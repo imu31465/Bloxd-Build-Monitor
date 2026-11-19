@@ -1,40 +1,40 @@
 export const id = 119;
 export const ids = [119];
 export const modules = {
-  6261: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      default: () => dz
+  6280: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      default: () => yD
     });
-    var Ez = bz(1305),
-      nz = bz(56),
-      iz = bz(104),
-      lz = bz(1490),
-      Mz = bz(1219),
-      tz = bz(316),
-      Hz = bz(606);
-    const Oz = new URL(Mz.n[tz.e.PRODUCTION]).origin;
-    var pz = bz(1089);
+    var ID = cD(1328),
+      pD = cD(53),
+      iD = cD(101),
+      fD = cD(1517),
+      bD = cD(1227),
+      QD = cD(312),
+      wD = cD(646);
+    const SD = new URL(bD.l[QD.d.PRODUCTION]).origin;
+    var BD = cD(1093);
 
-    function dz() {
-      const zz = (0, lz.D)();
-      return (0, nz.useEffect)((() => {
-        const uz = iz.currentUrl.getSearchParam("code");
-        iz.currentUrl.removeSearchParam("code"), null === uz && (console.error("No authorization code found in the URL"), window.close());
-        const bz = {
-          type: `oauth_authentication_${zz.providerName}`,
-          code: uz
+    function yD() {
+      const DD = (0, fD.F)();
+      return (0, pD.useEffect)((() => {
+        const CD = iD.currentUrl.getSearchParam("code");
+        iD.currentUrl.removeSearchParam("code"), null === CD && (console.error("No authorization code found in the URL"), window.close());
+        const cD = {
+          type: `oauth_authentication_${DD.providerName}`,
+          code: CD
         };
-        for (const zz of (nz = window.location.origin) === Oz ? [nz, `https://${Hz.e}`] : [nz]) {
-          var Ez;
-          null === (Ez = window.opener) || void 0 === Ez || Ez.postMessage(bz, zz)
+        for (const DD of (pD = window.location.origin) === SD ? [pD, `https://${wD.b}`] : [pD]) {
+          var ID;
+          null === (ID = window.opener) || void 0 === ID || ID.postMessage(cD, DD)
         }
-        var nz;
+        var pD;
         setTimeout((() => {
           window.close()
         }), 1e3)
-      })), (0, pz.jsx)("div", {
+      })), (0, BD.jsx)("div", {
         className: "AuthCallback",
-        children: (0, pz.jsx)(Ez.c, {
+        children: (0, BD.jsx)(ID.e, {
           showFace: !0,
           loading: !0
         })
@@ -43,4 +43,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

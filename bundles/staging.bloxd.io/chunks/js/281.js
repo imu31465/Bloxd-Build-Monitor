@@ -1,758 +1,758 @@
 export const id = 281;
 export const ids = [281, 282];
 export const modules = {
-  40493: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      CharacterCustomisationUI: () => Uz
+  40345: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      CharacterCustomisationUI: () => TD
     });
-    var Ez = bz(56),
-      nz = bz(2756),
-      iz = bz(1114),
-      lz = bz(1871),
-      Mz = bz(1038),
-      tz = bz.n(Mz),
-      Hz = bz(1226),
-      Oz = bz(577),
-      pz = bz(1181),
-      dz = bz(2132),
-      Fz = bz(1531),
-      Zz = bz(8494),
-      Rz = bz(2136),
-      Kz = bz(2858),
-      wz = bz(1912),
-      Xz = bz(1419),
-      fz = bz(2171),
-      sz = bz(20),
-      rz = bz(1473),
-      oz = bz(328),
-      Nz = bz(40500),
-      vz = bz(1527),
-      xz = bz(2222),
-      Jz = bz(2754),
-      Az = bz(2067),
-      Tz = bz(2455),
-      Lz = bz(1047);
-    bz(9020), bz(2860);
+    var ID = cD(53),
+      pD = cD(2790),
+      iD = cD(1120),
+      fD = cD(1905),
+      bD = cD(1049),
+      QD = cD.n(bD),
+      wD = cD(1240),
+      SD = cD(611),
+      BD = cD(1192),
+      yD = cD(2192),
+      MD = cD(1562),
+      tD = cD(8520),
+      ZD = cD(2195),
+      oD = cD(2899),
+      vD = cD(1954),
+      ND = cD(1442),
+      gD = cD(2228),
+      XD = cD(16),
+      mD = cD(1497),
+      nD = cD(326),
+      OD = cD(40352),
+      PD = cD(1556),
+      HD = cD(2268),
+      UD = cD(2788),
+      xD = cD(2112),
+      qD = cD(2466),
+      JD = cD(1064);
+    cD(9074), cD(2901);
     Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
-    var Pz = bz(2178),
-      Gz = bz(1332),
-      az = bz(1089);
+    var KD = cD(2238),
+      aD = cD(1356),
+      VD = cD(1093);
 
-    function Vz(zz, uz, bz) {
-      return (0, dz.n)(zz, uz).purchasable && !(0, xz.q)(zz, uz, bz)
+    function zD(DD, CD, cD) {
+      return (0, yD.m)(DD, CD).purchasable && !(0, HD.s)(DD, CD, cD)
     }
 
-    function mz(zz, uz) {
-      return Object.entries(zz).some((zz => {
-        let [bz, Ez] = zz;
-        return Vz(bz, Ez, uz)
+    function jD(DD, CD) {
+      return Object.entries(DD).some((DD => {
+        let [cD, ID] = DD;
+        return zD(cD, ID, CD)
       }))
     }
 
-    function qz(zz) {
-      var uz;
+    function lD(DD) {
+      var CD;
       let {
-        pack: bz,
-        ownedPacks: Ez,
-        showStoreLink: nz = !1,
-        children: iz
-      } = zz;
+        pack: cD,
+        ownedPacks: ID,
+        showStoreLink: pD = !1,
+        children: iD
+      } = DD;
       const {
-        t: lz
-      } = (0, pz.F)(), Mz = vz.e[bz], Hz = Mz.purchasable && !Ez.includes(bz) && vz.p.includes(bz), Oz = Jz.h[bz];
-      return (0, az.jsxs)("div", {
-        className: tz()("CosmeticPackGroup", {
-          CosmeticPackGroupLocked: Hz
+        t: fD
+      } = (0, BD.F)(), bD = PD.c[cD], wD = bD.purchasable && !ID.includes(cD) && PD.r.includes(cD), SD = UD.i[cD];
+      return (0, VD.jsxs)("div", {
+        className: QD()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: wD
         }),
-        children: [Oz && (0, az.jsx)(Oz, {}), (0, az.jsxs)("div", {
+        children: [SD && (0, VD.jsx)(SD, {}), (0, VD.jsxs)("div", {
           className: "CosmeticPackGroupLabel",
-          children: [(0, az.jsx)("span", {
+          children: [(0, VD.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: null !== (uz = Mz.displayName) && void 0 !== uz ? uz : bz
-          }), (Hz || nz) && (0, az.jsxs)(Xz.G, {
+            children: null !== (CD = bD.displayName) && void 0 !== CD ? CD : cD
+          }), (wD || pD) && (0, VD.jsxs)(ND.F, {
             onClick: () => {
-              Hz ? (0, Jz.e)(bz) : (0, fz.o)({
+              wD ? (0, UD.g)(cD) : (0, gD.p)({
                 mode: "self",
                 source: "characterCustomisation"
               })
             },
-            children: [(0, az.jsx)(Lz.c, {
+            children: [(0, VD.jsx)(JD.c, {
               name: "store"
-            }), " ", lz("general:viewInShop")]
+            }), " ", fD("general:viewInShop")]
           })]
-        }), Hz && "bee" === bz && (0, az.jsx)(Jz.b, {}), iz]
+        }), wD && "bee" === cD && (0, VD.jsx)(UD.d, {}), iD]
       })
     }
 
-    function hz(zz) {
+    function LD(DD) {
       let {
-        equippedEmoteIds: uz,
-        ownedPacks: bz,
-        canBuy: Ez,
-        onUpdateLoadout: nz,
-        onEmoteSelected: iz,
-        onEquipPreviewSkin: lz
-      } = zz;
+        equippedEmoteIds: CD,
+        ownedPacks: cD,
+        canBuy: ID,
+        onUpdateLoadout: pD,
+        onEmoteSelected: iD,
+        onEquipPreviewSkin: fD
+      } = DD;
       const {
-        t: Mz
-      } = (0, pz.F)(), Oz = new Set(uz), Fz = new Map, Zz = Object.keys(dz.h.emote).sort(((zz, uz) => {
-        var bz, Ez, nz, iz;
-        return (null !== (bz = null === (Ez = (0, dz.m)("emote", zz)) || void 0 === Ez ? void 0 : Ez.clientIdx) && void 0 !== bz ? bz : 0) - (null !== (nz = null === (iz = (0, dz.m)("emote", uz)) || void 0 === iz ? void 0 : iz.clientIdx) && void 0 !== nz ? nz : 0)
-      })).filter((zz => {
-        const uz = (0, dz.n)("emote", zz),
-          nz = (0, xz.q)("emote", zz, bz);
-        return !(uz.purchasable && !nz && !Ez) && (uz.clientSelectable || nz)
+        t: bD
+      } = (0, BD.F)(), SD = new Set(CD), MD = new Map, tD = Object.keys(yD.f.emote).sort(((DD, CD) => {
+        var cD, ID, pD, iD;
+        return (null !== (cD = null === (ID = (0, yD.k)("emote", DD)) || void 0 === ID ? void 0 : ID.clientIdx) && void 0 !== cD ? cD : 0) - (null !== (pD = null === (iD = (0, yD.k)("emote", CD)) || void 0 === iD ? void 0 : iD.clientIdx) && void 0 !== pD ? pD : 0)
+      })).filter((DD => {
+        const CD = (0, yD.m)("emote", DD),
+          pD = (0, HD.s)("emote", DD, cD);
+        return !(CD.purchasable && !pD && !ID) && (CD.clientSelectable || pD)
       }));
-      for (const tz of Zz) {
-        const zz = (0, dz.m)("emote", tz).cosmeticPack;
-        Fz.has(zz) || Fz.set(zz, []), Fz.get(zz).push(tz)
+      for (const QD of tD) {
+        const DD = (0, yD.k)("emote", QD).cosmeticPack;
+        MD.has(DD) || MD.set(DD, []), MD.get(DD).push(QD)
       }
-      const Kz = Array.from(Fz.keys());
-      return (0, az.jsxs)("div", {
+      const oD = Array.from(MD.keys());
+      return (0, VD.jsxs)("div", {
         className: "CharCustomisPartSelectorWrapper",
-        children: [!1, (0, az.jsxs)("div", {
+        children: [!1, (0, VD.jsxs)("div", {
           className: "EmoteLoadoutSummary",
-          children: [(0, az.jsx)("span", {
+          children: [(0, VD.jsx)("span", {
             className: "EmoteLoadoutSummaryText SmallTextBold",
-            children: Mz("emotes:equippedCount", {
-              count: uz.length,
-              max: Hz.o
+            children: bD("emotes:equippedCount", {
+              count: CD.length,
+              max: wD.l
             })
-          }), (0, az.jsx)("span", {
+          }), (0, VD.jsx)("span", {
             className: "EmoteLoadoutSummaryHint SmallTextLight",
-            children: Mz("emotes:loadoutHint")
+            children: bD("emotes:loadoutHint")
           })]
-        }), Kz.map((zz => {
-          const Ez = Fz.get(zz);
-          return (0, az.jsx)(qz, {
-            pack: zz,
-            ownedPacks: bz,
-            children: (0, az.jsx)("div", {
+        }), oD.map((DD => {
+          const ID = MD.get(DD);
+          return (0, VD.jsx)(lD, {
+            pack: DD,
+            ownedPacks: cD,
+            children: (0, VD.jsx)("div", {
               className: "CosmeticPackGroupItems",
-              children: Ez.map((zz => {
-                var Ez;
-                const lz = uz.indexOf(zz),
-                  pz = -1 !== lz,
-                  dz = uz.length >= Hz.o,
-                  Fz = Vz("emote", zz, bz),
-                  Zz = Fz || !pz && dz,
-                  Kz = (0, Rz.j)(zz);
-                return (0, az.jsxs)("div", {
-                  className: tz()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
-                    SelectedCharCustomPartWrapper: pz
+              children: ID.map((DD => {
+                var ID;
+                const fD = CD.indexOf(DD),
+                  BD = -1 !== fD,
+                  yD = CD.length >= wD.l,
+                  MD = zD("emote", DD, cD),
+                  tD = MD || !BD && yD,
+                  oD = (0, ZD.h)(DD);
+                return (0, VD.jsxs)("div", {
+                  className: QD()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: BD
                   }),
                   onClick: () => {
-                    iz(zz)
+                    iD(DD)
                   },
-                  children: [(0, az.jsxs)("div", {
+                  children: [(0, VD.jsxs)("div", {
                     className: "CharCustomPart EmoteCustomPart",
-                    children: [(0, az.jsx)("div", {
+                    children: [(0, VD.jsx)("div", {
                       className: "EmoteCustomPartIcon",
                       style: {
-                        backgroundImage: `url(/textures/charSkins/previews/emote_${zz}_preview.png)`
+                        backgroundImage: `url(/textures/charSkins/previews/emote_${DD}_preview.png)`
                       },
                       "aria-hidden": !0
-                    }), (0, az.jsx)("span", {
+                    }), (0, VD.jsx)("span", {
                       className: "EmoteCustomPartLabel SmallTextBold",
-                      children: null !== (Ez = null === Kz || void 0 === Kz ? void 0 : Kz.displayName) && void 0 !== Ez ? Ez : zz
+                      children: null !== (ID = null === oD || void 0 === oD ? void 0 : oD.displayName) && void 0 !== ID ? ID : DD
                     })]
-                  }), (0, az.jsxs)("div", {
+                  }), (0, VD.jsxs)("div", {
                     className: "EmoteCustomPartToggleContainer",
-                    children: [pz && (0, az.jsx)("span", {
+                    children: [BD && (0, VD.jsx)("span", {
                       className: "EmoteCustomPartSlotBadge",
-                      children: lz + 1
-                    }), Fz && (0, az.jsx)(Lz.c, {
+                      children: fD + 1
+                    }), MD && (0, VD.jsx)(JD.c, {
                       name: "lock",
                       className: "LockedCosmeticIcon"
-                    }), (0, az.jsx)(Gz.f, {
-                      tooltipInner: (0, az.jsx)(az.Fragment, {
-                        children: Mz(pz ? "general:remove" : "general:add")
+                    }), (0, VD.jsx)(aD.f, {
+                      tooltipInner: (0, VD.jsx)(VD.Fragment, {
+                        children: bD(BD ? "general:remove" : "general:add")
                       }),
                       delayShow: 0,
                       delayHide: 0,
-                      children: (0, az.jsx)("div", {
-                        className: tz()("EmoteCustomPartToggle", {
-                          EmoteCustomPartToggleDisabled: Zz,
-                          EmoteCustomPartToggleEquipped: pz
+                      children: (0, VD.jsx)("div", {
+                        className: QD()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: tD,
+                          EmoteCustomPartToggleEquipped: BD
                         }),
-                        onClick: bz => {
-                          bz.stopPropagation(), Zz || function(zz) {
-                            Oz.has(zz) ? nz(uz.filter((uz => uz !== zz))) : uz.length >= Hz.o || nz([...uz, zz])
-                          }(zz)
+                        onClick: cD => {
+                          cD.stopPropagation(), tD || function(DD) {
+                            SD.has(DD) ? pD(CD.filter((CD => CD !== DD))) : CD.length >= wD.l || pD([...CD, DD])
+                          }(DD)
                         },
-                        children: (0, az.jsx)(Lz.c, {
-                          name: pz ? "minus" : "plus",
+                        children: (0, VD.jsx)(JD.c, {
+                          name: BD ? "minus" : "plus",
                           "aria-hidden": !0
                         })
                       })
                     })]
                   })]
-                }, zz)
+                }, DD)
               }))
             })
-          }, zz)
+          }, DD)
         }))]
       })
     }
-    const Uz = (0, Ez.memo)((function(zz) {
+    const TD = (0, ID.memo)((function(DD) {
       let {
-        selectedTab: uz
-      } = zz;
-      const bz = "characters" === uz ? "skin" : uz,
+        selectedTab: CD
+      } = DD;
+      const cD = "characters" === CD ? "skin" : CD,
         {
-          t: Mz
-        } = (0, pz.F)(),
+          t: bD
+        } = (0, BD.F)(),
         {
-          userContext: Rz,
-          isUserContextUpdating: Jz
-        } = (0, iz.c)(),
-        Gz = (0, nz.c)(),
+          userContext: ZD,
+          isUserContextUpdating: UD
+        } = (0, iD.c)(),
+        aD = (0, pD.b)(),
         {
-          gameState: Uz,
-          initSdkSelectorFinished: cz
-        } = (0, sz.m)(["gameState", "initSdkSelectorFinished"]),
-        [gz, Sz] = (0, Ez.useState)({}),
-        [yz, Dz] = (0, Ez.useState)({}),
+          gameState: TD,
+          initSdkSelectorFinished: GD
+        } = (0, XD.o)(["gameState", "initSdkSelectorFinished"]),
+        [RD, kD] = (0, ID.useState)({}),
+        [dD, YD] = (0, ID.useState)({}),
         {
-          previewEmote: Qz,
-          triggerEmote: Wz
-        } = (0, Kz.e)(),
-        ez = (0, Ez.useRef)(Hz.u.reduce(((zz, uz) => (zz[uz] = (0, Zz.b)(uz), zz)), {})),
-        jz = (0, Ez.useRef)(!1),
-        Iz = (0, Ez.useRef)(null),
-        Bz = (0, Ez.useRef)(null),
-        Cz = (0, Ez.useRef)(null);
+          previewEmote: WD,
+          triggerEmote: sD
+        } = (0, oD.c)(),
+        ED = (0, ID.useRef)(wD.u.reduce(((DD, CD) => (DD[CD] = (0, tD.b)(CD), DD)), {})),
+        eD = (0, ID.useRef)(!1),
+        uD = (0, ID.useRef)(null),
+        hD = (0, ID.useRef)(null),
+        rD = (0, ID.useRef)(null);
 
-      function Yz() {
-        null !== Bz.current && (clearTimeout(Bz.current), Bz.current = null);
-        const zz = Cz.current;
-        if (null === zz) return;
-        Cz.current = null;
-        const uz = {
-          kb: "emote",
-          zE: zz
+      function AD() {
+        null !== hD.current && (clearTimeout(hD.current), hD.current = null);
+        const DD = rD.current;
+        if (null === DD) return;
+        rD.current = null;
+        const CD = {
+          Gc: "emote",
+          Rc: DD
         };
-        null !== lz.gameBridge.latest("connectedGame").websocketUrl ? lz.gameBridge.send("updateMyCosmetic", uz) : rz.c.updateCosmetics(Rz, [uz]).catch((zz => {
-          console.error("Failed to update emote loadout", zz)
+        null !== fD.gameBridge.latest("connectedGame").websocketUrl ? fD.gameBridge.send("updateMyCosmetic", CD) : mD.c.updateCosmetics(ZD, [CD]).catch((DD => {
+          console.error("Failed to update emote loadout", DD)
         }))
       }
 
-      function kz(zz, uz, bz) {
-        var Ez, nz, iz;
-        if (ez.current = {
-            ...ez.current,
-            [zz]: uz
-          }, Gz(), bz) {
-          const bz = {
-            kb: zz,
-            zE: uz
+      function FD(DD, CD, cD) {
+        var ID, pD, iD;
+        if (ED.current = {
+            ...ED.current,
+            [DD]: CD
+          }, aD(), cD) {
+          const cD = {
+            Gc: DD,
+            Rc: CD
           };
-          null !== lz.gameBridge.latest("connectedGame").websocketUrl ? lz.gameBridge.send("updateMyCosmetic", bz) : rz.c.updateCosmetics(Rz, [bz]).catch((zz => {
-            console.error("Failed to update cosmetic", zz)
-          })), Rz.setPlayerCosmetics(zz, uz)
+          null !== fD.gameBridge.latest("connectedGame").websocketUrl ? fD.gameBridge.send("updateMyCosmetic", cD) : mD.c.updateCosmetics(ZD, [cD]).catch((DD => {
+            console.error("Failed to update cosmetic", DD)
+          })), ZD.setPlayerCosmetics(DD, CD)
         }
-        const Mz = (0, dz.m)(zz, uz);
-        if (null !== Mz && void 0 !== Mz && Mz.colourGroup && null !== (Ez = vz.e[Mz.cosmeticPack].colourGroups) && void 0 !== Ez && null !== (nz = Ez[Mz.colourGroup]) && void 0 !== nz && nz.showSwatchSelector) {
-          const bz = (0, dz.i)(uz);
-          bz && Dz((uz => ({
-            ...uz,
-            [`${Mz.cosmeticPack}_${zz}_${Mz.colourGroup}`]: parseInt(bz[1])
+        const bD = (0, yD.k)(DD, CD);
+        if (null !== bD && void 0 !== bD && bD.colourGroup && null !== (ID = PD.c[bD.cosmeticPack].colourGroups) && void 0 !== ID && null !== (pD = ID[bD.colourGroup]) && void 0 !== pD && pD.showSwatchSelector) {
+          const cD = (0, yD.j)(CD);
+          cD && YD((CD => ({
+            ...CD,
+            [`${bD.cosmeticPack}_${DD}_${bD.colourGroup}`]: parseInt(cD[1])
           })))
         }
-        null !== (iz = Iz.current) && void 0 !== iz && iz.isReady() && Iz.current.updateCosmetic(zz, uz)
+        null !== (iD = uD.current) && void 0 !== iD && iD.isReady() && uD.current.updateCosmetic(DD, CD)
       }
 
-      function zu(zz) {
-        return Object.entries(zz).every((zz => {
-          let [uz, bz] = zz;
-          return gz[uz] === bz
+      function DC(DD) {
+        return Object.entries(DD).every((DD => {
+          let [CD, cD] = DD;
+          return RD[CD] === cD
         }))
-      }(0, wz.d)("cosmeticsUpdated", (zz => {
-        let uz = !1;
+      }(0, vD.c)("cosmeticsUpdated", (DD => {
+        let CD = !1;
         for (const {
-            local: bz,
-            kb: Ez,
-            zE: nz
+            local: cD,
+            Gc: ID,
+            Rc: pD
           }
-          of zz) {
-          if (!bz) return;
-          uz = !0, jz.current || kz(Ez, nz, !1), Gz()
+          of DD) {
+          if (!cD) return;
+          CD = !0, eD.current || FD(ID, pD, !1), aD()
         }
-        uz && (jz.current = !0)
-      })), (0, Ez.useEffect)((() => {
-        if (!Jz) {
-          for (const [zz, uz] of Object.entries(Rz.getPlayerCosmetics())) kz(zz, uz, !1);
-          Gz()
+        CD && (eD.current = !0)
+      })), (0, ID.useEffect)((() => {
+        if (!UD) {
+          for (const [DD, CD] of Object.entries(ZD.getPlayerCosmetics())) FD(DD, CD, !1);
+          aD()
         }
-      }), [Jz]), (0, Ez.useEffect)((() => () => {
-        Yz()
+      }), [UD]), (0, ID.useEffect)((() => () => {
+        AD()
       }), []);
-      const uu = Rz.getOwnedCosmeticPacks(),
-        bu = (0, Pz.purchasesAllowed)(),
-        Eu = Object.keys(dz.h[bz]).filter((zz => {
-          const uz = (0, dz.n)(bz, zz),
-            Ez = (0, xz.q)(bz, zz, uu);
-          return !(uz.purchasable && !Ez && !bu) && (uz.clientSelectable || Ez)
-        })).sort(((zz, uz) => {
-          var Ez, nz, iz, lz;
-          return (null !== (Ez = null === (nz = (0, dz.m)(bz, zz)) || void 0 === nz ? void 0 : nz.clientIdx) && void 0 !== Ez ? Ez : 0) - (null !== (iz = null === (lz = (0, dz.m)(bz, uz)) || void 0 === lz ? void 0 : lz.clientIdx) && void 0 !== iz ? iz : 0)
+      const CC = ZD.getOwnedCosmeticPacks(),
+        cC = (0, KD.purchasesAllowed)(),
+        IC = Object.keys(yD.f[cD]).filter((DD => {
+          const CD = (0, yD.m)(cD, DD),
+            ID = (0, HD.s)(cD, DD, CC);
+          return !(CD.purchasable && !ID && !cC) && (CD.clientSelectable || ID)
+        })).sort(((DD, CD) => {
+          var ID, pD, iD, fD;
+          return (null !== (ID = null === (pD = (0, yD.k)(cD, DD)) || void 0 === pD ? void 0 : pD.clientIdx) && void 0 !== ID ? ID : 0) - (null !== (iD = null === (fD = (0, yD.k)(cD, CD)) || void 0 === fD ? void 0 : fD.clientIdx) && void 0 !== iD ? iD : 0)
         })),
-        nu = new Map;
-      for (const Ez of Eu) {
-        var iu;
-        const zz = null === (iu = (0, dz.m)(bz, Ez)) || void 0 === iu ? void 0 : iu.cosmeticPack;
-        nu.has(zz) || nu.set(zz, []), nu.get(zz).push(Ez)
+        pC = new Map;
+      for (const ID of IC) {
+        var iC;
+        const DD = null === (iC = (0, yD.k)(cD, ID)) || void 0 === iC ? void 0 : iC.cosmeticPack;
+        pC.has(DD) || pC.set(DD, []), pC.get(DD).push(ID)
       }
-      const lu = function(zz, uz) {
-          const bz = new Set,
-            Ez = new Set;
-          for (const [nz, iz] of Object.entries(dz.h[zz])) {
-            if (void 0 === iz.colourGroup) continue;
-            const lz = `${iz.cosmeticPack}_${iz.colourGroup}`;
-            (Vz(zz, nz, uz) ? Ez : bz).add(lz)
+      const fC = function(DD, CD) {
+          const cD = new Set,
+            ID = new Set;
+          for (const [pD, iD] of Object.entries(yD.f[DD])) {
+            if (void 0 === iD.colourGroup) continue;
+            const fD = `${iD.cosmeticPack}_${iD.colourGroup}`;
+            (zD(DD, pD, CD) ? ID : cD).add(fD)
           }
-          return new Set([...bz].filter((zz => Ez.has(zz))))
-        }(bz, uu),
-        Mu = new Map;
-      for (const [Ez, nz] of nu) {
-        const zz = [],
-          uz = new Map;
-        for (const Ez of nz) {
-          var tu, Hu;
-          const nz = null !== (tu = null === (Hu = (0, dz.m)(bz, Ez)) || void 0 === Hu ? void 0 : Hu.colourGroup) && void 0 !== tu ? tu : null;
-          uz.has(nz) || (uz.set(nz, []), zz.push(nz)), uz.get(nz).push(Ez)
+          return new Set([...cD].filter((DD => ID.has(DD))))
+        }(cD, CC),
+        bC = new Map;
+      for (const [ID, pD] of pC) {
+        const DD = [],
+          CD = new Map;
+        for (const ID of pD) {
+          var QC, wC;
+          const pD = null !== (QC = null === (wC = (0, yD.k)(cD, ID)) || void 0 === wC ? void 0 : wC.colourGroup) && void 0 !== QC ? QC : null;
+          CD.has(pD) || (CD.set(pD, []), DD.push(pD)), CD.get(pD).push(ID)
         }
-        const iz = zz.map((zz => {
-          var nz;
-          const iz = uz.get(zz),
-            lz = zz ? null === (nz = vz.e[Ez].colourGroups) || void 0 === nz ? void 0 : nz[zz] : void 0,
-            Mz = !0 === (null === lz || void 0 === lz ? void 0 : lz.showSwatchSelector) && !lu.has(`${Ez}_${zz}`);
-          if (Mz && lz) {
-            var tz;
-            const uz = null !== (tz = yz[`${Ez}_${bz}_${zz}`]) && void 0 !== tz ? tz : (0, vz.i)(lz.colours);
+        const iD = DD.map((DD => {
+          var pD;
+          const iD = CD.get(DD),
+            fD = DD ? null === (pD = PD.c[ID].colourGroups) || void 0 === pD ? void 0 : pD[DD] : void 0,
+            bD = !0 === (null === fD || void 0 === fD ? void 0 : fD.showSwatchSelector) && !fC.has(`${ID}_${DD}`);
+          if (bD && fD) {
+            var QD;
+            const CD = null !== (QD = dD[`${ID}_${cD}_${DD}`]) && void 0 !== QD ? QD : (0, PD.f)(fD.colours);
             return {
-              groupName: zz,
-              showSwatch: Mz,
-              cosmetics: iz.filter((zz => {
-                const bz = (0, dz.i)(zz);
-                return !bz || uz.toString() === bz[1].toString()
+              groupName: DD,
+              showSwatch: bD,
+              cosmetics: iD.filter((DD => {
+                const cD = (0, yD.j)(DD);
+                return !cD || CD.toString() === cD[1].toString()
               }))
             }
           }
           return {
-            groupName: zz,
-            cosmetics: iz,
-            showSwatch: Mz
+            groupName: DD,
+            cosmetics: iD,
+            showSwatch: bD
           }
         }));
-        Mu.set(Ez, iz)
+        bC.set(ID, iD)
       }
-      const Ou = Array.from(nu.keys()),
-        pu = new Map;
-      for (const [Ez, nz] of Object.entries(Fz.c)) {
-        const zz = vz.e[nz.cosmeticPack],
-          uz = !mz(nz.cosmetics, uu),
-          bz = vz.l.some((zz => (0, vz.g)(zz) === Ez));
-        (zz.clientSelectable || bz || uz) && ((!zz.purchasable || uz || bu) && (pu.has(nz.cosmeticPack) || pu.set(nz.cosmeticPack, []), pu.get(nz.cosmeticPack).push([Ez, nz])))
+      const SC = Array.from(pC.keys()),
+        BC = new Map;
+      for (const [ID, pD] of Object.entries(MD.c)) {
+        const DD = PD.c[pD.cosmeticPack],
+          CD = !jD(pD.cosmetics, CC),
+          cD = PD.l.some((DD => (0, PD.e)(DD) === ID));
+        (DD.clientSelectable || cD || CD) && ((!DD.purchasable || CD || cC) && (BC.has(pD.cosmeticPack) || BC.set(pD.cosmeticPack, []), BC.get(pD.cosmeticPack).push([ID, pD])))
       }
-      const du = Array.from(pu.keys());
-      return (0, az.jsxs)("div", {
+      const yC = Array.from(BC.keys());
+      return (0, VD.jsxs)("div", {
         className: "CharCustomisationBody",
-        children: [("cape" === bz || "nameColour" === bz) && !Rz.playerHasRank("super") && (0, az.jsxs)("div", {
+        children: [("cape" === cD || "nameColour" === cD) && !ZD.playerHasRank("super") && (0, VD.jsxs)("div", {
           className: "CharCustomisationBodyHeader",
-          children: [(0, az.jsx)(Lz.c, {
+          children: [(0, VD.jsx)(JD.c, {
             name: "bolt"
-          }), Mz("homePage:unlockWithSuperRank"), bu && (0, az.jsx)(Xz.q, {
+          }), bD("homePage:unlockWithSuperRank"), cC && (0, VD.jsx)(ND.o, {
             onClick: () => {
-              (0, fz.o)({
+              (0, gD.p)({
                 mode: "self",
                 source: "characterCustomisation",
                 openItem: "superRank"
               })
             },
-            children: Mz("general:getItNow")
+            children: bD("general:getItNow")
           })]
-        }), (0, az.jsxs)("div", {
+        }), (0, VD.jsxs)("div", {
           className: "CharCustomisationBodyInner",
-          children: ["characters" === uz && (0, az.jsxs)("div", {
+          children: ["characters" === CD && (0, VD.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, du.map((zz => {
-              const uz = pu.get(zz);
-              return (0, az.jsx)(qz, {
-                pack: zz,
-                ownedPacks: uu,
-                showStoreLink: !vz.m.includes(zz) && uz.some((zz => {
+            children: [!1, yC.map((DD => {
+              const CD = BC.get(DD);
+              return (0, VD.jsx)(lD, {
+                pack: DD,
+                ownedPacks: CC,
+                showStoreLink: !PD.o.includes(DD) && CD.some((DD => {
                   let [, {
-                    cosmetics: uz
-                  }] = zz;
-                  return mz(uz, uu)
+                    cosmetics: CD
+                  }] = DD;
+                  return jD(CD, CC)
                 })),
-                children: (0, az.jsx)("div", {
+                children: (0, VD.jsx)("div", {
                   className: "CharacterPresetsGrid",
-                  children: uz.map((zz => {
-                    let [uz, {
-                      cosmetics: bz
-                    }] = zz;
-                    const Ez = mz(bz, uu),
-                      nz = zu(bz),
-                      iz = !nz && Object.entries(bz).every((zz => {
-                        let [uz, bz] = zz;
-                        return ez.current[uz] === bz
+                  children: CD.map((DD => {
+                    let [CD, {
+                      cosmetics: cD
+                    }] = DD;
+                    const ID = jD(cD, CC),
+                      pD = DC(cD),
+                      iD = !pD && Object.entries(cD).every((DD => {
+                        let [CD, cD] = DD;
+                        return ED.current[CD] === cD
                       }));
-                    return (0, az.jsxs)("div", {
+                    return (0, VD.jsxs)("div", {
                       "data-pad-focusable": !0,
-                      className: tz()("CharacterPresetCard", {
-                        CharacterPresetCardActive: iz,
-                        CharacterPresetCardTryingOn: nz
+                      className: QD()("CharacterPresetCard", {
+                        CharacterPresetCardActive: iD,
+                        CharacterPresetCardTryingOn: pD
                       }),
                       onClick: () => {
-                        if (Ez) ! function(zz) {
-                          zu(zz) ? Sz({}) : Sz({
-                            ...zz
+                        if (ID) ! function(DD) {
+                          DC(DD) ? kD({}) : kD({
+                            ...DD
                           })
-                        }(bz);
+                        }(cD);
                         else {
-                          Object.keys(gz).length > 0 && Sz({});
-                          const zz = Object.entries(bz);
-                          for (const [uz, bz] of zz) kz(uz, bz, !1), Rz.setPlayerCosmetics(uz, bz);
-                          if (null !== lz.gameBridge.latest("connectedGame").websocketUrl)
-                            for (const [uz, bz] of zz) lz.gameBridge.send("updateMyCosmetic", {
-                              kb: uz,
-                              zE: bz
+                          Object.keys(RD).length > 0 && kD({});
+                          const DD = Object.entries(cD);
+                          for (const [CD, cD] of DD) FD(CD, cD, !1), ZD.setPlayerCosmetics(CD, cD);
+                          if (null !== fD.gameBridge.latest("connectedGame").websocketUrl)
+                            for (const [CD, cD] of DD) fD.gameBridge.send("updateMyCosmetic", {
+                              Gc: CD,
+                              Rc: cD
                             });
-                          else rz.c.updateCosmetics(Rz, zz.map((zz => {
-                            let [uz, bz] = zz;
+                          else mD.c.updateCosmetics(ZD, DD.map((DD => {
+                            let [CD, cD] = DD;
                             return {
-                              kb: uz,
-                              zE: bz
+                              Gc: CD,
+                              Rc: cD
                             }
-                          }))).catch((zz => {
-                            console.error("Failed to update cosmetics", zz)
+                          }))).catch((DD => {
+                            console.error("Failed to update cosmetics", DD)
                           }))
                         }
                       },
-                      children: [(0, az.jsx)("div", {
+                      children: [(0, VD.jsx)("div", {
                         className: "CharacterPresetCardPreview",
                         style: {
-                          backgroundImage: `url(/textures/charSkins/previews/character_${uz}_preview.png)`
+                          backgroundImage: `url(/textures/charSkins/previews/character_${CD}_preview.png)`
                         }
-                      }), Ez && (0, az.jsx)(Lz.c, {
+                      }), ID && (0, VD.jsx)(JD.c, {
                         name: "lock",
                         className: "LockedCosmeticIcon"
                       })]
-                    }, uz)
+                    }, CD)
                   }))
                 })
-              }, zz)
+              }, DD)
             }))]
-          }), "emote" === uz && (0, az.jsx)(hz, {
-            equippedEmoteIds: (0, Zz.e)(ez.current.emote),
-            ownedPacks: uu,
-            canBuy: bu,
-            onUpdateLoadout: zz => {
-              const uz = (0, Zz.g)(zz);
-              var bz;
-              ez.current = {
-                ...ez.current,
-                emote: uz
-              }, Rz.setPlayerCosmetics("emote", uz), Gz(), bz = uz, Cz.current = bz, null !== Bz.current && clearTimeout(Bz.current), Bz.current = setTimeout(Yz, 350)
+          }), "emote" === CD && (0, VD.jsx)(LD, {
+            equippedEmoteIds: (0, tD.f)(ED.current.emote),
+            ownedPacks: CC,
+            canBuy: cC,
+            onUpdateLoadout: DD => {
+              const CD = (0, tD.g)(DD);
+              var cD;
+              ED.current = {
+                ...ED.current,
+                emote: CD
+              }, ZD.setPlayerCosmetics("emote", CD), aD(), cD = CD, rD.current = cD, null !== hD.current && clearTimeout(hD.current), hD.current = setTimeout(AD, 350)
             },
-            onEmoteSelected: Wz,
+            onEmoteSelected: sD,
             onEquipPreviewSkin: () => {
-              ! function(zz, uz) {
-                for (const bz of Hz.u) "cape" !== bz && "nameColour" !== bz && "emote" !== bz && zz(bz, "skin" === bz ? "skin_preview" : `${bz}_none`, !1);
-                uz()
-              }(kz, Gz)
+              ! function(DD, CD) {
+                for (const cD of wD.u) "cape" !== cD && "nameColour" !== cD && "emote" !== cD && DD(cD, "skin" === cD ? "skin_preview" : `${cD}_none`, !1);
+                CD()
+              }(FD, aD)
             }
-          }), "characters" !== uz && "emote" !== uz && (0, az.jsxs)("div", {
+          }), "characters" !== CD && "emote" !== CD && (0, VD.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, Ou.map((zz => {
-              const uz = Mu.get(zz);
-              return (0, az.jsx)(qz, {
-                pack: zz,
-                ownedPacks: uu,
-                children: uz.map((uz => {
-                  var Ez;
+            children: [!1, SC.map((DD => {
+              const CD = bC.get(DD);
+              return (0, VD.jsx)(lD, {
+                pack: DD,
+                ownedPacks: CC,
+                children: CD.map((CD => {
+                  var ID;
                   let {
-                    groupName: nz,
-                    cosmetics: iz,
-                    showSwatch: lz
-                  } = uz;
-                  const Mz = nz ? null === (Ez = vz.e[zz].colourGroups) || void 0 === Ez ? void 0 : Ez[nz] : void 0,
-                    Hz = `${zz}_${bz}_${nz}`;
-                  return (0, az.jsxs)("div", {
+                    groupName: pD,
+                    cosmetics: iD,
+                    showSwatch: fD
+                  } = CD;
+                  const bD = pD ? null === (ID = PD.c[DD].colourGroups) || void 0 === ID ? void 0 : ID[pD] : void 0,
+                    wD = `${DD}_${cD}_${pD}`;
+                  return (0, VD.jsxs)("div", {
                     className: "CosmeticPackGroupItems",
-                    children: [lz && Mz && (0, az.jsx)("div", {
+                    children: [fD && bD && (0, VD.jsx)("div", {
                       className: "CosmeticColorSwatchCell",
-                      children: [...Mz.colours.map(((zz, uz) => ({
-                        color: zz,
-                        index: uz
-                      })))].sort(((zz, uz) => zz.color.order - uz.color.order)).map((uz => {
-                        var Ez;
+                      children: [...bD.colours.map(((DD, CD) => ({
+                        color: DD,
+                        index: CD
+                      })))].sort(((DD, CD) => DD.color.order - CD.color.order)).map((CD => {
+                        var ID;
                         let {
-                          color: iz,
-                          index: lz
-                        } = uz;
-                        return (0, az.jsx)("div", {
-                          className: tz()("CosmeticColorOption", {
-                            CosmeticColorOptionSelected: (null !== (Ez = yz[Hz]) && void 0 !== Ez ? Ez : (0, vz.i)(Mz.colours)) === lz
+                          color: iD,
+                          index: fD
+                        } = CD;
+                        return (0, VD.jsx)("div", {
+                          className: QD()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (ID = dD[wD]) && void 0 !== ID ? ID : (0, PD.f)(bD.colours)) === fD
                           }),
                           style: {
-                            backgroundColor: `rgb(${iz.rbg.join(",")})`
+                            backgroundColor: `rgb(${iD.rbg.join(",")})`
                           },
                           onClick: () => {
-                            var uz;
-                            Dz((zz => ({
-                              ...zz,
-                              [Hz]: lz
+                            var CD;
+                            YD((DD => ({
+                              ...DD,
+                              [wD]: fD
                             })));
-                            const Ez = gz[bz],
-                              iz = Ez ? (0, dz.m)(bz, Ez) : null,
-                              Mz = (null === iz || void 0 === iz ? void 0 : iz.cosmeticPack) === zz,
-                              tz = Mz ? Ez : ez.current[bz],
-                              Oz = Mz ? iz : (0, dz.m)(bz, tz);
-                            if ((null === Oz || void 0 === Oz ? void 0 : Oz.cosmeticPack) !== zz) return;
-                            if ((null !== (uz = null === Oz || void 0 === Oz ? void 0 : Oz.colourGroup) && void 0 !== uz ? uz : null) !== nz) return;
-                            const pz = (0, dz.i)(tz);
-                            if (pz) {
-                              const zz = `${bz}_${pz[0]}_${lz}`;
-                              Mz ? Sz((uz => ({
-                                ...uz,
-                                [bz]: zz
-                              }))) : kz(bz, zz, !0)
+                            const ID = RD[cD],
+                              iD = ID ? (0, yD.k)(cD, ID) : null,
+                              bD = (null === iD || void 0 === iD ? void 0 : iD.cosmeticPack) === DD,
+                              QD = bD ? ID : ED.current[cD],
+                              SD = bD ? iD : (0, yD.k)(cD, QD);
+                            if ((null === SD || void 0 === SD ? void 0 : SD.cosmeticPack) !== DD) return;
+                            if ((null !== (CD = null === SD || void 0 === SD ? void 0 : SD.colourGroup) && void 0 !== CD ? CD : null) !== pD) return;
+                            const BD = (0, yD.j)(QD);
+                            if (BD) {
+                              const DD = `${cD}_${BD[0]}_${fD}`;
+                              bD ? kD((CD => ({
+                                ...CD,
+                                [cD]: DD
+                              }))) : FD(cD, DD, !0)
                             }
                           }
-                        }, iz.rbg.join())
+                        }, iD.rbg.join())
                       }))
-                    }), iz.map((zz => {
-                      const uz = zz === ez.current[bz],
-                        Ez = gz[bz] === zz,
-                        nz = Vz(bz, zz, uu);
-                      let iz = !0;
-                      return nz || uz || ("cape" !== bz || (0, oz.Rd)(Rz.getPlayerRanks(), zz)) && ("nameColour" !== bz || Rz.playerHasRank("super")) || (iz = !1), (0, az.jsxs)("div", {
-                        className: tz()("CharCustomPartWrapper", {
-                          SelectedCharCustomPartWrapper: uz && !Ez,
-                          TryingOnCharCustomPartWrapper: Ez,
-                          DisabledCharCustomPartWrapper: !iz,
-                          CharCustomPartWrapperProfileEffect: "profileEffect" === bz
+                    }), iD.map((DD => {
+                      const CD = DD === ED.current[cD],
+                        ID = RD[cD] === DD,
+                        pD = zD(cD, DD, CC);
+                      let iD = !0;
+                      return pD || CD || ("cape" !== cD || (0, nD.Kd)(ZD.getPlayerRanks(), DD)) && ("nameColour" !== cD || ZD.playerHasRank("super")) || (iD = !1), (0, VD.jsxs)("div", {
+                        className: QD()("CharCustomPartWrapper", {
+                          SelectedCharCustomPartWrapper: CD && !ID,
+                          TryingOnCharCustomPartWrapper: ID,
+                          DisabledCharCustomPartWrapper: !iD,
+                          CharCustomPartWrapperProfileEffect: "profileEffect" === cD
                         }),
                         onClick: () => {
-                          if (iz)
-                            if (nz) Sz((uz => {
-                              if (uz[bz] === zz) {
-                                const zz = {
-                                  ...uz
+                          if (iD)
+                            if (pD) kD((CD => {
+                              if (CD[cD] === DD) {
+                                const DD = {
+                                  ...CD
                                 };
-                                return delete zz[bz], zz
+                                return delete DD[cD], DD
                               }
                               return {
-                                ...uz,
-                                [bz]: zz
+                                ...CD,
+                                [cD]: DD
                               }
                             }));
                             else {
-                              var uz;
-                              if (gz[bz] && Sz((zz => {
-                                  const uz = {
-                                    ...zz
+                              var CD;
+                              if (RD[cD] && kD((DD => {
+                                  const CD = {
+                                    ...DD
                                   };
-                                  return delete uz[bz], uz
-                                })), zz === ez.current[bz]) return;
-                              null !== (uz = Iz.current) && void 0 !== uz && uz.isReady() && kz(bz, zz, !0)
+                                  return delete CD[cD], CD
+                                })), DD === ED.current[cD]) return;
+                              null !== (CD = uD.current) && void 0 !== CD && CD.isReady() && FD(cD, DD, !0)
                             }
                         },
-                        children: ["profileEffect" === bz ? (0, az.jsx)("div", {
+                        children: ["profileEffect" === cD ? (0, VD.jsx)("div", {
                           className: "CharCustomPart CharCustomProfileEffect",
-                          children: (0, az.jsx)(Tz.i, {
-                            playerSocialPreview: (0, Az.c)(zz, {
-                              name: Rz.getPlayerName(),
-                              cosmetics: Rz.getPlayerCosmetics()
+                          children: (0, VD.jsx)(qD.h, {
+                            playerSocialPreview: (0, xD.e)(DD, {
+                              name: ZD.getPlayerName(),
+                              cosmetics: ZD.getPlayerCosmetics()
                             }),
                             showLocation: !1,
                             opensProfileCard: !1
                           })
-                        }) : (0, az.jsx)("div", {
-                          className: tz()("CharCustomPart", {
-                            PixelatedImage: "cape" === bz
+                        }) : (0, VD.jsx)("div", {
+                          className: QD()("CharCustomPart", {
+                            PixelatedImage: "cape" === cD
                           }),
-                          style: (0, dz.m)(bz, zz).previewTex ? {
-                            backgroundImage: `url(/textures/charSkins/previews/${(0,dz.m)(bz,zz).previewTex}.png)`
+                          style: (0, yD.k)(cD, DD).previewTex ? {
+                            backgroundImage: `url(/textures/charSkins/previews/${(0,yD.k)(cD,DD).previewTex}.png)`
                           } : {
-                            backgroundColor: Oz.n[zz]
+                            backgroundColor: SD.p[DD]
                           }
-                        }), nz && (0, az.jsx)(Lz.c, {
+                        }), pD && (0, VD.jsx)(JD.c, {
                           name: "lock",
                           className: "LockedCosmeticIcon"
                         })]
-                      }, zz)
+                      }, DD)
                     }))]
-                  }, null !== nz && void 0 !== nz ? nz : "ungrouped")
+                  }, null !== pD && void 0 !== pD ? pD : "ungrouped")
                 }))
-              }, zz)
+              }, DD)
             }))]
-          }), (0, az.jsx)(Nz.CharacterPreview, {
-            ref: Iz,
-            forcedCosmetics: gz,
-            GM: Qz.id,
-            emotePlaySeq: Qz.seq,
+          }), (0, VD.jsx)(OD.CharacterPreview, {
+            ref: uD,
+            forcedCosmetics: RD,
+            Pb: WD.id,
+            emotePlaySeq: WD.seq,
             onReady: () => {
-              for (const zz of Hz.u) kz(zz, ez.current[zz], !1)
+              for (const DD of wD.u) FD(DD, ED.current[DD], !1)
             }
           })]
         })]
       })
     }))
   },
-  40500: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      CharacterPreview: () => pz
+  40352: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      CharacterPreview: () => BD
     });
-    var Ez = bz(56),
-      nz = bz(2602),
-      iz = bz(1226),
-      lz = bz(8494),
-      Mz = bz(9020),
-      tz = bz(3382),
-      Hz = bz(1089);
-    const Oz = .6 * Math.PI,
-      pz = (0, Ez.memo)((0, Ez.forwardRef)((function(zz, uz) {
+    var ID = cD(53),
+      pD = cD(2621),
+      iD = cD(1240),
+      fD = cD(8520),
+      bD = cD(9074),
+      QD = cD(3447),
+      wD = cD(1093);
+    const SD = .6 * Math.PI,
+      BD = (0, ID.memo)((0, ID.forwardRef)((function(DD, CD) {
         let {
-          onReady: bz,
-          onDrawn: pz,
-          owner: dz = "other",
-          framing: Fz = "player",
-          forcedCosmetics: Zz,
-          GM: Rz,
-          emotePlaySeq: Kz,
-          turntableFromYaw: wz = null
-        } = zz;
-        const Xz = (0, Ez.useRef)(null),
+          onReady: cD,
+          onDrawn: BD,
+          owner: yD = "other",
+          framing: MD = "player",
+          forcedCosmetics: tD,
+          Pb: ZD,
+          emotePlaySeq: oD,
+          turntableFromYaw: vD = null
+        } = DD;
+        const ND = (0, ID.useRef)(null),
           {
-            width: fz,
-            height: sz
-          } = (0, nz.e)(Xz),
-          rz = (0, Ez.useRef)(null),
-          oz = (0, Ez.useRef)({}),
-          Nz = (0, Ez.useRef)({}),
-          [vz, xz] = (0, Ez.useState)(!1),
-          Jz = (0, Ez.useRef)(bz);
-        Jz.current = bz;
-        const Az = (0, Ez.useRef)(pz);
-        Az.current = pz;
-        const Tz = (0, Ez.useRef)(null),
-          Lz = (0, Ez.useRef)(!1),
-          Pz = (0, Ez.useRef)(!1),
-          Gz = (0, Ez.useCallback)((() => {
-            const zz = rz.current;
-            if (!zz || !Az.current || Lz.current || !Pz.current) return;
-            const uz = {};
-            Tz.current = uz, queueMicrotask((() => {
-              if (Tz.current !== uz) return;
-              const bz = Promise.all(iz.u.map((uz => zz.untilDrawn(uz)))).catch((zz => {
-                  console.error("Failed to draw the character preview", zz)
+            width: gD,
+            height: XD
+          } = (0, pD.e)(ND),
+          mD = (0, ID.useRef)(null),
+          nD = (0, ID.useRef)({}),
+          OD = (0, ID.useRef)({}),
+          [PD, HD] = (0, ID.useState)(!1),
+          UD = (0, ID.useRef)(cD);
+        UD.current = cD;
+        const xD = (0, ID.useRef)(BD);
+        xD.current = BD;
+        const qD = (0, ID.useRef)(null),
+          JD = (0, ID.useRef)(!1),
+          KD = (0, ID.useRef)(!1),
+          aD = (0, ID.useCallback)((() => {
+            const DD = mD.current;
+            if (!DD || !xD.current || JD.current || !KD.current) return;
+            const CD = {};
+            qD.current = CD, queueMicrotask((() => {
+              if (qD.current !== CD) return;
+              const cD = Promise.all(iD.u.map((CD => DD.untilDrawn(CD)))).catch((DD => {
+                  console.error("Failed to draw the character preview", DD)
                 })),
-                Ez = new Promise((zz => {
-                  setTimeout(zz, 1e4)
+                ID = new Promise((DD => {
+                  setTimeout(DD, 1e4)
                 }));
-              Promise.race([bz, Ez]).then((() => {
-                var bz;
-                rz.current !== zz || Tz.current !== uz || Lz.current || (Lz.current = !0, null === (bz = Az.current) || void 0 === bz || bz.call(Az))
+              Promise.race([cD, ID]).then((() => {
+                var cD;
+                mD.current !== DD || qD.current !== CD || JD.current || (JD.current = !0, null === (cD = xD.current) || void 0 === cD || cD.call(xD))
               }))
             }))
           }), []);
-        return (0, Ez.useImperativeHandle)(uz, (() => {
-          const zz = (zz, uz) => {
-            var bz;
-            (oz.current[zz] = uz, null !== Zz && void 0 !== Zz && Zz[zz]) || (null === (bz = rz.current) || void 0 === bz || bz.setCosmetic(zz, uz), Gz())
+        return (0, ID.useImperativeHandle)(CD, (() => {
+          const DD = (DD, CD) => {
+            var cD;
+            (nD.current[DD] = CD, null !== tD && void 0 !== tD && tD[DD]) || (null === (cD = mD.current) || void 0 === cD || cD.setCosmetic(DD, CD), aD())
           };
           return {
-            updateCosmetic: zz,
-            setAllCosmetics(uz) {
-              for (const Ez of iz.u) {
-                var bz;
-                zz(Ez, null !== (bz = uz[Ez]) && void 0 !== bz ? bz : (0, lz.b)(Ez))
+            updateCosmetic: DD,
+            setAllCosmetics(CD) {
+              for (const ID of iD.u) {
+                var cD;
+                DD(ID, null !== (cD = CD[ID]) && void 0 !== cD ? cD : (0, fD.b)(ID))
               }
             },
             isReady() {
-              var zz, uz;
-              return null !== (zz = null === (uz = rz.current) || void 0 === uz ? void 0 : uz.isReady()) && void 0 !== zz && zz
+              var DD, CD;
+              return null !== (DD = null === (CD = mD.current) || void 0 === CD ? void 0 : CD.isReady()) && void 0 !== DD && DD
             },
             resetCamera() {
-              var zz;
-              null === (zz = rz.current) || void 0 === zz || zz.resetCamera()
+              var DD;
+              null === (DD = mD.current) || void 0 === DD || DD.resetCamera()
             },
-            setOrbit(zz) {
-              var uz;
-              null === (uz = rz.current) || void 0 === uz || uz.setOrbit(zz)
+            setOrbit(DD) {
+              var CD;
+              null === (CD = mD.current) || void 0 === CD || CD.setOrbit(DD)
             },
-            async ensureReadyForCapture(zz) {
-              var uz;
-              await (null === (uz = rz.current) || void 0 === uz ? void 0 : uz.untilDrawn(zz))
+            async ensureReadyForCapture(DD) {
+              var CD;
+              await (null === (CD = mD.current) || void 0 === CD ? void 0 : CD.untilDrawn(DD))
             },
             getDevTools() {
-              var zz;
-              return null !== (zz = rz.current) && void 0 !== zz && zz.isReady() ? rz.current.dev : null
+              var DD;
+              return null !== (DD = mD.current) && void 0 !== DD && DD.isReady() ? mD.current.dev : null
             }
           }
-        }), [Zz, Gz]), (0, Ez.useEffect)((() => {
-          const zz = tz.c.register(dz),
-            uz = Mz.j.openCharacter(Xz.current, Fz);
-          rz.current = uz;
-          let bz = !0;
-          return uz.ready.then((() => {
-            bz && (xz(!0), Jz.current())
-          })).catch((zz => {
-            console.error("Failed to set up the character preview", zz)
+        }), [tD, aD]), (0, ID.useEffect)((() => {
+          const DD = QD.e.register(yD),
+            CD = bD.f.openCharacter(ND.current, MD);
+          mD.current = CD;
+          let cD = !0;
+          return CD.ready.then((() => {
+            cD && (HD(!0), UD.current())
+          })).catch((DD => {
+            console.error("Failed to set up the character preview", DD)
           })), () => {
-            bz = !1, zz(), uz.resetCamera(), uz.close(), rz.current = null
+            cD = !1, DD(), CD.resetCamera(), CD.close(), mD.current = null
           }
-        }), []), (0, Ez.useEffect)((() => {
-          fz <= 0 || sz <= 0 || rz.current.resize(fz, sz)
-        }), [fz, sz]), (0, Ez.useEffect)((() => {
-          if (!vz) return;
-          const zz = Nz.current;
-          for (const uz of iz.u) {
-            const bz = null === Zz || void 0 === Zz ? void 0 : Zz[uz],
-              Ez = zz[uz];
-            bz && bz !== Ez ? rz.current.setCosmetic(uz, bz) : !bz && Ez && oz.current[uz] && rz.current.setCosmetic(uz, oz.current[uz])
+        }), []), (0, ID.useEffect)((() => {
+          gD <= 0 || XD <= 0 || mD.current.resize(gD, XD)
+        }), [gD, XD]), (0, ID.useEffect)((() => {
+          if (!PD) return;
+          const DD = OD.current;
+          for (const CD of iD.u) {
+            const cD = null === tD || void 0 === tD ? void 0 : tD[CD],
+              ID = DD[CD];
+            cD && cD !== ID ? mD.current.setCosmetic(CD, cD) : !cD && ID && nD.current[CD] && mD.current.setCosmetic(CD, nD.current[CD])
           }
-          Nz.current = {
-            ...Zz
-          }, Pz.current = !0, Gz()
-        }), [Zz, vz, Gz]), (0, Ez.useEffect)((() => {
-          vz && rz.current.playEmote(null !== Rz && void 0 !== Rz ? Rz : null)
-        }), [Rz, Kz, vz]), (0, Ez.useEffect)((() => {
-          if (!vz || null === wz) return;
-          const zz = rz.current,
+          OD.current = {
+            ...tD
+          }, KD.current = !0, aD()
+        }), [tD, PD, aD]), (0, ID.useEffect)((() => {
+          PD && mD.current.playEmote(null !== ZD && void 0 !== ZD ? ZD : null)
+        }), [ZD, oD, PD]), (0, ID.useEffect)((() => {
+          if (!PD || null === vD) return;
+          const DD = mD.current,
             {
-              pitch: uz,
-              radius: bz
-            } = Mz.c[Fz];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return zz.setOrbit({
-            yaw: wz + Oz,
-            pitch: uz,
-            radius: bz
+              pitch: CD,
+              radius: cD
+            } = bD.c[MD];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return DD.setOrbit({
+            yaw: vD + SD,
+            pitch: CD,
+            radius: cD
           }), () => {
-            zz.resetCamera()
+            DD.resetCamera()
           };
-          const Ez = performance.now();
-          let nz = 0;
-          const iz = lz => {
-            zz.setOrbit({
-              yaw: wz + (lz - Ez) / 6e3 * 2 * Math.PI,
-              pitch: uz,
-              radius: bz
-            }), nz = requestAnimationFrame(iz)
+          const ID = performance.now();
+          let pD = 0;
+          const iD = fD => {
+            DD.setOrbit({
+              yaw: vD + (fD - ID) / 6e3 * 2 * Math.PI,
+              pitch: CD,
+              radius: cD
+            }), pD = requestAnimationFrame(iD)
           };
-          return nz = requestAnimationFrame(iz), () => {
-            cancelAnimationFrame(nz), zz.resetCamera()
+          return pD = requestAnimationFrame(iD), () => {
+            cancelAnimationFrame(pD), DD.resetCamera()
           }
-        }), [vz, wz]), (0, Hz.jsx)("div", {
+        }), [PD, vD]), (0, wD.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: Xz
+          ref: ND
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

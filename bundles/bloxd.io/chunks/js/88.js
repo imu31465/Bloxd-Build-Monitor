@@ -1,495 +1,495 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  40687: (zz, uz, bz) => {
-    async function Ez(zz, uz) {
+  40528: (DD, CD, cD) => {
+    async function ID(DD, CD) {
       const [{
-        clientSideServerUrls: Ez
+        clientSideServerUrls: ID
       }, {
-        postJsonWithMetricsCookiesAndJsonResponse: nz
+        postJsonWithMetricsCookiesAndJsonResponse: pD
       }, {
-        gameBridge: iz
-      }] = await Promise.all([Promise.resolve().then((() => bz(1195))), Promise.resolve().then((() => bz(1118))), Promise.resolve().then((() => bz(1871)))]), lz = iz.latest("connectedGame").websocketUrl;
-      if (!lz) throw new Error("AI Helper: not connected to a game server");
-      const Mz = `${Ez.getHttpUrlFromWebSocketUrl(lz)}${zz}`;
-      return await nz(Mz, uz, {
+        gameBridge: iD
+      }] = await Promise.all([Promise.resolve().then((() => cD(1199))), Promise.resolve().then((() => cD(1127))), Promise.resolve().then((() => cD(1905)))]), fD = iD.latest("connectedGame").websocketUrl;
+      if (!fD) throw new Error("AI Helper: not connected to a game server");
+      const bD = `${ID.getHttpUrlFromWebSocketUrl(fD)}${DD}`;
+      return await pD(bD, CD, {
         retries: 0
       })
     }
-    bz.r(uz), bz.d(uz, {
-      postToGameServer: () => Ez
+    cD.r(CD), cD.d(CD, {
+      postToGameServer: () => ID
     })
   },
-  40685: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      WorldCodeAiPanel: () => jp,
-      default: () => Ip
+  40525: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      WorldCodeAiPanel: () => EB,
+      default: () => eB
     });
-    var Ez = bz(56),
-      nz = bz(1038),
-      iz = bz.n(nz),
-      lz = bz(1089);
+    var ID = cD(53),
+      pD = cD(1049),
+      iD = cD.n(pD),
+      fD = cD(1093);
 
-    function Mz(zz) {
+    function bD(DD) {
       let {
-        title: uz,
-        children: bz,
-        isCalm: nz = !1,
-        isElsewhere: Mz = !1,
-        defaultOpen: tz = !1,
-        isOpen: Hz,
-        onToggle: Oz,
-        className: pz
-      } = zz;
-      const [dz, Fz] = (0, Ez.useState)(tz), Zz = null !== Hz && void 0 !== Hz ? Hz : dz;
-      return (0, lz.jsxs)("div", {
-        className: iz()("WorldCodeAiLog", nz && "WorldCodeAiLog-calm", Mz && "WorldCodeAiLog-elsewhere", Zz && "WorldCodeAiLog-open", pz),
-        children: [(0, lz.jsxs)("button", {
+        title: CD,
+        children: cD,
+        isCalm: pD = !1,
+        isElsewhere: bD = !1,
+        defaultOpen: QD = !1,
+        isOpen: wD,
+        onToggle: SD,
+        className: BD
+      } = DD;
+      const [yD, MD] = (0, ID.useState)(QD), tD = null !== wD && void 0 !== wD ? wD : yD;
+      return (0, fD.jsxs)("div", {
+        className: iD()("WorldCodeAiLog", pD && "WorldCodeAiLog-calm", bD && "WorldCodeAiLog-elsewhere", tD && "WorldCodeAiLog-open", BD),
+        children: [(0, fD.jsxs)("button", {
           className: "WorldCodeAiLogToggle",
-          "aria-expanded": Zz,
+          "aria-expanded": tD,
           onClick: () => {
-            void 0 === Hz && Fz(!Zz), null === Oz || void 0 === Oz || Oz(!Zz)
+            void 0 === wD && MD(!tD), null === SD || void 0 === SD || SD(!tD)
           },
-          children: [(0, lz.jsx)("span", {
+          children: [(0, fD.jsx)("span", {
             className: "WorldCodeAiLogChevron",
             "aria-hidden": "true",
-            children: Zz ? "\u25be" : "\u25b8"
-          }), uz]
-        }), Zz && (0, lz.jsx)("div", {
+            children: tD ? "\u25be" : "\u25b8"
+          }), CD]
+        }), tD && (0, fD.jsx)("div", {
           className: "WorldCodeAiLogBody",
-          children: bz
+          children: cD
         })]
       })
     }
-    var tz = bz(1871),
-      Hz = bz(6226),
-      Oz = bz(1419),
-      pz = bz(36326),
-      dz = bz(1047),
-      Fz = bz(4497),
-      Zz = bz(36334),
-      Rz = bz(1547),
-      Kz = bz(4581),
-      wz = bz(6214);
-    const Xz = new URL(Rz.e).host;
+    var QD = cD(1905),
+      wD = cD(6235),
+      SD = cD(1442),
+      BD = cD(36249),
+      yD = cD(1064),
+      MD = cD(4537),
+      tD = cD(36265),
+      ZD = cD(1577),
+      oD = cD(4597),
+      vD = cD(6224);
+    const ND = new URL(ZD.c).host;
 
-    function fz(zz) {
-      const uz = zz.trim();
-      let bz;
+    function gD(DD) {
+      const CD = DD.trim();
+      let cD;
       try {
-        const zz = /^docs\//i.test(uz) ? `${Rz.e}/` : `${Rz.e}/docs/`,
-          Ez = uz.toLowerCase().replace(/^www\./, "").startsWith(`${Xz}/`);
-        bz = new URL(Ez ? `https://${uz}` : uz, zz)
+        const DD = /^docs\//i.test(CD) ? `${ZD.c}/` : `${ZD.c}/docs/`,
+          ID = CD.toLowerCase().replace(/^www\./, "").startsWith(`${ND}/`);
+        cD = new URL(ID ? `https://${CD}` : CD, DD)
       } catch {
         return null
       }
-      if ("https:" !== bz.protocol && "http:" !== bz.protocol || bz.host !== Xz && bz.host !== `www.${Xz}`) return null;
-      const Ez = bz.pathname.toLowerCase();
-      return sz(Ez) || null !== (0, Kz.A)(Ez) ? Ez : (0, Kz.w)(Ez)
+      if ("https:" !== cD.protocol && "http:" !== cD.protocol || cD.host !== ND && cD.host !== `www.${ND}`) return null;
+      const ID = cD.pathname.toLowerCase();
+      return XD(ID) || null !== (0, oD.t)(ID) ? ID : (0, oD.q)(ID)
     }
 
-    function sz(zz) {
-      return zz === Kz.i || zz === Kz.n
+    function XD(DD) {
+      return DD === oD.g || DD === oD.k
     }
 
-    function rz(zz) {
-      const uz = fz(zz);
-      return null === uz ? zz : `${Rz.e}${uz}`
+    function mD(DD) {
+      const CD = gD(DD);
+      return null === CD ? DD : `${ZD.c}${CD}`
     }
-    var oz = bz(206),
-      Nz = bz(40624),
-      vz = bz.n(Nz);
+    var nD = cD(208),
+      OD = cD(40459),
+      PD = cD.n(OD);
 
-    function xz(zz) {
-      const uz = [];
-      let bz = 0;
-      return zz.split("\n").forEach(((zz, Ez) => {
-        uz.push({
-          text: zz,
-          from: bz,
-          index: Ez
-        }), bz += zz.length + 1
-      })), uz
-    }
-
-    function Jz(zz) {
-      return zz.replace(/^\s*\/\/.*$/, "").replace(/\s+/g, "").replace(/['`]/g, '"').replace(/[;,]+$/, "")
+    function HD(DD) {
+      const CD = [];
+      let cD = 0;
+      return DD.split("\n").forEach(((DD, ID) => {
+        CD.push({
+          text: DD,
+          from: cD,
+          index: ID
+        }), cD += DD.length + 1
+      })), CD
     }
 
-    function Az(zz, uz, bz) {
-      if (0 === uz.length) return null;
-      let Ez = null;
-      for (let nz = 0; nz + uz.length <= zz.length; nz++) {
-        if (uz.every(((uz, Ez) => bz(zz[nz + Ez].text) === uz))) {
-          if (Ez) return {
-            ...Ez,
+    function UD(DD) {
+      return DD.replace(/^\s*\/\/.*$/, "").replace(/\s+/g, "").replace(/['`]/g, '"').replace(/[;,]+$/, "")
+    }
+
+    function xD(DD, CD, cD) {
+      if (0 === CD.length) return null;
+      let ID = null;
+      for (let pD = 0; pD + CD.length <= DD.length; pD++) {
+        if (CD.every(((CD, ID) => cD(DD[pD + ID].text) === CD))) {
+          if (ID) return {
+            ...ID,
             isOnly: !1
           };
-          const bz = zz[nz + uz.length - 1];
-          Ez = {
-            from: zz[nz].from,
-            to: bz.from + bz.text.length
+          const cD = DD[pD + CD.length - 1];
+          ID = {
+            from: DD[pD].from,
+            to: cD.from + cD.text.length
           }
         }
       }
-      return Ez ? {
-        ...Ez,
+      return ID ? {
+        ...ID,
         isOnly: !0
       } : null
     }
 
-    function Tz(zz, uz) {
-      if ("" === uz.trim()) return null;
-      const bz = xz(zz),
-        Ez = function(zz) {
-          return zz.split("\n").map((zz => zz.trim())).filter(((zz, uz, bz) => "" !== zz || uz > 0 && uz < bz.length - 1))
-        }(uz),
-        nz = Az(bz, Ez, (zz => zz.trim()));
-      if (null !== nz) return {
-        from: nz.from,
-        to: nz.to,
-        isLoose: !nz.isOnly
+    function qD(DD, CD) {
+      if ("" === CD.trim()) return null;
+      const cD = HD(DD),
+        ID = function(DD) {
+          return DD.split("\n").map((DD => DD.trim())).filter(((DD, CD, cD) => "" !== DD || CD > 0 && CD < cD.length - 1))
+        }(CD),
+        pD = xD(cD, ID, (DD => DD.trim()));
+      if (null !== pD) return {
+        from: pD.from,
+        to: pD.to,
+        isLoose: !pD.isOnly
       };
-      const iz = zz => zz.trim().replace(/;+$/, ""),
-        lz = Az(bz, Ez.map(iz), iz);
-      if (null !== lz) {
-        const bz = zz.indexOf(uz),
-          Ez = -1 !== bz && (bz < lz.from || bz >= lz.to);
+      const iD = DD => DD.trim().replace(/;+$/, ""),
+        fD = xD(cD, ID.map(iD), iD);
+      if (null !== fD) {
+        const cD = DD.indexOf(CD),
+          ID = -1 !== cD && (cD < fD.from || cD >= fD.to);
         return {
-          from: lz.from,
-          to: lz.to,
-          isLoose: !lz.isOnly || Ez
+          from: fD.from,
+          to: fD.to,
+          isLoose: !fD.isOnly || ID
         }
       }
-      const Mz = zz.indexOf(uz);
-      if (-1 !== Mz) {
-        var tz, Hz, Oz;
-        const bz = /\w/.test(uz[0]) && /\w/.test(null !== (tz = zz[Mz - 1]) && void 0 !== tz ? tz : "") || /\w/.test(null !== (Hz = uz.at(-1)) && void 0 !== Hz ? Hz : "") && /\w/.test(null !== (Oz = zz[Mz + uz.length]) && void 0 !== Oz ? Oz : "");
+      const bD = DD.indexOf(CD);
+      if (-1 !== bD) {
+        var QD, wD, SD;
+        const cD = /\w/.test(CD[0]) && /\w/.test(null !== (QD = DD[bD - 1]) && void 0 !== QD ? QD : "") || /\w/.test(null !== (wD = CD.at(-1)) && void 0 !== wD ? wD : "") && /\w/.test(null !== (SD = DD[bD + CD.length]) && void 0 !== SD ? SD : "");
         return {
-          from: Mz,
-          to: Mz + uz.length,
-          isLoose: bz || -1 !== zz.indexOf(uz, Mz + 1)
+          from: bD,
+          to: bD + CD.length,
+          isLoose: cD || -1 !== DD.indexOf(CD, bD + 1)
         }
       }
-      const pz = uz.split("\n").map(Jz).filter(Boolean),
-        dz = Az(bz.filter((zz => "" !== Jz(zz.text))), pz, Jz);
-      return null === dz ? null : {
-        from: dz.from,
-        to: dz.to,
+      const BD = CD.split("\n").map(UD).filter(Boolean),
+        yD = xD(cD.filter((DD => "" !== UD(DD.text))), BD, UD);
+      return null === yD ? null : {
+        from: yD.from,
+        to: yD.to,
         isLoose: !0
       }
     }
 
-    function Lz(zz) {
-      var uz, bz;
-      return null !== (uz = null === (bz = /^[ \t]*/.exec(zz)) || void 0 === bz ? void 0 : bz[0]) && void 0 !== uz ? uz : ""
+    function JD(DD) {
+      var CD, cD;
+      return null !== (CD = null === (cD = /^[ \t]*/.exec(DD)) || void 0 === cD ? void 0 : cD[0]) && void 0 !== CD ? CD : ""
     }
 
-    function Pz(zz, uz, bz, Ez) {
-      if (uz.from > 0 && "\n" !== zz[uz.from - 1]) return Ez;
-      const nz = zz.slice(uz.from, uz.to).split("\n").filter((zz => "" !== zz.trim())),
-        iz = bz.split("\n").filter((zz => "" !== zz.trim()));
-      if (0 === nz.length || 0 === iz.length) return Ez;
-      const lz = Lz(nz[0]),
-        Mz = Lz(iz[0]);
-      if (lz === Mz) return Ez;
-      const tz = iz.length > 1 && iz.length === nz.length && iz.slice(1).every(((zz, uz) => Lz(zz) === Lz(nz[uz + 1]))),
-        Hz = Ez.split("\n"),
-        Oz = Hz.findIndex((zz => "" !== zz.trim()));
-      if (-1 === Oz || Lz(Hz[Oz]) === lz) return Ez;
-      let pz = !1;
-      return Hz.map(((zz, uz) => {
-        var bz, Ez;
-        const nz = pz;
-        return (null !== (bz = null === (Ez = zz.replace(/\\`/g, "").match(/`/g)) || void 0 === Ez ? void 0 : Ez.length) && void 0 !== bz ? bz : 0) % 2 === 1 && (pz = !pz), nz || tz && uz !== Oz ? zz : function(zz, uz, bz) {
-          if ("" === zz.trim()) return zz;
-          const Ez = Lz(zz);
-          return Ez.startsWith(uz) ? bz + zz.slice(uz.length) : uz.startsWith(Ez) ? bz.slice(0, Math.max(0, bz.length - (uz.length - Ez.length))) + zz.trimStart() : zz
-        }(zz, Mz, lz)
+    function KD(DD, CD, cD, ID) {
+      if (CD.from > 0 && "\n" !== DD[CD.from - 1]) return ID;
+      const pD = DD.slice(CD.from, CD.to).split("\n").filter((DD => "" !== DD.trim())),
+        iD = cD.split("\n").filter((DD => "" !== DD.trim()));
+      if (0 === pD.length || 0 === iD.length) return ID;
+      const fD = JD(pD[0]),
+        bD = JD(iD[0]);
+      if (fD === bD) return ID;
+      const QD = iD.length > 1 && iD.length === pD.length && iD.slice(1).every(((DD, CD) => JD(DD) === JD(pD[CD + 1]))),
+        wD = ID.split("\n"),
+        SD = wD.findIndex((DD => "" !== DD.trim()));
+      if (-1 === SD || JD(wD[SD]) === fD) return ID;
+      let BD = !1;
+      return wD.map(((DD, CD) => {
+        var cD, ID;
+        const pD = BD;
+        return (null !== (cD = null === (ID = DD.replace(/\\`/g, "").match(/`/g)) || void 0 === ID ? void 0 : ID.length) && void 0 !== cD ? cD : 0) % 2 === 1 && (BD = !BD), pD || QD && CD !== SD ? DD : function(DD, CD, cD) {
+          if ("" === DD.trim()) return DD;
+          const ID = JD(DD);
+          return ID.startsWith(CD) ? cD + DD.slice(CD.length) : CD.startsWith(ID) ? cD.slice(0, Math.max(0, cD.length - (CD.length - ID.length))) + DD.trimStart() : DD
+        }(DD, bD, fD)
       })).join("\n")
     }
 
-    function Gz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Ez = new Map;
-      for (const Mz of zz.split("\n")) {
-        const zz = Mz.trim(),
-          uz = zz.replace(/;$/, "");
-        "" === uz || zz.endsWith(";") || Ez.has(uz) || Ez.set(uz, zz)
+    function aD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const ID = new Map;
+      for (const bD of DD.split("\n")) {
+        const DD = bD.trim(),
+          CD = DD.replace(/;$/, "");
+        "" === CD || DD.endsWith(";") || ID.has(CD) || ID.set(CD, DD)
       }
-      const nz = uz.split("\n");
-      let iz = !1;
-      const lz = nz.map(((zz, uz) => {
-        var lz, Mz, tz;
-        const Hz = iz;
-        (null !== (lz = null === (Mz = zz.replace(/\\`/g, "").match(/`/g)) || void 0 === Mz ? void 0 : Mz.length) && void 0 !== lz ? lz : 0) % 2 === 1 && (iz = !iz);
-        const Oz = zz.trim(),
-          pz = Ez.get(Oz.replace(/;$/, ""));
-        if (void 0 === pz || pz === Oz || Hz || iz) return zz;
-        const dz = null !== (tz = nz.slice(uz + 1).find((zz => "" !== zz.trim()))) && void 0 !== tz ? tz : bz;
-        return /^(?:[([`+-]|\/(?![/*]))/.test(dz.trim()) ? zz : zz.slice(0, zz.length - zz.trimStart().length) + pz
+      const pD = CD.split("\n");
+      let iD = !1;
+      const fD = pD.map(((DD, CD) => {
+        var fD, bD, QD;
+        const wD = iD;
+        (null !== (fD = null === (bD = DD.replace(/\\`/g, "").match(/`/g)) || void 0 === bD ? void 0 : bD.length) && void 0 !== fD ? fD : 0) % 2 === 1 && (iD = !iD);
+        const SD = DD.trim(),
+          BD = ID.get(SD.replace(/;$/, ""));
+        if (void 0 === BD || BD === SD || wD || iD) return DD;
+        const yD = null !== (QD = pD.slice(CD + 1).find((DD => "" !== DD.trim()))) && void 0 !== QD ? QD : cD;
+        return /^(?:[([`+-]|\/(?![/*]))/.test(yD.trim()) ? DD : DD.slice(0, DD.length - DD.trimStart().length) + BD
       })).join("\n");
-      return lz.trim() === zz.trim() && uz.trim() !== zz.trim() ? uz : lz
+      return fD.trim() === DD.trim() && CD.trim() !== DD.trim() ? CD : fD
     }
 
-    function az(zz) {
-      var uz;
-      return null !== (uz = zz.split("\n").find((zz => "" !== zz.trim()))) && void 0 !== uz ? uz : ""
+    function VD(DD) {
+      var CD;
+      return null !== (CD = DD.split("\n").find((DD => "" !== DD.trim()))) && void 0 !== CD ? CD : ""
     }
 
-    function Vz(zz, uz) {
-      if (zz === uz) return 1;
-      if (zz.length < 2 || uz.length < 2) return 0;
-      const bz = new Map;
-      for (let lz = 0; lz < zz.length - 1; lz++) {
-        var Ez;
-        const uz = zz.slice(lz, lz + 2);
-        bz.set(uz, (null !== (Ez = bz.get(uz)) && void 0 !== Ez ? Ez : 0) + 1)
+    function zD(DD, CD) {
+      if (DD === CD) return 1;
+      if (DD.length < 2 || CD.length < 2) return 0;
+      const cD = new Map;
+      for (let fD = 0; fD < DD.length - 1; fD++) {
+        var ID;
+        const CD = DD.slice(fD, fD + 2);
+        cD.set(CD, (null !== (ID = cD.get(CD)) && void 0 !== ID ? ID : 0) + 1)
       }
-      let nz = 0;
-      for (let lz = 0; lz < uz.length - 1; lz++) {
-        var iz;
-        const zz = uz.slice(lz, lz + 2),
-          Ez = null !== (iz = bz.get(zz)) && void 0 !== iz ? iz : 0;
-        Ez > 0 && (bz.set(zz, Ez - 1), nz++)
+      let pD = 0;
+      for (let fD = 0; fD < CD.length - 1; fD++) {
+        var iD;
+        const DD = CD.slice(fD, fD + 2),
+          ID = null !== (iD = cD.get(DD)) && void 0 !== iD ? iD : 0;
+        ID > 0 && (cD.set(DD, ID - 1), pD++)
       }
-      return 2 * nz / (zz.length + uz.length - 2)
+      return 2 * pD / (DD.length + CD.length - 2)
     }
 
-    function mz(zz, uz) {
-      const bz = uz.split("\n").map(Jz).filter(Boolean),
-        Ez = xz(zz).filter((zz => "" !== Jz(zz.text)));
-      if (0 === bz.length || 0 === Ez.length) return null;
-      const nz = Math.min(bz.length, Ez.length);
-      let iz = null;
-      for (let Mz = 0; Mz + nz <= Ez.length; Mz++) {
-        let zz = 0;
-        for (let uz = 0; uz < nz; uz++) zz += Vz(Jz(Ez[Mz + uz].text), bz[uz]);
-        zz /= bz.length, (null === iz || zz > iz.score) && (iz = {
-          start: Mz,
-          score: zz
+    function jD(DD, CD) {
+      const cD = CD.split("\n").map(UD).filter(Boolean),
+        ID = HD(DD).filter((DD => "" !== UD(DD.text)));
+      if (0 === cD.length || 0 === ID.length) return null;
+      const pD = Math.min(cD.length, ID.length);
+      let iD = null;
+      for (let bD = 0; bD + pD <= ID.length; bD++) {
+        let DD = 0;
+        for (let CD = 0; CD < pD; CD++) DD += zD(UD(ID[bD + CD].text), cD[CD]);
+        DD /= cD.length, (null === iD || DD > iD.score) && (iD = {
+          start: bD,
+          score: DD
         })
       }
-      if (null === iz || iz.score < .5) return null;
-      const lz = Ez.slice(iz.start, iz.start + nz);
+      if (null === iD || iD.score < .5) return null;
+      const fD = ID.slice(iD.start, iD.start + pD);
       return {
-        line: lz[0].index + 1,
-        lastLine: lz[lz.length - 1].index + 1,
-        text: lz.map((zz => zz.text.trim())).join("\n")
+        line: fD[0].index + 1,
+        lastLine: fD[fD.length - 1].index + 1,
+        text: fD.map((DD => DD.text.trim())).join("\n")
       }
     }
 
-    function qz(zz) {
-      return vz().isFunctionExpression(zz) || vz().isArrowFunction(zz)
+    function lD(DD) {
+      return PD().isFunctionExpression(DD) || PD().isArrowFunction(DD)
     }
 
-    function hz(zz) {
-      return vz().isExpressionStatement(zz) && vz().isBinaryExpression(zz.expression) && vz().isPropertyAccessExpression(zz.expression.left) && ! function(zz) {
-        return vz().isIdentifier(zz) && ("globalThis" === zz.text || "window" === zz.text || "self" === zz.text)
-      }(zz.expression.left.expression)
+    function LD(DD) {
+      return PD().isExpressionStatement(DD) && PD().isBinaryExpression(DD.expression) && PD().isPropertyAccessExpression(DD.expression.left) && ! function(DD) {
+        return PD().isIdentifier(DD) && ("globalThis" === DD.text || "window" === DD.text || "self" === DD.text)
+      }(DD.expression.left.expression)
     }
 
-    function Uz(zz, uz, bz) {
-      let Ez = bz;
-      for (const iz of (null !== (nz = vz().getLeadingCommentRanges(zz, uz.getFullStart())) && void 0 !== nz ? nz : []).reverse()) {
-        var nz;
-        if (/\n[^\S\n]*\n/.test(zz.slice(iz.end, Ez))) break;
-        Ez = iz.pos
+    function TD(DD, CD, cD) {
+      let ID = cD;
+      for (const iD of (null !== (pD = PD().getLeadingCommentRanges(DD, CD.getFullStart())) && void 0 !== pD ? pD : []).reverse()) {
+        var pD;
+        if (/\n[^\S\n]*\n/.test(DD.slice(iD.end, ID))) break;
+        ID = iD.pos
       }
-      return Ez
+      return ID
     }
 
-    function cz(zz) {
-      var uz;
+    function GD(DD) {
+      var CD;
       const {
-        parseDiagnostics: bz
-      } = zz;
-      return (null !== (uz = null === bz || void 0 === bz ? void 0 : bz.length) && void 0 !== uz ? uz : 0) > 0
+        parseDiagnostics: cD
+      } = DD;
+      return (null !== (CD = null === cD || void 0 === cD ? void 0 : cD.length) && void 0 !== CD ? CD : 0) > 0
     }
 
-    function gz(zz) {
-      const uz = vz().createSourceFile("worldCode.js", zz, vz().ScriptTarget.Latest, !1, vz().ScriptKind.JS),
-        bz = [],
-        Ez = (nz, iz) => {
-          const lz = function(zz) {
-            var uz, bz;
-            if (vz().isFunctionDeclaration(zz)) return null !== (uz = null === (bz = zz.name) || void 0 === bz ? void 0 : bz.text) && void 0 !== uz ? uz : null;
-            if (vz().isVariableStatement(zz) && 1 === zz.declarationList.declarations.length) {
-              const uz = zz.declarationList.declarations[0];
-              return vz().isIdentifier(uz.name) && uz.initializer && qz(uz.initializer) ? uz.name.text : null
+    function RD(DD) {
+      const CD = PD().createSourceFile("worldCode.js", DD, PD().ScriptTarget.Latest, !1, PD().ScriptKind.JS),
+        cD = [],
+        ID = (pD, iD) => {
+          const fD = function(DD) {
+            var CD, cD;
+            if (PD().isFunctionDeclaration(DD)) return null !== (CD = null === (cD = DD.name) || void 0 === cD ? void 0 : cD.text) && void 0 !== CD ? CD : null;
+            if (PD().isVariableStatement(DD) && 1 === DD.declarationList.declarations.length) {
+              const CD = DD.declarationList.declarations[0];
+              return PD().isIdentifier(CD.name) && CD.initializer && lD(CD.initializer) ? CD.name.text : null
             }
-            if (vz().isExpressionStatement(zz) && vz().isBinaryExpression(zz.expression) && zz.expression.operatorToken.kind === vz().SyntaxKind.EqualsToken && qz(zz.expression.right)) {
-              const uz = zz.expression.left;
-              return vz().isIdentifier(uz) ? uz.text : vz().isPropertyAccessExpression(uz) ? uz.name.text : null
+            if (PD().isExpressionStatement(DD) && PD().isBinaryExpression(DD.expression) && DD.expression.operatorToken.kind === PD().SyntaxKind.EqualsToken && lD(DD.expression.right)) {
+              const CD = DD.expression.left;
+              return PD().isIdentifier(CD) ? CD.text : PD().isPropertyAccessExpression(CD) ? CD.name.text : null
             }
             return null
-          }(nz);
-          if (null !== lz) {
-            const Ez = nz.getStart(uz);
-            bz.push({
-              name: lz,
-              from: Ez,
-              to: nz.getEnd(),
-              commentFrom: Uz(zz, nz, Ez),
-              topLevel: iz,
-              isProperty: hz(nz)
+          }(pD);
+          if (null !== fD) {
+            const ID = pD.getStart(CD);
+            cD.push({
+              name: fD,
+              from: ID,
+              to: pD.getEnd(),
+              commentFrom: TD(DD, pD, ID),
+              topLevel: iD,
+              isProperty: LD(pD)
             })
           }
-          vz().forEachChild(nz, (zz => {
-            Ez(zz, !1)
+          PD().forEachChild(pD, (DD => {
+            ID(DD, !1)
           }))
         };
-      for (const nz of uz.statements) Ez(nz, !0);
+      for (const pD of CD.statements) ID(pD, !0);
       return {
-        functions: bz,
-        hasErrors: cz(uz)
+        functions: cD,
+        hasErrors: GD(CD)
       }
     }
 
-    function Sz(zz) {
-      return gz(zz).functions
+    function kD(DD) {
+      return RD(DD).functions
     }
 
-    function yz(zz) {
-      return zz.trim().replace(/^(?:callback:|function\s+)/, "").replace(/\s*\(.*$/s, "").trim()
+    function dD(DD) {
+      return DD.trim().replace(/^(?:callback:|function\s+)/, "").replace(/\s*\(.*$/s, "").trim()
     }
 
-    function Dz(zz, uz) {
-      var bz;
-      const Ez = zz.filter((zz => zz.name === uz)),
-        nz = Ez.filter((zz => !zz.isProperty)),
-        iz = nz.length > 0 ? nz : Ez;
-      return null !== (bz = iz.find((zz => zz.topLevel))) && void 0 !== bz ? bz : iz[0]
+    function YD(DD, CD) {
+      var cD;
+      const ID = DD.filter((DD => DD.name === CD)),
+        pD = ID.filter((DD => !DD.isProperty)),
+        iD = pD.length > 0 ? pD : ID;
+      return null !== (cD = iD.find((DD => DD.topLevel))) && void 0 !== cD ? cD : iD[0]
     }
 
-    function Qz(zz, uz) {
-      return "" === zz.trim() ? `${uz.trim()}\n` : `${zz.replace(/\s*$/,"")}\n\n${uz.trim()}\n`
+    function WD(DD, CD) {
+      return "" === DD.trim() ? `${CD.trim()}\n` : `${DD.replace(/\s*$/,"")}\n\n${CD.trim()}\n`
     }
 
-    function Wz(zz, uz, bz) {
-      var Ez, nz;
-      const iz = gz(zz),
+    function sD(DD, CD, cD) {
+      var ID, pD;
+      const iD = RD(DD),
         {
-          functions: lz
-        } = iz,
-        Mz = Sz(bz),
-        tz = null !== (Ez = Mz.find((zz => zz.topLevel && !zz.isProperty))) && void 0 !== Ez ? Ez : Mz.find((zz => zz.topLevel)),
-        Hz = yz(uz),
-        Oz = tz ? Dz(lz, tz.name) : void 0,
-        pz = null !== (nz = void 0 !== Oz && !Mz.some((zz => zz.topLevel && zz.name === Hz)) ? Oz : Dz(lz, Hz)) && void 0 !== nz ? nz : Oz;
-      return pz ? ez(zz, iz, pz, Mz, bz) : Qz(zz, bz)
+          functions: fD
+        } = iD,
+        bD = kD(cD),
+        QD = null !== (ID = bD.find((DD => DD.topLevel && !DD.isProperty))) && void 0 !== ID ? ID : bD.find((DD => DD.topLevel)),
+        wD = dD(CD),
+        SD = QD ? YD(fD, QD.name) : void 0,
+        BD = null !== (pD = void 0 !== SD && !bD.some((DD => DD.topLevel && DD.name === wD)) ? SD : YD(fD, wD)) && void 0 !== pD ? pD : SD;
+      return BD ? ED(DD, iD, BD, bD, cD) : WD(DD, cD)
     }
 
-    function ez(zz, uz, bz, Ez, nz) {
+    function ED(DD, CD, cD, ID, pD) {
       let {
-        functions: iz,
-        hasErrors: lz
-      } = uz;
-      const Mz = iz.some((zz => zz.from > bz.from && zz.to <= bz.to && !Ez.some((uz => uz.name === zz.name))));
-      if (lz && Mz) return null;
-      const tz = /^\s*(?:\/\/|\/\*)/.test(nz) ? bz.commentFrom : bz.from;
-      return zz.slice(0, tz) + Gz(zz.slice(tz, bz.to), nz.trim(), az(zz.slice(bz.to))) + zz.slice(bz.to)
+        functions: iD,
+        hasErrors: fD
+      } = CD;
+      const bD = iD.some((DD => DD.from > cD.from && DD.to <= cD.to && !ID.some((CD => CD.name === DD.name))));
+      if (fD && bD) return null;
+      const QD = /^\s*(?:\/\/|\/\*)/.test(pD) ? cD.commentFrom : cD.from;
+      return DD.slice(0, QD) + aD(DD.slice(QD, cD.to), pD.trim(), VD(DD.slice(cD.to))) + DD.slice(cD.to)
     }
 
-    function jz(zz, uz, bz, Ez, nz) {
-      const iz = Ez.trim();
-      if (iz.includes("\n") || !iz.endsWith("{")) return null;
-      const lz = gz(zz),
-        Mz = lz.functions.find((Ez => Ez.topLevel && Iz(zz, Ez.from) <= uz && bz < Ez.to && !zz.slice(Ez.from, bz).includes("\n"))),
-        tz = gz(nz),
-        Hz = tz.functions.filter((zz => zz.topLevel)),
-        Oz = !tz.hasErrors && (1 === Hz.length || Hz.some((zz => zz.name === (null === Mz || void 0 === Mz ? void 0 : Mz.name)))),
-        pz = 1 === Hz.length && Hz[0].name !== (null === Mz || void 0 === Mz ? void 0 : Mz.name) ? Hz[0].name : void 0,
-        dz = void 0 === pz ? void 0 : lz.functions.find((zz => zz.topLevel && zz.name === pz));
-      return Mz && Oz ? ez(zz, lz, null !== dz && void 0 !== dz ? dz : Mz, tz.functions, nz) : function(zz, uz, bz, Ez, nz) {
-        const iz = vz().createSourceFile("worldCode.js", zz, vz().ScriptTarget.Latest, !0, vz().ScriptKind.JS),
-          lz = iz.statements.find((Ez => {
-            const nz = Ez.getStart(iz);
-            return Iz(zz, nz) <= uz && bz < Ez.getEnd() && !zz.slice(nz, bz).includes("\n")
+    function eD(DD, CD, cD, ID, pD) {
+      const iD = ID.trim();
+      if (iD.includes("\n") || !iD.endsWith("{")) return null;
+      const fD = RD(DD),
+        bD = fD.functions.find((ID => ID.topLevel && uD(DD, ID.from) <= CD && cD < ID.to && !DD.slice(ID.from, cD).includes("\n"))),
+        QD = RD(pD),
+        wD = QD.functions.filter((DD => DD.topLevel)),
+        SD = !QD.hasErrors && (1 === wD.length || wD.some((DD => DD.name === (null === bD || void 0 === bD ? void 0 : bD.name)))),
+        BD = 1 === wD.length && wD[0].name !== (null === bD || void 0 === bD ? void 0 : bD.name) ? wD[0].name : void 0,
+        yD = void 0 === BD ? void 0 : fD.functions.find((DD => DD.topLevel && DD.name === BD));
+      return bD && SD ? ED(DD, fD, null !== yD && void 0 !== yD ? yD : bD, QD.functions, pD) : function(DD, CD, cD, ID, pD) {
+        const iD = PD().createSourceFile("worldCode.js", DD, PD().ScriptTarget.Latest, !0, PD().ScriptKind.JS),
+          fD = iD.statements.find((ID => {
+            const pD = ID.getStart(iD);
+            return uD(DD, pD) <= CD && cD < ID.getEnd() && !DD.slice(pD, cD).includes("\n")
           })),
-          Mz = vz().createSourceFile("replace.js", nz.trim(), vz().ScriptTarget.Latest, !0, vz().ScriptKind.JS),
-          tz = 1 === Mz.statements.length ? Mz.statements[0] : void 0;
-        if (!lz || !tz || cz(Mz) || tz.kind !== lz.kind || !tz.getText(Mz).startsWith(Ez)) return null;
-        const Hz = lz.getStart(iz);
-        return zz.slice(0, Hz) + nz.trim() + zz.slice(lz.getEnd())
-      }(zz, uz, bz, iz, nz)
+          bD = PD().createSourceFile("replace.js", pD.trim(), PD().ScriptTarget.Latest, !0, PD().ScriptKind.JS),
+          QD = 1 === bD.statements.length ? bD.statements[0] : void 0;
+        if (!fD || !QD || GD(bD) || QD.kind !== fD.kind || !QD.getText(bD).startsWith(ID)) return null;
+        const wD = fD.getStart(iD);
+        return DD.slice(0, wD) + pD.trim() + DD.slice(fD.getEnd())
+      }(DD, CD, cD, iD, pD)
     }
 
-    function Iz(zz, uz) {
-      let bz = uz;
-      for (; bz > 0 && (" " === zz[bz - 1] || "\t" === zz[bz - 1]);) bz--;
-      return 0 === bz || "\n" === zz[bz - 1] ? bz : uz
+    function uD(DD, CD) {
+      let cD = CD;
+      for (; cD > 0 && (" " === DD[cD - 1] || "\t" === DD[cD - 1]);) cD--;
+      return 0 === cD || "\n" === DD[cD - 1] ? cD : CD
     }
 
-    function Bz(zz, uz, bz) {
-      const Ez = uz.trim().toLowerCase();
-      if ("" !== zz.trim() && ("top" === Ez || "start" === Ez)) return `${bz.trim()}\n\n${zz.replace(/^\s+/,"")}`;
-      const nz = "end" === Ez ? void 0 : Dz(Sz(zz), yz(uz));
-      return nz ? `${zz.slice(0,nz.to)}\n\n${bz.trim()}${zz.slice(nz.to)}` : Qz(zz, bz)
+    function hD(DD, CD, cD) {
+      const ID = CD.trim().toLowerCase();
+      if ("" !== DD.trim() && ("top" === ID || "start" === ID)) return `${cD.trim()}\n\n${DD.replace(/^\s+/,"")}`;
+      const pD = "end" === ID ? void 0 : YD(kD(DD), dD(CD));
+      return pD ? `${DD.slice(0,pD.to)}\n\n${cD.trim()}${DD.slice(pD.to)}` : WD(DD, cD)
     }
 
-    function Cz(zz) {
-      return [...new Set(Sz(zz).filter((zz => zz.topLevel)).map((zz => zz.name)))]
+    function rD(DD) {
+      return [...new Set(kD(DD).filter((DD => DD.topLevel)).map((DD => DD.name)))]
     }
-    const Yz = 120,
-      kz = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
+    const AD = 120,
+      FD = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
 
-    function zu(zz) {
-      let uz = zz.replace(/\s+/g, " ").trim();
-      if ("" === uz || kz.test(uz)) return null;
-      if (uz.length > Yz) {
-        const zz = uz.slice(0, Yz);
-        uz = `${zz.slice(0,Math.max(zz.lastIndexOf(" "),60)).trimEnd()}\u2026`
+    function DC(DD) {
+      let CD = DD.replace(/\s+/g, " ").trim();
+      if ("" === CD || FD.test(CD)) return null;
+      if (CD.length > AD) {
+        const DD = CD.slice(0, AD);
+        CD = `${DD.slice(0,Math.max(DD.lastIndexOf(" "),60)).trimEnd()}\u2026`
       }
-      return uz.charAt(0).toUpperCase() + uz.slice(1)
+      return CD.charAt(0).toUpperCase() + CD.slice(1)
     }
-    const uu = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
+    const CC = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
 
-    function bu(zz) {
-      var uz, bz;
-      const Ez = null === (uz = /\(([^)]*)\)/.exec(zz)) || void 0 === uz || null === (bz = uz[1].split(",")[1]) || void 0 === bz ? void 0 : bz.trim();
-      return Ez && /^[A-Za-z_$][\w$]*$/.test(Ez) ? [...zz.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((zz => zz[2].split(",").some((zz => zz.trim() === Ez)) ? [zz[1]] : [])) : []
+    function cC(DD) {
+      var CD, cD;
+      const ID = null === (CD = /\(([^)]*)\)/.exec(DD)) || void 0 === CD || null === (cD = CD[1].split(",")[1]) || void 0 === cD ? void 0 : cD.trim();
+      return ID && /^[A-Za-z_$][\w$]*$/.test(ID) ? [...DD.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((DD => DD[2].split(",").some((DD => DD.trim() === ID)) ? [DD[1]] : [])) : []
     }
 
-    function Eu(zz, uz) {
-      const bz = new Set,
-        Ez = new Set,
-        nz = new Set,
-        iz = Object.values(zz).map((zz => {
-          const uz = Sz(zz),
-            bz = uz.filter((zz => "playerCommand" === zz.name)).map((uz => zz.slice(uz.from, uz.to)));
+    function IC(DD, CD) {
+      const cD = new Set,
+        ID = new Set,
+        pD = new Set,
+        iD = Object.values(DD).map((DD => {
+          const CD = kD(DD),
+            cD = CD.filter((DD => "playerCommand" === DD.name)).map((CD => DD.slice(CD.from, CD.to)));
           return {
-            text: zz,
-            found: uz,
-            own: bz
+            text: DD,
+            found: CD,
+            own: cD
           }
         })),
-        lz = new Set(iz.flatMap((zz => {
+        fD = new Set(iD.flatMap((DD => {
           let {
-            own: uz
-          } = zz;
-          return uz.flatMap(bu)
+            own: CD
+          } = DD;
+          return CD.flatMap(cC)
         })));
       for (const {
-          text: tz,
-          found: Hz,
-          own: Oz
+          text: QD,
+          found: wD,
+          own: SD
         }
-        of iz) {
-        for (const nz of Cz(tz)) uz.has(nz) ? bz.add(nz) : Ez.add(nz);
-        const zz = [...Oz, ...Hz.filter((zz => "playerCommand" !== zz.name && lz.has(zz.name))).map((zz => tz.slice(zz.from, zz.to)))],
-          iz = zz.length > 0 || !/\bplayerCommand\b/.test(tz) ? zz : [tz];
-        for (const uz of iz)
-          for (const zz of uz.matchAll(uu)) nz.add(`/${zz[1].split(/\s/)[0]}`)
+        of iD) {
+        for (const pD of rD(QD)) CD.has(pD) ? cD.add(pD) : ID.add(pD);
+        const DD = [...SD, ...wD.filter((DD => "playerCommand" !== DD.name && fD.has(DD.name))).map((DD => QD.slice(DD.from, DD.to)))],
+          iD = DD.length > 0 || !/\bplayerCommand\b/.test(QD) ? DD : [QD];
+        for (const CD of iD)
+          for (const DD of CD.matchAll(CC)) pD.add(`/${DD[1].split(/\s/)[0]}`)
       }
-      const Mz = zz => [...zz].slice(0, 12);
+      const bD = DD => [...DD].slice(0, 12);
       return {
-        callbacks: Mz(bz),
-        commands: Mz(nz),
-        functions: Mz(Ez)
+        callbacks: bD(cD),
+        commands: bD(pD),
+        functions: bD(ID)
       }
     }
-    const nu = new Map([
+    const pC = new Map([
       ["onPlayerJoin", "When a player joins"],
       ["onPlayerLeave", "When a player leaves"],
       ["onPlayerChat", "When a player chats"],
@@ -520,87 +520,87 @@ export const modules = {
       ["doPeriodicSave", "When the game saves"]
     ]);
 
-    function iu(zz) {
-      const uz = nu.get(zz);
-      if (uz) return uz;
-      return `When: ${zz.replace(/^on/,"").replace(/([a-z])([A-Z])/g,"$1 $2").toLowerCase()}`
+    function iC(DD) {
+      const CD = pC.get(DD);
+      if (CD) return CD;
+      return `When: ${DD.replace(/^on/,"").replace(/([a-z])([A-Z])/g,"$1 $2").toLowerCase()}`
     }
 
-    function lu(zz) {
-      return Array.isArray(zz) && zz.every((zz => "string" === typeof zz))
+    function fC(DD) {
+      return Array.isArray(DD) && DD.every((DD => "string" === typeof DD))
     }
-    const Mu = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
-      tu = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
+    const bC = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
+      QC = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
 
-    function Hu(zz) {
-      var uz, bz;
-      const Ez = zz.trim().split(/\s+/).length,
-        nz = new Set((null !== (uz = zz.match(Mu)) && void 0 !== uz ? uz : []).map((zz => zz.toLowerCase().replace(/s$/, "")))).size,
-        iz = (null !== (bz = zz.match(tu)) && void 0 !== bz ? bz : []).length;
-      return nz >= 2 && iz >= 2 || Ez >= 30 && iz >= 3
-    }
-
-    function Ou(zz) {
-      const uz = zz.split(/\n|\|/).map((zz => zz.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((zz => "" !== zz)).slice(0, 5).map((zz => zz.length > 90 ? `${zz.slice(0,89).trimEnd()}\u2026` : zz));
-      return uz.length >= 2 ? uz : []
-    }
-    var pu = bz(4629);
-
-    function du(zz) {
-      return zz.replace(/^on/, "").replace(/^player/i, "").toLowerCase()
+    function wC(DD) {
+      var CD, cD;
+      const ID = DD.trim().split(/\s+/).length,
+        pD = new Set((null !== (CD = DD.match(bC)) && void 0 !== CD ? CD : []).map((DD => DD.toLowerCase().replace(/s$/, "")))).size,
+        iD = (null !== (cD = DD.match(QC)) && void 0 !== cD ? cD : []).length;
+      return pD >= 2 && iD >= 2 || ID >= 30 && iD >= 3
     }
 
-    function Fu(zz) {
-      const uz = new Set;
-      for (const bz of zz.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) uz.add(bz[1]);
-      for (const bz of zz.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) uz.add(bz[1]);
-      return [...uz]
+    function SC(DD) {
+      const CD = DD.split(/\n|\|/).map((DD => DD.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((DD => "" !== DD)).slice(0, 5).map((DD => DD.length > 90 ? `${DD.slice(0,89).trimEnd()}\u2026` : DD));
+      return CD.length >= 2 ? CD : []
+    }
+    var BC = cD(4630);
+
+    function yC(DD) {
+      return DD.replace(/^on/, "").replace(/^player/i, "").toLowerCase()
     }
 
-    function Zu(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Ez = new Set(uz),
-        nz = new Map;
-      for (const pz of uz) {
-        var iz;
-        const zz = du(pz);
-        nz.set(zz, [...null !== (iz = nz.get(zz)) && void 0 !== iz ? iz : [], pz])
+    function MC(DD) {
+      const CD = new Set;
+      for (const cD of DD.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) CD.add(cD[1]);
+      for (const cD of DD.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) CD.add(cD[1]);
+      return [...CD]
+    }
+
+    function tC(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const ID = new Set(CD),
+        pD = new Map;
+      for (const BD of CD) {
+        var iD;
+        const DD = yC(BD);
+        pD.set(DD, [...null !== (iD = pD.get(DD)) && void 0 !== iD ? iD : [], BD])
       }
-      const lz = Fu(zz),
-        Mz = new Set(Fu(bz)),
-        tz = [];
-      let Hz = zz;
-      for (const pz of lz) {
-        var Oz;
-        if (Ez.has(pz) || Mz.has(pz) || !/^(on|player)[A-Z]/.test(pz)) continue;
-        const zz = null !== (Oz = nz.get(du(pz))) && void 0 !== Oz ? Oz : [];
-        1 !== zz.length || lz.includes(zz[0]) || (Hz = (0, pu.t)(Hz, new RegExp(`${pz}(?![\\w$])`, "g"), pu.l, (() => zz[0])), tz.push({
-          from: pz,
-          to: zz[0]
+      const fD = MC(DD),
+        bD = new Set(MC(cD)),
+        QD = [];
+      let wD = DD;
+      for (const BD of fD) {
+        var SD;
+        if (ID.has(BD) || bD.has(BD) || !/^(on|player)[A-Z]/.test(BD)) continue;
+        const DD = null !== (SD = pD.get(yC(BD))) && void 0 !== SD ? SD : [];
+        1 !== DD.length || fD.includes(DD[0]) || (wD = (0, BC.C)(wD, new RegExp(`${BD}(?![\\w$])`, "g"), BC.q, (() => DD[0])), QD.push({
+          from: BD,
+          to: DD[0]
         }))
       }
       return {
-        code: Hz,
-        renames: tz
+        code: wD,
+        renames: QD
       }
     }
-    const Ru = {
+    const ZC = {
         functions: "api",
         callbacks: "callback",
         "client options": "clientOption"
       },
-      Ku = Object.keys(Ru).map((zz => `"${zz}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
-      wu = {
+      oC = Object.keys(ZC).map((DD => `"${DD}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
+      vC = {
         type: "string",
         description: "A few plain words for the creator on what this change does, under 80 characters"
       },
-      Xu = {
+      NC = {
         readOnlyHint: !0,
         destructiveHint: !1,
         idempotentHint: !0,
         openWorldHint: !1
       },
-      fu = [{
+      gC = [{
         name: "write_file",
         title: "Write a file",
         description: "Replaces a file with new code, or makes a new file",
@@ -611,7 +611,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: wu,
+            why: vC,
             content: {
               type: "string",
               description: "The whole new file"
@@ -636,7 +636,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: wu,
+            why: vC,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the current file"
@@ -669,7 +669,7 @@ export const modules = {
               type: "string",
               description: "The function's or callback's name, e.g. onPlayerJoin"
             },
-            why: wu,
+            why: vC,
             code: {
               type: "string",
               description: "The whole new function"
@@ -698,7 +698,7 @@ export const modules = {
               type: "string",
               description: 'Where it goes: "top", "end", or the name of the function to put it after'
             },
-            why: wu,
+            why: vC,
             code: {
               type: "string",
               description: "Only the new code"
@@ -731,7 +731,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: wu
+            why: vC
           },
           required: ["name"]
         },
@@ -768,7 +768,7 @@ export const modules = {
         inputSchema: {
           type: "object",
           properties: {
-            why: wu,
+            why: vC,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the open code"
@@ -906,7 +906,7 @@ export const modules = {
           },
           required: ["path"]
         },
-        annotations: Xu,
+        annotations: NC,
         _meta: {
           isLookup: !0
         }
@@ -919,7 +919,7 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Xu,
+        annotations: NC,
         _meta: {
           isLookup: !0
         }
@@ -937,7 +937,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Xu,
+        annotations: NC,
         _meta: {
           isLookup: !0
         }
@@ -950,25 +950,25 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Xu,
+        annotations: NC,
         _meta: {
           isLookup: !0
         }
       }, {
         name: "fetch_url",
         title: "Read a docs page",
-        description: `Reads a page of Bloxd's docs as Markdown. ${Kz.k} lists every page with its link; then read the page, or the part of a long page, you need`,
+        description: `Reads a page of Bloxd's docs as Markdown. ${oD.i} lists every page with its link; then read the page, or the part of a long page, you need`,
         inputSchema: {
           type: "object",
           properties: {
             url: {
               type: "string",
-              description: `${Kz.k}, or a page it links to`
+              description: `${oD.i}, or a page it links to`
             }
           },
           required: ["url"]
         },
-        annotations: Xu,
+        annotations: NC,
         _meta: {
           isLookup: !0
         }
@@ -981,7 +981,7 @@ export const modules = {
           properties: {
             list: {
               type: "string",
-              description: `${Ku}, to list every one of them`
+              description: `${oC}, to list every one of them`
             },
             name: {
               type: "string",
@@ -990,7 +990,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Xu,
+        annotations: NC,
         _meta: {
           isLookup: !0
         }
@@ -1008,7 +1008,7 @@ export const modules = {
           },
           required: ["words"]
         },
-        annotations: Xu,
+        annotations: NC,
         _meta: {
           isLookup: !0
         }
@@ -1026,7 +1026,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Xu,
+        annotations: NC,
         _meta: {
           isLookup: !0
         }
@@ -1044,7 +1044,7 @@ export const modules = {
           },
           required: ["name"]
         },
-        annotations: Xu,
+        annotations: NC,
         _meta: {
           isLookup: !0
         }
@@ -1057,290 +1057,290 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Xu,
+        annotations: NC,
         _meta: {
           isLookup: !0
         }
       }];
 
-    function su(zz) {
-      var uz;
-      return !0 === (null === (uz = ru(zz)._meta) || void 0 === uz ? void 0 : uz.isLookup)
+    function XC(DD) {
+      var CD;
+      return !0 === (null === (CD = mC(DD)._meta) || void 0 === CD ? void 0 : CD.isLookup)
     }
 
-    function ru(zz) {
-      const uz = fu.find((uz => uz.name === zz));
-      if (!uz) throw new Error(`No AI Helper tool ${zz}`);
-      return uz
+    function mC(DD) {
+      const CD = gC.find((CD => CD.name === DD));
+      if (!CD) throw new Error(`No AI Helper tool ${DD}`);
+      return CD
     }
-    const ou = fu.map((zz => zz.name)).filter((zz => "plan" !== zz && "remember" !== zz)).join("|"),
-      Nu = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${ou})\b[^\n.]*\.?[ \t]*\n*)+`),
-      vu = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${ou})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
-      xu = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
+    const nC = gC.map((DD => DD.name)).filter((DD => "plan" !== DD && "remember" !== DD)).join("|"),
+      OC = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${nC})\b[^\n.]*\.?[ \t]*\n*)+`),
+      PC = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${nC})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
+      HC = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
 
-    function Ju(zz) {
-      const uz = zz.trim();
-      return vu.some((zz => zz.test(uz)))
+    function UC(DD) {
+      const CD = DD.trim();
+      return PC.some((DD => DD.test(CD)))
     }
 
-    function Au(zz, uz) {
-      const bz = zz.replace(Nu, "");
-      return uz ? function(zz) {
-        const uz = zz.indexOf("```"),
-          bz = -1 === uz ? zz : zz.slice(0, uz);
-        let Ez = -1,
-          nz = -1,
-          iz = 0;
-        for (const lz of bz.matchAll(xu)) {
-          const zz = lz.index + lz[0].length;
-          Ju(bz.slice(iz, zz)) && (Ez = -1 === Ez ? iz : Ez, nz = zz), iz = zz
+    function xC(DD, CD) {
+      const cD = DD.replace(OC, "");
+      return CD ? function(DD) {
+        const CD = DD.indexOf("```"),
+          cD = -1 === CD ? DD : DD.slice(0, CD);
+        let ID = -1,
+          pD = -1,
+          iD = 0;
+        for (const fD of cD.matchAll(HC)) {
+          const DD = fD.index + fD[0].length;
+          UC(cD.slice(iD, DD)) && (ID = -1 === ID ? iD : ID, pD = DD), iD = DD
         }
-        return -1 === nz ? zz : "" !== bz.slice(nz).trim() ? zz.slice(nz).trimStart() : `${zz.slice(0,Ez).trimEnd()}\n${zz.slice(bz.length)}`.trim()
-      }(bz) : "" !== bz.trim() ? bz : zz
+        return -1 === pD ? DD : "" !== cD.slice(pD).trim() ? DD.slice(pD).trimStart() : `${DD.slice(0,ID).trimEnd()}\n${DD.slice(cD.length)}`.trim()
+      }(cD) : "" !== cD.trim() ? cD : DD
     }
-    const Tu = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
-      Lu = new Set(["content", "code"]);
+    const qC = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
+      JC = new Set(["content", "code"]);
 
-    function Pu(zz) {
-      const uz = "string" === typeof zz ? zz.split(/[./:]/).pop() : void 0;
-      return function(zz) {
-        return fu.some((uz => uz.name === zz))
-      }(uz) ? uz : null
+    function KC(DD) {
+      const CD = "string" === typeof DD ? DD.split(/[./:]/).pop() : void 0;
+      return function(DD) {
+        return gC.some((CD => CD.name === DD))
+      }(CD) ? CD : null
     }
 
-    function Gu(zz, uz) {
-      return bz => {
-        const Ez = [];
-        let nz;
-        for (const tz of bz.matchAll(zz)) {
-          var iz;
-          const zz = Pu(tz[1]);
-          if (null === zz) continue;
-          const Hz = {};
-          for (const bz of tz[2].matchAll(uz)) {
-            var lz, Mz;
-            Hz[null !== (lz = bz[1]) && void 0 !== lz ? lz : bz[2]] = null !== (Mz = bz[3]) && void 0 !== Mz ? Mz : bz[4]
-          }(null === (iz = nz) || void 0 === iz ? void 0 : iz.call.name) === zz && "" === bz.slice(nz.index + nz.call.source.length, tz.index).trim() ? Ez[Ez.length - 1] = {
+    function aC(DD, CD) {
+      return cD => {
+        const ID = [];
+        let pD;
+        for (const QD of cD.matchAll(DD)) {
+          var iD;
+          const DD = KC(QD[1]);
+          if (null === DD) continue;
+          const wD = {};
+          for (const cD of QD[2].matchAll(CD)) {
+            var fD, bD;
+            wD[null !== (fD = cD[1]) && void 0 !== fD ? fD : cD[2]] = null !== (bD = cD[3]) && void 0 !== bD ? bD : cD[4]
+          }(null === (iD = pD) || void 0 === iD ? void 0 : iD.call.name) === DD && "" === cD.slice(pD.index + pD.call.source.length, QD.index).trim() ? ID[ID.length - 1] = {
             call: {
-              name: zz,
-              args: Hz,
-              source: bz.slice(nz.index, tz.index + tz[0].length)
+              name: DD,
+              args: wD,
+              source: cD.slice(pD.index, QD.index + QD[0].length)
             },
-            index: nz.index
-          } : Ez.push({
+            index: pD.index
+          } : ID.push({
             call: {
-              name: zz,
-              args: Hz,
-              source: tz[0]
+              name: DD,
+              args: wD,
+              source: QD[0]
             },
-            index: tz.index
-          }), nz = "" === tz[2].trim() && ru(zz).inputSchema.required.length > 0 ? Ez.at(-1) : void 0
+            index: QD.index
+          }), pD = "" === QD[2].trim() && mC(DD).inputSchema.required.length > 0 ? ID.at(-1) : void 0
         }
-        return Ez
+        return ID
       }
     }
 
-    function au(zz) {
-      return zz.replace(/\\(["\\nt])/g, ((zz, uz) => "n" === uz ? "\n" : "t" === uz ? "\t" : uz))
+    function VC(DD) {
+      return DD.replace(/\\(["\\nt])/g, ((DD, CD) => "n" === CD ? "\n" : "t" === CD ? "\t" : CD))
     }
 
-    function Vu(zz) {
-      let uz = null !== zz && void 0 !== zz ? zz : {};
-      if ("string" === typeof uz) try {
-        uz = JSON.parse("" === uz ? "{}" : uz)
+    function zC(DD) {
+      let CD = null !== DD && void 0 !== DD ? DD : {};
+      if ("string" === typeof CD) try {
+        CD = JSON.parse("" === CD ? "{}" : CD)
       } catch {
         return null
       }
-      if ("object" !== typeof uz || null === uz) return null;
-      const bz = {};
-      for (const [Ez, nz] of Object.entries(uz)) "string" === typeof nz ? bz[Ez] = Lu.has(Ez) && Tu.test(nz) && !nz.includes("\n") ? au(nz) : nz : "boolean" === typeof nz || "number" === typeof nz ? bz[Ez] = String(nz) : "object" !== typeof nz || null === nz || Array.isArray(nz) ? Array.isArray(nz) && nz.every((zz => "string" === typeof zz)) && (bz[Ez] = nz.join("\n")) : bz[Ez] = JSON.stringify(nz);
-      return bz
+      if ("object" !== typeof CD || null === CD) return null;
+      const cD = {};
+      for (const [ID, pD] of Object.entries(CD)) "string" === typeof pD ? cD[ID] = JC.has(ID) && qC.test(pD) && !pD.includes("\n") ? VC(pD) : pD : "boolean" === typeof pD || "number" === typeof pD ? cD[ID] = String(pD) : "object" !== typeof pD || null === pD || Array.isArray(pD) ? Array.isArray(pD) && pD.every((DD => "string" === typeof DD)) && (cD[ID] = pD.join("\n")) : cD[ID] = JSON.stringify(pD);
+      return cD
     }
 
-    function mu(zz, uz) {
-      let bz = 0,
-        Ez = !1;
-      for (let nz = uz; nz < zz.length; nz++) {
-        const uz = zz[nz];
-        if (Ez) "\\" === uz ? nz++ : '"' === uz && (Ez = !1);
-        else if ('"' === uz) Ez = !0;
-        else if ("{" === uz) bz++;
-        else if ("}" === uz && (bz--, 0 === bz)) return nz + 1
+    function jC(DD, CD) {
+      let cD = 0,
+        ID = !1;
+      for (let pD = CD; pD < DD.length; pD++) {
+        const CD = DD[pD];
+        if (ID) "\\" === CD ? pD++ : '"' === CD && (ID = !1);
+        else if ('"' === CD) ID = !0;
+        else if ("{" === CD) cD++;
+        else if ("}" === CD && (cD--, 0 === cD)) return pD + 1
       }
       return null
     }
 
-    function qu(zz, uz) {
-      let bz = zz;
+    function lC(DD, CD) {
+      let cD = DD;
       for (const {
-          call: Ez,
-          index: nz
+          call: ID,
+          index: pD
         }
-        of uz) bz = bz.slice(0, nz) + " ".repeat(Ez.source.length) + bz.slice(nz + Ez.source.length);
-      return bz
+        of CD) cD = cD.slice(0, pD) + " ".repeat(ID.source.length) + cD.slice(pD + ID.source.length);
+      return cD
     }
-    const hu = new RegExp(`\\b(${fu.map((zz=>zz.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
-    const Uu = {
-        formatCall: (zz, uz) => {
-          const bz = Object.fromEntries(Object.entries(uz).filter((zz => {
-            let [, uz] = zz;
-            return void 0 !== uz
+    const LC = new RegExp(`\\b(${gC.map((DD=>DD.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
+    const TC = {
+        formatCall: (DD, CD) => {
+          const cD = Object.fromEntries(Object.entries(CD).filter((DD => {
+            let [, CD] = DD;
+            return void 0 !== CD
           })));
-          return `${zz}(${JSON.stringify(bz)})`
+          return `${DD}(${JSON.stringify(cD)})`
         },
-        declareTools: zz => zz,
+        declareTools: DD => DD,
         callStyle: "Make each call with function calling, its code in full: never write a call, or the code it carries, in your answer's words or in a code fence.",
-        fileResult: (zz, uz, bz) => `<file path="${zz}"${bz?' open_in_editor="true"':""}>\n${uz}\n</file>`,
-        editFailure: (zz, uz) => `${zz} failed: ${uz}`,
-        lookupResult: (zz, uz, bz) => `${zz} ${uz}:\n${bz}`
+        fileResult: (DD, CD, cD) => `<file path="${DD}"${cD?' open_in_editor="true"':""}>\n${CD}\n</file>`,
+        editFailure: (DD, CD) => `${DD} failed: ${CD}`,
+        lookupResult: (DD, CD, cD) => `${DD} ${CD}:\n${cD}`
       },
-      cu = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
+      GC = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
 
-    function gu(zz) {
-      const uz = [];
-      for (const nz of zz.matchAll(cu)) {
-        const iz = Pu(nz[1]),
-          lz = nz.index + nz[0].length,
-          Mz = mu(zz, lz),
-          tz = null === Mz ? null : Vu(zz.slice(lz, Mz));
-        if (null !== iz && null !== Mz && null !== tz) {
-          var bz, Ez;
-          const lz = null !== (bz = null === (Ez = zz.slice(Mz).match(/^\s*<\|call\|>/)) || void 0 === Ez ? void 0 : Ez[0]) && void 0 !== bz ? bz : "";
-          uz.push({
+    function RC(DD) {
+      const CD = [];
+      for (const pD of DD.matchAll(GC)) {
+        const iD = KC(pD[1]),
+          fD = pD.index + pD[0].length,
+          bD = jC(DD, fD),
+          QD = null === bD ? null : zC(DD.slice(fD, bD));
+        if (null !== iD && null !== bD && null !== QD) {
+          var cD, ID;
+          const fD = null !== (cD = null === (ID = DD.slice(bD).match(/^\s*<\|call\|>/)) || void 0 === ID ? void 0 : ID[0]) && void 0 !== cD ? cD : "";
+          CD.push({
             call: {
-              name: iz,
-              args: tz,
-              source: zz.slice(nz.index, Mz + lz.length)
+              name: iD,
+              args: QD,
+              source: DD.slice(pD.index, bD + fD.length)
             },
-            index: nz.index
+            index: pD.index
           })
         }
       }
-      return uz
+      return CD
     }
 
-    function Su(zz) {
-      var uz, bz, Ez, nz;
-      let iz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      if ("object" !== typeof zz || null === zz) return [];
-      const lz = zz;
-      if (Array.isArray(lz.tool_calls)) return lz.tool_calls.flatMap((zz => Su(zz, !0)));
-      if (void 0 !== lz.tool_call) return Su(lz.tool_call, !0);
-      if (void 0 !== lz.function) return Su(lz.function, !0);
-      const Mz = null !== (uz = null !== (bz = null !== (Ez = null !== (nz = lz.arguments) && void 0 !== nz ? nz : lz.params) && void 0 !== Ez ? Ez : lz.param) && void 0 !== bz ? bz : lz.args) && void 0 !== uz ? uz : lz.input,
-        tz = Pu(lz.tool);
-      if (null !== tz) {
+    function kC(DD) {
+      var CD, cD, ID, pD;
+      let iD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      if ("object" !== typeof DD || null === DD) return [];
+      const fD = DD;
+      if (Array.isArray(fD.tool_calls)) return fD.tool_calls.flatMap((DD => kC(DD, !0)));
+      if (void 0 !== fD.tool_call) return kC(fD.tool_call, !0);
+      if (void 0 !== fD.function) return kC(fD.function, !0);
+      const bD = null !== (CD = null !== (cD = null !== (ID = null !== (pD = fD.arguments) && void 0 !== pD ? pD : fD.params) && void 0 !== ID ? ID : fD.param) && void 0 !== cD ? cD : fD.args) && void 0 !== CD ? CD : fD.input,
+        QD = KC(fD.tool);
+      if (null !== QD) {
         const {
-          tool: zz,
-          ...uz
-        } = lz, bz = Vu(null !== Mz && void 0 !== Mz ? Mz : uz);
-        return null === bz ? [] : [{
-          name: tz,
-          args: bz
+          tool: DD,
+          ...CD
+        } = fD, cD = zC(null !== bD && void 0 !== bD ? bD : CD);
+        return null === cD ? [] : [{
+          name: QD,
+          args: cD
         }]
       }
-      if (!iz && void 0 === Mz) return [];
-      const Hz = Pu(lz.name),
-        Oz = Vu(Mz);
-      return null === Hz || null === Oz ? [] : [{
-        name: Hz,
-        args: Oz
+      if (!iD && void 0 === bD) return [];
+      const wD = KC(fD.name),
+        SD = zC(bD);
+      return null === wD || null === SD ? [] : [{
+        name: wD,
+        args: SD
       }]
     }
 
-    function yu(zz) {
-      const uz = [];
-      let bz = zz.indexOf("{");
-      for (; - 1 !== bz;) {
-        const Ez = mu(zz, bz);
-        let nz = [];
-        if (null !== Ez) try {
-          nz = Su(JSON.parse(zz.slice(bz, Ez)))
+    function dC(DD) {
+      const CD = [];
+      let cD = DD.indexOf("{");
+      for (; - 1 !== cD;) {
+        const ID = jC(DD, cD);
+        let pD = [];
+        if (null !== ID) try {
+          pD = kC(JSON.parse(DD.slice(cD, ID)))
         } catch {}
-        if (null !== Ez && nz.length > 0) {
-          const iz = zz.slice(bz, Ez);
-          uz.push(...nz.map((zz => ({
+        if (null !== ID && pD.length > 0) {
+          const iD = DD.slice(cD, ID);
+          CD.push(...pD.map((DD => ({
             call: {
-              ...zz,
-              source: iz
+              ...DD,
+              source: iD
             },
-            index: bz
-          })))), bz = zz.indexOf("{", Ez)
-        } else bz = zz.indexOf("{", bz + 1)
+            index: cD
+          })))), cD = DD.indexOf("{", ID)
+        } else cD = DD.indexOf("{", cD + 1)
       }
-      return uz
+      return CD
     }
 
-    function Du(zz) {
-      if (Array.isArray(zz)) return `[${zz.map(Du).join(", ")}]`;
-      if ("object" === typeof zz && null !== zz) {
-        return `{${Object.entries(zz).map((zz=>{let[uz,bz]=zz;return`${JSON.stringify(uz)}: ${Du(bz)}`})).join(", ")}}`
+    function YC(DD) {
+      if (Array.isArray(DD)) return `[${DD.map(YC).join(", ")}]`;
+      if ("object" === typeof DD && null !== DD) {
+        return `{${Object.entries(DD).map((DD=>{let[CD,cD]=DD;return`${JSON.stringify(CD)}: ${YC(cD)}`})).join(", ")}}`
       }
-      return JSON.stringify(zz)
+      return JSON.stringify(DD)
     }
-    const Qu = {
-        formatCall: (zz, uz) => `<tool_call>\n<function=${zz}>\n${Object.entries(uz).flatMap((zz=>{let[uz,bz]=zz;return void 0===bz?[]:[`<parameter=${uz}>\n${bz}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
-        declareTools: (zz, uz, bz) => bz || 0 === uz.length ? zz : `${function(zz){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${zz.map((zz=>`\n${Du({type:"function",function:{name:zz.name,description:zz.description,parameters:zz.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(uz)}\n\n${zz}`,
+    const WC = {
+        formatCall: (DD, CD) => `<tool_call>\n<function=${DD}>\n${Object.entries(CD).flatMap((DD=>{let[CD,cD]=DD;return void 0===cD?[]:[`<parameter=${CD}>\n${cD}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
+        declareTools: (DD, CD, cD) => cD || 0 === CD.length ? DD : `${function(DD){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${DD.map((DD=>`\n${YC({type:"function",function:{name:DD.name,description:DD.description,parameters:DD.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(CD)}\n\n${DD}`,
         callStyle: "Write each call in your answer as a <tool_call> holding a <function=name> block with a <parameter=name> for each argument, the code inside as it is, not escaped and in full: never as JSON or inside a code fence.",
-        fileResult: (zz, uz, bz) => `<tool_response>\nview_file ${zz}${bz?" (open in the editor)":""}:\n${uz}\n</tool_response>`,
-        editFailure: (zz, uz) => `<tool_response>\nError: ${uz}\n</tool_response>`,
-        lookupResult: (zz, uz, bz) => `<tool_response>\n${zz} ${uz}:\n${bz}\n</tool_response>`
+        fileResult: (DD, CD, cD) => `<tool_response>\nview_file ${DD}${cD?" (open in the editor)":""}:\n${CD}\n</tool_response>`,
+        editFailure: (DD, CD) => `<tool_response>\nError: ${CD}\n</tool_response>`,
+        lookupResult: (DD, CD, cD) => `<tool_response>\n${DD} ${CD}:\n${cD}\n</tool_response>`
       },
-      Wu = Gu(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
-      eu = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
-      ju = {
-        formatCall: (zz, uz) => `<tool_call name="${zz}">\n${Object.entries(uz).flatMap((zz=>{let[uz,bz]=zz;return void 0===bz?[]:[`<param name="${uz}">${eu.has(uz)?bz:`\n${bz}\n`}</param>\n`]})).join("")}</tool_call>`,
-        declareTools: zz => zz,
+      sC = aC(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
+      EC = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
+      eC = {
+        formatCall: (DD, CD) => `<tool_call name="${DD}">\n${Object.entries(CD).flatMap((DD=>{let[CD,cD]=DD;return void 0===cD?[]:[`<param name="${CD}">${EC.has(CD)?cD:`\n${cD}\n`}</param>\n`]})).join("")}</tool_call>`,
+        declareTools: DD => DD,
         callStyle: "Write each call in your answer as a <tool_call> with a <param> for each argument, the code inside as it is, not escaped and in full: never as JSON, a function call or inside a code fence.",
-        fileResult: (zz, uz, bz) => `<tool_result name="view_file" path="${zz}"${bz?' open_in_editor="true"':""}>\n${uz}\n</tool_result>`,
-        editFailure: (zz, uz) => `<tool_result name="${zz}" is_error="true">\n${uz}\n</tool_result>`,
-        lookupResult: (zz, uz, bz) => `<tool_result name="${zz}" about="${uz.replace(/"/g,"'")}">\n${bz}\n</tool_result>`
+        fileResult: (DD, CD, cD) => `<tool_result name="view_file" path="${DD}"${cD?' open_in_editor="true"':""}>\n${CD}\n</tool_result>`,
+        editFailure: (DD, CD) => `<tool_result name="${DD}" is_error="true">\n${CD}\n</tool_result>`,
+        lookupResult: (DD, CD, cD) => `<tool_result name="${DD}" about="${CD.replace(/"/g,"'")}">\n${cD}\n</tool_result>`
       },
-      Iu = Gu(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
-      Bu = {
-        simple: ju,
-        qwenXml: Qu,
-        deepseek: Uu
+      uC = aC(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
+      hC = {
+        simple: eC,
+        qwenXml: WC,
+        deepseek: TC
       },
-      Cu = {
-        simple: Iu,
-        qwenXml: Wu,
-        deepseek: function(zz) {
-          const uz = [];
-          for (const Mz of zz.matchAll(hu)) {
-            var bz, Ez, nz, iz, lz;
-            const tz = Pu(Mz[1]),
-              Hz = Mz.index + Mz[0].length,
-              Oz = mu(zz, Hz);
-            if (null === tz || null === Oz || (null !== (bz = null === (Ez = uz.at(-1)) || void 0 === Ez ? void 0 : Ez.index) && void 0 !== bz ? bz : -1) + (null !== (nz = null === (iz = uz.at(-1)) || void 0 === iz ? void 0 : iz.call.source.length) && void 0 !== nz ? nz : 0) > Mz.index) continue;
-            const pz = Vu(zz.slice(Hz, Oz));
-            if (null === pz) continue;
-            const dz = /^\s*\)/.exec(zz.slice(Oz)),
-              Fz = zz.slice(Mz.index, Oz + (null !== (lz = null === dz || void 0 === dz ? void 0 : dz[0].length) && void 0 !== lz ? lz : 0));
-            uz.push({
+      rC = {
+        simple: uC,
+        qwenXml: sC,
+        deepseek: function(DD) {
+          const CD = [];
+          for (const bD of DD.matchAll(LC)) {
+            var cD, ID, pD, iD, fD;
+            const QD = KC(bD[1]),
+              wD = bD.index + bD[0].length,
+              SD = jC(DD, wD);
+            if (null === QD || null === SD || (null !== (cD = null === (ID = CD.at(-1)) || void 0 === ID ? void 0 : ID.index) && void 0 !== cD ? cD : -1) + (null !== (pD = null === (iD = CD.at(-1)) || void 0 === iD ? void 0 : iD.call.source.length) && void 0 !== pD ? pD : 0) > bD.index) continue;
+            const BD = zC(DD.slice(wD, SD));
+            if (null === BD) continue;
+            const yD = /^\s*\)/.exec(DD.slice(SD)),
+              MD = DD.slice(bD.index, SD + (null !== (fD = null === yD || void 0 === yD ? void 0 : yD[0].length) && void 0 !== fD ? fD : 0));
+            CD.push({
               call: {
-                name: tz,
-                args: pz,
-                source: Fz
+                name: QD,
+                args: BD,
+                source: MD
               },
-              index: Mz.index
+              index: bD.index
             })
           }
-          return uz
+          return CD
         }
       },
-      Yu = ["simple", "qwenXml"];
+      AC = ["simple", "qwenXml"];
 
-    function ku(zz) {
-      return "deepseek" === zz ? "simple" : zz
+    function FC(DD) {
+      return "deepseek" === DD ? "simple" : DD
     }
-    const zb = /<\|[a-z_]+\|>/g,
-      ub = /^[ \t]*`{1,2}[ \t]*$/gm,
-      bb = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
-      Eb = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
-      nb = /```[\w-]*/g,
-      ib = /^[\s[\],]*$/,
-      lb = {
+    const Dc = /<\|[a-z_]+\|>/g,
+      Cc = /^[ \t]*`{1,2}[ \t]*$/gm,
+      cc = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
+      Ic = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
+      pc = /```[\w-]*/g,
+      ic = /^[\s[\],]*$/,
+      fc = {
         use_prefab: 0,
         add_world_code: 1,
         write_file: 2,
@@ -1365,823 +1365,823 @@ export const modules = {
         view_prefab: 21
       };
 
-    function Mb(zz) {
-      return ru(zz.name).inputSchema.required.every((uz => void 0 !== zz.args[uz]))
+    function bc(DD) {
+      return mC(DD.name).inputSchema.required.every((CD => void 0 !== DD.args[CD]))
     }
 
-    function tb(zz, uz) {
-      const bz = Pu(zz),
-        Ez = Vu(uz);
-      return null === bz || null === Ez ? null : {
-        name: bz,
-        args: Ez
+    function Qc(DD, CD) {
+      const cD = KC(DD),
+        ID = zC(CD);
+      return null === cD || null === ID ? null : {
+        name: cD,
+        args: ID
       }
     }
 
-    function Hb(zz, uz) {
-      const bz = [];
-      for (const Ez of function(zz) {
-          const uz = ku(zz),
-            bz = Yu.filter((zz => zz !== uz));
-          return [Cu[uz], ...zz === uz ? [] : [Cu[zz]], ...bz.map((zz => Cu[zz])), gu, yu]
-        }(uz)) bz.push(...Ez(qu(zz, bz)));
-      return bz.map((zz => {
+    function wc(DD, CD) {
+      const cD = [];
+      for (const ID of function(DD) {
+          const CD = FC(DD),
+            cD = AC.filter((DD => DD !== CD));
+          return [rC[CD], ...DD === CD ? [] : [rC[DD]], ...cD.map((DD => rC[DD])), RC, dC]
+        }(CD)) cD.push(...ID(lC(DD, cD)));
+      return cD.map((DD => {
         let {
-          call: uz
-        } = zz;
-        return uz
+          call: CD
+        } = DD;
+        return CD
       }))
     }
 
-    function Ob(zz, uz) {
-      return Hb(zz, uz).sort(((zz, uz) => lb[zz.name] - lb[uz.name]))
+    function Sc(DD, CD) {
+      return wc(DD, CD).sort(((DD, CD) => fc[DD.name] - fc[CD.name]))
     }
 
-    function pb(zz) {
-      return function(zz) {
-        const uz = [...zz.matchAll(nb)],
-          bz = [];
-        let Ez = 0;
-        for (; Ez < uz.length;) {
-          const nz = uz[Ez],
-            iz = uz.at(Ez + 1);
-          void 0 !== iz && "```" === iz[0] ? (ib.test(zz.slice(nz.index + nz[0].length, iz.index)) && bz.push({
-            from: nz.index,
-            to: iz.index + iz[0].length
-          }), Ez += 2) : (bz.push({
-            from: nz.index,
-            to: nz.index + nz[0].length
-          }), Ez++)
+    function Bc(DD) {
+      return function(DD) {
+        const CD = [...DD.matchAll(pc)],
+          cD = [];
+        let ID = 0;
+        for (; ID < CD.length;) {
+          const pD = CD[ID],
+            iD = CD.at(ID + 1);
+          void 0 !== iD && "```" === iD[0] ? (ic.test(DD.slice(pD.index + pD[0].length, iD.index)) && cD.push({
+            from: pD.index,
+            to: iD.index + iD[0].length
+          }), ID += 2) : (cD.push({
+            from: pD.index,
+            to: pD.index + pD[0].length
+          }), ID++)
         }
-        let nz = zz;
+        let pD = DD;
         for (const {
-            from: iz,
-            to: lz
+            from: iD,
+            to: fD
           }
-          of bz.reverse()) nz = nz.slice(0, iz) + nz.slice(lz);
-        return nz
-      }(zz.replace(zb, "").replace(ub, "").replace(bb, "").replace(Eb, ""))
+          of cD.reverse()) pD = pD.slice(0, iD) + pD.slice(fD);
+        return pD
+      }(DD.replace(Dc, "").replace(Cc, "").replace(cc, "").replace(Ic, ""))
     }
 
-    function db(zz) {
-      return /^(?:on[A-Z]\w*|tick|playerCommand)$/.test(zz)
+    function yc(DD) {
+      return /^(?:on[A-Z]\w*|tick|playerCommand)$/.test(DD)
     }
-    const Fb = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
-      Zb = {
+    const Mc = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
+      tc = {
         playerCommand: {
-          stopsWhen: zz => `${zz} !== undefined && ${zz} !== false`,
+          stopsWhen: DD => `${DD} !== undefined && ${DD} !== false`,
           passedOn: !1
         },
         onPlayerChat: {
-          stopsWhen: zz => `${zz} === false || ${zz} === null`,
+          stopsWhen: DD => `${DD} === false || ${DD} === null`,
           passedOn: !0
         },
         onPlayerDamagingOtherPlayer: {
-          stopsWhen: zz => `${zz} === "preventDamage"`,
+          stopsWhen: DD => `${DD} === "preventDamage"`,
           passedOn: !0
         }
       };
 
-    function Rb(zz) {
-      var uz;
-      const bz = vz().createSourceFile("worldCode.js", zz, vz().ScriptTarget.Latest, !0, vz().ScriptKind.JS),
+    function Zc(DD) {
+      var CD;
+      const cD = PD().createSourceFile("worldCode.js", DD, PD().ScriptTarget.Latest, !0, PD().ScriptKind.JS),
         {
-          parseDiagnostics: Ez
-        } = bz;
+          parseDiagnostics: ID
+        } = cD;
       return {
-        file: bz,
-        hasErrors: (null !== (uz = null === Ez || void 0 === Ez ? void 0 : Ez.length) && void 0 !== uz ? uz : 0) > 0
+        file: cD,
+        hasErrors: (null !== (CD = null === ID || void 0 === ID ? void 0 : ID.length) && void 0 !== CD ? CD : 0) > 0
       }
     }
 
-    function Kb(zz) {
-      return void 0 !== zz && (vz().isFunctionExpression(zz) || vz().isArrowFunction(zz))
+    function oc(DD) {
+      return void 0 !== DD && (PD().isFunctionExpression(DD) || PD().isArrowFunction(DD))
     }
 
-    function wb(zz) {
-      if (vz().isFunctionDeclaration(zz) && zz.name) return {
-        TZ: zz,
-        nameNode: zz.name
+    function vc(DD) {
+      if (PD().isFunctionDeclaration(DD) && DD.name) return {
+        Ot: DD,
+        nameNode: DD.name
       };
-      if (vz().isVariableStatement(zz) && 1 === zz.declarationList.declarations.length) {
-        const uz = zz.declarationList.declarations[0],
-          bz = uz.initializer && Xb(uz.initializer);
-        if (vz().isIdentifier(uz.name) && Kb(bz)) return {
-          TZ: bz,
-          nameNode: uz.name
+      if (PD().isVariableStatement(DD) && 1 === DD.declarationList.declarations.length) {
+        const CD = DD.declarationList.declarations[0],
+          cD = CD.initializer && Nc(CD.initializer);
+        if (PD().isIdentifier(CD.name) && oc(cD)) return {
+          Ot: cD,
+          nameNode: CD.name
         }
       }
-      const uz = fb(zz),
-        bz = uz && Xb(uz.value);
-      return uz && Kb(bz) ? {
-        TZ: bz,
-        nameNode: uz.name
+      const CD = gc(DD),
+        cD = CD && Nc(CD.value);
+      return CD && oc(cD) ? {
+        Ot: cD,
+        nameNode: CD.name
       } : null
     }
 
-    function Xb(zz) {
-      return vz().isParenthesizedExpression(zz) ? Xb(zz.expression) : zz
+    function Nc(DD) {
+      return PD().isParenthesizedExpression(DD) ? Nc(DD.expression) : DD
     }
 
-    function fb(zz) {
-      return vz().isExpressionStatement(zz) && vz().isBinaryExpression(zz.expression) && zz.expression.operatorToken.kind === vz().SyntaxKind.EqualsToken && vz().isIdentifier(zz.expression.left) ? {
-        name: zz.expression.left,
-        value: zz.expression.right
+    function gc(DD) {
+      return PD().isExpressionStatement(DD) && PD().isBinaryExpression(DD.expression) && DD.expression.operatorToken.kind === PD().SyntaxKind.EqualsToken && PD().isIdentifier(DD.expression.left) ? {
+        name: DD.expression.left,
+        value: DD.expression.right
       } : null
     }
 
-    function sb(zz) {
-      return vz().isIdentifier(zz) ? [zz.text] : zz.elements.flatMap((zz => vz().isOmittedExpression(zz) ? [] : sb(zz.name)))
+    function Xc(DD) {
+      return PD().isIdentifier(DD) ? [DD.text] : DD.elements.flatMap((DD => PD().isOmittedExpression(DD) ? [] : Xc(DD.name)))
     }
 
-    function rb(zz) {
-      if (!vz().isVariableStatement(zz)) return null;
-      const uz = zz.declarationList.declarations.find((zz => vz().isIdentifier(zz.name) && "CONFIG" === zz.name.text));
-      return null !== uz && void 0 !== uz && uz.initializer && vz().isObjectLiteralExpression(uz.initializer) ? uz.initializer : null
+    function mc(DD) {
+      if (!PD().isVariableStatement(DD)) return null;
+      const CD = DD.declarationList.declarations.find((DD => PD().isIdentifier(DD.name) && "CONFIG" === DD.name.text));
+      return null !== CD && void 0 !== CD && CD.initializer && PD().isObjectLiteralExpression(CD.initializer) ? CD.initializer : null
     }
 
-    function ob(zz, uz) {
-      return uz.statements.map((bz => {
-        var Ez;
-        const nz = function(zz, uz, bz) {
-            let Ez = bz.getStart(uz);
-            for (const iz of (null !== (nz = vz().getLeadingCommentRanges(zz, bz.getFullStart())) && void 0 !== nz ? nz : []).reverse()) {
-              var nz;
-              if (/\n[^\S\n]*\n/.test(zz.slice(iz.end, Ez))) break;
-              Ez = iz.pos
+    function nc(DD, CD) {
+      return CD.statements.map((cD => {
+        var ID;
+        const pD = function(DD, CD, cD) {
+            let ID = cD.getStart(CD);
+            for (const iD of (null !== (pD = PD().getLeadingCommentRanges(DD, cD.getFullStart())) && void 0 !== pD ? pD : []).reverse()) {
+              var pD;
+              if (/\n[^\S\n]*\n/.test(DD.slice(iD.end, ID))) break;
+              ID = iD.pos
             }
-            return Ez
-          }(zz, uz, bz),
-          iz = wb(bz);
-        if (null !== iz && void 0 !== iz && iz.nameNode) {
-          const zz = iz.nameNode.text;
+            return ID
+          }(DD, CD, cD),
+          iD = vc(cD);
+        if (null !== iD && void 0 !== iD && iD.nameNode) {
+          const DD = iD.nameNode.text;
           return {
-            kind: db(zz) ? "callback" : "function",
-            names: [zz],
-            from: nz,
-            to: bz.getEnd(),
-            node: bz
+            kind: yc(DD) ? "callback" : "function",
+            names: [DD],
+            from: pD,
+            to: cD.getEnd(),
+            node: cD
           }
         }
-        const lz = vz().isVariableStatement(bz) ? bz.declarationList.declarations.flatMap((zz => sb(zz.name))) : [];
-        if (rb(bz)) {
+        const fD = PD().isVariableStatement(cD) ? cD.declarationList.declarations.flatMap((DD => Xc(DD.name))) : [];
+        if (mc(cD)) {
           return {
             kind: "config",
-            names: ["CONFIG", ...lz.filter((zz => "CONFIG" !== zz))],
-            from: nz,
-            to: bz.getEnd(),
-            node: bz
+            names: ["CONFIG", ...fD.filter((DD => "CONFIG" !== DD))],
+            from: pD,
+            to: cD.getEnd(),
+            node: cD
           }
         }
-        if (vz().isVariableStatement(bz)) return {
+        if (PD().isVariableStatement(cD)) return {
           kind: "variable",
-          names: lz,
-          from: nz,
-          to: bz.getEnd(),
-          node: bz
+          names: fD,
+          from: pD,
+          to: cD.getEnd(),
+          node: cD
         };
-        if (vz().isClassDeclaration(bz) && bz.name) return {
+        if (PD().isClassDeclaration(cD) && cD.name) return {
           kind: "function",
-          names: [bz.name.text],
-          from: nz,
-          to: bz.getEnd(),
-          node: bz
+          names: [cD.name.text],
+          from: pD,
+          to: cD.getEnd(),
+          node: cD
         };
-        const Mz = null === (Ez = fb(bz)) || void 0 === Ez ? void 0 : Ez.name.text;
+        const bD = null === (ID = gc(cD)) || void 0 === ID ? void 0 : ID.name.text;
         return {
           kind: "other",
-          names: void 0 !== Mz && db(Mz) ? [Mz] : [],
-          from: nz,
-          to: bz.getEnd(),
-          node: bz
+          names: void 0 !== bD && yc(bD) ? [bD] : [],
+          from: pD,
+          to: cD.getEnd(),
+          node: cD
         }
       }))
     }
 
-    function Nb(zz) {
-      if (!vz().isPropertyAssignment(zz) && !vz().isShorthandPropertyAssignment(zz)) return null;
-      const uz = zz.name;
-      return vz().isIdentifier(uz) || vz().isStringLiteral(uz) ? uz.text : null
+    function Oc(DD) {
+      if (!PD().isPropertyAssignment(DD) && !PD().isShorthandPropertyAssignment(DD)) return null;
+      const CD = DD.name;
+      return PD().isIdentifier(CD) || PD().isStringLiteral(CD) ? CD.text : null
     }
 
-    function vb(zz, uz) {
-      return zz.lastIndexOf("\n", uz - 1) + 1
+    function Pc(DD, CD) {
+      return DD.lastIndexOf("\n", CD - 1) + 1
     }
 
-    function xb(zz, uz) {
-      var bz, Ez;
-      const nz = zz.slice(vb(zz, uz), uz);
-      return /^\s*$/.test(nz) ? nz : `${null!==(bz=null===(Ez=/^\s*/.exec(nz))||void 0===Ez?void 0:Ez[0])&&void 0!==bz?bz:""}\t`
+    function Hc(DD, CD) {
+      var cD, ID;
+      const pD = DD.slice(Pc(DD, CD), CD);
+      return /^\s*$/.test(pD) ? pD : `${null!==(cD=null===(ID=/^\s*/.exec(pD))||void 0===ID?void 0:ID[0])&&void 0!==cD?cD:""}\t`
     }
 
-    function Jb(zz, uz, bz) {
-      const Ez = zz.slice(vb(zz, uz.getStart(bz)), function(zz, uz) {
-          const bz = zz.indexOf("\n", uz);
-          return -1 === bz ? zz.length : bz
-        }(zz, uz.getEnd())),
-        nz = Ez.trim(),
-        iz = /^[\w$"']+\s*:/.test(nz) && "" === zz.slice(vb(zz, uz.getStart(bz)), uz.getStart(bz)).trim() ? Ez.replace(/^\s*/, "\t") : `\t${uz.getText(bz)},`;
-      return /,\s*(?:\/\/.*)?$/.test(iz) ? iz : iz.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
+    function Uc(DD, CD, cD) {
+      const ID = DD.slice(Pc(DD, CD.getStart(cD)), function(DD, CD) {
+          const cD = DD.indexOf("\n", CD);
+          return -1 === cD ? DD.length : cD
+        }(DD, CD.getEnd())),
+        pD = ID.trim(),
+        iD = /^[\w$"']+\s*:/.test(pD) && "" === DD.slice(Pc(DD, CD.getStart(cD)), CD.getStart(cD)).trim() ? ID.replace(/^\s*/, "\t") : `\t${CD.getText(cD)},`;
+      return /,\s*(?:\/\/.*)?$/.test(iD) ? iD : iD.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
     }
 
-    function Ab(zz, uz) {
-      let bz = zz;
-      for (const Ez of [...uz].sort(((zz, uz) => uz.from - zz.from))) bz = bz.slice(0, Ez.from) + Ez.text + bz.slice(Ez.to);
-      return bz
+    function xc(DD, CD) {
+      let cD = DD;
+      for (const ID of [...CD].sort(((DD, CD) => CD.from - DD.from))) cD = cD.slice(0, ID.from) + ID.text + cD.slice(ID.to);
+      return cD
     }
 
-    function Tb(zz) {
-      return zz.charAt(0).toUpperCase() + zz.slice(1)
+    function qc(DD) {
+      return DD.charAt(0).toUpperCase() + DD.slice(1)
     }
 
-    function Lb(zz) {
-      return zz.replace(/[^A-Za-z0-9]+(.)?/g, ((zz, uz) => uz ? uz.toUpperCase() : ""))
+    function Jc(DD) {
+      return DD.replace(/[^A-Za-z0-9]+(.)?/g, ((DD, CD) => CD ? CD.toUpperCase() : ""))
     }
 
-    function Pb(zz, uz) {
-      var bz, Ez;
-      const nz = zz.filter((zz => zz.names.includes(uz))),
-        iz = nz.filter((zz => !vz().isFunctionDeclaration(zz.node) && function(zz, uz) {
-          return !vz().isVariableStatement(zz) || zz.declarationList.declarations.some((zz => void 0 !== zz.initializer && sb(zz.name).includes(uz)))
-        }(zz.node, uz))),
-        lz = null !== (bz = iz[iz.length - 1]) && void 0 !== bz ? bz : nz[nz.length - 1];
-      if ("callback" === (null === lz || void 0 === lz ? void 0 : lz.kind)) return wb(lz.node);
-      const Mz = "other" === (null === lz || void 0 === lz ? void 0 : lz.kind) ? null === (Ez = fb(lz.node)) || void 0 === Ez ? void 0 : Ez.value : void 0;
-      if (!Mz || !vz().isIdentifier(Mz)) return null;
-      const tz = zz.filter((zz => {
-          var uz;
-          const bz = null === (uz = fb(zz.node)) || void 0 === uz ? void 0 : uz.value;
-          return void 0 !== bz && vz().isIdentifier(bz) && bz.text === Mz.text
+    function Kc(DD, CD) {
+      var cD, ID;
+      const pD = DD.filter((DD => DD.names.includes(CD))),
+        iD = pD.filter((DD => !PD().isFunctionDeclaration(DD.node) && function(DD, CD) {
+          return !PD().isVariableStatement(DD) || DD.declarationList.declarations.some((DD => void 0 !== DD.initializer && Xc(DD.name).includes(CD)))
+        }(DD.node, CD))),
+        fD = null !== (cD = iD[iD.length - 1]) && void 0 !== cD ? cD : pD[pD.length - 1];
+      if ("callback" === (null === fD || void 0 === fD ? void 0 : fD.kind)) return vc(fD.node);
+      const bD = "other" === (null === fD || void 0 === fD ? void 0 : fD.kind) ? null === (ID = gc(fD.node)) || void 0 === ID ? void 0 : ID.value : void 0;
+      if (!bD || !PD().isIdentifier(bD)) return null;
+      const QD = DD.filter((DD => {
+          var CD;
+          const cD = null === (CD = gc(DD.node)) || void 0 === CD ? void 0 : CD.value;
+          return void 0 !== cD && PD().isIdentifier(cD) && cD.text === bD.text
         })),
-        Hz = zz.filter((zz => zz.names.includes(Mz.text))),
-        Oz = 1 === Hz.length && "function" === Hz[0].kind ? wb(Hz[0].node) : null;
-      return 1 === tz.length ? Oz : null
+        wD = DD.filter((DD => DD.names.includes(bD.text))),
+        SD = 1 === wD.length && "function" === wD[0].kind ? vc(wD[0].node) : null;
+      return 1 === QD.length ? SD : null
     }
 
-    function Gb(zz) {
-      return zz.parameters.map((zz => vz().isIdentifier(zz.name) ? zz.name.text : null))
+    function ac(DD) {
+      return DD.parameters.map((DD => PD().isIdentifier(DD.name) ? DD.name.text : null))
     }
 
-    function ab(zz, uz, bz, Ez, nz, iz, lz) {
-      var Mz;
-      let tz = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+    function Vc(DD, CD, cD, ID, pD, iD, fD) {
+      var bD;
+      let QD = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
       const {
-        TZ: Hz
-      } = bz, Oz = Hz.body;
-      if (!Oz) return [];
-      const pz = [],
-        dz = Gb(Hz),
-        Fz = [],
-        Zz = new Set([...dz.filter((zz => null !== zz)), ...qb(Oz)]),
-        Rz = (zz, uz) => {
-          let bz = zz;
-          for (let Ez = uz; Zz.has(bz); Ez++) bz = `${zz}${Ez}`;
-          return Zz.add(bz), bz
+        Ot: wD
+      } = cD, SD = wD.body;
+      if (!SD) return [];
+      const BD = [],
+        yD = ac(wD),
+        MD = [],
+        tD = new Set([...yD.filter((DD => null !== DD)), ...lc(SD)]),
+        ZD = (DD, CD) => {
+          let cD = DD;
+          for (let ID = CD; tD.has(cD); ID++) cD = `${DD}${ID}`;
+          return tD.add(cD), cD
         },
-        Kz = [];
-      for (const [vz, Az] of iz.entries()) {
-        var wz;
-        const zz = dz[vz];
-        if (void 0 !== zz && null !== (wz = Hz.parameters[vz]) && void 0 !== wz && wz.dotDotDotToken) {
-          Fz.push(null === zz ? "undefined" : `...${zz}`);
+        oD = [];
+      for (const [PD, xD] of iD.entries()) {
+        var vD;
+        const DD = yD[PD];
+        if (void 0 !== DD && null !== (vD = wD.parameters[PD]) && void 0 !== vD && vD.dotDotDotToken) {
+          MD.push(null === DD ? "undefined" : `...${DD}`);
           break
         }
-        if (void 0 !== zz) {
-          Fz.push(null !== zz && void 0 !== zz ? zz : "undefined");
+        if (void 0 !== DD) {
+          MD.push(null !== DD && void 0 !== DD ? DD : "undefined");
           continue
         }
-        const uz = Rz(Az, vz);
-        Kz.push(uz), Fz.push(uz)
+        const CD = ZD(xD, PD);
+        oD.push(CD), MD.push(CD)
       }
-      if (Kz.length > 0) {
-        const zz = Hz.getChildren(uz).find((zz => zz.kind === vz().SyntaxKind.CloseParenToken)),
-          bz = zz ? zz.getStart(uz) : -1;
-        if (-1 === bz) {
-          const zz = Hz.parameters[0];
-          if (!zz) return [];
-          pz.push({
-            from: zz.getStart(uz),
-            to: zz.getEnd(),
-            text: `(${[zz.getText(uz),...Kz].join(", ")})`
+      if (oD.length > 0) {
+        const DD = wD.getChildren(CD).find((DD => DD.kind === PD().SyntaxKind.CloseParenToken)),
+          cD = DD ? DD.getStart(CD) : -1;
+        if (-1 === cD) {
+          const DD = wD.parameters[0];
+          if (!DD) return [];
+          BD.push({
+            from: DD.getStart(CD),
+            to: DD.getEnd(),
+            text: `(${[DD.getText(CD),...oD].join(", ")})`
           })
         } else {
-          const zz = Hz.parameters.hasTrailingComma ? " " : Hz.parameters.length > 0 ? ", " : "";
-          pz.push({
-            from: bz,
-            to: bz,
-            text: `${zz}${Kz.join(", ")}`
+          const DD = wD.parameters.hasTrailingComma ? " " : wD.parameters.length > 0 ? ", " : "";
+          BD.push({
+            from: cD,
+            to: cD,
+            text: `${DD}${oD.join(", ")}`
           })
         }
       }
-      const Xz = `${nz}(${Fz.join(", ")})`,
-        fz = Rz(`${Lb(lz)}Result`, 2),
-        sz = Zb[Ez],
-        rz = Fb.has(Ez) ? [Xz] : sz ? [`const ${fz} = ${Xz}`, `if (${sz.stopsWhen(fz)}) return ${fz}`] : [`const ${fz} = ${Xz}`],
-        oz = !Fb.has(Ez) && (null === (Mz = null === sz || void 0 === sz ? void 0 : sz.passedOn) || void 0 === Mz || Mz);
-      if (oz && vz().isBlock(Oz)) {
-        const bz = function(zz, uz) {
-            const bz = new Set;
-            for (const Ez of zz.statements) {
-              const zz = vz().isVariableStatement(Ez) ? Ez.declarationList.declarations[0] : void 0;
-              zz && vz().isIdentifier(zz.name) && zz.initializer && Vb(zz.initializer, uz) && bz.add(zz.name.text)
+      const ND = `${pD}(${MD.join(", ")})`,
+        gD = ZD(`${Jc(fD)}Result`, 2),
+        XD = tc[ID],
+        mD = Mc.has(ID) ? [ND] : XD ? [`const ${gD} = ${ND}`, `if (${XD.stopsWhen(gD)}) return ${gD}`] : [`const ${gD} = ${ND}`],
+        nD = !Mc.has(ID) && (null === (bD = null === XD || void 0 === XD ? void 0 : XD.passedOn) || void 0 === bD || bD);
+      if (nD && PD().isBlock(SD)) {
+        const cD = function(DD, CD) {
+            const cD = new Set;
+            for (const ID of DD.statements) {
+              const DD = PD().isVariableStatement(ID) ? ID.declarationList.declarations[0] : void 0;
+              DD && PD().isIdentifier(DD.name) && DD.initializer && zc(DD.initializer, CD) && cD.add(DD.name.text)
             }
-            return bz
-          }(Oz, Ez),
-          nz = zz => {
-            if (!vz().isFunctionLike(zz) && ! function(zz, uz, bz) {
-                if (!vz().isIfStatement(zz) || !vz().isReturnStatement(zz.thenStatement) || !zz.thenStatement.expression) return !1;
-                const Ez = zz.thenStatement.expression;
-                return vz().isIdentifier(Ez) && uz.has(Ez.text) && zz.expression.getText(bz).startsWith(`${Ez.text} `)
-              }(zz, bz, uz)) {
-              if (vz().isReturnStatement(zz) && !zz.expression) pz.push({
-                from: zz.getStart(uz),
-                to: zz.getEnd(),
-                text: `return ${fz}`
+            return cD
+          }(SD, ID),
+          pD = DD => {
+            if (!PD().isFunctionLike(DD) && ! function(DD, CD, cD) {
+                if (!PD().isIfStatement(DD) || !PD().isReturnStatement(DD.thenStatement) || !DD.thenStatement.expression) return !1;
+                const ID = DD.thenStatement.expression;
+                return PD().isIdentifier(ID) && CD.has(ID.text) && DD.expression.getText(cD).startsWith(`${ID.text} `)
+              }(DD, cD, CD)) {
+              if (PD().isReturnStatement(DD) && !DD.expression) BD.push({
+                from: DD.getStart(CD),
+                to: DD.getEnd(),
+                text: `return ${gD}`
               });
-              else if (vz().isReturnStatement(zz) && zz.expression) {
-                const Ez = mb(zz.expression, bz);
-                Ez && pz.push({
-                  from: Ez.getStart(uz),
-                  to: Ez.getEnd(),
-                  text: `${Ez.text} !== undefined ? ${Ez.text} : ${fz}`
+              else if (PD().isReturnStatement(DD) && DD.expression) {
+                const ID = jc(DD.expression, cD);
+                ID && BD.push({
+                  from: ID.getStart(CD),
+                  to: ID.getEnd(),
+                  text: `${ID.text} !== undefined ? ${ID.text} : ${gD}`
                 })
               }
-              vz().forEachChild(zz, nz)
+              PD().forEachChild(DD, pD)
             }
           };
-        Oz.statements.forEach(nz);
-        const iz = Oz.statements[Oz.statements.length - 1];
-        if (!iz || !vz().isReturnStatement(iz) && !vz().isThrowStatement(iz)) {
-          const bz = Oz.getEnd() - 1,
-            Ez = iz ? xb(zz, iz.getStart(uz)) : `${zz.slice(vb(zz,Hz.getStart(uz)),Hz.getStart(uz)).replace(/\S.*$/,"")}\t`,
-            nz = zz.slice(vb(zz, bz), bz),
-            lz = /^\s*$/.test(nz) ? `${Ez}return ${fz}\n${nz}` : `\n${Ez}return ${fz}\n`;
-          pz.push({
-            from: /^\s*$/.test(nz) ? vb(zz, bz) : bz,
-            to: bz,
-            text: lz
+        SD.statements.forEach(pD);
+        const iD = SD.statements[SD.statements.length - 1];
+        if (!iD || !PD().isReturnStatement(iD) && !PD().isThrowStatement(iD)) {
+          const cD = SD.getEnd() - 1,
+            ID = iD ? Hc(DD, iD.getStart(CD)) : `${DD.slice(Pc(DD,wD.getStart(CD)),wD.getStart(CD)).replace(/\S.*$/,"")}\t`,
+            pD = DD.slice(Pc(DD, cD), cD),
+            fD = /^\s*$/.test(pD) ? `${ID}return ${gD}\n${pD}` : `\n${ID}return ${gD}\n`;
+          BD.push({
+            from: /^\s*$/.test(pD) ? Pc(DD, cD) : cD,
+            to: cD,
+            text: fD
           })
         }
       }
-      const Nz = vz().isBlock(Oz) ? [...Oz.statements] : [],
-        xz = Nz.findIndex((zz => ! function(zz, uz) {
-          return vz().isExpressionStatement(zz) && Vb(zz.expression, uz)
-        }(zz, Ez))),
-        Jz = Nz[(-1 === xz ? Nz.length : xz) - 1];
-      if (tz && Fb.has(Ez) && Jz) pz.push({
-        from: Jz.getEnd(),
-        to: Jz.getEnd(),
-        text: `\n${xb(zz,Jz.getStart(uz))}${Xz}`
+      const OD = PD().isBlock(SD) ? [...SD.statements] : [],
+        HD = OD.findIndex((DD => ! function(DD, CD) {
+          return PD().isExpressionStatement(DD) && zc(DD.expression, CD)
+        }(DD, ID))),
+        UD = OD[(-1 === HD ? OD.length : HD) - 1];
+      if (QD && Mc.has(ID) && UD) BD.push({
+        from: UD.getEnd(),
+        to: UD.getEnd(),
+        text: `\n${Hc(DD,UD.getStart(CD))}${ND}`
       });
-      else if (vz().isBlock(Oz)) {
-        const bz = Oz.statements[0],
-          Ez = bz ? xb(zz, bz.getStart(uz)) : `${zz.slice(vb(zz,Hz.getStart(uz)),Hz.getStart(uz)).replace(/\S.*$/,"")}\t`,
-          nz = Oz.getStart(uz) + 1,
-          iz = void 0 !== bz && !zz.slice(nz, bz.getStart(uz)).includes("\n");
-        pz.push({
-          from: nz,
-          to: iz ? bz.getStart(uz) : nz,
-          text: `\n${rz.map((zz=>`${Ez}${zz}`)).join("\n")}${bz?iz?`\n${Ez}`:"":"\n"}`
+      else if (PD().isBlock(SD)) {
+        const cD = SD.statements[0],
+          ID = cD ? Hc(DD, cD.getStart(CD)) : `${DD.slice(Pc(DD,wD.getStart(CD)),wD.getStart(CD)).replace(/\S.*$/,"")}\t`,
+          pD = SD.getStart(CD) + 1,
+          iD = void 0 !== cD && !DD.slice(pD, cD.getStart(CD)).includes("\n");
+        BD.push({
+          from: pD,
+          to: iD ? cD.getStart(CD) : pD,
+          text: `\n${mD.map((DD=>`${ID}${DD}`)).join("\n")}${cD?iD?`\n${ID}`:"":"\n"}`
         })
       } else {
-        const bz = zz.slice(vb(zz, Hz.getStart(uz)), Hz.getStart(uz)).replace(/\S.*$/, ""),
-          Ez = Rz("ownResult", 2),
-          nz = oz ? [`const ${Ez} = ${Oz.getText(uz)}`, `return ${Ez} !== undefined ? ${Ez} : ${fz}`] : [`return ${Oz.getText(uz)}`];
-        pz.push({
-          from: Oz.getStart(uz),
-          to: Oz.getEnd(),
-          text: `{\n${[...rz,...nz].map((zz=>`${bz}\t${zz}`)).join("\n")}\n${bz}}`
+        const cD = DD.slice(Pc(DD, wD.getStart(CD)), wD.getStart(CD)).replace(/\S.*$/, ""),
+          ID = ZD("ownResult", 2),
+          pD = nD ? [`const ${ID} = ${SD.getText(CD)}`, `return ${ID} !== undefined ? ${ID} : ${gD}`] : [`return ${SD.getText(CD)}`];
+        BD.push({
+          from: SD.getStart(CD),
+          to: SD.getEnd(),
+          text: `{\n${[...mD,...pD].map((DD=>`${cD}\t${DD}`)).join("\n")}\n${cD}}`
         })
       }
-      return pz
+      return BD
     }
 
-    function Vb(zz, uz) {
-      return vz().isCallExpression(zz) && vz().isIdentifier(zz.expression) && zz.expression.text.endsWith(Tb(uz)) && zz.expression.text !== Tb(uz)
+    function zc(DD, CD) {
+      return PD().isCallExpression(DD) && PD().isIdentifier(DD.expression) && DD.expression.text.endsWith(qc(CD)) && DD.expression.text !== qc(CD)
     }
 
-    function mb(zz, uz) {
-      return vz().isIdentifier(zz) ? uz.has(zz.text) ? zz : null : vz().isConditionalExpression(zz) ? mb(zz.whenFalse, uz) : null
+    function jc(DD, CD) {
+      return PD().isIdentifier(DD) ? CD.has(DD.text) ? DD : null : PD().isConditionalExpression(DD) ? jc(DD.whenFalse, CD) : null
     }
 
-    function qb(zz) {
-      const uz = [],
-        bz = zz => {
-          vz().isIdentifier(zz) && uz.push(zz.text), vz().forEachChild(zz, bz)
+    function lc(DD) {
+      const CD = [],
+        cD = DD => {
+          PD().isIdentifier(DD) && CD.push(DD.text), PD().forEachChild(DD, cD)
         };
-      return bz(zz), uz
+      return cD(DD), CD
     }
 
-    function hb(zz, uz, bz) {
-      var Ez, nz;
-      return (0, pu.e)(null !== (Ez = null === (nz = zz.body) || void 0 === nz ? void 0 : nz.getText(uz)) && void 0 !== Ez ? Ez : "", new RegExp(`${bz}\\s*\\(`), pu.l).length > 0
+    function Lc(DD, CD, cD) {
+      var ID, pD;
+      return (0, BC.f)(null !== (ID = null === (pD = DD.body) || void 0 === pD ? void 0 : pD.getText(CD)) && void 0 !== ID ? ID : "", new RegExp(`${cD}\\s*\\(`), BC.q).length > 0
     }
 
-    function Ub(zz, uz, bz) {
-      var Ez;
+    function Tc(DD, CD, cD) {
+      var ID;
       const {
-        owner: nz,
-        heading: iz
-      } = bz, lz = null !== (Ez = bz.overrides) && void 0 !== Ez ? Ez : new Set;
-      if ("" === zz.trim() && !0 !== bz.chainCallbacks) {
-        const zz = `${iz?`${iz}\n`:""}${uz.trim()}\n`,
+        owner: pD,
+        heading: iD
+      } = cD, fD = null !== (ID = cD.overrides) && void 0 !== ID ? ID : new Set;
+      if ("" === DD.trim() && !0 !== cD.chainCallbacks) {
+        const DD = `${iD?`${iD}\n`:""}${CD.trim()}\n`,
           {
-            file: bz,
-            hasErrors: Ez
-          } = Rb(zz);
-        if (Ez) return null;
-        const nz = ob(zz, bz);
+            file: cD,
+            hasErrors: ID
+          } = Zc(DD);
+        if (ID) return null;
+        const pD = nc(DD, cD);
         return {
-          text: zz,
-          added: nz.flatMap((zz => "config" === zz.kind ? [] : zz.names)),
+          text: DD,
+          added: pD.flatMap((DD => "config" === DD.kind ? [] : DD.names)),
           chained: [],
-          settings: nz.flatMap((zz => {
-            var uz;
-            const bz = "config" === zz.kind ? rb(zz.node) : null;
-            return (null !== (uz = null === bz || void 0 === bz ? void 0 : bz.properties) && void 0 !== uz ? uz : []).flatMap((zz => {
-              const uz = Nb(zz);
-              return null === uz ? [] : [uz]
+          settings: pD.flatMap((DD => {
+            var CD;
+            const cD = "config" === DD.kind ? mc(DD.node) : null;
+            return (null !== (CD = null === cD || void 0 === cD ? void 0 : cD.properties) && void 0 !== CD ? CD : []).flatMap((DD => {
+              const CD = Oc(DD);
+              return null === CD ? [] : [CD]
             }))
           }))
         }
       }
-      const Mz = Rb(zz),
-        tz = Rb(uz);
-      if (Mz.hasErrors || tz.hasErrors) return null;
-      const Hz = ob(zz, Mz.file),
-        Oz = ob(uz, tz.file),
-        pz = new Set(Hz.flatMap((zz => zz.names))),
-        dz = new Set(pz),
-        Fz = [],
-        Zz = [],
-        Rz = [],
-        Kz = [];
-      let wz = [];
-      const Xz = Oz.find((zz => "config" === zz.kind)),
-        fz = Hz.find((zz => "config" === zz.kind));
-      if (Xz) {
-        const bz = rb(Xz.node),
-          Ez = fz ? rb(fz.node) : null;
-        if (bz && Ez) {
-          const nz = function(zz, uz, bz, Ez, nz, iz, lz) {
-            const Mz = new Map;
-            for (const fz of bz.properties) {
-              const zz = Nb(fz);
-              null !== zz && Mz.set(zz, fz)
+      const bD = Zc(DD),
+        QD = Zc(CD);
+      if (bD.hasErrors || QD.hasErrors) return null;
+      const wD = nc(DD, bD.file),
+        SD = nc(CD, QD.file),
+        BD = new Set(wD.flatMap((DD => DD.names))),
+        yD = new Set(BD),
+        MD = [],
+        tD = [],
+        ZD = [],
+        oD = [];
+      let vD = [];
+      const ND = SD.find((DD => "config" === DD.kind)),
+        gD = wD.find((DD => "config" === DD.kind));
+      if (ND) {
+        const cD = mc(ND.node),
+          ID = gD ? mc(gD.node) : null;
+        if (cD && ID) {
+          const pD = function(DD, CD, cD, ID, pD, iD, fD) {
+            const bD = new Map;
+            for (const gD of cD.properties) {
+              const DD = Oc(gD);
+              null !== DD && bD.set(DD, gD)
             }
-            const tz = [],
-              Hz = [],
-              Oz = [],
-              pz = new Map;
-            for (const fz of iz.properties) {
-              const zz = Nb(fz);
-              if (null === zz) continue;
-              const bz = Mz.get(zz);
-              if (bz) {
-                if (lz.has(zz) && vz().isPropertyAssignment(bz) && vz().isPropertyAssignment(fz)) {
-                  const Ez = fz.initializer.getText(nz);
-                  bz.initializer.getText(uz) !== Ez && (tz.push({
-                    from: bz.initializer.getStart(uz),
-                    to: bz.initializer.getEnd(),
-                    text: Ez
-                  }), pz.set(bz, Ez), Hz.push(zz))
+            const QD = [],
+              wD = [],
+              SD = [],
+              BD = new Map;
+            for (const gD of iD.properties) {
+              const DD = Oc(gD);
+              if (null === DD) continue;
+              const cD = bD.get(DD);
+              if (cD) {
+                if (fD.has(DD) && PD().isPropertyAssignment(cD) && PD().isPropertyAssignment(gD)) {
+                  const ID = gD.initializer.getText(pD);
+                  cD.initializer.getText(CD) !== ID && (QD.push({
+                    from: cD.initializer.getStart(CD),
+                    to: cD.initializer.getEnd(),
+                    text: ID
+                  }), BD.set(cD, ID), wD.push(DD))
                 }
-              } else Oz.push(Jb(Ez, fz, nz)), Hz.push(zz)
+              } else SD.push(Uc(ID, gD, pD)), wD.push(DD)
             }
-            if (0 === Oz.length) return {
-              edits: tz,
-              settings: Hz
+            if (0 === SD.length) return {
+              edits: QD,
+              settings: wD
             };
-            const dz = bz.getEnd() - 1,
-              Fz = bz.properties[bz.properties.length - 1];
-            if (!zz.slice(bz.getStart(uz), dz).includes("\n")) {
-              const zz = bz.properties.map((zz => {
-                const bz = pz.get(zz);
-                return vz().isPropertyAssignment(zz) && void 0 !== bz ? `\t${zz.name.getText(uz)}: ${bz},` : `\t${zz.getText(uz)},`
+            const yD = cD.getEnd() - 1,
+              MD = cD.properties[cD.properties.length - 1];
+            if (!DD.slice(cD.getStart(CD), yD).includes("\n")) {
+              const DD = cD.properties.map((DD => {
+                const cD = BD.get(DD);
+                return PD().isPropertyAssignment(DD) && void 0 !== cD ? `\t${DD.name.getText(CD)}: ${cD},` : `\t${DD.getText(CD)},`
               }));
               return {
                 edits: [{
-                  from: bz.getStart(uz),
-                  to: bz.getEnd(),
-                  text: `{\n${[...zz,...Oz].join("\n")}\n}`
+                  from: cD.getStart(CD),
+                  to: cD.getEnd(),
+                  text: `{\n${[...DD,...SD].join("\n")}\n}`
                 }],
-                settings: Hz
+                settings: wD
               }
             }
-            const Zz = void 0 !== Fz && !bz.properties.hasTrailingComma,
-              Rz = vb(zz, dz),
-              Kz = zz.slice(Rz, dz);
-            if ("" === Kz.trim()) return Zz && tz.push({
-              from: Fz.getEnd(),
-              to: Fz.getEnd(),
+            const tD = void 0 !== MD && !cD.properties.hasTrailingComma,
+              ZD = Pc(DD, yD),
+              oD = DD.slice(ZD, yD);
+            if ("" === oD.trim()) return tD && QD.push({
+              from: MD.getEnd(),
+              to: MD.getEnd(),
               text: ","
-            }), tz.push({
-              from: Rz,
-              to: Rz,
-              text: `${Oz.join("\n")}\n`
+            }), QD.push({
+              from: ZD,
+              to: ZD,
+              text: `${SD.join("\n")}\n`
             }), {
-              edits: tz,
-              settings: Hz
+              edits: QD,
+              settings: wD
             };
-            const wz = Rz + Kz.trimEnd().length,
-              Xz = Zz && Fz.getEnd() === wz;
-            return Zz && !Xz && tz.push({
-              from: Fz.getEnd(),
-              to: Fz.getEnd(),
+            const vD = ZD + oD.trimEnd().length,
+              ND = tD && MD.getEnd() === vD;
+            return tD && !ND && QD.push({
+              from: MD.getEnd(),
+              to: MD.getEnd(),
               text: ","
-            }), tz.push({
-              from: wz,
-              to: dz,
-              text: `${Xz?",":""}\n${Oz.join("\n")}\n`
+            }), QD.push({
+              from: vD,
+              to: yD,
+              text: `${ND?",":""}\n${SD.join("\n")}\n`
             }), {
-              edits: tz,
-              settings: Hz
+              edits: QD,
+              settings: wD
             }
-          }(zz, Mz.file, Ez, uz, tz.file, bz, lz);
-          Fz.push(...nz.edits), wz = nz.settings
-        } else if (bz) {
-          if (dz.has("CONFIG")) return null;
-          const Ez = function(zz, uz) {
-              const bz = uz.statements[0];
-              return bz ? vb(zz, bz.getStart(uz)) : zz.length
-            }(zz, Mz.file),
-            nz = Ez > 0 && "\n" !== zz[Ez - 1] ? "\n" : "";
-          Fz.push({
-            from: Ez,
-            to: Ez,
-            text: `${nz}${uz.slice(Xz.from,Xz.to)}\n\n`
-          }), wz = bz.properties.flatMap((zz => {
-            const uz = Nb(zz);
-            return null === uz ? [] : [uz]
+          }(DD, bD.file, ID, CD, QD.file, cD, fD);
+          MD.push(...pD.edits), vD = pD.settings
+        } else if (cD) {
+          if (yD.has("CONFIG")) return null;
+          const ID = function(DD, CD) {
+              const cD = CD.statements[0];
+              return cD ? Pc(DD, cD.getStart(CD)) : DD.length
+            }(DD, bD.file),
+            pD = ID > 0 && "\n" !== DD[ID - 1] ? "\n" : "";
+          MD.push({
+            from: ID,
+            to: ID,
+            text: `${pD}${CD.slice(ND.from,ND.to)}\n\n`
+          }), vD = cD.properties.flatMap((DD => {
+            const CD = Oc(DD);
+            return null === CD ? [] : [CD]
           }))
         }
       }
-      const sz = [],
-        rz = (zz, bz) => {
-          const Ez = sz[sz.length - 1],
-            nz = void 0 !== Ez && Ez >= 0 && Ez === bz - 1 && !/\n[^\S\n]*\n/.test(uz.slice(Oz[Ez].to, Oz[bz].from)) ? "\n" : "\n\n";
-          Zz.push(0 === Zz.length ? zz : `${nz}${zz}`), sz.push(bz)
+      const XD = [],
+        mD = (DD, cD) => {
+          const ID = XD[XD.length - 1],
+            pD = void 0 !== ID && ID >= 0 && ID === cD - 1 && !/\n[^\S\n]*\n/.test(CD.slice(SD[ID].to, SD[cD].from)) ? "\n" : "\n\n";
+          tD.push(0 === tD.length ? DD : `${pD}${DD}`), XD.push(cD)
         };
-      for (const [Nz, vz] of Oz.entries()) {
-        if ("config" === vz.kind) continue;
-        const Ez = uz.slice(vz.from, vz.to);
-        if ("callback" === vz.kind) {
-          const uz = vz.names[0],
-            iz = Pb(Hz, uz);
-          if (!iz && pz.has(uz)) {
-            if (!0 === bz.chainCallbacks) continue;
+      for (const [OD, PD] of SD.entries()) {
+        if ("config" === PD.kind) continue;
+        const ID = CD.slice(PD.from, PD.to);
+        if ("callback" === PD.kind) {
+          const CD = PD.names[0],
+            iD = Kc(wD, CD);
+          if (!iD && BD.has(CD)) {
+            if (!0 === cD.chainCallbacks) continue;
             return null
           }
-          if (!iz && !0 !== bz.chainCallbacks) {
-            dz.has(uz) || (rz(Ez, Nz), Rz.push(uz), dz.add(uz));
+          if (!iD && !0 !== cD.chainCallbacks) {
+            yD.has(CD) || (mD(ID, OD), ZD.push(CD), yD.add(CD));
             continue
           }
-          const lz = `${Lb(nz)}${Tb(uz)}`,
-            Oz = wb(vz.node);
-          if (null === Oz || void 0 === Oz || !Oz.nameNode) continue;
-          if (!dz.has(lz)) {
-            const zz = Oz.nameNode.getStart(tz.file) - vz.from,
-              uz = Oz.nameNode.getEnd() - vz.from;
-            rz(Ez.slice(0, zz) + lz + Ez.slice(uz), Nz), Rz.push(lz), dz.add(lz)
+          const fD = `${Jc(pD)}${qc(CD)}`,
+            SD = vc(PD.node);
+          if (null === SD || void 0 === SD || !SD.nameNode) continue;
+          if (!yD.has(fD)) {
+            const DD = SD.nameNode.getStart(QD.file) - PD.from,
+              CD = SD.nameNode.getEnd() - PD.from;
+            mD(ID.slice(0, DD) + fD + ID.slice(CD), OD), ZD.push(fD), yD.add(fD)
           }
-          const Zz = Gb(Oz.TZ).map(((zz, uz) => null !== zz && void 0 !== zz ? zz : `arg${uz}`));
-          if (!iz) {
-            const zz = `${lz}(${Zz.join(", ")})`,
-              bz = `${Lb(nz)}Result`;
-            rz(`function ${uz}(${Zz.join(", ")}) {\n\t${Fb.has(uz)?zz:`const ${bz} = ${zz}\n\treturn ${bz}`}\n}`, -1), Rz.push(uz), dz.add(uz);
+          const tD = ac(SD.Ot).map(((DD, CD) => null !== DD && void 0 !== DD ? DD : `arg${CD}`));
+          if (!iD) {
+            const DD = `${fD}(${tD.join(", ")})`,
+              cD = `${Jc(pD)}Result`;
+            mD(`function ${CD}(${tD.join(", ")}) {\n\t${Mc.has(CD)?DD:`const ${cD} = ${DD}\n\treturn ${cD}`}\n}`, -1), ZD.push(CD), yD.add(CD);
             continue
           }
-          hb(iz.TZ, Mz.file, lz) || (Fz.push(...ab(zz, Mz.file, iz, uz, lz, Zz, nz, !0 === bz.runsLast)), Kz.push(uz));
+          Lc(iD.Ot, bD.file, fD) || (MD.push(...Vc(DD, bD.file, iD, CD, fD, tD, pD, !0 === cD.runsLast)), oD.push(CD));
           continue
         }
-        const iz = vz.names.filter((zz => !dz.has(zz)));
-        if ("other" === vz.kind || vz.names.length > 0 && iz.length === vz.names.length) {
-          rz(Ez, Nz), Rz.push(...iz);
-          for (const zz of iz) dz.add(zz)
+        const iD = PD.names.filter((DD => !yD.has(DD)));
+        if ("other" === PD.kind || PD.names.length > 0 && iD.length === PD.names.length) {
+          mD(ID, OD), ZD.push(...iD);
+          for (const DD of iD) yD.add(DD)
         }
       }
-      let oz = Ab(zz, Fz);
-      if (Zz.length > 0) {
-        const zz = oz.replace(/\s*$/, "");
-        oz = `${""===zz?"":`${zz}\n\n`}${iz?`${iz}\n`:""}${Zz.join("")}\n`
+      let nD = xc(DD, MD);
+      if (tD.length > 0) {
+        const DD = nD.replace(/\s*$/, "");
+        nD = `${""===DD?"":`${DD}\n\n`}${iD?`${iD}\n`:""}${tD.join("")}\n`
       }
-      return Rb(oz).hasErrors ? null : {
-        text: oz,
-        added: Rz,
-        chained: Kz,
-        settings: wz
+      return Zc(nD).hasErrors ? null : {
+        text: nD,
+        added: ZD,
+        chained: oD,
+        settings: vD
       }
     }
 
-    function cb(zz) {
+    function Gc(DD) {
       const {
-        file: uz
-      } = Rb(zz);
-      return new Set(ob(zz, uz).flatMap((zz => zz.names)))
+        file: CD
+      } = Zc(DD);
+      return new Set(nc(DD, CD).flatMap((DD => DD.names)))
     }
 
-    function gb(zz) {
+    function Rc(DD) {
       const {
-        file: uz
-      } = Rb(zz), bz = new Set, Ez = zz => {
-        vz().isCallExpression(zz) && vz().isIdentifier(zz.expression) && bz.add(zz.expression.text), vz().forEachChild(zz, Ez)
+        file: CD
+      } = Zc(DD), cD = new Set, ID = DD => {
+        PD().isCallExpression(DD) && PD().isIdentifier(DD.expression) && cD.add(DD.expression.text), PD().forEachChild(DD, ID)
       };
-      return Ez(uz), bz
+      return ID(CD), cD
     }
 
-    function Sb(zz) {
-      return !Rb(zz).hasErrors
+    function kc(DD) {
+      return !Zc(DD).hasErrors
     }
 
-    function yb(zz, uz) {
-      return vz().isCallExpression(zz) && vz().isPropertyAccessExpression(zz.expression) && "api" === zz.expression.expression.getText(uz)
+    function dc(DD, CD) {
+      return PD().isCallExpression(DD) && PD().isPropertyAccessExpression(DD.expression) && "api" === DD.expression.expression.getText(CD)
     }
 
-    function Db(zz, uz) {
-      var bz;
-      const Ez = zz.getPropertiesOfType(zz.getNonNullableType(uz)),
-        nz = null !== (bz = Ez.find((zz => "color" === zz.name))) && void 0 !== bz ? bz : Ez[0];
-      if (!nz) return;
-      const iz = zz.typeToString(zz.getNonNullableType(zz.getTypeOfSymbol(nz))),
-        lz = "color" === nz.name ? '"red"' : iz.includes("number") ? "1" : "boolean" === iz ? "true" : '"..."';
-      return `{ ${nz.name}: ${lz} }`
+    function Yc(DD, CD) {
+      var cD;
+      const ID = DD.getPropertiesOfType(DD.getNonNullableType(CD)),
+        pD = null !== (cD = ID.find((DD => "color" === DD.name))) && void 0 !== cD ? cD : ID[0];
+      if (!pD) return;
+      const iD = DD.typeToString(DD.getNonNullableType(DD.getTypeOfSymbol(pD))),
+        fD = "color" === pD.name ? '"red"' : iD.includes("number") ? "1" : "boolean" === iD ? "true" : '"..."';
+      return `{ ${pD.name}: ${fD} }`
     }
 
-    function Qb(zz) {
-      return zz.isUnion() ? zz.types.every((zz => 0 !== (zz.flags & vz().TypeFlags.Object))) : 0 !== (zz.flags & vz().TypeFlags.Object)
+    function Wc(DD) {
+      return DD.isUnion() ? DD.types.every((DD => 0 !== (DD.flags & PD().TypeFlags.Object))) : 0 !== (DD.flags & PD().TypeFlags.Object)
     }
 
-    function Wb(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const Ez = zz.getNonNullableType(uz);
-      if (Ez.isUnion()) {
-        const uz = [...new Set(Ez.types.map((uz => Wb(zz, uz, bz))))];
-        return uz.length > 7 ? `${uz.slice(0,7).join(" or ")} or ...` : uz.join(" or ")
+    function sc(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const ID = DD.getNonNullableType(CD);
+      if (ID.isUnion()) {
+        const CD = [...new Set(ID.types.map((CD => sc(DD, CD, cD))))];
+        return CD.length > 7 ? `${CD.slice(0,7).join(" or ")} or ...` : CD.join(" or ")
       }
-      if (Ez.isStringLiteral()) return `"${Ez.value}"`;
-      if (Ez.isNumberLiteral()) return `${Ez.value}`;
-      if (Ez.flags & vz().TypeFlags.StringLike) return "text";
-      if (Ez.flags & vz().TypeFlags.NumberLike) return "a number";
-      if (Ez.flags & vz().TypeFlags.BooleanLike) return "true or false";
-      if (zz.isTupleType(Ez)) {
-        return `[${zz.getTypeArguments(Ez).map((uz=>Wb(zz,uz,bz+1))).join(", ")}]`
+      if (ID.isStringLiteral()) return `"${ID.value}"`;
+      if (ID.isNumberLiteral()) return `${ID.value}`;
+      if (ID.flags & PD().TypeFlags.StringLike) return "text";
+      if (ID.flags & PD().TypeFlags.NumberLike) return "a number";
+      if (ID.flags & PD().TypeFlags.BooleanLike) return "true or false";
+      if (DD.isTupleType(ID)) {
+        return `[${DD.getTypeArguments(ID).map((CD=>sc(DD,CD,cD+1))).join(", ")}]`
       }
-      if (zz.isArrayType(Ez)) {
-        if (bz > 1) return "a list";
-        const uz = Wb(zz, zz.getTypeArguments(Ez)[0], bz + 1);
-        return `a list of ${uz.includes(" or ")?`(${uz})`:uz}`
+      if (DD.isArrayType(ID)) {
+        if (cD > 1) return "a list";
+        const CD = sc(DD, DD.getTypeArguments(ID)[0], cD + 1);
+        return `a list of ${CD.includes(" or ")?`(${CD})`:CD}`
       }
-      if (Ez.getCallSignatures().length > 0) return "a function";
-      const nz = zz.getPropertiesOfType(Ez);
-      if (0 === nz.length || bz > 1) return "{ ... }";
-      return `{ ${nz.slice(0,10).map((zz=>`${zz.name}${zz.flags&vz().SymbolFlags.Optional?"?":""}`)).join(", ")}${nz.length>10?", ...":""} }`
+      if (ID.getCallSignatures().length > 0) return "a function";
+      const pD = DD.getPropertiesOfType(ID);
+      if (0 === pD.length || cD > 1) return "{ ... }";
+      return `{ ${pD.slice(0,10).map((DD=>`${DD.name}${DD.flags&PD().SymbolFlags.Optional?"?":""}`)).join(", ")}${pD.length>10?", ...":""} }`
     }
 
-    function eb(zz, uz, bz) {
-      const Ez = (uz, bz) => zz.isTypeAssignableTo(uz, bz) || eb(zz, uz, bz),
-        nz = uz => zz.getTypeArguments(uz)[0];
-      if ("string | number" === zz.typeToString(uz)) return !0;
-      if (uz.isUnion() && !(uz.flags & vz().TypeFlags.Boolean)) return uz.types.every((zz => Ez(zz, bz)));
-      const iz = zz.getNonNullableType(bz);
-      return (iz.isUnion() ? iz.types : [iz]).some((bz => zz.isTupleType(bz) ? zz.isArrayType(uz) && zz.getTypeArguments(bz).every((zz => Ez(nz(uz), zz))) : zz.isArrayType(bz) ? zz.isArrayType(uz) && Ez(nz(uz), nz(bz)) : bz.flags & (vz().TypeFlags.Object | vz().TypeFlags.Intersection) && 0 === bz.getCallSignatures().length ? !!(uz.flags & (vz().TypeFlags.Object | vz().TypeFlags.Intersection)) && !zz.isArrayType(uz) && !zz.isTupleType(uz) && zz.getPropertiesOfType(bz).every((zz => 0 !== (zz.flags & vz().SymbolFlags.Optional) || void 0 !== uz.getProperty(zz.name))) && zz.getPropertiesOfType(uz).every((uz => {
-        var nz;
-        if (zz.getTypeOfSymbol(uz).flags & vz().TypeFlags.Undefined) return !0;
-        const iz = bz.getProperty(uz.name),
-          lz = iz ? zz.getTypeOfSymbol(iz) : null === (nz = zz.getIndexInfoOfType(bz, vz().IndexKind.String)) || void 0 === nz ? void 0 : nz.type;
-        return void 0 !== lz && Ez(zz.getTypeOfSymbol(uz), lz)
-      })) : bz.isNumberLiteral() && uz.flags === vz().TypeFlags.Number || bz.isStringLiteral() && uz.flags === vz().TypeFlags.String))
+    function Ec(DD, CD, cD) {
+      const ID = (CD, cD) => DD.isTypeAssignableTo(CD, cD) || Ec(DD, CD, cD),
+        pD = CD => DD.getTypeArguments(CD)[0];
+      if ("string | number" === DD.typeToString(CD)) return !0;
+      if (CD.isUnion() && !(CD.flags & PD().TypeFlags.Boolean)) return CD.types.every((DD => ID(DD, cD)));
+      const iD = DD.getNonNullableType(cD);
+      return (iD.isUnion() ? iD.types : [iD]).some((cD => DD.isTupleType(cD) ? DD.isArrayType(CD) && DD.getTypeArguments(cD).every((DD => ID(pD(CD), DD))) : DD.isArrayType(cD) ? DD.isArrayType(CD) && ID(pD(CD), pD(cD)) : cD.flags & (PD().TypeFlags.Object | PD().TypeFlags.Intersection) && 0 === cD.getCallSignatures().length ? !!(CD.flags & (PD().TypeFlags.Object | PD().TypeFlags.Intersection)) && !DD.isArrayType(CD) && !DD.isTupleType(CD) && DD.getPropertiesOfType(cD).every((DD => 0 !== (DD.flags & PD().SymbolFlags.Optional) || void 0 !== CD.getProperty(DD.name))) && DD.getPropertiesOfType(CD).every((CD => {
+        var pD;
+        if (DD.getTypeOfSymbol(CD).flags & PD().TypeFlags.Undefined) return !0;
+        const iD = cD.getProperty(CD.name),
+          fD = iD ? DD.getTypeOfSymbol(iD) : null === (pD = DD.getIndexInfoOfType(cD, PD().IndexKind.String)) || void 0 === pD ? void 0 : pD.type;
+        return void 0 !== fD && ID(DD.getTypeOfSymbol(CD), fD)
+      })) : cD.isNumberLiteral() && CD.flags === PD().TypeFlags.Number || cD.isStringLiteral() && CD.flags === PD().TypeFlags.String))
     }
 
-    function jb(zz, uz) {
-      return vz().isTypeReferenceNode(zz) && vz().isIdentifier(zz.typeName) && uz.has(zz.typeName.text) || !!vz().forEachChild(zz, (zz => jb(zz, uz) || void 0))
+    function ec(DD, CD) {
+      return PD().isTypeReferenceNode(DD) && PD().isIdentifier(DD.typeName) && CD.has(DD.typeName.text) || !!PD().forEachChild(DD, (DD => ec(DD, CD) || void 0))
     }
 
-    function Ib(zz, uz) {
-      const bz = new Set,
-        Ez = nz => {
-          if (yb(nz, zz)) {
-            var iz, lz, Mz;
-            const Ez = uz.getResolvedSignature(nz),
-              tz = null !== (iz = null === Ez || void 0 === Ez ? void 0 : Ez.getParameters()) && void 0 !== iz ? iz : [],
-              Hz = new Set((null !== (lz = null === Ez || void 0 === Ez || null === (Mz = Ez.getDeclaration()) || void 0 === Mz ? void 0 : Mz.typeParameters) && void 0 !== lz ? lz : []).map((zz => zz.name.text)));
-            nz.arguments.forEach(((uz, Ez) => {
-              var iz;
-              const lz = null === (iz = tz[Ez]) || void 0 === iz ? void 0 : iz.valueDeclaration,
-                Mz = lz && vz().isParameter(lz) ? lz.type : void 0;
-              if (uz.kind === vz().SyntaxKind.NullKeyword && Mz && !jb(Mz, Hz) && !/\b(?:null|any|unknown)\b/.test(Mz.getText())) {
-                const uz = Ez === nz.arguments.length - 1;
-                bz.add(`${nz.expression.getText(zz)} can't take null as ${tz[Ez].name}: ${uz?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
+    function uc(DD, CD) {
+      const cD = new Set,
+        ID = pD => {
+          if (dc(pD, DD)) {
+            var iD, fD, bD;
+            const ID = CD.getResolvedSignature(pD),
+              QD = null !== (iD = null === ID || void 0 === ID ? void 0 : ID.getParameters()) && void 0 !== iD ? iD : [],
+              wD = new Set((null !== (fD = null === ID || void 0 === ID || null === (bD = ID.getDeclaration()) || void 0 === bD ? void 0 : bD.typeParameters) && void 0 !== fD ? fD : []).map((DD => DD.name.text)));
+            pD.arguments.forEach(((CD, ID) => {
+              var iD;
+              const fD = null === (iD = QD[ID]) || void 0 === iD ? void 0 : iD.valueDeclaration,
+                bD = fD && PD().isParameter(fD) ? fD.type : void 0;
+              if (CD.kind === PD().SyntaxKind.NullKeyword && bD && !ec(bD, wD) && !/\b(?:null|any|unknown)\b/.test(bD.getText())) {
+                const CD = ID === pD.arguments.length - 1;
+                cD.add(`${pD.expression.getText(DD)} can't take null as ${QD[ID].name}: ${CD?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
               }
             }))
           }
-          vz().forEachChild(nz, Ez)
+          PD().forEachChild(pD, ID)
         };
-      return Ez(zz), [...bz]
+      return ID(DD), [...cD]
     }
 
-    function Bb(zz) {
-      return Rb(zz).file
+    function hc(DD) {
+      return Zc(DD).file
     }
 
-    function Cb(zz) {
+    function rc(DD) {
       return {
-        from: zz.getFullStart(),
-        to: zz.getEnd()
+        from: DD.getFullStart(),
+        to: DD.getEnd()
       }
     }
 
-    function Yb(zz) {
-      if (!/\buse_?prefab\s*\(/i.test(zz)) return {
-        code: zz,
+    function Ac(DD) {
+      if (!/\buse_?prefab\s*\(/i.test(DD)) return {
+        code: DD,
         calls: []
       };
-      const uz = Bb(zz),
-        bz = function(zz) {
-          const uz = new Map;
-          for (const bz of zz.statements)
-            if (vz().isVariableStatement(bz))
-              for (const zz of bz.declarationList.declarations)
-                if (vz().isIdentifier(zz.name) && "CONFIG" === zz.name.text && zz.initializer && vz().isObjectLiteralExpression(zz.initializer))
-                  for (const bz of zz.initializer.properties) vz().isPropertyAssignment(bz) && (vz().isIdentifier(bz.name) || vz().isStringLiteral(bz.name)) && uz.set(bz.name.text, bz.initializer.getText());
-          return uz
-        }(uz),
-        Ez = [],
-        nz = [],
-        iz = zz => {
-          var uz;
-          return vz().isPropertyAccessExpression(zz) && vz().isIdentifier(zz.expression) && "CONFIG" === zz.expression.text && null !== (uz = bz.get(zz.name.text)) && void 0 !== uz ? uz : zz.getText()
+      const CD = hc(DD),
+        cD = function(DD) {
+          const CD = new Map;
+          for (const cD of DD.statements)
+            if (PD().isVariableStatement(cD))
+              for (const DD of cD.declarationList.declarations)
+                if (PD().isIdentifier(DD.name) && "CONFIG" === DD.name.text && DD.initializer && PD().isObjectLiteralExpression(DD.initializer))
+                  for (const cD of DD.initializer.properties) PD().isPropertyAssignment(cD) && (PD().isIdentifier(cD.name) || PD().isStringLiteral(cD.name)) && CD.set(cD.name.text, cD.initializer.getText());
+          return CD
+        }(CD),
+        ID = [],
+        pD = [],
+        iD = DD => {
+          var CD;
+          return PD().isPropertyAccessExpression(DD) && PD().isIdentifier(DD.expression) && "CONFIG" === DD.expression.text && null !== (CD = cD.get(DD.name.text)) && void 0 !== CD ? CD : DD.getText()
         },
-        lz = zz => zz && (vz().isStringLiteral(zz) || vz().isNoSubstitutionTemplateLiteral(zz)) ? zz.text : zz && vz().isObjectLiteralExpression(zz) ? zz.properties.flatMap((zz => vz().isPropertyAssignment(zz) && (vz().isIdentifier(zz.name) || vz().isStringLiteral(zz.name)) ? [`${zz.name.text}: ${iz(zz.initializer)}`] : vz().isShorthandPropertyAssignment(zz) && bz.has(zz.name.text) ? [`${zz.name.text}: ${bz.get(zz.name.text)}`] : [])).join("\n") : "";
-      for (const Mz of uz.statements) {
-        const zz = vz().isExpressionStatement(Mz) ? Mz.expression : null;
-        if (!zz || !vz().isCallExpression(zz) || !vz().isIdentifier(zz.expression) || !/^use_?prefab$/i.test(zz.expression.text)) continue;
-        const [uz, bz] = zz.arguments;
-        if (uz && (vz().isStringLiteral(uz) || vz().isNoSubstitutionTemplateLiteral(uz))) Ez.push({
-          name: uz.text,
-          settings: lz(bz)
+        fD = DD => DD && (PD().isStringLiteral(DD) || PD().isNoSubstitutionTemplateLiteral(DD)) ? DD.text : DD && PD().isObjectLiteralExpression(DD) ? DD.properties.flatMap((DD => PD().isPropertyAssignment(DD) && (PD().isIdentifier(DD.name) || PD().isStringLiteral(DD.name)) ? [`${DD.name.text}: ${iD(DD.initializer)}`] : PD().isShorthandPropertyAssignment(DD) && cD.has(DD.name.text) ? [`${DD.name.text}: ${cD.get(DD.name.text)}`] : [])).join("\n") : "";
+      for (const bD of CD.statements) {
+        const DD = PD().isExpressionStatement(bD) ? bD.expression : null;
+        if (!DD || !PD().isCallExpression(DD) || !PD().isIdentifier(DD.expression) || !/^use_?prefab$/i.test(DD.expression.text)) continue;
+        const [CD, cD] = DD.arguments;
+        if (CD && (PD().isStringLiteral(CD) || PD().isNoSubstitutionTemplateLiteral(CD))) ID.push({
+          name: CD.text,
+          settings: fD(cD)
         });
         else {
-          if (!uz || !vz().isObjectLiteralExpression(uz)) continue;
+          if (!CD || !PD().isObjectLiteralExpression(CD)) continue;
           {
-            const zz = zz => {
-                var bz;
-                return null === (bz = uz.properties.find((uz => vz().isPropertyAssignment(uz) && vz().isIdentifier(uz.name) && uz.name.text === zz))) || void 0 === bz ? void 0 : bz.initializer
+            const DD = DD => {
+                var cD;
+                return null === (cD = CD.properties.find((CD => PD().isPropertyAssignment(CD) && PD().isIdentifier(CD.name) && CD.name.text === DD))) || void 0 === cD ? void 0 : cD.initializer
               },
-              bz = zz("name");
-            bz && vz().isStringLiteral(bz) && Ez.push({
-              name: bz.text,
-              settings: lz(zz("settings"))
+              cD = DD("name");
+            cD && PD().isStringLiteral(cD) && ID.push({
+              name: cD.text,
+              settings: fD(DD("settings"))
             })
           }
         }
-        nz.push({
-          ...Cb(Mz),
+        pD.push({
+          ...rc(bD),
           text: ""
         })
       }
       return {
-        code: Ab(zz, nz),
-        calls: Ez
+        code: xc(DD, pD),
+        calls: ID
       }
     }
 
-    function kb(zz) {
-      if (!/=\s*(?:on[A-Z]\w*|tick|playerCommand)\b/.test(zz)) return zz;
-      const uz = Bb(zz),
-        bz = new Set(uz.statements.flatMap((zz => vz().isFunctionDeclaration(zz) && zz.name ? [zz.name.text] : []))),
-        Ez = [];
-      for (const nz of uz.statements)
-        if (vz().isExpressionStatement(nz) && vz().isBinaryExpression(nz.expression) && nz.expression.operatorToken.kind === vz().SyntaxKind.EqualsToken && vz().isIdentifier(nz.expression.left) && bz.add(nz.expression.left.text), vz().isVariableStatement(nz))
-          for (const zz of nz.declarationList.declarations) {
-            const uz = zz.initializer;
-            uz && vz().isIdentifier(uz) && db(uz.text) && !bz.has(uz.text) && Ez.push({
-              from: uz.getStart(),
-              to: uz.getEnd(),
+    function Fc(DD) {
+      if (!/=\s*(?:on[A-Z]\w*|tick|playerCommand)\b/.test(DD)) return DD;
+      const CD = hc(DD),
+        cD = new Set(CD.statements.flatMap((DD => PD().isFunctionDeclaration(DD) && DD.name ? [DD.name.text] : []))),
+        ID = [];
+      for (const pD of CD.statements)
+        if (PD().isExpressionStatement(pD) && PD().isBinaryExpression(pD.expression) && pD.expression.operatorToken.kind === PD().SyntaxKind.EqualsToken && PD().isIdentifier(pD.expression.left) && cD.add(pD.expression.left.text), PD().isVariableStatement(pD))
+          for (const DD of pD.declarationList.declarations) {
+            const CD = DD.initializer;
+            CD && PD().isIdentifier(CD) && yc(CD.text) && !cD.has(CD.text) && ID.push({
+              from: CD.getStart(),
+              to: CD.getEnd(),
               text: "function () {}"
-            }), uz && vz().isIdentifier(zz.name) && bz.add(zz.name.text)
+            }), CD && PD().isIdentifier(DD.name) && cD.add(DD.name.text)
           }
-      return Ab(zz, Ez)
+      return xc(DD, ID)
     }
 
-    function zE(zz, uz) {
-      if (!zz.includes("api.setBlockRect(")) return zz;
-      const bz = Bb(zz);
-      if (bz.statements.some((zz => {
-          var uz;
-          return vz().isFunctionDeclaration(zz) && "fillBox" === (null === (uz = zz.name) || void 0 === uz ? void 0 : uz.text) && 3 !== zz.parameters.length
-        }))) return zz;
-      const Ez = [],
-        nz = zz => {
-          var iz;
-          vz().isFunctionDeclaration(zz) && "fillBox" === (null === (iz = zz.name) || void 0 === iz ? void 0 : iz.text) || (yb(zz, bz) && "setBlockRect" === zz.expression.name.text && 3 === zz.arguments.length && !uz.includes(zz.getText()) && Ez.push({
-            from: zz.expression.getStart(),
-            to: zz.expression.getEnd(),
+    function DI(DD, CD) {
+      if (!DD.includes("api.setBlockRect(")) return DD;
+      const cD = hc(DD);
+      if (cD.statements.some((DD => {
+          var CD;
+          return PD().isFunctionDeclaration(DD) && "fillBox" === (null === (CD = DD.name) || void 0 === CD ? void 0 : CD.text) && 3 !== DD.parameters.length
+        }))) return DD;
+      const ID = [],
+        pD = DD => {
+          var iD;
+          PD().isFunctionDeclaration(DD) && "fillBox" === (null === (iD = DD.name) || void 0 === iD ? void 0 : iD.text) || (dc(DD, cD) && "setBlockRect" === DD.expression.name.text && 3 === DD.arguments.length && !CD.includes(DD.getText()) && ID.push({
+            from: DD.expression.getStart(),
+            to: DD.expression.getEnd(),
             text: "fillBox"
-          }), vz().forEachChild(zz, nz))
+          }), PD().forEachChild(DD, pD))
         };
-      return nz(bz), Ab(zz, Ez)
+      return pD(cD), xc(DD, ID)
     }
-    const uE = [{
+    const CI = [{
         name: "parkour",
         kind: "game",
         title: "Parkour / obby",
@@ -4416,7 +4416,7 @@ export const modules = {
         }],
         setup: "Put your own Bloxd name in admins to get the admin commands, and set spawnPosition to where players should start."
       }],
-      bE = [{
+      cI = [{
         group: "timers",
         code: "// Ready-made timers: runLater(seconds, fn) runs fn once after some seconds, repeatEvery(seconds, fn) runs it every\n// few seconds, and cancelTimer(id) stops either. Time is counted in tick. The list is a var made on first use, so\n// they can be called from the top of the file, above this code.\nvar timerList\nvar nextTimerId\n\nfunction runLater(seconds, fn) {\n\treturn addToTimerList(seconds, 0, fn)\n}\n\nfunction repeatEvery(seconds, fn) {\n\treturn addToTimerList(seconds, Math.max(50, seconds * 1000), fn)\n}\n\nfunction addToTimerList(seconds, everyMs, fn) {\n\tif (!timerList) {\n\t\ttimerList = []\n\t\tnextTimerId = 1\n\t}\n\tconst id = nextTimerId++\n\ttimerList.push({ id: id, msLeft: seconds * 1000, everyMs: everyMs, fn: fn })\n\treturn id\n}\n\nfunction cancelTimer(id) {\n\tconst index = timerList ? timerList.findIndex((timer) => timer.id === id) : -1\n\tif (index !== -1) {\n\t\ttimerList.splice(index, 1)\n\t}\n}\n\nfunction tick(ms) {\n\tif (!timerList) {\n\t\treturn\n\t}\n\tfor (const timer of timerList.slice()) {\n\t\tif (!timerList.includes(timer)) {\n\t\t\tcontinue\n\t\t}\n\t\ttimer.msLeft -= ms\n\t\tif (timer.msLeft > 0) {\n\t\t\tcontinue\n\t\t}\n\t\tif (timer.everyMs > 0) {\n\t\t\ttimer.msLeft += timer.everyMs\n\t\t} else {\n\t\t\tcancelTimer(timer.id)\n\t\t}\n\t\ttimer.fn()\n\t}\n}",
         helpers: [{
@@ -5003,180 +5003,180 @@ export const modules = {
           about: "Stops a risingLava (the handle it returned). With clear true it also takes away the blocks it placed, and only those, e.g. for the next round. Returns nothing.",
           example: "stopLava(lava, true)"
         }]
-      }].flatMap((zz => zz.helpers.map((uz => ({
-        ...uz,
-        group: zz.group,
-        code: zz.code,
-        ...zz.uses ? {
-          uses: zz.uses
+      }].flatMap((DD => DD.helpers.map((CD => ({
+        ...CD,
+        group: DD.group,
+        code: DD.code,
+        ...DD.uses ? {
+          uses: DD.uses
         } : {}
       })))));
 
-    function EE(zz) {
+    function II(DD) {
       const {
-        file: uz,
-        hasErrors: bz
-      } = Rb(`(${zz})`), Ez = uz.statements[0];
-      if (bz || 1 !== uz.statements.length || !Ez || !vz().isExpressionStatement(Ez)) return null;
-      const nz = Ez.expression;
-      return vz().isParenthesizedExpression(nz) ? nz.expression : nz
+        file: CD,
+        hasErrors: cD
+      } = Zc(`(${DD})`), ID = CD.statements[0];
+      if (cD || 1 !== CD.statements.length || !ID || !PD().isExpressionStatement(ID)) return null;
+      const pD = ID.expression;
+      return PD().isParenthesizedExpression(pD) ? pD.expression : pD
     }
 
-    function nE(zz) {
-      return !!(vz().isNumericLiteral(zz) || vz().isStringLiteral(zz) || vz().isNoSubstitutionTemplateLiteral(zz)) || (zz.kind === vz().SyntaxKind.TrueKeyword || zz.kind === vz().SyntaxKind.FalseKeyword || zz.kind === vz().SyntaxKind.NullKeyword || (!vz().isPrefixUnaryExpression(zz) || zz.operator !== vz().SyntaxKind.MinusToken && zz.operator !== vz().SyntaxKind.PlusToken ? vz().isArrayLiteralExpression(zz) ? zz.elements.every((zz => nE(zz))) : !!vz().isObjectLiteralExpression(zz) && zz.properties.every((zz => vz().isPropertyAssignment(zz) && (vz().isIdentifier(zz.name) || vz().isStringLiteral(zz.name)) && nE(zz.initializer))) : vz().isNumericLiteral(zz.operand)))
+    function pI(DD) {
+      return !!(PD().isNumericLiteral(DD) || PD().isStringLiteral(DD) || PD().isNoSubstitutionTemplateLiteral(DD)) || (DD.kind === PD().SyntaxKind.TrueKeyword || DD.kind === PD().SyntaxKind.FalseKeyword || DD.kind === PD().SyntaxKind.NullKeyword || (!PD().isPrefixUnaryExpression(DD) || DD.operator !== PD().SyntaxKind.MinusToken && DD.operator !== PD().SyntaxKind.PlusToken ? PD().isArrayLiteralExpression(DD) ? DD.elements.every((DD => pI(DD))) : !!PD().isObjectLiteralExpression(DD) && DD.properties.every((DD => PD().isPropertyAssignment(DD) && (PD().isIdentifier(DD.name) || PD().isStringLiteral(DD.name)) && pI(DD.initializer))) : PD().isNumericLiteral(DD.operand)))
     }
 
-    function iE(zz) {
-      return vz().isNumericLiteral(zz) || vz().isPrefixUnaryExpression(zz) && vz().isNumericLiteral(zz.operand)
+    function iI(DD) {
+      return PD().isNumericLiteral(DD) || PD().isPrefixUnaryExpression(DD) && PD().isNumericLiteral(DD.operand)
     }
 
-    function lE(zz) {
-      return vz().isStringLiteral(zz) || vz().isNoSubstitutionTemplateLiteral(zz) ? zz.text : null
+    function fI(DD) {
+      return PD().isStringLiteral(DD) || PD().isNoSubstitutionTemplateLiteral(DD) ? DD.text : null
     }
-    const ME = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
+    const bI = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
 
-    function tE(zz) {
-      const uz = zz.trim();
-      if ("" === uz) return [];
-      if (uz.startsWith("{")) try {
-        const zz = JSON.parse(uz);
-        if (zz && "object" === typeof zz && !Array.isArray(zz)) return Object.entries(zz).map((zz => {
-          let [uz, bz] = zz;
-          return [uz, JSON.stringify(bz)]
+    function QI(DD) {
+      const CD = DD.trim();
+      if ("" === CD) return [];
+      if (CD.startsWith("{")) try {
+        const DD = JSON.parse(CD);
+        if (DD && "object" === typeof DD && !Array.isArray(DD)) return Object.entries(DD).map((DD => {
+          let [CD, cD] = DD;
+          return [CD, JSON.stringify(cD)]
         }))
       } catch {}
-      const bz = function(zz) {
-        const uz = EE(zz);
-        if (!uz || !vz().isObjectLiteralExpression(uz)) return null;
-        const bz = [];
-        for (const Ez of uz.properties) {
-          if (!vz().isPropertyAssignment(Ez) || !vz().isIdentifier(Ez.name) && !vz().isStringLiteral(Ez.name)) return null;
-          bz.push([Ez.name.text, Ez.initializer.getText()])
+      const cD = function(DD) {
+        const CD = II(DD);
+        if (!CD || !PD().isObjectLiteralExpression(CD)) return null;
+        const cD = [];
+        for (const ID of CD.properties) {
+          if (!PD().isPropertyAssignment(ID) || !PD().isIdentifier(ID.name) && !PD().isStringLiteral(ID.name)) return null;
+          cD.push([ID.name.text, ID.initializer.getText()])
         }
-        return bz
-      }(uz.startsWith("{") ? uz : `{${uz}}`);
-      if (bz) return bz;
-      const Ez = [];
-      let nz = null,
-        iz = 0;
-      const lz = uz.startsWith("{") ? uz.replace(/^\{/, "").replace(/\}\s*$/, "") : uz;
-      for (const pz of lz.split("\n")) {
-        var Mz, tz, Hz, Oz;
-        const zz = /\/\//.exec(pz.replace(ME, (zz => " ".repeat(zz.length)))),
-          uz = (zz ? pz.slice(0, zz.index) : pz).trim();
-        if ("" === uz) continue;
-        if (nz && iz > 0) nz[1] += `\n${uz}`;
+        return cD
+      }(CD.startsWith("{") ? CD : `{${CD}}`);
+      if (cD) return cD;
+      const ID = [];
+      let pD = null,
+        iD = 0;
+      const fD = CD.startsWith("{") ? CD.replace(/^\{/, "").replace(/\}\s*$/, "") : CD;
+      for (const BD of fD.split("\n")) {
+        var bD, QD, wD, SD;
+        const DD = /\/\//.exec(BD.replace(bI, (DD => " ".repeat(DD.length)))),
+          CD = (DD ? BD.slice(0, DD.index) : BD).trim();
+        if ("" === CD) continue;
+        if (pD && iD > 0) pD[1] += `\n${CD}`;
         else {
-          const zz = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(uz.replace(/^[-*\u2022]\s*/, ""));
-          if (!zz) continue;
-          nz = [zz[1], zz[2]], Ez.push(nz)
+          const DD = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(CD.replace(/^[-*\u2022]\s*/, ""));
+          if (!DD) continue;
+          pD = [DD[1], DD[2]], ID.push(pD)
         }
-        const bz = uz.replace(ME, "");
-        iz = Math.max(0, iz + (null !== (Mz = null === (tz = bz.match(/[[{(]/g)) || void 0 === tz ? void 0 : tz.length) && void 0 !== Mz ? Mz : 0) - (null !== (Hz = null === (Oz = bz.match(/[\]})]/g)) || void 0 === Oz ? void 0 : Oz.length) && void 0 !== Hz ? Hz : 0))
+        const cD = CD.replace(bI, "");
+        iD = Math.max(0, iD + (null !== (bD = null === (QD = cD.match(/[[{(]/g)) || void 0 === QD ? void 0 : QD.length) && void 0 !== bD ? bD : 0) - (null !== (wD = null === (SD = cD.match(/[\]})]/g)) || void 0 === SD ? void 0 : SD.length) && void 0 !== wD ? wD : 0))
       }
-      return Ez.map((zz => {
-        let [uz, bz] = zz;
-        return [uz, bz.trim().replace(/[,;]\s*$/, "")]
+      return ID.map((DD => {
+        let [CD, cD] = DD;
+        return [CD, cD.trim().replace(/[,;]\s*$/, "")]
       }))
     }
 
-    function HE(zz, uz, bz) {
-      const Ez = "string" === zz.kind || "block" === zz.kind || "item" === zz.kind || "mob" === zz.kind;
-      let nz = EE(uz),
-        iz = uz;
-      var lz;
-      if (nz && nE(nz) || !Ez || (lz = uz, iz = JSON.stringify(lz.replace(/^["'`]|["'`]$/g, "")), nz = EE(iz)), !nz || !nE(nz)) return {
-        problem: `${zz.key} must be a plain value like ${zz.value}, not ${uz}`
+    function wI(DD, CD, cD) {
+      const ID = "string" === DD.kind || "block" === DD.kind || "item" === DD.kind || "mob" === DD.kind;
+      let pD = II(CD),
+        iD = CD;
+      var fD;
+      if (pD && pI(pD) || !ID || (fD = CD, iD = JSON.stringify(fD.replace(/^["'`]|["'`]$/g, "")), pD = II(iD)), !pD || !pI(pD)) return {
+        problem: `${DD.key} must be a plain value like ${DD.value}, not ${CD}`
       };
-      if ("number" === zz.kind && !iE(nz)) return {
-        problem: `${zz.key} must be a number, like ${zz.value}`
+      if ("number" === DD.kind && !iI(pD)) return {
+        problem: `${DD.key} must be a number, like ${DD.value}`
       };
-      if ("boolean" === zz.kind && nz.kind !== vz().SyntaxKind.TrueKeyword && nz.kind !== vz().SyntaxKind.FalseKeyword) return {
-        problem: `${zz.key} must be true or false`
+      if ("boolean" === DD.kind && pD.kind !== PD().SyntaxKind.TrueKeyword && pD.kind !== PD().SyntaxKind.FalseKeyword) return {
+        problem: `${DD.key} must be true or false`
       };
-      if ("position" === zz.kind && ! function(zz) {
-          return vz().isArrayLiteralExpression(zz) && 3 === zz.elements.length && zz.elements.every(iE)
-        }(nz) && (nz.kind !== vz().SyntaxKind.NullKeyword || "null" !== zz.value)) return {
-        problem: `${zz.key} must be a position [x, y, z], like ${"null"===zz.value?"[0, 10, 0]":zz.value}`
+      if ("position" === DD.kind && ! function(DD) {
+          return PD().isArrayLiteralExpression(DD) && 3 === DD.elements.length && DD.elements.every(iI)
+        }(pD) && (pD.kind !== PD().SyntaxKind.NullKeyword || "null" !== DD.value)) return {
+        problem: `${DD.key} must be a position [x, y, z], like ${"null"===DD.value?"[0, 10, 0]":DD.value}`
       };
-      if ("list" === zz.kind && !vz().isArrayLiteralExpression(nz)) return {
-        problem: `${zz.key} must be a list in [ ], like ${zz.value}`
+      if ("list" === DD.kind && !PD().isArrayLiteralExpression(pD)) return {
+        problem: `${DD.key} must be a list in [ ], like ${DD.value}`
       };
-      if ("list" === zz.kind && zz.names && bz && vz().isArrayLiteralExpression(nz)) return function(zz, uz, bz, Ez) {
-        const nz = zz => zz.elements.flatMap(((uz, Ez) => {
-            if (vz().isArrayLiteralExpression(uz)) return nz(uz);
-            if ("item" === bz && vz().isObjectLiteralExpression(uz)) return iz(uz);
-            const lz = zz.elements[Ez + 1],
-              Mz = void 0 !== lz && vz().isArrayLiteralExpression(lz);
-            return null === lE(uz) || Mz ? [] : [uz]
+      if ("list" === DD.kind && DD.names && cD && PD().isArrayLiteralExpression(pD)) return function(DD, CD, cD, ID) {
+        const pD = DD => DD.elements.flatMap(((CD, ID) => {
+            if (PD().isArrayLiteralExpression(CD)) return pD(CD);
+            if ("item" === cD && PD().isObjectLiteralExpression(CD)) return iD(CD);
+            const fD = DD.elements[ID + 1],
+              bD = void 0 !== fD && PD().isArrayLiteralExpression(fD);
+            return null === fI(CD) || bD ? [] : [CD]
           })),
-          iz = zz => zz.properties.flatMap((zz => {
-            if (!vz().isPropertyAssignment(zz) || !["item", "ammo", "projectile", "items"].includes(zz.name.getText().replace(/["']/g, ""))) return [];
-            const uz = zz.initializer;
-            return vz().isArrayLiteralExpression(uz) ? nz(uz) : null !== lE(uz) ? [uz] : []
+          iD = DD => DD.properties.flatMap((DD => {
+            if (!PD().isPropertyAssignment(DD) || !["item", "ammo", "projectile", "items"].includes(DD.name.getText().replace(/["']/g, ""))) return [];
+            const CD = DD.initializer;
+            return PD().isArrayLiteralExpression(CD) ? pD(CD) : null !== fI(CD) ? [CD] : []
           })),
-          lz = nz(uz),
-          Mz = uz.getStart();
-        let tz = uz.getText();
-        const Hz = [],
-          Oz = [],
-          pz = new Map([...zz.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((zz => [zz[2], zz[1]]))),
-          dz = zz => {
-            var uz;
-            const bz = zz.parent,
-              Ez = null === bz || void 0 === bz ? void 0 : bz.parent;
-            if (!vz().isPropertyAssignment(bz) || "item" !== bz.name.getText().replace(/["']/g, "") || !Ez || !vz().isObjectLiteralExpression(Ez)) return;
-            const nz = zz => Ez.properties.find((uz => vz().isPropertyAssignment(uz) && uz.name.getText().replace(/["']/g, "") === zz)),
-              iz = nz("action"),
-              lz = iz ? pz.get(null !== (uz = lE(iz.initializer)) && void 0 !== uz ? uz : "") : void 0;
-            return lz ? {
-              property: bz,
-              item: lz,
-              named: void 0 !== nz("name")
+          fD = pD(CD),
+          bD = CD.getStart();
+        let QD = CD.getText();
+        const wD = [],
+          SD = [],
+          BD = new Map([...DD.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((DD => [DD[2], DD[1]]))),
+          yD = DD => {
+            var CD;
+            const cD = DD.parent,
+              ID = null === cD || void 0 === cD ? void 0 : cD.parent;
+            if (!PD().isPropertyAssignment(cD) || "item" !== cD.name.getText().replace(/["']/g, "") || !ID || !PD().isObjectLiteralExpression(ID)) return;
+            const pD = DD => ID.properties.find((CD => PD().isPropertyAssignment(CD) && CD.name.getText().replace(/["']/g, "") === DD)),
+              iD = pD("action"),
+              fD = iD ? BD.get(null !== (CD = fI(iD.initializer)) && void 0 !== CD ? CD : "") : void 0;
+            return fD ? {
+              property: cD,
+              item: fD,
+              named: void 0 !== pD("name")
             } : void 0
           };
-        for (const Zz of [...lz].reverse()) {
-          var Fz;
-          const zz = null !== (Fz = lE(Zz)) && void 0 !== Fz ? Fz : "",
-            uz = Ez(bz, zz),
-            nz = null === uz ? dz(Zz) : void 0;
-          if (nz) {
-            const uz = nz.named ? `item: ${JSON.stringify(nz.item)}` : `item: ${JSON.stringify(nz.item)}, name: ${JSON.stringify(zz)}`;
-            Hz.unshift(`"${zz}" isn't an item, so it is a ${nz.item}${nz.named?"":` named "${zz}"`}`), tz = `${tz.slice(0,nz.property.getStart()-Mz)}${uz}${tz.slice(nz.property.getEnd()-Mz)}`
-          } else null === uz ? Oz.unshift(`"${zz}"`) : uz !== zz && (Hz.unshift(`"${zz}" is "${uz}"`), tz = `${tz.slice(0,Zz.getStart()-Mz)}${JSON.stringify(uz)}${tz.slice(Zz.getEnd()-Mz)}`)
+        for (const tD of [...fD].reverse()) {
+          var MD;
+          const DD = null !== (MD = fI(tD)) && void 0 !== MD ? MD : "",
+            CD = ID(cD, DD),
+            pD = null === CD ? yD(tD) : void 0;
+          if (pD) {
+            const CD = pD.named ? `item: ${JSON.stringify(pD.item)}` : `item: ${JSON.stringify(pD.item)}, name: ${JSON.stringify(DD)}`;
+            wD.unshift(`"${DD}" isn't an item, so it is a ${pD.item}${pD.named?"":` named "${DD}"`}`), QD = `${QD.slice(0,pD.property.getStart()-bD)}${CD}${QD.slice(pD.property.getEnd()-bD)}`
+          } else null === CD ? SD.unshift(`"${DD}"`) : CD !== DD && (wD.unshift(`"${DD}" is "${CD}"`), QD = `${QD.slice(0,tD.getStart()-bD)}${JSON.stringify(CD)}${QD.slice(tD.getEnd()-bD)}`)
         }
-        if (Oz.length > 0) return {
-          problem: `${Oz.join(", ")} ${1===Oz.length?"item"===bz?"isn't an":"isn't a":"aren't"} ${bz} name${1===Oz.length?"":"s"}, so ${zz.key} kept ${zz.value}`
+        if (SD.length > 0) return {
+          problem: `${SD.join(", ")} ${1===SD.length?"item"===cD?"isn't an":"isn't a":"aren't"} ${cD} name${1===SD.length?"":"s"}, so ${DD.key} kept ${DD.value}`
         };
         return {
-          value: tz,
-          ...Hz.length > 0 ? {
-            fixed: Hz.join(", ")
+          value: QD,
+          ...wD.length > 0 ? {
+            fixed: wD.join(", ")
           } : {}
         }
-      }(zz, nz, zz.names, bz);
-      if (Ez) {
-        const uz = lE(nz);
-        if (null === uz) return {
-          problem: `${zz.key} must be text in quotes, like ${zz.value}`
+      }(DD, pD, DD.names, cD);
+      if (ID) {
+        const CD = fI(pD);
+        if (null === CD) return {
+          problem: `${DD.key} must be text in quotes, like ${DD.value}`
         };
-        if (("block" === zz.kind || "item" === zz.kind || "mob" === zz.kind) && bz) {
-          const Ez = bz(zz.kind, uz);
-          if (null === Ez) return {
-            problem: `"${uz}" isn't ${"item"===zz.kind?"an":"a"} ${zz.kind} name, so ${zz.key} kept ${zz.value}`
+        if (("block" === DD.kind || "item" === DD.kind || "mob" === DD.kind) && cD) {
+          const ID = cD(DD.kind, CD);
+          if (null === ID) return {
+            problem: `"${CD}" isn't ${"item"===DD.kind?"an":"a"} ${DD.kind} name, so ${DD.key} kept ${DD.value}`
           };
-          if (Ez !== uz) return {
-            value: JSON.stringify(Ez),
-            fixed: `"${uz}" is "${Ez}"`
+          if (ID !== CD) return {
+            value: JSON.stringify(ID),
+            fixed: `"${CD}" is "${ID}"`
           }
         }
       }
       return {
-        value: nz.getText()
+        value: pD.getText()
       }
     }
-    const OE = uE,
-      pE = new Map([
+    const SI = CI,
+      BI = new Map([
         ["parkour", "parkour, obbies and races to a finish"],
         ["pvp", "fighting other players: arenas, kills, last one standing"],
         ["teams", "teams against each other"],
@@ -5190,707 +5190,707 @@ export const modules = {
         ["screen", "text on players' screens and announcements"]
       ]);
 
-    function dE(zz) {
-      return zz.toLowerCase().replace(/[^a-z0-9]/g, "")
+    function yI(DD) {
+      return DD.toLowerCase().replace(/[^a-z0-9]/g, "")
     }
 
-    function FE(zz) {
-      var uz;
-      const bz = dE(zz);
-      return null !== (uz = OE.find((zz => dE(zz.name) === bz || dE(zz.title) === bz))) && void 0 !== uz ? uz : null
+    function MI(DD) {
+      var CD;
+      const cD = yI(DD);
+      return null !== (CD = SI.find((DD => yI(DD.name) === cD || yI(DD.title) === cD))) && void 0 !== CD ? CD : null
     }
 
-    function ZE(zz) {
-      var uz;
-      return null !== (uz = bE.find((uz => uz.name === zz))) && void 0 !== uz ? uz : null
+    function tI(DD) {
+      var CD;
+      return null !== (CD = cI.find((CD => CD.name === DD))) && void 0 !== CD ? CD : null
     }
 
-    function RE(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-      const bz = function(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return 0 === zz.length ? "" : `const CONFIG = {\n${zz.map((zz=>{var bz;return`\t${zz.key}: ${null!==(bz=uz.get(zz.key))&&void 0!==bz?bz:zz.value}, // ${zz.about}`})).join("\n")}\n}`
-      }(zz.settings, uz);
-      return `${""===bz?"":`${bz}\n\n`}${zz.code.trim()}\n`
+    function ZI(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+      const cD = function(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return 0 === DD.length ? "" : `const CONFIG = {\n${DD.map((DD=>{var cD;return`\t${DD.key}: ${null!==(cD=CD.get(DD.key))&&void 0!==cD?cD:DD.value}, // ${DD.about}`})).join("\n")}\n}`
+      }(DD.settings, CD);
+      return `${""===cD?"":`${cD}\n\n`}${DD.code.trim()}\n`
     }
 
-    function KE(zz) {
-      const uz = [],
-        bz = new Set,
-        Ez = zz => {
-          const nz = ZE(zz);
-          if (nz && !bz.has(nz.group)) {
-            bz.add(nz.group);
-            for (const zz of null !== (iz = nz.uses) && void 0 !== iz ? iz : []) {
-              var iz;
-              Ez(zz)
+    function oI(DD) {
+      const CD = [],
+        cD = new Set,
+        ID = DD => {
+          const pD = tI(DD);
+          if (pD && !cD.has(pD.group)) {
+            cD.add(pD.group);
+            for (const DD of null !== (iD = pD.uses) && void 0 !== iD ? iD : []) {
+              var iD;
+              ID(DD)
             }
-            uz.push(nz)
+            CD.push(pD)
           }
         };
-      for (const nz of zz) Ez(nz);
-      return uz
+      for (const pD of DD) ID(pD);
+      return CD
     }
 
-    function wE(zz, uz) {
-      const bz = zz => zz.replace(/\s+/g, ""),
-        Ez = new RegExp(`function ${uz.name}\\s*\\([^)]*\\)\\s*\\{`).exec(zz);
-      return !!Ez && bz(uz.code).includes(bz(zz.slice(Ez.index, Ez.index + 200)).slice(0, 60))
+    function vI(DD, CD) {
+      const cD = DD => DD.replace(/\s+/g, ""),
+        ID = new RegExp(`function ${CD.name}\\s*\\([^)]*\\)\\s*\\{`).exec(DD);
+      return !!ID && cD(CD.code).includes(cD(DD.slice(ID.index, ID.index + 200)).slice(0, 60))
     }
 
-    function XE(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
-      if (!Sb(zz)) return {
-        text: zz,
+    function NI(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
+      if (!kc(DD)) return {
+        text: DD,
         added: []
       };
-      let bz = zz;
-      const Ez = [];
-      for (let nz = 0; nz < 4; nz++) {
-        const zz = cb(bz),
-          nz = [...gb(bz)].filter((Ez => {
-            const nz = ZE(Ez);
-            return null !== nz && !uz.has(Ez) && (!zz.has(Ez) || wE(bz, nz))
+      let cD = DD;
+      const ID = [];
+      for (let pD = 0; pD < 4; pD++) {
+        const DD = Gc(cD),
+          pD = [...Rc(cD)].filter((ID => {
+            const pD = tI(ID);
+            return null !== pD && !CD.has(ID) && (!DD.has(ID) || vI(cD, pD))
           }));
-        let iz = !1;
-        for (const uz of KE(nz)) {
-          const lz = Ub(bz, uz.code, {
-            owner: uz.group,
+        let iD = !1;
+        for (const CD of oI(pD)) {
+          const fD = Tc(cD, CD.code, {
+            owner: CD.group,
             chainCallbacks: !0
           });
-          lz && lz.text !== bz && (bz = lz.text, iz = !0, zz.has(uz.name) || Ez.push(...bE.filter((zz => zz.group === uz.group && nz.includes(zz.name))).map((zz => zz.name))))
+          fD && fD.text !== cD && (cD = fD.text, iD = !0, DD.has(CD.name) || ID.push(...cI.filter((DD => DD.group === CD.group && pD.includes(DD.name))).map((DD => DD.name))))
         }
-        if (!iz) break
+        if (!iD) break
       }
       return {
-        text: bz,
-        added: [...new Set(Ez)]
+        text: cD,
+        added: [...new Set(ID)]
       }
     }
 
-    function fE(zz, uz) {
-      const bz = [...cb(uz.code)].filter((zz => "CONFIG" !== zz && !db(zz)));
-      if (0 === bz.length) return zz.includes(uz.code.trim().slice(0, 80));
-      const Ez = Sb(zz) ? cb(zz) : new Set;
-      return 2 * bz.filter((zz => Ez.has(zz))).length >= bz.length
+    function gI(DD, CD) {
+      const cD = [...Gc(CD.code)].filter((DD => "CONFIG" !== DD && !yc(DD)));
+      if (0 === cD.length) return DD.includes(CD.code.trim().slice(0, 80));
+      const ID = kc(DD) ? Gc(DD) : new Set;
+      return 2 * cD.filter((DD => ID.has(DD))).length >= cD.length
     }
 
-    function sE(zz) {
-      const uz = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(zz.code);
-      return uz ? uz[1].split("\n").flatMap((zz => {
-        const uz = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(zz);
-        if (!uz) return [];
-        const [, bz, Ez, nz] = uz;
+    function XI(DD) {
+      const CD = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(DD.code);
+      return CD ? CD[1].split("\n").flatMap((DD => {
+        const CD = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(DD);
+        if (!CD) return [];
+        const [, cD, ID, pD] = CD;
         return [{
-          key: bz,
-          kind: /^-?\d/.test(Ez) ? "number" : "true" === Ez || "false" === Ez ? "boolean" : Ez.startsWith("[") ? "list" : "string",
-          value: Ez,
-          about: nz
+          key: cD,
+          kind: /^-?\d/.test(ID) ? "number" : "true" === ID || "false" === ID ? "boolean" : ID.startsWith("[") ? "list" : "string",
+          value: ID,
+          about: pD
         }]
       })) : []
     }
 
-    function rE(zz) {
-      const uz = new Set(zz.settings.map((zz => zz.key))),
-        bz = new Map;
-      for (const Ez of KE(gb(zz.code)))
-        for (const zz of sE(Ez)) uz.has(zz.key) || bz.set(zz.key, zz);
-      return [...bz.values()]
+    function mI(DD) {
+      const CD = new Set(DD.settings.map((DD => DD.key))),
+        cD = new Map;
+      for (const ID of oI(Rc(DD.code)))
+        for (const DD of XI(ID)) CD.has(DD.key) || cD.set(DD.key, DD);
+      return [...cD.values()]
     }
 
-    function oE(zz, uz, bz, Ez) {
-      const nz = rE(uz),
-        iz = function(zz, uz, bz) {
-          const Ez = new Map,
-            nz = [],
-            iz = [],
-            lz = new Map(zz.settings.map((zz => [zz.key.toLowerCase(), zz])));
-          for (const [Mz, tz] of tE(uz)) {
-            const uz = lz.get(Mz.toLowerCase());
-            if (!uz) {
-              nz.push(`${zz.name} has no setting ${Mz}`);
+    function nI(DD, CD, cD, ID) {
+      const pD = mI(CD),
+        iD = function(DD, CD, cD) {
+          const ID = new Map,
+            pD = [],
+            iD = [],
+            fD = new Map(DD.settings.map((DD => [DD.key.toLowerCase(), DD])));
+          for (const [bD, QD] of QI(CD)) {
+            const CD = fD.get(bD.toLowerCase());
+            if (!CD) {
+              pD.push(`${DD.name} has no setting ${bD}`);
               continue
             }
-            if (/^CONFIG\.\w+$/.test(tz.trim())) continue;
-            const Hz = HE(uz, tz, bz);
-            "problem" in Hz ? nz.push(Hz.problem) : (Ez.set(uz.key, Hz.value), Hz.fixed && iz.push(Hz.fixed))
+            if (/^CONFIG\.\w+$/.test(QD.trim())) continue;
+            const wD = wI(CD, QD, cD);
+            "problem" in wD ? pD.push(wD.problem) : (ID.set(CD.key, wD.value), wD.fixed && iD.push(wD.fixed))
           }
           return {
-            values: Ez,
-            problems: nz,
-            fixed: iz
+            values: ID,
+            problems: pD,
+            fixed: iD
           }
         }({
-          ...uz,
-          settings: [...uz.settings, ...nz]
-        }, bz, Ez),
-        lz = nz.filter((zz => iz.values.has(zz.key))),
-        Mz = Ub(zz, RE({
-          ...uz,
-          settings: [...uz.settings, ...lz]
-        }, iz.values), {
-          owner: uz.name,
-          overrides: new Set(iz.values.keys()),
-          heading: "" === zz.trim() ? void 0 : `// ---- ${uz.title} (ready-made) ----`
+          ...CD,
+          settings: [...CD.settings, ...pD]
+        }, cD, ID),
+        fD = pD.filter((DD => iD.values.has(DD.key))),
+        bD = Tc(DD, ZI({
+          ...CD,
+          settings: [...CD.settings, ...fD]
+        }, iD.values), {
+          owner: CD.name,
+          overrides: new Set(iD.values.keys()),
+          heading: "" === DD.trim() ? void 0 : `// ---- ${CD.title} (ready-made) ----`
         });
-      if (!Mz) return {
-        error: Sb(zz) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
+      if (!bD) return {
+        error: kc(DD) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
       };
-      const tz = XE(Mz.text);
+      const QD = NI(bD.text);
       return {
-        prefab: uz,
-        text: tz.text,
-        problems: iz.problems,
-        fixed: iz.fixed,
-        chained: Mz.chained,
-        helpers: tz.added
+        prefab: CD,
+        text: QD.text,
+        problems: iD.problems,
+        fixed: iD.fixed,
+        chained: bD.chained,
+        helpers: QD.added
       }
     }
 
-    function NE(zz) {
-      return `- ${zz.name}: ${zz.summary}. Settings: ${zz.settings.map((zz=>zz.key)).join(", ")}`
+    function OI(DD) {
+      return `- ${DD.name}: ${DD.summary}. Settings: ${DD.settings.map((DD=>DD.key)).join(", ")}`
     }
 
-    function vE(zz) {
-      var uz;
-      const bz = null !== (uz = null === zz || void 0 === zz ? void 0 : zz.trim().toLowerCase()) && void 0 !== uz ? uz : "",
-        Ez = [...pE.keys()].find((zz => zz === bz)),
-        nz = Ez ? OE.filter((zz => zz.category === Ez)) : OE,
-        iz = Ez ? bE.filter((zz => zz.category === Ez)) : [];
-      return `${Ez?`Prefabs for ${pE.get(Ez)}:`:""===bz||"all"===bz?"Every prefab:":`There is no category ${zz}. Every prefab:`}\n${nz.length>0?nz.map(NE).join("\n"):"(none yet)"}${iz.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${iz.map((zz=>`- ${zz.signature}: ${zz.about}`)).join("\n")}`:""}${Ez?"":`\nCategories: ${[...pE.keys()].join(", ")}`}`
+    function PI(DD) {
+      var CD;
+      const cD = null !== (CD = null === DD || void 0 === DD ? void 0 : DD.trim().toLowerCase()) && void 0 !== CD ? CD : "",
+        ID = [...BI.keys()].find((DD => DD === cD)),
+        pD = ID ? SI.filter((DD => DD.category === ID)) : SI,
+        iD = ID ? cI.filter((DD => DD.category === ID)) : [];
+      return `${ID?`Prefabs for ${BI.get(ID)}:`:""===cD||"all"===cD?"Every prefab:":`There is no category ${DD}. Every prefab:`}\n${pD.length>0?pD.map(OI).join("\n"):"(none yet)"}${iD.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${iD.map((DD=>`- ${DD.signature}: ${DD.about}`)).join("\n")}`:""}${ID?"":`\nCategories: ${[...BI.keys()].join(", ")}`}`
     }
 
-    function xE(zz, uz) {
-      var bz;
-      const Ez = [...zz.settings, ...rE(zz)].map((zz => `- ${zz.key} (${zz.kind}, default ${zz.value}): ${zz.about}`)).join("\n"),
-        nz = null !== (bz = zz.changeable) && void 0 !== bz && bz.length ? `\nFunctions to replace by name for a game of their own:\n${zz.changeable.map((zz=>`- ${zz.name}: ${zz.about}`)).join("\n")}` : "",
-        iz = uz ? `\nIts code, as it goes in with the default settings:\n${RE(zz)}` : "";
-      return `${zz.name} (${zz.title}): ${zz.summary}.\nHow it plays: ${zz.howItPlays}\nSettings:\n${Ez}${nz}${zz.setup?`\nThe creator sets up: ${zz.setup}`:""}${iz}`
+    function HI(DD, CD) {
+      var cD;
+      const ID = [...DD.settings, ...mI(DD)].map((DD => `- ${DD.key} (${DD.kind}, default ${DD.value}): ${DD.about}`)).join("\n"),
+        pD = null !== (cD = DD.changeable) && void 0 !== cD && cD.length ? `\nFunctions to replace by name for a game of their own:\n${DD.changeable.map((DD=>`- ${DD.name}: ${DD.about}`)).join("\n")}` : "",
+        iD = CD ? `\nIts code, as it goes in with the default settings:\n${ZI(DD)}` : "";
+      return `${DD.name} (${DD.title}): ${DD.summary}.\nHow it plays: ${DD.howItPlays}\nSettings:\n${ID}${pD}${DD.setup?`\nThe creator sets up: ${DD.setup}`:""}${iD}`
     }
 
-    function JE(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
-      const bz = function(zz) {
-          return new Set(zz.toLowerCase().split(/[^a-z0-9]+/).filter((zz => zz.length > 1)))
-        }(zz),
-        Ez = ` ${zz.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
-      return OE.map((zz => {
-        const uz = zz.keywords.map((zz => zz.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((zz => zz.includes(" ") ? Ez.includes(` ${zz} `) : bz.has(zz))),
-          nz = Math.min(...uz.map((zz => Ez.indexOf(` ${zz} `))));
+    function UI(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
+      const cD = function(DD) {
+          return new Set(DD.toLowerCase().split(/[^a-z0-9]+/).filter((DD => DD.length > 1)))
+        }(DD),
+        ID = ` ${DD.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
+      return SI.map((DD => {
+        const CD = DD.keywords.map((DD => DD.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((DD => DD.includes(" ") ? ID.includes(` ${DD} `) : cD.has(DD))),
+          pD = Math.min(...CD.map((DD => ID.indexOf(` ${DD} `))));
         return {
-          prefab: zz,
-          score: uz.length,
-          first: nz
+          prefab: DD,
+          score: CD.length,
+          first: pD
         }
-      })).filter((zz => zz.score > 0)).sort(((zz, uz) => uz.score - zz.score || zz.first - uz.first)).slice(0, uz).map((zz => zz.prefab))
+      })).filter((DD => DD.score > 0)).sort(((DD, CD) => CD.score - DD.score || DD.first - CD.first)).slice(0, CD).map((DD => DD.prefab))
     }
-    const AE = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
+    const xI = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
 
-    function TE(zz) {
-      var uz, bz, Ez, nz, iz, lz;
-      const Mz = function(zz) {
-          var uz, bz;
-          const Ez = null === (uz = zz.questions) || void 0 === uz ? void 0 : uz.trim();
-          if (null !== (bz = zz.question) && void 0 !== bz && bz.trim() || !Ez) return zz;
-          const nz = {
-            ...zz,
-            question: Ez
+    function qI(DD) {
+      var CD, cD, ID, pD, iD, fD;
+      const bD = function(DD) {
+          var CD, cD;
+          const ID = null === (CD = DD.questions) || void 0 === CD ? void 0 : CD.trim();
+          if (null !== (cD = DD.question) && void 0 !== cD && cD.trim() || !ID) return DD;
+          const pD = {
+            ...DD,
+            question: ID
           };
-          if (!/^[[{]/.test(Ez)) return nz;
+          if (!/^[[{]/.test(ID)) return pD;
           try {
-            const uz = JSON.parse(Ez),
-              bz = Array.isArray(uz) ? uz[0] : uz;
-            if ("string" === typeof bz) {
-              const Ez = Array.isArray(uz) ? uz.slice(1).filter((zz => "string" === typeof zz)) : [];
+            const CD = JSON.parse(ID),
+              cD = Array.isArray(CD) ? CD[0] : CD;
+            if ("string" === typeof cD) {
+              const ID = Array.isArray(CD) ? CD.slice(1).filter((DD => "string" === typeof DD)) : [];
               return {
-                ...zz,
-                question: bz,
-                ...Ez.length > 0 && void 0 === zz.choices ? {
-                  choices: Ez.join("\n")
+                ...DD,
+                question: cD,
+                ...ID.length > 0 && void 0 === DD.choices ? {
+                  choices: ID.join("\n")
                 } : {}
               }
             }
-            if ("object" !== typeof bz || null === bz) return nz;
-            const iz = bz,
-              lz = zz => "string" === typeof zz ? zz : "boolean" === typeof zz ? String(zz) : Array.isArray(zz) ? zz.filter((zz => "string" === typeof zz)).join("\n") : void 0,
-              Mz = {
-                question: lz(iz.question),
-                choices: lz(iz.choices),
-                allow_other: lz(iz.allow_other)
+            if ("object" !== typeof cD || null === cD) return pD;
+            const iD = cD,
+              fD = DD => "string" === typeof DD ? DD : "boolean" === typeof DD ? String(DD) : Array.isArray(DD) ? DD.filter((DD => "string" === typeof DD)).join("\n") : void 0,
+              bD = {
+                question: fD(iD.question),
+                choices: fD(iD.choices),
+                allow_other: fD(iD.allow_other)
               };
             return {
-              ...zz,
-              ...Object.fromEntries(Object.entries(Mz).filter((zz => {
-                let [, uz] = zz;
-                return void 0 !== uz
+              ...DD,
+              ...Object.fromEntries(Object.entries(bD).filter((DD => {
+                let [, CD] = DD;
+                return void 0 !== CD
               })))
             }
           } catch {
-            return Ez.startsWith("[") ? nz : zz
+            return ID.startsWith("[") ? pD : DD
           }
-        }(zz),
-        tz = null !== (uz = null === (bz = Mz.question) || void 0 === bz ? void 0 : bz.replace(/\s+/g, " ").trim()) && void 0 !== uz ? uz : "",
-        Hz = (null !== (Ez = Mz.choices) && void 0 !== Ez ? Ez : "").includes("\n") ? (null !== (nz = Mz.choices) && void 0 !== nz ? nz : "").split("\n") : (null !== (iz = Mz.choices) && void 0 !== iz ? iz : "").split("|"),
-        Oz = [...new Set(Hz.map((zz => zz.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
-        pz = "false" !== (null === (lz = Mz.allow_other) || void 0 === lz ? void 0 : lz.trim().toLowerCase());
-      return "" === tz || AE.test(tz) || Oz.length < 2 && !pz ? null : {
-        question: tz,
-        choices: Oz,
-        allowOther: pz
+        }(DD),
+        QD = null !== (CD = null === (cD = bD.question) || void 0 === cD ? void 0 : cD.replace(/\s+/g, " ").trim()) && void 0 !== CD ? CD : "",
+        wD = (null !== (ID = bD.choices) && void 0 !== ID ? ID : "").includes("\n") ? (null !== (pD = bD.choices) && void 0 !== pD ? pD : "").split("\n") : (null !== (iD = bD.choices) && void 0 !== iD ? iD : "").split("|"),
+        SD = [...new Set(wD.map((DD => DD.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
+        BD = "false" !== (null === (fD = bD.allow_other) || void 0 === fD ? void 0 : fD.trim().toLowerCase());
+      return "" === QD || xI.test(QD) || SD.length < 2 && !BD ? null : {
+        question: QD,
+        choices: SD,
+        allowOther: BD
       }
     }
-    const LE = /^\s*(?:\.\.\.|\u2026)\s*$/,
-      PE = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
+    const JI = /^\s*(?:\.\.\.|\u2026)\s*$/,
+      KI = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
 
-    function GE(zz, uz) {
-      if (LE.test(zz)) return !0;
-      const bz = new Set(uz.split("\n").map((zz => zz.trim())));
-      return zz.split("\n").some((zz => PE.test(zz) && !bz.has(zz.trim())))
+    function aI(DD, CD) {
+      if (JI.test(DD)) return !0;
+      const cD = new Set(CD.split("\n").map((DD => DD.trim())));
+      return DD.split("\n").some((DD => KI.test(DD) && !cD.has(DD.trim())))
     }
-    const aE = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
-      VE = String.raw`on[A-Z]\w*|tick|playerCommand`,
-      mE = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${VE})\s*\(|(?:${VE})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
-      qE = new RegExp(`^(?:${VE})$`),
-      hE = new RegExp(String.raw`^(${VE})(\s*\([^()\n]*\)\s*\{)`, "gm"),
-      UE = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${VE})\b|\buse_?prefab\s*\(`, "i");
+    const VI = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
+      zI = String.raw`on[A-Z]\w*|tick|playerCommand`,
+      jI = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${zI})\s*\(|(?:${zI})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
+      lI = new RegExp(`^(?:${zI})$`),
+      LI = new RegExp(String.raw`^(${zI})(\s*\([^()\n]*\)\s*\{)`, "gm"),
+      TI = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${zI})\b|\buse_?prefab\s*\(`, "i");
 
-    function cE(zz) {
-      return zz.replace(/^\s*```[\w-]*[^\n]*\n/, "").replace(/\n?```\s*$/, "")
-    }
-
-    function gE(zz) {
-      return cE(zz).replace(/\s*$/, "\n")
+    function GI(DD) {
+      return DD.replace(/^\s*```[\w-]*[^\n]*\n/, "").replace(/\n?```\s*$/, "")
     }
 
-    function SE(zz, uz) {
-      switch (zz) {
+    function RI(DD) {
+      return GI(DD).replace(/\s*$/, "\n")
+    }
+
+    function kI(DD, CD) {
+      switch (DD) {
         case "view_file":
-          return void 0 === uz.path ? uz : {
-            path: yE(uz.path)
+          return void 0 === CD.path ? CD : {
+            path: dI(CD.path)
           };
         case "fetch_url":
-          return void 0 === uz.url ? uz : {
-            url: rz(uz.url)
+          return void 0 === CD.url ? CD : {
+            url: mD(CD.url)
           };
         default:
-          return uz
+          return CD
       }
     }
 
-    function yE(zz) {
-      return zz.trim().replace(/^\.?\//, "")
+    function dI(DD) {
+      return DD.trim().replace(/^\.?\//, "")
     }
 
-    function DE(zz) {
-      return zz.replace(hE, "function $1$2")
+    function YI(DD) {
+      return DD.replace(LI, "function $1$2")
     }
 
-    function QE(zz) {
-      return zz.replace(/\bif\s*\(\s*(\/\*(?:(?!\*\/)[^])*\*\/)\s*\)/g, "if (false $1)")
+    function WI(DD) {
+      return DD.replace(/\bif\s*\(\s*(\/\*(?:(?!\*\/)[^])*\*\/)\s*\)/g, "if (false $1)")
     }
 
-    function WE(zz, uz, bz, Ez) {
-      let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        iz = arguments.length > 5 ? arguments[5] : void 0,
-        lz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
-        Mz = arguments.length > 7 ? arguments[7] : void 0,
-        tz = arguments.length > 8 ? arguments[8] : void 0;
-      const Hz = {
-          ...bz
+    function sI(DD, CD, cD, ID) {
+      let pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        iD = arguments.length > 5 ? arguments[5] : void 0,
+        fD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
+        bD = arguments.length > 7 ? arguments[7] : void 0,
+        QD = arguments.length > 8 ? arguments[8] : void 0;
+      const wD = {
+          ...cD
         },
-        Oz = new Set,
-        pz = [];
-      let dz;
-      const Fz = (zz, uz, bz, Ez) => {
-        pz.push({
-          tool: zz,
-          path: uz,
-          reason: bz,
+        SD = new Set,
+        BD = [];
+      let yD;
+      const MD = (DD, CD, cD, ID) => {
+        BD.push({
+          tool: DD,
+          path: CD,
+          reason: cD,
           closest: null,
           functions: [],
-          ...Ez,
-          ...dz ? {
-            call: dz
+          ...ID,
+          ...yD ? {
+            call: yD
           } : {}
         })
       };
-      let Rz = zz;
-      const Kz = Object.keys(bz).some(Zz.e),
-        wz = zz => null !== zz && Kz && (0, Zz.e)(zz),
-        Xz = zz => wz(zz) ? `${Zz.j}${(0,Zz.f)(zz)}` : null !== iz && void 0 !== iz ? iz : yE(zz),
-        fz = zz => void 0 === iz || wz(zz),
-        sz = zz => void 0 !== Mz && !Mz.has(zz),
-        rz = new Set,
-        oz = zz => JSON.stringify({
-          name: zz.name,
-          args: zz.args
+      let ZD = DD;
+      const oD = Object.keys(cD).some(tD.d),
+        vD = DD => null !== DD && oD && (0, tD.d)(DD),
+        ND = DD => vD(DD) ? `${tD.h}${(0,tD.g)(DD)}` : null !== iD && void 0 !== iD ? iD : dI(DD),
+        gD = DD => void 0 === iD || vD(DD),
+        XD = DD => void 0 !== bD && !bD.has(DD),
+        mD = new Set,
+        nD = DD => JSON.stringify({
+          name: DD.name,
+          args: DD.args
         }),
-        Nz = zz => {
-          const uz = wz(zz) ? {
+        OD = DD => {
+          const CD = vD(DD) ? {
               name: "view_world_code",
               args: {}
             } : {
               name: "view_file",
               args: {
-                path: zz
+                path: DD
               }
             },
-            bz = dz ? {
-              ...uz,
-              call: dz
-            } : uz;
-          rz.add(oz(bz)), xz(bz)
+            cD = yD ? {
+              ...CD,
+              call: yD
+            } : CD;
+          mD.add(nD(cD)), HD(cD)
         },
-        vz = [],
-        xz = zz => {
-          const uz = oz(zz);
-          vz.length < 4 && !vz.some((zz => oz(zz) === uz)) && vz.push(zz)
+        PD = [],
+        HD = DD => {
+          const CD = nD(DD);
+          PD.length < 4 && !PD.some((DD => nD(DD) === CD)) && PD.push(DD)
         },
-        Jz = [],
-        Az = [],
-        Lz = [],
-        Vz = new Map,
-        qz = new Map,
-        hz = (zz, uz, bz) => {
-          var Ez;
-          const nz = function(zz) {
-              const uz = zz.replace(/\s+/g, " ").trim();
-              if (uz.length <= 80) return uz;
-              const bz = uz.slice(0, 80);
-              return `${bz.slice(0,Math.max(bz.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
-            }(null !== uz && void 0 !== uz ? uz : ""),
-            iz = null !== (Ez = Vz.get(zz)) && void 0 !== Ez ? Ez : [];
-          var lz;
-          ("" === nz || iz.includes(nz) || Vz.set(zz, [...iz, nz]), "" !== nz) && qz.set(zz, [...null !== (lz = qz.get(zz)) && void 0 !== lz ? lz : [], {
-            why: nz,
-            code: bz
+        UD = [],
+        xD = [],
+        JD = [],
+        zD = new Map,
+        lD = new Map,
+        LD = (DD, CD, cD) => {
+          var ID;
+          const pD = function(DD) {
+              const CD = DD.replace(/\s+/g, " ").trim();
+              if (CD.length <= 80) return CD;
+              const cD = CD.slice(0, 80);
+              return `${cD.slice(0,Math.max(cD.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
+            }(null !== CD && void 0 !== CD ? CD : ""),
+            iD = null !== (ID = zD.get(DD)) && void 0 !== ID ? ID : [];
+          var fD;
+          ("" === pD || iD.includes(pD) || zD.set(DD, [...iD, pD]), "" !== pD) && lD.set(DD, [...null !== (fD = lD.get(DD)) && void 0 !== fD ? fD : [], {
+            why: pD,
+            code: cD
           }])
         },
-        Uz = new Set,
-        cz = [],
-        gz = new Map,
-        Sz = [];
-      let Dz = null;
-      const Qz = [];
-      let ez = [];
-      const Iz = (zz, uz) => void 0 !== iz && !wz(zz) && (null === zz || yE(zz) !== iz) && mE.test(uz),
-        Yz = (zz, uz, bz, Ez) => {
-          var nz, iz;
-          const lz = function(zz, uz, bz, Ez) {
-            const nz = FE(uz);
-            return nz ? oE(zz, nz, bz, Ez) : {
-              error: `There is no prefab called ${uz}. The prefabs are: ${OE.map((zz=>zz.name)).join(", ")}.`
+        TD = new Set,
+        GD = [],
+        RD = new Map,
+        kD = [];
+      let YD = null;
+      const WD = [];
+      let ED = [];
+      const uD = (DD, CD) => void 0 !== iD && !vD(DD) && (null === DD || dI(DD) !== iD) && jI.test(CD),
+        AD = (DD, CD, cD, ID) => {
+          var pD, iD;
+          const fD = function(DD, CD, cD, ID) {
+            const pD = MI(CD);
+            return pD ? nI(DD, pD, cD, ID) : {
+              error: `There is no prefab called ${CD}. The prefabs are: ${SI.map((DD=>DD.name)).join(", ")}.`
             }
-          }(null !== (nz = Hz[zz]) && void 0 !== nz ? nz : "", uz, bz, tz);
-          return "error" in lz ? (Fz("use_prefab", zz, "prefab", {
-            detail: lz.error
-          }), !1) : (Hz[zz] = lz.text, Oz.add(zz), gz.set(zz, {
-            prefab: lz.prefab,
-            settings: bz
-          }), hz(zz, null !== Ez && void 0 !== Ez ? Ez : lz.prefab.title, lz.text), cz.push({
-            name: lz.prefab.name,
-            title: lz.prefab.title,
-            path: zz,
-            problems: lz.problems,
-            fixed: lz.fixed,
-            setup: null !== (iz = lz.prefab.setup) && void 0 !== iz ? iz : null
+          }(null !== (pD = wD[DD]) && void 0 !== pD ? pD : "", CD, cD, QD);
+          return "error" in fD ? (MD("use_prefab", DD, "prefab", {
+            detail: fD.error
+          }), !1) : (wD[DD] = fD.text, SD.add(DD), RD.set(DD, {
+            prefab: fD.prefab,
+            settings: cD
+          }), LD(DD, null !== ID && void 0 !== ID ? ID : fD.prefab.title, fD.text), GD.push({
+            name: fD.prefab.name,
+            title: fD.prefab.title,
+            path: DD,
+            problems: fD.problems,
+            fixed: fD.fixed,
+            setup: null !== (iD = fD.prefab.setup) && void 0 !== iD ? iD : null
           }), !0)
         },
-        kz = (zz, uz, bz) => {
-          const Ez = Yb(uz);
-          if (0 === Ez.calls.length) return !1;
-          Hz[zz] = Ez.code, Oz.add(zz);
-          for (const nz of Ez.calls) Yz(zz, nz.name, nz.settings, bz);
-          return hz(zz, bz, Ez.code), !0
+        FD = (DD, CD, cD) => {
+          const ID = Ac(CD);
+          if (0 === ID.calls.length) return !1;
+          wD[DD] = ID.code, SD.add(DD);
+          for (const pD of ID.calls) AD(DD, pD.name, pD.settings, cD);
+          return LD(DD, cD, ID.code), !0
         },
-        uu = zz => {
-          const uz = Zu(DE(gE(zz)), nz);
-          Jz.push(uz.code), Lz.push(...uz.renames)
+        CC = DD => {
+          const CD = tC(YI(RI(DD)), pD);
+          UD.push(CD.code), JD.push(...CD.renames)
         },
-        bu = Ob(zz, uz),
-        Eu = new Map;
-      for (const Zz of bu) {
-        var nu, iu, lu, Mu;
-        const zz = null !== (nu = Eu.get(Zz.name)) && void 0 !== nu ? nu : 0;
-        Eu.set(Zz.name, zz + 1), dz = {
-          name: Zz.name,
-          nth: zz
+        cC = Sc(DD, CD),
+        IC = new Map;
+      for (const tD of cC) {
+        var pC, iC, fC, bC;
+        const DD = null !== (pC = IC.get(tD.name)) && void 0 !== pC ? pC : 0;
+        IC.set(tD.name, DD + 1), yD = {
+          name: tD.name,
+          nth: DD
         };
-        const uz = ("replace_function" === Zz.name || "insert_code" === Zz.name) && void 0 === Zz.args.code && void 0 !== Zz.args.content ? {
-            ...Zz,
+        const CD = ("replace_function" === tD.name || "insert_code" === tD.name) && void 0 === tD.args.code && void 0 !== tD.args.content ? {
+            ...tD,
             args: {
-              ...Zz.args,
-              code: Zz.args.content,
-              path: null !== (iu = null !== (lu = null !== (Mu = Zz.args.path) && void 0 !== Mu ? Mu : iz) && void 0 !== lu ? lu : Ez) && void 0 !== iu ? iu : void 0
+              ...tD.args,
+              code: tD.args.content,
+              path: null !== (iC = null !== (fC = null !== (bC = tD.args.path) && void 0 !== bC ? bC : iD) && void 0 !== fC ? fC : ID) && void 0 !== iC ? iC : void 0
             }
-          } : Zz,
+          } : tD,
           {
-            path: nz,
-            content: lz,
-            search: Mz,
-            replace: pz,
-            code: Kz
-          } = uz.args,
-          wz = ru(uz.name),
-          rz = `${uz.name}\n${JSON.stringify({...uz.args,why:void 0})}`,
-          oz = Uz.has(rz);
-        if (wz.annotations.idempotentHint && oz) Rz = Rz.replace(uz.source, "");
+            path: pD,
+            content: fD,
+            search: bD,
+            replace: BD,
+            code: oD
+          } = CD.args,
+          vD = mC(CD.name),
+          mD = `${CD.name}\n${JSON.stringify({...CD.args,why:void 0})}`,
+          nD = TD.has(mD);
+        if (vD.annotations.idempotentHint && nD) ZD = ZD.replace(CD.source, "");
         else {
-          if (Uz.add(rz), su(uz.name)) {
-            const zz = Object.fromEntries(Object.entries(uz.args).flatMap((zz => {
-              let [uz, bz] = zz;
-              return void 0 === bz || "" === bz.trim() ? [] : [
-                [uz, bz.trim()]
+          if (TD.add(mD), XC(CD.name)) {
+            const DD = Object.fromEntries(Object.entries(CD.args).flatMap((DD => {
+              let [CD, cD] = DD;
+              return void 0 === cD || "" === cD.trim() ? [] : [
+                [CD, cD.trim()]
               ]
             })));
-            xz({
-              name: uz.name,
-              args: SE(uz.name, zz),
-              call: dz
+            HD({
+              name: CD.name,
+              args: kI(CD.name, DD),
+              call: yD
             })
-          } else if ("add_world_code" === uz.name) {
-            if (void 0 === iz) continue;
-            void 0 !== Kz ? uu(Kz) : Fz(uz.name, null, "missingArgs")
-          } else if ("use_prefab" === uz.name) {
-            const zz = void 0 !== nz && "" !== nz.trim() ? Xz(nz) : void 0 === iz ? null !== Ez && void 0 !== Ez ? Ez : "index.js" : null;
-            if (void 0 === uz.args.name || "" === uz.args.name.trim()) Fz(uz.name, zz, "missingArgs");
-            else if (null !== zz && fz(zz)) {
-              var tu;
-              Yz(zz, uz.args.name, null !== (tu = uz.args.settings) && void 0 !== tu ? tu : "", uz.args.why)
-            } else Fz(uz.name, zz, "prefab", {
+          } else if ("add_world_code" === CD.name) {
+            if (void 0 === iD) continue;
+            void 0 !== oD ? CC(oD) : MD(CD.name, null, "missingArgs")
+          } else if ("use_prefab" === CD.name) {
+            const DD = void 0 !== pD && "" !== pD.trim() ? ND(pD) : void 0 === iD ? null !== ID && void 0 !== ID ? ID : "index.js" : null;
+            if (void 0 === CD.args.name || "" === CD.args.name.trim()) MD(CD.name, DD, "missingArgs");
+            else if (null !== DD && gD(DD)) {
+              var QC;
+              AD(DD, CD.args.name, null !== (QC = CD.args.settings) && void 0 !== QC ? QC : "", CD.args.why)
+            } else MD(CD.name, DD, "prefab", {
               detail: "A prefab goes in World Code, not in a code block."
             })
-          } else if ("ask_creator" === uz.name) Dz ??= TE(uz.args);
-          else if ("plan" === uz.name) {
-            var Hu;
-            if (0 === ez.length) ez = Ou(null !== (Hu = uz.args.steps) && void 0 !== Hu ? Hu : "")
-          } else if ("remember" === uz.name) {
-            var pu;
-            const zz = zu(null !== (pu = uz.args.note) && void 0 !== pu ? pu : "");
-            null !== zz && 0 === Qz.length && Qz.push(zz)
-          } else if ("export_game" === uz.name || "switch_to_world_code" === uz.name) {
-            if ("switch_to_world_code" === uz.name && void 0 === iz) continue;
-            const zz = "export_game" === uz.name ? "exportGame" : "switchToWorldCode";
-            var du;
-            if (!Az.some((uz => uz.kind === zz))) Az.push("export_game" === uz.name ? {
+          } else if ("ask_creator" === CD.name) YD ??= qI(CD.args);
+          else if ("plan" === CD.name) {
+            var wC;
+            if (0 === ED.length) ED = SC(null !== (wC = CD.args.steps) && void 0 !== wC ? wC : "")
+          } else if ("remember" === CD.name) {
+            var BC;
+            const DD = DC(null !== (BC = CD.args.note) && void 0 !== BC ? BC : "");
+            null !== DD && 0 === WD.length && WD.push(DD)
+          } else if ("export_game" === CD.name || "switch_to_world_code" === CD.name) {
+            if ("switch_to_world_code" === CD.name && void 0 === iD) continue;
+            const DD = "export_game" === CD.name ? "exportGame" : "switchToWorldCode";
+            var yC;
+            if (!xD.some((CD => CD.kind === DD))) xD.push("export_game" === CD.name ? {
               kind: "exportGame"
             } : {
               kind: "switchToWorldCode",
-              request: (null === (du = uz.args.request) || void 0 === du ? void 0 : du.trim()) || null
+              request: (null === (yC = CD.args.request) || void 0 === yC ? void 0 : yC.trim()) || null
             })
-          } else if ("write_file" === uz.name) {
-            var Fu, Ru;
-            if (Mb(uz))
-              if (void 0 === lz || "" !== lz.trim() && !GE(cE(lz), void 0 === nz ? "" : null !== (Fu = Hz[Xz(nz)]) && void 0 !== Fu ? Fu : "")) {
-                if (void 0 !== nz && void 0 !== lz && Iz(nz, lz)) uu(lz);
-                else if (void 0 !== nz && sz(Xz(nz)) && "" !== (null !== (Ru = bz[Xz(nz)]) && void 0 !== Ru ? Ru : "").trim()) Fz(uz.name, Xz(nz), "unread", void 0 === lz ? void 0 : {
-                  code: gE(lz)
-                }), Nz(Xz(nz));
-                else if (void 0 !== nz && void 0 !== lz) {
-                  const zz = Xz(nz),
-                    bz = kb(gE(lz));
-                  if (!fz(zz) || !kz(zz, bz, uz.args.why)) {
-                    const Ez = gz.get(zz),
-                      nz = Ez && !fE(bz, Ez.prefab) ? oE(bz, Ez.prefab, Ez.settings, tz) : null;
-                    Hz[zz] = nz && !("error" in nz) ? nz.text : bz, Oz.add(zz), hz(zz, uz.args.why, lz)
+          } else if ("write_file" === CD.name) {
+            var MC, ZC;
+            if (bc(CD))
+              if (void 0 === fD || "" !== fD.trim() && !aI(GI(fD), void 0 === pD ? "" : null !== (MC = wD[ND(pD)]) && void 0 !== MC ? MC : "")) {
+                if (void 0 !== pD && void 0 !== fD && uD(pD, fD)) CC(fD);
+                else if (void 0 !== pD && XD(ND(pD)) && "" !== (null !== (ZC = cD[ND(pD)]) && void 0 !== ZC ? ZC : "").trim()) MD(CD.name, ND(pD), "unread", void 0 === fD ? void 0 : {
+                  code: RI(fD)
+                }), OD(ND(pD));
+                else if (void 0 !== pD && void 0 !== fD) {
+                  const DD = ND(pD),
+                    cD = Fc(RI(fD));
+                  if (!gD(DD) || !FD(DD, cD, CD.args.why)) {
+                    const ID = RD.get(DD),
+                      pD = ID && !gI(cD, ID.prefab) ? nI(cD, ID.prefab, ID.settings, QD) : null;
+                    wD[DD] = pD && !("error" in pD) ? pD.text : cD, SD.add(DD), LD(DD, CD.args.why, fD)
                   }
                 }
-              } else Fz(uz.name, void 0 === nz ? null : Xz(nz), "placeholder");
-            else Fz(uz.name, void 0 === nz ? null : Xz(nz), "missingArgs")
-          } else if ("replace_function" === uz.name || "insert_code" === uz.name) {
-            var Ku, wu, Xu;
-            const zz = void 0 === nz ? null : Xz(nz),
-              bz = "replace_function" === uz.name ? uz.args.name : uz.args.after,
-              Ez = void 0 === bz ? void 0 : yz(bz),
-              iz = null === zz ? "" : null !== (Ku = Hz[zz]) && void 0 !== Ku ? Ku : "",
-              lz = void 0 === Kz ? "" : cE(Kz),
-              Mz = null === zz ? void 0 : gz.get(zz),
-              tz = "replace_function" === uz.name && void 0 !== Mz && void 0 !== Ez && qE.test(Ez) && cb(Mz.prefab.code).has(Ez),
-              pz = null === zz || void 0 === Kz || void 0 === bz ? null : tz ? null !== (wu = null === (Xu = Ub(iz, lz, {
+              } else MD(CD.name, void 0 === pD ? null : ND(pD), "placeholder");
+            else MD(CD.name, void 0 === pD ? null : ND(pD), "missingArgs")
+          } else if ("replace_function" === CD.name || "insert_code" === CD.name) {
+            var oC, vC, NC;
+            const DD = void 0 === pD ? null : ND(pD),
+              cD = "replace_function" === CD.name ? CD.args.name : CD.args.after,
+              ID = void 0 === cD ? void 0 : dD(cD),
+              iD = null === DD ? "" : null !== (oC = wD[DD]) && void 0 !== oC ? oC : "",
+              fD = void 0 === oD ? "" : GI(oD),
+              bD = null === DD ? void 0 : RD.get(DD),
+              QD = "replace_function" === CD.name && void 0 !== bD && void 0 !== ID && lI.test(ID) && Gc(bD.prefab.code).has(ID),
+              BD = null === DD || void 0 === oD || void 0 === cD ? null : QD ? null !== (vC = null === (NC = Tc(iD, fD, {
                 owner: "extra",
                 runsLast: !0
-              })) || void 0 === Xu ? void 0 : Xu.text) && void 0 !== wu ? wu : null : "replace_function" === uz.name ? Wz(iz, bz, lz) : Bz(iz, bz, lz);
-            null === zz || null === pz ? Fz(uz.name, zz, Mb(uz) ? "brokenCode" : "missingArgs") : GE(lz, iz) ? Fz(uz.name, zz, "placeholder") : "replace_function" === uz.name && sz(zz) && Cz(iz).includes(null !== Ez && void 0 !== Ez ? Ez : "") ? (Fz(uz.name, zz, "unread", {
-              code: gE(lz)
-            }), Nz(zz)) : (Hz[zz] = pz, Oz.add(zz), hz(zz, uz.args.why, lz))
+              })) || void 0 === NC ? void 0 : NC.text) && void 0 !== vC ? vC : null : "replace_function" === CD.name ? sD(iD, cD, fD) : hD(iD, cD, fD);
+            null === DD || null === BD ? MD(CD.name, DD, bc(CD) ? "brokenCode" : "missingArgs") : aI(fD, iD) ? MD(CD.name, DD, "placeholder") : "replace_function" === CD.name && XD(DD) && rD(iD).includes(null !== ID && void 0 !== ID ? ID : "") ? (MD(CD.name, DD, "unread", {
+              code: RI(fD)
+            }), OD(DD)) : (wD[DD] = BD, SD.add(DD), LD(DD, CD.args.why, fD))
           } else {
-            var fu, ou;
-            const zz = !0 === (null === (fu = wz._meta) || void 0 === fu ? void 0 : fu.appliesAtOnce) ? null !== iz && void 0 !== iz ? iz : Ez : void 0 === nz ? null : Xz(nz),
-              bz = null === zz ? "" : null !== (ou = Hz[zz]) && void 0 !== ou ? ou : "",
-              lz = Mb(uz) && void 0 !== Mz,
-              tz = lz ? Tz(bz, Mz) : null,
-              dz = null === tz && void 0 !== Mz && Mz.includes("\\n") ? Tz(bz, au(Mz)) : null,
-              Zz = null !== tz && void 0 !== tz ? tz : dz,
-              Rz = null !== dz ? au(null !== pz && void 0 !== pz ? pz : "") : null !== pz && void 0 !== pz ? pz : "",
-              Kz = null === Zz || void 0 === Mz ? Rz : Gz(bz.slice(Zz.from, Zz.to), Pz(bz, Zz, null !== dz ? au(Mz) : Mz, Rz), az(bz.slice(Zz.to)));
-            if (null === zz || null === Zz) Fz(uz.name, zz, lz ? "noMatch" : "missingArgs", {
-              closest: lz ? mz(bz, Mz) : null,
-              functions: fz(zz) ? Cz(bz) : []
+            var gC, nC;
+            const DD = !0 === (null === (gC = vD._meta) || void 0 === gC ? void 0 : gC.appliesAtOnce) ? null !== iD && void 0 !== iD ? iD : ID : void 0 === pD ? null : ND(pD),
+              cD = null === DD ? "" : null !== (nC = wD[DD]) && void 0 !== nC ? nC : "",
+              fD = bc(CD) && void 0 !== bD,
+              QD = fD ? qD(cD, bD) : null,
+              yD = null === QD && void 0 !== bD && bD.includes("\\n") ? qD(cD, VC(bD)) : null,
+              tD = null !== QD && void 0 !== QD ? QD : yD,
+              ZD = null !== yD ? VC(null !== BD && void 0 !== BD ? BD : "") : null !== BD && void 0 !== BD ? BD : "",
+              oD = null === tD || void 0 === bD ? ZD : aD(cD.slice(tD.from, tD.to), KD(cD, tD, null !== yD ? VC(bD) : bD, ZD), VD(cD.slice(tD.to)));
+            if (null === DD || null === tD) MD(CD.name, DD, fD ? "noMatch" : "missingArgs", {
+              closest: fD ? jD(cD, bD) : null,
+              functions: gD(DD) ? rD(cD) : []
             });
-            else if (GE(Kz, bz.slice(Zz.from, Zz.to))) Fz(uz.name, zz, "placeholder");
+            else if (aI(oD, cD.slice(tD.from, tD.to))) MD(CD.name, DD, "placeholder");
             else {
-              const Ez = fz(zz) ? jz(bz, Zz.from, Zz.to, null !== Mz && void 0 !== Mz ? Mz : "", Rz) : null;
-              Hz[zz] = null !== Ez && void 0 !== Ez ? Ez : bz.slice(0, Zz.from) + Kz + bz.slice(Zz.to), Oz.add(zz), hz(zz, uz.args.why, Kz)
+              const ID = gD(DD) ? eD(cD, tD.from, tD.to, null !== bD && void 0 !== bD ? bD : "", ZD) : null;
+              wD[DD] = null !== ID && void 0 !== ID ? ID : cD.slice(0, tD.from) + oD + cD.slice(tD.to), SD.add(DD), LD(DD, CD.args.why, oD)
             }
           }
-          Rz = Rz.replace(uz.source, "")
+          ZD = ZD.replace(CD.source, "")
         }
       }
-      if (dz = void 0, Rz = Au(pb(Rz), bu.length > 0), 0 === bu.length) {
-        var Nu, vu;
-        const uz = [...zz.matchAll(aE)],
-          bz = 1 === uz.length ? uz[0][1] : null,
-          nz = null !== (Nu = null !== iz && void 0 !== iz ? iz : Ez) && void 0 !== Nu ? Nu : "index.js";
-        if (null !== bz && Iz(null, bz)) uu(bz), Rz = Rz.replace(uz[0][0], "");
-        else if (null !== bz && UE.test(bz) && !GE(bz, null !== (vu = Hz[nz]) && void 0 !== vu ? vu : "")) {
-          const zz = kb(gE(bz));
-          fz(nz) && kz(nz, zz, void 0) || (Hz[nz] = zz, Oz.add(nz)), Rz = Rz.replace(uz[0][0], "")
+      if (yD = void 0, ZD = xC(Bc(ZD), cC.length > 0), 0 === cC.length) {
+        var OC, PC;
+        const CD = [...DD.matchAll(VI)],
+          cD = 1 === CD.length ? CD[0][1] : null,
+          pD = null !== (OC = null !== iD && void 0 !== iD ? iD : ID) && void 0 !== OC ? OC : "index.js";
+        if (null !== cD && uD(null, cD)) CC(cD), ZD = ZD.replace(CD[0][0], "");
+        else if (null !== cD && TI.test(cD) && !aI(cD, null !== (PC = wD[pD]) && void 0 !== PC ? PC : "")) {
+          const DD = Fc(RI(cD));
+          gD(pD) && FD(pD, DD, void 0) || (wD[pD] = DD, SD.add(pD)), ZD = ZD.replace(CD[0][0], "")
         }
       }
-      for (const Zz of Oz) {
-        var xu;
-        if (fz(Zz)) {
-          var Ju;
-          const zz = Object.values(Hz).some((zz => /\brequire\s*\(/.test(zz)));
-          Hz[Zz] = zE(kb(zz ? Hz[Zz] : Hz[Zz].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (Ju = bz[Zz]) && void 0 !== Ju ? Ju : "");
-          const uz = new Set(Object.keys(Hz).filter((zz => zz !== Zz && fz(zz))).flatMap((zz => [...cb(Hz[zz])]))),
-            Ez = XE(Hz[Zz], uz);
-          Hz[Zz] = Ez.text, Sz.push(...Ez.added)
+      for (const tD of SD) {
+        var HC;
+        if (gD(tD)) {
+          var UC;
+          const DD = Object.values(wD).some((DD => /\brequire\s*\(/.test(DD)));
+          wD[tD] = DI(Fc(DD ? wD[tD] : wD[tD].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (UC = cD[tD]) && void 0 !== UC ? UC : "");
+          const CD = new Set(Object.keys(wD).filter((DD => DD !== tD && gD(DD))).flatMap((DD => [...Gc(wD[DD])]))),
+            ID = NI(wD[tD], CD);
+          wD[tD] = ID.text, kD.push(...ID.added)
         }
-        const zz = Zu(QE(DE(Hz[Zz])), fz(Zz) ? nz : [], null !== (xu = bz[Zz]) && void 0 !== xu ? xu : "");
-        Hz[Zz] = zz.code, Lz.push(...zz.renames)
+        const DD = tC(WI(YI(wD[tD])), gD(tD) ? pD : [], null !== (HC = cD[tD]) && void 0 !== HC ? HC : "");
+        wD[tD] = DD.code, JD.push(...DD.renames)
       }
-      for (const Zz of cz) {
-        const zz = Zz.problems.length > 0 ? ` Kept as it was: ${Zz.problems.join("; ")}.` : "",
-          uz = Zz.fixed.length > 0 ? ` Names changed to real ones: ${Zz.fixed.join(", ")}.` : "";
-        Rz += `\n\nThis uses the ready-made ${Zz.title}.${uz}${zz}${Zz.setup?` ${Zz.setup}`:""}`
+      for (const tD of GD) {
+        const DD = tD.problems.length > 0 ? ` Kept as it was: ${tD.problems.join("; ")}.` : "",
+          CD = tD.fixed.length > 0 ? ` Names changed to real ones: ${tD.fixed.join(", ")}.` : "";
+        ZD += `\n\nThis uses the ready-made ${tD.title}.${CD}${DD}${tD.setup?` ${tD.setup}`:""}`
       }
       for (const {
-          from: Zz,
-          to: Tz
+          from: tD,
+          to: qD
         }
-        of Lz) Rz += `\n\nI renamed \`${Zz}\` to \`${Tz}\`, the name World Code calls.`;
-      const Tu = [];
-      for (const Zz of Oz) {
-        var Lu;
-        const zz = null !== (Lu = bz[Zz]) && void 0 !== Lu ? Lu : "";
-        if (Hz[Zz] !== zz) {
-          const uz = Vz.get(Zz);
-          Tu.push(uz ? {
-            path: Zz,
-            before: zz,
-            after: Hz[Zz],
-            why: uz,
-            parts: qz.get(Zz)
+        of JD) ZD += `\n\nI renamed \`${tD}\` to \`${qD}\`, the name World Code calls.`;
+      const qC = [];
+      for (const tD of SD) {
+        var JC;
+        const DD = null !== (JC = cD[tD]) && void 0 !== JC ? JC : "";
+        if (wD[tD] !== DD) {
+          const CD = zD.get(tD);
+          qC.push(CD ? {
+            path: tD,
+            before: DD,
+            after: wD[tD],
+            why: CD,
+            parts: lD.get(tD)
           } : {
-            path: Zz,
-            before: zz,
-            after: Hz[Zz]
+            path: tD,
+            before: DD,
+            after: wD[tD]
           })
         }
       }
-      const Pu = "direct" === lz && Tu.length > 0,
-        Gu = Tu.length > 0 || Jz.length > 0;
+      const KC = "direct" === fD && qC.length > 0,
+        aC = qC.length > 0 || UD.length > 0;
       return {
-        text: Rz.replace(/\n{3,}/g, "\n\n").trim(),
-        changes: Tu,
-        failedEdits: pz,
-        renamedCallbacks: Lz,
-        worldCode: Jz,
-        inPlace: Pu,
-        actions: Az,
-        question: Gu ? null : Dz,
-        notes: Qz,
-        plan: Gu ? [] : ez,
-        lookups: Gu ? vz.filter((zz => rz.has(oz(zz)))) : null !== Dz || ez.length > 0 ? [] : vz,
-        prefabs: cz,
-        helpersAdded: [...new Set(Sz)]
+        text: ZD.replace(/\n{3,}/g, "\n\n").trim(),
+        changes: qC,
+        failedEdits: BD,
+        renamedCallbacks: JD,
+        worldCode: UD,
+        inPlace: KC,
+        actions: xD,
+        question: aC ? null : YD,
+        notes: WD,
+        plan: aC ? [] : ED,
+        lookups: aC ? PD.filter((DD => mD.has(nD(DD)))) : null !== YD || ED.length > 0 ? [] : PD,
+        prefabs: GD,
+        helpersAdded: [...new Set(kD)]
       }
     }
 
-    function eE(zz, uz) {
-      const bz = "" === zz ? [] : zz.replace(/\n$/, "").split("\n"),
-        Ez = "" === uz ? [] : uz.replace(/\n$/, "").split("\n");
-      let nz = 0;
-      for (; nz < bz.length && nz < Ez.length && bz[nz] === Ez[nz];) nz++;
-      let iz = bz.length,
-        lz = Ez.length;
-      for (; iz > nz && lz > nz && bz[iz - 1] === Ez[lz - 1];) iz--, lz--;
-      const Mz = bz.slice(nz, iz),
-        tz = Ez.slice(nz, lz),
-        Hz = Array.from({
-          length: Mz.length + 1
-        }, (() => new Array(tz.length + 1).fill(0)));
-      for (let Fz = Mz.length - 1; Fz >= 0; Fz--)
-        for (let zz = tz.length - 1; zz >= 0; zz--) Hz[Fz][zz] = Mz[Fz] === tz[zz] ? Hz[Fz + 1][zz + 1] + 1 : Math.max(Hz[Fz + 1][zz], Hz[Fz][zz + 1]);
-      const Oz = bz.slice(0, nz).map((zz => ({
+    function EI(DD, CD) {
+      const cD = "" === DD ? [] : DD.replace(/\n$/, "").split("\n"),
+        ID = "" === CD ? [] : CD.replace(/\n$/, "").split("\n");
+      let pD = 0;
+      for (; pD < cD.length && pD < ID.length && cD[pD] === ID[pD];) pD++;
+      let iD = cD.length,
+        fD = ID.length;
+      for (; iD > pD && fD > pD && cD[iD - 1] === ID[fD - 1];) iD--, fD--;
+      const bD = cD.slice(pD, iD),
+        QD = ID.slice(pD, fD),
+        wD = Array.from({
+          length: bD.length + 1
+        }, (() => new Array(QD.length + 1).fill(0)));
+      for (let MD = bD.length - 1; MD >= 0; MD--)
+        for (let DD = QD.length - 1; DD >= 0; DD--) wD[MD][DD] = bD[MD] === QD[DD] ? wD[MD + 1][DD + 1] + 1 : Math.max(wD[MD + 1][DD], wD[MD][DD + 1]);
+      const SD = cD.slice(0, pD).map((DD => ({
         kind: "same",
-        text: zz
+        text: DD
       })));
-      let pz = 0,
-        dz = 0;
-      for (; pz < Mz.length || dz < tz.length;) pz < Mz.length && dz < tz.length && Mz[pz] === tz[dz] ? (Oz.push({
+      let BD = 0,
+        yD = 0;
+      for (; BD < bD.length || yD < QD.length;) BD < bD.length && yD < QD.length && bD[BD] === QD[yD] ? (SD.push({
         kind: "same",
-        text: Mz[pz]
-      }), pz++, dz++) : dz < tz.length && (pz === Mz.length || Hz[pz][dz + 1] > Hz[pz + 1][dz]) ? (Oz.push({
+        text: bD[BD]
+      }), BD++, yD++) : yD < QD.length && (BD === bD.length || wD[BD][yD + 1] > wD[BD + 1][yD]) ? (SD.push({
         kind: "added",
-        text: tz[dz]
-      }), dz++) : (Oz.push({
+        text: QD[yD]
+      }), yD++) : (SD.push({
         kind: "removed",
-        text: Mz[pz]
-      }), pz++);
-      for (const Fz of bz.slice(iz)) Oz.push({
+        text: bD[BD]
+      }), BD++);
+      for (const MD of cD.slice(iD)) SD.push({
         kind: "same",
-        text: Fz
+        text: MD
       });
-      return Oz
+      return SD
     }
-    const jE = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
+    const eI = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
 
-    function IE(zz) {
-      return jE.test(zz)
+    function uI(DD) {
+      return eI.test(DD)
     }
-    const BE = {
+    const hI = {
       worldCode: new Set(["write_file", "edit_file", "replace_function", "use_prefab", "edit_code_in_place", "export_game", "ask_creator", "plan", "remember", "view_file", "view_chunk", "view_game_state", "get_docs", "find_names", "view_prefab", "view_errors"]),
       codeBlock: new Set(["write_file", "edit_file", "replace_function", "add_world_code", "edit_code_in_place", "switch_to_world_code", "ask_creator", "view_world_code", "view_chunk", "view_game_state", "get_docs", "find_names", "view_errors"])
     };
 
-    function CE(zz, uz, bz) {
-      return Bu[zz].formatCall(uz, bz)
+    function rI(DD, CD, cD) {
+      return hC[DD].formatCall(CD, cD)
     }
 
-    function YE(zz, uz, bz, Ez) {
-      return Bu[bz].declareTools(zz, uz, Ez)
+    function AI(DD, CD, cD, ID) {
+      return hC[cD].declareTools(DD, CD, ID)
     }
 
-    function kE(zz) {
-      const uz = null === zz.path ? zz.tool : `${zz.tool} ${zz.path}`;
-      var bz;
-      if ("prefab" === zz.reason) return `${uz}: ${null!==(bz=zz.detail)&&void 0!==bz?bz:"the prefab couldn't go in."} Nothing changed.`;
-      if ("missingArgs" === zz.reason) return `${uz}: the call was missing an argument it needs, so nothing changed.`;
-      if ("placeholder" === zz.reason) return "write_file" === zz.tool ? `${uz}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${uz}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
-      if ("unread" === zz.reason) return `${uz}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==zz.path&&(0,Zz.e)(zz.path)?"view_world_code":"view_file"} shows.`;
-      if ("brokenCode" === zz.reason) return `${uz}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
-      return `${uz}: search matched nothing in the file, so nothing changed. ${zz.closest?`The closest lines (${zz.closest.line}-${zz.closest.lastLine}) are:\n${zz.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${zz.functions.length>0?`, or use replace_function with one of these names: ${zz.functions.join(", ")}`:""}.`
+    function FI(DD) {
+      const CD = null === DD.path ? DD.tool : `${DD.tool} ${DD.path}`;
+      var cD;
+      if ("prefab" === DD.reason) return `${CD}: ${null!==(cD=DD.detail)&&void 0!==cD?cD:"the prefab couldn't go in."} Nothing changed.`;
+      if ("missingArgs" === DD.reason) return `${CD}: the call was missing an argument it needs, so nothing changed.`;
+      if ("placeholder" === DD.reason) return "write_file" === DD.tool ? `${CD}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${CD}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
+      if ("unread" === DD.reason) return `${CD}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==DD.path&&(0,tD.d)(DD.path)?"view_world_code":"view_file"} shows.`;
+      if ("brokenCode" === DD.reason) return `${CD}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
+      return `${CD}: search matched nothing in the file, so nothing changed. ${DD.closest?`The closest lines (${DD.closest.line}-${DD.closest.lastLine}) are:\n${DD.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${DD.functions.length>0?`, or use replace_function with one of these names: ${DD.functions.join(", ")}`:""}.`
     }
-    const zn = {
+    const Dp = {
         offer: "matched",
         list: "matched",
         categories: !1,
         helperIndex: !0
       },
-      un = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
+      Cp = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
 
-    function bn(zz) {
-      return Object.values(zz).some((zz => "" !== zz.trim()))
+    function cp(DD) {
+      return Object.values(DD).some((DD => "" !== DD.trim()))
     }
-    const En = {
+    const Ip = {
         format: "simple",
         nativeTools: !1
       },
-      nn = zz => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${zz?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true for a command you handled, so the player isn't told it is unknown, and return nothing (never false) for any other, or the game's own commands (/spawn) stop working.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${zz?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${zz?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(playerId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: playerId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
-      Mn = zz => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${zz?"in the docs":"in the API list"}. Use only methods and client options that are ${zz?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(myId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: myId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
-      tn = {
+      pp = DD => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${DD?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true for a command you handled, so the player isn't told it is unknown, and return nothing (never false) for any other, or the game's own commands (/spawn) stop working.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${DD?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${DD?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(playerId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: playerId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
+      ip = DD => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${DD?"in the docs":"in the API list"}. Use only methods and client options that are ${DD?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(myId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: myId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
+      fp = {
         search: "lines to find",
         replace: "lines to put instead",
         codeBlock: "...all of the code block's code...",
@@ -5898,324 +5898,324 @@ export const modules = {
         worldCode: "...only the World Code to add...",
         function: "function onPlayerJoin(playerId) {\n\t...the whole new function...\n}"
       },
-      Hn = Object.values(tn);
-    const On = `You looked at World Code: its files are below, their paths starting ${Zz.j}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${Zz.j}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${Zz.b}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
+      bp = Object.values(fp);
+    const Qp = `You looked at World Code: its files are below, their paths starting ${tD.h}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${tD.h}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${tD.b}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
 
-    function pn(zz, uz, bz, Ez) {
-      var nz, iz, lz, Mz;
+    function wp(DD, CD, cD, ID) {
+      var pD, iD, fD, bD;
       let {
-        hasWorldCodeFiles: tz,
-        hasLookedUp: Hz,
-        movesToWorldCode: Oz,
-        listedPrefabs: pz,
-        guidesToPrefabs: dz
-      } = Ez;
-      const Fz = uz ? Zz.b : "index.js",
-        Rz = uz ? `${Zz.j}index.js` : Fz,
-        wz = (zz, uz) => CE(bz, zz, uz),
-        Xz = uz => zz.some((zz => zz.name === uz)),
-        fz = zz.filter((zz => ["content", "replace", "code"].some((uz => uz in zz.inputSchema.properties)))),
-        sz = Xz("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${wz("edit_code_in_place",{why:"what this fix does",search:tn.search,replace:tn.replace})}` : "",
-        rz = Xz("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${wz("export_game",{})}` : "",
-        oz = Xz("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${wz("replace_function",{path:Rz,name:"onPlayerJoin",why:"what the new function does",code:tn.function})}` : "",
-        Nz = Xz("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${wz("edit_file",{path:Fz,why:"what this part's change does",search:tn.search,replace:tn.replace})}` : "",
-        vz = uz ? `2. Then give the whole new code with a write_file call, exactly like this:\n${wz("write_file",{path:Fz,why:"what the change does",content:tn.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${wz("write_file",{path:Fz,why:"what the change does",content:tn.file})}`,
-        xz = uz ? "" : ` If there is no code yet, write it in ${Fz}.`,
-        Jz = wz("switch_to_world_code", {}),
-        Az = uz ? tz ? `\n${On}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${wz("add_world_code",{code:tn.worldCode})}\n${Oz?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${Xz("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${wz("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${Jz}` : "",
-        Tz = dz && Xz("use_prefab") && pz.length >= 2,
-        Lz = Tz ? pz.slice(0, 3).map((zz => zz.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
-        Pz = Tz ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
-        Gz = Xz("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${Pz}\n${wz("ask_creator",{question:"What kind of game should it be?",choices:Lz,allow_other:"true"})}` : "",
-        az = Xz("plan") ? `\n${"deepseek"===bz?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${wz("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
-        Vz = null !== (nz = pz[0]) && void 0 !== nz ? nz : FE("parkour"),
-        mz = (null !== (iz = null === Vz || void 0 === Vz ? void 0 : Vz.settings) && void 0 !== iz ? iz : []).slice(0, 2).map((zz => `${zz.key}: ${zz.value}`)).join("\n");
-      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${vz}${oz}${Nz}${sz}${Az}${Xz("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${wz("use_prefab",{name:null!==(lz=null===Vz||void 0===Vz?void 0:Vz.name)&&void 0!==lz?lz:"parkour",settings:mz,why:null!==(Mz=null===Vz||void 0===Vz?void 0:Vz.summary)&&void 0!==Mz?Mz:"a parkour course"})}`:""}${rz}${Gz}${az}${Xz("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${wz("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(zz,uz,bz){const Ez=zz.some((zz=>"fetch_url"===zz.name)),nz={view_file:`To see another of their files from the list, before you change it:\n${uz("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${uz("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${uz("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${uz("view_game_state",{})}`,fetch_url:`To read the docs: ${Kz.k} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${uz("fetch_url",{url:Kz.k})}`,get_docs:Ez?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${Ku}):\n${uz("get_docs",{name:"setClientOption"})}\n${uz("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${uz("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${uz("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${uz("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${uz("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${uz("view_prefab",{name:"parkour"})}`},iz=zz.flatMap((zz=>{const uz=nz[zz.name];return void 0===uz?[]:[uz]}));return 0===iz.length?bz?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
+        hasWorldCodeFiles: QD,
+        hasLookedUp: wD,
+        movesToWorldCode: SD,
+        listedPrefabs: BD,
+        guidesToPrefabs: yD
+      } = ID;
+      const MD = CD ? tD.b : "index.js",
+        ZD = CD ? `${tD.h}index.js` : MD,
+        vD = (DD, CD) => rI(cD, DD, CD),
+        ND = CD => DD.some((DD => DD.name === CD)),
+        gD = DD.filter((DD => ["content", "replace", "code"].some((CD => CD in DD.inputSchema.properties)))),
+        XD = ND("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${vD("edit_code_in_place",{why:"what this fix does",search:fp.search,replace:fp.replace})}` : "",
+        mD = ND("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${vD("export_game",{})}` : "",
+        nD = ND("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${vD("replace_function",{path:ZD,name:"onPlayerJoin",why:"what the new function does",code:fp.function})}` : "",
+        OD = ND("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${vD("edit_file",{path:MD,why:"what this part's change does",search:fp.search,replace:fp.replace})}` : "",
+        PD = CD ? `2. Then give the whole new code with a write_file call, exactly like this:\n${vD("write_file",{path:MD,why:"what the change does",content:fp.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${vD("write_file",{path:MD,why:"what the change does",content:fp.file})}`,
+        HD = CD ? "" : ` If there is no code yet, write it in ${MD}.`,
+        UD = vD("switch_to_world_code", {}),
+        xD = CD ? QD ? `\n${Qp}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${vD("add_world_code",{code:fp.worldCode})}\n${SD?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${ND("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${vD("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${UD}` : "",
+        qD = yD && ND("use_prefab") && BD.length >= 2,
+        JD = qD ? BD.slice(0, 3).map((DD => DD.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
+        KD = qD ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
+        aD = ND("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${KD}\n${vD("ask_creator",{question:"What kind of game should it be?",choices:JD,allow_other:"true"})}` : "",
+        VD = ND("plan") ? `\n${"deepseek"===cD?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${vD("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
+        zD = null !== (pD = BD[0]) && void 0 !== pD ? pD : MI("parkour"),
+        jD = (null !== (iD = null === zD || void 0 === zD ? void 0 : zD.settings) && void 0 !== iD ? iD : []).slice(0, 2).map((DD => `${DD.key}: ${DD.value}`)).join("\n");
+      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${PD}${nD}${OD}${XD}${xD}${ND("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${vD("use_prefab",{name:null!==(fD=null===zD||void 0===zD?void 0:zD.name)&&void 0!==fD?fD:"parkour",settings:jD,why:null!==(bD=null===zD||void 0===zD?void 0:zD.summary)&&void 0!==bD?bD:"a parkour course"})}`:""}${mD}${aD}${VD}${ND("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${vD("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(DD,CD,cD){const ID=DD.some((DD=>"fetch_url"===DD.name)),pD={view_file:`To see another of their files from the list, before you change it:\n${CD("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${CD("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${CD("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${CD("view_game_state",{})}`,fetch_url:`To read the docs: ${oD.i} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${CD("fetch_url",{url:oD.i})}`,get_docs:ID?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${oC}):\n${CD("get_docs",{name:"setClientOption"})}\n${CD("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${CD("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${CD("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${CD("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${CD("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${CD("view_prefab",{name:"parkour"})}`},iD=DD.flatMap((DD=>{const CD=pD[DD.name];return void 0===CD?[]:[CD]}));return 0===iD.length?cD?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
       nIf you need to see something before you can answer well, look it up first: answer with only look - up calls, no other words and no code, and you are asked again with what they found.$ {
-        Ez ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
+        ID ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
       }\
       n$ {
-        iz.join("\n")
+        iD.join("\n")
       }
-      `}(zz,wz,Hz)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${xz}\n4. If the request is not about their ${uz?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${fz.map((zz=>zz.name)).join(" or ")} calls. ${function(zz){return Bu[zz].callStyle}(bz)}`
+      `}(DD,vD,wD)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${HD}\n4. If the request is not about their ${CD?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${gD.map((DD=>DD.name)).join(" or ")} calls. ${function(DD){return hC[DD].callStyle}(cD)}`
     }
 
-    function dn(zz, uz, bz) {
-      return Object.keys(zz).filter((zz => !bz || !(0, Zz.e)(zz))).sort(((zz, bz) => (bz === uz ? 1 : 0) - (zz === uz ? 1 : 0) || zz.localeCompare(bz)))
+    function Sp(DD, CD, cD) {
+      return Object.keys(DD).filter((DD => !cD || !(0, tD.d)(DD))).sort(((DD, cD) => (cD === CD ? 1 : 0) - (DD === CD ? 1 : 0) || DD.localeCompare(cD)))
     }
 
-    function Fn(zz, uz, bz) {
-      var Ez;
-      const nz = dn(zz, uz, bz);
-      return null !== uz && nz.includes(uz) ? uz : null !== (Ez = nz[0]) && void 0 !== Ez ? Ez : null
+    function Bp(DD, CD, cD) {
+      var ID;
+      const pD = Sp(DD, CD, cD);
+      return null !== CD && pD.includes(CD) ? CD : null !== (ID = pD[0]) && void 0 !== ID ? ID : null
     }
 
-    function Zn(zz) {
-      const uz = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${zz.includes("index.ts")?"index.ts":"index.js"}`;
-      return `Only ${uz} runs by itself: another file runs when ${uz} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${uz}.\n`
+    function yp(DD) {
+      const CD = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${DD.includes("index.ts")?"index.ts":"index.js"}`;
+      return `Only ${CD} runs by itself: another file runs when ${CD} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${CD}.\n`
     }
 
-    function Rn(zz, uz) {
-      var bz;
+    function Mp(DD, CD) {
+      var cD;
       const {
-        files: Ez,
-        activePath: nz
-      } = zz, iz = !0 === zz.codeBlock, lz = dn(Ez, nz, iz);
-      if (0 === lz.length || lz.every((zz => "" === Ez[zz].trim()))) return iz ? "There is no code yet: the code block is empty." : lz.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
-      const Mz = null !== (bz = Fn(Ez, nz, iz)) && void 0 !== bz ? bz : lz[0];
-      return `${lz.length>1?`Their files:\n${lz.map((zz=>{const uz=""===(bz=Ez[zz])?0:bz.replace(/\n$/,"").split("\n").length;var bz;return`- ${zz}: ${1===uz?"1 line":`${uz} lines`}${zz===Mz?" (open in the editor, its code below)":""}`})).join("\n")}\n${iz?"":Zn(lz)}\n`:""}${function(zz,uz,bz,Ez){return uz.map((uz=>Bu[Ez].fileResult(uz,zz[uz],uz===bz))).join("\n\n")}(Ez,[Mz],nz,uz)}`
+        files: ID,
+        activePath: pD
+      } = DD, iD = !0 === DD.codeBlock, fD = Sp(ID, pD, iD);
+      if (0 === fD.length || fD.every((DD => "" === ID[DD].trim()))) return iD ? "There is no code yet: the code block is empty." : fD.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
+      const bD = null !== (cD = Bp(ID, pD, iD)) && void 0 !== cD ? cD : fD[0];
+      return `${fD.length>1?`Their files:\n${fD.map((DD=>{const CD=""===(cD=ID[DD])?0:cD.replace(/\n$/,"").split("\n").length;var cD;return`- ${DD}: ${1===CD?"1 line":`${CD} lines`}${DD===bD?" (open in the editor, its code below)":""}`})).join("\n")}\n${iD?"":yp(fD)}\n`:""}${function(DD,CD,cD,ID){return CD.map((CD=>hC[ID].fileResult(CD,DD[CD],CD===cD))).join("\n\n")}(ID,[bD],pD,CD)}`
     }
 
-    function Kn(zz) {
-      var uz, bz, Ez, nz, iz, lz;
+    function tp(DD) {
+      var CD, cD, ID, pD, iD, fD;
       return {
-        codeBlock: !0 === zz.codeBlock,
-        hasCode: "" !== (null !== (uz = zz.files[null !== (bz = zz.activePath) && void 0 !== bz ? bz : ""]) && void 0 !== uz ? uz : "").trim(),
-        hasBigFile: Object.values(zz.files).some((zz => zz.length > 6e3)),
-        wantsExport: IE(zz.request),
-        canAsk: !0 === zz.canAsk,
-        canRemember: !0 === (null === (Ez = zz.about) || void 0 === Ez ? void 0 : Ez.canRemember),
-        isBigRequest: Hu(zz.request),
-        canLookUp: !0 === zz.canLookUp,
-        hasOtherFiles: Object.keys(zz.files).length > 1,
-        hasErrors: zz.errors.length > 0,
-        canChangeWorldCode: !0 === zz.canChangeWorldCode,
-        hasWorldCodeFiles: Object.keys(zz.files).some(Zz.e),
-        offersPrefabs: (nz = zz.request, iz = zz.files, lz = wn(zz), "never" !== lz.offer && ("always" === lz.offer || JE(nz, 1).length > 0 || Hu(nz) || !bn(iz) && un.test(nz))),
-        listsPrefabs: wn(zz).categories,
-        looksUpDocs: !0 === zz.looksUpDocs
+        codeBlock: !0 === DD.codeBlock,
+        hasCode: "" !== (null !== (CD = DD.files[null !== (cD = DD.activePath) && void 0 !== cD ? cD : ""]) && void 0 !== CD ? CD : "").trim(),
+        hasBigFile: Object.values(DD.files).some((DD => DD.length > 6e3)),
+        wantsExport: uI(DD.request),
+        canAsk: !0 === DD.canAsk,
+        canRemember: !0 === (null === (ID = DD.about) || void 0 === ID ? void 0 : ID.canRemember),
+        isBigRequest: wC(DD.request),
+        canLookUp: !0 === DD.canLookUp,
+        hasOtherFiles: Object.keys(DD.files).length > 1,
+        hasErrors: DD.errors.length > 0,
+        canChangeWorldCode: !0 === DD.canChangeWorldCode,
+        hasWorldCodeFiles: Object.keys(DD.files).some(tD.d),
+        offersPrefabs: (pD = DD.request, iD = DD.files, fD = Zp(DD), "never" !== fD.offer && ("always" === fD.offer || UI(pD, 1).length > 0 || wC(pD) || !cp(iD) && Cp.test(pD))),
+        listsPrefabs: Zp(DD).categories,
+        looksUpDocs: !0 === DD.looksUpDocs
       }
     }
 
-    function wn(zz) {
-      var uz;
-      return null !== (uz = zz.prefabs) && void 0 !== uz ? uz : zn
+    function Zp(DD) {
+      var CD;
+      return null !== (CD = DD.prefabs) && void 0 !== CD ? CD : Dp
     }
 
-    function Xn(zz, uz) {
-      return "deepseek" === uz ? function(zz) {
-        const uz = BE[zz ? "codeBlock" : "worldCode"];
-        return fu.filter((zz => uz.has(zz.name)))
-      }(!0 === zz.codeBlock) : function(zz) {
-        const uz = (zz.hasCode || zz.hasBigFile) && !zz.codeBlock || !0 === zz.hasWorldCodeFiles,
-          bz = !0 === zz.canLookUp,
-          Ez = zz.codeBlock && !0 === zz.canChangeWorldCode && !0 !== zz.hasWorldCodeFiles && bz,
-          nz = {
+    function op(DD, CD) {
+      return "deepseek" === CD ? function(DD) {
+        const CD = hI[DD ? "codeBlock" : "worldCode"];
+        return gC.filter((DD => CD.has(DD.name)))
+      }(!0 === DD.codeBlock) : function(DD) {
+        const CD = (DD.hasCode || DD.hasBigFile) && !DD.codeBlock || !0 === DD.hasWorldCodeFiles,
+          cD = !0 === DD.canLookUp,
+          ID = DD.codeBlock && !0 === DD.canChangeWorldCode && !0 !== DD.hasWorldCodeFiles && cD,
+          pD = {
             write_file: !0,
-            edit_file: zz.hasBigFile,
-            replace_function: uz,
+            edit_file: DD.hasBigFile,
+            replace_function: CD,
             insert_code: !1,
-            add_world_code: zz.codeBlock && !0 !== zz.hasWorldCodeFiles,
-            edit_code_in_place: zz.hasCode,
-            export_game: zz.wantsExport,
-            switch_to_world_code: zz.codeBlock,
-            ask_creator: zz.canAsk,
-            remember: !0 === zz.canRemember && !zz.codeBlock,
-            plan: !0 === zz.isBigRequest && zz.canAsk && !zz.codeBlock,
-            view_file: bz && !0 === zz.hasOtherFiles && !zz.codeBlock,
-            view_world_code: Ez,
-            view_chunk: bz,
-            view_game_state: bz,
-            get_docs: bz,
-            fetch_url: bz && !0 === zz.looksUpDocs,
-            find_names: bz,
-            view_errors: bz && !0 === zz.hasErrors,
-            use_prefab: !0 === zz.offersPrefabs && !zz.codeBlock,
-            list_prefabs: bz && !0 === zz.listsPrefabs && !zz.codeBlock,
-            view_prefab: bz && !0 === zz.offersPrefabs && !zz.codeBlock
+            add_world_code: DD.codeBlock && !0 !== DD.hasWorldCodeFiles,
+            edit_code_in_place: DD.hasCode,
+            export_game: DD.wantsExport,
+            switch_to_world_code: DD.codeBlock,
+            ask_creator: DD.canAsk,
+            remember: !0 === DD.canRemember && !DD.codeBlock,
+            plan: !0 === DD.isBigRequest && DD.canAsk && !DD.codeBlock,
+            view_file: cD && !0 === DD.hasOtherFiles && !DD.codeBlock,
+            view_world_code: ID,
+            view_chunk: cD,
+            view_game_state: cD,
+            get_docs: cD,
+            fetch_url: cD && !0 === DD.looksUpDocs,
+            find_names: cD,
+            view_errors: cD && !0 === DD.hasErrors,
+            use_prefab: !0 === DD.offersPrefabs && !DD.codeBlock,
+            list_prefabs: cD && !0 === DD.listsPrefabs && !DD.codeBlock,
+            view_prefab: cD && !0 === DD.offersPrefabs && !DD.codeBlock
           };
-        let iz = fu.filter((zz => nz[zz.name]));
-        for (const lz of ["remember", "plan"]) iz.filter((zz => !su(zz.name))).length > 7 && (iz = iz.filter((zz => zz.name !== lz)));
-        return iz
-      }(Kn(zz))
+        let iD = gC.filter((DD => pD[DD.name]));
+        for (const fD of ["remember", "plan"]) iD.filter((DD => !XC(DD.name))).length > 7 && (iD = iD.filter((DD => DD.name !== fD)));
+        return iD
+      }(tp(DD))
     }
 
-    function fn(zz, uz) {
-      var bz, Ez;
-      const nz = Kn(zz),
-        iz = !0 === nz.canLookUp,
-        lz = (null !== (bz = null === (Ez = zz.lookups) || void 0 === Ez ? void 0 : Ez.length) && void 0 !== bz ? bz : 0) > 0,
-        Mz = !0 === nz.hasWorldCodeFiles,
-        tz = [nz.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", nz.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", iz ? "" : lz ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", iz && !0 !== nz.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...nz.codeBlock ? [nz.canAsk ? "" : "Build what they asked: don't call ask_creator.", Mz ? `${On} So don't call add_world_code or view_world_code.` : "", Mz || !0 !== nz.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", Mz || !0 === nz.canChangeWorldCode && iz ? "" : "Don't call view_world_code.", Mz ? "" : "The code block has no functions, so don't call replace_function."] : [nz.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", nz.canAsk && !0 !== nz.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", nz.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === nz.canRemember ? "" : "Their AI notes are full, so don't call remember.", iz && !0 !== nz.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === nz.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", nz.canAsk && !0 === wn(zz).guide && uz.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${uz.slice(0,3).map((zz=>zz.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((zz => "" !== zz));
-      return tz.length > 0 ? `\n\nFor this request: ${tz.join(" ")}` : ""
+    function vp(DD, CD) {
+      var cD, ID;
+      const pD = tp(DD),
+        iD = !0 === pD.canLookUp,
+        fD = (null !== (cD = null === (ID = DD.lookups) || void 0 === ID ? void 0 : ID.length) && void 0 !== cD ? cD : 0) > 0,
+        bD = !0 === pD.hasWorldCodeFiles,
+        QD = [pD.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", pD.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", iD ? "" : fD ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", iD && !0 !== pD.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...pD.codeBlock ? [pD.canAsk ? "" : "Build what they asked: don't call ask_creator.", bD ? `${Qp} So don't call add_world_code or view_world_code.` : "", bD || !0 !== pD.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", bD || !0 === pD.canChangeWorldCode && iD ? "" : "Don't call view_world_code.", bD ? "" : "The code block has no functions, so don't call replace_function."] : [pD.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", pD.canAsk && !0 !== pD.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", pD.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === pD.canRemember ? "" : "Their AI notes are full, so don't call remember.", iD && !0 !== pD.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === pD.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", pD.canAsk && !0 === Zp(DD).guide && CD.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${CD.slice(0,3).map((DD=>DD.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((DD => "" !== DD));
+      return QD.length > 0 ? `\n\nFor this request: ${QD.join(" ")}` : ""
     }
 
-    function sn(zz, uz) {
-      var bz, Ez, nz, iz, lz, Mz;
-      let tz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : En,
+    function Np(DD, CD) {
+      var cD, ID, pD, iD, fD, bD;
+      let QD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ip,
         {
-          docsInTurn: Hz = !1,
-          AO: Oz = !1
+          docsInTurn: wD = !1,
+          eb: SD = !1
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const pz = "deepseek" === tz.format,
-        dz = Object.values(uz.files).join("\n"),
-        Fz = uz.history.slice(-2).map((zz => zz.text)).join("\n"),
-        Zz = `${uz.request}\n${Fz}\n${uz.errors.join("\n")}`,
-        Rz = !0 === uz.looksUpDocs,
-        Kz = Rz && !0 === uz.canLookUp ? [] : zz.find(Zz, dz, 12),
-        wz = zz.matchItemAndBlockNames(Zz, 12),
-        Xz = !0 === uz.codeBlock,
-        fz = Xz ? "myId" : "playerId",
-        sz = Xn(uz, tz.format),
-        rz = sz.some((zz => "use_prefab" === zz.name)),
-        oz = !rz || pz && !0 !== Kn(uz).offersPrefabs ? [] : function(zz, uz, bz) {
-          if ("never" === bz.offer || "none" === bz.list) return [];
-          if ("all" === bz.list) return [...OE];
-          const Ez = JE(zz, 4);
-          if (bn(uz) || !un.test(zz) && !Hu(zz)) return Ez;
-          const nz = OE.filter((zz => "game" === zz.kind && !Ez.includes(zz)));
-          return [...Ez, ...nz]
-        }(uz.request, uz.files, wn(uz)),
-        Nz = rz ? function(zz, uz, bz) {
-          const Ez = uz ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...pE.keys()].join(", ")}).` : "";
-          if (0 === zz.length) return uz ? `## Prefabs (ready-made games)${Ez}` : "";
-          const nz = bz && zz.includes(bz) ? `\nThis request fits ${bz.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${xE(bz,!1)}` : "";
-          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${zz.map(NE).join("\n")}${nz}${Ez}`
-        }(oz, wn(uz).categories, JE(uz.request, 1)[0]) : "",
-        vz = Xz || !0 !== wn(uz).inlineCode ? "" : function(zz) {
-          const uz = JE(zz, 1)[0];
-          if (!uz) return "";
-          const bz = XE(RE(uz)).text;
-          return `## Tested code for this kind of game (${uz.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${bz}\`\`\``
-        }(uz.request),
-        xz = [Kz.length > 0 ? `## Docs for this request\n${Kz.map((zz=>zz.text)).join("\n\n")}` : "", wz.length > 0 ? `## Exact item and block names that match the request\n${wz.join(", ")}` : ""].filter((zz => "" !== zz)),
-        Jz = [{
+      const BD = "deepseek" === QD.format,
+        yD = Object.values(CD.files).join("\n"),
+        MD = CD.history.slice(-2).map((DD => DD.text)).join("\n"),
+        tD = `${CD.request}\n${MD}\n${CD.errors.join("\n")}`,
+        ZD = !0 === CD.looksUpDocs,
+        oD = ZD && !0 === CD.canLookUp ? [] : DD.find(tD, yD, 12),
+        vD = DD.matchItemAndBlockNames(tD, 12),
+        ND = !0 === CD.codeBlock,
+        gD = ND ? "myId" : "playerId",
+        XD = op(CD, QD.format),
+        mD = XD.some((DD => "use_prefab" === DD.name)),
+        nD = !mD || BD && !0 !== tp(CD).offersPrefabs ? [] : function(DD, CD, cD) {
+          if ("never" === cD.offer || "none" === cD.list) return [];
+          if ("all" === cD.list) return [...SI];
+          const ID = UI(DD, 4);
+          if (cp(CD) || !Cp.test(DD) && !wC(DD)) return ID;
+          const pD = SI.filter((DD => "game" === DD.kind && !ID.includes(DD)));
+          return [...ID, ...pD]
+        }(CD.request, CD.files, Zp(CD)),
+        OD = mD ? function(DD, CD, cD) {
+          const ID = CD ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...BI.keys()].join(", ")}).` : "";
+          if (0 === DD.length) return CD ? `## Prefabs (ready-made games)${ID}` : "";
+          const pD = cD && DD.includes(cD) ? `\nThis request fits ${cD.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${HI(cD,!1)}` : "";
+          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${DD.map(OI).join("\n")}${pD}${ID}`
+        }(nD, Zp(CD).categories, UI(CD.request, 1)[0]) : "",
+        PD = ND || !0 !== Zp(CD).inlineCode ? "" : function(DD) {
+          const CD = UI(DD, 1)[0];
+          if (!CD) return "";
+          const cD = NI(ZI(CD)).text;
+          return `## Tested code for this kind of game (${CD.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${cD}\`\`\``
+        }(CD.request),
+        HD = [oD.length > 0 ? `## Docs for this request\n${oD.map((DD=>DD.text)).join("\n\n")}` : "", vD.length > 0 ? `## Exact item and block names that match the request\n${vD.join(", ")}` : ""].filter((DD => "" !== DD)),
+        UD = [{
           role: "system",
-          content: YE([Xz ? Mn(Rz) : nn(Rz), ...Rz ? [] : [Xz ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${zz.index("callback")}` : `## Callbacks (all of them)\n${zz.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${zz.index("api")}`, `## Client options (all of them, set with api.setClientOption(${fz}, name, value))\n${zz.index("clientOption")}`], ...Hz ? [] : xz, zz.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${zz.mobTypes.join(", ")}` : "", pz ? "" : Nz, !Xz && wn(uz).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${bE.map((zz=>zz.signature)).join(", ")}` : "", pz ? "" : vz, pn(sz, Xz, tz.format, pz ? {
+          content: AI([ND ? ip(ZD) : pp(ZD), ...ZD ? [] : [ND ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${DD.index("callback")}` : `## Callbacks (all of them)\n${DD.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${DD.index("api")}`, `## Client options (all of them, set with api.setClientOption(${gD}, name, value))\n${DD.index("clientOption")}`], ...wD ? [] : HD, DD.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${DD.mobTypes.join(", ")}` : "", BD ? "" : OD, !ND && Zp(CD).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${cI.map((DD=>DD.signature)).join(", ")}` : "", BD ? "" : PD, wp(XD, ND, QD.format, BD ? {
             hasWorldCodeFiles: !1,
             hasLookedUp: !1,
             movesToWorldCode: !1,
             listedPrefabs: [],
             guidesToPrefabs: !1
           } : {
-            hasWorldCodeFiles: !0 === Kn(uz).hasWorldCodeFiles,
-            hasLookedUp: (null !== (bz = null === (Ez = uz.lookups) || void 0 === Ez ? void 0 : Ez.length) && void 0 !== bz ? bz : 0) > 0,
-            movesToWorldCode: !0 === uz.canChangeWorldCode,
-            listedPrefabs: oz,
-            guidesToPrefabs: !0 === wn(uz).guide
-          })].filter((zz => "" !== zz)).join("\n\n"), sz, tz.format, tz.nativeTools)
+            hasWorldCodeFiles: !0 === tp(CD).hasWorldCodeFiles,
+            hasLookedUp: (null !== (cD = null === (ID = CD.lookups) || void 0 === ID ? void 0 : ID.length) && void 0 !== cD ? cD : 0) > 0,
+            movesToWorldCode: !0 === CD.canChangeWorldCode,
+            listedPrefabs: nD,
+            guidesToPrefabs: !0 === Zp(CD).guide
+          })].filter((DD => "" !== DD)).join("\n\n"), XD, QD.format, QD.nativeTools)
         }];
-      if (!pz)
-        for (const hz of uz.history) Jz.push({
-          role: hz.role,
-          content: hz.text
+      if (!BD)
+        for (const LD of CD.history) UD.push({
+          role: LD.role,
+          content: LD.text
         });
-      const Az = pz && !Oz && uz.history.length > 0 ? `Earlier in this chat:\n${uz.history.map((zz=>`${"user"===zz.role?"They asked":"You answered"}: ${zz.text}`)).join("\n")}\n\n` : "",
-        Tz = null !== (nz = uz.about) && void 0 !== nz && nz.notes.length ? `AI notes (notes they kept):\n${uz.about.notes.map((zz=>`- ${zz}`)).join("\n")}\n\n` : "",
-        Lz = null !== (iz = uz.about) && void 0 !== iz && iz.outline ? `Outline of their code:\n${uz.about.outline}\n\n` : "",
-        Pz = uz.errors.length > 0 ? `\n\nErrors their world showed recently:\n${uz.errors.slice(-5).join("\n")}` : "",
-        Gz = null === (lz = uz.failedEdits) || void 0 === lz || !lz.length || pz && Oz ? "" : `\n\nWhat happened to your last answer's changes:\n${function(zz,uz){return zz.map((zz=>Bu[uz].editFailure(zz.tool,kE(zz)))).join("\n\n")}(uz.failedEdits,tz.format)}`,
-        az = [...Hz ? xz : [], ...pz ? [Nz, vz] : []].filter((zz => "" !== zz)).map((zz => `${zz}\n\n`)).join(""),
-        Vz = null === (Mz = uz.lookups) || void 0 === Mz || !Mz.length || pz && Oz ? "" : `\n\nWhat you looked up for this request:\n${mz=uz.lookups,qz=tz.format,mz.map((zz=>Bu[qz].lookupResult(zz.tool,zz.about,zz.text))).join("\n\n")}`;
-      var mz, qz;
-      return Jz.push({
+      const xD = BD && !SD && CD.history.length > 0 ? `Earlier in this chat:\n${CD.history.map((DD=>`${"user"===DD.role?"They asked":"You answered"}: ${DD.text}`)).join("\n")}\n\n` : "",
+        qD = null !== (pD = CD.about) && void 0 !== pD && pD.notes.length ? `AI notes (notes they kept):\n${CD.about.notes.map((DD=>`- ${DD}`)).join("\n")}\n\n` : "",
+        JD = null !== (iD = CD.about) && void 0 !== iD && iD.outline ? `Outline of their code:\n${CD.about.outline}\n\n` : "",
+        KD = CD.errors.length > 0 ? `\n\nErrors their world showed recently:\n${CD.errors.slice(-5).join("\n")}` : "",
+        aD = null === (fD = CD.failedEdits) || void 0 === fD || !fD.length || BD && SD ? "" : `\n\nWhat happened to your last answer's changes:\n${function(DD,CD){return DD.map((DD=>hC[CD].editFailure(DD.tool,FI(DD)))).join("\n\n")}(CD.failedEdits,QD.format)}`,
+        VD = [...wD ? HD : [], ...BD ? [OD, PD] : []].filter((DD => "" !== DD)).map((DD => `${DD}\n\n`)).join(""),
+        zD = null === (bD = CD.lookups) || void 0 === bD || !bD.length || BD && SD ? "" : `\n\nWhat you looked up for this request:\n${jD=CD.lookups,lD=QD.format,jD.map((DD=>hC[lD].lookupResult(DD.tool,DD.about,DD.text))).join("\n\n")}`;
+      var jD, lD;
+      return UD.push({
         role: "user",
-        content: `${az}${Tz}${Lz}${Az}Their code now:\n${Rn(uz,tz.format)}${Pz}${Gz}${Vz}${pz?fn(uz,oz):""}\n\nTheir request: ${uz.request}`
-      }), Jz
+        content: `${VD}${qD}${JD}${xD}Their code now:\n${Mp(CD,QD.format)}${KD}${aD}${zD}${BD?vp(CD,nD):""}\n\nTheir request: ${CD.request}`
+      }), UD
     }
-    var rn = bz(38972);
+    var gp = cD(38928);
 
-    function Nn(zz) {
-      var uz, bz, Ez, nz, iz, lz;
+    function Xp(DD) {
+      var CD, cD, ID, pD, iD, fD;
       const {
-        args: Mz
-      } = zz;
-      switch (zz.name) {
+        args: bD
+      } = DD;
+      switch (DD.name) {
         case "view_file":
-          return null !== (uz = Mz.path) && void 0 !== uz ? uz : "a file";
+          return null !== (CD = bD.path) && void 0 !== CD ? CD : "a file";
         case "view_world_code":
           return "your World Code";
         case "view_chunk":
-          return Mz.position ? `the blocks near ${null!==(bz=null===(Ez=(0,rn.f)(Mz.position))||void 0===Ez?void 0:Ez.map(Math.floor).join(", "))&&void 0!==bz?bz:Mz.position}` : "the blocks around you";
+          return bD.position ? `the blocks near ${null!==(cD=null===(ID=(0,gp.e)(bD.position))||void 0===ID?void 0:ID.map(Math.floor).join(", "))&&void 0!==cD?cD:bD.position}` : "the blocks around you";
         case "view_game_state":
           return "what you see in your world";
         case "get_docs":
-          return Mz.name ? `the docs for ${Mz.name}` : `the list of ${xn(null!==(nz=Mz.list)&&void 0!==nz?nz:vn)}`;
+          return bD.name ? `the docs for ${bD.name}` : `the list of ${np(null!==(pD=bD.list)&&void 0!==pD?pD:mp)}`;
         case "fetch_url":
-          return function(zz) {
-            const uz = void 0 === zz ? null : fz(zz);
-            if (null === uz) return null !== zz && void 0 !== zz ? zz : "a docs page";
-            return sz(uz) ? "the list of docs pages" : `the docs page ${function(zz){const uz=(0,Kz.A)(zz);return null===uz?zz:`${uz.name}${null===uz.part?"":`/${uz.part}`}`}(uz)}`
-          }(Mz.url);
+          return function(DD) {
+            const CD = void 0 === DD ? null : gD(DD);
+            if (null === CD) return null !== DD && void 0 !== DD ? DD : "a docs page";
+            return XD(CD) ? "the list of docs pages" : `the docs page ${function(DD){const CD=(0,oD.t)(DD);return null===CD?DD:`${CD.name}${null===CD.part?"":`/${CD.part}`}`}(CD)}`
+          }(bD.url);
         case "find_names":
-          return `names for "${null!==(iz=Mz.words)&&void 0!==iz?iz:""}"`;
+          return `names for "${null!==(iD=bD.words)&&void 0!==iD?iD:""}"`;
         case "view_errors":
           return "your world's errors";
         case "list_prefabs":
-          return Mz.category ? `the ready-made ${Mz.category} games` : "the ready-made games";
+          return bD.category ? `the ready-made ${bD.category} games` : "the ready-made games";
         case "view_prefab":
-          return `the ready-made ${null!==(lz=Mz.name)&&void 0!==lz?lz:"game"}`
+          return `the ready-made ${null!==(fD=bD.name)&&void 0!==fD?fD:"game"}`
       }
     }
-    const vn = "functions";
+    const mp = "functions";
 
-    function xn(zz) {
-      return zz.trim().toLowerCase().replace(/[\s_]+/g, " ").replace(/s?$/, "s")
+    function np(DD) {
+      return DD.trim().toLowerCase().replace(/[\s_]+/g, " ").replace(/s?$/, "s")
     }
 
-    function Jn(zz) {
-      return "get_docs" === zz.name || "fetch_url" === zz.name
+    function Op(DD) {
+      return "get_docs" === DD.name || "fetch_url" === DD.name
     }
-    async function An(zz, uz) {
-      var bz;
-      const Ez = Nn(zz),
-        nz = uz => ({
+    async function Pp(DD, CD) {
+      var cD;
+      const ID = Xp(DD),
+        pD = CD => ({
           result: {
-            tool: zz.name,
-            about: Ez,
-            text: uz
+            tool: DD.name,
+            about: ID,
+            text: CD
           }
         });
-      switch (zz.name) {
+      switch (DD.name) {
         case "view_file":
-          return nz((Mz = zz.args.path, tz = uz.files, void 0 === Mz ? "No path was given: give the path of a file from the list." : Object.hasOwn(tz, Mz) ? "" === tz[Mz] ? `${Mz} is empty.` : tz[Mz] : `There is no file called ${Mz}. Their files are: ${Object.keys(tz).join(", ")}.`));
+          return pD((bD = DD.args.path, QD = CD.files, void 0 === bD ? "No path was given: give the path of a file from the list." : Object.hasOwn(QD, bD) ? "" === QD[bD] ? `${bD} is empty.` : QD[bD] : `There is no file called ${bD}. Their files are: ${Object.keys(QD).join(", ")}.`));
         case "view_world_code": {
-          const zz = uz.readWorldCode ? await uz.readWorldCode() : null;
-          if (null === zz) return nz("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
-          const bz = Object.keys(zz).sort(),
-            Ez = Object.fromEntries(bz.map((uz => [`${Zz.j}${uz}`, zz[uz]]))),
-            iz = bz.map((uz => `${Zz.j}${uz}:\n${""===zz[uz]?"(empty)":zz[uz]}`)).join("\n\n"),
-            lz = bz.length > 1 ? `\n\n${Zn(bz,Zz.j)}` : "";
+          const DD = CD.readWorldCode ? await CD.readWorldCode() : null;
+          if (null === DD) return pD("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
+          const cD = Object.keys(DD).sort(),
+            ID = Object.fromEntries(cD.map((CD => [`${tD.h}${CD}`, DD[CD]]))),
+            iD = cD.map((CD => `${tD.h}${CD}:\n${""===DD[CD]?"(empty)":DD[CD]}`)).join("\n\n"),
+            fD = cD.length > 1 ? `\n\n${yp(cD,tD.h)}` : "";
           return {
-            ...nz("" === iz ? `World Code has no code yet: ${Zz.j}index.js is empty.` : `${iz}${lz}`),
-            worldCodeFiles: Ez
+            ...pD("" === iD ? `World Code has no code yet: ${tD.h}index.js is empty.` : `${iD}${fD}`),
+            worldCodeFiles: ID
           }
         }
         case "view_chunk":
-          return nz(await uz.viewChunk((0, rn.f)(zz.args.position)));
+          return pD(await CD.viewChunk((0, gp.e)(DD.args.position)));
         case "view_game_state":
-          return nz(await uz.viewGameState());
+          return pD(await CD.viewGameState());
         case "get_docs":
-          return nz(function(zz, uz, bz) {
-            if (void 0 === zz) {
-              const zz = (0, oz.e)(Ru, xn(null !== uz && void 0 !== uz ? uz : vn));
-              return void 0 === zz ? `There is no list called ${uz}: ask for ${Ku}.` : bz.index(zz)
+          return pD(function(DD, CD, cD) {
+            if (void 0 === DD) {
+              const DD = (0, nD.c)(ZC, np(null !== CD && void 0 !== CD ? CD : mp));
+              return void 0 === DD ? `There is no list called ${CD}: ask for ${oC}.` : cD.index(DD)
             }
-            const Ez = bz.section(zz);
-            if (Ez) return Ez.text;
-            const nz = bz.find(zz, "", 3).map((zz => zz.name)).join(", ");
-            return `Nothing is called ${zz}.${""===nz?"":` The closest names are: ${nz}.`}`
-          }(zz.args.name, zz.args.list, uz.docs));
+            const ID = cD.section(DD);
+            if (ID) return ID.text;
+            const pD = cD.find(DD, "", 3).map((DD => DD.name)).join(", ");
+            return `Nothing is called ${DD}.${""===pD?"":` The closest names are: ${pD}.`}`
+          }(DD.args.name, DD.args.list, CD.docs));
         case "fetch_url":
-          return nz(await uz.fetchDocsPage(null !== (bz = zz.args.url) && void 0 !== bz ? bz : ""));
+          return pD(await CD.fetchDocsPage(null !== (cD = DD.args.url) && void 0 !== cD ? cD : ""));
         case "find_names": {
-          var iz, lz;
-          const bz = uz.docs.searchNames(null !== (iz = zz.args.words) && void 0 !== iz ? iz : "", 20);
-          return nz(bz.length > 0 ? bz.join(", ") : `No block, item or mob name has any of the words "${null!==(lz=zz.args.words)&&void 0!==lz?lz:""}".`)
+          var iD, fD;
+          const cD = CD.docs.searchNames(null !== (iD = DD.args.words) && void 0 !== iD ? iD : "", 20);
+          return pD(cD.length > 0 ? cD.join(", ") : `No block, item or mob name has any of the words "${null!==(fD=DD.args.words)&&void 0!==fD?fD:""}".`)
         }
         case "view_errors":
-          return nz(uz.errors.length > 0 ? uz.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
+          return pD(CD.errors.length > 0 ? CD.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
         case "list_prefabs":
-          return nz(vE(zz.args.category));
+          return pD(PI(DD.args.category));
         case "view_prefab":
-          return nz(function(zz, uz) {
-            const bz = void 0 === zz ? null : FE(zz);
-            return bz ? xE(bz, uz) : `There is no prefab called ${null!==zz&&void 0!==zz?zz:"that"}.\n${vE()}`
-          }(zz.args.name, !0 === uz.showPrefabCode))
+          return pD(function(DD, CD) {
+            const cD = void 0 === DD ? null : MI(DD);
+            return cD ? HI(cD, CD) : `There is no prefab called ${null!==DD&&void 0!==DD?DD:"that"}.\n${PI()}`
+          }(DD.args.name, !0 === CD.showPrefabCode))
       }
-      var Mz, tz
+      var bD, QD
     }
-    const Tn = [
+    const Hp = [
       [/\bme\b/gi, "the player"],
       [/\bmyself\b/gi, "the player"],
       [/\bmy\b/gi, "the player's"],
@@ -6241,206 +6241,206 @@ export const modules = {
       [/\bstolen\b/gi, "taken"]
     ];
 
-    function Ln(zz) {
-      let uz = zz;
-      for (const [bz, Ez] of Tn) uz = uz.replace(bz, (zz => zz.length > 1 && zz[0] !== zz[0].toLowerCase() && zz.slice(1) === zz.slice(1).toLowerCase() ? Ez[0].toUpperCase() + Ez.slice(1) : Ez));
-      return uz
+    function Up(DD) {
+      let CD = DD;
+      for (const [cD, ID] of Hp) CD = CD.replace(cD, (DD => DD.length > 1 && DD[0] !== DD[0].toLowerCase() && DD.slice(1) === DD.slice(1).toLowerCase() ? ID[0].toUpperCase() + ID.slice(1) : ID));
+      return CD
     }
-    const Pn = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      Gn = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
-      an = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
-      Vn = 12e3,
-      mn = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
+    const xp = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      qp = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
+      Jp = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
+      Kp = 12e3,
+      ap = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
 
-    function qn(zz) {
-      var uz, bz, Ez;
-      const nz = null === (uz = /Safety:\s*(\w+)/.exec(zz)) || void 0 === uz ? void 0 : uz[1],
-        iz = null !== (bz = null === (Ez = /Categories:\s*(.+)/.exec(zz)) || void 0 === Ez ? void 0 : Ez[1]) && void 0 !== bz ? bz : "";
-      return /PII/.test(iz) ? "personalInfo" : "Unsafe" === nz || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(iz) ? "unsafe" : "ok"
-    }
-
-    function hn(zz) {
-      var uz, bz, Ez;
-      const nz = null === (uz = /Safety:\s*(\w+)/.exec(zz)) || void 0 === uz ? void 0 : uz[1];
-      if (!nz) return null;
-      const iz = (null !== (bz = null === (Ez = /Categories:\s*(.+)/.exec(zz)) || void 0 === Ez ? void 0 : Ez[1]) && void 0 !== bz ? bz : "").split(",").map((zz => zz.trim())).filter((zz => "" !== zz && "None" !== zz));
-      return "Safe" !== nz && iz.some((zz => /Sexual/.test(zz))) ? "unsafe" : "Unsafe" !== nz ? "ok" : iz.length > 0 && iz.every((zz => mn.has(zz))) ? "maybeGame" : "unsafe"
-    }
-    async function Un(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Ez = await uz(zz),
-        nz = null === Ez ? null : hn(Ez);
-      if (null === nz) return "unchecked";
-      if ("ok" === nz || "unsafe" === nz && (!bz || null === Ez || /Sexual/.test(Ez))) return nz;
-      const iz = Ln(zz);
-      if (iz === zz) return "unsafe";
-      const lz = await uz(iz),
-        Mz = null === lz ? null : hn(lz);
-      return null === Mz ? "unchecked" : "ok" === Mz ? "ok" : "unsafe"
+    function Vp(DD) {
+      var CD, cD, ID;
+      const pD = null === (CD = /Safety:\s*(\w+)/.exec(DD)) || void 0 === CD ? void 0 : CD[1],
+        iD = null !== (cD = null === (ID = /Categories:\s*(.+)/.exec(DD)) || void 0 === ID ? void 0 : ID[1]) && void 0 !== cD ? cD : "";
+      return /PII/.test(iD) ? "personalInfo" : "Unsafe" === pD || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(iD) ? "unsafe" : "ok"
     }
 
-    function cn(zz) {
-      const uz = [];
-      return Dn(zz, 0, !1, uz), uz.map((zz => zz.trim())).filter((zz => "" !== zz))
+    function zp(DD) {
+      var CD, cD, ID;
+      const pD = null === (CD = /Safety:\s*(\w+)/.exec(DD)) || void 0 === CD ? void 0 : CD[1];
+      if (!pD) return null;
+      const iD = (null !== (cD = null === (ID = /Categories:\s*(.+)/.exec(DD)) || void 0 === ID ? void 0 : ID[1]) && void 0 !== cD ? cD : "").split(",").map((DD => DD.trim())).filter((DD => "" !== DD && "None" !== DD));
+      return "Safe" !== pD && iD.some((DD => /Sexual/.test(DD))) ? "unsafe" : "Unsafe" !== pD ? "ok" : iD.length > 0 && iD.every((DD => ap.has(DD))) ? "maybeGame" : "unsafe"
     }
-    const gn = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
-
-    function Sn(zz, uz) {
-      let bz = uz - 1;
-      for (; bz >= 0 && /\s/.test(zz[bz]);) bz--;
-      if (bz < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(zz[bz])) return !0;
-      let Ez = bz;
-      for (; Ez > 0 && /[\w$]/.test(zz[Ez - 1]);) Ez--;
-      return gn.has(zz.slice(Ez, bz + 1))
+    async function jp(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const ID = await CD(DD),
+        pD = null === ID ? null : zp(ID);
+      if (null === pD) return "unchecked";
+      if ("ok" === pD || "unsafe" === pD && (!cD || null === ID || /Sexual/.test(ID))) return pD;
+      const iD = Up(DD);
+      if (iD === DD) return "unsafe";
+      const fD = await CD(iD),
+        bD = null === fD ? null : zp(fD);
+      return null === bD ? "unchecked" : "ok" === bD ? "ok" : "unsafe"
     }
 
-    function yn(zz, uz) {
-      let bz = !1;
-      for (let Ez = uz + 1; Ez < zz.length; Ez++) {
-        const uz = zz[Ez];
-        if ("\\" === uz) Ez++;
+    function lp(DD) {
+      const CD = [];
+      return Rp(DD, 0, !1, CD), CD.map((DD => DD.trim())).filter((DD => "" !== DD))
+    }
+    const Lp = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
+
+    function Tp(DD, CD) {
+      let cD = CD - 1;
+      for (; cD >= 0 && /\s/.test(DD[cD]);) cD--;
+      if (cD < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(DD[cD])) return !0;
+      let ID = cD;
+      for (; ID > 0 && /[\w$]/.test(DD[ID - 1]);) ID--;
+      return Lp.has(DD.slice(ID, cD + 1))
+    }
+
+    function Gp(DD, CD) {
+      let cD = !1;
+      for (let ID = CD + 1; ID < DD.length; ID++) {
+        const CD = DD[ID];
+        if ("\\" === CD) ID++;
         else {
-          if ("\n" === uz) break;
-          if (bz) bz = "]" !== uz;
-          else if ("[" === uz) bz = !0;
-          else if ("/" === uz) return Ez + 1
+          if ("\n" === CD) break;
+          if (cD) cD = "]" !== CD;
+          else if ("[" === CD) cD = !0;
+          else if ("/" === CD) return ID + 1
         }
       }
-      return uz + 1
+      return CD + 1
     }
 
-    function Dn(zz, uz, bz, Ez) {
-      let nz = uz,
-        iz = 0;
-      for (; nz < zz.length;) {
-        const uz = zz[nz],
-          lz = zz[nz + 1];
-        if ("/" === uz && "/" === lz) {
-          const uz = zz.indexOf("\n", nz);
-          Ez.push(zz.slice(nz + 2, -1 === uz ? zz.length : uz)), nz = -1 === uz ? zz.length : uz
-        } else if ("/" === uz && "*" === lz) {
-          const uz = zz.indexOf("*/", nz + 2);
-          Ez.push(zz.slice(nz + 2, -1 === uz ? zz.length : uz)), nz = -1 === uz ? zz.length : uz + 2
-        } else if ("/" === uz && Sn(zz, nz)) nz = yn(zz, nz);
-        else if ('"' === uz || "'" === uz || "`" === uz) {
-          const bz = Ez.length;
-          Ez.push("");
-          let iz = "";
-          for (nz++; nz < zz.length && zz[nz] !== uz;) "\\" === zz[nz] ? (iz += zz.slice(nz, nz + 2), nz += 2) : "`" === uz && "$" === zz[nz] && "{" === zz[nz + 1] ? (iz += " ", nz = Dn(zz, nz + 2, !0, Ez)) : (iz += zz[nz], nz++);
-          Ez[bz] = iz, nz++
+    function Rp(DD, CD, cD, ID) {
+      let pD = CD,
+        iD = 0;
+      for (; pD < DD.length;) {
+        const CD = DD[pD],
+          fD = DD[pD + 1];
+        if ("/" === CD && "/" === fD) {
+          const CD = DD.indexOf("\n", pD);
+          ID.push(DD.slice(pD + 2, -1 === CD ? DD.length : CD)), pD = -1 === CD ? DD.length : CD
+        } else if ("/" === CD && "*" === fD) {
+          const CD = DD.indexOf("*/", pD + 2);
+          ID.push(DD.slice(pD + 2, -1 === CD ? DD.length : CD)), pD = -1 === CD ? DD.length : CD + 2
+        } else if ("/" === CD && Tp(DD, pD)) pD = Gp(DD, pD);
+        else if ('"' === CD || "'" === CD || "`" === CD) {
+          const cD = ID.length;
+          ID.push("");
+          let iD = "";
+          for (pD++; pD < DD.length && DD[pD] !== CD;) "\\" === DD[pD] ? (iD += DD.slice(pD, pD + 2), pD += 2) : "`" === CD && "$" === DD[pD] && "{" === DD[pD + 1] ? (iD += " ", pD = Rp(DD, pD + 2, !0, ID)) : (iD += DD[pD], pD++);
+          ID[cD] = iD, pD++
         } else {
-          if (bz && "{" === uz) iz++;
-          else if (bz && "}" === uz) {
-            if (0 === iz) return nz + 1;
-            iz--
+          if (cD && "{" === CD) iD++;
+          else if (cD && "}" === CD) {
+            if (0 === iD) return pD + 1;
+            iD--
           }
-          nz++
+          pD++
         }
       }
-      return nz
+      return pD
     }
-    const Qn = 4e5;
-    var Wn = bz(40687);
-    const en = 15e3;
-    let jn = [],
-      In = null;
+    const kp = 4e5;
+    var dp = cD(40528);
+    const Yp = 15e3;
+    let Wp = [],
+      sp = null;
 
-    function Bn(zz) {
-      return Math.ceil(zz.length / 4)
-    }
-
-    function Cn(zz) {
-      return "number" === typeof zz && Number.isInteger(zz) && zz >= 0
+    function Ep(DD) {
+      return Math.ceil(DD.length / 4)
     }
 
-    function Yn(zz, uz, bz) {
-      var Ez;
-      let nz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      ! function(zz) {
+    function ep(DD) {
+      return "number" === typeof DD && Number.isInteger(DD) && DD >= 0
+    }
+
+    function hp(DD, CD, cD) {
+      var ID;
+      let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      ! function(DD) {
         if ("undefined" === typeof window) return;
-        if (jn.push(zz), jn.length >= 40) return void kn();
-        In ??= setTimeout((() => {
-          kn()
-        }), en)
-      }(null !== (Ez = function(zz) {
-        if (null === zz || "object" !== typeof zz) return null;
+        if (Wp.push(DD), Wp.length >= 40) return void rp();
+        sp ??= setTimeout((() => {
+          rp()
+        }), Yp)
+      }(null !== (ID = function(DD) {
+        if (null === DD || "object" !== typeof DD) return null;
         const {
-          prompt_tokens: uz,
-          completion_tokens: bz,
-          prompt_tokens_details: Ez
-        } = zz;
-        if (!Cn(uz) || !Cn(bz)) return null;
-        const nz = null !== Ez && "object" === typeof Ez ? Ez.cached_tokens : void 0;
+          prompt_tokens: CD,
+          completion_tokens: cD,
+          prompt_tokens_details: ID
+        } = DD;
+        if (!ep(CD) || !ep(cD)) return null;
+        const pD = null !== ID && "object" === typeof ID ? ID.cached_tokens : void 0;
         return {
-          sent: uz,
-          cached: Cn(nz) ? nz : 0,
-          received: bz
+          sent: CD,
+          cached: ep(pD) ? pD : 0,
+          received: cD
         }
-      }(zz)) && void 0 !== Ez ? Ez : {
-        sent: Bn(JSON.stringify(uz)),
+      }(DD)) && void 0 !== ID ? ID : {
+        sent: Ep(JSON.stringify(CD)),
         cached: 0,
-        received: Bn(bz) + nz
+        received: Ep(cD) + pD
       })
     }
-    async function kn() {
-      null !== In && (clearTimeout(In), In = null);
-      const zz = jn.slice(0, 40);
-      if (jn = jn.slice(40), jn.length > 0 && (In = setTimeout((() => {
-          kn()
-        }), en)), 0 !== zz.length) try {
-        await (0, Wn.postToGameServer)("/ai-helper/usage", {
-          calls: zz
+    async function rp() {
+      null !== sp && (clearTimeout(sp), sp = null);
+      const DD = Wp.slice(0, 40);
+      if (Wp = Wp.slice(40), Wp.length > 0 && (sp = setTimeout((() => {
+          rp()
+        }), Yp)), 0 !== DD.length) try {
+        await (0, dp.postToGameServer)("/ai-helper/usage", {
+          calls: DD
         })
       } catch {}
     }
-    const zi = 6e4;
-    const ui = new class {
+    const Ap = 6e4;
+    const Fp = new class {
         constructor() {
           this.calls = new Map, this.fullUntil = new Map
         }
-        record(zz) {
-          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.calls.set(zz, [...this.recent(zz, uz), uz])
+        record(DD) {
+          let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.calls.set(DD, [...this.recent(DD, CD), CD])
         }
-        markFull(zz) {
-          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.fullUntil.set(zz, uz + zi)
+        markFull(DD) {
+          let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.fullUntil.set(DD, CD + Ap)
         }
-        callsInLastMinute(zz) {
-          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return this.recent(zz, uz).length
+        callsInLastMinute(DD) {
+          let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return this.recent(DD, CD).length
         }
-        freeAt(zz) {
-          var uz;
-          let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          const Ez = this.recent(zz, bz),
-            nz = Ez.length < 2 ? bz : Ez[Ez.length - 2] + zi;
-          return Math.max(nz, null !== (uz = this.fullUntil.get(zz)) && void 0 !== uz ? uz : 0, bz)
+        freeAt(DD) {
+          var CD;
+          let cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          const ID = this.recent(DD, cD),
+            pD = ID.length < 2 ? cD : ID[ID.length - 2] + Ap;
+          return Math.max(pD, null !== (CD = this.fullUntil.get(DD)) && void 0 !== CD ? CD : 0, cD)
         }
-        firstFreeAt(zz) {
-          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return Math.min(...zz.map((zz => this.freeAt(zz, uz))))
+        firstFreeAt(DD) {
+          let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return Math.min(...DD.map((DD => this.freeAt(DD, CD))))
         }
         clear() {
           this.calls.clear(), this.fullUntil.clear()
         }
-        recent(zz, uz) {
-          var bz;
-          return (null !== (bz = this.calls.get(zz)) && void 0 !== bz ? bz : []).filter((zz => uz - zz < zi))
+        recent(DD, CD) {
+          var cD;
+          return (null !== (cD = this.calls.get(DD)) && void 0 !== cD ? cD : []).filter((DD => CD - DD < Ap))
         }
       },
-      bi = /\n{3,}/,
-      Ei = /<tool_call\b|<function=/;
+      Di = /\n{3,}/,
+      Ci = /<tool_call\b|<function=/;
 
-    function ni(zz) {
-      const uz = zz.trimStart(),
-        bz = bi.exec(uz),
-        Ez = Ei.exec(uz);
-      if (null === bz || null !== Ez && Ez.index < bz.index) return null;
-      const nz = uz.slice(bz.index + bz[0].length);
-      return "" === nz.trim() ? null : nz
+    function ci(DD) {
+      const CD = DD.trimStart(),
+        cD = Di.exec(CD),
+        ID = Ci.exec(CD);
+      if (null === cD || null !== ID && ID.index < cD.index) return null;
+      const pD = CD.slice(cD.index + cD[0].length);
+      return "" === pD.trim() ? null : pD
     }
-    const ii = [{
+    const Ii = [{
       name: "Qwen3.8-27B",
       temperature: .6,
       nativeTools: !0,
@@ -6459,45 +6459,45 @@ export const modules = {
       temperature: 1,
       reasoningEffort: "high"
     }];
-    const li = {
+    const ii = {
       name: "Qwen3.6-27B",
       temperature: .6,
       nativeTools: !0,
       callFormat: "qwenXml"
     };
 
-    function Mi(zz) {
-      return [...ii, li].find((uz => uz.name === zz))
+    function fi(DD) {
+      return [...Ii, ii].find((CD => CD.name === DD))
     }
 
-    function ti(zz) {
-      var uz, bz;
-      return null !== (uz = null === (bz = Mi(zz)) || void 0 === bz ? void 0 : bz.callFormat) && void 0 !== uz ? uz : "simple"
+    function bi(DD) {
+      var CD, cD;
+      return null !== (CD = null === (cD = fi(DD)) || void 0 === cD ? void 0 : cD.callFormat) && void 0 !== CD ? CD : "simple"
     }
 
-    function Hi(zz) {
-      var uz;
+    function Qi(DD) {
+      var CD;
       return {
-        format: null !== (uz = zz.callFormat) && void 0 !== uz ? uz : "simple",
-        nativeTools: !0 === zz.nativeTools
+        format: null !== (CD = DD.callFormat) && void 0 !== CD ? CD : "simple",
+        nativeTools: !0 === DD.nativeTools
       }
     }
 
-    function Oi(zz, uz) {
-      return "function" === typeof zz ? zz(uz) : zz
+    function wi(DD, CD) {
+      return "function" === typeof DD ? DD(CD) : DD
     }
-    const di = "TOO_COMPLEX",
-      Fi = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${di} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${di} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${di} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${di} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${di} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
-      Zi = 24e4,
-      Ri = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
-    class Ki extends Error {
-      constructor(zz) {
-        super(`World Code AI ${zz}`), this.reason = zz
+    const Si = "TOO_COMPLEX",
+      Bi = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${Si} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${Si} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${Si} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${Si} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${Si} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
+      yi = 24e4,
+      Mi = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
+    class ti extends Error {
+      constructor(DD) {
+        super(`World Code AI ${DD}`), this.reason = DD
       }
     }
 
-    function wi(zz) {
-      switch (zz) {
+    function Zi(DD) {
+      switch (DD) {
         case "busy":
           return "Bot.xd is busy right now.";
         case "tooLarge":
@@ -6510,421 +6510,421 @@ export const modules = {
       }
     }
 
-    function Xi(zz, uz) {
-      var bz, Ez, nz, iz, lz;
-      const Mz = zz[null !== (bz = uz.index) && void 0 !== bz ? bz : 0] ??= {
+    function oi(DD, CD) {
+      var cD, ID, pD, iD, fD;
+      const bD = DD[null !== (cD = CD.index) && void 0 !== cD ? cD : 0] ??= {
         name: "",
         args: ""
       };
-      Mz.name += null !== (Ez = null === (nz = uz.function) || void 0 === nz ? void 0 : nz.name) && void 0 !== Ez ? Ez : "", Mz.args += null !== (iz = null === (lz = uz.function) || void 0 === lz ? void 0 : lz.arguments) && void 0 !== iz ? iz : ""
+      bD.name += null !== (ID = null === (pD = CD.function) || void 0 === pD ? void 0 : pD.name) && void 0 !== ID ? ID : "", bD.args += null !== (iD = null === (fD = CD.function) || void 0 === fD ? void 0 : fD.arguments) && void 0 !== iD ? iD : ""
     }
 
-    function fi(zz) {
-      return "mcp" === zz ? "simple" : zz
+    function vi(DD) {
+      return "mcp" === DD ? "simple" : DD
     }
 
-    function si(zz, uz, bz, Ez) {
-      let nz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      return ri(zz, uz, bz, fi(Ez), nz).answer
+    function Ni(DD, CD, cD, ID) {
+      let pD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      return gi(DD, CD, cD, vi(ID), pD).answer
     }
 
-    function ri(zz, uz, bz, Ez, nz) {
-      const iz = bz.flatMap((zz => {
-        const uz = tb(zz.name, zz.args);
-        return null === uz ? [] : [CE(ku(Ez), uz.name, uz.args)]
+    function gi(DD, CD, cD, ID, pD) {
+      const iD = cD.flatMap((DD => {
+        const CD = Qc(DD.name, DD.args);
+        return null === CD ? [] : [rI(FC(ID), CD.name, CD.args)]
       }));
-      let lz = !1;
-      return 0 !== iz.length || 0 !== Ob(zz, Ez).length || zz.includes("```") || (iz.push(...nz ? [] : function(zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        const Ez = new Map;
-        for (const Mz of Hb(zz, uz)) {
-          const zz = Object.values(Mz.args).some((zz => void 0 !== zz && bz.includes(zz.trim())));
-          var nz, iz, lz;
-          "export_game" === Mz.name || "switch_to_world_code" === Mz.name || su(Mz.name) || zz || Ez.set(`${Mz.name} ${null!==(nz=Mz.args.path)&&void 0!==nz?nz:""} ${null!==(iz=Mz.args.search)&&void 0!==iz?iz:""} ${null!==(lz=Mz.args.name)&&void 0!==lz?lz:""}`, Mz.source)
+      let fD = !1;
+      return 0 !== iD.length || 0 !== Sc(DD, ID).length || DD.includes("```") || (iD.push(...pD ? [] : function(DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+        const ID = new Map;
+        for (const bD of wc(DD, CD)) {
+          const DD = Object.values(bD.args).some((DD => void 0 !== DD && cD.includes(DD.trim())));
+          var pD, iD, fD;
+          "export_game" === bD.name || "switch_to_world_code" === bD.name || XC(bD.name) || DD || ID.set(`${bD.name} ${null!==(pD=bD.args.path)&&void 0!==pD?pD:""} ${null!==(iD=bD.args.search)&&void 0!==iD?iD:""} ${null!==(fD=bD.args.name)&&void 0!==fD?fD:""}`, bD.source)
         }
-        return [...new Set(Ez.values())]
-      }(uz, Ez, Hn)), lz = iz.length > 0), {
-        answer: [zz, ...iz].join("\n\n").trim(),
-        hasCallsFromReasoning: lz
+        return [...new Set(ID.values())]
+      }(CD, ID, bp)), fD = iD.length > 0), {
+        answer: [DD, ...iD].join("\n\n").trim(),
+        hasCallsFromReasoning: fD
       }
     }
-    async function oi(zz, uz) {
-      const bz = zz.getReader(),
-        Ez = new TextDecoder;
-      let nz = "";
+    async function Xi(DD, CD) {
+      const cD = DD.getReader(),
+        ID = new TextDecoder;
+      let pD = "";
       for (;;) {
         const {
-          done: zz,
-          value: iz
-        } = await bz.read();
-        if (zz) break;
-        nz += Ez.decode(iz, {
+          done: DD,
+          value: iD
+        } = await cD.read();
+        if (DD) break;
+        pD += ID.decode(iD, {
           stream: !0
         });
-        let lz = nz.indexOf("\n");
-        for (; - 1 !== lz;) {
-          const zz = nz.slice(0, lz).trim();
-          if (nz = nz.slice(lz + 1), lz = nz.indexOf("\n"), !zz.startsWith("data:")) continue;
-          const bz = zz.slice(5).trim();
-          if ("[DONE]" === bz) return;
-          let Ez;
+        let fD = pD.indexOf("\n");
+        for (; - 1 !== fD;) {
+          const DD = pD.slice(0, fD).trim();
+          if (pD = pD.slice(fD + 1), fD = pD.indexOf("\n"), !DD.startsWith("data:")) continue;
+          const cD = DD.slice(5).trim();
+          if ("[DONE]" === cD) return;
+          let ID;
           try {
-            Ez = JSON.parse(bz)
+            ID = JSON.parse(cD)
           } catch {
             continue
           }
-          uz(Ez)
+          CD(ID)
         }
       }
     }
 
-    function Ni(zz) {
-      return zz.map((zz => ({
+    function mi(DD) {
+      return DD.map((DD => ({
         type: "function",
         function: {
-          name: zz.name,
-          description: zz.description,
-          parameters: zz.inputSchema
+          name: DD.name,
+          description: DD.description,
+          parameters: DD.inputSchema
         }
       })))
     }
 
-    function vi(zz) {
-      return "object" === typeof zz
+    function ni(DD) {
+      return "object" === typeof DD
     }
-    async function xi(zz, uz, bz, Ez) {
-      var nz;
-      let iz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-      if (ui.freeAt(zz.name) > Date.now()) return "busy";
-      ui.record(zz.name);
-      const lz = await fetch(Pn, {
+    async function Oi(DD, CD, cD, ID) {
+      var pD;
+      let iD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
+      if (Fp.freeAt(DD.name) > Date.now()) return "busy";
+      Fp.record(DD.name);
+      const fD = await fetch(xp, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: zz.name,
-          messages: uz,
+          model: DD.name,
+          messages: CD,
           max_tokens: 16e3,
-          temperature: zz.temperature,
-          reasoning_effort: zz.reasoningEffort,
+          temperature: DD.temperature,
+          reasoning_effort: DD.reasoningEffort,
           stream: !0,
           stream_options: {
             include_usage: !0
           },
-          ...zz.nativeTools && iz.length > 0 ? {
-            tools: Ni(iz)
+          ...DD.nativeTools && iD.length > 0 ? {
+            tools: mi(iD)
           } : {}
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: bz
+        signal: cD
       });
-      if (429 === lz.status) return ui.markFull(zz.name), "busy";
-      if (!lz.ok || !lz.body) return console.warn(`World Code AI: ${zz.name} answered ${lz.status}`), lz.ok ? "failed" : 429 === (Mz = lz.status) ? "busy" : 400 === Mz || 413 === Mz ? "tooLarge" : 401 === Mz || 403 === Mz ? "turnedAway" : "failed";
-      var Mz;
-      let tz = "",
-        Hz = "";
-      const Oz = [];
-      let pz = !1,
-        dz = !1,
-        Fz = null;
+      if (429 === fD.status) return Fp.markFull(DD.name), "busy";
+      if (!fD.ok || !fD.body) return console.warn(`World Code AI: ${DD.name} answered ${fD.status}`), fD.ok ? "failed" : 429 === (bD = fD.status) ? "busy" : 400 === bD || 413 === bD ? "tooLarge" : 401 === bD || 403 === bD ? "turnedAway" : "failed";
+      var bD;
+      let QD = "",
+        wD = "";
+      const SD = [];
+      let BD = !1,
+        yD = !1,
+        MD = null;
       try {
-        await async function(zz, uz, bz) {
-          await oi(zz, (zz => {
-            var Ez;
-            const nz = zz,
-              iz = null === (Ez = nz.choices) || void 0 === Ez ? void 0 : Ez[0];
-            var lz, Mz;
-            iz && uz(null !== (lz = iz.delta) && void 0 !== lz ? lz : {}, null !== (Mz = iz.finish_reason) && void 0 !== Mz ? Mz : null), nz.usage && (null === bz || void 0 === bz || bz(nz.usage))
+        await async function(DD, CD, cD) {
+          await Xi(DD, (DD => {
+            var ID;
+            const pD = DD,
+              iD = null === (ID = pD.choices) || void 0 === ID ? void 0 : ID[0];
+            var fD, bD;
+            iD && CD(null !== (fD = iD.delta) && void 0 !== fD ? fD : {}, null !== (bD = iD.finish_reason) && void 0 !== bD ? bD : null), pD.usage && (null === cD || void 0 === cD || cD(pD.usage))
           }))
-        }(lz.body, ((uz, bz) => {
-          var nz, iz, lz, Mz;
-          pz ||= "length" === bz, Hz += null !== (nz = null !== (iz = uz.reasoning) && void 0 !== iz ? iz : uz.reasoning_content) && void 0 !== nz ? nz : "", tz += null !== (lz = uz.content) && void 0 !== lz ? lz : "";
-          for (const zz of null !== (Fz = uz.tool_calls) && void 0 !== Fz ? Fz : []) {
-            var Fz;
-            dz ||= "" !== Hz && "" === tz.trim(), Xi(Oz, zz)
+        }(fD.body, ((CD, cD) => {
+          var pD, iD, fD, bD;
+          BD ||= "length" === cD, wD += null !== (pD = null !== (iD = CD.reasoning) && void 0 !== iD ? iD : CD.reasoning_content) && void 0 !== pD ? pD : "", QD += null !== (fD = CD.content) && void 0 !== fD ? fD : "";
+          for (const DD of null !== (MD = CD.tool_calls) && void 0 !== MD ? MD : []) {
+            var MD;
+            yD ||= "" !== wD && "" === QD.trim(), oi(SD, DD)
           }
-          const Zz = zz.nativeTools && dz ? null !== (Mz = ni(tz)) && void 0 !== Mz ? Mz : "" : tz;
-          null === Ez || void 0 === Ez || Ez({
-            model: zz.name,
-            reasoningChars: Hz.length,
-            answer: Zz,
-            isCalling: Oz.length > 0
+          const tD = DD.nativeTools && yD ? null !== (bD = ci(QD)) && void 0 !== bD ? bD : "" : QD;
+          null === ID || void 0 === ID || ID({
+            model: DD.name,
+            reasoningChars: wD.length,
+            answer: tD,
+            isCalling: SD.length > 0
           })
-        }), (zz => {
-          Fz = zz
+        }), (DD => {
+          MD = DD
         }))
       } finally {
-        Yn(Fz, uz, tz + Hz, 20 * Oz.length)
+        hp(MD, CD, QD + wD, 20 * SD.length)
       }
-      return null !== (nz = Ji(zz, tz, Hz, Oz, pz, dz)) && void 0 !== nz ? nz : "failed"
+      return null !== (pD = Pi(DD, QD, wD, SD, BD, yD)) && void 0 !== pD ? pD : "failed"
     }
 
-    function Ji(zz, uz, bz, Ez, nz) {
-      var iz;
-      let lz = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        Mz = uz;
-      var tz;
-      zz.nativeTools && lz && (Mz = null !== (tz = ni(Mz)) && void 0 !== tz ? tz : Mz);
-      Mz = Mz.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-      const Hz = ri(Mz, bz, Ez, null !== (iz = zz.callFormat) && void 0 !== iz ? iz : "simple", nz);
-      return "" === Hz.answer ? null : {
-        model: zz.name,
-        answer: Hz.answer,
-        reasoning: bz,
-        isCutShort: nz,
-        hasCallsFromReasoning: Hz.hasCallsFromReasoning
+    function Pi(DD, CD, cD, ID, pD) {
+      var iD;
+      let fD = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        bD = CD;
+      var QD;
+      DD.nativeTools && fD && (bD = null !== (QD = ci(bD)) && void 0 !== QD ? QD : bD);
+      bD = bD.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+      const wD = gi(bD, cD, ID, null !== (iD = DD.callFormat) && void 0 !== iD ? iD : "simple", pD);
+      return "" === wD.answer ? null : {
+        model: DD.name,
+        answer: wD.answer,
+        reasoning: cD,
+        isCutShort: pD,
+        hasCallsFromReasoning: wD.hasCallsFromReasoning
       }
     }
 
-    function Ai(zz) {
-      return zz.replace(/<think>[\s\S]*?(<\/think>|$)/g, "")
+    function Hi(DD) {
+      return DD.replace(/<think>[\s\S]*?(<\/think>|$)/g, "")
     }
 
-    function Ti(zz) {
-      return vi(zz) && !zz.isCutShort
+    function Ui(DD) {
+      return ni(DD) && !DD.isCutShort
     }
-    async function Li(zz, uz, bz, Ez, nz) {
-      const iz = zz.map((() => new AbortController)),
-        lz = () => {
-          for (const zz of iz) zz.abort()
+    async function xi(DD, CD, cD, ID, pD) {
+      const iD = DD.map((() => new AbortController)),
+        fD = () => {
+          for (const DD of iD) DD.abort()
         };
-      null !== bz && void 0 !== bz && bz.aborted && lz(), null === bz || void 0 === bz || bz.addEventListener("abort", lz, {
+      null !== cD && void 0 !== cD && cD.aborted && fD(), null === cD || void 0 === cD || cD.addEventListener("abort", fD, {
         once: !0
       });
-      const Mz = zz.map((() => {})),
-        tz = zz.map((() => {}));
-      let Hz = null;
-      const Oz = zz => void 0 !== zz && ("" !== Ai(zz.answer).trim() || !0 === zz.isCalling);
-      let pz = () => {};
-      zz.forEach(((zz, bz) => {
-        const lz = (0, wz.c)(Zi, iz[bz].signal);
-        xi(zz, Oi(uz, zz), lz.signal, (zz => {
-          tz[bz] = zz, null === Hz && Oz(zz) && (Hz = bz), Hz === bz && (null === Ez || void 0 === Ez || Ez(zz))
-        }), nz).catch((uz => {
-          if (iz[bz].signal.aborted) return "failed";
-          const Ez = lz.signal.aborted;
-          return console.warn(`World Code AI: ${zz.name} ${Ez?"took longer than 240 s":"couldn't be reached"}`, uz), Ez ? "timeout" : "failed"
-        })).then((zz => {
-          lz.clear(), Mz[bz] = zz, Hz !== bz || Ti(zz) || (Hz = null), pz()
+      const bD = DD.map((() => {})),
+        QD = DD.map((() => {}));
+      let wD = null;
+      const SD = DD => void 0 !== DD && ("" !== Hi(DD.answer).trim() || !0 === DD.isCalling);
+      let BD = () => {};
+      DD.forEach(((DD, cD) => {
+        const fD = (0, vD.e)(yi, iD[cD].signal);
+        Oi(DD, wi(CD, DD), fD.signal, (DD => {
+          QD[cD] = DD, null === wD && SD(DD) && (wD = cD), wD === cD && (null === ID || void 0 === ID || ID(DD))
+        }), pD).catch((CD => {
+          if (iD[cD].signal.aborted) return "failed";
+          const ID = fD.signal.aborted;
+          return console.warn(`World Code AI: ${DD.name} ${ID?"took longer than 240 s":"couldn't be reached"}`, CD), ID ? "timeout" : "failed"
+        })).then((DD => {
+          fD.clear(), bD[cD] = DD, wD !== cD || Ui(DD) || (wD = null), BD()
         }))
       }));
-      const dz = () => {
-        var zz;
-        if (null !== Hz) {
-          const zz = Mz[Hz];
-          return Ti(zz) ? {
-            reply: zz
+      const yD = () => {
+        var DD;
+        if (null !== wD) {
+          const DD = bD[wD];
+          return Ui(DD) ? {
+            reply: DD
           } : void 0
         }
-        const uz = Mz.find(Ti);
-        if (uz) return {
-          reply: uz
+        const CD = bD.find(Ui);
+        if (CD) return {
+          reply: CD
         };
-        if (!Mz.includes(void 0)) return {
-          reply: null !== (zz = Mz.find(vi)) && void 0 !== zz ? zz : null
+        if (!bD.includes(void 0)) return {
+          reply: null !== (DD = bD.find(ni)) && void 0 !== DD ? DD : null
         };
         {
-          const zz = Mz.findIndex(((zz, uz) => void 0 === zz && Oz(tz[uz])));
-          if (-1 !== zz) {
-            Hz = zz;
-            const uz = tz[zz];
-            uz && (null === Ez || void 0 === Ez || Ez(uz))
+          const DD = bD.findIndex(((DD, CD) => void 0 === DD && SD(QD[CD])));
+          if (-1 !== DD) {
+            wD = DD;
+            const CD = QD[DD];
+            CD && (null === ID || void 0 === ID || ID(CD))
           }
         }
       };
       try {
         for (;;) {
-          if (null !== bz && void 0 !== bz && bz.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
-          const zz = dz();
-          if (zz) {
-            const uz = Mz.filter((zz => "string" === typeof zz));
+          if (null !== cD && void 0 !== cD && cD.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
+          const DD = yD();
+          if (DD) {
+            const CD = bD.filter((DD => "string" === typeof DD));
             return {
-              reply: zz.reply,
-              failures: uz
+              reply: DD.reply,
+              failures: CD
             }
           }
-          await new Promise((zz => {
-            pz = zz
+          await new Promise((DD => {
+            BD = DD
           }))
         }
       } finally {
-        null === bz || void 0 === bz || bz.removeEventListener("abort", lz), lz()
+        null === cD || void 0 === cD || cD.removeEventListener("abort", fD), fD()
       }
     }
 
-    function Pi() {
-      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-      return ui.firstFreeAt(ii.map((zz => zz.name)), zz)
+    function qi() {
+      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
+      return Fp.firstFreeAt(Ii.map((DD => DD.name)), DD)
     }
-    async function Gi(zz) {
-      var uz;
-      let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const Ez = Date.now(),
-        nz = null !== (uz = bz.models) && void 0 !== uz ? uz : ii,
-        iz = void 0 === bz.models ? function(zz, uz) {
-          let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-          const Ez = zz.map((zz => ({
-              model: zz,
-              key: bz()
-            }))).sort(((zz, uz) => zz.key - uz.key)).map((zz => {
+    async function Ji(DD) {
+      var CD;
+      let cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const ID = Date.now(),
+        pD = null !== (CD = cD.models) && void 0 !== CD ? CD : Ii,
+        iD = void 0 === cD.models ? function(DD, CD) {
+          let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+          const ID = DD.map((DD => ({
+              model: DD,
+              key: cD()
+            }))).sort(((DD, CD) => DD.key - CD.key)).map((DD => {
               let {
-                model: uz
-              } = zz;
-              return uz
+                model: CD
+              } = DD;
+              return CD
             })),
-            nz = [...Ez.filter((zz => uz(zz))), ...Ez.filter((zz => !uz(zz)))],
-            iz = [];
-          for (let lz = 0; lz < nz.length; lz += 2) iz.push(nz.slice(lz, lz + 2));
-          return iz
-        }(nz, (zz => ui.freeAt(zz.name) <= Ez)) : nz.map((zz => [zz])),
-        lz = [];
-      for (const tz of iz) {
-        const uz = await Li(tz, zz, bz.signal, bz.onProgress, bz.tools);
-        if (null !== uz.reply) {
-          const nz = tz.find((zz => {
-            var bz;
-            return zz.name === (null === (bz = uz.reply) || void 0 === bz ? void 0 : bz.model)
+            pD = [...ID.filter((DD => CD(DD))), ...ID.filter((DD => !CD(DD)))],
+            iD = [];
+          for (let fD = 0; fD < pD.length; fD += 2) iD.push(pD.slice(fD, fD + 2));
+          return iD
+        }(pD, (DD => Fp.freeAt(DD.name) <= ID)) : pD.map((DD => [DD])),
+        fD = [];
+      for (const QD of iD) {
+        const CD = await xi(QD, DD, cD.signal, cD.onProgress, cD.tools);
+        if (null !== CD.reply) {
+          const pD = QD.find((DD => {
+            var cD;
+            return DD.name === (null === (cD = CD.reply) || void 0 === cD ? void 0 : cD.model)
           }));
           return {
-            ...nz && !1 !== bz.canNudge ? await mi(nz, Oi(zz, nz), uz.reply, bz.signal, bz.onProgress, bz.tools) : uz.reply,
-            ms: Date.now() - Ez
+            ...pD && !1 !== cD.canNudge ? await Vi(pD, wi(DD, pD), CD.reply, cD.signal, cD.onProgress, cD.tools) : CD.reply,
+            ms: Date.now() - ID
           }
         }
-        lz.push(...uz.failures)
+        fD.push(...CD.failures)
       }
-      const Mz = Ri.find((zz => lz.includes(zz)));
-      throw new Ki(null !== Mz && void 0 !== Mz ? Mz : "failed")
+      const bD = Mi.find((DD => fD.includes(DD)));
+      throw new ti(null !== bD && void 0 !== bD ? bD : "failed")
     }
-    const ai = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
+    const Ki = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
 
-    function Vi(zz) {
-      const uz = zz.trim();
-      return uz.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(uz) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(uz) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(uz)
+    function ai(DD) {
+      const CD = DD.trim();
+      return CD.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(CD) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(CD) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(CD)
     }
-    async function mi(zz, uz, bz, Ez, nz, iz) {
-      var lz;
-      let Mz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Zi;
-      if (! function(zz, uz) {
-          return !zz.isCutShort && Vi(zz.answer) && !zz.answer.includes("?") && 0 === Ob(zz.answer, uz).length
-        }(bz, null !== (lz = zz.callFormat) && void 0 !== lz ? lz : "simple")) return bz;
-      const tz = [...uz, {
+    async function Vi(DD, CD, cD, ID, pD, iD) {
+      var fD;
+      let bD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : yi;
+      if (! function(DD, CD) {
+          return !DD.isCutShort && ai(DD.answer) && !DD.answer.includes("?") && 0 === Sc(DD.answer, CD).length
+        }(cD, null !== (fD = DD.callFormat) && void 0 !== fD ? fD : "simple")) return cD;
+      const QD = [...CD, {
           role: "assistant",
-          content: bz.answer
+          content: cD.answer
         }, {
           role: "user",
-          content: ai
+          content: Ki
         }],
-        Hz = (0, wz.c)(Mz, Ez);
+        wD = (0, vD.e)(bD, ID);
       try {
-        const uz = await xi(zz, tz, Hz.signal, nz, iz);
-        return vi(uz) && "" !== uz.answer.trim() ? uz : bz
-      } catch (Oz) {
-        if (null !== Ez && void 0 !== Ez && Ez.aborted) throw Oz;
-        return bz
+        const CD = await Oi(DD, QD, wD.signal, pD, iD);
+        return ni(CD) && "" !== CD.answer.trim() ? CD : cD
+      } catch (SD) {
+        if (null !== ID && void 0 !== ID && ID.aborted) throw SD;
+        return cD
       } finally {
-        Hz.clear()
+        wD.clear()
       }
     }
 
-    function qi(zz) {
-      const uz = Ai(zz);
-      return /too_complex/i.test(uz) || /^\W*too[\s_-]*complex\W*$/i.test(uz.trim())
+    function zi(DD) {
+      const CD = Hi(DD);
+      return /too_complex/i.test(CD) || /^\W*too[\s_-]*complex\W*$/i.test(CD.trim())
     }
 
-    function Ui(zz) {
-      const uz = Ai(zz).trim();
-      return uz.length > 19 && !/^\W*too[\s_-]*complex/i.test(uz)
+    function ji(DD) {
+      const CD = Hi(DD).trim();
+      return CD.length > 19 && !/^\W*too[\s_-]*complex/i.test(CD)
     }
 
-    function ci(zz) {
-      return zz.map(((zz, uz) => 0 === uz && "system" === zz.role ? {
-        ...zz,
-        content: zz.content + Fi
-      } : zz))
+    function li(DD) {
+      return DD.map(((DD, CD) => 0 === CD && "system" === DD.role ? {
+        ...DD,
+        content: DD.content + Bi
+      } : DD))
     }
-    async function gi(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      for (const Ez of Gn) {
-        const bz = await Si(Ez, [{
+    async function Li(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      for (const ID of qp) {
+        const cD = await Ti(ID, [{
           role: "user",
-          content: zz
-        }], uz);
-        if (null !== bz && "busy" !== bz) return qn(bz)
+          content: DD
+        }], CD);
+        if (null !== cD && "busy" !== cD) return Vp(cD)
       }
-      return bz ? "unchecked" : "ok"
+      return cD ? "unchecked" : "ok"
     }
-    async function Si(zz, uz, bz) {
-      const Ez = (0, wz.c)(2e4, bz);
-      ui.record(zz);
+    async function Ti(DD, CD, cD) {
+      const ID = (0, vD.e)(2e4, cD);
+      Fp.record(DD);
       try {
-        var nz, iz, lz, Mz;
-        const bz = await fetch(Pn, {
+        var pD, iD, fD, bD;
+        const cD = await fetch(xp, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            model: zz,
-            messages: uz,
+            model: DD,
+            messages: CD,
             max_tokens: 40
           }),
           credentials: "omit",
           referrerPolicy: "no-referrer",
-          signal: Ez.signal
+          signal: ID.signal
         });
-        if (429 === bz.status) return ui.markFull(zz), "busy";
-        if (!bz.ok) return null;
-        const tz = await bz.json(),
-          Hz = String(null !== (nz = null === (iz = tz.choices) || void 0 === iz || null === (lz = iz[0]) || void 0 === lz || null === (Mz = lz.message) || void 0 === Mz ? void 0 : Mz.content) && void 0 !== nz ? nz : "");
-        return Yn(tz.usage, uz, Hz),
-          function(zz) {
-            return /Safety:/.test(zz)
-          }(Hz) ? Hz : null
-      } catch (tz) {
-        if (null !== bz && void 0 !== bz && bz.aborted) throw tz;
+        if (429 === cD.status) return Fp.markFull(DD), "busy";
+        if (!cD.ok) return null;
+        const QD = await cD.json(),
+          wD = String(null !== (pD = null === (iD = QD.choices) || void 0 === iD || null === (fD = iD[0]) || void 0 === fD || null === (bD = fD.message) || void 0 === bD ? void 0 : bD.content) && void 0 !== pD ? pD : "");
+        return hp(QD.usage, CD, wD),
+          function(DD) {
+            return /Safety:/.test(DD)
+          }(wD) ? wD : null
+      } catch (QD) {
+        if (null !== cD && void 0 !== cD && cD.aborted) throw QD;
         return null
       } finally {
-        Ez.clear()
+        ID.clear()
       }
     }
-    var yi = bz(33);
-    const Di = "aiHelperDataSharing";
+    var Gi = cD(36);
+    const Ri = "aiHelperDataSharing";
 
-    function Qi() {
-      const zz = yi.g.getItem(Di);
-      return null !== zz && "object" === typeof zz ? zz : {}
+    function ki() {
+      const DD = Gi.h.getItem(Ri);
+      return null !== DD && "object" === typeof DD ? DD : {}
     }
-    const Wi = new class {
+    const di = new class {
       constructor() {
-        this.player = null, this.unsaved = new Map, this.listeners = new Set, this.listening = !1, this.subscribe = zz => (this.listen(), this.listeners.add(zz), () => {
-          this.listeners.delete(zz)
+        this.player = null, this.unsaved = new Map, this.listeners = new Set, this.listening = !1, this.subscribe = DD => (this.listen(), this.listeners.add(DD), () => {
+          this.listeners.delete(DD)
         })
       }
       get() {
-        var zz, uz;
-        return null === this.player ? null : null !== (zz = null !== (uz = this.unsaved.get(this.player)) && void 0 !== uz ? uz : Qi()[this.player]) && void 0 !== zz ? zz : null
+        var DD, CD;
+        return null === this.player ? null : null !== (DD = null !== (CD = this.unsaved.get(this.player)) && void 0 !== CD ? CD : ki()[this.player]) && void 0 !== DD ? DD : null
       }
       getPlayer() {
         return this.player
       }
       async refresh() {
         this.listen();
-        const zz = await async function() {
-          var zz, uz;
+        const DD = await async function() {
+          var DD, CD;
           const {
-            userContextManager: Ez
-          } = await Promise.resolve().then((() => bz(1118)));
-          return null !== (zz = null === (uz = Ez.peekCurrentUserContext()) || void 0 === uz ? void 0 : uz.whamm) && void 0 !== zz ? zz : null
-        }().catch((zz => (console.error("AI Helper: couldn't look up the player for sharing chats", zz), null)));
-        return zz !== this.player && (this.player = zz, this.notify()), this.get()
+            userContextManager: ID
+          } = await Promise.resolve().then((() => cD(1127)));
+          return null !== (DD = null === (CD = ID.peekCurrentUserContext()) || void 0 === CD ? void 0 : CD.whamm) && void 0 !== DD ? DD : null
+        }().catch((DD => (console.error("AI Helper: couldn't look up the player for sharing chats", DD), null)));
+        return DD !== this.player && (this.player = DD, this.notify()), this.get()
       }
-      set(zz) {
-        null !== this.player && (yi.g.setItem(Di, {
-          ...Qi(),
-          [this.player]: zz
-        }) ? this.unsaved.delete(this.player) : this.unsaved.set(this.player, zz), this.notify())
+      set(DD) {
+        null !== this.player && (Gi.h.setItem(Ri, {
+          ...ki(),
+          [this.player]: DD
+        }) ? this.unsaved.delete(this.player) : this.unsaved.set(this.player, DD), this.notify())
       }
       listen() {
         this.listening || (this.listening = !0, window.addEventListener("storage", (() => {
@@ -6932,133 +6932,133 @@ export const modules = {
         })))
       }
       notify() {
-        for (const zz of this.listeners) zz()
+        for (const DD of this.listeners) DD()
       }
     };
-    let ei = null,
-      ji = !1;
-    const Ii = 4e5,
-      Bi = 6e4,
-      Ci = 12,
-      Yi = 9e5;
+    let Yi = null,
+      Wi = !1;
+    const si = 4e5,
+      Ei = 6e4,
+      ei = 12,
+      ui = 9e5;
 
-    function ki(zz, uz) {
-      if (zz.length <= uz) return zz;
-      const bz = `\n[... ${zz.length-uz} more characters cut]`;
-      let Ez = Math.max(0, uz - bz.length);
-      const nz = zz.charCodeAt(Ez - 1);
-      return nz >= 55296 && nz <= 56319 && Ez--, zz.slice(0, Ez) + bz
+    function ri(DD, CD) {
+      if (DD.length <= CD) return DD;
+      const cD = `\n[... ${DD.length-CD} more characters cut]`;
+      let ID = Math.max(0, CD - cD.length);
+      const pD = DD.charCodeAt(ID - 1);
+      return pD >= 55296 && pD <= 56319 && ID--, DD.slice(0, ID) + cD
     }
-    var zl = bz(597);
+    var Ai = cD(630);
 
-    function ul(zz) {
-      var uz;
-      return "system" === (null === (uz = zz[0]) || void 0 === uz ? void 0 : uz.role) ? function(zz) {
-        let uz = 2166136261;
-        for (let bz = 0; bz < zz.length; bz++) uz ^= zz.charCodeAt(bz), uz = Math.imul(uz, 16777619);
-        return (uz >>> 0).toString(16).padStart(8, "0")
-      }(zz[0].content.split("\n\n## ")[0]) : ""
+    function Fi(DD) {
+      var CD;
+      return "system" === (null === (CD = DD[0]) || void 0 === CD ? void 0 : CD.role) ? function(DD) {
+        let CD = 2166136261;
+        for (let cD = 0; cD < DD.length; cD++) CD ^= DD.charCodeAt(cD), CD = Math.imul(CD, 16777619);
+        return (CD >>> 0).toString(16).padStart(8, "0")
+      }(DD[0].content.split("\n\n## ")[0]) : ""
     }
 
-    function bl(zz, uz, bz) {
-      const Ez = (nz = uz.input, JSON.stringify({
-        ...nz,
+    function Df(DD, CD, cD) {
+      const ID = (pD = CD.input, JSON.stringify({
+        ...pD,
         prefabs: void 0
       }));
-      var nz;
-      return Ez.length > Ii ? null : {
+      var pD;
+      return ID.length > si ? null : {
         sentAt: Date.now(),
-        chatId: zz,
-        responder: uz.responder,
-        promptVersion: uz.promptVersion,
-        clientVersion: String(zl.c),
-        request: Ez,
-        responses: [El(bz)]
+        chatId: DD,
+        responder: CD.responder,
+        promptVersion: CD.promptVersion,
+        clientVersion: String(Ai.c),
+        request: ID,
+        responses: [Cf(cD)]
       }
     }
 
-    function El(zz) {
+    function Cf(DD) {
       return {
-        model: zz.model,
-        text: ki(zz.text, Bi)
+        model: DD.model,
+        text: ri(DD.text, Ei)
       }
     }
-    class nl {
+    class If {
       constructor() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tl;
-        this.xZ = zz, this.chatId = function() {
-          const zz = new Uint8Array(12);
-          return crypto.getRandomValues(zz), Array.from(zz, (zz => zz.toString(16).padStart(2, "0"))).join("")
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Qf;
+        this.Nt = DD, this.chatId = function() {
+          const DD = new Uint8Array(12);
+          return crypto.getRandomValues(DD), Array.from(DD, (DD => DD.toString(16).padStart(2, "0"))).join("")
         }(), this.open = new Map
       }
-      requestStarted(zz, uz) {
-        const bz = this.open.get(zz);
-        bz && (clearTimeout(bz.timer), uz || (this.open.delete(zz), this.send(bz.xZ)))
+      requestStarted(DD, CD) {
+        const cD = this.open.get(DD);
+        cD && (clearTimeout(cD.timer), CD || (this.open.delete(DD), this.send(cD.Nt)))
       }
-      answered(zz, uz, bz) {
-        if ("" === bz.text.trim()) return;
-        const Ez = this.open.get(zz);
-        if (Ez) return void(Ez.xZ.responses.length < Ci && Ez.xZ.responses.push(El(bz)));
-        const nz = bl(this.chatId, uz, bz);
-        nz && this.open.set(zz, {
-          xZ: nz
+      answered(DD, CD, cD) {
+        if ("" === cD.text.trim()) return;
+        const ID = this.open.get(DD);
+        if (ID) return void(ID.Nt.responses.length < ei && ID.Nt.responses.push(Cf(cD)));
+        const pD = Df(this.chatId, CD, cD);
+        pD && this.open.set(DD, {
+          Nt: pD
         })
       }
-      drop(zz) {
-        var uz;
-        clearTimeout(null === (uz = this.open.get(zz)) || void 0 === uz ? void 0 : uz.timer), this.open.delete(zz)
+      drop(DD) {
+        var CD;
+        clearTimeout(null === (CD = this.open.get(DD)) || void 0 === CD ? void 0 : CD.timer), this.open.delete(DD)
       }
-      requestEnded(zz) {
-        const uz = this.open.get(zz);
-        uz && (clearTimeout(uz.timer), uz.timer = setTimeout((() => {
-          this.open.delete(zz), this.send(uz.xZ)
+      requestEnded(DD) {
+        const CD = this.open.get(DD);
+        CD && (clearTimeout(CD.timer), CD.timer = setTimeout((() => {
+          this.open.delete(DD), this.send(CD.Nt)
         }), 2e4))
       }
-      send(zz) {
-        (function(zz) {
-          return (new TextEncoder).encode(JSON.stringify(zz)).length <= Yi
-        })(zz) && this.xZ(zz)
+      send(DD) {
+        (function(DD) {
+          return (new TextEncoder).encode(JSON.stringify(DD)).length <= ui
+        })(DD) && this.Nt(DD)
       }
     }
-    const il = [],
-      ll = 5;
-    let Ml = !1;
+    const pf = [],
+      ff = 5;
+    let bf = !1;
 
-    function tl(zz) {
+    function Qf(DD) {
       (async () => {
-        const uz = await Wi.refresh(),
-          bz = Wi.getPlayer();
-        "yes" === uz ? await Ol([zz]) : null === uz && null !== bz && function(zz, uz) {
-          Ml || (Ml = !0, Wi.subscribe(Hl));
-          il.push({
-            player: zz,
-            xZ: uz
-          }), il.length > ll && il.shift()
-        }(bz, zz)
+        const CD = await di.refresh(),
+          cD = di.getPlayer();
+        "yes" === CD ? await Sf([DD]) : null === CD && null !== cD && function(DD, CD) {
+          bf || (bf = !0, di.subscribe(wf));
+          pf.push({
+            player: DD,
+            Nt: CD
+          }), pf.length > ff && pf.shift()
+        }(cD, DD)
       })()
     }
 
-    function Hl() {
-      const zz = Wi.get();
-      if (null === zz) return;
-      const uz = Wi.getPlayer(),
-        bz = il.splice(0).filter((zz => zz.player === uz));
-      "yes" === zz && bz.length > 0 && Ol(bz.map((zz => zz.xZ)))
+    function wf() {
+      const DD = di.get();
+      if (null === DD) return;
+      const CD = di.getPlayer(),
+        cD = pf.splice(0).filter((DD => DD.player === CD));
+      "yes" === DD && cD.length > 0 && Sf(cD.map((DD => DD.Nt)))
     }
-    async function Ol(zz) {
-      const uz = Promise.resolve().then((() => bz(40687)));
-      for (const bz of zz) try {
+    async function Sf(DD) {
+      const CD = Promise.resolve().then((() => cD(40528)));
+      for (const cD of DD) try {
         const {
-          postToGameServer: zz
-        } = await uz;
-        await zz("/ai-helper/turn", bz)
-      } catch (Ez) {
-        console.warn("AI Helper: couldn't share a turn", Ez)
+          postToGameServer: DD
+        } = await CD;
+        await DD("/ai-helper/turn", cD)
+      } catch (ID) {
+        console.warn("AI Helper: couldn't share a turn", ID)
       }
     }
-    var pl = bz(328),
-      dl = bz(158);
-    const Fl = {
+    var Bf = cD(326),
+      yf = cD(162);
+    const Mf = {
         openrouter: {
           id: "openrouter",
           name: "OpenRouter",
@@ -7095,292 +7095,292 @@ export const modules = {
           keyPage: ""
         }
       },
-      Zl = ["openrouter", "anthropic", "openai", "gemini", "custom"],
-      Rl = new Set(Object.values(Fl).flatMap((zz => "" === zz.baseUrl ? [] : [new URL(zz.baseUrl).host])));
+      tf = ["openrouter", "anthropic", "openai", "gemini", "custom"],
+      Zf = new Set(Object.values(Mf).flatMap((DD => "" === DD.baseUrl ? [] : [new URL(DD.baseUrl).host])));
 
-    function Kl(zz) {
-      return zz.trim().replace(/^[A-Z_]+\s*=\s*/, "").replace(/^["'`]+|["'`]+$/g, "").replace(/^Bearer\s+/i, "").replace(/\s+/g, "")
+    function of(DD) {
+      return DD.trim().replace(/^[A-Z_]+\s*=\s*/, "").replace(/^["'`]+|["'`]+$/g, "").replace(/^Bearer\s+/i, "").replace(/\s+/g, "")
     }
 
-    function wl(zz) {
-      return zz.startsWith("sk-or-") ? "openrouter" : zz.startsWith("sk-ant-") ? "anthropic" : zz.startsWith("AIza") ? "gemini" : zz.startsWith("sk-") ? "openai" : null
+    function vf(DD) {
+      return DD.startsWith("sk-or-") ? "openrouter" : DD.startsWith("sk-ant-") ? "anthropic" : DD.startsWith("AIza") ? "gemini" : DD.startsWith("sk-") ? "openai" : null
     }
 
-    function Xl(zz) {
-      let uz;
+    function Nf(DD) {
+      let CD;
       try {
-        uz = new URL(zz.trim())
+        CD = new URL(DD.trim())
       } catch {
         return null
       }
-      const bz = "localhost" === uz.hostname || "127.0.0.1" === uz.hostname;
-      return "https:" !== uz.protocol && ("http:" !== uz.protocol || !bz) || uz.username || uz.password || uz.search ? null : `${uz.origin}${uz.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
+      const cD = "localhost" === CD.hostname || "127.0.0.1" === CD.hostname;
+      return "https:" !== CD.protocol && ("http:" !== CD.protocol || !cD) || CD.username || CD.password || CD.search ? null : `${CD.origin}${CD.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
     }
 
-    function fl(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      return "custom" === zz && uz ? new URL(uz).host : bz ? Fl[zz].shortName : Fl[zz].name
+    function gf(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      return "custom" === DD && CD ? new URL(CD).host : cD ? Mf[DD].shortName : Mf[DD].name
     }
-    class sl extends Error {
-      constructor(zz, uz, bz, Ez) {
-        super(`AI key request: ${zz}`), this.problem = zz, this.retryAfterMs = uz, this.status = bz, this.detail = Ez
+    class Xf extends Error {
+      constructor(DD, CD, cD, ID) {
+        super(`AI key request: ${DD}`), this.problem = DD, this.retryAfterMs = CD, this.status = cD, this.detail = ID
       }
     }
 
-    function rl(zz, uz) {
-      return ("" === uz ? zz : zz.split(uz).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
+    function mf(DD, CD) {
+      return ("" === CD ? DD : DD.split(CD).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
     }
 
-    function ol(zz, uz) {
-      const bz = "custom" === uz ? "That server" : Fl[uz].shortName;
-      switch (zz) {
+    function nf(DD, CD) {
+      const cD = "custom" === CD ? "That server" : Mf[CD].shortName;
+      switch (DD) {
         case "badKey":
-          return `${bz} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
+          return `${cD} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
         case "busy":
           return "Too many requests right now. Wait a minute and try again.";
         case "noModel":
-          return `${bz} can't find that model. Check its name.`;
+          return `${cD} can't find that model. Check its name.`;
         case "unreachable":
-          return "anthropic" === uz ? "Claude didn't accept your key: check it, or make a new one." : "custom" === uz ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${bz}. Check your internet and try again.`;
+          return "anthropic" === CD ? "Claude didn't accept your key: check it, or make a new one." : "custom" === CD ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${cD}. Check your internet and try again.`;
         case "noCredit":
-          return "custom" === uz ? "That server stopped your key for now: it has used all it can." : `${bz} stopped your key for now: it has used all it can. Check it on ${bz}'s website.`;
+          return "custom" === CD ? "That server stopped your key for now: it has used all it can." : `${cD} stopped your key for now: it has used all it can. Check it on ${cD}'s website.`;
         case "blocked":
-          return `${bz} doesn't work from where you are.`;
+          return `${cD} doesn't work from where you are.`;
         case "timeout":
           return "That took too long. Try again.";
         default:
-          return `${bz} had a problem with that. Try again in a minute.`
+          return `${cD} had a problem with that. Try again in a minute.`
       }
     }
 
-    function Nl(zz) {
-      var uz;
-      const bz = zz.at(-1);
-      if (!bz || null !== tb(bz.name, bz.args) || function(zz) {
+    function Of(DD) {
+      var CD;
+      const cD = DD.at(-1);
+      if (!cD || null !== Qc(cD.name, cD.args) || function(DD) {
           try {
-            return JSON.parse(zz), !0
+            return JSON.parse(DD), !0
           } catch {
             return !1
           }
-        }(bz.args)) return;
-      const Ez = null === (uz = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(bz.args)) || void 0 === uz ? void 0 : uz[1];
+        }(cD.args)) return;
+      const ID = null === (CD = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(cD.args)) || void 0 === CD ? void 0 : CD[1];
       return {
-        name: bz.name || "write_file",
-        path: Ez
+        name: cD.name || "write_file",
+        path: ID
       }
     }
-    const vl = 1e4,
-      xl = 3e5,
-      Jl = 16e3;
-    async function Al(zz, uz, bz, Ez) {
-      if ("custom" !== zz && ! function(zz) {
-          return Rl.has(new URL(zz).host)
-        }(uz)) throw new Error(`AI key request to an unknown host for ${zz}`);
-      const nz = await fetch(uz, {
-        ...bz,
+    const Pf = 1e4,
+      Hf = 3e5,
+      Uf = 16e3;
+    async function xf(DD, CD, cD, ID) {
+      if ("custom" !== DD && ! function(DD) {
+          return Zf.has(new URL(DD).host)
+        }(CD)) throw new Error(`AI key request to an unknown host for ${DD}`);
+      const pD = await fetch(CD, {
+        ...cD,
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: Ez
+        signal: ID
       });
-      if (!nz.ok) {
-        const uz = await nz.text().catch((() => ""));
-        throw console.warn(`AI key request: ${zz} answered ${nz.status}`), new sl(function(zz, uz, bz) {
-          const Ez = !("gemini" === zz && 429 === uz) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(bz);
-          return 401 === uz ? "badKey" : 404 !== uz && 400 !== uz || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(bz) ? 402 === uz || (400 === uz || 403 === uz || 429 === uz) && Ez && !/rate[ _-]?limit/i.test(bz) ? "noCredit" : 400 === uz && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(bz) ? "blocked" : 400 === uz && /api[ _-]?key/i.test(bz) ? "badKey" : 403 === uz ? /moderat|flagged/i.test(bz) ? "refused" : /region|country|territor|location/i.test(bz) ? "blocked" : "badKey" : 429 === uz ? "busy" : "failed" : "noModel"
-        }(zz, nz.status, uz), function(zz) {
-          const uz = zz.headers.get("retry-after");
-          if (!uz) return;
-          const bz = Number(uz);
-          return Number.isFinite(bz) ? 1e3 * bz : Math.max(0, Date.parse(uz) - Date.now()) || void 0
-        }(nz), nz.status, function(zz, uz) {
-          let bz = zz;
+      if (!pD.ok) {
+        const CD = await pD.text().catch((() => ""));
+        throw console.warn(`AI key request: ${DD} answered ${pD.status}`), new Xf(function(DD, CD, cD) {
+          const ID = !("gemini" === DD && 429 === CD) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(cD);
+          return 401 === CD ? "badKey" : 404 !== CD && 400 !== CD || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(cD) ? 402 === CD || (400 === CD || 403 === CD || 429 === CD) && ID && !/rate[ _-]?limit/i.test(cD) ? "noCredit" : 400 === CD && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(cD) ? "blocked" : 400 === CD && /api[ _-]?key/i.test(cD) ? "badKey" : 403 === CD ? /moderat|flagged/i.test(cD) ? "refused" : /region|country|territor|location/i.test(cD) ? "blocked" : "badKey" : 429 === CD ? "busy" : "failed" : "noModel"
+        }(DD, pD.status, CD), function(DD) {
+          const CD = DD.headers.get("retry-after");
+          if (!CD) return;
+          const cD = Number(CD);
+          return Number.isFinite(cD) ? 1e3 * cD : Math.max(0, Date.parse(CD) - Date.now()) || void 0
+        }(pD), pD.status, function(DD, CD) {
+          let cD = DD;
           try {
-            const uz = JSON.parse(zz),
-              Ez = uz.error && "object" === typeof uz.error ? uz.error.message : void 0,
-              nz = [uz.error, Ez, uz.message].find((zz => "string" === typeof zz));
-            bz = "string" === typeof nz ? nz : zz
+            const CD = JSON.parse(DD),
+              ID = CD.error && "object" === typeof CD.error ? CD.error.message : void 0,
+              pD = [CD.error, ID, CD.message].find((DD => "string" === typeof DD));
+            cD = "string" === typeof pD ? pD : DD
           } catch {}
-          const Ez = uz.reduce(((zz, uz) => rl(zz, uz)), bz.replace(/\s+/g, " ").trim()).slice(0, 200);
-          return "" === Ez ? void 0 : Ez
-        }(uz, function(zz) {
-          const uz = [];
-          return new Headers(zz.headers).forEach(((zz, bz) => {
-            /authorization|key/i.test(bz) && uz.push(zz, zz.replace(/^Bearer\s+/i, ""))
-          })), uz.filter((zz => zz.length >= 6))
-        }(bz)))
+          const ID = CD.reduce(((DD, CD) => mf(DD, CD)), cD.replace(/\s+/g, " ").trim()).slice(0, 200);
+          return "" === ID ? void 0 : ID
+        }(CD, function(DD) {
+          const CD = [];
+          return new Headers(DD.headers).forEach(((DD, cD) => {
+            /authorization|key/i.test(cD) && CD.push(DD, DD.replace(/^Bearer\s+/i, ""))
+          })), CD.filter((DD => DD.length >= 6))
+        }(cD)))
       }
-      return nz
+      return pD
     }
-    async function Tl(zz, uz, bz) {
-      const Ez = (0, wz.c)(zz, uz);
+    async function qf(DD, CD, cD) {
+      const ID = (0, vD.e)(DD, CD);
       try {
-        return await bz(Ez.signal)
-      } catch (nz) {
-        if (nz instanceof sl || null !== uz && void 0 !== uz && uz.aborted) throw nz;
-        throw Ez.signal.aborted || console.warn("AI key request couldn't be read", nz), new sl(Ez.signal.aborted ? "timeout" : "unreachable")
+        return await cD(ID.signal)
+      } catch (pD) {
+        if (pD instanceof Xf || null !== CD && void 0 !== CD && CD.aborted) throw pD;
+        throw ID.signal.aborted || console.warn("AI key request couldn't be read", pD), new Xf(ID.signal.aborted ? "timeout" : "unreachable")
       } finally {
-        Ez.clear()
+        ID.clear()
       }
     }
 
-    function Ll(zz) {
-      let uz = zz.length;
-      const bz = zz.lastIndexOf("<tool_call"); - 1 === bz || zz.includes("</tool_call>", bz) || (uz = bz);
-      const Ez = [...zz.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((uz => null === function(zz, uz) {
-        let bz = 0,
-          Ez = !1;
-        for (let nz = uz; nz < zz.length; nz++) {
-          const uz = zz[nz];
-          if (Ez) "\\" === uz ? nz++ : '"' === uz && (Ez = !1);
-          else if ('"' === uz) Ez = !0;
-          else if ("{" === uz) bz++;
-          else if ("}" === uz && (bz--, 0 === bz)) return nz + 1
+    function Jf(DD) {
+      let CD = DD.length;
+      const cD = DD.lastIndexOf("<tool_call"); - 1 === cD || DD.includes("</tool_call>", cD) || (CD = cD);
+      const ID = [...DD.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((CD => null === function(DD, CD) {
+        let cD = 0,
+          ID = !1;
+        for (let pD = CD; pD < DD.length; pD++) {
+          const CD = DD[pD];
+          if (ID) "\\" === CD ? pD++ : '"' === CD && (ID = !1);
+          else if ('"' === CD) ID = !0;
+          else if ("{" === CD) cD++;
+          else if ("}" === CD && (cD--, 0 === cD)) return pD + 1
         }
         return null
-      }(zz, uz.index)));
-      return Ez && Ez.index < uz && (uz = Ez.index), zz.slice(0, uz).replace(/```[\w-]*\s*$/, "").trim()
+      }(DD, CD.index)));
+      return ID && ID.index < CD && (CD = ID.index), DD.slice(0, CD).replace(/```[\w-]*\s*$/, "").trim()
     }
 
-    function Pl(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
-        Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+    function Kf(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
+        ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
       const {
-        answer: nz,
-        reasoning: iz,
-        Abz: lz,
-        isCutShort: Mz,
-        nativeCalls: tz = []
-      } = uz, Hz = nz.replace(/<think>[\s\S]*?<\/think>/g, ""), Oz = "" === Ez ? Hz.trim() : function(zz, uz) {
-        var bz, Ez;
-        const nz = uz.trimStart(),
-          iz = zz.trimStart();
-        if (iz.length >= 16 && nz.startsWith(iz.slice(0, 240))) return nz;
-        const lz = null !== (bz = null === (Ez = zz.match(/```/g)) || void 0 === Ez ? void 0 : Ez.length) && void 0 !== bz ? bz : 0,
-          Mz = Ll(zz) !== zz.trim() || lz % 2 === 1 ? 48 : 16;
-        for (let tz = Math.min(zz.length, nz.length, 4e3); tz >= Mz; tz--)
-          if (zz.endsWith(nz.slice(0, tz))) return zz + nz.slice(tz);
-        return zz + uz
-      }(Ez, Hz).trim(), pz = si(Oz, "", tz, bz), dz = si(Mz ? Ll(Oz) : Oz, iz, tz, bz, Mz), Fz = Mz ? Nl(tz) : void 0;
-      if (lz && "" === dz) throw new sl("refused");
-      if ("" === dz && (!Mz || "" === pz && !Fz)) throw new sl("failed");
+        answer: pD,
+        reasoning: iD,
+        qcD: fD,
+        isCutShort: bD,
+        nativeCalls: QD = []
+      } = CD, wD = pD.replace(/<think>[\s\S]*?<\/think>/g, ""), SD = "" === ID ? wD.trim() : function(DD, CD) {
+        var cD, ID;
+        const pD = CD.trimStart(),
+          iD = DD.trimStart();
+        if (iD.length >= 16 && pD.startsWith(iD.slice(0, 240))) return pD;
+        const fD = null !== (cD = null === (ID = DD.match(/```/g)) || void 0 === ID ? void 0 : ID.length) && void 0 !== cD ? cD : 0,
+          bD = Jf(DD) !== DD.trim() || fD % 2 === 1 ? 48 : 16;
+        for (let QD = Math.min(DD.length, pD.length, 4e3); QD >= bD; QD--)
+          if (DD.endsWith(pD.slice(0, QD))) return DD + pD.slice(QD);
+        return DD + CD
+      }(ID, wD).trim(), BD = Ni(SD, "", QD, cD), yD = Ni(bD ? Jf(SD) : SD, iD, QD, cD, bD), MD = bD ? Of(QD) : void 0;
+      if (fD && "" === yD) throw new Xf("refused");
+      if ("" === yD && (!bD || "" === BD && !MD)) throw new Xf("failed");
       return {
-        model: zz,
-        answer: dz,
-        reasoning: iz,
-        isCutShort: Mz,
-        written: Mz ? pz : void 0,
-        cutCall: Fz
+        model: DD,
+        answer: yD,
+        reasoning: iD,
+        isCutShort: bD,
+        written: bD ? BD : void 0,
+        cutCall: MD
       }
     }
 
-    function Gl(zz) {
-      const uz = zz.findIndex((zz => "user" === zz.role));
-      return -1 === uz ? [] : zz.slice(uz)
+    function af(DD) {
+      const CD = DD.findIndex((DD => "user" === DD.role));
+      return -1 === CD ? [] : DD.slice(CD)
     }
 
-    function al(zz, uz) {
-      var bz;
-      const Ez = null !== (bz = uz.tools) && void 0 !== bz ? bz : [];
-      if (0 === Ez.length) return {};
-      switch (zz) {
+    function Vf(DD, CD) {
+      var cD;
+      const ID = null !== (cD = CD.tools) && void 0 !== cD ? cD : [];
+      if (0 === ID.length) return {};
+      switch (DD) {
         case "openai":
           return {
-            tools: Ni(Ez)
+            tools: mi(ID)
           };
         case "anthropic":
           return {
-            tools: Ez.map((zz => ({
-              name: zz.name,
-              description: zz.description,
-              input_schema: zz.inputSchema
+            tools: ID.map((DD => ({
+              name: DD.name,
+              description: DD.description,
+              input_schema: DD.inputSchema
             })))
           };
         case "gemini":
           return {
             tools: [{
-              functionDeclarations: Ez.map((zz => {
+              functionDeclarations: ID.map((DD => {
                 return {
-                  name: zz.name,
-                  description: zz.description,
-                  parameters: (uz = zz.inputSchema, {
+                  name: DD.name,
+                  description: DD.description,
+                  parameters: (CD = DD.inputSchema, {
                     type: "OBJECT",
-                    properties: Object.fromEntries(Object.entries(uz.properties).map((zz => {
-                      let [uz, bz] = zz;
-                      return [uz, {
+                    properties: Object.fromEntries(Object.entries(CD.properties).map((DD => {
+                      let [CD, cD] = DD;
+                      return [CD, {
                         type: "STRING",
-                        description: bz.description
+                        description: cD.description
                       }]
                     }))),
-                    required: uz.required
+                    required: CD.required
                   })
                 };
-                var uz
+                var CD
               }))
             }]
           }
       }
     }
-    class Vl {
-      constructor(zz, uz, bz) {
-        this.provider = zz, this.baseUrl = uz, this.key = bz
+    class zf {
+      constructor(DD, CD, cD) {
+        this.provider = DD, this.baseUrl = CD, this.key = cD
       }
-      async check(zz) {
-        return Tl(vl, zz, (async zz => {
-          var uz;
-          const bz = await Al(this.provider, `${this.baseUrl}/models`, {
+      async check(DD) {
+        return qf(Pf, DD, (async DD => {
+          var CD;
+          const cD = await xf(this.provider, `${this.baseUrl}/models`, {
             headers: this.headers()
-          }, zz);
+          }, DD);
           return {
-            models: (null !== (uz = (await bz.json()).data) && void 0 !== uz ? uz : []).map((zz => ({
-              id: zz.id,
-              name: zz.name
+            models: (null !== (CD = (await cD.json()).data) && void 0 !== CD ? CD : []).map((DD => ({
+              id: DD.id,
+              name: DD.name
             })))
           }
         }))
       }
-      async ask(zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return Tl(xl, bz.signal, (async Ez => {
-          var nz;
-          const iz = await Al(this.provider, `${this.baseUrl}/chat/completions`, {
+      async ask(DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return qf(Hf, cD.signal, (async ID => {
+          var pD;
+          const iD = await xf(this.provider, `${this.baseUrl}/chat/completions`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
-              model: zz,
-              messages: uz,
-              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: Jl,
+              model: DD,
+              messages: CD,
+              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: Uf,
               stream: !0,
-              ...al("openai", bz)
+              ...Vf("openai", cD)
             })
-          }, Ez);
-          let lz = "",
-            Mz = "",
-            tz = !1,
-            Hz = !1;
-          const Oz = [];
-          return await oi(null !== (nz = iz.body) && void 0 !== nz ? nz : new ReadableStream, (uz => {
-            var Ez, nz, iz, pz, dz, Fz, Zz, Rz;
-            const Kz = uz;
-            if (Kz.error) throw new sl(402 === Number(Kz.error.code) ? "noCredit" : "failed");
-            const wz = null === (Ez = Kz.choices) || void 0 === Ez ? void 0 : Ez[0];
-            Mz += null !== (nz = null !== (iz = null === wz || void 0 === wz || null === (pz = wz.delta) || void 0 === pz ? void 0 : pz.reasoning) && void 0 !== iz ? iz : null === wz || void 0 === wz || null === (dz = wz.delta) || void 0 === dz ? void 0 : dz.reasoning_content) && void 0 !== nz ? nz : "", lz += null !== (Fz = null === wz || void 0 === wz || null === (Zz = wz.delta) || void 0 === Zz ? void 0 : Zz.content) && void 0 !== Fz ? Fz : "";
-            for (const zz of null !== (Xz = null === wz || void 0 === wz || null === (fz = wz.delta) || void 0 === fz ? void 0 : fz.tool_calls) && void 0 !== Xz ? Xz : []) {
-              var Xz, fz;
-              Xi(Oz, zz)
+          }, ID);
+          let fD = "",
+            bD = "",
+            QD = !1,
+            wD = !1;
+          const SD = [];
+          return await Xi(null !== (pD = iD.body) && void 0 !== pD ? pD : new ReadableStream, (CD => {
+            var ID, pD, iD, BD, yD, MD, tD, ZD;
+            const oD = CD;
+            if (oD.error) throw new Xf(402 === Number(oD.error.code) ? "noCredit" : "failed");
+            const vD = null === (ID = oD.choices) || void 0 === ID ? void 0 : ID[0];
+            bD += null !== (pD = null !== (iD = null === vD || void 0 === vD || null === (BD = vD.delta) || void 0 === BD ? void 0 : BD.reasoning) && void 0 !== iD ? iD : null === vD || void 0 === vD || null === (yD = vD.delta) || void 0 === yD ? void 0 : yD.reasoning_content) && void 0 !== pD ? pD : "", fD += null !== (MD = null === vD || void 0 === vD || null === (tD = vD.delta) || void 0 === tD ? void 0 : tD.content) && void 0 !== MD ? MD : "";
+            for (const DD of null !== (ND = null === vD || void 0 === vD || null === (gD = vD.delta) || void 0 === gD ? void 0 : gD.tool_calls) && void 0 !== ND ? ND : []) {
+              var ND, gD;
+              oi(SD, DD)
             }
-            tz ||= "content_filter" === (null === wz || void 0 === wz ? void 0 : wz.finish_reason), Hz ||= "length" === (null === wz || void 0 === wz ? void 0 : wz.finish_reason), null === (Rz = bz.onProgress) || void 0 === Rz || Rz.call(bz, {
-              model: zz,
-              reasoningChars: Mz.length,
-              answer: lz,
-              isCalling: Oz.length > 0
+            QD ||= "content_filter" === (null === vD || void 0 === vD ? void 0 : vD.finish_reason), wD ||= "length" === (null === vD || void 0 === vD ? void 0 : vD.finish_reason), null === (ZD = cD.onProgress) || void 0 === ZD || ZD.call(cD, {
+              model: DD,
+              reasoningChars: bD.length,
+              answer: fD,
+              isCalling: SD.length > 0
             })
-          })), Pl(zz, {
-            answer: lz,
-            reasoning: Mz,
-            Abz: tz,
-            isCutShort: Hz,
-            nativeCalls: Oz
-          }, bz.callFormat, bz.continueFrom)
+          })), Kf(DD, {
+            answer: fD,
+            reasoning: bD,
+            qcD: QD,
+            isCutShort: wD,
+            nativeCalls: SD
+          }, cD.callFormat, cD.continueFrom)
         }))
       }
       headers() {
@@ -7392,99 +7392,99 @@ export const modules = {
         }
       }
     }
-    class ml {
-      constructor(zz) {
-        this.key = zz, this.chat = void 0, this.chat = new Vl("openrouter", Fl.openrouter.baseUrl, zz)
+    class jf {
+      constructor(DD) {
+        this.key = DD, this.chat = void 0, this.chat = new zf("openrouter", Mf.openrouter.baseUrl, DD)
       }
-      async check(zz) {
-        return await Tl(vl, zz, (async zz => Al("openrouter", `${Fl.openrouter.baseUrl}/key`, {
+      async check(DD) {
+        return await qf(Pf, DD, (async DD => xf("openrouter", `${Mf.openrouter.baseUrl}/key`, {
           headers: {
             Authorization: `Bearer ${this.key}`
           }
-        }, zz))), this.chat.check(zz)
+        }, DD))), this.chat.check(DD)
       }
-      ask(zz, uz, bz) {
-        return this.chat.ask(zz, uz, bz)
+      ask(DD, CD, cD) {
+        return this.chat.ask(DD, CD, cD)
       }
     }
-    class ql {
-      constructor(zz) {
-        this.key = zz, this.baseUrl = Fl.anthropic.baseUrl
+    class lf {
+      constructor(DD) {
+        this.key = DD, this.baseUrl = Mf.anthropic.baseUrl
       }
-      async check(zz) {
-        return Tl(vl, zz, (async zz => {
-          var uz;
-          const bz = await Al("anthropic", `${this.baseUrl}/models?limit=1000`, {
+      async check(DD) {
+        return qf(Pf, DD, (async DD => {
+          var CD;
+          const cD = await xf("anthropic", `${this.baseUrl}/models?limit=1000`, {
             headers: this.headers()
-          }, zz);
+          }, DD);
           return {
-            models: (null !== (uz = (await bz.json()).data) && void 0 !== uz ? uz : []).map((zz => ({
-              id: zz.id,
-              name: zz.display_name
+            models: (null !== (CD = (await cD.json()).data) && void 0 !== CD ? CD : []).map((DD => ({
+              id: DD.id,
+              name: DD.display_name
             })))
           }
         }))
       }
-      async ask(zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Ez = uz.filter((zz => "system" === zz.role)).map((zz => zz.content)).join("\n\n"),
-          nz = Gl(uz).map((zz => ({
-            role: zz.role,
-            content: zz.content
+      async ask(DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const ID = CD.filter((DD => "system" === DD.role)).map((DD => DD.content)).join("\n\n"),
+          pD = af(CD).map((DD => ({
+            role: DD.role,
+            content: DD.content
           })));
-        return Tl(xl, bz.signal, (async uz => {
-          var iz;
-          const lz = await Al("anthropic", `${this.baseUrl}/messages`, {
+        return qf(Hf, cD.signal, (async CD => {
+          var iD;
+          const fD = await xf("anthropic", `${this.baseUrl}/messages`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
-              model: zz,
-              max_tokens: Jl,
-              system: Ez,
-              messages: nz,
+              model: DD,
+              max_tokens: Uf,
+              system: ID,
+              messages: pD,
               stream: !0,
-              ...al("anthropic", bz)
+              ...Vf("anthropic", cD)
             })
-          }, uz);
-          let Mz = "",
-            tz = "",
-            Hz = !1,
-            Oz = !1;
-          const pz = new Map;
-          await oi(null !== (iz = lz.body) && void 0 !== iz ? iz : new ReadableStream, (uz => {
-            var Ez, nz;
-            const iz = uz;
-            var lz, dz, Fz, Zz;
-            if ("error" === iz.type) throw new sl("overloaded_error" === (null === (lz = iz.error) || void 0 === lz ? void 0 : lz.type) || "rate_limit_error" === (null === (dz = iz.error) || void 0 === dz ? void 0 : dz.type) ? "busy" : "failed");
-            if ("content_block_start" === iz.type && "tool_use" === (null === (Ez = iz.content_block) || void 0 === Ez ? void 0 : Ez.type)) pz.set(null !== (Fz = iz.index) && void 0 !== Fz ? Fz : pz.size, {
-              name: null !== (Zz = iz.content_block.name) && void 0 !== Zz ? Zz : "",
+          }, CD);
+          let bD = "",
+            QD = "",
+            wD = !1,
+            SD = !1;
+          const BD = new Map;
+          await Xi(null !== (iD = fD.body) && void 0 !== iD ? iD : new ReadableStream, (CD => {
+            var ID, pD;
+            const iD = CD;
+            var fD, yD, MD, tD;
+            if ("error" === iD.type) throw new Xf("overloaded_error" === (null === (fD = iD.error) || void 0 === fD ? void 0 : fD.type) || "rate_limit_error" === (null === (yD = iD.error) || void 0 === yD ? void 0 : yD.type) ? "busy" : "failed");
+            if ("content_block_start" === iD.type && "tool_use" === (null === (ID = iD.content_block) || void 0 === ID ? void 0 : ID.type)) BD.set(null !== (MD = iD.index) && void 0 !== MD ? MD : BD.size, {
+              name: null !== (tD = iD.content_block.name) && void 0 !== tD ? tD : "",
               args: ""
             });
-            else if ("content_block_delta" === iz.type) {
-              var Rz, Kz, wz, Xz, fz, sz;
-              Mz += null !== (Rz = null === (Kz = iz.delta) || void 0 === Kz ? void 0 : Kz.text) && void 0 !== Rz ? Rz : "", tz += null !== (wz = null === (Xz = iz.delta) || void 0 === Xz ? void 0 : Xz.thinking) && void 0 !== wz ? wz : "";
-              const zz = pz.get(null !== (fz = iz.index) && void 0 !== fz ? fz : -1);
-              var rz;
-              if (zz && "input_json_delta" === (null === (sz = iz.delta) || void 0 === sz ? void 0 : sz.type)) zz.args += null !== (rz = iz.delta.partial_json) && void 0 !== rz ? rz : ""
-            } else if ("message_delta" === iz.type) {
-              var oz, Nz;
-              Hz ||= "refusal" === (null === (oz = iz.delta) || void 0 === oz ? void 0 : oz.stop_reason), Oz ||= "max_tokens" === (null === (Nz = iz.delta) || void 0 === Nz ? void 0 : Nz.stop_reason)
+            else if ("content_block_delta" === iD.type) {
+              var ZD, oD, vD, ND, gD, XD;
+              bD += null !== (ZD = null === (oD = iD.delta) || void 0 === oD ? void 0 : oD.text) && void 0 !== ZD ? ZD : "", QD += null !== (vD = null === (ND = iD.delta) || void 0 === ND ? void 0 : ND.thinking) && void 0 !== vD ? vD : "";
+              const DD = BD.get(null !== (gD = iD.index) && void 0 !== gD ? gD : -1);
+              var mD;
+              if (DD && "input_json_delta" === (null === (XD = iD.delta) || void 0 === XD ? void 0 : XD.type)) DD.args += null !== (mD = iD.delta.partial_json) && void 0 !== mD ? mD : ""
+            } else if ("message_delta" === iD.type) {
+              var nD, OD;
+              wD ||= "refusal" === (null === (nD = iD.delta) || void 0 === nD ? void 0 : nD.stop_reason), SD ||= "max_tokens" === (null === (OD = iD.delta) || void 0 === OD ? void 0 : OD.stop_reason)
             }
-            null === (nz = bz.onProgress) || void 0 === nz || nz.call(bz, {
-              model: zz,
-              reasoningChars: tz.length,
-              answer: Mz,
-              isCalling: pz.size > 0
+            null === (pD = cD.onProgress) || void 0 === pD || pD.call(cD, {
+              model: DD,
+              reasoningChars: QD.length,
+              answer: bD,
+              isCalling: BD.size > 0
             })
           }));
-          const dz = [...pz.values()];
-          return Pl(zz, {
-            answer: Mz,
-            reasoning: tz,
-            Abz: Hz,
-            isCutShort: Oz,
-            nativeCalls: dz
-          }, bz.callFormat, bz.continueFrom)
+          const yD = [...BD.values()];
+          return Kf(DD, {
+            answer: bD,
+            reasoning: QD,
+            qcD: wD,
+            isCutShort: SD,
+            nativeCalls: yD
+          }, cD.callFormat, cD.continueFrom)
         }))
       }
       headers() {
@@ -7496,90 +7496,90 @@ export const modules = {
         }
       }
     }
-    class hl {
-      constructor(zz) {
-        this.key = zz, this.baseUrl = Fl.gemini.baseUrl
+    class Lf {
+      constructor(DD) {
+        this.key = DD, this.baseUrl = Mf.gemini.baseUrl
       }
-      async check(zz) {
-        return Tl(vl, zz, (async zz => {
-          var uz;
-          const bz = await Al("gemini", `${this.baseUrl}/models?pageSize=1000`, {
+      async check(DD) {
+        return qf(Pf, DD, (async DD => {
+          var CD;
+          const cD = await xf("gemini", `${this.baseUrl}/models?pageSize=1000`, {
             headers: this.headers()
-          }, zz);
+          }, DD);
           return {
-            models: (null !== (uz = (await bz.json()).models) && void 0 !== uz ? uz : []).filter((zz => {
-              var uz, bz;
-              return null === (uz = null === (bz = zz.supportedGenerationMethods) || void 0 === bz ? void 0 : bz.includes("generateContent")) || void 0 === uz || uz
-            })).map((zz => ({
-              id: zz.name.replace(/^models\//, ""),
-              name: zz.displayName
+            models: (null !== (CD = (await cD.json()).models) && void 0 !== CD ? CD : []).filter((DD => {
+              var CD, cD;
+              return null === (CD = null === (cD = DD.supportedGenerationMethods) || void 0 === cD ? void 0 : cD.includes("generateContent")) || void 0 === CD || CD
+            })).map((DD => ({
+              id: DD.name.replace(/^models\//, ""),
+              name: DD.displayName
             })))
           }
         }))
       }
-      async ask(zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Ez = uz.filter((zz => "system" === zz.role)).map((zz => ({
-            text: zz.content
+      async ask(DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const ID = CD.filter((DD => "system" === DD.role)).map((DD => ({
+            text: DD.content
           }))),
-          nz = Gl(uz).map((zz => ({
-            role: "assistant" === zz.role ? "model" : "user",
+          pD = af(CD).map((DD => ({
+            role: "assistant" === DD.role ? "model" : "user",
             parts: [{
-              text: zz.content
+              text: DD.content
             }]
           })));
-        return Tl(xl, bz.signal, (async uz => {
-          var iz;
-          const lz = await Al("gemini", `${this.baseUrl}/models/${encodeURIComponent(zz)}:streamGenerateContent?alt=sse`, {
+        return qf(Hf, cD.signal, (async CD => {
+          var iD;
+          const fD = await xf("gemini", `${this.baseUrl}/models/${encodeURIComponent(DD)}:streamGenerateContent?alt=sse`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
               systemInstruction: {
-                parts: Ez
+                parts: ID
               },
-              contents: nz,
+              contents: pD,
               generationConfig: {
-                maxOutputTokens: Jl
+                maxOutputTokens: Uf
               },
-              ...al("gemini", bz)
+              ...Vf("gemini", cD)
             })
-          }, uz);
-          let Mz = "",
-            tz = "",
-            Hz = !1,
-            Oz = !1;
-          const pz = [];
-          return await oi(null !== (iz = lz.body) && void 0 !== iz ? iz : new ReadableStream, (uz => {
-            var Ez, nz, iz;
-            const lz = uz,
-              dz = null === (Ez = lz.candidates) || void 0 === Ez ? void 0 : Ez[0];
-            for (const zz of null !== (Fz = null === dz || void 0 === dz || null === (Zz = dz.content) || void 0 === Zz ? void 0 : Zz.parts) && void 0 !== Fz ? Fz : []) {
-              var Fz, Zz, Rz, Kz;
-              if (zz.functionCall) pz.push({
-                name: null !== (Rz = zz.functionCall.name) && void 0 !== Rz ? Rz : "",
-                args: JSON.stringify(null !== (Kz = zz.functionCall.args) && void 0 !== Kz ? Kz : {})
+          }, CD);
+          let bD = "",
+            QD = "",
+            wD = !1,
+            SD = !1;
+          const BD = [];
+          return await Xi(null !== (iD = fD.body) && void 0 !== iD ? iD : new ReadableStream, (CD => {
+            var ID, pD, iD;
+            const fD = CD,
+              yD = null === (ID = fD.candidates) || void 0 === ID ? void 0 : ID[0];
+            for (const DD of null !== (MD = null === yD || void 0 === yD || null === (tD = yD.content) || void 0 === tD ? void 0 : tD.parts) && void 0 !== MD ? MD : []) {
+              var MD, tD, ZD, oD;
+              if (DD.functionCall) BD.push({
+                name: null !== (ZD = DD.functionCall.name) && void 0 !== ZD ? ZD : "",
+                args: JSON.stringify(null !== (oD = DD.functionCall.args) && void 0 !== oD ? oD : {})
               });
-              else if (zz.thought) {
-                var wz;
-                tz += null !== (wz = zz.text) && void 0 !== wz ? wz : ""
+              else if (DD.thought) {
+                var vD;
+                QD += null !== (vD = DD.text) && void 0 !== vD ? vD : ""
               } else {
-                var Xz;
-                Mz += null !== (Xz = zz.text) && void 0 !== Xz ? Xz : ""
+                var ND;
+                bD += null !== (ND = DD.text) && void 0 !== ND ? ND : ""
               }
             }
-            Hz ||= void 0 !== (null === (nz = lz.promptFeedback) || void 0 === nz ? void 0 : nz.blockReason) || "SAFETY" === (null === dz || void 0 === dz ? void 0 : dz.finishReason) || "PROHIBITED_CONTENT" === (null === dz || void 0 === dz ? void 0 : dz.finishReason), Oz ||= "MAX_TOKENS" === (null === dz || void 0 === dz ? void 0 : dz.finishReason), null === (iz = bz.onProgress) || void 0 === iz || iz.call(bz, {
-              model: zz,
-              reasoningChars: tz.length,
-              answer: Mz,
-              isCalling: pz.length > 0
+            wD ||= void 0 !== (null === (pD = fD.promptFeedback) || void 0 === pD ? void 0 : pD.blockReason) || "SAFETY" === (null === yD || void 0 === yD ? void 0 : yD.finishReason) || "PROHIBITED_CONTENT" === (null === yD || void 0 === yD ? void 0 : yD.finishReason), SD ||= "MAX_TOKENS" === (null === yD || void 0 === yD ? void 0 : yD.finishReason), null === (iD = cD.onProgress) || void 0 === iD || iD.call(cD, {
+              model: DD,
+              reasoningChars: QD.length,
+              answer: bD,
+              isCalling: BD.length > 0
             })
-          })), Pl(zz, {
-            answer: Mz,
-            reasoning: tz,
-            Abz: Hz,
-            isCutShort: Oz,
-            nativeCalls: pz
-          }, bz.callFormat, bz.continueFrom)
+          })), Kf(DD, {
+            answer: bD,
+            reasoning: QD,
+            qcD: wD,
+            isCutShort: SD,
+            nativeCalls: BD
+          }, cD.callFormat, cD.continueFrom)
         }))
       }
       headers() {
@@ -7590,26 +7590,26 @@ export const modules = {
       }
     }
 
-    function Ul(zz, uz, bz) {
-      switch (zz) {
+    function Tf(DD, CD, cD) {
+      switch (DD) {
         case "openrouter":
-          return new ml(uz);
+          return new jf(CD);
         case "anthropic":
-          return new ql(uz);
+          return new lf(CD);
         case "gemini":
-          return new hl(uz);
+          return new Lf(CD);
         case "openai":
-          return new Vl("openai", Fl.openai.baseUrl, uz);
+          return new zf("openai", Mf.openai.baseUrl, CD);
         case "custom":
-          return new Vl("custom", null !== bz && void 0 !== bz ? bz : "", uz)
+          return new zf("custom", null !== cD && void 0 !== cD ? cD : "", CD)
       }
     }
-    const cl = {
+    const Gf = {
         fast: "Fast",
         smart: "Smart",
         smartest: "Smartest"
       },
-      gl = {
+      Rf = {
         anthropic: {
           fast: [{
             id: "claude-haiku-5-5",
@@ -7716,436 +7716,436 @@ export const modules = {
         }
       };
 
-    function Sl(zz) {
-      return /claude-(sonnet|opus|fable)|gpt-5(\.\d+)?($|-codex|-pro|-sol)|gpt-6(\.\d+)?-(sol|astra)|gemini-[\d.]+-pro|gemini-4/.test(zz) ? "mcp" : "simple"
+    function kf(DD) {
+      return /claude-(sonnet|opus|fable)|gpt-5(\.\d+)?($|-codex|-pro|-sol)|gpt-6(\.\d+)?-(sol|astra)|gemini-[\d.]+-pro|gemini-4/.test(DD) ? "mcp" : "simple"
     }
 
-    function yl(zz, uz) {
-      return "custom" !== zz && /claude-|gpt-|gemini-/.test(uz)
+    function df(DD, CD) {
+      return "custom" !== DD && /claude-|gpt-|gemini-/.test(CD)
     }
 
-    function Dl(zz, uz, bz) {
-      var Ez;
-      const nz = bz.find((zz => zz.id === uz));
+    function Yf(DD, CD, cD) {
+      var ID;
+      const pD = cD.find((DD => DD.id === CD));
       return {
-        id: uz,
-        name: null !== (Ez = null === nz || void 0 === nz ? void 0 : nz.name) && void 0 !== Ez ? Ez : uz,
-        callFormat: Sl(uz),
-        nativeTools: yl(zz, uz)
+        id: CD,
+        name: null !== (ID = null === pD || void 0 === pD ? void 0 : pD.name) && void 0 !== ID ? ID : CD,
+        callFormat: kf(CD),
+        nativeTools: df(DD, CD)
       }
     }
 
-    function Ql(zz, uz) {
-      return "custom" !== zz ? function(zz, uz) {
-        if ("custom" === zz) return [];
-        const bz = new Set(uz.map((zz => zz.id))),
-          Ez = gl[zz];
-        return Object.keys(Ez).flatMap((nz => {
-          const iz = Ez[nz].find((zz => bz.has(zz.id)));
-          return iz ? [{
-            ...Dl(zz, iz.id, uz),
-            name: iz.name,
-            tier: nz
+    function Wf(DD, CD) {
+      return "custom" !== DD ? function(DD, CD) {
+        if ("custom" === DD) return [];
+        const cD = new Set(CD.map((DD => DD.id))),
+          ID = Rf[DD];
+        return Object.keys(ID).flatMap((pD => {
+          const iD = ID[pD].find((DD => cD.has(DD.id)));
+          return iD ? [{
+            ...Yf(DD, iD.id, CD),
+            name: iD.name,
+            tier: pD
           }] : []
         }))
-      }(zz, uz) : uz.slice(0, 20).map((bz => Dl(zz, bz.id, uz)))
+      }(DD, CD) : CD.slice(0, 20).map((cD => Yf(DD, cD.id, CD)))
     }
 
-    function Wl(zz) {
-      var uz;
-      return null !== (uz = zz.find((zz => "smart" === zz.tier))) && void 0 !== uz ? uz : zz[0]
+    function sf(DD) {
+      var CD;
+      return null !== (CD = DD.find((DD => "smart" === DD.tier))) && void 0 !== CD ? CD : DD[0]
     }
 
-    function el(zz) {
-      var uz;
-      let bz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      return null !== (uz = zz.name) && void 0 !== uz ? uz : fl(zz.provider, zz.baseUrl, bz)
+    function Ef(DD) {
+      var CD;
+      let cD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      return null !== (CD = DD.name) && void 0 !== CD ? CD : gf(DD.provider, DD.baseUrl, cD)
     }
-    const jl = "bloxdAiHelperKeys",
-      Il = {
+    const ef = "bloxdAiHelperKeys",
+      uf = {
         keys: [],
         selected: null,
         remember: !1
       };
 
-    function Bl(zz, uz) {
-      return zz.id === uz.id || "custom" === zz.provider && "custom" === uz.provider && zz.baseUrl === uz.baseUrl
+    function hf(DD, CD) {
+      return DD.id === CD.id || "custom" === DD.provider && "custom" === CD.provider && DD.baseUrl === CD.baseUrl
     }
 
-    function Cl(zz) {
-      if ("custom" !== zz.provider) return !0;
+    function rf(DD) {
+      if ("custom" !== DD.provider) return !0;
       try {
-        var uz;
-        return new URL(null !== (uz = zz.baseUrl) && void 0 !== uz ? uz : "").protocol.startsWith("http")
+        var CD;
+        return new URL(null !== (CD = DD.baseUrl) && void 0 !== CD ? CD : "").protocol.startsWith("http")
       } catch {
         return !1
       }
     }
 
-    function Yl(zz) {
+    function Af(DD) {
       try {
-        return "undefined" === typeof window ? null : window[zz]
-      } catch (uz) {
-        return console.warn(`AI Helper: no ${zz}`, uz), null
+        return "undefined" === typeof window ? null : window[DD]
+      } catch (CD) {
+        return console.warn(`AI Helper: no ${DD}`, CD), null
       }
     }
-    const kl = new class {
-      constructor(zz, uz) {
-        var bz;
-        this.session = zz, this.local = uz, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = zz => (this.listeners.add(zz), () => {
-          this.listeners.delete(zz)
+    const Ff = new class {
+      constructor(DD, CD) {
+        var cD;
+        this.session = DD, this.local = CD, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = DD => (this.listeners.add(DD), () => {
+          this.listeners.delete(DD)
         });
-        for (const iz of [zz, uz]) null !== iz && void 0 !== iz && iz.getItem(jl) && !this.read(iz) && iz.removeItem(jl);
-        const Ez = this.read(zz),
-          nz = this.read(uz);
-        this.state = null !== Ez && void 0 !== Ez && Ez.remember ? null !== nz && void 0 !== nz && nz.remember ? nz : {
-          ...Ez,
+        for (const iD of [DD, CD]) null !== iD && void 0 !== iD && iD.getItem(ef) && !this.read(iD) && iD.removeItem(ef);
+        const ID = this.read(DD),
+          pD = this.read(CD);
+        this.state = null !== ID && void 0 !== ID && ID.remember ? null !== pD && void 0 !== pD && pD.remember ? pD : {
+          ...ID,
           remember: !1
-        } : null !== (bz = null !== Ez && void 0 !== Ez ? Ez : nz) && void 0 !== bz ? bz : Il, this.ownsRemembered = this.state.remember && null !== nz
+        } : null !== (cD = null !== ID && void 0 !== ID ? ID : pD) && void 0 !== cD ? cD : uf, this.ownsRemembered = this.state.remember && null !== pD
       }
       nextUsedAt() {
         return this.lastUsedAt = Math.max(Date.now(), this.lastUsedAt + 1), this.lastUsedAt
       }
       activeKey() {
-        const zz = this.state.selected,
-          uz = zz ? this.state.keys.find((uz => uz.id === zz.keyId)) : void 0,
-          bz = null === uz || void 0 === uz ? void 0 : uz.models.find((uz => uz.id === (null === zz || void 0 === zz ? void 0 : zz.modelId)));
-        return uz && bz ? {
-          ...uz,
-          model: bz
+        const DD = this.state.selected,
+          CD = DD ? this.state.keys.find((CD => CD.id === DD.keyId)) : void 0,
+          cD = null === CD || void 0 === CD ? void 0 : CD.models.find((CD => CD.id === (null === DD || void 0 === DD ? void 0 : DD.modelId)));
+        return CD && cD ? {
+          ...CD,
+          model: cD
         } : null
       }
-      addKey(zz, uz, bz) {
-        var Ez, nz, iz;
-        const lz = this.state.keys.find((uz => "custom" === uz.provider && uz.baseUrl === zz.baseUrl)),
-          Mz = "custom" !== zz.provider ? zz.provider : null !== (Ez = null === lz || void 0 === lz ? void 0 : lz.id) && void 0 !== Ez ? Ez : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
-          tz = void 0 === uz ? Wl(zz.models) : null !== (nz = zz.models.find((zz => zz.id === uz))) && void 0 !== nz ? nz : zz.models[0],
-          Hz = this.state.keys.find((zz => zz.id === Mz)),
-          Oz = {
-            ...zz,
-            id: Mz,
+      addKey(DD, CD, cD) {
+        var ID, pD, iD;
+        const fD = this.state.keys.find((CD => "custom" === CD.provider && CD.baseUrl === DD.baseUrl)),
+          bD = "custom" !== DD.provider ? DD.provider : null !== (ID = null === fD || void 0 === fD ? void 0 : fD.id) && void 0 !== ID ? ID : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
+          QD = void 0 === CD ? sf(DD.models) : null !== (pD = DD.models.find((DD => DD.id === CD))) && void 0 !== pD ? pD : DD.models[0],
+          wD = this.state.keys.find((DD => DD.id === bD)),
+          SD = {
+            ...DD,
+            id: bD,
             usedAt: this.nextUsedAt(),
-            ...tz ? {
-              usedModelId: tz.id
+            ...QD ? {
+              usedModelId: QD.id
             } : {},
-            ...null !== Hz && void 0 !== Hz && Hz.name && !zz.name ? {
-              name: Hz.name
+            ...null !== wD && void 0 !== wD && wD.name && !DD.name ? {
+              name: wD.name
             } : {}
           },
-          pz = this.state.keys.every((zz => zz.id !== Mz)),
-          dz = void 0 !== bz && bz !== Mz && this.state.keys.some((zz => zz.id === bz)),
-          Fz = dz ? this.state.keys.filter((zz => zz.id !== Mz)).map((zz => zz.id === bz ? Oz : zz)) : pz ? [...this.state.keys, Oz] : this.state.keys.map((zz => zz.id === Mz ? Oz : zz)),
-          Zz = tz ? {
-            keyId: Mz,
-            modelId: tz.id
-          } : (null === (iz = this.state.selected) || void 0 === iz ? void 0 : iz.keyId) === bz && dz ? null : this.state.selected;
+          BD = this.state.keys.every((DD => DD.id !== bD)),
+          yD = void 0 !== cD && cD !== bD && this.state.keys.some((DD => DD.id === cD)),
+          MD = yD ? this.state.keys.filter((DD => DD.id !== bD)).map((DD => DD.id === cD ? SD : DD)) : BD ? [...this.state.keys, SD] : this.state.keys.map((DD => DD.id === bD ? SD : DD)),
+          tD = QD ? {
+            keyId: bD,
+            modelId: QD.id
+          } : (null === (iD = this.state.selected) || void 0 === iD ? void 0 : iD.keyId) === cD && yD ? null : this.state.selected;
         return this.update({
-          keys: Fz,
-          selected: Zz
-        }), Mz
+          keys: MD,
+          selected: tD
+        }), bD
       }
-      renameKey(zz, uz) {
-        const bz = uz.replace(/\s+/g, " ").trim().slice(0, 30);
+      renameKey(DD, CD) {
+        const cD = CD.replace(/\s+/g, " ").trim().slice(0, 30);
         this.update({
-          keys: this.state.keys.map((uz => {
-            if (uz.id !== zz) return uz;
+          keys: this.state.keys.map((CD => {
+            if (CD.id !== DD) return CD;
             const {
-              name: Ez,
-              ...nz
-            } = uz;
-            return "" === bz ? nz : {
-              ...nz,
-              name: bz
+              name: ID,
+              ...pD
+            } = CD;
+            return "" === cD ? pD : {
+              ...pD,
+              name: cD
             }
           }))
         })
       }
-      select(zz) {
-        const uz = this.nextUsedAt(),
-          bz = null === zz ? this.state.keys : this.state.keys.map((bz => bz.id === zz.keyId ? {
-            ...bz,
-            usedAt: uz,
-            usedModelId: zz.modelId
-          } : bz));
+      select(DD) {
+        const CD = this.nextUsedAt(),
+          cD = null === DD ? this.state.keys : this.state.keys.map((cD => cD.id === DD.keyId ? {
+            ...cD,
+            usedAt: CD,
+            usedModelId: DD.modelId
+          } : cD));
         this.update({
-          keys: bz,
-          selected: zz
+          keys: cD,
+          selected: DD
         })
       }
-      refreshModels(zz, uz, bz) {
-        const Ez = this.state.keys.find((uz => uz.id === zz));
-        if (!Ez || bz && (Ez.key !== bz.key || Ez.baseUrl !== bz.baseUrl)) return !1;
-        const nz = [...uz.map((zz => {
-            const uz = Ez.models.find((uz => uz.id === zz.id));
+      refreshModels(DD, CD, cD) {
+        const ID = this.state.keys.find((CD => CD.id === DD));
+        if (!ID || cD && (ID.key !== cD.key || ID.baseUrl !== cD.baseUrl)) return !1;
+        const pD = [...CD.map((DD => {
+            const CD = ID.models.find((CD => CD.id === DD.id));
             return {
-              ...zz,
-              ...!1 === (null === uz || void 0 === uz ? void 0 : uz.nativeTools) ? {
+              ...DD,
+              ...!1 === (null === CD || void 0 === CD ? void 0 : CD.nativeTools) ? {
                 nativeTools: !1
               } : {},
-              ...null !== uz && void 0 !== uz && uz.typed ? {
+              ...null !== CD && void 0 !== CD && CD.typed ? {
                 typed: !0
               } : {}
             }
-          })), ...Ez.models.filter((zz => zz.typed && !uz.some((uz => uz.id === zz.id))))],
-          iz = this.state.selected,
-          lz = (null === iz || void 0 === iz ? void 0 : iz.keyId) === zz && !nz.some((zz => zz.id === iz.modelId)),
-          Mz = Wl(nz);
+          })), ...ID.models.filter((DD => DD.typed && !CD.some((CD => CD.id === DD.id))))],
+          iD = this.state.selected,
+          fD = (null === iD || void 0 === iD ? void 0 : iD.keyId) === DD && !pD.some((DD => DD.id === iD.modelId)),
+          bD = sf(pD);
         return this.update({
-          keys: this.state.keys.map((uz => uz.id === zz ? {
-            ...uz,
-            models: nz
-          } : uz)),
-          selected: lz ? Mz ? {
-            keyId: zz,
-            modelId: Mz.id
-          } : null : iz
+          keys: this.state.keys.map((CD => CD.id === DD ? {
+            ...CD,
+            models: pD
+          } : CD)),
+          selected: fD ? bD ? {
+            keyId: DD,
+            modelId: bD.id
+          } : null : iD
         }), !0
       }
-      stopNativeTools(zz, uz) {
+      stopNativeTools(DD, CD) {
         this.update({
-          keys: this.state.keys.map((bz => {
-            if (bz.id !== zz) return bz;
-            const Ez = bz.models.map((zz => zz.id === uz ? {
-              ...zz,
+          keys: this.state.keys.map((cD => {
+            if (cD.id !== DD) return cD;
+            const ID = cD.models.map((DD => DD.id === CD ? {
+              ...DD,
               nativeTools: !1
-            } : zz));
+            } : DD));
             return {
-              ...bz,
-              models: Ez
+              ...cD,
+              models: ID
             }
           }))
         })
       }
-      removeKey(zz) {
-        var uz;
-        const bz = this.state,
-          Ez = bz.keys.findIndex((uz => uz.id === zz)),
-          nz = bz.keys[Ez];
-        if (!nz) return () => {};
-        const iz = bz.keys.filter((uz => uz.id !== zz)),
-          lz = (null === (uz = bz.selected) || void 0 === uz ? void 0 : uz.keyId) === zz ? null : bz.selected;
+      removeKey(DD) {
+        var CD;
+        const cD = this.state,
+          ID = cD.keys.findIndex((CD => CD.id === DD)),
+          pD = cD.keys[ID];
+        if (!pD) return () => {};
+        const iD = cD.keys.filter((CD => CD.id !== DD)),
+          fD = (null === (CD = cD.selected) || void 0 === CD ? void 0 : CD.keyId) === DD ? null : cD.selected;
         return this.update({
-          keys: iz,
-          selected: lz,
-          remember: iz.length > 0 && bz.remember
+          keys: iD,
+          selected: fD,
+          remember: iD.length > 0 && cD.remember
         }), () => {
-          var uz;
-          const iz = this.state.keys.some((zz => Bl(zz, nz)));
-          if (iz) return;
-          const lz = [...this.state.keys];
-          lz.splice(Math.min(Ez, lz.length), 0, nz);
-          const Mz = (null === (uz = bz.selected) || void 0 === uz ? void 0 : uz.keyId) === zz && null === this.state.selected;
+          var CD;
+          const iD = this.state.keys.some((DD => hf(DD, pD)));
+          if (iD) return;
+          const fD = [...this.state.keys];
+          fD.splice(Math.min(ID, fD.length), 0, pD);
+          const bD = (null === (CD = cD.selected) || void 0 === CD ? void 0 : CD.keyId) === DD && null === this.state.selected;
           this.update({
-            keys: lz,
-            selected: Mz ? bz.selected : this.state.selected,
-            remember: this.state.remember || bz.remember
+            keys: fD,
+            selected: bD ? cD.selected : this.state.selected,
+            remember: this.state.remember || cD.remember
           })
         }
       }
       removeAll() {
-        this.update(Il), this.local && null !== this.local.getItem(jl) && (this.local.setItem(jl, JSON.stringify(Il)), this.local.removeItem(jl))
+        this.update(uf), this.local && null !== this.local.getItem(ef) && (this.local.setItem(ef, JSON.stringify(uf)), this.local.removeItem(ef))
       }
-      setRemember(zz) {
-        var uz;
-        const bz = zz && !this.ownsRemembered ? this.read(this.local) : null,
-          Ez = (null !== (uz = null === bz || void 0 === bz ? void 0 : bz.keys) && void 0 !== uz ? uz : []).filter((zz => this.state.keys.every((uz => !Bl(uz, zz)))));
+      setRemember(DD) {
+        var CD;
+        const cD = DD && !this.ownsRemembered ? this.read(this.local) : null,
+          ID = (null !== (CD = null === cD || void 0 === cD ? void 0 : cD.keys) && void 0 !== CD ? CD : []).filter((DD => this.state.keys.every((CD => !hf(CD, DD)))));
         this.update({
-          remember: zz,
-          keys: [...Ez, ...this.state.keys]
+          remember: DD,
+          keys: [...ID, ...this.state.keys]
         })
       }
-      otherTabChanged(zz) {
-        var uz;
+      otherTabChanged(DD) {
+        var CD;
         if (!this.state.remember) return;
-        const bz = zz ? this.parse(zz) : null;
-        bz ? (this.state = bz, this.ownsRemembered = bz.remember) : (this.ownsRemembered = !1, this.state = {
+        const cD = DD ? this.parse(DD) : null;
+        cD ? (this.state = cD, this.ownsRemembered = cD.remember) : (this.ownsRemembered = !1, this.state = {
           ...this.state,
           remember: !1
-        }), null === (uz = this.session) || void 0 === uz || uz.setItem(jl, JSON.stringify(this.state)), this.notify()
+        }), null === (CD = this.session) || void 0 === CD || CD.setItem(ef, JSON.stringify(this.state)), this.notify()
       }
       notify() {
-        for (const zz of this.listeners) zz()
+        for (const DD of this.listeners) DD()
       }
-      update(zz) {
-        var uz;
+      update(DD) {
+        var CD;
         this.state = {
           ...this.state,
-          ...zz
+          ...DD
         };
-        const bz = JSON.stringify(this.state);
-        var Ez;
-        if (null === (uz = this.session) || void 0 === uz || uz.setItem(jl, bz), this.state.remember && this.state.keys.length > 0) null === (Ez = this.local) || void 0 === Ez || Ez.setItem(jl, bz), this.ownsRemembered = !0;
+        const cD = JSON.stringify(this.state);
+        var ID;
+        if (null === (CD = this.session) || void 0 === CD || CD.setItem(ef, cD), this.state.remember && this.state.keys.length > 0) null === (ID = this.local) || void 0 === ID || ID.setItem(ef, cD), this.ownsRemembered = !0;
         else if (this.ownsRemembered) {
-          var nz, iz;
-          if (0 === this.state.keys.length) null === (iz = this.local) || void 0 === iz || iz.setItem(jl, JSON.stringify(Il));
-          null === (nz = this.local) || void 0 === nz || nz.removeItem(jl), this.ownsRemembered = !1
+          var pD, iD;
+          if (0 === this.state.keys.length) null === (iD = this.local) || void 0 === iD || iD.setItem(ef, JSON.stringify(uf));
+          null === (pD = this.local) || void 0 === pD || pD.removeItem(ef), this.ownsRemembered = !1
         }
         this.notify()
       }
-      read(zz) {
-        const uz = null === zz || void 0 === zz ? void 0 : zz.getItem(jl);
-        return uz ? this.parse(uz) : null
+      read(DD) {
+        const CD = null === DD || void 0 === DD ? void 0 : DD.getItem(ef);
+        return CD ? this.parse(CD) : null
       }
-      parse(zz) {
+      parse(DD) {
         try {
-          const uz = {
-            ...Il,
-            ...JSON.parse(zz)
+          const CD = {
+            ...uf,
+            ...JSON.parse(DD)
           };
-          return Array.isArray(uz.keys) && uz.keys.every(Cl) ? uz : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
-        } catch (uz) {
-          return console.warn("AI Helper: saved keys couldn't be read", uz instanceof Error ? uz.name : "error"), null
+          return Array.isArray(CD.keys) && CD.keys.every(rf) ? CD : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
+        } catch (CD) {
+          return console.warn("AI Helper: saved keys couldn't be read", CD instanceof Error ? CD.name : "error"), null
         }
       }
-    }(Yl("sessionStorage"), Yl("localStorage"));
+    }(Af("sessionStorage"), Af("localStorage"));
 
-    function zM() {
-      const zz = function() {
-          const [zz, uz] = (0, Ez.useState)(kl.getState);
-          return (0, Ez.useEffect)((() => (uz(kl.getState()), kl.subscribe((() => {
-            uz(kl.getState())
-          })))), []), zz
+    function Db() {
+      const DD = function() {
+          const [DD, CD] = (0, ID.useState)(Ff.getState);
+          return (0, ID.useEffect)((() => (CD(Ff.getState()), Ff.subscribe((() => {
+            CD(Ff.getState())
+          })))), []), DD
         }(),
-        uz = kl.activeKey();
+        CD = Ff.activeKey();
       return {
-        ...zz,
-        active: uz,
-        isSelected: bz => {
-          return (Ez = uz ? zz.selected : null) === (nz = bz) || null !== Ez && null !== nz && Ez.keyId === nz.keyId && Ez.modelId === nz.modelId;
-          var Ez, nz
+        ...DD,
+        active: CD,
+        isSelected: cD => {
+          return (ID = CD ? DD.selected : null) === (pD = cD) || null !== ID && null !== pD && ID.keyId === pD.keyId && ID.modelId === pD.modelId;
+          var ID, pD
         },
-        select: zz => {
-          kl.select(zz)
+        select: DD => {
+          Ff.select(DD)
         },
-        removeKey: zz => kl.removeKey(zz),
-        renameKey: (zz, uz) => {
-          kl.renameKey(zz, uz)
+        removeKey: DD => Ff.removeKey(DD),
+        renameKey: (DD, CD) => {
+          Ff.renameKey(DD, CD)
         },
-        setRemember: zz => {
-          kl.setRemember(zz)
+        setRemember: DD => {
+          Ff.setRemember(DD)
         }
       }
     }
-    async function uM(zz, uz) {
-      var bz;
+    async function Cb(DD, CD) {
+      var cD;
       let {
-        provider: Ez,
-        key: nz,
-        baseUrl: iz,
-        modelName: lz
-      } = zz;
-      const Mz = null !== (bz = null === lz || void 0 === lz ? void 0 : lz.trim()) && void 0 !== bz ? bz : "";
-      let tz = [];
+        provider: ID,
+        key: pD,
+        baseUrl: iD,
+        modelName: fD
+      } = DD;
+      const bD = null !== (cD = null === fD || void 0 === fD ? void 0 : fD.trim()) && void 0 !== cD ? cD : "";
+      let QD = [];
       try {
-        tz = (await Ul(Ez, nz, iz).check(uz)).models
-      } catch (Hz) {
-        if (!("custom" === Ez && Hz instanceof sl && ("failed" === Hz.problem || "noModel" === Hz.problem))) throw Hz
+        QD = (await Tf(ID, pD, iD).check(CD)).models
+      } catch (wD) {
+        if (!("custom" === ID && wD instanceof Xf && ("failed" === wD.problem || "noModel" === wD.problem))) throw wD
       }
-      if (null !== uz && void 0 !== uz && uz.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
-      return "" !== Mz ? [{
-        ...Dl(Ez, Mz, tz),
+      if (null !== CD && void 0 !== CD && CD.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
+      return "" !== bD ? [{
+        ...Yf(ID, bD, QD),
         typed: !0
-      }] : Ql(Ez, tz)
+      }] : Wf(ID, QD)
     }
-    "undefined" !== typeof window && window.addEventListener("storage", (zz => {
-      zz.storageArea === Yl("localStorage") && zz.key === jl && kl.otherTabChanged(zz.newValue)
+    "undefined" !== typeof window && window.addEventListener("storage", (DD => {
+      DD.storageArea === Af("localStorage") && DD.key === ef && Ff.otherTabChanged(DD.newValue)
     }));
-    async function bM(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Ez = Ul(zz.provider, zz.key, zz.baseUrl);
-      let nz = {
-        ...bz,
-        callFormat: zz.model.callFormat,
-        tools: zz.model.nativeTools ? bz.tools : void 0
+    async function cb(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const ID = Tf(DD.provider, DD.key, DD.baseUrl);
+      let pD = {
+        ...cD,
+        callFormat: DD.model.callFormat,
+        tools: DD.model.nativeTools ? cD.tools : void 0
       };
-      const iz = async () => {
+      const iD = async () => {
         try {
-          return await Ez.ask(zz.model.id, uz, nz)
-        } catch (bz) {
-          if (! function(zz, uz) {
-              var bz, Ez, nz;
-              return 0 !== (null !== (bz = null === (Ez = uz.tools) || void 0 === Ez ? void 0 : Ez.length) && void 0 !== bz ? bz : 0) && zz instanceof sl && "failed" === zz.problem && (400 === zz.status || 404 === zz.status && /\btool/i.test(null !== (nz = zz.detail) && void 0 !== nz ? nz : ""))
-            }(bz, nz)) throw bz;
-          const iz = {
-              ...nz,
+          return await ID.ask(DD.model.id, CD, pD)
+        } catch (cD) {
+          if (! function(DD, CD) {
+              var cD, ID, pD;
+              return 0 !== (null !== (cD = null === (ID = CD.tools) || void 0 === ID ? void 0 : ID.length) && void 0 !== cD ? cD : 0) && DD instanceof Xf && "failed" === DD.problem && (400 === DD.status || 404 === DD.status && /\btool/i.test(null !== (pD = DD.detail) && void 0 !== pD ? pD : ""))
+            }(cD, pD)) throw cD;
+          const iD = {
+              ...pD,
               tools: void 0
             },
-            lz = await Ez.ask(zz.model.id, uz, iz);
-          return kl.stopNativeTools(zz.id, zz.model.id), nz = iz, lz
+            fD = await ID.ask(DD.model.id, CD, iD);
+          return Ff.stopNativeTools(DD.id, DD.model.id), pD = iD, fD
         }
       };
       try {
-        return await iz()
-      } catch (pz) {
-        var lz, Mz;
-        if (!((Oz = pz) instanceof sl && void 0 !== Oz.status && "noCredit" !== Oz.problem && (429 === Oz.status || 408 === Oz.status || Oz.status >= 500))) throw pz;
-        return await (tz = Math.min(null !== (lz = null !== (Mz = pz.retryAfterMs) && void 0 !== Mz ? Mz : bz.retryWaitMs) && void 0 !== lz ? lz : 3e3, 2e4), Hz = bz.signal, new Promise(((zz, uz) => {
-          if (null !== Hz && void 0 !== Hz && Hz.aborted) return void uz(new DOMException("The AI key request was stopped", "AbortError"));
-          const bz = setTimeout(zz, tz);
-          null === Hz || void 0 === Hz || Hz.addEventListener("abort", (() => {
-            clearTimeout(bz), uz(new DOMException("The AI key request was stopped", "AbortError"))
+        return await iD()
+      } catch (BD) {
+        var fD, bD;
+        if (!((SD = BD) instanceof Xf && void 0 !== SD.status && "noCredit" !== SD.problem && (429 === SD.status || 408 === SD.status || SD.status >= 500))) throw BD;
+        return await (QD = Math.min(null !== (fD = null !== (bD = BD.retryAfterMs) && void 0 !== bD ? bD : cD.retryWaitMs) && void 0 !== fD ? fD : 3e3, 2e4), wD = cD.signal, new Promise(((DD, CD) => {
+          if (null !== wD && void 0 !== wD && wD.aborted) return void CD(new DOMException("The AI key request was stopped", "AbortError"));
+          const cD = setTimeout(DD, QD);
+          null === wD || void 0 === wD || wD.addEventListener("abort", (() => {
+            clearTimeout(cD), CD(new DOMException("The AI key request was stopped", "AbortError"))
           }), {
             once: !0
           })
-        }))), iz()
+        }))), iD()
       }
-      var tz, Hz, Oz
+      var QD, wD, SD
     }
-    var EM = bz(3385);
-    const nM = "Super Bot.xd",
-      iM = {
+    var Ib = cD(3452);
+    const pb = "Super Bot.xd",
+      ib = {
         ovh: {
-          name: nM,
+          name: pb,
           temperature: .6,
           nativeTools: !0,
           callFormat: "qwenXml"
         },
         deepseek: {
-          name: nM,
+          name: pb,
           temperature: 1,
           nativeTools: !0,
           callFormat: "deepseek"
         }
       };
-    const lM = "bloxdAiHelperSuperBot",
-      MM = "bloxdAiHelperDeepSeekNotice";
+    const fb = "bloxdAiHelperSuperBot",
+      bb = "bloxdAiHelperDeepSeekNotice";
 
-    function tM(zz) {
-      if ("deepseek" !== zz) return !0;
+    function Qb(DD) {
+      if ("deepseek" !== DD) return !0;
       try {
-        return "undefined" !== typeof window && "1" === window.localStorage.getItem(MM)
+        return "undefined" !== typeof window && "1" === window.localStorage.getItem(bb)
       } catch {
         return !1
       }
     }
 
-    function HM() {
+    function wb() {
       try {
-        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(lM)
+        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(fb)
       } catch {
         return !1
       }
     }
-    const OM = new class {
+    const Sb = new class {
       constructor() {
-        this.state = void 0, this.listeners = new Set, this.refreshing = null, this.getState = () => this.state, this.subscribe = zz => (this.listeners.add(zz), () => {
-          this.listeners.delete(zz)
+        this.state = void 0, this.listeners = new Set, this.refreshing = null, this.getState = () => this.state, this.subscribe = DD => (this.listeners.add(DD), () => {
+          this.listeners.delete(DD)
         }), this.state = {
-          picked: HM(),
+          picked: wb(),
           status: null,
           canBuySuperRank: null
-        }, kl.subscribe((() => {
-          null !== kl.getState().selected && this.state.picked && this.update({
+        }, Ff.subscribe((() => {
+          null !== Ff.getState().selected && this.state.picked && this.update({
             picked: !1
           })
         }))
       }
       isAnswering() {
-        var zz;
-        return this.state.picked && "ok" === (null === (zz = this.state.status) || void 0 === zz ? void 0 : zz.availability)
+        var DD;
+        return this.state.picked && "ok" === (null === (DD = this.state.status) || void 0 === DD ? void 0 : DD.availability)
       }
-      NF() {
-        kl.select(null), this.update({
+      MM() {
+        Ff.select(null), this.update({
           picked: !0
         })
       }
@@ -8154,105 +8154,105 @@ export const modules = {
           picked: !1
         })
       }
-      setStatus(zz) {
-        const uz = this.state.picked && ZM(zz, this.state.canBuySuperRank) && tM(zz.provider);
+      setStatus(DD) {
+        const CD = this.state.picked && tb(DD, this.state.canBuySuperRank) && Qb(DD.provider);
         this.update({
-          status: zz,
-          picked: uz
+          status: DD,
+          picked: CD
         })
       }
-      setCanBuySuperRank(zz) {
+      setCanBuySuperRank(DD) {
         const {
-          status: uz
+          status: CD
         } = this.state;
         this.update({
-          canBuySuperRank: zz,
-          picked: this.state.picked && (null === uz || ZM(uz, zz))
+          canBuySuperRank: DD,
+          picked: this.state.picked && (null === CD || tb(CD, DD))
         })
       }
       async refresh() {
-        return this.refreshing ??= (0, Wn.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((zz => {
-          this.setStatus(zz)
-        })).catch((zz => {
-          console.warn("AI Helper: Super Bot.xd's usage couldn't be checked", zz)
+        return this.refreshing ??= (0, dp.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((DD => {
+          this.setStatus(DD)
+        })).catch((DD => {
+          console.warn("AI Helper: Super Bot.xd's usage couldn't be checked", DD)
         })).finally((() => {
           this.refreshing = null
         })), this.refreshing
       }
-      update(zz) {
+      update(DD) {
         this.state = {
           ...this.state,
-          ...zz
+          ...DD
         };
         try {
-          window.sessionStorage.setItem(lM, this.state.picked ? "1" : "0")
+          window.sessionStorage.setItem(fb, this.state.picked ? "1" : "0")
         } catch {}
-        for (const uz of this.listeners) uz()
+        for (const CD of this.listeners) CD()
       }
     };
 
-    function pM() {
-      const [zz, uz] = (0, Ez.useState)(OM.getState);
-      return (0, Ez.useEffect)((() => (uz(OM.getState()), OM.subscribe((() => {
-        uz(OM.getState())
-      })))), []), zz
+    function Bb() {
+      const [DD, CD] = (0, ID.useState)(Sb.getState);
+      return (0, ID.useEffect)((() => (CD(Sb.getState()), Sb.subscribe((() => {
+        CD(Sb.getState())
+      })))), []), DD
     }
 
-    function dM(zz) {
-      var uz;
-      let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-      if (null === zz) return "Checking whether Super Bot.xd can answer for you\u2026";
-      switch (zz.availability) {
+    function yb(DD) {
+      var CD;
+      let cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+      if (null === DD) return "Checking whether Super Bot.xd can answer for you\u2026";
+      switch (DD.availability) {
         case "ok":
           return null;
         case "guest":
           return "Log in to use Super Bot.xd.";
         case "tooNew":
-          return `Super Bot.xd opens once your account is a week old: ${sM((null!==(uz=zz.availableFrom)&&void 0!==uz?uz:bz)-bz)} to go.`;
+          return `Super Bot.xd opens once your account is a week old: ${Xb((null!==(CD=DD.availableFrom)&&void 0!==CD?CD:cD)-cD)} to go.`;
         case "noUsageLeft":
-          return zz.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(zz,uz){const bz=Math.ceil((zz-uz)/36e5);if(bz<=24)return bz<=1?"within the hour":`in ${bz} hours`;return`in ${sM(zz-uz)}`}(zz.resetsAt,bz)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
+          return DD.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(DD,CD){const cD=Math.ceil((DD-CD)/36e5);if(cD<=24)return cD<=1?"within the hour":`in ${cD} hours`;return`in ${Xb(DD-CD)}`}(DD.resetsAt,cD)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
         case "unavailable":
           return "Super Bot.xd can't answer right now. Try again later."
       }
     }
 
-    function FM(zz) {
-      return null !== zz && !zz.isSuper && "noUsageLeft" === zz.availability
+    function Mb(DD) {
+      return null !== DD && !DD.isSuper && "noUsageLeft" === DD.availability
     }
 
-    function ZM(zz, uz) {
-      return "ok" === zz.availability || !1 !== uz && FM(zz)
+    function tb(DD, CD) {
+      return "ok" === DD.availability || !1 !== CD && Mb(DD)
     }
 
-    function RM(zz) {
-      return !0 === zz.canBuySuperRank && FM(zz.status)
+    function Zb(DD) {
+      return !0 === DD.canBuySuperRank && Mb(DD.status)
     }
 
-    function KM(zz) {
-      return RM(zz) ? null : dM(zz.status)
+    function ob(DD) {
+      return Zb(DD) ? null : yb(DD.status)
     }
 
-    function wM(zz) {
-      return zz.picked && null === KM(zz)
+    function vb(DD) {
+      return DD.picked && null === ob(DD)
     }
 
-    function XM(zz) {
-      return zz.picked && RM(zz)
+    function Nb(DD) {
+      return DD.picked && Zb(DD)
     }
 
-    function fM(zz) {
-      return `Usage left: ${zz.left}`
+    function gb(DD) {
+      return `Usage left: ${DD.left}`
     }
 
-    function sM(zz) {
-      const uz = Math.max(1, Math.ceil(zz / pl.j));
-      return 1 === uz ? "1 day" : `${uz} days`
+    function Xb(DD) {
+      const CD = Math.max(1, Math.ceil(DD / Bf.i));
+      return 1 === CD ? "1 day" : `${CD} days`
     }
 
-    function rM(zz, uz) {
-      const bz = "unavailable" === zz ? dM(uz) : null;
-      if (bz) return `${bz} Bot.xd is answering instead.`;
-      switch (zz) {
+    function mb(DD, CD) {
+      const cD = "unavailable" === DD ? yb(CD) : null;
+      if (cD) return `${cD} Bot.xd is answering instead.`;
+      switch (DD) {
         case "busy":
           return "Super Bot.xd is busy, so Bot.xd is answering this one.";
         case "tooLong":
@@ -8267,91 +8267,91 @@ export const modules = {
           return "Super Bot.xd couldn't answer, so Bot.xd is answering this one."
       }
     }
-    async function oM(zz) {
-      if (function(zz) {
-          var uz, bz, Ez, nz, iz, lz, Mz;
-          return zz.messages.length > 12 || zz.messages.some((zz => zz.content.length > Qn)) || (null !== (uz = null === (bz = zz.toolsJson) || void 0 === bz ? void 0 : bz.length) && void 0 !== uz ? uz : 0) > 1e5 || (null !== (Ez = null === (nz = zz.request) || void 0 === nz ? void 0 : nz.length) && void 0 !== Ez ? Ez : 0) > Qn || (null !== (iz = null === (lz = zz.code) || void 0 === lz ? void 0 : lz.length) && void 0 !== iz ? iz : 0) > Qn || (null !== (Mz = zz.toolResults) && void 0 !== Mz ? Mz : []).some((zz => zz.text.length > 1e5))
-        }(zz)) return {
+    async function nb(DD) {
+      if (function(DD) {
+          var CD, cD, ID, pD, iD, fD, bD;
+          return DD.messages.length > 12 || DD.messages.some((DD => DD.content.length > kp)) || (null !== (CD = null === (cD = DD.toolsJson) || void 0 === cD ? void 0 : cD.length) && void 0 !== CD ? CD : 0) > 1e5 || (null !== (ID = null === (pD = DD.request) || void 0 === pD ? void 0 : pD.length) && void 0 !== ID ? ID : 0) > kp || (null !== (iD = null === (fD = DD.code) || void 0 === fD ? void 0 : fD.length) && void 0 !== iD ? iD : 0) > kp || (null !== (bD = DD.toolResults) && void 0 !== bD ? bD : []).some((DD => DD.text.length > 1e5))
+        }(DD)) return {
         outcome: "tooLarge"
       };
       try {
-        return await (0, Wn.postToGameServer)("/ai-helper/super-bot-xd/ask", zz)
-      } catch (uz) {
-        if (uz instanceof dl.c && 413 === uz.httpCode) return {
+        return await (0, dp.postToGameServer)("/ai-helper/super-bot-xd/ask", DD)
+      } catch (CD) {
+        if (CD instanceof yf.d && 413 === CD.httpCode) return {
           outcome: "tooLarge"
         };
-        throw uz
+        throw CD
       }
     }
-    async function NM(zz, uz) {
-      return uz ? await new Promise(((bz, Ez) => {
-        const nz = () => {
-          Ez(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
+    async function Ob(DD, CD) {
+      return CD ? await new Promise(((cD, ID) => {
+        const pD = () => {
+          ID(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
         };
-        uz.aborted ? nz() : (uz.addEventListener("abort", nz, {
+        CD.aborted ? pD() : (CD.addEventListener("abort", pD, {
           once: !0
-        }), zz.then(bz, Ez).finally((() => {
-          uz.removeEventListener("abort", nz)
+        }), DD.then(cD, ID).finally((() => {
+          CD.removeEventListener("abort", pD)
         })))
-      })) : await zz
+      })) : await DD
     }
-    var vM = bz(22),
-      xM = bz(20),
-      JM = bz(2171);
-    let AM = null;
+    var Pb = cD(20),
+      Hb = cD(16),
+      Ub = cD(2228);
+    let xb = null;
 
-    function TM() {
-      AM ??= Promise.resolve().then((() => bz(2178))), AM.then((zz => {
+    function qb() {
+      xb ??= Promise.resolve().then((() => cD(2238))), xb.then((DD => {
         let {
-          purchasesAllowed: uz
-        } = zz;
-        OM.setCanBuySuperRank(uz())
-      }), (zz => {
-        AM = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", zz)
+          purchasesAllowed: CD
+        } = DD;
+        Sb.setCanBuySuperRank(CD())
+      }), (DD => {
+        xb = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", DD)
       }))
     }
-    let LM = !1,
-      PM = null;
-    async function GM() {
-      if (LM) return !0;
-      LM = !0;
+    let Jb = !1,
+      Kb = null;
+    async function ab() {
+      if (Jb) return !0;
+      Jb = !0;
       try {
-        var zz;
-        if (await OM.refresh(), !XM(OM.getState())) return !1;
+        var DD;
+        if (await Sb.refresh(), !Nb(Sb.getState())) return !1;
         document.activeElement instanceof HTMLElement && document.activeElement.blur();
         const [{
-          NotificationProvider: uz
+          NotificationProvider: CD
         }, {
-          WorldCodeAiOutOfUsage: Ez
-        }] = await Promise.all([Promise.resolve().then((() => bz(1322))), bz.e(346).then((() => bz(60351)))]);
-        null === (zz = PM) || void 0 === zz || zz.tearDownNotification();
-        const nz = uz.showCustomPopup({
-          body: zz => (0, lz.jsx)(Ez, {
+          WorldCodeAiOutOfUsage: ID
+        }] = await Promise.all([Promise.resolve().then((() => cD(1340))), cD.e(346).then((() => cD(60415)))]);
+        null === (DD = Kb) || void 0 === DD || DD.tearDownNotification();
+        const pD = CD.showCustomPopup({
+          body: DD => (0, fD.jsx)(ID, {
             onGetSuperRank: () => {
-              zz(),
+              DD(),
                 function() {
-                  vM.k.sK("OpenStoreFromCodeEditor"), (0, JM.o)({
+                  Pb.i.Uo("OpenStoreFromCodeEditor"), (0, Ub.p)({
                     mode: "self",
                     source: "codeEditorAi",
                     openItem: "superRank"
                   });
-                  const zz = vM.k.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
-                    null === xM.e.get("openEverythingMenuName") && (vM.k.unsubscribe(zz), OM.refresh())
+                  const DD = Pb.i.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
+                    null === Hb.d.get("openEverythingMenuName") && (Pb.i.unsubscribe(DD), Sb.refresh())
                   }))
                 }()
             }
           })
         });
-        return PM = nz, nz.getResult().finally((() => {
-          PM === nz && (PM = null)
+        return Kb = pD, pD.getResult().finally((() => {
+          Kb === pD && (Kb = null)
         })), !0
-      } catch (uz) {
-        return console.warn("AI Helper: the out of usage popup couldn't be opened", uz), !0
+      } catch (CD) {
+        return console.warn("AI Helper: the out of usage popup couldn't be opened", CD), !0
       } finally {
-        LM = !1
+        Jb = !1
       }
     }
-    const aM = {
+    const Vb = {
         wood: ["Maple Log"],
         log: ["Maple Log"],
         logs: ["Maple Log"],
@@ -8429,7 +8429,7 @@ export const modules = {
         glowstone: ["Glow Lamp"],
         "sea lantern": ["Glow Lamp", "Lantern"]
       },
-      VM = {
+      zb = {
         wooden: "wood",
         golden: "gold",
         oak: "maple",
@@ -8441,7 +8441,7 @@ export const modules = {
         egg: "orb",
         stained: ""
       },
-      mM = {
+      jb = {
         teleport: ["setPosition"],
         tp: ["setPosition"],
         heal: ["setHealth", "getHealth"],
@@ -8504,1240 +8504,1240 @@ export const modules = {
         green: ["sendMessage"],
         red: ["sendMessage"]
       },
-      qM = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
+      lb = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
 
-    function hM(zz) {
-      return zz.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9]+/).filter((zz => zz.length > 1))
+    function Lb(DD) {
+      return DD.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9]+/).filter((DD => DD.length > 1))
     }
 
-    function UM(zz) {
-      return zz.length > 4 && zz.endsWith("ies") ? `${zz.slice(0,-3)}y` : zz.length > 3 && zz.endsWith("s") && !zz.endsWith("ss") ? zz.slice(0, -1) : zz
+    function Tb(DD) {
+      return DD.length > 4 && DD.endsWith("ies") ? `${DD.slice(0,-3)}y` : DD.length > 3 && DD.endsWith("s") && !DD.endsWith("ss") ? DD.slice(0, -1) : DD
     }
 
-    function cM(zz) {
-      return new Set(hM(zz).map((zz => UM(zz))))
+    function Gb(DD) {
+      return new Set(Lb(DD).map((DD => Tb(DD))))
     }
-    const gM = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
+    const Rb = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
 
-    function SM(zz) {
-      return zz.split("\n").map((zz => zz.replace(/\/\/.*$/, "").replace(/(["'`])(?:\\.|(?!\1).)*\1/g, '""'))).join("\n").replace(/\/\*[^]*?\*\//g, (zz => zz.replace(/[^\n]/g, ""))).split("\n")
-    }
-
-    function yM(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const bz = [],
-        Ez = new Set,
-        nz = SM(uz ? zz : (0, pu.t)(zz, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, pu.l, (() => "projectRequire"))),
-        iz = new Set([...nz.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((zz => zz[1])));
-      return nz.forEach(((zz, uz) => {
-        for (const nz of (0, pu.e)(zz, /(global|window|document|process|require)\b\s*[.([]/g, pu.l)) Ez.has(nz[1]) || iz.has(nz[1]) || (Ez.add(nz[1]), bz.push(`Line ${uz+1} uses "${nz[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
-      })), bz
+    function kb(DD) {
+      return DD.split("\n").map((DD => DD.replace(/\/\/.*$/, "").replace(/(["'`])(?:\\.|(?!\1).)*\1/g, '""'))).join("\n").replace(/\/\*[^]*?\*\//g, (DD => DD.replace(/[^\n]/g, ""))).split("\n")
     }
 
-    function DM(zz) {
-      const uz = zz.split("\n"),
-        bz = [];
-      return uz.forEach(((zz, Ez) => {
-        var nz, iz, lz, Mz, tz;
-        const Hz = zz.indexOf("api.setCurrency(");
-        if (-1 === Hz) return;
-        const Oz = uz.slice(Ez, Ez + 3).join(" ").slice(Hz),
-          pz = Oz.slice(0, Oz.indexOf("}") + 1 || void 0),
-          dz = null === (nz = /amount\s*:\s*(\d+)/.exec(pz)) || void 0 === nz ? void 0 : nz[1];
-        if (!/persistent\s*:\s*true/.test(pz) || void 0 === dz) return;
-        const Fz = [null !== (iz = uz[Ez - 2]) && void 0 !== iz ? iz : "", null !== (lz = uz[Ez - 1]) && void 0 !== lz ? lz : "", zz.slice(0, Hz)].join(" ");
-        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(Fz)) return;
-        const Zz = null !== (Mz = null === (tz = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(pz)) || void 0 === tz ? void 0 : tz[1]) && void 0 !== Mz ? Mz : "coins";
-        bz.push(`Line ${Ez+1} sets the saved "${Zz}" back to ${dz} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${Zz}") is null.`)
-      })), bz
+    function db(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const cD = [],
+        ID = new Set,
+        pD = kb(CD ? DD : (0, BC.C)(DD, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, BC.q, (() => "projectRequire"))),
+        iD = new Set([...pD.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((DD => DD[1])));
+      return pD.forEach(((DD, CD) => {
+        for (const pD of (0, BC.f)(DD, /(global|window|document|process|require)\b\s*[.([]/g, BC.q)) ID.has(pD[1]) || iD.has(pD[1]) || (ID.add(pD[1]), cD.push(`Line ${CD+1} uses "${pD[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
+      })), cD
     }
 
-    function QM(zz) {
-      var uz, bz;
-      const Ez = null !== (uz = null === (bz = zz.split("### Parameters:")[1]) || void 0 === bz ? void 0 : bz.split("###")[0]) && void 0 !== uz ? uz : "",
-        nz = [];
-      for (const iz of Ez.split("\n")) {
-        const zz = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(iz);
-        zz && "Parameter" !== zz[1] && nz.push({
-          name: zz[1],
-          type: zz[2]
+    function Yb(DD) {
+      const CD = DD.split("\n"),
+        cD = [];
+      return CD.forEach(((DD, ID) => {
+        var pD, iD, fD, bD, QD;
+        const wD = DD.indexOf("api.setCurrency(");
+        if (-1 === wD) return;
+        const SD = CD.slice(ID, ID + 3).join(" ").slice(wD),
+          BD = SD.slice(0, SD.indexOf("}") + 1 || void 0),
+          yD = null === (pD = /amount\s*:\s*(\d+)/.exec(BD)) || void 0 === pD ? void 0 : pD[1];
+        if (!/persistent\s*:\s*true/.test(BD) || void 0 === yD) return;
+        const MD = [null !== (iD = CD[ID - 2]) && void 0 !== iD ? iD : "", null !== (fD = CD[ID - 1]) && void 0 !== fD ? fD : "", DD.slice(0, wD)].join(" ");
+        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(MD)) return;
+        const tD = null !== (bD = null === (QD = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(BD)) || void 0 === QD ? void 0 : QD[1]) && void 0 !== bD ? bD : "coins";
+        cD.push(`Line ${ID+1} sets the saved "${tD}" back to ${yD} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${tD}") is null.`)
+      })), cD
+    }
+
+    function Wb(DD) {
+      var CD, cD;
+      const ID = null !== (CD = null === (cD = DD.split("### Parameters:")[1]) || void 0 === cD ? void 0 : cD.split("###")[0]) && void 0 !== CD ? CD : "",
+        pD = [];
+      for (const iD of ID.split("\n")) {
+        const DD = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(iD);
+        DD && "Parameter" !== DD[1] && pD.push({
+          name: DD[1],
+          type: DD[2]
         })
       }
-      return nz
+      return pD
     }
 
-    function WM(zz) {
-      return QM(zz).map((zz => zz.name))
+    function sb(DD) {
+      return Wb(DD).map((DD => DD.name))
     }
-    const eM = "(\"[^\"\\n]*\"|'[^'\\n]*')";
+    const Eb = "(\"[^\"\\n]*\"|'[^'\\n]*')";
 
-    function jM(zz, uz) {
-      const bz = [];
-      let Ez = 0,
-        nz = "",
-        iz = "",
-        lz = uz;
-      for (let Mz = uz; Mz < zz.length; Mz++) {
-        const uz = zz[Mz];
-        if (nz) "\\" === uz ? Mz++ : uz === nz && (nz = "");
-        else if ("/" === uz && "/" === zz[Mz + 1]) {
-          iz += zz.slice(lz, Mz);
-          const uz = zz.indexOf("\n", Mz);
-          Mz = -1 === uz ? zz.length : uz, lz = Mz
-        } else if ('"' === uz || "'" === uz || "`" === uz) nz = uz;
-        else if ("[" === uz || "{" === uz || "(" === uz) Ez++;
-        else if (("]" === uz || "}" === uz || ")" === uz) && Ez > 0) Ez--;
+    function eb(DD, CD) {
+      const cD = [];
+      let ID = 0,
+        pD = "",
+        iD = "",
+        fD = CD;
+      for (let bD = CD; bD < DD.length; bD++) {
+        const CD = DD[bD];
+        if (pD) "\\" === CD ? bD++ : CD === pD && (pD = "");
+        else if ("/" === CD && "/" === DD[bD + 1]) {
+          iD += DD.slice(fD, bD);
+          const CD = DD.indexOf("\n", bD);
+          bD = -1 === CD ? DD.length : CD, fD = bD
+        } else if ('"' === CD || "'" === CD || "`" === CD) pD = CD;
+        else if ("[" === CD || "{" === CD || "(" === CD) ID++;
+        else if (("]" === CD || "}" === CD || ")" === CD) && ID > 0) ID--;
         else {
-          if (")" === uz) {
-            const uz = (iz + zz.slice(lz, Mz)).trim();
-            return "" !== uz || bz.length > 0 ? [...bz, uz] : bz
+          if (")" === CD) {
+            const CD = (iD + DD.slice(fD, bD)).trim();
+            return "" !== CD || cD.length > 0 ? [...cD, CD] : cD
           }
-          "," === uz && 0 === Ez && (bz.push((iz + zz.slice(lz, Mz)).trim()), iz = "", lz = Mz + 1)
+          "," === CD && 0 === ID && (cD.push((iD + DD.slice(fD, bD)).trim()), iD = "", fD = bD + 1)
         }
       }
       return []
     }
 
-    function IM(zz, uz) {
-      var bz;
-      if (!/^[A-Za-z_$][\w$]*$/.test(uz)) return;
-      const Ez = uz.replaceAll("$", "\\$"),
-        nz = `\\((?:[^()]*[\\s,])?${Ez}(?![\\w$])[^()]*\\)`,
-        iz = new RegExp(`(?:const|let|var)\\s+${Ez}(?![\\w$])|${Ez}\\s*(?:\\+?=(?![=>])|=>)|${nz}\\s*=>|function\\s*[\\w$]*\\s*${nz}`, "g");
-      return 1 === (0, pu.e)(zz, iz, pu.l).length ? null === (bz = new RegExp(`\\b(?:const|let|var)\\s+${Ez}\\s*=\\s*${eM}\\s*(?:;|//|$)`, "m").exec(zz)) || void 0 === bz ? void 0 : bz[1] : void 0
+    function ub(DD, CD) {
+      var cD;
+      if (!/^[A-Za-z_$][\w$]*$/.test(CD)) return;
+      const ID = CD.replaceAll("$", "\\$"),
+        pD = `\\((?:[^()]*[\\s,])?${ID}(?![\\w$])[^()]*\\)`,
+        iD = new RegExp(`(?:const|let|var)\\s+${ID}(?![\\w$])|${ID}\\s*(?:\\+?=(?![=>])|=>)|${pD}\\s*=>|function\\s*[\\w$]*\\s*${pD}`, "g");
+      return 1 === (0, BC.f)(DD, iD, BC.q).length ? null === (cD = new RegExp(`\\b(?:const|let|var)\\s+${ID}\\s*=\\s*${Eb}\\s*(?:;|//|$)`, "m").exec(DD)) || void 0 === cD ? void 0 : cD[1] : void 0
     }
 
-    function BM(zz, uz, bz) {
-      let Ez;
-      const nz = function(zz) {
-        const uz = zz.split("\n").slice(1).map((zz => zz.trim())).find((zz => "" !== zz && !zz.startsWith("#") && !zz.startsWith("|") && !zz.startsWith("**") && !zz.startsWith("```")));
-        if (!uz) return "";
-        const bz = uz.search(/\.\s/),
-          Ez = -1 === bz ? uz : uz.slice(0, bz + 1);
-        return Ez.length > 110 ? `${Ez.slice(0,107)}...` : Ez
-      }(bz);
-      return Ez = "api" === zz ? `api.${uz}(${WM(bz).join(", ")})${nz?` \u2014 ${nz}`:""}` : "callback" === zz ? `${uz}(${WM(bz).join(", ")})${nz?` \u2014 ${nz}`:""}` : "clientOption" === zz ? `${uz}: ${function(zz){var uz,bz;return null!==(uz=null===(bz=/\*\*Type:\*\*\s*`([^`]+)`/.exec(zz))||void 0===bz?void 0:bz[1])&&void 0!==uz?uz:""}(bz)}${nz?` \u2014 ${nz}`:""}`:uz,{kind:zz,name:uz,text:bz,line:Ez,nameWords:cM(uz),textWords:cM(bz)}}function CM(zz){return zz.toLowerCase().split(/[^a-z0-9]+/).filter((zz=>""!==zz&&"of"!==zz&&"the"!==zz)).sort().join(" ")}const YM=new Set(["block","item"]);function kM(zz){let{names:uz,isSure:bz}=zz;return 0===uz.length?"":1!==uz.length||bz?`
+    function hb(DD, CD, cD) {
+      let ID;
+      const pD = function(DD) {
+        const CD = DD.split("\n").slice(1).map((DD => DD.trim())).find((DD => "" !== DD && !DD.startsWith("#") && !DD.startsWith("|") && !DD.startsWith("**") && !DD.startsWith("```")));
+        if (!CD) return "";
+        const cD = CD.search(/\.\s/),
+          ID = -1 === cD ? CD : CD.slice(0, cD + 1);
+        return ID.length > 110 ? `${ID.slice(0,107)}...` : ID
+      }(cD);
+      return ID = "api" === DD ? `api.${CD}(${sb(cD).join(", ")})${pD?` \u2014 ${pD}`:""}` : "callback" === DD ? `${CD}(${sb(cD).join(", ")})${pD?` \u2014 ${pD}`:""}` : "clientOption" === DD ? `${CD}: ${function(DD){var CD,cD;return null!==(CD=null===(cD=/\*\*Type:\*\*\s*`([^`]+)`/.exec(DD))||void 0===cD?void 0:cD[1])&&void 0!==CD?CD:""}(cD)}${pD?` \u2014 ${pD}`:""}`:CD,{kind:DD,name:CD,text:cD,line:ID,nameWords:Gb(CD),textWords:Gb(cD)}}function rb(DD){return DD.toLowerCase().split(/[^a-z0-9]+/).filter((DD=>""!==DD&&"of"!==DD&&"the"!==DD)).sort().join(" ")}const Ab=new Set(["block","item"]);function Fb(DD){let{names:CD,isSure:cD}=DD;return 0===CD.length?"":1!==CD.length||cD?`
       Did you mean $ {
-        uz.map((zz => `"${zz}"`)).join(" or ")
+        CD.map((DD => `"${DD}"`)).join(" or ")
       } ? `:`
-      The closest name is "${uz[0]}", which may be something
+      The closest name is "${CD[0]}", which may be something
       else.
-      `}function zt(zz){return zz.split("\n").slice(1).map((zz=>zz.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((zz=>""!==zz&&!zz.startsWith("#")))}class ut{constructor(zz){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(zz,uz)=>{if("mob"===zz){var bz;const zz=uz.trim().toLowerCase();return null!==(bz=this.mobTypes.find((uz=>uz.toLowerCase()===zz)))&&void 0!==bz?bz:null}const Ez=this.suggestNames(uz),nz=Ez.isSure?Ez.names[0]:void 0;return void 0===nz||"item"!==zz&&!this.blockNames.has(nz)?null:nz};const uz=[],bz=(zz,bz)=>{for(const{name:Ez,text:nz}of function(zz){const uz=[],bz=zz.split(/^## /m).slice(1);for(const Ez of bz){const zz=Ez.indexOf("\n"),bz=(-1===zz?Ez:Ez.slice(0,zz)).trim(),nz=`
+      `}function DQ(DD){return DD.split("\n").slice(1).map((DD=>DD.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((DD=>""!==DD&&!DD.startsWith("#")))}class CQ{constructor(DD){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(DD,CD)=>{if("mob"===DD){var cD;const DD=CD.trim().toLowerCase();return null!==(cD=this.mobTypes.find((CD=>CD.toLowerCase()===DD)))&&void 0!==cD?cD:null}const ID=this.suggestNames(CD),pD=ID.isSure?ID.names[0]:void 0;return void 0===pD||"item"!==DD&&!this.blockNames.has(pD)?null:pD};const CD=[],cD=(DD,cD)=>{for(const{name:ID,text:pD}of function(DD){const CD=[],cD=DD.split(/^## /m).slice(1);for(const ID of cD){const DD=ID.indexOf("\n"),cD=(-1===DD?ID:ID.slice(0,DD)).trim(),pD=`
       # # $ {
-        Ez
+        ID
       }
-      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();uz.push({name:bz,text:nz})}return uz}(bz))uz.push(BM(zz,Ez,nz))};bz("api",zz.apiReference),bz("callback",zz.callbacks),bz("clientOption",zz.clientOptions),bz("snippet",zz.snippets),bz("howTo",zz.howTo);const Ez=function(){const zz=bE.map((zz=>`
+      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();CD.push({name:cD,text:pD})}return CD}(cD))CD.push(hb(DD,ID,pD))};cD("api",DD.apiReference),cD("callback",DD.callbacks),cD("clientOption",DD.clientOptions),cD("snippet",DD.snippets),cD("howTo",DD.howTo);const ID=function(){const DD=cI.map((DD=>`
       # # $ {
-        zz.name
+        DD.name
       }\
       nReady - made
       function($ {
-        zz.category
+        DD.category
       }) : call it as it is, without api.and without writing it;
       its code is added to the file by itself.\n$ {
-        zz.about
+        DD.about
       }\
-      n\ nUsage: \`${zz.signature}\`\n\n\`\`\`js\n${zz.example}\n\`\`\``)),
-  uz = OE.map((zz => `## ${zz.name}\nPrefab (${zz.kind}, ${zz.category}): put in with use_prefab. ${xE(zz,!1)}`));
+      n\ nUsage: \`${DD.signature}\`\n\n\`\`\`js\n${DD.example}\n\`\`\``)),
+  CD = SI.map((DD => `## ${DD.name}\nPrefab (${DD.kind}, ${DD.category}): put in with use_prefab. ${HI(DD,!1)}`));
   return {
-    helpers: `# Ready-made functions\n\n${zz.join("\n\n")}\n`,
-    prefabs: `# Prefabs\n\n${uz.join("\n\n")}\n`
+    helpers: `# Ready-made functions\n\n${DD.join("\n\n")}\n`,
+    prefabs: `# Prefabs\n\n${CD.join("\n\n")}\n`
   }
 }();
-bz("helper", Ez.helpers), bz("prefab", Ez.prefabs), this.sections = uz;
-for (const iz of uz) {
-  this.byName.has(iz.name) || this.byName.set(iz.name, iz);
-  for (const zz of iz.textWords) {
-    var nz;
-    this.wordCounts.set(zz, (null !== (nz = this.wordCounts.get(zz)) && void 0 !== nz ? nz : 0) + 1)
+cD("helper", ID.helpers), cD("prefab", ID.prefabs), this.sections = CD;
+for (const iD of CD) {
+  this.byName.has(iD.name) || this.byName.set(iD.name, iD);
+  for (const DD of iD.textWords) {
+    var pD;
+    this.wordCounts.set(DD, (null !== (pD = this.wordCounts.get(DD)) && void 0 !== pD ? pD : 0) + 1)
   }
 }
-this.itemAndBlockNames = [...new Set([...zt(zz.itemNames), ...zt(zz.blockNames)])], this.blockNames = new Set(zt(zz.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((zz => [zz.toLowerCase(), zz]))), this.mobTypes = function(zz) {
-  var uz, bz;
-  const Ez = null !== (uz = null === (bz = zz.split("## Mob Variations")[1]) || void 0 === bz ? void 0 : bz.split("```")[1]) && void 0 !== uz ? uz : "",
-    nz = [];
-  for (const iz of Ez.split("\n")) {
-    const zz = /^([A-Z][\w ]*?):\s*"/.exec(iz.trim());
-    zz && nz.push(zz[1])
+this.itemAndBlockNames = [...new Set([...DQ(DD.itemNames), ...DQ(DD.blockNames)])], this.blockNames = new Set(DQ(DD.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((DD => [DD.toLowerCase(), DD]))), this.mobTypes = function(DD) {
+  var CD, cD;
+  const ID = null !== (CD = null === (cD = DD.split("## Mob Variations")[1]) || void 0 === cD ? void 0 : cD.split("```")[1]) && void 0 !== CD ? CD : "",
+    pD = [];
+  for (const iD of ID.split("\n")) {
+    const DD = /^([A-Z][\w ]*?):\s*"/.exec(iD.trim());
+    DD && pD.push(DD[1])
   }
-  return nz
-}(zz.mobSettings)
+  return pD
+}(DD.mobSettings)
 }
-index(zz) {
-  return this.sections.filter((uz => uz.kind === zz)).map((zz => zz.line)).join("\n")
+index(DD) {
+  return this.sections.filter((CD => CD.kind === DD)).map((DD => DD.line)).join("\n")
 }
 callbackNames() {
-  return this.sections.filter((zz => "callback" === zz.kind)).map((zz => zz.name))
+  return this.sections.filter((DD => "callback" === DD.kind)).map((DD => DD.name))
 }
-get(zz) {
-  return this.byName.get(zz)
+get(DD) {
+  return this.byName.get(DD)
 }
-unprefixedApiCalls(zz) {
-  const uz = SM(zz),
-    bz = uz.join("\n"),
-    Ez = new Set([...bz.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((zz => {
-      var uz;
-      return null !== (uz = zz[1]) && void 0 !== uz ? uz : zz[2]
+unprefixedApiCalls(DD) {
+  const CD = kb(DD),
+    cD = CD.join("\n"),
+    ID = new Set([...cD.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((DD => {
+      var CD;
+      return null !== (CD = DD[1]) && void 0 !== CD ? CD : DD[2]
     }))),
-    nz = [...bz.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...bz.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
-  for (const lz of nz)
-    for (const zz of lz[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) Ez.add(zz[1]);
-  const iz = new Map;
-  return uz.forEach(((zz, uz) => {
-    for (const nz of (0, pu.e)(zz, /([\w$]+)\s*\(/g, pu.l)) {
-      var bz;
-      const lz = nz[1],
-        Mz = /^\s*(?:async\s+)?$/.test(zz.slice(0, nz.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(zz.slice(nz.index));
-      iz.has(lz) || Ez.has(lz) || Mz || "api" !== (null === (bz = this.byName.get(lz)) || void 0 === bz ? void 0 : bz.kind) || iz.set(lz, `Line ${uz+1} calls ${lz} without "api.", so it throws there. Did you mean api.${lz}?`)
+    pD = [...cD.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...cD.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
+  for (const fD of pD)
+    for (const DD of fD[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) ID.add(DD[1]);
+  const iD = new Map;
+  return CD.forEach(((DD, CD) => {
+    for (const pD of (0, BC.f)(DD, /([\w$]+)\s*\(/g, BC.q)) {
+      var cD;
+      const fD = pD[1],
+        bD = /^\s*(?:async\s+)?$/.test(DD.slice(0, pD.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(DD.slice(pD.index));
+      iD.has(fD) || ID.has(fD) || bD || "api" !== (null === (cD = this.byName.get(fD)) || void 0 === cD ? void 0 : cD.kind) || iD.set(fD, `Line ${CD+1} calls ${fD} without "api.", so it throws there. Did you mean api.${fD}?`)
     }
-  })), [...iz.values()]
+  })), [...iD.values()]
 }
-unknownApiMethods(zz) {
-  return [...new Set([...zz.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)].map((zz => zz[1])))].filter((zz => {
-    var uz;
-    return "api" !== (null === (uz = this.byName.get(zz)) || void 0 === uz ? void 0 : uz.kind)
-  })).map((zz => {
-    const uz = this.find(zz.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((zz => "api" === zz.kind)).slice(0, 2).map((zz => `api.${zz.name}`));
-    return `api.${zz} doesn't exist.${uz.length?` Did you mean ${uz.join(" or ")}?`:""}`
+unknownApiMethods(DD) {
+  return [...new Set([...DD.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)].map((DD => DD[1])))].filter((DD => {
+    var CD;
+    return "api" !== (null === (CD = this.byName.get(DD)) || void 0 === CD ? void 0 : CD.kind)
+  })).map((DD => {
+    const CD = this.find(DD.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((DD => "api" === DD.kind)).slice(0, 2).map((DD => `api.${DD.name}`));
+    return `api.${DD} doesn't exist.${CD.length?` Did you mean ${CD.join(" or ")}?`:""}`
   }))
 }
-unknownItemNames(zz) {
-  const uz = new Set([...this.itemAndBlockNames, "Air"]),
-    bz = new Set;
-  for (const Ez of zz.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
-    const nz = this.byName.get(Ez[1]);
-    if ("api" !== (null === nz || void 0 === nz ? void 0 : nz.kind)) continue;
-    const iz = QM(nz.text).map((zz => {
+unknownItemNames(DD) {
+  const CD = new Set([...this.itemAndBlockNames, "Air"]),
+    cD = new Set;
+  for (const ID of DD.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
+    const pD = this.byName.get(ID[1]);
+    if ("api" !== (null === pD || void 0 === pD ? void 0 : pD.kind)) continue;
+    const iD = Wb(pD.text).map((DD => {
         let {
-          type: uz
-        } = zz;
-        return void 0 !== uz && /^(ItemName|BlockName)\b/.test(uz)
+          type: CD
+        } = DD;
+        return void 0 !== CD && /^(ItemName|BlockName)\b/.test(CD)
       })),
-      lz = jM(zz, Ez.index + Ez[0].length);
-    lz.forEach(((Ez, nz) => {
-      var Mz, tz, Hz, Oz;
-      if (!iz[nz] && (nz !== lz.length - 1 || !iz[iz.length - 1])) return;
-      const pz = null === (Mz = /^CONFIG\.([\w$]+)$/.exec(Ez)) || void 0 === Mz ? void 0 : Mz[1],
-        dz = pz ? null === (tz = new RegExp(`(?:^|[{,])\\s*${pz.replaceAll("$","\\$")}\\s*:\\s*${eM}`, "m").exec(zz)) || void 0 === tz ? void 0 : tz[1] : void 0,
-        Fz = IM(zz, Ez),
-        Zz = null !== (Hz = null === (Oz = new RegExp(`\\?\\s*${eM}\\s*:\\s*${eM}$`).exec(Ez)) || void 0 === Oz ? void 0 : Oz.slice(1)) && void 0 !== Hz ? Hz : [];
-      for (const zz of [null !== (Rz = null !== dz && void 0 !== dz ? dz : Fz) && void 0 !== Rz ? Rz : Ez, ...Zz]) {
-        var Rz;
-        const Ez = /^(["'`])([^"'`]+)\1$/.exec(zz),
-          nz = "`" === (null === Ez || void 0 === Ez ? void 0 : Ez[1]) && Ez[2].includes("${");
-        !Ez || nz || uz.has(Ez[2]) || bz.add(Ez[2])
+      fD = eb(DD, ID.index + ID[0].length);
+    fD.forEach(((ID, pD) => {
+      var bD, QD, wD, SD;
+      if (!iD[pD] && (pD !== fD.length - 1 || !iD[iD.length - 1])) return;
+      const BD = null === (bD = /^CONFIG\.([\w$]+)$/.exec(ID)) || void 0 === bD ? void 0 : bD[1],
+        yD = BD ? null === (QD = new RegExp(`(?:^|[{,])\\s*${BD.replaceAll("$","\\$")}\\s*:\\s*${Eb}`, "m").exec(DD)) || void 0 === QD ? void 0 : QD[1] : void 0,
+        MD = ub(DD, ID),
+        tD = null !== (wD = null === (SD = new RegExp(`\\?\\s*${Eb}\\s*:\\s*${Eb}$`).exec(ID)) || void 0 === SD ? void 0 : SD.slice(1)) && void 0 !== wD ? wD : [];
+      for (const DD of [null !== (ZD = null !== yD && void 0 !== yD ? yD : MD) && void 0 !== ZD ? ZD : ID, ...tD]) {
+        var ZD;
+        const ID = /^(["'`])([^"'`]+)\1$/.exec(DD),
+          pD = "`" === (null === ID || void 0 === ID ? void 0 : ID[1]) && ID[2].includes("${");
+        !ID || pD || CD.has(ID[2]) || cD.add(ID[2])
       }
     }))
   }
-  return [...bz].map((zz => `"${zz}" isn't an item or block name.${kM(this.suggestNames(zz))}`))
+  return [...cD].map((DD => `"${DD}" isn't an item or block name.${Fb(this.suggestNames(DD))}`))
 }
-reorderedComparedNames(zz) {
-  const uz = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    bz = new Map(this.itemAndBlockNames.map((zz => [CM(zz), zz]))),
-    Ez = new Map,
-    nz = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
-  for (const Mz of nz)
-    for (const nz of zz.matchAll(Mz)) {
-      const zz = nz[2],
-        iz = uz.has(zz) || !/\s/.test(zz.trim()) ? void 0 : bz.get(CM(zz));
-      iz && Ez.set(zz, iz)
+reorderedComparedNames(DD) {
+  const CD = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    cD = new Map(this.itemAndBlockNames.map((DD => [rb(DD), DD]))),
+    ID = new Map,
+    pD = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
+  for (const bD of pD)
+    for (const pD of DD.matchAll(bD)) {
+      const DD = pD[2],
+        iD = CD.has(DD) || !/\s/.test(DD.trim()) ? void 0 : cD.get(rb(DD));
+      iD && ID.set(DD, iD)
     }
-  const iz = [...Ez].map((zz => {
-      let [uz, bz] = zz;
-      return `"${uz}" isn't a block or item name, so comparing with it is never true. Did you mean "${bz}"?`
+  const iD = [...ID].map((DD => {
+      let [CD, cD] = DD;
+      return `"${CD}" isn't a block or item name, so comparing with it is never true. Did you mean "${cD}"?`
     })),
-    lz = new Map;
-  for (const Mz of zz.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
-    const uz = Mz[2],
-      bz = this.blockNames.has(uz) || !this.itemAndBlockNames.includes(uz) ? void 0 : [`Block of ${uz}`, `${uz} Block`].find((zz => this.blockNames.has(zz)));
-    !bz || zz.includes(`"${bz}"`) || zz.includes(`'${bz}'`) || lz.set(uz, bz)
+    fD = new Map;
+  for (const bD of DD.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
+    const CD = bD[2],
+      cD = this.blockNames.has(CD) || !this.itemAndBlockNames.includes(CD) ? void 0 : [`Block of ${CD}`, `${CD} Block`].find((DD => this.blockNames.has(DD)));
+    !cD || DD.includes(`"${cD}"`) || DD.includes(`'${cD}'`) || fD.set(CD, cD)
   }
-  return [...iz, ...[...lz].map((zz => {
-    let [uz, bz] = zz;
-    return `"${uz}" is an item, not a block, so no block is ever called that. Did you mean "${bz}"?`
+  return [...iD, ...[...fD].map((DD => {
+    let [CD, cD] = DD;
+    return `"${CD}" is an item, not a block, so no block is ever called that. Did you mean "${cD}"?`
   }))]
 }
-unknownComparedBlockNames(zz) {
-  const uz = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    bz = new Set(this.itemAndBlockNames.map((zz => CM(zz)))),
-    Ez = new Set;
-  for (const nz of zz.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) Ez.add(nz[2]);
-  for (const nz of zz.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) Ez.add(nz[2]);
-  return [...Ez].filter((zz => !uz.has(zz) && !(/\s/.test(zz.trim()) && bz.has(CM(zz))))).map((zz => {
-    const uz = this.itemAndBlockNames.filter((uz => CM(uz) === CM(zz))),
-      bz = this.itemAndBlockNames.filter((uz => hM(uz).includes(zz.toLowerCase()))),
-      Ez = this.suggestNames(zz),
-      nz = uz.length > 0 ? {
-        names: uz,
-        isSure: 1 === uz.length,
+unknownComparedBlockNames(DD) {
+  const CD = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    cD = new Set(this.itemAndBlockNames.map((DD => rb(DD)))),
+    ID = new Set;
+  for (const pD of DD.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) ID.add(pD[2]);
+  for (const pD of DD.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) ID.add(pD[2]);
+  return [...ID].filter((DD => !CD.has(DD) && !(/\s/.test(DD.trim()) && cD.has(rb(DD))))).map((DD => {
+    const CD = this.itemAndBlockNames.filter((CD => rb(CD) === rb(DD))),
+      cD = this.itemAndBlockNames.filter((CD => Lb(CD).includes(DD.toLowerCase()))),
+      ID = this.suggestNames(DD),
+      pD = CD.length > 0 ? {
+        names: CD,
+        isSure: 1 === CD.length,
         isDecided: !0
-      } : Ez.names.length > 0 || Ez.isDecided ? Ez : {
-        names: bz.length <= 2 ? bz : [],
-        isSure: 1 === bz.length,
+      } : ID.names.length > 0 || ID.isDecided ? ID : {
+        names: cD.length <= 2 ? cD : [],
+        isSure: 1 === cD.length,
         isDecided: !1
       };
-    return `"${zz}" isn't a block or item name, so comparing a block with it is never true.${kM(nz)}`
+    return `"${DD}" isn't a block or item name, so comparing a block with it is never true.${Fb(pD)}`
   }))
 }
-madeUpStopValues(zz) {
-  const uz = new Set;
+madeUpStopValues(DD) {
+  const CD = new Set;
   for (const {
-      name: bz,
-      body: Ez
+      name: cD,
+      body: ID
     }
     of
-    function(zz) {
-      const uz = [...zz.matchAll(gM)];
-      return uz.map(((bz, Ez) => {
-        var nz, iz, lz;
+    function(DD) {
+      const CD = [...DD.matchAll(Rb)];
+      return CD.map(((cD, ID) => {
+        var pD, iD, fD;
         return {
-          name: null !== (nz = bz[1]) && void 0 !== nz ? nz : bz[2],
-          body: zz.slice(bz.index, null !== (iz = null === (lz = uz[Ez + 1]) || void 0 === lz ? void 0 : lz.index) && void 0 !== iz ? iz : zz.length)
+          name: null !== (pD = cD[1]) && void 0 !== pD ? pD : cD[2],
+          body: DD.slice(cD.index, null !== (iD = null === (fD = CD[ID + 1]) || void 0 === fD ? void 0 : fD.index) && void 0 !== iD ? iD : DD.length)
         }
       }))
-    }(zz)) {
-    const zz = this.byName.get(bz);
-    if ("callback" === (null === zz || void 0 === zz ? void 0 : zz.kind))
-      for (const nz of Ez.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
-        const Ez = nz[1];
-        if (zz.text.includes(`"${Ez}"`)) continue;
-        const iz = [...new Set([...zz.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((zz => zz[1])))],
-          lz = iz.length > 0 ? `Did you mean ${iz.map((zz=>`"${zz}"`)).join(" or ")}?` : /Return false/i.test(zz.text) ? `To stop it, return false instead of "${Ez}".` : "Check Show Docs for what it can return.";
-        uz.add(`${bz} can't use "${Ez}" to stop anything. ${lz}`)
+    }(DD)) {
+    const DD = this.byName.get(cD);
+    if ("callback" === (null === DD || void 0 === DD ? void 0 : DD.kind))
+      for (const pD of ID.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
+        const ID = pD[1];
+        if (DD.text.includes(`"${ID}"`)) continue;
+        const iD = [...new Set([...DD.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((DD => DD[1])))],
+          fD = iD.length > 0 ? `Did you mean ${iD.map((DD=>`"${DD}"`)).join(" or ")}?` : /Return false/i.test(DD.text) ? `To stop it, return false instead of "${ID}".` : "Check Show Docs for what it can return.";
+        CD.add(`${cD} can't use "${ID}" to stop anything. ${fD}`)
       }
   }
-  return [...uz]
+  return [...CD]
 }
-codeWarnings(zz) {
-  let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return [...this.unknownApiMethods(zz), ...this.unprefixedApiCalls(zz), ...this.unknownItemNames(zz), ...this.reorderedComparedNames(zz), ...this.unknownComparedBlockNames(zz), ...this.madeUpStopValues(zz), ...DM(zz), ...yM(zz, uz)]
+codeWarnings(DD) {
+  let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  return [...this.unknownApiMethods(DD), ...this.unprefixedApiCalls(DD), ...this.unknownItemNames(DD), ...this.reorderedComparedNames(DD), ...this.unknownComparedBlockNames(DD), ...this.madeUpStopValues(DD), ...Yb(DD), ...db(DD, CD)]
 }
-suggestNames(zz) {
-  var uz;
-  const bz = zz.trim().toLowerCase().replace(/\s+/g, " "),
-    Ez = Object.hasOwn(aM, bz) ? aM[bz] : void 0;
-  if (Ez) {
-    const zz = Ez.filter((zz => this.namesByLowerCase.has(zz.toLowerCase())));
+suggestNames(DD) {
+  var CD;
+  const cD = DD.trim().toLowerCase().replace(/\s+/g, " "),
+    ID = Object.hasOwn(Vb, cD) ? Vb[cD] : void 0;
+  if (ID) {
+    const DD = ID.filter((DD => this.namesByLowerCase.has(DD.toLowerCase())));
     return {
-      names: zz,
-      isSure: 1 === zz.length,
+      names: DD,
+      isSure: 1 === DD.length,
       isDecided: !0
     }
   }
-  const nz = zz.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((zz => Object.hasOwn(VM, zz) ? VM[zz] : zz)).filter(Boolean).join(" "),
-    iz = null !== (uz = this.namesByLowerCase.get(bz)) && void 0 !== uz ? uz : this.namesByLowerCase.get(nz);
-  if (iz) return {
-    names: [iz],
+  const pD = DD.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((DD => Object.hasOwn(zb, DD) ? zb[DD] : DD)).filter(Boolean).join(" "),
+    iD = null !== (CD = this.namesByLowerCase.get(cD)) && void 0 !== CD ? CD : this.namesByLowerCase.get(pD);
+  if (iD) return {
+    names: [iD],
     isSure: !0,
     isDecided: !0
   };
-  const lz = this.closestItemAndBlockNames(nz),
-    Mz = zz => hM(zz).filter((zz => !qM.has(zz) && !YM.has(zz))).map(UM),
-    tz = 1 === lz.length ? Mz(lz[0]) : [];
+  const fD = this.closestItemAndBlockNames(pD),
+    bD = DD => Lb(DD).filter((DD => !lb.has(DD) && !Ab.has(DD))).map(Tb),
+    QD = 1 === fD.length ? bD(fD[0]) : [];
   return {
-    names: lz,
-    isSure: 1 === lz.length && Mz(nz).every((zz => tz.includes(zz))),
+    names: fD,
+    isSure: 1 === fD.length && bD(pD).every((DD => QD.includes(DD))),
     isDecided: !1
   }
 }
-closestItemAndBlockNames(zz) {
-  const uz = new Set(hM(zz).filter((zz => !qM.has(zz))).map(UM)),
-    bz = this.itemAndBlockNames.map((zz => {
-      const bz = hM(zz).filter((zz => !qM.has(zz))).map(UM),
-        Ez = bz.filter((zz => uz.has(zz))).length;
+closestItemAndBlockNames(DD) {
+  const CD = new Set(Lb(DD).filter((DD => !lb.has(DD))).map(Tb)),
+    cD = this.itemAndBlockNames.map((DD => {
+      const cD = Lb(DD).filter((DD => !lb.has(DD))).map(Tb),
+        ID = cD.filter((DD => CD.has(DD))).length;
       return {
-        candidate: zz,
-        score: 2 * Ez - (bz.length - Ez)
+        candidate: DD,
+        score: 2 * ID - (cD.length - ID)
       }
-    })).filter((zz => zz.score > 0)),
-    Ez = Math.max(...bz.map((zz => zz.score)));
-  return bz.filter((zz => zz.score === Ez)).slice(0, 2).map((zz => zz.candidate))
+    })).filter((DD => DD.score > 0)),
+    ID = Math.max(...cD.map((DD => DD.score)));
+  return cD.filter((DD => DD.score === ID)).slice(0, 2).map((DD => DD.candidate))
 }
-find(zz, uz, bz) {
-  const Ez = new Map,
-    nz = (zz, uz) => {
-      var bz;
-      zz && Ez.set(zz, (null !== (bz = Ez.get(zz)) && void 0 !== bz ? bz : 0) + uz)
+find(DD, CD, cD) {
+  const ID = new Map,
+    pD = (DD, CD) => {
+      var cD;
+      DD && ID.set(DD, (null !== (cD = ID.get(DD)) && void 0 !== cD ? cD : 0) + CD)
     },
-    iz = hM(zz),
-    lz = iz.filter((zz => !qM.has(zz)));
-  for (const pz of iz)
-    for (const zz of Object.hasOwn(mM, pz) ? mM[pz] : []) nz(this.byName.get(zz), 6);
-  for (const pz of `${zz}\n${uz}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
-    var Mz, tz;
-    nz(this.byName.get(null !== (Mz = null !== (tz = pz[1]) && void 0 !== tz ? tz : pz[2]) && void 0 !== Mz ? Mz : pz[3]), pz[1] || pz[2] ? 4 : 2)
+    iD = Lb(DD),
+    fD = iD.filter((DD => !lb.has(DD)));
+  for (const BD of iD)
+    for (const DD of Object.hasOwn(jb, BD) ? jb[BD] : []) pD(this.byName.get(DD), 6);
+  for (const BD of `${DD}\n${CD}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
+    var bD, QD;
+    pD(this.byName.get(null !== (bD = null !== (QD = BD[1]) && void 0 !== QD ? QD : BD[2]) && void 0 !== bD ? bD : BD[3]), BD[1] || BD[2] ? 4 : 2)
   }
-  for (const pz of (0, pu.e)(uz, /([A-Za-z_$][\w$]*)\s*\(/g, pu.l)) {
-    const zz = this.byName.get(pz[1]);
-    "helper" === (null === zz || void 0 === zz ? void 0 : zz.kind) && nz(zz, 3)
+  for (const BD of (0, BC.f)(CD, /([A-Za-z_$][\w$]*)\s*\(/g, BC.q)) {
+    const DD = this.byName.get(BD[1]);
+    "helper" === (null === DD || void 0 === DD ? void 0 : DD.kind) && pD(DD, 3)
   }
-  const Hz = new Set(lz.map(UM));
-  for (const pz of this.sections) {
-    let zz = 0;
-    for (const uz of Hz) {
-      var Oz;
-      const bz = 1 / Math.log2(2 + (null !== (Oz = this.wordCounts.get(uz)) && void 0 !== Oz ? Oz : 0));
-      pz.nameWords.has(uz) ? zz += 3 * bz : pz.textWords.has(uz) && (zz += bz)
+  const wD = new Set(fD.map(Tb));
+  for (const BD of this.sections) {
+    let DD = 0;
+    for (const CD of wD) {
+      var SD;
+      const cD = 1 / Math.log2(2 + (null !== (SD = this.wordCounts.get(CD)) && void 0 !== SD ? SD : 0));
+      BD.nameWords.has(CD) ? DD += 3 * cD : BD.textWords.has(CD) && (DD += cD)
     }
-    nz(pz, zz)
+    pD(BD, DD)
   }
-  return [...Ez.entries()].filter((zz => {
-    let [uz, bz] = zz;
-    return bz > .5 && "prefab" !== uz.kind
-  })).sort(((zz, uz) => uz[1] - zz[1])).slice(0, bz).map((zz => {
-    let [uz] = zz;
-    return uz
+  return [...ID.entries()].filter((DD => {
+    let [CD, cD] = DD;
+    return cD > .5 && "prefab" !== CD.kind
+  })).sort(((DD, CD) => CD[1] - DD[1])).slice(0, cD).map((DD => {
+    let [CD] = DD;
+    return CD
   }))
 }
-section(zz) {
-  var uz, bz;
-  const Ez = zz.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
-    nz = Ez.toLowerCase();
-  return null !== (uz = null !== (bz = this.byName.get(Ez)) && void 0 !== bz ? bz : this.sections.find((zz => zz.name.toLowerCase() === nz))) && void 0 !== uz ? uz : null
+section(DD) {
+  var CD, cD;
+  const ID = DD.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
+    pD = ID.toLowerCase();
+  return null !== (CD = null !== (cD = this.byName.get(ID)) && void 0 !== cD ? cD : this.sections.find((DD => DD.name.toLowerCase() === pD))) && void 0 !== CD ? CD : null
 }
-searchNames(zz, uz) {
-  const bz = hM(zz).filter((zz => !qM.has(zz))).map(UM);
-  if (0 === bz.length) return [];
-  const Ez = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((zz => {
-      const uz = new Set(hM(zz).map(UM)),
-        Ez = bz.filter((zz => uz.has(zz))).length;
-      return 0 === Ez ? [] : [{
-        name: zz,
-        found: Ez,
-        length: uz.size
+searchNames(DD, CD) {
+  const cD = Lb(DD).filter((DD => !lb.has(DD))).map(Tb);
+  if (0 === cD.length) return [];
+  const ID = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((DD => {
+      const CD = new Set(Lb(DD).map(Tb)),
+        ID = cD.filter((DD => CD.has(DD))).length;
+      return 0 === ID ? [] : [{
+        name: DD,
+        found: ID,
+        length: CD.size
       }]
     })),
-    nz = Math.max(0, ...Ez.map((zz => zz.found)));
-  return [...new Set(Ez.filter((zz => zz.found === nz)).sort(((zz, uz) => zz.length - uz.length || zz.name.localeCompare(uz.name))).map((zz => zz.name)))].slice(0, uz)
+    pD = Math.max(0, ...ID.map((DD => DD.found)));
+  return [...new Set(ID.filter((DD => DD.found === pD)).sort(((DD, CD) => DD.length - CD.length || DD.name.localeCompare(CD.name))).map((DD => DD.name)))].slice(0, CD)
 }
-matchItemAndBlockNames(zz, uz) {
-  const bz = new Set(hM(zz).map(UM)),
-    Ez = [];
-  for (const nz of this.itemAndBlockNames) {
-    const zz = hM(nz).filter((zz => !qM.has(zz))).map(UM);
-    zz.length > 0 && zz.every((zz => bz.has(zz))) && Ez.push({
-      name: nz,
-      length: zz.length
+matchItemAndBlockNames(DD, CD) {
+  const cD = new Set(Lb(DD).map(Tb)),
+    ID = [];
+  for (const pD of this.itemAndBlockNames) {
+    const DD = Lb(pD).filter((DD => !lb.has(DD))).map(Tb);
+    DD.length > 0 && DD.every((DD => cD.has(DD))) && ID.push({
+      name: pD,
+      length: DD.length
     })
   }
-  return Ez.sort(((zz, uz) => uz.length - zz.length)).slice(0, uz).map((zz => zz.name))
+  return ID.sort(((DD, CD) => CD.length - DD.length)).slice(0, CD).map((DD => DD.name))
 }
 }
 
-function bt(zz, uz) {
-  var bz;
-  const Ez = Et(zz, !0),
-    nz = null === (bz = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(Ez)) || void 0 === bz ? void 0 : bz[1],
-    iz = nz && void 0 !== uz ? function(zz, uz) {
-      const bz = uz.replace(/[$.]/g, "\\$&"),
-        Ez = new RegExp(`(^|[^\\w$.])${bz}\\s*\\(`),
-        nz = zz.split("\n").flatMap(((zz, uz) => Ez.test(zz) ? [uz + 1] : []));
-      return 1 === nz.length ? nz[0] : void 0
-    }(uz, nz) : void 0;
-  return iz ? {
-    text: Et(zz, !1),
-    line: iz
+function cQ(DD, CD) {
+  var cD;
+  const ID = IQ(DD, !0),
+    pD = null === (cD = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(ID)) || void 0 === cD ? void 0 : cD[1],
+    iD = pD && void 0 !== CD ? function(DD, CD) {
+      const cD = CD.replace(/[$.]/g, "\\$&"),
+        ID = new RegExp(`(^|[^\\w$.])${cD}\\s*\\(`),
+        pD = DD.split("\n").flatMap(((DD, CD) => ID.test(DD) ? [CD + 1] : []));
+      return 1 === pD.length ? pD[0] : void 0
+    }(CD, pD) : void 0;
+  return iD ? {
+    text: IQ(DD, !1),
+    line: iD
   } : {
-    text: Ez
+    text: ID
   }
 }
 
-function Et(zz, uz) {
-  const bz = zz.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
-    [Ez, ...nz] = bz.split("\n"),
+function IQ(DD, CD) {
+  const cD = DD.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
+    [ID, ...pD] = cD.split("\n"),
     {
-      when: iz,
-      rest: lz
-    } = function(zz) {
-      const uz = /^Error in world code init:\s*/.exec(zz);
-      if (uz) return {
+      when: iD,
+      rest: fD
+    } = function(DD) {
+      const CD = /^Error in world code init:\s*/.exec(DD);
+      if (CD) return {
         when: "when your world started",
-        rest: zz.slice(uz[0].length)
+        rest: DD.slice(CD[0].length)
       };
-      const bz = /^Error in (?:callback )?(\w+):\s*/.exec(zz);
-      return bz ? {
-        when: `in ${bz[1]}`,
-        rest: zz.slice(bz[0].length)
+      const cD = /^Error in (?:callback )?(\w+):\s*/.exec(DD);
+      return cD ? {
+        when: `in ${cD[1]}`,
+        rest: DD.slice(cD[0].length)
       } : {
         when: "",
-        rest: zz
+        rest: DD
       }
-    }(Ez.trim()),
-    Mz = iz && uz ? ` ${iz}` : "",
-    tz = /(?:ApiError:\s*)?(\w+) didn't work/.exec(lz);
-  if (tz) {
-    var Hz, Oz, pz, dz, Fz;
-    const zz = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (Hz = null === (Oz = nz[0]) || void 0 === Oz ? void 0 : Oz.trim()) && void 0 !== Hz ? Hz : ""),
-      uz = null === (pz = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (dz = null === (Fz = nz[1]) || void 0 === Fz ? void 0 : Fz.trim()) && void 0 !== dz ? dz : "")) || void 0 === pz ? void 0 : pz[1],
-      bz = uz ? function(zz) {
-        const uz = zz.split(/\s+or\s+/)[0].trim();
-        return /^(a|an|the)\s/i.test(uz) || !/^[a-z]/i.test(uz) ? uz : `${/^[aeiou]/i.test(uz)?"an":"a"} ${uz}`
-      }(uz) : void 0;
-    return bz && null !== zz && void 0 !== zz && zz[3] ? `api.${tz[1]} needs ${bz}, but it got ${zz[3]}${Mz}.` : zz ? `api.${tz[1]} couldn't use its ${Zz=Number(zz[1]),1===Zz?"first":2===Zz?"second":3===Zz?"third":4===Zz?"fourth":`#${Zz}`} argument${Mz}.${bz?` It needs ${bz}.`:""}` : `api.${tz[1]} didn't work${Mz}.`
+    }(ID.trim()),
+    bD = iD && CD ? ` ${iD}` : "",
+    QD = /(?:ApiError:\s*)?(\w+) didn't work/.exec(fD);
+  if (QD) {
+    var wD, SD, BD, yD, MD;
+    const DD = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (wD = null === (SD = pD[0]) || void 0 === SD ? void 0 : SD.trim()) && void 0 !== wD ? wD : ""),
+      CD = null === (BD = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (yD = null === (MD = pD[1]) || void 0 === MD ? void 0 : MD.trim()) && void 0 !== yD ? yD : "")) || void 0 === BD ? void 0 : BD[1],
+      cD = CD ? function(DD) {
+        const CD = DD.split(/\s+or\s+/)[0].trim();
+        return /^(a|an|the)\s/i.test(CD) || !/^[a-z]/i.test(CD) ? CD : `${/^[aeiou]/i.test(CD)?"an":"a"} ${CD}`
+      }(CD) : void 0;
+    return cD && null !== DD && void 0 !== DD && DD[3] ? `api.${QD[1]} needs ${cD}, but it got ${DD[3]}${bD}.` : DD ? `api.${QD[1]} couldn't use its ${tD=Number(DD[1]),1===tD?"first":2===tD?"second":3===tD?"third":4===tD?"fourth":`#${tD}`} argument${bD}.${cD?` It needs ${cD}.`:""}` : `api.${QD[1]} didn't work${bD}.`
   }
-  var Zz;
-  const Rz = /TypeError:\s*(?:(.+?) is )?not a function/.exec(lz);
-  if (Rz) return Rz[1] ? `${Rz[1]} isn't a function${Mz}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${Mz}. Check each name it calls is spelt exactly right.`;
-  const Kz = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(lz);
-  if (Kz) return `${Kz[1]} isn't defined${Mz}. Check the spelling, or create it before using it.`;
-  const wz = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(lz);
-  if (wz) {
-    var Xz;
-    const zz = null !== (Xz = wz[1]) && void 0 !== Xz ? Xz : wz[3];
-    return `Your code tried to read${zz?` .${zz}`:" something"} from ${wz[2]}${Mz}: a value it expected wasn't there.`
+  var tD;
+  const ZD = /TypeError:\s*(?:(.+?) is )?not a function/.exec(fD);
+  if (ZD) return ZD[1] ? `${ZD[1]} isn't a function${bD}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${bD}. Check each name it calls is spelt exactly right.`;
+  const oD = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(fD);
+  if (oD) return `${oD[1]} isn't defined${bD}. Check the spelling, or create it before using it.`;
+  const vD = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(fD);
+  if (vD) {
+    var ND;
+    const DD = null !== (ND = vD[1]) && void 0 !== ND ? ND : vD[3];
+    return `Your code tried to read${DD?` .${DD}`:" something"} from ${vD[2]}${bD}: a value it expected wasn't there.`
   }
-  return `Your code hit an error${Mz}: ${lz.replace(/^\w*Error:\s*/,"")}`
+  return `Your code hit an error${bD}: ${fD.replace(/^\w*Error:\s*/,"")}`
 }
-const nt = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
-  it = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
-  lt = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
-  Mt = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
-  tt = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
-  Ht = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
-  Ot = /^Line \d+ uses "global", which World Code doesn't have\b/,
-  pt = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
-  dt = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
+const pQ = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
+  iQ = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
+  fQ = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
+  bQ = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
+  QQ = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
+  wQ = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
+  SQ = /^Line \d+ uses "global", which World Code doesn't have\b/,
+  BQ = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
+  yQ = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
 
-function Ft(zz) {
-  const uz = tt.exec(zz);
-  if (uz) return {
-    from: uz[1],
-    to: uz[2],
+function MQ(DD) {
+  const CD = QQ.exec(DD);
+  if (CD) return {
+    from: CD[1],
+    to: CD[2],
     kind: "call"
   };
-  const bz = Ht.exec(zz);
-  if (bz) return {
-    from: bz[1],
-    to: bz[2],
+  const cD = wQ.exec(DD);
+  if (cD) return {
+    from: cD[1],
+    to: cD[2],
     kind: "variable"
   };
-  if (Ot.test(zz)) return {
+  if (SQ.test(DD)) return {
     from: "global",
     to: "",
     kind: "export"
   };
-  const Ez = Mt.exec(zz);
-  if (Ez) return {
-    from: Ez[2],
-    to: Ez[3],
-    callback: Ez[1]
+  const ID = bQ.exec(DD);
+  if (ID) return {
+    from: ID[2],
+    to: ID[3],
+    callback: ID[1]
   };
-  const nz = it.exec(zz);
-  if (nz) return {
-    from: nz[1],
-    to: nz[2],
+  const pD = iQ.exec(DD);
+  if (pD) return {
+    from: pD[1],
+    to: pD[2],
     kind: "compared"
   };
-  const iz = lt.exec(zz);
-  if (iz) return {
-    from: iz[1],
-    to: iz[2],
+  const iD = fQ.exec(DD);
+  if (iD) return {
+    from: iD[1],
+    to: iD[2],
     kind: "comparedBlock"
   };
-  const lz = nt.exec(zz);
-  return lz ? {
-    from: lz[1],
-    to: lz[2]
+  const fD = pQ.exec(DD);
+  return fD ? {
+    from: fD[1],
+    to: fD[2]
   } : void 0
 }
 
-function Zt(zz) {
-  const uz = zz.map(Ft);
-  return uz.length > 0 && !uz.includes(void 0) ? uz : void 0
+function tQ(DD) {
+  const CD = DD.map(MQ);
+  return CD.length > 0 && !CD.includes(void 0) ? CD : void 0
 }
 
-function Rt(zz, uz, bz) {
-  return zz.replaceAll(`"${uz}"`, `"${bz}"`).replaceAll(`'${uz}'`, `'${bz}'`)
+function ZQ(DD, CD, cD) {
+  return DD.replaceAll(`"${CD}"`, `"${cD}"`).replaceAll(`'${CD}'`, `'${cD}'`)
 }
 
-function Kt(zz, uz) {
-  const bz = zz => vz().isIdentifier(zz) ? zz.text === uz : zz.elements.some((zz => !vz().isOmittedExpression(zz) && bz(zz.name))),
-    Ez = zz => void 0 !== zz && vz().isVariableDeclarationList(zz) && zz.declarations.some((zz => bz(zz.name))),
-    nz = zz => {
-      const uz = zz => !vz().isFunctionLike(zz) && !vz().isClassStaticBlockDeclaration(zz) && (!(!vz().isVariableDeclarationList(zz) || 0 !== (zz.flags & vz().NodeFlags.BlockScoped) || !Ez(zz)) || !0 === vz().forEachChild(zz, uz));
-      return void 0 !== zz && !0 === vz().forEachChild(zz, uz)
+function oQ(DD, CD) {
+  const cD = DD => PD().isIdentifier(DD) ? DD.text === CD : DD.elements.some((DD => !PD().isOmittedExpression(DD) && cD(DD.name))),
+    ID = DD => void 0 !== DD && PD().isVariableDeclarationList(DD) && DD.declarations.some((DD => cD(DD.name))),
+    pD = DD => {
+      const CD = DD => !PD().isFunctionLike(DD) && !PD().isClassStaticBlockDeclaration(DD) && (!(!PD().isVariableDeclarationList(DD) || 0 !== (DD.flags & PD().NodeFlags.BlockScoped) || !ID(DD)) || !0 === PD().forEachChild(DD, CD));
+      return void 0 !== DD && !0 === PD().forEachChild(DD, CD)
     };
-  var iz;
-  if (vz().isFunctionLike(zz)) return zz.parameters.some((zz => bz(zz.name))) || vz().isFunctionExpression(zz) && (null === (iz = zz.name) || void 0 === iz ? void 0 : iz.text) === uz || "body" in zz && nz(zz.body);
-  return !(!vz().isSourceFile(zz) || !nz(zz)) || (vz().isSourceFile(zz) || vz().isBlock(zz) || vz().isCaseClause(zz) || vz().isDefaultClause(zz) ? zz.statements.some((zz => {
-    var bz;
-    return vz().isVariableStatement(zz) && Ez(zz.declarationList) || (vz().isFunctionDeclaration(zz) || vz().isClassDeclaration(zz)) && (null === (bz = zz.name) || void 0 === bz ? void 0 : bz.text) === uz || vz().isImportDeclaration(zz) && (zz => {
-      var bz;
-      const Ez = null === zz || void 0 === zz ? void 0 : zz.namedBindings;
-      return (null === zz || void 0 === zz || null === (bz = zz.name) || void 0 === bz ? void 0 : bz.text) === uz || void 0 !== Ez && (vz().isNamespaceImport(Ez) ? Ez.name.text === uz : Ez.elements.some((zz => zz.name.text === uz)))
-    })(zz.importClause)
-  })) : vz().isForStatement(zz) || vz().isForInStatement(zz) || vz().isForOfStatement(zz) ? Ez(zz.initializer) : vz().isCatchClause(zz) && void 0 !== zz.variableDeclaration && bz(zz.variableDeclaration.name))
+  var iD;
+  if (PD().isFunctionLike(DD)) return DD.parameters.some((DD => cD(DD.name))) || PD().isFunctionExpression(DD) && (null === (iD = DD.name) || void 0 === iD ? void 0 : iD.text) === CD || "body" in DD && pD(DD.body);
+  return !(!PD().isSourceFile(DD) || !pD(DD)) || (PD().isSourceFile(DD) || PD().isBlock(DD) || PD().isCaseClause(DD) || PD().isDefaultClause(DD) ? DD.statements.some((DD => {
+    var cD;
+    return PD().isVariableStatement(DD) && ID(DD.declarationList) || (PD().isFunctionDeclaration(DD) || PD().isClassDeclaration(DD)) && (null === (cD = DD.name) || void 0 === cD ? void 0 : cD.text) === CD || PD().isImportDeclaration(DD) && (DD => {
+      var cD;
+      const ID = null === DD || void 0 === DD ? void 0 : DD.namedBindings;
+      return (null === DD || void 0 === DD || null === (cD = DD.name) || void 0 === cD ? void 0 : cD.text) === CD || void 0 !== ID && (PD().isNamespaceImport(ID) ? ID.name.text === CD : ID.elements.some((DD => DD.name.text === CD)))
+    })(DD.importClause)
+  })) : PD().isForStatement(DD) || PD().isForInStatement(DD) || PD().isForOfStatement(DD) ? ID(DD.initializer) : PD().isCatchClause(DD) && void 0 !== DD.variableDeclaration && cD(DD.variableDeclaration.name))
 }
 
-function wt(zz, uz) {
-  return uz.reduce(((zz, uz) => {
+function vQ(DD, CD) {
+  return CD.reduce(((DD, CD) => {
     let {
-      from: bz,
-      to: Ez,
-      kind: nz,
-      callback: iz
-    } = uz;
-    if ("export" === nz) return zz.replace(pt, "").replace(dt, "$1$2$3");
-    if ("call" === nz || "variable" === nz) return function(zz, uz, bz, Ez) {
-      const nz = vz().createSourceFile("worldCode.js", zz, vz().ScriptTarget.Latest, !0, vz().ScriptKind.JS),
-        iz = [],
-        lz = (zz, Mz) => {
-          const tz = Mz || Kt(zz, uz),
-            Hz = zz.parent;
-          if (vz().isIdentifier(zz) && zz.text === uz && !tz && Hz) {
-            const lz = vz().isBindingElement(Hz) && Hz.propertyName === zz || (vz().isPropertyAccessExpression(Hz) || vz().isPropertyAssignment(Hz) || vz().isMethodDeclaration(Hz) || vz().isPropertyDeclaration(Hz) || vz().isGetAccessorDeclaration(Hz) || vz().isSetAccessorDeclaration(Hz)) && Hz.name === zz,
-              Mz = vz().isCallExpression(Hz) && Hz.expression === zz;
-            lz || Ez && !Mz || iz.push({
-              at: zz.getStart(nz),
-              text: vz().isShorthandPropertyAssignment(Hz) ? `${uz}: ${bz}` : bz
+      from: cD,
+      to: ID,
+      kind: pD,
+      callback: iD
+    } = CD;
+    if ("export" === pD) return DD.replace(BQ, "").replace(yQ, "$1$2$3");
+    if ("call" === pD || "variable" === pD) return function(DD, CD, cD, ID) {
+      const pD = PD().createSourceFile("worldCode.js", DD, PD().ScriptTarget.Latest, !0, PD().ScriptKind.JS),
+        iD = [],
+        fD = (DD, bD) => {
+          const QD = bD || oQ(DD, CD),
+            wD = DD.parent;
+          if (PD().isIdentifier(DD) && DD.text === CD && !QD && wD) {
+            const fD = PD().isBindingElement(wD) && wD.propertyName === DD || (PD().isPropertyAccessExpression(wD) || PD().isPropertyAssignment(wD) || PD().isMethodDeclaration(wD) || PD().isPropertyDeclaration(wD) || PD().isGetAccessorDeclaration(wD) || PD().isSetAccessorDeclaration(wD)) && wD.name === DD,
+              bD = PD().isCallExpression(wD) && wD.expression === DD;
+            fD || ID && !bD || iD.push({
+              at: DD.getStart(pD),
+              text: PD().isShorthandPropertyAssignment(wD) ? `${CD}: ${cD}` : cD
             })
           }
-          vz().forEachChild(zz, (zz => {
-            lz(zz, tz)
+          PD().forEachChild(DD, (DD => {
+            fD(DD, QD)
           }))
         };
-      return lz(nz, !1), iz.reduceRight(((zz, bz) => zz.slice(0, bz.at) + bz.text + zz.slice(bz.at + uz.length)), zz)
-    }(zz, bz, Ez, "call" === nz);
-    if ("compared" === nz || "comparedBlock" === nz) {
-      const uz = `(["'])${function(zz){return zz.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(bz)}\\1`;
-      return ("comparedBlock" === nz ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${uz}`, `${uz}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${uz}`, `${uz}\\s*[!=]==?`, `\\bcase\\s+${uz}\\s*:`, `\\.includes\\(\\s*${uz}\\s*\\)`]).reduce(((zz, uz) => zz.replace(new RegExp(uz, "g"), (zz => Rt(zz, bz, Ez)))), zz)
+      return fD(pD, !1), iD.reduceRight(((DD, cD) => DD.slice(0, cD.at) + cD.text + DD.slice(cD.at + CD.length)), DD)
+    }(DD, cD, ID, "call" === pD);
+    if ("compared" === pD || "comparedBlock" === pD) {
+      const CD = `(["'])${function(DD){return DD.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(cD)}\\1`;
+      return ("comparedBlock" === pD ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${CD}`, `${CD}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${CD}`, `${CD}\\s*[!=]==?`, `\\bcase\\s+${CD}\\s*:`, `\\.includes\\(\\s*${CD}\\s*\\)`]).reduce(((DD, CD) => DD.replace(new RegExp(CD, "g"), (DD => ZQ(DD, cD, ID)))), DD)
     }
-    if (void 0 !== iz) {
-      return Sz(zz).filter((zz => zz.name === iz && zz.topLevel)).reduceRight(((zz, uz) => zz.slice(0, uz.from) + Rt(zz.slice(uz.from, uz.to), bz, Ez) + zz.slice(uz.to)), zz)
+    if (void 0 !== iD) {
+      return kD(DD).filter((DD => DD.name === iD && DD.topLevel)).reduceRight(((DD, CD) => DD.slice(0, CD.from) + ZQ(DD.slice(CD.from, CD.to), cD, ID) + DD.slice(CD.to)), DD)
     }
-    return Rt(zz, bz, Ez)
-  }), zz)
+    return ZQ(DD, cD, ID)
+  }), DD)
 }
 
-function Xt(zz) {
+function NQ(DD) {
   let {
-    from: uz,
-    to: bz,
-    kind: Ez
-  } = zz;
-  return "export" === Ez ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${uz}" is now "${bz}".`
+    from: CD,
+    to: cD,
+    kind: ID
+  } = DD;
+  return "export" === ID ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${CD}" is now "${cD}".`
 }
-var ft = bz(40673);
+var gQ = cD(40518);
 
-function st() {
-  return (0, lz.jsxs)("svg", {
+function XQ() {
+  return (0, fD.jsxs)("svg", {
     className: "WorldCodeAiKeyIcon",
     viewBox: "0 0 16 16",
     "aria-hidden": "true",
-    children: [(0, lz.jsx)("circle", {
+    children: [(0, fD.jsx)("circle", {
       cx: "4.5",
       cy: "8",
       r: "3"
-    }), (0, lz.jsx)("path", {
+    }), (0, fD.jsx)("path", {
       d: "M7.5 8h7.5M12.5 8v3M15 8v2.5"
     })]
   })
 }
 
-function rt(zz) {
+function mQ(DD) {
   let {
-    detail: uz,
-    onOpen: bz
-  } = zz;
-  return (0, lz.jsxs)("details", {
+    detail: CD,
+    onOpen: cD
+  } = DD;
+  return (0, fD.jsxs)("details", {
     className: "WorldCodeAiKeyDetails",
-    onToggle: zz => {
-      zz.currentTarget.open && (null === bz || void 0 === bz || bz())
+    onToggle: DD => {
+      DD.currentTarget.open && (null === cD || void 0 === cD || cD())
     },
-    children: [(0, lz.jsx)("summary", {
+    children: [(0, fD.jsx)("summary", {
       children: "Details"
-    }), (0, lz.jsx)("p", {
-      children: uz
+    }), (0, fD.jsx)("p", {
+      children: CD
     })]
   })
 }
 
-function ot(zz) {
+function nQ(DD) {
   let {
-    answeredBy: uz
-  } = zz;
-  return "free" === uz ? (0, lz.jsx)("div", {
+    answeredBy: CD
+  } = DD;
+  return "free" === CD ? (0, fD.jsx)("div", {
     className: "WorldCodeAiAnsweredBy",
     children: "Bot.xd (free)"
-  }) : (0, lz.jsxs)("div", {
-    className: uz.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
-    children: [!uz.isSuperBot && (0, lz.jsx)(st, {}), uz.model]
+  }) : (0, fD.jsxs)("div", {
+    className: CD.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
+    children: [!CD.isSuperBot && (0, fD.jsx)(XQ, {}), CD.model]
   })
 }
 
-function Nt(zz) {
+function OQ(DD) {
   let {
-    notice: uz,
-    model: bz,
-    company: Ez,
-    isServer: nz
-  } = zz;
-  switch (uz) {
+    notice: CD,
+    model: cD,
+    company: ID,
+    isServer: pD
+  } = DD;
+  switch (CD) {
     case "badKey":
-      return nz ? `${Ez} didn't accept your key: it may be wrong or deleted.` : `${Ez} didn't accept your key: it may be wrong or deleted. Check it on ${Ez}'s website.`;
+      return pD ? `${ID} didn't accept your key: it may be wrong or deleted.` : `${ID} didn't accept your key: it may be wrong or deleted. Check it on ${ID}'s website.`;
     case "noCredit":
-      return nz ? `${Ez} stopped your key for now: it has used all it can.` : `${Ez} stopped your key for now: it has used all it can. Check it on ${Ez}'s website.`;
+      return pD ? `${ID} stopped your key for now: it has used all it can.` : `${ID} stopped your key for now: it has used all it can. Check it on ${ID}'s website.`;
     case "busy":
-      return `Too many requests to ${bz} right now. Wait a minute and try again.`;
+      return `Too many requests to ${cD} right now. Wait a minute and try again.`;
     case "noModel":
-      return `${Ez} can't find ${bz}. Pick another model, or press Check for new models in AI settings.`;
+      return `${ID} can't find ${cD}. Pick another model, or press Check for new models in AI settings.`;
     case "timeout":
-      return `${bz} took too long to answer.`;
+      return `${cD} took too long to answer.`;
     case "unreachable":
-      return nz ? `Couldn't reach ${Ez}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${Ez}. Check your internet and your key.`;
+      return pD ? `Couldn't reach ${ID}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${ID}. Check your internet and your key.`;
     case "blocked":
-      return `${Ez} doesn't work from where you are.`;
+      return `${ID} doesn't work from where you are.`;
     case "unchecked":
       return "Bloxd's safety check didn't answer, so your key wasn't used.";
     default:
-      return `${bz} can't be used right now. Try again in a minute.`
+      return `${cD} can't be used right now. Try again in a minute.`
   }
 }
 
-function vt(zz) {
+function PQ(DD) {
   let {
-    notice: uz,
-    model: bz,
-    company: Ez
-  } = zz;
-  switch (uz) {
+    notice: CD,
+    model: cD,
+    company: ID
+  } = DD;
+  switch (CD) {
     case "badKey":
-      return `Not answered: ${Ez} didn't accept your key.`;
+      return `Not answered: ${ID} didn't accept your key.`;
     case "noModel":
-      return `Not answered: ${Ez} couldn't find ${bz}.`;
+      return `Not answered: ${ID} couldn't find ${cD}.`;
     case "noCredit":
-      return `Not answered: ${Ez} stopped your key for now.`;
+      return `Not answered: ${ID} stopped your key for now.`;
     case "busy":
-      return `Not answered: too many requests to ${bz}.`;
+      return `Not answered: too many requests to ${cD}.`;
     case "timeout":
-      return `Not answered: ${bz} took too long.`;
+      return `Not answered: ${cD} took too long.`;
     case "unreachable":
-      return `Not answered: couldn't reach ${Ez}.`;
+      return `Not answered: couldn't reach ${ID}.`;
     case "blocked":
-      return `Not answered: ${Ez} doesn't work from where you are.`;
+      return `Not answered: ${ID} doesn't work from where you are.`;
     case "unchecked":
       return "Not answered: the safety check didn't answer.";
     default:
-      return `Not answered: ${bz} couldn't be used.`
+      return `Not answered: ${cD} couldn't be used.`
   }
 }
 
-function xt(zz) {
-  return "busy" === zz || "timeout" === zz || "failed" === zz || "unchecked" === zz
+function HQ(DD) {
+  return "busy" === DD || "timeout" === DD || "failed" === DD || "unchecked" === DD
 }
 
-function Jt(zz) {
+function UQ(DD) {
   let {
-    notice: uz,
-    onRetry: bz,
-    onUseFree: Ez,
-    onCheckKey: nz
-  } = zz;
-  return (0, lz.jsxs)("div", {
+    notice: CD,
+    onRetry: cD,
+    onUseFree: ID,
+    onCheckKey: pD
+  } = DD;
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiKeyNoticeActions",
-    children: [(0, lz.jsx)("button", {
-      ...ft.f,
+    children: [(0, fD.jsx)("button", {
+      ...gQ.e,
       className: "WorldCodeAiPrimaryButton",
-      onClick: Ez,
+      onClick: ID,
       children: "Use Bot.xd for this one"
-    }), xt(uz) && (0, lz.jsx)("button", {
+    }), HQ(CD) && (0, fD.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: bz,
+      onClick: cD,
       children: "Try again"
-    }), "unchecked" !== uz && (0, lz.jsx)("button", {
+    }), "unchecked" !== CD && (0, fD.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: nz,
+      onClick: pD,
       children: "Open AI settings"
     })]
   })
 }
 
-function At(zz) {
+function xQ(DD) {
   let {
-    hasCode: uz,
-    canFinish: bz,
-    onFinish: Ez
-  } = zz;
-  return (0, lz.jsxs)("div", {
+    hasCode: CD,
+    canFinish: cD,
+    onFinish: ID
+  } = DD;
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiCutShort",
-    children: [(0, lz.jsx)("p", {
-      children: uz ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
-    }), bz && (0, lz.jsx)("button", {
+    children: [(0, fD.jsx)("p", {
+      children: CD ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
+    }), cD && (0, fD.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: Ez,
+      onClick: ID,
       children: "Finish the answer"
     })]
   })
 }
-const Tt = "worldCodeAiAllowEdits";
+const qQ = "worldCodeAiAllowEdits";
 
-function Lt() {
+function JQ() {
   try {
-    return "false" !== localStorage.getItem(Tt)
+    return "false" !== localStorage.getItem(qQ)
   } catch {
     return !0
   }
 }
 
-function Pt(zz) {
+function KQ(DD) {
   let {
-    allow: uz,
-    onChange: bz
-  } = zz;
-  return (0, lz.jsxs)("label", {
+    allow: CD,
+    onChange: cD
+  } = DD;
+  return (0, fD.jsxs)("label", {
     className: "WorldCodeAiAllowEdits",
-    children: [(0, lz.jsx)("input", {
+    children: [(0, fD.jsx)("input", {
       type: "checkbox",
       role: "switch",
-      checked: uz,
-      onChange: zz => {
-        bz(zz.target.checked)
+      checked: CD,
+      onChange: DD => {
+        cD(DD.target.checked)
       }
-    }), (0, lz.jsx)("span", {
+    }), (0, fD.jsx)("span", {
       children: "Allow AI to make edits to my code"
     })]
   })
 }
-const Gt = {
+const aQ = {
   keyId: "bloxd",
   modelId: "superbotxd"
 };
 
-function Vt(zz, uz) {
-  const bz = Array.from(zz.querySelectorAll(".WorldCodeAiModelGroup")),
-    Ez = bz.findIndex((zz => zz.contains(uz)));
-  if (Ez < 0) return !1;
-  const nz = zz.getBoundingClientRect(),
-    iz = uz => zz.scrollTop + uz.top - nz.top,
-    lz = iz(uz.getBoundingClientRect()) + uz.getBoundingClientRect().height,
-    Mz = zz.scrollHeight - zz.clientHeight,
-    tz = bz.slice(0, Ez + 1).map((zz => iz(zz.getBoundingClientRect()))).filter((zz => lz - zz <= nz.height + 1));
-  if (0 === tz.length) return !1;
-  const Hz = tz.filter((zz => zz <= Mz + 1)),
-    Oz = Hz.length > 0 ? Math.max(...Hz) : Math.min(...tz);
-  return Oz > Mz && (zz.style.paddingBottom = (parseFloat(getComputedStyle(zz).paddingBottom) || 0) + Oz - Mz + "px"), zz.scrollTop = Oz, !0
+function VQ(DD, CD) {
+  const cD = Array.from(DD.querySelectorAll(".WorldCodeAiModelGroup")),
+    ID = cD.findIndex((DD => DD.contains(CD)));
+  if (ID < 0) return !1;
+  const pD = DD.getBoundingClientRect(),
+    iD = CD => DD.scrollTop + CD.top - pD.top,
+    fD = iD(CD.getBoundingClientRect()) + CD.getBoundingClientRect().height,
+    bD = DD.scrollHeight - DD.clientHeight,
+    QD = cD.slice(0, ID + 1).map((DD => iD(DD.getBoundingClientRect()))).filter((DD => fD - DD <= pD.height + 1));
+  if (0 === QD.length) return !1;
+  const wD = QD.filter((DD => DD <= bD + 1)),
+    SD = wD.length > 0 ? Math.max(...wD) : Math.min(...QD);
+  return SD > bD && (DD.style.paddingBottom = (parseFloat(getComputedStyle(DD).paddingBottom) || 0) + SD - bD + "px"), DD.scrollTop = SD, !0
 }
 
-function mt(zz) {
+function zQ(DD) {
   let {
-    keyName: uz,
-    placeholder: bz,
-    onDone: nz
-  } = zz;
-  const [iz, Mz] = (0, Ez.useState)(uz);
-  return (0, lz.jsxs)("form", {
+    keyName: CD,
+    placeholder: cD,
+    onDone: pD
+  } = DD;
+  const [iD, bD] = (0, ID.useState)(CD);
+  return (0, fD.jsxs)("form", {
     className: "WorldCodeAiKeyRename",
-    onSubmit: zz => {
-      zz.preventDefault(), nz(iz)
+    onSubmit: DD => {
+      DD.preventDefault(), pD(iD)
     },
-    children: [(0, lz.jsx)("input", {
+    children: [(0, fD.jsx)("input", {
       className: "WorldCodeAiAddKeyInput",
       "aria-label": "Name for this key",
-      value: iz,
+      value: iD,
       maxLength: 30,
-      placeholder: bz,
+      placeholder: cD,
       autoFocus: !0,
-      onChange: zz => {
-        Mz(zz.target.value)
+      onChange: DD => {
+        bD(DD.target.value)
       },
-      onKeyDown: zz => {
-        zz.stopPropagation(), "Escape" === zz.key && (zz.preventDefault(), nz(null))
+      onKeyDown: DD => {
+        DD.stopPropagation(), "Escape" === DD.key && (DD.preventDefault(), pD(null))
       }
-    }), (0, lz.jsx)("button", {
+    }), (0, fD.jsx)("button", {
       type: "submit",
       className: "WorldCodeAiLinkButton",
       children: "Save"
-    }), (0, lz.jsx)("button", {
+    }), (0, fD.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
       onClick: () => {
-        nz(null)
+        pD(null)
       },
       children: "Cancel"
     })]
   })
 }
 
-function qt(zz) {
+function jQ(DD) {
   let {
-    savedKey: uz,
-    isInUse: bz,
-    onRename: Ez,
-    onEdit: nz
-  } = zz;
-  const iz = el(uz),
-    Mz = fl(uz.provider, uz.baseUrl, !0),
-    tz = function(zz, uz) {
-      var bz, Ez;
-      return "" === zz ? "no key needed" : zz.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === uz ? `key \u2026${zz.slice(-4)}` : `${(null!==(bz=null===(Ez=/^[a-zA-Z]+-/.exec(zz))||void 0===Ez?void 0:Ez[0])&&void 0!==bz?bz:zz.slice(0,4)).slice(0,6)}\u2026${zz.slice(-4)}`
-    }(uz.key, uz.provider);
-  return (0, lz.jsxs)("span", {
+    savedKey: CD,
+    isInUse: cD,
+    onRename: ID,
+    onEdit: pD
+  } = DD;
+  const iD = Ef(CD),
+    bD = gf(CD.provider, CD.baseUrl, !0),
+    QD = function(DD, CD) {
+      var cD, ID;
+      return "" === DD ? "no key needed" : DD.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === CD ? `key \u2026${DD.slice(-4)}` : `${(null!==(cD=null===(ID=/^[a-zA-Z]+-/.exec(DD))||void 0===ID?void 0:ID[0])&&void 0!==cD?cD:DD.slice(0,4)).slice(0,6)}\u2026${DD.slice(-4)}`
+    }(CD.key, CD.provider);
+  return (0, fD.jsxs)("span", {
     className: "WorldCodeAiModelGroupName",
-    title: uz.baseUrl,
-    children: [iz, " ", uz.name && (0, lz.jsxs)("span", {
+    title: CD.baseUrl,
+    children: [iD, " ", CD.name && (0, fD.jsxs)("span", {
       className: "WorldCodeAiModelHint",
-      children: ["\xb7 ", Mz, " "]
-    }), "" === uz.key ? (0, lz.jsx)("span", {
+      children: ["\xb7 ", bD, " "]
+    }), "" === CD.key ? (0, fD.jsx)("span", {
       className: "WorldCodeAiModelHint",
-      children: tz
-    }) : (0, lz.jsx)("code", {
-      children: tz
-    }), bz && (0, lz.jsxs)(lz.Fragment, {
-      children: [" ", (0, lz.jsx)("span", {
+      children: QD
+    }) : (0, fD.jsx)("code", {
+      children: QD
+    }), cD && (0, fD.jsxs)(fD.Fragment, {
+      children: [" ", (0, fD.jsx)("span", {
         className: "WorldCodeAiInUseTag",
         children: "In use"
       })]
-    }), (nz || Ez) && (0, lz.jsxs)("span", {
+    }), (pD || ID) && (0, fD.jsxs)("span", {
       className: "WorldCodeAiKeyLinks",
-      children: [nz && (0, lz.jsx)("button", {
+      children: [pD && (0, fD.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Edit ${iz} key`,
-        onClick: nz,
+        "aria-label": `Edit ${iD} key`,
+        onClick: pD,
         children: "Edit"
-      }), Ez && (0, lz.jsx)("button", {
+      }), ID && (0, fD.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Rename ${iz} key`,
-        onClick: Ez,
+        "aria-label": `Rename ${iD} key`,
+        onClick: ID,
         children: "Rename"
       })]
     })]
   })
 }
 
-function ht(zz) {
-  var uz, bz, nz, Mz;
+function lQ(DD) {
+  var CD, cD, pD, bD;
   let {
-    name: tz,
-    hint: Hz,
-    choice: Oz,
-    selected: pz,
-    radioName: dz,
-    onSelect: Fz,
-    onChosen: Zz,
-    disabledWhy: Rz
-  } = zz;
-  const Kz = (0, Ez.useRef)(!1),
-    wz = `${dz}-${null!==(uz=null===Oz||void 0===Oz?void 0:Oz.keyId)&&void 0!==uz?uz:"botxd"}-${null!==(bz=null===Oz||void 0===Oz?void 0:Oz.modelId)&&void 0!==bz?bz:"botxd"}`.replace(/[^\w-]/g, "_"),
-    Xz = !!Rz;
-  return (0, lz.jsxs)("label", {
-    className: iz()("WorldCodeAiModelRow", pz && "Selected", Xz && "Disabled"),
-    "data-key-id": null !== (nz = null === Oz || void 0 === Oz ? void 0 : Oz.keyId) && void 0 !== nz ? nz : "botxd",
-    "data-model-id": null !== (Mz = null === Oz || void 0 === Oz ? void 0 : Oz.modelId) && void 0 !== Mz ? Mz : "botxd",
-    title: null !== Rz && void 0 !== Rz ? Rz : void 0,
+    name: QD,
+    hint: wD,
+    choice: SD,
+    selected: BD,
+    radioName: yD,
+    onSelect: MD,
+    onChosen: tD,
+    disabledWhy: ZD
+  } = DD;
+  const oD = (0, ID.useRef)(!1),
+    vD = `${yD}-${null!==(CD=null===SD||void 0===SD?void 0:SD.keyId)&&void 0!==CD?CD:"botxd"}-${null!==(cD=null===SD||void 0===SD?void 0:SD.modelId)&&void 0!==cD?cD:"botxd"}`.replace(/[^\w-]/g, "_"),
+    ND = !!ZD;
+  return (0, fD.jsxs)("label", {
+    className: iD()("WorldCodeAiModelRow", BD && "Selected", ND && "Disabled"),
+    "data-key-id": null !== (pD = null === SD || void 0 === SD ? void 0 : SD.keyId) && void 0 !== pD ? pD : "botxd",
+    "data-model-id": null !== (bD = null === SD || void 0 === SD ? void 0 : SD.modelId) && void 0 !== bD ? bD : "botxd",
+    title: null !== ZD && void 0 !== ZD ? ZD : void 0,
     onPointerDown: () => {
-      Kz.current = !Xz
+      oD.current = !ND
     },
-    children: [(0, lz.jsx)("input", {
+    children: [(0, fD.jsx)("input", {
       type: "radio",
-      name: dz,
-      "aria-label": tz,
-      "aria-describedby": Hz ? wz : void 0,
-      checked: pz,
-      disabled: Xz,
-      onChange: Fz,
+      name: yD,
+      "aria-label": QD,
+      "aria-describedby": wD ? vD : void 0,
+      checked: BD,
+      disabled: ND,
+      onChange: MD,
       onClick: () => {
-        Kz.current && (null === Zz || void 0 === Zz || Zz()), Kz.current = !1
+        oD.current && (null === tD || void 0 === tD || tD()), oD.current = !1
       },
-      onKeyDown: zz => {
-        "Enter" === zz.key && (null === Zz || void 0 === Zz || Zz())
+      onKeyDown: DD => {
+        "Enter" === DD.key && (null === tD || void 0 === tD || tD())
       }
-    }), (0, lz.jsx)("span", {
+    }), (0, fD.jsx)("span", {
       className: "WorldCodeAiModelName",
-      children: tz
-    }), Hz && (0, lz.jsx)("span", {
-      id: wz,
+      children: QD
+    }), wD && (0, fD.jsx)("span", {
+      id: vD,
       className: "WorldCodeAiModelHint",
-      children: Hz
+      children: wD
     })]
   })
 }
 
-function Ut(zz) {
+function LQ(DD) {
   let {
-    labelledBy: uz,
-    onPicked: nz,
-    canRename: iz = !1,
-    onEdit: Mz,
-    aJ: tz,
-    onRefresh: Hz,
-    refreshingIds: Oz,
-    keyNote: pz
-  } = zz;
+    labelledBy: CD,
+    onPicked: pD,
+    canRename: iD = !1,
+    onEdit: bD,
+    Zx: QD,
+    onRefresh: wD,
+    refreshingIds: SD,
+    keyNote: BD
+  } = DD;
   const {
-    keys: dz,
-    isSelected: Fz,
-    select: Zz,
-    renameKey: Rz
-  } = zM(), Kz = pM();
-  (0, Ez.useEffect)((() => {
-    OM.refresh(), TM()
+    keys: yD,
+    isSelected: MD,
+    select: tD,
+    renameKey: ZD
+  } = Db(), oD = Bb();
+  (0, ID.useEffect)((() => {
+    Sb.refresh(), qb()
   }), []);
-  const wz = KM(Kz),
-    [Xz, fz] = (0, Ez.useState)(null),
-    [sz, rz] = (0, Ez.useState)(null),
-    [oz, Nz] = (0, Ez.useState)({}),
-    [vz] = (0, Ez.useState)((() => function(zz) {
-      const uz = zz.map(((zz, uz) => {
-        var bz;
+  const vD = ob(oD),
+    [ND, gD] = (0, ID.useState)(null),
+    [XD, mD] = (0, ID.useState)(null),
+    [nD, OD] = (0, ID.useState)({}),
+    [PD] = (0, ID.useState)((() => function(DD) {
+      const CD = DD.map(((DD, CD) => {
+        var cD;
         return {
-          id: zz.id,
-          at: null !== (bz = zz.usedAt) && void 0 !== bz ? bz : 0,
-          i: uz
+          id: DD.id,
+          at: null !== (cD = DD.usedAt) && void 0 !== cD ? cD : 0,
+          i: CD
         }
-      })).sort(((zz, uz) => uz.at - zz.at || uz.i - zz.i));
-      return new Set(uz.slice(0, 2).map((zz => {
+      })).sort(((DD, CD) => CD.at - DD.at || CD.i - DD.i));
+      return new Set(CD.slice(0, 2).map((DD => {
         let {
-          id: uz
-        } = zz;
-        return uz
+          id: CD
+        } = DD;
+        return CD
       })))
-    }(dz))),
-    [xz, Jz] = (0, Ez.useState)(new Set),
-    Az = zz => zz.models.some((uz => Fz({
-      keyId: zz.id,
-      modelId: uz.id
+    }(yD))),
+    [HD, UD] = (0, ID.useState)(new Set),
+    xD = DD => DD.models.some((CD => MD({
+      keyId: DD.id,
+      modelId: CD.id
     }))),
-    Tz = zz => {
-      const uz = zz.closest(".WorldCodeAiModelGroupHeader");
-      rz(null), setTimeout((() => {
-        var zz;
-        null === uz || void 0 === uz || null === (zz = uz.querySelector(".WorldCodeAiModelRemove")) || void 0 === zz || zz.focus()
+    qD = DD => {
+      const CD = DD.closest(".WorldCodeAiModelGroupHeader");
+      mD(null), setTimeout((() => {
+        var DD;
+        null === CD || void 0 === CD || null === (DD = CD.querySelector(".WorldCodeAiModelRemove")) || void 0 === DD || DD.focus()
       }))
     },
-    Lz = `${uz}-model`,
-    Pz = (zz, uz, bz) => {
-      var Ez;
-      return (0, lz.jsx)(ht, {
-        name: zz,
-        hint: uz,
-        choice: bz,
-        selected: Fz(bz) && !(null === bz && Kz.picked && null === wz),
-        radioName: Lz,
+    JD = `${CD}-model`,
+    KD = (DD, CD, cD) => {
+      var ID;
+      return (0, fD.jsx)(lQ, {
+        name: DD,
+        hint: CD,
+        choice: cD,
+        selected: MD(cD) && !(null === cD && oD.picked && null === vD),
+        radioName: JD,
         onSelect: () => {
-          Zz(bz), OM.unpick()
+          tD(cD), Sb.unpick()
         },
-        onChosen: nz
-      }, null !== (Ez = null === bz || void 0 === bz ? void 0 : bz.modelId) && void 0 !== Ez ? Ez : "botxd")
+        onChosen: pD
+      }, null !== (ID = null === cD || void 0 === cD ? void 0 : cD.modelId) && void 0 !== ID ? ID : "botxd")
     };
-  return (0, lz.jsxs)("div", {
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiModelList",
     role: "radiogroup",
-    "aria-labelledby": uz,
-    children: [Pz("Bot.xd (free)", "Bloxd's own AI.", null), (0, lz.jsx)(ht, {
-      name: nM,
-      hint: null !== wz && void 0 !== wz ? wz : `Bloxd's better AI. ${Kz.status?fM(Kz.status):""}`.trim(),
-      choice: Gt,
-      selected: Kz.picked && null === wz,
-      radioName: Lz,
+    "aria-labelledby": CD,
+    children: [KD("Bot.xd (free)", "Bloxd's own AI.", null), (0, fD.jsx)(lQ, {
+      name: pb,
+      hint: null !== vD && void 0 !== vD ? vD : `Bloxd's better AI. ${oD.status?gb(oD.status):""}`.trim(),
+      choice: aQ,
+      selected: oD.picked && null === vD,
+      radioName: JD,
       onSelect: () => {
-        var zz, uz;
-        tM(null !== (zz = null === (uz = Kz.status) || void 0 === uz ? void 0 : uz.provider) && void 0 !== zz ? zz : "ovh") && OM.NF()
+        var DD, CD;
+        Qb(null !== (DD = null === (CD = oD.status) || void 0 === CD ? void 0 : CD.provider) && void 0 !== DD ? DD : "ovh") && Sb.MM()
       },
       onChosen: () => {
-        (async function(zz) {
-          var uz;
-          if (tM(null !== (uz = null === zz || void 0 === zz ? void 0 : zz.provider) && void 0 !== uz ? uz : "ovh")) return OM.NF(), !0;
-          if (ct) return !1;
-          ct = !0;
+        (async function(DD) {
+          var CD;
+          if (Qb(null !== (CD = null === DD || void 0 === DD ? void 0 : DD.provider) && void 0 !== CD ? CD : "ovh")) return Sb.MM(), !0;
+          if (TQ) return !1;
+          TQ = !0;
           try {
             const [{
-              NotificationProvider: zz
+              NotificationProvider: DD
             }, {
-              WorldCodeAiDeepSeekNotice: uz
-            }] = await Promise.all([Promise.resolve().then((() => bz(1322))), bz.e(347).then((() => bz(60356)))]), Ez = zz.showPromptPopup({
+              WorldCodeAiDeepSeekNotice: CD
+            }] = await Promise.all([Promise.resolve().then((() => cD(1340))), cD.e(347).then((() => cD(60419)))]), ID = DD.showPromptPopup({
               title: "superBotXd:deepSeekTitle",
-              subtitle: (0, lz.jsx)(uz, {}),
+              subtitle: (0, fD.jsx)(CD, {}),
               confirmText: "superBotXd:use",
               cancelText: "general:cancel"
             });
-            gt = Ez.tearDownNotification;
-            return !0 === await Ez.getResult() && (function() {
+            GQ = ID.tearDownNotification;
+            return !0 === await ID.getResult() && (function() {
               try {
-                window.localStorage.setItem(MM, "1")
+                window.localStorage.setItem(bb, "1")
               } catch {}
-            }(), OM.NF(), !0)
+            }(), Sb.MM(), !0)
           } finally {
-            ct = !1, gt = null
+            TQ = !1, GQ = null
           }
-        })(Kz.status).then((zz => {
-          zz && (null === nz || void 0 === nz || nz())
+        })(oD.status).then((DD => {
+          DD && (null === pD || void 0 === pD || pD())
         }))
       },
-      disabledWhy: wz
-    }), dz.map((zz => {
-      var uz, bz, Ez, nz, Zz;
-      const Kz = el(zz),
-        wz = dz.length >= 4 && !Az(zz) && !vz.has(zz.id) && !xz.has(zz.id),
-        Lz = wz ? null !== (uz = zz.models.find((uz => uz.id === zz.usedModelId))) && void 0 !== uz ? uz : Wl(zz.models) : void 0,
-        Gz = null !== (bz = null === (Ez = oz[zz.id]) || void 0 === Ez ? void 0 : Ez.trim().toLowerCase()) && void 0 !== bz ? bz : "",
-        az = Lz ? [Lz] : "" === Gz ? zz.models : zz.models.filter((uz => uz.name.toLowerCase().includes(Gz) || Fz({
-          keyId: zz.id,
-          modelId: uz.id
+      disabledWhy: vD
+    }), yD.map((DD => {
+      var CD, cD, ID, pD, tD;
+      const oD = Ef(DD),
+        vD = yD.length >= 4 && !xD(DD) && !PD.has(DD.id) && !HD.has(DD.id),
+        JD = vD ? null !== (CD = DD.models.find((CD => CD.id === DD.usedModelId))) && void 0 !== CD ? CD : sf(DD.models) : void 0,
+        aD = null !== (cD = null === (ID = nD[DD.id]) || void 0 === ID ? void 0 : ID.trim().toLowerCase()) && void 0 !== cD ? cD : "",
+        VD = JD ? [JD] : "" === aD ? DD.models : DD.models.filter((CD => CD.name.toLowerCase().includes(aD) || MD({
+          keyId: DD.id,
+          modelId: CD.id
         })));
-      return (0, lz.jsxs)("div", {
+      return (0, fD.jsxs)("div", {
         className: "WorldCodeAiModelGroup",
         role: "group",
-        "aria-label": Kz,
-        "data-key-id": zz.id,
-        children: [(0, lz.jsxs)("div", {
+        "aria-label": oD,
+        "data-key-id": DD.id,
+        children: [(0, fD.jsxs)("div", {
           className: "WorldCodeAiModelGroupHeader",
-          children: [Xz === zz.id ? (0, lz.jsx)(mt, {
-            keyName: null !== (nz = zz.name) && void 0 !== nz ? nz : "",
-            placeholder: fl(zz.provider, zz.baseUrl),
-            onDone: uz => {
-              null !== uz && Rz(zz.id, uz), fz(null)
+          children: [ND === DD.id ? (0, fD.jsx)(zQ, {
+            keyName: null !== (pD = DD.name) && void 0 !== pD ? pD : "",
+            placeholder: gf(DD.provider, DD.baseUrl),
+            onDone: CD => {
+              null !== CD && ZD(DD.id, CD), gD(null)
             }
-          }) : (0, lz.jsx)(qt, {
-            savedKey: zz,
-            isInUse: Az(zz),
-            onEdit: Mz ? () => {
-              Mz(zz)
+          }) : (0, fD.jsx)(jQ, {
+            savedKey: DD,
+            isInUse: xD(DD),
+            onEdit: bD ? () => {
+              bD(DD)
             } : void 0,
-            onRename: iz ? () => {
-              fz(zz.id)
+            onRename: iD ? () => {
+              gD(DD.id)
             } : void 0
-          }), Hz && sz !== zz.id && (0, lz.jsx)("button", {
+          }), wD && XD !== DD.id && (0, fD.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRefresh",
-            "aria-label": `Check ${Kz} for new models`,
-            disabled: null === Oz || void 0 === Oz ? void 0 : Oz.has(zz.id),
+            "aria-label": `Check ${oD} for new models`,
+            disabled: null === SD || void 0 === SD ? void 0 : SD.has(DD.id),
             onClick: () => {
-              Hz(zz)
+              wD(DD)
             },
-            children: null !== Oz && void 0 !== Oz && Oz.has(zz.id) ? "Checking\u2026" : "Check for new models"
-          }), tz && sz !== zz.id && (0, lz.jsx)("button", {
+            children: null !== SD && void 0 !== SD && SD.has(DD.id) ? "Checking\u2026" : "Check for new models"
+          }), QD && XD !== DD.id && (0, fD.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-            "aria-label": `Remove ${Kz} key`,
+            "aria-label": `Remove ${oD} key`,
             onClick: () => {
-              rz(zz.id)
+              mD(DD.id)
             },
             children: "Remove"
-          }), tz && sz === zz.id && (0, lz.jsxs)("span", {
+          }), QD && XD === DD.id && (0, fD.jsxs)("span", {
             className: "WorldCodeAiKeyConfirm",
             role: "group",
-            "aria-label": `Remove ${Kz} key?`,
-            onKeyDown: zz => {
-              "Escape" === zz.key && (zz.stopPropagation(), zz.preventDefault(), Tz(zz.currentTarget))
+            "aria-label": `Remove ${oD} key?`,
+            onKeyDown: DD => {
+              "Escape" === DD.key && (DD.stopPropagation(), DD.preventDefault(), qD(DD.currentTarget))
             },
-            children: ["Remove key?", (0, lz.jsx)("button", {
+            children: ["Remove key?", (0, fD.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-              "aria-label": `Yes, remove ${Kz} key`,
+              "aria-label": `Yes, remove ${oD} key`,
               onClick: () => {
-                rz(null), tz(zz)
+                mD(null), QD(DD)
               },
               children: "Yes"
-            }), (0, lz.jsx)("button", {
+            }), (0, fD.jsx)("button", {
               className: "WorldCodeAiLinkButton",
-              "aria-label": `No, keep ${Kz} key`,
+              "aria-label": `No, keep ${oD} key`,
               autoFocus: !0,
-              onClick: zz => {
-                Tz(zz.currentTarget)
+              onClick: DD => {
+                qD(DD.currentTarget)
               },
               children: "No"
             })]
           })]
-        }), (null === pz || void 0 === pz ? void 0 : pz.keyId) === zz.id && (0, lz.jsx)("p", {
+        }), (null === BD || void 0 === BD ? void 0 : BD.keyId) === DD.id && (0, fD.jsx)("p", {
           className: "WorldCodeAiAiSettingsNote",
           role: "status",
-          children: pz.text
-        }), !wz && zz.models.length > 12 && (0, lz.jsx)("input", {
+          children: BD.text
+        }), !vD && DD.models.length > 12 && (0, fD.jsx)("input", {
           className: "WorldCodeAiAddKeyInput WorldCodeAiModelFilter",
-          "aria-label": `Find a model from ${Kz}`,
-          placeholder: `Find a model (${zz.models.length})`,
-          value: null !== (Zz = oz[zz.id]) && void 0 !== Zz ? Zz : "",
-          onKeyDown: zz => {
-            zz.stopPropagation()
+          "aria-label": `Find a model from ${oD}`,
+          placeholder: `Find a model (${DD.models.length})`,
+          value: null !== (tD = nD[DD.id]) && void 0 !== tD ? tD : "",
+          onKeyDown: DD => {
+            DD.stopPropagation()
           },
-          onChange: uz => {
-            const bz = uz.target.value;
-            Nz((uz => ({
-              ...uz,
-              [zz.id]: bz
+          onChange: CD => {
+            const cD = CD.target.value;
+            OD((CD => ({
+              ...CD,
+              [DD.id]: cD
             })))
           }
-        }), az.map((uz => Pz(uz.name, uz.tier ? cl[uz.tier] : "", {
-          keyId: zz.id,
-          modelId: uz.id
-        }))), wz && zz.models.length > 1 && (0, lz.jsxs)("button", {
+        }), VD.map((CD => KD(CD.name, CD.tier ? Gf[CD.tier] : "", {
+          keyId: DD.id,
+          modelId: CD.id
+        }))), vD && DD.models.length > 1 && (0, fD.jsxs)("button", {
           className: "WorldCodeAiKeyLearnMore WorldCodeAiModelUnfold",
-          "aria-label": `Show all ${Kz} models`,
-          onClick: uz => {
-            const bz = uz.currentTarget.closest(".WorldCodeAiModelGroup");
-            Jz((uz => new Set(uz).add(zz.id))), setTimeout((() => {
-              var zz;
-              null === bz || void 0 === bz || null === (zz = bz.querySelector("input")) || void 0 === zz || zz.focus()
+          "aria-label": `Show all ${oD} models`,
+          onClick: CD => {
+            const cD = CD.currentTarget.closest(".WorldCodeAiModelGroup");
+            UD((CD => new Set(CD).add(DD.id))), setTimeout((() => {
+              var DD;
+              null === cD || void 0 === cD || null === (DD = cD.querySelector("input")) || void 0 === DD || DD.focus()
             }))
           },
-          children: ["Show all ", zz.models.length, " models"]
+          children: ["Show all ", DD.models.length, " models"]
         })]
-      }, zz.id)
+      }, DD.id)
     }))]
   })
 }
-let ct = !1,
-  gt = null;
+let TQ = !1,
+  GQ = null;
 
-function St(zz) {
+function RQ(DD) {
   let {
-    checked: uz,
-    onChange: bz,
-    title: Ez,
-    onNote: nz,
-    offNote: iz
-  } = zz;
-  return (0, lz.jsxs)("label", {
+    checked: CD,
+    onChange: cD,
+    title: ID,
+    onNote: pD,
+    offNote: iD
+  } = DD;
+  return (0, fD.jsxs)("label", {
     className: "WorldCodeAiSettingSwitch",
-    children: [(0, lz.jsx)("input", {
+    children: [(0, fD.jsx)("input", {
       type: "checkbox",
-      checked: uz,
-      onChange: zz => {
-        bz(zz.target.checked)
+      checked: CD,
+      onChange: DD => {
+        cD(DD.target.checked)
       }
-    }), (0, lz.jsxs)("span", {
-      children: [Ez, (0, lz.jsx)("span", {
+    }), (0, fD.jsxs)("span", {
+      children: [ID, (0, fD.jsx)("span", {
         className: "WorldCodeAiAiSettingsNote",
-        children: uz ? nz : iz
+        children: CD ? pD : iD
       })]
     })]
   })
 }
 
-function yt() {
+function kQ() {
   const {
-    remember: zz,
-    setRemember: uz
-  } = zM();
-  return (0, lz.jsx)(St, {
-    checked: zz,
-    onChange: uz,
+    remember: DD,
+    setRemember: CD
+  } = Db();
+  return (0, fD.jsx)(RQ, {
+    checked: DD,
+    onChange: CD,
     title: "Remember my keys in this browser",
     onNote: "On: saved only in this browser, not synced, for all your keys. Not for shared computers.",
     offNote: "Off: you'll paste your keys again next time. Best on shared computers."
   })
 }
 
-function Dt() {
+function dQ() {
   const {
-    answer: zz,
-    hasPlayer: uz
+    answer: DD,
+    hasPlayer: CD
   } = function() {
-    const zz = () => ({
-        answer: Wi.get(),
-        hasPlayer: null !== Wi.getPlayer()
+    const DD = () => ({
+        answer: di.get(),
+        hasPlayer: null !== di.getPlayer()
       }),
-      [uz, bz] = (0, Ez.useState)(zz);
-    return (0, Ez.useEffect)((() => {
-      const uz = Wi.subscribe((() => {
-        bz(zz())
+      [CD, cD] = (0, ID.useState)(DD);
+    return (0, ID.useEffect)((() => {
+      const CD = di.subscribe((() => {
+        cD(DD())
       }));
-      return Wi.refresh(), uz
-    }), []), uz
+      return di.refresh(), CD
+    }), []), CD
   }();
-  return uz ? (0, lz.jsx)("div", {
+  return CD ? (0, fD.jsx)("div", {
     className: "WorldCodeAiAiSettingsSection",
-    children: (0, lz.jsx)(St, {
-      checked: "yes" === zz,
-      onChange: zz => {
-        Wi.set(zz ? "yes" : "no")
+    children: (0, fD.jsx)(RQ, {
+      checked: "yes" === DD,
+      onChange: DD => {
+        di.set(DD ? "yes" : "no")
       },
       title: "Help make the AI Helper better",
       onNote: "On: Bloxd keeps your questions, code and the AI's answers for 30 days to improve the AI Helper.",
@@ -9746,258 +9746,258 @@ function Dt() {
   }) : null
 }
 
-function Qt(zz) {
+function YQ(DD) {
   let {
-    allowEdits: uz,
-    onAllowEditsChange: bz,
-    onAddKey: nz,
-    onEditKey: iz
-  } = zz;
+    allowEdits: CD,
+    onAllowEditsChange: cD,
+    onAddKey: pD,
+    onEditKey: iD
+  } = DD;
   const {
-    keys: Mz,
-    removeKey: tz
-  } = zM(), [Hz, Oz] = (0, Ez.useState)(null), [pz, dz] = (0, Ez.useState)(!1), [Fz, Zz] = (0, Ez.useState)(!1), Rz = (0, Ez.useRef)(null);
-  (0, Ez.useEffect)((() => {
-    var zz, uz;
-    (Hz || Fz) && (null === (zz = Rz.current) || void 0 === zz || zz.scrollIntoView({
+    keys: bD,
+    removeKey: QD
+  } = Db(), [wD, SD] = (0, ID.useState)(null), [BD, yD] = (0, ID.useState)(!1), [MD, tD] = (0, ID.useState)(!1), ZD = (0, ID.useRef)(null);
+  (0, ID.useEffect)((() => {
+    var DD, CD;
+    (wD || MD) && (null === (DD = ZD.current) || void 0 === DD || DD.scrollIntoView({
       block: "nearest"
-    }), null === (uz = Rz.current) || void 0 === uz || uz.focus({
+    }), null === (CD = ZD.current) || void 0 === CD || CD.focus({
       preventScroll: !0
     }))
-  }), [Hz, Fz]);
-  const Kz = (0, Ez.useRef)(null),
-    wz = () => {
-      dz(!1), setTimeout((() => {
-        var zz;
-        null === (zz = Kz.current) || void 0 === zz || zz.focus()
+  }), [wD, MD]);
+  const oD = (0, ID.useRef)(null),
+    vD = () => {
+      yD(!1), setTimeout((() => {
+        var DD;
+        null === (DD = oD.current) || void 0 === DD || DD.focus()
       }))
     },
-    [Xz, fz] = (0, Ez.useState)(new Set),
-    [sz, rz] = (0, Ez.useState)(null);
-  return (0, lz.jsxs)("div", {
+    [ND, gD] = (0, ID.useState)(new Set),
+    [XD, mD] = (0, ID.useState)(null);
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiAiSettings",
-    children: [bz && (0, lz.jsxs)("div", {
+    children: [cD && (0, fD.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, lz.jsx)(Pt, {
-        allow: uz,
-        onChange: zz => {
-          Oz(null), bz(zz)
+      children: [(0, fD.jsx)(KQ, {
+        allow: CD,
+        onChange: DD => {
+          SD(null), cD(DD)
         }
-      }), (0, lz.jsx)("p", {
+      }), (0, fD.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
-        children: uz ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
+        children: CD ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
       })]
-    }), (0, lz.jsxs)("div", {
+    }), (0, fD.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, lz.jsxs)("div", {
+      children: [(0, fD.jsxs)("div", {
         className: "WorldCodeAiAiSettingsHeading",
-        children: [(0, lz.jsx)("h3", {
+        children: [(0, fD.jsx)("h3", {
           id: "WorldCodeAiModelTitle",
           className: "WorldCodeAiAiSettingsTitle",
           children: "AI model"
-        }), (0, lz.jsxs)("button", {
+        }), (0, fD.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
-          onClick: nz,
-          children: [(0, lz.jsx)("span", {
+          onClick: pD,
+          children: [(0, fD.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
         })]
-      }), 0 === Mz.length && (0, lz.jsx)("p", {
+      }), 0 === bD.length && (0, fD.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
         children: "Use a stronger AI with your own key."
-      }), (0, lz.jsx)(yt, {}), Mz.length > 0 && (0, lz.jsx)("p", {
+      }), (0, fD.jsx)(kQ, {}), bD.length > 0 && (0, fD.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote WorldCodeAiForgetAll",
-        children: pz ? (0, lz.jsxs)("span", {
+        children: BD ? (0, fD.jsxs)("span", {
           className: "WorldCodeAiKeyConfirm",
           role: "group",
           "aria-label": "Forget all keys?",
-          onKeyDown: zz => {
-            "Escape" === zz.key && (zz.stopPropagation(), zz.preventDefault(), wz())
+          onKeyDown: DD => {
+            "Escape" === DD.key && (DD.stopPropagation(), DD.preventDefault(), vD())
           },
-          children: [1 === Mz.length ? "Forget your key" : `Forget all ${Mz.length} keys`, " in this browser?", (0, lz.jsx)("button", {
+          children: [1 === bD.length ? "Forget your key" : `Forget all ${bD.length} keys`, " in this browser?", (0, fD.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
             onClick: () => {
-              kl.removeAll(), dz(!1), Oz(null), Zz(!0)
+              Ff.removeAll(), yD(!1), SD(null), tD(!0)
             },
             children: "Yes"
-          }), (0, lz.jsx)("button", {
+          }), (0, fD.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             autoFocus: !0,
-            onClick: wz,
+            onClick: vD,
             children: "No"
           })]
-        }) : (0, lz.jsx)("button", {
-          ref: Kz,
+        }) : (0, fD.jsx)("button", {
+          ref: oD,
           className: "WorldCodeAiKeyLearnMore",
           onClick: () => {
-            dz(!0)
+            yD(!0)
           },
           children: "Forget all keys"
         })
-      }), 0 === Mz.length && Fz && (0, lz.jsx)("p", {
-        ref: Rz,
+      }), 0 === bD.length && MD && (0, fD.jsx)("p", {
+        ref: ZD,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
         children: "All keys forgotten in this browser. Bot.xd answers now. To stop a key working everywhere, delete it on its company's website."
-      }), Hz && (0, lz.jsxs)("p", {
-        ref: Rz,
+      }), wD && (0, fD.jsxs)("p", {
+        ref: ZD,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
-        children: [Hz.name, " removed.", Hz.wasInUse && " Bot.xd answers now.", Hz.keyPage && (0, lz.jsxs)(lz.Fragment, {
-          children: [" ", "To stop it working everywhere, delete it on", " ", (0, lz.jsxs)("a", {
-            href: Hz.keyPage,
+        children: [wD.name, " removed.", wD.wasInUse && " Bot.xd answers now.", wD.keyPage && (0, fD.jsxs)(fD.Fragment, {
+          children: [" ", "To stop it working everywhere, delete it on", " ", (0, fD.jsxs)("a", {
+            href: wD.keyPage,
             target: "_blank",
             rel: "noreferrer noopener",
-            children: [Hz.label, "'s website"]
+            children: [wD.label, "'s website"]
           }), "."]
-        }), " ", (0, lz.jsx)("button", {
+        }), " ", (0, fD.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiModelUndo",
           onClick: () => {
-            Hz.undo(), Oz(null)
+            wD.undo(), SD(null)
           },
           children: "Undo"
         })]
-      }), (0, lz.jsx)(Ut, {
+      }), (0, fD.jsx)(LQ, {
         labelledBy: "WorldCodeAiModelTitle",
         onPicked: () => {
-          Oz(null), rz(null)
+          SD(null), mD(null)
         },
         canRename: !0,
-        onEdit: iz,
-        refreshingIds: Xz,
-        keyNote: sz,
-        onRefresh: zz => {
-          (async zz => {
-            const uz = fl(zz.provider, zz.baseUrl, !0);
-            fz((uz => new Set(uz).add(zz.id))), rz(null);
+        onEdit: iD,
+        refreshingIds: ND,
+        keyNote: XD,
+        onRefresh: DD => {
+          (async DD => {
+            const CD = gf(DD.provider, DD.baseUrl, !0);
+            gD((CD => new Set(CD).add(DD.id))), mD(null);
             try {
-              const bz = await uM({
-                provider: zz.provider,
-                key: zz.key,
-                baseUrl: zz.baseUrl
+              const cD = await Cb({
+                provider: DD.provider,
+                key: DD.key,
+                baseUrl: DD.baseUrl
               });
-              0 === bz.length ? rz({
-                keyId: zz.id,
-                text: `${uz} listed no models, so your models stay as they were.`
-              }) : kl.refreshModels(zz.id, bz, {
-                key: zz.key,
-                baseUrl: zz.baseUrl
-              }) && rz({
-                keyId: zz.id,
-                text: `${uz}'s models are up to date.`
+              0 === cD.length ? mD({
+                keyId: DD.id,
+                text: `${CD} listed no models, so your models stay as they were.`
+              }) : Ff.refreshModels(DD.id, cD, {
+                key: DD.key,
+                baseUrl: DD.baseUrl
+              }) && mD({
+                keyId: DD.id,
+                text: `${CD}'s models are up to date.`
               })
-            } catch (bz) {
-              rz({
-                keyId: zz.id,
-                text: ol(bz instanceof sl ? bz.problem : "failed", zz.provider)
+            } catch (cD) {
+              mD({
+                keyId: DD.id,
+                text: nf(cD instanceof Xf ? cD.problem : "failed", DD.provider)
               })
             }
-            fz((uz => {
-              const bz = new Set(uz);
-              return bz.delete(zz.id), bz
+            gD((CD => {
+              const cD = new Set(CD);
+              return cD.delete(DD.id), cD
             }))
-          })(zz)
+          })(DD)
         },
-        aJ: zz => {
-          var uz;
-          const bz = (null === (uz = kl.activeKey()) || void 0 === uz ? void 0 : uz.id) === zz.id,
-            Ez = tz(zz.id);
-          Oz({
-            name: el(zz, !0),
-            label: fl(zz.provider, zz.baseUrl, !0),
-            keyPage: Fl[zz.provider].keyPage,
-            wasInUse: bz,
-            undo: Ez
+        Zx: DD => {
+          var CD;
+          const cD = (null === (CD = Ff.activeKey()) || void 0 === CD ? void 0 : CD.id) === DD.id,
+            ID = QD(DD.id);
+          SD({
+            name: Ef(DD, !0),
+            label: gf(DD.provider, DD.baseUrl, !0),
+            keyPage: Mf[DD.provider].keyPage,
+            wasInUse: cD,
+            undo: ID
           })
         }
       })]
-    }), (0, lz.jsx)(Dt, {})]
+    }), (0, fD.jsx)(dQ, {})]
   })
 }
-const Wt = ["anthropic", "openai", "gemini", "openrouter"];
+const WQ = ["anthropic", "openai", "gemini", "openrouter"];
 
-function et(zz) {
+function sQ(DD) {
   let {
-    provider: uz,
-    children: bz
-  } = zz;
-  return (0, lz.jsx)("a", {
-    href: Fl[uz].keyPage,
+    provider: CD,
+    children: cD
+  } = DD;
+  return (0, fD.jsx)("a", {
+    href: Mf[CD].keyPage,
     target: "_blank",
     rel: "noreferrer noopener",
-    children: bz
+    children: cD
   })
 }
 
-function jt() {
-  return (0, lz.jsxs)(lz.Fragment, {
-    children: [Wt.map(((zz, uz) => {
-      const bz = 0 === uz ? "" : uz === Wt.length - 1 ? " or " : ", ";
-      return (0, lz.jsxs)("span", {
-        children: [bz, (0, lz.jsx)(et, {
-          provider: zz,
-          children: Fl[zz].shortName
+function EQ() {
+  return (0, fD.jsxs)(fD.Fragment, {
+    children: [WQ.map(((DD, CD) => {
+      const cD = 0 === CD ? "" : CD === WQ.length - 1 ? " or " : ", ";
+      return (0, fD.jsxs)("span", {
+        children: [cD, (0, fD.jsx)(sQ, {
+          provider: DD,
+          children: Mf[DD].shortName
         })]
-      }, zz)
+      }, DD)
     })), "'s website"]
   })
 }
 
-function It(zz) {
-  var uz;
+function eQ(DD) {
+  var CD;
   let {
-    provider: bz
-  } = zz;
-  const [nz, iz] = (0, Ez.useState)(!1), Mz = (0, Ez.useRef)(null);
-  if ((0, Ez.useEffect)((() => {
-      if (nz) {
-        var zz, uz, bz;
-        const Ez = null === (zz = Mz.current) || void 0 === zz || null === (uz = zz.closest("form")) || void 0 === uz ? void 0 : uz.querySelector(".WorldCodeAiAddKeyActions");
-        null === (bz = null !== Ez && void 0 !== Ez ? Ez : Mz.current) || void 0 === bz || bz.scrollIntoView({
+    provider: cD
+  } = DD;
+  const [pD, iD] = (0, ID.useState)(!1), bD = (0, ID.useRef)(null);
+  if ((0, ID.useEffect)((() => {
+      if (pD) {
+        var DD, CD, cD;
+        const ID = null === (DD = bD.current) || void 0 === DD || null === (CD = DD.closest("form")) || void 0 === CD ? void 0 : CD.querySelector(".WorldCodeAiAddKeyActions");
+        null === (cD = null !== ID && void 0 !== ID ? ID : bD.current) || void 0 === cD || cD.scrollIntoView({
           block: "nearest",
           behavior: "smooth"
         })
       }
-    }), [nz]), "custom" === bz) return (0, lz.jsx)("div", {
+    }), [pD]), "custom" === cD) return (0, fD.jsx)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: (0, lz.jsx)("p", {
+    children: (0, fD.jsx)("p", {
       className: "WorldCodeAiAiSettingsNote",
       children: "Paste the key for that server, or leave it empty if it doesn't need one. It goes only to that server, never to Bloxd."
     })
   });
-  const tz = bz ? Fl[bz] : null;
-  return (0, lz.jsxs)("div", {
+  const QD = cD ? Mf[cD] : null;
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: [(0, lz.jsxs)("ul", {
-      ref: Mz,
+    children: [(0, fD.jsxs)("ul", {
+      ref: bD,
       id: "WorldCodeAiKeyExplainerLines",
       className: "WorldCodeAiKeyExplainerLines",
-      children: [(0, lz.jsx)("li", {
-        children: tz ? `An API key works like a password for ${tz.shortName}'s AI (it isn't your ${tz.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
-      }), (0, lz.jsxs)("li", {
-        children: ["You make it on ", tz ? `${tz.shortName}'s website` : (0, lz.jsx)(jt, {}), ", and see how much you've used or delete it there."]
-      }), nz && (0, lz.jsxs)("li", {
-        children: ["Your key stays in this browser and only goes to ", null !== (uz = null === tz || void 0 === tz ? void 0 : tz.shortName) && void 0 !== uz ? uz : "that company", ", never to Bloxd."]
-      }), (0, lz.jsx)("li", {
+      children: [(0, fD.jsx)("li", {
+        children: QD ? `An API key works like a password for ${QD.shortName}'s AI (it isn't your ${QD.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
+      }), (0, fD.jsxs)("li", {
+        children: ["You make it on ", QD ? `${QD.shortName}'s website` : (0, fD.jsx)(EQ, {}), ", and see how much you've used or delete it there."]
+      }), pD && (0, fD.jsxs)("li", {
+        children: ["Your key stays in this browser and only goes to ", null !== (CD = null === QD || void 0 === QD ? void 0 : QD.shortName) && void 0 !== CD ? CD : "that company", ", never to Bloxd."]
+      }), (0, fD.jsx)("li", {
         className: "WorldCodeAiKeyExplainerMore",
-        children: (0, lz.jsx)("button", {
+        children: (0, fD.jsx)("button", {
           type: "button",
           className: "WorldCodeAiKeyLearnMore",
-          "aria-expanded": nz,
+          "aria-expanded": pD,
           "aria-controls": "WorldCodeAiKeyExplainerLines",
           onClick: () => {
-            iz(!nz)
+            iD(!pD)
           },
-          children: nz ? "Less about keys" : "More about keys"
+          children: pD ? "Less about keys" : "More about keys"
         })
       })]
-    }), tz && (0, lz.jsxs)("a", {
+    }), QD && (0, fD.jsxs)("a", {
       className: "WorldCodeAiKeyPageLink",
-      href: tz.keyPage,
+      href: QD.keyPage,
       target: "_blank",
       rel: "noreferrer noopener",
-      children: ["Get a key on ", tz.shortName, "'s website ", (0, lz.jsx)("span", {
+      children: ["Get a key on ", QD.shortName, "'s website ", (0, fD.jsx)("span", {
         "aria-hidden": "true",
         children: "\u2197"
       })]
@@ -10005,473 +10005,473 @@ function It(zz) {
   })
 }
 
-function Bt() {
-  const [zz, uz] = (0, Ez.useState)(!1);
-  return (0, lz.jsxs)("span", {
+function uQ() {
+  const [DD, CD] = (0, ID.useState)(!1);
+  return (0, fD.jsxs)("span", {
     className: "WorldCodeAiAiSettingsNote",
-    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, lz.jsx)("button", {
+    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, fD.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
-      "aria-expanded": zz,
+      "aria-expanded": DD,
       onClick: () => {
-        uz(!zz)
+        CD(!DD)
       },
-      children: zz ? "Hide tips" : "Server tips"
-    }), zz && (0, lz.jsx)("span", {
+      children: DD ? "Hide tips" : "Server tips"
+    }), DD && (0, fD.jsx)("span", {
       className: "WorldCodeAiServerTips",
       children: "Use https://, or http:// for one on this computer, like http://localhost:1234/v1. It must allow web pages to use it: in LM Studio turn on CORS; for Ollama see its help."
     })]
   })
 }
 
-function Ct(zz) {
-  zz.stopPropagation()
+function hQ(DD) {
+  DD.stopPropagation()
 }
 
-function Yt(zz) {
-  var uz, bz, nz, iz, Mz;
+function rQ(DD) {
+  var CD, cD, pD, iD, bD;
   let {
-    editing: tz,
-    onAdded: Hz,
-    onOpenSettings: Oz
-  } = zz;
+    editing: QD,
+    onAdded: wD,
+    onOpenSettings: SD
+  } = DD;
   const {
-    remember: pz
-  } = zM(), [dz, Fz] = (0, Ez.useState)(null !== (uz = null === tz || void 0 === tz ? void 0 : tz.provider) && void 0 !== uz ? uz : null), [Zz, Rz] = (0, Ez.useState)(!!tz), [Kz, wz] = (0, Ez.useState)(""), Xz = null !== (bz = null === tz || void 0 === tz ? void 0 : tz.key) && void 0 !== bz ? bz : "", [fz, sz] = (0, Ez.useState)(!1), [rz, oz] = (0, Ez.useState)(null !== (nz = null === tz || void 0 === tz ? void 0 : tz.baseUrl) && void 0 !== nz ? nz : ""), Nz = zz => {
-    var uz, bz;
-    return zz === (null === tz || void 0 === tz ? void 0 : tz.provider) && ("custom" !== zz || (null !== (uz = Xl(rz)) && void 0 !== uz ? uz : "") === (null !== (bz = tz.baseUrl) && void 0 !== bz ? bz : ""))
-  }, vz = "" !== Xz && Nz(dz), xz = function(zz) {
-    let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Kl(Kz);
-    return "" === uz && "" !== Xz && Nz(zz) ? Xz : uz
-  }, [Jz, Az] = (0, Ez.useState)(""), [Tz, Lz] = (0, Ez.useState)(null !== (iz = null === tz || void 0 === tz ? void 0 : tz.name) && void 0 !== iz ? iz : ""), [Pz, Gz] = (0, Ez.useState)(!1), [az, Vz] = (0, Ez.useState)(null), [mz, qz] = (0, Ez.useState)(""), [hz, Uz] = (0, Ez.useState)(!1), [cz, gz] = (0, Ez.useState)(null), [Sz, yz] = (0, Ez.useState)(null), Dz = "custom" === dz && "" === xz(dz), Qz = (0, Ez.useRef)(null), Wz = (0, Ez.useRef)(null), ez = (0, Ez.useRef)(null);
-  (0, Ez.useEffect)((() => {
-    var zz, uz;
-    az && (null === (zz = Wz.current) || void 0 === zz || zz.scrollIntoView({
+    remember: BD
+  } = Db(), [yD, MD] = (0, ID.useState)(null !== (CD = null === QD || void 0 === QD ? void 0 : QD.provider) && void 0 !== CD ? CD : null), [tD, ZD] = (0, ID.useState)(!!QD), [oD, vD] = (0, ID.useState)(""), ND = null !== (cD = null === QD || void 0 === QD ? void 0 : QD.key) && void 0 !== cD ? cD : "", [gD, XD] = (0, ID.useState)(!1), [mD, nD] = (0, ID.useState)(null !== (pD = null === QD || void 0 === QD ? void 0 : QD.baseUrl) && void 0 !== pD ? pD : ""), OD = DD => {
+    var CD, cD;
+    return DD === (null === QD || void 0 === QD ? void 0 : QD.provider) && ("custom" !== DD || (null !== (CD = Nf(mD)) && void 0 !== CD ? CD : "") === (null !== (cD = QD.baseUrl) && void 0 !== cD ? cD : ""))
+  }, PD = "" !== ND && OD(yD), HD = function(DD) {
+    let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : of(oD);
+    return "" === CD && "" !== ND && OD(DD) ? ND : CD
+  }, [UD, xD] = (0, ID.useState)(""), [qD, JD] = (0, ID.useState)(null !== (iD = null === QD || void 0 === QD ? void 0 : QD.name) && void 0 !== iD ? iD : ""), [KD, aD] = (0, ID.useState)(!1), [VD, zD] = (0, ID.useState)(null), [jD, lD] = (0, ID.useState)(""), [LD, TD] = (0, ID.useState)(!1), [GD, RD] = (0, ID.useState)(null), [kD, dD] = (0, ID.useState)(null), YD = "custom" === yD && "" === HD(yD), WD = (0, ID.useRef)(null), sD = (0, ID.useRef)(null), ED = (0, ID.useRef)(null);
+  (0, ID.useEffect)((() => {
+    var DD, CD;
+    VD && (null === (DD = sD.current) || void 0 === DD || DD.scrollIntoView({
       block: "start"
-    }), null === (uz = ez.current) || void 0 === uz || uz.scrollIntoView({
+    }), null === (CD = ED.current) || void 0 === CD || CD.scrollIntoView({
       block: "nearest"
     }))
-  }), [az]), (0, Ez.useEffect)((() => () => {
-    var zz;
-    null === (zz = Qz.current) || void 0 === zz || zz.abort()
-  }), []), (0, Ez.useEffect)((() => {
-    var zz;
-    cz && (null === (zz = ez.current) || void 0 === zz || zz.scrollIntoView({
+  }), [VD]), (0, ID.useEffect)((() => () => {
+    var DD;
+    null === (DD = WD.current) || void 0 === DD || DD.abort()
+  }), []), (0, ID.useEffect)((() => {
+    var DD;
+    GD && (null === (DD = ED.current) || void 0 === DD || DD.scrollIntoView({
       block: "nearest"
     }))
-  }), [cz]);
-  const jz = () => {
-      var zz;
-      null === (zz = Qz.current) || void 0 === zz || zz.abort(), Uz(!1), Vz(null), gz(null), yz(null)
+  }), [GD]);
+  const eD = () => {
+      var DD;
+      null === (DD = WD.current) || void 0 === DD || DD.abort(), TD(!1), zD(null), RD(null), dD(null)
     },
-    Iz = null === az || void 0 === az ? void 0 : az.find((zz => zz.id === mz));
-  return (0, lz.jsxs)("form", {
+    uD = null === VD || void 0 === VD ? void 0 : VD.find((DD => DD.id === jD));
+  return (0, fD.jsxs)("form", {
     className: "WorldCodeAiAddKey",
-    onSubmit: zz => {
-      zz.preventDefault(), az ? (() => {
-        var zz;
-        if (!dz || !az) return;
-        const uz = kl.addKey({
-          provider: dz,
-          key: xz(dz),
-          baseUrl: "custom" === dz && null !== (zz = Xl(rz)) && void 0 !== zz ? zz : void 0,
-          models: az
-        }, mz, null === tz || void 0 === tz ? void 0 : tz.id);
-        ("" !== Tz.trim() || tz) && kl.renameKey(uz, Tz), Hz()
+    onSubmit: DD => {
+      DD.preventDefault(), VD ? (() => {
+        var DD;
+        if (!yD || !VD) return;
+        const CD = Ff.addKey({
+          provider: yD,
+          key: HD(yD),
+          baseUrl: "custom" === yD && null !== (DD = Nf(mD)) && void 0 !== DD ? DD : void 0,
+          models: VD
+        }, jD, null === QD || void 0 === QD ? void 0 : QD.id);
+        ("" !== qD.trim() || QD) && Ff.renameKey(CD, qD), wD()
       })() : (async () => {
-        const uz = Kl(Kz);
-        wz(uz), yz(null);
-        const bz = null !== dz && void 0 !== dz ? dz : wl(uz),
-          Ez = xz(bz, uz);
-        if ("" === Ez && "custom" !== bz) return void gz("Paste your key first.");
-        if (!bz) return void gz("Pick the company your key is from.");
-        const nz = "custom" === bz ? Xl(rz) : null;
-        if ("custom" === bz && null === nz) return void gz("That address doesn't look right. It should start with https://");
-        if (Pz && "" === Jz.trim()) return void gz("Type the name of the model to use.");
-        Fz(bz), Uz(!0), gz(null);
-        const iz = new AbortController;
-        Qz.current = iz;
+        const CD = of(oD);
+        vD(CD), dD(null);
+        const cD = null !== yD && void 0 !== yD ? yD : vf(CD),
+          ID = HD(cD, CD);
+        if ("" === ID && "custom" !== cD) return void RD("Paste your key first.");
+        if (!cD) return void RD("Pick the company your key is from.");
+        const pD = "custom" === cD ? Nf(mD) : null;
+        if ("custom" === cD && null === pD) return void RD("That address doesn't look right. It should start with https://");
+        if (KD && "" === UD.trim()) return void RD("Type the name of the model to use.");
+        MD(cD), TD(!0), RD(null);
+        const iD = new AbortController;
+        WD.current = iD;
         try {
-          var lz, Mz;
-          const zz = await uM({
-            provider: bz,
-            key: Ez,
-            baseUrl: null !== nz && void 0 !== nz ? nz : void 0,
-            modelName: Pz ? Jz : void 0
-          }, iz.signal);
-          if (Uz(!1), 0 === zz.length) return Gz(!0), void gz("custom" === bz ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
-          Vz(zz);
-          const uz = kl.getState().selected,
-            Hz = tz && (null === uz || void 0 === uz ? void 0 : uz.keyId) === tz.id ? zz.find((zz => zz.id === uz.modelId)) : void 0;
-          qz(null !== (lz = null === (Mz = null !== Hz && void 0 !== Hz ? Hz : Wl(zz)) || void 0 === Mz ? void 0 : Mz.id) && void 0 !== lz ? lz : "")
-        } catch (zz) {
-          if (iz.signal.aborted) return;
-          Uz(!1);
-          const nz = zz instanceof sl ? zz.problem : "failed";
-          if (yz(zz instanceof sl && zz.detail ? rl(zz.detail, Ez) : null), "badKey" === nz && "" === Ez) return void gz("This address needs a key.");
-          const lz = "badKey" !== nz || Zz ? "" : ` If it isn't from ${Fl[bz].shortName}, pick the company it's from.`;
-          gz(`${ol(nz,bz)}${lz}`)
+          var fD, bD;
+          const DD = await Cb({
+            provider: cD,
+            key: ID,
+            baseUrl: null !== pD && void 0 !== pD ? pD : void 0,
+            modelName: KD ? UD : void 0
+          }, iD.signal);
+          if (TD(!1), 0 === DD.length) return aD(!0), void RD("custom" === cD ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
+          zD(DD);
+          const CD = Ff.getState().selected,
+            wD = QD && (null === CD || void 0 === CD ? void 0 : CD.keyId) === QD.id ? DD.find((DD => DD.id === CD.modelId)) : void 0;
+          lD(null !== (fD = null === (bD = null !== wD && void 0 !== wD ? wD : sf(DD)) || void 0 === bD ? void 0 : bD.id) && void 0 !== fD ? fD : "")
+        } catch (DD) {
+          if (iD.signal.aborted) return;
+          TD(!1);
+          const pD = DD instanceof Xf ? DD.problem : "failed";
+          if (dD(DD instanceof Xf && DD.detail ? mf(DD.detail, ID) : null), "badKey" === pD && "" === ID) return void RD("This address needs a key.");
+          const fD = "badKey" !== pD || tD ? "" : ` If it isn't from ${Mf[cD].shortName}, pick the company it's from.`;
+          RD(`${nf(pD,cD)}${fD}`)
         }
       })()
     },
-    children: [(0, lz.jsxs)("label", {
+    children: [(0, fD.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, lz.jsx)("span", {
+      children: [(0, fD.jsx)("span", {
         children: "Company"
-      }), (0, lz.jsxs)("select", {
+      }), (0, fD.jsxs)("select", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyCompany",
-        value: null !== dz && void 0 !== dz ? dz : "",
-        onChange: zz => {
-          Fz(zz.target.value), Rz(!0), Gz(!1), jz()
+        value: null !== yD && void 0 !== yD ? yD : "",
+        onChange: DD => {
+          MD(DD.target.value), ZD(!0), aD(!1), eD()
         },
-        onKeyDown: Ct,
-        children: [null === dz && (0, lz.jsx)("option", {
+        onKeyDown: hQ,
+        children: [null === yD && (0, fD.jsx)("option", {
           value: "",
           disabled: !0,
           children: "Pick one, or paste your key below"
-        }), Zl.map((zz => (0, lz.jsx)("option", {
-          value: zz,
-          children: Fl[zz].name
-        }, zz)))]
+        }), tf.map((DD => (0, fD.jsx)("option", {
+          value: DD,
+          children: Mf[DD].name
+        }, DD)))]
       })]
-    }), "custom" === dz && (0, lz.jsxs)("label", {
+    }), "custom" === yD && (0, fD.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, lz.jsx)("span", {
+      children: [(0, fD.jsx)("span", {
         children: "Server address"
-      }), (0, lz.jsx)("input", {
+      }), (0, fD.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyEndpoint",
-        value: rz,
+        value: mD,
         placeholder: "https://ai.example.com/v1",
         autoComplete: "off",
         spellCheck: !1,
-        onChange: zz => {
-          oz(zz.target.value), Gz(!1), jz()
+        onChange: DD => {
+          nD(DD.target.value), aD(!1), eD()
         },
-        onKeyDown: Ct
-      }), (!tz || rz !== (null !== (Mz = tz.baseUrl) && void 0 !== Mz ? Mz : "")) && (0, lz.jsx)(Bt, {})]
-    }), (0, lz.jsxs)("div", {
+        onKeyDown: hQ
+      }), (!QD || mD !== (null !== (bD = QD.baseUrl) && void 0 !== bD ? bD : "")) && (0, fD.jsx)(uQ, {})]
+    }), (0, fD.jsxs)("div", {
       className: "WorldCodeAiAddKeyField",
-      children: [vz && (0, lz.jsxs)("span", {
+      children: [PD && (0, fD.jsxs)("span", {
         className: "WorldCodeAiAddKeySavedKey",
-        children: ["Key ends ", (0, lz.jsxs)("code", {
-          children: ["\u2026", Xz.slice(-4)]
+        children: ["Key ends ", (0, fD.jsxs)("code", {
+          children: ["\u2026", ND.slice(-4)]
         })]
-      }), (0, lz.jsx)("label", {
+      }), (0, fD.jsx)("label", {
         htmlFor: "WorldCodeAiAddKeyKey",
-        children: vz ? "Paste a new key to replace it (optional)" : "Your key"
-      }), (0, lz.jsxs)("span", {
+        children: PD ? "Paste a new key to replace it (optional)" : "Your key"
+      }), (0, fD.jsxs)("span", {
         className: "WorldCodeAiAddKeyPaste",
-        children: [(0, lz.jsx)("input", {
+        children: [(0, fD.jsx)("input", {
           id: "WorldCodeAiAddKeyKey",
           className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyKey",
-          type: fz ? "text" : "password",
-          value: Kz,
-          placeholder: vz ? "Leave empty to keep it" : "custom" === dz ? "Paste the key, or leave empty" : "Paste the key here",
+          type: gD ? "text" : "password",
+          value: oD,
+          placeholder: PD ? "Leave empty to keep it" : "custom" === yD ? "Paste the key, or leave empty" : "Paste the key here",
           autoComplete: "off",
           spellCheck: !1,
-          onChange: zz => {
-            wz(zz.target.value), Zz || Fz(wl(Kl(zz.target.value))), jz()
+          onChange: DD => {
+            vD(DD.target.value), tD || MD(vf(of(DD.target.value))), eD()
           },
-          onKeyDown: Ct
-        }), (0, lz.jsx)("button", {
+          onKeyDown: hQ
+        }), (0, fD.jsx)("button", {
           type: "button",
           className: "WorldCodeAiSecondaryButton",
           onClick: () => {
-            sz(!fz)
+            XD(!gD)
           },
-          children: fz ? "Hide" : "Show"
+          children: gD ? "Hide" : "Show"
         })]
-      }), (0, lz.jsx)(It, {
-        provider: dz
+      }), (0, fD.jsx)(eQ, {
+        provider: yD
       })]
-    }), !tz && (0, lz.jsxs)("p", {
+    }), !QD && (0, fD.jsxs)("p", {
       className: "WorldCodeAiAiSettingsNote WorldCodeAiAddKeyRemember",
-      children: [pz ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, lz.jsx)("button", {
+      children: [BD ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, fD.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
-        onClick: Oz,
+        onClick: SD,
         children: "AI settings"
       }), "."]
-    }), Pz && (0, lz.jsxs)("label", {
+    }), KD && (0, fD.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, lz.jsx)("span", {
+      children: [(0, fD.jsx)("span", {
         children: "Model name"
-      }), (0, lz.jsx)("input", {
+      }), (0, fD.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyModel",
-        value: Jz,
+        value: UD,
         placeholder: "llama-3.3-70b-versatile",
         autoComplete: "off",
         spellCheck: !1,
-        onChange: zz => {
-          Az(zz.target.value), jz()
+        onChange: DD => {
+          xD(DD.target.value), eD()
         },
-        onKeyDown: Ct
+        onKeyDown: hQ
       })]
-    }), az && (0, lz.jsxs)("div", {
-      ref: Wz,
+    }), VD && (0, fD.jsxs)("div", {
+      ref: sD,
       className: "WorldCodeAiModelList WorldCodeAiAddKeyModels",
       role: "radiogroup",
       "aria-labelledby": "WorldCodeAiAddKeyModelsTitle",
-      children: [(0, lz.jsxs)("p", {
+      children: [(0, fD.jsxs)("p", {
         id: "WorldCodeAiAddKeyModelsTitle",
         className: "WorldCodeAiAddKeyWorks",
-        children: ["" === xz(dz) ? "It works." : "Your key works.", " Pick a model:"]
-      }), az.map((zz => (0, lz.jsx)(ht, {
-        name: zz.name,
-        hint: zz.tier ? cl[zz.tier] : "",
+        children: ["" === HD(yD) ? "It works." : "Your key works.", " Pick a model:"]
+      }), VD.map((DD => (0, fD.jsx)(lQ, {
+        name: DD.name,
+        hint: DD.tier ? Gf[DD.tier] : "",
         choice: {
-          keyId: null !== dz && void 0 !== dz ? dz : "",
-          modelId: zz.id
+          keyId: null !== yD && void 0 !== yD ? yD : "",
+          modelId: DD.id
         },
-        selected: zz.id === mz,
+        selected: DD.id === jD,
         radioName: "WorldCodeAiAddKeyModelPick",
         onSelect: () => {
-          qz(zz.id)
+          lD(DD.id)
         }
-      }, zz.id))), (0, lz.jsx)("button", {
+      }, DD.id))), (0, fD.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
         onClick: () => {
-          Gz(!0), jz()
+          aD(!0), eD()
         },
         children: "Type a model name yourself"
       })]
-    }), az && (0, lz.jsxs)("label", {
+    }), VD && (0, fD.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, lz.jsx)("span", {
+      children: [(0, fD.jsx)("span", {
         children: "Name it (optional)"
-      }), (0, lz.jsx)("input", {
+      }), (0, fD.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyName",
-        value: Tz,
+        value: qD,
         maxLength: 30,
-        placeholder: dz && "custom" !== dz ? `Like My ${Fl[dz].shortName}` : "Like Home server",
+        placeholder: yD && "custom" !== yD ? `Like My ${Mf[yD].shortName}` : "Like Home server",
         autoComplete: "off",
-        onChange: zz => {
-          Lz(zz.target.value)
+        onChange: DD => {
+          JD(DD.target.value)
         },
-        onKeyDown: Ct
+        onKeyDown: hQ
       })]
-    }), (0, lz.jsxs)("div", {
-      ref: ez,
+    }), (0, fD.jsxs)("div", {
+      ref: ED,
       className: "WorldCodeAiAddKeyActions",
-      children: [cz && (0, lz.jsx)("p", {
+      children: [GD && (0, fD.jsx)("p", {
         className: "WorldCodeAiAddKeyError",
         role: "alert",
-        children: cz
-      }), cz && Sz && (0, lz.jsx)(rt, {
-        detail: Sz,
+        children: GD
+      }), GD && kD && (0, fD.jsx)(mQ, {
+        detail: kD,
         onOpen: () => {
-          var zz, uz;
-          null === (zz = ez.current) || void 0 === zz || null === (uz = zz.querySelector(".WorldCodeAiAddKeySave")) || void 0 === uz || uz.scrollIntoView({
+          var DD, CD;
+          null === (DD = ED.current) || void 0 === DD || null === (CD = DD.querySelector(".WorldCodeAiAddKeySave")) || void 0 === CD || CD.scrollIntoView({
             block: "nearest"
           })
         }
-      }), (0, lz.jsx)("button", {
+      }), (0, fD.jsx)("button", {
         type: "submit",
         className: "WorldCodeAiPrimaryButton WorldCodeAiAddKeySave",
-        disabled: hz,
-        children: hz ? Dz ? "Testing the connection\u2026" : "Testing your key\u2026" : Iz ? `Save and use ${Iz.name}` : Dz ? "Test connection" : "Test key"
+        disabled: LD,
+        children: LD ? YD ? "Testing the connection\u2026" : "Testing your key\u2026" : uD ? `Save and use ${uD.name}` : YD ? "Test connection" : "Test key"
       })]
     })]
   })
 }
-var kt = bz(1181),
-  zH = bz(36319),
-  uH = bz(36316);
+var AQ = cD(1192),
+  FQ = cD(36240),
+  Dw = cD(36235);
 
-function bH(zz) {
+function Cw(DD) {
   let {
-    step: uz,
-    placement: bz = "left",
-    onPrevious: Ez,
-    children: nz
-  } = zz;
+    step: CD,
+    placement: cD = "left",
+    onPrevious: ID,
+    children: pD
+  } = DD;
   const {
-    t: iz
-  } = (0, kt.F)();
-  return (0, lz.jsx)(uH.i, {
+    t: iD
+  } = (0, AQ.F)();
+  return (0, fD.jsx)(Dw.l, {
     tutorial: "aiHelperOverview",
-    step: uz,
-    text: iz(`codeEditorAiTutorial:${uz}`),
-    placement: bz,
-    onPrevious: Ez,
-    children: nz
+    step: CD,
+    text: iD(`codeEditorAiTutorial:${CD}`),
+    placement: cD,
+    onPrevious: ID,
+    children: pD
   })
 }
 
-function EH(zz, uz) {
-  if (zz.scrollHeight <= zz.clientHeight + 1) nH(zz);
+function Iw(DD, CD) {
+  if (DD.scrollHeight <= DD.clientHeight + 1) pw(DD);
   else {
-    if (!Vt(zz, uz)) {
-      const bz = uz.getBoundingClientRect().bottom - zz.getBoundingClientRect().bottom;
-      bz > 0 && (zz.scrollTop += bz),
-        function(zz, uz) {
-          const bz = zz.getBoundingClientRect(),
-            Ez = Math.max(bz.top, ...Array.from(zz.querySelectorAll(".WorldCodeAiModelGroupHeader"), (zz => {
-              const uz = zz.getBoundingClientRect();
-              return uz.top <= bz.top + 1 ? uz.bottom : bz.top
+    if (!VQ(DD, CD)) {
+      const cD = CD.getBoundingClientRect().bottom - DD.getBoundingClientRect().bottom;
+      cD > 0 && (DD.scrollTop += cD),
+        function(DD, CD) {
+          const cD = DD.getBoundingClientRect(),
+            ID = Math.max(cD.top, ...Array.from(DD.querySelectorAll(".WorldCodeAiModelGroupHeader"), (DD => {
+              const CD = DD.getBoundingClientRect();
+              return CD.top <= cD.top + 1 ? CD.bottom : cD.top
             })));
-          if (Ez <= bz.top) return;
-          const nz = uz.closest(".WorldCodeAiModelGroup"),
-            iz = nz && parseFloat(getComputedStyle(nz).rowGap) || 6,
-            lz = Array.from(zz.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((zz => {
-              const uz = zz.getBoundingClientRect();
-              return uz.top < Ez + iz - 1 && uz.bottom > Ez - iz
+          if (ID <= cD.top) return;
+          const pD = CD.closest(".WorldCodeAiModelGroup"),
+            iD = pD && parseFloat(getComputedStyle(pD).rowGap) || 6,
+            fD = Array.from(DD.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((DD => {
+              const CD = DD.getBoundingClientRect();
+              return CD.top < ID + iD - 1 && CD.bottom > ID - iD
             }));
-          if (!lz || lz === uz) return;
-          const Mz = zz.scrollTop;
-          zz.scrollTop -= Ez + iz - lz.getBoundingClientRect().top, uz.getBoundingClientRect().bottom > bz.bottom && (zz.scrollTop = Mz, zz.scrollTop += Math.max(0, lz.getBoundingClientRect().bottom - Ez))
-        }(zz, uz)
+          if (!fD || fD === CD) return;
+          const bD = DD.scrollTop;
+          DD.scrollTop -= ID + iD - fD.getBoundingClientRect().top, CD.getBoundingClientRect().bottom > cD.bottom && (DD.scrollTop = bD, DD.scrollTop += Math.max(0, fD.getBoundingClientRect().bottom - ID))
+        }(DD, CD)
     }
-    nH(zz)
+    pw(DD)
   }
 }
 
-function nH(zz) {
-  const uz = zz.getBoundingClientRect().top;
-  for (const bz of Array.from(zz.querySelectorAll(".WorldCodeAiModelGroup"))) {
-    const zz = bz.querySelector(".WorldCodeAiModelGroupHeader");
-    if (!zz) continue;
-    const Ez = uz + zz.offsetHeight,
-      nz = Array.from(bz.querySelectorAll(".WorldCodeAiModelRow")).some((zz => zz.getBoundingClientRect().bottom > Ez + 2));
-    zz.classList.toggle("Unpinned", !nz)
+function pw(DD) {
+  const CD = DD.getBoundingClientRect().top;
+  for (const cD of Array.from(DD.querySelectorAll(".WorldCodeAiModelGroup"))) {
+    const DD = cD.querySelector(".WorldCodeAiModelGroupHeader");
+    if (!DD) continue;
+    const ID = CD + DD.offsetHeight,
+      pD = Array.from(cD.querySelectorAll(".WorldCodeAiModelRow")).some((DD => DD.getBoundingClientRect().bottom > ID + 2));
+    DD.classList.toggle("Unpinned", !pD)
   }
 }
 
-function iH(zz) {
-  const uz = el(zz, !0);
-  return zz.model.name.toLowerCase().startsWith(uz.toLowerCase()) ? zz.model.name : `${uz} \xb7 ${zz.model.name}`
+function iw(DD) {
+  const CD = Ef(DD, !0);
+  return DD.model.name.toLowerCase().startsWith(CD.toLowerCase()) ? DD.model.name : `${CD} \xb7 ${DD.model.name}`
 }
 
-function lH(zz) {
+function fw(DD) {
   let {
-    onAddKey: uz,
-    editsOn: bz,
-    freeOnce: nz = !1,
-    onFreeOnce: Mz,
-    children: tz
-  } = zz;
+    onAddKey: CD,
+    editsOn: cD,
+    freeOnce: pD = !1,
+    onFreeOnce: bD,
+    children: QD
+  } = DD;
   const {
-    active: Hz,
-    select: Oz
-  } = zM(), pz = wM(pM());
-  (0, Ez.useEffect)((() => {
-    OM.refresh(), TM()
+    active: wD,
+    select: SD
+  } = Db(), BD = vb(Bb());
+  (0, ID.useEffect)((() => {
+    Sb.refresh(), qb()
   }), []);
-  const [dz, Fz] = (0, Ez.useState)(!1), Zz = (0, Ez.useRef)(null), Rz = (0, Ez.useRef)(null), Kz = (0, Ez.useRef)(null), wz = () => {
-    var zz;
-    Fz(!1), null === (zz = Rz.current) || void 0 === zz || zz.focus()
+  const [yD, MD] = (0, ID.useState)(!1), tD = (0, ID.useRef)(null), ZD = (0, ID.useRef)(null), oD = (0, ID.useRef)(null), vD = () => {
+    var DD;
+    MD(!1), null === (DD = ZD.current) || void 0 === DD || DD.focus()
   };
-  (0, Ez.useEffect)((() => {
-    var zz, uz;
-    if (!dz) return;
-    const bz = null === (zz = Kz.current) || void 0 === zz ? void 0 : zz.querySelector("input:checked");
-    null === bz || void 0 === bz || bz.focus({
+  (0, ID.useEffect)((() => {
+    var DD, CD;
+    if (!yD) return;
+    const cD = null === (DD = oD.current) || void 0 === DD ? void 0 : DD.querySelector("input:checked");
+    null === cD || void 0 === cD || cD.focus({
       preventScroll: !0
     });
-    const Ez = null === (uz = Kz.current) || void 0 === uz ? void 0 : uz.querySelector(".WorldCodeAiModelMenuList"),
-      nz = null === bz || void 0 === bz ? void 0 : bz.closest(".WorldCodeAiModelRow");
-    Ez && nz && EH(Ez, nz);
-    const iz = () => {
-      Ez && nH(Ez)
+    const ID = null === (CD = oD.current) || void 0 === CD ? void 0 : CD.querySelector(".WorldCodeAiModelMenuList"),
+      pD = null === cD || void 0 === cD ? void 0 : cD.closest(".WorldCodeAiModelRow");
+    ID && pD && Iw(ID, pD);
+    const iD = () => {
+      ID && pw(ID)
     };
-    null === Ez || void 0 === Ez || Ez.addEventListener("scroll", iz, {
+    null === ID || void 0 === ID || ID.addEventListener("scroll", iD, {
       passive: !0
     });
-    const lz = zz => {
-        var uz;
-        null !== (uz = Zz.current) && void 0 !== uz && uz.contains(zz.target) || Fz(!1)
+    const fD = DD => {
+        var CD;
+        null !== (CD = tD.current) && void 0 !== CD && CD.contains(DD.target) || MD(!1)
       },
-      Mz = zz => {
-        "Escape" === zz.key && (zz.stopPropagation(), zz.preventDefault(), gt && (gt(), 1) || wz())
+      bD = DD => {
+        "Escape" === DD.key && (DD.stopPropagation(), DD.preventDefault(), GQ && (GQ(), 1) || vD())
       };
-    return document.addEventListener("pointerdown", lz), document.addEventListener("keydown", Mz, !0), () => {
-      null === Ez || void 0 === Ez || Ez.removeEventListener("scroll", iz), document.removeEventListener("pointerdown", lz), document.removeEventListener("keydown", Mz, !0)
+    return document.addEventListener("pointerdown", fD), document.addEventListener("keydown", bD, !0), () => {
+      null === ID || void 0 === ID || ID.removeEventListener("scroll", iD), document.removeEventListener("pointerdown", fD), document.removeEventListener("keydown", bD, !0)
     }
-  }), [dz]);
-  const Xz = nz && null !== Hz,
-    fz = Xz ? "Bot.xd (free) \xb7 once" : Hz ? iH(Hz) : pz ? nM : "Bot.xd (free)";
-  return (0, lz.jsxs)("div", {
-    ref: Zz,
+  }), [yD]);
+  const ND = pD && null !== wD,
+    gD = ND ? "Bot.xd (free) \xb7 once" : wD ? iw(wD) : BD ? pb : "Bot.xd (free)";
+  return (0, fD.jsxs)("div", {
+    ref: tD,
     className: "WorldCodeAiModelChipRow",
-    onBlur: zz => {
-      var uz;
-      !dz || !zz.relatedTarget || null !== (uz = Zz.current) && void 0 !== uz && uz.contains(zz.relatedTarget) || Fz(!1)
+    onBlur: DD => {
+      var CD;
+      !yD || !DD.relatedTarget || null !== (CD = tD.current) && void 0 !== CD && CD.contains(DD.relatedTarget) || MD(!1)
     },
-    children: [(0, lz.jsxs)("button", {
-      ref: Rz,
-      className: iz()("WorldCodeAiModelChip", dz && "Open"),
-      "aria-expanded": dz,
-      "aria-label": `AI model: ${fz}`,
+    children: [(0, fD.jsxs)("button", {
+      ref: ZD,
+      className: iD()("WorldCodeAiModelChip", yD && "Open"),
+      "aria-expanded": yD,
+      "aria-label": `AI model: ${gD}`,
       title: "Change AI model",
       onClick: () => {
-        Fz(!dz)
+        MD(!yD)
       },
-      children: [Hz && !Xz && "" !== Hz.key && (0, lz.jsx)(st, {}), (0, lz.jsx)("span", {
+      children: [wD && !ND && "" !== wD.key && (0, fD.jsx)(XQ, {}), (0, fD.jsx)("span", {
         className: "WorldCodeAiModelChipName",
-        children: fz
-      }), (0, lz.jsx)("span", {
+        children: gD
+      }), (0, fD.jsx)("span", {
         className: "WorldCodeAiModelChipCaret",
         "aria-hidden": "true",
         children: "\u25be"
       })]
-    }), null !== bz && (0, lz.jsx)(bH, {
+    }), null !== cD && (0, fD.jsx)(Cw, {
       step: "aiEdits",
       placement: "top",
-      children: (0, lz.jsx)("span", {
-        className: iz()("WorldCodeAiEditsTag", !bz && "WorldCodeAiEditsTag-off"),
-        title: `Allow AI to make edits to my code is ${bz?"on":"off"}, in AI settings`,
-        children: bz ? "Edits on" : "Edits off"
+      children: (0, fD.jsx)("span", {
+        className: iD()("WorldCodeAiEditsTag", !cD && "WorldCodeAiEditsTag-off"),
+        title: `Allow AI to make edits to my code is ${cD?"on":"off"}, in AI settings`,
+        children: cD ? "Edits on" : "Edits off"
       })
-    }), (0, lz.jsx)("span", {
+    }), (0, fD.jsx)("span", {
       className: "WorldCodeAiModelChipStatus",
-      children: tz
-    }), dz && (0, lz.jsxs)("div", {
-      ref: Kz,
+      children: QD
+    }), yD && (0, fD.jsxs)("div", {
+      ref: oD,
       className: "WorldCodeAiModelMenu",
       role: "dialog",
       "aria-labelledby": "WorldCodeAiModelMenuTitle",
-      children: [(0, lz.jsx)("h3", {
+      children: [(0, fD.jsx)("h3", {
         id: "WorldCodeAiModelMenuTitle",
         className: "WorldCodeAiAiSettingsTitle",
         children: "AI model"
-      }), (0, lz.jsx)("div", {
+      }), (0, fD.jsx)("div", {
         className: "WorldCodeAiModelMenuList",
-        children: (0, lz.jsx)(Ut, {
+        children: (0, fD.jsx)(LQ, {
           labelledBy: "WorldCodeAiModelMenuTitle",
           onPicked: () => {
-            null === Mz || void 0 === Mz || Mz(!1), wz()
+            null === bD || void 0 === bD || bD(!1), vD()
           }
         })
-      }), (0, lz.jsxs)("div", {
+      }), (0, fD.jsxs)("div", {
         className: "WorldCodeAiModelMenuActions",
-        children: [(0, lz.jsxs)("button", {
+        children: [(0, fD.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
           onClick: () => {
-            Fz(!1), uz()
+            MD(!1), CD()
           },
-          children: [(0, lz.jsx)("span", {
+          children: [(0, fD.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
-        }), Hz && (0, lz.jsxs)("span", {
+        }), wD && (0, fD.jsxs)("span", {
           className: "WorldCodeAiModelMenuBotxd",
-          children: [Mz && (Xz ? (0, lz.jsxs)("button", {
+          children: [bD && (ND ? (0, fD.jsxs)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              Mz(!1), wz()
+              bD(!1), vD()
             },
-            children: ["Back to ", Hz.model.name]
-          }) : (0, lz.jsx)("button", {
+            children: ["Back to ", wD.model.name]
+          }) : (0, fD.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              Mz(!0), wz()
+              bD(!0), vD()
             },
             children: "Ask Bot.xd once"
-          })), (0, lz.jsx)("button", {
+          })), (0, fD.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              Oz(null), wz()
+              SD(null), vD()
             },
             children: "Use Bot.xd from now on"
           })]
@@ -10480,379 +10480,379 @@ function lH(zz) {
     })]
   })
 }
-const MH = "kv";
+const bw = "kv";
 
-function tH(zz) {
-  return new Promise(((uz, bz) => {
-    zz.oncomplete = () => {
-      uz()
-    }, zz.onerror = () => {
-      var uz;
-      bz(null !== (uz = zz.error) && void 0 !== uz ? uz : new Error("IndexedDB transaction failed"))
-    }, zz.onabort = () => {
-      var uz;
-      bz(null !== (uz = zz.error) && void 0 !== uz ? uz : new Error("IndexedDB transaction aborted"))
+function Qw(DD) {
+  return new Promise(((CD, cD) => {
+    DD.oncomplete = () => {
+      CD()
+    }, DD.onerror = () => {
+      var CD;
+      cD(null !== (CD = DD.error) && void 0 !== CD ? CD : new Error("IndexedDB transaction failed"))
+    }, DD.onabort = () => {
+      var CD;
+      cD(null !== (CD = DD.error) && void 0 !== CD ? CD : new Error("IndexedDB transaction aborted"))
     }
   }))
 }
-var HH = bz(36343);
-const OH = (0, Ez.memo)((function(zz) {
+var ww = cD(36273);
+const Sw = (0, ID.memo)((function(DD) {
   let {
-    change: uz,
-    marked: bz
-  } = zz;
-  const nz = (0, Ez.useMemo)((() => eE(uz.before, uz.after)), [uz]),
-    Mz = [];
-  for (let Ez = 0; Ez < nz.length; Ez++) {
-    if ("same" !== nz[Ez].kind) {
-      Mz.push(nz[Ez]);
+    change: CD,
+    marked: cD
+  } = DD;
+  const pD = (0, ID.useMemo)((() => EI(CD.before, CD.after)), [CD]),
+    bD = [];
+  for (let ID = 0; ID < pD.length; ID++) {
+    if ("same" !== pD[ID].kind) {
+      bD.push(pD[ID]);
       continue
     }
-    let zz = Ez;
-    for (; zz + 1 < nz.length && "same" === nz[zz + 1].kind;) zz++;
-    const uz = nz.slice(Ez, zz + 1),
-      bz = 0 === Ez ? 0 : 2,
-      iz = zz === nz.length - 1 ? 0 : 2;
-    uz.length > bz + iz + 1 ? Mz.push(...uz.slice(0, bz), {
+    let DD = ID;
+    for (; DD + 1 < pD.length && "same" === pD[DD + 1].kind;) DD++;
+    const CD = pD.slice(ID, DD + 1),
+      cD = 0 === ID ? 0 : 2,
+      iD = DD === pD.length - 1 ? 0 : 2;
+    CD.length > cD + iD + 1 ? bD.push(...CD.slice(0, cD), {
       kind: "fold",
-      count: uz.length - bz - iz
-    }, ...uz.slice(uz.length - iz)) : Mz.push(...uz), Ez = zz
+      count: CD.length - cD - iD
+    }, ...CD.slice(CD.length - iD)) : bD.push(...CD), ID = DD
   }
-  return (0, lz.jsx)("pre", {
+  return (0, fD.jsx)("pre", {
     className: "WorldCodeAiDiff",
-    children: Mz.map(((zz, uz) => {
-      if ("fold" === zz.kind) return (0, lz.jsxs)("div", {
+    children: bD.map(((DD, CD) => {
+      if ("fold" === DD.kind) return (0, fD.jsxs)("div", {
         className: "WorldCodeAiDiffFold",
-        children: ["\u22ef ", zz.count, " unchanged lines"]
-      }, uz);
-      const Ez = "added" === zz.kind ? function(zz, uz) {
-          if (uz) return zz.includes(`"${uz}"`) ? `"${uz}"` : zz.includes(uz) ? uz : void 0
-        }(zz.text, bz) : void 0,
-        nz = Ez ? zz.text.indexOf(Ez) : -1;
-      return (0, lz.jsxs)("div", {
-        className: iz()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${zz.kind}`, Ez && "WorldCodeAiDiff-marked"),
-        children: [(0, lz.jsx)("span", {
+        children: ["\u22ef ", DD.count, " unchanged lines"]
+      }, CD);
+      const ID = "added" === DD.kind ? function(DD, CD) {
+          if (CD) return DD.includes(`"${CD}"`) ? `"${CD}"` : DD.includes(CD) ? CD : void 0
+        }(DD.text, cD) : void 0,
+        pD = ID ? DD.text.indexOf(ID) : -1;
+      return (0, fD.jsxs)("div", {
+        className: iD()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${DD.kind}`, ID && "WorldCodeAiDiff-marked"),
+        children: [(0, fD.jsx)("span", {
           className: "WorldCodeAiDiffMark",
-          children: "added" === zz.kind ? "+" : "removed" === zz.kind ? "\u2212" : " "
-        }), (0, lz.jsx)("span", {
+          children: "added" === DD.kind ? "+" : "removed" === DD.kind ? "\u2212" : " "
+        }), (0, fD.jsx)("span", {
           className: "WorldCodeAiDiffText",
-          children: Ez ? (0, lz.jsxs)(lz.Fragment, {
-            children: [zz.text.slice(0, nz), (0, lz.jsx)("mark", {
-              children: Ez
-            }), zz.text.slice(nz + Ez.length)]
-          }) : zz.text || " "
+          children: ID ? (0, fD.jsxs)(fD.Fragment, {
+            children: [DD.text.slice(0, pD), (0, fD.jsx)("mark", {
+              children: ID
+            }), DD.text.slice(pD + ID.length)]
+          }) : DD.text || " "
         })]
-      }, uz)
+      }, CD)
     }))
   })
 }));
 
-function pH(zz) {
-  var uz, bz;
+function Bw(DD) {
+  var CD, cD;
   if ("undefined" === typeof BroadcastChannel) return;
-  const Ez = new BroadcastChannel(zz);
-  return null === (uz = (bz = Ez).unref) || void 0 === uz || uz.call(bz), {
-    post: zz => {
-      Ez.postMessage(zz)
+  const ID = new BroadcastChannel(DD);
+  return null === (CD = (cD = ID).unref) || void 0 === CD || CD.call(cD), {
+    post: DD => {
+      ID.postMessage(DD)
     },
-    listen: zz => {
-      const uz = uz => {
-        "string" === typeof uz.data && zz(uz.data)
+    listen: DD => {
+      const CD = CD => {
+        "string" === typeof CD.data && DD(CD.data)
       };
-      return Ez.addEventListener("message", uz), () => {
-        Ez.removeEventListener("message", uz)
+      return ID.addEventListener("message", CD), () => {
+        ID.removeEventListener("message", CD)
       }
     }
   }
 }
 
-function dH(zz) {
-  return Array.isArray(zz) && zz.every((zz => {
-    if ("object" !== typeof zz || null === zz || !("id" in zz) || !("at" in zz) || !("label" in zz) || !("files" in zz)) return !1;
-    const uz = zz.files;
-    return "object" === typeof uz && null !== uz && Object.values(uz).every((zz => "string" === typeof zz))
+function yw(DD) {
+  return Array.isArray(DD) && DD.every((DD => {
+    if ("object" !== typeof DD || null === DD || !("id" in DD) || !("at" in DD) || !("label" in DD) || !("files" in DD)) return !1;
+    const CD = DD.files;
+    return "object" === typeof CD && null !== CD && Object.values(CD).every((DD => "string" === typeof DD))
   }))
 }
 
-function FH(zz, uz) {
-  return uz ? function(zz, uz) {
-    if (!uz) return [...zz];
-    const bz = new Map;
-    for (const Ez of [...uz, ...zz]) bz.set(Ez.id, Ez);
-    return [...bz.values()].sort(((zz, uz) => zz.at - uz.at || zz.id - uz.id)).slice(-30)
-  }(uz, zz) : [...zz]
+function Mw(DD, CD) {
+  return CD ? function(DD, CD) {
+    if (!CD) return [...DD];
+    const cD = new Map;
+    for (const ID of [...CD, ...DD]) cD.set(ID.id, ID);
+    return [...cD.values()].sort(((DD, CD) => DD.at - CD.at || DD.id - CD.id)).slice(-30)
+  }(CD, DD) : [...DD]
 }
 
-function ZH(zz, uz) {
-  let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const Ez = new Date(zz).toLocaleTimeString("en-US", {
+function tw(DD, CD) {
+  let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const ID = new Date(DD).toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "2-digit",
-      ...bz ? {
+      ...cD ? {
         second: "2-digit"
       } : {}
     }).toLowerCase(),
-    nz = zz => new Date(zz).toDateString();
-  return nz(zz) === nz(uz) ? Ez : nz(zz) === nz(uz - 864e5) ? `yesterday ${Ez}` : function(zz, uz) {
-    const bz = Math.floor((uz - zz) / 6e4);
-    if (bz < 1) return "just now";
-    if (bz < 60) return `${bz} min ago`;
-    const Ez = Math.floor(bz / 60);
-    if (Ez < 24) return `${Ez} h ago`;
-    const nz = Math.floor(Ez / 24);
-    return 1 === nz ? "1 day ago" : `${nz} days ago`
-  }(zz, uz)
+    pD = DD => new Date(DD).toDateString();
+  return pD(DD) === pD(CD) ? ID : pD(DD) === pD(CD - 864e5) ? `yesterday ${ID}` : function(DD, CD) {
+    const cD = Math.floor((CD - DD) / 6e4);
+    if (cD < 1) return "just now";
+    if (cD < 60) return `${cD} min ago`;
+    const ID = Math.floor(cD / 60);
+    if (ID < 24) return `${ID} h ago`;
+    const pD = Math.floor(ID / 24);
+    return 1 === pD ? "1 day ago" : `${pD} days ago`
+  }(DD, CD)
 }
 
-function RH(zz, uz) {
-  return [...new Set([...Object.keys(uz), ...Object.keys(zz.files)])].flatMap((bz => {
-    var Ez, nz;
-    const iz = null !== (Ez = zz.files[bz]) && void 0 !== Ez ? Ez : "";
-    return (null !== (nz = uz[bz]) && void 0 !== nz ? nz : "") === iz ? [] : [{
-      path: bz,
-      text: iz
+function Zw(DD, CD) {
+  return [...new Set([...Object.keys(CD), ...Object.keys(DD.files)])].flatMap((cD => {
+    var ID, pD;
+    const iD = null !== (ID = DD.files[cD]) && void 0 !== ID ? ID : "";
+    return (null !== (pD = CD[cD]) && void 0 !== pD ? pD : "") === iD ? [] : [{
+      path: cD,
+      text: iD
     }]
   }))
 }
 
-function KH(zz) {
-  let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
-  if (zz.length <= uz) return null;
-  const bz = zz.slice(0, uz),
-    Ez = bz.lastIndexOf(" ");
-  return `${(Ez>uz/2?bz.slice(0,Ez):bz).replace(/[\s,;:.]+$/,"")}\u2026`
+function ow(DD) {
+  let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
+  if (DD.length <= CD) return null;
+  const cD = DD.slice(0, CD),
+    ID = cD.lastIndexOf(" ");
+  return `${(ID>CD/2?cD.slice(0,ID):cD).replace(/[\s,;:.]+$/,"")}\u2026`
 }
 
-function wH(zz) {
+function vw(DD) {
   let {
-    snapshot: uz,
-    files: bz,
-    now: nz,
-    withSeconds: Mz,
-    onRestore: tz
-  } = zz;
-  const [Hz, Oz] = (0, Ez.useState)(!1), [pz, dz] = (0, Ez.useState)(!1), Fz = uz.did ? `Before: ${uz.did}` : uz.label, Zz = KH(Fz), Rz = uz.did && uz.label.startsWith('Before "') ? uz.label.slice(7) : null, Kz = null === Rz ? null : KH(Rz, 50), wz = null !== Kz && null !== Rz && void 0 !== Rz && Rz.startsWith('"') ? `${Kz}"` : Kz, Xz = (0, Ez.useRef)(null);
-  (0, Ez.useEffect)((() => {
-    const zz = Xz.current,
-      uz = null === zz || void 0 === zz ? void 0 : zz.closest(".WorldCodeAiMessages");
-    if (!Hz || !zz || !uz) return;
-    const bz = uz.getBoundingClientRect(),
-      Ez = zz.getBoundingClientRect(),
-      nz = Ez.bottom - (bz.bottom - 28),
-      iz = Ez.top - (bz.top + 16);
-    nz > 0 && uz.scrollBy({
-      top: Math.min(nz, iz),
+    snapshot: CD,
+    files: cD,
+    now: pD,
+    withSeconds: bD,
+    onRestore: QD
+  } = DD;
+  const [wD, SD] = (0, ID.useState)(!1), [BD, yD] = (0, ID.useState)(!1), MD = CD.did ? `Before: ${CD.did}` : CD.label, tD = ow(MD), ZD = CD.did && CD.label.startsWith('Before "') ? CD.label.slice(7) : null, oD = null === ZD ? null : ow(ZD, 50), vD = null !== oD && null !== ZD && void 0 !== ZD && ZD.startsWith('"') ? `${oD}"` : oD, ND = (0, ID.useRef)(null);
+  (0, ID.useEffect)((() => {
+    const DD = ND.current,
+      CD = null === DD || void 0 === DD ? void 0 : DD.closest(".WorldCodeAiMessages");
+    if (!wD || !DD || !CD) return;
+    const cD = CD.getBoundingClientRect(),
+      ID = DD.getBoundingClientRect(),
+      pD = ID.bottom - (cD.bottom - 28),
+      iD = ID.top - (cD.top + 16);
+    pD > 0 && CD.scrollBy({
+      top: Math.min(pD, iD),
       behavior: "smooth"
     })
-  }), [Hz]);
-  const fz = (0, Ez.useRef)(null),
-    [sz, rz] = (0, Ez.useState)(!1),
-    oz = (0, Ez.useCallback)((() => {
-      const zz = fz.current;
-      rz(null !== zz && zz.scrollTop + zz.clientHeight >= zz.scrollHeight - 24)
+  }), [wD]);
+  const gD = (0, ID.useRef)(null),
+    [XD, mD] = (0, ID.useState)(!1),
+    nD = (0, ID.useCallback)((() => {
+      const DD = gD.current;
+      mD(null !== DD && DD.scrollTop + DD.clientHeight >= DD.scrollHeight - 24)
     }), []);
-  (0, Ez.useEffect)((() => {
-    Hz && oz()
-  }), [Hz, oz]);
-  const Nz = (0, Ez.useMemo)((() => [...new Set([...Object.keys(uz.files), ...Object.keys(bz)])].flatMap((zz => {
-    var Ez, nz;
-    const iz = null !== (Ez = uz.files[zz]) && void 0 !== Ez ? Ez : "",
-      lz = null !== (nz = bz[zz]) && void 0 !== nz ? nz : "";
-    return iz === lz ? [] : [{
-      path: zz,
-      before: iz,
-      after: lz
+  (0, ID.useEffect)((() => {
+    wD && nD()
+  }), [wD, nD]);
+  const OD = (0, ID.useMemo)((() => [...new Set([...Object.keys(CD.files), ...Object.keys(cD)])].flatMap((DD => {
+    var ID, pD;
+    const iD = null !== (ID = CD.files[DD]) && void 0 !== ID ? ID : "",
+      fD = null !== (pD = cD[DD]) && void 0 !== pD ? pD : "";
+    return iD === fD ? [] : [{
+      path: DD,
+      before: iD,
+      after: fD
     }]
-  }))), [uz, bz]);
-  return (0, lz.jsxs)("li", {
-    ref: Xz,
+  }))), [CD, cD]);
+  return (0, fD.jsxs)("li", {
+    ref: ND,
     className: "WorldCodeAiSnapshot",
-    children: [(0, lz.jsxs)("div", {
+    children: [(0, fD.jsxs)("div", {
       className: "WorldCodeAiSnapshotRow",
-      children: [(0, lz.jsxs)("span", {
+      children: [(0, fD.jsxs)("span", {
         className: "WorldCodeAiSnapshotLabel",
-        children: [pz || !Zz ? Fz : Zz, (Zz || wz) && (0, lz.jsx)("button", {
+        children: [BD || !tD ? MD : tD, (tD || vD) && (0, fD.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiSnapshotMore",
-          "aria-expanded": pz,
+          "aria-expanded": BD,
           onClick: () => {
-            dz(!pz)
+            yD(!BD)
           },
-          children: pz ? "less" : "more"
-        }), (0, lz.jsxs)("span", {
+          children: BD ? "less" : "more"
+        }), (0, fD.jsxs)("span", {
           className: "WorldCodeAiSnapshotAge",
-          children: [" \xb7 ", ZH(uz.at, nz, Mz)]
-        }), null !== Rz && (0, lz.jsxs)("span", {
+          children: [" \xb7 ", tw(CD.at, pD, bD)]
+        }), null !== ZD && (0, fD.jsxs)("span", {
           className: "WorldCodeAiSnapshotAsked",
-          children: ["You asked: ", pz || !wz ? Rz : wz]
+          children: ["You asked: ", BD || !vD ? ZD : vD]
         })]
-      }), Nz.length > 0 && (0, lz.jsx)("button", {
+      }), OD.length > 0 && (0, fD.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          Oz(!Hz)
+          SD(!wD)
         },
-        children: Hz ? "Hide" : "Compare"
-      }), Nz.length > 0 && tz && (0, lz.jsx)("button", {
+        children: wD ? "Hide" : "Compare"
+      }), OD.length > 0 && QD && (0, fD.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
-        onClick: tz,
+        onClick: QD,
         children: "Go back to this code"
-      }), 0 === Nz.length && (0, lz.jsx)("span", {
+      }), 0 === OD.length && (0, fD.jsx)("span", {
         className: "WorldCodeAiSnapshotNow",
         children: "Same as your code now"
       })]
-    }), Hz && (0, lz.jsxs)("div", {
+    }), wD && (0, fD.jsxs)("div", {
       className: "WorldCodeAiChanges",
-      children: [(0, lz.jsx)("p", {
+      children: [(0, fD.jsx)("p", {
         className: "WorldCodeAiSnapshotCompareNote",
         children: "What changed since then:"
-      }), (0, lz.jsx)("div", {
-        ref: fz,
-        className: iz()("WorldCodeAiSnapshotCompare", sz && "WorldCodeAiSnapshotCompare-end"),
-        onScroll: oz,
-        children: Nz.map((zz => (0, lz.jsxs)("div", {
+      }), (0, fD.jsx)("div", {
+        ref: gD,
+        className: iD()("WorldCodeAiSnapshotCompare", XD && "WorldCodeAiSnapshotCompare-end"),
+        onScroll: nD,
+        children: OD.map((DD => (0, fD.jsxs)("div", {
           className: "WorldCodeAiChange",
-          children: [(0, lz.jsx)("div", {
+          children: [(0, fD.jsx)("div", {
             className: "WorldCodeAiChangeHeader",
-            children: (0, lz.jsx)("span", {
+            children: (0, fD.jsx)("span", {
               className: "WorldCodeAiChangePath",
-              children: zz.path
+              children: DD.path
             })
-          }), (0, lz.jsx)(OH, {
-            change: zz
+          }), (0, fD.jsx)(Sw, {
+            change: DD
           })]
-        }, zz.path)))
+        }, DD.path)))
       })]
     })]
   })
 }
 
-function XH(zz) {
+function Nw(DD) {
   let {
-    snapshots: uz,
-    files: bz,
-    now: Ez,
-    onRestore: nz
-  } = zz;
-  return (0, lz.jsxs)("div", {
+    snapshots: CD,
+    files: cD,
+    now: ID,
+    onRestore: pD
+  } = DD;
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiHistory",
-    children: [(0, lz.jsx)("div", {
+    children: [(0, fD.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, lz.jsx)("span", {
+      children: (0, fD.jsx)("span", {
         children: "Your code before each change"
       })
-    }), 0 === uz.length ? (0, lz.jsx)("p", {
+    }), 0 === CD.length ? (0, fD.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing here yet. Each time a change goes into your code, your code from before it is kept here."
-    }) : (0, lz.jsx)("ul", {
+    }) : (0, fD.jsx)("ul", {
       className: "WorldCodeAiSnapshots",
-      children: [...uz].reverse().map((zz => {
-        const iz = uz.some((uz => uz.id !== zz.id && ZH(uz.at, Ez) === ZH(zz.at, Ez)));
-        return (0, lz.jsx)(wH, {
-          snapshot: zz,
-          files: bz,
-          now: Ez,
-          withSeconds: iz,
-          onRestore: nz && (() => {
-            nz(zz)
+      children: [...CD].reverse().map((DD => {
+        const iD = CD.some((CD => CD.id !== DD.id && tw(CD.at, ID) === tw(DD.at, ID)));
+        return (0, fD.jsx)(vw, {
+          snapshot: DD,
+          files: cD,
+          now: ID,
+          withSeconds: iD,
+          onRestore: pD && (() => {
+            pD(DD)
           })
-        }, zz.id)
+        }, DD.id)
       }))
     })]
   })
 }
 
-function fH(zz) {
+function gw(DD) {
   let {
-    notes: uz,
-    outline: bz,
-    Qr: nz,
-    onDelete: iz
-  } = zz;
-  const [Mz, tz] = (0, Ez.useState)(""), [Hz, Oz] = (0, Ez.useState)(null), [pz, dz] = (0, Ez.useState)(!1), Fz = uz.length >= 8, Zz = bz.callbacks.length + bz.commands.length + bz.functions.length > 0;
-  return (0, lz.jsxs)("div", {
+    notes: CD,
+    outline: cD,
+    Jm: pD,
+    onDelete: iD
+  } = DD;
+  const [bD, QD] = (0, ID.useState)(""), [wD, SD] = (0, ID.useState)(null), [BD, yD] = (0, ID.useState)(!1), MD = CD.length >= 8, tD = cD.callbacks.length + cD.commands.length + cD.functions.length > 0;
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiAbout",
-    children: [(0, lz.jsx)("div", {
+    children: [(0, fD.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, lz.jsx)("span", {
+      children: (0, fD.jsx)("span", {
         children: "AI notes"
       })
-    }), (0, lz.jsx)("p", {
+    }), (0, fD.jsx)("p", {
       className: "WorldCodeAiAboutNote",
       children: "The AI reads these notes with every request, so it remembers what your game is."
-    }), 0 === uz.length && (0, lz.jsx)("p", {
+    }), 0 === CD.length && (0, fD.jsx)("p", {
       className: "WorldCodeAiHint",
       children: 'No notes yet. Add one, like "Two teams, red and blue, race to the flag".'
-    }), (0, lz.jsx)("ul", {
+    }), (0, fD.jsx)("ul", {
       className: "WorldCodeAiAboutList",
-      children: uz.map((zz => (0, lz.jsxs)("li", {
-        children: [(0, lz.jsx)("span", {
-          children: zz
-        }), (0, lz.jsx)("button", {
+      children: CD.map((DD => (0, fD.jsxs)("li", {
+        children: [(0, fD.jsx)("span", {
+          children: DD
+        }), (0, fD.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          "aria-label": `Delete note: ${zz}`,
+          "aria-label": `Delete note: ${DD}`,
           onClick: () => {
-            iz(zz)
+            iD(DD)
           },
           children: "Delete"
         })]
-      }, zz)))
-    }), nz && !Fz && (0, lz.jsxs)("form", {
+      }, DD)))
+    }), pD && !MD && (0, fD.jsxs)("form", {
       className: "WorldCodeAiQuestionOther",
-      onSubmit: zz => {
-        zz.preventDefault(), "" === Mz.trim() || pz || (dz(!0), Oz(null), nz(Mz).then((zz => {
-          Oz(zz), null === zz && tz("")
+      onSubmit: DD => {
+        DD.preventDefault(), "" === bD.trim() || BD || (yD(!0), SD(null), pD(bD).then((DD => {
+          SD(DD), null === DD && QD("")
         })).catch((() => {
-          Oz("That note couldn't be kept. Try again.")
+          SD("That note couldn't be kept. Try again.")
         })).finally((() => {
-          dz(!1)
+          yD(!1)
         })))
       },
-      children: [(0, lz.jsx)("input", {
+      children: [(0, fD.jsx)("input", {
         className: "WorldCodeAiInput WorldCodeAiQuestionInput",
-        value: Mz,
-        maxLength: Yz,
+        value: bD,
+        maxLength: AD,
         placeholder: "Add a note about your game",
         "aria-label": "Add a note about your game",
-        onChange: zz => {
-          tz(zz.target.value)
+        onChange: DD => {
+          QD(DD.target.value)
         },
-        onKeyDown: zz => {
-          zz.stopPropagation()
+        onKeyDown: DD => {
+          DD.stopPropagation()
         }
-      }), (0, lz.jsx)("button", {
+      }), (0, fD.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         type: "submit",
-        disabled: "" === Mz.trim() || pz,
-        children: pz ? "Adding\u2026" : "Add"
+        disabled: "" === bD.trim() || BD,
+        children: BD ? "Adding\u2026" : "Add"
       })]
-    }), Fz && (0, lz.jsxs)("p", {
+    }), MD && (0, fD.jsxs)("p", {
       className: "WorldCodeAiHint",
       children: ["That's ", 8, " notes, the most it keeps: delete one to add another."]
-    }), Hz && (0, lz.jsx)("p", {
+    }), wD && (0, fD.jsx)("p", {
       className: "WorldCodeAiAboutError",
-      children: Hz
-    }), (0, lz.jsx)("p", {
+      children: wD
+    }), (0, fD.jsx)("p", {
       className: "WorldCodeAiAboutHeading",
       children: "In your code now"
-    }), Zz ? (0, lz.jsxs)("ul", {
+    }), tD ? (0, fD.jsxs)("ul", {
       className: "WorldCodeAiOutline",
-      children: [bz.callbacks.map((zz => (0, lz.jsxs)("li", {
-        children: [iu(zz), " ", (0, lz.jsx)("code", {
-          children: zz
+      children: [cD.callbacks.map((DD => (0, fD.jsxs)("li", {
+        children: [iC(DD), " ", (0, fD.jsx)("code", {
+          children: DD
         })]
-      }, zz))), bz.commands.length > 0 && (0, lz.jsxs)("li", {
-        children: ["Chat commands: ", bz.commands.join(", ")]
-      }), bz.functions.length > 0 && (0, lz.jsxs)("li", {
-        children: ["Your own functions: ", (0, lz.jsx)("code", {
-          children: bz.functions.join(", ")
+      }, DD))), cD.commands.length > 0 && (0, fD.jsxs)("li", {
+        children: ["Chat commands: ", cD.commands.join(", ")]
+      }), cD.functions.length > 0 && (0, fD.jsxs)("li", {
+        children: ["Your own functions: ", (0, fD.jsx)("code", {
+          children: cD.functions.join(", ")
         })]
       })]
-    }) : (0, lz.jsx)("p", {
+    }) : (0, fD.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing yet. Ask the AI to make something."
     })]
   })
 }
-const sH = {
+const Xw = {
   asked: "Remember this about your game?",
   pending: "A note to remember, once the change is in",
   checking: "Saving a note\u2026",
@@ -10861,42 +10861,42 @@ const sH = {
   refused: "Note not saved"
 };
 
-function rH(zz) {
+function mw(DD) {
   let {
-    note: uz,
-    status: bz,
-    onAnswer: Ez,
-    isPartLeftOut: nz = !1,
-    defaultOpen: iz
-  } = zz;
-  const tz = nz && ("asked" === bz || "pending" === bz);
-  return (0, lz.jsxs)("div", {
+    note: CD,
+    status: cD,
+    onAnswer: ID,
+    isPartLeftOut: pD = !1,
+    defaultOpen: iD
+  } = DD;
+  const QD = pD && ("asked" === cD || "pending" === cD);
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, lz.jsxs)(Mz, {
-      title: sH[bz],
-      isCalm: "refused" !== bz,
-      defaultOpen: iz,
-      children: [tz && (0, lz.jsx)("p", {
+    children: [(0, fD.jsxs)(bD, {
+      title: Xw[cD],
+      isCalm: "refused" !== cD,
+      defaultOpen: iD,
+      children: [QD && (0, fD.jsx)("p", {
         children: "The note to remember is hidden while a part is unticked. Tick every part to see it."
-      }), !tz && (0, lz.jsxs)("p", {
-        children: ['"', uz, '"']
-      }), !tz && "pending" === bz && (0, lz.jsx)("p", {
+      }), !QD && (0, fD.jsxs)("p", {
+        children: ['"', CD, '"']
+      }), !QD && "pending" === cD && (0, fD.jsx)("p", {
         children: "It goes into AI notes once the change is in."
-      }), "refused" === bz && (0, lz.jsx)("p", {
+      }), "refused" === cD && (0, fD.jsx)("p", {
         children: "This note can't be saved. Notes are only about your game."
       })]
-    }), !tz && "asked" === bz && Ez && (0, lz.jsxs)("div", {
+    }), !QD && "asked" === cD && ID && (0, fD.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, lz.jsx)("button", {
+      children: [(0, fD.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
         onClick: () => {
-          Ez(!0)
+          ID(!0)
         },
         children: "Yes, remember it"
-      }), (0, lz.jsx)("button", {
+      }), (0, fD.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         onClick: () => {
-          Ez(!1)
+          ID(!1)
         },
         children: "No"
       })]
@@ -10904,148 +10904,148 @@ function rH(zz) {
   })
 }
 
-function oH(zz) {
+function nw(DD) {
   let {
-    steps: uz,
-    built: bz,
-    done: Ez,
-    onBuild: nz
-  } = zz;
-  return (0, lz.jsxs)("div", {
+    steps: CD,
+    built: cD,
+    done: ID,
+    onBuild: pD
+  } = DD;
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiQuestion WorldCodeAiPlan",
-    children: [(0, lz.jsx)("p", {
+    children: [(0, fD.jsx)("p", {
       className: "WorldCodeAiQuestionText",
       children: "The plan: one step at a time"
-    }), (0, lz.jsx)("ol", {
+    }), (0, fD.jsx)("ol", {
       className: "WorldCodeAiPlanSteps",
-      children: uz.map(((zz, uz) => (0, lz.jsxs)("li", {
-        className: uz < Ez ? "WorldCodeAiPlanStep-built" : void 0,
-        children: [uz < Ez && (0, lz.jsx)("span", {
+      children: CD.map(((DD, CD) => (0, fD.jsxs)("li", {
+        className: CD < ID ? "WorldCodeAiPlanStep-built" : void 0,
+        children: [CD < ID && (0, fD.jsx)("span", {
           className: "WorldCodeAiPlanTick",
           children: "\u2713 "
-        }), zz, uz < bz && uz >= Ez && (0, lz.jsx)("span", {
+        }), DD, CD < cD && CD >= ID && (0, fD.jsx)("span", {
           className: "WorldCodeAiPlanAsked",
           children: " (apply it to tick it off)"
         })]
-      }, `${uz}:${zz}`)))
-    }), bz < uz.length && Ez < bz && (0, lz.jsxs)("span", {
+      }, `${CD}:${DD}`)))
+    }), cD < CD.length && ID < cD && (0, fD.jsxs)("span", {
       className: "WorldCodeAiHint",
-      children: ["Apply ", bz - Ez > 1 ? `steps ${Ez+1} to ${bz}` : `step ${bz}`, " to your code and try it, then build step ", bz + 1, "."]
-    }), bz < uz.length && nz && (0, lz.jsx)("button", {
-      ...ft.f,
-      className: Ez < bz ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+      children: ["Apply ", cD - ID > 1 ? `steps ${ID+1} to ${cD}` : `step ${cD}`, " to your code and try it, then build step ", cD + 1, "."]
+    }), cD < CD.length && pD && (0, fD.jsx)("button", {
+      ...gQ.e,
+      className: ID < cD ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
       onClick: () => {
-        nz(bz)
+        pD(cD)
       },
-      children: Ez < bz ? `Build step ${bz+1} anyway` : `Build step ${bz+1}`
-    }), bz < uz.length && bz > 0 && Ez >= bz && (0, lz.jsx)("span", {
+      children: ID < cD ? `Build step ${cD+1} anyway` : `Build step ${cD+1}`
+    }), cD < CD.length && cD > 0 && ID >= cD && (0, fD.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Try each step in your world before the next."
-    }), bz === uz.length && (0, lz.jsx)("span", {
+    }), cD === CD.length && (0, fD.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Every step is asked for."
     })]
   })
 }
 
-function NH(zz, uz, bz) {
-  return `${zz}\n\nYou asked me: "${uz}" ${null===bz?"I don't mind: choose what works best.":`My answer: ${bz.replace(/\.$/,"")}.`} Build it now, without asking again.`
+function Ow(DD, CD, cD) {
+  return `${DD}\n\nYou asked me: "${CD}" ${null===cD?"I don't mind: choose what works best.":`My answer: ${cD.replace(/\.$/,"")}.`} Build it now, without asking again.`
 }
 
-function vH(zz) {
+function Pw(DD) {
   let {
-    question: uz,
-    onAnswer: bz,
-    ownAnswerBelow: nz = !1
-  } = zz;
-  const [iz, Mz] = (0, Ez.useState)("");
-  return (0, lz.jsxs)("div", {
+    question: CD,
+    onAnswer: cD,
+    ownAnswerBelow: pD = !1
+  } = DD;
+  const [iD, bD] = (0, ID.useState)("");
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiQuestion",
-    children: [(0, lz.jsx)("p", {
+    children: [(0, fD.jsx)("p", {
       className: "WorldCodeAiQuestionText",
-      children: uz.question
-    }), bz && (0, lz.jsxs)(lz.Fragment, {
-      children: [(0, lz.jsx)("div", {
+      children: CD.question
+    }), cD && (0, fD.jsxs)(fD.Fragment, {
+      children: [(0, fD.jsx)("div", {
         className: "WorldCodeAiQuestionChoices",
-        children: uz.choices.map(((zz, uz) => (0, Ez.createElement)("button", {
-          ...ft.f,
-          key: `${uz}:${zz}`,
+        children: CD.choices.map(((DD, CD) => (0, ID.createElement)("button", {
+          ...gQ.e,
+          key: `${CD}:${DD}`,
           className: "WorldCodeAiQuestionChoice",
           onClick: () => {
-            bz(zz, !1)
+            cD(DD, !1)
           }
-        }, zz)))
-      }), uz.allowOther && nz && (0, lz.jsx)("span", {
+        }, DD)))
+      }), CD.allowOther && pD && (0, fD.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Or type your own answer in the box below."
-      }), uz.allowOther && !nz && (0, lz.jsxs)("form", {
+      }), CD.allowOther && !pD && (0, fD.jsxs)("form", {
         className: "WorldCodeAiQuestionOther",
-        onSubmit: zz => {
-          zz.preventDefault(), "" !== iz.trim() && bz(iz.trim(), !0)
+        onSubmit: DD => {
+          DD.preventDefault(), "" !== iD.trim() && cD(iD.trim(), !0)
         },
-        children: [(0, lz.jsx)("input", {
+        children: [(0, fD.jsx)("input", {
           className: "WorldCodeAiInput",
-          value: iz,
+          value: iD,
           maxLength: 200,
           placeholder: "Or type your own answer",
           "aria-label": "Your own answer",
-          onChange: zz => {
-            Mz(zz.target.value)
+          onChange: DD => {
+            bD(DD.target.value)
           },
-          onKeyDown: zz => {
-            zz.stopPropagation()
+          onKeyDown: DD => {
+            DD.stopPropagation()
           }
-        }), (0, lz.jsx)("button", {
+        }), (0, fD.jsx)("button", {
           className: "WorldCodeAiSecondaryButton",
           type: "submit",
-          disabled: "" === iz.trim(),
+          disabled: "" === iD.trim(),
           children: "Send"
         })]
-      }), (0, lz.jsx)("button", {
-        ...ft.f,
+      }), (0, fD.jsx)("button", {
+        ...gQ.e,
         className: "WorldCodeAiSecondaryButton WorldCodeAiQuestionAiPicks",
         onClick: () => {
-          bz(null, !1)
+          cD(null, !1)
         },
         children: "Let the AI pick"
       })]
     })]
   })
 }
-const xH = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
+const Hw = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
 
-function JH(zz, uz) {
-  let bz = 0;
-  for (; bz < uz;) {
-    const Ez = zz[bz],
-      nz = zz[bz + 1];
-    let iz = bz + 1;
-    if ("/" === Ez && "/" === nz) {
-      const uz = zz.indexOf("\n", bz);
-      iz = -1 === uz ? zz.length : uz
-    } else if ("/" === Ez && "*" === nz) {
-      const uz = zz.indexOf("*/", bz + 2);
-      iz = -1 === uz ? zz.length : uz + 2
-    } else if ('"' === Ez || "'" === Ez || "`" === Ez) {
-      for (iz = bz + 1; iz < zz.length && zz[iz] !== Ez && ("`" === Ez || "\n" !== zz[iz]);) iz += "\\" === zz[iz] ? 2 : 1;
-      iz++
+function Uw(DD, CD) {
+  let cD = 0;
+  for (; cD < CD;) {
+    const ID = DD[cD],
+      pD = DD[cD + 1];
+    let iD = cD + 1;
+    if ("/" === ID && "/" === pD) {
+      const CD = DD.indexOf("\n", cD);
+      iD = -1 === CD ? DD.length : CD
+    } else if ("/" === ID && "*" === pD) {
+      const CD = DD.indexOf("*/", cD + 2);
+      iD = -1 === CD ? DD.length : CD + 2
+    } else if ('"' === ID || "'" === ID || "`" === ID) {
+      for (iD = cD + 1; iD < DD.length && DD[iD] !== ID && ("`" === ID || "\n" !== DD[iD]);) iD += "\\" === DD[iD] ? 2 : 1;
+      iD++
     }
-    if (iz > uz) return !0;
-    bz = iz
+    if (iD > CD) return !0;
+    cD = iD
   }
   return !1
 }
 
-function AH(zz) {
-  const uz = zz.slice(1, -1);
-  let bz = "";
-  for (let Ez = 0; Ez < uz.length; Ez++) {
-    if ("\\" !== uz[Ez]) {
-      bz += uz[Ez];
+function xw(DD) {
+  const CD = DD.slice(1, -1);
+  let cD = "";
+  for (let ID = 0; ID < CD.length; ID++) {
+    if ("\\" !== CD[ID]) {
+      cD += CD[ID];
       continue
     }
-    const zz = uz[++Ez],
-      nz = {
+    const DD = CD[++ID],
+      pD = {
         n: "\n",
         t: "\t",
         r: "\r",
@@ -11053,223 +11053,223 @@ function AH(zz) {
         '"': '"',
         "'": "'"
       },
-      iz = "u" === zz ? uz.slice(Ez + 1, Ez + 5) : "x" === zz ? uz.slice(Ez + 1, Ez + 3) : "";
-    if (zz in nz) bz += nz[zz];
+      iD = "u" === DD ? CD.slice(ID + 1, ID + 5) : "x" === DD ? CD.slice(ID + 1, ID + 3) : "";
+    if (DD in pD) cD += pD[DD];
     else {
-      if ("" === iz || !/^[\da-f]+$/i.test(iz) || iz.length !== ("u" === zz ? 4 : 2)) return null;
-      bz += String.fromCharCode(parseInt(iz, 16)), Ez += iz.length
+      if ("" === iD || !/^[\da-f]+$/i.test(iD) || iD.length !== ("u" === DD ? 4 : 2)) return null;
+      cD += String.fromCharCode(parseInt(iD, 16)), ID += iD.length
     }
   }
-  return bz
+  return cD
 }
 
-function TH(zz) {
-  const uz = function(zz) {
-    xH.lastIndex = 0;
-    for (let uz = xH.exec(zz); uz; uz = xH.exec(zz))
-      if (!JH(zz, uz.index)) return uz;
+function qw(DD) {
+  const CD = function(DD) {
+    Hw.lastIndex = 0;
+    for (let CD = Hw.exec(DD); CD; CD = Hw.exec(DD))
+      if (!Uw(DD, CD.index)) return CD;
     return null
-  }(zz);
-  if (!uz) return [];
-  const bz = function(zz, uz) {
-    const bz = [];
-    let Ez = 0,
-      nz = uz;
-    for (; nz < zz.length;) {
-      var iz;
-      const uz = zz[nz];
-      if (/\s/.test(uz)) {
-        nz++;
+  }(DD);
+  if (!CD) return [];
+  const cD = function(DD, CD) {
+    const cD = [];
+    let ID = 0,
+      pD = CD;
+    for (; pD < DD.length;) {
+      var iD;
+      const CD = DD[pD];
+      if (/\s/.test(CD)) {
+        pD++;
         continue
       }
-      const lz = nz;
-      if ("/" === uz && "/" === zz[nz + 1]) {
-        const uz = zz.indexOf("\n", nz);
-        nz = -1 === uz ? zz.length : uz, bz.push({
+      const fD = pD;
+      if ("/" === CD && "/" === DD[pD + 1]) {
+        const CD = DD.indexOf("\n", pD);
+        pD = -1 === CD ? DD.length : CD, cD.push({
           type: "comment",
-          text: zz.slice(lz + 2, nz).trim(),
-          start: lz,
-          end: nz
+          text: DD.slice(fD + 2, pD).trim(),
+          start: fD,
+          end: pD
         });
         continue
       }
-      if ("/" === uz && "*" === zz[nz + 1]) {
-        const uz = zz.indexOf("*/", nz + 2);
-        if (-1 === uz) return null;
-        nz = uz + 2, bz.push({
+      if ("/" === CD && "*" === DD[pD + 1]) {
+        const CD = DD.indexOf("*/", pD + 2);
+        if (-1 === CD) return null;
+        pD = CD + 2, cD.push({
           type: "comment",
-          text: zz.slice(lz + 2, uz).trim(),
-          start: lz,
-          end: nz
+          text: DD.slice(fD + 2, CD).trim(),
+          start: fD,
+          end: pD
         });
         continue
       }
-      if ('"' === uz || "'" === uz || "`" === uz) {
-        for (nz++; nz < zz.length && zz[nz] !== uz;) {
-          if ("\\" === zz[nz]) nz++;
-          else if ("\n" === zz[nz] && "`" !== uz) return null;
-          nz++
+      if ('"' === CD || "'" === CD || "`" === CD) {
+        for (pD++; pD < DD.length && DD[pD] !== CD;) {
+          if ("\\" === DD[pD]) pD++;
+          else if ("\n" === DD[pD] && "`" !== CD) return null;
+          pD++
         }
-        if (nz >= zz.length) return null;
-        nz++, bz.push({
-          type: "`" === uz ? "template" : "string",
-          text: zz.slice(lz, nz),
-          start: lz,
-          end: nz
+        if (pD >= DD.length) return null;
+        pD++, cD.push({
+          type: "`" === CD ? "template" : "string",
+          text: DD.slice(fD, pD),
+          start: fD,
+          end: pD
         });
         continue
       }
-      const Mz = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(zz.slice(nz, nz + 40));
-      if (Mz && ("-" !== uz || ":" === (null === (iz = bz[bz.length - 1]) || void 0 === iz ? void 0 : iz.text))) {
-        nz += Mz[0].length, bz.push({
+      const bD = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(DD.slice(pD, pD + 40));
+      if (bD && ("-" !== CD || ":" === (null === (iD = cD[cD.length - 1]) || void 0 === iD ? void 0 : iD.text))) {
+        pD += bD[0].length, cD.push({
           type: "number",
-          text: Mz[0],
-          start: lz,
-          end: nz
+          text: bD[0],
+          start: fD,
+          end: pD
         });
         continue
       }
-      const tz = /^[A-Za-z_$][\w$]*/.exec(zz.slice(nz, nz + 80));
-      if (tz) nz += tz[0].length, bz.push({
+      const QD = /^[A-Za-z_$][\w$]*/.exec(DD.slice(pD, pD + 80));
+      if (QD) pD += QD[0].length, cD.push({
         type: "word",
-        text: tz[0],
-        start: lz,
-        end: nz
+        text: QD[0],
+        start: fD,
+        end: pD
       });
-      else if (nz++, bz.push({
+      else if (pD++, cD.push({
           type: "punct",
-          text: uz,
-          start: lz,
-          end: nz
-        }), "{[(".includes(uz)) Ez++;
-      else if ("}])".includes(uz) && (Ez--, 0 === Ez)) return bz
+          text: CD,
+          start: fD,
+          end: pD
+        }), "{[(".includes(CD)) ID++;
+      else if ("}])".includes(CD) && (ID--, 0 === ID)) return cD
     }
     return null
-  }(zz, uz.index + uz[0].length - 1);
-  if (!bz) return [];
-  const Ez = [];
-  let nz, iz = 1;
-  for (; iz < bz.length - 1;) {
-    var lz, Mz, tz, Hz, Oz, pz;
-    const uz = bz[iz];
-    if ("comment" === uz.type) {
-      nz = uz.text, iz++;
+  }(DD, CD.index + CD[0].length - 1);
+  if (!cD) return [];
+  const ID = [];
+  let pD, iD = 1;
+  for (; iD < cD.length - 1;) {
+    var fD, bD, QD, wD, SD, BD;
+    const CD = cD[iD];
+    if ("comment" === CD.type) {
+      pD = CD.text, iD++;
       continue
     }
-    if ("," === uz.text) {
-      iz++;
+    if ("," === CD.text) {
+      iD++;
       continue
     }
-    const dz = uz,
-      Fz = "word" === dz.type ? dz.text : "string" === dz.type ? AH(dz.text) : null;
-    if (null === Fz || ":" !== (null === (lz = bz[iz + 1]) || void 0 === lz ? void 0 : lz.text)) return [];
-    let Zz = iz + 2,
-      Rz = 0;
-    const Kz = [];
-    for (; Zz < bz.length - 1;) {
-      const zz = bz[Zz];
-      if (0 === Rz && "," === zz.text) break;
-      "punct" === zz.type && "{[(".includes(zz.text) ? Rz++ : "punct" === zz.type && "}])".includes(zz.text) && Rz--, "comment" !== zz.type && Kz.push(zz), Zz++
+    const yD = CD,
+      MD = "word" === yD.type ? yD.text : "string" === yD.type ? xw(yD.text) : null;
+    if (null === MD || ":" !== (null === (fD = cD[iD + 1]) || void 0 === fD ? void 0 : fD.text)) return [];
+    let tD = iD + 2,
+      ZD = 0;
+    const oD = [];
+    for (; tD < cD.length - 1;) {
+      const DD = cD[tD];
+      if (0 === ZD && "," === DD.text) break;
+      "punct" === DD.type && "{[(".includes(DD.text) ? ZD++ : "punct" === DD.type && "}])".includes(DD.text) && ZD--, "comment" !== DD.type && oD.push(DD), tD++
     }
-    const wz = Kz.at(-1),
-      Xz = "," === (null === (Mz = bz[Zz]) || void 0 === Mz ? void 0 : Mz.text) ? bz[Zz + 1] : bz.slice(iz + 2, Zz).find((zz => "comment" === zz.type && void 0 !== wz && zz.start >= wz.end)),
-      fz = "comment" !== (null === Xz || void 0 === Xz ? void 0 : Xz.type) || void 0 === wz || zz.slice(wz.end, Xz.start).includes("\n") ? void 0 : Xz.text,
-      sz = 1 === Kz.length ? Kz[0] : void 0,
-      rz = null !== fz && void 0 !== fz ? fz : nz;
-    nz = void 0;
-    const oz = {
-      key: Fz,
-      raw: null !== (tz = null === sz || void 0 === sz ? void 0 : sz.text) && void 0 !== tz ? tz : "",
-      start: null !== (Hz = null === sz || void 0 === sz ? void 0 : sz.start) && void 0 !== Hz ? Hz : 0,
-      end: null !== (Oz = null === sz || void 0 === sz ? void 0 : sz.end) && void 0 !== Oz ? Oz : 0,
-      ...rz ? {
-        comment: rz
+    const vD = oD.at(-1),
+      ND = "," === (null === (bD = cD[tD]) || void 0 === bD ? void 0 : bD.text) ? cD[tD + 1] : cD.slice(iD + 2, tD).find((DD => "comment" === DD.type && void 0 !== vD && DD.start >= vD.end)),
+      gD = "comment" !== (null === ND || void 0 === ND ? void 0 : ND.type) || void 0 === vD || DD.slice(vD.end, ND.start).includes("\n") ? void 0 : ND.text,
+      XD = 1 === oD.length ? oD[0] : void 0,
+      mD = null !== gD && void 0 !== gD ? gD : pD;
+    pD = void 0;
+    const nD = {
+      key: MD,
+      raw: null !== (QD = null === XD || void 0 === XD ? void 0 : XD.text) && void 0 !== QD ? QD : "",
+      start: null !== (wD = null === XD || void 0 === XD ? void 0 : XD.start) && void 0 !== wD ? wD : 0,
+      end: null !== (SD = null === XD || void 0 === XD ? void 0 : XD.end) && void 0 !== SD ? SD : 0,
+      ...mD ? {
+        comment: mD
       } : {}
     };
-    if ("number" === (null === sz || void 0 === sz ? void 0 : sz.type)) {
-      const zz = Number(sz.text.replace(/_/g, ""));
-      Number.isFinite(zz) && Ez.push({
-        ...oz,
+    if ("number" === (null === XD || void 0 === XD ? void 0 : XD.type)) {
+      const DD = Number(XD.text.replace(/_/g, ""));
+      Number.isFinite(DD) && ID.push({
+        ...nD,
         kind: "number",
-        value: zz
+        value: DD
       })
-    } else if ("string" === (null === sz || void 0 === sz ? void 0 : sz.type)) {
-      const zz = AH(sz.text);
-      null !== zz && Ez.push({
-        ...oz,
+    } else if ("string" === (null === XD || void 0 === XD ? void 0 : XD.type)) {
+      const DD = xw(XD.text);
+      null !== DD && ID.push({
+        ...nD,
         kind: "string",
-        value: zz
+        value: DD
       })
-    } else "word" !== (null === sz || void 0 === sz ? void 0 : sz.type) || "true" !== sz.text && "false" !== sz.text || Ez.push({
-      ...oz,
+    } else "word" !== (null === XD || void 0 === XD ? void 0 : XD.type) || "true" !== XD.text && "false" !== XD.text || ID.push({
+      ...nD,
       kind: "boolean",
-      value: "true" === sz.text
+      value: "true" === XD.text
     });
-    iz = Zz, fz && "," === (null === (pz = bz[iz]) || void 0 === pz ? void 0 : pz.text) && (iz += 2)
+    iD = tD, gD && "," === (null === (BD = cD[iD]) || void 0 === BD ? void 0 : BD.text) && (iD += 2)
   }
-  return Ez.slice(0, 30)
+  return ID.slice(0, 30)
 }
 
-function LH(zz, uz, bz) {
-  const Ez = TH(zz).find((zz => zz.key === uz.key));
-  if (!Ez || Ez.kind !== uz.kind || Ez.raw !== uz.raw) return null;
-  let nz;
-  if ("number" === uz.kind) {
-    if ("number" !== typeof bz || !Number.isFinite(bz)) return null;
-    nz = String(Number(bz.toPrecision(12)))
-  } else if ("boolean" === uz.kind) {
-    if ("boolean" !== typeof bz) return null;
-    nz = bz ? "true" : "false"
+function Jw(DD, CD, cD) {
+  const ID = qw(DD).find((DD => DD.key === CD.key));
+  if (!ID || ID.kind !== CD.kind || ID.raw !== CD.raw) return null;
+  let pD;
+  if ("number" === CD.kind) {
+    if ("number" !== typeof cD || !Number.isFinite(cD)) return null;
+    pD = String(Number(cD.toPrecision(12)))
+  } else if ("boolean" === CD.kind) {
+    if ("boolean" !== typeof cD) return null;
+    pD = cD ? "true" : "false"
   } else {
-    if ("string" !== typeof bz) return null;
-    const zz = uz.raw.startsWith("'") ? "'" : '"',
-      Ez = "'" === zz ? '"' : "'";
-    iz = bz, nz = `${lz=bz.includes(zz)&&!bz.includes(Ez)?Ez:zz}${iz.slice(0,200).replace(/\\/g,"\\\\").replace('"'===lz?/"/g:/'/g,`\\${lz}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(zz=>`\\u${zz.charCodeAt(0).toString(16).padStart(4,"0")}`))}${lz}`
+    if ("string" !== typeof cD) return null;
+    const DD = CD.raw.startsWith("'") ? "'" : '"',
+      ID = "'" === DD ? '"' : "'";
+    iD = cD, pD = `${fD=cD.includes(DD)&&!cD.includes(ID)?ID:DD}${iD.slice(0,200).replace(/\\/g,"\\\\").replace('"'===fD?/"/g:/'/g,`\\${fD}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(DD=>`\\u${DD.charCodeAt(0).toString(16).padStart(4,"0")}`))}${fD}`
   }
-  var iz, lz;
-  return zz.slice(0, Ez.start) + nz + zz.slice(Ez.end)
+  var iD, fD;
+  return DD.slice(0, ID.start) + pD + DD.slice(ID.end)
 }
 
-function PH(zz) {
-  if (!Number.isInteger(zz)) {
-    var uz;
-    const bz = Math.min(3, (null !== (uz = String(zz).split(".")[1]) && void 0 !== uz ? uz : "").length);
-    return 10 ** -Math.max(1, bz)
+function Kw(DD) {
+  if (!Number.isInteger(DD)) {
+    var CD;
+    const cD = Math.min(3, (null !== (CD = String(DD).split(".")[1]) && void 0 !== CD ? CD : "").length);
+    return 10 ** -Math.max(1, cD)
   }
-  const bz = Math.abs(zz);
-  return bz >= 100 ? 10 ** (Math.floor(Math.log10(bz)) - 1) : 1
+  const cD = Math.abs(DD);
+  return cD >= 100 ? 10 ** (Math.floor(Math.log10(cD)) - 1) : 1
 }
 
-function GH(zz) {
-  return zz.comment ? zz.comment.charAt(0).toUpperCase() + zz.comment.slice(1) : function(zz) {
-    const uz = zz.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
-    return uz.charAt(0).toUpperCase() + uz.slice(1)
-  }(zz.key)
+function aw(DD) {
+  return DD.comment ? DD.comment.charAt(0).toUpperCase() + DD.comment.slice(1) : function(DD) {
+    const CD = DD.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
+    return CD.charAt(0).toUpperCase() + CD.slice(1)
+  }(DD.key)
 }
 
-function aH(zz) {
-  return "boolean" === typeof zz ? zz ? "on" : "off" : "number" === typeof zz ? String(zz) : zz.length > 20 ? `\u201c${zz.slice(0,19)}\u2026\u201d` : `\u201c${zz}\u201d`
+function Vw(DD) {
+  return "boolean" === typeof DD ? DD ? "on" : "off" : "number" === typeof DD ? String(DD) : DD.length > 20 ? `\u201c${DD.slice(0,19)}\u2026\u201d` : `\u201c${DD}\u201d`
 }
 
-function VH(zz) {
-  let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
-  if (0 === zz.length) return `Before ${uz} settings`;
-  const bz = 3 === zz.length ? 3 : 2,
-    Ez = zz.slice(0, bz).map((zz => `${zz.name} ${zz.from} \u2192 ${zz.to}`)),
-    nz = zz.length > bz ? ` and ${zz.length-bz} more` : "";
-  return `Before ${uz} settings: ${Ez.join(", ")}${nz}`
+function zw(DD) {
+  let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
+  if (0 === DD.length) return `Before ${CD} settings`;
+  const cD = 3 === DD.length ? 3 : 2,
+    ID = DD.slice(0, cD).map((DD => `${DD.name} ${DD.from} \u2192 ${DD.to}`)),
+    pD = DD.length > cD ? ` and ${DD.length-cD} more` : "";
+  return `Before ${CD} settings: ${ID.join(", ")}${pD}`
 }
-const mH = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
+const jw = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
 
-function qH(zz) {
-  const uz = new Set;
-  for (const nz of zz.matchAll(mH)) {
-    var bz, Ez;
-    uz.add(null !== (bz = null !== (Ez = nz[1]) && void 0 !== Ez ? Ez : nz[2]) && void 0 !== bz ? bz : nz[3])
+function lw(DD) {
+  const CD = new Set;
+  for (const pD of DD.matchAll(jw)) {
+    var cD, ID;
+    CD.add(null !== (cD = null !== (ID = pD[1]) && void 0 !== ID ? ID : pD[2]) && void 0 !== cD ? cD : pD[3])
   }
-  return uz
+  return CD
 }
-const hH = new Map([
+const Lw = new Map([
     ["tick", ["second", "minute", "timer", "time", "every", "countdown", "wave", "always", "clock"]],
     ["playerCommand", ["command", "/"]],
     ["onPlayerJoin", ["join", "start", "welcome", "spawn", "enter", "arrive"]],
@@ -11292,27 +11292,27 @@ const hH = new Map([
     ["onPlayerDropItem", ["drop"]],
     ["CONFIG", ["setting", "config", "number", "value"]]
   ]),
-  UH = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
+  Tw = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
 
-function cH(zz) {
-  return zz.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((zz => zz.length >= 3 && !UH.has(zz)))
+function Gw(DD) {
+  return DD.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((DD => DD.length >= 3 && !Tw.has(DD)))
 }
 
-function gH(zz, uz) {
-  return zz.some((zz => uz.some((uz => function(zz, uz) {
-    return zz.startsWith(uz) || uz.startsWith(zz)
-  }(zz, uz)))))
+function Rw(DD, CD) {
+  return DD.some((DD => CD.some((CD => function(DD, CD) {
+    return DD.startsWith(CD) || CD.startsWith(DD)
+  }(DD, CD)))))
 }
 
-function SH(zz, uz, bz) {
-  const Ez = uz.toLowerCase();
-  return zz.names.some((uz => {
-    var nz;
-    const iz = null !== (nz = hH.get(uz)) && void 0 !== nz ? nz : [];
-    return !!(Ez.includes(uz.toLowerCase()) || iz.includes("/") && Ez.includes("/")) || gH(bz, [...iz.flatMap(cH), ...cH(zz.plainWords.join(" ")), ...zz.configKeys.flatMap(cH)])
+function kw(DD, CD, cD) {
+  const ID = CD.toLowerCase();
+  return DD.names.some((CD => {
+    var pD;
+    const iD = null !== (pD = Lw.get(CD)) && void 0 !== pD ? pD : [];
+    return !!(ID.includes(CD.toLowerCase()) || iD.includes("/") && ID.includes("/")) || Rw(cD, [...iD.flatMap(Gw), ...Gw(DD.plainWords.join(" ")), ...DD.configKeys.flatMap(Gw)])
   }))
 }
-const yH = new Map([
+const dw = new Map([
   ["tick", "Runs all the time"],
   ["playerCommand", "Chat commands like /help"],
   ["onPlayerJoin", "When a player joins"],
@@ -11358,382 +11358,382 @@ const yH = new Map([
   ["onClose", "When the game closes"]
 ]);
 
-function DH(zz) {
-  var uz;
-  return null !== (uz = yH.get(zz)) && void 0 !== uz ? uz : "CONFIG" === zz ? "Settings" : void 0
+function Yw(DD) {
+  var CD;
+  return null !== (CD = dw.get(DD)) && void 0 !== CD ? CD : "CONFIG" === DD ? "Settings" : void 0
 }
-yH.keys();
-const QH = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
+dw.keys();
+const Ww = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
 
-function WH(zz) {
-  const uz = zz.trim();
-  return "" === uz || /^(?:\/\/|\/\*|\*)/.test(uz)
+function sw(DD) {
+  const CD = DD.trim();
+  return "" === CD || /^(?:\/\/|\/\*|\*)/.test(CD)
 }
 
-function eH(zz) {
-  const uz = zz.map((zz => zz.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
-  return ["{}", "()", "[]"].every((zz => {
-    let [bz, Ez] = zz;
-    return uz.split(bz).length === uz.split(Ez).length
+function Ew(DD) {
+  const CD = DD.map((DD => DD.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
+  return ["{}", "()", "[]"].every((DD => {
+    let [cD, ID] = DD;
+    return CD.split(cD).length === CD.split(ID).length
   }))
 }
 
-function jH(zz) {
-  const uz = [];
-  let bz = 0;
-  const Ez = Ez => {
-    if (Ez > bz) {
-      var nz;
-      const iz = zz.slice(bz, Ez).find((zz => QH.test(zz)));
-      uz.push({
-        name: void 0 === iz ? null : null !== (nz = CH(iz)) && void 0 !== nz ? nz : null,
-        lines: zz.slice(bz, Ez)
-      }), bz = Ez
+function ew(DD) {
+  const CD = [];
+  let cD = 0;
+  const ID = ID => {
+    if (ID > cD) {
+      var pD;
+      const iD = DD.slice(cD, ID).find((DD => Ww.test(DD)));
+      CD.push({
+        name: void 0 === iD ? null : null !== (pD = rw(iD)) && void 0 !== pD ? pD : null,
+        lines: DD.slice(cD, ID)
+      }), cD = ID
     }
   };
-  for (let nz = 1; nz < zz.length; nz++)
-    if (QH.test(zz[nz])) {
-      let uz = nz;
-      for (; uz > bz && WH(zz[uz - 1]);) uz--;
-      Ez(uz)
-    } return Ez(zz.length), uz
+  for (let pD = 1; pD < DD.length; pD++)
+    if (Ww.test(DD[pD])) {
+      let CD = pD;
+      for (; CD > cD && sw(DD[CD - 1]);) CD--;
+      ID(CD)
+    } return ID(DD.length), CD
 }
 
-function IH(zz) {
-  const uz = jH(zz.removed),
-    bz = jH(zz.added);
-  if (uz.length + bz.length <= 1) return [zz];
-  const Ez = [];
-  let nz = 0,
-    iz = 0;
-  const lz = (zz, uz, bz) => uz.slice(bz).some((uz => uz.name === zz));
-  for (; nz < uz.length || iz < bz.length;)
-    if (nz < uz.length && iz < bz.length && uz[nz].name === bz[iz].name) Ez.push({
-      removed: uz[nz++].lines,
-      added: bz[iz++].lines
+function uw(DD) {
+  const CD = ew(DD.removed),
+    cD = ew(DD.added);
+  if (CD.length + cD.length <= 1) return [DD];
+  const ID = [];
+  let pD = 0,
+    iD = 0;
+  const fD = (DD, CD, cD) => CD.slice(cD).some((CD => CD.name === DD));
+  for (; pD < CD.length || iD < cD.length;)
+    if (pD < CD.length && iD < cD.length && CD[pD].name === cD[iD].name) ID.push({
+      removed: CD[pD++].lines,
+      added: cD[iD++].lines
     });
-    else if (nz < uz.length && !lz(uz[nz].name, bz, iz)) Ez.push({
-    removed: uz[nz++].lines,
+    else if (pD < CD.length && !fD(CD[pD].name, cD, iD)) ID.push({
+    removed: CD[pD++].lines,
     added: []
   });
   else {
-    if (!(iz < bz.length) || lz(bz[iz].name, uz, nz)) {
-      Ez.push({
-        removed: uz.slice(nz).flatMap((zz => zz.lines)),
-        added: bz.slice(iz).flatMap((zz => zz.lines))
+    if (!(iD < cD.length) || fD(cD[iD].name, CD, pD)) {
+      ID.push({
+        removed: CD.slice(pD).flatMap((DD => DD.lines)),
+        added: cD.slice(iD).flatMap((DD => DD.lines))
       });
       break
     }
-    Ez.push({
+    ID.push({
       removed: [],
-      added: bz[iz++].lines
+      added: cD[iD++].lines
     })
   }
-  const Mz = [];
-  for (const tz of Ez) {
-    const zz = Mz[Mz.length - 1],
-      uz = [...tz.removed, ...tz.added].every(WH);
-    zz && (uz || [...zz.removed, ...zz.added].every(WH)) ? Mz[Mz.length - 1] = {
-      removed: [...zz.removed, ...tz.removed],
-      added: [...zz.added, ...tz.added]
-    } : Mz.push(tz)
+  const bD = [];
+  for (const QD of ID) {
+    const DD = bD[bD.length - 1],
+      CD = [...QD.removed, ...QD.added].every(sw);
+    DD && (CD || [...DD.removed, ...DD.added].every(sw)) ? bD[bD.length - 1] = {
+      removed: [...DD.removed, ...QD.removed],
+      added: [...DD.added, ...QD.added]
+    } : bD.push(QD)
   }
-  return Mz.every((zz => eH(zz.removed) && eH(zz.added))) ? Mz : [zz]
+  return bD.every((DD => Ew(DD.removed) && Ew(DD.added))) ? bD : [DD]
 }
 
-function BH(zz, uz) {
-  const bz = [];
-  for (const iz of eE(zz, uz)) {
-    const zz = bz[bz.length - 1];
-    "same" === iz.kind ? bz.push({
+function hw(DD, CD) {
+  const cD = [];
+  for (const iD of EI(DD, CD)) {
+    const DD = cD[cD.length - 1];
+    "same" === iD.kind ? cD.push({
       kind: "same",
-      text: iz.text
-    }) : "hunk" === (null === zz || void 0 === zz ? void 0 : zz.kind) ? zz[iz.kind].push(iz.text) : bz.push({
+      text: iD.text
+    }) : "hunk" === (null === DD || void 0 === DD ? void 0 : DD.kind) ? DD[iD.kind].push(iD.text) : cD.push({
       kind: "hunk",
-      removed: "removed" === iz.kind ? [iz.text] : [],
-      added: "added" === iz.kind ? [iz.text] : []
+      removed: "removed" === iD.kind ? [iD.text] : [],
+      added: "added" === iD.kind ? [iD.text] : []
     })
   }
-  const Ez = [];
-  let nz = 0;
-  for (let iz = 0; iz < bz.length; iz++) {
-    const zz = bz[iz];
-    if ("same" === zz.kind) {
-      Ez.push(zz);
+  const ID = [];
+  let pD = 0;
+  for (let iD = 0; iD < cD.length; iD++) {
+    const DD = cD[iD];
+    if ("same" === DD.kind) {
+      ID.push(DD);
       continue
     }
-    let uz = IH(zz);
-    if (1 === uz.length) {
-      let Ez = iz + 1;
-      const nz = [];
-      for (; Ez < bz.length; Ez++) {
-        const zz = bz[Ez];
-        if ("same" !== zz.kind || !/^[\s})\];,]+$/.test(zz.text)) break;
-        nz.push(zz.text)
+    let CD = uw(DD);
+    if (1 === CD.length) {
+      let ID = iD + 1;
+      const pD = [];
+      for (; ID < cD.length; ID++) {
+        const DD = cD[ID];
+        if ("same" !== DD.kind || !/^[\s})\];,]+$/.test(DD.text)) break;
+        pD.push(DD.text)
       }
-      const lz = nz.length > 0 ? IH({
-        removed: [...zz.removed, ...nz],
-        added: [...zz.added, ...nz]
-      }) : uz;
-      lz.length > 1 && (uz = lz, iz = Ez - 1)
+      const fD = pD.length > 0 ? uw({
+        removed: [...DD.removed, ...pD],
+        added: [...DD.added, ...pD]
+      }) : CD;
+      fD.length > 1 && (CD = fD, iD = ID - 1)
     }
-    for (const bz of uz) Ez.push({
+    for (const cD of CD) ID.push({
       kind: "hunk",
-      index: nz++,
-      removed: bz.removed,
-      added: bz.added
+      index: pD++,
+      removed: cD.removed,
+      added: cD.added
     })
   }
-  return Ez
+  return ID
 }
 
-function CH(zz) {
-  var uz, bz;
-  const Ez = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(zz);
-  return Ez ? null !== (uz = null !== (bz = Ez[1]) && void 0 !== bz ? bz : Ez[2]) && void 0 !== uz ? uz : Ez[3] : void 0
+function rw(DD) {
+  var CD, cD;
+  const ID = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(DD);
+  return ID ? null !== (CD = null !== (cD = ID[1]) && void 0 !== cD ? cD : ID[2]) && void 0 !== CD ? CD : ID[3] : void 0
 }
 
-function YH(zz) {
-  const uz = CH(zz);
-  if (!uz || /^\s/.test(zz)) return;
-  return /^(?:export\s+)?(?:async\s+)?function\b/.test(zz) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(zz) || "CONFIG" === uz ? DH(uz) : void 0
+function Aw(DD) {
+  const CD = rw(DD);
+  if (!CD || /^\s/.test(DD)) return;
+  return /^(?:export\s+)?(?:async\s+)?function\b/.test(DD) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(DD) || "CONFIG" === CD ? Yw(CD) : void 0
 }
 
-function kH(zz) {
-  const uz = new Map;
-  for (const bz of zz) {
-    const zz = YH(bz),
-      Ez = CH(bz);
-    zz && Ez && uz.set(Ez, zz)
+function Fw(DD) {
+  const CD = new Map;
+  for (const cD of DD) {
+    const DD = Aw(cD),
+      ID = rw(cD);
+    DD && ID && CD.set(ID, DD)
   }
-  return uz
+  return CD
 }
 
-function zO(zz) {
-  return [...new Set(zz.flatMap((zz => {
-    const uz = /^\s/.test(zz) ? void 0 : CH(zz);
-    return uz ? [uz] : []
+function DS(DD) {
+  return [...new Set(DD.flatMap((DD => {
+    const CD = /^\s/.test(DD) ? void 0 : rw(DD);
+    return CD ? [CD] : []
   })))]
 }
 
-function uO(zz) {
-  var uz;
-  return zz.length <= 1 ? null !== (uz = zz[0]) && void 0 !== uz ? uz : "" : `${zz.slice(0,-1).join(", ")} and ${zz[zz.length-1]}`
+function CS(DD) {
+  var CD;
+  return DD.length <= 1 ? null !== (CD = DD[0]) && void 0 !== CD ? CD : "" : `${DD.slice(0,-1).join(", ")} and ${DD[DD.length-1]}`
 }
 
-function bO(zz) {
-  return zz.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase()
+function cS(DD) {
+  return DD.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase()
 }
 
-function EO(zz) {
-  return zz.charAt(0).toUpperCase() + zz.slice(1)
+function IS(DD) {
+  return DD.charAt(0).toUpperCase() + DD.slice(1)
 }
-const nO = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
+const pS = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
 
-function iO(zz) {
-  return [...new Set(zz.flatMap((zz => {
-    const uz = zz.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
-    return (0, pu.e)(uz, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, pu.l).map((zz => zz[0])).filter((zz => !nO.has(zz)))
+function iS(DD) {
+  return [...new Set(DD.flatMap((DD => {
+    const CD = DD.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
+    return (0, BC.f)(CD, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, BC.q).map((DD => DD[0])).filter((DD => !pS.has(DD)))
   })))]
 }
 
-function lO(zz, uz) {
-  var bz;
-  const Ez = (null !== (bz = zz.parts) && void 0 !== bz ? bz : []).map((zz => {
+function fS(DD, CD) {
+  var cD;
+  const ID = (null !== (cD = DD.parts) && void 0 !== cD ? cD : []).map((DD => {
       return {
-        why: zz.why,
-        lines: (uz = zz.code, new Set(uz.split("\n").map((zz => zz.trim())).filter((zz => zz.length > 1))))
+        why: DD.why,
+        lines: (CD = DD.code, new Set(CD.split("\n").map((DD => DD.trim())).filter((DD => DD.length > 1))))
       };
-      var uz
+      var CD
     })),
-    nz = BH(zz.before, zz.after);
-  let iz = 1;
-  const lz = nz.flatMap(((zz, uz) => {
-      if ("hunk" !== zz.kind) return iz++, [];
-      let bz;
-      for (const nz of Ez) {
-        const uz = zz.added.filter((zz => nz.lines.has(zz.trim()))).length;
-        uz > 0 && (!bz || uz > bz.score) && (bz = {
-          why: nz.why,
-          score: uz
+    pD = hw(DD.before, DD.after);
+  let iD = 1;
+  const fD = pD.flatMap(((DD, CD) => {
+      if ("hunk" !== DD.kind) return iD++, [];
+      let cD;
+      for (const pD of ID) {
+        const CD = DD.added.filter((DD => pD.lines.has(DD.trim()))).length;
+        CD > 0 && (!cD || CD > cD.score) && (cD = {
+          why: pD.why,
+          score: CD
         })
       }
-      const lz = function(zz, uz, bz) {
-          const Ez = zO(zz.added),
-            nz = zO(zz.removed),
-            iz = Ez.filter((zz => nz.includes(zz))),
-            lz = Ez.filter((zz => !iz.includes(zz))),
-            Mz = nz.filter((zz => !iz.includes(zz))),
-            tz = new Map([...kH(zz.removed), ...kH(zz.added)]),
-            Hz = [...iz, ...lz].filter((zz => tz.has(zz))),
-            Oz = (uz, bz) => {
+      const fD = function(DD, CD, cD) {
+          const ID = DS(DD.added),
+            pD = DS(DD.removed),
+            iD = ID.filter((DD => pD.includes(DD))),
+            fD = ID.filter((DD => !iD.includes(DD))),
+            bD = pD.filter((DD => !iD.includes(DD))),
+            QD = new Map([...Fw(DD.removed), ...Fw(DD.added)]),
+            wD = [...iD, ...fD].filter((DD => QD.has(DD))),
+            SD = (CD, cD) => {
               return {
-                names: uz,
-                configKeys: uz.includes("CONFIG") ? (Ez = zz.added, Ez.flatMap((zz => {
-                  const uz = /^\s+(\w+)\s*:/.exec(zz);
-                  return uz ? [uz[1]] : []
+                names: CD,
+                configKeys: CD.includes("CONFIG") ? (ID = DD.added, ID.flatMap((DD => {
+                  const CD = /^\s+(\w+)\s*:/.exec(DD);
+                  return CD ? [CD[1]] : []
                 }))) : [],
-                plainWords: uz.flatMap((zz => {
-                  const uz = tz.get(zz);
-                  return uz ? [uz] : []
+                plainWords: CD.flatMap((DD => {
+                  const CD = QD.get(DD);
+                  return CD ? [CD] : []
                 })),
-                onlyAdds: bz,
-                uses: iO(zz.added),
-                takesOut: Mz,
-                removedUses: iO(zz.removed)
+                onlyAdds: cD,
+                uses: iS(DD.added),
+                takesOut: bD,
+                removedUses: iS(DD.removed)
               };
-              var Ez
+              var ID
             },
-            pz = new Set([...zz.added, ...zz.removed].flatMap((zz => {
-              var uz;
-              const bz = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(zz);
-              return bz ? [null !== (uz = bz[1]) && void 0 !== uz ? uz : bz[2]] : []
+            BD = new Set([...DD.added, ...DD.removed].flatMap((DD => {
+              var CD;
+              const cD = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(DD);
+              return cD ? [null !== (CD = cD[1]) && void 0 !== CD ? CD : cD[2]] : []
             }))),
-            dz = zz => {
-              const uz = bO(zz);
-              return pz.has(zz) ? `"${uz}"` : uz
+            yD = DD => {
+              const CD = cS(DD);
+              return BD.has(DD) ? `"${CD}"` : CD
             },
-            Fz = [...iz, ...lz, ...Mz];
-          if (Fz.some((zz => tz.has(zz)))) {
-            const zz = zz => {
-                const uz = zz.filter((zz => tz.has(zz)));
-                return uO(uz.length > 0 ? uz.map((zz => {
-                  var uz;
-                  return null !== (uz = tz.get(zz)) && void 0 !== uz ? uz : zz
-                })) : zz.map(dz))
+            MD = [...iD, ...fD, ...bD];
+          if (MD.some((DD => QD.has(DD)))) {
+            const DD = DD => {
+                const CD = DD.filter((DD => QD.has(DD)));
+                return CS(CD.length > 0 ? CD.map((DD => {
+                  var CD;
+                  return null !== (CD = QD.get(DD)) && void 0 !== CD ? CD : DD
+                })) : DD.map(yD))
               },
-              uz = [iz.length > 0 ? `${zz(iz)} \u2014 changed` : "", lz.length > 0 ? `${zz(lz)} \u2014 added` : "", Mz.length > 0 ? `${zz(Mz)} \u2014 taken out` : ""].filter(Boolean),
-              bz = [...Fz.filter((zz => tz.has(zz))), ...Fz.filter((zz => !tz.has(zz)))],
-              Ez = Hz.every((zz => lz.includes(zz)));
+              CD = [iD.length > 0 ? `${DD(iD)} \u2014 changed` : "", fD.length > 0 ? `${DD(fD)} \u2014 added` : "", bD.length > 0 ? `${DD(bD)} \u2014 taken out` : ""].filter(Boolean),
+              cD = [...MD.filter((DD => QD.has(DD))), ...MD.filter((DD => !QD.has(DD)))],
+              ID = wD.every((DD => fD.includes(DD)));
             return {
-              named: EO(uz.join("; ")),
-              codeNames: bz,
-              takesOut: Mz,
+              named: IS(CD.join("; ")),
+              codeNames: cD,
+              takesOut: bD,
               isPlain: !0,
-              about: Oz(Hz, Ez)
+              about: SD(wD, ID)
             }
           }
-          const Zz = [iz.length > 0 ? `changes ${uO(iz.map(dz))}` : "", lz.length > 0 ? `adds ${uO(lz.map(dz))}` : "", Mz.length > 0 ? `takes out ${uO(Mz.map(dz))}` : ""].filter(Boolean);
-          if (Zz.length > 0) return {
-            named: EO(Zz.join(", ")),
-            codeNames: Fz,
-            takesOut: Mz,
+          const tD = [iD.length > 0 ? `changes ${CS(iD.map(yD))}` : "", fD.length > 0 ? `adds ${CS(fD.map(yD))}` : "", bD.length > 0 ? `takes out ${CS(bD.map(yD))}` : ""].filter(Boolean);
+          if (tD.length > 0) return {
+            named: IS(tD.join(", ")),
+            codeNames: MD,
+            takesOut: bD,
             isPlain: !1,
-            about: Oz([], !1)
+            about: SD([], !1)
           };
-          const Rz = uz.flatMap((zz => "same" === zz.kind ? [zz.text] : zz.added));
-          for (let Kz = Rz.length - 1; Kz >= 0; Kz--) {
-            const zz = Rz[Kz],
-              uz = /^\s/.test(zz) ? void 0 : CH(zz);
-            if (!uz && "" !== zz.trim() && !/^\s/.test(zz) && !/^(?:\/\/|\/\*|\*)/.test(zz.trim())) break;
-            if (uz) {
-              const bz = YH(zz);
-              return bz ? (tz.set(uz, bz), {
-                named: `${bz} \u2014 changed`,
-                codeNames: [uz],
+          const ZD = CD.flatMap((DD => "same" === DD.kind ? [DD.text] : DD.added));
+          for (let oD = ZD.length - 1; oD >= 0; oD--) {
+            const DD = ZD[oD],
+              CD = /^\s/.test(DD) ? void 0 : rw(DD);
+            if (!CD && "" !== DD.trim() && !/^\s/.test(DD) && !/^(?:\/\/|\/\*|\*)/.test(DD.trim())) break;
+            if (CD) {
+              const cD = Aw(DD);
+              return cD ? (QD.set(CD, cD), {
+                named: `${cD} \u2014 changed`,
+                codeNames: [CD],
                 takesOut: [],
                 isPlain: !0,
-                about: Oz([uz], !1)
+                about: SD([CD], !1)
               }) : {
-                named: `Changes ${/\bfunction\b|=>/.test(zz)?`"${bO(uz)}"`:bO(uz)}`,
-                codeNames: [uz],
+                named: `Changes ${/\bfunction\b|=>/.test(DD)?`"${cS(CD)}"`:cS(CD)}`,
+                codeNames: [CD],
                 takesOut: [],
                 isPlain: !1,
-                about: Oz([], !1)
+                about: SD([], !1)
               }
             }
           }
           return {
-            named: 0 === zz.added.length ? `Takes out lines from line ${bz}` : `Changes line ${bz}`,
+            named: 0 === DD.added.length ? `Takes out lines from line ${cD}` : `Changes line ${cD}`,
             codeNames: [],
             takesOut: [],
             isPlain: !1,
-            about: Oz([], !1)
+            about: SD([], !1)
           }
-        }(zz, nz.slice(0, uz), iz),
-        Mz = iz;
-      return iz += zz.added.length, [{
-        index: zz.index,
-        removed: zz.removed,
-        added: zz.added,
-        line: Mz,
-        ...lz,
-        ...bz ? {
-          why: bz.why
+        }(DD, pD.slice(0, CD), iD),
+        bD = iD;
+      return iD += DD.added.length, [{
+        index: DD.index,
+        removed: DD.removed,
+        added: DD.added,
+        line: bD,
+        ...fD,
+        ...cD ? {
+          why: cD.why
         } : {}
       }]
     })),
-    Mz = function(zz, uz) {
-      const bz = uz ? cH(uz) : [];
-      if (!uz || 0 === bz.length) return zz.map((() => {}));
-      const Ez = zz.map((zz => SH(zz, uz, bz) || void 0 !== zz.why && gH(bz, cH(zz.why)))),
-        nz = new Set(zz.flatMap(((zz, uz) => {
-          var bz;
-          return Ez[uz] && null !== (bz = zz.uses) && void 0 !== bz ? bz : []
+    bD = function(DD, CD) {
+      const cD = CD ? Gw(CD) : [];
+      if (!CD || 0 === cD.length) return DD.map((() => {}));
+      const ID = DD.map((DD => kw(DD, CD, cD) || void 0 !== DD.why && Rw(cD, Gw(DD.why)))),
+        pD = new Set(DD.flatMap(((DD, CD) => {
+          var cD;
+          return ID[CD] && null !== (cD = DD.uses) && void 0 !== cD ? cD : []
         }))),
-        iz = zz.map(((zz, uz) => {
-          var bz;
-          return Ez[uz] || (null !== (bz = zz.uses) && void 0 !== bz ? bz : []).some((zz => nz.has(zz)))
+        iD = DD.map(((DD, CD) => {
+          var cD;
+          return ID[CD] || (null !== (cD = DD.uses) && void 0 !== cD ? cD : []).some((DD => pD.has(DD)))
         }));
-      if (!Ez.includes(!0)) return zz.map((() => {}));
-      const lz = new Set(zz.flatMap((zz => zz.names)));
-      return zz.map(((zz, Ez) => {
-        if (0 === zz.names.length) {
-          var Mz, tz;
-          const Ez = (null !== (Mz = zz.takesOut) && void 0 !== Mz ? Mz : []).filter((zz => ("CONFIG" === zz || hH.has(zz)) && !lz.has(zz)));
-          return 0 === Ez.length || SH({
-            ...zz,
-            names: Ez
-          }, uz, bz) || void 0 !== zz.why && gH(bz, cH(zz.why)) || (null !== (tz = zz.removedUses) && void 0 !== tz ? tz : []).some((zz => nz.has(zz))) ? void 0 : "takesOut"
+      if (!ID.includes(!0)) return DD.map((() => {}));
+      const fD = new Set(DD.flatMap((DD => DD.names)));
+      return DD.map(((DD, ID) => {
+        if (0 === DD.names.length) {
+          var bD, QD;
+          const ID = (null !== (bD = DD.takesOut) && void 0 !== bD ? bD : []).filter((DD => ("CONFIG" === DD || Lw.has(DD)) && !fD.has(DD)));
+          return 0 === ID.length || kw({
+            ...DD,
+            names: ID
+          }, CD, cD) || void 0 !== DD.why && Rw(cD, Gw(DD.why)) || (null !== (QD = DD.removedUses) && void 0 !== QD ? QD : []).some((DD => pD.has(DD))) ? void 0 : "takesOut"
         }
-        if (!iz[Ez]) return zz.onlyAdds ? "adds" : "changes"
+        if (!iD[ID]) return DD.onlyAdds ? "adds" : "changes"
       }))
-    }(lz.map((zz => ({
-      ...zz.about,
-      ...zz.why ? {
-        why: zz.why
+    }(fD.map((DD => ({
+      ...DD.about,
+      ...DD.why ? {
+        why: DD.why
       } : {}
-    }))), uz),
-    tz = lz.map(((zz, uz) => {
+    }))), CD),
+    QD = fD.map(((DD, CD) => {
       let {
-        named: bz,
-        codeNames: Ez,
-        isPlain: nz,
-        about: iz,
-        ...tz
-      } = zz;
-      const Hz = void 0 !== tz.why && 1 === lz.filter((zz => zz.why === tz.why)).length && tz.why ? tz.why.charAt(0).toUpperCase() + tz.why.slice(1) : void 0,
-        Oz = !nz && Hz ? Hz : bz,
-        pz = Mz[uz],
-        dz = pz ? Oz.replace(/ \u2014 (added|changed|taken out)$/, "") : Oz;
+        named: cD,
+        codeNames: ID,
+        isPlain: pD,
+        about: iD,
+        ...QD
+      } = DD;
+      const wD = void 0 !== QD.why && 1 === fD.filter((DD => DD.why === QD.why)).length && QD.why ? QD.why.charAt(0).toUpperCase() + QD.why.slice(1) : void 0,
+        SD = !pD && wD ? wD : cD,
+        BD = bD[CD],
+        yD = BD ? SD.replace(/ \u2014 (added|changed|taken out)$/, "") : SD;
       return {
-        ...tz,
-        label: dz,
-        codeNames: Ez,
-        ...nz && Hz ? {
-          detail: Hz
+        ...QD,
+        label: yD,
+        codeNames: ID,
+        ...pD && wD ? {
+          detail: wD
         } : {},
-        ...pz ? {
-          also: pz
+        ...BD ? {
+          also: BD
         } : {}
       }
     })),
-    Hz = zz => {
-      var uz, bz;
-      return `${null!==(uz=zz.also)&&void 0!==uz?uz:""}|${zz.label}|${null!==(bz=zz.detail)&&void 0!==bz?bz:""}`
+    wD = DD => {
+      var CD, cD;
+      return `${null!==(CD=DD.also)&&void 0!==CD?CD:""}|${DD.label}|${null!==(cD=DD.detail)&&void 0!==cD?cD:""}`
     };
-  return tz.map((zz => {
+  return QD.map((DD => {
     let {
-      line: uz,
-      ...bz
-    } = zz;
-    return tz.filter((zz => Hz(zz) === Hz(bz))).length > 1 ? {
-      ...bz,
-      label: `${bz.label} (line ${uz})`
-    } : bz
+      line: CD,
+      ...cD
+    } = DD;
+    return QD.filter((DD => wD(DD) === wD(cD))).length > 1 ? {
+      ...cD,
+      label: `${cD.label} (line ${CD})`
+    } : cD
   }))
 }
-const MO = {
+const bS = {
     added: "adds",
     changed: "changes",
     updated: "updates",
@@ -11745,1301 +11745,1301 @@ const MO = {
     gave: "gives",
     moved: "moves"
   },
-  tO = Object.keys(MO).join("|"),
-  HO = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
-  OO = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
-const pO = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
+  QS = Object.keys(bS).join("|"),
+  wS = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
+  SS = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
+const BS = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
 
-function dO(zz) {
-  return !/^['\u2018]/.test(zz[0]) || !(0, pu.c)(zz, "\\w\u2019'")
+function yS(DD) {
+  return !/^['\u2018]/.test(DD[0]) || !(0, BC.e)(DD, "\\w\u2019'")
 }
-const FO = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
+const MS = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
 
-function ZO(zz) {
-  const uz = function(zz) {
-      return (0, pu.e)(zz, pO, dO).map((zz => [zz.index, zz.index + zz[0].length]))
-    }(zz),
-    bz = zz => uz.some((uz => {
-      let [bz, Ez] = uz;
-      return zz >= bz && zz < Ez
+function tS(DD) {
+  const CD = function(DD) {
+      return (0, BC.f)(DD, BS, yS).map((DD => [DD.index, DD.index + DD[0].length]))
+    }(DD),
+    cD = DD => CD.some((CD => {
+      let [cD, ID] = CD;
+      return DD >= cD && DD < ID
     })),
-    Ez = [];
-  for (const iz of zz.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${tO})\\b`, "g"))) {
-    const uz = iz.index + iz[1].length,
-      nz = iz.index + iz[0].length,
-      lz = zz.slice(nz),
-      Mz = /[.!?](?=\s|$)|\n/.exec(lz),
-      tz = Mz ? lz.slice(0, Mz.index) : lz;
-    if (!bz(uz) && !FO.test(tz)) {
-      Ez.push({
-        at: uz,
-        length: nz - uz,
-        words: `${iz[2]?"It also":"This"} ${MO[iz[3]]}`
+    ID = [];
+  for (const iD of DD.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${QS})\\b`, "g"))) {
+    const CD = iD.index + iD[1].length,
+      pD = iD.index + iD[0].length,
+      fD = DD.slice(pD),
+      bD = /[.!?](?=\s|$)|\n/.exec(fD),
+      QD = bD ? fD.slice(0, bD.index) : fD;
+    if (!cD(CD) && !MS.test(QD)) {
+      ID.push({
+        at: CD,
+        length: pD - CD,
+        words: `${iD[2]?"It also":"This"} ${bS[iD[3]]}`
       });
-      for (const zz of tz.matchAll(new RegExp(`\\b(and|then|also) (${tO})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) bz(nz + zz.index) || Ez.push({
-        at: nz + zz.index,
-        length: zz[0].length,
-        words: `${zz[1]} ${MO[zz[2]]}`
+      for (const DD of QD.matchAll(new RegExp(`\\b(and|then|also) (${QS})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) cD(pD + DD.index) || ID.push({
+        at: pD + DD.index,
+        length: DD[0].length,
+        words: `${DD[1]} ${bS[DD[2]]}`
       })
     }
   }
-  for (const iz of zz.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
-    const uz = Math.max(zz.lastIndexOf(".", iz.index), zz.lastIndexOf("\n", iz.index)) + 1,
-      lz = /[.!?](?=\s|$)|\n/.exec(zz.slice(iz.index)),
-      Mz = zz.slice(uz, lz ? iz.index + lz.index : zz.length),
-      tz = Ez.some((zz => iz.index < zz.at + zz.length && zz.at < iz.index + iz[0].length)),
-      Hz = OO.test(zz.slice(uz, iz.index));
-    HO.has(iz[1]) || Hz || bz(iz.index) || FO.test(Mz) || tz || Ez.push({
-      at: iz.index,
-      length: iz[0].length,
-      words: `will ${nz=iz[1],"has"===nz?"have":nz.endsWith("ies")?`${nz.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(nz)?nz.slice(0,-2):nz.slice(0,-1)}`
+  for (const iD of DD.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
+    const CD = Math.max(DD.lastIndexOf(".", iD.index), DD.lastIndexOf("\n", iD.index)) + 1,
+      fD = /[.!?](?=\s|$)|\n/.exec(DD.slice(iD.index)),
+      bD = DD.slice(CD, fD ? iD.index + fD.index : DD.length),
+      QD = ID.some((DD => iD.index < DD.at + DD.length && DD.at < iD.index + iD[0].length)),
+      wD = SS.test(DD.slice(CD, iD.index));
+    wS.has(iD[1]) || wD || cD(iD.index) || MS.test(bD) || QD || ID.push({
+      at: iD.index,
+      length: iD[0].length,
+      words: `will ${pD=iD[1],"has"===pD?"have":pD.endsWith("ies")?`${pD.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(pD)?pD.slice(0,-2):pD.slice(0,-1)}`
     })
   }
-  var nz;
-  return Ez.sort(((zz, uz) => uz.at - zz.at)).reduce(((zz, uz) => zz.slice(0, uz.at) + uz.words + zz.slice(uz.at + uz.length)), zz)
+  var pD;
+  return ID.sort(((DD, CD) => CD.at - DD.at)).reduce(((DD, CD) => DD.slice(0, CD.at) + CD.words + DD.slice(CD.at + CD.length)), DD)
 }
 
-function RO(zz) {
+function ZS(DD) {
   let {
-    path: uz,
-    field: bz,
-    onWrite: nz,
-    isChanged: iz
-  } = zz;
-  const [Mz, tz] = (0, Ez.useState)(null), [Hz, Oz] = (0, Ez.useState)(null), pz = GH(bz), [dz, Fz] = (0, Ez.useState)(!1), Zz = (0, Ez.useRef)(null), Rz = async zz => {
-    if (nz && !dz) {
-      tz(null), Fz(!0);
+    path: CD,
+    field: cD,
+    onWrite: pD,
+    isChanged: iD
+  } = DD;
+  const [bD, QD] = (0, ID.useState)(null), [wD, SD] = (0, ID.useState)(null), BD = aw(cD), [yD, MD] = (0, ID.useState)(!1), tD = (0, ID.useRef)(null), ZD = async DD => {
+    if (pD && !yD) {
+      QD(null), MD(!0);
       try {
-        const lz = await nz(uz, bz, zz);
-        var Ez, iz;
-        if (Oz(lz ? null : "Your code changed here. Look at it again."), lz) null === (Ez = Zz.current) || void 0 === Ez || null === (iz = Ez.scrollIntoView) || void 0 === iz || iz.call(Ez, {
+        const fD = await pD(CD, cD, DD);
+        var ID, iD;
+        if (SD(fD ? null : "Your code changed here. Look at it again."), fD) null === (ID = tD.current) || void 0 === ID || null === (iD = ID.scrollIntoView) || void 0 === iD || iD.call(ID, {
           block: "nearest"
         })
       } finally {
-        Fz(!1)
+        MD(!1)
       }
     }
-  }, Kz = () => {
-    if (null !== Mz)
-      if ("number" === bz.kind) {
-        const zz = Number(Mz.trim());
-        if ("" === Mz.trim() || !Number.isFinite(zz)) return Oz("That needs to be a number."), void tz(null);
-        Rz(zz)
-      } else Rz(Mz)
-  }, wz = `WorldCodeAiSetting-${uz}-${bz.key}`;
-  return (0, lz.jsxs)("li", {
-    ref: Zz,
+  }, oD = () => {
+    if (null !== bD)
+      if ("number" === cD.kind) {
+        const DD = Number(bD.trim());
+        if ("" === bD.trim() || !Number.isFinite(DD)) return SD("That needs to be a number."), void QD(null);
+        ZD(DD)
+      } else ZD(bD)
+  }, vD = `WorldCodeAiSetting-${CD}-${cD.key}`;
+  return (0, fD.jsxs)("li", {
+    ref: tD,
     className: "WorldCodeAiSetting",
-    children: [(0, lz.jsxs)("label", {
+    children: [(0, fD.jsxs)("label", {
       className: "WorldCodeAiSettingLabel",
-      htmlFor: wz,
-      children: [pz, bz.comment && (0, lz.jsx)("code", {
-        children: bz.key
+      htmlFor: vD,
+      children: [BD, cD.comment && (0, fD.jsx)("code", {
+        children: cD.key
       })]
-    }), "boolean" === bz.kind ? (0, lz.jsxs)("label", {
+    }), "boolean" === cD.kind ? (0, fD.jsxs)("label", {
       className: "WorldCodeAiSwitch",
-      children: [(0, lz.jsx)("input", {
-        id: wz,
+      children: [(0, fD.jsx)("input", {
+        id: vD,
         type: "checkbox",
         role: "switch",
-        checked: !0 === bz.value,
-        disabled: !nz,
-        onChange: zz => {
-          Rz(zz.target.checked)
+        checked: !0 === cD.value,
+        disabled: !pD,
+        onChange: DD => {
+          ZD(DD.target.checked)
         }
-      }), (0, lz.jsx)("span", {
-        children: bz.value ? "On" : "Off"
+      }), (0, fD.jsx)("span", {
+        children: cD.value ? "On" : "Off"
       })]
-    }) : (0, lz.jsxs)("div", {
+    }) : (0, fD.jsxs)("div", {
       className: "WorldCodeAiSettingControl",
-      children: ["number" === bz.kind && (0, lz.jsx)("button", {
+      children: ["number" === cD.kind && (0, fD.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `Less ${pz}`,
-        disabled: !nz,
+        "aria-label": `Less ${BD}`,
+        disabled: !pD,
         onClick: () => {
-          Rz(bz.value - PH(bz.value))
+          ZD(cD.value - Kw(cD.value))
         },
         children: "\u2212"
-      }), (0, lz.jsx)("input", {
-        id: wz,
+      }), (0, fD.jsx)("input", {
+        id: vD,
         className: "WorldCodeAiInput WorldCodeAiSettingInput",
-        type: "number" === bz.kind ? "number" : "text",
-        inputMode: "number" === bz.kind ? "decimal" : void 0,
-        maxLength: "string" === bz.kind ? 200 : void 0,
-        value: null !== Mz && void 0 !== Mz ? Mz : String(bz.value),
-        disabled: !nz,
-        onChange: zz => {
-          tz(zz.target.value)
+        type: "number" === cD.kind ? "number" : "text",
+        inputMode: "number" === cD.kind ? "decimal" : void 0,
+        maxLength: "string" === cD.kind ? 200 : void 0,
+        value: null !== bD && void 0 !== bD ? bD : String(cD.value),
+        disabled: !pD,
+        onChange: DD => {
+          QD(DD.target.value)
         },
-        onBlur: Kz,
-        onKeyDown: zz => {
-          zz.stopPropagation(), "Enter" === zz.key ? Kz() : "Escape" === zz.key && tz(null)
+        onBlur: oD,
+        onKeyDown: DD => {
+          DD.stopPropagation(), "Enter" === DD.key ? oD() : "Escape" === DD.key && QD(null)
         }
-      }), "number" === bz.kind && (0, lz.jsx)("button", {
+      }), "number" === cD.kind && (0, fD.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `More ${pz}`,
-        disabled: !nz,
+        "aria-label": `More ${BD}`,
+        disabled: !pD,
         onClick: () => {
-          Rz(bz.value + PH(bz.value))
+          ZD(cD.value + Kw(cD.value))
         },
         children: "+"
       })]
-    }), Hz && (0, lz.jsx)("span", {
+    }), wD && (0, fD.jsx)("span", {
       className: "WorldCodeAiAboutError",
-      children: Hz
-    }), iz && !Hz && (0, lz.jsx)("span", {
+      children: wD
+    }), iD && !wD && (0, fD.jsx)("span", {
       className: "WorldCodeAiSettingDone",
       children: "\u2713 Changed in your code"
     })]
   })
 }
 
-function KO(zz) {
+function oS(DD) {
   let {
-    files: uz,
-    onWrite: bz,
-    onTryIt: Ez,
-    onUndo: nz,
-    before: iz
-  } = zz;
-  const Mz = Object.entries(uz).flatMap((zz => {
-    let [uz, bz] = zz;
-    const Ez = TH(bz);
-    return Ez.length > 0 ? [{
-      path: uz,
-      fields: Ez
+    files: CD,
+    onWrite: cD,
+    onTryIt: ID,
+    onUndo: pD,
+    before: iD
+  } = DD;
+  const bD = Object.entries(CD).flatMap((DD => {
+    let [CD, cD] = DD;
+    const ID = qw(cD);
+    return ID.length > 0 ? [{
+      path: CD,
+      fields: ID
     }] : []
   }));
-  return (0, lz.jsxs)("div", {
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiSettings",
-    children: [(0, lz.jsx)("div", {
+    children: [(0, fD.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, lz.jsx)("span", {
+      children: (0, fD.jsx)("span", {
         children: "Settings of my game"
       })
-    }), 0 === Mz.length ? (0, lz.jsx)("p", {
+    }), 0 === bD.length ? (0, fD.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Your code has no settings yet. Settings are the numbers and messages at the top of your code, in CONFIG."
-    }) : (0, lz.jsxs)(lz.Fragment, {
-      children: [(0, lz.jsx)("p", {
+    }) : (0, fD.jsxs)(fD.Fragment, {
+      children: [(0, fD.jsx)("p", {
         className: "WorldCodeAiAboutNote",
         children: "Changes go into your code straight away. Try them in your world."
-      }), (Ez || nz) && (0, lz.jsxs)("div", {
+      }), (ID || pD) && (0, fD.jsxs)("div", {
         className: "WorldCodeAiSettingActions",
-        children: [Ez && (0, lz.jsx)("button", {
+        children: [ID && (0, fD.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: Ez,
+          onClick: ID,
           children: "Try it in my world"
-        }), nz && (0, lz.jsx)("button", {
+        }), pD && (0, fD.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          onClick: nz,
+          onClick: pD,
           children: "Undo these changes"
         })]
-      }), Mz.map((zz => {
+      }), bD.map((DD => {
         let {
-          path: uz,
-          fields: Ez
-        } = zz;
-        return (0, lz.jsxs)("div", {
-          children: [Mz.length > 1 && (0, lz.jsx)("p", {
+          path: CD,
+          fields: ID
+        } = DD;
+        return (0, fD.jsxs)("div", {
+          children: [bD.length > 1 && (0, fD.jsx)("p", {
             className: "WorldCodeAiAboutHeading",
-            children: uz
-          }), (0, lz.jsx)("ul", {
+            children: CD
+          }), (0, fD.jsx)("ul", {
             className: "WorldCodeAiSettingList",
-            children: Ez.map((zz => {
-              const Ez = void 0 === (null === iz || void 0 === iz ? void 0 : iz[uz]) ? void 0 : TH(iz[uz]).find((uz => uz.key === zz.key));
-              return (0, lz.jsx)(RO, {
-                isChanged: !!iz && (null === Ez || void 0 === Ez ? void 0 : Ez.value) !== zz.value,
-                path: uz,
-                field: zz,
-                onWrite: bz
-              }, zz.key)
+            children: ID.map((DD => {
+              const ID = void 0 === (null === iD || void 0 === iD ? void 0 : iD[CD]) ? void 0 : qw(iD[CD]).find((CD => CD.key === DD.key));
+              return (0, fD.jsx)(ZS, {
+                isChanged: !!iD && (null === ID || void 0 === ID ? void 0 : ID.value) !== DD.value,
+                path: CD,
+                field: DD,
+                onWrite: cD
+              }, DD.key)
             }))
           })]
-        }, uz)
+        }, CD)
       }))]
     })]
   })
 }
-const wO = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
-const XO = ["Reading your code", "Planning", "Writing", "Safety check"];
+const vS = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
+const NS = ["Reading your code", "Planning", "Writing", "Safety check"];
 
-function fO(zz) {
-  if (zz <= 1e4) return "It starts in a few seconds.";
-  const uz = 10 * Math.ceil(zz / 1e4);
-  return uz >= 60 ? "It starts in about a minute." : `It starts in about ${uz} seconds.`
+function gS(DD) {
+  if (DD <= 1e4) return "It starts in a few seconds.";
+  const CD = 10 * Math.ceil(DD / 1e4);
+  return CD >= 60 ? "It starts in about a minute." : `It starts in about ${CD} seconds.`
 }
-var sO = bz(1768);
+var XS = cD(1796);
 
-function rO(zz, uz) {
-  const bz = new Map;
-  for (const nz of cn(zz)) {
-    var Ez;
-    bz.set(nz, (null !== (Ez = bz.get(nz)) && void 0 !== Ez ? Ez : 0) + 1)
+function mS(DD, CD) {
+  const cD = new Map;
+  for (const pD of lp(DD)) {
+    var ID;
+    cD.set(pD, (null !== (ID = cD.get(pD)) && void 0 !== ID ? ID : 0) + 1)
   }
-  return cn(uz).filter((zz => {
-    var uz;
-    const Ez = null !== (uz = bz.get(zz)) && void 0 !== uz ? uz : 0;
-    return bz.set(zz, Ez - 1), Ez <= 0
+  return lp(CD).filter((DD => {
+    var CD;
+    const ID = null !== (CD = cD.get(DD)) && void 0 !== CD ? CD : 0;
+    return cD.set(DD, ID - 1), ID <= 0
   }))
 }
 
-function oO(zz, uz) {
-  return new Promise(((bz, Ez) => {
-    if (null !== uz && void 0 !== uz && uz.aborted) return void Ez((0, sO.g)(uz));
-    const nz = setTimeout(bz, zz);
-    null === uz || void 0 === uz || uz.addEventListener("abort", (() => {
-      clearTimeout(nz), Ez((0, sO.g)(uz))
+function nS(DD, CD) {
+  return new Promise(((cD, ID) => {
+    if (null !== CD && void 0 !== CD && CD.aborted) return void ID((0, XS.g)(CD));
+    const pD = setTimeout(cD, DD);
+    null === CD || void 0 === CD || CD.addEventListener("abort", (() => {
+      clearTimeout(pD), ID((0, XS.g)(CD))
     }), {
       once: !0
     })
   }))
 }
-async function NO(zz, uz, bz, Ez, nz) {
-  const iz = new Set;
-  for (; Date.now() < bz;) {
-    var lz;
-    const Mz = an.filter((zz => !iz.has(zz)));
-    if (0 === Mz.length) return null;
-    const tz = ui.firstFreeAt(Mz);
-    if (tz > Date.now()) {
-      if (tz > bz) return null;
-      null === nz || void 0 === nz || nz(tz), await oO(tz - Date.now(), Ez)
+async function OS(DD, CD, cD, ID, pD) {
+  const iD = new Set;
+  for (; Date.now() < cD;) {
+    var fD;
+    const bD = Jp.filter((DD => !iD.has(DD)));
+    if (0 === bD.length) return null;
+    const QD = Fp.firstFreeAt(bD);
+    if (QD > Date.now()) {
+      if (QD > cD) return null;
+      null === pD || void 0 === pD || pD(QD), await nS(QD - Date.now(), ID)
     }
-    const Hz = null !== (lz = Mz.find((zz => ui.freeAt(zz) <= Date.now()))) && void 0 !== lz ? lz : Mz[0],
-      Oz = await Si(Hz, [{
+    const wD = null !== (fD = bD.find((DD => Fp.freeAt(DD) <= Date.now()))) && void 0 !== fD ? fD : bD[0],
+      SD = await Ti(wD, [{
         role: "user",
-        content: zz
+        content: DD
       }, {
         role: "assistant",
-        content: uz
-      }], Ez);
-    if (null === Oz) iz.add(Hz);
-    else if ("busy" !== Oz) return Oz
+        content: CD
+      }], ID);
+    if (null === SD) iD.add(wD);
+    else if ("busy" !== SD) return SD
   }
   return null
 }
-async function vO(zz, uz, bz, Ez) {
-  const nz = function(zz) {
-    const uz = [zz.text, ...zz.question ? [zz.question.question, ...zz.question.choices] : [], ...zz.plan, ...zz.notes, ...zz.actions.flatMap((zz => "switchToWorldCode" === zz.kind && zz.request ? [zz.request] : [])), ...zz.lookups.flatMap((zz => Object.values(zz.args).filter((zz => void 0 !== zz)))), ...zz.changes.flatMap((zz => {
-      var uz, bz;
-      return [...null !== (uz = zz.why) && void 0 !== uz ? uz : [], ...(null !== (bz = zz.parts) && void 0 !== bz ? bz : []).map((zz => zz.why)), ...rO(zz.before, zz.after)]
-    })), ...zz.worldCode.flatMap((zz => cn(zz)))];
-    return uz.map((zz => zz.trim())).filter((zz => "" !== zz)).join("\n")
-  }(uz);
-  if ("" === nz) return "ok";
-  const iz = Date.now() + 75e3;
-  for (const lz of function(zz) {
-      const uz = [];
-      let bz = zz;
-      for (; bz.length > Vn;) {
-        const zz = bz.lastIndexOf("\n", Vn),
-          Ez = zz > 6e3 ? zz : Vn;
-        uz.push(bz.slice(0, Ez)), bz = bz.slice(Ez)
+async function PS(DD, CD, cD, ID) {
+  const pD = function(DD) {
+    const CD = [DD.text, ...DD.question ? [DD.question.question, ...DD.question.choices] : [], ...DD.plan, ...DD.notes, ...DD.actions.flatMap((DD => "switchToWorldCode" === DD.kind && DD.request ? [DD.request] : [])), ...DD.lookups.flatMap((DD => Object.values(DD.args).filter((DD => void 0 !== DD)))), ...DD.changes.flatMap((DD => {
+      var CD, cD;
+      return [...null !== (CD = DD.why) && void 0 !== CD ? CD : [], ...(null !== (cD = DD.parts) && void 0 !== cD ? cD : []).map((DD => DD.why)), ...mS(DD.before, DD.after)]
+    })), ...DD.worldCode.flatMap((DD => lp(DD)))];
+    return CD.map((DD => DD.trim())).filter((DD => "" !== DD)).join("\n")
+  }(CD);
+  if ("" === pD) return "ok";
+  const iD = Date.now() + 75e3;
+  for (const fD of function(DD) {
+      const CD = [];
+      let cD = DD;
+      for (; cD.length > Kp;) {
+        const DD = cD.lastIndexOf("\n", Kp),
+          ID = DD > 6e3 ? DD : Kp;
+        CD.push(cD.slice(0, ID)), cD = cD.slice(ID)
       }
-      return [...uz, bz]
-    }(nz)) {
-    const uz = await Un(lz, (uz => NO(zz, uz, iz, bz, Ez)));
-    if ("ok" !== uz) return uz
+      return [...CD, cD]
+    }(pD)) {
+    const CD = await jp(fD, (CD => OS(DD, CD, iD, cD, ID)));
+    if ("ok" !== CD) return CD
   }
   return "ok"
 }
-const xO = "worldCodeAiAnswerTimes";
+const HS = "worldCodeAiAnswerTimes";
 
-function JO(zz, uz) {
-  var bz;
-  const Ez = uz && null !== (bz = zz[uz]) && void 0 !== bz ? bz : [],
-    nz = Ez.length >= 2 ? Ez : Object.values(zz).flat();
-  return nz.length < 2 ? "Usually under a minute." : `Usually ${function(zz){const uz=Math.max(5,5*Math.round(zz/5e3));if(uz<60)return`about ${uz} seconds`;const bz=10*Math.round(zz/1e4),Ez=Math.floor(bz/60),nz=bz%60,iz=`${Ez} ${1===Ez?"minute":"minutes"}`;return 0===nz?`about ${iz}`:`about ${iz} ${nz} seconds`}(function(zz){const uz=[...zz].sort(((zz,uz)=>zz-uz)),bz=Math.floor(uz.length/2);return uz.length%2===1?uz[bz]:(uz[bz-1]+uz[bz])/2}(nz))}.`
+function US(DD, CD) {
+  var cD;
+  const ID = CD && null !== (cD = DD[CD]) && void 0 !== cD ? cD : [],
+    pD = ID.length >= 2 ? ID : Object.values(DD).flat();
+  return pD.length < 2 ? "Usually under a minute." : `Usually ${function(DD){const CD=Math.max(5,5*Math.round(DD/5e3));if(CD<60)return`about ${CD} seconds`;const cD=10*Math.round(DD/1e4),ID=Math.floor(cD/60),pD=cD%60,iD=`${ID} ${1===ID?"minute":"minutes"}`;return 0===pD?`about ${iD}`:`about ${iD} ${pD} seconds`}(function(DD){const CD=[...DD].sort(((DD,CD)=>DD-CD)),cD=Math.floor(CD.length/2);return CD.length%2===1?CD[cD]:(CD[cD-1]+CD[cD])/2}(pD))}.`
 }
-var AO = bz(36352);
+var xS = cD(36280);
 
-function TO(zz, uz) {
-  const bz = zz.split("\n"),
-    Ez = uz.split("\n"),
-    nz = Ez.findIndex(((zz, uz) => zz !== bz[uz]));
-  return (-1 === nz ? Math.min(bz.length, Ez.length) - 1 : nz) + 1
+function qS(DD, CD) {
+  const cD = DD.split("\n"),
+    ID = CD.split("\n"),
+    pD = ID.findIndex(((DD, CD) => DD !== cD[CD]));
+  return (-1 === pD ? Math.min(cD.length, ID.length) - 1 : pD) + 1
 }
 
-function LO(zz, uz) {
-  return zz.filter((zz => zz.path !== uz)).map((zz => ({
-    path: zz.path,
-    line: TO(zz.before, zz.after)
+function JS(DD, CD) {
+  return DD.filter((DD => DD.path !== CD)).map((DD => ({
+    path: DD.path,
+    line: qS(DD.before, DD.after)
   })))
 }
 
-function PO(zz) {
-  return `Moving to ${zz} code\u2026`
+function KS(DD) {
+  return `Moving to ${DD} code\u2026`
 }
 
-function GO(zz) {
-  return zz.fromLine === zz.toLine ? `line ${zz.fromLine}` : `lines ${zz.fromLine}-${zz.toLine}`
+function aS(DD) {
+  return DD.fromLine === DD.toLine ? `line ${DD.fromLine}` : `lines ${DD.fromLine}-${DD.toLine}`
 }
 
-function aO(zz) {
-  const uz = zz.text.length > 4e3 ? `${zz.text.slice(0,4e3)}\n...` : zz.text;
-  return `The part I picked (${zz.path}, ${GO(zz)}):\n\`\`\`\n${uz}\n\`\`\``
+function VS(DD) {
+  const CD = DD.text.length > 4e3 ? `${DD.text.slice(0,4e3)}\n...` : DD.text;
+  return `The part I picked (${DD.path}, ${aS(DD)}):\n\`\`\`\n${CD}\n\`\`\``
 }
 
-function VO(zz) {
-  let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  switch (zz.action) {
+function zS(DD) {
+  let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+  switch (DD.action) {
     case "explain":
-      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${aO(zz)}`;
+      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${VS(DD)}`;
     case "fix":
-      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${aO(zz)}`;
+      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${VS(DD)}`;
     case "change":
-      return `${uz.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${aO(zz)}`
+      return `${CD.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${VS(DD)}`
   }
 }
 
-function mO(zz) {
-  let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  const bz = GO(zz);
-  switch (zz.action) {
+function jS(DD) {
+  let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+  const cD = aS(DD);
+  switch (DD.action) {
     case "explain":
-      return `Explain ${bz}`;
+      return `Explain ${cD}`;
     case "fix":
-      return `Fix ${bz}`;
+      return `Fix ${cD}`;
     case "change":
-      return `${uz.trim()} (${bz})`
+      return `${CD.trim()} (${cD})`
   }
 }
-var qO = bz(40611),
-  hO = bz(4517),
-  UO = bz(40598),
-  cO = bz(40607),
-  gO = bz(40603);
+var lS = cD(40444),
+  LS = cD(4550),
+  TS = cD(40434),
+  GS = cD(40441),
+  RS = cD(40437);
 
-function SO(zz) {
-  return zz ? "/worldCodeAiCheck.ts" : "/worldCodeAiCheck.js"
+function kS(DD) {
+  return DD ? "/worldCodeAiCheck.ts" : "/worldCodeAiCheck.js"
 }
-const yO = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
-  DO = new Set([2304, 2552]),
-  QO = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
-  WO = {};
+const dS = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
+  YS = new Set([2304, 2552]),
+  WS = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
+  sS = {};
 
-function eO() {
-  let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  const uz = zz ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
-  let bz = WO[uz];
-  if (!bz) {
-    const Ez = SO("worldCodeTs" === uz),
-      nz = new Map(zz ? [
-        [Ez, "\n"],
-        ["/globals.d.ts", UO.e],
-        ["/lib.d.ts", cO.d]
+function ES() {
+  let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+  const CD = DD ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
+  let cD = sS[CD];
+  if (!cD) {
+    const ID = kS("worldCodeTs" === CD),
+      pD = new Map(DD ? [
+        [ID, "\n"],
+        ["/globals.d.ts", TS.b],
+        ["/lib.d.ts", GS.b]
       ] : [
-        [Ez, "\n"],
-        ["/node_modules/@bloxd/index.d.ts", hO.default],
-        ["/globals.d.ts", gO.d],
-        ["/lib.d.ts", cO.d]
+        [ID, "\n"],
+        ["/node_modules/@bloxd/index.d.ts", LS.default],
+        ["/globals.d.ts", RS.d],
+        ["/lib.d.ts", GS.b]
       ]);
-    bz = qO.h(qO.d(nz), [...nz.keys()], vz(), {
+    cD = lS.e(lS.c(pD), [...pD.keys()], PD(), {
       allowJs: !0,
       checkJs: !0,
       noLib: !0,
       strict: !1,
-      module: vz().ModuleKind.ESNext,
-      moduleResolution: vz().ModuleResolutionKind.Bundler,
-      target: vz().ScriptTarget.ES2015,
+      module: PD().ModuleKind.ESNext,
+      moduleResolution: PD().ModuleResolutionKind.Bundler,
+      target: PD().ScriptTarget.ES2015,
       allowUnreachableCode: !1,
       paths: {
         "@bloxd": ["/node_modules/@bloxd/index.d.ts"]
       }
-    }), WO[uz] = bz
+    }), sS[CD] = cD
   }
-  return bz
+  return cD
 }
 
-function jO(zz, uz, bz) {
-  let Ez;
-  const nz = iz => {
-    uz < iz.getStart(zz) || uz >= iz.getEnd() || (vz().isFunctionLike(iz) && uz > iz.getStart(zz) && (Ez = void 0), vz().isCallExpression(iz) && (uz >= iz.expression.getEnd() || bz <= iz.expression.getEnd()) && (Ez = iz), vz().forEachChild(iz, nz))
+function eS(DD, CD, cD) {
+  let ID;
+  const pD = iD => {
+    CD < iD.getStart(DD) || CD >= iD.getEnd() || (PD().isFunctionLike(iD) && CD > iD.getStart(DD) && (ID = void 0), PD().isCallExpression(iD) && (CD >= iD.expression.getEnd() || cD <= iD.expression.getEnd()) && (ID = iD), PD().forEachChild(iD, pD))
   };
-  return nz(zz), Ez && yb(Ez, zz) ? Ez : void 0
+  return pD(DD), ID && dc(ID, DD) ? ID : void 0
 }
 
-function IO(zz, uz, bz) {
-  let Ez;
-  const nz = iz => {
-    uz < iz.getStart(zz) || bz > iz.getEnd() || (Ez = iz, vz().forEachChild(iz, nz))
+function uS(DD, CD, cD) {
+  let ID;
+  const pD = iD => {
+    CD < iD.getStart(DD) || cD > iD.getEnd() || (ID = iD, PD().forEachChild(iD, pD))
   };
-  return nz(zz), Ez
+  return pD(DD), ID
 }
 
-function BO(zz) {
-  return zz.toLowerCase().replace(/[^a-z0-9]/g, "")
+function hS(DD) {
+  return DD.toLowerCase().replace(/[^a-z0-9]/g, "")
 }
 
-function CO(zz, uz) {
-  const bz = BO(zz);
-  if (!bz) return;
-  const Ez = uz.find((zz => BO(zz) === bz));
-  if (Ez) return `"${Ez}"`;
-  const nz = uz.filter((zz => {
-    const uz = BO(zz);
-    return uz.includes(bz) || bz.includes(uz)
-  })).sort(((zz, uz) => zz.length - uz.length));
-  if (nz.length > 0) return nz.slice(0, 2).map((zz => `"${zz}"`)).join(" or ");
-  const iz = new Set(zz.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
-  let lz;
-  for (const Mz of uz) {
-    const zz = Mz.toLowerCase().split(/[^a-z0-9]+/).filter((zz => iz.has(zz))).length;
-    zz > 0 && (!lz || zz > lz.shared) && (lz = {
-      option: Mz,
-      shared: zz
+function rS(DD, CD) {
+  const cD = hS(DD);
+  if (!cD) return;
+  const ID = CD.find((DD => hS(DD) === cD));
+  if (ID) return `"${ID}"`;
+  const pD = CD.filter((DD => {
+    const CD = hS(DD);
+    return CD.includes(cD) || cD.includes(CD)
+  })).sort(((DD, CD) => DD.length - CD.length));
+  if (pD.length > 0) return pD.slice(0, 2).map((DD => `"${DD}"`)).join(" or ");
+  const iD = new Set(DD.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+  let fD;
+  for (const bD of CD) {
+    const DD = bD.toLowerCase().split(/[^a-z0-9]+/).filter((DD => iD.has(DD))).length;
+    DD > 0 && (!fD || DD > fD.shared) && (fD = {
+      option: bD,
+      shared: DD
     })
   }
-  return lz ? `"${lz.option}"` : void 0
+  return fD ? `"${fD.option}"` : void 0
 }
 
-function YO(zz) {
-  for (let uz = zz; uz && !vz().isSourceFile(uz); uz = uz.parent)
-    if (vz().isExpressionWithTypeArguments(uz)) {
-      if (vz().isHeritageClause(uz.parent) && uz.parent.token === vz().SyntaxKind.ImplementsKeyword) return !0
-    } else if (vz().isTypeNode(uz)) return !0;
+function AS(DD) {
+  for (let CD = DD; CD && !PD().isSourceFile(CD); CD = CD.parent)
+    if (PD().isExpressionWithTypeArguments(CD)) {
+      if (PD().isHeritageClause(CD.parent) && CD.parent.token === PD().SyntaxKind.ImplementsKeyword) return !0
+    } else if (PD().isTypeNode(CD)) return !0;
   return !1
 }
 
-function kO(zz) {
-  var uz;
-  let bz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    Ez = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const nz = SO(Ez && !bz),
-    iz = eO(bz, Ez);
-  iz.updateFile(nz, zz || "\n");
-  const lz = iz.getSourceFile(nz),
-    Mz = null === (uz = iz.languageService.getProgram()) || void 0 === uz ? void 0 : uz.getTypeChecker();
-  if (!lz || !Mz) return [];
-  const tz = new Set,
-    Hz = iz.languageService.getSyntacticDiagnostics(nz)[0];
-  if (void 0 !== (null === Hz || void 0 === Hz ? void 0 : Hz.start)) {
-    var Oz, pz;
-    const uz = lz.getLineAndCharacterOfPosition(Hz.start).line,
-      bz = null !== (Oz = null === (pz = zz.split("\n")[uz]) || void 0 === pz ? void 0 : pz.trim()) && void 0 !== Oz ? Oz : "",
-      Ez = bz.length > 40 ? `${bz.slice(0,37)}...` : bz,
-      nz = vz().flattenDiagnosticMessageText(Hz.messageText, " ").replace(/\.$/, "");
-    tz.add(`Line ${uz+1} stops all of this code from running: "${Ez}" (${nz}).`)
+function FS(DD) {
+  var CD;
+  let cD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    ID = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const pD = kS(ID && !cD),
+    iD = ES(cD, ID);
+  iD.updateFile(pD, DD || "\n");
+  const fD = iD.getSourceFile(pD),
+    bD = null === (CD = iD.languageService.getProgram()) || void 0 === CD ? void 0 : CD.getTypeChecker();
+  if (!fD || !bD) return [];
+  const QD = new Set,
+    wD = iD.languageService.getSyntacticDiagnostics(pD)[0];
+  if (void 0 !== (null === wD || void 0 === wD ? void 0 : wD.start)) {
+    var SD, BD;
+    const CD = fD.getLineAndCharacterOfPosition(wD.start).line,
+      cD = null !== (SD = null === (BD = DD.split("\n")[CD]) || void 0 === BD ? void 0 : BD.trim()) && void 0 !== SD ? SD : "",
+      ID = cD.length > 40 ? `${cD.slice(0,37)}...` : cD,
+      pD = PD().flattenDiagnosticMessageText(wD.messageText, " ").replace(/\.$/, "");
+    QD.add(`Line ${CD+1} stops all of this code from running: "${ID}" (${pD}).`)
   }
-  const dz = new Set;
-  for (const mz of iz.languageService.getSemanticDiagnostics(nz)) {
-    var Fz, Zz, Rz, Kz, wz, Xz, fz, sz;
-    if (7027 === mz.code && void 0 !== mz.start) {
-      var rz, oz;
-      const uz = lz.getLineAndCharacterOfPosition(mz.start).line,
-        bz = null !== (rz = null === (oz = zz.split("\n")[uz]) || void 0 === oz ? void 0 : oz.trim()) && void 0 !== rz ? rz : "",
-        Ez = bz.length > 40 ? `${bz.slice(0,37)}...` : bz;
-      tz.add(`Line ${uz+1} never runs: "${Ez}" comes after a return, which ends the function first.`);
+  const yD = new Set;
+  for (const jD of iD.languageService.getSemanticDiagnostics(pD)) {
+    var MD, tD, ZD, oD, vD, ND, gD, XD;
+    if (7027 === jD.code && void 0 !== jD.start) {
+      var mD, nD;
+      const CD = fD.getLineAndCharacterOfPosition(jD.start).line,
+        cD = null !== (mD = null === (nD = DD.split("\n")[CD]) || void 0 === nD ? void 0 : nD.trim()) && void 0 !== mD ? mD : "",
+        ID = cD.length > 40 ? `${cD.slice(0,37)}...` : cD;
+      QD.add(`Line ${CD+1} never runs: "${ID}" comes after a return, which ends the function first.`);
       continue
     }
-    if (DO.has(mz.code) && void 0 !== mz.start) {
-      var Nz, xz;
-      const uz = mz.start + (null !== (Nz = mz.length) && void 0 !== Nz ? Nz : 0),
-        bz = zz.slice(mz.start, uz),
-        Ez = /^\s*\(/.test(zz.slice(uz)),
-        nz = new RegExp(`^${bz.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(zz),
-        iz = zz.slice(0, mz.start),
-        Mz = iz.lastIndexOf("/*") > iz.lastIndexOf("*/") || iz.slice(iz.lastIndexOf("\n")).includes("//"),
-        Oz = new RegExp(`//\\s*(?:const|let|var)\\s+${bz.replaceAll("$","\\$")}\\b`).test(zz),
-        pz = new RegExp(`typeof\\s+${bz.replaceAll("$","\\$")}\\b`).test(zz);
-      if (QO.has(bz) || dz.has(bz) || Ez || nz || Mz || Oz || pz || Hz || YO(IO(lz, mz.start, uz))) continue;
-      dz.add(bz);
-      const Fz = lz.getLineAndCharacterOfPosition(mz.start).line,
-        Zz = null === (xz = /Did you mean '([\w$]+)'\?/.exec(vz().flattenDiagnosticMessageText(mz.messageText, " "))) || void 0 === xz ? void 0 : xz[1];
-      tz.add(Zz ? `Line ${Fz+1} uses "${bz}", which is never set, so it throws there. Did you mean "${Zz}"?` : `Line ${Fz+1} uses "${bz}", which isn't set there, so it throws when that line runs.`);
+    if (YS.has(jD.code) && void 0 !== jD.start) {
+      var OD, HD;
+      const CD = jD.start + (null !== (OD = jD.length) && void 0 !== OD ? OD : 0),
+        cD = DD.slice(jD.start, CD),
+        ID = /^\s*\(/.test(DD.slice(CD)),
+        pD = new RegExp(`^${cD.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(DD),
+        iD = DD.slice(0, jD.start),
+        bD = iD.lastIndexOf("/*") > iD.lastIndexOf("*/") || iD.slice(iD.lastIndexOf("\n")).includes("//"),
+        SD = new RegExp(`//\\s*(?:const|let|var)\\s+${cD.replaceAll("$","\\$")}\\b`).test(DD),
+        BD = new RegExp(`typeof\\s+${cD.replaceAll("$","\\$")}\\b`).test(DD);
+      if (WS.has(cD) || yD.has(cD) || ID || pD || bD || SD || BD || wD || AS(uS(fD, jD.start, CD))) continue;
+      yD.add(cD);
+      const MD = fD.getLineAndCharacterOfPosition(jD.start).line,
+        tD = null === (HD = /Did you mean '([\w$]+)'\?/.exec(PD().flattenDiagnosticMessageText(jD.messageText, " "))) || void 0 === HD ? void 0 : HD[1];
+      QD.add(tD ? `Line ${MD+1} uses "${cD}", which is never set, so it throws there. Did you mean "${tD}"?` : `Line ${MD+1} uses "${cD}", which isn't set there, so it throws when that line runs.`);
       continue
     }
-    if (!yO.has(mz.code) || void 0 === mz.start) continue;
-    const uz = vz().flattenDiagnosticMessageText(mz.messageText, " ");
-    if (uz.includes("'string | number'")) continue;
-    const bz = mz.start + (null !== (Fz = mz.length) && void 0 !== Fz ? Fz : 0),
-      Ez = jO(lz, mz.start, bz);
-    if (!Ez) continue;
-    const nz = IO(lz, mz.start, bz),
-      iz = Ez.expression.getText(lz),
-      Oz = null !== nz && void 0 !== nz && nz.parent && vz().isPropertyAssignment(nz.parent) && nz.parent.name === nz ? nz.parent : void 0,
-      pz = (Oz ? Oz.getText(lz) : zz.slice(mz.start, bz)).replace(/\s+/g, " "),
-      qz = pz.length > 40 ? `${pz.slice(0,37)}...` : pz;
-    if (2554 === mz.code) {
-      var Jz, Az, Tz;
-      const zz = uz.match(/Expected (\S+) arguments?, but got (\d+)/),
-        bz = null !== (Jz = null === zz || void 0 === zz || null === (Az = zz[1]) || void 0 === Az ? void 0 : Az.replace("-", " to ")) && void 0 !== Jz ? Jz : "a different number of",
-        nz = Number(null !== (Tz = null === zz || void 0 === zz ? void 0 : zz[2]) && void 0 !== Tz ? Tz : Ez.arguments.length);
-      tz.add(`${iz} needs ${bz} ${"1"===bz?"value":"values"}, but this line gives it ${nz}.`);
+    if (!dS.has(jD.code) || void 0 === jD.start) continue;
+    const CD = PD().flattenDiagnosticMessageText(jD.messageText, " ");
+    if (CD.includes("'string | number'")) continue;
+    const cD = jD.start + (null !== (MD = jD.length) && void 0 !== MD ? MD : 0),
+      ID = eS(fD, jD.start, cD);
+    if (!ID) continue;
+    const pD = uS(fD, jD.start, cD),
+      iD = ID.expression.getText(fD),
+      SD = null !== pD && void 0 !== pD && pD.parent && PD().isPropertyAssignment(pD.parent) && pD.parent.name === pD ? pD.parent : void 0,
+      BD = (SD ? SD.getText(fD) : DD.slice(jD.start, cD)).replace(/\s+/g, " "),
+      lD = BD.length > 40 ? `${BD.slice(0,37)}...` : BD;
+    if (2554 === jD.code) {
+      var UD, xD, qD;
+      const DD = CD.match(/Expected (\S+) arguments?, but got (\d+)/),
+        cD = null !== (UD = null === DD || void 0 === DD || null === (xD = DD[1]) || void 0 === xD ? void 0 : xD.replace("-", " to ")) && void 0 !== UD ? UD : "a different number of",
+        pD = Number(null !== (qD = null === DD || void 0 === DD ? void 0 : DD[2]) && void 0 !== qD ? qD : ID.arguments.length);
+      QD.add(`${iD} needs ${cD} ${"1"===cD?"value":"values"}, but this line gives it ${pD}.`);
       continue
     }
-    if (2353 === mz.code) {
-      var Lz, Pz;
-      const zz = null !== (Lz = null === (Pz = uz.match(/'([^']*)' does not exist/)) || void 0 === Pz ? void 0 : Pz[1]) && void 0 !== Lz ? Lz : qz,
-        bz = null !== nz && void 0 !== nz && nz.parent && vz().isPropertyAssignment(nz.parent) ? nz.parent.parent : null === nz || void 0 === nz ? void 0 : nz.parent,
-        Ez = bz && vz().isObjectLiteralExpression(bz) ? Mz.getContextualType(bz) : void 0,
-        lz = CO(zz, Ez && !Mz.isArrayType(Mz.getNonNullableType(Ez)) ? Mz.getPropertiesOfType(Mz.getNonNullableType(Ez)).map((zz => zz.name)) : []),
-        Hz = Ez ? ` It takes ${Wb(Mz,Ez)}.` : " Check Show Docs for its settings.";
-      tz.add(`${iz} has no setting called "${zz}".${lz?` Did you mean ${lz}?`:Hz}`);
+    if (2353 === jD.code) {
+      var JD, KD;
+      const DD = null !== (JD = null === (KD = CD.match(/'([^']*)' does not exist/)) || void 0 === KD ? void 0 : KD[1]) && void 0 !== JD ? JD : lD,
+        cD = null !== pD && void 0 !== pD && pD.parent && PD().isPropertyAssignment(pD.parent) ? pD.parent.parent : null === pD || void 0 === pD ? void 0 : pD.parent,
+        ID = cD && PD().isObjectLiteralExpression(cD) ? bD.getContextualType(cD) : void 0,
+        fD = rS(DD, ID && !bD.isArrayType(bD.getNonNullableType(ID)) ? bD.getPropertiesOfType(bD.getNonNullableType(ID)).map((DD => DD.name)) : []),
+        wD = ID ? ` It takes ${sc(bD,ID)}.` : " Check Show Docs for its settings.";
+      QD.add(`${iD} has no setting called "${DD}".${fD?` Did you mean ${fD}?`:wD}`);
       continue
     }
-    const hz = null !== (Zz = null === Oz || void 0 === Oz ? void 0 : Oz.initializer) && void 0 !== Zz ? Zz : nz,
-      Uz = hz && vz().isExpression(hz) ? Mz.getContextualType(hz) : void 0,
-      cz = (null !== (Vz = Uz) && void 0 !== Vz && Vz.isUnion() ? Vz.types : Vz ? [Vz] : []).filter((zz => zz.isStringLiteral())).map((zz => zz.value)),
-      gz = uz.includes("keyof ") ? "setting" : "name",
-      Sz = null !== (Rz = null === hz || void 0 === hz ? void 0 : hz.getText(lz)) && void 0 !== Rz ? Rz : pz,
-      yz = cz.length > 0 ? null === (Kz = /^CONFIG\.([\w$]+)$/.exec(Sz)) || void 0 === Kz ? void 0 : Kz[1] : void 0;
-    if (void 0 !== yz) {
-      var Gz;
-      const uz = null === (Gz = new RegExp(`(?:^|[{,])\\s*${yz.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(zz)) || void 0 === Gz ? void 0 : Gz[2];
-      if (void 0 !== uz && !cz.includes(uz)) {
-        const zz = CO(uz, cz);
-        tz.add(`${iz} has no ${gz} called "${uz}" (${Sz}).${zz?` Did you mean ${zz}?`:""}`)
+    const LD = null !== (tD = null === SD || void 0 === SD ? void 0 : SD.initializer) && void 0 !== tD ? tD : pD,
+      TD = LD && PD().isExpression(LD) ? bD.getContextualType(LD) : void 0,
+      GD = (null !== (zD = TD) && void 0 !== zD && zD.isUnion() ? zD.types : zD ? [zD] : []).filter((DD => DD.isStringLiteral())).map((DD => DD.value)),
+      RD = CD.includes("keyof ") ? "setting" : "name",
+      kD = null !== (ZD = null === LD || void 0 === LD ? void 0 : LD.getText(fD)) && void 0 !== ZD ? ZD : BD,
+      dD = GD.length > 0 ? null === (oD = /^CONFIG\.([\w$]+)$/.exec(kD)) || void 0 === oD ? void 0 : oD[1] : void 0;
+    if (void 0 !== dD) {
+      var aD;
+      const CD = null === (aD = new RegExp(`(?:^|[{,])\\s*${dD.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(DD)) || void 0 === aD ? void 0 : aD[2];
+      if (void 0 !== CD && !GD.includes(CD)) {
+        const DD = rS(CD, GD);
+        QD.add(`${iD} has no ${RD} called "${CD}" (${kD}).${DD?` Did you mean ${DD}?`:""}`)
       }
       continue
     }
-    if (Uz && hz && eb(Mz, Mz.getTypeAtLocation(hz), Uz)) continue;
-    if (cz.length > 0) {
-      const zz = hz && vz().isStringLiteral(hz) ? hz : void 0,
-        uz = zz ? CO(zz.text, cz) : void 0,
-        bz = zz && !Oz ? `${iz} has no ${gz} called ${az=qz,az.startsWith('"')?az:`"${az}"`}.` : `${iz} can't take ${qz} there.`;
-      tz.add(`${bz}${uz?` Did you mean ${uz}?`:" Check Show Docs for what it takes."}`);
+    if (TD && LD && Ec(bD, bD.getTypeAtLocation(LD), TD)) continue;
+    if (GD.length > 0) {
+      const DD = LD && PD().isStringLiteral(LD) ? LD : void 0,
+        CD = DD ? rS(DD.text, GD) : void 0,
+        cD = DD && !SD ? `${iD} has no ${RD} called ${VD=lD,VD.startsWith('"')?VD:`"${VD}"`}.` : `${iD} can't take ${lD} there.`;
+      QD.add(`${cD}${CD?` Did you mean ${CD}?`:" Check Show Docs for what it takes."}`);
       continue
     }
-    if (Uz && hz && Qb(Mz.getTypeAtLocation(hz))) {
-      tz.add(`${iz} can't take ${qz} there: it takes ${Wb(Mz,Uz)}.`);
+    if (TD && LD && Wc(bD.getTypeAtLocation(LD))) {
+      QD.add(`${iD} can't take ${lD} there: it takes ${sc(bD,TD)}.`);
       continue
     }
-    const Dz = Uz && Mz.getNonNullableType(Uz);
-    if (Dz && Qb(Dz) && !Mz.isArrayType(Dz) && !Mz.isTupleType(Dz)) {
-      const zz = Db(Mz, Uz);
-      tz.add(`${iz} needs settings in { } there${zz?`, like ${zz}`:""}, not ${qz}.`);
+    const YD = TD && bD.getNonNullableType(TD);
+    if (YD && Wc(YD) && !bD.isArrayType(YD) && !bD.isTupleType(YD)) {
+      const DD = Yc(bD, TD);
+      QD.add(`${iD} needs settings in { } there${DD?`, like ${DD}`:""}, not ${lD}.`);
       continue
     }
-    const Qz = null === (wz = uz.match(/parameter of type '([^']*)'/)) || void 0 === wz ? void 0 : wz[1],
-      Wz = Ez.arguments.findIndex((zz => zz.getStart(lz) <= mz.start && mz.start < zz.getEnd())),
-      ez = null !== (Xz = null === (fz = Mz.getResolvedSignature(Ez)) || void 0 === fz || null === (sz = fz.parameters[Wz]) || void 0 === sz ? void 0 : sz.name) && void 0 !== Xz ? Xz : "that part",
-      jz = nz ? Mz.typeToString(Mz.getTypeAtLocation(nz)) : "",
-      Iz = "number" === jz ? "a number" : "string" === jz ? "text" : "something else";
-    "string" === Qz ? tz.add(`${iz} needs ${ez} as text, but ${qz} is ${Iz} here.`) : "number" === Qz ? tz.add(`${iz} needs ${ez} as a number, but ${qz} is ${Iz} here.`) : tz.add(`${iz} can't take ${qz} there${Uz?`: it takes ${Wb(Mz,Uz)}`:". Check Show Docs for what it takes"}.`)
+    const WD = null === (vD = CD.match(/parameter of type '([^']*)'/)) || void 0 === vD ? void 0 : vD[1],
+      sD = ID.arguments.findIndex((DD => DD.getStart(fD) <= jD.start && jD.start < DD.getEnd())),
+      ED = null !== (ND = null === (gD = bD.getResolvedSignature(ID)) || void 0 === gD || null === (XD = gD.parameters[sD]) || void 0 === XD ? void 0 : XD.name) && void 0 !== ND ? ND : "that part",
+      eD = pD ? bD.typeToString(bD.getTypeAtLocation(pD)) : "",
+      uD = "number" === eD ? "a number" : "string" === eD ? "text" : "something else";
+    "string" === WD ? QD.add(`${iD} needs ${ED} as text, but ${lD} is ${uD} here.`) : "number" === WD ? QD.add(`${iD} needs ${ED} as a number, but ${lD} is ${uD} here.`) : QD.add(`${iD} can't take ${lD} there${TD?`: it takes ${sc(bD,TD)}`:". Check Show Docs for what it takes"}.`)
   }
-  var az, Vz;
-  return [...tz, ...Ib(lz, Mz)]
+  var VD, zD;
+  return [...QD, ...uc(fD, bD)]
 }
 
-function zp(zz) {
-  return zz.replace(/^Line \d+ /, "")
+function DB(DD) {
+  return DD.replace(/^Line \d+ /, "")
 }
 
-function bp(zz) {
-  const uz = new Map;
-  for (const nz of zz.split("\n")) {
-    var bz;
-    const zz = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(nz),
-      iz = null !== (bz = null === zz || void 0 === zz ? void 0 : zz[1]) && void 0 !== bz ? bz : null === zz || void 0 === zz ? void 0 : zz[2];
-    var Ez;
-    if (iz) uz.set(iz, (null !== (Ez = uz.get(iz)) && void 0 !== Ez ? Ez : 0) + 1)
+function CB(DD) {
+  const CD = new Map;
+  for (const pD of DD.split("\n")) {
+    var cD;
+    const DD = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(pD),
+      iD = null !== (cD = null === DD || void 0 === DD ? void 0 : DD[1]) && void 0 !== cD ? cD : null === DD || void 0 === DD ? void 0 : DD[2];
+    var ID;
+    if (iD) CD.set(iD, (null !== (ID = CD.get(iD)) && void 0 !== ID ? ID : 0) + 1)
   }
-  return [...uz].flatMap((zz => {
-    let [uz, bz] = zz;
-    return bz > 1 ? [`${uz} is in the code ${bz} times, so only the last one runs. Put them together in one ${uz}.`] : []
+  return [...CD].flatMap((DD => {
+    let [CD, cD] = DD;
+    return cD > 1 ? [`${CD} is in the code ${cD} times, so only the last one runs. Put them together in one ${CD}.`] : []
   }))
 }
 
-function Ep(zz, uz) {
-  var bz, Ez, nz, iz;
-  const lz = uz.after.split("\n"),
-    Mz = zz => {
-      var uz, bz;
-      const Ez = null !== (uz = null === (bz = lz[zz]) || void 0 === bz ? void 0 : bz.trim()) && void 0 !== uz ? uz : "";
-      return "" === Ez ? void 0 : {
-        line: zz + 1,
-        text: Ez.length > 50 ? `${Ez.slice(0,47)}...` : Ez
+function cB(DD, CD) {
+  var cD, ID, pD, iD;
+  const fD = CD.after.split("\n"),
+    bD = DD => {
+      var CD, cD;
+      const ID = null !== (CD = null === (cD = fD[DD]) || void 0 === cD ? void 0 : cD.trim()) && void 0 !== CD ? CD : "";
+      return "" === ID ? void 0 : {
+        line: DD + 1,
+        text: ID.length > 50 ? `${ID.slice(0,47)}...` : ID
       }
     },
-    tz = /^Line (\d+) /.exec(zz);
-  if (tz) return Mz(Number(tz[1]) - 1);
-  const Hz = /^([\w$]+) is in the code \d+ times\b/.exec(zz);
-  if (Hz) {
-    const zz = Hz[1].replaceAll("$", "\\$"),
-      uz = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${zz}\\s*\\(|^${zz}\\s*=`),
-      bz = lz.findIndex((zz => uz.test(zz)));
-    return bz >= 0 ? Mz(bz) : void 0
+    QD = /^Line (\d+) /.exec(DD);
+  if (QD) return bD(Number(QD[1]) - 1);
+  const wD = /^([\w$]+) is in the code \d+ times\b/.exec(DD);
+  if (wD) {
+    const DD = wD[1].replaceAll("$", "\\$"),
+      CD = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${DD}\\s*\\(|^${DD}\\s*=`),
+      cD = fD.findIndex((DD => CD.test(DD)));
+    return cD >= 0 ? bD(cD) : void 0
   }
-  const Oz = null !== (bz = null === (Ez = /"([^"]+)"/.exec(zz)) || void 0 === Ez ? void 0 : Ez[1]) && void 0 !== bz ? bz : null === (nz = /^api\.[\w$]+/.exec(zz)) || void 0 === nz ? void 0 : nz[0];
-  if (!Oz) return;
-  const pz = new Set(uz.before.split("\n")),
-    dz = lz.flatMap(((zz, uz) => zz.includes(Oz) ? [uz] : [])),
-    Fz = null !== (iz = dz.find((zz => !pz.has(lz[zz])))) && void 0 !== iz ? iz : dz[0];
-  return void 0 === Fz ? void 0 : Mz(Fz)
+  const SD = null !== (cD = null === (ID = /"([^"]+)"/.exec(DD)) || void 0 === ID ? void 0 : ID[1]) && void 0 !== cD ? cD : null === (pD = /^api\.[\w$]+/.exec(DD)) || void 0 === pD ? void 0 : pD[0];
+  if (!SD) return;
+  const BD = new Set(CD.before.split("\n")),
+    yD = fD.flatMap(((DD, CD) => DD.includes(SD) ? [CD] : [])),
+    MD = null !== (iD = yD.find((DD => !BD.has(fD[DD])))) && void 0 !== iD ? iD : yD[0];
+  return void 0 === MD ? void 0 : bD(MD)
 }
 
-function np(zz) {
-  return /^Line \d+ stops all of this code from running: "/.test(zz)
+function IB(DD) {
+  return /^Line \d+ stops all of this code from running: "/.test(DD)
 }
 
-function ip(zz) {
-  return /^Line \d+ (?:stops all of this code from running|never runs): "/.test(zz)
+function pB(DD) {
+  return /^Line \d+ (?:stops all of this code from running|never runs): "/.test(DD)
 }
 
-function lp(zz) {
-  return zz.replace(/^Line \d+ (\w)/, ((zz, uz) => uz.toUpperCase()))
+function iB(DD) {
+  return DD.replace(/^Line \d+ (\w)/, ((DD, CD) => CD.toUpperCase()))
 }
-const Mp = new Set([vz().SyntaxKind.EqualsToken, vz().SyntaxKind.QuestionQuestionEqualsToken, vz().SyntaxKind.BarBarEqualsToken]);
+const fB = new Set([PD().SyntaxKind.EqualsToken, PD().SyntaxKind.QuestionQuestionEqualsToken, PD().SyntaxKind.BarBarEqualsToken]);
 
-function tp(zz) {
-  const uz = vz().createSourceFile("worldCode.js", zz, vz().ScriptTarget.Latest, !0, vz().ScriptKind.JS),
-    bz = uz.statements.flatMap((zz => vz().isVariableStatement(zz) ? zz.declarationList.declarations.filter((zz => vz().isIdentifier(zz.name) && "CONFIG" === zz.name.text)) : [])),
-    Ez = 1 === bz.length ? bz[0].initializer : void 0;
-  if (!Ez || !vz().isObjectLiteralExpression(Ez)) return [];
-  const nz = new Set;
-  for (const tz of Ez.properties) {
-    if (!vz().isPropertyAssignment(tz) && !vz().isShorthandPropertyAssignment(tz) && !vz().isMethodDeclaration(tz)) return [];
-    if (vz().isComputedPropertyName(tz.name)) return [];
-    nz.add(tz.name.text)
+function bB(DD) {
+  const CD = PD().createSourceFile("worldCode.js", DD, PD().ScriptTarget.Latest, !0, PD().ScriptKind.JS),
+    cD = CD.statements.flatMap((DD => PD().isVariableStatement(DD) ? DD.declarationList.declarations.filter((DD => PD().isIdentifier(DD.name) && "CONFIG" === DD.name.text)) : [])),
+    ID = 1 === cD.length ? cD[0].initializer : void 0;
+  if (!ID || !PD().isObjectLiteralExpression(ID)) return [];
+  const pD = new Set;
+  for (const QD of ID.properties) {
+    if (!PD().isPropertyAssignment(QD) && !PD().isShorthandPropertyAssignment(QD) && !PD().isMethodDeclaration(QD)) return [];
+    if (PD().isComputedPropertyName(QD.name)) return [];
+    pD.add(QD.name.text)
   }
-  const iz = [],
-    lz = zz => {
-      if (vz().isPropertyAccessExpression(zz) && vz().isIdentifier(zz.expression) && "CONFIG" === zz.expression.text) {
-        const bz = zz.name.text,
-          Ez = zz.parent;
-        vz().isBinaryExpression(Ez) && Ez.left === zz && Mp.has(Ez.operatorToken.kind) ? nz.add(bz) : iz.push({
-          name: bz,
-          at: zz.getStart(uz)
+  const iD = [],
+    fD = DD => {
+      if (PD().isPropertyAccessExpression(DD) && PD().isIdentifier(DD.expression) && "CONFIG" === DD.expression.text) {
+        const cD = DD.name.text,
+          ID = DD.parent;
+        PD().isBinaryExpression(ID) && ID.left === DD && fB.has(ID.operatorToken.kind) ? pD.add(cD) : iD.push({
+          name: cD,
+          at: DD.getStart(CD)
         })
       }
-      vz().forEachChild(zz, lz)
+      PD().forEachChild(DD, fD)
     };
-  lz(uz);
-  const Mz = new Set;
-  return iz.flatMap((zz => {
-    if (nz.has(zz.name) || Mz.has(zz.name)) return [];
-    Mz.add(zz.name);
-    return [`Line ${uz.getLineAndCharacterOfPosition(zz.at).line+1} uses "CONFIG.${zz.name}", but CONFIG has no ${zz.name}, so it is undefined there. Add ${zz.name} to CONFIG.`]
+  fD(CD);
+  const bD = new Set;
+  return iD.flatMap((DD => {
+    if (pD.has(DD.name) || bD.has(DD.name)) return [];
+    bD.add(DD.name);
+    return [`Line ${CD.getLineAndCharacterOfPosition(DD.at).line+1} uses "CONFIG.${DD.name}", but CONFIG has no ${DD.name}, so it is undefined there. Add ${DD.name} to CONFIG.`]
   }))
 }
 
-function Hp(zz, uz) {
-  var bz;
-  const Ez = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== uz.path && (0, Zz.e)(uz.path)),
-    nz = !0 === (null === (bz = uz.path) || void 0 === bz ? void 0 : bz.endsWith(".ts")),
-    iz = uz => [...zz.codeWarnings(uz, Ez), ...kO(uz, Ez, nz), ...bp(uz), ...tp(uz)],
-    lz = new Set(iz(uz.before).map(zp));
-  return iz(uz.after).filter((zz => !lz.has(zp(zz))))
+function QB(DD, CD) {
+  var cD;
+  const ID = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== CD.path && (0, tD.d)(CD.path)),
+    pD = !0 === (null === (cD = CD.path) || void 0 === cD ? void 0 : cD.endsWith(".ts")),
+    iD = CD => [...DD.codeWarnings(CD, ID), ...FS(CD, ID, pD), ...CB(CD), ...bB(CD)],
+    fD = new Set(iD(CD.before).map(DB));
+  return iD(CD.after).filter((DD => !fD.has(DB(DD))))
 }
-const Op = "Looking up";
+const wB = "Looking up";
 
-function pp(zz) {
+function SB(DD) {
   return {
-    ...zz,
+    ...DD,
     call: void 0
   }
 }
-const dp = 15e3,
-  Fp = new Map;
-const Zp = function(zz) {
-    let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
-    if ("undefined" === typeof indexedDB) return zz;
-    let bz = "unknown",
-      Ez = null;
-    const nz = () => (Ez ??= new Promise(((zz, bz) => {
-        const nz = indexedDB.open(uz, 1);
-        nz.onupgradeneeded = () => {
-          nz.result.createObjectStore(MH)
-        }, nz.onsuccess = () => {
-          const uz = nz.result;
-          uz.onversionchange = () => {
-            uz.close(), Ez = null
-          }, uz.onclose = () => {
-            Ez = null
-          }, zz(uz)
-        }, nz.onerror = () => {
-          var zz;
-          bz(null !== (zz = nz.error) && void 0 !== zz ? zz : new Error("IndexedDB didn't open"))
-        }, nz.onblocked = () => {
-          bz(new Error("IndexedDB is blocked"))
+const BB = 15e3,
+  yB = new Map;
+const MB = function(DD) {
+    let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
+    if ("undefined" === typeof indexedDB) return DD;
+    let cD = "unknown",
+      ID = null;
+    const pD = () => (ID ??= new Promise(((DD, cD) => {
+        const pD = indexedDB.open(CD, 1);
+        pD.onupgradeneeded = () => {
+          pD.result.createObjectStore(bw)
+        }, pD.onsuccess = () => {
+          const CD = pD.result;
+          CD.onversionchange = () => {
+            CD.close(), ID = null
+          }, CD.onclose = () => {
+            ID = null
+          }, DD(CD)
+        }, pD.onerror = () => {
+          var DD;
+          cD(null !== (DD = pD.error) && void 0 !== DD ? DD : new Error("IndexedDB didn't open"))
+        }, pD.onblocked = () => {
+          cD(new Error("IndexedDB is blocked"))
         }
-      })).catch((zz => {
-        throw Ez = null, zz
-      })), Ez),
-      iz = async zz => {
+      })).catch((DD => {
+        throw ID = null, DD
+      })), ID),
+      iD = async DD => {
         try {
-          return (await nz()).transaction(MH, zz)
-        } catch (uz) {
-          if ("indexedDB" !== bz) throw uz;
-          return Ez = null, (await nz()).transaction(MH, zz)
+          return (await pD()).transaction(bw, DD)
+        } catch (CD) {
+          if ("indexedDB" !== cD) throw CD;
+          return ID = null, (await pD()).transaction(bw, DD)
         }
-      }, lz = async () => {
-        if ("unknown" === bz) try {
-          await nz(), bz = "indexedDB"
+      }, fD = async () => {
+        if ("unknown" === cD) try {
+          await pD(), cD = "indexedDB"
         } catch {
-          bz = "fallback"
+          cD = "fallback"
         }
-        return "indexedDB" === bz
+        return "indexedDB" === cD
       };
     return {
-      getItem: async uz => {
-        if (!await lz()) return zz.getItem(uz);
-        const bz = await (async zz => {
-          const uz = await iz("readonly"),
-            bz = uz.objectStore(MH).get(zz);
-          return await tH(uz), bz.result
-        })(uz);
-        return void 0 === bz ? zz.getItem(uz) : bz
+      getItem: async CD => {
+        if (!await fD()) return DD.getItem(CD);
+        const cD = await (async DD => {
+          const CD = await iD("readonly"),
+            cD = CD.objectStore(bw).get(DD);
+          return await Qw(CD), cD.result
+        })(CD);
+        return void 0 === cD ? DD.getItem(CD) : cD
       },
-      setItem: async (uz, bz) => {
-        if (!await lz()) return zz.setItem(uz, bz);
+      setItem: async (CD, cD) => {
+        if (!await fD()) return DD.setItem(CD, cD);
         try {
-          const zz = await iz("readwrite");
-          return zz.objectStore(MH).put(bz, uz), await tH(zz), !0
+          const DD = await iD("readwrite");
+          return DD.objectStore(bw).put(cD, CD), await Qw(DD), !0
         } catch {
           return !1
         }
       },
-      update: async (uz, bz) => {
-        if (!await lz()) throw new Error("No IndexedDB: read and write localforage instead");
-        const Ez = await zz.getItem(uz).catch((() => null)),
-          nz = await iz("readwrite"),
-          Mz = nz.objectStore(MH);
-        let tz;
-        const Hz = Mz.get(uz);
-        return Hz.onsuccess = () => {
-          tz = bz(void 0 === Hz.result ? Ez : Hz.result), Mz.put(tz, uz)
-        }, await tH(nz), tz
+      update: async (CD, cD) => {
+        if (!await fD()) throw new Error("No IndexedDB: read and write localforage instead");
+        const ID = await DD.getItem(CD).catch((() => null)),
+          pD = await iD("readwrite"),
+          bD = pD.objectStore(bw);
+        let QD;
+        const wD = bD.get(CD);
+        return wD.onsuccess = () => {
+          QD = cD(void 0 === wD.result ? ID : wD.result), bD.put(QD, CD)
+        }, await Qw(pD), QD
       }
     }
-  }(yi.d),
-  Rp = new class {
-    constructor(zz, uz) {
-      this.store = zz, this.signal = uz, this.MZ = new Map
+  }(Gi.f),
+  tB = new class {
+    constructor(DD, CD) {
+      this.store = DD, this.signal = CD, this.uM = new Map
     }
-    watch(zz, uz) {
-      var bz, Ez;
-      return null !== (bz = null === (Ez = this.signal) || void 0 === Ez ? void 0 : Ez.listen((bz => {
-        if (bz !== zz) return;
-        const Ez = this.load(zz).then((async uz => FH(uz, await this.read(zz))));
-        this.MZ.set(zz, Ez), Ez.then(uz)
-      }))) && void 0 !== bz ? bz : () => {}
+    watch(DD, CD) {
+      var cD, ID;
+      return null !== (cD = null === (ID = this.signal) || void 0 === ID ? void 0 : ID.listen((cD => {
+        if (cD !== DD) return;
+        const ID = this.load(DD).then((async CD => Mw(CD, await this.read(DD))));
+        this.uM.set(DD, ID), ID.then(CD)
+      }))) && void 0 !== cD ? cD : () => {}
     }
-    list(zz) {
-      return this.load(zz)
+    list(DD) {
+      return this.load(DD)
     }
-    async add(zz, uz, bz) {
-      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
-        nz = arguments.length > 4 ? arguments[4] : void 0;
-      const iz = (zz, iz) => {
-          const lz = FH(zz, iz),
-            Mz = lz[lz.length - 1];
-          if (Mz && function(zz, uz) {
-              const bz = Object.keys(zz);
-              return bz.length === Object.keys(uz).length && bz.every((bz => zz[bz] === uz[bz]))
-            }(Mz.files, bz)) return lz;
-          const tz = Math.max(Ez, ...lz.map((zz => zz.id + 1)));
-          return [...lz, {
-            id: tz,
-            at: Ez,
-            label: uz,
-            ...nz ? {
-              did: nz
+    async add(DD, CD, cD) {
+      let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
+        pD = arguments.length > 4 ? arguments[4] : void 0;
+      const iD = (DD, iD) => {
+          const fD = Mw(DD, iD),
+            bD = fD[fD.length - 1];
+          if (bD && function(DD, CD) {
+              const cD = Object.keys(DD);
+              return cD.length === Object.keys(CD).length && cD.every((cD => DD[cD] === CD[cD]))
+            }(bD.files, cD)) return fD;
+          const QD = Math.max(ID, ...fD.map((DD => DD.id + 1)));
+          return [...fD, {
+            id: QD,
+            at: ID,
+            label: CD,
+            ...pD ? {
+              did: pD
             } : {},
             files: {
-              ...bz
+              ...cD
             }
           }].slice(-30)
         },
-        lz = this.load(zz).then((async uz => this.save(zz, (zz => iz(uz, zz)))));
-      this.MZ.set(zz, lz.then((zz => {
+        fD = this.load(DD).then((async CD => this.save(DD, (DD => iD(CD, DD)))));
+      this.uM.set(DD, fD.then((DD => {
         let {
-          snapshots: uz
-        } = zz;
-        return uz
+          snapshots: CD
+        } = DD;
+        return CD
       })));
       const {
-        snapshots: Mz,
-        isSaved: tz
-      } = await lz;
-      var Hz;
-      tz && (null === (Hz = this.signal) || void 0 === Hz || Hz.post(zz));
-      return Mz
+        snapshots: bD,
+        isSaved: QD
+      } = await fD;
+      var wD;
+      QD && (null === (wD = this.signal) || void 0 === wD || wD.post(DD));
+      return bD
     }
-    async relabel(zz, uz, bz) {
-      const Ez = this.load(zz).then((async Ez => this.save(zz, (zz => FH(Ez, zz).map((zz => zz.id === uz ? {
-        ...zz,
-        label: bz
-      } : zz))))));
-      this.MZ.set(zz, Ez.then((zz => {
+    async relabel(DD, CD, cD) {
+      const ID = this.load(DD).then((async ID => this.save(DD, (DD => Mw(ID, DD).map((DD => DD.id === CD ? {
+        ...DD,
+        label: cD
+      } : DD))))));
+      this.uM.set(DD, ID.then((DD => {
         let {
-          snapshots: uz
-        } = zz;
-        return uz
+          snapshots: CD
+        } = DD;
+        return CD
       })));
       const {
-        snapshots: nz,
-        isSaved: iz
-      } = await Ez;
-      var lz;
-      iz && (null === (lz = this.signal) || void 0 === lz || lz.post(zz));
-      return nz
+        snapshots: pD,
+        isSaved: iD
+      } = await ID;
+      var fD;
+      iD && (null === (fD = this.signal) || void 0 === fD || fD.post(DD));
+      return pD
     }
-    async save(zz, uz) {
+    async save(DD, CD) {
       if (this.store.update) try {
         return {
-          snapshots: await this.store.update(this.storeKey(zz), (zz => uz(dH(zz) ? zz : null))),
+          snapshots: await this.store.update(this.storeKey(DD), (DD => CD(yw(DD) ? DD : null))),
           isSaved: !0
         }
       } catch {}
-      const bz = uz(await this.read(zz));
+      const cD = CD(await this.read(DD));
       return {
-        snapshots: bz,
-        isSaved: await this.store.setItem(this.storeKey(zz), bz).catch((() => !1))
+        snapshots: cD,
+        isSaved: await this.store.setItem(this.storeKey(DD), cD).catch((() => !1))
       }
     }
-    read(zz) {
-      return this.store.getItem(this.storeKey(zz)).then((zz => dH(zz) ? zz : null)).catch((() => null))
+    read(DD) {
+      return this.store.getItem(this.storeKey(DD)).then((DD => yw(DD) ? DD : null)).catch((() => null))
     }
-    load(zz) {
-      let uz = this.MZ.get(zz);
-      return uz || (uz = this.store.getItem(this.storeKey(zz)).then((zz => dH(zz) ? zz : [])).catch((() => [])), this.MZ.set(zz, uz)), uz
+    load(DD) {
+      let CD = this.uM.get(DD);
+      return CD || (CD = this.store.getItem(this.storeKey(DD)).then((DD => yw(DD) ? DD : [])).catch((() => [])), this.uM.set(DD, CD)), CD
     }
-    storeKey(zz) {
-      return `worldCodeAiHistory:${zz}`
+    storeKey(DD) {
+      return `worldCodeAiHistory:${DD}`
     }
-  }(Zp, pH("bloxd-worldCodeAiHistory")),
-  Kp = new class {
-    constructor(zz, uz) {
-      this.store = zz, this.signal = uz, this.MZ = new Map
+  }(MB, Bw("bloxd-worldCodeAiHistory")),
+  ZB = new class {
+    constructor(DD, CD) {
+      this.store = DD, this.signal = CD, this.uM = new Map
     }
-    watch(zz, uz) {
-      var bz, Ez;
-      return null !== (bz = null === (Ez = this.signal) || void 0 === Ez ? void 0 : Ez.listen((bz => {
-        if (bz !== zz) return;
-        const Ez = this.load(zz).then((async uz => {
-          var bz;
-          return null !== (bz = await this.read(zz)) && void 0 !== bz ? bz : uz
+    watch(DD, CD) {
+      var cD, ID;
+      return null !== (cD = null === (ID = this.signal) || void 0 === ID ? void 0 : ID.listen((cD => {
+        if (cD !== DD) return;
+        const ID = this.load(DD).then((async CD => {
+          var cD;
+          return null !== (cD = await this.read(DD)) && void 0 !== cD ? cD : CD
         }));
-        this.MZ.set(zz, Ez), Ez.then(uz)
-      }))) && void 0 !== bz ? bz : () => {}
+        this.uM.set(DD, ID), ID.then(CD)
+      }))) && void 0 !== cD ? cD : () => {}
     }
-    list(zz) {
-      return this.load(zz)
+    list(DD) {
+      return this.load(DD)
     }
-    add(zz, uz) {
-      return this.update(zz, (zz => zz.includes(uz) || zz.length >= 8 ? zz : [...zz, uz]))
+    add(DD, CD) {
+      return this.update(DD, (DD => DD.includes(CD) || DD.length >= 8 ? DD : [...DD, CD]))
     }
-    remove(zz, uz) {
-      return this.update(zz, (zz => zz.filter((zz => zz !== uz))))
+    remove(DD, CD) {
+      return this.update(DD, (DD => DD.filter((DD => DD !== CD))))
     }
-    async update(zz, uz) {
-      var bz;
-      const Ez = this.load(zz).then((async bz => {
-        var Ez;
+    async update(DD, CD) {
+      var cD;
+      const ID = this.load(DD).then((async cD => {
+        var ID;
         if (this.store.update) try {
-          return await this.store.update(this.storeKey(zz), (zz => uz(lu(zz) ? zz.slice(0, 8) : bz)))
+          return await this.store.update(this.storeKey(DD), (DD => CD(fC(DD) ? DD.slice(0, 8) : cD)))
         } catch {}
-        const nz = uz(null !== (Ez = await this.read(zz)) && void 0 !== Ez ? Ez : bz);
-        return await this.store.setItem(this.storeKey(zz), nz).catch((() => !1)), nz
+        const pD = CD(null !== (ID = await this.read(DD)) && void 0 !== ID ? ID : cD);
+        return await this.store.setItem(this.storeKey(DD), pD).catch((() => !1)), pD
       }));
-      this.MZ.set(zz, Ez);
-      const nz = await Ez;
-      return null === (bz = this.signal) || void 0 === bz || bz.post(zz), nz
+      this.uM.set(DD, ID);
+      const pD = await ID;
+      return null === (cD = this.signal) || void 0 === cD || cD.post(DD), pD
     }
-    read(zz) {
-      return this.store.getItem(this.storeKey(zz)).then((zz => lu(zz) ? zz.slice(0, 8) : null)).catch((() => null))
+    read(DD) {
+      return this.store.getItem(this.storeKey(DD)).then((DD => fC(DD) ? DD.slice(0, 8) : null)).catch((() => null))
     }
-    load(zz) {
-      let uz = this.MZ.get(zz);
-      return uz || (uz = this.read(zz).then((zz => null !== zz && void 0 !== zz ? zz : [])), this.MZ.set(zz, uz)), uz
+    load(DD) {
+      let CD = this.uM.get(DD);
+      return CD || (CD = this.read(DD).then((DD => null !== DD && void 0 !== DD ? DD : [])), this.uM.set(DD, CD)), CD
     }
-    storeKey(zz) {
-      return `worldCodeAiNotes:${zz}`
+    storeKey(DD) {
+      return `worldCodeAiNotes:${DD}`
     }
-  }(Zp, pH("bloxd-worldCodeAiNotes"));
-const wp = ["Next in line", "2nd in line", "3rd in line"];
-let Xp = null;
+  }(MB, Bw("bloxd-worldCodeAiNotes"));
+const oB = ["Next in line", "2nd in line", "3rd in line"];
+let vB = null;
 
-function fp() {
-  if (!Xp) {
-    var zz, uz, bz, Ez;
-    const nz = zz => Fz.d.find((uz => uz.id === zz)),
-      iz = zz => {
-        var uz, bz;
-        return null !== (uz = null === (bz = nz(zz)) || void 0 === bz ? void 0 : bz.content) && void 0 !== uz ? uz : ""
+function NB() {
+  if (!vB) {
+    var DD, CD, cD, ID;
+    const pD = DD => MD.c.find((CD => CD.id === DD)),
+      iD = DD => {
+        var CD, cD;
+        return null !== (CD = null === (cD = pD(DD)) || void 0 === cD ? void 0 : cD.content) && void 0 !== CD ? CD : ""
       };
-    Xp = new ut({
-      apiReference: iz("apiReference"),
-      callbacks: iz("callbacks"),
-      clientOptions: iz("clientOptions"),
-      snippets: iz("snippets"),
-      howTo: iz("howTo"),
-      itemNames: null !== (zz = null === (uz = nz("itemNames")) || void 0 === uz ? void 0 : uz.raw) && void 0 !== zz ? zz : "",
-      blockNames: null !== (bz = null === (Ez = nz("blockNames")) || void 0 === Ez ? void 0 : Ez.raw) && void 0 !== bz ? bz : "",
-      mobSettings: iz("mobSettings")
+    vB = new CQ({
+      apiReference: iD("apiReference"),
+      callbacks: iD("callbacks"),
+      clientOptions: iD("clientOptions"),
+      snippets: iD("snippets"),
+      howTo: iD("howTo"),
+      itemNames: null !== (DD = null === (CD = pD("itemNames")) || void 0 === CD ? void 0 : CD.raw) && void 0 !== DD ? DD : "",
+      blockNames: null !== (cD = null === (ID = pD("blockNames")) || void 0 === ID ? void 0 : ID.raw) && void 0 !== cD ? cD : "",
+      mobSettings: iD("mobSettings")
     })
   }
-  return Xp
+  return vB
 }
-const sp = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
-  rp = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
-  op = ["Explain these changes", "Make it simpler"],
-  Np = ["Make the change"],
-  vp = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
-  xp = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
+const gB = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
+  XB = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
+  mB = ["Explain these changes", "Make it simpler"],
+  nB = ["Make the change"],
+  OB = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
+  PB = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
 
-function Jp(zz) {
+function HB(DD) {
   let {
-    requests: uz,
-    onPick: bz
-  } = zz;
-  const nz = (0, Ez.useRef)(null);
-  var iz;
-  return iz = nz, (0, Ez.useLayoutEffect)((() => {
-    const zz = iz.current,
-      uz = null === zz || void 0 === zz ? void 0 : zz.closest(".WorldCodeAiMessages");
-    if (!zz || !uz) return;
-    const bz = () => {
-      const bz = uz.getBoundingClientRect().bottom;
-      for (const uz of Array.from(zz.children)) {
-        const zz = uz.getBoundingClientRect();
-        uz.style.visibility = zz.top < bz && zz.bottom > bz + 1 ? "hidden" : ""
+    requests: CD,
+    onPick: cD
+  } = DD;
+  const pD = (0, ID.useRef)(null);
+  var iD;
+  return iD = pD, (0, ID.useLayoutEffect)((() => {
+    const DD = iD.current,
+      CD = null === DD || void 0 === DD ? void 0 : DD.closest(".WorldCodeAiMessages");
+    if (!DD || !CD) return;
+    const cD = () => {
+      const cD = CD.getBoundingClientRect().bottom;
+      for (const CD of Array.from(DD.children)) {
+        const DD = CD.getBoundingClientRect();
+        CD.style.visibility = DD.top < cD && DD.bottom > cD + 1 ? "hidden" : ""
       }
     };
-    bz(), uz.addEventListener("scroll", bz, {
+    cD(), CD.addEventListener("scroll", cD, {
       passive: !0
     });
-    const Ez = "function" === typeof ResizeObserver ? new ResizeObserver(bz) : null;
-    return null === Ez || void 0 === Ez || Ez.observe(uz), null === Ez || void 0 === Ez || Ez.observe(zz), () => {
-      uz.removeEventListener("scroll", bz), null === Ez || void 0 === Ez || Ez.disconnect()
+    const ID = "function" === typeof ResizeObserver ? new ResizeObserver(cD) : null;
+    return null === ID || void 0 === ID || ID.observe(CD), null === ID || void 0 === ID || ID.observe(DD), () => {
+      CD.removeEventListener("scroll", cD), null === ID || void 0 === ID || ID.disconnect()
     }
-  }), [iz]), (0, lz.jsx)("div", {
-    ref: nz,
+  }), [iD]), (0, fD.jsx)("div", {
+    ref: pD,
     className: "WorldCodeAiChips WorldCodeAiFollowUps",
-    children: uz.map((zz => (0, Ez.createElement)("button", {
-      ...ft.f,
-      key: zz,
+    children: CD.map((DD => (0, ID.createElement)("button", {
+      ...gQ.e,
+      key: DD,
       className: "WorldCodeAiChip",
       onClick: () => {
-        bz(zz)
+        cD(DD)
       }
-    }, function(zz) {
-      const uz = zz.replace(/^It didn't work: /, "").replace(/\.$/, "");
-      return uz.charAt(0).toUpperCase() + uz.slice(1)
-    }(zz))))
+    }, function(DD) {
+      const CD = DD.replace(/^It didn't work: /, "").replace(/\.$/, "");
+      return CD.charAt(0).toUpperCase() + CD.slice(1)
+    }(DD))))
   })
 }
 
-function Ap(zz) {
+function UB(DD) {
   let {
-    useFree: uz,
-    retryOf: bz,
-    isAutoFix: Ez,
-    lookupOf: nz
-  } = zz;
-  return !0 !== uz && (void 0 !== bz || !0 !== Ez && void 0 === nz)
+    useFree: CD,
+    retryOf: cD,
+    isAutoFix: ID,
+    lookupOf: pD
+  } = DD;
+  return !0 !== CD && (void 0 !== cD || !0 !== ID && void 0 === pD)
 }
 
-function Tp() {
+function xB() {
   return "The world's blocks can't be seen from here."
 }
 
-function Lp() {
+function qB() {
   return "The world can't be seen from here."
 }
-const Pp = "Try the missing change again",
-  Gp = 1e4,
-  ap = "I can only help with your game's code. Try asking about something in your world.";
+const JB = "Try the missing change again",
+  KB = 1e4,
+  aB = "I can only help with your game's code. Try asking about something in your world.";
 
-function Vp(zz) {
-  return zz ? "Apply this change first, then press Switch to World Code." : "Apply this change first, then ask me again to go to World Code."
+function VB(DD) {
+  return DD ? "Apply this change first, then press Switch to World Code." : "Apply this change first, then ask me again to go to World Code."
 }
-const mp = 1500;
+const zB = 1500;
 
-function qp(zz, uz) {
-  var bz;
-  return Object.entries(null !== (bz = zz.leftFiles) && void 0 !== bz ? bz : {}).every((zz => {
-    var bz;
-    let [Ez, nz] = zz;
-    return (null !== (bz = uz[Ez]) && void 0 !== bz ? bz : "") === nz
+function jB(DD, CD) {
+  var cD;
+  return Object.entries(null !== (cD = DD.leftFiles) && void 0 !== cD ? cD : {}).every((DD => {
+    var cD;
+    let [ID, pD] = DD;
+    return (null !== (cD = CD[ID]) && void 0 !== cD ? cD : "") === pD
   }))
 }
-const hp = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
+const lB = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
 
-function Up(zz) {
-  var uz, bz, nz, tz, Hz, Oz, pz, dz;
+function LB(DD) {
+  var CD, cD, pD, QD, wD, SD, BD, yD;
   let {
-    entry: Fz,
-    isOutOfDate: Zz = !1,
-    canEdit: Rz,
-    onApply: Kz,
-    onUndo: wz,
-    onTryIt: Xz,
-    isLatest: fz,
-    canUndo: sz,
-    onFixWarnings: rz,
-    onCheck: oz,
-    busy: Nz,
-    checkPicked: vz,
-    onPickedChange: xz,
-    request: Jz,
-    elsewhere: Az,
-    defaultOpen: Tz
-  } = zz;
-  const Lz = "offered" === Fz.status && Zz ? "stale" : Fz.status,
-    [Pz, Gz] = (0, Ez.useState)(Tz),
-    [az, Vz] = (0, Ez.useState)(!1),
-    mz = null !== (uz = Fz.warnings) && void 0 !== uz ? uz : [],
-    qz = fz && ("offered" === Lz || "applied" === Lz) && Rz && mz.length > 0 && !Fz.warningsSentBack,
-    hz = "applied" === Lz,
-    Uz = null !== (bz = null === (nz = Fz.swappedTo) || void 0 === nz ? void 0 : nz[0]) && void 0 !== bz ? bz : qz ? null !== (tz = null === (Hz = /"([^"]+)"/.exec(mz[0])) || void 0 === Hz ? void 0 : Hz[1]) && void 0 !== tz ? tz : null === (Oz = /^api\.[\w$]+/.exec(mz[0])) || void 0 === Oz ? void 0 : Oz[0] : void 0,
-    cz = mz.every((zz => /never true|no block is ever called that/.test(zz))),
-    gz = (0, Ez.useMemo)((() => {
-      var zz;
-      const [uz] = Fz.changes;
-      return new Map((null !== (zz = Fz.warnings) && void 0 !== zz ? zz : []).map((zz => [zz, 1 === Fz.changes.length && uz ? Ep(zz, uz) : void 0])))
-    }), [Fz.warnings, Fz.changes]),
-    Sz = 1 === mz.length ? gz.get(mz[0]) : void 0,
-    [yz, Dz] = (0, Ez.useState)(new Set),
-    Qz = yz.size > 0;
-  (0, Ez.useEffect)((() => {
-    null === xz || void 0 === xz || xz(Qz)
-  }), [Qz, xz]), (0, Ez.useEffect)((() => {
-    Dz((zz => 0 === zz.size ? zz : new Set))
-  }), [Fz.changes]);
-  const Wz = "offered" === Lz && Rz && Fz.id >= 0,
-    ez = (0, Ez.useMemo)((() => new Map(Fz.changes.map((zz => [zz.path, lO(zz, Jz)])))), [Fz.changes, Jz]),
-    jz = [...ez.values()].reduce(((zz, uz) => zz + uz.length), 0),
-    Iz = Wz && jz >= 2,
-    [Bz, Cz] = (0, Ez.useState)(!1),
-    Yz = "applied" === Lz && jz >= 2,
-    kz = jz - yz.size,
-    zu = (0, Ez.useMemo)((() => {
-      if (0 !== yz.size) return Fz.changes.flatMap((zz => {
-        var uz;
-        const bz = new Set((null !== (uz = ez.get(zz.path)) && void 0 !== uz ? uz : []).filter((uz => !yz.has(`${zz.path}:${uz.index}`))).map((zz => zz.index))),
-          Ez = function(zz, uz) {
-            const bz = BH(zz.before, zz.after),
-              Ez = bz.flatMap((zz => "same" === zz.kind ? [zz.text] : uz.has(zz.index) ? zz.added : zz.removed));
-            if (0 === Ez.length) return "";
-            const nz = (bz.every((zz => "same" === zz.kind || uz.has(zz.index))) ? zz.after : zz.before).endsWith("\n") ? "\n" : "";
-            return `${Ez.join("\n")}${nz}`
-          }(zz, bz);
-        return Ez === zz.before ? [] : [{
-          ...zz,
-          after: Ez
+    entry: MD,
+    isOutOfDate: tD = !1,
+    canEdit: ZD,
+    onApply: oD,
+    onUndo: vD,
+    onTryIt: ND,
+    isLatest: gD,
+    canUndo: XD,
+    onFixWarnings: mD,
+    onCheck: nD,
+    busy: OD,
+    checkPicked: PD,
+    onPickedChange: HD,
+    request: UD,
+    elsewhere: xD,
+    defaultOpen: qD
+  } = DD;
+  const JD = "offered" === MD.status && tD ? "stale" : MD.status,
+    [KD, aD] = (0, ID.useState)(qD),
+    [VD, zD] = (0, ID.useState)(!1),
+    jD = null !== (CD = MD.warnings) && void 0 !== CD ? CD : [],
+    lD = gD && ("offered" === JD || "applied" === JD) && ZD && jD.length > 0 && !MD.warningsSentBack,
+    LD = "applied" === JD,
+    TD = null !== (cD = null === (pD = MD.swappedTo) || void 0 === pD ? void 0 : pD[0]) && void 0 !== cD ? cD : lD ? null !== (QD = null === (wD = /"([^"]+)"/.exec(jD[0])) || void 0 === wD ? void 0 : wD[1]) && void 0 !== QD ? QD : null === (SD = /^api\.[\w$]+/.exec(jD[0])) || void 0 === SD ? void 0 : SD[0] : void 0,
+    GD = jD.every((DD => /never true|no block is ever called that/.test(DD))),
+    RD = (0, ID.useMemo)((() => {
+      var DD;
+      const [CD] = MD.changes;
+      return new Map((null !== (DD = MD.warnings) && void 0 !== DD ? DD : []).map((DD => [DD, 1 === MD.changes.length && CD ? cB(DD, CD) : void 0])))
+    }), [MD.warnings, MD.changes]),
+    kD = 1 === jD.length ? RD.get(jD[0]) : void 0,
+    [dD, YD] = (0, ID.useState)(new Set),
+    WD = dD.size > 0;
+  (0, ID.useEffect)((() => {
+    null === HD || void 0 === HD || HD(WD)
+  }), [WD, HD]), (0, ID.useEffect)((() => {
+    YD((DD => 0 === DD.size ? DD : new Set))
+  }), [MD.changes]);
+  const sD = "offered" === JD && ZD && MD.id >= 0,
+    ED = (0, ID.useMemo)((() => new Map(MD.changes.map((DD => [DD.path, fS(DD, UD)])))), [MD.changes, UD]),
+    eD = [...ED.values()].reduce(((DD, CD) => DD + CD.length), 0),
+    uD = sD && eD >= 2,
+    [hD, rD] = (0, ID.useState)(!1),
+    AD = "applied" === JD && eD >= 2,
+    FD = eD - dD.size,
+    DC = (0, ID.useMemo)((() => {
+      if (0 !== dD.size) return MD.changes.flatMap((DD => {
+        var CD;
+        const cD = new Set((null !== (CD = ED.get(DD.path)) && void 0 !== CD ? CD : []).filter((CD => !dD.has(`${DD.path}:${CD.index}`))).map((DD => DD.index))),
+          ID = function(DD, CD) {
+            const cD = hw(DD.before, DD.after),
+              ID = cD.flatMap((DD => "same" === DD.kind ? [DD.text] : CD.has(DD.index) ? DD.added : DD.removed));
+            if (0 === ID.length) return "";
+            const pD = (cD.every((DD => "same" === DD.kind || CD.has(DD.index))) ? DD.after : DD.before).endsWith("\n") ? "\n" : "";
+            return `${ID.join("\n")}${pD}`
+          }(DD, cD);
+        return ID === DD.before ? [] : [{
+          ...DD,
+          after: ID
         }]
       }))
-    }), [Fz.changes, ez, yz]),
-    uu = (0, Ez.useMemo)((() => zu && vz ? vz(zu) : []), [zu, vz]);
-  (0, Ez.useEffect)((() => {
-    "applied" === Lz && Gz(!1)
-  }), [Lz]);
-  const bu = !!Fz.editedInPlace;
-  (0, Ez.useEffect)((() => {
-    bu || "offered" !== Fz.status || Gz(!0)
-  }), [bu, Fz.status]);
-  const Eu = Fz.changes.map((zz => zz.path)).join(", "),
-    nu = !bu || qz || uu.length > 0 || "undone" === Lz || "stale" === Lz;
-  return (0, lz.jsxs)("div", {
+    }), [MD.changes, ED, dD]),
+    CC = (0, ID.useMemo)((() => DC && PD ? PD(DC) : []), [DC, PD]);
+  (0, ID.useEffect)((() => {
+    "applied" === JD && aD(!1)
+  }), [JD]);
+  const cC = !!MD.editedInPlace;
+  (0, ID.useEffect)((() => {
+    cC || "offered" !== MD.status || aD(!0)
+  }), [cC, MD.status]);
+  const IC = MD.changes.map((DD => DD.path)).join(", "),
+    pC = !cC || lD || CC.length > 0 || "undone" === JD || "stale" === JD;
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, lz.jsx)(Mz, {
+    children: [(0, fD.jsx)(bD, {
       className: "WorldCodeAiChangeLog",
-      title: bu ? `Editing code: ${Eu}` : `Code change: ${Eu}`,
+      title: cC ? `Editing code: ${IC}` : `Code change: ${IC}`,
       isCalm: !0,
-      isElsewhere: !!Az,
-      isOpen: Pz,
-      onToggle: Gz,
-      children: (0, lz.jsx)("div", {
+      isElsewhere: !!xD,
+      isOpen: KD,
+      onToggle: aD,
+      children: (0, fD.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: Fz.changes.map((zz => {
-          var uz, bz;
+        children: MD.changes.map((DD => {
+          var CD, cD;
           const {
-            added: Ez,
-            removed: nz
-          } = function(zz) {
-            let uz = 0,
-              bz = 0;
-            for (const Ez of eE(zz.before, zz.after)) "added" === Ez.kind ? uz++ : "removed" === Ez.kind && bz++;
+            added: ID,
+            removed: pD
+          } = function(DD) {
+            let CD = 0,
+              cD = 0;
+            for (const ID of EI(DD.before, DD.after)) "added" === ID.kind ? CD++ : "removed" === ID.kind && cD++;
             return {
-              added: uz,
-              removed: bz
+              added: CD,
+              removed: cD
             }
-          }(zu ? null !== (uz = zu.find((uz => uz.path === zz.path))) && void 0 !== uz ? uz : {
-            ...zz,
-            after: zz.before
-          } : zz), iz = null !== (bz = ez.get(zz.path)) && void 0 !== bz ? bz : [], Mz = "offered" !== Lz && "applied" !== Lz || "" === zz.before ? [] : function(zz, uz) {
-            const bz = qH(uz);
-            return [...qH(zz)].filter((zz => !bz.has(zz)))
-          }(zz.before, zz.after);
-          return (0, lz.jsxs)("div", {
+          }(DC ? null !== (CD = DC.find((CD => CD.path === DD.path))) && void 0 !== CD ? CD : {
+            ...DD,
+            after: DD.before
+          } : DD), iD = null !== (cD = ED.get(DD.path)) && void 0 !== cD ? cD : [], bD = "offered" !== JD && "applied" !== JD || "" === DD.before ? [] : function(DD, CD) {
+            const cD = lw(CD);
+            return [...lw(DD)].filter((DD => !cD.has(DD)))
+          }(DD.before, DD.after);
+          return (0, fD.jsxs)("div", {
             className: "WorldCodeAiChange",
-            children: [(0, lz.jsxs)("div", {
+            children: [(0, fD.jsxs)("div", {
               className: "WorldCodeAiChangeHeader",
-              children: [(0, lz.jsx)("span", {
+              children: [(0, fD.jsx)("span", {
                 className: "WorldCodeAiChangePath",
-                children: zz.path
-              }), Ez > 0 && (0, lz.jsx)("span", {
+                children: DD.path
+              }), ID > 0 && (0, fD.jsx)("span", {
                 className: "WorldCodeAiAdded",
-                children: 1 === Ez ? "1 line added" : `${Ez} lines added`
-              }), nz > 0 && (0, lz.jsxs)("span", {
+                children: 1 === ID ? "1 line added" : `${ID} lines added`
+              }), pD > 0 && (0, fD.jsxs)("span", {
                 className: "WorldCodeAiRemoved",
-                children: [nz, " removed"]
+                children: [pD, " removed"]
               })]
-            }), Iz && (0, lz.jsx)("ul", {
+            }), uD && (0, fD.jsx)("ul", {
               className: "WorldCodeAiHunks",
-              children: iz.map((uz => {
-                const bz = `${zz.path}:${uz.index}`,
-                  Ez = [uz.added.length > 0 ? `+${uz.added.length}` : "", uz.removed.length > 0 ? `\u2212${uz.removed.length}` : ""].filter(Boolean).join(" "),
-                  nz = [uz.added.length > 0 ? `${uz.added.length} ${1===uz.added.length?"line":"lines"} added` : "", uz.removed.length > 0 ? `${uz.removed.length} taken out` : ""].filter(Boolean).join(", ");
-                return (0, lz.jsx)("li", {
-                  children: (0, lz.jsxs)("label", {
-                    children: [(0, lz.jsx)("input", {
+              children: iD.map((CD => {
+                const cD = `${DD.path}:${CD.index}`,
+                  ID = [CD.added.length > 0 ? `+${CD.added.length}` : "", CD.removed.length > 0 ? `\u2212${CD.removed.length}` : ""].filter(Boolean).join(" "),
+                  pD = [CD.added.length > 0 ? `${CD.added.length} ${1===CD.added.length?"line":"lines"} added` : "", CD.removed.length > 0 ? `${CD.removed.length} taken out` : ""].filter(Boolean).join(", ");
+                return (0, fD.jsx)("li", {
+                  children: (0, fD.jsxs)("label", {
+                    children: [(0, fD.jsx)("input", {
                       type: "checkbox",
-                      checked: !yz.has(bz),
-                      onChange: zz => {
-                        const uz = new Set(yz);
-                        zz.target.checked ? uz.delete(bz) : uz.add(bz), Dz(uz)
+                      checked: !dD.has(cD),
+                      onChange: DD => {
+                        const CD = new Set(dD);
+                        DD.target.checked ? CD.delete(cD) : CD.add(cD), YD(CD)
                       }
-                    }), (0, lz.jsxs)("span", {
-                      children: [uz.also && (0, lz.jsx)("span", {
+                    }), (0, fD.jsxs)("span", {
+                      children: [CD.also && (0, fD.jsx)("span", {
                         className: "WorldCodeAiHunkAlso",
                         title: "You didn't ask for this. Untick it to leave it out.",
-                        children: "adds" === uz.also ? "Also adds" : "changes" === uz.also ? "Also changes" : "Also takes out"
-                      }), uz.label, uz.codeNames.length > 0 && (0, lz.jsx)("code", {
+                        children: "adds" === CD.also ? "Also adds" : "changes" === CD.also ? "Also changes" : "Also takes out"
+                      }), CD.label, CD.codeNames.length > 0 && (0, fD.jsx)("code", {
                         className: "WorldCodeAiHunkCode",
-                        children: uz.codeNames.join(", ")
-                      }), uz.detail && (0, lz.jsx)("span", {
+                        children: CD.codeNames.join(", ")
+                      }), CD.detail && (0, fD.jsx)("span", {
                         className: "WorldCodeAiHunkDetail",
-                        children: uz.detail
+                        children: CD.detail
                       })]
-                    }), (0, lz.jsx)("span", {
+                    }), (0, fD.jsx)("span", {
                       className: "WorldCodeAiHunkCount",
-                      title: nz,
-                      "aria-label": nz,
-                      children: `${Ez} ${uz.added.length+uz.removed.length===1?"line":"lines"}`
+                      title: pD,
+                      "aria-label": pD,
+                      children: `${ID} ${CD.added.length+CD.removed.length===1?"line":"lines"}`
                     })]
                   })
-                }, bz)
+                }, cD)
               }))
-            }), Iz && (iz.some((zz => void 0 !== zz.also)) ? (0, lz.jsx)("p", {
+            }), uD && (iD.some((DD => void 0 !== DD.also)) ? (0, fD.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: 'You didn\'t ask for the parts marked "Also". Untick one to leave it out.'
-            }) : iz.some((zz => zz.takesOut.length > 0 || 0 === zz.added.length)) && (0, lz.jsx)("p", {
+            }) : iD.some((DD => DD.takesOut.length > 0 || 0 === DD.added.length)) && (0, fD.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: "Untick a part to keep that bit of your code as it is."
-            })), Yz && iz.length >= 2 && (0, lz.jsx)("button", {
+            })), AD && iD.length >= 2 && (0, fD.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiPartsToggle",
               onClick: () => {
-                Cz(!Bz)
+                rD(!hD)
               },
-              children: Bz ? `Hide the ${iz.length} parts` : `Show the ${iz.length} parts that went in`
-            }), Yz && Bz && (0, lz.jsx)("ul", {
+              children: hD ? `Hide the ${iD.length} parts` : `Show the ${iD.length} parts that went in`
+            }), AD && hD && (0, fD.jsx)("ul", {
               className: "WorldCodeAiHunks WorldCodeAiHunks-done",
-              children: iz.map((uz => (0, lz.jsx)("li", {
-                children: (0, lz.jsxs)("span", {
-                  children: [uz.label, uz.codeNames.length > 0 && (0, lz.jsx)("code", {
+              children: iD.map((CD => (0, fD.jsx)("li", {
+                children: (0, fD.jsxs)("span", {
+                  children: [CD.label, CD.codeNames.length > 0 && (0, fD.jsx)("code", {
                     className: "WorldCodeAiHunkCode",
-                    children: uz.codeNames.join(", ")
-                  }), uz.detail && (0, lz.jsx)("span", {
+                    children: CD.codeNames.join(", ")
+                  }), CD.detail && (0, fD.jsx)("span", {
                     className: "WorldCodeAiHunkDetail",
-                    children: uz.detail
+                    children: CD.detail
                   })]
                 })
-              }, `${zz.path}:${uz.index}`)))
-            }), zz.why && !Iz && !(Yz && Bz) && (0, lz.jsx)("ul", {
+              }, `${DD.path}:${CD.index}`)))
+            }), DD.why && !uD && !(AD && hD) && (0, fD.jsx)("ul", {
               className: "WorldCodeAiChangeWhy",
-              children: zz.why.map((zz => (0, lz.jsx)("li", {
-                children: zz.charAt(0).toUpperCase() + zz.slice(1)
-              }, zz)))
-            }), Mz.length > 0 && !(Iz && Mz.every((zz => iz.some((uz => uz.takesOut.includes(zz)))))) && (0, lz.jsxs)("p", {
+              children: DD.why.map((DD => (0, fD.jsx)("li", {
+                children: DD.charAt(0).toUpperCase() + DD.slice(1)
+              }, DD)))
+            }), bD.length > 0 && !(uD && bD.every((DD => iD.some((CD => CD.takesOut.includes(DD)))))) && (0, fD.jsxs)("p", {
               className: "WorldCodeAiChangeTakenOut",
-              children: ["applied" === Lz ? "It took out " : "It also takes out ", Mz.slice(0, 6).map((zz => {
-                var uz;
-                const bz = null !== (uz = DH(zz)) && void 0 !== uz ? uz : bO(zz);
-                return bz.charAt(0).toLowerCase() + bz.slice(1)
-              })).join(", "), Mz.length > 6 ? ` and ${Mz.length-6} more` : "", ".", " ", (0, lz.jsx)("code", {
+              children: ["applied" === JD ? "It took out " : "It also takes out ", bD.slice(0, 6).map((DD => {
+                var CD;
+                const cD = null !== (CD = Yw(DD)) && void 0 !== CD ? CD : cS(DD);
+                return cD.charAt(0).toLowerCase() + cD.slice(1)
+              })).join(", "), bD.length > 6 ? ` and ${bD.length-6} more` : "", ".", " ", (0, fD.jsx)("code", {
                 className: "WorldCodeAiHunkCode",
-                children: Mz.slice(0, 6).join(", ")
+                children: bD.slice(0, 6).join(", ")
               })]
-            }), (0, lz.jsx)(OH, {
-              change: zz,
-              marked: Uz
+            }), (0, fD.jsx)(Sw, {
+              change: DD,
+              marked: TD
             })]
-          }, zz.path)
+          }, DD.path)
         }))
       })
-    }), nu && (0, lz.jsxs)("div", {
-      className: iz()("WorldCodeAiChangeActions", fz && "WorldCodeAiChangeActions-sticky"),
-      children: [uu.length > 0 && (0, lz.jsxs)("div", {
+    }), pC && (0, fD.jsxs)("div", {
+      className: iD()("WorldCodeAiChangeActions", gD && "WorldCodeAiChangeActions-sticky"),
+      children: [CC.length > 0 && (0, fD.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, lz.jsx)("p", {
+        children: [(0, fD.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
           children: "Leaving that part out breaks this:"
-        }), (0, lz.jsx)("p", {
-          children: uu[0]
+        }), (0, fD.jsx)("p", {
+          children: CC[0]
         })]
-      }), qz && (0, lz.jsxs)("div", {
+      }), lD && (0, fD.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, lz.jsx)("p", {
+        children: [(0, fD.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
-          children: cz ? 1 === mz.length ? `${Sz?`Line ${Sz.line}`:"This line"} ${hz?"will":"would"} never work:` : `${mz.length} lines ${hz?"will":"would"} never work:` : 1 === mz.length ? `${Sz?`Line ${Sz.line}`:"This line"} ${hz?"will":"would"} break:` : `${mz.length} lines ${hz?"will":"would"} break:`
-        }), (az ? mz : mz.slice(0, 1)).map((zz => {
-          const uz = gz.get(zz);
-          return (0, lz.jsxs)(Ez.Fragment, {
-            children: [uz && !ip(zz) && (0, lz.jsxs)("p", {
+          children: GD ? 1 === jD.length ? `${kD?`Line ${kD.line}`:"This line"} ${LD?"will":"would"} never work:` : `${jD.length} lines ${LD?"will":"would"} never work:` : 1 === jD.length ? `${kD?`Line ${kD.line}`:"This line"} ${LD?"will":"would"} break:` : `${jD.length} lines ${LD?"will":"would"} break:`
+        }), (VD ? jD : jD.slice(0, 1)).map((DD => {
+          const CD = RD.get(DD);
+          return (0, fD.jsxs)(ID.Fragment, {
+            children: [CD && !pB(DD) && (0, fD.jsxs)("p", {
               className: "WorldCodeAiWarningWhere",
-              children: [mz.length > 1 && `Line ${uz.line}: `, (0, lz.jsx)("code", {
-                children: uz.text
+              children: [jD.length > 1 && `Line ${CD.line}: `, (0, fD.jsx)("code", {
+                children: CD.text
               })]
-            }), (0, lz.jsx)("p", {
-              children: !uz || 1 !== mz.length && ip(zz) ? zz : lp(zz)
+            }), (0, fD.jsx)("p", {
+              children: !CD || 1 !== jD.length && pB(DD) ? DD : iB(DD)
             })]
-          }, zz)
-        })), !az && mz.length > 1 && (0, lz.jsxs)("button", {
+          }, DD)
+        })), !VD && jD.length > 1 && (0, fD.jsxs)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            Vz(!0)
+            zD(!0)
           },
-          children: ["Show ", mz.length - 1, " more"]
+          children: ["Show ", jD.length - 1, " more"]
         })]
-      }), qz && (0, lz.jsx)("button", {
-        ...Zt(null !== (pz = Fz.warnings) && void 0 !== pz ? pz : []) ? {} : ft.f,
+      }), lD && (0, fD.jsx)("button", {
+        ...tQ(null !== (BD = MD.warnings) && void 0 !== BD ? BD : []) ? {} : gQ.e,
         className: "WorldCodeAiPrimaryButton",
-        disabled: Nz,
-        onClick: rz,
-        children: 1 === (null === (dz = Fz.warnings) || void 0 === dz ? void 0 : dz.length) ? "Fix this line" : "Fix these lines"
-      }), "offered" === Lz && Rz && !bu && (0, lz.jsx)("button", {
-        className: qz ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
-        disabled: Iz && 0 === kz || !!Az && Nz,
-        title: Az && Nz ? "You can apply it once the AI is done." : void 0,
+        disabled: OD,
+        onClick: mD,
+        children: 1 === (null === (yD = MD.warnings) || void 0 === yD ? void 0 : yD.length) ? "Fix this line" : "Fix these lines"
+      }), "offered" === JD && ZD && !cC && (0, fD.jsx)("button", {
+        className: lD ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+        disabled: uD && 0 === FD || !!xD && OD,
+        title: xD && OD ? "You can apply it once the AI is done." : void 0,
         onClick: () => {
-          Kz(zu)
+          oD(DC)
         },
-        children: Az ? Az.codeBlock ? "Apply in that code block" : "Apply in World Code" : Iz && kz < jz ? `Apply ${kz} of ${jz} changes` : qz ? "Apply anyway" : "Apply to my code"
-      }), "offered" === Lz && !Rz && (0, lz.jsx)("span", {
+        children: xD ? xD.codeBlock ? "Apply in that code block" : "Apply in World Code" : uD && FD < eD ? `Apply ${FD} of ${eD} changes` : lD ? "Apply anyway" : "Apply to my code"
+      }), "offered" === JD && !ZD && (0, fD.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: null !== Az && void 0 !== Az && Az.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
-      }), "applied" === Lz && !bu && (0, lz.jsxs)("div", {
+        children: null !== xD && void 0 !== xD && xD.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
+      }), "applied" === JD && !cC && (0, fD.jsxs)("div", {
         className: "WorldCodeAiAppliedRow",
-        children: [(0, lz.jsx)("span", {
+        children: [(0, fD.jsx)("span", {
           className: "WorldCodeAiAppliedNote",
           children: "Applied."
-        }), fz && (0, lz.jsx)("button", {
+        }), gD && (0, fD.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: Xz,
+          onClick: ND,
           children: "Try it in my world"
-        }), fz && (0, lz.jsx)("button", {
-          ...ft.f,
+        }), gD && (0, fD.jsx)("button", {
+          ...gQ.e,
           className: "WorldCodeAiSecondaryButton",
-          disabled: Nz,
-          onClick: oz,
+          disabled: OD,
+          onClick: nD,
           children: "Check for mistakes"
-        }), sz && (0, lz.jsx)("button", {
+        }), XD && (0, fD.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiUndoButton",
-          onClick: wz,
+          onClick: vD,
           children: "Undo"
         })]
-      }), "applied" === Lz && !bu && !sz && !Az && (0, lz.jsx)("span", {
+      }), "applied" === JD && !cC && !XD && !xD && (0, fD.jsx)("span", {
         className: "WorldCodeAiHint WorldCodeAiUndoOff",
         children: "You've changed this code since, so Undo is off. History can still go back."
-      }), "undone" === Lz && (0, lz.jsx)("span", {
+      }), "undone" === JD && (0, fD.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: Fz.wentBack ? "You went back, so this change is gone." : "Undone."
-      }), "stale" === Lz && (0, lz.jsx)("span", {
+        children: MD.wentBack ? "You went back, so this change is gone." : "Undone."
+      }), "stale" === JD && (0, fD.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Your code changed since this answer, so ask again to get an up-to-date change."
       })]
@@ -13047,104 +13047,104 @@ function Up(zz) {
   })
 }
 
-function cp(zz) {
+function TB(DD) {
   let {
-    target: uz,
-    isOpen: bz
-  } = zz;
-  return (0, lz.jsxs)("div", {
-    className: iz()("WorldCodeAiTargetLabel", bz && "WorldCodeAiTargetLabel-open"),
-    children: [(0, lz.jsx)("span", {
-      children: uz.label
-    }), bz && (0, lz.jsx)("span", {
+    target: CD,
+    isOpen: cD
+  } = DD;
+  return (0, fD.jsxs)("div", {
+    className: iD()("WorldCodeAiTargetLabel", cD && "WorldCodeAiTargetLabel-open"),
+    children: [(0, fD.jsx)("span", {
+      children: CD.label
+    }), cD && (0, fD.jsx)("span", {
       className: "WorldCodeAiTargetLabelNote",
       children: "Open now"
     })]
   })
 }
 
-function gp(zz) {
+function GB(DD) {
   let {
-    code: uz,
-    onSwitch: bz,
-    defaultOpen: nz,
-    isElsewhere: iz
-  } = zz;
-  const [tz, Hz] = (0, Ez.useState)(!1), Oz = (0, Ez.useMemo)((() => ({
+    code: CD,
+    onSwitch: cD,
+    defaultOpen: pD,
+    isElsewhere: iD
+  } = DD;
+  const [QD, wD] = (0, ID.useState)(!1), SD = (0, ID.useMemo)((() => ({
     path: "World Code",
     before: "",
-    after: uz
-  })), [uz]);
-  return (0, lz.jsxs)("div", {
+    after: CD
+  })), [CD]);
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiToolCard WorldCodeAiWorldCodePart",
-    children: [(0, lz.jsx)(Mz, {
+    children: [(0, fD.jsx)(bD, {
       className: "WorldCodeAiChangeLog",
       title: "Code for World Code",
       isCalm: !0,
-      isElsewhere: iz,
-      defaultOpen: nz,
-      children: (0, lz.jsx)("div", {
+      isElsewhere: iD,
+      defaultOpen: pD,
+      children: (0, fD.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: (0, lz.jsx)(OH, {
-          change: Oz
+        children: (0, fD.jsx)(Sw, {
+          change: SD
         })
       })
-    }), (0, lz.jsxs)("div", {
+    }), (0, fD.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, lz.jsx)("span", {
+      children: [(0, fD.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "A code block only runs when clicked, so this part goes in World Code."
-      }), bz && (0, lz.jsx)("button", {
+      }), cD && (0, fD.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
-        onClick: bz,
+        onClick: cD,
         children: "Switch to World Code"
-      }), (0, lz.jsx)("button", {
+      }), (0, fD.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          navigator.clipboard.writeText(uz).then((() => {
-            Hz(!0)
+          navigator.clipboard.writeText(CD).then((() => {
+            wD(!0)
           })).catch((() => {}))
         },
-        children: tz ? "Copied" : "Copy"
+        children: QD ? "Copied" : "Copy"
       })]
     })]
   })
 }
 
-function Sp(zz) {
-  var uz;
+function RB(DD) {
+  var CD;
   let {
-    failed: bz,
-    nothingChanged: Ez,
-    onRetry: nz,
-    defaultOpen: iz,
-    isElsewhere: tz
-  } = zz;
-  const Hz = null === (uz = bz.find((zz => null !== zz.closest))) || void 0 === uz ? void 0 : uz.closest;
-  return (0, lz.jsxs)("div", {
+    failed: cD,
+    nothingChanged: ID,
+    onRetry: pD,
+    defaultOpen: iD,
+    isElsewhere: QD
+  } = DD;
+  const wD = null === (CD = cD.find((DD => null !== DD.closest))) || void 0 === CD ? void 0 : CD.closest;
+  return (0, fD.jsxs)("div", {
     className: "WorldCodeAiFailedEdits",
-    children: [(0, lz.jsxs)(Mz, {
-      title: Ez ? "That change didn't work, so your code is the same." : 1 === bz.length ? "One part didn't work, so it's left out." : `${bz.length} parts didn't work, so they're left out.`,
-      defaultOpen: iz,
-      isElsewhere: tz,
-      children: [Hz && (0, lz.jsxs)(lz.Fragment, {
-        children: [(0, lz.jsx)("p", {
+    children: [(0, fD.jsxs)(bD, {
+      title: ID ? "That change didn't work, so your code is the same." : 1 === cD.length ? "One part didn't work, so it's left out." : `${cD.length} parts didn't work, so they're left out.`,
+      defaultOpen: iD,
+      isElsewhere: QD,
+      children: [wD && (0, fD.jsxs)(fD.Fragment, {
+        children: [(0, fD.jsx)("p", {
           children: "The closest bit in your code:"
-        }), (0, lz.jsx)("pre", {
+        }), (0, fD.jsx)("pre", {
           className: "WorldCodeAiFailedLines",
-          children: Hz.text.split("\n").length > 4 ? `${Hz.text.split("\n").slice(0,4).join("\n")}\n\u2026` : Hz.text
+          children: wD.text.split("\n").length > 4 ? `${wD.text.split("\n").slice(0,4).join("\n")}\n\u2026` : wD.text
         })]
-      }), !Hz && (0, lz.jsx)("p", {
+      }), !wD && (0, fD.jsx)("p", {
         children: "Try asking for it again, maybe in a different way."
       })]
-    }), nz && (0, lz.jsxs)("div", {
+    }), pD && (0, fD.jsxs)("div", {
       className: "WorldCodeAiFailedRetry",
-      children: [(0, lz.jsx)("button", {
-        ...ft.f,
+      children: [(0, fD.jsx)("button", {
+        ...gQ.e,
         className: "WorldCodeAiSecondaryButton",
-        onClick: nz,
+        onClick: pD,
         children: "Ask the AI to try again"
-      }), (0, lz.jsx)("span", {
+      }), (0, fD.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "It asks the AI once more."
       })]
@@ -13152,1059 +13152,1059 @@ function Sp(zz) {
   })
 }
 
-function yp(zz) {
+function kB(DD) {
   let {
-    lookups: uz,
-    words: bz,
-    defaultOpen: Ez,
-    isElsewhere: nz
-  } = zz;
-  return (0, lz.jsxs)(Mz, {
-    title: Op,
+    lookups: CD,
+    words: cD,
+    defaultOpen: ID,
+    isElsewhere: pD
+  } = DD;
+  return (0, fD.jsxs)(bD, {
+    title: wB,
     isCalm: !0,
-    isElsewhere: nz,
-    defaultOpen: Ez,
-    children: [bz && (0, lz.jsx)("p", {
-      children: bz
-    }), (0, lz.jsx)("p", {
+    isElsewhere: pD,
+    defaultOpen: ID,
+    children: [cD && (0, fD.jsx)("p", {
+      children: cD
+    }), (0, fD.jsx)("p", {
       children: "It looks at:"
-    }), (0, lz.jsx)("ul", {
+    }), (0, fD.jsx)("ul", {
       className: "WorldCodeAiLookupList",
-      children: uz.map(((zz, uz) => (0, lz.jsx)("li", {
-        children: Nn(zz)
-      }, uz)))
+      children: CD.map(((DD, CD) => (0, fD.jsx)("li", {
+        children: Xp(DD)
+      }, CD)))
     })]
   })
 }
 
-function Dp(zz) {
-  return `Add this to my World Code:\n\`\`\`js\n${zz.join("\n").replace(/\s*$/,"\n")}\`\`\``
+function dB(DD) {
+  return `Add this to my World Code:\n\`\`\`js\n${DD.join("\n").replace(/\s*$/,"\n")}\`\`\``
 }
 
-function Qp(zz) {
-  const uz = Math.ceil(zz / 1e3);
-  return `${Math.floor(uz/60)}:${String(uz%60).padStart(2,"0")}`
+function YB(DD) {
+  const CD = Math.ceil(DD / 1e3);
+  return `${Math.floor(CD/60)}:${String(CD%60).padStart(2,"0")}`
 }
 
-function Wp(zz) {
-  return "waiting" === zz.phase ? "You're next" : zz.playingThrough && "writing" !== zz.phase && "screening" !== zz.phase ? "Playing your code through as each player\u2026" : null
+function WB(DD) {
+  return "waiting" === DD.phase ? "You're next" : DD.playingThrough && "writing" !== DD.phase && "screening" !== DD.phase ? "Playing your code through as each player\u2026" : null
 }
 
-function ep(zz) {
-  var uz;
+function sB(DD) {
+  var CD;
   let {
-    busy: bz
-  } = zz;
-  const Ez = (nz = bz.phase, Mz = null !== (uz = bz.reasoningChars) && void 0 !== uz ? uz : 0, "screening" === nz ? 3 : "writing" === nz ? 2 : "thinking" === nz && Mz >= 400 ? 1 : 0);
-  var nz, Mz;
-  return (0, lz.jsx)("ol", {
+    busy: cD
+  } = DD;
+  const ID = (pD = cD.phase, bD = null !== (CD = cD.reasoningChars) && void 0 !== CD ? CD : 0, "screening" === pD ? 3 : "writing" === pD ? 2 : "thinking" === pD && bD >= 400 ? 1 : 0);
+  var pD, bD;
+  return (0, fD.jsx)("ol", {
     className: "WorldCodeAiSteps",
-    children: XO.map(((zz, uz) => (0, lz.jsx)("li", {
-      className: iz()(uz < Ez && "WorldCodeAiStep-done", uz === Ez && "WorldCodeAiStep-current"),
-      children: uz < Ez ? `\u2713 ${zz}` : zz
-    }, zz)))
+    children: NS.map(((DD, CD) => (0, fD.jsx)("li", {
+      className: iD()(CD < ID && "WorldCodeAiStep-done", CD === ID && "WorldCodeAiStep-current"),
+      children: CD < ID ? `\u2713 ${DD}` : DD
+    }, DD)))
   })
 }
-const jp = (0, Ez.memo)((function(zz) {
-    var uz, nz, Fz, Xz, sz, rz, oz, Nz, vz, xz, Jz, Az, Tz;
+const EB = (0, ID.memo)((function(DD) {
+    var CD, pD, MD, ND, XD, mD, nD, OD, PD, HD, UD, xD, qD;
     let {
-      files: Lz,
-      activePath: Pz,
-      canEdit: Gz,
-      errors: az,
-      errorCount: Vz,
-      applyFiles: mz,
-      submit: qz,
-      testRun: hz,
-      close: Uz,
-      goToLine: cz,
-      target: gz,
-      chatKey: Sz,
-      historyKey: yz,
-      openWorldCode: Dz,
-      readWorldCode: Qz,
-      viewChunk: Wz,
-      viewGameState: ez,
-      openTarget: jz,
-      isLoaded: Iz = !0,
-      draft: Bz,
-      onDraftUsed: Cz,
-      selection: Yz,
-      onSelectionUsed: kz
-    } = zz;
-    const uu = gz.codeBlock,
-      bu = gz.key,
-      nu = function(zz) {
-        let uz = Fp.get(zz);
-        return uz || (uz = {
+      files: JD,
+      activePath: KD,
+      canEdit: aD,
+      errors: VD,
+      errorCount: zD,
+      applyFiles: jD,
+      submit: lD,
+      testRun: LD,
+      close: TD,
+      goToLine: GD,
+      target: RD,
+      chatKey: kD,
+      historyKey: dD,
+      openWorldCode: YD,
+      readWorldCode: WD,
+      viewChunk: sD,
+      viewGameState: ED,
+      openTarget: eD,
+      isLoaded: uD = !0,
+      draft: hD,
+      onDraftUsed: rD,
+      selection: AD,
+      onSelectionUsed: FD
+    } = DD;
+    const CC = RD.codeBlock,
+      cC = RD.key,
+      pC = function(DD) {
+        let CD = yB.get(DD);
+        return CD || (CD = {
           entries: [],
           nextId: 1,
           dismissedErrorCounts: new Map,
-          turns: new nl
-        }, Fp.set(zz, uz)), uz
-      }(Sz),
-      [iu, lu] = (0, Ez.useState)((() => nu.entries)),
-      Mu = (0, Ez.useRef)(!0),
-      tu = (0, Ez.useCallback)((zz => {
-        const uz = "function" === typeof zz ? zz : () => zz;
-        Mu.current ? lu(uz) : nu.setEntries ? nu.setEntries(uz) : nu.entries = uz(nu.entries)
-      }), [nu]);
-    (0, Ez.useEffect)((() => (Mu.current = !0, nu.setEntries = lu, () => {
-      Mu.current = !1, nu.setEntries === lu && (nu.setEntries = void 0)
-    })), [nu]);
-    const [Hu, Ou] = (0, Ez.useState)(null), [pu, du] = (0, Ez.useState)([]), [Fu, Zu] = (0, Ez.useState)(!1), [Ru, Ku] = (0, Ez.useState)([]), [wu, Xu] = (0, Ez.useState)(!1), [fu, su] = (0, Ez.useState)(!1), [ru, ou] = (0, Ez.useState)(null), [Nu, vu] = (0, Ez.useState)(!1), xu = (0, Ez.useRef)("settings"), [Ju, Au] = (0, Ez.useState)(null), Tu = (0, Ez.useRef)(function() {
+          turns: new If
+        }, yB.set(DD, CD)), CD
+      }(kD),
+      [iC, fC] = (0, ID.useState)((() => pC.entries)),
+      bC = (0, ID.useRef)(!0),
+      QC = (0, ID.useCallback)((DD => {
+        const CD = "function" === typeof DD ? DD : () => DD;
+        bC.current ? fC(CD) : pC.setEntries ? pC.setEntries(CD) : pC.entries = CD(pC.entries)
+      }), [pC]);
+    (0, ID.useEffect)((() => (bC.current = !0, pC.setEntries = fC, () => {
+      bC.current = !1, pC.setEntries === fC && (pC.setEntries = void 0)
+    })), [pC]);
+    const [wC, SC] = (0, ID.useState)(null), [BC, yC] = (0, ID.useState)([]), [MC, tC] = (0, ID.useState)(!1), [ZC, oC] = (0, ID.useState)([]), [vC, NC] = (0, ID.useState)(!1), [gC, XC] = (0, ID.useState)(!1), [mC, nC] = (0, ID.useState)(null), [OC, PC] = (0, ID.useState)(!1), HC = (0, ID.useRef)("settings"), [UC, xC] = (0, ID.useState)(null), qC = (0, ID.useRef)(function() {
       try {
-        var zz;
-        const uz = JSON.parse(null !== (zz = localStorage.getItem(xO)) && void 0 !== zz ? zz : "{}");
-        return "object" !== typeof uz || null === uz ? {} : Object.fromEntries(Object.entries(uz).filter((zz => {
-          let [, uz] = zz;
-          return Array.isArray(uz) && uz.every((zz => "number" === typeof zz))
+        var DD;
+        const CD = JSON.parse(null !== (DD = localStorage.getItem(HS)) && void 0 !== DD ? DD : "{}");
+        return "object" !== typeof CD || null === CD ? {} : Object.fromEntries(Object.entries(CD).filter((DD => {
+          let [, CD] = DD;
+          return Array.isArray(CD) && CD.every((DD => "number" === typeof DD))
         })))
       } catch {
         return {}
       }
-    }()), [Lu, Pu] = (0, Ez.useState)(Lt), Gu = (0, Ez.useRef)(Lu);
-    Gu.current = Lu;
-    const au = Lu && Gz,
-      Vu = (0, Ez.useRef)(!1),
-      [mu, qu] = (0, Ez.useState)(null),
-      [hu, Uu] = (0, Ez.useState)(""),
-      [cu, gu] = (0, Ez.useState)([]),
-      [Su, yu] = (0, Ez.useState)(null),
-      [Du, Qu] = (0, Ez.useState)(new Set),
-      [Wu, eu] = (0, Ez.useState)(null !== (uz = nu.dismissedErrorCounts.get(gz.key)) && void 0 !== uz ? uz : 0),
-      [ju, Iu] = (0, Ez.useState)(!1),
-      [Bu, Cu] = (0, Ez.useState)(Date.now),
-      Yu = (0, Ez.useRef)(null),
-      ku = (0, Ez.useRef)(null),
-      zb = (0, Ez.useRef)([]),
-      [ub, bb] = (0, Ez.useState)(0),
-      [Eb, nb] = (0, Ez.useState)(null),
-      ib = (0, HH.o)(Sz),
-      lb = null !== Eb && void 0 !== Eb ? Eb : null === ib || void 0 === ib ? void 0 : ib.entryId,
-      Mb = iu.find((zz => zz.id === lb)),
-      tb = (null === Mb || void 0 === Mb ? void 0 : Mb.target.key) === gz.key && (null !== Eb || void 0 === (null === ib || void 0 === ib ? void 0 : ib.endedAt)),
-      Hb = (zz, uz) => {
-        const bz = setTimeout((() => {
-          zb.current = zb.current.filter((zz => zz !== bz)), bb(zb.current.length), zz()
-        }), uz);
-        zb.current.push(bz), bb(zb.current.length)
+    }()), [JC, KC] = (0, ID.useState)(JQ), aC = (0, ID.useRef)(JC);
+    aC.current = JC;
+    const VC = JC && aD,
+      zC = (0, ID.useRef)(!1),
+      [jC, lC] = (0, ID.useState)(null),
+      [LC, TC] = (0, ID.useState)(""),
+      [GC, RC] = (0, ID.useState)([]),
+      [kC, dC] = (0, ID.useState)(null),
+      [YC, WC] = (0, ID.useState)(new Set),
+      [sC, EC] = (0, ID.useState)(null !== (CD = pC.dismissedErrorCounts.get(RD.key)) && void 0 !== CD ? CD : 0),
+      [eC, uC] = (0, ID.useState)(!1),
+      [hC, rC] = (0, ID.useState)(Date.now),
+      AC = (0, ID.useRef)(null),
+      FC = (0, ID.useRef)(null),
+      Dc = (0, ID.useRef)([]),
+      [Cc, cc] = (0, ID.useState)(0),
+      [Ic, pc] = (0, ID.useState)(null),
+      ic = (0, ww.p)(kD),
+      fc = null !== Ic && void 0 !== Ic ? Ic : null === ic || void 0 === ic ? void 0 : ic.entryId,
+      bc = iC.find((DD => DD.id === fc)),
+      Qc = (null === bc || void 0 === bc ? void 0 : bc.target.key) === RD.key && (null !== Ic || void 0 === (null === ic || void 0 === ic ? void 0 : ic.endedAt)),
+      wc = (DD, CD) => {
+        const cD = setTimeout((() => {
+          Dc.current = Dc.current.filter((DD => DD !== cD)), cc(Dc.current.length), DD()
+        }), CD);
+        Dc.current.push(cD), cc(Dc.current.length)
       },
-      pb = () => {
-        for (const zz of zb.current) clearTimeout(zz);
-        zb.current = [], bb(0), nb(null)
+      Bc = () => {
+        for (const DD of Dc.current) clearTimeout(DD);
+        Dc.current = [], cc(0), pc(null)
       },
-      db = (0, Ez.useRef)(null),
-      Fb = (0, Ez.useRef)(null),
-      Zb = () => nu.nextId++,
-      Rb = (0, Ez.useRef)(0),
-      Kb = (0, Ez.useRef)(Lz);
-    Kb.current = Lz;
-    const wb = (0, Ez.useCallback)((zz => {
-        null === zz || void 0 === zz || zz.focus()
+      yc = (0, ID.useRef)(null),
+      Mc = (0, ID.useRef)(null),
+      tc = () => pC.nextId++,
+      Zc = (0, ID.useRef)(0),
+      oc = (0, ID.useRef)(JD);
+    oc.current = JD;
+    const vc = (0, ID.useCallback)((DD => {
+        null === DD || void 0 === DD || DD.focus()
       }), []),
-      Xb = (0, Ez.useRef)(Vz);
-    Xb.current = Vz;
-    const fb = (0, Ez.useRef)(cu);
-    fb.current = cu;
-    const sb = (0, Ez.useRef)(iu.length);
-    (0, Ez.useEffect)((() => {
-      const zz = db.current;
-      if (!zz) return;
-      if (Fu) return void zz.scrollTo({
+      Nc = (0, ID.useRef)(zD);
+    Nc.current = zD;
+    const gc = (0, ID.useRef)(GC);
+    gc.current = GC;
+    const Xc = (0, ID.useRef)(iC.length);
+    (0, ID.useEffect)((() => {
+      const DD = yc.current;
+      if (!DD) return;
+      if (MC) return void DD.scrollTo({
         top: 0
       });
-      if (ru) return;
-      const uz = iu[iu.length - 1],
-        bz = (null === uz || void 0 === uz ? void 0 : uz.target.key) === bu;
-      iu.length > sb.current && "assistant" === (null === uz || void 0 === uz ? void 0 : uz.role) && !uz.isNotice && bz && (nu.heldAnswerId = uz.id), sb.current = iu.length;
-      const Ez = void 0 !== uz && bz && uz.id === nu.heldAnswerId && "offered" === uz.status && void 0 === uz.trial,
-        nz = zz.querySelectorAll(".WorldCodeAiEntry"),
-        iz = nz[nz.length - 1];
-      if (Ez && iz) {
-        var lz;
-        const bz = zz.getBoundingClientRect().top,
-          Ez = uz => zz.scrollTop + uz.getBoundingClientRect().top - bz;
-        let nz = Ez(iz);
-        const Mz = iz.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
-          tz = iz.querySelector(".WorldCodeAiChangeHeader"),
-          Hz = iz.querySelector(".WorldCodeAiChangeActions-sticky");
-        if (null !== (lz = uz.warnings) && void 0 !== lz && lz.length && Mz && tz && Hz) {
-          const uz = iz.querySelector(".WorldCodeAiDiff-marked"),
-            bz = Mz.getBoundingClientRect().height,
-            lz = uz ? Ez(uz) + 2 * bz + Hz.offsetHeight - zz.clientHeight : Ez(Mz) + 3 * bz + Hz.offsetHeight - zz.clientHeight;
-          nz = Math.max(nz, Math.min(lz, uz ? Ez(uz) - bz : Ez(tz)))
-        } else if (tz && Hz) {
-          const uz = iz.querySelectorAll(".WorldCodeAiChangeWhy li"),
-            bz = uz[uz.length - 1];
-          if (bz) {
-            const uz = Ez(bz) + bz.getBoundingClientRect().height + Hz.offsetHeight - zz.clientHeight;
-            nz = Math.max(nz, Math.min(uz, Ez(tz)))
+      if (mC) return;
+      const CD = iC[iC.length - 1],
+        cD = (null === CD || void 0 === CD ? void 0 : CD.target.key) === cC;
+      iC.length > Xc.current && "assistant" === (null === CD || void 0 === CD ? void 0 : CD.role) && !CD.isNotice && cD && (pC.heldAnswerId = CD.id), Xc.current = iC.length;
+      const ID = void 0 !== CD && cD && CD.id === pC.heldAnswerId && "offered" === CD.status && void 0 === CD.trial,
+        pD = DD.querySelectorAll(".WorldCodeAiEntry"),
+        iD = pD[pD.length - 1];
+      if (ID && iD) {
+        var fD;
+        const cD = DD.getBoundingClientRect().top,
+          ID = CD => DD.scrollTop + CD.getBoundingClientRect().top - cD;
+        let pD = ID(iD);
+        const bD = iD.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
+          QD = iD.querySelector(".WorldCodeAiChangeHeader"),
+          wD = iD.querySelector(".WorldCodeAiChangeActions-sticky");
+        if (null !== (fD = CD.warnings) && void 0 !== fD && fD.length && bD && QD && wD) {
+          const CD = iD.querySelector(".WorldCodeAiDiff-marked"),
+            cD = bD.getBoundingClientRect().height,
+            fD = CD ? ID(CD) + 2 * cD + wD.offsetHeight - DD.clientHeight : ID(bD) + 3 * cD + wD.offsetHeight - DD.clientHeight;
+          pD = Math.max(pD, Math.min(fD, CD ? ID(CD) - cD : ID(QD)))
+        } else if (QD && wD) {
+          const CD = iD.querySelectorAll(".WorldCodeAiChangeWhy li"),
+            cD = CD[CD.length - 1];
+          if (cD) {
+            const CD = ID(cD) + cD.getBoundingClientRect().height + wD.offsetHeight - DD.clientHeight;
+            pD = Math.max(pD, Math.min(CD, ID(QD)))
           }
         }
-        zz.scrollTo({
-          top: nz
+        DD.scrollTo({
+          top: pD
         })
-      } else zz.scrollTo({
-        top: zz.scrollHeight
+      } else DD.scrollTo({
+        top: DD.scrollHeight
       })
-    }), [nu, iu, Hu, Fu, bu, ru]), (0, Ez.useEffect)((() => {
-      nu.entries = iu, nu.dismissedErrorCounts.set(gz.key, Wu)
-    }), [nu, iu, Wu, gz.key]), (0, Ez.useEffect)((() => () => {
-      var zz;
-      null === (zz = Yu.current) || void 0 === zz || zz.abort(), pb(),
+    }), [pC, iC, wC, MC, cC, mC]), (0, ID.useEffect)((() => {
+      pC.entries = iC, pC.dismissedErrorCounts.set(RD.key, sC)
+    }), [pC, iC, sC, RD.key]), (0, ID.useEffect)((() => () => {
+      var DD;
+      null === (DD = AC.current) || void 0 === DD || DD.abort(), Bc(),
         function() {
-          var zz;
-          null === (zz = ei) || void 0 === zz || zz.tearDownNotification()
+          var DD;
+          null === (DD = Yi) || void 0 === DD || DD.tearDownNotification()
         }()
-    }), []), (0, Ez.useEffect)((() => {
-      var zz;
-      Bz && (Bz.send ? Iz && (null === Cz || void 0 === Cz || Cz(), Wb.current(Bz.text, Bz.text, {
+    }), []), (0, ID.useEffect)((() => {
+      var DD;
+      hD && (hD.send ? uD && (null === rD || void 0 === rD || rD(), sc.current(hD.text, hD.text, {
         check: !1,
         useFree: !1
-      })) : (Uu(Bz.text), null === (zz = Fb.current) || void 0 === zz || zz.focus(), null === Cz || void 0 === Cz || Cz()))
-    }), [Bz, Cz, Iz]), (0, Ez.useEffect)((() => function() {
-      let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      const uz = setTimeout((() => {
-        eO(zz)
+      })) : (TC(hD.text), null === (DD = Mc.current) || void 0 === DD || DD.focus(), null === rD || void 0 === rD || rD()))
+    }), [hD, rD, uD]), (0, ID.useEffect)((() => function() {
+      let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      const CD = setTimeout((() => {
+        ES(DD)
       }), 1e3);
       return () => {
-        clearTimeout(uz)
+        clearTimeout(CD)
       }
-    }(uu)), [uu]), (0, Ez.useEffect)((() => {
-      let zz = !0;
-      Rp.list(yz).then((uz => {
-        zz && du(uz)
-      })).catch((zz => {
-        console.error("World Code AI: couldn't read the version history", zz)
+    }(CC)), [CC]), (0, ID.useEffect)((() => {
+      let DD = !0;
+      tB.list(dD).then((CD => {
+        DD && yC(CD)
+      })).catch((DD => {
+        console.error("World Code AI: couldn't read the version history", DD)
       }));
-      const uz = Rp.watch(yz, du);
+      const CD = tB.watch(dD, yC);
       return () => {
-        zz = !1, uz()
+        DD = !1, CD()
       }
-    }), [yz]), (0, Ez.useEffect)((() => {
-      let zz = !0;
-      Kp.list(yz).then((uz => {
-        zz && Ku(uz)
-      })).catch((zz => {
-        console.error("World Code AI: couldn't read the notes about the game", zz)
+    }), [dD]), (0, ID.useEffect)((() => {
+      let DD = !0;
+      ZB.list(dD).then((CD => {
+        DD && oC(CD)
+      })).catch((DD => {
+        console.error("World Code AI: couldn't read the notes about the game", DD)
       }));
-      const uz = Kp.watch(yz, Ku);
+      const CD = ZB.watch(dD, oC);
       return () => {
-        zz = !1, uz()
+        DD = !1, CD()
       }
-    }), [yz]);
-    const rb = null !== (nz = null === (Fz = iu.findLast((zz => zz.target.key === gz.key))) || void 0 === Fz ? void 0 : Fz.retryAt) && void 0 !== nz ? nz : 0,
-      ob = Pi(Bu),
-      Nb = null !== Hu || rb > Bu || ob > Bu;
-    (0, Ez.useEffect)((() => {
-      if (!Nb) return;
-      const zz = setInterval((() => {
-        Cu(Date.now())
+    }), [dD]);
+    const mc = null !== (pD = null === (MD = iC.findLast((DD => DD.target.key === RD.key))) || void 0 === MD ? void 0 : MD.retryAt) && void 0 !== pD ? pD : 0,
+      nc = qi(hC),
+      Oc = null !== wC || mc > hC || nc > hC;
+    (0, ID.useEffect)((() => {
+      if (!Oc) return;
+      const DD = setInterval((() => {
+        rC(Date.now())
       }), 1e3);
       return () => {
-        clearInterval(zz)
+        clearInterval(DD)
       }
-    }), [Nb]);
-    const vb = Vz > Wu && az.length > 0 ? az[az.length - 1] : null,
-      xb = (0, Ez.useMemo)((() => vb ? function(zz, uz) {
-        var bz;
-        let Ez;
-        for (const [nz, iz] of Object.entries(uz)) {
+    }), [Oc]);
+    const Pc = zD > sC && VD.length > 0 ? VD[VD.length - 1] : null,
+      Hc = (0, ID.useMemo)((() => Pc ? function(DD, CD) {
+        var cD;
+        let ID;
+        for (const [pD, iD] of Object.entries(CD)) {
           const {
-            text: uz,
-            line: bz
-          } = bt(zz, iz);
-          if (void 0 !== bz) {
-            if (Ez) return bt(zz);
-            Ez = {
-              text: uz,
-              path: nz,
-              line: bz
+            text: CD,
+            line: cD
+          } = cQ(DD, iD);
+          if (void 0 !== cD) {
+            if (ID) return cQ(DD);
+            ID = {
+              text: CD,
+              path: pD,
+              line: cD
             }
           }
         }
-        return null !== (bz = Ez) && void 0 !== bz ? bz : bt(zz)
-      }(vb, Lz) : {
+        return null !== (cD = ID) && void 0 !== cD ? cD : cQ(DD)
+      }(Pc, JD) : {
         text: ""
-      }), [vb, Lz]),
-      Jb = function(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gz;
-        const bz = Zb();
-        return Zu(!1), Xu(!1), tu((Ez => [...Ez, {
-          ...zz,
-          id: bz,
-          target: uz
-        }])), bz
+      }), [Pc, JD]),
+      Uc = function(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RD;
+        const cD = tc();
+        return tC(!1), NC(!1), QC((ID => [...ID, {
+          ...DD,
+          id: cD,
+          target: CD
+        }])), cD
       },
-      Ab = zz => zz.target.key === gz.key,
-      Tb = (zz, uz) => {
-        tu((bz => bz.map((bz => bz.id === zz ? {
-          ...bz,
-          ...uz
-        } : bz))))
+      xc = DD => DD.target.key === RD.key,
+      qc = (DD, CD) => {
+        QC((cD => cD.map((cD => cD.id === DD ? {
+          ...cD,
+          ...CD
+        } : cD))))
       },
-      Lb = (zz, uz) => {
-        Tb(zz, {
-          status: uz
+      Jc = (DD, CD) => {
+        qc(DD, {
+          status: CD
         })
       },
-      Pb = pM();
+      Kc = Bb();
 
-    function Gb(zz) {
-      return !!XM(OM.getState()) && (GM().then((uz => {
-        uz || zz()
+    function ac(DD) {
+      return !!Nb(Sb.getState()) && (ab().then((CD => {
+        CD || DD()
       })), !0)
     }
-    const ab = zz => {
-        !Nu && Gb(zz) || zz()
+    const Vc = DD => {
+        !OC && ac(DD) || DD()
       },
-      Vb = async function(zz, uz) {
-        let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      zc = async function(DD, CD) {
+        let ID = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         const {
-          check: nz = void 0 === uz,
-          about: iz = (null !== uz && void 0 !== uz ? uz : zz.trim()),
-          planStep: lz,
-          wordsOnly: Mz = !1,
-          asked: tz,
-          failedEdits: Hz,
-          isAutoFix: Oz = !1,
-          autoFixRound: pz = 0,
-          useFree: dz,
-          retryOf: Fz,
-          continueFrom: Rz,
-          lookups: Kz = [],
-          lookupRound: Xz = 0,
-          worldCodeFiles: fz,
-          viewedPaths: sz = [],
-          lookupOf: rz,
-          insertsInto: oz,
-          guardWords: Nz
-        } = Ez, vz = zz.trim();
-        if ("" === vz || Hu) return;
-        null === Wi.get() && (ji || (ji = !0, (async () => {
+          check: pD = void 0 === CD,
+          about: iD = (null !== CD && void 0 !== CD ? CD : DD.trim()),
+          planStep: fD,
+          wordsOnly: bD = !1,
+          asked: QD,
+          failedEdits: wD,
+          isAutoFix: SD = !1,
+          autoFixRound: BD = 0,
+          useFree: yD,
+          retryOf: MD,
+          continueFrom: ZD,
+          lookups: oD = [],
+          lookupRound: ND = 0,
+          worldCodeFiles: gD,
+          viewedPaths: XD = [],
+          lookupOf: mD,
+          insertsInto: nD,
+          guardWords: OD
+        } = ID, PD = DD.trim();
+        if ("" === PD || wC) return;
+        null === di.get() && (Wi || (Wi = !0, (async () => {
           try {
-            if (null !== await Wi.refresh() || null === Wi.getPlayer()) return;
+            if (null !== await di.refresh() || null === di.getPlayer()) return;
             const {
-              NotificationProvider: zz
-            } = await Promise.resolve().then((() => bz(1322)));
-            ei = zz.showPromptPopup({
+              NotificationProvider: DD
+            } = await Promise.resolve().then((() => cD(1340)));
+            Yi = DD.showPromptPopup({
               title: "aiHelperDataSharing:title",
               subtitle: "aiHelperDataSharing:subtitle",
               confirmText: "aiHelperDataSharing:yes",
               cancelText: "aiHelperDataSharing:no"
             });
-            const uz = await ei.getResult();
-            "notificationTornDown" !== uz && Wi.set(uz ? "yes" : "no")
-          } catch (zz) {
-            console.warn("AI Helper: couldn't ask about sharing chats", zz)
+            const CD = await Yi.getResult();
+            "notificationTornDown" !== CD && di.set(CD ? "yes" : "no")
+          } catch (DD) {
+            console.warn("AI Helper: couldn't ask about sharing chats", DD)
           } finally {
-            ei = null, ji = !1
+            Yi = null, Wi = !1
           }
         })()));
-        const xz = null !== dz && void 0 !== dz ? dz : Nu && !Oz && void 0 === Fz && void 0 === Rz;
-        if (!xz && Ap(Ez) && Gb((() => {
-            Ub.current(zz, uz, Ez)
+        const HD = null !== yD && void 0 !== yD ? yD : OC && !SD && void 0 === MD && void 0 === ZD;
+        if (!HD && UB(ID) && ac((() => {
+            Tc.current(DD, CD, ID)
           }))) return;
-        const Jz = null !== oz && void 0 !== oz ? oz : Pz;
-        void 0 === dz && xz && vu(!1), pb();
-        const Az = kl.activeKey(),
-          Tz = xz ? null : Az,
-          Lz = null !== Tz,
-          Vz = null !== Az && xz,
-          mz = !Tz && !xz && OM.isAnswering(),
-          qz = void 0 === Fz ? -1 : ((zz, uz) => {
-            for (let bz = zz.findIndex((zz => zz.id === uz)) - 1; bz >= 0; bz--)
-              if ("user" === zz[bz].role) return bz;
+        const UD = null !== nD && void 0 !== nD ? nD : KD;
+        void 0 === yD && HD && PC(!1), Bc();
+        const xD = Ff.activeKey(),
+          qD = HD ? null : xD,
+          JD = null !== qD,
+          zD = null !== xD && HD,
+          jD = !qD && !HD && Sb.isAnswering(),
+          lD = void 0 === MD ? -1 : ((DD, CD) => {
+            for (let cD = DD.findIndex((DD => DD.id === CD)) - 1; cD >= 0; cD--)
+              if ("user" === DD[cD].role) return cD;
             return -1
-          })(iu, Fz),
-          hz = (qz < 0 ? iu : iu.slice(0, qz)).filter((zz => !zz.isNotice && !zz.leftOut && Ab(zz))).slice(-4).map((zz => ({
-            role: zz.role,
-            text: zz.question ? `${zz.text}\n${zz.question.question}` : zz.text
+          })(iC, MD),
+          LD = (lD < 0 ? iC : iC.slice(0, lD)).filter((DD => !DD.isNotice && !DD.leftOut && xc(DD))).slice(-4).map((DD => ({
+            role: DD.role,
+            text: DD.question ? `${DD.text}\n${DD.question.question}` : DD.text
           }))),
-          Uz = void 0 === uz,
-          gz = void 0 === tz ? void 0 === uz ? vz : void 0 : null !== tz && void 0 !== tz ? tz : void 0,
-          Sz = void 0 !== Fz && void 0 !== Rz,
-          yz = Sz ? iu.find((zz => zz.id === Fz)) : void 0;
-        let Qz;
-        if (Sz) Qz = qz >= 0 ? iu[qz].id : -1;
-        else if (void 0 !== rz && qz < 0) Qz = rz;
-        else if (qz >= 0) Qz = iu[qz].id, tu((zz => zz.filter((zz => zz.id !== Fz)).map((zz => zz.id === Qz ? {
-          ...zz,
+          TD = void 0 === CD,
+          RD = void 0 === QD ? void 0 === CD ? PD : void 0 : null !== QD && void 0 !== QD ? QD : void 0,
+          kD = void 0 !== MD && void 0 !== ZD,
+          dD = kD ? iC.find((DD => DD.id === MD)) : void 0;
+        let WD;
+        if (kD) WD = lD >= 0 ? iC[lD].id : -1;
+        else if (void 0 !== mD && lD < 0) WD = mD;
+        else if (lD >= 0) WD = iC[lD].id, QC((DD => DD.filter((DD => DD.id !== MD)).map((DD => DD.id === WD ? {
+          ...DD,
           isNotice: void 0
-        } : zz))));
+        } : DD))));
         else {
-          const zz = Oz && pz > 0;
-          Qz = Jb({
+          const DD = SD && BD > 0;
+          WD = Uc({
             role: "user",
-            text: zz ? vz : null !== uz && void 0 !== uz ? uz : vz,
+            text: DD ? PD : null !== CD && void 0 !== CD ? CD : PD,
             changes: [],
             status: "offered",
-            about: iz,
-            planStep: lz,
-            ...gz ? {
-              asked: gz
+            about: iD,
+            planStep: fD,
+            ...RD ? {
+              asked: RD
             } : {},
-            ...zz ? {
-              logTitle: Hz ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
+            ...DD ? {
+              logTitle: wD ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
             } : {}
           })
         }
-        const Wz = {
-            lookups: Kz,
-            lookupRound: Xz,
-            worldCodeFiles: fz,
-            viewedPaths: sz
+        const sD = {
+            lookups: oD,
+            lookupRound: ND,
+            worldCodeFiles: gD,
+            viewedPaths: XD
           },
-          ez = {
-            retry: vz,
-            retryShown: uz,
+          ED = {
+            retry: PD,
+            retryShown: CD,
             retryOptions: {
-              check: nz,
-              about: iz,
-              planStep: lz,
-              wordsOnly: Mz,
-              useFree: xz,
-              asked: tz,
-              failedEdits: Hz,
-              isAutoFix: Oz,
-              autoFixRound: pz,
-              insertsInto: oz,
-              guardWords: Nz,
-              ...Wz
+              check: pD,
+              about: iD,
+              planStep: fD,
+              wordsOnly: bD,
+              useFree: HD,
+              asked: QD,
+              failedEdits: wD,
+              isAutoFix: SD,
+              autoFixRound: BD,
+              insertsInto: nD,
+              guardWords: OD,
+              ...sD
             }
           },
-          Iz = new AbortController;
-        Yu.current = Iz;
-        const Bz = nu.turns;
-        Bz.requestStarted(Qz, void 0 !== rz);
-        const Cz = Gu.current ? "direct" : "offer";
-        var Yz, kz, zu, bu, lu;
+          uD = new AbortController;
+        AC.current = uD;
+        const hD = pC.turns;
+        hD.requestStarted(WD, void 0 !== mD);
+        const rD = aC.current ? "direct" : "offer";
+        var AD, FD, DC, cC, fC;
         try {
-          var Mu;
-          const zz = Date.now(),
-            bz = vz.startsWith(hp),
-            Ez = null === Tz || void 0 === Tz ? void 0 : Tz.model.name;
-          Cu(zz), Ou(mz ? {
+          var bC;
+          const DD = Date.now(),
+            cD = PD.startsWith(lB),
+            ID = null === qD || void 0 === qD ? void 0 : qD.model.name;
+          rC(DD), SC(jD ? {
             phase: "thinking",
-            startedAt: zz,
-            playingThrough: bz,
+            startedAt: DD,
+            playingThrough: cD,
             isSuperBot: !0
           } : {
             phase: "checking",
-            startedAt: zz,
-            playingThrough: bz,
-            keyModel: Ez
+            startedAt: DD,
+            playingThrough: cD,
+            keyModel: ID
           });
-          const tz = zz => {
-              Tb(Qz, {
+          const QD = DD => {
+              qc(WD, {
                 isNotice: !0
-              }), Jb({
+              }), Uc({
                 role: "assistant",
-                text: "personalInfo" === zz ? "Please don't share personal details like names, addresses or schools. Ask again without them." : ap,
+                text: "personalInfo" === DD ? "Please don't share personal details like names, addresses or schools. Ask again without them." : aB,
                 changes: [],
                 status: "offered",
                 isNotice: !0
               })
             },
-            dz = async () => {
-              if (!nz && !Tz) return null !== Nz && void 0 !== Nz ? Nz : vz;
-              const zz = Date.now();
-              Cu(zz), Ou({
+            yD = async () => {
+              if (!pD && !qD) return null !== OD && void 0 !== OD ? OD : PD;
+              const DD = Date.now();
+              rC(DD), SC({
                 phase: "checking",
-                startedAt: zz,
-                playingThrough: bz,
-                keyModel: Ez
+                startedAt: DD,
+                playingThrough: cD,
+                keyModel: ID
               });
               const {
-                safety: uz,
-                request: iz
-              } = await async function(zz, uz) {
-                let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                const Ez = await gi(zz, uz, bz),
-                  nz = Ln(zz);
-                if ("unsafe" !== Ez || nz === zz) return {
-                  safety: Ez,
-                  request: zz
+                safety: CD,
+                request: iD
+              } = await async function(DD, CD) {
+                let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                const ID = await Li(DD, CD, cD),
+                  pD = Up(DD);
+                if ("unsafe" !== ID || pD === DD) return {
+                  safety: ID,
+                  request: DD
                 };
-                const iz = await gi(nz, uz, !0);
-                return "unchecked" === iz ? {
-                  safety: Ez,
-                  request: zz
+                const iD = await Li(pD, CD, !0);
+                return "unchecked" === iD ? {
+                  safety: ID,
+                  request: DD
                 } : {
-                  safety: iz,
-                  request: nz
+                  safety: iD,
+                  request: pD
                 }
-              }(vz, Iz.signal, Lz);
-              return "unchecked" === uz && Tz ? (Jb({
+              }(PD, uD.signal, JD);
+              return "unchecked" === CD && qD ? (Uc({
                 role: "assistant",
                 text: "",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
-                ...ez,
+                ...ED,
                 keyNotice: {
                   notice: "unchecked",
-                  model: Tz.model.name,
-                  company: fl(Tz.provider, Tz.baseUrl, !0)
+                  model: qD.model.name,
+                  company: gf(qD.provider, qD.baseUrl, !0)
                 }
-              }), null) : "personalInfo" === uz || "unsafe" === uz ? (tz(uz), null) : iz
+              }), null) : "personalInfo" === CD || "unsafe" === CD ? (QD(CD), null) : iD
             };
-          let Az = mz ? null !== Nz && void 0 !== Nz ? Nz : vz : await dz();
-          if (null === Az) return;
-          const Pz = fz ? {
-              ...Kb.current,
-              ...fz
-            } : Kb.current,
-            gz = {
-              request: vz,
-              files: Pz,
-              activePath: Jz,
-              errors: az.slice(-5),
-              history: hz,
-              codeBlock: uu,
-              failedEdits: Hz,
-              canAsk: Uz,
-              lookups: Kz,
-              canLookUp: Xz < 3 && !Mz,
-              canChangeWorldCode: bE(Cz),
-              looksUpDocs: Lz,
-              about: uu ? void 0 : {
-                notes: Ru,
-                outline: (lu = Eu(Pz, new Set(fp().callbackNames())), [lu.callbacks.length > 0 ? `Callbacks: ${lu.callbacks.join(", ")}` : "", lu.commands.length > 0 ? `Commands: ${lu.commands.join(", ")}` : "", lu.functions.length > 0 ? `Functions: ${lu.functions.join(", ")}` : ""].filter((zz => "" !== zz)).join("\n")),
-                canRemember: Ru.length < 8
+          let xD = jD ? null !== OD && void 0 !== OD ? OD : PD : await yD();
+          if (null === xD) return;
+          const KD = gD ? {
+              ...oc.current,
+              ...gD
+            } : oc.current,
+            RD = {
+              request: PD,
+              files: KD,
+              activePath: UD,
+              errors: VD.slice(-5),
+              history: LD,
+              codeBlock: CC,
+              failedEdits: wD,
+              canAsk: TD,
+              lookups: oD,
+              canLookUp: ND < 3 && !bD,
+              canChangeWorldCode: cI(rD),
+              looksUpDocs: JD,
+              about: CC ? void 0 : {
+                notes: ZC,
+                outline: (fC = IC(KD, new Set(NB().callbackNames())), [fC.callbacks.length > 0 ? `Callbacks: ${fC.callbacks.join(", ")}` : "", fC.commands.length > 0 ? `Commands: ${fC.commands.join(", ")}` : "", fC.functions.length > 0 ? `Functions: ${fC.functions.join(", ")}` : ""].filter((DD => "" !== DD)).join("\n")),
+                canRemember: ZC.length < 8
               }
             },
-            nu = new Map,
-            Hu = zz => {
-              var uz;
-              const bz = `${zz.format} ${zz.nativeTools}`,
-                Ez = null !== (uz = nu.get(bz)) && void 0 !== uz ? uz : sn(fp(), gz, zz);
-              return nu.set(bz, Ez), Ez
+            pC = new Map,
+            wC = DD => {
+              var CD;
+              const cD = `${DD.format} ${DD.nativeTools}`,
+                ID = null !== (CD = pC.get(cD)) && void 0 !== CD ? CD : Np(NB(), RD, DD);
+              return pC.set(cD, ID), ID
             },
-            Ku = zz => Hu(Hi(zz)),
-            wu = Xn(gz);
-          let Xu = 0,
-            fu = null;
-          const su = async () => {
-            const uz = Pi();
-            var Ez, nz;
-            uz > Date.now() && (Cu(Date.now()), Ou({
+            oC = DD => wC(Qi(DD)),
+            vC = op(RD);
+          let NC = 0,
+            gC = null;
+          const XC = async () => {
+            const CD = qi();
+            var ID, pD;
+            CD > Date.now() && (rC(Date.now()), SC({
               phase: "waiting",
-              startedAt: zz,
-              until: uz,
-              playingThrough: bz
-            }), await (Ez = uz - Date.now(), nz = Iz.signal, new Promise(((zz, uz) => {
-              const bz = setTimeout(zz, Ez);
-              nz.addEventListener("abort", (() => {
-                clearTimeout(bz), uz(new DOMException("The World Code AI request was stopped", "AbortError"))
+              startedAt: DD,
+              until: CD,
+              playingThrough: cD
+            }), await (ID = CD - Date.now(), pD = uD.signal, new Promise(((DD, CD) => {
+              const cD = setTimeout(DD, ID);
+              pD.addEventListener("abort", (() => {
+                clearTimeout(cD), CD(new DOMException("The World Code AI request was stopped", "AbortError"))
               }), {
                 once: !0
               })
             }))));
-            const iz = Date.now();
-            return Cu(iz), Ou({
+            const iD = Date.now();
+            return rC(iD), SC({
               phase: "thinking",
-              startedAt: iz,
-              playingThrough: bz
-            }), async function(zz) {
-              var uz, bz;
-              let Ez = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const nz = Date.now(),
-                iz = new AbortController,
-                lz = () => {
-                  iz.abort()
+              startedAt: iD,
+              playingThrough: cD
+            }), async function(DD) {
+              var CD, cD;
+              let ID = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const pD = Date.now(),
+                iD = new AbortController,
+                fD = () => {
+                  iD.abort()
                 };
-              null !== (uz = Ez.signal) && void 0 !== uz && uz.aborted && lz(), null === (bz = Ez.signal) || void 0 === bz || bz.addEventListener("abort", lz, {
+              null !== (CD = ID.signal) && void 0 !== CD && CD.aborted && fD(), null === (cD = ID.signal) || void 0 === cD || cD.addEventListener("abort", fD, {
                 once: !0
               });
-              const Mz = (0, wz.c)(3e4, iz.signal);
-              let tz = !1;
+              const bD = (0, vD.e)(3e4, iD.signal);
+              let QD = !1;
               try {
-                const uz = await xi(li, ci(Oi(zz, li)), Mz.signal, (zz => {
-                  if (!tz) {
-                    if (qi(zz.answer)) return tz = !0, void lz();
-                    var uz;
-                    (!0 === zz.isCalling || Ui(zz.answer)) && (null === (uz = Ez.onProgress) || void 0 === uz || uz.call(Ez, zz))
+                const CD = await Oi(ii, li(wi(DD, ii)), bD.signal, (DD => {
+                  if (!QD) {
+                    if (zi(DD.answer)) return QD = !0, void fD();
+                    var CD;
+                    (!0 === DD.isCalling || ji(DD.answer)) && (null === (CD = ID.onProgress) || void 0 === CD || CD.call(ID, DD))
                   }
-                }), Ez.tools);
-                if (vi(uz) && !qi(uz.answer)) {
-                  const bz = !1 !== Ez.canNudge ? await mi(li, ci(Oi(zz, li)), uz, iz.signal, (zz => {
-                    if (!tz) {
-                      if (qi(zz.answer)) return tz = !0, void lz();
-                      var uz;
-                      (!0 === zz.isCalling || Ui(zz.answer)) && (null === (uz = Ez.onProgress) || void 0 === uz || uz.call(Ez, zz))
+                }), ID.tools);
+                if (ni(CD) && !zi(CD.answer)) {
+                  const cD = !1 !== ID.canNudge ? await Vi(ii, li(wi(DD, ii)), CD, iD.signal, (DD => {
+                    if (!QD) {
+                      if (zi(DD.answer)) return QD = !0, void fD();
+                      var CD;
+                      (!0 === DD.isCalling || ji(DD.answer)) && (null === (CD = ID.onProgress) || void 0 === CD || CD.call(ID, DD))
                     }
-                  }), Ez.tools, 3e4) : uz;
-                  if (!qi(bz.answer)) return {
-                    ...bz,
-                    ms: Date.now() - nz
+                  }), ID.tools, 3e4) : CD;
+                  if (!zi(cD.answer)) return {
+                    ...cD,
+                    ms: Date.now() - pD
                   }
                 }
-              } catch (pz) {
-                var Hz;
-                if (null !== (Hz = Ez.signal) && void 0 !== Hz && Hz.aborted) throw pz;
-                tz || console.warn(`World Code AI: ${li.name} couldn't be reached`, pz)
+              } catch (BD) {
+                var wD;
+                if (null !== (wD = ID.signal) && void 0 !== wD && wD.aborted) throw BD;
+                QD || console.warn(`World Code AI: ${ii.name} couldn't be reached`, BD)
               } finally {
-                var Oz;
-                Mz.clear(), null === (Oz = Ez.signal) || void 0 === Oz || Oz.removeEventListener("abort", lz)
+                var SD;
+                bD.clear(), null === (SD = ID.signal) || void 0 === SD || SD.removeEventListener("abort", fD)
               }
               return {
-                ...await Gi(zz, Ez),
-                ms: Date.now() - nz
+                ...await Ji(DD, ID),
+                ms: Date.now() - pD
               }
-            }(Ku, {
-              signal: Iz.signal,
-              tools: wu,
-              canNudge: !Mz,
-              onProgress: zz => {
-                const uz = Date.now(),
-                  Ez = zz.model !== fu;
-                if (fu = zz.model, !Ez && uz - Xu < 150) return;
-                Xu = uz;
-                const nz = function(zz, uz) {
-                  const bz = function(zz) {
-                      return zz.replace(/<think>[\s\S]*?(?:<\/think>|$)/g, "")
-                    }(zz),
-                    Ez = wO.exec(bz);
-                  let nz = Ez ? bz.slice(0, Ez.index) : bz;
-                  nz = nz.replace(/<[\w_]*$/, "").trim();
-                  const iz = bz.trimEnd(),
-                    lz = Ob(bz, uz).filter((zz => !/^<(?:tool_call|function=)/.test(zz.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(zz.source) || !iz.endsWith(zz.source.trimEnd()))),
-                    Mz = lz.flatMap((zz => {
-                      var uz;
-                      const bz = null === (uz = zz.args.why) || void 0 === uz ? void 0 : uz.trim();
-                      return bz ? [bz.charAt(0).toUpperCase() + bz.slice(1)] : []
+            }(oC, {
+              signal: uD.signal,
+              tools: vC,
+              canNudge: !bD,
+              onProgress: DD => {
+                const CD = Date.now(),
+                  ID = DD.model !== gC;
+                if (gC = DD.model, !ID && CD - NC < 150) return;
+                NC = CD;
+                const pD = function(DD, CD) {
+                  const cD = function(DD) {
+                      return DD.replace(/<think>[\s\S]*?(?:<\/think>|$)/g, "")
+                    }(DD),
+                    ID = vS.exec(cD);
+                  let pD = ID ? cD.slice(0, ID.index) : cD;
+                  pD = pD.replace(/<[\w_]*$/, "").trim();
+                  const iD = cD.trimEnd(),
+                    fD = Sc(cD, CD).filter((DD => !/^<(?:tool_call|function=)/.test(DD.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(DD.source) || !iD.endsWith(DD.source.trimEnd()))),
+                    bD = fD.flatMap((DD => {
+                      var CD;
+                      const cD = null === (CD = DD.args.why) || void 0 === CD ? void 0 : CD.trim();
+                      return cD ? [cD.charAt(0).toUpperCase() + cD.slice(1)] : []
                     }));
                   return {
-                    text: nz,
-                    whys: [...new Set(Mz)],
-                    isWritingCode: null !== Ez,
-                    calls: lz.length
+                    text: pD,
+                    whys: [...new Set(bD)],
+                    isWritingCode: null !== ID,
+                    calls: fD.length
                   }
-                }(zz.answer, ti(zz.model));
-                Ou({
-                  phase: "" !== nz.text || nz.isWritingCode ? "writing" : "thinking",
-                  startedAt: iz,
-                  playingThrough: bz,
-                  reasoningChars: zz.reasoningChars,
-                  model: zz.model
+                }(DD.answer, bi(DD.model));
+                SC({
+                  phase: "" !== pD.text || pD.isWritingCode ? "writing" : "thinking",
+                  startedAt: iD,
+                  playingThrough: cD,
+                  reasoningChars: DD.reasoningChars,
+                  model: DD.model
                 })
               }
             })
-          }, ru = (bu = null === (Mu = OM.getState().status) || void 0 === Mu ? void 0 : Mu.provider, iM[null !== bu && void 0 !== bu ? bu : "ovh"]), ou = zz => {
-            ku.current = null, Bz.drop(Qz), Tb(Qz, {
+          }, mC = (cC = null === (bC = Sb.getState().status) || void 0 === bC ? void 0 : bC.provider, ib[null !== cC && void 0 !== cC ? cC : "ovh"]), nC = DD => {
+            FC.current = null, hD.drop(WD), qc(WD, {
               isNotice: !0
-            }), Jb({
+            }), Uc({
               role: "assistant",
-              text: "unsafe" === zz ? "That answer didn't pass Bloxd's safety check, so it isn't shown. Try again, or ask in a different way." : "Bloxd's safety check couldn't look at that answer, so it isn't shown. Try again in a minute.",
+              text: "unsafe" === DD ? "That answer didn't pass Bloxd's safety check, so it isn't shown. Try again, or ask in a different way." : "Bloxd's safety check couldn't look at that answer, so it isn't shown. Try again in a minute.",
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...ez
+              ...ED
             })
-          }, Nu = async () => {
-            var zz;
-            const uz = Date.now();
-            Cu(uz), Ou({
+          }, OC = async () => {
+            var DD;
+            const CD = Date.now();
+            rC(CD), SC({
               phase: "thinking",
-              startedAt: uz,
-              playingThrough: bz,
+              startedAt: CD,
+              playingThrough: cD,
               isSuperBot: !0
             });
-            const Ez = qz < 0 ? iu : iu.slice(0, qz),
-              iz = Ez.findLastIndex((zz => "assistant" === zz.role && !zz.isNotice && !zz.leftOut && Ab(zz))),
-              lz = Ez[iz],
-              Mz = Ez.findIndex((zz => zz.id === rz)),
-              Oz = Ez.slice(0, Math.max(0, iz)).findLastIndex((zz => "user" === zz.role)),
-              pz = void 0 === Fz && (void 0 === rz || Mz >= 0 && Mz < iz && Mz >= Oz) && "object" === typeof(null === lz || void 0 === lz ? void 0 : lz.answeredBy) && !0 === lz.answeredBy.isSuperBot,
-              dz = Hi(ru),
-              Zz = sn(fp(), gz, dz, {
+            const ID = lD < 0 ? iC : iC.slice(0, lD),
+              iD = ID.findLastIndex((DD => "assistant" === DD.role && !DD.isNotice && !DD.leftOut && xc(DD))),
+              fD = ID[iD],
+              bD = ID.findIndex((DD => DD.id === mD)),
+              SD = ID.slice(0, Math.max(0, iD)).findLastIndex((DD => "user" === DD.role)),
+              BD = void 0 === MD && (void 0 === mD || bD >= 0 && bD < iD && bD >= SD) && "object" === typeof(null === fD || void 0 === fD ? void 0 : fD.answeredBy) && !0 === fD.answeredBy.isSuperBot,
+              yD = Qi(mC),
+              tD = Np(NB(), RD, yD, {
                 docsInTurn: !0
               }),
-              Rz = Xn(gz, dz.format),
-              Kz = "deepseek" === dz.format ? {
-                AO: sn(fp(), gz, dz, {
+              ZD = op(RD, yD.format),
+              oD = "deepseek" === yD.format ? {
+                eb: Np(NB(), RD, yD, {
                   docsInTurn: !0,
-                  AO: !0
+                  eb: !0
                 }).at(-1),
-                toolResults: [...(null !== Hz && void 0 !== Hz ? Hz : []).flatMap((zz => zz.call ? [{
-                  ...zz.call,
-                  text: kE(zz)
-                }] : [])), ...(null !== (zz = gz.lookups) && void 0 !== zz ? zz : []).flatMap((zz => zz.call ? [{
-                  ...zz.call,
-                  text: `${zz.about}:\n${zz.text}`
+                toolResults: [...(null !== wD && void 0 !== wD ? wD : []).flatMap((DD => DD.call ? [{
+                  ...DD.call,
+                  text: FI(DD)
+                }] : [])), ...(null !== (DD = RD.lookups) && void 0 !== DD ? DD : []).flatMap((DD => DD.call ? [{
+                  ...DD.call,
+                  text: `${DD.about}:\n${DD.text}`
                 }] : []))].slice(-20)
               } : {};
-            let wz;
+            let vD;
             try {
-              wz = await async function(zz, uz, bz, Ez, nz) {
-                var iz;
+              vD = await async function(DD, CD, cD, ID, pD) {
+                var iD;
                 let {
-                  AO: lz,
-                  toolResults: Mz,
-                  request: tz,
-                  code: Hz
+                  eb: fD,
+                  toolResults: bD,
+                  request: QD,
+                  code: wD
                 } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-                const Oz = Date.now(),
-                  pz = "system" === (null === (iz = uz[0]) || void 0 === iz ? void 0 : iz.role) ? uz[0].content : "",
-                  dz = JSON.stringify(Ni(bz)),
-                  Fz = null !== Ez && Ez.system === pz && Ez.toolsJson === dz,
-                  Zz = null !== lz && void 0 !== lz ? lz : uz[uz.length - 1],
-                  Rz = Mz && Mz.length > 0 ? {
-                    toolResults: Mz
+                const SD = Date.now(),
+                  BD = "system" === (null === (iD = CD[0]) || void 0 === iD ? void 0 : iD.role) ? CD[0].content : "",
+                  yD = JSON.stringify(mi(cD)),
+                  MD = null !== ID && ID.system === BD && ID.toolsJson === yD,
+                  tD = null !== fD && void 0 !== fD ? fD : CD[CD.length - 1],
+                  ZD = bD && bD.length > 0 ? {
+                    toolResults: bD
                   } : {},
-                  Kz = {
-                    ...tz ? {
-                      request: tz
+                  oD = {
+                    ...QD ? {
+                      request: QD
                     } : {},
-                    ...Hz ? {
-                      code: Hz
+                    ...wD ? {
+                      code: wD
                     } : {}
                   };
-                let wz = await NM(oM(Fz ? {
-                  chatId: Ez.chatId,
-                  messages: [Zz],
-                  ...Rz,
-                  ...Kz
+                let vD = await Ob(nb(MD ? {
+                  chatId: ID.chatId,
+                  messages: [tD],
+                  ...ZD,
+                  ...oD
                 } : {
-                  messages: uz,
-                  toolsJson: dz,
-                  ...Kz
-                }), nz);
-                if ("newChat" === wz.outcome && Fz && (wz = await NM(oM({
-                    messages: uz,
-                    toolsJson: dz,
-                    ...Kz
-                  }), nz)), "status" in wz && OM.setStatus(wz.status), "refused" === wz.outcome) return {
+                  messages: CD,
+                  toolsJson: yD,
+                  ...oD
+                }), pD);
+                if ("newChat" === vD.outcome && MD && (vD = await Ob(nb({
+                    messages: CD,
+                    toolsJson: yD,
+                    ...oD
+                  }), pD)), "status" in vD && Sb.setStatus(vD.status), "refused" === vD.outcome) return {
                   kind: "refused",
-                  safety: wz.safety
+                  safety: vD.safety
                 };
-                if ("blocked" === wz.outcome) return {
+                if ("blocked" === vD.outcome) return {
                   kind: "blocked",
-                  safety: wz.safety
+                  safety: vD.safety
                 };
-                if ("answered" !== wz.outcome) return {
-                  kind: "newChat" === wz.outcome ? "failed" : wz.outcome
+                if ("answered" !== vD.outcome) return {
+                  kind: "newChat" === vD.outcome ? "failed" : vD.outcome
                 };
-                const Xz = Ji(zz, wz.answer, wz.reasoning, wz.toolCalls, wz.isCutShort);
-                return null === Xz ? {
+                const ND = Pi(DD, vD.answer, vD.reasoning, vD.toolCalls, vD.isCutShort);
+                return null === ND ? {
                   kind: "failed"
                 } : {
                   kind: "answered",
                   reply: {
-                    ...Xz,
-                    ms: Date.now() - Oz
+                    ...ND,
+                    ms: Date.now() - SD
                   },
                   chat: {
-                    chatId: wz.chatId,
-                    system: pz,
-                    toolsJson: dz
+                    chatId: vD.chatId,
+                    system: BD,
+                    toolsJson: yD
                   }
                 }
-              }(ru, Zz, Rz, pz ? ku.current : null, Iz.signal, {
-                ...Kz,
-                ...nz ? {
-                  request: vz
+              }(mC, tD, ZD, BD ? FC.current : null, uD.signal, {
+                ...oD,
+                ...pD ? {
+                  request: PD
                 } : {},
-                code: Rn(gz, dz.format)
+                code: Mp(RD, yD.format)
               })
-            } catch (sz) {
-              if (Iz.signal.aborted) throw sz;
-              console.warn("AI Helper: Super Bot.xd couldn't be reached", sz), wz = {
+            } catch (XD) {
+              if (uD.signal.aborted) throw XD;
+              console.warn("AI Helper: Super Bot.xd couldn't be reached", XD), vD = {
                 kind: "failed"
               }
             }
-            if ("answered" === wz.kind) return ku.current = wz.chat, {
-              ...wz.reply,
-              promptVersion: ul(Zz)
+            if ("answered" === vD.kind) return FC.current = vD.chat, {
+              ...vD.reply,
+              promptVersion: Fi(tD)
             };
-            if ("refused" === wz.kind) return tz(wz.safety), "stopped";
-            if ("blocked" === wz.kind) return ou(wz.safety), "stopped";
-            ku.current = null, Lu = "free";
-            const Xz = OM.getState(),
-              fz = "unavailable" === wz.kind && XM(Xz);
-            return fz && GM(), {
-              fallbackNotice: fz ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : rM(wz.kind, Xz.status)
+            if ("refused" === vD.kind) return QD(vD.safety), "stopped";
+            if ("blocked" === vD.kind) return nC(vD.safety), "stopped";
+            FC.current = null, JC = "free";
+            const ND = Sb.getState(),
+              gD = "unavailable" === vD.kind && Nb(ND);
+            return gD && ab(), {
+              fallbackNotice: gD ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : mb(vD.kind, ND.status)
             }
           };
-          let vu, xu, Ju, Au, Lu = xz || kl.getState().keys.length > 0 ? "free" : void 0,
-            Pu = !1;
-          if (Tz) {
-            const uz = {
-              format: fi(Tz.model.callFormat),
-              nativeTools: !0 === Tz.model.nativeTools
+          let PC, HC, UC, xC, JC = HD || Ff.getState().keys.length > 0 ? "free" : void 0,
+            KC = !1;
+          if (qD) {
+            const CD = {
+              format: vi(qD.model.callFormat),
+              nativeTools: !0 === qD.model.nativeTools
             };
-            xu = uz.format;
-            const nz = [...Hu(uz)];
-            var pu;
-            if (Au = {
+            HC = CD.format;
+            const pD = [...wC(CD)];
+            var BC;
+            if (xC = {
                 responder: "key",
-                model: Tz.model.name,
-                promptVersion: ul(nz)
-              }, void 0 !== Rz) "" !== Rz && nz.push({
+                model: qD.model.name,
+                promptVersion: Fi(pD)
+              }, void 0 !== ZD) "" !== ZD && pD.push({
               role: "assistant",
-              content: Rz
-            }), nz.push({
+              content: ZD
+            }), pD.push({
               role: "user",
-              content: (zu = null === yz || void 0 === yz || null === (pu = yz.cutShort) || void 0 === pu ? void 0 : pu.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (zu ? ` Your ${zu.name} call${zu.path?` for ${zu.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
+              content: (DC = null === dD || void 0 === dD || null === (BC = dD.cutShort) || void 0 === BC ? void 0 : BC.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (DC ? ` Your ${DC.name} call${DC.path?` for ${DC.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
             });
-            Ou({
+            SC({
               phase: "thinking",
-              startedAt: zz,
-              playingThrough: bz,
-              keyModel: Ez
+              startedAt: DD,
+              playingThrough: cD,
+              keyModel: ID
             });
-            const iz = uz => {
-              Ou({
-                phase: "" === uz.answer ? "thinking" : "writing",
-                startedAt: zz,
-                playingThrough: bz,
-                keyModel: Ez
+            const iD = CD => {
+              SC({
+                phase: "" === CD.answer ? "thinking" : "writing",
+                startedAt: DD,
+                playingThrough: cD,
+                keyModel: ID
               })
             };
             try {
-              const zz = await bM(Tz, nz, {
-                signal: Iz.signal,
-                onProgress: iz,
-                tools: wu,
-                continueFrom: Rz
+              const DD = await cb(qD, pD, {
+                signal: uD.signal,
+                onProgress: iD,
+                tools: vC,
+                continueFrom: ZD
               });
-              vu = zz, Lu = {
-                model: Tz.name ? `${Tz.name} \xb7 ${Tz.model.name}` : Tz.model.name
-              }, zz.isCutShort && (Ju = function(zz, uz, bz) {
+              PC = DD, JC = {
+                model: qD.name ? `${qD.name} \xb7 ${qD.model.name}` : qD.model.name
+              }, DD.isCutShort && (UC = function(DD, CD, cD) {
                 return {
-                  request: bz,
-                  written: uz.written,
-                  cutCall: uz.cutCall,
-                  keyId: zz.id,
-                  modelId: zz.model.id
+                  request: cD,
+                  written: CD.written,
+                  cutCall: CD.cutCall,
+                  keyId: DD.id,
+                  modelId: DD.model.id
                 }
-              }(Tz, zz, vz))
-            } catch (Zu) {
-              if (!(Zu instanceof sl) || Iz.signal.aborted) throw Zu;
-              return void mb(Zu, Tz, Qz, ez)
+              }(qD, DD, PD))
+            } catch (tC) {
+              if (!(tC instanceof Xf) || uD.signal.aborted) throw tC;
+              return void jc(tC, qD, WD, ED)
             }
           } else {
-            const zz = mz ? await Nu() : null;
-            if ("stopped" === zz) return;
-            if (zz && !("fallbackNotice" in zz)) {
-              var du;
-              vu = zz, Au = {
+            const DD = jD ? await OC() : null;
+            if ("stopped" === DD) return;
+            if (DD && !("fallbackNotice" in DD)) {
+              var yC;
+              PC = DD, xC = {
                 responder: "super_bot_xd",
-                model: ru.name,
-                promptVersion: zz.promptVersion
-              }, xu = null !== (du = ru.callFormat) && void 0 !== du ? du : "simple", Lu = {
-                model: nM,
+                model: mC.name,
+                promptVersion: DD.promptVersion
+              }, HC = null !== (yC = mC.callFormat) && void 0 !== yC ? yC : "simple", JC = {
+                model: pb,
                 isSuperBot: !0
-              }, Pu = !0
+              }, KC = !0
             } else {
-              if (mz) {
-                const zz = await dz();
-                if (null === zz) return;
-                Az = zz
+              if (jD) {
+                const DD = await yD();
+                if (null === DD) return;
+                xD = DD
               }
-              let uz;
-              zz && "fallbackNotice" in zz && Jb({
+              let CD;
+              DD && "fallbackNotice" in DD && Uc({
                 role: "assistant",
-                text: zz.fallbackNotice,
+                text: DD.fallbackNotice,
                 changes: [],
                 status: "offered",
                 isNotice: !0
               });
               try {
-                uz = await su()
-              } catch (Zu) {
-                if (!(Zu instanceof Ki && "busy" === Zu.reason)) throw Zu;
-                uz = await su()
+                CD = await XC()
+              } catch (tC) {
+                if (!(tC instanceof ti && "busy" === tC.reason)) throw tC;
+                CD = await XC()
               }
-              Tu.current = function(zz, uz, bz) {
-                  var Ez;
-                  return !Number.isFinite(bz) || bz <= 0 ? zz : {
-                    ...zz,
-                    [uz]: [...null !== (Ez = zz[uz]) && void 0 !== Ez ? Ez : [], bz].slice(-10)
+              qC.current = function(DD, CD, cD) {
+                  var ID;
+                  return !Number.isFinite(cD) || cD <= 0 ? DD : {
+                    ...DD,
+                    [CD]: [...null !== (ID = DD[CD]) && void 0 !== ID ? ID : [], cD].slice(-10)
                   }
-                }(Tu.current, uz.model, uz.ms),
-                function(zz) {
+                }(qC.current, CD.model, CD.ms),
+                function(DD) {
                   try {
-                    localStorage.setItem(xO, JSON.stringify(zz))
+                    localStorage.setItem(HS, JSON.stringify(DD))
                   } catch {}
-                }(Tu.current), vu = uz, xu = ti(uz.model);
-              const bz = Mi(uz.model);
-              Au = {
+                }(qC.current), PC = CD, HC = bi(CD.model);
+              const cD = fi(CD.model);
+              xC = {
                 responder: "bot_xd",
-                model: uz.model,
-                promptVersion: bz ? ul(Ku(bz)) : ""
+                model: CD.model,
+                promptVersion: cD ? Fi(oC(cD)) : ""
               }
             }
           }
-          const Gu = fp(),
-            au = WE(vu.answer, xu, Pz, Jz, Gu.callbackNames(), uu ? Zz.b : void 0, Cz, new Set([Fn(Pz, Jz, uu), Jz, ...sz, ...Object.keys(null !== fz && void 0 !== fz ? fz : {})].filter((zz => null !== zz))), Gu.realName),
-            Vu = Mz ? {
-              ...au,
+          const aC = NB(),
+            VC = sI(PC.answer, HC, KD, UD, aC.callbackNames(), CC ? tD.b : void 0, rD, new Set([Bp(KD, UD, CC), UD, ...XD, ...Object.keys(null !== gD && void 0 !== gD ? gD : {})].filter((DD => null !== DD))), aC.realName),
+            zC = bD ? {
+              ...VC,
               changes: [],
               failedEdits: [],
               inPlace: !1,
               worldCode: [],
               plan: [],
               actions: []
-            } : au;
-          if (!Pu) {
-            const zz = Date.now();
-            Cu(zz), Ou({
+            } : VC;
+          if (!KC) {
+            const DD = Date.now();
+            rC(DD), SC({
               phase: "screening",
-              startedAt: zz,
-              playingThrough: bz,
-              keyModel: Ez
+              startedAt: DD,
+              playingThrough: cD,
+              keyModel: ID
             });
-            const uz = await vO(Az, Vu, Iz.signal, (uz => {
-              Cu(Date.now()), Ou({
+            const CD = await PS(xD, zC, uD.signal, (CD => {
+              rC(Date.now()), SC({
                 phase: "screening",
-                startedAt: zz,
-                playingThrough: bz,
-                keyModel: Ez,
-                until: uz
+                startedAt: DD,
+                playingThrough: cD,
+                keyModel: ID,
+                until: CD
               })
             }));
-            if ("ok" !== uz) return void ou(uz)
+            if ("ok" !== CD) return void nC(CD)
           }
-          Bz.answered(Qz, {
-            input: gz,
-            responder: Au.responder,
-            promptVersion: Au.promptVersion
+          hD.answered(WD, {
+            input: RD,
+            responder: xC.responder,
+            promptVersion: xC.promptVersion
           }, {
-            model: Au.model,
-            text: vu.answer
+            model: xC.model,
+            text: PC.answer
           });
-          const mu = function(zz) {
-              let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
-              return zz.flatMap((zz => Hp(Gu, zz, uz && !(0, Zz.e)(zz.path))))
+          const jC = function(DD) {
+              let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CC;
+              return DD.flatMap((DD => QB(aC, DD, CD && !(0, tD.d)(DD.path))))
             },
-            qu = mu(Vu.changes),
-            hu = "direct" === Cz ? function(zz) {
-              return zz.flatMap((zz => {
-                var uz;
-                return null !== (uz = Ft(zz)) && void 0 !== uz ? uz : []
+            lC = jC(zC.changes),
+            LC = "direct" === rD ? function(DD) {
+              return DD.flatMap((DD => {
+                var CD;
+                return null !== (CD = MQ(DD)) && void 0 !== CD ? CD : []
               }))
-            }(qu) : [],
-            Uu = hu.length > 0 ? {
-              ...Vu,
-              changes: Vu.changes.map((zz => ({
-                ...zz,
-                after: wt(zz.after, hu)
+            }(lC) : [],
+            TC = LC.length > 0 ? {
+              ...zC,
+              changes: zC.changes.map((DD => ({
+                ...DD,
+                after: vQ(DD.after, LC)
               })))
-            } : Vu,
-            cu = Uu.changes.filter((zz => uu && (0, Zz.e)(zz.path))).map((zz => ({
-              ...zz,
-              path: (0, Zz.f)(zz.path)
+            } : zC,
+            GC = TC.changes.filter((DD => CC && (0, tD.d)(DD.path))).map((DD => ({
+              ...DD,
+              path: (0, tD.g)(DD.path)
             }))),
-            Su = Uu.changes.filter((zz => !uu || !(0, Zz.e)(zz.path))),
-            yu = cu.length > 0 ? {
-              ...Uu,
-              changes: Su,
-              inPlace: Uu.inPlace && Su.length > 0
-            } : Uu,
-            Du = cu.length > 0 || hu.length > 0 ? mu(yu.changes) : qu,
-            Qu = Du.filter(np),
-            Wu = yu.inPlace && Gz && Qu.length > 0 && pz < 3 && !vu.isCutShort && !vu.hasCallsFromReasoning,
-            eu = "direct" === Cz && Gz,
-            ju = yu.failedEdits.filter((zz => "unread" === zz.reason)),
-            Iu = !eu || Mz || void 0 !== oz || uu ? [] : ju.flatMap((zz => null !== zz.path && void 0 !== zz.code ? [{
-              path: zz.path,
-              code: zz.code
+            kC = TC.changes.filter((DD => !CC || !(0, tD.d)(DD.path))),
+            dC = GC.length > 0 ? {
+              ...TC,
+              changes: kC,
+              inPlace: TC.inPlace && kC.length > 0
+            } : TC,
+            YC = GC.length > 0 || LC.length > 0 ? jC(dC.changes) : lC,
+            WC = YC.filter(IB),
+            sC = dC.inPlace && aD && WC.length > 0 && BD < 3 && !PC.isCutShort && !PC.hasCallsFromReasoning,
+            EC = "direct" === rD && aD,
+            eC = dC.failedEdits.filter((DD => "unread" === DD.reason)),
+            uC = !EC || bD || void 0 !== nD || CC ? [] : eC.flatMap((DD => null !== DD.path && void 0 !== DD.code ? [{
+              path: DD.path,
+              code: DD.code
             }] : [])),
-            Bu = zz => "unread" === zz.reason && Iu.some((uz => uz.path === zz.path)),
-            Yu = yu.failedEdits.filter((zz => !Bu(zz))),
-            zb = ju.filter((zz => !Bu(zz))),
-            ub = bE(Cz) && yu.worldCode.length > 0 && !Mz && 0 === cu.length,
-            bb = Xz < 3 && !Mz && !vu.isCutShort,
-            Eb = new Set([...wu.map((zz => zz.name)), ...zb.length > 0 ? ["view_file", "view_world_code"] : []]),
-            nb = !bb || Iu.length > 0 || cu.length > 0 || Wu ? [] : yu.lookups.filter((zz => Eb.has(zz.name))),
-            ib = {
-              request: vz,
-              shown: uz,
-              userEntryId: Qz,
+            hC = DD => "unread" === DD.reason && uC.some((CD => CD.path === DD.path)),
+            AC = dC.failedEdits.filter((DD => !hC(DD))),
+            Dc = eC.filter((DD => !hC(DD))),
+            Cc = cI(rD) && dC.worldCode.length > 0 && !bD && 0 === GC.length,
+            cc = ND < 3 && !bD && !PC.isCutShort,
+            Ic = new Set([...vC.map((DD => DD.name)), ...Dc.length > 0 ? ["view_file", "view_world_code"] : []]),
+            pc = !cc || uC.length > 0 || GC.length > 0 || sC ? [] : dC.lookups.filter((DD => Ic.has(DD.name))),
+            ic = {
+              request: PD,
+              shown: CD,
+              userEntryId: WD,
               options: {
                 check: !1,
-                about: iz,
-                planStep: lz,
-                wordsOnly: Mz,
-                useFree: xz,
-                isAutoFix: Oz,
-                autoFixRound: pz,
-                failedEdits: [...(null !== Hz && void 0 !== Hz ? Hz : []).map(pp), ...zb],
-                ...Wz,
-                lookupRound: Xz + 1,
-                lookupOf: Qz,
-                insertsInto: oz,
-                guardWords: Az
+                about: iD,
+                planStep: fD,
+                wordsOnly: bD,
+                useFree: HD,
+                isAutoFix: SD,
+                autoFixRound: BD,
+                failedEdits: [...(null !== wD && void 0 !== wD ? wD : []).map(SB), ...Dc],
+                ...sD,
+                lookupRound: ND + 1,
+                lookupOf: WD,
+                insertsInto: nD,
+                guardWords: xD
               }
             },
-            lb = 0 === yu.changes.length && 0 === yu.worldCode.length,
-            Mb = nb.length > 0 && ("direct" === Cz || Lz && lb && nb.every(Jn)),
-            tb = Mb && lb && 0 === yu.notes.length,
-            pb = Uz ? yu.question : null,
-            db = vu.isCutShort ? yu.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : yu.text,
-            Fb = vu.isCutShort && !Ju ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
-            Rb = Yu.length > 0 && yu.changes.length > 0 && !vu.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
-            wb = () => yu.changes.length > 0 ? "Here's a change for your code." : cu.length > 0 ? "This changes your World Code." : yu.worldCode.length > 0 ? "This needs World Code." : Iu.length > 0 ? `I'll put it into ${Iu.map((zz=>zz.path)).join(" and ")}.` : pb ? "Quick question before I build it:" : yu.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : nb.length > 0 ? `I'll look at ${function(zz){var uz;const bz=zz.map(Nn);return bz.length<=1?null!==(uz=bz[0])&&void 0!==uz?uz:"":`${bz.slice(0,-1).join(", ")} and ${bz[bz.length-1]}`}(nb)} first.` : yu.notes.length > 0 ? "Here's something to remember about your game." : yu.actions.length > 0 ? "Sure!" : vu.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
-            Xb = {
+            fc = 0 === dC.changes.length && 0 === dC.worldCode.length,
+            bc = pc.length > 0 && ("direct" === rD || JD && fc && pc.every(Op)),
+            Qc = bc && fc && 0 === dC.notes.length,
+            Bc = TD ? dC.question : null,
+            yc = PC.isCutShort ? dC.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : dC.text,
+            Mc = PC.isCutShort && !UC ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
+            Zc = AC.length > 0 && dC.changes.length > 0 && !PC.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
+            vc = () => dC.changes.length > 0 ? "Here's a change for your code." : GC.length > 0 ? "This changes your World Code." : dC.worldCode.length > 0 ? "This needs World Code." : uC.length > 0 ? `I'll put it into ${uC.map((DD=>DD.path)).join(" and ")}.` : Bc ? "Quick question before I build it:" : dC.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : pc.length > 0 ? `I'll look at ${function(DD){var CD;const cD=DD.map(Xp);return cD.length<=1?null!==(CD=cD[0])&&void 0!==CD?CD:"":`${cD.slice(0,-1).join(", ")} and ${cD[cD.length-1]}`}(pc)} first.` : dC.notes.length > 0 ? "Here's something to remember about your game." : dC.actions.length > 0 ? "Sure!" : PC.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
+            Nc = {
               role: "assistant",
-              text: (db || wb()) + Fb + Rb,
-              changes: yu.changes,
+              text: (yc || vc()) + Mc + Zc,
+              changes: dC.changes,
               status: "offered",
-              warnings: Du,
-              worldCode: yu.worldCode.length > 0 && !ub ? yu.worldCode : void 0,
-              editedInPlace: yu.inPlace && !Wu || void 0,
-              failedEdits: Yu.length > 0 ? Yu : void 0,
-              question: null !== pb && void 0 !== pb ? pb : void 0,
-              askedFor: pb ? {
-                request: vz,
-                guardWords: Az
+              warnings: YC,
+              worldCode: dC.worldCode.length > 0 && !Cc ? dC.worldCode : void 0,
+              editedInPlace: dC.inPlace && !sC || void 0,
+              failedEdits: AC.length > 0 ? AC : void 0,
+              question: null !== Bc && void 0 !== Bc ? Bc : void 0,
+              askedFor: Bc ? {
+                request: PD,
+                guardWords: xD
               } : void 0,
-              note: yu.notes[0],
-              plan: yu.plan.length > 0 ? yu.plan : void 0,
-              noteStatus: yu.notes.length > 0 ? eu ? "pending" : "asked" : void 0,
-              answeredBy: Lu,
-              oneOff: Vz || void 0,
-              cutShort: Ju,
-              byItself: eu || void 0,
-              ...Ju ? {
-                retryShown: ez.retryShown,
-                retryOptions: ez.retryOptions
+              note: dC.notes[0],
+              plan: dC.plan.length > 0 ? dC.plan : void 0,
+              noteStatus: dC.notes.length > 0 ? EC ? "pending" : "asked" : void 0,
+              answeredBy: JC,
+              oneOff: zD || void 0,
+              cutShort: UC,
+              byItself: EC || void 0,
+              ...UC ? {
+                retryShown: ED.retryShown,
+                retryOptions: ED.retryOptions
               } : {},
-              ...tb ? {
-                logTitle: Op,
+              ...Qc ? {
+                logTitle: wB,
                 isCalm: !0
               } : {},
-              ...nb.length > 0 ? {
+              ...pc.length > 0 ? {
                 lookups: {
-                  lookups: nb,
-                  followUp: ib
+                  lookups: pc,
+                  followUp: ic
                 },
-                lookedAt: Mb || void 0
+                lookedAt: bc || void 0
               } : {}
             },
-            fb = Sz && void 0 !== Fz ? (Yz = Fz, kz = Xb, tu((zz => zz.map((zz => zz.id === Yz ? {
-              ...kz,
-              id: Yz,
-              target: zz.target
-            } : zz)))), Yz) : Jb(Xb),
-            sb = yu.inPlace && Gz && !Wu && !vu.isCutShort && !vu.hasCallsFromReasoning,
-            rb = sb && await Ib({
-              id: fb,
-              changes: yu.changes
-            }, iz);
-          !yu.inPlace || Wu || rb || Tb(fb, {
+            gc = kD && void 0 !== MD ? (AD = MD, FD = Nc, QC((DD => DD.map((DD => DD.id === AD ? {
+              ...FD,
+              id: AD,
+              target: DD.target
+            } : DD)))), AD) : Uc(Nc),
+            Xc = dC.inPlace && aD && !sC && !PC.isCutShort && !PC.hasCallsFromReasoning,
+            mc = Xc && await uc({
+              id: gc,
+              changes: dC.changes
+            }, iD);
+          !dC.inPlace || sC || mc || qc(gc, {
             editedInPlace: void 0
           });
-          const ob = 0 === yu.changes.length && 0 === Yu.length && 0 === Iu.length && 0 === cu.length && 0 === yu.worldCode.length;
-          if (eu && void 0 !== Xb.note && ((rb || Wu || ob) && !Iz.signal.aborted ? NE({
-              id: fb,
-              note: Xb.note,
+          const nc = 0 === dC.changes.length && 0 === AC.length && 0 === uC.length && 0 === GC.length && 0 === dC.worldCode.length;
+          if (EC && void 0 !== Nc.note && ((mc || sC || nc) && !uD.signal.aborted ? OI({
+              id: gc,
+              note: Nc.note,
               changes: [],
               status: "applied"
-            }, !0) : sb && !Iz.signal.aborted ? oE(fb, "declined") : oE(fb, "asked")), Iz.signal.aborted) return void Jb({
+            }, !0) : Xc && !uD.signal.aborted ? nI(gc, "declined") : nI(gc, "asked")), uD.signal.aborted) return void Uc({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14212,56 +14212,56 @@ const jp = (0, Ez.memo)((function(zz) {
             isNotice: !0,
             isCalm: !0
           });
-          Wu && (Tb(fb, {
+          sC && (qc(gc, {
             warningsSentBack: !0
-          }), gu((zz => [{
-            id: Zb(),
-            text: (0, HH.v)(Qu),
+          }), RC((DD => [{
+            id: tc(),
+            text: (0, ww.u)(WC),
             shown: "Fix this line",
             check: !1,
             isAutoFix: !0,
-            autoFixRound: pz + 1
-          }, ...zz]))), rb && LO(yu.changes, Jz).forEach(((zz, uz) => {
-            const bz = () => {
-              Jb({
+            autoFixRound: BD + 1
+          }, ...DD]))), mc && JS(dC.changes, UD).forEach(((DD, CD) => {
+            const cD = () => {
+              Uc({
                 role: "assistant",
-                text: PO(zz.path),
+                text: KS(DD.path),
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0
-              }), cz(zz.path, zz.line)
+              }), GD(DD.path, DD.line)
             };
-            0 === uz ? bz() : Hb(bz, 1200 * uz)
+            0 === CD ? cD() : wc(cD, 1200 * CD)
           }));
-          const Nb = 0 === nb.length && yu.actions.some((zz => "exportGame" === zz.kind));
-          Gz && Nb && "direct" === Cz ? kb(yu.changes.length > 0 && !rb) : Gz && (Nb || IE(Az) && !uu) && Tb(fb, {
+          const Oc = 0 === pc.length && dC.actions.some((DD => "exportGame" === DD.kind));
+          aD && Oc && "direct" === rD ? Fc(dC.changes.length > 0 && !mc) : aD && (Oc || uI(xD) && !CC) && qc(gc, {
             offerExport: !0
           });
-          const vb = 0 === nb.length ? yu.actions.find((zz => "switchToWorldCode" === zz.kind)) : void 0,
-            xb = yu.changes.length > 0 && !rb && Gz,
-            Lb = rb ? yu.changes.map((zz => ({
-              path: zz.path,
-              text: zz.before
+          const Pc = 0 === pc.length ? dC.actions.find((DD => "switchToWorldCode" === DD.kind)) : void 0,
+            Hc = dC.changes.length > 0 && !mc && aD,
+            Jc = mc ? dC.changes.map((DD => ({
+              path: DD.path,
+              text: DD.before
             }))) : void 0,
-            Pb = cu.length > 0 && eu && !!jz,
-            Gb = Pb && !xb;
-          if (cu.length > 0) {
-            const zz = Jb({
+            Kc = GC.length > 0 && EC && !!eD,
+            ac = Kc && !Hc;
+          if (GC.length > 0) {
+            const DD = Uc({
               role: "assistant",
               text: "This is the part of the change that goes in World Code.",
-              changes: cu,
+              changes: GC,
               status: "offered",
-              warnings: mu(cu, !1),
-              answeredBy: Lu,
-              byItself: Gb || void 0
-            }, AO.i);
-            Pb && uE(zz, xb)
+              warnings: jC(GC, !1),
+              answeredBy: JC,
+              byItself: ac || void 0
+            }, xS.e);
+            Kc && CI(DD, Hc)
           }
-          if ("stopped" === (Mb ? await nE(nb, ib, {
-              replaced: Lb,
-              signal: Iz.signal
-            }) : "none")) return void Jb({
+          if ("stopped" === (bc ? await pI(pc, ic, {
+              replaced: Jc,
+              signal: uD.signal
+            }) : "none")) return void Uc({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14269,108 +14269,108 @@ const jp = (0, Ez.memo)((function(zz) {
             isNotice: !0,
             isCalm: !0
           });
-          const ab = zz => ({
-            request: zz(vz),
-            guardWords: zz(Az)
+          const Vc = DD => ({
+            request: DD(PD),
+            guardWords: DD(xD)
           });
-          Iu.length > 0 && gu((zz => [...Iu.map((zz => {
+          uC.length > 0 && RC((DD => [...uC.map((DD => {
             const {
-              request: uz,
-              guardWords: bz
-            } = ab((uz => function(zz, uz, bz) {
-              return `They asked: "${zz}"\nYour last answer wrote this for ${uz}, but you hadn't seen that file, so it didn't go in. ${uz} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${bz.replace(/\s*$/,"")}\n\`\`\``
-            }(uz, zz.path, zz.code)));
+              request: CD,
+              guardWords: cD
+            } = Vc((CD => function(DD, CD, cD) {
+              return `They asked: "${DD}"\nYour last answer wrote this for ${CD}, but you hadn't seen that file, so it didn't go in. ${CD} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${cD.replace(/\s*$/,"")}\n\`\`\``
+            }(CD, DD.path, DD.code)));
             return {
-              id: Zb(),
-              text: uz,
+              id: tc(),
+              text: CD,
               shown: "Put the code in",
               followUp: {
                 check: !1,
-                about: iz,
-                planStep: lz,
-                useFree: xz,
-                lookupRound: Xz,
-                lookupOf: Qz,
-                insertsInto: zz.path,
-                guardWords: bz
+                about: iD,
+                planStep: fD,
+                useFree: HD,
+                lookupRound: ND,
+                lookupOf: WD,
+                insertsInto: DD.path,
+                guardWords: cD
               },
-              opensPath: zz.path,
-              ...Lb ? {
-                replaced: Lb,
-                until: Date.now() + Gp
+              opensPath: DD.path,
+              ...Jc ? {
+                replaced: Jc,
+                until: Date.now() + KB
               } : {}
             }
-          })), ...zz]));
-          const Vb = eu && !!jz && uu && 0 === cu.length && (ub || "switchToWorldCode" === (null === vb || void 0 === vb ? void 0 : vb.kind) && !Mz);
-          if (Vb && xb) tu((zz => zz.map((zz => zz.id === fb && yu.worldCode.length > 0 ? {
-            ...zz,
-            worldCode: yu.worldCode
-          } : zz)))), Jb({
+          })), ...DD]));
+          const zc = EC && !!eD && CC && 0 === GC.length && (Cc || "switchToWorldCode" === (null === Pc || void 0 === Pc ? void 0 : Pc.kind) && !bD);
+          if (zc && Hc) QC((DD => DD.map((DD => DD.id === gc && dC.worldCode.length > 0 ? {
+            ...DD,
+            worldCode: dC.worldCode
+          } : DD)))), Uc({
             role: "assistant",
-            text: Vp(yu.worldCode.length > 0),
+            text: VB(dC.worldCode.length > 0),
             changes: [],
             status: "offered",
             isNotice: !0
           });
-          else if (Vb) {
-            var Fu;
-            const zz = yu.worldCode.join("\n\n"),
-              uz = "switchToWorldCode" === (null === vb || void 0 === vb ? void 0 : vb.kind) ? vb.request : null,
-              bz = ub ? ab((uz => function(zz, uz) {
-                return `In a code block, they asked: "${zz}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${uz.replace(/\s*$/,"")}\n\`\`\``
-              }(uz, zz))) : null;
-            EE(null !== (Fu = null === bz || void 0 === bz ? void 0 : bz.request) && void 0 !== Fu ? Fu : uz ? function(zz) {
-              return `In a code block, they asked for this in World Code, which is open now: ${zz}`
-            }(uz) : null, {
+          else if (zc) {
+            var MC;
+            const DD = dC.worldCode.join("\n\n"),
+              CD = "switchToWorldCode" === (null === Pc || void 0 === Pc ? void 0 : Pc.kind) ? Pc.request : null,
+              cD = Cc ? Vc((CD => function(DD, CD) {
+                return `In a code block, they asked: "${DD}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${CD.replace(/\s*$/,"")}\n\`\`\``
+              }(CD, DD))) : null;
+            II(null !== (MC = null === cD || void 0 === cD ? void 0 : cD.request) && void 0 !== MC ? MC : CD ? function(DD) {
+              return `In a code block, they asked for this in World Code, which is open now: ${DD}`
+            }(CD) : null, {
               check: !1,
-              about: iz,
-              useFree: xz,
-              lookupOf: Qz,
-              ...bz ? {
-                guardWords: bz.guardWords
+              about: iD,
+              useFree: HD,
+              lookupOf: WD,
+              ...cD ? {
+                guardWords: cD.guardWords
               } : {}
-            }, ub ? zz : void 0)
+            }, Cc ? DD : void 0)
           }
-          const qb = !!Dz && 0 === cu.length && !Vb && ("switchToWorldCode" === (null === vb || void 0 === vb ? void 0 : vb.kind) || eu && yu.worldCode.length > 0);
-          if (qb) {
-            const zz = "switchToWorldCode" === (null === vb || void 0 === vb ? void 0 : vb.kind) ? vb.request : null;
-            zE(null !== zz && void 0 !== zz ? zz : yu.worldCode.length > 0 ? Dp(yu.worldCode) : "", {
-              leavesChangeBehind: xb,
-              hasWorldCodePart: yu.worldCode.length > 0
+          const lc = !!YD && 0 === GC.length && !zc && ("switchToWorldCode" === (null === Pc || void 0 === Pc ? void 0 : Pc.kind) || EC && dC.worldCode.length > 0);
+          if (lc) {
+            const DD = "switchToWorldCode" === (null === Pc || void 0 === Pc ? void 0 : Pc.kind) ? Pc.request : null;
+            DI(null !== DD && void 0 !== DD ? DD : dC.worldCode.length > 0 ? dB(dC.worldCode) : "", {
+              leavesChangeBehind: Hc,
+              hasWorldCodePart: dC.worldCode.length > 0
             })
           }
-          if (rb && Du.length > 0 && pz < 3 && (!(qb || Pb || Vb) || xb) && (Tb(fb, {
+          if (mc && YC.length > 0 && BD < 3 && (!(lc || Kc || zc) || Hc) && (qc(gc, {
               warningsSentBack: !0
-            }), gu((zz => [{
-              id: Zb(),
-              text: (0, HH.D)(Du),
-              shown: 1 === Du.length ? "Fix this line" : "Fix these lines",
+            }), RC((DD => [{
+              id: tc(),
+              text: (0, ww.J)(YC),
+              shown: 1 === YC.length ? "Fix this line" : "Fix these lines",
               check: !1,
               isAutoFix: !0,
-              autoFixRound: pz + 1,
-              replaced: Lb,
-              until: Date.now() + Gp
-            }, ...zz]))), eu && Yu.length > 0 && (rb || 0 === yu.changes.length && !vu.isCutShort && !Wu && !vu.hasCallsFromReasoning) && !pb && 0 === Du.length && 0 === nb.length && 0 === Iu.length && pz < 3 && !qb && !Pb && !Vb && gu((zz => [{
-              id: Zb(),
-              text: HH.r,
-              shown: Pp,
-              replaced: Lb,
-              until: Date.now() + Gp,
+              autoFixRound: BD + 1,
+              replaced: Jc,
+              until: Date.now() + KB
+            }, ...DD]))), EC && AC.length > 0 && (mc || 0 === dC.changes.length && !PC.isCutShort && !sC && !PC.hasCallsFromReasoning) && !Bc && 0 === YC.length && 0 === pc.length && 0 === uC.length && BD < 3 && !lc && !Kc && !zc && RC((DD => [{
+              id: tc(),
+              text: ww.r,
+              shown: JB,
+              replaced: Jc,
+              until: Date.now() + KB,
               followUp: {
                 check: !1,
-                about: iz,
-                planStep: lz,
-                useFree: xz,
+                about: iD,
+                planStep: fD,
+                useFree: HD,
                 isAutoFix: !0,
-                autoFixRound: pz + 1,
-                failedEdits: Yu
+                autoFixRound: BD + 1,
+                failedEdits: AC
               }
-            }, ...zz])), rb && "direct" === Cz && 0 === Du.length && 0 === Yu.length && 0 === nb.length && 0 === Iu.length && 0 === cu.length && !Vb && !qb) {
-            const zz = LO(yu.changes, Jz).length;
-            lE(fb, pz, zz > 1 ? 1200 * (zz - 1) + 1500 : 0)
+            }, ...DD])), mc && "direct" === rD && 0 === YC.length && 0 === AC.length && 0 === pc.length && 0 === uC.length && 0 === GC.length && !zc && !lc) {
+            const DD = JS(dC.changes, UD).length;
+            fI(gc, BD, DD > 1 ? 1200 * (DD - 1) + 1500 : 0)
           }
-        } catch (Zu) {
-          if (Iz.signal.aborted) ku.current = null, Jb({
+        } catch (tC) {
+          if (uD.signal.aborted) FC.current = null, Uc({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14379,356 +14379,356 @@ const jp = (0, Ez.memo)((function(zz) {
             isCalm: !0
           });
           else {
-            const zz = Zu instanceof Ki ? Zu.reason : "failed";
-            Jb({
+            const DD = tC instanceof ti ? tC.reason : "failed";
+            Uc({
               role: "assistant",
-              text: wi(zz),
+              text: Zi(DD),
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...ez,
-              retryAt: "busy" === zz ? Date.now() + 6e4 : void 0
-            }), Cu(Date.now())
+              ...ED,
+              retryAt: "busy" === DD ? Date.now() + 6e4 : void 0
+            }), rC(Date.now())
           }
         } finally {
-          Yu.current = null, Ou(null), Bz.requestEnded(Qz)
+          AC.current = null, SC(null), hD.requestEnded(WD)
         }
-      }, mb = (zz, uz, bz, Ez) => {
-        const nz = function(zz, uz) {
-          return "refused" === zz.problem ? null : {
-            notice: zz.problem,
-            model: uz.model.name,
-            company: fl(uz.provider, uz.baseUrl, !0),
-            isServer: "custom" === uz.provider,
-            detail: zz.detail && rl(zz.detail, uz.key)
+      }, jc = (DD, CD, cD, ID) => {
+        const pD = function(DD, CD) {
+          return "refused" === DD.problem ? null : {
+            notice: DD.problem,
+            model: CD.model.name,
+            company: gf(CD.provider, CD.baseUrl, !0),
+            isServer: "custom" === CD.provider,
+            detail: DD.detail && mf(DD.detail, CD.key)
           }
-        }(zz, uz);
-        if (!nz) return (zz => {
-          Tb(zz, {
+        }(DD, CD);
+        if (!pD) return (DD => {
+          qc(DD, {
             leftOut: !0
           })
-        })(bz), void Jb({
+        })(cD), void Uc({
           role: "assistant",
-          text: ap,
+          text: aB,
           changes: [],
           status: "offered",
           isNotice: !0
         });
-        Jb({
+        Uc({
           role: "assistant",
           text: "",
           changes: [],
           status: "offered",
           isNotice: !0,
-          ...Ez,
-          keyNotice: nz
+          ...ID,
+          keyNotice: pD
         })
-      }, qb = () => {
-        const zz = hu.trim();
-        if ("" === zz || Hu && cu.length >= 3) return;
-        const uz = Nu && null !== hE;
-        if (uz || !Gb((() => {
-            hb.current()
+      }, lc = () => {
+        const DD = LC.trim();
+        if ("" === DD || wC && GC.length >= 3) return;
+        const CD = OC && null !== LI;
+        if (CD || !ac((() => {
+            Lc.current()
           }))) {
-          if (vu(!1), Su) return Qb(VO(Su, zz), mO(Su, zz), {
+          if (PC(!1), kC) return Wc(zS(kC, DD), jS(kC, DD), {
             check: !0,
-            useFree: uz
-          }), yu(null), void Uu("");
-          if (Hu || null === aE || void 0 === aE || !aE.question) {
-            if (!Hu) return Uu(""), void Vb(zz, void 0, {
-              useFree: uz
+            useFree: CD
+          }), dC(null), void TC("");
+          if (wC || null === VI || void 0 === VI || !VI.question) {
+            if (!wC) return TC(""), void zc(DD, void 0, {
+              useFree: CD
             });
-            cu.length < 3 && (gu([...cu, {
-              id: Zb(),
-              text: zz,
-              useFree: uz
-            }]), Uu(""))
+            GC.length < 3 && (RC([...GC, {
+              id: tc(),
+              text: DD,
+              useFree: CD
+            }]), TC(""))
           } else {
-            var bz, Ez, nz;
-            Uu("");
-            const iz = null !== (bz = null === (Ez = aE.askedFor) || void 0 === Ez ? void 0 : Ez.request) && void 0 !== bz ? bz : "",
-              lz = NH(iz, aE.question.question, zz);
-            Vb(lz, zz, {
+            var cD, ID, pD;
+            TC("");
+            const iD = null !== (cD = null === (ID = VI.askedFor) || void 0 === ID ? void 0 : ID.request) && void 0 !== cD ? cD : "",
+              fD = Ow(iD, VI.question.question, DD);
+            zc(fD, DD, {
               check: !0,
-              about: null === (nz = aE.askedFor) || void 0 === nz ? void 0 : nz.request,
-              asked: `${iz} ${zz}`,
-              useFree: uz
+              about: null === (pD = VI.askedFor) || void 0 === pD ? void 0 : pD.request,
+              asked: `${iD} ${DD}`,
+              useFree: CD
             })
           }
         }
-      }, hb = (0, Ez.useRef)(qb);
-    hb.current = qb;
-    const Ub = (0, Ez.useRef)(Vb);
-    Ub.current = Vb;
-    const cb = (0, Ez.useRef)(Jb);
-    cb.current = Jb;
-    const gb = (0, Ez.useRef)(null),
-      [Sb, yb] = (0, Ez.useState)(null),
-      Db = cu.filter((zz => void 0 === zz.followUp));
+      }, Lc = (0, ID.useRef)(lc);
+    Lc.current = lc;
+    const Tc = (0, ID.useRef)(zc);
+    Tc.current = zc;
+    const Gc = (0, ID.useRef)(Uc);
+    Gc.current = Uc;
+    const Rc = (0, ID.useRef)(null),
+      [kc, dc] = (0, ID.useState)(null),
+      Yc = GC.filter((DD => void 0 === DD.followUp));
 
-    function Qb(zz, uz, bz) {
-      if (Hu) {
-        if (cu.length < 3) {
-          var Ez;
-          const nz = null !== (Ez = bz.useFree) && void 0 !== Ez ? Ez : Nu && null !== hE;
-          nz && vu(!1), gu([...cu, {
-            id: Zb(),
-            text: zz,
-            shown: uz,
-            ...bz,
-            useFree: nz
+    function Wc(DD, CD, cD) {
+      if (wC) {
+        if (GC.length < 3) {
+          var ID;
+          const pD = null !== (ID = cD.useFree) && void 0 !== ID ? ID : OC && null !== LI;
+          pD && PC(!1), RC([...GC, {
+            id: tc(),
+            text: DD,
+            shown: CD,
+            ...cD,
+            useFree: pD
           }])
         }
-      } else Vb(zz, uz, bz)
-    }(0, Ez.useEffect)((() => {
-      var zz, uz, bz;
-      const [Ez, ...nz] = cu;
-      if (Hu || !Ez || ub > 0) return;
-      const iz = null === (zz = Ez.followUp) || void 0 === zz ? void 0 : zz.lookupOf;
-      if (void 0 !== iz && !iu.some((zz => zz.id === iz))) return void gu(nz);
-      if (null === (uz = Ez.replaced) || void 0 === uz ? void 0 : uz.some((zz => {
-          var uz;
+      } else zc(DD, CD, cD)
+    }(0, ID.useEffect)((() => {
+      var DD, CD, cD;
+      const [ID, ...pD] = GC;
+      if (wC || !ID || Cc > 0) return;
+      const iD = null === (DD = ID.followUp) || void 0 === DD ? void 0 : DD.lookupOf;
+      if (void 0 !== iD && !iC.some((DD => DD.id === iD))) return void RC(pD);
+      if (null === (CD = ID.replaced) || void 0 === CD ? void 0 : CD.some((DD => {
+          var CD;
           let {
-            path: bz,
-            text: Ez
-          } = zz;
-          return (null !== (uz = Lz[bz]) && void 0 !== uz ? uz : "") === Ez
+            path: cD,
+            text: ID
+          } = DD;
+          return (null !== (CD = JD[cD]) && void 0 !== CD ? CD : "") === ID
         }))) {
-        var lz;
-        const zz = (null !== (lz = Ez.until) && void 0 !== lz ? lz : 0) - Date.now();
-        if (zz <= 0) return void gu(nz);
-        const uz = setTimeout((() => {
-          gu((zz => [...zz]))
-        }), zz);
+        var fD;
+        const DD = (null !== (fD = ID.until) && void 0 !== fD ? fD : 0) - Date.now();
+        if (DD <= 0) return void RC(pD);
+        const CD = setTimeout((() => {
+          RC((DD => [...DD]))
+        }), DD);
         return () => {
-          clearTimeout(uz)
+          clearTimeout(CD)
         }
       }
-      if (void 0 !== Ez.opensPath && Ez.opensPath !== Pz) {
-        var Mz;
-        (null === (Mz = gb.current) || void 0 === Mz ? void 0 : Mz.id) !== Ez.id && (gb.current = {
-          id: Ez.id,
+      if (void 0 !== ID.opensPath && ID.opensPath !== KD) {
+        var bD;
+        (null === (bD = Rc.current) || void 0 === bD ? void 0 : bD.id) !== ID.id && (Rc.current = {
+          id: ID.id,
           until: Date.now() + 3e3
-        }, cb.current({
+        }, Gc.current({
           role: "assistant",
-          text: PO(Ez.opensPath),
+          text: KS(ID.opensPath),
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), cz(Ez.opensPath, 1));
-        const zz = gb.current.until - Date.now();
-        if (zz > 0) {
-          const uz = setTimeout((() => {
-            gu((zz => [...zz]))
-          }), zz);
+        }), GD(ID.opensPath, 1));
+        const DD = Rc.current.until - Date.now();
+        if (DD > 0) {
+          const CD = setTimeout((() => {
+            RC((DD => [...DD]))
+          }), DD);
           return () => {
-            clearTimeout(uz)
+            clearTimeout(CD)
           }
         }
       }
-      const tz = null !== (bz = Ez.followUp) && void 0 !== bz ? bz : {
-        ...void 0 === Ez.shown ? {} : {
-          check: Ez.check,
-          wordsOnly: Ez.wordsOnly,
-          isAutoFix: Ez.isAutoFix,
-          autoFixRound: Ez.autoFixRound
+      const QD = null !== (cD = ID.followUp) && void 0 !== cD ? cD : {
+        ...void 0 === ID.shown ? {} : {
+          check: ID.check,
+          wordsOnly: ID.wordsOnly,
+          isAutoFix: ID.isAutoFix,
+          autoFixRound: ID.autoFixRound
         },
-        useFree: Ez.useFree
+        useFree: ID.useFree
       };
-      Ap(tz) && XM(OM.getState()) ? Sb !== Ez.id && (yb(Ez.id), GM()) : (gu(nz), Ub.current(Ez.text, Ez.shown, tz))
-    }), [Hu, cu, ub, Lz, iu, Pz, cz, Pb, Sb]);
-    const Wb = (0, Ez.useRef)(Qb);
-    Wb.current = Qb, (0, Ez.useEffect)((() => {
-      if (Yz) {
-        var zz;
-        if (null === kz || void 0 === kz || kz(), "change" === Yz.action) return yu(Yz), void(null === (zz = Fb.current) || void 0 === zz || zz.focus());
-        yu(null), Wb.current(VO(Yz), mO(Yz), {
+      UB(QD) && Nb(Sb.getState()) ? kc !== ID.id && (dc(ID.id), ab()) : (RC(pD), Tc.current(ID.text, ID.shown, QD))
+    }), [wC, GC, Cc, JD, iC, KD, GD, Kc, kc]);
+    const sc = (0, ID.useRef)(Wc);
+    sc.current = Wc, (0, ID.useEffect)((() => {
+      if (AD) {
+        var DD;
+        if (null === FD || void 0 === FD || FD(), "change" === AD.action) return dC(AD), void(null === (DD = Mc.current) || void 0 === DD || DD.focus());
+        dC(null), sc.current(zS(AD), jS(AD), {
           check: !1,
-          wordsOnly: "explain" === Yz.action
+          wordsOnly: "explain" === AD.action
         })
       }
-    }), [Yz, kz]);
-    const eb = (zz, uz, bz) => {
-        Rp.add(yz, zz, uz, Date.now(), bz).then(du).catch((zz => {
-          console.error("World Code AI: couldn't keep a version of the code", zz)
+    }), [AD, FD]);
+    const Ec = (DD, CD, cD) => {
+        tB.add(dD, DD, CD, Date.now(), cD).then(yC).catch((DD => {
+          console.error("World Code AI: couldn't keep a version of the code", DD)
         }))
       },
-      jb = (0, Ez.useRef)(new Set),
-      Ib = async function(zz, uz) {
+      ec = (0, ID.useRef)(new Set),
+      uc = async function(DD, CD) {
         let {
-          tryAgainLater: bz = !1
+          tryAgainLater: cD = !1
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Ez = Kb.current;
-        if (zz.changes.some((zz => {
-            var uz;
-            return (null !== (uz = Ez[zz.path]) && void 0 !== uz ? uz : "") !== zz.before
-          }))) return Lb(zz.id, "stale"), !1;
-        jb.current.add(zz.id);
-        if (!await mz(zz.changes.map((zz => ({
-            path: zz.path,
-            text: zz.after
+        const ID = oc.current;
+        if (DD.changes.some((DD => {
+            var CD;
+            return (null !== (CD = ID[DD.path]) && void 0 !== CD ? CD : "") !== DD.before
+          }))) return Jc(DD.id, "stale"), !1;
+        ec.current.add(DD.id);
+        if (!await jD(DD.changes.map((DD => ({
+            path: DD.path,
+            text: DD.after
           })))).finally((() => {
-            jb.current.delete(zz.id)
-          }))) return bz || Lb(zz.id, "stale"), !1;
-        eb(function(zz) {
-          const uz = zz.replace(/\s+/g, " ").trim();
-          return `Before "${uz.length>200?`${uz.slice(0,200).trimEnd()}\u2026`:uz}"`
-        }(uz), Ez, function(zz) {
-          const uz = [...new Set(zz.flatMap((zz => {
-            var uz;
-            return null !== (uz = zz.why) && void 0 !== uz ? uz : []
+            ec.current.delete(DD.id)
+          }))) return cD || Jc(DD.id, "stale"), !1;
+        Ec(function(DD) {
+          const CD = DD.replace(/\s+/g, " ").trim();
+          return `Before "${CD.length>200?`${CD.slice(0,200).trimEnd()}\u2026`:CD}"`
+        }(CD), ID, function(DD) {
+          const CD = [...new Set(DD.flatMap((DD => {
+            var CD;
+            return null !== (CD = DD.why) && void 0 !== CD ? CD : []
           })))];
-          if (0 === uz.length) return;
-          const bz = uz.map(((zz, uz) => 0 === uz ? zz.charAt(0).toUpperCase() + zz.slice(1) : zz.charAt(0).toLowerCase() + zz.slice(1))).join(", ");
-          return bz.length > 400 ? `${bz.slice(0,400).trimEnd()}\u2026` : bz
-        }(zz.changes)), Lb(zz.id, "applied"), zz.isPartial && Tb(zz.id, {
-          changes: zz.changes
+          if (0 === CD.length) return;
+          const cD = CD.map(((DD, CD) => 0 === CD ? DD.charAt(0).toUpperCase() + DD.slice(1) : DD.charAt(0).toLowerCase() + DD.slice(1))).join(", ");
+          return cD.length > 400 ? `${cD.slice(0,400).trimEnd()}\u2026` : cD
+        }(DD.changes)), Jc(DD.id, "applied"), DD.isPartial && qc(DD.id, {
+          changes: DD.changes
         });
-        const nz = iu.find((uz => uz.id === zz.id && "pending" === uz.noteStatus));
-        return nz && zz.isPartial ? oE(zz.id, "asked") : nz && NE({
-          ...nz,
+        const pD = iC.find((CD => CD.id === DD.id && "pending" === CD.noteStatus));
+        return pD && DD.isPartial ? nI(DD.id, "asked") : pD && OI({
+          ...pD,
           status: "applied"
-        }, !0), tu((uz => {
-          var bz;
-          const Ez = null === (bz = uz.findLast((uz => "user" === uz.role && uz.id < zz.id))) || void 0 === bz ? void 0 : bz.planStep;
-          return Ez ? uz.map((zz => {
-            var uz;
-            return zz.id === Ez.planId ? {
-              ...zz,
-              planDone: Math.max(null !== (uz = zz.planDone) && void 0 !== uz ? uz : 0, Ez.index + 1)
-            } : zz
-          })) : uz
-        })), Rb.current = Date.now(), !0
-      }, Bb = !Hu && 0 === ub && (0 === cu.length || cu[0].id === Sb), Cb = (0, Ez.useRef)((() => Promise.resolve(!0)));
-    Cb.current = async () => {
-      var zz;
-      const uz = nu.pendingApply;
-      if (!uz || uz.targetKey !== gz.key) return !0;
-      const bz = iu.find((zz => zz.id === uz.entryId));
-      if (!bz || "offered" !== bz.status) return nu.pendingApply = void 0, !0;
-      const Ez = null !== (zz = uz.picked) && void 0 !== zz ? zz : bz.changes,
-        nz = Iz && Gz && Ez.every((zz => {
-          var uz;
-          return (null !== (uz = Kb.current[zz.path]) && void 0 !== uz ? uz : "") === zz.before
+        }, !0), QC((CD => {
+          var cD;
+          const ID = null === (cD = CD.findLast((CD => "user" === CD.role && CD.id < DD.id))) || void 0 === cD ? void 0 : cD.planStep;
+          return ID ? CD.map((DD => {
+            var CD;
+            return DD.id === ID.planId ? {
+              ...DD,
+              planDone: Math.max(null !== (CD = DD.planDone) && void 0 !== CD ? CD : 0, ID.index + 1)
+            } : DD
+          })) : CD
+        })), Zc.current = Date.now(), !0
+      }, hc = !wC && 0 === Cc && (0 === GC.length || GC[0].id === kc), rc = (0, ID.useRef)((() => Promise.resolve(!0)));
+    rc.current = async () => {
+      var DD;
+      const CD = pC.pendingApply;
+      if (!CD || CD.targetKey !== RD.key) return !0;
+      const cD = iC.find((DD => DD.id === CD.entryId));
+      if (!cD || "offered" !== cD.status) return pC.pendingApply = void 0, !0;
+      const ID = null !== (DD = CD.picked) && void 0 !== DD ? DD : cD.changes,
+        pD = uD && aD && ID.every((DD => {
+          var CD;
+          return (null !== (CD = oc.current[DD.path]) && void 0 !== CD ? CD : "") === DD.before
         }));
-      if (Date.now() > uz.until) return nu.pendingApply = void 0, nz && Jb({
+      if (Date.now() > CD.until) return pC.pendingApply = void 0, pD && Uc({
         role: "assistant",
         text: "That change couldn't go in. Press Apply to try again.",
         changes: [],
         status: "offered",
         isNotice: !0
       }), !0;
-      if (!nz || jb.current.has(bz.id)) return !1;
-      const iz = await Ib({
-        id: bz.id,
-        changes: Ez,
-        isPartial: void 0 !== uz.picked
-      }, JE(bz.id), {
+      if (!pD || ec.current.has(cD.id)) return !1;
+      const iD = await uc({
+        id: cD.id,
+        changes: ID,
+        isPartial: void 0 !== CD.picked
+      }, UI(cD.id), {
         tryAgainLater: !0
       });
-      iz && nu.pendingApply === uz && (nu.pendingApply = void 0), iz && uz.byItself && Tb(bz.id, {
+      iD && pC.pendingApply === CD && (pC.pendingApply = void 0), iD && CD.byItself && qc(cD.id, {
         editedInPlace: !0
       });
-      const lz = Ez[0];
-      return iz && lz && cz(lz.path, TO(lz.before, lz.after)), iz
-    }, (0, Ez.useEffect)((() => {
-      var zz;
-      if ((null === (zz = nu.pendingApply) || void 0 === zz ? void 0 : zz.targetKey) !== gz.key) return;
-      const uz = setInterval((() => {
-        Cb.current().then((zz => {
-          zz && clearInterval(uz)
+      const fD = ID[0];
+      return iD && fD && GD(fD.path, qS(fD.before, fD.after)), iD
+    }, (0, ID.useEffect)((() => {
+      var DD;
+      if ((null === (DD = pC.pendingApply) || void 0 === DD ? void 0 : DD.targetKey) !== RD.key) return;
+      const CD = setInterval((() => {
+        rc.current().then((DD => {
+          DD && clearInterval(CD)
         }))
       }), 250);
       return () => {
-        clearInterval(uz)
+        clearInterval(CD)
       }
-    }), [nu, gz.key, Iz, Lz]);
-    const Yb = (0, Ez.useRef)((() => !0));
-    Yb.current = () => {
-      const zz = nu.pendingInsert;
-      if (!zz || zz.targetKey !== gz.key) return !0;
-      if (Date.now() > zz.until) return nu.pendingInsert = void 0, Jb({
+    }), [pC, RD.key, uD, JD]);
+    const Ac = (0, ID.useRef)((() => !0));
+    Ac.current = () => {
+      const DD = pC.pendingInsert;
+      if (!DD || DD.targetKey !== RD.key) return !0;
+      if (Date.now() > DD.until) return pC.pendingInsert = void 0, Uc({
         role: "assistant",
-        text: void 0 === zz.code ? "World Code didn't open in time, so that wasn't asked here. Ask again." : "World Code didn't open in time, so the code block's World Code part isn't in. Here it is to add.",
+        text: void 0 === DD.code ? "World Code didn't open in time, so that wasn't asked here. Ask again." : "World Code didn't open in time, so the code block's World Code part isn't in. Here it is to add.",
         changes: [],
         status: "offered",
-        worldCode: void 0 === zz.code ? void 0 : [zz.code],
-        isNotice: void 0 === zz.code
+        worldCode: void 0 === DD.code ? void 0 : [DD.code],
+        isNotice: void 0 === DD.code
       }), !0;
-      const uz = Object.values(Kb.current).some((zz => "" !== zz.trim()));
-      return !(!Iz || !Gz || !uz && Date.now() < zz.readyBy) && (nu.pendingInsert = void 0, gu((uz => [{
-        id: Zb(),
-        text: zz.request,
+      const CD = Object.values(oc.current).some((DD => "" !== DD.trim()));
+      return !(!uD || !aD || !CD && Date.now() < DD.readyBy) && (pC.pendingInsert = void 0, RC((CD => [{
+        id: tc(),
+        text: DD.request,
         shown: "Put the code in",
         followUp: {
-          ...zz.options,
-          insertsInto: Pz
+          ...DD.options,
+          insertsInto: KD
         }
-      }, ...uz])), !0)
-    }, (0, Ez.useEffect)((() => {
-      var zz;
-      if ((null === (zz = nu.pendingInsert) || void 0 === zz ? void 0 : zz.targetKey) !== gz.key) return;
-      const uz = setInterval((() => {
-        Yb.current() && clearInterval(uz)
+      }, ...CD])), !0)
+    }, (0, ID.useEffect)((() => {
+      var DD;
+      if ((null === (DD = pC.pendingInsert) || void 0 === DD ? void 0 : DD.targetKey) !== RD.key) return;
+      const CD = setInterval((() => {
+        Ac.current() && clearInterval(CD)
       }), 250);
       return () => {
-        clearInterval(uz)
+        clearInterval(CD)
       }
-    }), [nu, gz.key, Iz, Lz]);
-    const kb = zz => {
-        Hb((() => {
-          tz.gameBridge.send("sendChatMessage", {
-            zM: "//export",
+    }), [pC, RD.key, uD, JD]);
+    const Fc = DD => {
+        wc((() => {
+          QD.gameBridge.send("sendChatMessage", {
+            Rf: "//export",
             channelName: null
           })
-        }), Math.max(0, Rb.current + 600 - Date.now())), Jb({
+        }), Math.max(0, Zc.current + 600 - Date.now())), Uc({
           role: "assistant",
-          text: zz ? "Saving your game with //export, without this change. Apply it and ask me to save again to keep it too." : "Saving your game with //export. The chat says when it's saved.",
+          text: DD ? "Saving your game with //export, without this change. Apply it and ask me to save again to keep it too." : "Saving your game with //export. The chat says when it's saved.",
           changes: [],
           status: "offered",
           isNotice: !0,
-          isCalm: !zz || void 0
+          isCalm: !DD || void 0
         })
       },
-      zE = (zz, uz) => {
+      DI = (DD, CD) => {
         let {
-          leavesChangeBehind: bz,
-          hasWorldCodePart: Ez
-        } = uz;
-        bz ? Jb({
+          leavesChangeBehind: cD,
+          hasWorldCodePart: ID
+        } = CD;
+        cD ? Uc({
           role: "assistant",
-          text: Vp(Ez),
+          text: VB(ID),
           changes: [],
           status: "offered",
           isNotice: !0
-        }) : (Jb({
+        }) : (Uc({
           role: "assistant",
           text: "Taking you to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), Hb((() => {
-          null === Dz || void 0 === Dz || Dz(zz, !1)
-        }), mp))
+        }), wc((() => {
+          null === YD || void 0 === YD || YD(DD, !1)
+        }), zB))
       },
-      uE = (zz, uz) => {
-        !uz && jz ? (Jb({
+      CI = (DD, CD) => {
+        !CD && eD ? (Uc({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), Hb((() => {
-          nu.pendingApply = {
-            entryId: zz,
-            targetKey: AO.i.key,
-            until: Date.now() + dp,
+        }), wc((() => {
+          pC.pendingApply = {
+            entryId: DD,
+            targetKey: xS.e.key,
+            until: Date.now() + BB,
             byItself: !0
-          }, jz(AO.i)
-        }), mp)) : Jb({
+          }, eD(xS.e)
+        }), zB)) : Uc({
           role: "assistant",
           text: "Apply this change first, then apply the World Code part.",
           changes: [],
@@ -14736,1441 +14736,1441 @@ const jp = (0, Ez.memo)((function(zz) {
           isNotice: !0
         })
       },
-      bE = zz => uu && "direct" === zz && Gz && !!jz,
-      EE = (zz, uz, bz) => {
-        jz && (Jb({
+      cI = DD => CC && "direct" === DD && aD && !!eD,
+      II = (DD, CD, cD) => {
+        eD && (Uc({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), Hb((() => {
-          null !== zz && (nu.pendingInsert = {
-            targetKey: AO.i.key,
-            request: zz,
-            options: uz,
-            code: bz,
+        }), wc((() => {
+          null !== DD && (pC.pendingInsert = {
+            targetKey: xS.e.key,
+            request: DD,
+            options: CD,
+            code: cD,
             readyBy: Date.now() + 4e3,
-            until: Date.now() + dp
-          }), jz(AO.i)
-        }), mp))
+            until: Date.now() + BB
+          }), eD(xS.e)
+        }), zB))
       },
-      nE = async function(zz, uz) {
-        var bz, Ez, nz;
+      pI = async function(DD, CD) {
+        var cD, ID, pD;
         let {
-          replaced: iz,
-          signal: lz
+          replaced: iD,
+          signal: fD
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Mz = await async function(zz, uz) {
-          const bz = [];
-          let Ez = null;
-          for (const iz of zz) {
-            var nz;
-            const zz = await An(iz, uz);
-            bz.push(iz.call ? {
-              ...zz.result,
-              call: iz.call
-            } : zz.result), Ez = null !== (nz = zz.worldCodeFiles) && void 0 !== nz ? nz : Ez
+        const bD = await async function(DD, CD) {
+          const cD = [];
+          let ID = null;
+          for (const iD of DD) {
+            var pD;
+            const DD = await Pp(iD, CD);
+            cD.push(iD.call ? {
+              ...DD.result,
+              call: iD.call
+            } : DD.result), ID = null !== (pD = DD.worldCodeFiles) && void 0 !== pD ? pD : ID
           }
           return {
-            results: bz,
-            worldCodeFiles: Ez
+            results: cD,
+            worldCodeFiles: ID
           }
-        }(zz, {
-          files: Kb.current,
-          docs: fp(),
-          errors: az,
-          viewChunk: null !== Wz && void 0 !== Wz ? Wz : Tp,
-          viewGameState: null !== ez && void 0 !== ez ? ez : Lp,
-          readWorldCode: Qz,
-          fetchDocsPage: zz => async function(zz, uz, bz) {
-            if ("" === zz.trim()) return `No url was given: give ${Kz.k}, or a page it links to.`;
-            const Ez = fz(zz);
-            if (null === Ez) return zz.includes(Kz.g) ? `${zz} is every page at once, too long to read: read ${Kz.k}, then the page you need.` : `Only Bloxd's docs can be read: ${Kz.k} and the pages it links to.`;
-            const nz = `There is no docs page at ${zz}. ${Kz.k} lists every page with its link.`,
-              iz = `${zz} couldn't be read just now. Use get_docs instead.`,
-              lz = (0, wz.c)(2e4, bz);
-            let Mz;
+        }(DD, {
+          files: oc.current,
+          docs: NB(),
+          errors: VD,
+          viewChunk: null !== sD && void 0 !== sD ? sD : xB,
+          viewGameState: null !== ED && void 0 !== ED ? ED : qB,
+          readWorldCode: WD,
+          fetchDocsPage: DD => async function(DD, CD, cD) {
+            if ("" === DD.trim()) return `No url was given: give ${oD.i}, or a page it links to.`;
+            const ID = gD(DD);
+            if (null === ID) return DD.includes(oD.c) ? `${DD} is every page at once, too long to read: read ${oD.i}, then the page you need.` : `Only Bloxd's docs can be read: ${oD.i} and the pages it links to.`;
+            const pD = `There is no docs page at ${DD}. ${oD.i} lists every page with its link.`,
+              iD = `${DD} couldn't be read just now. Use get_docs instead.`,
+              fD = (0, vD.e)(2e4, cD);
+            let bD;
             try {
-              var tz;
-              const zz = await fetch(`${uz}${Ez}`, {
-                signal: lz.signal
+              var QD;
+              const DD = await fetch(`${CD}${ID}`, {
+                signal: fD.signal
               });
-              if (404 === zz.status) return nz;
-              if (!zz.ok) return console.warn("AI Helper: a docs page couldn't be read", Ez, zz.status), iz;
-              if (null !== (tz = zz.headers.get("content-type")) && void 0 !== tz && tz.startsWith("text/html")) return nz;
-              Mz = await zz.text()
-            } catch (Oz) {
-              return !0 !== (null === bz || void 0 === bz ? void 0 : bz.aborted) && console.warn("AI Helper: a docs page couldn't be read", Ez, Oz), iz
+              if (404 === DD.status) return pD;
+              if (!DD.ok) return console.warn("AI Helper: a docs page couldn't be read", ID, DD.status), iD;
+              if (null !== (QD = DD.headers.get("content-type")) && void 0 !== QD && QD.startsWith("text/html")) return pD;
+              bD = await DD.text()
+            } catch (SD) {
+              return !0 !== (null === cD || void 0 === cD ? void 0 : cD.aborted) && console.warn("AI Helper: a docs page couldn't be read", ID, SD), iD
             } finally {
-              lz.clear()
+              fD.clear()
             }
-            const Hz = (0, Kz.A)(Ez);
-            return null !== Hz && null === Hz.part && Mz.length > Kz.e ? `${zz} is too long to read whole: read the part you need. Its parts start at ${Rz.e}${(0,Kz.s)(Hz.name,0)}, and ${Kz.k} says what each part has.` : Mz.length <= 4e4 ? Mz : (console.warn("AI Helper: a docs file is longer than any should be", Ez, Mz.length), `${Mz.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
-          }(zz, window.location.origin, lz)
+            const wD = (0, oD.t)(ID);
+            return null !== wD && null === wD.part && bD.length > oD.b ? `${DD} is too long to read whole: read the part you need. Its parts start at ${ZD.c}${(0,oD.p)(wD.name,0)}, and ${oD.i} says what each part has.` : bD.length <= 4e4 ? bD : (console.warn("AI Helper: a docs file is longer than any should be", ID, bD.length), `${bD.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
+          }(DD, window.location.origin, fD)
         });
-        if (null !== lz && void 0 !== lz && lz.aborted) return "stopped";
-        const tz = Mz.results,
-          Hz = zz.flatMap((zz => "view_file" === zz.name && void 0 !== zz.args.path && zz.args.path in Kb.current ? [zz.args.path] : [])),
-          Oz = {
-            ...uz.options,
-            lookups: [...(null !== (bz = uz.options.lookups) && void 0 !== bz ? bz : []).map(pp), ...tz],
-            worldCodeFiles: null !== (Ez = Mz.worldCodeFiles) && void 0 !== Ez ? Ez : uz.options.worldCodeFiles,
-            viewedPaths: [...null !== (nz = uz.options.viewedPaths) && void 0 !== nz ? nz : [], ...Hz]
+        if (null !== fD && void 0 !== fD && fD.aborted) return "stopped";
+        const QD = bD.results,
+          wD = DD.flatMap((DD => "view_file" === DD.name && void 0 !== DD.args.path && DD.args.path in oc.current ? [DD.args.path] : [])),
+          SD = {
+            ...CD.options,
+            lookups: [...(null !== (cD = CD.options.lookups) && void 0 !== cD ? cD : []).map(SB), ...QD],
+            worldCodeFiles: null !== (ID = bD.worldCodeFiles) && void 0 !== ID ? ID : CD.options.worldCodeFiles,
+            viewedPaths: [...null !== (pD = CD.options.viewedPaths) && void 0 !== pD ? pD : [], ...wD]
           };
-        return gu((zz => [{
-          id: Zb(),
-          text: uz.request,
-          shown: uz.shown,
-          followUp: Oz,
-          ...iz ? {
-            replaced: iz,
-            until: Date.now() + Gp
+        return RC((DD => [{
+          id: tc(),
+          text: CD.request,
+          shown: CD.shown,
+          followUp: SD,
+          ...iD ? {
+            replaced: iD,
+            until: Date.now() + KB
           } : {}
-        }, ...zz])), "asked"
-      }, iE = (zz, uz, bz) => {
-        tu((Ez => Ez.map((Ez => Ez.id === zz ? {
-          ...Ez,
-          trial: uz,
-          trialErrors: null !== bz && void 0 !== bz ? bz : Ez.trialErrors
-        } : Ez))))
-      }, lE = function(zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        hz && (nb(zz), Hb((() => {
-          var bz;
-          nb(null), Yu.current || fb.current.length > 0 || null !== (bz = Fb.current) && void 0 !== bz && bz.value.trim() || (eu(Xb.current), hz({
-            chatKey: Sz,
-            entryId: zz,
-            autoFixRound: uz
+        }, ...DD])), "asked"
+      }, iI = (DD, CD, cD) => {
+        QC((ID => ID.map((ID => ID.id === DD ? {
+          ...ID,
+          trial: CD,
+          trialErrors: null !== cD && void 0 !== cD ? cD : ID.trialErrors
+        } : ID))))
+      }, fI = function(DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        LD && (pc(DD), wc((() => {
+          var cD;
+          pc(null), AC.current || gc.current.length > 0 || null !== (cD = Mc.current) && void 0 !== cD && cD.value.trim() || (EC(Nc.current), LD({
+            chatKey: kD,
+            entryId: DD,
+            autoFixRound: CD
           }))
-        }), Math.max(bz, Rb.current + 1500 - Date.now())))
-      }, ME = () => {
-        pb(), (0, HH.d)(Sz)
+        }), Math.max(cD, Zc.current + 1500 - Date.now())))
+      }, bI = () => {
+        Bc(), (0, ww.e)(kD)
       };
-    (0, Ez.useEffect)((() => {
-      if (!Iz || void 0 === (null === ib || void 0 === ib ? void 0 : ib.endedAt) || (null === Mb || void 0 === Mb ? void 0 : Mb.target.key) !== gz.key) return void(void 0 === (null === ib || void 0 === ib ? void 0 : ib.endedAt) || Mb || (0, HH.n)(Sz));
-      const zz = (0, HH.n)(Sz);
-      if (!zz) return;
-      const uz = (0, HH.B)(zz);
-      cb.current({
+    (0, ID.useEffect)((() => {
+      if (!uD || void 0 === (null === ic || void 0 === ic ? void 0 : ic.endedAt) || (null === bc || void 0 === bc ? void 0 : bc.target.key) !== RD.key) return void(void 0 === (null === ic || void 0 === ic ? void 0 : ic.endedAt) || bc || (0, ww.l)(kD));
+      const DD = (0, ww.l)(kD);
+      if (!DD) return;
+      const CD = (0, ww.B)(DD);
+      Gc.current({
         role: "assistant",
-        text: uz.text,
+        text: CD.text,
         changes: [],
         status: "offered",
         isNotice: !0,
-        isCalm: 0 === zz.errors.length && void 0 !== zz.ranAt,
-        logTitle: uz.title
-      }), void 0 !== zz.ranAt && (0 !== zz.errors.length ? zz.autoFixRound >= 3 || (eu(Xb.current), gu((uz => [{
-        id: Zb(),
-        text: (0, HH.y)(zz.errors),
-        shown: 1 === zz.errors.length ? "Fix the error" : "Fix these errors",
+        isCalm: 0 === DD.errors.length && void 0 !== DD.ranAt,
+        logTitle: CD.title
+      }), void 0 !== DD.ranAt && (0 !== DD.errors.length ? DD.autoFixRound >= 3 || (EC(Nc.current), RC((CD => [{
+        id: tc(),
+        text: (0, ww.y)(DD.errors),
+        shown: 1 === DD.errors.length ? "Fix the error" : "Fix these errors",
         check: !1,
         isAutoFix: !0,
-        autoFixRound: zz.autoFixRound + 1
-      }, ...uz]))) : iE(zz.entryId, "ask", Xb.current))
-    }), [ib, Iz, Mb, gz.key, Sz]);
-    const tE = async (zz, uz) => {
-      if (Tb(zz.id, {
-          forgetStatus: uz ? "forgotten" : "MZ"
-        }), uz) try {
-        for (const uz of null !== (bz = zz.forgetNotes) && void 0 !== bz ? bz : []) {
-          var bz;
-          Ku(await Kp.remove(yz, uz))
+        autoFixRound: DD.autoFixRound + 1
+      }, ...CD]))) : iI(DD.entryId, "ask", Nc.current))
+    }), [ic, uD, bc, RD.key, kD]);
+    const QI = async (DD, CD) => {
+      if (qc(DD.id, {
+          forgetStatus: CD ? "forgotten" : "uM"
+        }), CD) try {
+        for (const CD of null !== (cD = DD.forgetNotes) && void 0 !== cD ? cD : []) {
+          var cD;
+          oC(await ZB.remove(dD, CD))
         }
-      } catch (Ez) {
-        console.error("World Code AI: couldn't forget a note", Ez), Tb(zz.id, {
+      } catch (ID) {
+        console.error("World Code AI: couldn't forget a note", ID), qc(DD.id, {
           forgetStatus: void 0
         })
       }
-    }, HE = (0, Ez.useCallback)((zz => zz.flatMap((zz => Hp(fp(), zz, uu)))), [uu]), OE = (0, Ez.useRef)({}), pE = (0, Ez.useRef)({}), dE = (0, Ez.useRef)(Promise.resolve()), FE = (0, Ez.useRef)([]), ZE = (0, Ez.useRef)(new Map), RE = (0, Ez.useRef)(new Map), KE = (0, Ez.useRef)(null), wE = () => {
-      Vu.current = !1, FE.current = [], ZE.current = new Map, RE.current = new Map, KE.current = null, OE.current = {}, pE.current = {}, qu(null)
-    }, XE = async () => {
-      if (!mu) return;
-      const zz = Kb.current,
-        uz = function(zz, uz, bz) {
-          return Object.entries(uz).flatMap((uz => {
-            var Ez;
-            let [nz, iz] = uz;
-            const lz = bz[nz];
-            if (void 0 === lz) return [];
-            const Mz = new Map(TH(null !== (Ez = zz[nz]) && void 0 !== Ez ? Ez : "").map((zz => [zz.key, zz.value]))),
-              tz = new Map(TH(iz).map((zz => [zz.key, zz.value])));
-            let Hz = lz;
-            for (const [zz, bz] of Mz) {
-              var Oz;
-              const uz = TH(Hz).find((uz => uz.key === zz));
-              uz && uz.value !== bz && tz.get(zz) === uz.value && (Hz = null !== (Oz = LH(Hz, uz, bz)) && void 0 !== Oz ? Oz : Hz)
+    }, wI = (0, ID.useCallback)((DD => DD.flatMap((DD => QB(NB(), DD, CC)))), [CC]), SI = (0, ID.useRef)({}), BI = (0, ID.useRef)({}), yI = (0, ID.useRef)(Promise.resolve()), MI = (0, ID.useRef)([]), tI = (0, ID.useRef)(new Map), ZI = (0, ID.useRef)(new Map), oI = (0, ID.useRef)(null), vI = () => {
+      zC.current = !1, MI.current = [], tI.current = new Map, ZI.current = new Map, oI.current = null, SI.current = {}, BI.current = {}, lC(null)
+    }, NI = async () => {
+      if (!jC) return;
+      const DD = oc.current,
+        CD = function(DD, CD, cD) {
+          return Object.entries(CD).flatMap((CD => {
+            var ID;
+            let [pD, iD] = CD;
+            const fD = cD[pD];
+            if (void 0 === fD) return [];
+            const bD = new Map(qw(null !== (ID = DD[pD]) && void 0 !== ID ? ID : "").map((DD => [DD.key, DD.value]))),
+              QD = new Map(qw(iD).map((DD => [DD.key, DD.value])));
+            let wD = fD;
+            for (const [DD, cD] of bD) {
+              var SD;
+              const CD = qw(wD).find((CD => CD.key === DD));
+              CD && CD.value !== cD && QD.get(DD) === CD.value && (wD = null !== (SD = Jw(wD, CD, cD)) && void 0 !== SD ? SD : wD)
             }
-            return Hz === lz ? [] : [{
-              path: nz,
-              text: Hz
+            return wD === fD ? [] : [{
+              path: pD,
+              text: wD
             }]
           }))
-        }(mu, OE.current, zz);
-      if (uz.length > 0) {
-        if (!await mz(uz)) return;
-        eb(function(zz) {
-          const uz = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((uz => zz.includes(uz.name))).map((zz => ({
-            name: zz.name,
-            from: zz.to,
-            to: zz.from
+        }(jC, SI.current, DD);
+      if (CD.length > 0) {
+        if (!await jD(CD)) return;
+        Ec(function(DD) {
+          const CD = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((CD => DD.includes(CD.name))).map((DD => ({
+            name: DD.name,
+            from: DD.to,
+            to: DD.from
           })));
-          return uz.length > 0 ? VH(uz, "undoing") : 0 === zz.length ? "Before undoing settings" : `Before undoing settings: ${(zz.length>3?[...zz.slice(0,3),zz.length-3+" more"]:zz).join(", ")}`
-        }(FE.current, [...ZE.current.values()]), zz), Rb.current = Date.now()
+          return CD.length > 0 ? zw(CD, "undoing") : 0 === DD.length ? "Before undoing settings" : `Before undoing settings: ${(DD.length>3?[...DD.slice(0,3),DD.length-3+" more"]:DD).join(", ")}`
+        }(MI.current, [...tI.current.values()]), DD), Zc.current = Date.now()
       }
-      wE()
-    }, fE = !uu && Object.values(Lz).some((zz => TH(zz).length > 0)), sE = function(zz) {
+      vI()
+    }, gI = !CC && Object.values(JD).some((DD => qw(DD).length > 0)), XI = function(DD) {
       let {
-        codeBlock: uz,
-        hasSettings: bz,
-        canEdit: nz
-      } = zz;
-      return (0, Ez.useEffect)((() => {
-        (0, zH.y)("aiNotes", !uz)
-      }), [uz]), (0, Ez.useEffect)((() => {
-        (0, zH.y)("aiGameSettings", bz)
-      }), [bz]), (0, Ez.useEffect)((() => {
-        (0, zH.y)("aiEdits", nz)
-      }), [nz]), (0, uH.j)("aiHelperOverview")
+        codeBlock: CD,
+        hasSettings: cD,
+        canEdit: pD
+      } = DD;
+      return (0, ID.useEffect)((() => {
+        (0, FQ.D)("aiNotes", !CD)
+      }), [CD]), (0, ID.useEffect)((() => {
+        (0, FQ.D)("aiGameSettings", cD)
+      }), [cD]), (0, ID.useEffect)((() => {
+        (0, FQ.D)("aiEdits", pD)
+      }), [pD]), (0, Dw.n)("aiHelperOverview")
     }({
-      codeBlock: uu,
-      hasSettings: fE,
-      canEdit: Gz
+      codeBlock: CC,
+      hasSettings: gI,
+      canEdit: aD
     });
-    (0, Ez.useEffect)((() => {
-      sE && (Zu(!1), Xu(!1), su(!1), ou(null))
-    }), [sE]);
-    const rE = async zz => {
-      const uz = zu(zz);
-      return null === uz ? "Notes are only about your game, never personal details." : "ok" !== await gi(uz) ? "This note can't be saved. Notes are only about your game." : (Ku(await Kp.add(yz, uz)), null)
-    }, oE = (zz, uz) => {
-      Tb(zz, {
-        noteStatus: uz
+    (0, ID.useEffect)((() => {
+      XI && (tC(!1), NC(!1), XC(!1), nC(null))
+    }), [XI]);
+    const mI = async DD => {
+      const CD = DC(DD);
+      return null === CD ? "Notes are only about your game, never personal details." : "ok" !== await Li(CD) ? "This note can't be saved. Notes are only about your game." : (oC(await ZB.add(dD, CD)), null)
+    }, nI = (DD, CD) => {
+      qc(DD, {
+        noteStatus: CD
       })
-    }, NE = async (zz, uz) => {
-      if (uz && void 0 !== zz.note)
-        if (zz.changes.length > 0 && "offered" === zz.status) oE(zz.id, "pending");
+    }, OI = async (DD, CD) => {
+      if (CD && void 0 !== DD.note)
+        if (DD.changes.length > 0 && "offered" === DD.status) nI(DD.id, "pending");
         else {
-          oE(zz.id, "checking");
+          nI(DD.id, "checking");
           try {
-            oE(zz.id, null === await rE(zz.note) ? "saved" : "refused")
-          } catch (bz) {
-            console.error("World Code AI: couldn't keep a note", bz), oE(zz.id, "asked")
+            nI(DD.id, null === await mI(DD.note) ? "saved" : "refused")
+          } catch (cD) {
+            console.error("World Code AI: couldn't keep a note", cD), nI(DD.id, "asked")
           }
         }
-      else oE(zz.id, "declined")
-    }, vE = zz => {
-      var uz;
-      const bz = null === (uz = iu.find((uz => uz.id === zz))) || void 0 === uz ? void 0 : uz.target.key;
-      return iu.findLast((uz => "user" === uz.role && uz.id < zz && uz.target.key === bz))
-    }, xE = zz => {
-      var uz;
-      return null === (uz = vE(zz)) || void 0 === uz ? void 0 : uz.asked
-    }, JE = zz => {
-      var uz, bz;
-      const Ez = vE(zz);
-      return null !== (uz = null !== (bz = null === Ez || void 0 === Ez ? void 0 : Ez.about) && void 0 !== bz ? bz : null === Ez || void 0 === Ez ? void 0 : Ez.text) && void 0 !== uz ? uz : "a change"
-    }, AE = iu.filter(Ab), TE = null === (Xz = AE[AE.length - 1]) || void 0 === Xz ? void 0 : Xz.id, LE = null !== (sz = null === (rz = AE.findLast((zz => "user" === zz.role))) || void 0 === rz ? void 0 : rz.id) && void 0 !== sz ? sz : 0, PE = AE.length < iu.length, GE = AE[AE.length - 1], aE = null !== GE && void 0 !== GE && null !== (oz = GE.question) && void 0 !== oz && oz.allowOther && !Hu ? GE : void 0, VE = (0, Ez.useRef)(!1), mE = () => {
-      VE.current = !0, ou("settings")
-    }, qE = () => {
-      Zu(!1), Xu(!1), su(!1), xu.current = null, Au(null), ou("addKey")
+      else nI(DD.id, "declined")
+    }, PI = DD => {
+      var CD;
+      const cD = null === (CD = iC.find((CD => CD.id === DD))) || void 0 === CD ? void 0 : CD.target.key;
+      return iC.findLast((CD => "user" === CD.role && CD.id < DD && CD.target.key === cD))
+    }, HI = DD => {
+      var CD;
+      return null === (CD = PI(DD)) || void 0 === CD ? void 0 : CD.asked
+    }, UI = DD => {
+      var CD, cD;
+      const ID = PI(DD);
+      return null !== (CD = null !== (cD = null === ID || void 0 === ID ? void 0 : ID.about) && void 0 !== cD ? cD : null === ID || void 0 === ID ? void 0 : ID.text) && void 0 !== CD ? CD : "a change"
+    }, xI = iC.filter(xc), qI = null === (ND = xI[xI.length - 1]) || void 0 === ND ? void 0 : ND.id, JI = null !== (XD = null === (mD = xI.findLast((DD => "user" === DD.role))) || void 0 === mD ? void 0 : mD.id) && void 0 !== XD ? XD : 0, KI = xI.length < iC.length, aI = xI[xI.length - 1], VI = null !== aI && void 0 !== aI && null !== (nD = aI.question) && void 0 !== nD && nD.allowOther && !wC ? aI : void 0, zI = (0, ID.useRef)(!1), jI = () => {
+      zI.current = !0, nC("settings")
+    }, lI = () => {
+      tC(!1), NC(!1), XC(!1), HC.current = null, xC(null), nC("addKey")
     }, {
-      activeKey: hE,
-      cutShortActions: UE,
-      noticeActions: cE
-    } = function(zz) {
-      var uz;
+      activeKey: LI,
+      cutShortActions: TI,
+      noticeActions: GI
+    } = function(DD) {
+      var CD;
       let {
-        entries: bz,
-        busy: Ez,
-        send: nz,
-        onCheckKey: iz
-      } = zz;
+        entries: cD,
+        busy: ID,
+        send: pD,
+        onCheckKey: iD
+      } = DD;
       const {
-        active: lz
-      } = zM(), Mz = null === (uz = bz.findLast((zz => "assistant" === zz.role && !zz.isNotice))) || void 0 === uz ? void 0 : uz.id;
+        active: fD
+      } = Db(), bD = null === (CD = cD.findLast((DD => "assistant" === DD.role && !DD.isNotice))) || void 0 === CD ? void 0 : CD.id;
       return {
-        activeKey: lz,
-        cutShortActions: (zz, uz) => ({
-          canFinish: !Ez && zz === Mz && (null === lz || void 0 === lz ? void 0 : lz.id) === uz.keyId && lz.model.id === uz.modelId,
+        activeKey: fD,
+        cutShortActions: (DD, CD) => ({
+          canFinish: !ID && DD === bD && (null === fD || void 0 === fD ? void 0 : fD.id) === CD.keyId && fD.model.id === CD.modelId,
           onFinish: () => {
-            nz(uz.request, {
-              retryOf: zz,
-              continueFrom: uz.written
+            pD(CD.request, {
+              retryOf: DD,
+              continueFrom: CD.written
             })
           }
         }),
-        noticeActions: (zz, uz, bz) => ({
-          notice: bz.notice,
+        noticeActions: (DD, CD, cD) => ({
+          notice: cD.notice,
           onRetry: () => {
-            nz(uz, {
-              retryOf: zz
+            pD(CD, {
+              retryOf: DD
             })
           },
           onUseFree: () => {
-            nz(uz, {
+            pD(CD, {
               useFree: !0,
-              retryOf: zz
+              retryOf: DD
             })
           },
-          onCheckKey: iz
+          onCheckKey: iD
         })
       }
     }({
-      entries: AE,
-      busy: !!Hu,
-      send: (zz, uz) => {
+      entries: xI,
+      busy: !!wC,
+      send: (DD, CD) => {
         let {
-          useFree: bz,
-          retryOf: Ez,
-          continueFrom: nz
-        } = uz;
-        const iz = iu.find((zz => zz.id === Ez));
-        return Vb(zz, null === iz || void 0 === iz ? void 0 : iz.retryShown, {
-          ...null === iz || void 0 === iz ? void 0 : iz.retryOptions,
-          useFree: bz,
-          retryOf: Ez,
-          continueFrom: nz
+          useFree: cD,
+          retryOf: ID,
+          continueFrom: pD
+        } = CD;
+        const iD = iC.find((DD => DD.id === ID));
+        return zc(DD, null === iD || void 0 === iD ? void 0 : iD.retryShown, {
+          ...null === iD || void 0 === iD ? void 0 : iD.retryOptions,
+          useFree: cD,
+          retryOf: ID,
+          continueFrom: pD
         })
       },
-      onCheckKey: mE
-    }), gE = wM(Pb) ? Pb.status : null, SE = null !== gE && void 0 !== gE && gE.isSuper ? gE.resetsAt : null, yE = (0, Ez.useRef)({
+      onCheckKey: jI
+    }), RI = vb(Kc) ? Kc.status : null, kI = null !== RI && void 0 !== RI && RI.isSuper ? RI.resetsAt : null, dI = (0, ID.useRef)({
       resetsAt: 0,
       count: 0,
       nextAt: 0
     });
-    (0, Ez.useEffect)((() => {
-      if (null === SE) return;
-      if (SE <= Bu) {
-        yE.current.resetsAt !== SE && (yE.current = {
-          resetsAt: SE,
+    (0, ID.useEffect)((() => {
+      if (null === kI) return;
+      if (kI <= hC) {
+        dI.current.resetsAt !== kI && (dI.current = {
+          resetsAt: kI,
           count: 0,
           nextAt: 0
         });
-        const zz = yE.current,
-          uz = [15e3, 6e4, 24e4];
-        if (zz.count > uz.length) return;
-        let bz = !1;
-        const Ez = setTimeout((() => {
-          var Ez;
-          zz.nextAt = Date.now() + (null !== (Ez = uz[zz.count]) && void 0 !== Ez ? Ez : 0), zz.count++, OM.refresh().then((() => {
-            bz || Cu(Date.now())
+        const DD = dI.current,
+          CD = [15e3, 6e4, 24e4];
+        if (DD.count > CD.length) return;
+        let cD = !1;
+        const ID = setTimeout((() => {
+          var ID;
+          DD.nextAt = Date.now() + (null !== (ID = CD[DD.count]) && void 0 !== ID ? ID : 0), DD.count++, Sb.refresh().then((() => {
+            cD || rC(Date.now())
           }))
-        }), Math.max(0, zz.nextAt - Date.now()));
+        }), Math.max(0, DD.nextAt - Date.now()));
         return () => {
-          bz = !0, clearTimeout(Ez)
+          cD = !0, clearTimeout(ID)
         }
       }
-      const zz = setTimeout((() => {
-        Cu(Date.now())
-      }), Math.max(0, (SE - Bu - 1) % 6e4 + 1 - (Date.now() - Bu)));
+      const DD = setTimeout((() => {
+        rC(Date.now())
+      }), Math.max(0, (kI - hC - 1) % 6e4 + 1 - (Date.now() - hC)));
       return () => {
-        clearTimeout(zz)
+        clearTimeout(DD)
       }
-    }), [SE, Bu]);
-    const DE = hE ? `${hE.id}/${hE.model.id}` : null;
-    (0, Ez.useEffect)((() => {
-      vu(!1)
-    }), [DE]);
-    const QE = Object.values(Lz).some((zz => "" !== zz.trim())),
-      eE = Fu || wu || fu || null !== ru,
-      jE = "aiAnswer" === sE || ("aiNotes" === sE || "aiGameSettings" === sE || "aiGear" === sE) && eE ? sE : "aiPanel",
-      BE = (0, Ez.useRef)(null),
-      CE = (0, Ez.useRef)(null),
-      YE = (0, Ez.useRef)(ru);
-    (0, Ez.useEffect)((() => {
-      if (YE.current === ru) return;
-      YE.current = ru;
+    }), [kI, hC]);
+    const YI = LI ? `${LI.id}/${LI.model.id}` : null;
+    (0, ID.useEffect)((() => {
+      PC(!1)
+    }), [YI]);
+    const WI = Object.values(JD).some((DD => "" !== DD.trim())),
+      EI = MC || vC || gC || null !== mC,
+      eI = "aiAnswer" === XI || ("aiNotes" === XI || "aiGameSettings" === XI || "aiGear" === XI) && EI ? XI : "aiPanel",
+      hI = (0, ID.useRef)(null),
+      rI = (0, ID.useRef)(null),
+      AI = (0, ID.useRef)(mC);
+    (0, ID.useEffect)((() => {
+      if (AI.current === mC) return;
+      AI.current = mC;
       if (!document.activeElement || document.activeElement === document.body) {
-        var zz;
-        null === (zz = (ru ? BE : CE).current) || void 0 === zz || zz.focus()
+        var DD;
+        null === (DD = (mC ? hI : rI).current) || void 0 === DD || DD.focus()
       }
-    }), [ru]), (0, Ez.useEffect)((() => {
-      const zz = db.current;
-      if (!ru || !zz) return;
-      zz.scrollTo({
+    }), [mC]), (0, ID.useEffect)((() => {
+      const DD = yc.current;
+      if (!mC || !DD) return;
+      DD.scrollTo({
         top: 0
       });
-      const uz = "settings" === ru && VE.current ? zz.querySelector(".WorldCodeAiModelRow.Selected") : null;
-      if (uz && uz.getBoundingClientRect().bottom > zz.getBoundingClientRect().bottom && !Vt(zz, uz)) {
-        const bz = zz.getBoundingClientRect(),
-          Ez = uz.getBoundingClientRect();
-        zz.scrollTop += Ez.top - bz.top - (bz.height - Ez.height) / 2
+      const CD = "settings" === mC && zI.current ? DD.querySelector(".WorldCodeAiModelRow.Selected") : null;
+      if (CD && CD.getBoundingClientRect().bottom > DD.getBoundingClientRect().bottom && !VQ(DD, CD)) {
+        const cD = DD.getBoundingClientRect(),
+          ID = CD.getBoundingClientRect();
+        DD.scrollTop += ID.top - cD.top - (cD.height - ID.height) / 2
       }
       return () => {
-        zz.style.paddingBottom = ""
+        DD.style.paddingBottom = ""
       }
-    }), [ru]);
+    }), [mC]);
     const {
-      disclosureRef: zn,
-      gearLabelRef: un,
-      hasGearLabel: bn
-    } = function(zz, uz) {
-      const bz = (0, Ez.useRef)(null),
-        nz = (0, Ez.useRef)(null),
-        iz = (0, Ez.useRef)(0),
-        [lz, Mz] = (0, Ez.useState)(!0);
-      return (0, Ez.useLayoutEffect)((() => {
-        const uz = bz.current;
-        if (!uz || "undefined" === typeof ResizeObserver) return;
-        const Ez = () => {
-          const bz = document.createRange();
-          if (bz.selectNodeContents(uz), "function" !== typeof bz.getBoundingClientRect) return;
-          const Ez = bz.getBoundingClientRect().width,
-            lz = nz.current;
-          if (lz) {
-            const bz = zz.current,
-              nz = bz && parseFloat(getComputedStyle(bz).columnGap) || 0;
-            iz.current = lz.getBoundingClientRect().width + nz, Ez > uz.clientWidth + 1 && Mz(!1)
-          } else uz.clientWidth - Ez >= iz.current && Mz(!0)
+      disclosureRef: Dp,
+      gearLabelRef: Cp,
+      hasGearLabel: cp
+    } = function(DD, CD) {
+      const cD = (0, ID.useRef)(null),
+        pD = (0, ID.useRef)(null),
+        iD = (0, ID.useRef)(0),
+        [fD, bD] = (0, ID.useState)(!0);
+      return (0, ID.useLayoutEffect)((() => {
+        const CD = cD.current;
+        if (!CD || "undefined" === typeof ResizeObserver) return;
+        const ID = () => {
+          const cD = document.createRange();
+          if (cD.selectNodeContents(CD), "function" !== typeof cD.getBoundingClientRect) return;
+          const ID = cD.getBoundingClientRect().width,
+            fD = pD.current;
+          if (fD) {
+            const cD = DD.current,
+              pD = cD && parseFloat(getComputedStyle(cD).columnGap) || 0;
+            iD.current = fD.getBoundingClientRect().width + pD, ID > CD.clientWidth + 1 && bD(!1)
+          } else CD.clientWidth - ID >= iD.current && bD(!0)
         };
-        Ez();
-        const lz = new ResizeObserver(Ez);
-        return lz.observe(uz), () => {
-          lz.disconnect()
+        ID();
+        const fD = new ResizeObserver(ID);
+        return fD.observe(CD), () => {
+          fD.disconnect()
         }
-      }), [zz, uz]), {
-        disclosureRef: bz,
-        gearLabelRef: nz,
-        hasGearLabel: lz
+      }), [DD, CD]), {
+        disclosureRef: cD,
+        gearLabelRef: pD,
+        hasGearLabel: fD
       }
-    }(CE, eE), En = () => {
-      var zz;
-      gu([]), null === (zz = Yu.current) || void 0 === zz || zz.abort(), pb()
-    }, nn = (0, lz.jsxs)("div", {
-      className: iz()("WorldCodeAiPanel", ru && "WorldCodeAiPanel-aiView"),
-      children: [(0, lz.jsxs)("div", {
+    }(rI, EI), Ip = () => {
+      var DD;
+      RC([]), null === (DD = AC.current) || void 0 === DD || DD.abort(), Bc()
+    }, pp = (0, fD.jsxs)("div", {
+      className: iD()("WorldCodeAiPanel", mC && "WorldCodeAiPanel-aiView"),
+      children: [(0, fD.jsxs)("div", {
         className: "WorldCodeAiHeader",
-        children: [(0, lz.jsx)("span", {
+        children: [(0, fD.jsx)("span", {
           className: "WorldCodeAiTitle",
           children: "AI Helper"
-        }), (0, lz.jsx)("span", {
-          ref: zn,
+        }), (0, fD.jsx)("span", {
+          ref: Dp,
           className: "WorldCodeAiDisclosure",
           title: "AI can be wrong. Check its changes.",
           children: "AI can be wrong."
-        }), eE && (0, lz.jsx)("button", {
-          ref: BE,
+        }), EI && (0, fD.jsx)("button", {
+          ref: hI,
           className: "WorldCodeAiLinkButton WorldCodeAiBackButton",
           onClick: () => {
-            Zu(!1), Xu(!1), su(!1), ou("addKey" === ru ? xu.current : null)
+            tC(!1), NC(!1), XC(!1), nC("addKey" === mC ? HC.current : null)
           },
-          children: "addKey" === ru && xu.current ? "Back" : "Back to chat"
-        }), ru && (0, lz.jsx)("h3", {
+          children: "addKey" === mC && HC.current ? "Back" : "Back to chat"
+        }), mC && (0, fD.jsx)("h3", {
           className: "WorldCodeAiViewTitle",
-          children: "settings" === ru ? "AI settings" : Ju ? `Edit ${el(Ju)} key` : "Add an API key"
-        }), "settings" === ru && (0, lz.jsxs)("span", {
+          children: "settings" === mC ? "AI settings" : UC ? `Edit ${Ef(UC)} key` : "Add an API key"
+        }), "settings" === mC && (0, fD.jsxs)("span", {
           className: "WorldCodeAiViewUsing",
-          children: [(0, lz.jsxs)("span", {
+          children: [(0, fD.jsxs)("span", {
             className: "WorldCodeAiViewUsingModel",
-            children: ["Using:", " ", hE ? Nu ? "Bot.xd (free) for the next question" : iH(hE) : gE ? nM : "Bot.xd (free)"]
-          }), (0, lz.jsxs)("span", {
+            children: ["Using:", " ", LI ? OC ? "Bot.xd (free) for the next question" : iw(LI) : RI ? pb : "Bot.xd (free)"]
+          }), (0, fD.jsxs)("span", {
             className: "WorldCodeAiViewUsingEdits",
-            children: ["Edits: ", au ? "On" : "Off"]
+            children: ["Edits: ", VC ? "On" : "Off"]
           })]
-        }), eE && Hu && (0, lz.jsx)("button", {
+        }), EI && wC && (0, fD.jsx)("button", {
           className: "WorldCodeAiStop WorldCodeAiHeaderStop",
-          onClick: En,
+          onClick: Ip,
           children: "Stop answer"
-        }), !eE && !uu && (0, lz.jsx)(bH, {
+        }), !EI && !CC && (0, fD.jsx)(Cw, {
           step: "aiNotes",
           placement: "bottom",
-          children: (0, lz.jsx)("button", {
-            className: iz()("WorldCodeAiLinkButton", wu && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": wu,
+          children: (0, fD.jsx)("button", {
+            className: iD()("WorldCodeAiLinkButton", vC && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": vC,
             onClick: () => {
-              Zu(!1), su(!1), Xu(!wu)
+              tC(!1), XC(!1), NC(!vC)
             },
             children: "AI notes"
           })
-        }), !eE && fE && (0, lz.jsx)(bH, {
+        }), !EI && gI && (0, fD.jsx)(Cw, {
           step: "aiGameSettings",
           placement: "bottom",
-          children: (0, lz.jsx)("button", {
-            className: iz()("WorldCodeAiLinkButton", fu && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": fu,
+          children: (0, fD.jsx)("button", {
+            className: iD()("WorldCodeAiLinkButton", gC && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": gC,
             onClick: () => {
-              wE(), Zu(!1), Xu(!1), su(!fu)
+              vI(), tC(!1), NC(!1), XC(!gC)
             },
             children: "Game settings"
           })
-        }), !eE && pu.length > 0 && (0, lz.jsx)("button", {
-          className: iz()("WorldCodeAiLinkButton", Fu && "WorldCodeAiLinkButton-active"),
-          "aria-pressed": Fu,
+        }), !EI && BC.length > 0 && (0, fD.jsx)("button", {
+          className: iD()("WorldCodeAiLinkButton", MC && "WorldCodeAiLinkButton-active"),
+          "aria-pressed": MC,
           onClick: () => {
-            Cu(Date.now()), Xu(!1), su(!1), Zu(!Fu)
+            rC(Date.now()), NC(!1), XC(!1), tC(!MC)
           },
           children: "History"
-        }), !eE && iu.length > 0 && (0, lz.jsx)("button", {
+        }), !EI && iC.length > 0 && (0, fD.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          disabled: !!Hu,
+          disabled: !!wC,
           onClick: () => {
-            ME(), gu([]), tu([]), nu.turns = new nl
+            bI(), RC([]), QC([]), pC.turns = new If
           },
           children: "New chat"
-        }), !eE && (0, lz.jsx)(bH, {
+        }), !EI && (0, fD.jsx)(Cw, {
           step: "aiGear",
           placement: "bottom",
-          children: (0, lz.jsxs)("button", {
-            ref: CE,
+          children: (0, fD.jsxs)("button", {
+            ref: rI,
             className: "WorldCodeAiLinkButton WorldCodeAiGear",
             "aria-label": "AI Helper settings",
             title: "AI Helper settings",
             onClick: () => {
-              VE.current = !1, ou("settings")
+              zI.current = !1, nC("settings")
             },
-            children: [(0, lz.jsx)(dz.c, {
+            children: [(0, fD.jsx)(yD.c, {
               name: "gear"
-            }), bn && (0, lz.jsx)("span", {
-              ref: un,
+            }), cp && (0, fD.jsx)("span", {
+              ref: Cp,
               className: "WorldCodeAiGearLabel",
               children: "Settings"
             })]
           })
         })]
-      }), (0, lz.jsxs)("div", {
+      }), (0, fD.jsxs)("div", {
         className: "WorldCodeAiMessages",
-        ref: db,
-        role: eE ? void 0 : "log",
-        "aria-live": eE ? void 0 : "polite",
-        children: [Fu && (0, lz.jsx)(XH, {
-          snapshots: pu,
-          files: Lz,
-          now: Bu,
-          onRestore: Gz && !Hu ? zz => {
-            (async zz => {
-              const uz = Kb.current,
-                bz = RH(zz, uz);
-              if (0 === bz.length) return;
-              if (!await mz(bz)) return;
-              eb("Before going back", uz), Zu(!1), null !== Eb && ME();
-              const Ez = {};
-              for (const lz of bz) Ez[lz.path] = lz.text;
-              const nz = zz => Ab(zz) && "applied" === zz.status && zz.changes.some((zz => zz.path in Ez && Ez[zz.path] !== zz.after)),
-                iz = iu.filter((zz => nz(zz) && "saved" === zz.noteStatus && void 0 !== zz.note && Ru.includes(zz.note))).map((zz => {
-                  var uz;
-                  return null !== (uz = zz.note) && void 0 !== uz ? uz : ""
+        ref: yc,
+        role: EI ? void 0 : "log",
+        "aria-live": EI ? void 0 : "polite",
+        children: [MC && (0, fD.jsx)(Nw, {
+          snapshots: BC,
+          files: JD,
+          now: hC,
+          onRestore: aD && !wC ? DD => {
+            (async DD => {
+              const CD = oc.current,
+                cD = Zw(DD, CD);
+              if (0 === cD.length) return;
+              if (!await jD(cD)) return;
+              Ec("Before going back", CD), tC(!1), null !== Ic && bI();
+              const ID = {};
+              for (const fD of cD) ID[fD.path] = fD.text;
+              const pD = DD => xc(DD) && "applied" === DD.status && DD.changes.some((DD => DD.path in ID && ID[DD.path] !== DD.after)),
+                iD = iC.filter((DD => pD(DD) && "saved" === DD.noteStatus && void 0 !== DD.note && ZC.includes(DD.note))).map((DD => {
+                  var CD;
+                  return null !== (CD = DD.note) && void 0 !== CD ? CD : ""
                 }));
-              tu((zz => zz.map((zz => nz(zz) ? {
-                ...zz,
+              QC((DD => DD.map((DD => pD(DD) ? {
+                ...DD,
                 status: "undone",
                 wentBack: !0,
-                noteStatus: "asked" === zz.noteStatus ? void 0 : zz.noteStatus
-              } : zz)))), Jb({
+                noteStatus: "asked" === DD.noteStatus ? void 0 : DD.noteStatus
+              } : DD)))), Uc({
                 role: "assistant",
                 text: "Your code is back to how it was.",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0,
-                undoFiles: uz,
-                leftFiles: Object.fromEntries(bz.map((zz => [zz.path, zz.text]))),
-                forgetNotes: iz.length > 0 ? iz : void 0
+                undoFiles: CD,
+                leftFiles: Object.fromEntries(cD.map((DD => [DD.path, DD.text]))),
+                forgetNotes: iD.length > 0 ? iD : void 0
               })
-            })(zz)
+            })(DD)
           } : void 0
-        }), fu && (0, lz.jsx)(KO, {
-          files: Lz,
-          before: mu,
-          onWrite: Gz ? (zz, uz, bz) => {
-            const Ez = dE.current.then((async () => {
-              var Ez, nz, iz, lz;
-              const Mz = Kb.current,
-                tz = OE.current[zz],
-                Hz = void 0 !== tz && (null !== (Ez = Mz[zz]) && void 0 !== Ez ? Ez : "") === pE.current[zz] ? {
-                  ...Mz,
-                  [zz]: tz
-                } : Mz,
-                Oz = LH(null !== (nz = Hz[zz]) && void 0 !== nz ? nz : "", uz, bz);
-              if (null === Oz) return !1;
-              if (Oz === Hz[zz]) return !0;
-              if (!await mz([{
-                  path: zz,
-                  text: Oz
+        }), gC && (0, fD.jsx)(oS, {
+          files: JD,
+          before: jC,
+          onWrite: aD ? (DD, CD, cD) => {
+            const ID = yI.current.then((async () => {
+              var ID, pD, iD, fD;
+              const bD = oc.current,
+                QD = SI.current[DD],
+                wD = void 0 !== QD && (null !== (ID = bD[DD]) && void 0 !== ID ? ID : "") === BI.current[DD] ? {
+                  ...bD,
+                  [DD]: QD
+                } : bD,
+                SD = Jw(null !== (pD = wD[DD]) && void 0 !== pD ? pD : "", CD, cD);
+              if (null === SD) return !1;
+              if (SD === wD[DD]) return !0;
+              if (!await jD([{
+                  path: DD,
+                  text: SD
                 }])) return !1;
-              const pz = GH(uz),
-                dz = `${zz}:${uz.key}`,
-                Fz = null !== (iz = RE.current.get(dz)) && void 0 !== iz ? iz : uz.value;
-              RE.current.set(dz, Fz), Fz === bz ? ZE.current.delete(dz) : ZE.current.set(dz, {
-                name: pz,
-                from: aH(Fz),
-                to: aH(bz)
+              const BD = aw(CD),
+                yD = `${DD}:${CD.key}`,
+                MD = null !== (iD = ZI.current.get(yD)) && void 0 !== iD ? iD : CD.value;
+              ZI.current.set(yD, MD), MD === cD ? tI.current.delete(yD) : tI.current.set(yD, {
+                name: BD,
+                from: Vw(MD),
+                to: Vw(cD)
               });
-              const Zz = VH([...ZE.current.values()]);
-              if (Vu.current) {
-                var Rz;
-                null === (Rz = KE.current) || void 0 === Rz || Rz.then((async zz => {
-                  void 0 !== zz && du(await Rp.relabel(yz, zz, Zz))
-                })).catch((zz => {
-                  console.error("World Code AI: couldn't rename a version of the code", zz)
+              const tD = zw([...tI.current.values()]);
+              if (zC.current) {
+                var ZD;
+                null === (ZD = oI.current) || void 0 === ZD || ZD.then((async DD => {
+                  void 0 !== DD && yC(await tB.relabel(dD, DD, tD))
+                })).catch((DD => {
+                  console.error("World Code AI: couldn't rename a version of the code", DD)
                 }))
               } else {
-                Vu.current = !0;
-                const zz = Date.now();
-                KE.current = Rp.add(yz, Zz, Hz, zz).then((uz => {
-                  var bz;
-                  return du(uz), null === (bz = uz.find((uz => uz.at === zz && uz.label === Zz))) || void 0 === bz ? void 0 : bz.id
-                })).catch((zz => {
-                  console.error("World Code AI: couldn't keep a version of the code", zz)
-                })), qu(Hz)
+                zC.current = !0;
+                const DD = Date.now();
+                oI.current = tB.add(dD, tD, wD, DD).then((CD => {
+                  var cD;
+                  return yC(CD), null === (cD = CD.find((CD => CD.at === DD && CD.label === tD))) || void 0 === cD ? void 0 : cD.id
+                })).catch((DD => {
+                  console.error("World Code AI: couldn't keep a version of the code", DD)
+                })), lC(wD)
               }
-              return FE.current.includes(pz) || FE.current.push(pz), pE.current[zz] = null !== (lz = Hz[zz]) && void 0 !== lz ? lz : "", OE.current[zz] = Oz, Rb.current = Date.now(), !0
+              return MI.current.includes(BD) || MI.current.push(BD), BI.current[DD] = null !== (fD = wD[DD]) && void 0 !== fD ? fD : "", SI.current[DD] = SD, Zc.current = Date.now(), !0
             }));
-            return dE.current = Ez.catch((() => !1)), Ez
+            return yI.current = ID.catch((() => !1)), ID
           } : void 0,
-          onTryIt: mu ? () => {
-            Hb(qz, Math.max(0, Rb.current + 600 - Date.now()))
+          onTryIt: jC ? () => {
+            wc(lD, Math.max(0, Zc.current + 600 - Date.now()))
           } : void 0,
-          onUndo: mu && Gz ? () => {
-            XE()
+          onUndo: jC && aD ? () => {
+            NI()
           } : void 0
-        }), "settings" === ru && (0, lz.jsx)(Qt, {
-          allowEdits: Lu,
-          onAllowEditsChange: Gz ? zz => {
-            Pu(zz),
-              function(zz) {
+        }), "settings" === mC && (0, fD.jsx)(YQ, {
+          allowEdits: JC,
+          onAllowEditsChange: aD ? DD => {
+            KC(DD),
+              function(DD) {
                 try {
-                  localStorage.setItem(Tt, String(zz))
+                  localStorage.setItem(qQ, String(DD))
                 } catch {}
-              }(zz)
+              }(DD)
           } : void 0,
           onAddKey: () => {
-            xu.current = "settings", Au(null), ou("addKey")
+            HC.current = "settings", xC(null), nC("addKey")
           },
-          onEditKey: zz => {
-            xu.current = "settings", Au(zz), ou("addKey")
+          onEditKey: DD => {
+            HC.current = "settings", xC(DD), nC("addKey")
           }
-        }), "addKey" === ru && (0, lz.jsx)(Yt, {
-          editing: null !== Ju && void 0 !== Ju ? Ju : void 0,
+        }), "addKey" === mC && (0, fD.jsx)(rQ, {
+          editing: null !== UC && void 0 !== UC ? UC : void 0,
           onAdded: () => {
-            VE.current = !0, ou(xu.current)
+            zI.current = !0, nC(HC.current)
           },
           onOpenSettings: () => {
-            VE.current = !1, ou("settings")
+            zI.current = !1, nC("settings")
           }
-        }, null !== (Nz = null === Ju || void 0 === Ju ? void 0 : Ju.id) && void 0 !== Nz ? Nz : "new"), wu && (0, lz.jsx)(fH, {
-          notes: Ru,
-          outline: Eu(Lz, new Set(fp().callbackNames())),
-          Qr: rE,
-          onDelete: zz => {
-            Kp.remove(yz, zz).then(Ku).catch((zz => {
-              console.error("World Code AI: couldn't delete a note", zz)
+        }, null !== (OD = null === UC || void 0 === UC ? void 0 : UC.id) && void 0 !== OD ? OD : "new"), vC && (0, fD.jsx)(gw, {
+          notes: ZC,
+          outline: IC(JD, new Set(NB().callbackNames())),
+          Jm: mI,
+          onDelete: DD => {
+            ZB.remove(dD, DD).then(oC).catch((DD => {
+              console.error("World Code AI: couldn't delete a note", DD)
             }))
           }
-        }), !eE && iu.map(((zz, uz) => {
-          var bz, nz, tz, Oz, pz, dz, Fz, Zz;
-          const Rz = Ab(zz),
-            Kz = PE && (null === (bz = iu[uz - 1]) || void 0 === bz ? void 0 : bz.target.key) !== zz.target.key,
-            wz = 0 === zz.changes.length,
-            Xz = wz && !!zz.failedEdits && !zz.question && !zz.worldCode,
-            fz = zz.failedEdits && (0, lz.jsx)(Sp, {
-              failed: zz.failedEdits,
-              nothingChanged: wz,
-              defaultOpen: !zz.byItself,
-              isElsewhere: !Rz,
-              onRetry: zz.id !== TE || Hu || 0 !== cu.length ? void 0 : () => {
-                Vb(HH.r, Pp, {
-                  about: JE(zz.id),
-                  failedEdits: zz.failedEdits
+        }), !EI && iC.map(((DD, CD) => {
+          var cD, pD, QD, SD, BD, yD, MD, tD;
+          const ZD = xc(DD),
+            oD = KI && (null === (cD = iC[CD - 1]) || void 0 === cD ? void 0 : cD.target.key) !== DD.target.key,
+            vD = 0 === DD.changes.length,
+            ND = vD && !!DD.failedEdits && !DD.question && !DD.worldCode,
+            gD = DD.failedEdits && (0, fD.jsx)(RB, {
+              failed: DD.failedEdits,
+              nothingChanged: vD,
+              defaultOpen: !DD.byItself,
+              isElsewhere: !ZD,
+              onRetry: DD.id !== qI || wC || 0 !== GC.length ? void 0 : () => {
+                zc(ww.r, JB, {
+                  about: UI(DD.id),
+                  failedEdits: DD.failedEdits
                 })
               }
             });
-          var sz;
-          return void 0 === zz.logTitle && (!zz.isNotice || "assistant" !== zz.role || "" === zz.text || void 0 !== zz.retry || zz.keyNotice || zz.undoFiles || zz.failedEdits || zz.cutShort || zz.question || zz.worldCode || 0 !== zz.changes.length) ? (0, lz.jsxs)(Ez.Fragment, {
-            children: [Kz && (0, lz.jsx)(cp, {
-              target: zz.target,
-              isOpen: Rz
-            }), (0, lz.jsxs)("div", {
-              className: iz()("WorldCodeAiEntry", `WorldCodeAiEntry-${zz.role}`, {
-                "WorldCodeAiEntry-elsewhere": !Rz,
-                WorldCodeAiNotice: zz.isNotice,
-                "WorldCodeAiNotice-calm": zz.isNotice && zz.isCalm,
-                "WorldCodeAiNotice-past": zz.isNotice && void 0 !== zz.retry && (zz.id !== TE || !!vb)
+          var XD;
+          return void 0 === DD.logTitle && (!DD.isNotice || "assistant" !== DD.role || "" === DD.text || void 0 !== DD.retry || DD.keyNotice || DD.undoFiles || DD.failedEdits || DD.cutShort || DD.question || DD.worldCode || 0 !== DD.changes.length) ? (0, fD.jsxs)(ID.Fragment, {
+            children: [oD && (0, fD.jsx)(TB, {
+              target: DD.target,
+              isOpen: ZD
+            }), (0, fD.jsxs)("div", {
+              className: iD()("WorldCodeAiEntry", `WorldCodeAiEntry-${DD.role}`, {
+                "WorldCodeAiEntry-elsewhere": !ZD,
+                WorldCodeAiNotice: DD.isNotice,
+                "WorldCodeAiNotice-calm": DD.isNotice && DD.isCalm,
+                "WorldCodeAiNotice-past": DD.isNotice && void 0 !== DD.retry && (DD.id !== qI || !!Pc)
               }),
-              children: [wz && fz, Xz ? null : zz.isNotice && void 0 !== zz.retry && (zz.id !== TE || vb) ? (0, lz.jsx)("p", {
-                children: zz.keyNotice ? vt(zz.keyNotice) : void 0 !== zz.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
-              }) : zz.keyNotice ? (0, lz.jsxs)(lz.Fragment, {
-                children: [(0, lz.jsx)("p", {
-                  children: Nt(zz.keyNotice)
-                }), zz.keyNotice.detail && (0, lz.jsx)(rt, {
-                  detail: zz.keyNotice.detail
+              children: [vD && gD, ND ? null : DD.isNotice && void 0 !== DD.retry && (DD.id !== qI || Pc) ? (0, fD.jsx)("p", {
+                children: DD.keyNotice ? PQ(DD.keyNotice) : void 0 !== DD.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
+              }) : DD.keyNotice ? (0, fD.jsxs)(fD.Fragment, {
+                children: [(0, fD.jsx)("p", {
+                  children: OQ(DD.keyNotice)
+                }), DD.keyNotice.detail && (0, fD.jsx)(mQ, {
+                  detail: DD.keyNotice.detail
                 })]
-              }) : zz.undoFiles ? (0, lz.jsxs)("div", {
+              }) : DD.undoFiles ? (0, fD.jsxs)("div", {
                 className: "WorldCodeAiWentBack",
-                children: [(0, lz.jsx)("span", {
-                  children: "undone" === zz.status ? "Undone: your code is as it was before going back." : zz.text
-                }), Rz && "undone" !== zz.status && qp(zz, Lz) && Gz && (0, lz.jsx)("button", {
+                children: [(0, fD.jsx)("span", {
+                  children: "undone" === DD.status ? "Undone: your code is as it was before going back." : DD.text
+                }), ZD && "undone" !== DD.status && jB(DD, JD) && aD && (0, fD.jsx)("button", {
                   className: "WorldCodeAiLinkButton WorldCodeAiNoticeUndo",
-                  disabled: !!Hu,
-                  title: Hu ? "You can undo once the answer is in." : void 0,
+                  disabled: !!wC,
+                  title: wC ? "You can undo once the answer is in." : void 0,
                   onClick: () => {
-                    (async zz => {
-                      var uz;
-                      const bz = Kb.current;
-                      if (!qp(zz, bz)) return;
-                      const Ez = RH({
+                    (async DD => {
+                      var CD;
+                      const cD = oc.current;
+                      if (!jB(DD, cD)) return;
+                      const ID = Zw({
                         id: 0,
                         at: 0,
                         label: "",
-                        files: null !== (uz = zz.undoFiles) && void 0 !== uz ? uz : {}
-                      }, bz).filter((uz => void 0 !== zz.leftFiles && uz.path in zz.leftFiles));
-                      if (Ez.length > 0) {
-                        if (!await mz(Ez)) return;
-                        eb("Before undoing going back", bz)
+                        files: null !== (CD = DD.undoFiles) && void 0 !== CD ? CD : {}
+                      }, cD).filter((CD => void 0 !== DD.leftFiles && CD.path in DD.leftFiles));
+                      if (ID.length > 0) {
+                        if (!await jD(ID)) return;
+                        Ec("Before undoing going back", cD)
                       }
-                      const nz = {
-                        ...bz
+                      const pD = {
+                        ...cD
                       };
-                      for (const iz of Ez) nz[iz.path] = iz.text;
-                      tu((uz => uz.map((uz => uz.id === zz.id ? {
-                        ...uz,
+                      for (const iD of ID) pD[iD.path] = iD.text;
+                      QC((CD => CD.map((CD => CD.id === DD.id ? {
+                        ...CD,
                         status: "undone"
-                      } : Ab(uz) && uz.wentBack && uz.changes.every((zz => {
-                        var uz;
-                        return (null !== (uz = nz[zz.path]) && void 0 !== uz ? uz : "") === zz.after
+                      } : xc(CD) && CD.wentBack && CD.changes.every((DD => {
+                        var CD;
+                        return (null !== (CD = pD[DD.path]) && void 0 !== CD ? CD : "") === DD.after
                       })) ? {
-                        ...uz,
+                        ...CD,
                         status: "applied",
                         wentBack: void 0
-                      } : uz))))
-                    })(zz)
+                      } : CD))))
+                    })(DD)
                   },
-                  children: Hu ? "Undo going back after this answer" : "Undo going back"
+                  children: wC ? "Undo going back after this answer" : "Undo going back"
                 })]
-              }) : "assistant" === zz.role ? (0, lz.jsx)(Hz.d, {
-                markdown: "applied" !== zz.status && !zz.editedInPlace && (zz.changes.length > 0 || null !== (nz = zz.failedEdits) && void 0 !== nz && nz.length) ? ZO(zz.text) : zz.text
-              }) : (0, lz.jsx)("p", {
-                children: zz.text
-              }), zz.answeredBy && (0, lz.jsx)(ot, {
-                answeredBy: zz.answeredBy
-              }), zz.oneOff && hE && zz.id === TE && !Hu && (0, lz.jsxs)("p", {
+              }) : "assistant" === DD.role ? (0, fD.jsx)(wD.d, {
+                markdown: "applied" !== DD.status && !DD.editedInPlace && (DD.changes.length > 0 || null !== (pD = DD.failedEdits) && void 0 !== pD && pD.length) ? tS(DD.text) : DD.text
+              }) : (0, fD.jsx)("p", {
+                children: DD.text
+              }), DD.answeredBy && (0, fD.jsx)(nQ, {
+                answeredBy: DD.answeredBy
+              }), DD.oneOff && LI && DD.id === qI && !wC && (0, fD.jsxs)("p", {
                 className: "WorldCodeAiBackTo",
-                children: ["Your next question goes back to ", hE.model.name, "."]
-              }), zz.cutShort && (0, lz.jsx)(At, {
-                hasCode: zz.changes.length > 0 || !!zz.worldCode,
-                ...UE(zz.id, zz.cutShort)
-              }), zz.forgetNotes && (0, lz.jsx)("div", {
+                children: ["Your next question goes back to ", LI.model.name, "."]
+              }), DD.cutShort && (0, fD.jsx)(xQ, {
+                hasCode: DD.changes.length > 0 || !!DD.worldCode,
+                ...TI(DD.id, DD.cutShort)
+              }), DD.forgetNotes && (0, fD.jsx)("div", {
                 className: "WorldCodeAiForget",
-                children: Rz && void 0 === zz.forgetStatus && zz.id > LE ? (0, lz.jsxs)(lz.Fragment, {
-                  children: [(0, lz.jsxs)("span", {
+                children: ZD && void 0 === DD.forgetStatus && DD.id > JI ? (0, fD.jsxs)(fD.Fragment, {
+                  children: [(0, fD.jsxs)("span", {
                     className: "WorldCodeAiForgetAsk",
-                    children: [1 === zz.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, lz.jsx)("span", {
+                    children: [1 === DD.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, fD.jsx)("span", {
                       className: "WorldCodeAiForgetNote",
-                      children: zz.forgetNotes.map((zz => `"${zz}"`)).join(", ")
+                      children: DD.forgetNotes.map((DD => `"${DD}"`)).join(", ")
                     })]
-                  }), (0, lz.jsxs)("div", {
+                  }), (0, fD.jsxs)("div", {
                     className: "WorldCodeAiNoteButtons",
-                    children: [(0, lz.jsx)("button", {
+                    children: [(0, fD.jsx)("button", {
                       className: "WorldCodeAiSecondaryButton",
                       onClick: () => {
-                        tE(zz, !0)
+                        QI(DD, !0)
                       },
                       children: "Forget it"
-                    }), (0, lz.jsx)("button", {
+                    }), (0, fD.jsx)("button", {
                       className: "WorldCodeAiLinkButton",
                       onClick: () => {
-                        tE(zz, !1)
+                        QI(DD, !1)
                       },
                       children: "Keep it"
                     })]
                   })]
-                }) : (0, lz.jsx)("span", {
+                }) : (0, fD.jsx)("span", {
                   className: "WorldCodeAiHint",
-                  children: "forgotten" === zz.forgetStatus ? "Taken out of AI notes." : "Kept in AI notes."
+                  children: "forgotten" === DD.forgetStatus ? "Taken out of AI notes." : "Kept in AI notes."
                 })
-              }), zz.changes.length > 0 && (0, lz.jsx)(Up, {
-                entry: zz,
-                defaultOpen: !zz.byItself,
-                elsewhere: Rz ? void 0 : zz.target,
-                isOutOfDate: Rz && !jb.current.has(zz.id) && zz.changes.some((zz => {
-                  var uz;
-                  return (null !== (uz = Lz[zz.path]) && void 0 !== uz ? uz : "") !== zz.before
+              }), DD.changes.length > 0 && (0, fD.jsx)(LB, {
+                entry: DD,
+                defaultOpen: !DD.byItself,
+                elsewhere: ZD ? void 0 : DD.target,
+                isOutOfDate: ZD && !ec.current.has(DD.id) && DD.changes.some((DD => {
+                  var CD;
+                  return (null !== (CD = JD[DD.path]) && void 0 !== CD ? CD : "") !== DD.before
                 })),
-                canEdit: Rz ? Gz : !!jz && (!zz.target.codeBlock || zz.target.canChangePos),
-                request: xE(zz.id),
-                onApply: uz => {
-                  Rz ? Ib(uz ? {
-                    id: zz.id,
-                    changes: uz,
+                canEdit: ZD ? aD : !!eD && (!DD.target.codeBlock || DD.target.canChangePos),
+                request: HI(DD.id),
+                onApply: CD => {
+                  ZD ? uc(CD ? {
+                    id: DD.id,
+                    changes: CD,
                     isPartial: !0
-                  } : zz, JE(zz.id)) : ((zz, uz) => {
-                    jz && Bb && (nu.pendingApply = {
-                      entryId: zz.id,
-                      targetKey: zz.target.key,
-                      picked: uz,
-                      until: Date.now() + dp
-                    }, jz(zz.target))
-                  })(zz, uz)
+                  } : DD, UI(DD.id)) : ((DD, CD) => {
+                    eD && hc && (pC.pendingApply = {
+                      entryId: DD.id,
+                      targetKey: DD.target.key,
+                      picked: CD,
+                      until: Date.now() + BB
+                    }, eD(DD.target))
+                  })(DD, CD)
                 },
-                checkPicked: Rz ? HE : void 0,
-                onPickedChange: uz => {
-                  Qu((bz => {
-                    if (bz.has(zz.id) === uz) return bz;
-                    const Ez = new Set(bz);
-                    return uz ? Ez.add(zz.id) : Ez.delete(zz.id), Ez
+                checkPicked: ZD ? wI : void 0,
+                onPickedChange: CD => {
+                  WC((cD => {
+                    if (cD.has(DD.id) === CD) return cD;
+                    const ID = new Set(cD);
+                    return CD ? ID.add(DD.id) : ID.delete(DD.id), ID
                   }))
                 },
                 onUndo: () => {
-                  (async zz => {
-                    const uz = Kb.current;
-                    if (zz.changes.some((zz => {
-                        var bz;
-                        return (null !== (bz = uz[zz.path]) && void 0 !== bz ? bz : "") !== zz.after
+                  (async DD => {
+                    const CD = oc.current;
+                    if (DD.changes.some((DD => {
+                        var cD;
+                        return (null !== (cD = CD[DD.path]) && void 0 !== cD ? cD : "") !== DD.after
                       }))) return;
-                    await mz(zz.changes.map((zz => ({
-                      path: zz.path,
-                      text: zz.before
-                    })))) && (Lb(zz.id, "undone"), null !== Eb && ME())
-                  })(zz)
+                    await jD(DD.changes.map((DD => ({
+                      path: DD.path,
+                      text: DD.before
+                    })))) && (Jc(DD.id, "undone"), null !== Ic && bI())
+                  })(DD)
                 },
                 onTryIt: () => {
-                  (zz => {
-                    const uz = Xb.current;
-                    eu(uz), iE(zz.id, "ask", uz), Hb(qz, Math.max(0, Rb.current + 600 - Date.now()))
-                  })(zz)
+                  (DD => {
+                    const CD = Nc.current;
+                    EC(CD), iI(DD.id, "ask", CD), wc(lD, Math.max(0, Zc.current + 600 - Date.now()))
+                  })(DD)
                 },
-                isLatest: Rz && zz.id > LE,
-                canUndo: Rz && zz.changes.every((zz => {
-                  var uz;
-                  return (null !== (uz = Lz[zz.path]) && void 0 !== uz ? uz : "") === zz.after
+                isLatest: ZD && DD.id > JI,
+                canUndo: ZD && DD.changes.every((DD => {
+                  var CD;
+                  return (null !== (CD = JD[DD.path]) && void 0 !== CD ? CD : "") === DD.after
                 })),
                 onFixWarnings: () => {
-                  (zz => {
-                    var uz;
-                    const bz = Zt(null !== (uz = zz.warnings) && void 0 !== uz ? uz : []);
-                    var Ez;
-                    if (!bz) return void Vb(`Fix this in your change: ${null===(Ez=zz.warnings)||void 0===Ez?void 0:Ez.join(" ")}`);
-                    const nz = fp(),
-                      iz = zz.changes.map((uz => ({
-                        ...uz,
-                        before: "applied" === zz.status ? uz.after : uz.before,
-                        after: wt(uz.after, bz)
+                  (DD => {
+                    var CD;
+                    const cD = tQ(null !== (CD = DD.warnings) && void 0 !== CD ? CD : []);
+                    var ID;
+                    if (!cD) return void zc(`Fix this in your change: ${null===(ID=DD.warnings)||void 0===ID?void 0:ID.join(" ")}`);
+                    const pD = NB(),
+                      iD = DD.changes.map((CD => ({
+                        ...CD,
+                        before: "applied" === DD.status ? CD.after : CD.before,
+                        after: vQ(CD.after, cD)
                       })));
-                    Jb({
+                    Uc({
                       role: "user",
-                      text: 1 === bz.length ? "Fix this line" : "Fix these lines",
+                      text: 1 === cD.length ? "Fix this line" : "Fix these lines",
                       changes: [],
                       status: "offered"
-                    }), Jb({
+                    }), Uc({
                       role: "assistant",
-                      text: `Fixed without asking the AI: ${bz.map(Xt).join(" ")}`,
-                      changes: iz,
+                      text: `Fixed without asking the AI: ${cD.map(NQ).join(" ")}`,
+                      changes: iD,
                       status: "offered",
-                      swappedTo: bz.flatMap((zz => {
+                      swappedTo: cD.flatMap((DD => {
                         let {
-                          to: uz
-                        } = zz;
-                        return uz ? [uz] : []
+                          to: CD
+                        } = DD;
+                        return CD ? [CD] : []
                       })),
-                      warnings: iz.flatMap((zz => Hp(nz, zz, uu)))
+                      warnings: iD.flatMap((DD => QB(pD, DD, CC)))
                     })
-                  })(zz)
+                  })(DD)
                 },
                 onCheck: () => {
-                  Vb(function(zz) {
-                    const uz = [...new Set(zz)];
-                    return uz.length > 0 ? `${hp} These names were checked against the game and are right, so keep them: ${uz.map((zz=>`"${zz}"`)).join(", ")}.` : hp
-                  }(AE.flatMap((zz => {
-                    var uz;
-                    return null !== (uz = zz.swappedTo) && void 0 !== uz ? uz : []
+                  zc(function(DD) {
+                    const CD = [...new Set(DD)];
+                    return CD.length > 0 ? `${lB} These names were checked against the game and are right, so keep them: ${CD.map((DD=>`"${DD}"`)).join(", ")}.` : lB
+                  }(xI.flatMap((DD => {
+                    var CD;
+                    return null !== (CD = DD.swappedTo) && void 0 !== CD ? CD : []
                   }))), "Check it for mistakes")
                 },
-                busy: Rz ? !!Hu : !Bb
-              }), zz.question && (0, lz.jsx)(vH, {
+                busy: ZD ? !!wC : !hc
+              }), DD.question && (0, fD.jsx)(Pw, {
                 ownAnswerBelow: !0,
-                question: zz.question,
-                onAnswer: zz.id !== TE || Hu ? void 0 : (uz, bz) => {
-                  var Ez, nz, iz, lz, Mz, tz, Hz;
-                  const Oz = null !== (Ez = null === (nz = zz.question) || void 0 === nz ? void 0 : nz.question) && void 0 !== Ez ? Ez : "",
-                    pz = null !== (iz = null === (lz = zz.askedFor) || void 0 === lz ? void 0 : lz.request) && void 0 !== iz ? iz : "";
-                  Vb(NH(pz, Oz, uz), null !== uz && void 0 !== uz ? uz : "Let the AI pick", {
-                    check: bz,
-                    about: null === (Mz = zz.askedFor) || void 0 === Mz ? void 0 : Mz.request,
-                    asked: bz && uz ? `${pz} ${uz}` : null,
-                    guardWords: NH(null !== (tz = null === (Hz = zz.askedFor) || void 0 === Hz ? void 0 : Hz.guardWords) && void 0 !== tz ? tz : "", Oz, uz)
+                question: DD.question,
+                onAnswer: DD.id !== qI || wC ? void 0 : (CD, cD) => {
+                  var ID, pD, iD, fD, bD, QD, wD;
+                  const SD = null !== (ID = null === (pD = DD.question) || void 0 === pD ? void 0 : pD.question) && void 0 !== ID ? ID : "",
+                    BD = null !== (iD = null === (fD = DD.askedFor) || void 0 === fD ? void 0 : fD.request) && void 0 !== iD ? iD : "";
+                  zc(Ow(BD, SD, CD), null !== CD && void 0 !== CD ? CD : "Let the AI pick", {
+                    check: cD,
+                    about: null === (bD = DD.askedFor) || void 0 === bD ? void 0 : bD.request,
+                    asked: cD && CD ? `${BD} ${CD}` : null,
+                    guardWords: Ow(null !== (QD = null === (wD = DD.askedFor) || void 0 === wD ? void 0 : wD.guardWords) && void 0 !== QD ? QD : "", SD, CD)
                   })
                 }
-              }), Rz && zz.offerExport && (0, lz.jsx)("button", {
+              }), ZD && DD.offerExport && (0, fD.jsx)("button", {
                 className: "WorldCodeAiSecondaryButton WorldCodeAiSaveGame",
                 onClick: () => {
-                  Tb(zz.id, {
+                  qc(DD.id, {
                     offerExport: !1
-                  }), kb("offered" === zz.status && zz.changes.length > 0)
+                  }), Fc("offered" === DD.status && DD.changes.length > 0)
                 },
                 children: "Save my game"
-              }), zz.plan && (0, lz.jsx)(oH, {
-                steps: zz.plan,
-                built: null !== (tz = zz.planBuilt) && void 0 !== tz ? tz : 0,
-                done: null !== (Oz = zz.planDone) && void 0 !== Oz ? Oz : 0,
-                onBuild: Rz && !Hu && Gz ? uz => {
-                  var bz;
-                  const Ez = null !== (bz = zz.plan) && void 0 !== bz ? bz : [];
-                  ab((() => {
-                    Tb(zz.id, {
-                      planBuilt: uz + 1
-                    }), Ub.current(function(zz, uz) {
-                      const bz = zz.map(((zz, bz) => `${bz+1}. ${zz}${bz<uz?" (built)":""}`)).join("\n");
-                      return `Build step ${uz+1} of our plan now: ${zz[uz]}\nThe whole plan:\n${bz}\nBuild only step ${uz+1}, keeping what earlier steps built, so I can try it before the next.`
-                    }(Ez, uz), `Build step ${uz+1}: ${Ez[uz]}`, {
-                      about: Ez[uz],
-                      asked: Ez[uz],
+              }), DD.plan && (0, fD.jsx)(nw, {
+                steps: DD.plan,
+                built: null !== (QD = DD.planBuilt) && void 0 !== QD ? QD : 0,
+                done: null !== (SD = DD.planDone) && void 0 !== SD ? SD : 0,
+                onBuild: ZD && !wC && aD ? CD => {
+                  var cD;
+                  const ID = null !== (cD = DD.plan) && void 0 !== cD ? cD : [];
+                  Vc((() => {
+                    qc(DD.id, {
+                      planBuilt: CD + 1
+                    }), Tc.current(function(DD, CD) {
+                      const cD = DD.map(((DD, cD) => `${cD+1}. ${DD}${cD<CD?" (built)":""}`)).join("\n");
+                      return `Build step ${CD+1} of our plan now: ${DD[CD]}\nThe whole plan:\n${cD}\nBuild only step ${CD+1}, keeping what earlier steps built, so I can try it before the next.`
+                    }(ID, CD), `Build step ${CD+1}: ${ID[CD]}`, {
+                      about: ID[CD],
+                      asked: ID[CD],
                       planStep: {
-                        planId: zz.id,
-                        index: uz
+                        planId: DD.id,
+                        index: CD
                       }
                     })
                   }))
                 } : void 0
-              }), Rz && zz.note && zz.noteStatus && !(zz.wentBack && "saved" === zz.noteStatus) && (0, lz.jsx)(rH, {
-                note: zz.note,
-                status: zz.noteStatus,
-                isPartLeftOut: "offered" === zz.status && Du.has(zz.id),
-                defaultOpen: !zz.byItself || "asked" === zz.noteStatus,
-                onAnswer: uz => {
-                  NE(zz, uz)
+              }), ZD && DD.note && DD.noteStatus && !(DD.wentBack && "saved" === DD.noteStatus) && (0, fD.jsx)(mw, {
+                note: DD.note,
+                status: DD.noteStatus,
+                isPartLeftOut: "offered" === DD.status && YC.has(DD.id),
+                defaultOpen: !DD.byItself || "asked" === DD.noteStatus,
+                onAnswer: CD => {
+                  OI(DD, CD)
                 }
-              }, "asked" === zz.noteStatus ? "asked" : "MZ"), !wz && fz, zz.lookups && (0, lz.jsx)(yp, {
-                lookups: zz.lookups.lookups,
-                defaultOpen: !zz.lookedAt,
-                isElsewhere: !Rz
-              }), Rz && zz.lookups && !zz.lookedAt && (0, lz.jsx)("div", {
+              }, "asked" === DD.noteStatus ? "asked" : "uM"), !vD && gD, DD.lookups && (0, fD.jsx)(kB, {
+                lookups: DD.lookups.lookups,
+                defaultOpen: !DD.lookedAt,
+                isElsewhere: !ZD
+              }), ZD && DD.lookups && !DD.lookedAt && (0, fD.jsx)("div", {
                 className: "WorldCodeAiLookups",
-                children: (0, lz.jsx)("button", {
+                children: (0, fD.jsx)("button", {
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: !!Hu,
+                  disabled: !!wC,
                   onClick: () => {
-                    (async zz => {
-                      if (!zz.lookups || zz.lookedAt || Hu) return;
-                      Tb(zz.id, {
+                    (async DD => {
+                      if (!DD.lookups || DD.lookedAt || wC) return;
+                      qc(DD.id, {
                         lookedAt: !0
                       });
-                      const uz = new AbortController;
-                      Yu.current = uz;
-                      const bz = Date.now();
-                      Cu(bz), Ou({
+                      const CD = new AbortController;
+                      AC.current = CD;
+                      const cD = Date.now();
+                      rC(cD), SC({
                         phase: "thinking",
-                        startedAt: bz
+                        startedAt: cD
                       });
                       try {
-                        "stopped" === await nE(zz.lookups.lookups, zz.lookups.followUp, {
-                          signal: uz.signal
-                        }) && Tb(zz.id, {
+                        "stopped" === await pI(DD.lookups.lookups, DD.lookups.followUp, {
+                          signal: CD.signal
+                        }) && qc(DD.id, {
                           lookedAt: !1
                         })
                       } finally {
-                        Yu.current = null, Ou(null)
+                        AC.current = null, SC(null)
                       }
-                    })(zz)
+                    })(DD)
                   },
                   children: "Let the AI look"
                 })
-              }), zz.worldCode && (0, lz.jsx)(gp, {
-                code: zz.worldCode.join("\n"),
-                defaultOpen: !zz.byItself,
-                isElsewhere: !Rz,
-                onSwitch: Rz && Dz ? () => {
-                  var uz;
-                  Dz(Dp(null !== (uz = zz.worldCode) && void 0 !== uz ? uz : []))
+              }), DD.worldCode && (0, fD.jsx)(GB, {
+                code: DD.worldCode.join("\n"),
+                defaultOpen: !DD.byItself,
+                isElsewhere: !ZD,
+                onSwitch: ZD && YD ? () => {
+                  var CD;
+                  YD(dB(null !== (CD = DD.worldCode) && void 0 !== CD ? CD : []))
                 } : void 0
-              }), Rz && "ask" === zz.trial && zz.id > LE && Vz <= (null !== (pz = zz.trialErrors) && void 0 !== pz ? pz : 0) && (0, lz.jsxs)("div", {
+              }), ZD && "ask" === DD.trial && DD.id > JI && zD <= (null !== (BD = DD.trialErrors) && void 0 !== BD ? BD : 0) && (0, fD.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, lz.jsx)("span", {
+                children: [(0, fD.jsx)("span", {
                   children: "Did your world do what you wanted?"
-                }), (0, lz.jsxs)("div", {
+                }), (0, fD.jsxs)("div", {
                   className: "WorldCodeAiTrialButtons",
-                  children: [(0, lz.jsx)("button", {
-                    ref: wb,
+                  children: [(0, fD.jsx)("button", {
+                    ref: vc,
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      iE(zz.id, "worked")
+                      iI(DD.id, "worked")
                     },
                     children: "Yes"
-                  }), (0, lz.jsx)("button", {
+                  }), (0, fD.jsx)("button", {
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      var uz;
-                      iE(zz.id, "notQuite"), Uu("It didn't work because "), null === (uz = Fb.current) || void 0 === uz || uz.focus()
+                      var CD;
+                      iI(DD.id, "notQuite"), TC("It didn't work because "), null === (CD = Mc.current) || void 0 === CD || CD.focus()
                     },
                     children: "Not quite"
                   })]
                 })]
-              }), Rz && "worked" === zz.trial && zz.id > LE && (0, lz.jsxs)("div", {
+              }), ZD && "worked" === DD.trial && DD.id > JI && (0, fD.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, lz.jsx)("span", {
+                children: [(0, fD.jsx)("span", {
                   children: "Nice! What next?"
-                }), (0, lz.jsx)(Jp, {
-                  requests: vp,
-                  onPick: zz => {
-                    Vb(zz, void 0, {
+                }), (0, fD.jsx)(HB, {
+                  requests: OB,
+                  onPick: DD => {
+                    zc(DD, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), Rz && "notQuite" === zz.trial && zz.id > LE && (0, lz.jsxs)("div", {
+              }), ZD && "notQuite" === DD.trial && DD.id > JI && (0, fD.jsxs)("div", {
                 className: "WorldCodeAiTrial WorldCodeAiTrial-wrong",
-                children: [(0, lz.jsx)("span", {
+                children: [(0, fD.jsx)("span", {
                   children: "What went wrong? Pick one, or say it in your own words below."
-                }), (0, lz.jsx)(Jp, {
-                  requests: xp,
-                  onPick: zz => {
-                    Vb(zz, void 0, {
+                }), (0, fD.jsx)(HB, {
+                  requests: PB,
+                  onPick: DD => {
+                    zc(DD, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), "assistant" === zz.role && zz.changes.length > 0 && "offered" === zz.status && zz.id === TE && !Hu && (0, lz.jsx)(Jp, {
-                requests: op,
-                onPick: zz => {
-                  Vb(zz, void 0, {
+              }), "assistant" === DD.role && DD.changes.length > 0 && "offered" === DD.status && DD.id === qI && !wC && (0, fD.jsx)(HB, {
+                requests: mB,
+                onPick: DD => {
+                  zc(DD, void 0, {
                     asked: null
                   })
                 }
-              }), "assistant" === zz.role && void 0 !== zz.answeredBy && "free" !== zz.answeredBy && 0 === zz.changes.length && !zz.worldCode && !zz.cutShort && zz.id === TE && !Hu && Vi(zz.text) && (0, lz.jsx)(Jp, {
-                requests: Np,
+              }), "assistant" === DD.role && void 0 !== DD.answeredBy && "free" !== DD.answeredBy && 0 === DD.changes.length && !DD.worldCode && !DD.cutShort && DD.id === qI && !wC && ai(DD.text) && (0, fD.jsx)(HB, {
+                requests: nB,
                 onPick: () => {
-                  Vb("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
+                  zc("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
                     asked: null
                   })
                 }
-              }), zz.keyNotice && void 0 !== zz.retry && zz.id === TE && !Hu && (0, lz.jsx)(Jt, {
-                ...cE(zz.id, zz.retry, zz.keyNotice)
-              }), void 0 !== zz.retry && !zz.keyNotice && zz.id === TE && !Hu && (0, lz.jsxs)("div", {
+              }), DD.keyNotice && void 0 !== DD.retry && DD.id === qI && !wC && (0, fD.jsx)(UQ, {
+                ...GI(DD.id, DD.retry, DD.keyNotice)
+              }), void 0 !== DD.retry && !DD.keyNotice && DD.id === qI && !wC && (0, fD.jsxs)("div", {
                 className: "WorldCodeAiRetry",
-                children: [(0, lz.jsx)("button", {
-                  ...ft.f,
+                children: [(0, fD.jsx)("button", {
+                  ...gQ.e,
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: (null !== (dz = zz.retryAt) && void 0 !== dz ? dz : 0) > Bu,
+                  disabled: (null !== (yD = DD.retryAt) && void 0 !== yD ? yD : 0) > hC,
                   onClick: () => {
-                    var uz;
-                    Vb(null !== (uz = zz.retry) && void 0 !== uz ? uz : "", zz.retryShown, {
-                      ...zz.retryOptions,
-                      retryOf: zz.id
+                    var CD;
+                    zc(null !== (CD = DD.retry) && void 0 !== CD ? CD : "", DD.retryShown, {
+                      ...DD.retryOptions,
+                      retryOf: DD.id
                     })
                   },
-                  children: (null !== (Fz = zz.retryAt) && void 0 !== Fz ? Fz : 0) > Bu ? `Try again in ${Qp((null!==(Zz=zz.retryAt)&&void 0!==Zz?Zz:0)-Bu)}` : "Try again"
-                }), hE && (0, lz.jsxs)("button", {
+                  children: (null !== (MD = DD.retryAt) && void 0 !== MD ? MD : 0) > hC ? `Try again in ${YB((null!==(tD=DD.retryAt)&&void 0!==tD?tD:0)-hC)}` : "Try again"
+                }), LI && (0, fD.jsxs)("button", {
                   className: "WorldCodeAiPrimaryButton",
                   onClick: () => {
-                    var uz;
-                    Vb(null !== (uz = zz.retry) && void 0 !== uz ? uz : "", zz.retryShown, {
-                      ...zz.retryOptions,
-                      retryOf: zz.id,
+                    var CD;
+                    zc(null !== (CD = DD.retry) && void 0 !== CD ? CD : "", DD.retryShown, {
+                      ...DD.retryOptions,
+                      retryOf: DD.id,
                       useFree: !1
                     })
                   },
-                  children: ["Ask ", hE.model.name, " instead"]
-                }), !hE && (0, lz.jsx)("button", {
+                  children: ["Ask ", LI.model.name, " instead"]
+                }), !LI && (0, fD.jsx)("button", {
                   className: "WorldCodeAiLinkButton",
-                  onClick: mE,
+                  onClick: jI,
                   children: "Choose another AI"
                 })]
               })]
             })]
-          }, zz.id) : (0, lz.jsxs)(Ez.Fragment, {
-            children: [Kz && (0, lz.jsx)(cp, {
-              target: zz.target,
-              isOpen: Rz
-            }), zz.lookups && (0, lz.jsx)(yp, {
-              lookups: zz.lookups.lookups,
-              words: zz.text,
-              defaultOpen: !zz.lookedAt,
-              isElsewhere: !Rz
-            }), !zz.lookups && (0, lz.jsx)(Mz, {
-              title: null !== (sz = zz.logTitle) && void 0 !== sz ? sz : zz.isCalm ? "Update" : "Problem",
-              isCalm: zz.isCalm || "user" === zz.role,
-              isElsewhere: !Rz,
-              children: (0, lz.jsx)("p", {
-                children: zz.text
+          }, DD.id) : (0, fD.jsxs)(ID.Fragment, {
+            children: [oD && (0, fD.jsx)(TB, {
+              target: DD.target,
+              isOpen: ZD
+            }), DD.lookups && (0, fD.jsx)(kB, {
+              lookups: DD.lookups.lookups,
+              words: DD.text,
+              defaultOpen: !DD.lookedAt,
+              isElsewhere: !ZD
+            }), !DD.lookups && (0, fD.jsx)(bD, {
+              title: null !== (XD = DD.logTitle) && void 0 !== XD ? XD : DD.isCalm ? "Update" : "Problem",
+              isCalm: DD.isCalm || "user" === DD.role,
+              isElsewhere: !ZD,
+              children: (0, fD.jsx)("p", {
+                children: DD.text
               })
             })]
-          }, zz.id)
-        })), !eE && PE && (null === (vz = iu[iu.length - 1]) || void 0 === vz ? void 0 : vz.target.key) !== gz.key && (0, lz.jsx)(cp, {
-          target: gz,
+          }, DD.id)
+        })), !EI && KI && (null === (PD = iC[iC.length - 1]) || void 0 === PD ? void 0 : PD.target.key) !== RD.key && (0, fD.jsx)(TB, {
+          target: RD,
           isOpen: !0
-        }), !eE && 0 === AE.length && (0, lz.jsxs)("div", {
+        }), !EI && 0 === xI.length && (0, fD.jsxs)("div", {
           className: "WorldCodeAiEmpty",
-          children: [(0, lz.jsx)("p", {
-            children: uu ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
-          }), (0, lz.jsxs)("div", {
+          children: [(0, fD.jsx)("p", {
+            children: CC ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
+          }), (0, fD.jsxs)("div", {
             className: "WorldCodeAiChips",
-            children: [QE && (0, lz.jsx)("button", {
-              ...ft.f,
+            children: [WI && (0, fD.jsx)("button", {
+              ...gQ.e,
               className: "WorldCodeAiChip",
               onClick: () => {
-                Vb("Explain what my code does")
+                zc("Explain what my code does")
               },
               children: "Explain my code"
-            }), QE && !uu && !fE && Gz && (0, lz.jsx)("button", {
-              ...ft.f,
+            }), WI && !CC && !gI && aD && (0, fD.jsx)("button", {
+              ...gQ.e,
               className: "WorldCodeAiChip",
               onClick: () => {
-                Vb("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
+                zc("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
               },
               children: "Make settings I can change"
-            }), (Gz ? uu ? rp : sp : []).map((zz => (0, Ez.createElement)("button", {
-              ...ft.f,
-              key: zz,
+            }), (aD ? CC ? XB : gB : []).map((DD => (0, ID.createElement)("button", {
+              ...gQ.e,
+              key: DD,
               className: "WorldCodeAiChip",
               onClick: () => {
-                Vb(zz)
+                zc(DD)
               }
-            }, zz)))]
-          }), (0, lz.jsxs)("p", {
+            }, DD)))]
+          }), (0, fD.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: [hE ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${hE.model.name} with your key.` : gE ? "deepseek" === gE.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
-          }), !hE && (0, lz.jsxs)("p", {
+            children: [LI ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${LI.model.name} with your key.` : RI ? "deepseek" === RI.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
+          }), !LI && (0, fD.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: ["Want a stronger AI?", " ", (0, lz.jsx)("button", {
+            children: ["Want a stronger AI?", " ", (0, fD.jsx)("button", {
               className: "WorldCodeAiKeyLearnMore",
-              onClick: qE,
+              onClick: lI,
               children: "Add your own API key"
             })]
           })]
-        }), !eE && Hu && (0, lz.jsx)("div", {
+        }), !EI && wC && (0, fD.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, lz.jsxs)("div", {
+          children: (0, fD.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, lz.jsx)("span", {
+            children: [(0, fD.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, lz.jsx)("span", {
+            }), (0, fD.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, lz.jsx)(Mz, {
-                title: null !== (xz = Wp(Hu)) && void 0 !== xz ? xz : "Thinking\u2026",
+              children: (0, fD.jsx)(bD, {
+                title: null !== (HD = WB(wC)) && void 0 !== HD ? HD : "Thinking\u2026",
                 isCalm: !0,
-                children: "waiting" === Hu.phase ? (0, lz.jsxs)("span", {
+                children: "waiting" === wC.phase ? (0, fD.jsxs)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: [fO((null !== (Jz = Hu.until) && void 0 !== Jz ? Jz : Bu) - Bu), " Lots of people share Bot.xd."]
-                }) : (0, lz.jsxs)(lz.Fragment, {
-                  children: [(0, lz.jsx)(ep, {
-                    busy: Hu
-                  }), "screening" === Hu.phase && (null !== (Az = Hu.until) && void 0 !== Az ? Az : 0) > Bu && (0, lz.jsxs)("span", {
+                  children: [gS((null !== (UD = wC.until) && void 0 !== UD ? UD : hC) - hC), " Lots of people share Bot.xd."]
+                }) : (0, fD.jsxs)(fD.Fragment, {
+                  children: [(0, fD.jsx)(sB, {
+                    busy: wC
+                  }), "screening" === wC.phase && (null !== (xD = wC.until) && void 0 !== xD ? xD : 0) > hC && (0, fD.jsxs)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: [fO((null !== (Tz = Hu.until) && void 0 !== Tz ? Tz : Bu) - Bu), " Lots of people share the safety check."]
-                  }), "checking" !== Hu.phase && "screening" !== Hu.phase && (0, lz.jsx)("span", {
+                    children: [gS((null !== (qD = wC.until) && void 0 !== qD ? qD : hC) - hC), " Lots of people share the safety check."]
+                  }), "checking" !== wC.phase && "screening" !== wC.phase && (0, fD.jsx)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: Hu.keyModel ? `${Hu.keyModel} is answering with your key.` : Hu.isSuperBot ? `${nM} is answering from your usage.` : JO(Tu.current, Hu.model)
+                    children: wC.keyModel ? `${wC.keyModel} is answering with your key.` : wC.isSuperBot ? `${pb} is answering from your usage.` : US(qC.current, wC.model)
                   })]
                 })
               })
-            }), (0, lz.jsx)("button", {
+            }), (0, fD.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: En,
+              onClick: Ip,
               children: "Stop"
             })]
           })
-        }), !eE && !Hu && tb && (0, lz.jsx)("div", {
+        }), !EI && !wC && Qc && (0, fD.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, lz.jsxs)("div", {
+          children: (0, fD.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, lz.jsx)("span", {
+            children: [(0, fD.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, lz.jsx)("span", {
+            }), (0, fD.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, lz.jsx)(Mz, {
+              children: (0, fD.jsx)(bD, {
                 title: "Testing\u2026",
                 isCalm: !0,
-                children: (0, lz.jsx)("span", {
+                children: (0, fD.jsx)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: uu ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${HH.C/1e3} seconds. If it shows an error, the AI fixes it.`
+                  children: CC ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${ww.F/1e3} seconds. If it shows an error, the AI fixes it.`
                 })
               })
-            }), (0, lz.jsx)("button", {
+            }), (0, fD.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: ME,
+              onClick: bI,
               children: "Stop"
             })]
           })
-        }), !eE && Db.map(((zz, uz) => {
-          var bz, Ez;
-          return (0, lz.jsxs)("div", {
+        }), !EI && Yc.map(((DD, CD) => {
+          var cD, ID;
+          return (0, fD.jsxs)("div", {
             className: "WorldCodeAiEntry WorldCodeAiEntry-user WorldCodeAiQueued",
-            children: [(0, lz.jsx)("p", {
-              children: null !== (bz = zz.shown) && void 0 !== bz ? bz : zz.text
-            }), (0, lz.jsxs)("span", {
+            children: [(0, fD.jsx)("p", {
+              children: null !== (cD = DD.shown) && void 0 !== cD ? cD : DD.text
+            }), (0, fD.jsxs)("span", {
               className: "WorldCodeAiQueuedNote",
-              children: [zz.id === Sb ? "Pick Bot.xd to send it" : null !== (Ez = wp[uz]) && void 0 !== Ez ? Ez : "In line", (0, lz.jsx)("button", {
+              children: [DD.id === kc ? "Pick Bot.xd to send it" : null !== (ID = oB[CD]) && void 0 !== ID ? ID : "In line", (0, fD.jsx)("button", {
                 className: "WorldCodeAiLinkButton",
                 onClick: () => {
-                  gu((uz => uz.filter((uz => uz.id !== zz.id))))
+                  RC((CD => CD.filter((CD => CD.id !== DD.id))))
                 },
                 children: "Delete"
               })]
             })]
-          }, zz.id)
+          }, DD.id)
         }))]
-      }), vb && !Hu && (0, lz.jsxs)("div", {
+      }), Pc && !wC && (0, fD.jsxs)("div", {
         className: "WorldCodeAiErrorBanner",
-        children: [(0, lz.jsxs)("div", {
+        children: [(0, fD.jsxs)("div", {
           className: "WorldCodeAiErrorPlain",
-          children: [void 0 !== xb.line && (0, lz.jsxs)(lz.Fragment, {
-            children: [(0, lz.jsxs)("button", {
+          children: [void 0 !== Hc.line && (0, fD.jsxs)(fD.Fragment, {
+            children: [(0, fD.jsxs)("button", {
               className: "WorldCodeAiLinkButton",
               title: "Show this line in your code",
               onClick: () => {
-                var zz, uz;
-                cz(null !== (zz = xb.path) && void 0 !== zz ? zz : Pz, null !== (uz = xb.line) && void 0 !== uz ? uz : 1), (0, pz.c)() && Uz()
+                var DD, CD;
+                GD(null !== (DD = Hc.path) && void 0 !== DD ? DD : KD, null !== (CD = Hc.line) && void 0 !== CD ? CD : 1), (0, BD.i)() && TD()
               },
-              children: [xb.path && xb.path !== Pz ? `${xb.path} line` : "Line", " ", xb.line]
+              children: [Hc.path && Hc.path !== KD ? `${Hc.path} line` : "Line", " ", Hc.line]
             }), ":", " "]
-          }), xb.text]
-        }), ju && (0, lz.jsx)("div", {
+          }), Hc.text]
+        }), eC && (0, fD.jsx)("div", {
           className: "WorldCodeAiErrorText",
-          children: vb
-        }), (0, lz.jsxs)("div", {
+          children: Pc
+        }), (0, fD.jsxs)("div", {
           className: "WorldCodeAiErrorActions",
-          children: [(0, lz.jsx)("button", {
-            ...ft.f,
+          children: [(0, fD.jsx)("button", {
+            ...gQ.e,
             className: "WorldCodeAiPrimaryButton",
             onClick: () => {
-              ab((() => {
-                eu(Vz), Ub.current(`Fix this error: ${vb}`)
+              Vc((() => {
+                EC(zD), Tc.current(`Fix this error: ${Pc}`)
               }))
             },
             children: "Fix the error"
-          }), (0, lz.jsx)("button", {
-            ...ft.f,
+          }), (0, fD.jsx)("button", {
+            ...gQ.e,
             className: "WorldCodeAiSecondaryButton",
             onClick: () => {
-              ab((() => {
-                eu(Vz), Ub.current(`Explain this error in simple words, and where it is in my code: ${vb}`)
+              Vc((() => {
+                EC(zD), Tc.current(`Explain this error in simple words, and where it is in my code: ${Pc}`)
               }))
             },
             children: "Explain it"
-          }), (0, lz.jsx)("button", {
+          }), (0, fD.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             onClick: () => {
-              eu(Vz)
+              EC(zD)
             },
             children: "Dismiss"
-          }), (0, lz.jsx)("button", {
+          }), (0, fD.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiErrorDetailsToggle",
             onClick: () => {
-              Iu(!ju)
+              uC(!eC)
             },
-            children: ju ? "Hide details" : "Show details"
+            children: eC ? "Hide details" : "Show details"
           })]
-        }), (0, lz.jsx)("div", {
+        }), (0, fD.jsx)("div", {
           className: "WorldCodeAiErrorNote",
           children: "Fix the error and Explain it send this error and your code to the AI."
         })]
-      }), Su && (0, lz.jsxs)("div", {
+      }), kC && (0, fD.jsxs)("div", {
         className: "WorldCodeAiPicked",
-        children: [(0, lz.jsxs)("span", {
-          children: ["Changing ", GO(Su), " of ", Su.path]
-        }), (0, lz.jsx)("button", {
+        children: [(0, fD.jsxs)("span", {
+          children: ["Changing ", aS(kC), " of ", kC.path]
+        }), (0, fD.jsx)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            yu(null)
+            dC(null)
           },
           children: "Cancel"
         })]
-      }), (0, lz.jsx)(bH, {
+      }), (0, fD.jsx)(Cw, {
         step: "aiAskBox",
-        children: (0, lz.jsx)("form", {
+        children: (0, fD.jsx)("form", {
           className: "WorldCodeAiInputRow",
-          onSubmit: zz => {
-            zz.preventDefault(), qb()
+          onSubmit: DD => {
+            DD.preventDefault(), lc()
           },
-          children: (0, lz.jsxs)("div", {
+          children: (0, fD.jsxs)("div", {
             className: "WorldCodeAiAsk",
-            children: [(0, lz.jsx)("textarea", {
-              ref: Fb,
+            children: [(0, fD.jsx)("textarea", {
+              ref: Mc,
               className: "WorldCodeAiAskInput",
-              value: hu,
+              value: LC,
               maxLength: 1e3,
               rows: 2,
-              placeholder: Su ? `How should ${GO(Su)} change?` : aE ? "Or type your own answer here" : "Ask AI",
-              onChange: zz => {
-                Uu(zz.target.value)
+              placeholder: kC ? `How should ${aS(kC)} change?` : VI ? "Or type your own answer here" : "Ask AI",
+              onChange: DD => {
+                TC(DD.target.value)
               },
-              onKeyDown: zz => {
-                zz.stopPropagation(), "Enter" !== zz.key || zz.shiftKey || zz.nativeEvent.isComposing || 229 === zz.nativeEvent.keyCode || (zz.preventDefault(), qb())
+              onKeyDown: DD => {
+                DD.stopPropagation(), "Enter" !== DD.key || DD.shiftKey || DD.nativeEvent.isComposing || 229 === DD.nativeEvent.keyCode || (DD.preventDefault(), lc())
               }
-            }), (0, lz.jsx)(Oz.q, {
+            }), (0, fD.jsx)(SD.o, {
               className: "WorldCodeAiSend",
               ariaLabel: "Send",
-              disabled: "" === hu.trim() || !!Hu && cu.length >= 3,
-              onClick: qb,
-              children: (0, lz.jsx)(dz.c, {
+              disabled: "" === LC.trim() || !!wC && GC.length >= 3,
+              onClick: lc,
+              children: (0, fD.jsx)(yD.c, {
                 name: "arrow-up"
               })
             })]
           })
         })
-      }), (0, lz.jsx)(bH, {
+      }), (0, fD.jsx)(Cw, {
         step: "aiModelChip",
-        children: (0, lz.jsx)("div", {
-          className: iz()("WorldCodeAiLimit", Hu && "WorldCodeAiLimit-busy"),
-          children: (0, lz.jsx)(lH, {
-            editsOn: Gz ? Lu : null,
-            freeOnce: Nu,
-            onFreeOnce: vu,
-            onAddKey: qE,
+        children: (0, fD.jsx)("div", {
+          className: iD()("WorldCodeAiLimit", wC && "WorldCodeAiLimit-busy"),
+          children: (0, fD.jsx)(fw, {
+            editsOn: aD ? JC : null,
+            freeOnce: OC,
+            onFreeOnce: PC,
+            onAddKey: lI,
             children: (() => {
-              if (Hu) return 0 === Db.length ? "You can type your next request: it sends when this answer is done." : 1 === Db.length ? "1 request waiting: it sends when this answer is done." : `${Db.length} requests waiting: they send one at a time.`;
-              if (hE && Nu) return `Your next question goes to Bot.xd, then back to ${hE.model.name}.`;
-              if (hE) return `Your question and code go to ${fl(hE.provider,hE.baseUrl,!0)}.`;
-              if (gE) {
-                const zz = null === SE ? null : function(zz, uz) {
-                  return zz <= uz ? null : `Limit resets in ${(0,EM.e)(Math.ceil((zz-uz)/6e4))}`
-                }(SE, Bu);
-                return null === zz ? fM(gE) : (0, lz.jsxs)(lz.Fragment, {
-                  children: [(0, lz.jsx)("span", {
+              if (wC) return 0 === Yc.length ? "You can type your next request: it sends when this answer is done." : 1 === Yc.length ? "1 request waiting: it sends when this answer is done." : `${Yc.length} requests waiting: they send one at a time.`;
+              if (LI && OC) return `Your next question goes to Bot.xd, then back to ${LI.model.name}.`;
+              if (LI) return `Your question and code go to ${gf(LI.provider,LI.baseUrl,!0)}.`;
+              if (RI) {
+                const DD = null === kI ? null : function(DD, CD) {
+                  return DD <= CD ? null : `Limit resets in ${(0,Ib.b)(Math.ceil((DD-CD)/6e4))}`
+                }(kI, hC);
+                return null === DD ? gb(RI) : (0, fD.jsxs)(fD.Fragment, {
+                  children: [(0, fD.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
-                    children: fM(gE)
-                  }), (0, lz.jsx)("span", {
+                    children: gb(RI)
+                  }), (0, fD.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
-                    children: zz
+                    children: DD
                   })]
                 })
               }
-              return ob > Bu ? `Send now and it starts by itself. ${fO(ob-Bu)}` : null
+              return nc > hC ? `Send now and it starts by itself. ${gS(nc-hC)}` : null
             })()
           })
         })
       })]
     });
-    return (0, lz.jsx)(bH, {
-      step: jE,
-      onPrevious: "aiPanel" === jE ? Uz : void 0,
-      children: nn
+    return (0, fD.jsx)(Cw, {
+      step: eI,
+      onPrevious: "aiPanel" === eI ? TD : void 0,
+      children: pp
     })
   })),
-  Ip = jp
-}, 38972: (zz, uz, bz) => {
-  bz.d(uz, {
-    d: () => tz,
-    f: () => iz,
-    g: () => nz
+  eB = EB
+}, 38928: (DD, CD, cD) => {
+  cD.d(CD, {
+    b: () => QD,
+    e: () => iD,
+    i: () => pD
   });
-  const Ez = 6e3;
+  const ID = 6e3;
 
-  function nz(zz, uz) {
-    return [Math.floor(zz[0] / uz) * uz, Math.floor(zz[1] / uz) * uz, Math.floor(zz[2] / uz) * uz]
+  function pD(DD, CD) {
+    return [Math.floor(DD[0] / CD) * CD, Math.floor(DD[1] / CD) * CD, Math.floor(DD[2] / CD) * CD]
   }
 
-  function iz(zz) {
-    const uz = (null !== zz && void 0 !== zz ? zz : "").match(/-?\d+(?:\.\d+)?/g);
-    return uz && uz.length >= 3 ? [Number(uz[0]), Number(uz[1]), Number(uz[2])] : null
+  function iD(DD) {
+    const CD = (null !== DD && void 0 !== DD ? DD : "").match(/-?\d+(?:\.\d+)?/g);
+    return CD && CD.length >= 3 ? [Number(CD[0]), Number(CD[1]), Number(CD[2])] : null
   }
 
-  function lz(zz, uz) {
-    return zz === uz ? String(zz) : `${zz}-${uz}`
+  function fD(DD, CD) {
+    return DD === CD ? String(DD) : `${DD}-${CD}`
   }
 
-  function Mz(zz, uz, bz, Ez) {
-    const nz = [];
-    let iz = new Map;
-    for (let lz = zz[2]; lz < zz[2] + uz; lz++) {
-      const Mz = new Map;
-      let tz = zz[0];
-      for (; tz < zz[0] + uz;) {
-        const nz = Ez(tz, bz, lz);
-        let Hz = tz;
-        for (; Hz + 1 < zz[0] + uz && Ez(Hz + 1, bz, lz) === nz;) Hz++;
-        if (null !== nz) {
-          const zz = `${tz} ${Hz} ${nz}`,
-            uz = iz.get(zz);
-          uz ? (uz.z1 = lz, iz.delete(zz), Mz.set(zz, uz)) : Mz.set(zz, {
-            x0: tz,
-            x1: Hz,
-            z0: lz,
-            z1: lz,
-            name: nz
+  function bD(DD, CD, cD, ID) {
+    const pD = [];
+    let iD = new Map;
+    for (let fD = DD[2]; fD < DD[2] + CD; fD++) {
+      const bD = new Map;
+      let QD = DD[0];
+      for (; QD < DD[0] + CD;) {
+        const pD = ID(QD, cD, fD);
+        let wD = QD;
+        for (; wD + 1 < DD[0] + CD && ID(wD + 1, cD, fD) === pD;) wD++;
+        if (null !== pD) {
+          const DD = `${QD} ${wD} ${pD}`,
+            CD = iD.get(DD);
+          CD ? (CD.z1 = fD, iD.delete(DD), bD.set(DD, CD)) : bD.set(DD, {
+            x0: QD,
+            x1: wD,
+            z0: fD,
+            z1: fD,
+            name: pD
           })
         }
-        tz = Hz + 1
+        QD = wD + 1
       }
-      nz.push(...iz.values()), iz = Mz
+      pD.push(...iD.values()), iD = bD
     }
-    return nz.push(...iz.values()), nz.sort(((zz, uz) => zz.z0 - uz.z0 || zz.x0 - uz.x0)).map((zz => `x${lz(zz.x0,zz.x1)} z${lz(zz.z0,zz.z1)} ${zz.name}`))
+    return pD.push(...iD.values()), pD.sort(((DD, CD) => DD.z0 - CD.z0 || DD.x0 - CD.x0)).map((DD => `x${fD(DD.x0,DD.x1)} z${fD(DD.z0,DD.z1)} ${DD.name}`))
   }
 
-  function tz(zz, uz, bz, nz) {
-    let iz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Ez;
-    const tz = [zz[0] + uz - 1, zz[1] + uz - 1, zz[2] + uz - 1],
-      Hz = null !== nz && nz.every(((uz, bz) => Math.floor(uz) >= zz[bz] && Math.floor(uz) <= tz[bz])),
-      Oz = [`The chunk from ${zz.join(" ")} to ${tz.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-    null !== nz && Oz.push(`The player's feet are at ${nz.map(Math.floor).join(" ")}, ${Hz?"in this chunk":"outside this chunk"}.`);
-    const pz = [];
-    for (let Ez = zz[1]; Ez <= tz[1]; Ez++) {
-      const nz = Mz(zz, uz, Ez, bz).join("; "),
-        iz = pz[pz.length - 1];
-      (null === iz || void 0 === iz ? void 0 : iz.boxes) === nz ? iz.to = Ez : pz.push({
-        from: Ez,
-        to: Ez,
-        boxes: nz
+  function QD(DD, CD, cD, pD) {
+    let iD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : ID;
+    const QD = [DD[0] + CD - 1, DD[1] + CD - 1, DD[2] + CD - 1],
+      wD = null !== pD && pD.every(((CD, cD) => Math.floor(CD) >= DD[cD] && Math.floor(CD) <= QD[cD])),
+      SD = [`The chunk from ${DD.join(" ")} to ${QD.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+    null !== pD && SD.push(`The player's feet are at ${pD.map(Math.floor).join(" ")}, ${wD?"in this chunk":"outside this chunk"}.`);
+    const BD = [];
+    for (let ID = DD[1]; ID <= QD[1]; ID++) {
+      const pD = bD(DD, CD, ID, cD).join("; "),
+        iD = BD[BD.length - 1];
+      (null === iD || void 0 === iD ? void 0 : iD.boxes) === pD ? iD.to = ID : BD.push({
+        from: ID,
+        to: ID,
+        boxes: pD
       })
     }
-    const dz = pz.filter((zz => "" !== zz.boxes));
-    0 === dz.length && Oz.push("It is all air.");
-    let Fz = Oz.join("\n").length;
-    for (const Ez of dz) {
-      const zz = `y${lz(Ez.from,Ez.to)}: ${Ez.boxes}`;
-      if (Fz += zz.length + 1, Fz > iz) {
-        Oz.push(`Cut short: the layers from y${Ez.from} up aren't shown, as there are too many blocks.`);
+    const yD = BD.filter((DD => "" !== DD.boxes));
+    0 === yD.length && SD.push("It is all air.");
+    let MD = SD.join("\n").length;
+    for (const ID of yD) {
+      const DD = `y${fD(ID.from,ID.to)}: ${ID.boxes}`;
+      if (MD += DD.length + 1, MD > iD) {
+        SD.push(`Cut short: the layers from y${ID.from} up aren't shown, as there are too many blocks.`);
         break
       }
-      Oz.push(zz)
+      SD.push(DD)
     }
-    return Oz.join("\n")
+    return SD.join("\n")
   }
-}, 4581: (zz, uz, bz) => {
-  bz.d(uz, {
-    A: () => Fz,
-    e: () => nz,
-    g: () => tz,
-    i: () => iz,
-    k: () => lz,
-    n: () => Mz,
-    p: () => Kz,
-    r: () => Oz,
-    s: () => pz,
-    w: () => Rz
+}, 4597: (DD, CD, cD) => {
+  cD.d(CD, {
+    b: () => pD,
+    c: () => QD,
+    g: () => iD,
+    i: () => fD,
+    k: () => bD,
+    l: () => oD,
+    m: () => SD,
+    p: () => BD,
+    q: () => ZD,
+    t: () => MD
   });
-  var Ez = bz(1547);
-  const nz = 24e3,
-    iz = "/docs/llms.txt",
-    lz = `${Ez.e}${iz}`,
-    Mz = "/llms.txt",
-    tz = "/docs/llms-full.txt";
+  var ID = cD(1577);
+  const pD = 24e3,
+    iD = "/docs/llms.txt",
+    fD = `${ID.c}${iD}`,
+    bD = "/llms.txt",
+    QD = "/docs/llms-full.txt";
 
-  function Hz(zz) {
-    return zz || "index"
+  function wD(DD) {
+    return DD || "index"
   }
 
-  function Oz(zz) {
-    return `/docs/${Hz(zz)}.md`
+  function SD(DD) {
+    return `/docs/${wD(DD)}.md`
   }
 
-  function pz(zz, uz) {
-    return `/docs/${Hz(zz)}/${uz+1}.md`
+  function BD(DD, CD) {
+    return `/docs/${wD(DD)}/${CD+1}.md`
   }
-  const dz = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+  const yD = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-  function Fz(zz) {
-    const uz = dz.exec(zz);
-    return null === uz ? null : {
-      name: uz[1],
-      part: void 0 === uz[2] ? null : Number(uz[2])
+  function MD(DD) {
+    const CD = yD.exec(DD);
+    return null === CD ? null : {
+      name: CD[1],
+      part: void 0 === CD[2] ? null : Number(CD[2])
     }
   }
-  const Zz = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+  const tD = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-  function Rz(zz) {
-    const uz = Zz.exec(zz);
-    if (null === uz) return null;
-    const [, bz = "", Ez] = uz;
-    return void 0 === Ez ? Oz(bz) : pz(bz, Number(Ez) - 1)
+  function ZD(DD) {
+    const CD = tD.exec(DD);
+    if (null === CD) return null;
+    const [, cD = "", ID] = CD;
+    return void 0 === ID ? SD(cD) : BD(cD, Number(ID) - 1)
   }
 
-  function Kz(zz) {
-    return `/docsHtml/${Hz(zz)}.html`
+  function oD(DD) {
+    return `/docsHtml/${wD(DD)}.html`
   }
 }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

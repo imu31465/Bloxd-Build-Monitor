@@ -1,116 +1,116 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  38898: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      default: () => Mz
+  38839: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      default: () => bD
     });
-    var Ez = bz(9013);
-    const nz = 1e3 / 3;
+    var ID = cD(9065);
+    const pD = 1e3 / 3;
 
-    function iz(zz, uz, bz) {
-      if ("parenthetical-seconds" === uz) return ` (${zz}s)`;
-      const Ez = `${Math.floor(zz/60)}:${(zz%60).toString().padStart(2,"0")}`;
-      return bz ? `${bz}${Ez}` : Ez
+    function iD(DD, CD, cD) {
+      if ("parenthetical-seconds" === CD) return ` (${DD}s)`;
+      const ID = `${Math.floor(DD/60)}:${(DD%60).toString().padStart(2,"0")}`;
+      return cD ? `${cD}${ID}` : ID
     }
 
-    function lz(zz, uz, bz, nz, iz) {
-      var lz;
-      const Mz = {
-        ...nz.baseNametag
+    function fD(DD, CD, cD, pD, iD) {
+      var fD;
+      const bD = {
+        ...pD.baseNametag
       };
-      Mz.content = [...null !== (lz = nz.baseNametag.content) && void 0 !== lz ? lz : [], {
+      bD.content = [...null !== (fD = pD.baseNametag.content) && void 0 !== fD ? fD : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,Ez.b)(iz)}`
-      }], zz.setOtherEntitySetting(uz, bz, "nameTagInfo", Mz)
+        str: `: ${(0,ID.e)(iD)}`
+      }], DD.setOtherEntitySetting(CD, cD, "nameTagInfo", bD)
     }
-    const Mz = function(zz, uz, bz, Ez) {
-      let Mz, {
-        localPlayerId: tz
-      } = Ez;
-      const Hz = new Map,
-        Oz = new Map;
-      let pz = 0,
-        dz = 0;
+    const bD = function(DD, CD, cD, ID) {
+      let bD, {
+        localPlayerId: QD
+      } = ID;
+      const wD = new Map,
+        SD = new Map;
+      let BD = 0,
+        yD = 0;
       return {
-        onCreate: zz => {
-          Mz = zz
+        onCreate: DD => {
+          bD = DD
         },
-        sd: zz => {
-          const uz = Date.now();
-          for (const [Ez, nz] of Hz) {
-            const zz = Math.floor((uz - nz.startTime) / 1e3),
-              lz = Math.max(0, nz.remainingSeconds - zz);
-            if (lz === nz.lastRenderedSecond) continue;
-            nz.lastRenderedSecond = lz;
-            const Oz = {
-                str: iz(lz, nz.format, nz.prefix),
-                style: nz.style
+        wy: DD => {
+          const CD = Date.now();
+          for (const [ID, pD] of wD) {
+            const DD = Math.floor((CD - pD.startTime) / 1e3),
+              fD = Math.max(0, pD.remainingSeconds - DD);
+            if (fD === pD.lastRenderedSecond) continue;
+            pD.lastRenderedSecond = fD;
+            const SD = {
+                str: iD(fD, pD.format, pD.prefix),
+                style: pD.style
               },
-              pz = {
-                ...nz.baseNametag
+              BD = {
+                ...pD.baseNametag
               };
-            var bz;
-            if ("content" === nz.location) pz.content = [...null !== (bz = nz.baseNametag.content) && void 0 !== bz ? bz : [], Oz];
-            else pz.subtitle = [Oz];
-            Mz.setOtherEntitySetting(tz, Ez, "nameTagInfo", pz), lz <= 0 && Hz.delete(Ez)
+            var cD;
+            if ("content" === pD.location) BD.content = [...null !== (cD = pD.baseNametag.content) && void 0 !== cD ? cD : [], SD];
+            else BD.subtitle = [SD];
+            bD.setOtherEntitySetting(QD, ID, "nameTagInfo", BD), fD <= 0 && wD.delete(ID)
           }
-          if (Oz.size > 0 && uz - pz >= nz) {
-            pz = uz, dz = (dz + 1) % 3;
-            let zz = 0;
-            for (const [bz, Ez] of Oz) {
-              if (zz++ % 3 !== dz) continue;
-              const nz = Math.floor((uz - Ez.startTime) / 1e3);
-              if (nz === Ez.lastRenderedSecond) continue;
-              Ez.lastRenderedSecond = nz;
-              const iz = Ez.accumulatedIncome + Ez.incomePerSecond * BigInt(nz);
-              lz(Mz, tz, bz, Ez, iz)
+          if (SD.size > 0 && CD - BD >= pD) {
+            BD = CD, yD = (yD + 1) % 3;
+            let DD = 0;
+            for (const [cD, ID] of SD) {
+              if (DD++ % 3 !== yD) continue;
+              const pD = Math.floor((CD - ID.startTime) / 1e3);
+              if (pD === ID.lastRenderedSecond) continue;
+              ID.lastRenderedSecond = pD;
+              const iD = ID.accumulatedIncome + ID.incomePerSecond * BigInt(pD);
+              fD(bD, QD, cD, ID, iD)
             }
           }
         },
-        onReceivedMessageFromServer: (zz, uz) => {
-          if ("startCountdown" === zz) Hz.set(uz.eId, {
-            baseNametag: uz.baseNametag,
-            remainingSeconds: uz.remainingSeconds,
+        onReceivedMessageFromServer: (DD, CD) => {
+          if ("startCountdown" === DD) wD.set(CD.eId, {
+            baseNametag: CD.baseNametag,
+            remainingSeconds: CD.remainingSeconds,
             startTime: Date.now(),
-            format: uz.format,
-            location: uz.location,
-            prefix: uz.prefix,
-            style: uz.style,
+            format: CD.format,
+            location: CD.location,
+            prefix: CD.prefix,
+            style: CD.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === zz) Hz.delete(uz.eId);
-          else if ("startIncomeTicking" === zz) {
-            const zz = {
-              baseNametag: uz.baseNametag,
-              accumulatedIncome: BigInt(uz.accumulatedIncome),
-              incomePerSecond: BigInt(uz.incomePerSecond),
+          else if ("stopCountdown" === DD) wD.delete(CD.eId);
+          else if ("startIncomeTicking" === DD) {
+            const DD = {
+              baseNametag: CD.baseNametag,
+              accumulatedIncome: BigInt(CD.accumulatedIncome),
+              incomePerSecond: BigInt(CD.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            Oz.set(uz.eId, zz), lz(Mz, tz, uz.eId, zz, zz.accumulatedIncome)
-          } else "stopIncomeTicking" === zz && Oz.delete(uz.eId) && Mz.setOtherEntitySetting(tz, uz.eId, "nameTagInfo", {
+            SD.set(CD.eId, DD), fD(bD, QD, CD.eId, DD, DD.accumulatedIncome)
+          } else "stopIncomeTicking" === DD && SD.delete(CD.eId) && bD.setOtherEntitySetting(QD, CD.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (zz, uz, bz, Ez, nz, iz) => {
-          if (iz && "Mesh" === Mz.getEntityType(iz)) {
-            const uz = Mz.getEntityName(iz);
-            "Upgrades" === uz ? Mz.openShop(zz, !1, "Upgrades") : "Items" === uz ? Mz.openShop(zz, !1, "Items") : "Prestige" === uz ? Mz.openShop(zz, !1, "Prestige") : "Collections" === uz ? Mz.openShop(zz, !1, "Collections") : "Base Skins" === uz ? Mz.openShop(zz, !1, "Base Skins") : "Gauntlet" === uz ? Mz.openShop(zz, !1, "Gauntlet") : "Diamond Shop" === uz && Mz.openShop(zz, !1, "Diamond Shop")
+        onPlayerAltAction: (DD, CD, cD, ID, pD, iD) => {
+          if (iD && "Mesh" === bD.getEntityType(iD)) {
+            const CD = bD.getEntityName(iD);
+            "Upgrades" === CD ? bD.openShop(DD, !1, "Upgrades") : "Items" === CD ? bD.openShop(DD, !1, "Items") : "Prestige" === CD ? bD.openShop(DD, !1, "Prestige") : "Collections" === CD ? bD.openShop(DD, !1, "Collections") : "Base Skins" === CD ? bD.openShop(DD, !1, "Base Skins") : "Gauntlet" === CD ? bD.openShop(DD, !1, "Gauntlet") : "Diamond Shop" === CD && bD.openShop(DD, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  9013: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => nz,
-      d: () => lz
+  9065: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => pD,
+      g: () => fD
     });
-    const Ez = [{
+    const ID = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function nz(zz) {
-      let uz, bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof zz) {
-        if (!Number.isFinite(zz)) return "0";
-        if (Math.abs(zz) < 100) {
-          const uz = zz < 0 ? "-" : "",
-            bz = Math.abs(zz);
-          return bz >= 10 ? `${uz}${bz.toFixed(1).replace(/\.0$/,"")}` : `${uz}${bz.toFixed(2).replace(/\.?0+$/,"")}`
+    function pD(DD) {
+      let CD, cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof DD) {
+        if (!Number.isFinite(DD)) return "0";
+        if (Math.abs(DD) < 100) {
+          const CD = DD < 0 ? "-" : "",
+            cD = Math.abs(DD);
+          return cD >= 10 ? `${CD}${cD.toFixed(1).replace(/\.0$/,"")}` : `${CD}${cD.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        uz = BigInt(Math.floor(zz))
-      } else uz = zz;
-      const nz = uz < 0n ? -uz : uz,
-        iz = uz < 0n ? "-" : "",
-        lz = nz.toString();
-      if (lz.length <= bz) return `${iz}${lz}`;
-      const Mz = 3 * Math.floor((lz.length - 1) / 3);
-      if (Mz < 3) return `${iz}${lz}`;
-      if (Mz > 3 * Ez.length) {
-        const zz = lz[0],
-          uz = lz.slice(1, 3).replace(/0+$/, "");
-        return `${iz}${uz?`${zz}.${uz}`:zz}e${lz.length-1}`
+        CD = BigInt(Math.floor(DD))
+      } else CD = DD;
+      const pD = CD < 0n ? -CD : CD,
+        iD = CD < 0n ? "-" : "",
+        fD = pD.toString();
+      if (fD.length <= cD) return `${iD}${fD}`;
+      const bD = 3 * Math.floor((fD.length - 1) / 3);
+      if (bD < 3) return `${iD}${fD}`;
+      if (bD > 3 * ID.length) {
+        const DD = fD[0],
+          CD = fD.slice(1, 3).replace(/0+$/, "");
+        return `${iD}${CD?`${DD}.${CD}`:DD}e${fD.length-1}`
       }
       const {
-        threshold: tz,
-        suffix: Hz
-      } = Ez[Ez.length - Mz / 3], Oz = nz / tz, pz = Number(1000n * (nz % tz) / tz), dz = Number(Oz) + pz / 1e3;
-      let Fz;
-      return Fz = dz >= 100 ? Math.floor(dz).toString() : dz >= 10 ? dz.toFixed(1).replace(/\.0$/, "") : dz.toFixed(2).replace(/\.?0+$/, ""), `${iz}${Fz}${Hz}`
+        threshold: QD,
+        suffix: wD
+      } = ID[ID.length - bD / 3], SD = pD / QD, BD = Number(1000n * (pD % QD) / QD), yD = Number(SD) + BD / 1e3;
+      let MD;
+      return MD = yD >= 100 ? Math.floor(yD).toString() : yD >= 10 ? yD.toFixed(1).replace(/\.0$/, "") : yD.toFixed(2).replace(/\.?0+$/, ""), `${iD}${MD}${wD}`
     }
-    const iz = Ez.map((zz => {
+    const iD = ID.map((DD => {
       let {
-        threshold: uz,
-        suffix: bz
-      } = zz;
+        threshold: CD,
+        suffix: cD
+      } = DD;
       return {
-        threshold: Number(uz),
-        suffix: bz
+        threshold: Number(CD),
+        suffix: cD
       }
-    })).filter((zz => {
+    })).filter((DD => {
       let {
-        threshold: uz
-      } = zz;
-      return Number.isFinite(uz)
+        threshold: CD
+      } = DD;
+      return Number.isFinite(CD)
     }));
 
-    function lz(zz) {
-      const uz = Math.abs(zz),
-        bz = zz < 0 ? "-" : "";
+    function fD(DD) {
+      const CD = Math.abs(DD),
+        cD = DD < 0 ? "-" : "";
       for (const {
-          threshold: Ez,
-          suffix: nz
+          threshold: ID,
+          suffix: pD
         }
-        of iz)
-        if (uz >= Ez) {
-          const zz = uz / Ez;
-          if (zz >= 1e3) return `${bz}${uz.toExponential(2).replace("e+","e")}`;
-          let iz;
-          return iz = zz >= 100 ? Math.floor(zz).toString() : zz >= 10 ? zz.toFixed(1).replace(/\.0$/, "") : zz.toFixed(2).replace(/\.?0+$/, ""), `${bz}${iz}${nz}`
-        } return `${bz}${uz}`
+        of iD)
+        if (CD >= ID) {
+          const DD = CD / ID;
+          if (DD >= 1e3) return `${cD}${CD.toExponential(2).replace("e+","e")}`;
+          let iD;
+          return iD = DD >= 100 ? Math.floor(DD).toString() : DD >= 10 ? DD.toFixed(1).replace(/\.0$/, "") : DD.toFixed(2).replace(/\.?0+$/, ""), `${cD}${iD}${pD}`
+        } return `${cD}${CD}`
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,397 +1,397 @@
 export const id = 97;
 export const ids = [97, 185];
 export const modules = {
-  8877: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      EverythingMenu: () => iM
+  8916: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      EverythingMenu: () => ib
     });
-    var Ez = bz(56),
-      nz = bz(1038),
-      iz = bz.n(nz),
-      lz = bz(1181),
-      Mz = bz(1047),
-      tz = bz(1998),
-      Hz = bz(1102),
-      Oz = bz(1089);
+    var ID = cD(53),
+      pD = cD(1049),
+      iD = cD.n(pD),
+      fD = cD(1192),
+      bD = cD(1064),
+      QD = cD(2031),
+      wD = cD(1108),
+      SD = cD(1093);
 
-    function pz(zz) {
+    function BD(DD) {
       let {
-        items: uz,
-        onClick: bz,
-        selectedItemId: Ez,
-        className: nz,
-        padStartsOnTab: pz = !0
-      } = zz;
+        items: CD,
+        onClick: cD,
+        selectedItemId: ID,
+        className: pD,
+        padStartsOnTab: BD = !0
+      } = DD;
       const {
-        t: dz
-      } = (0, lz.F)(), Fz = (0, Hz.n)(), Zz = [];
-      for (const iz of uz) {
-        var Rz;
-        const zz = Zz[Zz.length - 1];
-        var Kz;
-        if (zz && zz.title === (null !== (Rz = iz.section) && void 0 !== Rz ? Rz : null)) zz.items.push(iz);
-        else Zz.push({
-          title: null !== (Kz = iz.section) && void 0 !== Kz ? Kz : null,
-          items: [iz]
+        t: yD
+      } = (0, fD.F)(), MD = (0, wD.o)(), tD = [];
+      for (const iD of CD) {
+        var ZD;
+        const DD = tD[tD.length - 1];
+        var oD;
+        if (DD && DD.title === (null !== (ZD = iD.section) && void 0 !== ZD ? ZD : null)) DD.items.push(iD);
+        else tD.push({
+          title: null !== (oD = iD.section) && void 0 !== oD ? oD : null,
+          items: [iD]
         })
       }
-      return (0, Oz.jsx)("div", {
-        className: iz()("MenuSideBarBody", nz),
+      return (0, SD.jsx)("div", {
+        className: iD()("MenuSideBarBody", pD),
         "data-pad-tabs": "2",
-        children: Zz.map(((zz, uz) => {
-          var nz;
-          return (0, Oz.jsxs)("div", {
+        children: tD.map(((DD, CD) => {
+          var pD;
+          return (0, SD.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [zz.title && (0, Oz.jsx)("div", {
+            children: [DD.title && (0, SD.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: dz(zz.title)
-            }), zz.items.map((zz => {
-              var uz;
-              const nz = !!zz.iconElement || !!zz.faIcon;
-              return (0, Oz.jsxs)("div", {
+              children: yD(DD.title)
+            }), DD.items.map((DD => {
+              var CD;
+              const pD = !!DD.iconElement || !!DD.faIcon;
+              return (0, SD.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": Ez === zz.id ? "true" : void 0,
-                "data-pad-default-focus": pz && Ez === zz.id || void 0,
-                className: iz()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: Ez === zz.id
+                "data-pad-selected": ID === DD.id ? "true" : void 0,
+                "data-pad-default-focus": BD && ID === DD.id || void 0,
+                className: iD()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: ID === DD.id
                 }),
                 onClick: () => {
-                  bz(zz.id)
+                  cD(DD.id)
                 },
-                children: [nz && (0, Oz.jsx)("div", {
+                children: [pD && (0, SD.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (uz = zz.iconElement) && void 0 !== uz ? uz : (0, Oz.jsx)(Mz.c, {
-                    name: zz.faIcon
+                  children: null !== (CD = DD.iconElement) && void 0 !== CD ? CD : (0, SD.jsx)(bD.c, {
+                    name: DD.faIcon
                   })
-                }), (!Fz || !nz) && (0, Oz.jsx)("div", {
-                  children: dz(zz.title)
-                }), zz.redDot && (0, Oz.jsx)(tz.b, {
+                }), (!MD || !pD) && (0, SD.jsx)("div", {
+                  children: yD(DD.title)
+                }), DD.redDot && (0, SD.jsx)(QD.e, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, zz.id)
+              }, DD.id)
             }))]
-          }, null !== (nz = zz.title) && void 0 !== nz ? nz : uz)
+          }, null !== (pD = DD.title) && void 0 !== pD ? pD : CD)
         }))
       })
     }
-    var dz = bz(2756),
-      Fz = bz(1114),
-      Zz = bz(2313),
-      Rz = bz(1108),
-      Kz = bz(1419),
-      wz = bz(96),
-      Xz = bz(1871),
-      fz = bz(2158),
-      sz = bz(2166),
-      rz = bz(1628),
-      oz = bz(1305),
-      Nz = bz(4746),
-      vz = bz(20),
-      xz = bz(8886);
+    var yD = cD(2790),
+      MD = cD(1120),
+      tD = cD(2358),
+      ZD = cD(1113),
+      oD = cD(1442),
+      vD = cD(90),
+      ND = cD(1905),
+      gD = cD(2216),
+      XD = cD(2224),
+      mD = cD(1655),
+      nD = cD(1328),
+      OD = cD(4770),
+      PD = cD(16),
+      HD = cD(8925);
 
-    function Jz(zz) {
+    function UD(DD) {
       let {
-        setApplySettingsCallback: uz
-      } = zz;
+        setApplySettingsCallback: CD
+      } = DD;
       const {
-        clientEscMenuOptions: bz
-      } = (0, vz.m)(["clientEscMenuOptions"]), [nz, iz] = (0, Ez.useState)(!1), [lz, Mz] = (0, Ez.useState)(!1), [tz, Hz] = (0, Ez.useState)(6400), [pz, dz] = (0, Ez.useState)(3600), [Fz, Zz] = (0, Ez.useState)(!1), [Rz, wz] = (0, Ez.useState)(!1);
+        clientEscMenuOptions: cD
+      } = (0, PD.o)(["clientEscMenuOptions"]), [pD, iD] = (0, ID.useState)(!1), [fD, bD] = (0, ID.useState)(!1), [QD, wD] = (0, ID.useState)(6400), [BD, yD] = (0, ID.useState)(3600), [MD, tD] = (0, ID.useState)(!1), [ZD, vD] = (0, ID.useState)(!1);
 
-      function Xz(zz) {
-        const uz = "screenshot" === zz ? Mz : iz;
-        uz(!0);
-        const bz = Fz ? "normals" : Rz ? "depth" : null;
-        xz.devTools.downloadScene(zz, {
-          width: tz,
-          height: pz,
-          colouring: bz
-        }).catch((zz => {
-          console.error("Couldn't download the scene", zz)
+      function ND(DD) {
+        const CD = "screenshot" === DD ? bD : iD;
+        CD(!0);
+        const cD = MD ? "normals" : ZD ? "depth" : null;
+        HD.devTools.downloadScene(DD, {
+          width: QD,
+          height: BD,
+          colouring: cD
+        }).catch((DD => {
+          console.error("Couldn't download the scene", DD)
         })).finally((() => {
-          uz(!1)
+          CD(!1)
         }))
       }
-      return (0, Oz.jsxs)("div", {
+      return (0, SD.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, Oz.jsx)(Nz.b, {
+        children: [(0, SD.jsx)(OD.e, {
           label: "Disable Ambient Occlusion",
-          checked: bz.disableAmbientOcclusion,
-          onClick: zz => {
-            vz.e.setClientEscMenuOptions({
-              disableAmbientOcclusion: zz
-            }), uz((() => Nz.j))
+          checked: cD.disableAmbientOcclusion,
+          onClick: DD => {
+            PD.d.setClientEscMenuOptions({
+              disableAmbientOcclusion: DD
+            }), CD((() => OD.j))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), xz.devTools.supports("ambientLight") && (0, Oz.jsx)(Nz.f, {
+        }), HD.devTools.supports("ambientLight") && (0, SD.jsx)(OD.i, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: bz.ambientLightIntensity,
-          onChange: zz => {
-            xz.devTools.setAmbientLightIntensity(zz).then((() => {
-              vz.e.setClientEscMenuOptions({
-                ambientLightIntensity: zz
+          initValue: cD.ambientLightIntensity,
+          onChange: DD => {
+            HD.devTools.setAmbientLightIntensity(DD).then((() => {
+              PD.d.setClientEscMenuOptions({
+                ambientLightIntensity: DD
               })
-            })).catch((zz => {
-              console.error("Couldn't set the ambient light", zz)
+            })).catch((DD => {
+              console.error("Couldn't set the ambient light", DD)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), xz.devTools.supports("weaponRaycasts") && (0, Oz.jsx)(Nz.b, {
+        }), HD.devTools.supports("weaponRaycasts") && (0, SD.jsx)(OD.e, {
           label: "Show Weapon Raycasts",
-          checked: bz.showWeaponRaycasts,
-          onClick: zz => {
-            vz.e.setClientEscMenuOptions({
-              showWeaponRaycasts: zz
+          checked: cD.showWeaponRaycasts,
+          onClick: DD => {
+            PD.d.setClientEscMenuOptions({
+              showWeaponRaycasts: DD
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), xz.devTools.supports("sceneDownload") && (0, Oz.jsxs)("div", {
+        }), HD.devTools.supports("sceneDownload") && (0, SD.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, Oz.jsxs)("div", {
+          children: [(0, SD.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, Oz.jsx)(Nz.b, {
+            children: [(0, SD.jsx)(OD.e, {
               label: "Apply normal-based coloring",
-              checked: Fz,
-              onClick: zz => {
-                Zz(zz), zz && wz(!1)
+              checked: MD,
+              onClick: DD => {
+                tD(DD), DD && vD(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, Oz.jsx)(Nz.b, {
+            }), (0, SD.jsx)(OD.e, {
               label: "Apply depth-based coloring",
-              checked: Rz,
-              onClick: zz => {
-                wz(zz), zz && Zz(!1)
+              checked: ZD,
+              onClick: DD => {
+                vD(DD), DD && tD(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, Oz.jsxs)("div", {
+            }), (0, SD.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, Oz.jsx)("div", {
+              children: [(0, SD.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, Oz.jsx)(rz.d, {
+              }), (0, SD.jsx)(mD.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (zz, uz) => {
-                  const bz = parseInt(zz) || 6400;
-                  Hz(bz)
+                onValueChange: (DD, CD) => {
+                  const cD = parseInt(DD) || 6400;
+                  wD(cD)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: tz.toString()
-              }), (0, Oz.jsx)("span", {
+                defaultValue: QD.toString()
+              }), (0, SD.jsx)("span", {
                 children: "X"
-              }), (0, Oz.jsx)(rz.d, {
+              }), (0, SD.jsx)(mD.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (zz, uz) => {
-                  const bz = parseInt(zz) || 3600;
-                  dz(bz)
+                onValueChange: (DD, CD) => {
+                  const cD = parseInt(DD) || 3600;
+                  yD(cD)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: pz.toString()
+                defaultValue: BD.toString()
               })]
-            }), (0, Oz.jsxs)("div", {
+            }), (0, SD.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, Oz.jsxs)(Kz.f, {
+              children: [(0, SD.jsxs)(oD.i, {
                 onClick: () => {
-                  Xz("screenshot")
+                  ND("screenshot")
                 },
-                disabled: lz,
-                children: [lz && (0, Oz.jsx)(oz.c, {}), "Download Screenshot"]
-              }), (0, Oz.jsxs)(Kz.f, {
+                disabled: fD,
+                children: [fD && (0, SD.jsx)(nD.e, {}), "Download Screenshot"]
+              }), (0, SD.jsxs)(oD.i, {
                 onClick: () => {
-                  Xz("glb")
+                  ND("glb")
                 },
-                disabled: nz,
-                children: [nz && (0, Oz.jsx)(oz.c, {}), "Download GLB"]
+                disabled: pD,
+                children: [pD && (0, SD.jsx)(nD.e, {}), "Download GLB"]
               })]
             })]
-          }), (0, Oz.jsx)("div", {
+          }), (0, SD.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var Az = bz(128),
-      Tz = bz(1118),
-      Lz = bz(1195),
-      Pz = bz(2763),
-      Gz = bz(1482),
-      az = bz(1256),
-      Vz = bz(1222),
-      mz = bz(2852),
-      qz = bz(1973),
-      hz = bz(1473),
-      Uz = bz(328),
-      cz = bz(2171),
-      gz = bz(2178),
-      Sz = bz(2532),
-      yz = bz(1597),
-      Dz = bz(2828),
-      Qz = bz(2795),
-      Wz = bz(2856),
-      ez = bz(206);
+    var xD = cD(120),
+      qD = cD(1127),
+      JD = cD(1199),
+      KD = cD(2799),
+      aD = cD(1508),
+      VD = cD(1266),
+      zD = cD(1232),
+      jD = cD(2886),
+      lD = cD(2015),
+      LD = cD(1497),
+      TD = cD(326),
+      GD = cD(2228),
+      RD = cD(2238),
+      kD = cD(2572),
+      dD = cD(1629),
+      YD = cD(2867),
+      WD = cD(2837),
+      sD = cD(2893),
+      ED = cD(208);
 
-    function jz(zz) {
+    function eD(DD) {
       const {
-        t: uz,
-        selectedLanguage: bz
-      } = (0, lz.F)(), {
-        userContext: nz
-      } = (0, Fz.c)(), {
-        superRankInfo: iz
-      } = nz, Mz = zz && ((0, Uz.Bc)(iz) || nz.ranksMayChange) && (0, gz.purchasesAllowed)(), {
-        accountId: tz,
-        data: Hz
-      } = (0, Sz.g)(Dz.d, Mz);
-      if ((0, Ez.useEffect)((() => {
-          if (Mz) return Dz.d.watchAccount(), yz.b.addRefetchListener("billing", (zz => {
-            "reconnected" === zz ? Dz.d.refreshAfterReconnect() : Dz.d.refresh()
+        t: CD,
+        selectedLanguage: cD
+      } = (0, fD.F)(), {
+        userContext: pD
+      } = (0, MD.c)(), {
+        superRankInfo: iD
+      } = pD, bD = DD && ((0, TD.Ac)(iD) || pD.ranksMayChange) && (0, RD.purchasesAllowed)(), {
+        accountId: QD,
+        data: wD
+      } = (0, kD.h)(YD.e, bD);
+      if ((0, ID.useEffect)((() => {
+          if (bD) return YD.e.watchAccount(), dD.e.addRefetchListener("billing", (DD => {
+            "reconnected" === DD ? YD.e.refreshAfterReconnect() : YD.e.refresh()
           }))
-        }), [Mz]), !Mz || !(0, Uz.Bc)(iz) || null === Hz || tz !== nz.whamm) return null;
-      const Oz = function(zz, uz, bz) {
-        const Ez = Wz.k[(0, Wz.d)(Wz.k, uz)],
-          nz = void 0 === Ez ? void 0 : (0, ez.e)(zz.entitlements, Ez.entitlementId);
-        return void 0 === nz || null === nz.expiresAt || (0, Qz.f)(nz) <= bz ? null : nz.willRenew && null === nz.billingIssueDetectedAt ? {
+        }), [bD]), !bD || !(0, TD.Ac)(iD) || null === wD || QD !== pD.whamm) return null;
+      const SD = function(DD, CD, cD) {
+        const ID = sD.i[(0, sD.d)(sD.i, CD)],
+          pD = void 0 === ID ? void 0 : (0, ED.c)(DD.entitlements, ID.entitlementId);
+        return void 0 === pD || null === pD.expiresAt || (0, WD.e)(pD) <= cD ? null : pD.willRenew && null === pD.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(nz.expiresAt, bz)
+          at: Math.max(pD.expiresAt, cD)
         } : {
           renews: !1,
-          at: (0, Qz.f)(nz)
+          at: (0, WD.e)(pD)
         }
-      }(Hz, iz.tier, Date.now());
-      if (null === Oz) return null;
-      const pz = Oz.renews ? "store:renewsOn" : "store:endsOn";
-      return uz(pz, {
-        date: new Date(Oz.at).toLocaleDateString((0, lz.p)(bz.code, pz), {
+      }(wD, iD.tier, Date.now());
+      if (null === SD) return null;
+      const BD = SD.renews ? "store:renewsOn" : "store:endsOn";
+      return CD(BD, {
+        date: new Date(SD.at).toLocaleDateString((0, fD.m)(cD.code, BD), {
           year: "numeric",
           month: "short",
           day: "numeric"
         })
       })
     }
-    var Iz = bz(1332),
-      Bz = bz(1202),
-      Cz = bz(4648),
-      Yz = bz(1448),
-      kz = bz(3405),
-      zu = bz(2150);
+    var uD = cD(1356),
+      hD = cD(1210),
+      rD = cD(4648),
+      AD = cD(1471),
+      FD = cD(3467),
+      DC = cD(2205);
 
-    function uu(zz) {
+    function CC(DD) {
       let {
-        showing: uz
-      } = zz;
+        showing: CD
+      } = DD;
       const {
-        t: bz
-      } = (0, lz.F)(), {
-        data: Ez,
-        failed: nz
-      } = (0, Sz.g)(kz.h, uz);
-      return 0 === (null === Ez || void 0 === Ez ? void 0 : Ez.length) || null === Ez && !nz ? null : (0, Oz.jsxs)("div", {
+        t: cD
+      } = (0, fD.F)(), {
+        data: ID,
+        failed: pD
+      } = (0, kD.h)(FD.h, CD);
+      return 0 === (null === ID || void 0 === ID ? void 0 : ID.length) || null === ID && !pD ? null : (0, SD.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, Oz.jsx)("div", {
+        children: [(0, SD.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: bz("paymentHistory:title")
-        }), null === Ez && nz && (0, Oz.jsx)("div", {
+          children: cD("paymentHistory:title")
+        }), null === ID && pD && (0, SD.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: bz("paymentHistory:loadFailed")
-        }), null !== Ez && (0, Oz.jsx)("ul", {
+          children: cD("paymentHistory:loadFailed")
+        }), null !== ID && (0, SD.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: Ez.map((zz => (0, Oz.jsxs)("li", {
+          children: ID.map((DD => (0, SD.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, Oz.jsx)(zu.c, {
-              entry: zz
-            }), (0, Oz.jsxs)("div", {
+            children: [(0, SD.jsx)(DC.d, {
+              entry: DD
+            }), (0, SD.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, Oz.jsx)("div", {
-                children: (0, zu.i)(bz, zz)
-              }), (0, Oz.jsxs)("div", {
+              children: [(0, SD.jsx)("div", {
+                children: (0, DC.i)(cD, DD)
+              }), (0, SD.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(zz.at).toLocaleDateString(), "number" === typeof zz.orderId && ` \xb7 ${bz("paymentHistory:order",{orderId:zz.orderId})}`]
+                children: [new Date(DD.at).toLocaleDateString(), "number" === typeof DD.orderId && ` \xb7 ${cD("paymentHistory:order",{orderId:DD.orderId})}`]
               })]
             })]
-          }, (0, kz.d)(zz))))
+          }, (0, FD.e)(DD))))
         })]
       })
     }
-    var bu = bz(1833),
-      Eu = bz(1232),
-      nu = bz(1322),
-      iu = bz(1283),
-      lu = bz(1732),
-      Mu = bz(2782);
-    async function tu() {
+    var cC = cD(1857),
+      IC = cD(1243),
+      pC = cD(1340),
+      iC = cD(1305),
+      fC = cD(1763),
+      bC = cD(2821);
+    async function QC() {
       try {
-        return function(zz) {
-          const uz = new Map;
+        return function(DD) {
+          const CD = new Map;
           for (const {
-              store: bz,
-              status: Ez,
-              autoRenewStatus: nz,
-              managementUrl: iz
+              store: cD,
+              status: ID,
+              autoRenewStatus: pD,
+              managementUrl: iD
             }
-            of Object.values(zz.subscriptions)) !(0, Qz.i)(bz) || (0, Qz.j)(Ez) || "willNotRenew" === nz || uz.has(bz) || uz.set(bz, null !== iz && void 0 !== iz ? iz : Qz.m[bz]);
-          return Array.from(uz, (zz => {
-            let [uz, bz] = zz;
+            of Object.values(DD.subscriptions)) !(0, WD.g)(cD) || (0, WD.j)(ID) || "willNotRenew" === pD || CD.has(cD) || CD.set(cD, null !== iD && void 0 !== iD ? iD : WD.l[cD]);
+          return Array.from(CD, (DD => {
+            let [CD, cD] = DD;
             return {
-              store: uz,
-              managementUrl: bz
+              store: CD,
+              managementUrl: cD
             }
           }))
-        }(await (0, lu.l)((0, Mu.e)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (zz) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", zz), null
+        }(await (0, fC.k)((0, bC.h)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (DD) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", DD), null
       }
     }
-    var Hu = bz(316),
-      Ou = bz(2379);
-    const pu = {
+    var wC = cD(312),
+      SC = cD(2414);
+    const BC = {
       appStore: {
         name: "App Store",
-        ...Hu.hc.appStore
+        ...wC.Wb.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...Hu.hc.googlePlay
+        ...wC.Wb.googlePlay
       },
       discord: {
         name: "Discord",
-        ...Hu.hc.discord
+        ...wC.Wb.discord
       }
     };
 
-    function du(zz) {
+    function yC(DD) {
       let {
-        warning: uz,
-        subscriptions: bz
-      } = zz;
+        warning: CD,
+        subscriptions: cD
+      } = DD;
       const {
-        t: Ez
-      } = (0, lz.F)();
-      return null !== bz && 0 === bz.length ? (0, Oz.jsx)(Oz.Fragment, {
-        children: Ez(uz)
-      }) : (0, Oz.jsxs)("div", {
+        t: ID
+      } = (0, fD.F)();
+      return null !== cD && 0 === cD.length ? (0, SD.jsx)(SD.Fragment, {
+        children: ID(CD)
+      }) : (0, SD.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [Ez(uz), null === bz && (0, Oz.jsx)("div", {
+        children: [ID(CD), null === cD && (0, SD.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: Ez("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== bz && (0, Oz.jsxs)(Oz.Fragment, {
-          children: [(0, Oz.jsx)("div", {
+          children: ID("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== cD && (0, SD.jsxs)(SD.Fragment, {
+          children: [(0, SD.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: Ez("auth:deleteAccountStoreSubscriptions")
-          }), (0, Oz.jsx)(Ou.d, {
+            children: ID("auth:deleteAccountStoreSubscriptions")
+          }), (0, SD.jsx)(SC.b, {
             className: "DeleteAccountSubtitleLinks",
-            links: bz.map((zz => {
+            links: cD.map((DD => {
               let {
-                store: uz,
-                managementUrl: bz
-              } = zz;
+                store: CD,
+                managementUrl: cD
+              } = DD;
               return {
-                ...pu[uz],
-                url: bz
+                ...BC[CD],
+                url: cD
               }
             }))
           })]
@@ -399,703 +399,703 @@ export const modules = {
       })
     }
 
-    function Fu(zz) {
+    function MC(DD) {
       let {
-        showing: uz
-      } = zz;
+        showing: CD
+      } = DD;
       const {
-        userContext: bz,
-        isUserContextUpdating: nz
-      } = (0, Fz.c)(), {
-        t: iz
-      } = (0, lz.F)(), [Mz, tz] = (0, Ez.useState)(!1), [Hz, pz] = (0, Ez.useState)(null), dz = (0, Ez.useRef)(uz);
-      (0, Ez.useEffect)((() => (dz.current = uz, () => {
-        dz.current = !1
-      })), [uz]);
-      const Zz = nz || Mz;
-      async function Rz() {
-        const zz = function(zz) {
-            if ((0, Az.d)()) return "auth:discordActivityDeleteAccountWarning";
-            return zz ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
-          }(bz.isLoggedIn()),
-          uz = (0, bu.c)(bz.availableUserContextTypes) ? await tu() : [];
-        if (!dz.current) return Eu.b.ok();
-        if (!0 !== await nu.NotificationProvider.showPromptPopup({
+        userContext: cD,
+        isUserContextUpdating: pD
+      } = (0, MD.c)(), {
+        t: iD
+      } = (0, fD.F)(), [bD, QD] = (0, ID.useState)(!1), [wD, BD] = (0, ID.useState)(null), yD = (0, ID.useRef)(CD);
+      (0, ID.useEffect)((() => (yD.current = CD, () => {
+        yD.current = !1
+      })), [CD]);
+      const tD = pD || bD;
+      async function ZD() {
+        const DD = function(DD) {
+            if ((0, xD.c)()) return "auth:discordActivityDeleteAccountWarning";
+            return DD ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
+          }(cD.isLoggedIn()),
+          CD = (0, cC.e)(cD.availableUserContextTypes) ? await QC() : [];
+        if (!yD.current) return IC.e.ok();
+        if (!0 !== await pC.NotificationProvider.showPromptPopup({
             title: "auth:deleteAccountPopupTitleNamed",
             textOpts: {
               title: {
-                playerName: (0, az.b)(bz.getPlayerName(), !wz.featureFlags.canSeeRealPlayerNames)
+                playerName: (0, VD.d)(cD.getPlayerName(), !vD.featureFlags.canSeeRealPlayerNames)
               }
             },
-            subtitle: (0, Oz.jsx)(du, {
-              warning: zz,
-              subscriptions: uz
+            subtitle: (0, SD.jsx)(yC, {
+              warning: DD,
+              subscriptions: CD
             }),
             confirmText: "auth:deleteAccount",
             destructive: !0,
             confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
             cancelText: "general:cancel",
             cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-          }).getResult()) return Eu.b.ok();
-        const Ez = await (0, Tz.postJsonWithMetricsCookiesAndJsonResponse)(`${Lz.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-          gameState: vz.e.get("gameState")
+          }).getResult()) return IC.e.ok();
+        const ID = await (0, qD.postJsonWithMetricsCookiesAndJsonResponse)(`${JD.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+          gameState: PD.d.get("gameState")
         }, {
           retries: 3
-        }, bz.getMetricsCookies());
-        if (Ez.error) return Eu.b.error(Ez.error);
-        if ((0, Az.d)()) {
-          (await iu.l.discordActivity()).exit("User deleted their account")
+        }, cD.getMetricsCookies());
+        if (ID.error) return IC.e.error(ID.error);
+        if ((0, xD.c)()) {
+          (await iC.i.discordActivity()).exit("User deleted their account")
         }
-        return (0, Tz.forgetStoredGuestAccount)(bz.whamm), (0, Tz.forceGlobalSignOut)(!0), Eu.b.ok()
+        return (0, qD.forgetStoredGuestAccount)(cD.whamm), (0, qD.forceGlobalSignOut)(!0), IC.e.ok()
       }
-      return (0, Oz.jsxs)("div", {
+      return (0, SD.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, Oz.jsxs)(Kz.K, {
+        children: [(0, SD.jsxs)(oD.J, {
           onClick: async function() {
-            if (!Mz) {
-              tz(!0);
+            if (!bD) {
+              QD(!0);
               try {
-                const zz = await Rz(),
-                  uz = zz.isError() ? zz.asError().message : null;
-                pz(uz)
-              } catch (zz) {
-                console.error("Failed to delete account:", zz), pz(iz("auth:genericDeleteAccountError"))
+                const DD = await ZD(),
+                  CD = DD.isError() ? DD.asError().message : null;
+                BD(CD)
+              } catch (DD) {
+                console.error("Failed to delete account:", DD), BD(iD("auth:genericDeleteAccountError"))
               }
-              tz(!1)
+              QD(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: Zz,
-          children: [Zz && (0, Oz.jsx)("div", {
+          disabled: tD,
+          children: [tD && (0, SD.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, Oz.jsx)(oz.c, {})
-          }), iz("auth:deleteAccount")]
-        }), Hz && (0, Oz.jsx)("div", {
+            children: (0, SD.jsx)(nD.e, {})
+          }), iD("auth:deleteAccount")]
+        }), wD && (0, SD.jsx)("div", {
           className: "DeleteAccountError",
-          children: Hz
+          children: wD
         })]
       })
     }
-    var Zu = bz(3344),
-      Ru = bz(3355),
-      Ku = bz(3351);
+    var tC = cD(3395),
+      ZC = cD(3410),
+      oC = cD(3406);
 
-    function wu(zz) {
+    function vC(DD) {
       let {
-        showing: uz
-      } = zz;
+        showing: CD
+      } = DD;
       const {
-        t: bz
-      } = (0, lz.F)(), {
-        data: Ez,
-        failed: nz
-      } = (0, Sz.g)(Zu.b, uz), iz = null === Ez ? null : (0, Zu.d)(Ez);
-      return (0, Oz.jsxs)("div", {
+        t: cD
+      } = (0, fD.F)(), {
+        data: ID,
+        failed: pD
+      } = (0, kD.h)(tC.b, CD), iD = null === ID ? null : (0, tC.d)(ID);
+      return (0, SD.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, Oz.jsx)("div", {
+        children: [(0, SD.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: bz("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === iz && !nz && (0, Oz.jsx)(oz.c, {}), null === iz && nz && (0, Oz.jsxs)("div", {
+          children: cD("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === iD && !pD && (0, SD.jsx)(nD.e, {}), null === iD && pD && (0, SD.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [bz("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, Oz.jsx)(Kz.f, {
+          children: [cD("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, SD.jsx)(oD.i, {
             className: "SmallTextLight",
             onClick: () => {
-              Zu.b.refresh()
+              tC.b.refresh()
             },
-            children: bz("general:tryAgain")
+            children: cD("general:tryAgain")
           })]
-        }), 0 === (null === iz || void 0 === iz ? void 0 : iz.length) && (0, Oz.jsx)("div", {
+        }), 0 === (null === iD || void 0 === iD ? void 0 : iD.length) && (0, SD.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: bz("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== iz && iz.length > 0 && (0, Oz.jsx)("ul", {
+          children: cD("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== iD && iD.length > 0 && (0, SD.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: iz.map((zz => {
+          children: iD.map((DD => {
             let {
-              name: uz,
-              exclusion: Ez
-            } = zz;
-            const nz = Ku.f[Ez];
-            return (0, Oz.jsxs)("li", {
+              name: CD,
+              exclusion: ID
+            } = DD;
+            const pD = oC.f[ID];
+            return (0, SD.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, Oz.jsx)("div", {
+              children: [(0, SD.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: uz
-              }), (0, Oz.jsx)(Kz.j, {
+                children: CD
+              }), (0, SD.jsx)(oD.k, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, Ru.g)(nz, uz, {
+                  (0, ZC.f)(pD, CD, {
                     chatMessage: null
                   })
                 },
-                children: bz(Ku.h[nz].text)
+                children: cD(oC.g[pD].text)
               })]
-            }, uz)
+            }, CD)
           }))
         })]
       })
     }
-    const Xu = (0, Ez.memo)((function(zz) {
-      var uz;
+    const NC = (0, ID.memo)((function(DD) {
+      var CD;
       let {
-        showing: bz,
-        inGame: nz
-      } = zz;
+        showing: cD,
+        inGame: pD
+      } = DD;
       const {
-        t: tz,
-        selectedLanguage: Hz
-      } = (0, lz.F)(), {
-        hideSocialLocationFrom: pz
-      } = (0, vz.m)(["hideSocialLocationFrom"]), Zz = (0, dz.c)(), {
-        userContext: Rz,
-        isUserContextUpdating: Xz
-      } = (0, Fz.c)(), [fz, sz] = (0, Ez.useState)(null !== (uz = Rz.getPlayerName()) && void 0 !== uz ? uz : ""), [xz, Jz] = (0, Ez.useState)(null), {
-        purchasing: Sz,
-        outcome: yz,
-        purchase: Dz
-      } = (0, Pz.b)("/super-rank-welcome"), Qz = (0, Uz.ic)((0, lz.p)(Hz.code, "general:timeLeft"), Rz.superRankInfo), Wz = jz(bz), ez = Qz ? tz("general:timeLeft", {
-        time: Qz
-      }) : Wz, [kz, zu] = (0, Ez.useState)(!1), [bu, Eu] = (0, Ez.useState)(!1), nu = (0, Ez.useRef)(null), iu = (0, Ez.useRef)(null), lu = (0, qz.g)({
+        t: QD,
+        selectedLanguage: wD
+      } = (0, fD.F)(), {
+        hideSocialLocationFrom: BD
+      } = (0, PD.o)(["hideSocialLocationFrom"]), tD = (0, yD.b)(), {
+        userContext: ZD,
+        isUserContextUpdating: ND
+      } = (0, MD.c)(), [gD, XD] = (0, ID.useState)(null !== (CD = ZD.getPlayerName()) && void 0 !== CD ? CD : ""), [HD, UD] = (0, ID.useState)(null), {
+        purchasing: kD,
+        outcome: dD,
+        purchase: YD
+      } = (0, KD.e)("/super-rank-welcome"), WD = (0, TD.hc)((0, fD.m)(wD.code, "general:timeLeft"), ZD.superRankInfo), sD = eD(cD), ED = WD ? QD("general:timeLeft", {
+        time: WD
+      }) : sD, [FD, DC] = (0, ID.useState)(!1), [cC, IC] = (0, ID.useState)(!1), pC = (0, ID.useRef)(null), iC = (0, ID.useRef)(null), fC = (0, lD.e)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), Mu = null === lu, tu = null !== lu && void 0 !== lu ? lu : [], Hu = Rz !== Tz.NULL_USER_CONTEXT && !Rz.isLoggedIn(), Ou = Hu && 0 !== (null === lu || void 0 === lu ? void 0 : lu.length), [pu, du] = (0, Ez.useState)([]), [Zu, Ru] = (0, Ez.useState)(!1), Ku = Rz.playerHasRank("youtuber"), Xu = (0, Ez.useCallback)((() => hz.c.getPlayerProfile(Rz, {
-        lowerCaseName: Rz.getPlayerName().toLowerCase()
-      }).then((zz => {
-        du(zz.socialLinks)
-      })).catch((zz => {
-        console.error("Failed to refresh social links", zz)
-      }))), [Rz]);
+      }), bC = null === fC, QC = null !== fC && void 0 !== fC ? fC : [], wC = ZD !== qD.NULL_USER_CONTEXT && !ZD.isLoggedIn(), SC = wC && 0 !== (null === fC || void 0 === fC ? void 0 : fC.length), [BC, yC] = (0, ID.useState)([]), [tC, ZC] = (0, ID.useState)(!1), oC = ZD.playerHasRank("youtuber"), NC = (0, ID.useCallback)((() => LD.c.getPlayerProfile(ZD, {
+        lowerCaseName: ZD.getPlayerName().toLowerCase()
+      }).then((DD => {
+        yC(DD.socialLinks)
+      })).catch((DD => {
+        console.error("Failed to refresh social links", DD)
+      }))), [ZD]);
 
-      function su(zz) {
-        zz !== fz && ((0, az.l)(zz) ? (zz = (0, az.p)(zz), Jz("Only letters, numbers, and _")) : Jz(null), nu.current && (nu.current.value = zz), sz(zz))
+      function XC(DD) {
+        DD !== gD && ((0, VD.k)(DD) ? (DD = (0, VD.o)(DD), UD("Only letters, numbers, and _")) : UD(null), pC.current && (pC.current.value = DD), XD(DD))
       }
-      return (0, Ez.useEffect)((() => (!0 === bz ? (clearInterval(iu.current), iu.current = setInterval(Zz, 1e3)) : clearInterval(iu.current), () => {
-        clearInterval(iu.current)
-      })), [bz, Zz]), (0, Ez.useEffect)((() => {
-        var zz;
-        sz(null !== (zz = Rz.getPlayerName()) && void 0 !== zz ? zz : "")
-      }), [Rz]), (0, Ez.useEffect)((() => {
-        if (!bz || !Ku || Xz) return;
-        let zz = !1;
-        return Ru(!0), du([]), hz.c.getPlayerProfile(Rz, {
-          lowerCaseName: Rz.getPlayerName().toLowerCase()
-        }).then((uz => {
-          zz || du(uz.socialLinks)
-        })).catch((zz => {
-          console.error("Failed to load social links", zz)
+      return (0, ID.useEffect)((() => (!0 === cD ? (clearInterval(iC.current), iC.current = setInterval(tD, 1e3)) : clearInterval(iC.current), () => {
+        clearInterval(iC.current)
+      })), [cD, tD]), (0, ID.useEffect)((() => {
+        var DD;
+        XD(null !== (DD = ZD.getPlayerName()) && void 0 !== DD ? DD : "")
+      }), [ZD]), (0, ID.useEffect)((() => {
+        if (!cD || !oC || ND) return;
+        let DD = !1;
+        return ZC(!0), yC([]), LD.c.getPlayerProfile(ZD, {
+          lowerCaseName: ZD.getPlayerName().toLowerCase()
+        }).then((CD => {
+          DD || yC(CD.socialLinks)
+        })).catch((DD => {
+          console.error("Failed to load social links", DD)
         })).finally((() => {
-          zz || Ru(!1)
+          DD || ZC(!1)
         })), () => {
-          zz = !0
+          DD = !0
         }
-      }), [bz, Ku, Xz, Rz]), (0, Oz.jsxs)("div", {
-        className: iz()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: nz
+      }), [cD, oC, ND, ZD]), (0, SD.jsxs)("div", {
+        className: iD()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: pD
         }),
-        children: [nz && (0, Oz.jsx)("div", {
+        children: [pD && (0, SD.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: tz("settingsMenu:accountSettingsInGameWarning")
-        }), (0, Oz.jsxs)("div", {
+          children: QD("settingsMenu:accountSettingsInGameWarning")
+        }), (0, SD.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, Oz.jsxs)("div", {
+          children: [(0, SD.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [tz("homePage:discordNamePopupTitle"), (0, Oz.jsxs)(Gz.LinkPreserveSearch, {
+            children: [QD("homePage:discordNamePopupTitle"), (0, SD.jsxs)(aD.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, Vz.j)({
-                name: Rz.getPlayerName()
+              to: (0, zD.h)({
+                name: ZD.getPlayerName()
               }),
               onClick: () => {
-                vz.e.set({
+                PD.d.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, Oz.jsx)(Mz.c, {
+              children: [(0, SD.jsx)(bD.c, {
                 name: "arrow-up-right-from-square"
-              }), " ", tz("profileCard:viewProfile")]
+              }), " ", QD("profileCard:viewProfile")]
             })]
-          }), (0, Oz.jsxs)("div", {
+          }), (0, SD.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, Oz.jsxs)("div", {
+            children: [(0, SD.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [wz.featureFlags.canChangeName && (0, Oz.jsx)(rz.d, {
+              children: [vD.featureFlags.canChangeName && (0, SD.jsx)(mD.b, {
                 className: "EnterName",
-                placeholderText: tz("homePage:enterName"),
-                maxLength: az.g,
-                defaultValue: fz,
-                onValueChange: zz => {
-                  su(zz)
+                placeholderText: QD("homePage:enterName"),
+                maxLength: VD.i,
+                defaultValue: gD,
+                onValueChange: DD => {
+                  XC(DD)
                 },
-                forcedText: kz || !wz.featureFlags.canChangeName ? fz : null,
+                forcedText: FD || !vD.featureFlags.canChangeName ? gD : null,
                 blurOnEnter: !0,
-                domRef: nu
-              }), (0, Oz.jsx)(Kz.f, {
+                domRef: pC
+              }), (0, SD.jsx)(oD.i, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  su((0, az.c)())
+                  XC((0, VD.h)())
                 },
-                children: (0, Oz.jsx)(Mz.c, {
+                children: (0, SD.jsx)(bD.c, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !wz.featureFlags.canChangeName && (0, Oz.jsx)("div", {
+              }), !vD.featureFlags.canChangeName && (0, SD.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, az.b)(fz, !wz.featureFlags.canSeeRealPlayerNames)
+                children: (0, VD.d)(gD, !vD.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, Oz.jsx)(Kz.f, {
+            }), (0, SD.jsx)(oD.i, {
               className: "ChooseNameButton",
-              disabled: kz || fz === Rz.getPlayerName(),
+              disabled: FD || gD === ZD.getPlayerName(),
               onClick: () => {
-                fz.length < az.i ? Jz(tz("homePage:changeNameMinLengthError", {
-                  length: az.i
-                })) : fz.length > az.g ? Jz(tz("homePage:changeNameMaxLengthError", {
-                  length: az.g
-                })) : (zu(!0), Jz(null), async function(zz, uz, bz, Ez) {
-                  const nz = await (0, Tz.postJsonWithMetricsCookiesAndJsonResponse)(`${Lz.clientSideServerUrls.indexUrl}/index/name/update`, {
-                    name: zz
+                gD.length < VD.j ? UD(QD("homePage:changeNameMinLengthError", {
+                  length: VD.j
+                })) : gD.length > VD.i ? UD(QD("homePage:changeNameMaxLengthError", {
+                  length: VD.i
+                })) : (DC(!0), UD(null), async function(DD, CD, cD, ID) {
+                  const pD = await (0, qD.postJsonWithMetricsCookiesAndJsonResponse)(`${JD.clientSideServerUrls.indexUrl}/index/name/update`, {
+                    name: DD
                   }, {
                     retries: 3
-                  }, uz.getMetricsCookies()).catch((zz => (console.error("Bad response from the server when trying to update name:", zz), {
+                  }, CD.getMetricsCookies()).catch((DD => (console.error("Bad response from the server when trying to update name:", DD), {
                     err: "An error occurred trying to change your name! Please report on discord what steps you took to get this error message."
                   })));
-                  nz.err ? (console.error("Error when trying to get with new name from DB", nz.err), Ez(nz.err)) : !0 === nz.nameExists ? Ez("Name is already taken") : bz(zz)
-                }(fz, Rz, (zz => {
-                  Rz.setPlayerName(zz), zu(!1)
-                }), (zz => {
-                  Jz(zz), zu(!1)
+                  pD.err ? (console.error("Error when trying to get with new name from DB", pD.err), ID(pD.err)) : !0 === pD.nameExists ? ID("Name is already taken") : cD(DD)
+                }(gD, ZD, (DD => {
+                  ZD.setPlayerName(DD), DC(!1)
+                }), (DD => {
+                  UD(DD), DC(!1)
                 })))
               },
-              children: tz("general:choose")
+              children: QD("general:choose")
             })]
-          }), xz && (0, Oz.jsx)("div", {
+          }), HD && (0, SD.jsx)("div", {
             className: "ChooseAccNameError",
-            children: xz
+            children: HD
           })]
-        }), (0, Oz.jsx)(Nz.b, {
+        }), (0, SD.jsx)(OD.e, {
           label: (() => {
-            if ((0, Bz.n)(pz)) {
-              const zz = (0, lz.p)(Hz.code, "general:timeLeft"),
-                uz = (0, Uz.fb)(zz, Date.now(), pz + Bz.k);
-              return `${tz("settingsMenu:hideSocialLocation")} (${tz("general:timeLeft",{time:uz})})`
+            if ((0, hD.o)(BD)) {
+              const DD = (0, fD.m)(wD.code, "general:timeLeft"),
+                CD = (0, TD.cb)(DD, Date.now(), BD + hD.l);
+              return `${QD("settingsMenu:hideSocialLocation")} (${QD("general:timeLeft",{time:CD})})`
             }
-            return tz("settingsMenu:hideSocialLocation")
+            return QD("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const zz = !(0, Bz.n)(pz);
-            (0, Yz.reportAnalyticsClick)({
+            const DD = !(0, hD.o)(BD);
+            (0, AD.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: zz ? "on" : "off"
-            }), Eu(!0), hz.c.setHideSocialLocation(Rz, zz).then((() => {
-              vz.e.set({
-                hideSocialLocationFrom: zz ? Date.now() : null
+              value: DD ? "on" : "off"
+            }), IC(!0), LD.c.setHideSocialLocation(ZD, DD).then((() => {
+              PD.d.set({
+                hideSocialLocationFrom: DD ? Date.now() : null
               })
             })).finally((() => {
-              Eu(!1)
+              IC(!1)
             }))
           },
-          checked: (0, Bz.n)(pz),
-          disabled: bu
-        }), Ku && (0, Oz.jsxs)("div", {
+          checked: (0, hD.o)(BD),
+          disabled: cC
+        }), oC && (0, SD.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, Oz.jsx)("div", {
+          children: [(0, SD.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: tz("settingsMenu:socialLinks")
-          }), Zu && (0, Oz.jsx)(oz.c, {}), !Zu && (0, Oz.jsx)(Cz.e, {
-            socialLinks: pu,
+            children: QD("settingsMenu:socialLinks")
+          }), tC && (0, SD.jsx)(nD.e, {}), !tC && (0, SD.jsx)(rD.c, {
+            socialLinks: BC,
             editable: !0,
-            userContext: Rz,
-            onLinksUpdated: Xu
+            userContext: ZD,
+            onLinksUpdated: NC
           })]
-        }), (0, Oz.jsxs)("div", {
+        }), (0, SD.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, Oz.jsx)("div", {
+          children: [(0, SD.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: tz(Ou ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), Mu && (0, Oz.jsx)(oz.c, {}), !Mu && 0 === tu.length && (0, Oz.jsx)("div", {
+            children: QD(SC ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), bC && (0, SD.jsx)(nD.e, {}), !bC && 0 === QC.length && (0, SD.jsx)("div", {
             className: "NoLoginOptions",
-            children: tz("auth:noLoginOptions")
-          }), !Mu && tu.length > 0 && "crazygames" !== Az.x && (0, Oz.jsx)("div", {
+            children: QD("auth:noLoginOptions")
+          }), !bC && QC.length > 0 && "crazygames" !== xD.p && (0, SD.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: tu
-          }), !Mu && tu.length > 0 && "crazygames" === Az.x && (0, Oz.jsxs)("div", {
+            children: QC
+          }), !bC && QC.length > 0 && "crazygames" === xD.p && (0, SD.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [tu[0], tu.length > 1 && (0, Oz.jsxs)(Oz.Fragment, {
-              children: [(0, Oz.jsxs)("div", {
+            children: [QC[0], QC.length > 1 && (0, SD.jsxs)(SD.Fragment, {
+              children: [(0, SD.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, Oz.jsx)("span", {
+                children: [(0, SD.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: tz("auth:legacyLoginOptions")
-                }), (0, Oz.jsx)(Iz.b, {
+                  children: QD("auth:legacyLoginOptions")
+                }), (0, SD.jsx)(uD.d, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: tz("auth:legacyLoginOptionsInfo")
+                  hoverInfo: QD("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, Oz.jsx)("div", {
+              }), (0, SD.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: tu.slice(1)
+                children: QC.slice(1)
               })]
             })]
-          }), wz.featureFlags.useLogin && (null !== Rz.loggedInInfo || Rz.isLoggedIn()) && (0, Oz.jsxs)(Oz.Fragment, {
-            children: [(0, Oz.jsx)("div", {
+          }), vD.featureFlags.useLogin && (null !== ZD.loggedInInfo || ZD.isLoggedIn()) && (0, SD.jsxs)(SD.Fragment, {
+            children: [(0, SD.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, Oz.jsxs)(Kz.K, {
+            }), (0, SD.jsxs)(oD.J, {
               onClick: () => {
-                (0, Tz.forceGlobalSignOut)()
+                (0, qD.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, Oz.jsx)(Mz.c, {
+              children: [(0, SD.jsx)(bD.c, {
                 name: "right-from-bracket"
-              }), tz("auth:signOut")]
+              }), QD("auth:signOut")]
             })]
           })]
-        }), !Rz.playerHasRank("super") && (0, gz.purchasesAllowed)() && (0, Oz.jsxs)("div", {
+        }), !ZD.playerHasRank("super") && (0, RD.purchasesAllowed)() && (0, SD.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, Oz.jsxs)("div", {
+          children: [(0, SD.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, Oz.jsx)(Mz.c, {
+            children: [(0, SD.jsx)(bD.c, {
               name: "bolt"
-            }), tz("homePage:superRank")]
-          }), (0, Oz.jsxs)("div", {
+            }), QD("homePage:superRank")]
+          }), (0, SD.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, Oz.jsxs)(Kz.q, {
+            children: [(0, SD.jsxs)(oD.o, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, cz.o)({
+                (0, GD.p)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, Oz.jsx)(Mz.c, {
+              children: [(0, SD.jsx)(bD.c, {
                 name: "bolt"
-              }), tz("homePage:getSuperRank")]
-            }), (0, Oz.jsxs)(Kz.q, {
+              }), QD("homePage:getSuperRank")]
+            }), (0, SD.jsxs)(oD.o, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, cz.o)({
+                (0, GD.p)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, Oz.jsx)(Mz.c, {
+              children: [(0, SD.jsx)(bD.c, {
                 name: "bolt"
-              }), tz("homePage:giftSuperRank")]
+              }), QD("homePage:giftSuperRank")]
             })]
           })]
-        }), Rz.playerHasRank("super") && (0, Oz.jsxs)("div", {
+        }), ZD.playerHasRank("super") && (0, SD.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, Oz.jsxs)("div", {
+          children: [(0, SD.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, Oz.jsx)(Mz.c, {
+            children: [(0, SD.jsx)(bD.c, {
               name: "bolt"
-            }), tz("homePage:superRank"), ez && (0, Oz.jsxs)("div", {
+            }), QD("homePage:superRank"), ED && (0, SD.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", ez, ")"]
+              children: ["(", ED, ")"]
             })]
-          }), (0, gz.purchasesAllowed)() && (0, Oz.jsxs)("div", {
+          }), (0, RD.purchasesAllowed)() && (0, SD.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, Uz.Bc)(Rz.superRankInfo) && (0, Oz.jsxs)(Kz.q, {
+            children: [!(0, TD.Ac)(ZD.superRankInfo) && (0, SD.jsxs)(oD.o, {
               className: "AccountSettingsSuperRankProlong",
-              loading: Sz,
+              loading: kD,
               onClick: () => {
-                Dz(mz.h.id, null)
+                YD(jD.g.id, null)
               },
-              children: [(0, Oz.jsx)(Mz.c, {
+              children: [(0, SD.jsx)(bD.c, {
                 name: "bolt"
-              }), tz("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: mz.h.product.days,
-                price: mz.h.price
+              }), QD("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: jD.g.product.days,
+                price: jD.g.price
               })]
-            }), (0, Oz.jsxs)(Kz.q, {
+            }), (0, SD.jsxs)(oD.o, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, cz.o)({
+                (0, GD.p)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, Oz.jsx)(Mz.c, {
+              children: [(0, SD.jsx)(bD.c, {
                 name: "bolt"
-              }), tz("homePage:giftSuperRank")]
+              }), QD("homePage:giftSuperRank")]
             })]
-          }), yz && (0, Oz.jsx)("div", {
+          }), dD && (0, SD.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: tz(yz.translationKey)
+            children: QD(dD.translationKey)
           })]
-        }), (0, Oz.jsx)(uu, {
-          showing: bz
-        }), wz.featureFlags.useSocialFeatures && (0, Oz.jsx)(wu, {
-          showing: bz
-        }), (0, Oz.jsxs)("div", {
+        }), (0, SD.jsx)(CC, {
+          showing: cD
+        }), vD.featureFlags.useSocialFeatures && (0, SD.jsx)(vC, {
+          showing: cD
+        }), (0, SD.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, Oz.jsxs)("div", {
+          children: [(0, SD.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, Oz.jsx)("div", {
+            children: [(0, SD.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: tz(fu(Hu, Ou))
-            }), (0, Az.d)() && (0, Oz.jsx)("div", {
+              children: QD(gC(wC, SC))
+            }), (0, xD.c)() && (0, SD.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: tz("auth:discordActivityKickWarning")
-            }), (0, Oz.jsx)(Fu, {
-              showing: bz
+              children: QD("auth:discordActivityKickWarning")
+            }), (0, SD.jsx)(MC, {
+              showing: cD
             })]
-          }), (0, Oz.jsx)("div", {
+          }), (0, SD.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: tz("auth:deleteAccountWarning")
+            children: QD("auth:deleteAccountWarning")
           })]
         })]
       })
     }));
 
-    function fu(zz, uz) {
-      return zz ? uz ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function gC(DD, CD) {
+      return DD ? CD ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var su = bz(8892),
-      ru = bz(2882),
-      ou = bz(1241),
-      Nu = bz(1405);
-    const vu = (0, Ez.memo)((function(zz) {
+    var XC = cD(8940),
+      mC = cD(2921),
+      nC = cD(1250),
+      OC = cD(1425);
+    const PC = (0, ID.memo)((function(DD) {
         let {
-          inGame: uz
-        } = zz;
+          inGame: CD
+        } = DD;
         const {
-          t: bz,
-          selectedLanguage: Ez
-        } = (0, lz.F)(), {
-          clientEscMenuOptions: nz,
-          showDebugOverlay: iz
-        } = (0, vz.m)(["clientEscMenuOptions", "showDebugOverlay"]), Mz = (0, Zz.g)("hideCoordinates");
-        let tz = "settingsMenu:showCoordinates",
-          Hz = "settingsMenu:showChunkCoordinates";
+          t: cD,
+          selectedLanguage: ID
+        } = (0, fD.F)(), {
+          clientEscMenuOptions: pD,
+          showDebugOverlay: iD
+        } = (0, PD.o)(["clientEscMenuOptions", "showDebugOverlay"]), bD = (0, tD.h)("hideCoordinates");
+        let QD = "settingsMenu:showCoordinates",
+          wD = "settingsMenu:showChunkCoordinates";
 
-        function pz(zz) {
-          const uz = new Intl.DisplayNames([zz], {
+        function BD(DD) {
+          const CD = new Intl.DisplayNames([DD], {
             type: "language"
-          }).of(zz);
-          return uz.charAt(0).toUpperCase() + uz.slice(1)
+          }).of(DD);
+          return CD.charAt(0).toUpperCase() + CD.slice(1)
         }
-        return Mz && (tz = "settingsMenu:showCoordinatesHidden", Hz = "settingsMenu:showChunkCoordinatesHidden"), (0, Oz.jsxs)("div", {
+        return bD && (QD = "settingsMenu:showCoordinatesHidden", wD = "settingsMenu:showChunkCoordinatesHidden"), (0, SD.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [uz && wz.featureFlags.canUseInviteLinks && (0, Oz.jsxs)("div", {
+          children: [CD && vD.featureFlags.canUseInviteLinks && (0, SD.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, Oz.jsx)("div", {
+            children: [(0, SD.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: bz("settingsMenu:inviteLink")
-            }), (0, Oz.jsx)(su.e, {})]
-          }), (0, Oz.jsxs)("div", {
+              children: cD("settingsMenu:inviteLink")
+            }), (0, SD.jsx)(XC.h, {})]
+          }), (0, SD.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, Oz.jsx)("div", {
+            children: [(0, SD.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: bz("settingsMenu:language")
-            }), (0, Oz.jsx)(ru.d, {
-              options: Object.entries(lz.j).map((zz => {
-                let [uz, bz] = zz;
+              children: cD("settingsMenu:language")
+            }), (0, SD.jsx)(mC.b, {
+              options: Object.entries(fD.f).map((DD => {
+                let [CD, cD] = DD;
                 return {
-                  label: (0, Oz.jsxs)("div", {
+                  label: (0, SD.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, Oz.jsx)("img", {
-                      src: bz.flagImg,
+                    children: [(0, SD.jsx)("img", {
+                      src: cD.flagImg,
                       alt: "flag"
-                    }), (0, Oz.jsxs)("span", {
-                      children: [pz(uz), " ", (0, Oz.jsxs)("span", {
+                    }), (0, SD.jsxs)("span", {
+                      children: [BD(CD), " ", (0, SD.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", uz, ")"]
+                        children: ["(", CD, ")"]
                       })]
                     })]
                   }),
-                  value: uz
+                  value: CD
                 }
               })),
-              value: Ez.code,
-              onChange: zz => {
-                ou.h.get().setCurrentLanguage(zz.value)
+              value: ID.code,
+              onChange: DD => {
+                nC.e.get().setCurrentLanguage(DD.value)
               }
             })]
-          }), !(0, wz.isMobileApp)() && (0, Nu.g)() && wz.featureFlags.useForceRotateForceFullscreenOverlay && (0, Oz.jsx)(Nz.b, {
-            label: bz("settingsMenu:disableFullscreenMode"),
-            checked: nz.disableFullscreen,
-            onClick: zz => {
-              vz.e.setClientEscMenuOptions({
-                disableFullscreen: zz
+          }), !(0, vD.isMobileApp)() && (0, OC.c)() && vD.featureFlags.useForceRotateForceFullscreenOverlay && (0, SD.jsx)(OD.e, {
+            label: cD("settingsMenu:disableFullscreenMode"),
+            checked: pD.disableFullscreen,
+            onClick: DD => {
+              PD.d.setClientEscMenuOptions({
+                disableFullscreen: DD
               })
             }
-          }), (0, Oz.jsx)(Nz.b, {
-            label: bz(tz),
-            checked: nz.showCoordinates,
-            onClick: zz => {
-              vz.e.setClientEscMenuOptions({
-                showCoordinates: zz
+          }), (0, SD.jsx)(OD.e, {
+            label: cD(QD),
+            checked: pD.showCoordinates,
+            onClick: DD => {
+              PD.d.setClientEscMenuOptions({
+                showCoordinates: DD
               })
             },
-            disabled: Mz
-          }), (0, Oz.jsx)(Nz.b, {
-            label: bz(Hz),
-            checked: nz.showChunkCoordinates,
-            onClick: zz => {
-              vz.e.setClientEscMenuOptions({
-                showChunkCoordinates: zz
+            disabled: bD
+          }), (0, SD.jsx)(OD.e, {
+            label: cD(wD),
+            checked: pD.showChunkCoordinates,
+            onClick: DD => {
+              PD.d.setClientEscMenuOptions({
+                showChunkCoordinates: DD
               })
             },
-            disabled: Mz
-          }), (0, Oz.jsx)(Nz.b, {
-            label: bz("settingsMenu:showFps"),
-            checked: nz.showFPS,
-            onClick: zz => {
-              vz.e.setClientEscMenuOptions({
-                showFPS: zz
+            disabled: bD
+          }), (0, SD.jsx)(OD.e, {
+            label: cD("settingsMenu:showFps"),
+            checked: pD.showFPS,
+            onClick: DD => {
+              PD.d.setClientEscMenuOptions({
+                showFPS: DD
               })
             }
-          }), (0, Oz.jsx)(Nz.b, {
-            label: bz("settingsMenu:disableBunnyHopping"),
-            checked: nz.disableBunnyHopping,
-            onClick: zz => {
-              vz.e.setClientEscMenuOptions({
-                disableBunnyHopping: zz
+          }), (0, SD.jsx)(OD.e, {
+            label: cD("settingsMenu:disableBunnyHopping"),
+            checked: pD.disableBunnyHopping,
+            onClick: DD => {
+              PD.d.setClientEscMenuOptions({
+                disableBunnyHopping: DD
               })
             }
-          }), (0, iu.s)() && (0, Oz.jsx)(Nz.b, {
-            label: bz("settingsMenu:showChat"),
-            checked: nz.showChat,
-            onClick: zz => {
-              vz.e.setClientEscMenuOptions({
-                showChat: zz
+          }), (0, iC.t)() && (0, SD.jsx)(OD.e, {
+            label: cD("settingsMenu:showChat"),
+            checked: pD.showChat,
+            onClick: DD => {
+              PD.d.setClientEscMenuOptions({
+                showChat: DD
               })
             }
-          }), (0, Oz.jsx)(Nz.b, {
-            label: bz("settingsMenu:showDebugOverlay"),
-            checked: iz,
-            onClick: zz => {
-              vz.e.set({
-                showDebugOverlay: zz
+          }), (0, SD.jsx)(OD.e, {
+            label: cD("settingsMenu:showDebugOverlay"),
+            checked: iD,
+            onClick: DD => {
+              PD.d.set({
+                showDebugOverlay: DD
               })
             }
-          }), wz.featureFlags.useSocialFeatures && (0, Oz.jsx)(Nz.b, {
-            label: bz("settingsMenu:showFriendOnlineToasts"),
-            checked: nz.showFriendOnlineToasts,
-            onClick: zz => {
-              vz.e.setClientEscMenuOptions({
-                showFriendOnlineToasts: zz
+          }), vD.featureFlags.useSocialFeatures && (0, SD.jsx)(OD.e, {
+            label: cD("settingsMenu:showFriendOnlineToasts"),
+            checked: pD.showFriendOnlineToasts,
+            onClick: DD => {
+              PD.d.setClientEscMenuOptions({
+                showFriendOnlineToasts: DD
               })
             }
-          }), (0, Oz.jsx)(Nz.b, {
-            label: bz("settingsMenu:showNewItemIndicator"),
-            checked: nz.showNewItemIndicator,
-            onClick: zz => {
-              vz.e.setClientEscMenuOptions({
-                showNewItemIndicator: zz
+          }), (0, SD.jsx)(OD.e, {
+            label: cD("settingsMenu:showNewItemIndicator"),
+            checked: pD.showNewItemIndicator,
+            onClick: DD => {
+              PD.d.setClientEscMenuOptions({
+                showNewItemIndicator: DD
               })
             }
           })]
         })
       })),
-      xu = (0, Ez.memo)((function() {
+      HC = (0, ID.memo)((function() {
         const {
-          t: zz
-        } = (0, lz.F)(), {
-          soundVolume: uz,
-          musicVolume: bz
-        } = (0, vz.m)(["soundVolume", "musicVolume"]);
-        return (0, Oz.jsxs)("div", {
+          t: DD
+        } = (0, fD.F)(), {
+          soundVolume: CD,
+          musicVolume: cD
+        } = (0, PD.o)(["soundVolume", "musicVolume"]);
+        return (0, SD.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, Oz.jsx)(Nz.f, {
-            name: zz("settingsMenu:musicVolume"),
+          children: [(0, SD.jsx)(OD.i, {
+            name: DD("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: bz,
-            onChange: zz => {
-              vz.e.set({
-                musicVolume: Math.round(100 * zz) / 100
+            initValue: cD,
+            onChange: DD => {
+              PD.d.set({
+                musicVolume: Math.round(100 * DD) / 100
               })
             },
-            format: zz => zz.toFixed(2)
-          }), (0, Oz.jsx)(Nz.f, {
-            name: zz("settingsMenu:soundEffectsVolume"),
+            format: DD => DD.toFixed(2)
+          }), (0, SD.jsx)(OD.i, {
+            name: DD("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: uz,
-            onChange: zz => {
-              vz.e.set({
-                soundVolume: Math.round(100 * zz) / 100
+            initValue: CD,
+            onChange: DD => {
+              PD.d.set({
+                soundVolume: Math.round(100 * DD) / 100
               })
             },
-            format: zz => zz.toFixed(2)
+            format: DD => DD.toFixed(2)
           })]
         })
       }));
-    var Ju = bz(686),
-      Au = bz(1417),
-      Tu = bz(3411),
-      Lu = bz(8896),
-      Pu = bz(3238);
-    const Gu = {
+    var UC = cD(723),
+      xC = cD(1440),
+      qC = cD(3479),
+      JC = cD(8944),
+      KC = cD(3306);
+    const aC = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function au() {
+    function VC() {
       const {
-        t: zz
-      } = (0, lz.F)(), uz = (0, Pu.e)(), {
-        mobilePushNotificationsCanAsk: bz
-      } = (0, vz.m)(["mobilePushNotificationsCanAsk"]), [nz, iz] = (0, Ez.useState)(null), [Mz, tz] = (0, Ez.useState)(!1), [Hz, pz] = (0, Ez.useState)(null), [dz, Fz] = (0, Ez.useState)(!1), Zz = (0, Ez.useCallback)((() => {
-        (0, Tu.d)().then((zz => {
-          uz.current && (iz(zz), tz(!1))
-        })).catch((zz => {
-          console.error("Failed to load push notification targets:", zz), uz.current && tz(!0)
+        t: DD
+      } = (0, fD.F)(), CD = (0, KC.d)(), {
+        mobilePushNotificationsCanAsk: cD
+      } = (0, PD.o)(["mobilePushNotificationsCanAsk"]), [pD, iD] = (0, ID.useState)(null), [bD, QD] = (0, ID.useState)(!1), [wD, BD] = (0, ID.useState)(null), [yD, MD] = (0, ID.useState)(!1), tD = (0, ID.useCallback)((() => {
+        (0, qC.c)().then((DD => {
+          CD.current && (iD(DD), QD(!1))
+        })).catch((DD => {
+          console.error("Failed to load push notification targets:", DD), CD.current && QD(!0)
         }))
-      }), [uz]), Rz = (0, Ez.useCallback)((() => {
-        (0, Lu.b)().then((zz => {
-          uz.current && pz((() => zz))
+      }), [CD]), ZD = (0, ID.useCallback)((() => {
+        (0, JC.d)().then((DD => {
+          CD.current && BD((() => DD))
         }))
-      }), [uz]);
-      (0, Ez.useEffect)((() => {
-        Zz()
-      }), [Zz]), (0, Ez.useEffect)((() => {
-        Rz()
-      }), [Rz, bz]), (0, Au.g)(Tu.k, Zz);
-      const wz = null === nz ? [] : Object.keys(Gu).filter((zz => nz[zz] > 0));
-      return (0, Oz.jsxs)("div", {
+      }), [CD]);
+      (0, ID.useEffect)((() => {
+        tD()
+      }), [tD]), (0, ID.useEffect)((() => {
+        ZD()
+      }), [ZD, cD]), (0, xC.f)(qC.g, tD);
+      const vD = null === pD ? [] : Object.keys(aC).filter((DD => pD[DD] > 0));
+      return (0, SD.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, Oz.jsx)("div", {
+        children: [(0, SD.jsx)("div", {
           className: "SliderText",
-          children: zz("notificationSettings:pushNotifications")
-        }), null === nz && Mz && (0, Oz.jsx)("div", {
+          children: DD("notificationSettings:pushNotifications")
+        }), null === pD && bD && (0, SD.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: zz("notificationSettings:pushTargetsLoadFailed")
-        }), null !== nz && 0 === wz.length && (0, Oz.jsx)("div", {
+          children: DD("notificationSettings:pushTargetsLoadFailed")
+        }), null !== pD && 0 === vD.length && (0, SD.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: zz("notificationSettings:pushTargetsNone")
-        }), wz.length > 0 && (0, Oz.jsx)("ul", {
+          children: DD("notificationSettings:pushTargetsNone")
+        }), vD.length > 0 && (0, SD.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: wz.map((uz => {
-            var bz;
-            return (0, Oz.jsx)("li", {
-              children: zz(Gu[uz], {
-                count: null !== (bz = null === nz || void 0 === nz ? void 0 : nz[uz]) && void 0 !== bz ? bz : 0
+          children: vD.map((CD => {
+            var cD;
+            return (0, SD.jsx)("li", {
+              children: DD(aC[CD], {
+                count: null !== (cD = null === pD || void 0 === pD ? void 0 : pD[CD]) && void 0 !== cD ? cD : 0
               })
-            }, uz)
+            }, CD)
           }))
-        }), null !== Hz && (0, Oz.jsx)(Kz.f, {
+        }), null !== wD && (0, SD.jsx)(oD.i, {
           className: "PushNotificationSettingsButton",
-          loading: dz,
+          loading: yD,
           onClick: () => {
-            Fz(!0), Hz().catch((zz => {
-              console.error("Failed to turn on push notifications:", zz)
+            MD(!0), wD().catch((DD => {
+              console.error("Failed to turn on push notifications:", DD)
             })).finally((() => {
-              uz.current && (Fz(!1), Rz())
+              CD.current && (MD(!1), ZD())
             }))
           },
-          children: zz("notificationSettings:pushTurnOn")
+          children: DD("notificationSettings:pushTurnOn")
         })]
       })
     }
-    const Vu = {
+    const zC = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1109,337 +1109,337 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      mu = (0, Ez.memo)((function() {
+      jC = (0, ID.memo)((function() {
         const {
-          t: zz
-        } = (0, lz.F)(), {
-          clientEscMenuOptions: uz
-        } = (0, vz.m)(["clientEscMenuOptions"]);
-        return (0, Oz.jsxs)("div", {
+          t: DD
+        } = (0, fD.F)(), {
+          clientEscMenuOptions: CD
+        } = (0, PD.o)(["clientEscMenuOptions"]);
+        return (0, SD.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, Oz.jsx)(Nz.e, {
-            label: zz("notificationSettings:friendRequests"),
-            options: Ju.d.map((uz => ({
-              value: uz,
-              label: zz(Vu[uz].label)
+          children: [(0, SD.jsx)(OD.g, {
+            label: DD("notificationSettings:friendRequests"),
+            options: UC.e.map((CD => ({
+              value: CD,
+              label: DD(zC[CD].label)
             }))),
-            value: uz.friendRequestNotifications,
-            onChange: zz => {
-              vz.e.setClientEscMenuOptions({
-                friendRequestNotifications: zz
+            value: CD.friendRequestNotifications,
+            onChange: DD => {
+              PD.d.setClientEscMenuOptions({
+                friendRequestNotifications: DD
               })
             },
-            circleInfoText: (0, Oz.jsx)("div", {
+            circleInfoText: (0, SD.jsx)("div", {
               className: "NotificationSettingLevelsInfo",
-              children: Ju.d.map((uz => (0, Oz.jsxs)("div", {
-                children: [(0, Oz.jsx)("b", {
-                  children: zz(Vu[uz].label)
-                }), ": ", zz(Vu[uz].info)]
-              }, uz)))
+              children: UC.e.map((CD => (0, SD.jsxs)("div", {
+                children: [(0, SD.jsx)("b", {
+                  children: DD(zC[CD].label)
+                }), ": ", DD(zC[CD].info)]
+              }, CD)))
             })
-          }), (0, Oz.jsx)(au, {})]
+          }), (0, SD.jsx)(VC, {})]
         })
       }));
-    var qu = bz(4274),
-      hu = bz(195),
-      Uu = bz(298),
-      cu = bz(6382),
-      gu = bz(3198),
-      Su = bz(8902),
-      yu = bz(588),
-      Du = bz(22);
-    var Qu = bz(606),
-      Wu = bz(33),
-      eu = bz(4150);
-    const ju = new Map([
+    var lC = cD(4301),
+      LC = cD(194),
+      TC = cD(298),
+      GC = cD(6409),
+      RC = cD(3255),
+      kC = cD(8950),
+      dC = cD(624),
+      YC = cD(20);
+    var WC = cD(646),
+      sC = cD(36),
+      EC = cD(4184);
+    const eC = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function Iu(zz) {
-      return ju.has(zz) ? Xz.gameBridge.lookup("Kr", null) : null
+    function uC(DD) {
+      return eC.has(DD) ? ND.gameBridge.lookup("Om", null) : null
     }
 
-    function Bu(zz) {
-      if (!(0, yu.F)(vz.e.get("clientEscMenuOptions")[zz])) return vz.e.get("clientEscMenuOptions")[zz];
-      const uz = Iu(zz);
-      return null !== uz ? uz[ju.get(zz)] : Wu.g.getItem(zz)
+    function hC(DD) {
+      if (!(0, dC.C)(PD.d.get("clientEscMenuOptions")[DD])) return PD.d.get("clientEscMenuOptions")[DD];
+      const CD = uC(DD);
+      return null !== CD ? CD[eC.get(DD)] : sC.h.getItem(DD)
     }
 
-    function Cu(zz, uz) {
-      if ("useTouchControls" === zz) return void(0, eu.d)(uz);
-      zz in vz.e.get("clientEscMenuOptions") && vz.e.setClientEscMenuOptions({
-        [zz]: uz
+    function rC(DD, CD) {
+      if ("useTouchControls" === DD) return void(0, EC.b)(CD);
+      DD in PD.d.get("clientEscMenuOptions") && PD.d.setClientEscMenuOptions({
+        [DD]: CD
       });
-      const bz = Iu(zz);
-      null !== bz && Xz.gameBridge.send("setChunkAddDistance", {
-        ...bz,
-        [ju.get(zz)]: uz
-      }), Wu.g.setItem(zz, uz)
+      const cD = uC(DD);
+      null !== cD && ND.gameBridge.send("setChunkAddDistance", {
+        ...cD,
+        [eC.get(DD)]: CD
+      }), sC.h.setItem(DD, CD)
     }
-    var Yu = bz(4193),
-      ku = bz(8908),
-      zb = bz(8911),
-      ub = bz(4266);
+    var AC = cD(4220),
+      FC = cD(8958),
+      Dc = cD(8967),
+      Cc = cD(4296);
 
-    function bb(zz) {
-      var uz, nz, Mz, tz;
+    function cc(DD) {
+      var CD, pD, bD, QD;
       let {
-        minChunkAddDist: Hz,
-        getValue: pz,
-        onChange: dz,
-        setApplySettingsCallback: Fz
-      } = zz;
+        minChunkAddDist: wD,
+        getValue: BD,
+        onChange: yD,
+        setApplySettingsCallback: MD
+      } = DD;
       const {
-        t: Rz
-      } = (0, lz.F)(), {
-        clientEscMenuOptions: Kz
-      } = (0, vz.m)(["clientEscMenuOptions", "showDistantNametags"]), Xz = (0, Ez.useRef)(pz("showFog")), fz = (0, Ez.useRef)(Kz.antiAliasing), sz = (0, Ez.useRef)(Kz.useWebGpu), [rz, oz] = (0, Ez.useState)(null), [Jz, Az] = (0, Ez.useState)((() => (0, gu.c)(wz.featureFlags.settings.canUseShaderPacks))), [Tz] = (0, Ez.useState)((() => vz.e.isWebGpuDefaultOff())), [Lz] = (0, Ez.useState)(Uu.g);
-      (0, Ez.useEffect)((() => {
-        let zz = !1;
-        return (0, wz.hasUsableWebGpuAdapter)().then((uz => {
-          zz || oz(uz)
-        })), (0, gu.h)(wz.featureFlags.settings.canUseShaderPacks) && (0, cu.e)().then((async uz => {
-          const Ez = null !== uz && await async function(zz) {
+        t: ZD
+      } = (0, fD.F)(), {
+        clientEscMenuOptions: oD
+      } = (0, PD.o)(["clientEscMenuOptions", "showDistantNametags"]), ND = (0, ID.useRef)(BD("showFog")), gD = (0, ID.useRef)(oD.antiAliasing), XD = (0, ID.useRef)(oD.useWebGpu), [mD, nD] = (0, ID.useState)(null), [UD, xD] = (0, ID.useState)((() => (0, RC.g)(vD.featureFlags.settings.canUseShaderPacks))), [qD] = (0, ID.useState)((() => PD.d.isWebGpuDefaultOff())), [JD] = (0, ID.useState)(TC.f);
+      (0, ID.useEffect)((() => {
+        let DD = !1;
+        return (0, vD.hasUsableWebGpuAdapter)().then((CD => {
+          DD || nD(CD)
+        })), (0, RC.o)(vD.featureFlags.settings.canUseShaderPacks) && (0, GC.d)().then((async CD => {
+          const ID = null !== CD && await async function(DD) {
             const [{
-              isShaderPackActive: uz
+              isShaderPackActive: CD
             }, {
-              loadPageShaderPackCompiler: Ez
-            }] = await Promise.all([bz.e(127).then((() => bz(6379))), Promise.all([bz.e(74), bz.e(131), bz.e(130)]).then((() => bz(6340)))]);
-            return uz(zz, await Ez())
-          }(uz);
-          zz || Az(Ez)
+              loadPageShaderPackCompiler: ID
+            }] = await Promise.all([cD.e(127).then((() => cD(6404))), Promise.all([cD.e(74), cD.e(131), cD.e(130)]).then((() => cD(6366)))]);
+            return CD(DD, await ID())
+          }(CD);
+          DD || xD(ID)
         })), () => {
-          zz = !0
+          DD = !0
         }
       }), []);
-      const Pz = function(zz, uz, bz, Ez, nz) {
-          return (0, Su.b)(bz, Ez) && !0 === uz ? {
+      const KD = function(DD, CD, cD, ID, pD) {
+          return (0, kC.e)(cD, ID) && !0 === CD ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== uz ? "settingsMenu:newWebGpu" : nz ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: zz && !1 !== uz,
-            disabled: !0 !== uz
+            translationKey: !1 !== CD ? "settingsMenu:newWebGpu" : pD ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: DD && !1 !== CD,
+            disabled: !0 !== CD
           }
-        }(Kz.useWebGpu, rz, Jz, Tz, Lz),
-        Gz = (Kz.useWebGpu || (0, Su.b)(Jz, Tz)) && Jz && !0 === rz,
-        az = (0, Zz.g)("lightingOverride"),
-        Vz = !(0, yu.F)(az);
-      let mz = "settingsMenu:enableLighting";
-      Vz && (mz = az ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const qz = zz => {
-          var uz, bz, Ez;
-          const nz = null !== (uz = zz.showFog) && void 0 !== uz ? uz : pz("showFog"),
-            iz = null !== (bz = zz.antiAliasing) && void 0 !== bz ? bz : Kz.antiAliasing,
-            lz = null !== (Ez = zz.useWebGpu) && void 0 !== Ez ? Ez : Kz.useWebGpu,
-            Mz = !Qu.x && nz !== Xz.current || iz !== fz.current || lz !== sz.current;
-          Fz(Mz ? () => Nz.j : null)
+        }(oD.useWebGpu, mD, UD, qD, JD),
+        aD = (oD.useWebGpu || (0, kC.e)(UD, qD)) && UD && !0 === mD,
+        VD = (0, tD.h)("lightingOverride"),
+        zD = !(0, dC.C)(VD);
+      let jD = "settingsMenu:enableLighting";
+      zD && (jD = VD ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const lD = DD => {
+          var CD, cD, ID;
+          const pD = null !== (CD = DD.showFog) && void 0 !== CD ? CD : BD("showFog"),
+            iD = null !== (cD = DD.antiAliasing) && void 0 !== cD ? cD : oD.antiAliasing,
+            fD = null !== (ID = DD.useWebGpu) && void 0 !== ID ? ID : oD.useWebGpu,
+            bD = !WC.q && pD !== ND.current || iD !== gD.current || fD !== XD.current;
+          MD(bD ? () => OD.j : null)
         },
-        hz = (0, Zz.g)("fogChunkDistanceOverride"),
-        Uz = (0, Zz.g)("fogBlockDistanceOverride"),
-        cz = !(0, yu.F)(hz) || !(0, yu.F)(Uz),
-        gz = cz ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [Sz, yz] = (0, qu.g)(Hz),
-        [Dz, Qz] = (0, ub.e)(Hz),
-        Wz = Rz("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        ez = Dz < Sz,
-        jz = Math.min(null !== (uz = pz("chunkHorizAddDist")) && void 0 !== uz ? uz : Hz[0], Dz),
-        Iz = !cz && function(zz, uz) {
-          return !0 === zz.showFog && zz.fogChunkDistance > uz
-        }(Kz, jz);
-      return (0, Oz.jsxs)("div", {
+        LD = (0, tD.h)("fogChunkDistanceOverride"),
+        TD = (0, tD.h)("fogBlockDistanceOverride"),
+        GD = !(0, dC.C)(LD) || !(0, dC.C)(TD),
+        RD = GD ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [kD, dD] = (0, lC.f)(wD),
+        [YD, WD] = (0, Cc.c)(wD),
+        sD = ZD("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        ED = YD < kD,
+        eD = Math.min(null !== (CD = BD("chunkHorizAddDist")) && void 0 !== CD ? CD : wD[0], YD),
+        uD = !GD && function(DD, CD) {
+          return !0 === DD.showFog && DD.fogChunkDistance > CD
+        }(oD, eD);
+      return (0, SD.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, Oz.jsx)(Nz.f, {
-          name: Rz("settingsMenu:horizontalChunkLoadDistance"),
-          min: Hz[0],
-          max: Sz,
-          selectableMax: Dz,
-          cappedNote: Wz,
+        children: [(0, SD.jsx)(OD.i, {
+          name: ZD("settingsMenu:horizontalChunkLoadDistance"),
+          min: wD[0],
+          max: kD,
+          selectableMax: YD,
+          cappedNote: sD,
           step: 1,
-          initValue: jz,
-          onChange: zz => {
-            !0 === pz("showFog") && zz < pz("fogChunkDistance") && dz("fogChunkDistance", zz), dz("chunkHorizAddDist", zz), Du.k.sK("updatedChunkLoadDist")
+          initValue: eD,
+          onChange: DD => {
+            !0 === BD("showFog") && DD < BD("fogChunkDistance") && yD("fogChunkDistance", DD), yD("chunkHorizAddDist", DD), YC.i.Uo("updatedChunkLoadDist")
           },
-          circleInfoText: Rz("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, Oz.jsx)(Nz.f, {
-          name: Rz("settingsMenu:verticalChunkLoadDistance"),
-          min: Hz[1],
-          max: yz,
-          selectableMax: Qz,
-          cappedNote: ez ? void 0 : Wz,
+          circleInfoText: ZD("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, SD.jsx)(OD.i, {
+          name: ZD("settingsMenu:verticalChunkLoadDistance"),
+          min: wD[1],
+          max: dD,
+          selectableMax: WD,
+          cappedNote: ED ? void 0 : sD,
           step: 1,
-          initValue: Math.min(null !== (nz = pz("chunkVertAddDist")) && void 0 !== nz ? nz : Hz[1], Qz),
-          onChange: zz => {
-            dz("chunkVertAddDist", zz), Du.k.sK("updatedChunkLoadDist")
+          initValue: Math.min(null !== (pD = BD("chunkVertAddDist")) && void 0 !== pD ? pD : wD[1], WD),
+          onChange: DD => {
+            yD("chunkVertAddDist", DD), YC.i.Uo("updatedChunkLoadDist")
           },
-          circleInfoText: Rz("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: ZD("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, Oz.jsx)(Nz.b, {
-          label: Rz("settingsMenu:chunkFadeIn"),
-          checked: Kz.chunkFadeIn,
-          onClick: zz => {
-            vz.e.setClientEscMenuOptions({
-              chunkFadeIn: zz
+        }), (0, SD.jsx)(OD.e, {
+          label: ZD("settingsMenu:chunkFadeIn"),
+          checked: oD.chunkFadeIn,
+          onClick: DD => {
+            PD.d.setClientEscMenuOptions({
+              chunkFadeIn: DD
             })
           },
-          circleInfoText: Rz("settingsMenu:chunkFadeInInfo")
-        }), xz.devTools.supports("chunkBorders") && (0, Oz.jsx)(Nz.b, {
-          label: Rz("settingsMenu:showChunkBorders"),
-          checked: Kz.showChunkBorders,
-          onClick: zz => {
-            vz.e.setClientEscMenuOptions({
-              showChunkBorders: zz
+          circleInfoText: ZD("settingsMenu:chunkFadeInInfo")
+        }), HD.devTools.supports("chunkBorders") && (0, SD.jsx)(OD.e, {
+          label: ZD("settingsMenu:showChunkBorders"),
+          checked: oD.showChunkBorders,
+          onClick: DD => {
+            PD.d.setClientEscMenuOptions({
+              showChunkBorders: DD
             })
           },
-          circleInfoText: Rz("settingsMenu:showChunkBordersInfo")
-        }), (0, Oz.jsx)(Nz.b, {
-          label: Rz(mz),
-          checked: Kz.enableLighting,
-          onClick: zz => {
-            vz.e.setClientEscMenuOptions({
-              enableLighting: zz
+          circleInfoText: ZD("settingsMenu:showChunkBordersInfo")
+        }), (0, SD.jsx)(OD.e, {
+          label: ZD(jD),
+          checked: oD.enableLighting,
+          onClick: DD => {
+            PD.d.setClientEscMenuOptions({
+              enableLighting: DD
             })
           },
-          disabled: Vz
-        }), (0, Oz.jsxs)("div", {
+          disabled: zD
+        }), (0, SD.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, Oz.jsx)(Nz.b, {
-            label: Rz(gz),
-            checked: Kz.showFog,
-            onClick: zz => {
-              qz({
-                showFog: zz
-              }), vz.e.setClientEscMenuOptions({
-                showFog: zz
+          children: [(0, SD.jsx)(OD.e, {
+            label: ZD(RD),
+            checked: oD.showFog,
+            onClick: DD => {
+              lD({
+                showFog: DD
+              }), PD.d.setClientEscMenuOptions({
+                showFog: DD
               })
             },
-            disabled: cz,
-            className: iz()({
-              SettingBoxWarning: Iz
+            disabled: GD,
+            className: iD()({
+              SettingBoxWarning: uD
             })
-          }), (0, Oz.jsx)(Nz.f, {
-            name: Rz("settingsMenu:fogChunkDistance"),
-            min: Hz[0],
-            max: hu.e.maxChunkHorizAddDistance,
+          }), (0, SD.jsx)(OD.i, {
+            name: ZD("settingsMenu:fogChunkDistance"),
+            min: wD[0],
+            max: LC.h.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (Mz = Kz.fogChunkDistance) && void 0 !== Mz ? Mz : Hz[0],
-            onChange: zz => {
-              vz.e.setClientEscMenuOptions({
-                fogChunkDistance: zz
-              }), Du.k.sK("fogChunkDistanceChanged", zz)
+            initValue: null !== (bD = oD.fogChunkDistance) && void 0 !== bD ? bD : wD[0],
+            onChange: DD => {
+              PD.d.setClientEscMenuOptions({
+                fogChunkDistance: DD
+              }), YC.i.Uo("fogChunkDistanceChanged", DD)
             },
-            circleInfoText: Rz("settingsMenu:fogChunkDistanceInfo"),
-            disabled: cz || !1 === pz("showFog"),
-            className: iz()({
-              SettingBoxWarning: Iz
+            circleInfoText: ZD("settingsMenu:fogChunkDistanceInfo"),
+            disabled: GD || !1 === BD("showFog"),
+            className: iD()({
+              SettingBoxWarning: uD
             })
-          }), Iz && (0, Oz.jsx)("div", {
+          }), uD && (0, SD.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: Rz("settingsMenu:fogChunkDistanceInfo")
+            children: ZD("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !Qu.x && (0, Oz.jsx)(Nz.b, {
-          label: Rz(Gz ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !Gz && Kz.disableTexAtlas,
-          onClick: zz => {
-            vz.e.setClientEscMenuOptions({
-              disableTexAtlas: zz
+        }), !WC.q && (0, SD.jsx)(OD.e, {
+          label: ZD(aD ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !aD && oD.disableTexAtlas,
+          onClick: DD => {
+            PD.d.setClientEscMenuOptions({
+              disableTexAtlas: DD
             })
           },
-          circleInfoText: Rz("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: Gz
-        }), (0, Oz.jsx)(Nz.f, {
-          name: Rz("settingsMenu:fieldOfView"),
+          circleInfoText: ZD("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: aD
+        }), (0, SD.jsx)(OD.i, {
+          name: ZD("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: Kz.cameraFOV,
-          onChange: zz => {
-            vz.e.setClientEscMenuOptions({
-              cameraFOV: zz
+          initValue: oD.cameraFOV,
+          onChange: DD => {
+            PD.d.setClientEscMenuOptions({
+              cameraFOV: DD
             })
           }
-        }), (0, Oz.jsx)(Nz.b, {
-          label: Rz("settingsMenu:disableViewBobbing"),
-          checked: Kz.disableBobbing,
-          onClick: zz => {
-            vz.e.setClientEscMenuOptions({
-              disableBobbing: zz
+        }), (0, SD.jsx)(OD.e, {
+          label: ZD("settingsMenu:disableViewBobbing"),
+          checked: oD.disableBobbing,
+          onClick: DD => {
+            PD.d.setClientEscMenuOptions({
+              disableBobbing: DD
             })
           },
-          circleInfoText: Rz("settingsMenu:disableViewBobbingInfo")
-        }), (0, Oz.jsx)(Nz.b, {
-          label: Rz("settingsMenu:antiAliasing"),
-          checked: Kz.antiAliasing,
-          onClick: zz => {
-            qz({
-              antiAliasing: zz
-            }), (0, Yu.i)("antiAliasing"), vz.e.setClientEscMenuOptions({
-              antiAliasing: zz
+          circleInfoText: ZD("settingsMenu:disableViewBobbingInfo")
+        }), (0, SD.jsx)(OD.e, {
+          label: ZD("settingsMenu:antiAliasing"),
+          checked: oD.antiAliasing,
+          onClick: DD => {
+            lD({
+              antiAliasing: DD
+            }), (0, AC.g)("antiAliasing"), PD.d.setClientEscMenuOptions({
+              antiAliasing: DD
             })
           },
-          circleInfoText: Rz("settingsMenu:antiAliasingInfo")
-        }), (0, Oz.jsx)(Nz.f, {
-          name: Rz("settingsMenu:pixelScale"),
+          circleInfoText: ZD("settingsMenu:antiAliasingInfo")
+        }), (0, SD.jsx)(OD.i, {
+          name: ZD("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (tz = Kz.pixelScale) && void 0 !== tz ? tz : 1,
-          onChange: zz => {
-            (zz !== vz.e.get("clientEscMenuOptions").pixelScale || (0, zb.q)()) && (0, Yu.i)("pixelScale"), vz.e.setClientEscMenuOptions({
-              pixelScale: zz
+          initValue: null !== (QD = oD.pixelScale) && void 0 !== QD ? QD : 1,
+          onChange: DD => {
+            (DD !== PD.d.get("clientEscMenuOptions").pixelScale || (0, Dc.r)()) && (0, AC.g)("pixelScale"), PD.d.setClientEscMenuOptions({
+              pixelScale: DD
             })
           },
-          circleInfoText: Rz("settingsMenu:pixelScaleInfo"),
-          format: zz => `${zz}x`
-        }), (0, Oz.jsx)(Nz.b, {
-          label: Rz("settingsMenu:pixelSmoothing"),
-          checked: Kz.pixelSmoothing,
-          onClick: zz => {
-            vz.e.setClientEscMenuOptions({
-              pixelSmoothing: zz
+          circleInfoText: ZD("settingsMenu:pixelScaleInfo"),
+          format: DD => `${DD}x`
+        }), (0, SD.jsx)(OD.e, {
+          label: ZD("settingsMenu:pixelSmoothing"),
+          checked: oD.pixelSmoothing,
+          onClick: DD => {
+            PD.d.setClientEscMenuOptions({
+              pixelSmoothing: DD
             })
           },
-          circleInfoText: Rz("settingsMenu:pixelSmoothingInfo")
-        }), Qu.x && (0, Oz.jsx)(Nz.b, {
-          label: Rz("settingsMenu:distantNametags"),
-          checked: (0, ku.c)(),
-          onClick: zz => {
-            vz.e.set({
-              showDistantNametags: zz
+          circleInfoText: ZD("settingsMenu:pixelSmoothingInfo")
+        }), WC.q && (0, SD.jsx)(OD.e, {
+          label: ZD("settingsMenu:distantNametags"),
+          checked: (0, FC.e)(),
+          onClick: DD => {
+            PD.d.set({
+              showDistantNametags: DD
             })
           },
-          circleInfoText: Rz("settingsMenu:distantNametagsInfo")
-        }), (0, Oz.jsx)(Nz.b, {
-          label: Rz(Pz.translationKey),
-          checked: Pz.checked,
-          onClick: zz => {
-            qz({
-              useWebGpu: zz
-            }), vz.e.setClientEscMenuOptions({
-              useWebGpu: zz
+          circleInfoText: ZD("settingsMenu:distantNametagsInfo")
+        }), (0, SD.jsx)(OD.e, {
+          label: ZD(KD.translationKey),
+          checked: KD.checked,
+          onClick: DD => {
+            lD({
+              useWebGpu: DD
+            }), PD.d.setClientEscMenuOptions({
+              useWebGpu: DD
             })
           },
-          circleInfoText: Rz("settingsMenu:newWebGpuInfo"),
-          disabled: Pz.disabled
+          circleInfoText: ZD("settingsMenu:newWebGpuInfo"),
+          disabled: KD.disabled
         })]
       })
     }
-    var Eb = bz(4185),
-      nb = bz(8539),
-      ib = bz(8920),
-      lb = bz(8546),
-      Mb = bz(8928);
-    const tb = {
+    var Ic = cD(4213),
+      pc = cD(8564),
+      ic = cD(8986),
+      fc = cD(8574),
+      bc = cD(8991);
+    const Qc = {
         color: 16777215,
         name: "white"
       },
-      Hb = {
+      wc = {
         color: 0,
         name: "black"
       },
-      Ob = [tb, {
+      Sc = [Qc, {
         color: 5046092,
         name: "green"
       }, {
@@ -1454,73 +1454,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, Hb],
-      pb = [Hb, tb];
+      }, wc],
+      Bc = [wc, Qc];
 
-    function db(zz) {
-      return `${zz} px`
+    function yc(DD) {
+      return `${DD} px`
     }
 
-    function Fb(zz) {
-      return `${zz}%`
+    function Mc(DD) {
+      return `${DD}%`
     }
 
-    function Zb(zz) {
+    function tc(DD) {
       let {
-        label: uz,
-        value: bz,
-        swatches: Ez,
-        onChange: nz
-      } = zz;
+        label: CD,
+        value: cD,
+        swatches: ID,
+        onChange: pD
+      } = DD;
       const {
-        t: Mz
-      } = (0, lz.F)(), tz = !Ez.some((zz => zz.color === bz));
-      return (0, Oz.jsxs)("div", {
+        t: bD
+      } = (0, fD.F)(), QD = !ID.some((DD => DD.color === cD));
+      return (0, SD.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, Oz.jsx)("div", {
+        children: [(0, SD.jsx)("div", {
           className: "SliderText",
-          children: uz
-        }), (0, Oz.jsxs)("div", {
+          children: CD
+        }), (0, SD.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": uz,
-          children: [Ez.map((zz => {
+          "aria-label": CD,
+          children: [ID.map((DD => {
             let {
-              color: uz,
-              name: Ez
-            } = zz;
-            return (0, Oz.jsx)("button", {
+              color: CD,
+              name: ID
+            } = DD;
+            return (0, SD.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": uz === bz,
-              "aria-label": Mz(`crosshairSettings:color_${Ez}`),
+              "aria-checked": CD === cD,
+              "aria-label": bD(`crosshairSettings:color_${ID}`),
               "data-pad-focusable": !0,
-              className: iz()("CrosshairSwatch", {
-                Selected: uz === bz
+              className: iD()("CrosshairSwatch", {
+                Selected: CD === cD
               }),
               style: {
-                background: (0, Mb.m)(uz)
+                background: (0, bc.o)(CD)
               },
               onClick: () => {
-                nz(uz)
+                pD(CD)
               }
-            }, uz)
-          })), (0, Oz.jsx)("label", {
-            className: iz()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: tz
+            }, CD)
+          })), (0, SD.jsx)("label", {
+            className: iD()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: QD
             }),
-            style: tz ? {
-              background: (0, Mb.m)(bz)
+            style: QD ? {
+              background: (0, bc.o)(cD)
             } : void 0,
-            title: Mz("crosshairSettings:customColor"),
+            title: bD("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, Oz.jsx)("input", {
+            children: (0, SD.jsx)("input", {
               type: "color",
-              "aria-label": Mz("crosshairSettings:customColor"),
-              value: (0, Mb.m)(bz),
-              onChange: zz => {
-                const uz = (0, Mb.p)(zz.target.value);
-                null !== uz && nz(uz)
+              "aria-label": bD("crosshairSettings:customColor"),
+              value: (0, bc.o)(cD),
+              onChange: DD => {
+                const CD = (0, bc.u)(DD.target.value);
+                null !== CD && pD(CD)
               }
             })
           })]
@@ -1528,119 +1528,119 @@ export const modules = {
       })
     }
 
-    function Rb(zz) {
+    function Zc(DD) {
       let {
-        settings: uz,
-        onChange: bz
-      } = zz;
+        settings: CD,
+        onChange: cD
+      } = DD;
       const {
-        t: Ez
-      } = (0, lz.F)(), nz = (zz, Ez) => {
-        bz((0, Mb.u)(uz, zz, Ez))
-      }, iz = function(zz, bz) {
-        let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : db;
+        t: ID
+      } = (0, fD.F)(), pD = (DD, ID) => {
+        cD((0, bc.A)(CD, DD, ID))
+      }, iD = function(DD, cD) {
+        let ID = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : yc;
         const {
-          min: iz,
-          max: lz,
-          step: Mz
-        } = Mb.b[zz];
-        return (0, Oz.jsx)(Nz.f, {
-          name: bz,
-          min: iz,
-          max: lz,
-          step: Mz,
-          initValue: uz[zz],
-          format: Ez,
-          onChange: uz => {
-            nz(zz, uz)
+          min: iD,
+          max: fD,
+          step: bD
+        } = bc.e[DD];
+        return (0, SD.jsx)(OD.i, {
+          name: cD,
+          min: iD,
+          max: fD,
+          step: bD,
+          initValue: CD[DD],
+          format: ID,
+          onChange: CD => {
+            pD(DD, CD)
           }
-        }, zz)
-      }, Mz = ["lines", "dot", "circle"].filter((zz => uz[zz])), tz = (zz, bz, Ez) => (0, Oz.jsx)(Nz.b, {
-        label: bz,
-        checked: uz[zz],
-        disabled: 1 === Mz.length && Mz[0] === zz,
-        circleInfoText: Ez,
-        onClick: uz => {
-          nz(zz, uz)
+        }, DD)
+      }, bD = ["lines", "dot", "circle"].filter((DD => CD[DD])), QD = (DD, cD, ID) => (0, SD.jsx)(OD.e, {
+        label: cD,
+        checked: CD[DD],
+        disabled: 1 === bD.length && bD[0] === DD,
+        circleInfoText: ID,
+        onClick: CD => {
+          pD(DD, CD)
         }
-      }, zz), Hz = "shapes" === uz.style;
-      return (0, Oz.jsxs)(Oz.Fragment, {
-        children: [(0, Oz.jsx)(Nz.e, {
-          label: Ez("crosshairSettings:style"),
+      }, DD), wD = "shapes" === CD.style;
+      return (0, SD.jsxs)(SD.Fragment, {
+        children: [(0, SD.jsx)(OD.g, {
+          label: ID("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: Ez("crosshairSettings:styleClassic")
+            label: ID("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: Ez("crosshairSettings:styleShapes")
+            label: ID("crosshairSettings:styleShapes")
           }],
-          value: uz.style,
-          onChange: zz => {
-            nz("style", zz)
+          value: CD.style,
+          onChange: DD => {
+            pD("style", DD)
           }
-        }), (0, Oz.jsx)(Zb, {
-          label: Ez("crosshairSettings:color"),
-          value: uz.color,
-          swatches: Ob,
-          onChange: zz => {
-            nz("color", zz)
+        }), (0, SD.jsx)(tc, {
+          label: ID("crosshairSettings:color"),
+          value: CD.color,
+          swatches: Sc,
+          onChange: DD => {
+            pD("color", DD)
           }
-        }), iz("opacity", Ez("crosshairSettings:opacity"), Fb), !Hz && iz("size", Ez("crosshairSettings:size"), Fb), Hz && (0, Oz.jsxs)("div", {
+        }), iD("opacity", ID("crosshairSettings:opacity"), Mc), !wD && iD("size", ID("crosshairSettings:size"), Mc), wD && (0, SD.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [tz("lines", Ez("crosshairSettings:lines")), uz.lines && iz("lineLength", Ez("crosshairSettings:lineLength")), uz.lines && iz("lineThickness", Ez("crosshairSettings:lineThickness")), uz.lines && iz("gap", Ez("crosshairSettings:gap")), uz.lines && tz("tStyle", Ez("crosshairSettings:tStyle"))]
-        }), Hz && (0, Oz.jsxs)("div", {
+          children: [QD("lines", ID("crosshairSettings:lines")), CD.lines && iD("lineLength", ID("crosshairSettings:lineLength")), CD.lines && iD("lineThickness", ID("crosshairSettings:lineThickness")), CD.lines && iD("gap", ID("crosshairSettings:gap")), CD.lines && QD("tStyle", ID("crosshairSettings:tStyle"))]
+        }), wD && (0, SD.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [tz("dot", Ez("crosshairSettings:dot")), uz.dot && iz("dotSize", Ez("crosshairSettings:dotSize"))]
-        }), Hz && (0, Oz.jsxs)("div", {
+          children: [QD("dot", ID("crosshairSettings:dot")), CD.dot && iD("dotSize", ID("crosshairSettings:dotSize"))]
+        }), wD && (0, SD.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [tz("circle", Ez("crosshairSettings:circle")), uz.circle && iz("circleRadius", Ez("crosshairSettings:circleRadius")), uz.circle && iz("circleThickness", Ez("crosshairSettings:circleThickness"))]
-        }), (0, Oz.jsxs)("div", {
+          children: [QD("circle", ID("crosshairSettings:circle")), CD.circle && iD("circleRadius", ID("crosshairSettings:circleRadius")), CD.circle && iD("circleThickness", ID("crosshairSettings:circleThickness"))]
+        }), (0, SD.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [iz("outline", Ez("crosshairSettings:outline"), (zz => zz > 0 ? db(zz) : Ez("crosshairSettings:off"))), uz.outline > 0 && (0, Oz.jsx)(Zb, {
-            label: Ez("crosshairSettings:outlineColor"),
-            value: uz.outlineColor,
-            swatches: pb,
-            onChange: zz => {
-              nz("outlineColor", zz)
+          children: [iD("outline", ID("crosshairSettings:outline"), (DD => DD > 0 ? yc(DD) : ID("crosshairSettings:off"))), CD.outline > 0 && (0, SD.jsx)(tc, {
+            label: ID("crosshairSettings:outlineColor"),
+            value: CD.outlineColor,
+            swatches: Bc,
+            onChange: DD => {
+              pD("outlineColor", DD)
             }
           })]
-        }), tz("growOnClick", Ez("crosshairSettings:growOnClick")), Hz && tz("forGuns", Ez("crosshairSettings:forGuns"), Ez("crosshairSettings:forGunsInfo"))]
+        }), QD("growOnClick", ID("crosshairSettings:growOnClick")), wD && QD("forGuns", ID("crosshairSettings:forGuns"), ID("crosshairSettings:forGunsInfo"))]
       })
     }
-    var Kb = bz(79),
-      wb = bz(1266),
-      Xb = bz(8936),
-      fb = bz(8938),
-      sb = bz(8942),
-      rb = bz(8947);
-    const ob = ["sky", "grass", "stone", "sand", "snow", "night"],
-      Nb = "4rem";
+    var oc = cD(62),
+      vc = cD(1280),
+      Nc = cD(8998),
+      gc = cD(9003),
+      Xc = cD(9012),
+      mc = cD(9014);
+    const nc = ["sky", "grass", "stone", "sand", "snow", "night"],
+      Oc = "4rem";
 
-    function vb(zz) {
+    function Pc(DD) {
       return {
-        backgroundImage: `url(${zz})`,
-        backgroundSize: `${Nb} ${Nb}`,
+        backgroundImage: `url(${DD})`,
+        backgroundSize: `${Oc} ${Oc}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function xb(zz) {
+    function Hc(DD) {
       return {
         ...(() => {
-          switch (zz) {
+          switch (DD) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return vb(Xb);
+              return Pc(Nc);
             case "stone":
-              return vb(fb);
+              return Pc(gc);
             case "sand":
-              return vb(sb);
+              return Pc(Xc);
             case "snow":
-              return vb(rb);
+              return Pc(mc);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1651,21 +1651,21 @@ export const modules = {
       }
     }
 
-    function Jb(zz) {
+    function Uc(DD) {
       return Object.freeze({
-        ...Mb.f,
+        ...bc.h,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...zz
+        ...DD
       })
     }
-    const Ab = [{
+    const xc = [{
         id: "default",
-        settings: Mb.f
+        settings: bc.h
       }, {
         id: "cross",
-        settings: Jb({
+        settings: Uc({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1674,7 +1674,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: Jb({
+        settings: Uc({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1685,13 +1685,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: Jb({
+        settings: Uc({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: Jb({
+        settings: Uc({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1700,7 +1700,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: Jb({
+        settings: Uc({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -1710,7 +1710,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: Jb({
+        settings: Uc({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -1719,7 +1719,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: Jb({
+        settings: Uc({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -1727,571 +1727,571 @@ export const modules = {
           outline: 1.5
         })
       }],
-      Tb = ["growOnClick", "forGuns"];
-    var Lb = bz(8954);
+      qc = ["growOnClick", "forGuns"];
+    var Jc = cD(9021);
 
-    function Pb(zz) {
+    function Kc(DD) {
       let {
-        label: uz,
-        selected: bz,
-        onClick: Ez,
-        className: nz,
-        style: lz,
-        children: Mz
-      } = zz;
-      return (0, Oz.jsx)("button", {
+        label: CD,
+        selected: cD,
+        onClick: ID,
+        className: pD,
+        style: fD,
+        children: bD
+      } = DD;
+      return (0, SD.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": bz,
-        title: uz,
-        "aria-label": uz,
+        "aria-checked": cD,
+        title: CD,
+        "aria-label": CD,
         "data-pad-focusable": !0,
-        className: iz()("CrosshairBackdropSwatch", nz, {
-          Selected: bz
+        className: iD()("CrosshairBackdropSwatch", pD, {
+          Selected: cD
         }),
-        style: lz,
-        onClick: Ez,
-        children: Mz
+        style: fD,
+        onClick: ID,
+        children: bD
       })
     }
 
-    function Gb(zz) {
+    function ac(DD) {
       let {
-        backdrop: uz,
-        onChange: bz,
-        game: Ez
-      } = zz;
+        backdrop: CD,
+        onChange: cD,
+        game: ID
+      } = DD;
       const {
-        t: nz
-      } = (0, lz.F)();
-      return (0, Oz.jsxs)("div", {
+        t: pD
+      } = (0, fD.F)();
+      return (0, SD.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": nz("crosshairSettings:background"),
-        children: [Ez && (0, Oz.jsx)(Pb, {
-          label: nz("crosshairSettings:bg_game"),
-          selected: Ez.selected,
-          onClick: Ez.onSelect,
+        "aria-label": pD("crosshairSettings:background"),
+        children: [ID && (0, SD.jsx)(Kc, {
+          label: pD("crosshairSettings:bg_game"),
+          selected: ID.selected,
+          onClick: ID.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, Oz.jsx)(Mz.c, {
+          children: (0, SD.jsx)(bD.c, {
             name: "cube"
           })
-        }), ob.map((zz => (0, Oz.jsx)(Pb, {
-          label: nz(`crosshairSettings:bg_${zz}`),
-          selected: !(null !== Ez && void 0 !== Ez && Ez.selected) && zz === uz,
-          style: xb(zz),
+        }), nc.map((DD => (0, SD.jsx)(Kc, {
+          label: pD(`crosshairSettings:bg_${DD}`),
+          selected: !(null !== ID && void 0 !== ID && ID.selected) && DD === CD,
+          style: Hc(DD),
           onClick: () => {
-            bz(zz)
+            cD(DD)
           }
-        }, zz)))]
+        }, DD)))]
       })
     }
 
-    function ab(zz) {
+    function Vc(DD) {
       let {
-        settings: uz,
-        touch: bz,
-        backdrop: Ez,
-        onChange: nz
-      } = zz;
+        settings: CD,
+        touch: cD,
+        backdrop: ID,
+        onChange: pD
+      } = DD;
       const {
-        t: Mz
-      } = (0, lz.F)(), tz = function(zz) {
-        var uz;
-        return null !== (uz = Ab.find((uz => (0, Mb.t)(uz.settings, zz, Tb)))) && void 0 !== uz ? uz : null
-      }(uz);
-      return (0, Oz.jsx)("div", {
+        t: bD
+      } = (0, fD.F)(), QD = function(DD) {
+        var CD;
+        return null !== (CD = xc.find((CD => (0, bc.w)(CD.settings, DD, qc)))) && void 0 !== CD ? CD : null
+      }(CD);
+      return (0, SD.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": Mz("crosshairSettings:presets"),
-        children: Ab.map((zz => {
-          const lz = (null === tz || void 0 === tz ? void 0 : tz.id) === zz.id;
-          return (0, Oz.jsxs)("button", {
+        "aria-label": bD("crosshairSettings:presets"),
+        children: xc.map((DD => {
+          const fD = (null === QD || void 0 === QD ? void 0 : QD.id) === DD.id;
+          return (0, SD.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": lz,
+            "aria-checked": fD,
             "data-pad-focusable": !0,
-            className: iz()("CrosshairPreset", {
-              Selected: lz
+            className: iD()("CrosshairPreset", {
+              Selected: fD
             }),
             onClick: () => {
-              nz(function(zz, uz) {
+              pD(function(DD, CD) {
                 return {
-                  ...uz.settings,
-                  growOnClick: zz.growOnClick,
-                  forGuns: zz.forGuns
+                  ...CD.settings,
+                  growOnClick: DD.growOnClick,
+                  forGuns: DD.forGuns
                 }
-              }(uz, zz))
+              }(CD, DD))
             },
-            children: [(0, Oz.jsx)("div", {
+            children: [(0, SD.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: xb(Ez),
-              children: (0, Oz.jsx)(Lb.c, {
-                settings: zz.settings,
-                touch: bz,
+              style: Hc(ID),
+              children: (0, SD.jsx)(Jc.e, {
+                settings: DD.settings,
+                touch: cD,
                 inPreview: !0
               })
-            }), (0, Oz.jsx)("div", {
+            }), (0, SD.jsx)("div", {
               className: "CrosshairPresetName",
-              children: Mz(`crosshairSettings:preset_${zz.id}`)
+              children: bD(`crosshairSettings:preset_${DD.id}`)
             })]
-          }, zz.id)
+          }, DD.id)
         }))
       })
     }
-    var Vb = bz(1619);
+    var zc = cD(1647);
 
-    function mb(zz, uz) {
-      const [bz, nz] = (0, Ez.useState)(!1), iz = () => {
-        nz(!1)
-      }, [lz, Mz] = (0, Ez.useState)(!1), tz = (0, Ez.useRef)({
-        growOnClick: zz.growOnClick,
-        forGuns: zz.forGuns
+    function jc(DD, CD) {
+      const [cD, pD] = (0, ID.useState)(!1), iD = () => {
+        pD(!1)
+      }, [fD, bD] = (0, ID.useState)(!1), QD = (0, ID.useRef)({
+        growOnClick: DD.growOnClick,
+        forGuns: DD.forGuns
       });
-      (0, Ez.useEffect)((() => {
-        const uz = tz.current;
-        tz.current = {
-          growOnClick: zz.growOnClick,
-          forGuns: zz.forGuns
-        }, (zz.growOnClick && !uz.growOnClick || zz.forGuns && !uz.forGuns) && Mz(!0)
-      }), [zz.growOnClick, zz.forGuns]), (0, Ez.useEffect)((() => {
-        if (!lz) return;
-        const zz = setTimeout((() => {
-          Mz(!1)
+      (0, ID.useEffect)((() => {
+        const CD = QD.current;
+        QD.current = {
+          growOnClick: DD.growOnClick,
+          forGuns: DD.forGuns
+        }, (DD.growOnClick && !CD.growOnClick || DD.forGuns && !CD.forGuns) && bD(!0)
+      }), [DD.growOnClick, DD.forGuns]), (0, ID.useEffect)((() => {
+        if (!fD) return;
+        const DD = setTimeout((() => {
+          bD(!1)
         }), 600);
         return () => {
-          clearTimeout(zz)
+          clearTimeout(DD)
         }
-      }), [lz]);
-      const Hz = bz || lz;
+      }), [fD]);
+      const wD = cD || fD;
       return {
         view: {
-          pressed: Hz,
-          spread: Hz && zz.forGuns && !zz.growOnClick ? 6 : 0
+          pressed: wD,
+          spread: wD && DD.forGuns && !DD.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: zz => {
-            !zz.target.closest(uz) && (0, Vb.c)(zz.currentTarget, zz.pointerId) && nz(!0)
+          onPointerDown: DD => {
+            !DD.target.closest(CD) && (0, zc.e)(DD.currentTarget, DD.pointerId) && pD(!0)
           },
-          onPointerUp: iz,
-          onPointerCancel: iz,
-          onLostPointerCapture: iz
+          onPointerUp: iD,
+          onPointerCancel: iD,
+          onLostPointerCapture: iD
         }
       }
     }
 
-    function qb(zz) {
+    function lc(DD) {
       let {
-        settings: uz,
-        touch: bz,
-        backdrop: Ez,
-        className: nz,
-        children: lz,
-        label: Mz
-      } = zz;
-      const tz = mb(uz, ".CrosshairStageControls");
-      return (0, Oz.jsxs)("div", {
-        className: iz()("CrosshairStage", nz),
-        style: xb(Ez),
-        ...tz.handlers,
-        children: [(0, Oz.jsx)("div", {
+        settings: CD,
+        touch: cD,
+        backdrop: ID,
+        className: pD,
+        children: fD,
+        label: bD
+      } = DD;
+      const QD = jc(CD, ".CrosshairStageControls");
+      return (0, SD.jsxs)("div", {
+        className: iD()("CrosshairStage", pD),
+        style: Hc(ID),
+        ...QD.handlers,
+        children: [(0, SD.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": Mz,
-          children: (0, Oz.jsx)(Lb.c, {
-            settings: uz,
-            touch: bz,
+          "aria-label": bD,
+          children: (0, SD.jsx)(Jc.e, {
+            settings: CD,
+            touch: cD,
             inPreview: !0,
-            ...tz.view
+            ...QD.view
           })
-        }), lz]
+        }), fD]
       })
     }
-    const hb = "crosshairFullScreen";
+    const Lc = "crosshairFullScreen";
 
-    function Ub(zz) {
+    function Tc(DD) {
       let {
-        settings: uz,
-        touch: bz,
-        backdrop: nz,
-        onBackdrop: tz,
-        inGame: Hz,
-        onChange: pz,
-        onClose: dz
-      } = zz;
+        settings: CD,
+        touch: cD,
+        backdrop: pD,
+        onBackdrop: QD,
+        inGame: wD,
+        onChange: BD,
+        onClose: yD
+      } = DD;
       const {
-        t: Fz
-      } = (0, lz.F)(), Zz = (0, Ez.useRef)(null);
-      (0, wb.u)("popup", Zz, dz),
-      function(zz) {
-        const uz = (0, Ez.useRef)(zz);
-        uz.current = zz, (0, Ez.useEffect)((() => {
+        t: MD
+      } = (0, fD.F)(), tD = (0, ID.useRef)(null);
+      (0, vc.t)("popup", tD, yD),
+      function(DD) {
+        const CD = (0, ID.useRef)(DD);
+        CD.current = DD, (0, ID.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [hb]: !0
+            [Lc]: !0
           }, "");
-          let zz = !1;
-          const bz = () => {
-            zz = !0, uz.current()
+          let DD = !1;
+          const cD = () => {
+            DD = !0, CD.current()
           };
-          return window.addEventListener("popstate", bz), () => {
-            var uz;
-            window.removeEventListener("popstate", bz), !zz && null !== (uz = window.history.state) && void 0 !== uz && uz[hb] && window.history.back()
+          return window.addEventListener("popstate", cD), () => {
+            var CD;
+            window.removeEventListener("popstate", cD), !DD && null !== (CD = window.history.state) && void 0 !== CD && CD[Lc] && window.history.back()
           }
         }), [])
-      }(dz);
-      const Rz = (0, Ez.useRef)(dz);
-      Rz.current = dz, (0, Ez.useEffect)((() => {
-        function zz(zz) {
-          "Escape" === zz.key && (zz.stopPropagation(), Rz.current())
+      }(yD);
+      const ZD = (0, ID.useRef)(yD);
+      ZD.current = yD, (0, ID.useEffect)((() => {
+        function DD(DD) {
+          "Escape" === DD.key && (DD.stopPropagation(), ZD.current())
         }
-        return window.addEventListener("keydown", zz, !0), () => {
-          window.removeEventListener("keydown", zz, !0)
+        return window.addEventListener("keydown", DD, !0), () => {
+          window.removeEventListener("keydown", DD, !0)
         }
       }), []);
-      const wz = mb(uz, ".CrosshairFullScreenPanel"),
-        [Xz, fz] = (0, Ez.useState)(!0),
-        sz = Xz && Hz;
-      (0, Ez.useEffect)((() => {
-        if (sz) return vz.e.set({
+      const vD = jc(CD, ".CrosshairFullScreenPanel"),
+        [ND, gD] = (0, ID.useState)(!0),
+        XD = ND && wD;
+      (0, ID.useEffect)((() => {
+        if (XD) return PD.d.set({
           crosshairGameView: !0
         }), () => {
-          vz.e.set({
+          PD.d.set({
             crosshairGameView: !1
           })
         }
-      }), [sz]);
-      const [rz, oz] = (0, Ez.useState)(!0);
-      return (0, Kb.createPortal)((0, Oz.jsxs)("div", {
-        ref: Zz,
+      }), [XD]);
+      const [mD, nD] = (0, ID.useState)(!0);
+      return (0, oc.createPortal)((0, SD.jsxs)("div", {
+        ref: tD,
         className: "CrosshairFullScreen",
-        style: sz ? void 0 : xb(nz),
-        ...wz.handlers,
-        children: [(0, Oz.jsx)(Lb.c, {
-          settings: uz,
-          touch: bz,
+        style: XD ? void 0 : Hc(pD),
+        ...vD.handlers,
+        children: [(0, SD.jsx)(Jc.e, {
+          settings: CD,
+          touch: cD,
           inEditor: !0,
-          ...wz.view
-        }), (0, Oz.jsxs)("div", {
-          className: iz()("CrosshairFullScreenPanel", {
-            Collapsed: !rz
+          ...vD.view
+        }), (0, SD.jsxs)("div", {
+          className: iD()("CrosshairFullScreenPanel", {
+            Collapsed: !mD
           }),
-          children: [(0, Oz.jsxs)("div", {
+          children: [(0, SD.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, Oz.jsx)(Gb, {
-              backdrop: nz,
-              onChange: zz => {
-                fz(!1), tz(zz)
+            children: [(0, SD.jsx)(ac, {
+              backdrop: pD,
+              onChange: DD => {
+                gD(!1), QD(DD)
               },
-              game: Hz ? {
-                selected: sz,
+              game: wD ? {
+                selected: XD,
                 onSelect: () => {
-                  fz(!0)
+                  gD(!0)
                 }
               } : void 0
-            }), (0, Oz.jsx)(Kz.V, {
+            }), (0, SD.jsx)(oD.P, {
               className: "CrosshairPanelToggle",
-              ariaLabel: Fz(rz ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: MD(mD ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                oz(!rz)
+                nD(!mD)
               },
-              children: (0, Oz.jsx)(Mz.c, {
-                name: rz ? "caret-up" : "pen"
+              children: (0, SD.jsx)(bD.c, {
+                name: mD ? "caret-up" : "pen"
               })
-            }), (0, Oz.jsx)(Kz.f, {
+            }), (0, SD.jsx)(oD.i, {
               className: "CrosshairFullScreenDone",
-              onClick: dz,
+              onClick: yD,
               padDefaultFocus: !0,
-              children: Fz("crosshairSettings:done")
+              children: MD("crosshairSettings:done")
             })]
-          }), rz && (0, Oz.jsxs)("div", {
+          }), mD && (0, SD.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, Oz.jsx)(ab, {
-              settings: uz,
-              touch: bz,
-              backdrop: nz,
-              onChange: pz
-            }), (0, Oz.jsx)(Rb, {
-              settings: uz,
-              onChange: pz
+            children: [(0, SD.jsx)(Vc, {
+              settings: CD,
+              touch: cD,
+              backdrop: pD,
+              onChange: BD
+            }), (0, SD.jsx)(Zc, {
+              settings: CD,
+              onChange: BD
             })]
           })]
         })]
       }), document.body)
     }
-    var cb = bz(2523),
-      gb = bz(8962);
+    var Gc = cD(2551),
+      Rc = cD(9028);
 
-    function Sb(zz) {
+    function kc(DD) {
       let {
-        settings: uz,
-        onChange: bz
-      } = zz;
+        settings: CD,
+        onChange: cD
+      } = DD;
       const {
-        t: nz
-      } = (0, lz.F)(), tz = (0, gb.h)(uz), [Hz, pz] = (0, cb.e)(), [dz, Fz] = (0, Ez.useState)(!1), Zz = (0, Ez.useRef)(null), [Rz, wz] = (0, cb.e)(), [Xz, fz] = (0, Ez.useState)(!1);
-      return (0, Oz.jsxs)("div", {
+        t: pD
+      } = (0, fD.F)(), QD = (0, Rc.g)(CD), [wD, BD] = (0, Gc.h)(), [yD, MD] = (0, ID.useState)(!1), tD = (0, ID.useRef)(null), [ZD, vD] = (0, Gc.h)(), [ND, gD] = (0, ID.useState)(!1);
+      return (0, SD.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, Oz.jsxs)("div", {
+        children: [(0, SD.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, Oz.jsxs)(Kz.V, {
-            className: iz()("CrosshairCopy", {
-              ActiveSecondaryButton: Hz
+          children: [(0, SD.jsxs)(oD.P, {
+            className: iD()("CrosshairCopy", {
+              ActiveSecondaryButton: wD
             }),
             onClick: () => {
-              (0, cb.d)(tz, {
+              (0, Gc.d)(QD, {
                 useShareSheet: !1,
-                onOutcome: zz => {
-                  Fz("failed" === zz), "copied" === zz && pz()
+                onOutcome: DD => {
+                  MD("failed" === DD), "copied" === DD && BD()
                 }
               })
             },
-            children: [(0, Oz.jsx)(Mz.c, {
-              name: Hz ? "check" : "copy"
-            }), " ", nz(Hz ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, Oz.jsx)(rz.d, {
+            children: [(0, SD.jsx)(bD.c, {
+              name: wD ? "check" : "copy"
+            }), " ", pD(wD ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, SD.jsx)(mD.b, {
             className: "CrosshairPaste",
-            domRef: Zz,
-            ariaLabel: nz("crosshairSettings:paste"),
-            placeholderText: nz("crosshairSettings:paste"),
-            onValueChange: zz => {
-              const uz = (0, gb.g)(zz);
-              fz(!uz && zz.trim().length >= gb.e), uz && (bz(uz), Zz.current.value = "", wz())
+            domRef: tD,
+            ariaLabel: pD("crosshairSettings:paste"),
+            placeholderText: pD("crosshairSettings:paste"),
+            onValueChange: DD => {
+              const CD = (0, Rc.e)(DD);
+              gD(!CD && DD.trim().length >= Rc.d), CD && (cD(CD), tD.current.value = "", vD())
             }
           })]
-        }), dz && (0, Oz.jsx)("input", {
+        }), yD && (0, SD.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: tz,
-          "aria-label": nz("crosshairSettings:copy"),
-          onFocus: zz => {
-            zz.currentTarget.select()
+          value: QD,
+          "aria-label": pD("crosshairSettings:copy"),
+          onFocus: DD => {
+            DD.currentTarget.select()
           }
-        }), (0, Oz.jsxs)("div", {
+        }), (0, SD.jsxs)("div", {
           "aria-live": "polite",
-          children: [Xz && (0, Oz.jsx)("div", {
+          children: [ND && (0, SD.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: nz("crosshairSettings:pasteInvalid")
-          }), Rz && !Xz && (0, Oz.jsx)("div", {
+            children: pD("crosshairSettings:pasteInvalid")
+          }), ZD && !ND && (0, SD.jsx)("div", {
             className: "CrosshairShareNote",
-            children: nz("crosshairSettings:applied")
+            children: pD("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var yb = bz(8970);
-    let Db = "sky";
+    var dc = cD(9037);
+    let Yc = "sky";
 
-    function Qb(zz) {
+    function Wc(DD) {
       let {
-        showing: uz
-      } = zz;
+        showing: CD
+      } = DD;
       const {
-        t: bz
-      } = (0, lz.F)(), {
-        isTouchScreen: nz,
-        gameState: iz,
-        clientEscMenuOptions: tz
-      } = (0, vz.m)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), Hz = (0, yb.f)(), [pz, dz] = (0, Ez.useState)(Db), Fz = zz => {
-        Db = zz, dz(zz)
-      }, [Zz, Rz] = (0, Ez.useState)(!1);
-      return (0, Ez.useEffect)((() => {
-        uz || Rz(!1)
-      }), [uz]), (0, Oz.jsxs)("div", {
+        t: cD
+      } = (0, fD.F)(), {
+        isTouchScreen: pD,
+        gameState: iD,
+        clientEscMenuOptions: QD
+      } = (0, PD.o)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), wD = (0, dc.h)(), [BD, yD] = (0, ID.useState)(Yc), MD = DD => {
+        Yc = DD, yD(DD)
+      }, [tD, ZD] = (0, ID.useState)(!1);
+      return (0, ID.useEffect)((() => {
+        CD || ZD(!1)
+      }), [CD]), (0, SD.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, Oz.jsx)("div", {
+        children: [(0, SD.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, Oz.jsx)(qb, {
+          children: (0, SD.jsx)(lc, {
             className: "CrosshairPreviewStage",
-            settings: Hz,
-            touch: nz,
-            backdrop: pz,
-            label: bz("crosshairSettings:preview"),
-            children: (0, Oz.jsxs)("div", {
+            settings: wD,
+            touch: pD,
+            backdrop: BD,
+            label: cD("crosshairSettings:preview"),
+            children: (0, SD.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, Oz.jsx)(Gb, {
-                backdrop: pz,
-                onChange: Fz
-              }), (0, Oz.jsxs)(Kz.V, {
+              children: [(0, SD.jsx)(ac, {
+                backdrop: BD,
+                onChange: MD
+              }), (0, SD.jsxs)(oD.P, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  Rz(!0)
+                  ZD(!0)
                 },
-                children: [(0, Oz.jsx)(Mz.c, {
+                children: [(0, SD.jsx)(bD.c, {
                   name: "expand"
-                }), " ", bz("crosshairSettings:fullScreen")]
+                }), " ", cD("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, Oz.jsx)("div", {
+        }), (0, SD.jsx)("div", {
           className: "SettingBox",
-          children: (0, Oz.jsx)(ab, {
-            settings: Hz,
-            touch: nz,
-            backdrop: pz,
-            onChange: yb.d
+          children: (0, SD.jsx)(Vc, {
+            settings: wD,
+            touch: pD,
+            backdrop: BD,
+            onChange: dc.e
           })
-        }), (0, Oz.jsx)(Sb, {
-          settings: Hz,
-          onChange: yb.d
-        }), nz && (0, Oz.jsx)(lb.c, {
-          note: (0, ib.g)(nz, tz.touchActionButtons) ? bz("crosshairSettings:touchNote") : void 0
-        }), (0, Oz.jsx)(Rb, {
-          settings: Hz,
-          onChange: yb.d
-        }), Zz && (0, Oz.jsx)(Ub, {
-          settings: Hz,
-          touch: nz,
-          backdrop: pz,
-          onBackdrop: Fz,
-          inGame: "inGame" === iz,
-          onChange: yb.d,
+        }), (0, SD.jsx)(kc, {
+          settings: wD,
+          onChange: dc.e
+        }), pD && (0, SD.jsx)(fc.b, {
+          note: (0, ic.g)(pD, QD.touchActionButtons) ? cD("crosshairSettings:touchNote") : void 0
+        }), (0, SD.jsx)(Zc, {
+          settings: wD,
+          onChange: dc.e
+        }), tD && (0, SD.jsx)(Tc, {
+          settings: wD,
+          touch: pD,
+          backdrop: BD,
+          onBackdrop: MD,
+          inGame: "inGame" === iD,
+          onChange: dc.e,
           onClose: () => {
-            Rz(!1)
+            ZD(!1)
           }
         })]
       })
     }
-    var Wb = bz(8541),
-      eb = bz(1371),
-      jb = bz(4744),
-      Ib = bz(8979),
-      Bb = bz(1912),
-      Cb = bz(4078),
-      Yb = bz(1920),
-      kb = bz(694);
-    const zE = (0, Ez.memo)((function() {
+    var sc = cD(8572),
+      Ec = cD(1396),
+      ec = cD(4767),
+      uc = cD(9039),
+      hc = cD(1954),
+      rc = cD(4119),
+      Ac = cD(1957),
+      Fc = cD(728);
+    const DI = (0, ID.memo)((function() {
       const {
-        clientEscMenuOptions: zz
-      } = (0, vz.m)(["clientEscMenuOptions"]), {
-        recording: uz,
-        clipping: bz,
-        hasClipBuffer: nz
-      } = (0, Bb.h)("replayRecorder"), lz = (0, Bb.e)("connectedGame", (zz => zz.replay)), Mz = (0, Cb.j)(), tz = !1 === (0, Zz.g)("canRecordReplays");
-      (0, Ez.useEffect)((() => {
-        Xz.gameBridge.send("setRecorderPrefs", {
-          clipping: zz.enableClipping,
-          clipSeconds: zz.clipDurationSeconds
+        clientEscMenuOptions: DD
+      } = (0, PD.o)(["clientEscMenuOptions"]), {
+        recording: CD,
+        clipping: cD,
+        hasClipBuffer: pD
+      } = (0, hc.h)("replayRecorder"), fD = (0, hc.g)("connectedGame", (DD => DD.replay)), bD = (0, rc.o)(), QD = !1 === (0, tD.h)("canRecordReplays");
+      (0, ID.useEffect)((() => {
+        ND.gameBridge.send("setRecorderPrefs", {
+          clipping: DD.enableClipping,
+          clipSeconds: DD.clipDurationSeconds
         })
-      }), [zz.enableClipping, zz.clipDurationSeconds]);
-      const Hz = Mz || lz,
-        pz = !Hz && !tz,
-        dz = uz || pz,
-        Fz = pz,
-        Rz = Fz && bz && !uz;
+      }), [DD.enableClipping, DD.clipDurationSeconds]);
+      const wD = bD || fD,
+        BD = !wD && !QD,
+        yD = CD || BD,
+        MD = BD,
+        ZD = MD && cD && !CD;
 
-      function wz() {
-        dz && Xz.gameBridge.send("toggleRecording", null)
+      function vD() {
+        yD && ND.gameBridge.send("toggleRecording", null)
       }
-      return (0, Oz.jsxs)("div", {
+      return (0, SD.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, Oz.jsxs)("div", {
+        children: [(0, SD.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, Oz.jsx)("div", {
+          children: [(0, SD.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: uz ? (0, Oz.jsxs)(Oz.Fragment, {
-              children: [(0, Oz.jsxs)(Kz.K, {
+            children: CD ? (0, SD.jsxs)(SD.Fragment, {
+              children: [(0, SD.jsxs)(oD.J, {
                 className: "ReplayViewerCategoryButton",
-                onClick: wz,
-                disabled: !dz,
-                children: [(0, Oz.jsx)("span", {
+                onClick: vD,
+                disabled: !yD,
+                children: [(0, SD.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, Oz.jsx)(Yb.e, {
+                }), (0, SD.jsx)(Ac.d, {
                   noaAction: "recordGame"
                 })]
-              }), (0, Oz.jsx)(Ib.d, {
+              }), (0, SD.jsx)(uc.c, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, Oz.jsxs)(Kz.f, {
+            }) : (0, SD.jsxs)(oD.i, {
               className: "ReplayViewerCategoryButton",
-              onClick: wz,
-              disabled: !dz,
-              children: [(0, Oz.jsx)("span", {
+              onClick: vD,
+              disabled: !yD,
+              children: [(0, SD.jsx)("span", {
                 children: "Start Recording"
-              }), (0, Oz.jsx)(Yb.e, {
+              }), (0, SD.jsx)(Ac.d, {
                 noaAction: "recordGame"
               })]
             })
-          }), tz && (0, Oz.jsx)("div", {
+          }), QD && (0, SD.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), Hz && !uz && (0, Oz.jsx)("div", {
+          }), wD && !CD && (0, SD.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, Oz.jsxs)("div", {
+        }), (0, SD.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, Oz.jsx)(Nz.b, {
+          children: [(0, SD.jsx)(OD.e, {
             label: "Enable clipping",
-            checked: zz.enableClipping,
-            disabled: !Fz,
-            onClick: function(zz) {
-              Fz && vz.e.setClientEscMenuOptions({
-                enableClipping: zz
+            checked: DD.enableClipping,
+            disabled: !MD,
+            onClick: function(DD) {
+              MD && PD.d.setClientEscMenuOptions({
+                enableClipping: DD
               })
             },
-            className: iz()({
-              SettingBoxDisabled: !Fz
+            className: iD()({
+              SettingBoxDisabled: !MD
             })
-          }), (0, Oz.jsx)(Nz.f, {
+          }), (0, SD.jsx)(OD.i, {
             name: "Clip duration (seconds)",
-            min: kb.k,
-            max: kb.h,
-            step: kb.c,
-            initValue: zz.clipDurationSeconds,
-            onChange: function(zz) {
-              vz.e.setClientEscMenuOptions({
-                clipDurationSeconds: zz
+            min: Fc.i,
+            max: Fc.h,
+            step: Fc.c,
+            initValue: DD.clipDurationSeconds,
+            onChange: function(DD) {
+              PD.d.setClientEscMenuOptions({
+                clipDurationSeconds: DD
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !Fz || !zz.enableClipping
+            disabled: !MD || !DD.enableClipping
           })]
-        }), (0, Oz.jsxs)("div", {
+        }), (0, SD.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, Oz.jsxs)(Kz.f, {
+          children: [(0, SD.jsxs)(oD.i, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              Rz && Xz.gameBridge.send("saveClip", null)
+              ZD && ND.gameBridge.send("saveClip", null)
             },
-            disabled: !Rz,
-            children: [(0, Oz.jsx)("span", {
+            disabled: !ZD,
+            children: [(0, SD.jsx)("span", {
               children: "Record clip"
-            }), (0, Oz.jsx)(Yb.e, {
+            }), (0, SD.jsx)(Ac.d, {
               noaAction: "recordClip"
             })]
-          }), zz.enableClipping && !nz && Fz && !uz && (0, Oz.jsx)("div", {
+          }), DD.enableClipping && !pD && MD && !CD && (0, SD.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), uz && (0, Oz.jsx)("div", {
+          }), CD && (0, SD.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, Oz.jsxs)("div", {
+        }), (0, SD.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, Oz.jsxs)(Kz.f, {
+          children: [(0, SD.jsxs)(oD.i, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, Cb.i)(!0), vz.e.set({
+              (0, rc.l)(!0), PD.d.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: Mz,
-            children: [(0, Oz.jsx)("span", {
+            disabled: bD,
+            children: [(0, SD.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, Oz.jsx)(Yb.e, {
+            }), (0, SD.jsx)(Ac.d, {
               noaAction: "replayViewerOpen"
             })]
-          }), Mz && (0, Oz.jsx)("div", {
+          }), bD && (0, SD.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, Oz.jsxs)("div", {
+        }), (0, SD.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, Oz.jsx)("div", {
+          children: [(0, SD.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, Oz.jsx)("iframe", {
+          }), (0, SD.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2302,8 +2302,8 @@ export const modules = {
         })]
       })
     }));
-    var uE = bz(1840);
-    const bE = {
+    var CI = cD(1865);
+    const cI = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2325,11 +2325,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, Oz.jsx)("svg", {
+        icon: () => (0, SD.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, Oz.jsx)("path", {
+          children: (0, SD.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2348,7 +2348,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      JZ: {
+      gt: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2374,280 +2374,280 @@ export const modules = {
       }
     };
 
-    function EE() {
-      return Promise.all([bz.e(74), bz.e(131), bz.e(125), bz.e(122)]).then((() => bz(40266))).then((zz => ({
-        default: zz.ShaderPackCategory
-      })), (zz => (console.error("Failed to load the shader pack settings", zz), {
-        default: nE
+    function II() {
+      return Promise.all([cD.e(74), cD.e(131), cD.e(125), cD.e(122)]).then((() => cD(40151))).then((DD => ({
+        default: DD.ShaderPackCategory
+      })), (DD => (console.error("Failed to load the shader pack settings", DD), {
+        default: pI
       })))
     }
 
-    function nE() {
+    function pI() {
       const {
-        t: zz
-      } = (0, lz.F)();
-      return (0, Oz.jsx)("div", {
+        t: DD
+      } = (0, fD.F)();
+      return (0, SD.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: zz("shaderPack:tabLoadFailed")
+        children: DD("shaderPack:tabLoadFailed")
       })
     }
-    var iE = bz(1362);
-    const lE = (0, Ez.lazy)((() => bz.e(263).then((() => bz(40251))).then((zz => ({
-        default: zz.BloxdInformation
+    var iI = cD(1388);
+    const fI = (0, ID.lazy)((() => cD.e(263).then((() => cD(40143))).then((DD => ({
+        default: DD.BloxdInformation
       }))))),
-      ME = (0, Ez.lazy)(EE);
+      bI = (0, ID.lazy)(II);
 
-    function tE(zz) {
-      return zz ? "general" : "account"
+    function QI(DD) {
+      return DD ? "general" : "account"
     }
-    const HE = new Map,
-      OE = (0, Ez.memo)((function(zz) {
+    const wI = new Map,
+      SI = (0, ID.memo)((function(DD) {
         let {
-          show: uz,
-          setBeforeResumeCallback: bz
-        } = zz;
-        (0, Rz.b)();
+          show: CD,
+          setBeforeResumeCallback: cD
+        } = DD;
+        (0, ZD.b)();
         const {
-          gameState: nz,
-          openSettingsCategory: iz
-        } = (0, vz.m)(["gameState", "openSettingsCategory"]), {
-          userContext: tz
-        } = (0, Fz.c)(), {
-          t: Hz
-        } = (0, lz.F)(), rz = (0, dz.c)(), oz = (0, Zz.g)("minChunkAddDist"), Nz = "inGame" === nz, [xz, Tz] = (0, Ez.useState)(tE(Nz)), [Lz, Pz] = (0, Ez.useState)(null), [Gz, az] = (0, Ez.useState)([]), Vz = (0, Ez.useRef)(function() {
-          const zz = new Date,
-            uz = 6 * (zz.getMonth() + zz.getDate()) % Hu.C.length;
-          return [...Hu.C, ...Hu.C].slice(uz, uz + 6)
-        }()), mz = (0, Ez.useRef)(null), qz = (0, Au.h)(eb.j, (0, eb.b)()), hz = Object.keys(bE).filter((zz => {
-          switch (zz) {
+          gameState: pD,
+          openSettingsCategory: iD
+        } = (0, PD.o)(["gameState", "openSettingsCategory"]), {
+          userContext: QD
+        } = (0, MD.c)(), {
+          t: wD
+        } = (0, fD.F)(), mD = (0, yD.b)(), nD = (0, tD.h)("minChunkAddDist"), OD = "inGame" === pD, [HD, qD] = (0, ID.useState)(QI(OD)), [JD, KD] = (0, ID.useState)(null), [aD, VD] = (0, ID.useState)([]), zD = (0, ID.useRef)(function() {
+          const DD = new Date,
+            CD = 6 * (DD.getMonth() + DD.getDate()) % wC.x.length;
+          return [...wC.x, ...wC.x].slice(CD, CD + 6)
+        }()), jD = (0, ID.useRef)(null), lD = (0, xC.g)(Ec.k, (0, Ec.e)()), LD = Object.keys(cI).filter((DD => {
+          switch (DD) {
             case "replayViewer":
-              return Nz;
+              return OD;
             case "developerTools":
-              return tz.playerHasRank("developer") || !1;
+              return QD.playerHasRank("developer") || !1;
             case "texturePack":
-              return wz.featureFlags.settings.canChangeTexturePack;
-            case "JZ":
-              return wz.featureFlags.settings.canUseShaderPacks;
+              return vD.featureFlags.settings.canChangeTexturePack;
+            case "gt":
+              return vD.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return wz.featureFlags.useSocialFeatures;
+              return vD.featureFlags.useSocialFeatures;
             case "alternativeDomains":
-              return "crazygames" !== Az.x;
+              return "crazygames" !== xD.p;
             case "controller":
-              return wz.featureFlags.useControllerSupport && (qz || "controller" === xz);
+              return vD.featureFlags.useControllerSupport && (lD || "controller" === HD);
             default:
               return !0
           }
         }));
-        (0, Au.g)("toggleFullCoordinateOverlay", (() => {
-          const zz = Bu("showCoordinates") && Bu("showChunkCoordinates") && Bu("showFPS");
-          Cu("showCoordinates", !zz), Cu("showChunkCoordinates", !zz), Cu("showFPS", !zz), rz()
-        })), (0, Au.g)("updatedChunkLoadDist", (() => {
-          rz()
-        })), (0, Ez.useEffect)((() => {
-          if (Pz(null), null === vz.e.get("openSettingsCategory")) {
-            const zz = (0, iE.f)() ? HE.get(Nz) : void 0;
-            Tz(zz && hz.includes(zz) ? zz : tE(Nz))
+        (0, xC.f)("toggleFullCoordinateOverlay", (() => {
+          const DD = hC("showCoordinates") && hC("showChunkCoordinates") && hC("showFPS");
+          rC("showCoordinates", !DD), rC("showChunkCoordinates", !DD), rC("showFPS", !DD), mD()
+        })), (0, xC.f)("updatedChunkLoadDist", (() => {
+          mD()
+        })), (0, ID.useEffect)((() => {
+          if (KD(null), null === PD.d.get("openSettingsCategory")) {
+            const DD = (0, iI.e)() ? wI.get(OD) : void 0;
+            qD(DD && LD.includes(DD) ? DD : QI(OD))
           }
-        }), [uz]), (0, Ez.useEffect)((() => {
-          null !== iz && (Tz(iz), HE.set(Nz, iz), vz.e.set({
+        }), [CD]), (0, ID.useEffect)((() => {
+          null !== iD && (qD(iD), wI.set(OD, iD), PD.d.set({
             openSettingsCategory: null
           }))
-        }), [iz, Nz]), (0, Ez.useLayoutEffect)((() => {
-          mz.current && (mz.current.scrollTop = 0)
-        }), [xz, uz]), (0, Ez.useEffect)((() => {
-          "updateLog" === xz && (0, sz.d)().then(az)
-        }), [xz]), (0, Ez.useEffect)((() => {
-          if ((0, yu.F)(oz)) return;
-          const [zz, uz] = (0, Eb.e)(), [bz, Ez] = (0, qu.g)(oz), nz = (0, uE.f)(oz[0], zz, bz), iz = (0, uE.f)(oz[1], uz, Ez);
-          Xz.gameBridge.send("setChunkAddDistance", {
-            horizontal: nz,
-            vertical: iz
+        }), [iD, OD]), (0, ID.useLayoutEffect)((() => {
+          jD.current && (jD.current.scrollTop = 0)
+        }), [HD, CD]), (0, ID.useEffect)((() => {
+          "updateLog" === HD && (0, XD.d)().then(VD)
+        }), [HD]), (0, ID.useEffect)((() => {
+          if ((0, dC.C)(nD)) return;
+          const [DD, CD] = (0, Ic.g)(), [cD, ID] = (0, lC.f)(nD), pD = (0, CI.h)(nD[0], DD, cD), iD = (0, CI.h)(nD[1], CD, ID);
+          ND.gameBridge.send("setChunkAddDistance", {
+            horizontal: pD,
+            vertical: iD
           })
-        }), [oz]);
-        const Uz = (0, Ez.useCallback)((async () => {
-          Lz && (await Lz(), Pz(null))
-        }), [Lz]);
+        }), [nD]);
+        const TD = (0, ID.useCallback)((async () => {
+          JD && (await JD(), KD(null))
+        }), [JD]);
 
-        function cz() {
-          vz.e.set({
+        function GD() {
+          PD.d.set({
             openEverythingMenuName: null
           })
         }
-        return (0, Ez.useEffect)((() => {
-          bz((() => Uz))
-        }), [Uz, bz]), (0, Oz.jsxs)("div", {
+        return (0, ID.useEffect)((() => {
+          cD((() => TD))
+        }), [TD, cD]), (0, SD.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: uz ? {} : {
+          style: CD ? {} : {
             display: "none"
           },
-          children: [(0, Oz.jsx)("div", {
+          children: [(0, SD.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, Oz.jsx)("div", {
+            children: (0, SD.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, Oz.jsx)(pz, {
-                items: hz.map((zz => {
-                  const uz = bE[zz].icon;
+              children: (0, SD.jsx)(BD, {
+                items: LD.map((DD => {
+                  const CD = cI[DD].icon;
                   return {
-                    id: zz,
-                    faIcon: "string" === typeof uz ? uz : void 0,
-                    iconElement: "string" === typeof uz ? void 0 : (0, Oz.jsx)(uz, {}),
-                    title: Hz(bE[zz].displayName),
+                    id: DD,
+                    faIcon: "string" === typeof CD ? CD : void 0,
+                    iconElement: "string" === typeof CD ? void 0 : (0, SD.jsx)(CD, {}),
+                    title: wD(cI[DD].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: xz,
-                onClick: zz => {
-                  !async function(zz) {
-                    await Uz(), Tz(zz), HE.set(Nz, zz)
-                  }(zz)
+                selectedItemId: HD,
+                onClick: DD => {
+                  !async function(DD) {
+                    await TD(), qD(DD), wI.set(OD, DD)
+                  }(DD)
                 }
               })
             })
-          }), (0, Oz.jsxs)("div", {
-            ref: mz,
+          }), (0, SD.jsxs)("div", {
+            ref: jD,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === xz && (0, Oz.jsx)(Xu, {
-              showing: uz,
-              inGame: Nz
-            }), "general" === xz && (0, Oz.jsx)(vu, {
-              inGame: Nz
-            }), "audio" === xz && (0, Oz.jsx)(xu, {}), "notifications" === xz && (0, Oz.jsx)(mu, {}), "graphics" === xz && (0, Oz.jsx)(bb, {
-              minChunkAddDist: null !== oz && void 0 !== oz ? oz : [2, 2],
-              getValue: Bu,
-              onChange: Cu,
-              setApplySettingsCallback: Pz
-            }), "controls" === xz && (0, Oz.jsx)(nb.f, {}), "crosshair" === xz && (0, Oz.jsx)(Qb, {
-              showing: uz
-            }), "controller" === xz && wz.featureFlags.useControllerSupport && (0, Oz.jsx)(Wb.e, {}), wz.featureFlags.settings.canChangeTexturePack && "texturePack" === xz && (0, Oz.jsx)(jb.c, {
-              setApplySettingsCallback: Pz
-            }), wz.featureFlags.settings.canUseShaderPacks && "JZ" === xz && (0, Oz.jsx)(Ez.Suspense, {
+            children: ["account" === HD && (0, SD.jsx)(NC, {
+              showing: CD,
+              inGame: OD
+            }), "general" === HD && (0, SD.jsx)(PC, {
+              inGame: OD
+            }), "audio" === HD && (0, SD.jsx)(HC, {}), "notifications" === HD && (0, SD.jsx)(jC, {}), "graphics" === HD && (0, SD.jsx)(cc, {
+              minChunkAddDist: null !== nD && void 0 !== nD ? nD : [2, 2],
+              getValue: hC,
+              onChange: rC,
+              setApplySettingsCallback: KD
+            }), "controls" === HD && (0, SD.jsx)(pc.h, {}), "crosshair" === HD && (0, SD.jsx)(Wc, {
+              showing: CD
+            }), "controller" === HD && vD.featureFlags.useControllerSupport && (0, SD.jsx)(sc.c, {}), vD.featureFlags.settings.canChangeTexturePack && "texturePack" === HD && (0, SD.jsx)(ec.e, {
+              setApplySettingsCallback: KD
+            }), vD.featureFlags.settings.canUseShaderPacks && "gt" === HD && (0, SD.jsx)(ID.Suspense, {
               fallback: null,
-              children: (0, Oz.jsx)(ME, {
-                setApplySettingsCallback: Pz
+              children: (0, SD.jsx)(bI, {
+                setApplySettingsCallback: KD
               })
-            }), "updateLog" === xz && (0, Oz.jsx)("div", {
+            }), "updateLog" === HD && (0, SD.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, Oz.jsx)("div", {
+              children: (0, SD.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: Gz.map(((zz, uz) => (0, Oz.jsx)(fz.b, {
-                  updateLog: zz,
-                  index: uz,
-                  close: cz
-                }, uz)))
+                children: aD.map(((DD, CD) => (0, SD.jsx)(gD.c, {
+                  updateLog: DD,
+                  index: CD,
+                  close: GD
+                }, CD)))
               })
-            }), "information" === xz && (0, Oz.jsx)("div", {
+            }), "information" === HD && (0, SD.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, Oz.jsx)(Ez.Suspense, {
+              children: (0, SD.jsx)(ID.Suspense, {
                 fallback: null,
-                children: (0, Oz.jsx)(lE, {})
+                children: (0, SD.jsx)(fI, {})
               })
-            }), "alternativeDomains" === xz && (0, Oz.jsxs)("div", {
+            }), "alternativeDomains" === HD && (0, SD.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, Oz.jsx)("div", {
+              children: [(0, SD.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: Hz("settingsMenu:unblockedDomainsDescription")
-              }), (0, Oz.jsx)("div", {
+                children: wD("settingsMenu:unblockedDomainsDescription")
+              }), (0, SD.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: Vz.current.map((zz => (0, Oz.jsxs)(Kz.f, {
+                children: zD.current.map((DD => (0, SD.jsxs)(oD.i, {
                   onClick: () => {
-                    window.open(`https://${zz}`)
+                    window.open(`https://${DD}`)
                   },
-                  children: [(0, Oz.jsx)(Mz.c, {
+                  children: [(0, SD.jsx)(bD.c, {
                     name: "arrow-up-right-from-square"
-                  }), " ", zz]
-                }, zz)))
+                  }), " ", DD]
+                }, DD)))
               })]
-            }), "replayViewer" === xz && (0, Oz.jsx)(zE, {}), "developerTools" === xz && (0, Oz.jsx)("div", {
+            }), "replayViewer" === HD && (0, SD.jsx)(DI, {}), "developerTools" === HD && (0, SD.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, Oz.jsx)(Jz, {
-                setApplySettingsCallback: Pz
+              children: (0, SD.jsx)(UD, {
+                setApplySettingsCallback: KD
               })
-            }), null !== Lz && (0, Oz.jsx)("div", {
+            }), null !== JD && (0, SD.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, Oz.jsx)(Kz.f, {
+              children: (0, SD.jsx)(oD.i, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: Uz,
-                children: Hz("general:apply")
+                onClick: TD,
+                children: wD("general:apply")
               })
             })]
           })]
         })
       }));
-    var pE = bz(2471);
-    const dE = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      FE = (0, Ez.lazy)((() => Promise.resolve().then((() => bz(4407))).then((zz => {
-        zz.needGameClientAfterPaint();
-        const uz = zz.matchmakingLibrariesPromise.then((zz => (0, pE.d)(zz.loadCharacterCustomisationUI(), (zz => zz.CharacterCustomisationUI))));
-        return Promise.all([zz.ensureGameSetup(), uz]).then((zz => {
-          let [, uz] = zz;
-          return uz
+    var BI = cD(2482);
+    const yI = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      MI = (0, ID.lazy)((() => Promise.resolve().then((() => cD(4452))).then((DD => {
+        DD.needGameClientAfterPaint();
+        const CD = DD.matchmakingLibrariesPromise.then((DD => (0, BI.c)(DD.loadCharacterCustomisationUI(), (DD => DD.CharacterCustomisationUI))));
+        return Promise.all([DD.ensureGameSetup(), CD]).then((DD => {
+          let [, CD] = DD;
+          return CD
         }))
       }))));
 
-    function ZE(zz) {
+    function tI(DD) {
       let {
-        show: uz
-      } = zz;
+        show: CD
+      } = DD;
       const {
-        userContext: bz
-      } = (0, Fz.c)(), [nz, iz] = (0, Ez.useState)("characters");
-      if (!uz) return null;
-      const lz = dE.filter((zz => "cape" !== zz && "nameColour" !== zz || bz.getPlayerRanks().includes("super") || (0, gz.purchasesAllowed)())).map((zz => ({
-        id: zz,
-        faIcon: Hu.K[zz],
-        title: Hu.O[zz],
+        userContext: cD
+      } = (0, MD.c)(), [pD, iD] = (0, ID.useState)("characters");
+      if (!CD) return null;
+      const fD = yI.filter((DD => "cape" !== DD && "nameColour" !== DD || cD.getPlayerRanks().includes("super") || (0, RD.purchasesAllowed)())).map((DD => ({
+        id: DD,
+        faIcon: wC.F[DD],
+        title: wC.J[DD],
         redDot: !1
       })));
-      return (0, Oz.jsxs)("div", {
+      return (0, SD.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, Oz.jsx)("div", {
+        children: [(0, SD.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, Oz.jsx)(pz, {
-            items: lz,
-            selectedItemId: nz,
-            onClick: zz => {
-              iz(zz)
+          children: (0, SD.jsx)(BD, {
+            items: fD,
+            selectedItemId: pD,
+            onClick: DD => {
+              iD(DD)
             }
           })
-        }), (0, Oz.jsx)("div", {
+        }), (0, SD.jsx)("div", {
           className: "MenuBody",
-          children: (0, Oz.jsx)(Ez.Suspense, {
-            fallback: (0, Oz.jsx)("div", {
+          children: (0, SD.jsx)(ID.Suspense, {
+            fallback: (0, SD.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, Oz.jsx)(oz.c, {})
+              children: (0, SD.jsx)(nD.e, {})
             }),
-            children: (0, Oz.jsx)(FE, {
-              selectedTab: nz
+            children: (0, SD.jsx)(MI, {
+              selectedTab: pD
             })
           })
         })]
       })
     }
-    var RE = bz(1434),
-      KE = bz(8982),
-      wE = bz(4292),
-      XE = bz(3169),
-      fE = bz(3210),
-      sE = bz(9013),
-      rE = bz(8434),
-      oE = bz(8987),
-      NE = bz(8999),
-      vE = bz(1856),
-      xE = bz(1846),
-      JE = bz(4670),
-      AE = bz(1249),
-      TE = bz(1212),
-      LE = bz(1613),
-      PE = bz(8524);
+    var ZI = cD(1460),
+      oI = cD(9041),
+      vI = cD(4325),
+      NI = cD(3211),
+      gI = cD(3266),
+      XI = cD(9065),
+      mI = cD(8463),
+      nI = cD(9045),
+      OI = cD(9057),
+      PI = cD(1893),
+      HI = cD(1872),
+      UI = cD(4677),
+      xI = cD(1260),
+      qI = cD(1221),
+      JI = cD(1645),
+      KI = cD(8548);
 
-    function GE(zz) {
-      return zz ? Object.keys(zz).sort(((uz, bz) => {
-        var Ez, nz, iz, lz;
-        const Mz = (null !== (Ez = null === (nz = zz[bz]) || void 0 === nz ? void 0 : nz.sortPriority) && void 0 !== Ez ? Ez : 0) - (null !== (iz = null === (lz = zz[uz]) || void 0 === lz ? void 0 : lz.sortPriority) && void 0 !== iz ? iz : 0);
-        return 0 !== Mz ? Mz : uz.localeCompare(bz)
+    function aI(DD) {
+      return DD ? Object.keys(DD).sort(((CD, cD) => {
+        var ID, pD, iD, fD;
+        const bD = (null !== (ID = null === (pD = DD[cD]) || void 0 === pD ? void 0 : pD.sortPriority) && void 0 !== ID ? ID : 0) - (null !== (iD = null === (fD = DD[CD]) || void 0 === fD ? void 0 : fD.sortPriority) && void 0 !== iD ? iD : 0);
+        return 0 !== bD ? bD : CD.localeCompare(cD)
       })) : []
     }
-    const aE = [{
+    const VI = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -2661,241 +2661,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function VE(zz) {
+    function zI(DD) {
       for (const {
-          threshold: uz,
-          suffix: bz
+          threshold: CD,
+          suffix: cD
         }
-        of aE)
-        if (zz >= uz) {
-          const Ez = zz / uz;
-          return Ez >= 100 ? `${Math.floor(Ez)}${bz}` : Ez >= 10 ? `${Ez.toFixed(1).replace(/\.0$/,"")}${bz}` : `${Ez.toFixed(2).replace(/\.?0+$/,"")}${bz}`
-        } return String(zz)
+        of VI)
+        if (DD >= CD) {
+          const ID = DD / CD;
+          return ID >= 100 ? `${Math.floor(ID)}${cD}` : ID >= 10 ? `${ID.toFixed(1).replace(/\.0$/,"")}${cD}` : `${ID.toFixed(2).replace(/\.?0+$/,"")}${cD}`
+        } return String(DD)
     }
-    var mE = bz(4770);
-    const qE = {
+    var jI = cD(4799);
+    const lI = {
         normal: "0.8em",
         big: "1em"
       },
-      hE = (0, Ez.memo)((function(zz) {
+      LI = (0, ID.memo)((function(DD) {
         let {
-          item: uz,
-          amount: bz = 0,
-          size: Ez = "normal",
-          tier: nz = null
-        } = zz;
-        return (0, Oz.jsx)("div", {
-          className: iz()("SmpSlot", `SmpSlot-${Ez}`),
-          children: uz && (0, Oz.jsx)(vE.c, {
-            itemName: uz,
-            amount: bz > 1 ? bz : 0,
-            amountFontSize: qE[Ez],
-            enchantmentTier: nz
+          item: CD,
+          amount: cD = 0,
+          size: ID = "normal",
+          tier: pD = null
+        } = DD;
+        return (0, SD.jsx)("div", {
+          className: iD()("SmpSlot", `SmpSlot-${ID}`),
+          children: CD && (0, SD.jsx)(PI.d, {
+            itemName: CD,
+            amount: cD > 1 ? cD : 0,
+            amountFontSize: lI[ID],
+            enchantmentTier: pD
           })
         })
       }));
 
-    function UE(zz) {
+    function TI(DD) {
       let {
-        amount: uz,
-        exact: bz = !1,
-        className: Ez
-      } = zz;
-      return (0, Oz.jsxs)("span", {
-        className: iz()("SmpGold", Ez),
-        children: [(0, Oz.jsx)("span", {
+        amount: CD,
+        exact: cD = !1,
+        className: ID
+      } = DD;
+      return (0, SD.jsxs)("span", {
+        className: iD()("SmpGold", ID),
+        children: [(0, SD.jsx)("span", {
           className: "SmpCoin",
-          children: (0, Oz.jsx)(vE.c, {
+          children: (0, SD.jsx)(PI.d, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), bz ? uz.toLocaleString("en-US") : VE(uz)]
+        }), cD ? CD.toLocaleString("en-US") : zI(CD)]
       })
     }
 
-    function cE(zz) {
+    function GI(DD) {
       let {
-        count: uz = 5,
-        grid: bz = !1
-      } = zz;
-      return (0, Oz.jsx)("div", {
-        className: bz ? "SmpCardGrid" : "SmpList",
+        count: CD = 5,
+        grid: cD = !1
+      } = DD;
+      return (0, SD.jsx)("div", {
+        className: cD ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: uz
-        }, ((zz, uz) => (0, Oz.jsxs)("div", {
-          className: iz()(bz ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, Oz.jsx)("div", {
-            className: iz()("SmpSlot", bz ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, Oz.jsxs)("div", {
+          length: CD
+        }, ((DD, CD) => (0, SD.jsxs)("div", {
+          className: iD()(cD ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, SD.jsx)("div", {
+            className: iD()("SmpSlot", cD ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, SD.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, Oz.jsx)("b", {}), (0, Oz.jsx)("small", {})]
-          }), (0, Oz.jsx)("div", {
+            children: [(0, SD.jsx)("b", {}), (0, SD.jsx)("small", {})]
+          }), (0, SD.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, uz)))
+        }, CD)))
       })
     }
 
-    function gE(zz) {
+    function RI(DD) {
       let {
-        title: uz,
-        children: bz
-      } = zz;
-      return (0, Oz.jsxs)("div", {
+        title: CD,
+        children: cD
+      } = DD;
+      return (0, SD.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, Oz.jsx)("b", {
-          children: uz
-        }), bz && (0, Oz.jsx)("small", {
-          children: bz
+        children: [(0, SD.jsx)("b", {
+          children: CD
+        }), cD && (0, SD.jsx)("small", {
+          children: cD
         })]
       })
     }
 
-    function SE(zz) {
+    function kI(DD) {
       let {
-        entry: uz
-      } = zz;
-      return (0, Oz.jsx)(gE, {
-        title: (0, Oz.jsx)(xE.b, {
-          text: uz.item.customTitle
+        entry: CD
+      } = DD;
+      return (0, SD.jsx)(RI, {
+        title: (0, SD.jsx)(HI.c, {
+          text: CD.item.customTitle
         }),
-        children: (0, Oz.jsx)(xE.b, {
-          text: uz.item.description
+        children: (0, SD.jsx)(HI.c, {
+          text: CD.item.description
         })
       })
     }
 
-    function yE(zz) {
-      return (0, Oz.jsx)(mE.d, {
-        ...zz,
-        className: iz()("SmpChoice", zz.className),
+    function dI(DD) {
+      return (0, SD.jsx)(jI.b, {
+        ...DD,
+        className: iD()("SmpChoice", DD.className),
         reselectable: !0
       })
     }
 
-    function DE() {
-      return (0, Oz.jsx)("span", {
+    function YI() {
+      return (0, SD.jsx)("span", {
         className: "SmpLoader",
-        children: (0, Oz.jsx)(oz.c, {})
+        children: (0, SD.jsx)(nD.e, {})
       })
     }
 
-    function QE(zz) {
+    function WI(DD) {
       let {
-        value: uz,
-        onChange: bz,
-        min: nz = 1,
-        max: iz,
-        step: lz = 1,
-        label: Mz
-      } = zz;
-      const tz = (0, Ez.useRef)(null),
-        Hz = (0, Ez.useRef)(uz);
-      Hz.current = uz;
-      const [pz, dz] = (0, Ez.useState)(null), Fz = zz => Math.max(nz, Math.min(iz, Math.floor(zz))), Zz = zz => {
-        const uz = Hz.current,
-          Ez = "function" === typeof lz ? lz(uz, zz) : lz,
-          nz = Fz(uz + Ez * zz);
-        Hz.current = nz, bz(nz)
+        value: CD,
+        onChange: cD,
+        min: pD = 1,
+        max: iD,
+        step: fD = 1,
+        label: bD
+      } = DD;
+      const QD = (0, ID.useRef)(null),
+        wD = (0, ID.useRef)(CD);
+      wD.current = CD;
+      const [BD, yD] = (0, ID.useState)(null), MD = DD => Math.max(pD, Math.min(iD, Math.floor(DD))), tD = DD => {
+        const CD = wD.current,
+          ID = "function" === typeof fD ? fD(CD, DD) : fD,
+          pD = MD(CD + ID * DD);
+        wD.current = pD, cD(pD)
       };
-      (0, Ez.useEffect)((() => {
-        if (null === pz) return;
-        let zz;
-        const uz = () => {
-            dz(null)
+      (0, ID.useEffect)((() => {
+        if (null === BD) return;
+        let DD;
+        const CD = () => {
+            yD(null)
           },
-          bz = setTimeout((() => {
-            zz = setInterval((() => {
-              Zz(pz);
-              const zz = Hz.current;
-              (pz > 0 ? zz >= iz : zz <= nz) && uz()
+          cD = setTimeout((() => {
+            DD = setInterval((() => {
+              tD(BD);
+              const DD = wD.current;
+              (BD > 0 ? DD >= iD : DD <= pD) && CD()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", uz), window.addEventListener("pointercancel", uz), window.addEventListener("blur", uz), () => {
-          clearTimeout(bz), clearInterval(zz), window.removeEventListener("pointerup", uz), window.removeEventListener("pointercancel", uz), window.removeEventListener("blur", uz)
+        return window.addEventListener("pointerup", CD), window.addEventListener("pointercancel", CD), window.addEventListener("blur", CD), () => {
+          clearTimeout(cD), clearInterval(DD), window.removeEventListener("pointerup", CD), window.removeEventListener("pointercancel", CD), window.removeEventListener("blur", CD)
         }
-      }), [pz]), (0, Ez.useEffect)((() => {
-        const zz = tz.current;
-        zz && document.activeElement !== zz && zz.value !== String(uz) && (zz.value = String(uz))
-      }), [uz]), (0, Ez.useEffect)((() => {
-        const zz = tz.current;
-        if (!zz) return;
-        const uz = () => {
-          zz.value = String(Hz.current)
+      }), [BD]), (0, ID.useEffect)((() => {
+        const DD = QD.current;
+        DD && document.activeElement !== DD && DD.value !== String(CD) && (DD.value = String(CD))
+      }), [CD]), (0, ID.useEffect)((() => {
+        const DD = QD.current;
+        if (!DD) return;
+        const CD = () => {
+          DD.value = String(wD.current)
         };
-        return zz.addEventListener("blur", uz), () => {
-          zz.removeEventListener("blur", uz)
+        return DD.addEventListener("blur", CD), () => {
+          DD.removeEventListener("blur", CD)
         }
       }), []);
-      const Rz = zz => (0, Oz.jsx)("button", {
+      const ZD = DD => (0, SD.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${zz>0?"More":"Less"} ${Mz}`,
-        disabled: zz > 0 ? uz >= iz : uz <= nz,
-        onPointerDown: uz => {
-          0 === uz.button && (Zz(zz), dz(zz))
+        "aria-label": `${DD>0?"More":"Less"} ${bD}`,
+        disabled: DD > 0 ? CD >= iD : CD <= pD,
+        onPointerDown: CD => {
+          0 === CD.button && (tD(DD), yD(DD))
         },
-        onKeyDown: uz => {
-          "Enter" !== uz.key && " " !== uz.key || Zz(zz)
+        onKeyDown: CD => {
+          "Enter" !== CD.key && " " !== CD.key || tD(DD)
         },
-        onContextMenu: zz => {
-          zz.preventDefault()
+        onContextMenu: DD => {
+          DD.preventDefault()
         },
-        children: zz > 0 ? "+" : "\u2212"
+        children: DD > 0 ? "+" : "\u2212"
       });
-      return (0, Oz.jsxs)("div", {
+      return (0, SD.jsxs)("div", {
         className: "SmpStepper",
-        children: [Rz(-1), (0, Oz.jsx)(rz.d, {
+        children: [ZD(-1), (0, SD.jsx)(mD.b, {
           className: "SmpStepperInput",
-          domRef: tz,
-          defaultValue: String(uz),
-          ariaLabel: Mz,
+          domRef: QD,
+          defaultValue: String(CD),
+          ariaLabel: bD,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: zz => {
-            const uz = zz.replace(/[^\d]/g, "");
-            tz.current && uz !== zz && (tz.current.value = uz), "" !== uz && bz(Fz(Number(uz)))
+          onValueChange: DD => {
+            const CD = DD.replace(/[^\d]/g, "");
+            QD.current && CD !== DD && (QD.current.value = CD), "" !== CD && cD(MD(Number(CD)))
           }
-        }), Rz(1)]
+        }), ZD(1)]
       })
     }
 
-    function WE(zz) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, zz))) - 1))
+    function sI(DD) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, DD))) - 1))
     }
-    var eE = bz(9007),
-      jE = bz(1226);
-    const IE = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    jE.w, Uz.Jc.length;
+    var EI = cD(9062),
+      eI = cD(1240);
+    const uI = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    eI.v, TD.Gc.length;
     new Map;
-    var BE = bz(3043);
+    var hI = cD(3083);
 
-    function CE(zz, uz) {
-      var bz;
-      return uz && (null === (bz = zz[uz]) || void 0 === bz ? void 0 : bz.smp) || null
+    function rI(DD, CD) {
+      var cD;
+      return CD && (null === (cD = DD[CD]) || void 0 === cD ? void 0 : cD.smp) || null
     }
 
-    function YE(zz, uz) {
-      const bz = [];
-      for (const nz of GE(zz)) {
-        var Ez;
-        const iz = zz[nz];
-        (null === (Ez = iz.smp) || void 0 === Ez ? void 0 : Ez.kind) === uz && bz.push({
-          key: nz,
-          item: iz,
-          meta: iz.smp
+    function AI(DD, CD) {
+      const cD = [];
+      for (const pD of aI(DD)) {
+        var ID;
+        const iD = DD[pD];
+        (null === (ID = iD.smp) || void 0 === ID ? void 0 : ID.kind) === CD && cD.push({
+          key: pD,
+          item: iD,
+          meta: iD.smp
         })
       }
-      return bz
+      return cD
     }
 
-    function kE(zz, uz) {
-      var bz;
-      return null !== (bz = YE(zz, uz)[0]) && void 0 !== bz ? bz : null
+    function FI(DD, CD) {
+      var cD;
+      return null !== (cD = AI(DD, CD)[0]) && void 0 !== cD ? cD : null
     }
-    const zn = "50% 0% 50% 0%",
-      un = [{
+    const Dp = "50% 0% 50% 0%",
+      Cp = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -2909,746 +2909,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function bn(zz) {
-      const uz = zz - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function cp(DD) {
+      const CD = DD - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: bz,
-          suffix: Ez
+          divisor: cD,
+          suffix: ID
         }
-        of un)
-        if (uz >= bz) return `${Math.floor(uz/bz)}${Ez}`;
+        of Cp)
+        if (CD >= cD) return `${Math.floor(CD/cD)}${ID}`;
       return "<1s"
     }
 
-    function En(zz) {
-      const uz = zz.map(rE.e),
-        bz = [];
-      return uz.forEach(((zz, Ez) => {
-        const nz = function(zz) {
-            const uz = zz.match(/\d+/);
-            return uz ? Number(uz[0]) : 0
-          }(zz),
-          iz = Ez === uz.length - 1;
-        (iz || 1 === nz || 10 === nz || 100 === nz) && bz.push({
-          label: zz,
-          quantity: nz,
-          isAll: iz
+    function Ip(DD) {
+      const CD = DD.map(mI.d),
+        cD = [];
+      return CD.forEach(((DD, ID) => {
+        const pD = function(DD) {
+            const CD = DD.match(/\d+/);
+            return CD ? Number(CD[0]) : 0
+          }(DD),
+          iD = ID === CD.length - 1;
+        (iD || 1 === pD || 10 === pD || 100 === pD) && cD.push({
+          label: DD,
+          quantity: pD,
+          isAll: iD
         })
-      })), bz
+      })), cD
     }
-    let nn = null;
+    let pp = null;
 
-    function Mn(zz, uz) {
-      const bz = uz.trim().toLowerCase();
-      if (!bz) return [];
-      const Ez = zz => {
-          if (zz === bz) return 0;
-          if (zz.startsWith(bz)) return 1;
-          const uz = zz.indexOf(bz);
-          return -1 === uz ? -1 : 2 + uz
+    function ip(DD, CD) {
+      const cD = CD.trim().toLowerCase();
+      if (!cD) return [];
+      const ID = DD => {
+          if (DD === cD) return 0;
+          if (DD.startsWith(cD)) return 1;
+          const CD = DD.indexOf(cD);
+          return -1 === CD ? -1 : 2 + CD
         },
-        nz = [];
-      for (const Mz of zz) {
-        const zz = [Ez(Mz.lowerLabel), Ez(Mz.lowerName)].filter((zz => -1 !== zz));
-        zz.length && nz.push({
-          item: Mz,
-          rank: Math.min(...zz)
+        pD = [];
+      for (const bD of DD) {
+        const DD = [ID(bD.lowerLabel), ID(bD.lowerName)].filter((DD => -1 !== DD));
+        DD.length && pD.push({
+          item: bD,
+          rank: Math.min(...DD)
         })
       }
-      if (nz.length > 0) return nz.sort(((zz, uz) => zz.rank - uz.rank)).map((zz => zz.item));
-      const iz = [...bz],
-        lz = zz => {
-          let uz = 0;
-          for (const bz of iz) {
-            if (uz = zz.indexOf(bz, uz), -1 === uz) return !1;
-            uz++
+      if (pD.length > 0) return pD.sort(((DD, CD) => DD.rank - CD.rank)).map((DD => DD.item));
+      const iD = [...cD],
+        fD = DD => {
+          let CD = 0;
+          for (const cD of iD) {
+            if (CD = DD.indexOf(cD, CD), -1 === CD) return !1;
+            CD++
           }
           return !0
         };
-      return zz.filter((zz => lz(zz.lowerLabel) || lz(zz.lowerName)))
+      return DD.filter((DD => fD(DD.lowerLabel) || fD(DD.lowerName)))
     }
 
-    function tn(zz, uz) {
-      var bz;
-      return null !== (bz = null === zz || void 0 === zz ? void 0 : zz[uz]) && void 0 !== bz ? bz : uz
+    function fp(DD, CD) {
+      var cD;
+      return null !== (cD = null === DD || void 0 === DD ? void 0 : DD[CD]) && void 0 !== cD ? cD : CD
     }
 
-    function Hn(zz, uz) {
-      const bz = zz.userInput;
-      return void 0 !== uz && "dropdown" === (null === bz || void 0 === bz ? void 0 : bz.type) && bz.dropdownOptions.map(rE.e).includes(uz) ? uz : function(zz) {
-        const uz = zz.userInput;
-        if ("dropdown" !== (null === uz || void 0 === uz ? void 0 : uz.type) || 0 === uz.dropdownOptions.length) return null;
-        const bz = uz.dropdownOptions.map(rE.e);
-        return uz.initialValue && bz.includes(uz.initialValue) ? uz.initialValue : bz[bz.length - 1]
-      }(zz)
+    function bp(DD, CD) {
+      const cD = DD.userInput;
+      return void 0 !== CD && "dropdown" === (null === cD || void 0 === cD ? void 0 : cD.type) && cD.dropdownOptions.map(mI.d).includes(CD) ? CD : function(DD) {
+        const CD = DD.userInput;
+        if ("dropdown" !== (null === CD || void 0 === CD ? void 0 : CD.type) || 0 === CD.dropdownOptions.length) return null;
+        const cD = CD.dropdownOptions.map(mI.d);
+        return CD.initialValue && cD.includes(CD.initialValue) ? CD.initialValue : cD[cD.length - 1]
+      }(DD)
     }
 
-    function On(zz) {
-      return void 0 === zz ? "" : JSON.stringify(zz)
+    function Qp(DD) {
+      return void 0 === DD ? "" : JSON.stringify(DD)
     }
-    const pn = (0, Ez.createContext)(null);
+    const wp = (0, ID.createContext)(null);
 
-    function dn() {
-      return (0, Ez.useContext)(pn)
+    function Sp() {
+      return (0, ID.useContext)(wp)
     }
-    var Fn = bz(2548);
-    const Zn = (0, Ez.memo)((function(zz) {
+    var Bp = cD(2587);
+    const yp = (0, ID.memo)((function(DD) {
         let {
-          name: uz,
-          label: bz,
-          onPick: Ez
-        } = zz;
-        return (0, Oz.jsxs)("button", {
+          name: CD,
+          label: cD,
+          onPick: ID
+        } = DD;
+        return (0, SD.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: bz,
+          title: cD,
           onClick: () => {
-            Ez(uz)
+            ID(CD)
           },
-          children: [(0, Oz.jsx)(hE, {
-            item: uz,
+          children: [(0, SD.jsx)(LI, {
+            item: CD,
             size: "big"
-          }), (0, Oz.jsx)("span", {
-            children: bz
+          }), (0, SD.jsx)("span", {
+            children: cD
           })]
         })
       })),
-      Rn = (0, Ez.memo)((function(zz) {
+      Mp = (0, ID.memo)((function(DD) {
         let {
-          items: uz,
-          query: bz,
-          onPick: nz
-        } = zz;
+          items: CD,
+          query: cD,
+          onPick: pD
+        } = DD;
         const {
-          t: iz
-        } = (0, lz.F)(), [Mz, tz] = (0, Ez.useState)(new Set), Hz = (0, Ez.useMemo)((() => function(zz) {
-          const uz = new Map;
-          for (const bz of zz) {
-            let zz = uz.get(bz.category);
-            zz || (zz = [], uz.set(bz.category, zz)), zz.push(bz)
+          t: iD
+        } = (0, fD.F)(), [bD, QD] = (0, ID.useState)(new Set), wD = (0, ID.useMemo)((() => function(DD) {
+          const CD = new Map;
+          for (const cD of DD) {
+            let DD = CD.get(cD.category);
+            DD || (DD = [], CD.set(cD.category, DD)), DD.push(cD)
           }
-          return [...IE, "other"].filter((zz => uz.has(zz))).map((zz => ({
-            category: zz,
-            items: uz.get(zz)
+          return [...uI, "other"].filter((DD => CD.has(DD))).map((DD => ({
+            category: DD,
+            items: CD.get(DD)
           })))
-        }(uz)), [uz]), pz = (0, Ez.useMemo)((() => Mn(uz, bz).slice(0, 60)), [uz, bz]);
-        return bz.trim() ? 0 === pz.length ? (0, Oz.jsx)(gE, {
-          title: iz("smpShop:noItemsFound", {
-            query: bz.trim()
+        }(CD)), [CD]), BD = (0, ID.useMemo)((() => ip(CD, cD).slice(0, 60)), [CD, cD]);
+        return cD.trim() ? 0 === BD.length ? (0, SD.jsx)(RI, {
+          title: iD("smpShop:noItemsFound", {
+            query: cD.trim()
           }),
-          children: iz("smpShop:tryShorterName")
-        }) : (0, Oz.jsx)(Fn.b, {
+          children: iD("smpShop:tryShorterName")
+        }) : (0, SD.jsx)(Bp.c, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: zn,
-          observerUpdateDeps: [bz],
-          children: pz.map((zz => (0, Oz.jsx)(Zn, {
-            name: zz.name,
-            label: zz.label,
-            onPick: nz
-          }, zz.name)))
-        }) : (0, Oz.jsx)(Oz.Fragment, {
-          children: Hz.map((zz => {
+          rootMargin: Dp,
+          observerUpdateDeps: [cD],
+          children: BD.map((DD => (0, SD.jsx)(yp, {
+            name: DD.name,
+            label: DD.label,
+            onPick: pD
+          }, DD.name)))
+        }) : (0, SD.jsx)(SD.Fragment, {
+          children: wD.map((DD => {
             let {
-              category: uz,
-              items: bz
-            } = zz;
-            const Ez = Mz.has(uz) || bz.length <= 48,
-              lz = Ez ? bz : bz.slice(0, 48);
-            return (0, Oz.jsxs)("section", {
+              category: CD,
+              items: cD
+            } = DD;
+            const ID = bD.has(CD) || cD.length <= 48,
+              fD = ID ? cD : cD.slice(0, 48);
+            return (0, SD.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, Oz.jsxs)("h4", {
-                children: [iz("other" === uz ? "smpShop:otherItems" : `creativeInventory:${uz}`), !Ez && (0, Oz.jsx)("button", {
+              children: [(0, SD.jsxs)("h4", {
+                children: [iD("other" === CD ? "smpShop:otherItems" : `creativeInventory:${CD}`), !ID && (0, SD.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    tz(new Set([...Mz, uz]))
+                    QD(new Set([...bD, CD]))
                   },
-                  children: iz("smpShop:showAll", {
-                    count: bz.length
+                  children: iD("smpShop:showAll", {
+                    count: cD.length
                   })
                 })]
-              }), (0, Oz.jsx)(Fn.b, {
+              }), (0, SD.jsx)(Bp.c, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: zn,
-                observerUpdateDeps: [Ez],
-                children: lz.map((zz => (0, Oz.jsx)(Zn, {
-                  name: zz.name,
-                  label: zz.label,
-                  onPick: nz
-                }, zz.name)))
+                rootMargin: Dp,
+                observerUpdateDeps: [ID],
+                children: fD.map((DD => (0, SD.jsx)(yp, {
+                  name: DD.name,
+                  label: DD.label,
+                  onPick: pD
+                }, DD.name)))
               })]
-            }, uz)
+            }, CD)
           }))
         })
       }));
 
-    function Kn(zz, uz) {
+    function tp(DD, CD) {
       const {
-        searched: bz,
-        shown: nz,
-        searchFor: iz,
-        loading: lz
-      } = function(zz, uz) {
-        var bz;
-        const nz = dn(),
-          [iz, lz] = (0, Ez.useState)(void 0),
-          Mz = (0, Ez.useRef)(void 0),
-          tz = (0, Ez.useRef)(0),
-          Hz = (0, Ez.useRef)(void 0),
-          Oz = null !== (bz = null === zz || void 0 === zz ? void 0 : zz.meta.item) && void 0 !== bz ? bz : null,
-          pz = !!zz && nz.isPending(zz.key);
-        (0, Ez.useEffect)((() => {
-          if (!zz || pz || !uz || void 0 === iz || iz === Oz) return;
-          const bz = iz === Mz.current && nz.gaveUpAt(zz.key) > tz.current && Hz.current !== iz;
-          (iz !== Mz.current || bz) && nz.act(zz.key, null !== iz && void 0 !== iz ? iz : "*", bz) && (bz && (Hz.current = iz), Mz.current = iz, tz.current = Date.now())
-        }), [zz, pz, uz, iz, Oz, nz]);
-        const dz = (0, Ez.useCallback)((zz => {
-            Mz.current = void 0, Hz.current = void 0, lz(zz)
+        searched: cD,
+        shown: pD,
+        searchFor: iD,
+        loading: fD
+      } = function(DD, CD) {
+        var cD;
+        const pD = Sp(),
+          [iD, fD] = (0, ID.useState)(void 0),
+          bD = (0, ID.useRef)(void 0),
+          QD = (0, ID.useRef)(0),
+          wD = (0, ID.useRef)(void 0),
+          SD = null !== (cD = null === DD || void 0 === DD ? void 0 : DD.meta.item) && void 0 !== cD ? cD : null,
+          BD = !!DD && pD.isPending(DD.key);
+        (0, ID.useEffect)((() => {
+          if (!DD || BD || !CD || void 0 === iD || iD === SD) return;
+          const cD = iD === bD.current && pD.gaveUpAt(DD.key) > QD.current && wD.current !== iD;
+          (iD !== bD.current || cD) && pD.act(DD.key, null !== iD && void 0 !== iD ? iD : "*", cD) && (cD && (wD.current = iD), bD.current = iD, QD.current = Date.now())
+        }), [DD, BD, CD, iD, SD, pD]);
+        const yD = (0, ID.useCallback)((DD => {
+            bD.current = void 0, wD.current = void 0, fD(DD)
           }), []),
-          Fz = void 0 !== iz && iz !== Oz && (pz || Mz.current !== iz);
+          MD = void 0 !== iD && iD !== SD && (BD || bD.current !== iD);
         return {
-          searched: Oz,
-          shown: Fz ? iz : Oz,
-          searchFor: dz,
-          loading: Fz || pz || null !== Oz && !uz
+          searched: SD,
+          shown: MD ? iD : SD,
+          searchFor: yD,
+          loading: MD || BD || null !== SD && !CD
         }
-      }(zz, uz), Mz = (0, Ez.useMemo)((() => function() {
-        var zz;
-        let uz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const nz = `${(0,BE.k)()}\x1f${uz.join("\x1e")}\x1f${bz.join("\x1e")}\x1f${JSON.stringify(Ez)}`;
-        if ((null === (zz = nn) || void 0 === zz ? void 0 : zz.key) === nz) return nn.items;
-        const iz = new Set(bz),
-          lz = new Set,
-          Mz = [],
-          tz = (zz, uz) => {
-            var bz;
-            if (!zz || lz.has(zz) || iz.has(zz)) return;
-            lz.add(zz);
-            const nz = null !== (bz = Ez[zz]) && void 0 !== bz ? bz : zz;
-            Mz.push({
-              name: zz,
-              label: nz,
-              lowerLabel: nz.toLowerCase(),
-              lowerName: zz.toLowerCase(),
-              category: uz
+      }(DD, CD), bD = (0, ID.useMemo)((() => function() {
+        var DD;
+        let CD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          ID = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const pD = `${(0,hI.l)()}\x1f${CD.join("\x1e")}\x1f${cD.join("\x1e")}\x1f${JSON.stringify(ID)}`;
+        if ((null === (DD = pp) || void 0 === DD ? void 0 : DD.key) === pD) return pp.items;
+        const iD = new Set(cD),
+          fD = new Set,
+          bD = [],
+          QD = (DD, CD) => {
+            var cD;
+            if (!DD || fD.has(DD) || iD.has(DD)) return;
+            fD.add(DD);
+            const pD = null !== (cD = ID[DD]) && void 0 !== cD ? cD : DD;
+            bD.push({
+              name: DD,
+              label: pD,
+              lowerLabel: pD.toLowerCase(),
+              lowerName: DD.toLowerCase(),
+              category: CD
             })
           };
-        for (const Oz of (0, eE.creativeItemIds)()) {
-          var Hz;
-          (0, eE.itemIsDisabled)(Oz, !0, !0, !1) || (0, eE.showOnlyInCreativeSearch)(Oz) || tz((0, BE.g)(Oz), null !== (Hz = (0, eE.creativeCategoryOf)(Oz)) && void 0 !== Hz ? Hz : "other")
+        for (const SD of (0, EI.creativeItemIds)()) {
+          var wD;
+          (0, EI.itemIsDisabled)(SD, !0, !0, !1) || (0, EI.showOnlyInCreativeSearch)(SD) || QD((0, hI.h)(SD), null !== (wD = (0, EI.creativeCategoryOf)(SD)) && void 0 !== wD ? wD : "other")
         }
-        for (const Oz of uz) tz(Oz, "other");
-        return nn = {
-          key: nz,
-          items: Mz
-        }, Mz
-      }(null === zz || void 0 === zz ? void 0 : zz.meta.extra, null === zz || void 0 === zz ? void 0 : zz.meta.excluded, null === zz || void 0 === zz ? void 0 : zz.meta.names)), [null === zz || void 0 === zz ? void 0 : zz.meta.extra, null === zz || void 0 === zz ? void 0 : zz.meta.excluded, null === zz || void 0 === zz ? void 0 : zz.meta.names]), [tz, Hz] = (0, Ez.useState)(""), [Oz, pz] = (0, Ez.useState)(0), [dz, Fz] = (0, Ez.useState)("recent"), Zz = (0, Ez.useCallback)((zz => {
-        Hz(""), pz((zz => zz + 1)), iz(zz)
-      }), [iz]), Rz = "browse" === dz || "" !== tz.trim();
+        for (const SD of CD) QD(SD, "other");
+        return pp = {
+          key: pD,
+          items: bD
+        }, bD
+      }(null === DD || void 0 === DD ? void 0 : DD.meta.extra, null === DD || void 0 === DD ? void 0 : DD.meta.excluded, null === DD || void 0 === DD ? void 0 : DD.meta.names)), [null === DD || void 0 === DD ? void 0 : DD.meta.extra, null === DD || void 0 === DD ? void 0 : DD.meta.excluded, null === DD || void 0 === DD ? void 0 : DD.meta.names]), [QD, wD] = (0, ID.useState)(""), [SD, BD] = (0, ID.useState)(0), [yD, MD] = (0, ID.useState)("recent"), tD = (0, ID.useCallback)((DD => {
+        wD(""), BD((DD => DD + 1)), iD(DD)
+      }), [iD]), ZD = "browse" === yD || "" !== QD.trim();
       return {
-        searched: bz,
-        shown: nz,
-        searchFor: iz,
-        loading: lz,
-        catalogue: Mz,
-        names: null === zz || void 0 === zz ? void 0 : zz.meta.names,
-        query: tz,
-        setQuery: Hz,
-        searchBoxKey: Oz,
-        pickItem: Zz,
-        setView: Fz,
-        browsing: Rz
+        searched: cD,
+        shown: pD,
+        searchFor: iD,
+        loading: fD,
+        catalogue: bD,
+        names: null === DD || void 0 === DD ? void 0 : DD.meta.names,
+        query: QD,
+        setQuery: wD,
+        searchBoxKey: SD,
+        pickItem: tD,
+        setView: MD,
+        browsing: ZD
       }
     }
 
-    function wn(zz) {
+    function Zp(DD) {
       let {
-        browser: uz,
-        children: bz
-      } = zz;
+        browser: CD,
+        children: cD
+      } = DD;
       const {
-        t: Ez
-      } = (0, lz.F)(), nz = dn();
-      return (0, Oz.jsxs)("div", {
+        t: ID
+      } = (0, fD.F)(), pD = Sp();
+      return (0, SD.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, Oz.jsx)("div", {
+        children: [(0, SD.jsx)("div", {
           className: "SmpSearch",
-          children: (0, Oz.jsx)(rz.d, {
+          children: (0, SD.jsx)(mD.b, {
             className: "SmpSearchInput",
-            placeholderText: Ez("smpShop:searchPlaceholder"),
-            defaultValue: uz.query,
-            onValueChange: zz => {
-              uz.setQuery(zz), uz.searched && zz.trim() && uz.searchFor(null)
+            placeholderText: ID("smpShop:searchPlaceholder"),
+            defaultValue: CD.query,
+            onValueChange: DD => {
+              CD.setQuery(DD), CD.searched && DD.trim() && CD.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const zz = Mn(uz.catalogue, uz.query)[0];
-              zz ? uz.pickItem(zz.name) : uz.query.trim() && nz.notify(Ez("smpShop:noItemsFound", {
-                query: uz.query.trim()
+              const DD = ip(CD.catalogue, CD.query)[0];
+              DD ? CD.pickItem(DD.name) : CD.query.trim() && pD.notify(ID("smpShop:noItemsFound", {
+                query: CD.query.trim()
               }))
             }
-          }, uz.searchBoxKey)
-        }), bz]
+          }, CD.searchBoxKey)
+        }), cD]
       })
     }
 
-    function Xn(zz) {
+    function op(DD) {
       let {
-        browser: uz,
-        recentLabel: bz,
-        children: Ez
-      } = zz;
+        browser: CD,
+        recentLabel: cD,
+        children: ID
+      } = DD;
       const {
-        t: nz
-      } = (0, lz.F)();
-      return (0, Oz.jsxs)("div", {
+        t: pD
+      } = (0, fD.F)();
+      return (0, SD.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, Oz.jsx)(yE, {
+        children: [(0, SD.jsx)(dI, {
           options: [{
             value: "recent",
-            label: bz
+            label: cD
           }, {
             value: "browse",
-            label: nz("smpShop:browseItems")
+            label: pD("smpShop:browseItems")
           }],
-          value: uz.browsing ? "browse" : "recent",
-          onChange: uz.setView,
-          ariaLabel: nz("smpShop:show")
-        }), !uz.browsing && Ez]
+          value: CD.browsing ? "browse" : "recent",
+          onChange: CD.setView,
+          ariaLabel: pD("smpShop:show")
+        }), !CD.browsing && ID]
       })
     }
 
-    function fn(zz) {
+    function vp(DD) {
       let {
-        item: uz,
-        names: bz,
-        summary: Ez,
-        onBack: nz,
-        children: iz
-      } = zz;
+        item: CD,
+        names: cD,
+        summary: ID,
+        onBack: pD,
+        children: iD
+      } = DD;
       const {
-        t: Mz
-      } = (0, lz.F)();
-      return (0, Oz.jsxs)("div", {
+        t: bD
+      } = (0, fD.F)();
+      return (0, SD.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, Oz.jsx)(Kz.d, {
+        children: [(0, SD.jsx)(oD.e, {
           className: "SmpBackButton",
-          onClick: nz,
-          children: Mz("general:back")
-        }), (0, Oz.jsx)(hE, {
-          item: uz,
+          onClick: pD,
+          children: bD("general:back")
+        }), (0, SD.jsx)(LI, {
+          item: CD,
           size: "big"
-        }), (0, Oz.jsxs)("div", {
+        }), (0, SD.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, Oz.jsx)("b", {
-            children: tn(bz, uz)
-          }), Ez && (0, Oz.jsx)("small", {
-            children: Ez
+          children: [(0, SD.jsx)("b", {
+            children: fp(cD, CD)
+          }), ID && (0, SD.jsx)("small", {
+            children: ID
           })]
-        }), iz]
+        }), iD]
       })
     }
 
-    function sn(zz) {
+    function Np(DD) {
       let {
-        browser: uz,
-        className: bz,
-        action: Ez,
-        above: nz,
-        list: lz,
-        summary: Mz,
-        recentLabel: tz,
-        listControls: Hz,
-        onBack: pz
-      } = zz;
-      return (0, Oz.jsxs)("div", {
-        className: iz()("SmpScreen", bz),
-        children: [(0, Oz.jsx)(wn, {
-          browser: uz,
-          children: Ez
-        }), uz.shown && (0, Oz.jsx)(fn, {
-          item: uz.shown,
-          names: uz.names,
-          summary: !uz.loading && Mz,
+        browser: CD,
+        className: cD,
+        action: ID,
+        above: pD,
+        list: fD,
+        summary: bD,
+        recentLabel: QD,
+        listControls: wD,
+        onBack: BD
+      } = DD;
+      return (0, SD.jsxs)("div", {
+        className: iD()("SmpScreen", cD),
+        children: [(0, SD.jsx)(Zp, {
+          browser: CD,
+          children: ID
+        }), CD.shown && (0, SD.jsx)(vp, {
+          item: CD.shown,
+          names: CD.names,
+          summary: !CD.loading && bD,
           onBack: () => {
-            null === pz || void 0 === pz || pz(), uz.searchFor(null)
+            null === BD || void 0 === BD || BD(), CD.searchFor(null)
           },
-          children: Hz
-        }), nz, uz.shown ? lz : (0, Oz.jsxs)(Oz.Fragment, {
-          children: [(0, Oz.jsx)(Xn, {
-            browser: uz,
-            recentLabel: tz,
-            children: Hz
-          }), uz.browsing ? (0, Oz.jsx)(Rn, {
-            items: uz.catalogue,
-            query: uz.query,
-            onPick: uz.pickItem
-          }) : lz]
+          children: wD
+        }), pD, CD.shown ? fD : (0, SD.jsxs)(SD.Fragment, {
+          children: [(0, SD.jsx)(op, {
+            browser: CD,
+            recentLabel: QD,
+            children: wD
+          }), CD.browsing ? (0, SD.jsx)(Mp, {
+            items: CD.catalogue,
+            query: CD.query,
+            onPick: CD.pickItem
+          }) : fD]
         })]
       })
     }
 
-    function rn(zz, uz) {
-      const bz = zz.map((zz => {
+    function gp(DD, CD) {
+      const cD = DD.map((DD => {
         let {
-          meta: uz
-        } = zz;
-        return uz.pricePerItem
+          meta: CD
+        } = DD;
+        return CD.pricePerItem
       }));
-      return "min" === uz ? Math.min(...bz) : Math.max(...bz)
+      return "min" === CD ? Math.min(...cD) : Math.max(...cD)
     }
-    var Nn = bz(6291);
-    const vn = (0, Ez.memo)((function(zz) {
-      var uz;
+    var Xp = cD(6320);
+    const mp = (0, ID.memo)((function(DD) {
+      var CD;
       const {
-        t: bz
-      } = (0, lz.F)(), Ez = null === zz.seller, nz = zz.quantity * zz.pricePerItem;
-      return (0, Oz.jsxs)("div", {
-        className: zz.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, Oz.jsx)(hE, {
-          item: zz.item,
-          amount: zz.quantity,
-          size: zz.grid ? "big" : "normal",
-          tier: zz.tier
-        }), (0, Oz.jsxs)("div", {
+        t: cD
+      } = (0, fD.F)(), ID = null === DD.seller, pD = DD.quantity * DD.pricePerItem;
+      return (0, SD.jsxs)("div", {
+        className: DD.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, SD.jsx)(LI, {
+          item: DD.item,
+          amount: DD.quantity,
+          size: DD.grid ? "big" : "normal",
+          tier: DD.tier
+        }), (0, SD.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, Oz.jsx)("b", {
-            children: (0, Oz.jsx)(xE.b, {
-              text: null !== (uz = zz.title) && void 0 !== uz ? uz : `${zz.quantity}x ${zz.item}`
+          children: [(0, SD.jsx)("b", {
+            children: (0, SD.jsx)(HI.c, {
+              text: null !== (CD = DD.title) && void 0 !== CD ? CD : `${DD.quantity}x ${DD.item}`
             })
-          }), (0, Oz.jsxs)("small", {
+          }), (0, SD.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, Oz.jsx)("span", {
-              children: Ez ? bz("smpShop:you") : (0, Oz.jsx)(xE.b, {
+            children: [(0, SD.jsx)("span", {
+              children: ID ? cD("smpShop:you") : (0, SD.jsx)(HI.c, {
                 text: [{
-                  entityName: zz.seller
+                  entityName: DD.seller
                 }]
               })
-            }), (0, Oz.jsx)("span", {
-              children: bz("smpShop:timeLeft", {
-                time: bn(zz.expiresAt)
+            }), (0, SD.jsx)("span", {
+              children: cD("smpShop:timeLeft", {
+                time: cp(DD.expiresAt)
               })
             })]
           })]
-        }), (0, Oz.jsxs)("div", {
+        }), (0, SD.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, Oz.jsx)(UE, {
-            amount: zz.pricePerItem
-          }), (0, Oz.jsx)("small", {
-            children: bz("smpShop:each")
+          children: [(0, SD.jsx)(TI, {
+            amount: DD.pricePerItem
+          }), (0, SD.jsx)("small", {
+            children: cD("smpShop:each")
           })]
-        }), (0, Oz.jsx)(Kz.f, {
+        }), (0, SD.jsx)(oD.i, {
           className: "SmpBuyButton",
-          disabled: Ez || !zz.canAfford && !zz.busy,
-          loading: zz.busy,
+          disabled: ID || !DD.canAfford && !DD.busy,
+          loading: DD.busy,
           onClick: () => {
-            zz.onBuy(zz.itemKey)
+            DD.onBuy(DD.itemKey)
           },
-          children: Ez ? bz("smpShop:yours") : (0, Oz.jsx)(UE, {
-            amount: nz
+          children: ID ? cD("smpShop:yours") : (0, SD.jsx)(TI, {
+            amount: pD
           })
         })]
       })
     }));
 
-    function xn(zz) {
+    function np(DD) {
       let {
-        view: uz,
-        onChange: bz
-      } = zz;
+        view: CD,
+        onChange: cD
+      } = DD;
       const {
-        t: Ez
-      } = (0, lz.F)();
-      return (0, Oz.jsx)(mE.d, {
+        t: ID
+      } = (0, fD.F)();
+      return (0, SD.jsx)(jI.b, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: Ez("smpShop:layout"),
+        ariaLabel: ID("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, Oz.jsx)(Mz.c, {
+          label: (0, SD.jsx)(bD.c, {
             name: "list"
           }),
-          ariaLabel: Ez("smpShop:listView")
+          ariaLabel: ID("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, Oz.jsx)(Mz.c, {
+          label: (0, SD.jsx)(bD.c, {
             name: "grid-2"
           }),
-          ariaLabel: Ez("smpShop:gridView")
+          ariaLabel: ID("smpShop:gridView")
         }],
-        value: uz,
-        onChange: bz
+        value: CD,
+        onChange: cD
       })
     }
 
-    function Jn(zz) {
+    function Op(DD) {
       let {
-        entries: uz,
-        view: bz
-      } = zz;
+        entries: CD,
+        view: cD
+      } = DD;
       const {
-        t: Ez
-      } = (0, lz.F)(), nz = dn(), iz = "grid" === bz;
-      return (0, Oz.jsxs)(Oz.Fragment, {
-        children: [!iz && (0, Oz.jsxs)("div", {
+        t: ID
+      } = (0, fD.F)(), pD = Sp(), iD = "grid" === cD;
+      return (0, SD.jsxs)(SD.Fragment, {
+        children: [!iD && (0, SD.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, Oz.jsx)("span", {}), (0, Oz.jsx)("span", {
-            children: Ez("smpShop:columnItem")
-          }), (0, Oz.jsx)("span", {
-            children: Ez("smpShop:columnPriceEach")
-          }), (0, Oz.jsx)("span", {
-            children: Ez("smpShop:columnTotal")
+          children: [(0, SD.jsx)("span", {}), (0, SD.jsx)("span", {
+            children: ID("smpShop:columnItem")
+          }), (0, SD.jsx)("span", {
+            children: ID("smpShop:columnPriceEach")
+          }), (0, SD.jsx)("span", {
+            children: ID("smpShop:columnTotal")
           })]
-        }), (0, Oz.jsx)(Fn.b, {
-          lazyLoadedClassName: iz ? "SmpCardGrid" : "SmpList",
+        }), (0, SD.jsx)(Bp.c, {
+          lazyLoadedClassName: iD ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: zn,
-          observerUpdateDeps: [uz.length],
-          children: uz.map((zz => {
-            var uz, bz;
+          rootMargin: Dp,
+          observerUpdateDeps: [CD.length],
+          children: CD.map((DD => {
+            var CD, cD;
             let {
-              key: Ez,
-              item: lz,
-              meta: Mz
-            } = zz;
-            const tz = Mz.quantity * Mz.pricePerItem;
-            return (0, Oz.jsx)(vn, {
-              itemKey: Ez,
-              item: Mz.item,
-              title: lz.customTitle,
-              quantity: Mz.quantity,
-              pricePerItem: Mz.pricePerItem,
-              seller: Mz.seller,
-              expiresAt: Mz.expiresAt,
-              tier: null !== (uz = null === (bz = lz.enchant) || void 0 === bz ? void 0 : bz.tier) && void 0 !== uz ? uz : null,
-              busy: nz.isPending(Ez) || null !== Mz.seller && !1 === lz.canBuy,
-              canAfford: nz.canAfford(lz, tz),
-              grid: iz,
-              onBuy: nz.act
-            }, Ez)
+              key: ID,
+              item: fD,
+              meta: bD
+            } = DD;
+            const QD = bD.quantity * bD.pricePerItem;
+            return (0, SD.jsx)(mp, {
+              itemKey: ID,
+              item: bD.item,
+              title: fD.customTitle,
+              quantity: bD.quantity,
+              pricePerItem: bD.pricePerItem,
+              seller: bD.seller,
+              expiresAt: bD.expiresAt,
+              tier: null !== (CD = null === (cD = fD.enchant) || void 0 === cD ? void 0 : cD.tier) && void 0 !== CD ? CD : null,
+              busy: pD.isPending(ID) || null !== bD.seller && !1 === fD.canBuy,
+              canAfford: pD.canAfford(fD, QD),
+              grid: iD,
+              onBuy: pD.act
+            }, ID)
           }))
-        }, bz)]
+        }, cD)]
       })
     }
-    const An = [1, 10, 100],
-      Tn = [1, 10, 100, 999];
+    const Pp = [1, 10, 100],
+      Hp = [1, 10, 100, 999];
 
-    function Ln(zz) {
-      var uz, bz, nz, tz, Hz, pz, dz, Fz, Zz, Rz;
+    function Up(DD) {
+      var CD, cD, pD, QD, wD, BD, yD, MD, tD, ZD;
       const {
-        t: wz
-      } = (0, lz.F)(), Xz = dn(), {
-        creator: fz,
-        mode: sz
-      } = zz, [oz, Nz] = (0, Ez.useState)(null !== (uz = null === fz || void 0 === fz ? void 0 : fz.meta.item) && void 0 !== uz ? uz : null), [vz, xz] = (0, Ez.useState)(1), [Jz, Az] = (0, Ez.useState)(0), [Tz, Lz] = (0, Ez.useState)(""), [Pz, Gz] = (0, Ez.useState)(0), az = (0, Ez.useRef)(oz), Vz = (0, Ez.useRef)(!1), [mz, qz] = (0, Ez.useState)(!1), hz = null !== (bz = null === fz || void 0 === fz ? void 0 : fz.meta.item) && void 0 !== bz ? bz : null, Uz = null !== (nz = null === fz || void 0 === fz ? void 0 : fz.meta.yM) && void 0 !== nz ? nz : 0;
-      (0, Ez.useEffect)((() => {
-        zz.searching || null === hz || hz === az.current || (az.current = hz, Vz.current = !1, Nz(hz), Az(0), xz("list" === sz ? Math.max(1, Uz) : 1))
-      }), [hz, zz.searching]);
-      const cz = !!fz && !!oz && fz.meta.item === oz,
-        gz = cz ? fz.meta.yM : null !== (tz = null === (Hz = zz.inventory) || void 0 === Hz || null === (pz = Hz.find((zz => zz.item === oz))) || void 0 === pz ? void 0 : pz.quantity) && void 0 !== tz ? tz : 0,
-        Sz = "list" === sz ? Math.max(1, gz) : 45954,
-        yz = null !== (dz = zz.prices[0]) && void 0 !== dz ? dz : null,
-        Dz = zz.prices.length ? Math.round(zz.prices.reduce(((zz, uz) => zz + uz), 0) / zz.prices.length) : null,
-        Qz = null === (Fz = zz.inventory) || void 0 === Fz || null === (Zz = Fz.find((zz => zz.item === oz))) || void 0 === Zz ? void 0 : Zz.sellPrice;
-      (0, Ez.useEffect)((() => {
-        var zz;
-        cz && (xz((zz => "list" === sz ? Math.min(Math.max(1, zz), Math.max(1, gz)) : zz)), Vz.current || Az(null !== (zz = null !== yz && void 0 !== yz ? yz : Dz) && void 0 !== zz ? zz : Math.max(1, null !== Qz && void 0 !== Qz ? Qz : 1)))
-      }), [cz, gz, oz, yz, Dz]);
-      const Wz = zz => {
-          Vz.current = !0, Az(zz)
+        t: vD
+      } = (0, fD.F)(), ND = Sp(), {
+        creator: gD,
+        mode: XD
+      } = DD, [nD, OD] = (0, ID.useState)(null !== (CD = null === gD || void 0 === gD ? void 0 : gD.meta.item) && void 0 !== CD ? CD : null), [PD, HD] = (0, ID.useState)(1), [UD, xD] = (0, ID.useState)(0), [qD, JD] = (0, ID.useState)(""), [KD, aD] = (0, ID.useState)(0), VD = (0, ID.useRef)(nD), zD = (0, ID.useRef)(!1), [jD, lD] = (0, ID.useState)(!1), LD = null !== (cD = null === gD || void 0 === gD ? void 0 : gD.meta.item) && void 0 !== cD ? cD : null, TD = null !== (pD = null === gD || void 0 === gD ? void 0 : gD.meta.Lb) && void 0 !== pD ? pD : 0;
+      (0, ID.useEffect)((() => {
+        DD.searching || null === LD || LD === VD.current || (VD.current = LD, zD.current = !1, OD(LD), xD(0), HD("list" === XD ? Math.max(1, TD) : 1))
+      }), [LD, DD.searching]);
+      const GD = !!gD && !!nD && gD.meta.item === nD,
+        RD = GD ? gD.meta.Lb : null !== (QD = null === (wD = DD.inventory) || void 0 === wD || null === (BD = wD.find((DD => DD.item === nD))) || void 0 === BD ? void 0 : BD.quantity) && void 0 !== QD ? QD : 0,
+        kD = "list" === XD ? Math.max(1, RD) : 45954,
+        dD = null !== (yD = DD.prices[0]) && void 0 !== yD ? yD : null,
+        YD = DD.prices.length ? Math.round(DD.prices.reduce(((DD, CD) => DD + CD), 0) / DD.prices.length) : null,
+        WD = null === (MD = DD.inventory) || void 0 === MD || null === (tD = MD.find((DD => DD.item === nD))) || void 0 === tD ? void 0 : tD.sellPrice;
+      (0, ID.useEffect)((() => {
+        var DD;
+        GD && (HD((DD => "list" === XD ? Math.min(Math.max(1, DD), Math.max(1, RD)) : DD)), zD.current || xD(null !== (DD = null !== dD && void 0 !== dD ? dD : YD) && void 0 !== DD ? DD : Math.max(1, null !== WD && void 0 !== WD ? WD : 1)))
+      }), [GD, RD, nD, dD, YD]);
+      const sD = DD => {
+          zD.current = !0, xD(DD)
         },
-        ez = uz => {
-          var bz, Ez, nz;
-          az.current = uz, Vz.current = !1, qz(!1), Lz(""), Gz((zz => zz + 1)), Nz(uz), Az(0), xz("list" === sz && null !== (bz = null === (Ez = zz.inventory) || void 0 === Ez || null === (nz = Ez.find((zz => zz.item === uz))) || void 0 === nz ? void 0 : nz.quantity) && void 0 !== bz ? bz : 1), (null === fz || void 0 === fz ? void 0 : fz.meta.item) !== uz && zz.onPickItem(uz)
+        ED = CD => {
+          var cD, ID, pD;
+          VD.current = CD, zD.current = !1, lD(!1), JD(""), aD((DD => DD + 1)), OD(CD), xD(0), HD("list" === XD && null !== (cD = null === (ID = DD.inventory) || void 0 === ID || null === (pD = ID.find((DD => DD.item === CD))) || void 0 === pD ? void 0 : pD.quantity) && void 0 !== cD ? cD : 1), (null === gD || void 0 === gD ? void 0 : gD.meta.item) !== CD && DD.onPickItem(CD)
         },
-        jz = vz * Jz,
-        Iz = "list" === sz && null !== fz && void 0 !== fz && fz.meta.fee ? function(zz, uz) {
-          const bz = Math.max(0, uz - zz.taxFreeAllowance);
-          return Math.ceil(Math.round(bz * zz.rate * 1e6) / 1e6)
-        }(fz.meta.fee, jz) : 0,
-        Bz = !!fz && Xz.isPending(fz.key),
-        Cz = cz && !zz.searching && vz >= 1 && Jz >= 1 && ("order" === sz || gz >= vz) && !Bz,
-        Yz = !!oz && !cz && !zz.searching && vz >= 1 && Jz >= 1,
-        kz = () => {
-          Cz ? Xz.act(fz.key, `${vz}|${Jz}`) : Yz && (zz.onPickItem(oz), qz(!0))
+        eD = PD * UD,
+        uD = "list" === XD && null !== gD && void 0 !== gD && gD.meta.fee ? function(DD, CD) {
+          const cD = Math.max(0, CD - DD.taxFreeAllowance);
+          return Math.ceil(Math.round(cD * DD.rate * 1e6) / 1e6)
+        }(gD.meta.fee, eD) : 0,
+        hD = !!gD && ND.isPending(gD.key),
+        rD = GD && !DD.searching && PD >= 1 && UD >= 1 && ("order" === XD || RD >= PD) && !hD,
+        AD = !!nD && !GD && !DD.searching && PD >= 1 && UD >= 1,
+        FD = () => {
+          rD ? ND.act(gD.key, `${PD}|${UD}`) : AD && (DD.onPickItem(nD), lD(!0))
         };
-      (0, Ez.useEffect)((() => {
-        mz && cz && !zz.searching && (qz(!1), kz())
-      }), [mz, cz, zz.searching]);
-      const zu = !!oz && !cz && (zz.searching || mz),
-        uu = oz ? tn(zz.names, oz) : "",
-        bu = (0, Ez.useMemo)((() => Mn(zz.catalogue, Tz).slice(0, 8)), [zz.catalogue, Tz]),
-        Eu = ("list" === sz ? An.filter((zz => zz < gz)) : Tn).map((zz => ({
-          value: zz,
-          label: String(zz)
+      (0, ID.useEffect)((() => {
+        jD && GD && !DD.searching && (lD(!1), FD())
+      }), [jD, GD, DD.searching]);
+      const DC = !!nD && !GD && (DD.searching || jD),
+        CC = nD ? fp(DD.names, nD) : "",
+        cC = (0, ID.useMemo)((() => ip(DD.catalogue, qD).slice(0, 8)), [DD.catalogue, qD]),
+        IC = ("list" === XD ? Pp.filter((DD => DD < RD)) : Hp).map((DD => ({
+          value: DD,
+          label: String(DD)
         })));
-      "list" === sz && gz > 0 && Eu.push({
-        value: gz,
-        label: wz("smpShop:all", {
-          count: gz
+      "list" === XD && RD > 0 && IC.push({
+        value: RD,
+        label: vD("smpShop:all", {
+          count: RD
         })
       });
-      const nu = [];
-      return null !== yz && (yz > 1 && nu.push({
-        value: yz - 1,
-        label: wz("smpShop:undercut", {
-          price: VE(yz - 1)
+      const pC = [];
+      return null !== dD && (dD > 1 && pC.push({
+        value: dD - 1,
+        label: vD("smpShop:undercut", {
+          price: zI(dD - 1)
         })
-      }), nu.push({
-        value: yz,
-        label: wz("smpShop:lowest", {
-          price: VE(yz)
+      }), pC.push({
+        value: dD,
+        label: vD("smpShop:lowest", {
+          price: zI(dD)
         })
-      })), null !== Dz && Dz !== yz && nu.push({
-        value: Dz,
-        label: wz("smpShop:average", {
-          price: VE(Dz)
+      })), null !== YD && YD !== dD && pC.push({
+        value: YD,
+        label: vD("smpShop:average", {
+          price: zI(YD)
         })
-      }), (0, Oz.jsxs)("div", {
+      }), (0, SD.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, Oz.jsxs)("div", {
+        children: [(0, SD.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, Oz.jsx)("b", {
-            children: wz("list" === sz ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, Oz.jsx)("button", {
+          children: [(0, SD.jsx)("b", {
+            children: vD("list" === XD ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, SD.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": wz("smpShop:close"),
-            onClick: zz.onClose,
-            children: (0, Oz.jsx)(Mz.c, {
+            "aria-label": vD("smpShop:close"),
+            onClick: DD.onClose,
+            children: (0, SD.jsx)(bD.c, {
               name: "xmark"
             })
           })]
-        }), "list" === sz && (0, Oz.jsx)("div", {
+        }), "list" === XD && (0, SD.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (Rz = zz.inventory) && void 0 !== Rz && Rz.length ? zz.inventory.map((zz => {
+          children: null !== (ZD = DD.inventory) && void 0 !== ZD && ZD.length ? DD.inventory.map((DD => {
             let {
-              item: uz,
-              quantity: bz
-            } = zz;
-            return (0, Oz.jsx)("button", {
+              item: CD,
+              quantity: cD
+            } = DD;
+            return (0, SD.jsx)("button", {
               type: "button",
-              title: uz,
-              className: iz()("SmpPickerSlot", {
-                SmpPickerSlotOn: uz === oz
+              title: CD,
+              className: iD()("SmpPickerSlot", {
+                SmpPickerSlotOn: CD === nD
               }),
               onClick: () => {
-                ez(uz)
+                ED(CD)
               },
-              children: (0, Oz.jsx)(hE, {
-                item: uz,
-                amount: bz
+              children: (0, SD.jsx)(LI, {
+                item: CD,
+                amount: cD
               })
-            }, uz)
-          })) : (0, Oz.jsx)("span", {
+            }, CD)
+          })) : (0, SD.jsx)("span", {
             className: "SmpMuted",
-            children: wz("smpShop:nothingToList")
+            children: vD("smpShop:nothingToList")
           })
-        }), ("list" === sz || !oz) && (0, Oz.jsxs)("div", {
+        }), ("list" === XD || !nD) && (0, SD.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, Oz.jsx)(rz.d, {
+          children: [(0, SD.jsx)(mD.b, {
             className: "SmpSearchInput",
-            placeholderText: wz("list" === sz ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: Tz,
-            onValueChange: Lz,
+            placeholderText: vD("list" === XD ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: qD,
+            onValueChange: JD,
             blurOnEnter: !0,
             onEnter: () => {
-              bu[0] && ez(bu[0].name)
+              cC[0] && ED(cC[0].name)
             }
-          }, Pz), bu.length > 0 && (0, Oz.jsx)("div", {
+          }, KD), cC.length > 0 && (0, SD.jsx)("div", {
             className: "SmpPicker",
-            children: bu.map((zz => {
+            children: cC.map((DD => {
               let {
-                name: uz
-              } = zz;
-              return (0, Oz.jsx)("button", {
+                name: CD
+              } = DD;
+              return (0, SD.jsx)("button", {
                 type: "button",
-                title: uz,
-                className: iz()("SmpPickerSlot", {
-                  SmpPickerSlotOn: uz === oz
+                title: CD,
+                className: iD()("SmpPickerSlot", {
+                  SmpPickerSlotOn: CD === nD
                 }),
                 onClick: () => {
-                  ez(uz)
+                  ED(CD)
                 },
-                children: (0, Oz.jsx)(hE, {
-                  item: uz
+                children: (0, SD.jsx)(LI, {
+                  item: CD
                 })
-              }, uz)
+              }, CD)
             }))
           })]
-        }), oz && (0, Oz.jsxs)(Oz.Fragment, {
-          children: [(0, Oz.jsxs)("div", {
+        }), nD && (0, SD.jsxs)(SD.Fragment, {
+          children: [(0, SD.jsxs)("div", {
             className: "SmpPickedName",
-            children: [uu, zu && (0, Oz.jsx)(DE, {})]
-          }), (0, Oz.jsxs)("div", {
+            children: [CC, DC && (0, SD.jsx)(YI, {})]
+          }), (0, SD.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, Oz.jsxs)("div", {
+            children: [(0, SD.jsxs)("div", {
               className: "SmpField",
-              children: [(0, Oz.jsxs)("span", {
-                children: [wz("smpShop:quantity"), "list" === sz && cz && (0, Oz.jsx)("small", {
-                  children: wz("smpShop:youHave", {
-                    count: gz
+              children: [(0, SD.jsxs)("span", {
+                children: [vD("smpShop:quantity"), "list" === XD && GD && (0, SD.jsx)("small", {
+                  children: vD("smpShop:youHave", {
+                    count: RD
                   })
                 })]
-              }), (0, Oz.jsx)(QE, {
-                value: vz,
-                onChange: xz,
-                max: Sz,
-                label: wz("smpShop:quantity")
-              }), (0, Oz.jsx)(yE, {
-                options: Eu,
-                value: vz,
-                onChange: xz,
-                ariaLabel: wz("smpShop:quantity")
+              }), (0, SD.jsx)(WI, {
+                value: PD,
+                onChange: HD,
+                max: kD,
+                label: vD("smpShop:quantity")
+              }), (0, SD.jsx)(dI, {
+                options: IC,
+                value: PD,
+                onChange: HD,
+                ariaLabel: vD("smpShop:quantity")
               })]
-            }), (0, Oz.jsxs)("div", {
+            }), (0, SD.jsxs)("div", {
               className: "SmpField",
-              children: [(0, Oz.jsx)("span", {
-                children: wz("smpShop:pricePerItem")
-              }), (0, Oz.jsx)(QE, {
-                value: Math.max(1, Jz),
-                onChange: Wz,
+              children: [(0, SD.jsx)("span", {
+                children: vD("smpShop:pricePerItem")
+              }), (0, SD.jsx)(WI, {
+                value: Math.max(1, UD),
+                onChange: sD,
                 max: 9999999,
-                step: WE,
-                label: wz("smpShop:pricePerItem")
-              }), (0, Oz.jsx)(yE, {
-                options: nu,
-                value: Jz,
-                onChange: Wz,
-                ariaLabel: wz("smpShop:pricePerItem")
+                step: sI,
+                label: vD("smpShop:pricePerItem")
+              }), (0, SD.jsx)(dI, {
+                options: pC,
+                value: UD,
+                onChange: sD,
+                ariaLabel: vD("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === sz && (0, Oz.jsxs)("div", {
+          }), "list" === XD && (0, SD.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, Oz.jsxs)("span", {
-              children: [wz("smpShop:youGet"), " ", (0, Oz.jsx)(UE, {
-                amount: Math.max(0, jz - Iz),
+            children: [(0, SD.jsxs)("span", {
+              children: [vD("smpShop:youGet"), " ", (0, SD.jsx)(TI, {
+                amount: Math.max(0, eD - uD),
                 exact: !0
               })]
-            }), (0, Oz.jsx)("small", {
-              children: Iz > 0 ? wz("smpShop:listingFee", {
-                fee: Iz.toLocaleString("en-US")
-              }) : wz("smpShop:listingRules")
+            }), (0, SD.jsx)("small", {
+              children: uD > 0 ? vD("smpShop:listingFee", {
+                fee: uD.toLocaleString("en-US")
+              }) : vD("smpShop:listingRules")
             })]
-          }), (0, Oz.jsx)(Kz.v, {
+          }), (0, SD.jsx)(oD.r, {
             className: "SmpSubmit",
-            disabled: !Cz && !Yz && !Bz,
-            loading: Bz || zu || cz && zz.searching,
-            onClick: kz,
-            children: "list" === sz ? wz("smpShop:listButton", {
-              count: vz,
-              item: uu
-            }) : (0, Oz.jsxs)(Oz.Fragment, {
-              children: [wz("smpShop:orderButton", {
-                count: vz,
-                item: uu
-              }), " ", Jz >= 1 && (0, Oz.jsx)(UE, {
-                amount: jz
+            disabled: !rD && !AD && !hD,
+            loading: hD || DC || GD && DD.searching,
+            onClick: FD,
+            children: "list" === XD ? vD("smpShop:listButton", {
+              count: PD,
+              item: CC
+            }) : (0, SD.jsxs)(SD.Fragment, {
+              children: [vD("smpShop:orderButton", {
+                count: PD,
+                item: CC
+              }), " ", UD >= 1 && (0, SD.jsx)(TI, {
+                amount: eD
               })]
             })
           })]
@@ -3656,627 +3656,627 @@ export const modules = {
       })
     }
 
-    function Pn() {
-      var zz;
+    function xp() {
+      var DD;
       const {
-        t: uz
-      } = (0, lz.F)(), bz = dn(), nz = null === (zz = bz.shopInfo[bz.categoryKey]) || void 0 === zz ? void 0 : zz.items, iz = kE(nz, "search"), Mz = kE(nz, "creator"), tz = YE(nz, "enchantedCreator"), Hz = YE(nz, "listing"), pz = kE(nz, "empty"), dz = Kn(iz, Hz.length > 0 || null !== pz), {
-        searched: Fz,
-        shown: Zz,
-        loading: Rz
-      } = dz, [wz, Xz] = (0, Ez.useState)(!1), [fz, sz] = function() {
-        const [zz, uz] = (0, Nn.d)("smpMarketView", "list");
-        return ["grid" === zz ? "grid" : "list", uz]
-      }(), rz = "grid" === fz, oz = (0, Ez.useMemo)((() => Hz.filter((zz => {
+        t: CD
+      } = (0, fD.F)(), cD = Sp(), pD = null === (DD = cD.shopInfo[cD.categoryKey]) || void 0 === DD ? void 0 : DD.items, iD = FI(pD, "search"), bD = FI(pD, "creator"), QD = AI(pD, "enchantedCreator"), wD = AI(pD, "listing"), BD = FI(pD, "empty"), yD = tp(iD, wD.length > 0 || null !== BD), {
+        searched: MD,
+        shown: tD,
+        loading: ZD
+      } = yD, [vD, ND] = (0, ID.useState)(!1), [gD, XD] = function() {
+        const [DD, CD] = (0, Xp.c)("smpMarketView", "list");
+        return ["grid" === DD ? "grid" : "list", CD]
+      }(), mD = "grid" === gD, nD = (0, ID.useMemo)((() => wD.filter((DD => {
         let {
-          meta: uz
-        } = zz;
-        return null !== uz.seller && uz.item === Fz
-      })).map((zz => {
+          meta: CD
+        } = DD;
+        return null !== CD.seller && CD.item === MD
+      })).map((DD => {
         let {
-          meta: uz
-        } = zz;
-        return uz.pricePerItem
-      })).sort(((zz, uz) => zz - uz))), [Hz, Fz]), Nz = (0, Ez.useMemo)((() => {
-        const zz = new Set(dz.catalogue.map((zz => {
+          meta: CD
+        } = DD;
+        return CD.pricePerItem
+      })).sort(((DD, CD) => DD - CD))), [wD, MD]), OD = (0, ID.useMemo)((() => {
+        const DD = new Set(yD.catalogue.map((DD => {
           let {
-            name: uz
-          } = zz;
-          return uz
+            name: CD
+          } = DD;
+          return CD
         })));
-        return function(zz) {
-          for (const uz in zz)
-            if ("sell" === zz[uz].smp) return YE(zz[uz].items, "sell").filter((zz => {
+        return function(DD) {
+          for (const CD in DD)
+            if ("sell" === DD[CD].smp) return AI(DD[CD].items, "sell").filter((DD => {
               let {
-                item: uz
-              } = zz;
-              return !uz.enchant
-            })).map((zz => {
+                item: CD
+              } = DD;
+              return !CD.enchant
+            })).map((DD => {
               let {
-                meta: uz
-              } = zz;
+                meta: CD
+              } = DD;
               return {
-                item: uz.item,
-                quantity: uz.quantity,
-                sellPrice: uz.pricePerItem
+                item: CD.item,
+                quantity: CD.quantity,
+                sellPrice: CD.pricePerItem
               }
             }));
           return []
-        }(bz.shopInfo).filter((uz => {
+        }(cD.shopInfo).filter((CD => {
           let {
-            item: bz
-          } = uz;
-          return zz.has(bz)
+            item: cD
+          } = CD;
+          return DD.has(cD)
         }))
-      }), [bz.shopInfo, dz.catalogue]);
-      return (0, Oz.jsx)(sn, {
-        browser: dz,
+      }), [cD.shopInfo, yD.catalogue]);
+      return (0, SD.jsx)(Np, {
+        browser: yD,
         className: "SmpMarketTab",
-        recentLabel: uz("smpShop:recentlyListed"),
-        action: (0, Oz.jsx)(Kz.v, {
+        recentLabel: CD("smpShop:recentlyListed"),
+        action: (0, SD.jsx)(oD.r, {
           className: "SmpSellButton",
           onClick: () => {
-            Xz((zz => !zz))
+            ND((DD => !DD))
           },
-          children: uz("smpShop:sell")
+          children: CD("smpShop:sell")
         }),
-        above: wz && (0, Oz.jsxs)(Oz.Fragment, {
-          children: [(0, Oz.jsx)(Ln, {
+        above: vD && (0, SD.jsxs)(SD.Fragment, {
+          children: [(0, SD.jsx)(Up, {
             mode: "list",
-            creator: Mz,
-            inventory: Nz,
-            catalogue: dz.catalogue,
-            names: dz.names,
-            searching: Rz,
-            prices: oz,
-            onPickItem: dz.searchFor,
+            creator: bD,
+            inventory: OD,
+            catalogue: yD.catalogue,
+            names: yD.names,
+            searching: ZD,
+            prices: nD,
+            onPickItem: yD.searchFor,
             onClose: () => {
-              Xz(!1)
+              ND(!1)
             }
-          }), tz.length > 0 && (0, Oz.jsx)(Gn, {
-            entries: tz
+          }), QD.length > 0 && (0, SD.jsx)(qp, {
+            entries: QD
           })]
         }),
-        listControls: (0, Oz.jsx)(xn, {
-          view: fz,
-          onChange: sz
+        listControls: (0, SD.jsx)(np, {
+          view: gD,
+          onChange: XD
         }),
-        summary: Zz && (Hz.length > 0 ? uz(1 === Hz.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: Hz.length,
-          price: VE(rn(Hz, "min"))
-        }) : uz("smpShop:noOneSelling", {
-          item: tn(dz.names, Zz)
+        summary: tD && (wD.length > 0 ? CD(1 === wD.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: wD.length,
+          price: zI(gp(wD, "min"))
+        }) : CD("smpShop:noOneSelling", {
+          item: fp(yD.names, tD)
         })),
-        list: Rz ? (0, Oz.jsx)(cE, {
-          grid: rz
-        }) : Hz.length > 0 ? (0, Oz.jsx)(Jn, {
-          entries: Hz,
-          view: fz
-        }) : pz ? (0, Oz.jsx)(SE, {
-          entry: pz
-        }) : (0, Oz.jsx)(cE, {
+        list: ZD ? (0, SD.jsx)(GI, {
+          grid: mD
+        }) : wD.length > 0 ? (0, SD.jsx)(Op, {
+          entries: wD,
+          view: gD
+        }) : BD ? (0, SD.jsx)(kI, {
+          entry: BD
+        }) : (0, SD.jsx)(GI, {
           count: 3,
-          grid: rz
+          grid: mD
         })
       })
     }
 
-    function Gn(zz) {
+    function qp(DD) {
       let {
-        entries: uz
-      } = zz;
+        entries: CD
+      } = DD;
       const {
-        t: bz
-      } = (0, lz.F)(), nz = dn(), [iz, Mz] = (0, Ez.useState)({});
-      return (0, Oz.jsx)("div", {
+        t: cD
+      } = (0, fD.F)(), pD = Sp(), [iD, bD] = (0, ID.useState)({});
+      return (0, SD.jsx)("div", {
         className: "SmpList",
-        children: uz.map((zz => {
-          var uz, Ez, lz;
+        children: CD.map((DD => {
+          var CD, ID, fD;
           let {
-            key: tz,
-            item: Hz,
-            meta: pz
-          } = zz;
-          const dz = null !== (uz = iz[tz]) && void 0 !== uz ? uz : 1;
-          return (0, Oz.jsxs)("div", {
+            key: QD,
+            item: wD,
+            meta: BD
+          } = DD;
+          const yD = null !== (CD = iD[QD]) && void 0 !== CD ? CD : 1;
+          return (0, SD.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, Oz.jsx)(hE, {
-              item: pz.item,
-              amount: pz.quantity,
-              tier: null !== (Ez = null === (lz = Hz.enchant) || void 0 === lz ? void 0 : lz.tier) && void 0 !== Ez ? Ez : null
-            }), (0, Oz.jsxs)("div", {
+            children: [(0, SD.jsx)(LI, {
+              item: BD.item,
+              amount: BD.quantity,
+              tier: null !== (ID = null === (fD = wD.enchant) || void 0 === fD ? void 0 : fD.tier) && void 0 !== ID ? ID : null
+            }), (0, SD.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, Oz.jsx)("b", {
-                children: (0, Oz.jsx)(xE.b, {
-                  text: Hz.customTitle
+              children: [(0, SD.jsx)("b", {
+                children: (0, SD.jsx)(HI.c, {
+                  text: wD.customTitle
                 })
-              }), (0, Oz.jsx)("small", {
-                children: bz("smpShop:enchantedListing")
+              }), (0, SD.jsx)("small", {
+                children: cD("smpShop:enchantedListing")
               })]
-            }), (0, Oz.jsx)(QE, {
-              value: dz,
-              onChange: zz => {
-                Mz({
-                  ...iz,
-                  [tz]: zz
+            }), (0, SD.jsx)(WI, {
+              value: yD,
+              onChange: DD => {
+                bD({
+                  ...iD,
+                  [QD]: DD
                 })
               },
               max: 9999999,
-              step: WE,
-              label: bz("smpShop:pricePerItem")
-            }), (0, Oz.jsxs)(Kz.v, {
-              loading: nz.isPending(tz),
+              step: sI,
+              label: cD("smpShop:pricePerItem")
+            }), (0, SD.jsxs)(oD.r, {
+              loading: pD.isPending(QD),
               onClick: () => {
-                nz.act(tz, String(dz))
+                pD.act(QD, String(yD))
               },
-              children: [bz("smpShop:list"), " ", (0, Oz.jsx)(UE, {
-                amount: dz
+              children: [cD("smpShop:list"), " ", (0, SD.jsx)(TI, {
+                amount: yD
               })]
             })]
-          }, tz)
+          }, QD)
         }))
       })
     }
-    const an = (0, Ez.memo)((function(zz) {
+    const Jp = (0, ID.memo)((function(DD) {
       let {
-        itemKey: uz,
-        item: bz,
-        quantity: Ez,
-        pricePerItem: nz,
-        tier: lz,
-        selected: Mz,
-        onSelect: tz
-      } = zz;
-      return (0, Oz.jsxs)("button", {
+        itemKey: CD,
+        item: cD,
+        quantity: ID,
+        pricePerItem: pD,
+        tier: fD,
+        selected: bD,
+        onSelect: QD
+      } = DD;
+      return (0, SD.jsxs)("button", {
         type: "button",
-        className: iz()("SmpInventorySlot", {
-          SmpInventorySlotOn: Mz
+        className: iD()("SmpInventorySlot", {
+          SmpInventorySlotOn: bD
         }),
-        title: bz,
+        title: cD,
         onClick: () => {
-          tz(uz)
+          QD(CD)
         },
-        children: [(0, Oz.jsx)(hE, {
-          item: bz,
-          amount: Ez,
-          tier: lz
-        }), (0, Oz.jsx)(UE, {
-          amount: nz
+        children: [(0, SD.jsx)(LI, {
+          item: cD,
+          amount: ID,
+          tier: fD
+        }), (0, SD.jsx)(TI, {
+          amount: pD
         })]
       })
     }));
 
-    function Vn() {
-      var zz;
+    function Kp() {
+      var DD;
       const {
-        t: uz
-      } = (0, lz.F)(), bz = dn(), nz = null === (zz = bz.shopInfo[bz.categoryKey]) || void 0 === zz ? void 0 : zz.items, Mz = YE(nz, "sell"), tz = kE(nz, "empty"), [Hz, pz] = (0, Ez.useState)(null), [dz, Fz] = (0, Ez.useState)({}), Zz = Mz.find((zz => {
+        t: CD
+      } = (0, fD.F)(), cD = Sp(), pD = null === (DD = cD.shopInfo[cD.categoryKey]) || void 0 === DD ? void 0 : DD.items, bD = AI(pD, "sell"), QD = FI(pD, "empty"), [wD, BD] = (0, ID.useState)(null), [yD, MD] = (0, ID.useState)({}), tD = bD.find((DD => {
         let {
-          key: uz
-        } = zz;
-        return uz === Hz
+          key: CD
+        } = DD;
+        return CD === wD
       }));
-      return 0 === Mz.length ? (0, Oz.jsx)("div", {
+      return 0 === bD.length ? (0, SD.jsx)("div", {
         className: "SmpScreen",
-        children: (0, Oz.jsx)(gE, {
-          title: tz ? (0, Oz.jsx)(xE.b, {
-            text: tz.item.customTitle
-          }) : uz("smpShop:nothingToSell"),
-          children: tz && (0, Oz.jsx)(xE.b, {
-            text: tz.item.description
+        children: (0, SD.jsx)(RI, {
+          title: QD ? (0, SD.jsx)(HI.c, {
+            text: QD.item.customTitle
+          }) : CD("smpShop:nothingToSell"),
+          children: QD && (0, SD.jsx)(HI.c, {
+            text: QD.item.description
           })
         })
-      }) : (0, Oz.jsxs)("div", {
+      }) : (0, SD.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, Oz.jsx)("div", {
+        children: [(0, SD.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: Mz.map((zz => {
-            var uz, bz;
+          children: bD.map((DD => {
+            var CD, cD;
             let {
-              key: Ez,
-              item: nz,
-              meta: iz
-            } = zz;
-            return (0, Oz.jsx)(an, {
-              itemKey: Ez,
-              item: iz.item,
-              quantity: iz.quantity,
-              pricePerItem: iz.pricePerItem,
-              tier: null !== (uz = null === (bz = nz.enchant) || void 0 === bz ? void 0 : bz.tier) && void 0 !== uz ? uz : null,
-              selected: Ez === Hz,
-              onSelect: pz
-            }, Ez)
+              key: ID,
+              item: pD,
+              meta: iD
+            } = DD;
+            return (0, SD.jsx)(Jp, {
+              itemKey: ID,
+              item: iD.item,
+              quantity: iD.quantity,
+              pricePerItem: iD.pricePerItem,
+              tier: null !== (CD = null === (cD = pD.enchant) || void 0 === cD ? void 0 : cD.tier) && void 0 !== CD ? CD : null,
+              selected: ID === wD,
+              onSelect: BD
+            }, ID)
           }))
-        }), (0, Oz.jsx)("div", {
-          className: iz()("SmpSellBar", {
-            SmpSellBarIdle: !Zz
+        }), (0, SD.jsx)("div", {
+          className: iD()("SmpSellBar", {
+            SmpSellBarIdle: !tD
           }),
-          children: Zz ? (0, Oz.jsx)(mn, {
-            entry: Zz,
-            choice: Hn(Zz.item, dz[Zz.key]),
-            onChoose: zz => {
-              Fz({
-                ...dz,
-                [Zz.key]: zz
+          children: tD ? (0, SD.jsx)(ap, {
+            entry: tD,
+            choice: bp(tD.item, yD[tD.key]),
+            onChoose: DD => {
+              MD({
+                ...yD,
+                [tD.key]: DD
               })
             }
-          }) : (0, Oz.jsx)("span", {
+          }) : (0, SD.jsx)("span", {
             className: "SmpMuted",
-            children: uz("smpShop:tapToSell")
+            children: CD("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function mn(zz) {
-      var uz, bz, Ez, nz;
+    function ap(DD) {
+      var CD, cD, ID, pD;
       let {
-        entry: iz,
-        choice: Mz,
-        onChoose: tz
-      } = zz;
+        entry: iD,
+        choice: bD,
+        onChoose: QD
+      } = DD;
       const {
-        t: Hz
-      } = (0, lz.F)(), pz = dn(), {
-        key: dz,
-        item: Fz,
-        meta: Zz
-      } = iz, Rz = En("dropdown" === (null === (uz = Fz.userInput) || void 0 === uz ? void 0 : uz.type) ? Fz.userInput.dropdownOptions : []), wz = null === Mz ? 0 : -(0, rE.b)(Fz, Mz);
-      return (0, Oz.jsxs)(Oz.Fragment, {
-        children: [(0, Oz.jsx)(hE, {
-          item: Zz.item,
-          amount: Zz.quantity,
-          tier: null !== (bz = null === (Ez = Fz.enchant) || void 0 === Ez ? void 0 : Ez.tier) && void 0 !== bz ? bz : null
-        }), (0, Oz.jsxs)("div", {
+        t: wD
+      } = (0, fD.F)(), BD = Sp(), {
+        key: yD,
+        item: MD,
+        meta: tD
+      } = iD, ZD = Ip("dropdown" === (null === (CD = MD.userInput) || void 0 === CD ? void 0 : CD.type) ? MD.userInput.dropdownOptions : []), vD = null === bD ? 0 : -(0, mI.c)(MD, bD);
+      return (0, SD.jsxs)(SD.Fragment, {
+        children: [(0, SD.jsx)(LI, {
+          item: tD.item,
+          amount: tD.quantity,
+          tier: null !== (cD = null === (ID = MD.enchant) || void 0 === ID ? void 0 : ID.tier) && void 0 !== cD ? cD : null
+        }), (0, SD.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, Oz.jsx)("b", {
-            children: (0, Oz.jsx)(xE.b, {
-              text: null !== (nz = Fz.customTitle) && void 0 !== nz ? nz : Zz.item
+          children: [(0, SD.jsx)("b", {
+            children: (0, SD.jsx)(HI.c, {
+              text: null !== (pD = MD.customTitle) && void 0 !== pD ? pD : tD.item
             })
-          }), (0, Oz.jsx)("small", {
-            children: Hz("smpShop:sellEach", {
-              count: Zz.quantity
+          }), (0, SD.jsx)("small", {
+            children: wD("smpShop:sellEach", {
+              count: tD.quantity
             })
           })]
-        }), (0, Oz.jsx)(yE, {
-          options: Rz.map((zz => {
+        }), (0, SD.jsx)(dI, {
+          options: ZD.map((DD => {
             let {
-              label: uz,
-              quantity: bz,
-              isAll: Ez
-            } = zz;
+              label: CD,
+              quantity: cD,
+              isAll: ID
+            } = DD;
             return {
-              value: uz,
-              label: Ez ? Hz("smpShop:all", {
-                count: bz
-              }) : String(bz)
+              value: CD,
+              label: ID ? wD("smpShop:all", {
+                count: cD
+              }) : String(cD)
             }
           })),
-          value: Mz,
-          onChange: tz,
-          ariaLabel: Hz("smpShop:quantity")
-        }), (0, Oz.jsxs)(Kz.v, {
-          loading: pz.isPending(dz),
-          disabled: null === Mz,
+          value: bD,
+          onChange: QD,
+          ariaLabel: wD("smpShop:quantity")
+        }), (0, SD.jsxs)(oD.r, {
+          loading: BD.isPending(yD),
+          disabled: null === bD,
           onClick: () => {
-            pz.act(dz, Mz)
+            BD.act(yD, bD)
           },
-          children: [Hz("smpShop:sellButton"), " ", (0, Oz.jsx)(UE, {
-            amount: wz
+          children: [wD("smpShop:sellButton"), " ", (0, SD.jsx)(TI, {
+            amount: vD
           })]
         })]
       })
     }
 
-    function qn() {
-      var zz;
+    function Vp() {
+      var DD;
       const {
-        t: uz
-      } = (0, lz.F)(), bz = dn(), Ez = null === (zz = bz.shopInfo[bz.categoryKey]) || void 0 === zz ? void 0 : zz.items, nz = YE(Ez, "collect"), iz = YE(Ez, "myListing"), Mz = (zz, uz) => bz.isPending(zz) || !1 === uz.canBuy;
-      return (0, Oz.jsxs)("div", {
+        t: CD
+      } = (0, fD.F)(), cD = Sp(), ID = null === (DD = cD.shopInfo[cD.categoryKey]) || void 0 === DD ? void 0 : DD.items, pD = AI(ID, "collect"), iD = AI(ID, "myListing"), bD = (DD, CD) => cD.isPending(DD) || !1 === CD.canBuy;
+      return (0, SD.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, Oz.jsx)("h3", {
+        children: [(0, SD.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: uz("smpShop:readyToCollect")
-        }), nz.length > 0 ? (0, Oz.jsx)("div", {
+          children: CD("smpShop:readyToCollect")
+        }), pD.length > 0 ? (0, SD.jsx)("div", {
           className: "SmpList",
-          children: nz.map((zz => {
-            var Ez, nz;
+          children: pD.map((DD => {
+            var ID, pD;
             let {
-              key: iz,
-              item: lz,
-              meta: tz
-            } = zz;
-            return (0, Oz.jsxs)("div", {
+              key: iD,
+              item: fD,
+              meta: QD
+            } = DD;
+            return (0, SD.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, Oz.jsx)(hE, {
-                item: "sold" === tz.type ? "Gold Coin" : tz.item,
-                amount: "sold" === tz.type ? 0 : tz.quantity,
-                tier: null !== (Ez = null === (nz = lz.enchant) || void 0 === nz ? void 0 : nz.tier) && void 0 !== Ez ? Ez : null
-              }), (0, Oz.jsxs)("div", {
+              children: [(0, SD.jsx)(LI, {
+                item: "sold" === QD.type ? "Gold Coin" : QD.item,
+                amount: "sold" === QD.type ? 0 : QD.quantity,
+                tier: null !== (ID = null === (pD = fD.enchant) || void 0 === pD ? void 0 : pD.tier) && void 0 !== ID ? ID : null
+              }), (0, SD.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, Oz.jsx)("b", {
-                  children: (0, Oz.jsx)(xE.b, {
-                    text: lz.customTitle
+                children: [(0, SD.jsx)("b", {
+                  children: (0, SD.jsx)(HI.c, {
+                    text: fD.customTitle
                   })
-                }), (0, Oz.jsx)("small", {
-                  children: (0, Oz.jsx)(xE.b, {
-                    text: lz.description
+                }), (0, SD.jsx)("small", {
+                  children: (0, SD.jsx)(HI.c, {
+                    text: fD.description
                   })
                 })]
-              }), (0, Oz.jsx)(Kz.q, {
-                loading: Mz(iz, lz),
+              }), (0, SD.jsx)(oD.o, {
+                loading: bD(iD, fD),
                 onClick: () => {
-                  bz.act(iz)
+                  cD.act(iD)
                 },
-                children: uz("smpShop:collect")
+                children: CD("smpShop:collect")
               })]
-            }, iz)
+            }, iD)
           }))
-        }) : (0, Oz.jsx)(gE, {
-          title: uz("smpShop:nothingToCollect"),
-          children: uz("smpShop:nothingToCollectHint")
-        }), (0, Oz.jsx)("h3", {
+        }) : (0, SD.jsx)(RI, {
+          title: CD("smpShop:nothingToCollect"),
+          children: CD("smpShop:nothingToCollectHint")
+        }), (0, SD.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: uz("smpShop:activeListings", {
-            count: iz.length
+          children: CD("smpShop:activeListings", {
+            count: iD.length
           })
-        }), iz.length > 0 ? (0, Oz.jsx)("div", {
+        }), iD.length > 0 ? (0, SD.jsx)("div", {
           className: "SmpList",
-          children: iz.map((zz => {
-            var Ez, nz;
+          children: iD.map((DD => {
+            var ID, pD;
             let {
-              key: iz,
-              item: lz,
-              meta: tz
-            } = zz;
-            return (0, Oz.jsxs)("div", {
+              key: iD,
+              item: fD,
+              meta: QD
+            } = DD;
+            return (0, SD.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, Oz.jsx)(hE, {
-                item: tz.item,
-                amount: tz.quantity,
-                tier: null !== (Ez = null === (nz = lz.enchant) || void 0 === nz ? void 0 : nz.tier) && void 0 !== Ez ? Ez : null
-              }), (0, Oz.jsxs)("div", {
+              children: [(0, SD.jsx)(LI, {
+                item: QD.item,
+                amount: QD.quantity,
+                tier: null !== (ID = null === (pD = fD.enchant) || void 0 === pD ? void 0 : pD.tier) && void 0 !== ID ? ID : null
+              }), (0, SD.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, Oz.jsx)("b", {
-                  children: (0, Oz.jsx)(xE.b, {
-                    text: lz.customTitle
+                children: [(0, SD.jsx)("b", {
+                  children: (0, SD.jsx)(HI.c, {
+                    text: fD.customTitle
                   })
-                }), (0, Oz.jsx)("small", {
-                  children: uz("smpShop:timeLeft", {
-                    time: bn(tz.expiresAt)
+                }), (0, SD.jsx)("small", {
+                  children: CD("smpShop:timeLeft", {
+                    time: cp(QD.expiresAt)
                   })
                 })]
-              }), (0, Oz.jsxs)("div", {
+              }), (0, SD.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, Oz.jsx)(UE, {
-                  amount: tz.pricePerItem
-                }), (0, Oz.jsx)("small", {
-                  children: uz("smpShop:each")
+                children: [(0, SD.jsx)(TI, {
+                  amount: QD.pricePerItem
+                }), (0, SD.jsx)("small", {
+                  children: CD("smpShop:each")
                 })]
-              }), (0, Oz.jsx)(Kz.K, {
-                loading: Mz(iz, lz),
+              }), (0, SD.jsx)(oD.J, {
+                loading: bD(iD, fD),
                 onClick: () => {
-                  bz.act(iz)
+                  cD.act(iD)
                 },
-                children: uz("smpShop:cancel")
+                children: CD("smpShop:cancel")
               })]
-            }, iz)
+            }, iD)
           }))
-        }) : (0, Oz.jsx)(gE, {
-          title: uz("smpShop:noActiveListings"),
-          children: uz("smpShop:noActiveListingsHint")
+        }) : (0, SD.jsx)(RI, {
+          title: CD("smpShop:noActiveListings"),
+          children: CD("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function hn(zz) {
+    function zp(DD) {
       let {
-        done: uz,
-        of: bz
-      } = zz;
-      return (0, Oz.jsx)("span", {
+        done: CD,
+        of: cD
+      } = DD;
+      return (0, SD.jsx)("span", {
         className: "SmpProgress",
-        children: (0, Oz.jsx)("i", {
+        children: (0, SD.jsx)("i", {
           style: {
-            width: `${Math.min(100,uz/Math.max(1,bz)*100)}%`
+            width: `${Math.min(100,CD/Math.max(1,cD)*100)}%`
           }
         })
       })
     }
 
-    function Un(zz) {
-      var uz, bz, Ez;
+    function jp(DD) {
+      var CD, cD, ID;
       let {
-        entry: nz,
-        choice: iz,
-        onChoose: Mz
-      } = zz;
+        entry: pD,
+        choice: iD,
+        onChoose: bD
+      } = DD;
       const {
-        t: tz
-      } = (0, lz.F)(), Hz = dn(), {
-        key: pz,
-        item: dz,
-        meta: Fz
-      } = nz, Zz = "dropdown" === (null === (uz = dz.userInput) || void 0 === uz ? void 0 : uz.type) ? dz.userInput.dropdownOptions : [], Rz = !0 === Fz.processing, wz = null !== Fz.creator && (Fz.yM > 0 || Rz), Xz = wz && Fz.yM > 0 ? En(Zz) : [], fz = null === iz ? 0 : null !== (bz = null === (Ez = Xz.find((zz => zz.label === iz))) || void 0 === Ez ? void 0 : Ez.quantity) && void 0 !== bz ? bz : 0;
-      return (0, Oz.jsxs)("div", {
+        t: QD
+      } = (0, fD.F)(), wD = Sp(), {
+        key: BD,
+        item: yD,
+        meta: MD
+      } = pD, tD = "dropdown" === (null === (CD = yD.userInput) || void 0 === CD ? void 0 : CD.type) ? yD.userInput.dropdownOptions : [], ZD = !0 === MD.processing, vD = null !== MD.creator && (MD.Lb > 0 || ZD), ND = vD && MD.Lb > 0 ? Ip(tD) : [], gD = null === iD ? 0 : null !== (cD = null === (ID = ND.find((DD => DD.label === iD))) || void 0 === ID ? void 0 : ID.quantity) && void 0 !== cD ? cD : 0;
+      return (0, SD.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, Oz.jsx)(hE, {
-          item: Fz.item
-        }), (0, Oz.jsxs)("div", {
+        children: [(0, SD.jsx)(LI, {
+          item: MD.item
+        }), (0, SD.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, Oz.jsx)("b", {
-            children: (0, Oz.jsx)(xE.b, {
-              text: dz.customTitle
+          children: [(0, SD.jsx)("b", {
+            children: (0, SD.jsx)(HI.c, {
+              text: yD.customTitle
             })
-          }), (0, Oz.jsxs)("small", {
-            children: [(0, Oz.jsx)(UE, {
-              amount: Fz.pricePerItem
-            }), " ", tz("smpShop:each"), " \xb7", " ", null === Fz.creator ? tz("smpShop:you") : (0, Oz.jsx)(xE.b, {
+          }), (0, SD.jsxs)("small", {
+            children: [(0, SD.jsx)(TI, {
+              amount: MD.pricePerItem
+            }), " ", QD("smpShop:each"), " \xb7", " ", null === MD.creator ? QD("smpShop:you") : (0, SD.jsx)(HI.c, {
               text: [{
-                entityName: Fz.creator
+                entityName: MD.creator
               }]
             })]
-          }), (0, Oz.jsx)(hn, {
-            done: Fz.delivered,
-            of: Fz.wanted
+          }), (0, SD.jsx)(zp, {
+            done: MD.delivered,
+            of: MD.wanted
           })]
-        }), wz ? (0, Oz.jsxs)(Oz.Fragment, {
-          children: [(0, Oz.jsx)(yE, {
-            options: Xz.map((zz => {
+        }), vD ? (0, SD.jsxs)(SD.Fragment, {
+          children: [(0, SD.jsx)(dI, {
+            options: ND.map((DD => {
               let {
-                label: uz,
-                quantity: bz,
-                isAll: Ez
-              } = zz;
+                label: CD,
+                quantity: cD,
+                isAll: ID
+              } = DD;
               return {
-                value: uz,
-                label: Ez ? tz("smpShop:max", {
-                  count: bz
-                }) : String(bz)
+                value: CD,
+                label: ID ? QD("smpShop:max", {
+                  count: cD
+                }) : String(cD)
               }
             })),
-            value: iz,
-            onChange: Mz,
-            ariaLabel: tz("smpShop:quantity")
-          }), (0, Oz.jsxs)(Kz.v, {
-            loading: Hz.isPending(pz) || Rz,
-            disabled: null === iz,
+            value: iD,
+            onChange: bD,
+            ariaLabel: QD("smpShop:quantity")
+          }), (0, SD.jsxs)(oD.r, {
+            loading: wD.isPending(BD) || ZD,
+            disabled: null === iD,
             onClick: () => {
-              Hz.act(pz, iz)
+              wD.act(BD, iD)
             },
-            children: [tz("smpShop:deliver"), " ", (0, Oz.jsx)(UE, {
-              amount: fz * Fz.pricePerItem
+            children: [QD("smpShop:deliver"), " ", (0, SD.jsx)(TI, {
+              amount: gD * MD.pricePerItem
             })]
           })]
-        }) : (0, Oz.jsx)("span", {
+        }) : (0, SD.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === Fz.creator ? tz("smpShop:yourOrder") : tz("smpShop:youHave", {
+          children: null === MD.creator ? QD("smpShop:yourOrder") : QD("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function cn() {
-      var zz;
+    function lp() {
+      var DD;
       const {
-        t: uz
-      } = (0, lz.F)(), bz = dn(), nz = null === (zz = bz.shopInfo[bz.categoryKey]) || void 0 === zz ? void 0 : zz.items, iz = kE(nz, "search"), Mz = kE(nz, "creator"), tz = YE(nz, "order"), Hz = kE(nz, "empty"), pz = Kn(iz, tz.length > 0 || null !== Hz), [dz, Fz] = (0, Ez.useState)(!1), [Zz, Rz] = (0, Ez.useState)({});
-      return (0, Oz.jsx)(sn, {
-        browser: pz,
-        recentLabel: uz("smpShop:recentOrders"),
-        action: (0, Oz.jsx)(Kz.v, {
+        t: CD
+      } = (0, fD.F)(), cD = Sp(), pD = null === (DD = cD.shopInfo[cD.categoryKey]) || void 0 === DD ? void 0 : DD.items, iD = FI(pD, "search"), bD = FI(pD, "creator"), QD = AI(pD, "order"), wD = FI(pD, "empty"), BD = tp(iD, QD.length > 0 || null !== wD), [yD, MD] = (0, ID.useState)(!1), [tD, ZD] = (0, ID.useState)({});
+      return (0, SD.jsx)(Np, {
+        browser: BD,
+        recentLabel: CD("smpShop:recentOrders"),
+        action: (0, SD.jsx)(oD.r, {
           onClick: () => {
-            Fz((zz => !zz))
+            MD((DD => !DD))
           },
-          children: uz("smpShop:createOrder")
+          children: CD("smpShop:createOrder")
         }),
-        above: dz && (0, Oz.jsx)(Ln, {
+        above: yD && (0, SD.jsx)(Up, {
           mode: "order",
-          creator: Mz,
-          catalogue: pz.catalogue,
-          names: pz.names,
-          searching: pz.loading,
+          creator: bD,
+          catalogue: BD.catalogue,
+          names: BD.names,
+          searching: BD.loading,
           prices: [],
-          onPickItem: pz.searchFor,
+          onPickItem: BD.searchFor,
           onClose: () => {
-            Fz(!1)
+            MD(!1)
           }
         }),
         onBack: () => {
-          Fz(!1)
+          MD(!1)
         },
-        summary: tz.length > 0 && uz(1 === tz.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: tz.length,
-          price: VE(rn(tz, "max"))
+        summary: QD.length > 0 && CD(1 === QD.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: QD.length,
+          price: zI(gp(QD, "max"))
         }),
-        list: pz.loading ? (0, Oz.jsx)(cE, {}) : tz.length > 0 ? (0, Oz.jsx)(Fn.b, {
+        list: BD.loading ? (0, SD.jsx)(GI, {}) : QD.length > 0 ? (0, SD.jsx)(Bp.c, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: zn,
-          observerUpdateDeps: [tz.length],
-          children: tz.map((zz => (0, Oz.jsx)(Un, {
-            entry: zz,
-            choice: Hn(zz.item, Zz[zz.key]),
-            onChoose: uz => {
-              Rz({
-                ...Zz,
-                [zz.key]: uz
+          rootMargin: Dp,
+          observerUpdateDeps: [QD.length],
+          children: QD.map((DD => (0, SD.jsx)(jp, {
+            entry: DD,
+            choice: bp(DD.item, tD[DD.key]),
+            onChoose: CD => {
+              ZD({
+                ...tD,
+                [DD.key]: CD
               })
             }
-          }, zz.key)))
-        }) : Hz ? (0, Oz.jsx)(SE, {
-          entry: Hz
-        }) : (0, Oz.jsx)(cE, {
+          }, DD.key)))
+        }) : wD ? (0, SD.jsx)(kI, {
+          entry: wD
+        }) : (0, SD.jsx)(GI, {
           count: 3
         })
       })
     }
 
-    function gn() {
-      var zz;
+    function Lp() {
+      var DD;
       const {
-        t: uz
-      } = (0, lz.F)(), bz = dn(), Ez = YE(null === (zz = bz.shopInfo[bz.categoryKey]) || void 0 === zz ? void 0 : zz.items, "myOrder");
-      return 0 === Ez.length ? (0, Oz.jsx)("div", {
+        t: CD
+      } = (0, fD.F)(), cD = Sp(), ID = AI(null === (DD = cD.shopInfo[cD.categoryKey]) || void 0 === DD ? void 0 : DD.items, "myOrder");
+      return 0 === ID.length ? (0, SD.jsx)("div", {
         className: "SmpScreen",
-        children: (0, Oz.jsx)(gE, {
-          title: uz("smpShop:noOrders"),
-          children: uz("smpShop:noOrdersHint")
+        children: (0, SD.jsx)(RI, {
+          title: CD("smpShop:noOrders"),
+          children: CD("smpShop:noOrdersHint")
         })
-      }) : (0, Oz.jsx)("div", {
+      }) : (0, SD.jsx)("div", {
         className: "SmpScreen",
-        children: (0, Oz.jsx)("div", {
+        children: (0, SD.jsx)("div", {
           className: "SmpList",
-          children: Ez.map((zz => {
+          children: ID.map((DD => {
             let {
-              key: Ez,
-              item: nz,
-              meta: iz
-            } = zz;
-            const lz = bz.isPending(Ez) || !1 === nz.canBuy;
-            return (0, Oz.jsxs)("div", {
+              key: ID,
+              item: pD,
+              meta: iD
+            } = DD;
+            const fD = cD.isPending(ID) || !1 === pD.canBuy;
+            return (0, SD.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, Oz.jsx)(hE, {
-                item: iz.item,
-                amount: iz.collectable
-              }), (0, Oz.jsxs)("div", {
+              children: [(0, SD.jsx)(LI, {
+                item: iD.item,
+                amount: iD.collectable
+              }), (0, SD.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, Oz.jsx)("b", {
-                  children: (0, Oz.jsx)(xE.b, {
-                    text: nz.customTitle
+                children: [(0, SD.jsx)("b", {
+                  children: (0, SD.jsx)(HI.c, {
+                    text: pD.customTitle
                   })
-                }), (0, Oz.jsxs)("small", {
-                  children: [(0, Oz.jsx)(UE, {
-                    amount: iz.pricePerItem
-                  }), " ", uz("smpShop:each"), iz.collectable > 0 && ` \xb7 ${uz("smpShop:readyCount",{count:iz.collectable})}`]
-                }), (0, Oz.jsx)(hn, {
-                  done: iz.delivered,
-                  of: iz.wanted
+                }), (0, SD.jsxs)("small", {
+                  children: [(0, SD.jsx)(TI, {
+                    amount: iD.pricePerItem
+                  }), " ", CD("smpShop:each"), iD.collectable > 0 && ` \xb7 ${CD("smpShop:readyCount",{count:iD.collectable})}`]
+                }), (0, SD.jsx)(zp, {
+                  done: iD.delivered,
+                  of: iD.wanted
                 })]
-              }), iz.collectable > 0 ? (0, Oz.jsx)(Kz.q, {
-                loading: lz,
+              }), iD.collectable > 0 ? (0, SD.jsx)(oD.o, {
+                loading: fD,
                 onClick: () => {
-                  bz.act(Ez)
+                  cD.act(ID)
                 },
-                children: uz("smpShop:collectCount", {
-                  count: iz.collectable
+                children: CD("smpShop:collectCount", {
+                  count: iD.collectable
                 })
-              }) : (0, Oz.jsx)(Kz.K, {
-                loading: lz,
+              }) : (0, SD.jsx)(oD.J, {
+                loading: fD,
                 onClick: () => {
-                  bz.act(Ez)
+                  cD.act(ID)
                 },
-                children: uz("smpShop:cancel")
+                children: CD("smpShop:cancel")
               })]
-            }, Ez)
+            }, ID)
           }))
         })
       })
     }
-    const Sn = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      yn = {
+    const Tp = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      Gp = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4284,764 +4284,764 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function Dn(zz, uz) {
-      let bz = !1;
-      const Ez = {};
-      for (const nz in zz) uz(nz, zz[nz]) ? Ez[nz] = zz[nz] : bz = !0;
-      return bz ? Ez : zz
+    function Rp(DD, CD) {
+      let cD = !1;
+      const ID = {};
+      for (const pD in DD) CD(pD, DD[pD]) ? ID[pD] = DD[pD] : cD = !0;
+      return cD ? ID : DD
     }
 
-    function Qn(zz) {
-      var uz, bz, nz, tz;
+    function kp(DD) {
+      var CD, cD, pD, QD;
       const {
-        show: Hz,
-        shopInfo: pz,
-        selectedCategoryKey: dz
-      } = zz, {
-        t: Fz
-      } = (0, lz.F)(), Zz = null !== dz && void 0 !== dz ? dz : "", Rz = CE(pz, Zz), Kz = null === (uz = pz[Zz]) || void 0 === uz ? void 0 : uz.items, wz = null !== Rz, [Xz, fz] = (0, Ez.useState)({}), [sz, rz] = (0, Ez.useState)([]), [oz, Nz] = (0, Ez.useState)(!1), [vz, xz] = (0, Ez.useState)(null), [, Jz] = (0, Ez.useState)(0), Az = (0, Ez.useRef)(0), Tz = (0, Ez.useRef)({}), Lz = (0, Ez.useRef)({
-        items: Kz,
-        pending: Xz,
-        shopInfo: pz,
-        active: wz,
-        canAfford: zz.canAfford,
-        buy: zz.buy
+        show: wD,
+        shopInfo: BD,
+        selectedCategoryKey: yD
+      } = DD, {
+        t: MD
+      } = (0, fD.F)(), tD = null !== yD && void 0 !== yD ? yD : "", ZD = rI(BD, tD), oD = null === (CD = BD[tD]) || void 0 === CD ? void 0 : CD.items, vD = null !== ZD, [ND, gD] = (0, ID.useState)({}), [XD, mD] = (0, ID.useState)([]), [nD, OD] = (0, ID.useState)(!1), [PD, HD] = (0, ID.useState)(null), [, UD] = (0, ID.useState)(0), xD = (0, ID.useRef)(0), qD = (0, ID.useRef)({}), JD = (0, ID.useRef)({
+        items: oD,
+        pending: ND,
+        shopInfo: BD,
+        active: vD,
+        canAfford: DD.canAfford,
+        buy: DD.buy
       });
-      Lz.current = {
-        items: Kz,
-        pending: Xz,
-        shopInfo: pz,
-        active: wz,
-        canAfford: zz.canAfford,
-        buy: zz.buy
+      JD.current = {
+        items: oD,
+        pending: ND,
+        shopInfo: BD,
+        active: vD,
+        canAfford: DD.canAfford,
+        buy: DD.buy
       };
-      const Pz = (0, Ez.useCallback)((zz => {
-        Az.current++;
-        const uz = Az.current;
-        rz((bz => [{
-          id: uz,
-          text: zz
-        }, ...bz].slice(0, 8))), xz(uz)
+      const KD = (0, ID.useCallback)((DD => {
+        xD.current++;
+        const CD = xD.current;
+        mD((cD => [{
+          id: CD,
+          text: DD
+        }, ...cD].slice(0, 8))), HD(CD)
       }), []);
-      (0, Ez.useEffect)((() => {
-        if (null === vz) return;
-        const zz = setTimeout((() => {
-          xz(null)
+      (0, ID.useEffect)((() => {
+        if (null === PD) return;
+        const DD = setTimeout((() => {
+          HD(null)
         }), 3e3);
         return () => {
-          clearTimeout(zz)
+          clearTimeout(DD)
         }
-      }), [vz]), (0, Ez.useEffect)((() => {
-        const uz = zz.message;
-        if (!uz) return;
+      }), [PD]), (0, ID.useEffect)((() => {
+        const CD = DD.message;
+        if (!CD) return;
         const {
-          shopInfo: bz,
-          active: Ez,
-          items: nz
-        } = Lz.current, iz = null !== uz.categoryKey ? null !== CE(bz, uz.categoryKey) : Ez;
-        (iz || Ez) && Pz(uz.text), iz && fz((zz => Dn(zz, (zz => {
-          var uz, bz;
-          return !Sn.has(null === nz || void 0 === nz || null === (uz = nz[zz]) || void 0 === uz || null === (bz = uz.smp) || void 0 === bz ? void 0 : bz.kind)
+          shopInfo: cD,
+          active: ID,
+          items: pD
+        } = JD.current, iD = null !== CD.categoryKey ? null !== rI(cD, CD.categoryKey) : ID;
+        (iD || ID) && KD(CD.text), iD && gD((DD => Rp(DD, (DD => {
+          var CD, cD;
+          return !Tp.has(null === pD || void 0 === pD || null === (CD = pD[DD]) || void 0 === CD || null === (cD = CD.smp) || void 0 === cD ? void 0 : cD.kind)
         }))))
-      }), [zz.message, Pz]), (0, Ez.useEffect)((() => {
-        fz((zz => Dn(zz, ((zz, uz) => On(null === Kz || void 0 === Kz ? void 0 : Kz[zz]) === uz.snapshot))))
-      }), [pz, Kz]);
-      const Gz = Object.keys(Xz).length > 0;
-      (0, Ez.useEffect)((() => {
-        if (!Gz) return;
-        const zz = setInterval((() => {
-          Jz((zz => zz + 1));
-          const zz = Date.now(),
+      }), [DD.message, KD]), (0, ID.useEffect)((() => {
+        gD((DD => Rp(DD, ((DD, CD) => Qp(null === oD || void 0 === oD ? void 0 : oD[DD]) === CD.snapshot))))
+      }), [BD, oD]);
+      const aD = Object.keys(ND).length > 0;
+      (0, ID.useEffect)((() => {
+        if (!aD) return;
+        const DD = setInterval((() => {
+          UD((DD => DD + 1));
+          const DD = Date.now(),
             {
-              pending: uz,
-              items: bz
-            } = Lz.current,
-            Ez = Object.keys(uz).filter((bz => zz - uz[bz].at >= 12e3));
-          if (0 === Ez.length) return;
-          const nz = Ez.some((zz => {
-            var Ez, nz;
-            return "search" !== (null === bz || void 0 === bz || null === (Ez = bz[zz]) || void 0 === Ez || null === (nz = Ez.smp) || void 0 === nz ? void 0 : nz.kind) || uz[zz].resend
+              pending: CD,
+              items: cD
+            } = JD.current,
+            ID = Object.keys(CD).filter((cD => DD - CD[cD].at >= 12e3));
+          if (0 === ID.length) return;
+          const pD = ID.some((DD => {
+            var ID, pD;
+            return "search" !== (null === cD || void 0 === cD || null === (ID = cD[DD]) || void 0 === ID || null === (pD = ID.smp) || void 0 === pD ? void 0 : pD.kind) || CD[DD].resend
           }));
-          for (const iz of Ez) Tz.current[iz] = zz;
-          fz((zz => Dn(zz, (zz => !Ez.includes(zz))))), nz && Pz(Fz("smpShop:noAnswer"))
+          for (const iD of ID) qD.current[iD] = DD;
+          gD((DD => Rp(DD, (DD => !ID.includes(DD))))), pD && KD(MD("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(zz)
+          clearInterval(DD)
         }
-      }), [Gz]), (0, Ez.useEffect)((() => {
-        fz({})
-      }), [Zz]), (0, Ez.useEffect)((() => {
-        Hz || Nz(!1)
-      }), [Hz]);
-      const az = (0, Ez.useCallback)((function(zz, uz) {
-          let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [aD]), (0, ID.useEffect)((() => {
+        gD({})
+      }), [tD]), (0, ID.useEffect)((() => {
+        wD || OD(!1)
+      }), [wD]);
+      const VD = (0, ID.useCallback)((function(DD, CD) {
+          let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: Ez,
-            pending: nz,
-            canAfford: iz,
-            buy: lz
-          } = Lz.current, Mz = null === Ez || void 0 === Ez ? void 0 : Ez[zz];
-          if (!Mz || zz in nz || !1 === Mz.canBuy) return !1;
-          if (!iz(Mz, (0, rE.b)(Mz, uz))) return !1;
-          lz(zz, Mz, uz);
-          const tz = {
-            snapshot: On(Mz),
+            items: ID,
+            pending: pD,
+            canAfford: iD,
+            buy: fD
+          } = JD.current, bD = null === ID || void 0 === ID ? void 0 : ID[DD];
+          if (!bD || DD in pD || !1 === bD.canBuy) return !1;
+          if (!iD(bD, (0, mI.c)(bD, CD))) return !1;
+          fD(DD, bD, CD);
+          const QD = {
+            snapshot: Qp(bD),
             at: Date.now(),
-            resend: bz
+            resend: cD
           };
-          return Lz.current.pending = {
-            ...Lz.current.pending,
-            [zz]: tz
-          }, fz((uz => ({
-            ...uz,
-            [zz]: tz
+          return JD.current.pending = {
+            ...JD.current.pending,
+            [DD]: QD
+          }, gD((CD => ({
+            ...CD,
+            [DD]: QD
           }))), !0
         }), []),
-        Vz = (0, Ez.useMemo)((() => ({
-          shopInfo: pz,
-          categoryKey: Zz,
-          canAfford: zz.canAfford,
-          isPending: zz => zz in Xz,
-          gaveUpAt: zz => {
-            var uz;
-            return null !== (uz = Tz.current[zz]) && void 0 !== uz ? uz : 0
+        zD = (0, ID.useMemo)((() => ({
+          shopInfo: BD,
+          categoryKey: tD,
+          canAfford: DD.canAfford,
+          isPending: DD => DD in ND,
+          gaveUpAt: DD => {
+            var CD;
+            return null !== (CD = qD.current[DD]) && void 0 !== CD ? CD : 0
           },
-          act: az,
-          notify: Pz
-        })), [pz, Zz, zz.canAfford, Xz, az, Pz]),
-        mz = Math.min(...Object.values(Xz).map((zz => zz.at))),
-        qz = Gz && Date.now() - mz > 1500,
-        hz = sz.length > 1,
-        Uz = null !== (bz = null === (nz = pz[Zz]) || void 0 === nz ? void 0 : nz.customTitle) && void 0 !== bz ? bz : Zz,
-        cz = null === (tz = pz[Zz]) || void 0 === tz ? void 0 : tz.description;
-      let gz = null;
-      return "market" === Rz ? gz = (0, Oz.jsx)(Pn, {}) : "sell" === Rz ? gz = (0, Oz.jsx)(Vn, {}) : "collect" === Rz ? gz = (0, Oz.jsx)(qn, {}) : "orders" === Rz ? gz = (0, Oz.jsx)(cn, {}) : "myOrders" === Rz && (gz = (0, Oz.jsx)(gn, {})), (0, Oz.jsx)(pn.Provider, {
-        value: Vz,
-        children: (0, Oz.jsx)("div", {
+          act: VD,
+          notify: KD
+        })), [BD, tD, DD.canAfford, ND, VD, KD]),
+        jD = Math.min(...Object.values(ND).map((DD => DD.at))),
+        lD = aD && Date.now() - jD > 1500,
+        LD = XD.length > 1,
+        TD = null !== (cD = null === (pD = BD[tD]) || void 0 === pD ? void 0 : pD.customTitle) && void 0 !== cD ? cD : tD,
+        GD = null === (QD = BD[tD]) || void 0 === QD ? void 0 : QD.description;
+      let RD = null;
+      return "market" === ZD ? RD = (0, SD.jsx)(xp, {}) : "sell" === ZD ? RD = (0, SD.jsx)(Kp, {}) : "collect" === ZD ? RD = (0, SD.jsx)(Vp, {}) : "orders" === ZD ? RD = (0, SD.jsx)(lp, {}) : "myOrders" === ZD && (RD = (0, SD.jsx)(Lp, {})), (0, SD.jsx)(wp.Provider, {
+        value: zD,
+        children: (0, SD.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !wz,
-          children: (0, Oz.jsxs)("div", {
+          hidden: !vD,
+          children: (0, SD.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, Oz.jsx)("header", {
+            children: [(0, SD.jsx)("header", {
               className: "SmpHeader",
-              children: (0, Oz.jsxs)("div", {
+              children: (0, SD.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, Oz.jsxs)("h2", {
-                  children: [Rz && (0, Oz.jsx)(Mz.c, {
-                    name: yn[Rz]
-                  }), Fz(Uz)]
-                }), cz && (0, Oz.jsx)("p", {
-                  children: (0, Oz.jsx)(xE.b, {
-                    text: cz
+                children: [(0, SD.jsxs)("h2", {
+                  children: [ZD && (0, SD.jsx)(bD.c, {
+                    name: Gp[ZD]
+                  }), MD(TD)]
+                }), GD && (0, SD.jsx)("p", {
+                  children: (0, SD.jsx)(HI.c, {
+                    text: GD
                   })
                 })]
               })
-            }), (0, Oz.jsx)("main", {
+            }), (0, SD.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: Hz && gz
-            }), (0, Oz.jsxs)("button", {
+              children: wD && RD
+            }), (0, SD.jsxs)("button", {
               type: "button",
-              className: iz()("SmpStatus", {
-                SmpStatusWaiting: Gz,
-                SmpStatusFresh: !Gz && null !== vz,
-                SmpStatusHasHistory: hz
+              className: iD()("SmpStatus", {
+                SmpStatusWaiting: aD,
+                SmpStatusFresh: !aD && null !== PD,
+                SmpStatusHasHistory: LD
               }),
               "aria-live": "polite",
-              "aria-expanded": hz ? oz : void 0,
+              "aria-expanded": LD ? nD : void 0,
               onClick: () => {
-                hz && Nz((zz => !zz))
+                LD && OD((DD => !DD))
               },
-              children: [Gz ? (0, Oz.jsxs)("span", {
+              children: [aD ? (0, SD.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, Oz.jsx)(DE, {}), Fz(qz ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : sz[0] ? (0, Oz.jsx)("span", {
+                children: [(0, SD.jsx)(YI, {}), MD(lD ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : XD[0] ? (0, SD.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, Oz.jsx)(xE.b, {
-                  text: sz[0].text
+                children: (0, SD.jsx)(HI.c, {
+                  text: XD[0].text
                 })
-              }, sz[0].id) : (0, Oz.jsx)("span", {
+              }, XD[0].id) : (0, SD.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: Fz("smpShop:ready")
-              }), hz && (0, Oz.jsx)("small", {
-                children: Fz("smpShop:recentMessages", {
-                  count: sz.length
+                children: MD("smpShop:ready")
+              }), LD && (0, SD.jsx)("small", {
+                children: MD("smpShop:recentMessages", {
+                  count: XD.length
                 })
               })]
-            }), oz && hz && (0, Oz.jsx)("div", {
+            }), nD && LD && (0, SD.jsx)("div", {
               className: "SmpStatusHistory",
-              children: sz.map((zz => (0, Oz.jsx)("div", {
-                children: (0, Oz.jsx)(xE.b, {
-                  text: zz.text
+              children: XD.map((DD => (0, SD.jsx)("div", {
+                children: (0, SD.jsx)(HI.c, {
+                  text: DD.text
                 })
-              }, zz.id)))
+              }, DD.id)))
             })]
           })
         })
       })
     }
-    class Wn {
-      constructor(zz) {
-        this.info = zz
+    class dp {
+      constructor(DD) {
+        this.info = DD
       }
-      static fromShopInfo(zz) {
-        const uz = {};
-        for (const bz in zz) {
-          const Ez = !0 === zz[bz].redDot && !0 !== zz[bz].forceRemoveRedDot;
-          uz[bz] = {
-            redDot: Ez,
+      static fromShopInfo(DD) {
+        const CD = {};
+        for (const cD in DD) {
+          const ID = !0 === DD[cD].redDot && !0 !== DD[cD].forceRemoveRedDot;
+          CD[cD] = {
+            redDot: ID,
             items: {}
           };
-          for (const nz in zz[bz].items) {
-            const Ez = zz[bz].items[nz],
-              iz = !0 === Ez.redDot && !0 !== Ez.forceRemoveRedDot;
-            uz[bz].items[nz] = {
-              redDot: iz
+          for (const pD in DD[cD].items) {
+            const ID = DD[cD].items[pD],
+              iD = !0 === ID.redDot && !0 !== ID.forceRemoveRedDot;
+            CD[cD].items[pD] = {
+              redDot: iD
             }
           }
         }
-        return new Wn(uz)
+        return new dp(CD)
       }
       anyCategoryHasRedDots() {
-        for (const zz in this.info)
-          if (this.categoryHasRedDot(zz)) return !0;
+        for (const DD in this.info)
+          if (this.categoryHasRedDot(DD)) return !0;
         return !1
       }
-      doesCategoryExist(zz) {
-        return !(0, yu.F)(this.info[zz])
+      doesCategoryExist(DD) {
+        return !(0, dC.C)(this.info[DD])
       }
-      categoryHasRedDot(zz) {
-        return !0 === this.info[zz].redDot
+      categoryHasRedDot(DD) {
+        return !0 === this.info[DD].redDot
       }
-      updateCategoryRedDot(zz, uz) {
-        this.info[zz].redDot = uz
+      updateCategoryRedDot(DD, CD) {
+        this.info[DD].redDot = CD
       }
-      doesItemExist(zz, uz) {
-        return this.doesCategoryExist(zz) && !(0, yu.F)(this.info[zz].items[uz])
+      doesItemExist(DD, CD) {
+        return this.doesCategoryExist(DD) && !(0, dC.C)(this.info[DD].items[CD])
       }
-      itemHasRedDot(zz, uz) {
-        return !0 === this.info[zz].items[uz].redDot
+      itemHasRedDot(DD, CD) {
+        return !0 === this.info[DD].items[CD].redDot
       }
-      updateItemRedDot(zz, uz, bz) {
-        this.info[zz].items[uz].redDot = bz
+      updateItemRedDot(DD, CD, cD) {
+        this.info[DD].items[CD].redDot = cD
       }
       shallowCopy() {
-        return new Wn(this.info)
+        return new dp(this.info)
       }
     }
 
-    function en(zz, uz) {
-      return `${zz}\x1f${uz}`
+    function Yp(DD, CD) {
+      return `${DD}\x1f${CD}`
     }
 
-    function jn(zz, uz) {
-      return !(0, yu.F)(uz) && !(0, yu.F)(zz) && uz in zz
+    function Wp(DD, CD) {
+      return !(0, dC.C)(CD) && !(0, dC.C)(DD) && CD in DD
     }
-    const In = (0, Ez.memo)((function(zz) {
-      var uz, bz;
+    const sp = (0, ID.memo)((function(DD) {
+      var CD, cD;
       let {
-        show: nz
-      } = zz;
-      const lz = (0, Bb.e)("players", ui),
-        Mz = (0, Bb.e)("players", bi),
-        [Hz, dz] = (0, Ez.useState)({
+        show: pD
+      } = DD;
+      const fD = (0, hc.g)("players", Fp),
+        bD = (0, hc.g)("players", Di),
+        [wD, yD] = (0, ID.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: Wn.fromShopInfo({}),
+          redDotInfo: dp.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        Fz = (0, Ez.useRef)(""),
-        Rz = (0, Ez.useRef)(null),
-        wz = (0, Ez.useRef)(null),
-        fz = (0, Ez.useRef)(0),
-        sz = (0, Ez.useRef)(void 0),
-        rz = (0, Ez.useRef)(null),
-        oz = (0, Ez.useRef)(Hz),
-        Nz = Hz.redDotInfo.anyCategoryHasRedDots(),
-        [xz, Jz] = (0, Ez.useState)(null),
-        Tz = (0, Ez.useRef)(!1);
-      let Lz = !1,
-        Pz = 0,
-        Gz = 0;
-      if (Hz.currencyAmounts) {
-        for (const zz in Hz.currencyAmounts) {
-          var az;
-          const uz = Hz.currencyAmounts[zz];
-          uz.hidden || (Pz++, (null === (az = uz.subtext) || void 0 === az ? void 0 : az.length) > 0 && Gz++)
+        MD = (0, ID.useRef)(""),
+        ZD = (0, ID.useRef)(null),
+        vD = (0, ID.useRef)(null),
+        gD = (0, ID.useRef)(0),
+        XD = (0, ID.useRef)(void 0),
+        mD = (0, ID.useRef)(null),
+        nD = (0, ID.useRef)(wD),
+        OD = wD.redDotInfo.anyCategoryHasRedDots(),
+        [HD, UD] = (0, ID.useState)(null),
+        qD = (0, ID.useRef)(!1);
+      let JD = !1,
+        KD = 0,
+        aD = 0;
+      if (wD.currencyAmounts) {
+        for (const DD in wD.currencyAmounts) {
+          var VD;
+          const CD = wD.currencyAmounts[DD];
+          CD.hidden || (KD++, (null === (VD = CD.subtext) || void 0 === VD ? void 0 : VD.length) > 0 && aD++)
         }
-        Lz = Pz + Gz > 4
-      }(0, Ez.useEffect)((() => {
-        Du.k.sK("showShopIconRedDot", Nz, !0)
-      }), [Nz]), (0, Ez.useEffect)((() => {
-        Xz.gameBridge.send("setShopOpen", nz), nz || (clearTimeout(sz.current), dz((zz => zz.awaitingPurchase ? {
-          ...zz,
+        JD = KD + aD > 4
+      }(0, ID.useEffect)((() => {
+        YC.i.Uo("showShopIconRedDot", OD, !0)
+      }), [OD]), (0, ID.useEffect)((() => {
+        ND.gameBridge.send("setShopOpen", pD), pD || (clearTimeout(XD.current), yD((DD => DD.awaitingPurchase ? {
+          ...DD,
           awaitingPurchase: !1
-        } : zz)))
-      }), [nz]), (0, Ez.useEffect)((() => () => {
-        Xz.gameBridge.send("setShopOpen", !1), clearTimeout(sz.current)
-      }), []), (0, Ez.useEffect)((() => {
-        oz.current = Hz
-      }), [Hz]), (0, Ez.useEffect)((() => {
-        if (null === xz) return;
-        return (0, LE.e)("pointerdown", (zz => {
-          const uz = zz.target;
-          null !== uz && void 0 !== uz && uz.closest(".ShopItem") || Jz(null)
+        } : DD)))
+      }), [pD]), (0, ID.useEffect)((() => () => {
+        ND.gameBridge.send("setShopOpen", !1), clearTimeout(XD.current)
+      }), []), (0, ID.useEffect)((() => {
+        nD.current = wD
+      }), [wD]), (0, ID.useEffect)((() => {
+        if (null === HD) return;
+        return (0, JI.d)("pointerdown", (DD => {
+          const CD = DD.target;
+          null !== CD && void 0 !== CD && CD.closest(".ShopItem") || UD(null)
         }))
-      }), [xz]);
-      const Vz = zz => {
-          dz((uz => ({
-            ...uz,
-            ...zz
+      }), [HD]);
+      const zD = DD => {
+          yD((CD => ({
+            ...CD,
+            ...DD
           })))
         },
-        mz = zz => {
-          var uz;
-          clearTimeout(null === (uz = Hz.onBoughtInfo) || void 0 === uz ? void 0 : uz.timeout);
-          const bz = setTimeout((() => {
-            Vz({
+        jD = DD => {
+          var CD;
+          clearTimeout(null === (CD = wD.onBoughtInfo) || void 0 === CD ? void 0 : CD.timeout);
+          const cD = setTimeout((() => {
+            zD({
               onBoughtInfo: null
             })
           }), 3e3);
-          Fz.current = zz, Vz({
+          MD.current = DD, zD({
             onBoughtInfo: {
-              text: zz,
-              timeout: bz,
-              categoryKey: Rz.current
+              text: DD,
+              timeout: cD,
+              categoryKey: ZD.current
             }
           })
         },
-        qz = zz => {
+        lD = DD => {
           const {
-            shopInfo: uz,
-            userInputsPerItem: bz,
-            redDotInfo: Ez,
-            autoSelectCategory: iz
-          } = function(zz, uz, bz, Ez, nz, iz) {
-            if ((0, yu.F)(zz) || 0 === Object.keys(zz).length) return {
+            shopInfo: CD,
+            userInputsPerItem: cD,
+            redDotInfo: ID,
+            autoSelectCategory: iD
+          } = function(DD, CD, cD, ID, pD, iD) {
+            if ((0, dC.C)(DD) || 0 === Object.keys(DD).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: Wn.fromShopInfo({}),
+              redDotInfo: dp.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const lz = Az.r[Az.x].adConfig.showRewardedAds,
-              Mz = {};
-            let tz = null;
-            for (const Kz in zz) {
-              const uz = zz[Kz],
-                bz = {};
-              let Ez = !1;
-              for (const zz in uz.items) {
-                const nz = uz.items[zz];
-                (0, rE.j)(nz, lz) && (bz[zz] = nz, Ez = !0)
+            const fD = xD.j[xD.p].adConfig.showRewardedAds,
+              bD = {};
+            let QD = null;
+            for (const oD in DD) {
+              const CD = DD[oD],
+                cD = {};
+              let ID = !1;
+              for (const DD in CD.items) {
+                const pD = CD.items[DD];
+                (0, mI.i)(pD, fD) && (cD[DD] = pD, ID = !0)
               }
-              Ez && (Mz[Kz] = {
-                ...uz,
-                items: bz
-              }, !0 === uz.autoSelectCategory && (tz = Kz))
+              ID && (bD[oD] = {
+                ...CD,
+                items: cD
+              }, !0 === CD.autoSelectCategory && (QD = oD))
             }
-            const Hz = {},
-              Oz = (zz, uz, Ez, lz) => {
-                var Mz, tz;
-                const Oz = en(zz, uz),
-                  pz = null !== (Mz = bz[Oz]) && void 0 !== Mz ? Mz : bz[uz];
-                if (null !== (tz = lz.userInput) && void 0 !== tz && tz.type) switch (lz.userInput.type) {
+            const wD = {},
+              SD = (DD, CD, ID, fD) => {
+                var bD, QD;
+                const SD = Yp(DD, CD),
+                  BD = null !== (bD = cD[SD]) && void 0 !== bD ? bD : cD[CD];
+                if (null !== (QD = fD.userInput) && void 0 !== QD && QD.type) switch (fD.userInput.type) {
                   case "dropdown": {
-                    var dz;
-                    const zz = !pz || !lz.userInput.dropdownOptions.some((zz => (0, rE.e)(zz) === pz)),
-                      uz = lz.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === Ez || void 0 === Ez || null === (dz = Ez.userInput) || void 0 === dz ? void 0 : dz.type) || JSON.stringify(Ez.userInput.dropdownOptions) !== JSON.stringify(lz.userInput.dropdownOptions)),
-                      bz = lz.userInput,
-                      nz = !(0, yu.F)(bz.initialValue) && bz.dropdownOptions.some((zz => (0, rE.e)(zz) === bz.initialValue));
-                    var Fz;
-                    return void(zz || uz ? nz ? Hz[Oz] = null !== (Fz = lz.userInput.initialValue) && void 0 !== Fz ? Fz : null : lz.userInput.dropdownOptions.length > 0 ? Hz[Oz] = (0, rE.e)(lz.userInput.dropdownOptions[0]) : Hz[Oz] = null : Hz[Oz] = pz)
+                    var yD;
+                    const DD = !BD || !fD.userInput.dropdownOptions.some((DD => (0, mI.d)(DD) === BD)),
+                      CD = fD.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === ID || void 0 === ID || null === (yD = ID.userInput) || void 0 === yD ? void 0 : yD.type) || JSON.stringify(ID.userInput.dropdownOptions) !== JSON.stringify(fD.userInput.dropdownOptions)),
+                      cD = fD.userInput,
+                      pD = !(0, dC.C)(cD.initialValue) && cD.dropdownOptions.some((DD => (0, mI.d)(DD) === cD.initialValue));
+                    var MD;
+                    return void(DD || CD ? pD ? wD[SD] = null !== (MD = fD.userInput.initialValue) && void 0 !== MD ? MD : null : fD.userInput.dropdownOptions.length > 0 ? wD[SD] = (0, mI.d)(fD.userInput.dropdownOptions[0]) : wD[SD] = null : wD[SD] = BD)
                   }
                   case "text":
                   case "number":
-                    var Zz, Rz, Kz;
-                    return void((null === Ez || void 0 === Ez ? void 0 : Ez.userInput) !== lz.userInput ? Hz[Oz] = null !== (Zz = null !== (Rz = lz.userInput.initialValue) && void 0 !== Rz ? Rz : pz) && void 0 !== Zz ? Zz : "" : Hz[Oz] = null !== (Kz = null !== pz && void 0 !== pz ? pz : lz.userInput.initialValue) && void 0 !== Kz ? Kz : "");
+                    var tD, ZD, oD;
+                    return void((null === ID || void 0 === ID ? void 0 : ID.userInput) !== fD.userInput ? wD[SD] = null !== (tD = null !== (ZD = fD.userInput.initialValue) && void 0 !== ZD ? ZD : BD) && void 0 !== tD ? tD : "" : wD[SD] = null !== (oD = null !== BD && void 0 !== BD ? BD : fD.userInput.initialValue) && void 0 !== oD ? oD : "");
                   case "color":
-                    var wz, Xz, fz;
-                    return void((null === Ez || void 0 === Ez ? void 0 : Ez.userInput) !== lz.userInput ? Hz[Oz] = null !== (wz = null !== (Xz = lz.userInput.initialValue) && void 0 !== Xz ? Xz : pz) && void 0 !== wz ? wz : "#000000" : Hz[Oz] = null !== (fz = null !== pz && void 0 !== pz ? pz : lz.userInput.initialValue) && void 0 !== fz ? fz : "#000000");
+                    var vD, ND, gD;
+                    return void((null === ID || void 0 === ID ? void 0 : ID.userInput) !== fD.userInput ? wD[SD] = null !== (vD = null !== (ND = fD.userInput.initialValue) && void 0 !== ND ? ND : BD) && void 0 !== vD ? vD : "#000000" : wD[SD] = null !== (gD = null !== BD && void 0 !== BD ? BD : fD.userInput.initialValue) && void 0 !== gD ? gD : "#000000");
                   case "player": {
-                    const zz = (0, rE.f)(nz, iz, lz.userInput);
-                    return void(pz && zz.includes(pz) ? Hz[Oz] = pz : Hz[Oz] = zz.length > 0 ? zz[0] : null)
+                    const DD = (0, mI.f)(pD, iD, fD.userInput);
+                    return void(BD && DD.includes(BD) ? wD[SD] = BD : wD[SD] = DD.length > 0 ? DD[0] : null)
                   }
                 }
               };
-            for (const Kz in Mz)
-              for (const zz in Mz[Kz].items) {
-                var pz;
-                const bz = Mz[Kz].items[zz];
-                Oz(Kz, zz, null === (pz = uz[Kz]) || void 0 === pz ? void 0 : pz.items[zz], bz)
+            for (const oD in bD)
+              for (const DD in bD[oD].items) {
+                var BD;
+                const cD = bD[oD].items[DD];
+                SD(oD, DD, null === (BD = CD[oD]) || void 0 === BD ? void 0 : BD.items[DD], cD)
               }
-            const dz = Wn.fromShopInfo(Mz);
-            for (const Kz in Mz) {
-              var Fz;
-              if (Ez.doesCategoryExist(Kz)) {
-                (null === (Fz = uz[Kz]) || void 0 === Fz ? void 0 : Fz.redDot) === Mz[Kz].redDot && dz.updateCategoryRedDot(Kz, Ez.categoryHasRedDot(Kz));
-                for (const zz in Mz[Kz].items) {
-                  var Zz, Rz;
-                  Ez.doesItemExist(Kz, zz) && (null === (Zz = uz[Kz]) || void 0 === Zz || null === (Rz = Zz.items[zz]) || void 0 === Rz ? void 0 : Rz.redDot) === Mz[Kz].items[zz].redDot && dz.updateItemRedDot(Kz, zz, Ez.itemHasRedDot(Kz, zz))
+            const yD = dp.fromShopInfo(bD);
+            for (const oD in bD) {
+              var MD;
+              if (ID.doesCategoryExist(oD)) {
+                (null === (MD = CD[oD]) || void 0 === MD ? void 0 : MD.redDot) === bD[oD].redDot && yD.updateCategoryRedDot(oD, ID.categoryHasRedDot(oD));
+                for (const DD in bD[oD].items) {
+                  var tD, ZD;
+                  ID.doesItemExist(oD, DD) && (null === (tD = CD[oD]) || void 0 === tD || null === (ZD = tD.items[DD]) || void 0 === ZD ? void 0 : ZD.redDot) === bD[oD].items[DD].redDot && yD.updateItemRedDot(oD, DD, ID.itemHasRedDot(oD, DD))
                 }
               }
             }
             return {
-              shopInfo: Mz,
-              userInputsPerItem: Hz,
-              redDotInfo: dz,
-              autoSelectCategory: tz
+              shopInfo: bD,
+              userInputsPerItem: wD,
+              redDotInfo: yD,
+              autoSelectCategory: QD
             }
-          }(zz, Hz.shopInfo, Hz.userInputsPerItem, Hz.redDotInfo, lz, Mz), tz = {
-            shopInfo: uz,
-            userInputsPerItem: bz,
-            redDotInfo: Ez
+          }(DD, wD.shopInfo, wD.userInputsPerItem, wD.redDotInfo, fD, bD), QD = {
+            shopInfo: CD,
+            userInputsPerItem: cD,
+            redDotInfo: ID
           };
-          if (null === iz || nz)
-            if (uz[Hz.selectedCategoryKey]) tz.selectedCategoryKey = Hz.selectedCategoryKey;
+          if (null === iD || pD)
+            if (CD[wD.selectedCategoryKey]) QD.selectedCategoryKey = wD.selectedCategoryKey;
             else {
-              const zz = GE(uz);
-              tz.selectedCategoryKey = zz.length > 0 ? zz[0] : null
+              const DD = aI(CD);
+              QD.selectedCategoryKey = DD.length > 0 ? DD[0] : null
             }
-          else tz.selectedCategoryKey = iz;
-          return 0 === Object.keys(uz).length && nz && vz.e.set({
+          else QD.selectedCategoryKey = iD;
+          return 0 === Object.keys(CD).length && pD && PD.d.set({
             openEverythingMenuName: null
-          }), tz
+          }), QD
         },
-        hz = (zz, uz, bz) => {
-          const Ez = Hz.selectedCategoryKey,
-            nz = en(Ez, zz),
-            iz = null !== bz && void 0 !== bz ? bz : Hz.userInputsPerItem[nz],
-            lz = {
-              categoryKey: Ez,
-              itemKey: zz,
-              userInput: iz
+        LD = (DD, CD, cD) => {
+          const ID = wD.selectedCategoryKey,
+            pD = Yp(ID, DD),
+            iD = null !== cD && void 0 !== cD ? cD : wD.userInputsPerItem[pD],
+            fD = {
+              categoryKey: ID,
+              itemKey: DD,
+              userInput: iD
             };
-          if (Rz.current = Ez, uz.isRewardedAd) {
-            if (Date.now() - fz.current < 5e3) return;
-            (0, iu.Y)((() => {
-              var bz, Ez, iz;
+          if (ZD.current = ID, CD.isRewardedAd) {
+            if (Date.now() - gD.current < 5e3) return;
+            (0, iC.Z)((() => {
+              var cD, ID, iD;
               console.log("bought rewarded ad");
-              const Mz = lz.categoryKey ? null === (bz = oz.current.shopInfo[lz.categoryKey]) || void 0 === bz ? void 0 : bz.items[zz] : null;
-              if (!Mz || !Mz.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (Ez = uz.userInput) || void 0 === Ez ? void 0 : Ez.type) === (null === Mz || void 0 === Mz || null === (iz = Mz.userInput) || void 0 === iz ? void 0 : iz.type) ? (lz.userInput = oz.current.userInputsPerItem[nz], Xz.gameBridge.send("buyShopItem", lz), uz.onBoughtMessage && mz(uz.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), fz.current = Date.now()
+              const bD = fD.categoryKey ? null === (cD = nD.current.shopInfo[fD.categoryKey]) || void 0 === cD ? void 0 : cD.items[DD] : null;
+              if (!bD || !bD.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (ID = CD.userInput) || void 0 === ID ? void 0 : ID.type) === (null === bD || void 0 === bD || null === (iD = bD.userInput) || void 0 === iD ? void 0 : iD.type) ? (fD.userInput = nD.current.userInputsPerItem[pD], ND.gameBridge.send("buyShopItem", fD), CD.onBoughtMessage && jD(CD.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), gD.current = Date.now()
           } else {
-            Xz.gameBridge.send("buyShopItem", lz), Vz({
+            ND.gameBridge.send("buyShopItem", fD), zD({
               awaitingPurchase: !0
-            }), clearTimeout(sz.current), sz.current = setTimeout((() => {
-              rz.current = null, Vz({
+            }), clearTimeout(XD.current), XD.current = setTimeout((() => {
+              mD.current = null, zD({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const zz = (0, rE.b)(uz, iz);
-            if (rz.current = null, !isNaN(zz) && jn(Hz.currencyAmounts, uz.currency)) {
-              0 !== zz && (rz.current = {
-                currency: uz.currency,
-                amountBefore: Hz.currencyAmounts[uz.currency].amount
+            const DD = (0, mI.c)(CD, iD);
+            if (mD.current = null, !isNaN(DD) && Wp(wD.currencyAmounts, CD.currency)) {
+              0 !== DD && (mD.current = {
+                currency: CD.currency,
+                amountBefore: wD.currencyAmounts[CD.currency].amount
               });
-              const bz = {
-                ...Hz.currencyAmounts
+              const cD = {
+                ...wD.currencyAmounts
               };
-              bz[uz.currency].amount -= zz, Vz({
-                currencyAmounts: bz
+              cD[CD.currency].amount -= DD, zD({
+                currencyAmounts: cD
               })
             }
-            uz.onBoughtMessage && mz(uz.onBoughtMessage)
+            CD.onBoughtMessage && jD(CD.onBoughtMessage)
           }
         },
-        cz = (zz, uz) => {
-          if (null === uz || !zz.shopInfo[uz]) return zz;
-          let bz = zz.redDotInfo;
-          return bz.categoryHasRedDot(uz) && (bz.updateCategoryRedDot(uz, !1), bz = bz.shallowCopy()), {
-            ...zz,
-            selectedCategoryKey: uz,
-            redDotInfo: bz
+        GD = (DD, CD) => {
+          if (null === CD || !DD.shopInfo[CD]) return DD;
+          let cD = DD.redDotInfo;
+          return cD.categoryHasRedDot(CD) && (cD.updateCategoryRedDot(CD, !1), cD = cD.shallowCopy()), {
+            ...DD,
+            selectedCategoryKey: CD,
+            redDotInfo: cD
           }
         },
-        gz = zz => {
-          dz((uz => cz(uz, zz)))
+        RD = DD => {
+          yD((CD => GD(CD, DD)))
         };
-      (0, Au.g)(PE.l, (() => {
-        dz((zz => {
-          const uz = (0, PE.p)(GE(zz.shopInfo), zz.selectedCategoryKey, (uz => (0, PE.j)(zz.shopInfo[uz].items)));
-          return uz === zz.selectedCategoryKey ? zz : cz(zz, uz)
+      (0, xC.f)(KI.j, (() => {
+        yD((DD => {
+          const CD = (0, KI.m)(aI(DD.shopInfo), DD.selectedCategoryKey, (CD => (0, KI.g)(DD.shopInfo[CD].items)));
+          return CD === DD.selectedCategoryKey ? DD : GD(DD, CD)
         }))
-      })), (0, Au.g)("showShopFromServer", (zz => {
+      })), (0, xC.f)("showShopFromServer", (DD => {
         let {
-          toggle: uz,
-          Ku: bz
-        } = zz;
-        bz && gz(bz), 0 === Object.keys(Hz.shopInfo).length || uz && nz ? vz.e.set({
+          toggle: CD,
+          SC: cD
+        } = DD;
+        cD && RD(cD), 0 === Object.keys(wD.shopInfo).length || CD && pD ? PD.d.set({
           openEverythingMenuName: null
-        }) : vz.e.set({
-          openEverythingMenuName: Hu.r.SHOP
+        }) : PD.d.set({
+          openEverythingMenuName: wC.q.SHOP
         })
-      })), (0, Au.g)("closeShopOnDamaged", (() => {
-        nz && vz.e.set({
+      })), (0, xC.f)("closeShopOnDamaged", (() => {
+        pD && PD.d.set({
           openEverythingMenuName: null
         })
-      })), (0, Au.g)("overShopInfo", (zz => {
-        mz(zz)
-      })), (0, Zz.f)("currencyAmounts", (zz => {
-        var uz;
-        const bz = rz.current;
-        bz && (null === zz || void 0 === zz || null === (uz = zz[bz.currency]) || void 0 === uz ? void 0 : uz.amount) === bz.amountBefore ? Vz({
-          currencyAmounts: zz
-        }) : (rz.current = null, Vz({
-          currencyAmounts: zz,
+      })), (0, xC.f)("overShopInfo", (DD => {
+        jD(DD)
+      })), (0, tD.e)("currencyAmounts", (DD => {
+        var CD;
+        const cD = mD.current;
+        cD && (null === DD || void 0 === DD || null === (CD = DD[cD.currency]) || void 0 === CD ? void 0 : CD.amount) === cD.amountBefore ? zD({
+          currencyAmounts: DD
+        }) : (mD.current = null, zD({
+          currencyAmounts: DD,
           awaitingPurchase: !1
         }))
-      })), (0, Zz.f)("shopInfo", (zz => {
-        Vz({
-          ...qz(zz),
+      })), (0, tD.e)("shopInfo", (DD => {
+        zD({
+          ...lD(DD),
           awaitingPurchase: !1
         })
       }));
-      const Sz = (0, Ez.useRef)({
-        playerIds: lz,
-        localPlayerId: Mz
+      const kD = (0, ID.useRef)({
+        playerIds: fD,
+        localPlayerId: bD
       });
-      (0, Ez.useEffect)((() => {
-        Sz.current.playerIds === lz && Sz.current.localPlayerId === Mz || (Sz.current = {
-          playerIds: lz,
-          localPlayerId: Mz
-        }, dz((zz => {
-          const uz = qz(zz.shopInfo);
+      (0, ID.useEffect)((() => {
+        kD.current.playerIds === fD && kD.current.localPlayerId === bD || (kD.current = {
+          playerIds: fD,
+          localPlayerId: bD
+        }, yD((DD => {
+          const CD = lD(DD.shopInfo);
           return {
-            ...zz,
-            ...uz
+            ...DD,
+            ...CD
           }
         })))
-      }), [lz, Mz]);
-      const yz = Hz.selectedCategoryKey,
-        Dz = (zz, uz) => {
-          var bz, Ez;
-          return (isNaN(uz) || (0, yu.F)(zz.currency) || jn(Hz.currencyAmounts, zz.currency) && uz <= Hz.currencyAmounts[zz.currency].amount) && (null === (bz = zz.canBuy) || void 0 === bz || bz) && !(null !== (Ez = zz.hidden) && void 0 !== Ez && Ez)
+      }), [fD, bD]);
+      const dD = wD.selectedCategoryKey,
+        YD = (DD, CD) => {
+          var cD, ID;
+          return (isNaN(CD) || (0, dC.C)(DD.currency) || Wp(wD.currencyAmounts, DD.currency) && CD <= wD.currencyAmounts[DD.currency].amount) && (null === (cD = DD.canBuy) || void 0 === cD || cD) && !(null !== (ID = DD.hidden) && void 0 !== ID && ID)
         },
-        Qz = (zz, uz) => {
-          var bz, Ez, nz;
-          const lz = en(yz, zz),
-            Mz = Hz.shopInfo[yz].items[zz],
-            pz = Hz.userInputsPerItem[lz],
-            dz = (0, rE.b)(Mz, pz),
-            Fz = Dz(Mz, dz),
-            Zz = Mz.enchant,
-            Rz = Zz ? (0, Uz.vb)(null !== (bz = Mz.customTitle) && void 0 !== bz ? bz : zz, {
-              colour: Uz.rb[Zz.tier]
-            }) : null !== (Ez = Mz.customTitle) && void 0 !== Ez ? Ez : zz,
-            wz = uz => {
-              const bz = null !== uz && void 0 !== uz ? uz : pz,
-                Ez = void 0 !== uz ? (0, rE.b)(Mz, uz) : dz;
-              Dz(Mz, Ez) && null !== bz && hz(zz, Mz, uz);
-              let nz = Hz.redDotInfo;
-              nz.itemHasRedDot(yz, zz) && (nz.updateItemRedDot(yz, zz, !1), nz = nz.shallowCopy()), Vz({
-                redDotInfo: nz
+        WD = (DD, CD) => {
+          var cD, ID, pD;
+          const fD = Yp(dD, DD),
+            bD = wD.shopInfo[dD].items[DD],
+            BD = wD.userInputsPerItem[fD],
+            yD = (0, mI.c)(bD, BD),
+            MD = YD(bD, yD),
+            tD = bD.enchant,
+            ZD = tD ? (0, TD.tb)(null !== (cD = bD.customTitle) && void 0 !== cD ? cD : DD, {
+              colour: TD.lb[tD.tier]
+            }) : null !== (ID = bD.customTitle) && void 0 !== ID ? ID : DD,
+            vD = CD => {
+              const cD = null !== CD && void 0 !== CD ? CD : BD,
+                ID = void 0 !== CD ? (0, mI.c)(bD, CD) : yD;
+              YD(bD, ID) && null !== cD && LD(DD, bD, CD);
+              let pD = wD.redDotInfo;
+              pD.itemHasRedDot(dD, DD) && (pD.updateItemRedDot(dD, DD, !1), pD = pD.shallowCopy()), zD({
+                redDotInfo: pD
               })
             };
-          return (0, Oz.jsxs)("div", {
-            className: iz()("ShopItem", {
-              ShopItemNoInput: !Mz.userInput,
-              ShopItemNoInputCanBuy: !Mz.userInput && Fz,
-              ShopItemNoInputSelected: Mz.isSelected,
-              ShopItemEnchant: !!Zz
+          return (0, SD.jsxs)("div", {
+            className: iD()("ShopItem", {
+              ShopItemNoInput: !bD.userInput,
+              ShopItemNoInputCanBuy: !bD.userInput && MD,
+              ShopItemNoInputSelected: bD.isSelected,
+              ShopItemEnchant: !!tD
             }),
-            "data-pad-focusable": !Mz.userInput || void 0,
-            "data-pad-unavailable": !Mz.userInput && !Fz || void 0,
-            "data-pad-repeat": null !== (nz = (0, PE.e)(Mz)) && void 0 !== nz ? nz : void 0,
-            "data-pad-repeat-wait": Hz.awaitingPurchase || void 0,
+            "data-pad-focusable": !bD.userInput || void 0,
+            "data-pad-unavailable": !bD.userInput && !MD || void 0,
+            "data-pad-repeat": null !== (pD = (0, KI.d)(bD)) && void 0 !== pD ? pD : void 0,
+            "data-pad-repeat-wait": wD.awaitingPurchase || void 0,
             onClick: () => {
-              if (Zz && Tz.current) {
-                if (xz !== lz) return void Jz(lz);
-                Jz(null)
+              if (tD && qD.current) {
+                if (HD !== fD) return void UD(fD);
+                UD(null)
               }
-              Mz.userInput || wz()
+              bD.userInput || vD()
             },
-            onPointerDown: zz => {
-              Zz && (Tz.current = (0, NE.q)(zz))
+            onPointerDown: DD => {
+              tD && (qD.current = (0, OI.r)(DD))
             },
-            onPointerEnter: zz => {
-              Zz && !(0, NE.q)(zz) && Jz(lz)
+            onPointerEnter: DD => {
+              tD && !(0, OI.r)(DD) && UD(fD)
             },
-            onPointerLeave: zz => {
-              Zz && !(0, NE.q)(zz) && Jz((zz => zz === lz ? null : zz))
+            onPointerLeave: DD => {
+              tD && !(0, OI.r)(DD) && UD((DD => DD === fD ? null : DD))
             },
             style: {
-              zIndex: Object.keys(Hz.shopInfo[yz].items).length - uz
+              zIndex: Object.keys(wD.shopInfo[dD].items).length - CD
             },
-            children: [Hz.redDotInfo.itemHasRedDot(yz, zz) && (0, Oz.jsx)(tz.b, {
+            children: [wD.redDotInfo.itemHasRedDot(dD, DD) && (0, SD.jsx)(QD.e, {
               top: "-6px",
               right: "-6px"
-            }), Mz.badge && (0, Oz.jsx)("div", {
+            }), bD.badge && (0, SD.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, Oz.jsx)("div", {
-                className: iz()("ShopBadgeMain", Mz.badge.type),
-                children: (0, Oz.jsx)(xE.b, {
-                  text: Mz.badge.text
+              children: (0, SD.jsx)("div", {
+                className: iD()("ShopBadgeMain", bD.badge.type),
+                children: (0, SD.jsx)(HI.c, {
+                  text: bD.badge.text
                 })
               })
-            }), (0, Oz.jsx)("div", {
+            }), (0, SD.jsx)("div", {
               className: "ShopItemLeft",
-              children: Mz.image && (0, Oz.jsx)(Bn, {
-                item: Mz,
+              children: bD.image && (0, SD.jsx)(Ep, {
+                item: bD,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, Oz.jsxs)("div", {
+            }), (0, SD.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, Oz.jsxs)("div", {
+              children: [(0, SD.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, Oz.jsx)("div", {
+                children: [(0, SD.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, Oz.jsx)(xE.b, {
-                    text: Rz
+                  children: (0, SD.jsx)(HI.c, {
+                    text: ZD
                   })
-                }), (0, Oz.jsx)("div", {
+                }), (0, SD.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, Oz.jsx)(xE.b, {
-                    text: Mz.description
+                  children: (0, SD.jsx)(HI.c, {
+                    text: bD.description
                   })
                 })]
-              }), Mz.userInput && (0, Oz.jsxs)("div", {
+              }), bD.userInput && (0, SD.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: zz => {
-                  zz.stopPropagation()
+                onClick: DD => {
+                  DD.stopPropagation()
                 },
-                children: [(0, Oz.jsx)(kn, {
-                  item: Mz,
-                  currInput: pz,
-                  updateInput: uz => {
-                    ((zz, uz, bz) => {
-                      const Ez = en(zz, uz),
-                        nz = {
-                          ...Hz.userInputsPerItem
+                children: [(0, SD.jsx)(rp, {
+                  item: bD,
+                  currInput: BD,
+                  updateInput: CD => {
+                    ((DD, CD, cD) => {
+                      const ID = Yp(DD, CD),
+                        pD = {
+                          ...wD.userInputsPerItem
                         };
-                      nz[Ez] = bz, Vz({
-                        userInputsPerItem: nz
+                      pD[ID] = cD, zD({
+                        userInputsPerItem: pD
                       })
-                    })(yz, zz, uz)
+                    })(dD, DD, CD)
                   },
-                  onSubmit: zz => {
-                    wz(zz)
+                  onSubmit: DD => {
+                    vD(DD)
                   }
-                }), ("dropdown" !== Mz.userInput.type || !Mz.userInput.autoSubmit) && (0, Oz.jsx)(Kz.f, {
+                }), ("dropdown" !== bD.userInput.type || !bD.userInput.autoSubmit) && (0, SD.jsx)(oD.i, {
                   className: "ItemCostButton",
-                  disabled: !Fz && null !== pz,
+                  disabled: !MD && null !== BD,
                   onClick: () => {
-                    wz()
+                    vD()
                   },
-                  children: (0, Oz.jsx)(Yn, {
-                    item: Mz,
-                    cost: dz,
-                    currencyAmounts: Hz.currencyAmounts
+                  children: (0, SD.jsx)(hp, {
+                    item: bD,
+                    cost: yD,
+                    currencyAmounts: wD.currencyAmounts
                   })
                 })]
               })]
-            }), !Mz.userInput && (0, Oz.jsx)("div", {
+            }), !bD.userInput && (0, SD.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, Oz.jsx)(Yn, {
-                item: Mz,
-                cost: dz,
-                currencyAmounts: Hz.currencyAmounts
+              children: (0, SD.jsx)(hp, {
+                item: bD,
+                cost: yD,
+                currencyAmounts: wD.currencyAmounts
               })
-            }), Zz && xz === lz && (0, Oz.jsxs)("div", {
+            }), tD && HD === fD && (0, SD.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, Oz.jsx)(xE.b, {
-                text: Rz
-              }), (0, Oz.jsx)("div", {
+              children: [(0, SD.jsx)(HI.c, {
+                text: ZD
+              }), (0, SD.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, Oz.jsx)(xE.b, {
-                  text: (0, oE.c)("", Zz.enchantments, Zz.enchantmentData)
+                children: (0, SD.jsx)(HI.c, {
+                  text: (0, nI.d)("", tD.enchantments, tD.enchantmentData)
                 })
               })]
             })]
-          }, lz)
+          }, fD)
         },
-        Wz = function(zz) {
-          for (const uz in zz)
-            if (zz[uz].smp) return !0;
+        sD = function(DD) {
+          for (const CD in DD)
+            if (DD[CD].smp) return !0;
           return !1
-        }(Hz.shopInfo),
-        ez = CE(Hz.shopInfo, yz);
-      return (0, Oz.jsx)(XE.e, {
+        }(wD.shopInfo),
+        ED = rI(wD.shopInfo, dD);
+      return (0, SD.jsx)(NI.c, {
         className: "Menu ShopBody",
-        show: nz,
-        children: 0 !== Object.keys(Hz.shopInfo).length && (0, Oz.jsxs)(Oz.Fragment, {
-          children: [(0, Oz.jsxs)("div", {
+        show: pD,
+        children: 0 !== Object.keys(wD.shopInfo).length && (0, SD.jsxs)(SD.Fragment, {
+          children: [(0, SD.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, Oz.jsx)(pz, {
-              items: GE(Hz.shopInfo).map((zz => {
-                var uz;
+            children: [(0, SD.jsx)(BD, {
+              items: aI(wD.shopInfo).map((DD => {
+                var CD;
                 return {
-                  id: zz,
-                  title: null !== (uz = Hz.shopInfo[zz].customTitle) && void 0 !== uz ? uz : zz,
-                  redDot: Hz.redDotInfo.categoryHasRedDot(zz)
+                  id: DD,
+                  title: null !== (CD = wD.shopInfo[DD].customTitle) && void 0 !== CD ? CD : DD,
+                  redDot: wD.redDotInfo.categoryHasRedDot(DD)
                 }
               })),
-              selectedItemId: yz,
-              onClick: gz,
-              padStartsOnTab: (0, PE.i)(yz)
-            }), (0, Oz.jsx)("div", {
+              selectedItemId: dD,
+              onClick: RD,
+              padStartsOnTab: (0, KI.e)(dD)
+            }), (0, SD.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: Hz.currencyAmounts && Object.keys(Hz.currencyAmounts).map((zz => {
-                var uz;
-                const bz = Hz.currencyAmounts[zz];
-                return bz.hidden ? null : (0, Oz.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (Lz ? "SmallText" : ""),
-                  children: [(0, Oz.jsxs)("div", {
+              children: wD.currencyAmounts && Object.keys(wD.currencyAmounts).map((DD => {
+                var CD;
+                const cD = wD.currencyAmounts[DD];
+                return cD.hidden ? null : (0, SD.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (JD ? "SmallText" : ""),
+                  children: [(0, SD.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, Oz.jsx)("div", {
+                    children: [(0, SD.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: bz.iconColour
+                        color: cD.iconColour
                       },
-                      children: (0, Oz.jsx)(Ei, {
-                        iconName: bz.icon
+                      children: (0, SD.jsx)(Ci, {
+                        iconName: cD.icon
                       })
-                    }), "\xa0", (0, sE.b)(bz.amount, 6)]
-                  }), (null === (uz = bz.subtext) || void 0 === uz ? void 0 : uz.length) > 0 && (0, Oz.jsx)("div", {
+                    }), "\xa0", (0, XI.e)(cD.amount, 6)]
+                  }), (null === (CD = cD.subtext) || void 0 === CD ? void 0 : CD.length) > 0 && (0, SD.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, Oz.jsx)(xE.b, {
-                      text: bz.subtext
+                    children: (0, SD.jsx)(HI.c, {
+                      text: cD.subtext
                     })
                   })]
-                }, zz)
+                }, DD)
               }))
             })]
-          }), (0, Oz.jsxs)("div", {
+          }), (0, SD.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [Wz && (0, Oz.jsx)(Qn, {
-              show: nz,
-              shopInfo: Hz.shopInfo,
-              selectedCategoryKey: yz,
-              buy: (zz, uz, bz) => {
-                hz(zz, uz, bz)
+            children: [sD && (0, SD.jsx)(kp, {
+              show: pD,
+              shopInfo: wD.shopInfo,
+              selectedCategoryKey: dD,
+              buy: (DD, CD, cD) => {
+                LD(DD, CD, cD)
               },
-              canAfford: Dz,
-              message: Hz.onBoughtInfo
-            }), null === ez && (0, Oz.jsxs)(Oz.Fragment, {
-              children: [(0, Oz.jsx)("div", {
-                className: iz()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== Hz.onBoughtInfo
+              canAfford: YD,
+              message: wD.onBoughtInfo
+            }), null === ED && (0, SD.jsxs)(SD.Fragment, {
+              children: [(0, SD.jsx)("div", {
+                className: iD()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== wD.onBoughtInfo
                 }),
-                children: (0, Oz.jsx)(xE.b, {
-                  text: Fz.current
+                children: (0, SD.jsx)(HI.c, {
+                  text: MD.current
                 })
-              }), (0, Oz.jsx)("div", {
+              }), (0, SD.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, Oz.jsxs)("div", {
+                children: (0, SD.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (uz = Hz.shopInfo[yz]) || void 0 === uz ? void 0 : uz.description) && (0, Oz.jsx)("div", {
+                  children: [(null === (CD = wD.shopInfo[dD]) || void 0 === CD ? void 0 : CD.description) && (0, SD.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, Oz.jsx)(xE.b, {
-                      text: Hz.shopInfo[yz].description
+                    children: (0, SD.jsx)(HI.c, {
+                      text: wD.shopInfo[dD].description
                     })
-                  }), nz && (0, Oz.jsx)("div", {
+                  }), pD && (0, SD.jsx)("div", {
                     className: "ShopItems",
-                    ref: wz,
+                    ref: vD,
                     "data-pad-initial-area": !0,
-                    children: GE(null === (bz = Hz.shopInfo[yz]) || void 0 === bz ? void 0 : bz.items).map(((zz, uz) => Qz(zz, uz)))
+                    children: aI(null === (cD = wD.shopInfo[dD]) || void 0 === cD ? void 0 : cD.items).map(((DD, CD) => WD(DD, CD)))
                   })]
                 })
               })]
@@ -5051,777 +5051,777 @@ export const modules = {
       })
     }));
 
-    function Bn(zz) {
+    function Ep(DD) {
       let {
-        item: uz,
-        minWidth: bz,
-        minHeight: Ez
-      } = zz;
+        item: CD,
+        minWidth: cD,
+        minHeight: ID
+      } = DD;
       const {
-        image: nz,
-        schematicId: iz,
-        imageColour: lz
-      } = uz;
-      if (iz) return (0, Oz.jsx)("div", {
+        image: pD,
+        schematicId: iD,
+        imageColour: fD
+      } = CD;
+      if (iD) return (0, SD.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${bz}rem`,
-          height: `${Ez}rem`
+          width: `${cD}rem`,
+          height: `${ID}rem`
         },
-        children: (0, Oz.jsx)(JE.b, {
+        children: (0, SD.jsx)(UI.e, {
           game: {
-            schematicId: iz
+            schematicId: iD
           }
         })
       });
-      var tz, Hz;
-      if ((0, vE.d)(nz)) return (0, Oz.jsx)("div", {
+      var QD, wD;
+      if ((0, PI.g)(pD)) return (0, SD.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${bz}rem`,
+          minWidth: `${cD}rem`,
           height: "0",
-          minHeight: `${Ez}rem`
+          minHeight: `${ID}rem`
         },
-        children: (0, Oz.jsx)(vE.c, {
-          itemName: nz,
-          amount: null !== (tz = uz.amount) && void 0 !== tz ? tz : 0,
-          amountFontSize: Ez / 4 + "rem",
-          enchantmentTier: null === (Hz = uz.enchant) || void 0 === Hz ? void 0 : Hz.tier
+        children: (0, SD.jsx)(PI.d, {
+          itemName: pD,
+          amount: null !== (QD = CD.amount) && void 0 !== QD ? QD : 0,
+          amountFontSize: ID / 4 + "rem",
+          enchantmentTier: null === (wD = CD.enchant) || void 0 === wD ? void 0 : wD.tier
         })
       });
-      const pz = nz.slice(-4);
-      return ".jpg" === pz || ".png" === pz ? (0, Oz.jsx)(Cn, {
-        image: nz,
-        minWidth: bz
-      }) : (0, Oz.jsx)(Mz.c, {
-        name: nz,
+      const BD = pD.slice(-4);
+      return ".jpg" === BD || ".png" === BD ? (0, SD.jsx)(ep, {
+        image: pD,
+        minWidth: cD
+      }) : (0, SD.jsx)(bD.c, {
+        name: pD,
         className: "SelectedItemImage",
         style: {
-          color: lz
+          color: fD
         }
       })
     }
 
-    function Cn(zz) {
+    function ep(DD) {
       let {
-        image: uz,
-        minWidth: bz
-      } = zz;
+        image: CD,
+        minWidth: cD
+      } = DD;
       const {
-        gameNameWithVariation: Ez
-      } = (0, Bb.h)("connectedGame"), nz = uz.endsWith(".jpg");
-      return (0, Oz.jsx)("img", {
-        className: iz()({
-          ShopPixelImage: !nz
+        gameNameWithVariation: ID
+      } = (0, hc.h)("connectedGame"), pD = CD.endsWith(".jpg");
+      return (0, SD.jsx)("img", {
+        className: iD()({
+          ShopPixelImage: !pD
         }),
         style: {
-          width: `${nz?1.6*bz:bz}rem`,
+          width: `${pD?1.6*cD:cD}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,Uz.Sb)(Ez)}/${uz}`,
-        alt: uz,
+        src: `/textures/games/${(0,TD.Vb)(ID)}/${CD}`,
+        alt: CD,
         draggable: !1
       })
     }
 
-    function Yn(zz) {
+    function hp(DD) {
       let {
-        item: uz,
-        cost: bz,
-        currencyAmounts: Ez
-      } = zz;
-      const nz = !isNaN(bz) && 0 !== bz && jn(Ez, uz.currency);
-      let iz = null;
-      return uz.buyButtonText ? iz = uz.buyButtonText : nz ? (iz = bz, uz.sell && (iz = -1 * bz), iz = iz.toString()) : 0 === bz ? iz = "Free" : uz.isRewardedAd && (iz = "Watch ad"), (0, yu.F)(iz) || " " === iz ? null : (0, Oz.jsxs)("div", {
+        item: CD,
+        cost: cD,
+        currencyAmounts: ID
+      } = DD;
+      const pD = !isNaN(cD) && 0 !== cD && Wp(ID, CD.currency);
+      let iD = null;
+      return CD.buyButtonText ? iD = CD.buyButtonText : pD ? (iD = cD, CD.sell && (iD = -1 * cD), iD = iD.toString()) : 0 === cD ? iD = "Free" : CD.isRewardedAd && (iD = "Watch ad"), (0, dC.C)(iD) || " " === iD ? null : (0, SD.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [nz && (0, Oz.jsx)("div", {
+        children: [pD && (0, SD.jsx)("div", {
           style: {
-            color: Ez[uz.currency].iconColour
+            color: ID[CD.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, Oz.jsx)(Ei, {
-            iconName: Ez[uz.currency].icon
+          children: (0, SD.jsx)(Ci, {
+            iconName: ID[CD.currency].icon
           })
-        }), (0, Oz.jsx)("div", {
+        }), (0, SD.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, Oz.jsx)(xE.b, {
-            text: iz
+          children: (0, SD.jsx)(HI.c, {
+            text: iD
           })
         })]
       })
     }
 
-    function kn(zz) {
+    function rp(DD) {
       let {
-        item: uz,
-        currInput: bz,
-        updateInput: nz,
-        onSubmit: iz
-      } = zz;
+        item: CD,
+        currInput: cD,
+        updateInput: pD,
+        onSubmit: iD
+      } = DD;
       const {
-        t: Mz
-      } = (0, lz.F)(), tz = (0, Ez.useRef)(null);
-      if ((0, Ez.useEffect)((() => {
-          const zz = tz.current;
-          zz && zz.value !== bz && document.activeElement !== zz && (zz.value = null !== bz && void 0 !== bz ? bz : "")
-        }), [bz]), !uz.userInput) return null;
-      let Hz = uz.userInput;
-      if (wz.featureFlags.sanitizeShopInput && "text" === uz.userInput.type && (Hz = {
+        t: bD
+      } = (0, fD.F)(), QD = (0, ID.useRef)(null);
+      if ((0, ID.useEffect)((() => {
+          const DD = QD.current;
+          DD && DD.value !== cD && document.activeElement !== DD && (DD.value = null !== cD && void 0 !== cD ? cD : "")
+        }), [cD]), !CD.userInput) return null;
+      let wD = CD.userInput;
+      if (vD.featureFlags.sanitizeShopInput && "text" === CD.userInput.type && (wD = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === Hz.type || "number" === Hz.type) {
-        var pz, dz;
-        console.assert(void 0 !== bz, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(uz)}`);
-        const zz = "text" === Hz.type && Hz.wordCharsOnly;
-        return (0, Oz.jsx)("div", {
+        }), "text" === wD.type || "number" === wD.type) {
+        var BD, yD;
+        console.assert(void 0 !== cD, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(CD)}`);
+        const DD = "text" === wD.type && wD.wordCharsOnly;
+        return (0, SD.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, Oz.jsx)(rz.d, {
+          children: (0, SD.jsx)(mD.b, {
             className: "ShopItemUserInputText",
-            placeholderText: Mz(Hz.placeholderText),
-            defaultValue: bz,
-            domRef: tz,
-            onValueChange: (uz, bz) => {
-              !0 === zz && (uz = (0, TE.ob)(uz)), tz.current.value = uz, nz(uz)
+            placeholderText: bD(wD.placeholderText),
+            defaultValue: cD,
+            domRef: QD,
+            onValueChange: (CD, cD) => {
+              !0 === DD && (CD = (0, qI.kb)(CD)), QD.current.value = CD, pD(CD)
             },
-            onEnter: iz,
-            type: Hz.type
-          }, (null !== (pz = Hz.initialValue) && void 0 !== pz ? pz : "") + (null !== (dz = Hz.placeholderText) && void 0 !== dz ? dz : ""))
+            onEnter: iD,
+            type: wD.type
+          }, (null !== (BD = wD.initialValue) && void 0 !== BD ? BD : "") + (null !== (yD = wD.placeholderText) && void 0 !== yD ? yD : ""))
         })
       }
-      if ("dropdown" === Hz.type) {
-        console.assert(void 0 !== bz, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(uz)}`);
-        const zz = Hz.autoSubmit;
-        return (0, Oz.jsx)("div", {
+      if ("dropdown" === wD.type) {
+        console.assert(void 0 !== cD, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(CD)}`);
+        const DD = wD.autoSubmit;
+        return (0, SD.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, Oz.jsx)(ru.d, {
-            options: Hz.dropdownOptions.map((zz => (0, rE.e)(zz))),
-            value: bz,
-            onChange: uz => {
+          children: (0, SD.jsx)(mC.b, {
+            options: wD.dropdownOptions.map((DD => (0, mI.d)(DD))),
+            value: cD,
+            onChange: CD => {
               let {
-                value: bz
-              } = uz;
-              nz(bz), zz && iz(bz)
+                value: cD
+              } = CD;
+              pD(cD), DD && iD(cD)
             }
           })
         })
       }
-      return "player" === Hz.type ? (0, Oz.jsx)(zi, {
-        userInput: Hz,
-        currInput: bz,
-        updateInput: nz
-      }) : "color" === Hz.type ? (0, Oz.jsx)("div", {
+      return "player" === wD.type ? (0, SD.jsx)(Ap, {
+        userInput: wD,
+        currInput: cD,
+        updateInput: pD
+      }) : "color" === wD.type ? (0, SD.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, Oz.jsx)("input", {
+        children: (0, SD.jsx)("input", {
           type: "color",
-          value: bz,
-          onChange: zz => {
-            nz(zz.target.value)
+          value: cD,
+          onChange: DD => {
+            pD(DD.target.value)
           }
         })
       }) : null
     }
 
-    function zi(zz) {
+    function Ap(DD) {
       let {
-        userInput: uz,
-        currInput: bz,
-        updateInput: Ez
-      } = zz;
-      const nz = (0, Bb.h)("players"),
-        iz = (0, Bb.h)("hiddenPlayerNames"),
-        lz = (0, rE.f)(nz.ids, nz.localId, uz);
-      return (0, Oz.jsx)("div", {
+        userInput: CD,
+        currInput: cD,
+        updateInput: ID
+      } = DD;
+      const pD = (0, hc.h)("players"),
+        iD = (0, hc.h)("hiddenPlayerNames"),
+        fD = (0, mI.f)(pD.ids, pD.localId, CD);
+      return (0, SD.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, Oz.jsx)(ru.d, {
-          options: lz.map((zz => {
+        children: (0, SD.jsx)(mC.b, {
+          options: fD.map((DD => {
             const {
-              name: uz
-            } = nz.byId[zz];
+              name: CD
+            } = pD.byId[DD];
             return {
-              value: zz,
-              label: null === uz ? "" : (0, AE.c)(uz, iz)
+              value: DD,
+              label: null === CD ? "" : (0, xI.f)(CD, iD)
             }
           })),
-          value: bz,
-          onChange: zz => {
+          value: cD,
+          onChange: DD => {
             let {
-              value: uz
-            } = zz;
-            Ez(uz)
+              value: CD
+            } = DD;
+            ID(CD)
           }
         })
       })
     }
 
-    function ui(zz) {
+    function Fp(DD) {
       let {
-        ids: uz
-      } = zz;
-      return uz
+        ids: CD
+      } = DD;
+      return CD
     }
 
-    function bi(zz) {
+    function Di(DD) {
       let {
-        localId: uz
-      } = zz;
-      return uz
+        localId: CD
+      } = DD;
+      return CD
     }
 
-    function Ei(zz) {
+    function Ci(DD) {
       let {
-        iconName: uz
-      } = zz;
-      return Xz.gameBridge.lookup("isItemName", uz) ? (0, Oz.jsx)(vE.c, {
-        itemName: uz,
+        iconName: CD
+      } = DD;
+      return ND.gameBridge.lookup("isItemName", CD) ? (0, SD.jsx)(PI.d, {
+        itemName: CD,
         amount: 1
-      }) : (0, Oz.jsx)(Mz.c, {
-        name: uz,
+      }) : (0, SD.jsx)(bD.c, {
+        name: CD,
         className: "2x"
       })
     }
-    var ni = bz(1595);
-    const ii = (0, bz(1377).j)((zz => zz.PadLobbyShortcuts)),
-      li = (0, Ez.lazy)((() => Promise.resolve().then((() => bz(4407))).then((zz => ({
-        default: zz.Lobbyleaderboard
+    var ci = cD(1627);
+    const Ii = (0, cD(1403).e)((DD => DD.PadLobbyShortcuts)),
+      ii = (0, ID.lazy)((() => Promise.resolve().then((() => cD(4452))).then((DD => ({
+        default: DD.Lobbyleaderboard
       })))));
 
-    function Mi(zz) {
+    function fi(DD) {
       let {
-        show: uz
-      } = zz;
-      return uz ? (0, Oz.jsxs)(Oz.Fragment, {
-        children: [(0, Oz.jsx)(ii, {}), (0, Oz.jsx)(Ez.Suspense, {
-          fallback: (0, Oz.jsx)("div", {
+        show: CD
+      } = DD;
+      return CD ? (0, SD.jsxs)(SD.Fragment, {
+        children: [(0, SD.jsx)(Ii, {}), (0, SD.jsx)(ID.Suspense, {
+          fallback: (0, SD.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, Oz.jsx)(oz.c, {})
+            children: (0, SD.jsx)(nD.e, {})
           }),
-          children: (0, Oz.jsx)(li, {})
+          children: (0, SD.jsx)(ii, {})
         })]
       }) : null
     }
-    var ti = bz(1527),
-      Hi = bz(2773),
-      Oi = bz(1673),
-      di = bz(2837),
-      Fi = bz(2530),
-      Zi = bz(1468),
-      Ri = bz(1424),
-      Ki = bz(2754),
-      wi = bz(2765),
-      Xi = bz(2235);
-    const fi = "storeRecentGiftRecipients",
-      si = new Map;
+    var bi = cD(1556),
+      Qi = cD(2813),
+      wi = cD(1701),
+      Si = cD(2879),
+      Bi = cD(2567),
+      yi = cD(1488),
+      Mi = cD(1444),
+      ti = cD(2788),
+      Zi = cD(2805),
+      oi = cD(2280);
+    const vi = "storeRecentGiftRecipients",
+      Ni = new Map;
 
-    function ri() {
+    function gi() {
       try {
-        const zz = Wu.g.getItem(fi);
-        return Array.isArray(zz) ? zz.filter((zz => "string" === typeof(null === zz || void 0 === zz ? void 0 : zz.name) && zz.name.length > 0)).map((zz => ({
-          name: zz.name,
-          cosmetics: zz.cosmetics && "object" === typeof zz.cosmetics ? zz.cosmetics : null
+        const DD = sC.h.getItem(vi);
+        return Array.isArray(DD) ? DD.filter((DD => "string" === typeof(null === DD || void 0 === DD ? void 0 : DD.name) && DD.name.length > 0)).map((DD => ({
+          name: DD.name,
+          cosmetics: DD.cosmetics && "object" === typeof DD.cosmetics ? DD.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function oi(zz) {
-      var uz;
-      const [bz, nz] = (0, Ez.useState)(""), [iz, lz] = (0, Ez.useState)("search"), [Mz, tz] = (0, Ez.useState)(null), [Hz, Oz] = (0, Ez.useState)(null), pz = (0, Ez.useRef)(null), dz = (0, Ez.useRef)(null);
-      (0, Ez.useEffect)((() => () => {
-        pz.current && clearTimeout(pz.current)
+    function Xi(DD) {
+      var CD;
+      const [cD, pD] = (0, ID.useState)(""), [iD, fD] = (0, ID.useState)("search"), [bD, QD] = (0, ID.useState)(null), [wD, SD] = (0, ID.useState)(null), BD = (0, ID.useRef)(null), yD = (0, ID.useRef)(null);
+      (0, ID.useEffect)((() => () => {
+        BD.current && clearTimeout(BD.current)
       }), []);
-      const Fz = null !== (uz = null === Mz || void 0 === Mz ? void 0 : Mz.name) && void 0 !== uz ? uz : null;
+      const MD = null !== (CD = null === bD || void 0 === bD ? void 0 : bD.name) && void 0 !== CD ? CD : null;
 
-      function Zz() {
-        pz.current && (clearTimeout(pz.current), pz.current = null)
-      }(0, Ez.useEffect)((() => {
-        if (null === Fz || zz === Tz.NULL_USER_CONTEXT) return;
-        const uz = Fz.toLowerCase();
-        if (uz === zz.getPlayerName().toLowerCase()) return void Oz({
-          name: Fz,
+      function tD() {
+        BD.current && (clearTimeout(BD.current), BD.current = null)
+      }(0, ID.useEffect)((() => {
+        if (null === MD || DD === qD.NULL_USER_CONTEXT) return;
+        const CD = MD.toLowerCase();
+        if (CD === DD.getPlayerName().toLowerCase()) return void SD({
+          name: MD,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const bz = si.get(uz);
-        if (bz) return void Oz({
-          name: Fz,
-          result: bz
+        const cD = Ni.get(CD);
+        if (cD) return void SD({
+          name: MD,
+          result: cD
         });
-        let Ez = !1;
-        return async function(zz, uz) {
+        let ID = !1;
+        return async function(DD, CD) {
           try {
-            const bz = await (0, Tz.postJsonWithMetricsCookiesAndJsonResponse)(`${Lz.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: uz
+            const cD = await (0, qD.postJsonWithMetricsCookiesAndJsonResponse)(`${JD.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: CD
             }, {
               retries: 1
-            }, zz.getMetricsCookies());
-            if ("boolean" !== typeof(null === bz || void 0 === bz ? void 0 : bz.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(bz)}`);
-            return bz
-          } catch (bz) {
-            return console.error("Failed to look up gift recipient:", bz), {
+            }, DD.getMetricsCookies());
+            if ("boolean" !== typeof(null === cD || void 0 === cD ? void 0 : cD.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(cD)}`);
+            return cD
+          } catch (cD) {
+            return console.error("Failed to look up gift recipient:", cD), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(zz, Fz).catch((zz => (console.error("Gift recipient lookup failed:", zz), {
+        }(DD, MD).catch((DD => (console.error("Gift recipient lookup failed:", DD), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((zz => {
-          !0 !== zz.giftRecipientFound && "store:giftRecipientLookupFailed" === zz.giftRecipientError || si.set(uz, zz), Ez || Oz({
-            name: Fz,
-            result: zz
+        }))).then((DD => {
+          !0 !== DD.giftRecipientFound && "store:giftRecipientLookupFailed" === DD.giftRecipientError || Ni.set(CD, DD), ID || SD({
+            name: MD,
+            result: DD
           })
         })), () => {
-          Ez = !0
+          ID = !0
         }
-      }), [Fz, zz]);
-      const Rz = (0, Ez.useMemo)((() => {
-        const zz = bz.trim();
-        if (!zz) return {
+      }), [MD, DD]);
+      const ZD = (0, ID.useMemo)((() => {
+        const DD = cD.trim();
+        if (!DD) return {
           status: "none"
         };
-        if (!Mz || Mz.name !== zz || (null === Hz || void 0 === Hz ? void 0 : Hz.name) !== Mz.name) return {
+        if (!bD || bD.name !== DD || (null === wD || void 0 === wD ? void 0 : wD.name) !== bD.name) return {
           status: "pending",
-          name: zz
+          name: DD
         };
-        const uz = Hz.result;
-        return !1 === uz.giftRecipientFound ? {
+        const CD = wD.result;
+        return !1 === CD.giftRecipientFound ? {
           status: "error",
-          name: Mz.name,
-          error: uz.giftRecipientError
+          name: bD.name,
+          error: CD.giftRecipientError
         } : {
           status: "found",
-          name: uz.giftRecipientName,
-          ownedPacks: uz.giftRecipientOwnedPacks,
-          hasSuperRank: uz.giftRecipientHasSuperRank,
-          isSubscriber: uz.giftRecipientIsSubscriber
+          name: CD.giftRecipientName,
+          ownedPacks: CD.giftRecipientOwnedPacks,
+          hasSuperRank: CD.giftRecipientHasSuperRank,
+          isSubscriber: CD.giftRecipientIsSubscriber
         }
-      }), [bz, Mz, Hz]);
-      (0, Ez.useEffect)((() => {
-        "found" === Rz.status && "typed" === (null === Mz || void 0 === Mz ? void 0 : Mz.source) && dz.current !== Rz.name && (dz.current = Rz.name, (0, Yz.reportAnalyticsClick)({
+      }), [cD, bD, wD]);
+      (0, ID.useEffect)((() => {
+        "found" === ZD.status && "typed" === (null === bD || void 0 === bD ? void 0 : bD.source) && yD.current !== ZD.name && (yD.current = ZD.name, (0, AD.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [Rz, Mz]);
-      const Kz = (null === Hz || void 0 === Hz ? void 0 : Hz.name) === (null === Mz || void 0 === Mz ? void 0 : Mz.name) ? null === Hz || void 0 === Hz ? void 0 : Hz.result : null,
-        wz = !0 === (null === Kz || void 0 === Kz ? void 0 : Kz.giftRecipientFound) ? Kz.giftRecipientCosmetics : null;
+      }), [ZD, bD]);
+      const oD = (null === wD || void 0 === wD ? void 0 : wD.name) === (null === bD || void 0 === bD ? void 0 : bD.name) ? null === wD || void 0 === wD ? void 0 : wD.result : null,
+        vD = !0 === (null === oD || void 0 === oD ? void 0 : oD.giftRecipientFound) ? oD.giftRecipientCosmetics : null;
       return {
-        query: bz,
-        via: iz,
-        recipient: Rz,
-        recipientCosmetics: wz,
-        type: function(zz) {
-          nz(zz), lz("search"), Zz();
-          const uz = zz.trim();
-          uz ? pz.current = setTimeout((() => {
-            tz({
-              name: uz,
+        query: cD,
+        via: iD,
+        recipient: ZD,
+        recipientCosmetics: vD,
+        type: function(DD) {
+          pD(DD), fD("search"), tD();
+          const CD = DD.trim();
+          CD ? BD.current = setTimeout((() => {
+            QD({
+              name: CD,
               source: "typed"
             })
-          }), 400) : tz(null)
+          }), 400) : QD(null)
         },
-        choose: function(zz, uz) {
-          Zz(), nz(zz), lz("typed" === uz ? "search" : "prefilled" === uz ? "prefilled" : "suggestion"), tz({
-            name: zz,
-            source: uz
-          }), "typed" !== uz && "prefilled" !== uz && (0, Yz.reportAnalyticsClick)({
+        choose: function(DD, CD) {
+          tD(), pD(DD), fD("typed" === CD ? "search" : "prefilled" === CD ? "prefilled" : "suggestion"), QD({
+            name: DD,
+            source: CD
+          }), "typed" !== CD && "prefilled" !== CD && (0, AD.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: uz
+            value: CD
           })
         },
         clear: function() {
-          Zz(), nz(""), lz("search"), tz(null)
+          tD(), pD(""), fD("search"), QD(null)
         },
-        recordGift: function(zz, uz) {
-          ! function(zz) {
-            si.delete(zz.toLowerCase())
-          }(zz), Oz((bz => {
-            if (!bz || bz.name.toLowerCase() !== zz.toLowerCase() || !0 !== bz.result.giftRecipientFound || "superRank" === uz) return bz;
-            const Ez = bz.result.giftRecipientOwnedPacks;
+        recordGift: function(DD, CD) {
+          ! function(DD) {
+            Ni.delete(DD.toLowerCase())
+          }(DD), SD((cD => {
+            if (!cD || cD.name.toLowerCase() !== DD.toLowerCase() || !0 !== cD.result.giftRecipientFound || "superRank" === CD) return cD;
+            const ID = cD.result.giftRecipientOwnedPacks;
             return {
-              ...bz,
+              ...cD,
               result: {
-                ...bz.result,
-                giftRecipientOwnedPacks: Ez.includes(uz) ? Ez : [...Ez, uz]
+                ...cD.result,
+                giftRecipientOwnedPacks: ID.includes(CD) ? ID : [...ID, CD]
               }
             }
           }))
         }
       }
     }
-    var Ni = bz(2227),
-      vi = bz(4410),
-      xi = bz(262),
-      Ji = bz(2866);
-    const Ai = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var Ti = bz(2175),
-      Li = bz(577),
-      Pi = bz(2261),
-      Gi = bz(2455);
+    var mi = cD(2272),
+      ni = cD(4459),
+      Oi = cD(266),
+      Pi = cD(2908);
+    const Hi = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var Ui = cD(2235),
+      xi = cD(611),
+      qi = cD(2308),
+      Ji = cD(2466);
 
-    function ai(zz) {
+    function Ki(DD) {
       let {
-        cosmetics: uz
-      } = zz;
-      return (0, Oz.jsx)("span", {
+        cosmetics: CD
+      } = DD;
+      return (0, SD.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, Oz.jsx)(Pi.e, {
-          cosmetics: uz
+        children: (0, SD.jsx)(qi.e, {
+          cosmetics: CD
         })
       })
     }
 
-    function Vi(zz, uz) {
-      var bz, Ez;
-      const nz = null !== (bz = zz.friend) && void 0 !== bz ? bz : {
+    function ai(DD, CD) {
+      var cD, ID;
+      const pD = null !== (cD = DD.friend) && void 0 !== cD ? cD : {
         isError: !1,
-        name: zz.name,
+        name: DD.name,
         ranks: [],
-        cosmetics: null !== (Ez = zz.cosmetics) && void 0 !== Ez ? Ez : {},
-        nameColour: Li.b,
+        cosmetics: null !== (ID = DD.cosmetics) && void 0 !== ID ? ID : {},
+        nameColour: xi.b,
         location: {
           status: "noGamePlayed"
         }
       };
-      return uz ? {
-        ...nz,
-        cosmetics: uz
-      } : nz
+      return CD ? {
+        ...pD,
+        cosmetics: CD
+      } : pD
     }
 
-    function mi(zz) {
+    function Vi(DD) {
       let {
-        recipient: uz
-      } = zz;
-      return "pending" === uz.status ? (0, Oz.jsx)("span", {
+        recipient: CD
+      } = DD;
+      return "pending" === CD.status ? (0, SD.jsx)("span", {
         className: "StoreRecipientStatus",
-        children: (0, Oz.jsx)(oz.c, {})
-      }) : "found" === uz.status ? (0, Oz.jsx)(Mz.c, {
+        children: (0, SD.jsx)(nD.e, {})
+      }) : "found" === CD.status ? (0, SD.jsx)(bD.c, {
         name: "check",
         className: "StoreRecipientStatus StoreRecipientStatusFound"
       }) : null
     }
 
-    function qi(zz) {
-      var uz;
+    function zi(DD) {
+      var CD;
       let {
-        selfName: bz,
-        giftRecipient: nz,
-        suggestionsVersion: tz,
-        pulseSignal: Hz,
-        disabled: pz
-      } = zz;
+        selfName: cD,
+        giftRecipient: pD,
+        suggestionsVersion: QD,
+        pulseSignal: wD,
+        disabled: BD
+      } = DD;
       const {
-        t: dz
-      } = (0, lz.F)(), Fz = (0, yz.l)(), Zz = (0, Ez.useRef)(null), Rz = (0, Ez.useRef)(null), {
-        query: Xz,
-        via: fz,
-        recipient: sz,
-        recipientCosmetics: oz
-      } = nz, Nz = (0, Xi.l)(Xz), vz = (0, Ez.useMemo)((() => {
-        const zz = wz.featureFlags.useSocialFeatures ? Fz.friends.filter((zz => !zz.isError)) : [];
-        return (0, Xi.i)({
-          onlineFriends: (0, yz.e)(zz),
-          recentRecipients: ri(),
-          friends: zz,
-          selfName: bz,
+        t: yD
+      } = (0, fD.F)(), MD = (0, dD.m)(), tD = (0, ID.useRef)(null), ZD = (0, ID.useRef)(null), {
+        query: ND,
+        via: gD,
+        recipient: XD,
+        recipientCosmetics: nD
+      } = pD, OD = (0, oi.o)(ND), PD = (0, ID.useMemo)((() => {
+        const DD = vD.featureFlags.useSocialFeatures ? MD.friends.filter((DD => !DD.isError)) : [];
+        return (0, oi.g)({
+          onlineFriends: (0, dD.f)(DD),
+          recentRecipients: gi(),
+          friends: DD,
+          selfName: cD,
           max: 8
         })
-      }), [Fz.friends, bz, tz]), xz = Xz.trim().toLowerCase(), Jz = "search" !== fz && xz ? vz.find((zz => zz.name.toLowerCase() === xz)) : void 0, Az = Jz && "prefilled" === fz ? [Jz, ...vz.filter((zz => zz !== Jz))] : vz, Tz = "" !== xz && !Jz, Lz = Tz ? Xz : "", Pz = Az.length > 0;
-      (0, Ez.useEffect)((() => {
-        Zz.current && Zz.current.value !== Lz && (Zz.current.value = Lz)
-      }), [Lz]), (0, Ez.useEffect)((() => {
-        Zz.current && (Zz.current.disabled = pz)
-      }), [pz, Hz]);
-      const Gz = (0, Ez.useRef)(0);
+      }), [MD.friends, cD, QD]), HD = ND.trim().toLowerCase(), UD = "search" !== gD && HD ? PD.find((DD => DD.name.toLowerCase() === HD)) : void 0, xD = UD && "prefilled" === gD ? [UD, ...PD.filter((DD => DD !== UD))] : PD, qD = "" !== HD && !UD, JD = qD ? ND : "", KD = xD.length > 0;
+      (0, ID.useEffect)((() => {
+        tD.current && tD.current.value !== JD && (tD.current.value = JD)
+      }), [JD]), (0, ID.useEffect)((() => {
+        tD.current && (tD.current.disabled = BD)
+      }), [BD, wD]);
+      const aD = (0, ID.useRef)(0);
 
-      function Vz() {
-        "self" !== Nz && (0, Yz.reportAnalyticsClick)({
+      function zD() {
+        "self" !== OD && (0, AD.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), nz.clear()
+        }), pD.clear()
       }
 
-      function mz(zz) {
-        var uz, bz;
-        if (pz) return;
-        if (" " === zz.key || "Enter" === zz.key) return zz.preventDefault(), void zz.currentTarget.click();
-        const Ez = Array.from(null !== (uz = null === (bz = Rz.current) || void 0 === bz ? void 0 : bz.querySelectorAll("[role=radio]")) && void 0 !== uz ? uz : []),
-          nz = Ez.indexOf(zz.currentTarget);
-        let iz;
-        "ArrowRight" === zz.key || "ArrowDown" === zz.key ? iz = Ez[(nz + 1) % Ez.length] : "ArrowLeft" === zz.key || "ArrowUp" === zz.key ? iz = Ez[(nz - 1 + Ez.length) % Ez.length] : "Home" === zz.key ? iz = Ez[0] : "End" === zz.key && (iz = Ez[Ez.length - 1]), iz && (zz.preventDefault(), iz.focus(), iz.click())
-      }(0, Ez.useEffect)((() => {
-        var zz;
-        Hz > Gz.current && !pz && (Gz.current = Hz, null === (zz = Zz.current) || void 0 === zz || zz.focus())
-      }), [Hz, pz]);
-      const qz = "self" === Nz,
-        hz = null !== (uz = null === Jz || void 0 === Jz ? void 0 : Jz.name) && void 0 !== uz ? uz : null,
-        Uz = "error" === sz.status ? sz.error : null,
-        cz = "store:giftRecipientLookupFailed" === Uz;
-      return (0, Oz.jsxs)("div", {
-        className: iz()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: pz,
-          StoreRecipientStripNoChips: !Pz
+      function jD(DD) {
+        var CD, cD;
+        if (BD) return;
+        if (" " === DD.key || "Enter" === DD.key) return DD.preventDefault(), void DD.currentTarget.click();
+        const ID = Array.from(null !== (CD = null === (cD = ZD.current) || void 0 === cD ? void 0 : cD.querySelectorAll("[role=radio]")) && void 0 !== CD ? CD : []),
+          pD = ID.indexOf(DD.currentTarget);
+        let iD;
+        "ArrowRight" === DD.key || "ArrowDown" === DD.key ? iD = ID[(pD + 1) % ID.length] : "ArrowLeft" === DD.key || "ArrowUp" === DD.key ? iD = ID[(pD - 1 + ID.length) % ID.length] : "Home" === DD.key ? iD = ID[0] : "End" === DD.key && (iD = ID[ID.length - 1]), iD && (DD.preventDefault(), iD.focus(), iD.click())
+      }(0, ID.useEffect)((() => {
+        var DD;
+        wD > aD.current && !BD && (aD.current = wD, null === (DD = tD.current) || void 0 === DD || DD.focus())
+      }), [wD, BD]);
+      const lD = "self" === OD,
+        LD = null !== (CD = null === UD || void 0 === UD ? void 0 : UD.name) && void 0 !== CD ? CD : null,
+        TD = "error" === XD.status ? XD.error : null,
+        GD = "store:giftRecipientLookupFailed" === TD;
+      return (0, SD.jsxs)("div", {
+        className: iD()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: BD,
+          StoreRecipientStripNoChips: !KD
         }),
-        children: [(0, Oz.jsx)("span", {
+        children: [(0, SD.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: dz("store:buyingFor")
-        }), (0, Oz.jsxs)("div", {
-          ref: Rz,
+          children: yD("store:buyingFor")
+        }), (0, SD.jsxs)("div", {
+          ref: ZD,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": dz("store:whoIsItFor"),
-          children: [(0, Oz.jsxs)("div", {
+          "aria-label": yD("store:whoIsItFor"),
+          children: [(0, SD.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": qz,
-            tabIndex: pz || !qz && null !== hz ? -1 : 0,
-            className: iz()("StoreRecipientMe", {
-              StoreRecipientChecked: qz
+            "aria-checked": lD,
+            tabIndex: BD || !lD && null !== LD ? -1 : 0,
+            className: iD()("StoreRecipientMe", {
+              StoreRecipientChecked: lD
             }),
             onClick: () => {
-              pz || Vz()
+              BD || zD()
             },
-            onKeyDown: mz,
-            children: [(0, Oz.jsx)(Mz.c, {
+            onKeyDown: jD,
+            children: [(0, SD.jsx)(bD.c, {
               name: "user"
-            }), " ", dz("store:me")]
-          }), Pz && (0, Oz.jsx)("div", {
+            }), " ", yD("store:me")]
+          }), KD && (0, SD.jsx)("div", {
             className: "StoreRecipientChips",
-            children: Az.map((zz => {
-              const uz = zz === Jz;
-              return (0, Oz.jsx)("div", {
+            children: xD.map((DD => {
+              const CD = DD === UD;
+              return (0, SD.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": uz,
-                tabIndex: !pz && uz ? 0 : -1,
-                title: zz.name,
-                className: iz()("StoreRecipientChip", {
-                  StoreRecipientChecked: uz
+                "aria-checked": CD,
+                tabIndex: !BD && CD ? 0 : -1,
+                title: DD.name,
+                className: iD()("StoreRecipientChip", {
+                  StoreRecipientChecked: CD
                 }),
                 onClick: () => {
-                  pz || function(zz) {
-                    "gift" !== Nz && (0, Yz.reportAnalyticsClick)({
+                  BD || function(DD) {
+                    "gift" !== OD && (0, AD.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), nz.choose(zz.name, zz.kind)
-                  }(zz)
+                    }), pD.choose(DD.name, DD.kind)
+                  }(DD)
                 },
-                onKeyDown: mz,
-                children: (0, Oz.jsx)(Gi.i, {
-                  playerSocialPreview: Vi(zz, uz ? oz : null),
+                onKeyDown: jD,
+                children: (0, SD.jsx)(Ji.h, {
+                  playerSocialPreview: ai(DD, CD ? nD : null),
                   opensProfileCard: !1,
-                  isFriend: null !== zz.friend,
+                  isFriend: null !== DD.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== zz.friend,
-                  status: null === zz.friend ? null : void 0,
-                  trailing: uz ? (0, Oz.jsx)(mi, {
-                    recipient: sz
+                  showLocation: null !== DD.friend,
+                  status: null === DD.friend ? null : void 0,
+                  trailing: CD ? (0, SD.jsx)(Vi, {
+                    recipient: XD
                   }) : void 0
                 })
-              }, zz.name)
+              }, DD.name)
             }))
           })]
-        }), (0, Oz.jsxs)("div", {
-          className: iz()("StoreRecipientSearch", {
-            StoreRecipientChecked: Tz,
-            StoreRecipientSearchPulse: Hz > 0 && !Tz,
-            StoreRecipientSearchError: null !== Uz && !cz
+        }), (0, SD.jsxs)("div", {
+          className: iD()("StoreRecipientSearch", {
+            StoreRecipientChecked: qD,
+            StoreRecipientSearchPulse: wD > 0 && !qD,
+            StoreRecipientSearchError: null !== TD && !GD
           }),
           onClick: () => {
-            var zz;
-            null === (zz = Zz.current) || void 0 === zz || zz.focus()
+            var DD;
+            null === (DD = tD.current) || void 0 === DD || DD.focus()
           },
-          children: [Tz && "found" === sz.status && oz && (0, Oz.jsx)(ai, {
-            cosmetics: oz
-          }), !(Tz && "found" === sz.status && oz) && (0, Oz.jsx)(Mz.c, {
+          children: [qD && "found" === XD.status && nD && (0, SD.jsx)(Ki, {
+            cosmetics: nD
+          }), !(qD && "found" === XD.status && nD) && (0, SD.jsx)(bD.c, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, Oz.jsx)(rz.d, {
+          }), (0, SD.jsx)(mD.b, {
             className: "StoreRecipientSearchInput",
-            domRef: Zz,
-            placeholderText: dz("store:searchName"),
-            defaultValue: Lz,
-            maxLength: az.g,
-            onValueChange: function(zz) {
-              "gift" !== Nz && zz.trim() && (0, Yz.reportAnalyticsClick)({
+            domRef: tD,
+            placeholderText: yD("store:searchName"),
+            defaultValue: JD,
+            maxLength: VD.i,
+            onValueChange: function(DD) {
+              "gift" !== OD && DD.trim() && (0, AD.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), nz.type(zz)
+              }), pD.type(DD)
             },
             onEnter: () => {
-              var zz;
-              const uz = null === (zz = Zz.current) || void 0 === zz ? void 0 : zz.value.trim();
-              uz && nz.choose(uz, "typed")
+              var DD;
+              const CD = null === (DD = tD.current) || void 0 === DD ? void 0 : DD.value.trim();
+              CD && pD.choose(CD, "typed")
             },
             blurOnEnter: !0
-          }), Tz && (0, Oz.jsx)(mi, {
-            recipient: sz
-          }), Tz && (0, Oz.jsx)("div", {
-            ...(0, Kz.ab)({
-              disabled: pz
+          }), qD && (0, SD.jsx)(Vi, {
+            recipient: XD
+          }), qD && (0, SD.jsx)("div", {
+            ...(0, oD.U)({
+              disabled: BD
             }),
-            "aria-label": dz("store:clearRecipient"),
-            title: dz("store:clearRecipient"),
+            "aria-label": yD("store:clearRecipient"),
+            title: yD("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: zz => {
-              zz.stopPropagation(), pz || Vz()
+            onClick: DD => {
+              DD.stopPropagation(), BD || zD()
             },
-            children: (0, Oz.jsx)(Mz.c, {
+            children: (0, SD.jsx)(bD.c, {
               name: "xmark"
             })
           })]
-        }, Hz), Uz && (0, Oz.jsx)("div", {
-          className: iz()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: cz
+        }, wD), TD && (0, SD.jsx)("div", {
+          className: iD()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: GD
           }),
           role: "status",
-          children: dz(Uz)
+          children: yD(TD)
         })]
       })
     }
-    var Ui = bz(2222),
-      ci = bz(2155),
-      gi = bz(3337),
-      Si = bz(2872),
-      yi = bz(2181);
-    const Di = bz.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var ji = cD(2268),
+      li = cD(2209),
+      Li = cD(3389),
+      Ti = cD(2911),
+      Gi = cD(2245);
+    const Ri = cD.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function Qi() {
-      (0, yi.j)(Di, {
+    function ki() {
+      (0, Gi.f)(Ri, {
         lowPriority: !1
       })
     }
 
-    function Wi(zz) {
+    function di(DD) {
       let {
-        onBack: uz,
-        cta: bz,
-        recipient: nz,
-        afterCta: iz
-      } = zz;
+        onBack: CD,
+        cta: cD,
+        recipient: pD,
+        afterCta: iD
+      } = DD;
       const {
-        t: tz
-      } = (0, lz.F)(), [Hz, pz] = (0, Ez.useState)("starting"), dz = (0, Ez.useRef)(null), Fz = (0, Pu.e)(), Zz = (0, Ez.useRef)(null), Rz = (0, Ez.useCallback)((() => {
-        const zz = dz.current;
-        null !== zz.error && zz.load();
-        const uz = zz.play();
-        Zz.current = uz, uz.catch((zz => {
-          (0, gi.b)("Failed to play Super Rank video", zz), Fz.current && Zz.current === uz && pz("failed")
+        t: QD
+      } = (0, fD.F)(), [wD, BD] = (0, ID.useState)("starting"), yD = (0, ID.useRef)(null), MD = (0, KC.d)(), tD = (0, ID.useRef)(null), ZD = (0, ID.useCallback)((() => {
+        const DD = yD.current;
+        null !== DD.error && DD.load();
+        const CD = DD.play();
+        tD.current = CD, CD.catch((DD => {
+          (0, Li.d)("Failed to play Super Rank video", DD), MD.current && tD.current === CD && BD("failed")
         }))
-      }), [Fz]);
-      return (0, Ez.useEffect)((() => {
-        const zz = dz.current;
-        let uz;
+      }), [MD]);
+      return (0, ID.useEffect)((() => {
+        const DD = yD.current;
+        let CD;
 
-        function bz() {
-          clearTimeout(uz), uz = setTimeout(Rz, 3e3)
+        function cD() {
+          clearTimeout(CD), CD = setTimeout(ZD, 3e3)
         }
-        return Rz(), zz.addEventListener("ended", bz), () => {
-          clearTimeout(uz), zz.removeEventListener("ended", bz)
+        return ZD(), DD.addEventListener("ended", cD), () => {
+          clearTimeout(CD), DD.removeEventListener("ended", cD)
         }
-      }), [Rz]), (0, Oz.jsxs)("div", {
+      }), [ZD]), (0, SD.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, Oz.jsxs)("div", {
+        children: [(0, SD.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, Oz.jsx)(Kz.d, {
+          children: [(0, SD.jsx)(oD.e, {
             className: "StoreDetailBackButton",
-            onClick: uz,
+            onClick: CD,
             padBack: !0,
-            children: tz("general:back")
-          }), (0, Oz.jsxs)("div", {
+            children: QD("general:back")
+          }), (0, SD.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, Oz.jsx)(Mz.c, {
+            children: [(0, SD.jsx)(bD.c, {
               name: "bolt"
-            }), " ", tz("homePage:superRank")]
-          }), nz]
-        }), (0, Oz.jsxs)("div", {
+            }), " ", QD("homePage:superRank")]
+          }), pD]
+        }), (0, SD.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, Oz.jsxs)("div", {
+          children: [(0, SD.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, Oz.jsx)("video", {
-              ref: dz,
-              src: `${Lz.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: Di,
+            children: [(0, SD.jsx)("video", {
+              ref: yD,
+              src: `${JD.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: Ri,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === Hz,
+              controls: "playing" === wD,
               onPlaying: () => {
-                pz("playing")
+                BD("playing")
               },
               onError: () => {
-                pz("failed")
+                BD("failed")
               }
-            }), ("failed" === Hz || "loading" === Hz) && (0, Oz.jsx)("div", {
+            }), ("failed" === wD || "loading" === wD) && (0, SD.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, Oz.jsx)(Kz.f, {
-                ariaLabel: tz("general:play"),
-                loading: "loading" === Hz,
+              children: (0, SD.jsx)(oD.i, {
+                ariaLabel: QD("general:play"),
+                loading: "loading" === wD,
                 onClick: () => {
-                  pz("loading"), Rz()
+                  BD("loading"), ZD()
                 },
                 touchPressOn: "pointerup",
-                children: (0, Oz.jsx)(Mz.c, {
+                children: (0, SD.jsx)(bD.c, {
                   name: "play"
                 })
               })
             })]
-          }), (0, Oz.jsxs)("div", {
+          }), (0, SD.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, Oz.jsx)("div", {
+            children: [(0, SD.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, Oz.jsx)(Si.e, {})
-            }), (0, Oz.jsxs)("div", {
+              children: (0, SD.jsx)(Ti.d, {})
+            }), (0, SD.jsxs)("div", {
               className: "StoreTileActions",
-              children: [bz, iz]
+              children: [cD, iD]
             })]
           })]
         })]
       })
     }
-    var ei = bz(2469),
-      ji = bz(3290),
-      Ii = bz(2860),
-      Bi = bz(2862);
-    const Ci = [Li.n.yellow, Li.n.green, Li.n.aqua, Li.n.blue, Li.n.purple, Li.n.red];
+    var Yi = cD(2478),
+      Wi = cD(3344),
+      si = cD(2901),
+      Ei = cD(2906);
+    const ei = [xi.p.yellow, xi.p.green, xi.p.aqua, xi.p.blue, xi.p.purple, xi.p.red];
 
-    function Yi(zz) {
-      return "needsRecipient" === zz || "lookingUp" === zz || "gift" === zz || "recipientOwns" === zz || "recipientSharesOwned" === zz || "recipientSubscribed" === zz
+    function ui(DD) {
+      return "needsRecipient" === DD || "lookingUp" === DD || "gift" === DD || "recipientOwns" === DD || "recipientSharesOwned" === DD || "recipientSubscribed" === DD
     }
 
-    function ki(zz) {
+    function ri(DD) {
       const {
-        onKeyDown: uz,
-        ...bz
-      } = (0, Kz.ab)();
+        onKeyDown: CD,
+        ...cD
+      } = (0, oD.U)();
       return {
-        ...bz,
-        "aria-label": zz,
-        onKeyDown: zz => {
-          zz.target === zz.currentTarget && (null === uz || void 0 === uz || uz(zz))
+        ...cD,
+        "aria-label": DD,
+        onKeyDown: DD => {
+          DD.target === DD.currentTarget && (null === CD || void 0 === CD || CD(DD))
         }
       }
     }
 
-    function zl(zz) {
+    function Ai(DD) {
       let {
-        text: uz
-      } = zz;
-      return (0, Oz.jsx)("span", {
+        text: CD
+      } = DD;
+      return (0, SD.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(uz).map(((zz, uz) => (0, Oz.jsx)("span", {
+        children: Array.from(CD).map(((DD, CD) => (0, SD.jsx)("span", {
           style: {
-            color: Ci[uz % Ci.length]
+            color: ei[CD % ei.length]
           },
-          children: zz
-        }, uz)))
+          children: DD
+        }, CD)))
       })
     }
-    const ul = {
+    const Fi = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -5829,67 +5829,67 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function bl(zz) {
+    function Df(DD) {
       let {
-        state: uz,
-        item: bz,
-        price: Ez,
-        busy: nz,
-        highlight: tz = !1,
-        onAct: Hz,
-        onNeedRecipient: pz,
-        onLogin: dz
-      } = zz;
+        state: CD,
+        item: cD,
+        price: ID,
+        busy: pD,
+        highlight: QD = !1,
+        onAct: wD,
+        onNeedRecipient: BD,
+        onLogin: yD
+      } = DD;
       const {
-        t: Fz
-      } = (0, lz.F)(), Zz = "superRank" === bz ? mz.h.product.days : null, Rz = zz => null === Zz ? Fz(zz ? "general:gift" : "general:buy") : Fz(zz ? "store:giftDays" : "store:buyDays", {
-        days: Zz
-      }), wz = (zz, uz) => (0, Oz.jsxs)(Oz.Fragment, {
-        children: [uz && (0, Oz.jsx)("span", {
+        t: MD
+      } = (0, fD.F)(), tD = "superRank" === cD ? jD.g.product.days : null, ZD = DD => null === tD ? MD(DD ? "general:gift" : "general:buy") : MD(DD ? "store:giftDays" : "store:buyDays", {
+        days: tD
+      }), vD = (DD, CD) => (0, SD.jsxs)(SD.Fragment, {
+        children: [CD && (0, SD.jsx)("span", {
           className: "StoreCtaIcon",
-          children: uz
-        }), null === zz && (0, Oz.jsx)("span", {
+          children: CD
+        }), null === DD && (0, SD.jsx)("span", {
           className: "StoreCtaLabel StoreCtaLabelPending"
-        }), null !== zz && (0, Oz.jsx)("span", {
+        }), null !== DD && (0, SD.jsx)("span", {
           className: "StoreCtaLabel",
-          title: zz,
-          children: zz
-        }), (0, Oz.jsxs)("span", {
+          title: DD,
+          children: DD
+        }), (0, SD.jsxs)("span", {
           className: "StoreCtaPrice",
-          children: ["\xb7", (0, Oz.jsx)(ci.d, {
-            amount: Ez
+          children: ["\xb7", (0, SD.jsx)(li.d, {
+            amount: ID
           })]
         })]
       });
-      let Xz;
-      switch (uz) {
+      let ND;
+      switch (CD) {
         case "pending":
-          Xz = (0, Oz.jsx)(Kz.q, {
+          ND = (0, SD.jsx)(oD.o, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: wz(null)
+            children: vD(null)
           });
           break;
         case "login":
-          Xz = (0, Oz.jsx)(Kz.q, {
+          ND = (0, SD.jsx)(oD.o, {
             className: "StoreCtaButton",
-            onClick: dz,
-            children: wz(Rz(!1))
+            onClick: yD,
+            children: vD(ZD(!1))
           });
           break;
         case "owned":
-          Xz = (0, Oz.jsx)(Kz.j, {
+          ND = (0, SD.jsx)(oD.k, {
             className: "StoreCtaButton",
             onClick: () => {
-              vz.e.set({
-                openEverythingMenuName: Hu.r.CUSTOMISATION
+              PD.d.set({
+                openEverythingMenuName: wC.q.CUSTOMISATION
               })
             },
-            children: (0, Oz.jsxs)("span", {
+            children: (0, SD.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, Oz.jsx)(Mz.c, {
+              children: [(0, SD.jsx)(bD.c, {
                 name: "shirt"
-              }), " ", Fz("store:equip")]
+              }), " ", MD("store:equip")]
             })
           });
           break;
@@ -5898,205 +5898,205 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          Xz = (0, Oz.jsx)(Kz.q, {
+          ND = (0, SD.jsx)(oD.o, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, Oz.jsx)("span", {
+            children: (0, SD.jsx)("span", {
               className: "StoreCtaLabel",
-              children: Fz(ul[uz])
+              children: MD(Fi[CD])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          Xz = (0, Oz.jsx)(Kz.q, {
+          ND = (0, SD.jsx)(oD.o, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === uz || null === Ez,
-            loading: "lookingUp" === uz || nz,
-            onClick: Hz,
+            disabled: "needsRecipient" === CD || null === ID,
+            loading: "lookingUp" === CD || pD,
+            onClick: wD,
             analyticsClick: {
               id: "store.gift",
-              value: bz
+              value: cD
             },
-            children: wz(Rz(!0), Xi.b)
+            children: vD(ZD(!0), oi.c)
           });
           break;
         case "buy":
         case "recharge":
-          Xz = (0, Oz.jsx)(Kz.q, {
+          ND = (0, SD.jsx)(oD.o, {
             className: "StoreCtaButton",
-            loading: nz,
-            disabled: null === Ez,
-            onClick: Hz,
+            loading: pD,
+            disabled: null === ID,
+            onClick: wD,
             analyticsClick: {
               id: "store.buy",
-              value: bz
+              value: cD
             },
-            children: wz(Rz(!1))
+            children: vD(ZD(!1))
           })
       }
-      return (0, Oz.jsx)("div", {
-        className: iz()("StoreCta", {
-          StoreCtaHighlight: tz
+      return (0, SD.jsx)("div", {
+        className: iD()("StoreCta", {
+          StoreCtaHighlight: QD
         }),
-        onClick: zz => {
-          zz.stopPropagation(), "needsRecipient" === uz && pz()
+        onClick: DD => {
+          DD.stopPropagation(), "needsRecipient" === CD && BD()
         },
-        children: Xz
+        children: ND
       })
     }
 
-    function El() {
+    function Cf() {
       const {
-        t: zz
-      } = (0, lz.F)();
-      return (0, Oz.jsxs)("ul", {
+        t: DD
+      } = (0, fD.F)();
+      return (0, SD.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, Oz.jsxs)("li", {
-          children: [(0, Oz.jsx)(Mz.c, {
+        children: [(0, SD.jsxs)("li", {
+          children: [(0, SD.jsx)(bD.c, {
             name: "check"
-          }), (0, Oz.jsx)(zl, {
-            text: zz("store:colourfulNames")
+          }), (0, SD.jsx)(Ai, {
+            text: DD("store:colourfulNames")
           })]
-        }), (0, Oz.jsxs)("li", {
-          children: [(0, Oz.jsx)(Mz.c, {
+        }), (0, SD.jsxs)("li", {
+          children: [(0, SD.jsx)(bD.c, {
             name: "check"
-          }), zz("store:perkCapes")]
-        }), (0, Oz.jsxs)("li", {
-          children: [(0, Oz.jsx)(Mz.c, {
+          }), DD("store:perkCapes")]
+        }), (0, SD.jsxs)("li", {
+          children: [(0, SD.jsx)(bD.c, {
             name: "check"
-          }), zz("store:perkNoAdverts")]
-        }), (0, Oz.jsxs)("li", {
-          children: [(0, Oz.jsx)(Mz.c, {
+          }), DD("store:perkNoAdverts")]
+        }), (0, SD.jsxs)("li", {
+          children: [(0, SD.jsx)(bD.c, {
             name: "check"
-          }), zz("store:perkFriends", {
-            count: (0, Bz.c)(["super"])
+          }), DD("store:perkFriends", {
+            count: (0, hD.e)(["super"])
           })]
         })]
       })
     }
 
-    function nl(zz) {
+    function If(DD) {
       let {
-        daysLeft: uz,
-        totalDays: bz,
-        urgent: Ez
-      } = zz;
+        daysLeft: CD,
+        totalDays: cD,
+        urgent: ID
+      } = DD;
       const {
-        t: nz
-      } = (0, lz.F)(), Mz = bz > 0 ? Math.min(1, Math.max(.03, uz / bz)) : 1;
-      return (0, Oz.jsxs)("div", {
-        className: iz()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: Ez
+        t: pD
+      } = (0, fD.F)(), bD = cD > 0 ? Math.min(1, Math.max(.03, CD / cD)) : 1;
+      return (0, SD.jsxs)("div", {
+        className: iD()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: ID
         }),
-        children: [(0, Oz.jsx)("span", {
+        children: [(0, SD.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === uz ? nz("store:oneDayLeft") : nz("store:daysLeft", {
-            days: uz
+          children: 1 === CD ? pD("store:oneDayLeft") : pD("store:daysLeft", {
+            days: CD
           })
-        }), (0, Oz.jsx)("div", {
+        }), (0, SD.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, Oz.jsx)("i", {
+          children: (0, SD.jsx)("i", {
             style: {
-              width: 100 * Mz + "%"
+              width: 100 * bD + "%"
             }
           })
         })]
       })
     }
 
-    function il(zz) {
+    function pf(DD) {
       let {
-        state: uz,
-        urgent: bz,
-        daysLeft: Ez,
-        totalDays: nz,
-        recipientHasSuperRank: tz,
-        busy: Hz,
-        highlight: pz,
-        onOpen: dz,
-        onAct: Fz,
-        onNeedRecipient: Zz,
-        onLogin: Rz
-      } = zz;
+        state: CD,
+        urgent: cD,
+        daysLeft: ID,
+        totalDays: pD,
+        recipientHasSuperRank: QD,
+        busy: wD,
+        highlight: BD,
+        onOpen: yD,
+        onAct: MD,
+        onNeedRecipient: tD,
+        onLogin: ZD
+      } = DD;
       const {
-        t: Kz
-      } = (0, lz.F)(), wz = Yi(uz), {
-        days: Xz
-      } = mz.h.product, fz = Kz("store:recipientHasSuperRank", {
-        giftDays: Xz
-      }), sz = jz("subscribed" === uz);
-      return (0, Oz.jsxs)("div", {
-        className: iz()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: wz,
-          StoreSuperRankTileUrgent: "recharge" === uz && bz,
-          StoreSuperRankTileWithChip: tz,
-          StoreSuperRankTileGiftReady: "gift" === uz
+        t: oD
+      } = (0, fD.F)(), vD = ui(CD), {
+        days: ND
+      } = jD.g.product, gD = oD("store:recipientHasSuperRank", {
+        giftDays: ND
+      }), XD = eD("subscribed" === CD);
+      return (0, SD.jsxs)("div", {
+        className: iD()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: vD,
+          StoreSuperRankTileUrgent: "recharge" === CD && cD,
+          StoreSuperRankTileWithChip: QD,
+          StoreSuperRankTileGiftReady: "gift" === CD
         }),
-        ...ki(Kz("homePage:superRank")),
+        ...ri(oD("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: Qi,
-        onFocus: Qi,
-        onClick: dz,
-        children: [(0, Oz.jsx)("div", {
+        onPointerEnter: ki,
+        onFocus: ki,
+        onClick: yD,
+        children: [(0, SD.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${Ti.f})`
+            backgroundImage: `url(${Ui.i})`
           }
-        }), wz && (0, Oz.jsx)("div", {
+        }), vD && (0, SD.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, Oz.jsxs)("div", {
+        }), (0, SD.jsxs)("div", {
           className: "StoreTileContent",
-          children: [tz && (0, Oz.jsx)("span", {
+          children: [QD && (0, SD.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: fz,
-            children: fz
-          }), (0, Oz.jsxs)("div", {
+            title: gD,
+            children: gD
+          }), (0, SD.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, Oz.jsx)(Mz.c, {
+            children: [(0, SD.jsx)(bD.c, {
               name: "bolt"
-            }), " ", Kz("homePage:superRank")]
-          }), wz && (0, Oz.jsx)("div", {
+            }), " ", oD("homePage:superRank")]
+          }), vD && (0, SD.jsx)("div", {
             className: "StoreTilePitch",
-            children: Kz("store:giftPitch", {
-              days: Xz
+            children: oD("store:giftPitch", {
+              days: ND
             })
-          }), "recharge" === uz && (0, Oz.jsx)(nl, {
-            daysLeft: Ez,
-            totalDays: nz,
-            urgent: bz
-          }), sz && (0, Oz.jsx)("div", {
+          }), "recharge" === CD && (0, SD.jsx)(If, {
+            daysLeft: ID,
+            totalDays: pD,
+            urgent: cD
+          }), XD && (0, SD.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, Oz.jsx)("span", {
+            children: (0, SD.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: sz
+              children: XD
             })
-          }), (0, Oz.jsx)(El, {}), (0, Oz.jsxs)("div", {
+          }), (0, SD.jsx)(Cf, {}), (0, SD.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, Oz.jsx)(bl, {
-              state: uz,
+            children: [(0, SD.jsx)(Df, {
+              state: CD,
               item: "superRank",
-              price: mz.h.price,
-              busy: Hz,
-              highlight: pz,
-              onAct: Fz,
-              onNeedRecipient: Zz,
-              onLogin: Rz
-            }), "needsRecipient" === uz && (0, Oz.jsx)("span", {
+              price: jD.g.price,
+              busy: wD,
+              highlight: BD,
+              onAct: MD,
+              onNeedRecipient: tD,
+              onLogin: ZD
+            }), "needsRecipient" === CD && (0, SD.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: Kz("store:pickRecipientFirst")
-            }), "recharge" === uz && bz && (0, Oz.jsx)("span", {
+              children: oD("store:pickRecipientFirst")
+            }), "recharge" === CD && cD && (0, SD.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === Ez ? Kz("store:endsInOneDay") : Kz("store:endsInDays", {
-                days: Ez
+              children: 1 === ID ? oD("store:endsInOneDay") : oD("store:endsInDays", {
+                days: ID
               })
             })]
           })]
         })]
       })
     }
-    const ll = {
+    const ff = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6104,403 +6104,403 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function Ml(zz) {
-      var uz;
+    function bf(DD) {
+      var CD;
       let {
-        pack: bz,
-        state: nz,
-        busy: tz,
-        onOpen: Hz,
-        onAct: pz,
-        onNeedRecipient: dz,
-        onLogin: Fz
-      } = zz;
+        pack: cD,
+        state: pD,
+        busy: QD,
+        onOpen: wD,
+        onAct: BD,
+        onNeedRecipient: yD,
+        onLogin: MD
+      } = DD;
       const {
-        t: Zz
-      } = (0, lz.F)(), Rz = ti.e[bz], Kz = Ki.h[bz], wz = (0, Ti.n)(bz), Xz = (0, Ez.useRef)(null);
-      (0, Ii.m)(bz, Xz);
-      const fz = Yi(nz),
-        sz = null !== (uz = Rz.displayName) && void 0 !== uz ? uz : bz,
-        rz = (0, ji.e)((() => {
-          (0, ei.i)();
-          const zz = (0, Ii.f)(bz);
-          void 0 !== zz && (0, yi.j)((0, Ii.c)(zz))
+        t: tD
+      } = (0, fD.F)(), ZD = bi.c[cD], oD = ti.i[cD], vD = (0, Ui.p)(cD), ND = (0, ID.useRef)(null);
+      (0, si.h)(cD, ND);
+      const gD = ui(pD),
+        XD = null !== (CD = ZD.displayName) && void 0 !== CD ? CD : cD,
+        mD = (0, Wi.d)((() => {
+          (0, Yi.f)();
+          const DD = (0, si.e)(cD);
+          void 0 !== DD && (0, Gi.f)((0, si.d)(DD))
         })),
-        [oz] = (0, Ez.useState)(Ji.e);
-      return (0, Oz.jsxs)("div", {
-        className: iz()("StoreTile StorePackTile", ll[Rz.tier], {
-          StorePackTileOwned: "owned" === nz,
-          StorePackTileRecipientOwns: "recipientOwns" === nz,
-          StoreTileGift: fz
+        [nD] = (0, ID.useState)(Pi.j);
+      return (0, SD.jsxs)("div", {
+        className: iD()("StoreTile StorePackTile", ff[ZD.tier], {
+          StorePackTileOwned: "owned" === pD,
+          StorePackTileRecipientOwns: "recipientOwns" === pD,
+          StoreTileGift: gD
         }),
-        ...ki(sz),
-        ref: Xz,
-        "data-store-item": bz,
-        onClick: Hz,
-        onPointerMove: zz => {
-          "mouse" !== zz.pointerType || 0 === zz.movementX && 0 === zz.movementY || oz || rz.start()
+        ...ri(XD),
+        ref: ND,
+        "data-store-item": cD,
+        onClick: wD,
+        onPointerMove: DD => {
+          "mouse" !== DD.pointerType || 0 === DD.movementX && 0 === DD.movementY || nD || mD.start()
         },
-        onPointerLeave: rz.cancel,
-        children: [Kz && (0, Oz.jsx)(Kz, {}), (0, Oz.jsx)("div", {
+        onPointerLeave: mD.cancel,
+        children: [oD && (0, SD.jsx)(oD, {}), (0, SD.jsx)("div", {
           className: "StorePackCharacters",
-          children: wz.map((zz => (0, Oz.jsx)("div", {
+          children: vD.map((DD => (0, SD.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,Ti.h)(zz)})`
+              backgroundImage: `url(${(0,Ui.k)(DD)})`
             }
-          }, zz)))
-        }), (0, Oz.jsx)("div", {
+          }, DD)))
+        }), (0, SD.jsx)("div", {
           className: "StoreTileScrim"
-        }), fz && (0, Oz.jsx)("div", {
+        }), gD && (0, SD.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, Oz.jsxs)("div", {
+        }), (0, SD.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, Oz.jsx)("div", {
+          children: [(0, SD.jsx)("div", {
             className: "StoreTileTitle",
-            children: sz
-          }), (0, Oz.jsxs)("div", {
+            children: XD
+          }), (0, SD.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, Oz.jsx)(Bi.b, {
-              tier: Rz.tier
-            }), " \xb7 ", Zz("store:itemCount", {
-              count: (0, Ui.g)(bz)
-            }), "owned" === nz && (0, Oz.jsxs)("span", {
+            children: [(0, SD.jsx)(Ei.d, {
+              tier: ZD.tier
+            }), " \xb7 ", tD("store:itemCount", {
+              count: (0, ji.h)(cD)
+            }), "owned" === pD && (0, SD.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, Oz.jsx)(Mz.c, {
+              children: [" \xb7 ", (0, SD.jsx)(bD.c, {
                 name: "check"
-              }), " ", Zz("general:owned")]
+              }), " ", tD("general:owned")]
             })]
-          }), (0, Oz.jsx)(bl, {
-            state: nz,
-            item: bz,
-            price: (0, mz.f)(bz),
-            busy: tz,
-            onAct: pz,
-            onNeedRecipient: dz,
-            onLogin: Fz
+          }), (0, SD.jsx)(Df, {
+            state: pD,
+            item: cD,
+            price: (0, jD.d)(cD),
+            busy: QD,
+            onAct: BD,
+            onNeedRecipient: yD,
+            onLogin: MD
           })]
         })]
       })
     }
-    var tl = bz(2844),
-      Hl = bz(1525),
-      Ol = bz(1429),
-      pl = bz(3319);
+    var Qf = cD(2881),
+      wf = cD(1548),
+      Sf = cD(1451),
+      Bf = cD(3378);
 
-    function dl() {
-      return (0, Oz.jsx)("span", {
+    function yf() {
+      return (0, SD.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var Fl = bz(1313),
-      Zl = bz(1531),
-      Rl = bz(9020);
+    var Mf = cD(1331),
+      tf = cD(1562),
+      Zf = cD(9074);
 
-    function Kl(zz) {
+    function of(DD) {
       let {
-        character: uz,
-        drawn: bz,
-        onDrawn: nz
-      } = zz;
-      const lz = (0, Ez.useRef)(null),
-        Mz = (0, Rl.g)(uz);
-      return (0, Oz.jsx)("div", {
-        className: iz()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: bz
+        character: CD,
+        drawn: cD,
+        onDrawn: pD
+      } = DD;
+      const fD = (0, ID.useRef)(null),
+        bD = (0, Zf.e)(CD);
+      return (0, SD.jsx)("div", {
+        className: iD()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: cD
         }),
-        children: (0, Oz.jsx)(Ez.Suspense, {
+        children: (0, SD.jsx)(ID.Suspense, {
           fallback: null,
-          children: (0, Oz.jsx)(ei.e, {
-            ref: lz,
+          children: (0, SD.jsx)(Yi.d, {
+            ref: fD,
             framing: "store",
-            turntableFromYaw: bz ? Mz.yaw : null,
+            turntableFromYaw: cD ? bD.yaw : null,
             onReady: () => {
-              var zz, bz;
-              null === (zz = lz.current) || void 0 === zz || zz.setOrbit(Mz), null === (bz = lz.current) || void 0 === bz || bz.setAllCosmetics(Zl.c[uz].cosmetics)
+              var DD, cD;
+              null === (DD = fD.current) || void 0 === DD || DD.setOrbit(bD), null === (cD = fD.current) || void 0 === cD || cD.setAllCosmetics(tf.c[CD].cosmetics)
             },
-            onDrawn: nz
+            onDrawn: pD
           })
         })
       })
     }
-    const wl = {
+    const vf = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      Xl = new Set(["wildSpirits"]);
+      Nf = new Set(["wildSpirits"]);
 
-    function fl(zz) {
-      var uz;
+    function gf(DD) {
+      var CD;
       let {
-        tile: bz,
-        design: nz,
-        canGoLive: tz,
-        live: Hz,
-        busy: pz,
-        highlight: dz,
-        onLiveStart: Fz,
-        onLiveEnd: Zz,
-        onOpen: Rz,
-        onAct: Kz,
-        onNeedRecipient: wz,
-        onLogin: Xz
-      } = zz;
+        tile: cD,
+        design: pD,
+        canGoLive: QD,
+        live: wD,
+        busy: BD,
+        highlight: yD,
+        onLiveStart: MD,
+        onLiveEnd: tD,
+        onOpen: ZD,
+        onAct: oD,
+        onNeedRecipient: vD,
+        onLogin: ND
+      } = DD;
       const {
-        t: fz
-      } = (0, lz.F)(), {
-        pack: sz,
-        state: rz
-      } = bz, oz = ti.e[sz], Nz = (0, ti.g)(sz), vz = (0, Ti.j)(sz), xz = Ki.h[vz], Jz = Xl.has(vz), {
-        tier: Az
-      } = oz, Tz = "legendary" === Az || "mythic" === Az, Lz = (0, Ez.useRef)(null);
-      (0, Fl.b)(Lz, "epic" === Az || Tz || Jz);
-      const [Pz, az] = (0, Ez.useState)(!1);
-      return !Hz && Pz && az(!1), (0, Oz.jsxs)("div", {
-        ref: Lz,
-        className: iz()("StoreCharacterCard", `StoreCharacterCard${nz}`, wl[Az], {
-          StoreCharacterCardOwned: "owned" === rz || "recipientOwns" === rz,
-          StoreCharacterCardGift: Yi(rz),
-          StoreCharacterCardItem: void 0 === Nz
+        t: gD
+      } = (0, fD.F)(), {
+        pack: XD,
+        state: mD
+      } = cD, nD = bi.c[XD], OD = (0, bi.e)(XD), PD = (0, Ui.n)(XD), HD = ti.i[PD], UD = Nf.has(PD), {
+        tier: xD
+      } = nD, qD = "legendary" === xD || "mythic" === xD, JD = (0, ID.useRef)(null);
+      (0, Mf.b)(JD, "epic" === xD || qD || UD);
+      const [KD, VD] = (0, ID.useState)(!1);
+      return !wD && KD && VD(!1), (0, SD.jsxs)("div", {
+        ref: JD,
+        className: iD()("StoreCharacterCard", `StoreCharacterCard${pD}`, vf[xD], {
+          StoreCharacterCardOwned: "owned" === mD || "recipientOwns" === mD,
+          StoreCharacterCardGift: ui(mD),
+          StoreCharacterCardItem: void 0 === OD
         }),
-        onPointerMove: zz => {
-          "mouse" !== zz.pointerType || 0 === zz.movementX && 0 === zz.movementY || !tz || Hz || void 0 === Nz || Fz()
+        onPointerMove: DD => {
+          "mouse" !== DD.pointerType || 0 === DD.movementX && 0 === DD.movementY || !QD || wD || void 0 === OD || MD()
         },
-        onPointerLeave: Zz,
-        children: [(0, Oz.jsx)("div", {
+        onPointerLeave: tD,
+        children: [(0, SD.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: xz && (0, Oz.jsx)(xz, {
+          children: HD && (0, SD.jsx)(HD, {
             simple: !0
           })
-        }), Tz && (0, Oz.jsx)("div", {
+        }), qD && (0, SD.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, Oz.jsxs)(Gz.LinkPreserveSearch, {
+        }), (0, SD.jsxs)(aD.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, Hl.f)({
+          to: (0, wf.d)({
             kind: "pack",
-            pack: sz
+            pack: XD
           }),
-          "data-store-item": sz,
-          onClick: zz => {
-            (0, Ol.e)(zz) && (zz.preventDefault(), Rz())
+          "data-store-item": XD,
+          onClick: DD => {
+            (0, Sf.d)(DD) && (DD.preventDefault(), ZD())
           },
-          children: [(0, Oz.jsxs)("div", {
+          children: [(0, SD.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, Oz.jsx)("div", {
+            children: [(0, SD.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, Oz.jsx)("div", {
-              className: iz()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: Pz
+            }), (0, SD.jsx)("div", {
+              className: iD()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: KD
               }),
               style: {
-                backgroundImage: `url(${(0,Ti.s)(sz)})`
+                backgroundImage: `url(${(0,Ui.s)(XD)})`
               }
-            }), Hz && void 0 !== Nz && (0, Oz.jsx)(Kl, {
-              character: Nz,
-              drawn: Pz,
+            }), wD && void 0 !== OD && (0, SD.jsx)(of, {
+              character: OD,
+              drawn: KD,
               onDrawn: () => {
-                az(!0)
+                VD(!0)
               }
             })]
-          }), (0, Oz.jsx)("div", {
+          }), (0, SD.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (uz = oz.displayName) && void 0 !== uz ? uz : sz
-          }), (0, Oz.jsx)(Bi.b, {
-            tier: Az,
+            children: null !== (CD = nD.displayName) && void 0 !== CD ? CD : XD
+          }), (0, SD.jsx)(Ei.d, {
+            tier: xD,
             className: "StoreCharacterTier"
           })]
-        }), (0, Oz.jsx)("div", {
+        }), (0, SD.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), Jz && (0, Oz.jsx)("span", {
+        }), UD && (0, SD.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, Oz.jsx)(dl, {})
-        }), "owned" === rz && (0, Oz.jsx)("span", {
+          children: (0, SD.jsx)(yf, {})
+        }), "owned" === mD && (0, SD.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: fz("general:owned"),
-          "aria-label": fz("general:owned"),
-          children: (0, Oz.jsx)(Mz.c, {
+          title: gD("general:owned"),
+          "aria-label": gD("general:owned"),
+          children: (0, SD.jsx)(bD.c, {
             name: "check"
           })
-        }), (0, Oz.jsx)("div", {
+        }), (0, SD.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, Oz.jsx)(bl, {
-            state: rz,
-            item: sz,
-            price: (0, mz.f)(sz),
-            busy: pz,
-            highlight: dz,
-            onAct: Kz,
-            onNeedRecipient: wz,
-            onLogin: Xz
+          children: (0, SD.jsx)(Df, {
+            state: mD,
+            item: XD,
+            price: (0, jD.d)(XD),
+            busy: BD,
+            highlight: yD,
+            onAct: oD,
+            onNeedRecipient: vD,
+            onLogin: ND
           })
         })]
       })
     }
 
-    function sl(zz) {
+    function Xf(DD) {
       let {
-        tiles: uz,
-        busy: bz,
-        highlightItem: nz,
-        onOpen: iz,
-        onAct: lz,
-        onNeedRecipient: Mz,
-        onLogin: tz
-      } = zz;
-      const Hz = (0, pl.l)("storeCharacterCardFoil"),
-        pz = (0, pl.l)("storeCharacterCardSpotlight"),
-        dz = Hz ? "Foil" : pz ? "Spotlight" : "Showcase",
-        [Fz] = (0, Ez.useState)(Ji.e),
-        [Zz, Rz] = (0, Ez.useState)(null);
-      return (0, Oz.jsx)("div", {
+        tiles: CD,
+        busy: cD,
+        highlightItem: pD,
+        onOpen: iD,
+        onAct: fD,
+        onNeedRecipient: bD,
+        onLogin: QD
+      } = DD;
+      const wD = (0, Bf.h)("storeCharacterCardFoil"),
+        BD = (0, Bf.h)("storeCharacterCardSpotlight"),
+        yD = wD ? "Foil" : BD ? "Spotlight" : "Showcase",
+        [MD] = (0, ID.useState)(Pi.j),
+        [tD, ZD] = (0, ID.useState)(null);
+      return (0, SD.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: uz.map((zz => (0, Oz.jsx)(fl, {
-          tile: zz,
-          design: dz,
-          canGoLive: !Fz,
-          live: Zz === zz.pack,
-          busy: bz,
-          highlight: nz === zz.pack,
+        children: CD.map((DD => (0, SD.jsx)(gf, {
+          tile: DD,
+          design: yD,
+          canGoLive: !MD,
+          live: tD === DD.pack,
+          busy: cD,
+          highlight: pD === DD.pack,
           onLiveStart: () => {
-            Rz(zz.pack)
+            ZD(DD.pack)
           },
           onLiveEnd: () => {
-            Rz((uz => uz === zz.pack ? null : uz))
+            ZD((CD => CD === DD.pack ? null : CD))
           },
           onOpen: () => {
-            iz(zz.pack)
+            iD(DD.pack)
           },
           onAct: () => {
-            lz(zz.pack)
+            fD(DD.pack)
           },
-          onNeedRecipient: Mz,
+          onNeedRecipient: bD,
           onLogin: () => {
-            tz(zz.pack)
+            QD(DD.pack)
           }
-        }, zz.pack)))
+        }, DD.pack)))
       })
     }
-    var rl = bz(9035);
+    var mf = cD(9084);
 
-    function ol(zz) {
+    function nf(DD) {
       let {
-        title: uz
-      } = zz;
-      return (0, Oz.jsx)("h2", {
+        title: CD
+      } = DD;
+      return (0, SD.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, Oz.jsx)("span", {
+        children: (0, SD.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: uz
+          children: CD
         })
       })
     }
 
-    function Nl(zz) {
+    function Of(DD) {
       let {
-        mountAtOnce: uz,
-        children: bz
-      } = zz;
-      const nz = (0, Ez.useRef)(null),
-        [iz, lz] = (0, Ez.useState)(uz),
-        Mz = (0, rl.b)();
-      return (0, Ez.useLayoutEffect)((() => {
-        const zz = nz.current;
-        zz && zz.getBoundingClientRect().top < zz.parentElement.getBoundingClientRect().bottom && lz(!0)
-      }), []), iz || Mz ? (0, Oz.jsx)(Oz.Fragment, {
-        children: bz
-      }) : (0, Oz.jsx)("div", {
-        ref: nz
+        mountAtOnce: CD,
+        children: cD
+      } = DD;
+      const pD = (0, ID.useRef)(null),
+        [iD, fD] = (0, ID.useState)(CD),
+        bD = (0, mf.d)();
+      return (0, ID.useLayoutEffect)((() => {
+        const DD = pD.current;
+        DD && DD.getBoundingClientRect().top < DD.parentElement.getBoundingClientRect().bottom && fD(!0)
+      }), []), iD || bD ? (0, SD.jsx)(SD.Fragment, {
+        children: cD
+      }) : (0, SD.jsx)("div", {
+        ref: pD
       })
     }
 
-    function vl(zz) {
+    function Pf(DD) {
       let {
-        layout: uz,
-        mountAtOnce: bz,
-        bundleGift: Ez,
-        superRankTotalDays: nz,
-        busy: iz,
-        highlightItem: Mz,
-        onOpen: tz,
-        onAct: Hz,
-        onNeedRecipient: pz,
-        onLogin: dz
-      } = zz;
+        layout: CD,
+        mountAtOnce: cD,
+        bundleGift: ID,
+        superRankTotalDays: pD,
+        busy: iD,
+        highlightItem: bD,
+        onOpen: QD,
+        onAct: wD,
+        onNeedRecipient: BD,
+        onLogin: yD
+      } = DD;
       const {
-        t: Fz
-      } = (0, lz.F)(), Zz = uz.packs.filter((zz => void 0 === (0, ti.g)(zz.pack) && !(0, ti.j)(zz.pack))), Rz = uz.packs.filter((zz => void 0 !== (0, ti.g)(zz.pack))), Kz = uz.packs.filter((zz => (0, ti.j)(zz.pack)));
-      return (0, Oz.jsxs)(Oz.Fragment, {
-        children: [(0, Oz.jsx)(tl.d, {
+        t: MD
+      } = (0, fD.F)(), tD = CD.packs.filter((DD => void 0 === (0, bi.e)(DD.pack) && !(0, bi.h)(DD.pack))), ZD = CD.packs.filter((DD => void 0 !== (0, bi.e)(DD.pack))), oD = CD.packs.filter((DD => (0, bi.h)(DD.pack)));
+      return (0, SD.jsxs)(SD.Fragment, {
+        children: [(0, SD.jsx)(Qf.d, {
           className: "StoreSuperGems",
-          gift: Ez,
-          highlightSku: Mz
-        }), (0, Oz.jsx)(ol, {
-          title: Fz("store:rank")
-        }), (0, Oz.jsx)(il, {
-          state: uz.superRank.state,
-          urgent: uz.superRank.urgent,
-          daysLeft: uz.superRankDaysLeft,
-          totalDays: nz,
-          recipientHasSuperRank: uz.recipientHasSuperRank,
-          busy: iz,
-          highlight: "superRank" === Mz,
+          gift: ID,
+          highlightSku: bD
+        }), (0, SD.jsx)(nf, {
+          title: MD("store:rank")
+        }), (0, SD.jsx)(pf, {
+          state: CD.superRank.state,
+          urgent: CD.superRank.urgent,
+          daysLeft: CD.superRankDaysLeft,
+          totalDays: pD,
+          recipientHasSuperRank: CD.recipientHasSuperRank,
+          busy: iD,
+          highlight: "superRank" === bD,
           onOpen: () => {
-            tz("superRank")
+            QD("superRank")
           },
           onAct: () => {
-            Hz("superRank")
+            wD("superRank")
           },
-          onNeedRecipient: pz,
+          onNeedRecipient: BD,
           onLogin: () => {
-            dz("superRank")
+            yD("superRank")
           }
-        }), (0, Oz.jsxs)(Nl, {
-          mountAtOnce: bz,
-          children: [(0, Oz.jsx)(ol, {
-            title: Fz("store:bundles")
-          }), (0, Oz.jsx)("div", {
+        }), (0, SD.jsxs)(Of, {
+          mountAtOnce: cD,
+          children: [(0, SD.jsx)(nf, {
+            title: MD("store:bundles")
+          }), (0, SD.jsx)("div", {
             className: "StorePackGrid",
-            children: Zz.map((zz => (0, Oz.jsx)(Ml, {
-              pack: zz.pack,
-              state: zz.state,
-              busy: iz,
+            children: tD.map((DD => (0, SD.jsx)(bf, {
+              pack: DD.pack,
+              state: DD.state,
+              busy: iD,
               onOpen: () => {
-                tz(zz.pack)
+                QD(DD.pack)
               },
               onAct: () => {
-                Hz(zz.pack)
+                wD(DD.pack)
               },
-              onNeedRecipient: pz,
+              onNeedRecipient: BD,
               onLogin: () => {
-                dz(zz.pack)
+                yD(DD.pack)
               }
-            }, zz.pack)))
-          }), (0, Oz.jsxs)(Nl, {
-            mountAtOnce: bz,
-            children: [(0, Oz.jsx)(ol, {
-              title: Fz("store:characters")
-            }), (0, Oz.jsx)(sl, {
-              tiles: Rz,
-              busy: iz,
-              highlightItem: Mz,
-              onOpen: tz,
-              onAct: Hz,
-              onNeedRecipient: pz,
-              onLogin: dz
-            }), Kz.length > 0 && (0, Oz.jsxs)(Oz.Fragment, {
-              children: [(0, Oz.jsx)(ol, {
-                title: Fz("store:premiumItems")
-              }), (0, Oz.jsx)(sl, {
-                tiles: Kz,
-                busy: iz,
-                highlightItem: Mz,
-                onOpen: tz,
-                onAct: Hz,
-                onNeedRecipient: pz,
-                onLogin: dz
+            }, DD.pack)))
+          }), (0, SD.jsxs)(Of, {
+            mountAtOnce: cD,
+            children: [(0, SD.jsx)(nf, {
+              title: MD("store:characters")
+            }), (0, SD.jsx)(Xf, {
+              tiles: ZD,
+              busy: iD,
+              highlightItem: bD,
+              onOpen: QD,
+              onAct: wD,
+              onNeedRecipient: BD,
+              onLogin: yD
+            }), oD.length > 0 && (0, SD.jsxs)(SD.Fragment, {
+              children: [(0, SD.jsx)(nf, {
+                title: MD("store:premiumItems")
+              }), (0, SD.jsx)(Xf, {
+                tiles: oD,
+                busy: iD,
+                highlightItem: bD,
+                onOpen: QD,
+                onAct: wD,
+                onNeedRecipient: BD,
+                onLogin: yD
               })]
             })]
           })]
@@ -6508,780 +6508,780 @@ export const modules = {
       })
     }
 
-    function xl(zz) {
+    function Hf(DD) {
       let {
-        state: uz,
-        mode: bz,
-        giftName: Ez,
-        busy: nz,
-        highlight: iz,
-        purchaseError: Mz,
-        onBack: tz,
-        onChooseRecipient: Hz,
-        onAct: pz,
-        onLogin: dz
-      } = zz;
+        state: CD,
+        mode: cD,
+        giftName: ID,
+        busy: pD,
+        highlight: iD,
+        purchaseError: bD,
+        onBack: QD,
+        onChooseRecipient: wD,
+        onAct: BD,
+        onLogin: yD
+      } = DD;
       const {
-        t: Fz
-      } = (0, lz.F)(), Zz = jz("gift" !== bz);
-      return (0, Oz.jsx)(Wi, {
-        onBack: tz,
-        recipient: "gift" === bz && (0, Oz.jsxs)(Oz.Fragment, {
-          children: [Ez && (0, Oz.jsxs)("span", {
+        t: MD
+      } = (0, fD.F)(), tD = eD("gift" !== cD);
+      return (0, SD.jsx)(di, {
+        onBack: QD,
+        recipient: "gift" === cD && (0, SD.jsxs)(SD.Fragment, {
+          children: [ID && (0, SD.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: Fz("store:giftFor", {
-              name: Ez
+            title: MD("store:giftFor", {
+              name: ID
             }),
-            children: [Xi.b, " ", Fz("store:giftFor", {
-              name: Ez
+            children: [oi.c, " ", MD("store:giftFor", {
+              name: ID
             })]
-          }), !Ez && (0, Oz.jsxs)("div", {
-            ...(0, Kz.ab)(),
+          }), !ID && (0, SD.jsxs)("div", {
+            ...(0, oD.U)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: Hz,
-            children: [Xi.b, " ", Fz("store:chooseRecipient")]
+            onClick: wD,
+            children: [oi.c, " ", MD("store:chooseRecipient")]
           })]
         }),
-        cta: (0, Oz.jsx)(bl, {
-          state: uz,
+        cta: (0, SD.jsx)(Df, {
+          state: CD,
           item: "superRank",
-          price: mz.h.price,
-          busy: nz,
-          highlight: iz,
-          onAct: pz,
-          onNeedRecipient: Hz,
-          onLogin: dz
+          price: jD.g.price,
+          busy: pD,
+          highlight: iD,
+          onAct: BD,
+          onNeedRecipient: wD,
+          onLogin: yD
         }),
-        afterCta: (0, Oz.jsxs)(Oz.Fragment, {
-          children: [Zz && (0, Oz.jsx)("span", {
+        afterCta: (0, SD.jsxs)(SD.Fragment, {
+          children: [tD && (0, SD.jsx)("span", {
             className: "StoreTileNote",
-            children: Zz
-          }), Mz && (0, Oz.jsx)("span", {
+            children: tD
+          }), bD && (0, SD.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: Fz(Mz)
+            children: MD(bD)
           })]
         })
       })
     }
-    var Jl = bz(140);
-    const Al = Jl.k("kind", [Jl.s({
-      kind: Jl.p("refused"),
-      heldTierId: Jl.K(),
-      until: Jl.r()
-    }), Jl.s({
-      kind: Jl.p("refund"),
-      tierId: Jl.K(),
-      refundedMs: Jl.r(),
-      forfeitedMs: Jl.r(),
-      premiumCurrency: Jl.r()
-    }), Jl.s({
-      kind: Jl.p("none")
+    var Uf = cD(136);
+    const xf = Uf.o("kind", [Uf.y({
+      kind: Uf.t("refused"),
+      heldTierId: Uf.O(),
+      until: Uf.v()
+    }), Uf.y({
+      kind: Uf.t("refund"),
+      tierId: Uf.O(),
+      refundedMs: Uf.v(),
+      forfeitedMs: Uf.v(),
+      premiumCurrency: Uf.v()
+    }), Uf.y({
+      kind: Uf.t("none")
     })]);
-    async function Tl(zz) {
-      const uz = await (0, Tz.postJsonWithMetricsCookiesAndJsonResponse)(`${Lz.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: zz
+    async function qf(DD) {
+      const CD = await (0, qD.postJsonWithMetricsCookiesAndJsonResponse)(`${JD.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: DD
       }, {
         retries: 1
       });
-      return Al.parse(uz)
+      return xf.parse(CD)
     }
-    var Ll = bz(2812),
-      Pl = bz(2849);
+    var Jf = cD(2852),
+      Kf = cD(2884);
 
-    function Gl(zz, uz) {
-      const bz = Math.max(1, Math.round(uz / Uz.j));
-      return [1 === bz ? `${zz}OneDay` : zz, {
-        days: bz.toLocaleString()
+    function af(DD, CD) {
+      const cD = Math.max(1, Math.round(CD / TD.i));
+      return [1 === cD ? `${DD}OneDay` : DD, {
+        days: cD.toLocaleString()
       }]
     }
 
-    function al() {
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, gz.purchasesAllowed)() ? (0, Oz.jsx)(Vl, {}) : null
+    function Vf() {
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, RD.purchasesAllowed)() ? (0, SD.jsx)(zf, {}) : null
     }
 
-    function Vl() {
+    function zf() {
       const {
-        t: zz
-      } = (0, lz.F)(), {
-        userContext: uz
-      } = (0, Fz.c)(), {
-        purchaseUnderWay: bz,
-        notice: nz,
-        subscribe: iz
-      } = (0, Ll.b)(), [Mz, tz] = (0, Ez.useState)(null), [Hz, pz] = (0, Ez.useState)(0), [dz, Zz] = (0, Ez.useState)(!1), Rz = (0, Ez.useRef)(!0), wz = uz !== Tz.NULL_USER_CONTEXT, Xz = null !== Mz && Mz.loadedFor === uz ? Mz.offer : null, fz = null === nz || void 0 === nz ? void 0 : nz.pendingIntentId, sz = (0, Ez.useRef)(fz);
+        t: DD
+      } = (0, fD.F)(), {
+        userContext: CD
+      } = (0, MD.c)(), {
+        purchaseUnderWay: cD,
+        notice: pD,
+        subscribe: iD
+      } = (0, Jf.c)(), [bD, QD] = (0, ID.useState)(null), [wD, BD] = (0, ID.useState)(0), [yD, tD] = (0, ID.useState)(!1), ZD = (0, ID.useRef)(!0), vD = CD !== qD.NULL_USER_CONTEXT, ND = null !== bD && bD.loadedFor === CD ? bD.offer : null, gD = null === pD || void 0 === pD ? void 0 : pD.pendingIntentId, XD = (0, ID.useRef)(gD);
 
-      function rz() {
-        pz((zz => zz + 1))
+      function mD() {
+        BD((DD => DD + 1))
       }
-      async function oz(zz) {
-        Zz(!1), await iz(zz), Rz.current && rz()
+      async function nD(DD) {
+        tD(!1), await iD(DD), ZD.current && mD()
       }
-      if ((0, Ez.useEffect)((() => (Rz.current = !0, () => {
-          Rz.current = !1
-        })), []), (0, Ez.useEffect)((() => {
-          void 0 !== sz.current && void 0 === fz && rz(), sz.current = fz
-        }), [fz]), (0, Ez.useEffect)((() => {
-          if (!wz) return;
-          let zz = !1;
-          return Zz(!1), async function() {
+      if ((0, ID.useEffect)((() => (ZD.current = !0, () => {
+          ZD.current = !1
+        })), []), (0, ID.useEffect)((() => {
+          void 0 !== XD.current && void 0 === gD && mD(), XD.current = gD
+        }), [gD]), (0, ID.useEffect)((() => {
+          if (!vD) return;
+          let DD = !1;
+          return tD(!1), async function() {
             const {
-              offering: zz
-            } = await (0, Mu.e)().getOfferings("superRankPage"), uz = null === zz || void 0 === zz ? void 0 : zz.packages.find((zz => null !== zz.price));
-            return void 0 === uz ? {
+              offering: DD
+            } = await (0, bC.h)().getOfferings("superRankPage"), CD = null === DD || void 0 === DD ? void 0 : DD.packages.find((DD => null !== DD.price));
+            return void 0 === CD ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: uz,
-              preview: await Tl(uz.productId)
+              pkg: CD,
+              preview: await qf(CD.productId)
             }
-          }().catch((zz => (console.error("Billing: loading the Super Rank subscription or its preview failed:", zz), {
+          }().catch((DD => (console.error("Billing: loading the Super Rank subscription or its preview failed:", DD), {
             kind: "loadFailed"
-          }))).then((bz => {
-            zz || tz((zz => "loadFailed" === bz.kind && (null === zz || void 0 === zz ? void 0 : zz.loadedFor) === uz ? zz : {
-              loadedFor: uz,
-              offer: bz
+          }))).then((cD => {
+            DD || QD((DD => "loadFailed" === cD.kind && (null === DD || void 0 === DD ? void 0 : DD.loadedFor) === CD ? DD : {
+              loadedFor: CD,
+              offer: cD
             }))
           })), () => {
-            zz = !0
+            DD = !0
           }
-        }), [uz, wz, Hz]), null === Xz) return null;
-      if ("loaded" !== Xz.kind) return (0, Oz.jsx)(Pl.i, {
+        }), [CD, vD, wD]), null === ND) return null;
+      if ("loaded" !== ND.kind) return (0, SD.jsx)(Kf.j, {
         notice: {
           kind: "error",
-          key: "unavailable" === Xz.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === ND.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: Nz,
-        preview: vz
-      } = Xz;
-      if ("refused" === vz.kind) return (0, Oz.jsx)(Pl.i, {
+        pkg: OD,
+        preview: PD
+      } = ND;
+      if ("refused" === PD.kind) return (0, SD.jsx)(Kf.j, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(vz.until).toLocaleDateString()
+            date: new Date(PD.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const xz = (0, tl.f)(Nz.price);
-      if (dz && "refund" === vz.kind) {
+      const HD = (0, Qf.g)(OD.price);
+      if (yD && "refund" === PD.kind) {
         const {
-          refundedMs: uz,
-          forfeitedMs: Ez,
-          premiumCurrency: nz
-        } = vz, iz = Ez + (0 === nz ? uz : 0), [lz, Mz] = Gl("payments:subscribeRefundsGemRank", uz), [tz, Hz] = Gl("payments:subscribeForfeitsGemRank", iz);
-        return (0, Oz.jsxs)("div", {
+          refundedMs: CD,
+          forfeitedMs: ID,
+          premiumCurrency: pD
+        } = PD, iD = ID + (0 === pD ? CD : 0), [fD, bD] = af("payments:subscribeRefundsGemRank", CD), [QD, wD] = af("payments:subscribeForfeitsGemRank", iD);
+        return (0, SD.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, Oz.jsx)("div", {
-            children: zz("payments:subscribeEndsGemRank")
-          }), nz > 0 && (0, Oz.jsx)("div", {
-            children: zz(lz, {
-              ...Mz,
-              amount: nz.toLocaleString()
+          children: [(0, SD.jsx)("div", {
+            children: DD("payments:subscribeEndsGemRank")
+          }), pD > 0 && (0, SD.jsx)("div", {
+            children: DD(fD, {
+              ...bD,
+              amount: pD.toLocaleString()
             })
-          }), iz > 0 && (0, Oz.jsx)("div", {
-            children: zz(tz, Hz)
-          }), (0, Oz.jsxs)("div", {
+          }), iD > 0 && (0, SD.jsx)("div", {
+            children: DD(QD, wD)
+          }), (0, SD.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, Oz.jsx)(Kz.j, {
+            children: [(0, SD.jsx)(oD.k, {
               onClick: () => {
-                Zz(!1)
+                tD(!1)
               },
-              children: zz("general:cancel")
-            }), (0, Oz.jsx)(Kz.q, {
+              children: DD("general:cancel")
+            }), (0, SD.jsx)(oD.o, {
               onClick: () => {
-                oz(Nz)
+                nD(OD)
               },
-              loading: bz,
-              children: zz("payments:subscribeContinue", {
-                price: xz
+              loading: cD,
+              children: DD("payments:subscribeContinue", {
+                price: HD
               })
             })]
           })]
         })
       }
-      return (0, Oz.jsxs)("div", {
+      return (0, SD.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, Oz.jsx)(Pl.i, {
-          notice: nz,
+        children: [(0, SD.jsx)(Kf.j, {
+          notice: pD,
           className: "SmallTextBold"
-        }), (0, Oz.jsx)(Pl.c, {
+        }), (0, SD.jsx)(Kf.d, {
           className: "SmallTextBold"
-        }), (0, Oz.jsx)(Kz.q, {
+        }), (0, SD.jsx)(oD.o, {
           onClick: () => {
-            "refund" === vz.kind ? Zz(!0) : oz(Nz)
+            "refund" === PD.kind ? tD(!0) : nD(OD)
           },
-          disabled: void 0 !== fz,
-          loading: bz,
-          children: zz("payments:subscribeToSuperRank", {
-            price: xz
+          disabled: void 0 !== gD,
+          loading: cD,
+          children: DD("payments:subscribeToSuperRank", {
+            price: HD
           })
         })]
       })
     }
-    const ml = {
+    const jf = {
       kind: "board"
     };
-    let ql = !1;
+    let lf = !1;
 
-    function hl(zz) {
-      return "found" === zz.status || "error" === zz.status && "store:giftRecipientLookupFailed" === zz.error ? zz.name : null
-    }(0, cz.u)(Hi.prefetchBillingOfferings);
-    const Ul = (0, Ez.memo)((function(zz) {
-      var uz;
+    function Lf(DD) {
+      return "found" === DD.status || "error" === DD.status && "store:giftRecipientLookupFailed" === DD.error ? DD.name : null
+    }(0, GD.z)(Qi.prefetchBillingOfferings);
+    const Tf = (0, ID.memo)((function(DD) {
+      var CD;
       let {
-        show: nz
-      } = zz;
+        show: pD
+      } = DD;
       const {
-        t: Mz
-      } = (0, lz.F)(), {
-        userContext: tz
-      } = (0, Fz.c)(), Hz = tz !== Tz.NULL_USER_CONTEXT, pz = oi(tz), [dz, Zz] = (0, Rz.b)(), {
-        page: Kz,
-        urlMode: wz,
-        goTo: Xz
-      } = (0, Ni.h)(), fz = function(zz) {
-        return "superRank" === zz.kind ? "superRank" : "pack" === zz.kind ? zz.pack : null
-      }(Kz), {
-        openEverythingMenuName: sz,
-        gameState: rz
-      } = (0, vz.m)(["openEverythingMenuName", "gameState"]), oz = null !== sz;
-      ! function(zz, uz) {
-        const [nz] = (0, Ez.useState)(Ji.e), [iz, lz] = (0, Ez.useState)(!1);
-        nz && uz && !iz && lz(!0);
-        const Mz = (0, iE.p)(),
-          tz = nz && iz && zz && !Mz;
-        (0, Ez.useEffect)((() => {
-          if (!tz) return;
-          let zz = null,
-            uz = null,
-            Ez = null;
-          const nz = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, Mu.e)().purchaseUnderWay,
-            iz = () => {
-              var bz;
-              null === (bz = Ez) || void 0 === bz || bz(), Ez = null, null !== zz && (clearTimeout(zz), zz = null), null !== uz && (clearTimeout(uz), uz = null)
+        t: bD
+      } = (0, fD.F)(), {
+        userContext: QD
+      } = (0, MD.c)(), wD = QD !== qD.NULL_USER_CONTEXT, BD = Xi(QD), [yD, tD] = (0, ZD.b)(), {
+        page: oD,
+        urlMode: vD,
+        goTo: ND
+      } = (0, mi.e)(), gD = function(DD) {
+        return "superRank" === DD.kind ? "superRank" : "pack" === DD.kind ? DD.pack : null
+      }(oD), {
+        openEverythingMenuName: XD,
+        gameState: mD
+      } = (0, PD.o)(["openEverythingMenuName", "gameState"]), nD = null !== XD;
+      ! function(DD, CD) {
+        const [pD] = (0, ID.useState)(Pi.j), [iD, fD] = (0, ID.useState)(!1);
+        pD && CD && !iD && fD(!0);
+        const bD = (0, iI.p)(),
+          QD = pD && iD && DD && !bD;
+        (0, ID.useEffect)((() => {
+          if (!QD) return;
+          let DD = null,
+            CD = null,
+            ID = null;
+          const pD = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, bC.h)().purchaseUnderWay,
+            iD = () => {
+              var cD;
+              null === (cD = ID) || void 0 === cD || cD(), ID = null, null !== DD && (clearTimeout(DD), DD = null), null !== CD && (clearTimeout(CD), CD = null)
             },
-            lz = () => {
-              (0, vi.k)(!1), (0, vi.j)(!1), iz(), zz = setTimeout((() => {
-                zz = null, Ez = (0, xi.d)((() => {
-                  Ez = null, nz() ? lz() : ((0, vi.k)(!0), uz = setTimeout((() => {
-                    uz = null, Ez = (0, xi.d)((() => {
-                      Ez = null, nz() ? lz() : (0, vi.j)(!0)
+            fD = () => {
+              (0, ni.t)(!1), (0, ni.s)(!1), iD(), DD = setTimeout((() => {
+                DD = null, ID = (0, Oi.e)((() => {
+                  ID = null, pD() ? fD() : ((0, ni.t)(!0), CD = setTimeout((() => {
+                    CD = null, ID = (0, Oi.e)((() => {
+                      ID = null, pD() ? fD() : (0, ni.s)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => bz(4407))).then((zz => {
-                    zz.startBackgroundGameSetup()
-                  }), (zz => {
-                    console.warn("Background game setup: its chunk failed to load", zz)
+                  }), 3e3), Promise.resolve().then((() => cD(4452))).then((DD => {
+                    DD.startBackgroundGameSetup()
+                  }), (DD => {
+                    console.warn("Background game setup: its chunk failed to load", DD)
                   })))
                 }))
               }), 2e3)
             };
-          for (const bz of Ai) window.addEventListener(bz, lz, {
+          for (const cD of Hi) window.addEventListener(cD, fD, {
             capture: !0,
             passive: !0
           });
-          return lz(), () => {
-            for (const zz of Ai) window.removeEventListener(zz, lz, {
+          return fD(), () => {
+            for (const DD of Hi) window.removeEventListener(DD, fD, {
               capture: !0
             });
-            iz(), (0, vi.k)(!1), (0, vi.j)(!1)
+            iD(), (0, ni.t)(!1), (0, ni.s)(!1)
           }
-        }), [tz])
-      }(nz && oz, "pack" === Kz.kind);
-      const Nz = "landingPage" === rz;
-      (0, Ez.useEffect)((() => {
-        oz && (0, Hi.prefetchBillingOfferings)()
-      }), [oz]), (0, Ez.useEffect)((() => {
-        oz && !nz && Nz && (0, Ti.u)()
-      }), [oz, nz, Nz]);
-      const [xz, Jz] = (0, Ez.useState)(0), [Az, Lz] = (0, Ez.useState)(null), [Pz, Gz] = (0, Ez.useState)(null), [az, Vz] = (0, Ez.useState)(null), [qz, hz] = (0, Ez.useState)(null), Uz = (0, Ez.useRef)(null), Sz = (0, Ez.useRef)(null), yz = (0, Ez.useRef)(!1), Dz = (0, cz.z)(), Qz = (0, Ez.useRef)(0), Wz = (0, Ez.useRef)(!1);
+        }), [QD])
+      }(pD && nD, "pack" === oD.kind);
+      const OD = "landingPage" === mD;
+      (0, ID.useEffect)((() => {
+        nD && (0, Qi.prefetchBillingOfferings)()
+      }), [nD]), (0, ID.useEffect)((() => {
+        nD && !pD && OD && (0, Ui.t)()
+      }), [nD, pD, OD]);
+      const [HD, UD] = (0, ID.useState)(0), [xD, JD] = (0, ID.useState)(null), [KD, aD] = (0, ID.useState)(null), [VD, zD] = (0, ID.useState)(null), [lD, LD] = (0, ID.useState)(null), TD = (0, ID.useRef)(null), kD = (0, ID.useRef)(null), dD = (0, ID.useRef)(!1), YD = (0, GD.F)(), WD = (0, ID.useRef)(0), sD = (0, ID.useRef)(!1);
 
-      function ez() {
-        Jz((zz => zz + 1))
-      }(0, Ez.useEffect)((() => {
-        if (nz) {
-          if (ql = !0, (0, cz.n)(), Dz && Dz.seq !== Qz.current) {
-            var zz;
-            Qz.current = Dz.seq, "loginResume" !== Dz.source && (0, cz.y)();
-            const uz = (0, cz.d)(Dz);
-            wz || Xz(uz), hz(null !== (zz = Dz.highlight) && void 0 !== zz ? zz : null), Gz(null), "gift" === Dz.mode && Dz.giftRecipientName ? pz.choose(Dz.giftRecipientName, "prefilled") : "current" !== Dz.mode && pz.clear(), "gift" !== Dz.mode || Dz.giftRecipientName || ez(), (0, Yz.reportAnalyticsClick)({
+      function ED() {
+        UD((DD => DD + 1))
+      }(0, ID.useEffect)((() => {
+        if (pD) {
+          if (lf = !0, (0, GD.o)(), YD && YD.seq !== WD.current) {
+            var DD;
+            WD.current = YD.seq, "loginResume" !== YD.source && (0, GD.B)();
+            const CD = (0, GD.e)(YD);
+            vD || ND(CD), LD(null !== (DD = YD.highlight) && void 0 !== DD ? DD : null), aD(null), "gift" === YD.mode && YD.giftRecipientName ? BD.choose(YD.giftRecipientName, "prefilled") : "current" !== YD.mode && BD.clear(), "gift" !== YD.mode || YD.giftRecipientName || ED(), (0, AD.reportAnalyticsClick)({
               id: "store.open",
-              value: Dz.source
+              value: YD.source
             })
-          } else Wz.current || (0, Yz.reportAnalyticsClick)({
+          } else sD.current || (0, AD.reportAnalyticsClick)({
             id: "store.open",
             value: "menuTab"
           });
-          Wz.current = !0
-        } else Wz.current = !1
-      }), [nz, Dz]), (0, Ez.useEffect)((() => {
-        if (!qz) return;
-        const zz = setTimeout((() => {
-          hz(null)
+          sD.current = !0
+        } else sD.current = !1
+      }), [pD, YD]), (0, ID.useEffect)((() => {
+        if (!lD) return;
+        const DD = setTimeout((() => {
+          LD(null)
         }), 4e3);
         return () => {
-          clearTimeout(zz)
+          clearTimeout(DD)
         }
-      }), [qz]), (0, Ez.useEffect)((() => {
-        const zz = Uz.current;
-        var uz;
-        if (nz && zz) {
-          if (fz) Sz.current = fz, null === (uz = zz.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === uz || uz.focus();
-          else if (Sz.current) {
-            var bz;
-            null === (bz = zz.querySelector(`[data-store-item="${Sz.current}"]`)) || void 0 === bz || bz.focus(), Sz.current = null
+      }), [lD]), (0, ID.useEffect)((() => {
+        const DD = TD.current;
+        var CD;
+        if (pD && DD) {
+          if (gD) kD.current = gD, null === (CD = DD.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === CD || CD.focus();
+          else if (kD.current) {
+            var cD;
+            null === (cD = DD.querySelector(`[data-store-item="${kD.current}"]`)) || void 0 === cD || cD.focus(), kD.current = null
           }
-        } else Sz.current = null
-      }), [fz, nz]), (0, Ez.useEffect)((() => {
-        Gz(null)
-      }), [pz.query]), (0, Ez.useEffect)((() => {
-        if (!az) return;
-        const zz = setTimeout((() => {
-          Vz(null)
+        } else kD.current = null
+      }), [gD, pD]), (0, ID.useEffect)((() => {
+        aD(null)
+      }), [BD.query]), (0, ID.useEffect)((() => {
+        if (!VD) return;
+        const DD = setTimeout((() => {
+          zD(null)
         }), 8e3);
         return () => {
-          clearTimeout(zz)
+          clearTimeout(DD)
         }
-      }), [az]);
-      const jz = tz.superRankInfo,
-        Iz = tz.isLoggedIn() || (0, gz.guestsMayBuy)(),
-        Bz = tz.getOwnedCosmeticPacks(),
-        Cz = (0, Xi.l)(pz.query),
-        kz = (0, Xi.f)({
-          mode: Cz,
-          loggedIn: Hz ? Iz : null,
-          superRankInfo: jz,
+      }), [VD]);
+      const eD = QD.superRankInfo,
+        uD = QD.isLoggedIn() || (0, RD.guestsMayBuy)(),
+        hD = QD.getOwnedCosmeticPacks(),
+        rD = (0, oi.o)(BD.query),
+        FD = (0, oi.f)({
+          mode: rD,
+          loggedIn: wD ? uD : null,
+          superRankInfo: eD,
           now: Date.now(),
-          ownedPacks: Bz,
-          packs: ti.p,
-          recipient: pz.recipient
+          ownedPacks: hD,
+          packs: bi.r,
+          recipient: BD.recipient
         });
-      (0, Ez.useEffect)((() => {
-        if (!Iz || !nz) return;
-        const zz = (0, cz.y)(),
-          uz = zz && (0, Xi.j)(zz, ti.p);
-        zz && uz && ((0, Yz.reportAnalyticsClick)({
+      (0, ID.useEffect)((() => {
+        if (!uD || !pD) return;
+        const DD = (0, GD.B)(),
+          CD = DD && (0, oi.k)(DD, bi.r);
+        DD && CD && ((0, AD.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: zz.item
-        }), (0, cz.o)(uz))
-      }), [Iz, nz]);
-      const zu = (0, Xi.p)({
-        superRankDaysLeft: kz.superRankDaysLeft,
-        openedThisSession: ql || nz,
-        seenNewItems: (0, cz.j)()
+          value: DD.item
+        }), (0, GD.p)(CD))
+      }), [uD, pD]);
+      const DC = (0, oi.s)({
+        superRankDaysLeft: FD.superRankDaysLeft,
+        openedThisSession: lf || pD,
+        seenNewItems: (0, GD.l)()
       });
-      if ((0, Ez.useEffect)((() => {
-          (0, cz.x)(zu)
-        }), [zu]), !nz || !(0, gz.purchasesAllowed)()) return null;
-      const uu = Zz > dz && dz <= 700,
-        bu = !uu && Zz <= 420,
-        Eu = "gift" === Cz ? hl(pz.recipient) : null,
-        nu = null !== Az;
+      if ((0, ID.useEffect)((() => {
+          (0, GD.A)(DC)
+        }), [DC]), !pD || !(0, RD.purchasesAllowed)()) return null;
+      const CC = tD > yD && yD <= 700,
+        cC = !CC && tD <= 420,
+        IC = "gift" === rD ? Lf(BD.recipient) : null,
+        pC = null !== xD;
 
-      function iu(zz) {
-        (0, di.b)(zz, "gift" === Cz ? pz.query.trim() : null)
+      function iC(DD) {
+        (0, Si.d)(DD, "gift" === rD ? BD.query.trim() : null)
       }
 
-      function lu(zz, uz) {
-        (0, Yz.reportAnalyticsClick)({
+      function fC(DD, CD) {
+        (0, AD.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${uz?"gift":"self"}:${zz}`
-        }), uz && (pz.recordGift(uz.name, zz), tu(uz))
+          value: `${CD?"gift":"self"}:${DD}`
+        }), CD && (BD.recordGift(CD.name, DD), QC(CD))
       }
 
-      function tu(zz) {
-        ! function(zz) {
+      function QC(DD) {
+        ! function(DD) {
           try {
-            Wu.g.setItem(fi, (0, Xi.x)(ri(), zz))
+            sC.h.setItem(vi, (0, oi.D)(gi(), DD))
           } catch {}
         }({
-          name: zz.name,
-          cosmetics: zz.cosmetics
-        }), Xz(ml), Vz((uz => {
-          var bz;
+          name: DD.name,
+          cosmetics: DD.cosmetics
+        }), ND(jf), zD((CD => {
+          var cD;
           return {
-            name: zz.name,
-            seq: (null !== (bz = null === uz || void 0 === uz ? void 0 : uz.seq) && void 0 !== bz ? bz : 0) + 1
+            name: DD.name,
+            seq: (null !== (cD = null === CD || void 0 === CD ? void 0 : CD.seq) && void 0 !== cD ? cD : 0) + 1
           }
         }))
       }
-      async function Hu(zz) {
-        var uz, bz;
-        if (yz.current) return;
-        if (!Iz) return void iu(zz);
-        Gz(null), hz(null);
-        const Ez = "gift" === Cz ? {
-          name: hl(pz.recipient),
-          cosmetics: pz.recipientCosmetics
+      async function wC(DD) {
+        var CD, cD;
+        if (dD.current) return;
+        if (!uD) return void iC(DD);
+        aD(null), LD(null);
+        const ID = "gift" === rD ? {
+          name: Lf(BD.recipient),
+          cosmetics: BD.recipientCosmetics
         } : null;
-        if (Ez && !Ez.name) return void ez();
-        const nz = "superRank" === zz ? mz.h.id : (0, mz.d)(zz);
-        yz.current = !0;
-        const iz = await (0, wi.e)(nz, null !== (uz = null === Ez || void 0 === Ez ? void 0 : Ez.name) && void 0 !== uz ? uz : null);
-        if (yz.current = !1, !iz) return;
-        Lz(zz);
-        const lz = await Fi.e.purchase(nz, null !== (bz = null === Ez || void 0 === Ez ? void 0 : Ez.name) && void 0 !== bz ? bz : null);
-        Lz(null), lz ? Gz(lz) : (lu(zz, Ez), Ez || (await (0, Zi.flushClientAnalyticsEvents)(), (0, Oi.refreshWithoutConfirmation)("superRank" === zz ? "/super-rank-welcome" : `/pack-welcome/${zz}`)))
+        if (ID && !ID.name) return void ED();
+        const pD = "superRank" === DD ? jD.g.id : (0, jD.c)(DD);
+        dD.current = !0;
+        const iD = await (0, Zi.d)(pD, null !== (CD = null === ID || void 0 === ID ? void 0 : ID.name) && void 0 !== CD ? CD : null);
+        if (dD.current = !1, !iD) return;
+        JD(DD);
+        const fD = await Bi.e.purchase(pD, null !== (cD = null === ID || void 0 === ID ? void 0 : ID.name) && void 0 !== cD ? cD : null);
+        JD(null), fD ? aD(fD) : (fC(DD, ID), ID || (await (0, yi.flushClientAnalyticsEvents)(), (0, wi.refreshWithoutConfirmation)("superRank" === DD ? "/super-rank-welcome" : `/pack-welcome/${DD}`)))
       }
-      const Ou = iz()("Store", {
-        StoreGift: "gift" === Cz,
-        StorePortrait: uu,
-        StoreCompact: bu
+      const SC = iD()("Store", {
+        StoreGift: "gift" === rD,
+        StorePortrait: CC,
+        StoreCompact: cC
       });
-      if ("pack" === Kz.kind) {
-        const zz = Kz.pack,
-          uz = kz.packs.find((uz => uz.pack === zz));
-        return (0, Oz.jsx)("div", {
-          ref: Uz,
+      if ("pack" === oD.kind) {
+        const DD = oD.pack,
+          CD = FD.packs.find((CD => CD.pack === DD));
+        return (0, SD.jsx)("div", {
+          ref: TD,
           className: "CosmeticShopContainer",
-          children: (0, Oz.jsx)(Ki.d, {
-            pack: zz,
+          children: (0, SD.jsx)(ti.f, {
+            pack: DD,
             onBack: () => {
-              Xz(ml)
+              ND(jf)
             },
-            onPurchased: uz => {
-              lu(zz, uz ? {
-                name: uz,
+            onPurchased: CD => {
+              fC(DD, CD ? {
+                name: CD,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === Cz && Eu && uz && (0, Oz.jsxs)(Oz.Fragment, {
-              children: [(0, Oz.jsx)(bl, {
-                state: uz.state,
-                item: zz,
-                price: (pu = zz, "superRank" === pu ? mz.h.price : (0, mz.f)(pu)),
-                busy: nu,
+            giftCta: "gift" === rD && IC && CD && (0, SD.jsxs)(SD.Fragment, {
+              children: [(0, SD.jsx)(Df, {
+                state: CD.state,
+                item: DD,
+                price: (BC = DD, "superRank" === BC ? jD.g.price : (0, jD.d)(BC)),
+                busy: pC,
                 onAct: () => {
-                  Hu(zz)
+                  wC(DD)
                 },
                 onNeedRecipient: () => {
-                  Xz(ml), ez()
+                  ND(jf), ED()
                 },
                 onLogin: () => {
-                  iu(zz)
+                  iC(DD)
                 },
-                highlight: qz === zz
-              }), Pz && (0, Oz.jsx)("span", {
+                highlight: lD === DD
+              }), KD && (0, SD.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: Mz(Pz)
+                children: bD(KD)
               })]
             }),
-            ownedPacks: Bz,
-            startAsGift: "gift" === Cz,
-            initialGiftRecipient: "gift" === Cz ? null !== Eu && void 0 !== Eu ? Eu : pz.query.trim() : "",
-            highlightCta: qz === zz
-          }, zz)
+            ownedPacks: hD,
+            startAsGift: "gift" === rD,
+            initialGiftRecipient: "gift" === rD ? null !== IC && void 0 !== IC ? IC : BD.query.trim() : "",
+            highlightCta: lD === DD
+          }, DD)
         })
       }
-      var pu;
-      return "superRank" === Kz.kind ? (0, Oz.jsx)("div", {
-        ref: Uz,
-        className: iz()(Ou, "StoreDetailView"),
-        children: (0, Oz.jsx)(xl, {
-          state: kz.superRank.state,
-          mode: Cz,
-          giftName: Eu,
-          busy: nu,
-          highlight: "superRank" === qz,
-          purchaseError: Pz,
+      var BC;
+      return "superRank" === oD.kind ? (0, SD.jsx)("div", {
+        ref: TD,
+        className: iD()(SC, "StoreDetailView"),
+        children: (0, SD.jsx)(Hf, {
+          state: FD.superRank.state,
+          mode: rD,
+          giftName: IC,
+          busy: pC,
+          highlight: "superRank" === lD,
+          purchaseError: KD,
           onBack: () => {
-            Xz(ml)
+            ND(jf)
           },
           onChooseRecipient: () => {
-            Xz(ml), ez()
+            ND(jf), ED()
           },
           onAct: () => {
-            Hu("superRank")
+            wC("superRank")
           },
           onLogin: () => {
-            iu("superRank")
+            iC("superRank")
           }
         })
-      }) : (0, Oz.jsxs)("div", {
-        ref: Uz,
-        className: Ou,
-        children: [(0, Oz.jsx)("div", {
+      }) : (0, SD.jsxs)("div", {
+        ref: TD,
+        className: SC,
+        children: [(0, SD.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, Oz.jsx)(qi, {
-            selfName: Hz ? tz.getPlayerName() : "",
-            giftRecipient: pz,
-            suggestionsVersion: null !== (uz = null === az || void 0 === az ? void 0 : az.seq) && void 0 !== uz ? uz : 0,
-            pulseSignal: xz,
-            disabled: nu || !Hz
+          children: (0, SD.jsx)(zi, {
+            selfName: wD ? QD.getPlayerName() : "",
+            giftRecipient: BD,
+            suggestionsVersion: null !== (CD = null === VD || void 0 === VD ? void 0 : VD.seq) && void 0 !== CD ? CD : 0,
+            pulseSignal: HD,
+            disabled: pC || !wD
           })
-        }), az && (0, Oz.jsxs)("div", {
+        }), VD && (0, SD.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            Vz(null)
+            zD(null)
           },
-          children: [(0, Oz.jsx)(Ri.c, {
-            showSignal: az.seq
-          }), Xi.b, " ", Mz("store:giftSent", {
-            name: az.name
+          children: [(0, SD.jsx)(Mi.c, {
+            showSignal: VD.seq
+          }), oi.c, " ", bD("store:giftSent", {
+            name: VD.name
           })]
-        }, az.seq), !az && Pz && (0, Oz.jsx)("div", {
+        }, VD.seq), !VD && KD && (0, SD.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: Mz(Pz)
-        }), (0, Oz.jsx)(vl, {
-          layout: kz,
-          mountAtOnce: null !== Sz.current,
-          bundleGift: "gift" === Cz ? {
-            recipientName: Eu,
-            lookingUp: "pending" === pz.recipient.status,
-            busy: nu,
-            onNeedRecipient: ez,
-            onSent: zz => {
-              (0, Yz.reportAnalyticsClick)({
+          children: bD(KD)
+        }), (0, SD.jsx)(Pf, {
+          layout: FD,
+          mountAtOnce: null !== kD.current,
+          bundleGift: "gift" === rD ? {
+            recipientName: IC,
+            lookingUp: "pending" === BD.recipient.status,
+            busy: pC,
+            onNeedRecipient: ED,
+            onSent: DD => {
+              (0, AD.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), tu({
-                name: zz,
-                cosmetics: pz.recipientCosmetics
+              }), QC({
+                name: DD,
+                cosmetics: BD.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, Xi.s)(jz),
-          busy: nu,
-          highlightItem: qz,
-          onOpen: function(zz) {
-            (0, Yz.reportAnalyticsClick)({
+          superRankTotalDays: (0, oi.w)(eD),
+          busy: pC,
+          highlightItem: lD,
+          onOpen: function(DD) {
+            (0, AD.reportAnalyticsClick)({
               id: "store.item_open",
-              value: zz
-            }), Xz((0, cz.f)(zz))
+              value: DD
+            }), ND((0, GD.i)(DD))
           },
-          onAct: Hu,
-          onNeedRecipient: ez,
-          onLogin: iu
-        }), "gift" !== Cz && (0, Oz.jsx)(al, {})]
+          onAct: wC,
+          onNeedRecipient: ED,
+          onLogin: iC
+        }), "gift" !== rD && (0, SD.jsx)(Vf, {})]
       })
     }));
-    var cl = bz(2527),
-      gl = bz(8519),
-      Sl = bz(2594),
-      yl = bz(2442),
-      Dl = bz(2493),
-      Ql = bz(2503),
-      Wl = bz(2510),
-      el = bz(2584),
-      jl = bz(2558),
-      Il = bz(2253),
-      Bl = bz(2276),
-      Cl = bz(2264),
-      Yl = bz(1968),
-      kl = bz(2516),
-      zM = bz(2284);
+    var Gf = cD(2560),
+      Rf = cD(8545),
+      kf = cD(2619),
+      df = cD(2456),
+      Yf = cD(2501),
+      Wf = cD(2515),
+      sf = cD(2519),
+      Ef = cD(2607),
+      ef = cD(2600),
+      uf = cD(2293),
+      hf = cD(2328),
+      rf = cD(2317),
+      Af = cD(2010),
+      Ff = cD(2528),
+      Db = cD(2335);
 
-    function uM(zz) {
+    function Cb(DD) {
       let {
-        show: uz
-      } = zz;
-      return uz ? (0, Oz.jsx)(bM, {}) : null
+        show: CD
+      } = DD;
+      return CD ? (0, SD.jsx)(cb, {}) : null
     }
 
-    function bM() {
+    function cb() {
       const {
-        t: zz
-      } = (0, lz.F)(), {
-        followsLeader: uz
-      } = (0, yl.f)(), {
-        loading: bz,
-        friends: nz,
-        requests: tz,
-        invites: Hz
-      } = (0, yz.l)(), {
-        userContext: pz
-      } = (0, Fz.c)(), [dz, Zz] = (0, Ez.useState)(zM.h);
-      (0, Ez.useEffect)((() => {
-        (0, zM.b)()
+        t: DD
+      } = (0, fD.F)(), {
+        followsLeader: CD
+      } = (0, df.d)(), {
+        loading: cD,
+        friends: pD,
+        requests: QD,
+        invites: wD
+      } = (0, dD.m)(), {
+        userContext: BD
+      } = (0, MD.c)(), [yD, tD] = (0, ID.useState)(Db.k);
+      (0, ID.useEffect)((() => {
+        (0, Db.c)()
       }), []);
-      const Rz = tz.map((zz => zz.name)),
+      const ZD = QD.map((DD => DD.name)),
         {
-          state: wz,
-          recentRequesters: Xz
-        } = (0, jl.j)(),
-        fz = new Map([...("loaded" === wz.status ? wz.recentPlayers : []).map((zz => [zz.preview.name, zz])), ...Xz.map((zz => [zz.name, zz]))]),
-        sz = (0, Ez.useRef)(null),
-        [Nz, vz] = (0, Ez.useState)(""),
-        [xz, Jz] = (0, Ez.useState)("Enter"),
-        [Az, Tz] = (0, Ez.useState)(null);
+          state: vD,
+          recentRequesters: ND
+        } = (0, ef.m)(),
+        gD = new Map([...("loaded" === vD.status ? vD.recentPlayers : []).map((DD => [DD.preview.name, DD])), ...ND.map((DD => [DD.name, DD]))]),
+        XD = (0, ID.useRef)(null),
+        [OD, PD] = (0, ID.useState)(""),
+        [HD, UD] = (0, ID.useState)("Enter"),
+        [xD, qD] = (0, ID.useState)(null);
 
-      function Lz() {
-        Nz && (Jz("Loading"), (0, Cl.f)(Nz, "social_menu").then((zz => {
-          if (sz.current) switch (zz.kind) {
+      function JD() {
+        OD && (UD("Loading"), (0, rf.d)(OD, "social_menu").then((DD => {
+          if (XD.current) switch (DD.kind) {
             case "sent":
-              Jz("Success");
+              UD("Success");
               break;
             case "becameFriends":
-              Jz("BecameFriends");
+              UD("BecameFriends");
               break;
             case "failed":
-              Tz(zz.message), Jz("Error")
+              qD(DD.message), UD("Error")
           }
         })))
       }
-      return (0, Ez.useEffect)((() => {
-        if ("Enter" === xz || "Loading" === xz) return;
-        const zz = setTimeout((() => {
-          sz.current.value = "", vz(""), Jz("Enter")
-        }), "Success" === xz ? 1e3 : 4e3);
+      return (0, ID.useEffect)((() => {
+        if ("Enter" === HD || "Loading" === HD) return;
+        const DD = setTimeout((() => {
+          XD.current.value = "", PD(""), UD("Enter")
+        }), "Success" === HD ? 1e3 : 4e3);
         return () => {
-          clearTimeout(zz)
+          clearTimeout(DD)
         }
-      }), [xz]), (0, Oz.jsx)("div", {
+      }), [HD]), (0, SD.jsx)("div", {
         className: "SocialMenu",
-        children: (0, Oz.jsxs)("div", {
+        children: (0, SD.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, Oz.jsxs)("div", {
+          children: [(0, SD.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, Oz.jsxs)("div", {
+            children: [(0, SD.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, Oz.jsx)(Wl.c, {
-                label: zz("socialBar:addFriend")
-              }), (0, Oz.jsxs)("div", {
+              children: [(0, SD.jsx)(sf.d, {
+                label: DD("socialBar:addFriend")
+              }), (0, SD.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, Oz.jsxs)("div", {
-                  className: iz()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${xz}`]: !0
+                children: [(0, SD.jsxs)("div", {
+                  className: iD()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${HD}`]: !0
                   }),
-                  children: ["Loading" === xz && (0, Oz.jsx)(oz.c, {}), "Success" === xz && (0, Oz.jsx)(Mz.c, {
+                  children: ["Loading" === HD && (0, SD.jsx)(nD.e, {}), "Success" === HD && (0, SD.jsx)(bD.c, {
                     name: "check"
-                  }), "BecameFriends" === xz && (0, Oz.jsx)(Oz.Fragment, {
-                    children: zz("socialBar:nowFriends", {
-                      playerName: Nz
+                  }), "BecameFriends" === HD && (0, SD.jsx)(SD.Fragment, {
+                    children: DD("socialBar:nowFriends", {
+                      playerName: OD
                     })
-                  }), "Error" === xz && Az && (0, Oz.jsx)(Oz.Fragment, {
-                    children: zz(Az.translationKey, Az.params)
+                  }), "Error" === HD && xD && (0, SD.jsx)(SD.Fragment, {
+                    children: DD(xD.translationKey, xD.params)
                   })]
-                }), (0, Oz.jsxs)("div", {
+                }), (0, SD.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, Oz.jsx)(rz.d, {
+                  children: [(0, SD.jsx)(mD.b, {
                     className: "PlayerSearchInput",
-                    placeholderText: zz("socialBar:enterPlayerName"),
-                    domRef: sz,
-                    onValueChange: zz => {
-                      vz((0, az.p)(zz)), sz.current.value = (0, az.p)(zz)
+                    placeholderText: DD("socialBar:enterPlayerName"),
+                    domRef: XD,
+                    onValueChange: DD => {
+                      PD((0, VD.o)(DD)), XD.current.value = (0, VD.o)(DD)
                     },
                     onEnter: () => {
-                      Nz && (0, Yz.reportAnalyticsClick)({
+                      OD && (0, AD.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), Lz()
+                      }), JD()
                     }
-                  }), (0, Oz.jsxs)(Kz.f, {
+                  }), (0, SD.jsxs)(oD.i, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      Lz()
+                      JD()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, Oz.jsx)(Mz.c, {
+                    children: [(0, SD.jsx)(bD.c, {
                       name: "user-plus"
-                    }), " ", zz("socialBar:sendRequest")]
+                    }), " ", DD("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, Oz.jsx)(kl.d, {
+              }), (0, SD.jsx)(Ff.b, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), Hz.length > 0 && (0, Oz.jsxs)("div", {
+            }), wD.length > 0 && (0, SD.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, Oz.jsx)(Wl.c, {
-                label: zz("socialBar:invites"),
-                meta: Hz.length
-              }), Hz.map((uz => (0, Oz.jsxs)("div", {
+              children: [(0, SD.jsx)(sf.d, {
+                label: DD("socialBar:invites"),
+                meta: wD.length
+              }), wD.map((CD => (0, SD.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, Oz.jsx)("div", {
+                children: [(0, SD.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, Oz.jsx)(Il.e, {
-                    invite: uz
+                  children: (0, SD.jsx)(uf.b, {
+                    invite: CD
                   })
-                }), (0, Oz.jsx)("div", {
+                }), (0, SD.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, Oz.jsx)(Il.i, {
-                    invite: uz
+                  children: (0, SD.jsx)(uf.f, {
+                    invite: CD
                   })
-                }), (0, Oz.jsx)(Kz.q, {
+                }), (0, SD.jsx)(oD.o, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, Bl.f)(uz)
+                    (0, hf.e)(CD)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${uz.destination.kind}`
+                    value: `social_menu:${CD.destination.kind}`
                   },
-                  children: zz("general:join")
-                }), (0, Oz.jsx)(Iz.f, {
-                  tooltipInner: (0, Oz.jsx)(Oz.Fragment, {
-                    children: zz("general:decline")
+                  children: DD("general:join")
+                }), (0, SD.jsx)(uD.f, {
+                  tooltipInner: (0, SD.jsx)(SD.Fragment, {
+                    children: DD("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, Oz.jsx)(Kz.j, {
+                  children: (0, SD.jsx)(oD.k, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === dz || void 0 === dz ? void 0 : dz.kind) && dz.inviteId === uz.id,
+                    padDefaultFocus: "invite" === (null === yD || void 0 === yD ? void 0 : yD.kind) && yD.inviteId === CD.id,
                     onClick: () => {
-                      yz.b.declineInvite(uz.id)
+                      dD.e.declineInvite(CD.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${uz.destination.kind}`
+                      value: `social_menu:${CD.destination.kind}`
                     },
-                    children: (0, Oz.jsx)(Mz.c, {
+                    children: (0, SD.jsx)(bD.c, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, uz.id)))]
-            }), (0, Oz.jsxs)("div", {
-              className: iz()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !bz && 0 === tz.length
+              }, CD.id)))]
+            }), (0, SD.jsxs)("div", {
+              className: iD()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !cD && 0 === QD.length
               }),
-              children: [(0, Oz.jsx)(Wl.c, {
-                label: (0, Oz.jsxs)(Oz.Fragment, {
-                  children: [(0, Oz.jsx)(Mz.c, {
-                    name: Yl.f
-                  }), " ", zz("socialBar:requests")]
+              children: [(0, SD.jsx)(sf.d, {
+                label: (0, SD.jsxs)(SD.Fragment, {
+                  children: [(0, SD.jsx)(bD.c, {
+                    name: Af.e
+                  }), " ", DD("socialBar:requests")]
                 }),
-                meta: (0, Oz.jsxs)(Oz.Fragment, {
-                  children: [tz.length, tz.length === Bz.p && (0, Oz.jsx)("span", {
+                meta: (0, SD.jsxs)(SD.Fragment, {
+                  children: [QD.length, QD.length === hD.s && (0, SD.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: zz("socialBar:limitReached")
+                    children: DD("socialBar:limitReached")
                   })]
                 })
-              }), bz && (0, Oz.jsx)("div", {
+              }), cD && (0, SD.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, Oz.jsx)(oz.c, {})
-              }), !bz && 0 === tz.length && (0, Oz.jsx)("div", {
+                children: (0, SD.jsx)(nD.e, {})
+              }), !cD && 0 === QD.length && (0, SD.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: zz("socialBar:noFriendRequests")
-              }), !bz && tz.length > 0 && (0, Oz.jsx)("div", {
+                children: DD("socialBar:noFriendRequests")
+              }), !cD && QD.length > 0 && (0, SD.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, Oz.jsx)(Fn.b, {
+                children: (0, SD.jsx)(Bp.c, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [tz],
-                  children: tz.map(((uz, bz) => {
-                    const Ez = fz.get(uz.name);
-                    return (0, Oz.jsxs)(Ql.d, {
-                      playerSocialPreview: uz,
-                      zIndex: tz.length - bz,
-                      padDefaultFocus: (0, zM.e)(dz, uz.name, bz),
-                      status: Ez && (0, Oz.jsx)(el.b, {
-                        gameNameWithVariation: Ez.gameNameWithVariation,
-                        isPrivateLobby: Ez.isPrivateLobby
+                  observerUpdateDeps: [QD],
+                  children: QD.map(((CD, cD) => {
+                    const ID = gD.get(CD.name);
+                    return (0, SD.jsxs)(Wf.d, {
+                      playerSocialPreview: CD,
+                      zIndex: QD.length - cD,
+                      padDefaultFocus: (0, Db.h)(yD, CD.name, cD),
+                      status: ID && (0, SD.jsx)(Ef.b, {
+                        gameNameWithVariation: ID.gameNameWithVariation,
+                        isPrivateLobby: ID.isPrivateLobby
                       }),
-                      children: [(0, Oz.jsx)(Iz.f, {
-                        tooltipInner: (0, Oz.jsx)(Oz.Fragment, {
-                          children: zz("general:accept")
+                      children: [(0, SD.jsx)(uD.f, {
+                        tooltipInner: (0, SD.jsx)(SD.Fragment, {
+                          children: DD("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, Oz.jsx)(Kz.f, {
+                        children: (0, SD.jsx)(oD.i, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            Zz((0, zM.c)(Rz, bz)), (0, Cl.c)(uz.name, !0, {
+                            tD((0, Db.e)(ZD, cD)), (0, rf.c)(CD.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -7290,19 +7290,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, Oz.jsx)(Mz.c, {
+                          children: (0, SD.jsx)(bD.c, {
                             name: "check"
                           })
                         })
-                      }), (0, Oz.jsx)(Iz.f, {
-                        tooltipInner: (0, Oz.jsx)(Oz.Fragment, {
-                          children: zz("general:decline")
+                      }), (0, SD.jsx)(uD.f, {
+                        tooltipInner: (0, SD.jsx)(SD.Fragment, {
+                          children: DD("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, Oz.jsx)(Kz.j, {
+                        children: (0, SD.jsx)(oD.k, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            Zz((0, zM.c)(Rz, bz)), (0, Cl.c)(uz.name, !1, {
+                            tD((0, Db.e)(ZD, cD)), (0, rf.c)(CD.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -7310,62 +7310,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, Oz.jsx)(Mz.c, {
+                          children: (0, SD.jsx)(bD.c, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${uz.name}_${uz.isError}`)
+                    }, `${CD.name}_${CD.isError}`)
                   }))
                 })
               })]
-            }), (0, Oz.jsx)(el.f, {})]
-          }), (0, Oz.jsxs)("div", {
+            }), (0, SD.jsx)(Ef.f, {})]
+          }), (0, SD.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, Oz.jsxs)("div", {
+            children: [(0, SD.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, Oz.jsx)(Wl.c, {
-                label: zz("socialBar:party")
-              }), (0, Oz.jsx)(Dl.b, {})]
-            }), (0, Oz.jsxs)("div", {
+              children: [(0, SD.jsx)(sf.d, {
+                label: DD("socialBar:party")
+              }), (0, SD.jsx)(Yf.e, {})]
+            }), (0, SD.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, Oz.jsx)(Wl.c, {
-                label: (0, Oz.jsxs)(Oz.Fragment, {
-                  children: [(0, Oz.jsx)(Mz.c, {
-                    name: Yl.b
-                  }), " ", zz("socialBar:friends")]
+              children: [(0, SD.jsx)(sf.d, {
+                label: (0, SD.jsxs)(SD.Fragment, {
+                  children: [(0, SD.jsx)(bD.c, {
+                    name: Af.d
+                  }), " ", DD("socialBar:friends")]
                 }),
-                meta: (0, Oz.jsxs)(Oz.Fragment, {
-                  children: [nz.length, nz.length >= (0, Bz.c)(pz.getPlayerRanks()) && (0, Oz.jsx)("span", {
+                meta: (0, SD.jsxs)(SD.Fragment, {
+                  children: [pD.length, pD.length >= (0, hD.e)(BD.getPlayerRanks()) && (0, SD.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: zz("socialBar:limitReached")
+                    children: DD("socialBar:limitReached")
                   })]
                 })
-              }), bz && (0, Oz.jsx)("div", {
+              }), cD && (0, SD.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, Oz.jsx)(oz.c, {})
-              }), !bz && 0 === nz.length && (0, Oz.jsx)("div", {
+                children: (0, SD.jsx)(nD.e, {})
+              }), !cD && 0 === pD.length && (0, SD.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: zz("socialBar:noFriends")
-              }), !bz && nz.length > 0 && (0, Oz.jsx)("div", {
+                children: DD("socialBar:noFriends")
+              }), !cD && pD.length > 0 && (0, SD.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, Oz.jsx)(Fn.b, {
+                children: (0, SD.jsx)(Bp.c, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [nz],
-                  children: nz.map(((zz, bz) => (0, Oz.jsx)(Ql.d, {
-                    playerSocialPreview: zz,
+                  observerUpdateDeps: [pD],
+                  children: pD.map(((DD, cD) => (0, SD.jsx)(Wf.d, {
+                    playerSocialPreview: DD,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: zz => {
-                      yz.b.removeFriendFromState(zz)
+                    onFriendRemoved: DD => {
+                      dD.e.removeFriendFromState(DD)
                     },
-                    zIndex: nz.length - bz,
-                    children: (0, Oz.jsx)(Ql.b, {
-                      friend: zz,
-                      followsLeader: uz,
+                    zIndex: pD.length - cD,
+                    children: (0, SD.jsx)(Wf.c, {
+                      friend: DD,
+                      followsLeader: CD,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${zz.name}_${zz.isError}`)))
+                  }, `${DD.name}_${DD.isError}`)))
                 })
               })]
             })]
@@ -7373,231 +7373,231 @@ export const modules = {
         })
       })
     }
-    var EM = bz(2419);
-    const nM = zz => {
+    var Ib = cD(2442);
+    const pb = DD => {
         let {
-          action: uz,
-          padAction: bz
-        } = zz;
+          action: CD,
+          padAction: cD
+        } = DD;
         const {
-          isTouchScreen: Ez
-        } = (0, vz.m)(["isTouchScreen"]), nz = (0, iE.p)();
-        return Ez && !nz ? null : (0, Oz.jsx)(Yb.e, {
+          isTouchScreen: ID
+        } = (0, PD.o)(["isTouchScreen"]), pD = (0, iI.p)();
+        return ID && !pD ? null : (0, SD.jsx)(Ac.d, {
           className: "EverythingMenuTabKey",
-          noaAction: uz,
+          noaAction: CD,
           padHidesKey: !0,
-          padMenuShortcut: bz
+          padMenuShortcut: cD
         })
       },
-      iM = (0, Ez.memo)((function() {
+      ib = (0, ID.memo)((function() {
         const {
-          t: zz
-        } = (0, lz.F)(), {
-          gameState: uz,
-          openEverythingMenuName: bz,
-          initSdkSelectorFinished: nz,
-          crosshairGameView: Mz
-        } = (0, vz.m)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
-          userContext: tz
-        } = (0, Fz.c)(), Hz = (0, gz.purchasesAllowed)(), pz = (0, cz.B)(), dz = (zz, uz) => (0, Oz.jsx)(nM, {
-          action: zz,
-          padAction: uz
-        }), [Zz, Rz] = (0, Ez.useState)(null), Xz = (0, Ez.useRef)(null), fz = {
-          ..."inGame" === uz ? {} : (0, Kz.ab)({
+          t: DD
+        } = (0, fD.F)(), {
+          gameState: CD,
+          openEverythingMenuName: cD,
+          initSdkSelectorFinished: pD,
+          crosshairGameView: bD
+        } = (0, PD.o)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
+          userContext: QD
+        } = (0, MD.c)(), wD = (0, RD.purchasesAllowed)(), BD = (0, GD.I)(), yD = (DD, CD) => (0, SD.jsx)(pb, {
+          action: DD,
+          padAction: CD
+        }), [tD, ZD] = (0, ID.useState)(null), ND = (0, ID.useRef)(null), gD = {
+          ..."inGame" === CD ? {} : (0, oD.U)({
             focusOnClick: !1
           }),
-          ...RE.i
-        }, sz = null !== bz, rz = bz !== Hu.r.COSMETIC_SHOP && !Mz;
-        async function oz() {
+          ...ZI.h
+        }, XD = null !== cD, mD = cD !== wC.q.COSMETIC_SHOP && !bD;
+        async function nD() {
           await async function() {
-            if (!Zz) return;
-            await Zz(), Rz(null)
-          }(), vz.e.set({
+            if (!tD) return;
+            await tD(), ZD(null)
+          }(), PD.d.set({
             openEverythingMenuName: null
           })
         }
-        const Nz = (0, Ez.useMemo)((() => "inGame" === uz ? {
-          text: zz("settingsMenu:exitGame"),
+        const OD = (0, ID.useMemo)((() => "inGame" === CD ? {
+          text: DD("settingsMenu:exitGame"),
           onClick: () => {
-            (0, gl.b)()
+            (0, Rf.c)()
           }
-        } : (0, Az.d)() ? {
-          text: zz("settingsMenu:exitGame"),
+        } : (0, xD.c)() ? {
+          text: DD("settingsMenu:exitGame"),
           onClick: () => {
-            iu.l.discordActivity().then((zz => {
-              zz.exit("User exited the game")
+            iC.i.discordActivity().then((DD => {
+              DD.exit("User exited the game")
             }))
           }
-        } : null), [uz, zz]);
-        const xz = (0, Oz.jsx)("div", {
+        } : null), [CD, DD]);
+        const HD = (0, SD.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
           onClick: () => {
-            oz()
+            nD()
           },
-          children: (0, Oz.jsx)(Kz.m, {
+          children: (0, SD.jsx)(oD.l, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, Oz.jsx)(KE.d, {
-          showing: sz,
+        return (0, SD.jsx)(oI.c, {
+          showing: XD,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: bz === Hu.r.SHOP,
-          doGameplayStartStopOnShow: "inGame" === uz,
-          children: (0, Oz.jsx)(XE.e, {
+          keepsMovement: cD === wC.q.SHOP,
+          doGameplayStartStopOnShow: "inGame" === CD,
+          children: (0, SD.jsx)(NI.c, {
             className: "EverythingMenuContainer",
-            show: sz && !Mz,
-            children: (0, Oz.jsx)(wE.d, {
+            show: XD && !bD,
+            children: (0, SD.jsx)(vI.e, {
               close: () => {
-                oz()
+                nD()
               },
               togglePointerLock: !1,
-              children: (0, Oz.jsxs)("div", {
+              children: (0, SD.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, ni.f)(bz) && (0, Oz.jsxs)("div", {
+                children: [!(0, ci.n)(cD) && (0, SD.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, Oz.jsxs)("div", {
+                  children: [(0, SD.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [Nz && (0, Oz.jsx)(Kz.d, {
+                    children: [OD && (0, SD.jsx)(oD.e, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        Nz.onClick()
+                        OD.onClick()
                       },
-                      children: Nz.text
-                    }), sz && Hz && (0, Oz.jsx)("div", {
-                      ...fz,
+                      children: OD.text
+                    }), XD && wD && (0, SD.jsx)("div", {
+                      ...gD,
                       className: "EverythingMenuWallet",
-                      title: zz("homePage:getPremiumCurrency"),
+                      title: DD("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, cz.o)({
+                        (0, GD.p)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, Oz.jsx)(cl.i, {})
+                      children: (0, SD.jsx)(Gf.e, {})
                     })]
-                  }), (0, Oz.jsxs)("div", {
+                  }), (0, SD.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, Oz.jsxs)("div", {
-                      ...fz,
+                    children: [(0, SD.jsxs)("div", {
+                      ...gD,
                       "data-pad-tab": !0,
-                      "data-pad-selected": bz === Hu.r.SETTINGS ? "true" : void 0,
-                      className: iz()("EverythingMenuTab", {
-                        EverythingMenuTabActive: bz === Hu.r.SETTINGS
+                      "data-pad-selected": cD === wC.q.SETTINGS ? "true" : void 0,
+                      className: iD()("EverythingMenuTab", {
+                        EverythingMenuTabActive: cD === wC.q.SETTINGS
                       }),
                       onClick: () => {
-                        vz.e.set({
-                          openEverythingMenuName: Hu.r.SETTINGS
+                        PD.d.set({
+                          openEverythingMenuName: wC.q.SETTINGS
                         })
                       },
-                      children: [zz("general:settings"), dz("OpenSettings", "pause")]
-                    }), (0, Oz.jsxs)("div", {
-                      ...fz,
+                      children: [DD("general:settings"), yD("OpenSettings", "pause")]
+                    }), (0, SD.jsxs)("div", {
+                      ...gD,
                       "data-pad-tab": !0,
-                      "data-pad-selected": bz === Hu.r.CUSTOMISATION ? "true" : void 0,
-                      className: iz()("EverythingMenuTab", {
-                        EverythingMenuTabActive: bz === Hu.r.CUSTOMISATION
+                      "data-pad-selected": cD === wC.q.CUSTOMISATION ? "true" : void 0,
+                      className: iD()("EverythingMenuTab", {
+                        EverythingMenuTabActive: cD === wC.q.CUSTOMISATION
                       }),
                       onClick: () => {
-                        vz.e.set({
-                          openEverythingMenuName: Hu.r.CUSTOMISATION
+                        PD.d.set({
+                          openEverythingMenuName: wC.q.CUSTOMISATION
                         })
                       },
-                      children: [zz("general:player"), dz("OpenCharacterCustomization")]
-                    }), wz.featureFlags.useSocialFeatures && (0, Oz.jsxs)("div", {
-                      ...fz,
+                      children: [DD("general:player"), yD("OpenCharacterCustomization")]
+                    }), vD.featureFlags.useSocialFeatures && (0, SD.jsxs)("div", {
+                      ...gD,
                       "data-pad-tab": !0,
-                      "data-pad-selected": bz === Hu.r.SOCIAL ? "true" : void 0,
-                      className: iz()("EverythingMenuTab", {
-                        EverythingMenuTabActive: bz === Hu.r.SOCIAL
+                      "data-pad-selected": cD === wC.q.SOCIAL ? "true" : void 0,
+                      className: iD()("EverythingMenuTab", {
+                        EverythingMenuTabActive: cD === wC.q.SOCIAL
                       }),
-                      ...(0, Yz.d)({
+                      ...(0, AD.c)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, bz === Hu.r.SOCIAL),
+                      }, cD === wC.q.SOCIAL),
                       onClick: () => {
-                        vz.e.set({
-                          openEverythingMenuName: Hu.r.SOCIAL
+                        PD.d.set({
+                          openEverythingMenuName: wC.q.SOCIAL
                         })
                       },
-                      children: [zz("socialBar:social"), (0, Oz.jsx)(EM.e, {})]
-                    }), Hz && (0, Oz.jsxs)("div", {
-                      ...fz,
+                      children: [DD("socialBar:social"), (0, SD.jsx)(Ib.b, {})]
+                    }), wD && (0, SD.jsxs)("div", {
+                      ...gD,
                       "data-pad-tab": !0,
-                      "data-pad-selected": bz === Hu.r.COSMETIC_SHOP ? "true" : void 0,
-                      className: iz()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: bz === Hu.r.COSMETIC_SHOP
+                      "data-pad-selected": cD === wC.q.COSMETIC_SHOP ? "true" : void 0,
+                      className: iD()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: cD === wC.q.COSMETIC_SHOP
                       }),
                       onClick: () => {
-                        vz.e.set({
-                          openEverythingMenuName: Hu.r.COSMETIC_SHOP
+                        PD.d.set({
+                          openEverythingMenuName: wC.q.COSMETIC_SHOP
                         })
                       },
-                      children: [(0, Oz.jsx)("span", {
+                      children: [(0, SD.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: zz("store:title")
-                      }), "new" === pz && (0, Oz.jsx)(dl, {}), "dot" === pz && (0, Oz.jsx)("span", {
+                        children: DD("store:title")
+                      }), "new" === BD && (0, SD.jsx)(yf, {}), "dot" === BD && (0, SD.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === uz && (0, Oz.jsxs)("div", {
-                      ...fz,
+                    }), "inGame" === CD && (0, SD.jsxs)("div", {
+                      ...gD,
                       "data-pad-tab": !0,
-                      "data-pad-selected": bz === Hu.r.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: iz()("EverythingMenuTab", {
-                        EverythingMenuTabActive: bz === Hu.r.LOBBY_LEADERBOARD
+                      "data-pad-selected": cD === wC.q.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: iD()("EverythingMenuTab", {
+                        EverythingMenuTabActive: cD === wC.q.LOBBY_LEADERBOARD
                       }),
                       onClick: () => {
-                        vz.e.set({
-                          openEverythingMenuName: Hu.r.LOBBY_LEADERBOARD
+                        PD.d.set({
+                          openEverythingMenuName: wC.q.LOBBY_LEADERBOARD
                         })
                       },
-                      children: [zz("general:lobby"), dz("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [DD("general:lobby"), yD("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, Oz.jsx)("div", {
+                  }), (0, SD.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: xz
+                    children: HD
                   })]
-                }), (0, ni.f)(bz) && xz, (0, Oz.jsxs)("div", {
+                }), (0, ci.n)(cD) && HD, (0, SD.jsxs)("div", {
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === uz ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === CD ? "0.85" : "1"
                   },
-                  children: [(0, Oz.jsx)(OE, {
-                    show: bz === Hu.r.SETTINGS,
-                    setBeforeResumeCallback: Rz
-                  }), (0, Oz.jsx)(ZE, {
-                    show: bz === Hu.r.CUSTOMISATION
-                  }), (0, Oz.jsx)(Ez.Suspense, {
+                  children: [(0, SD.jsx)(SI, {
+                    show: cD === wC.q.SETTINGS,
+                    setBeforeResumeCallback: ZD
+                  }), (0, SD.jsx)(tI, {
+                    show: cD === wC.q.CUSTOMISATION
+                  }), (0, SD.jsx)(ID.Suspense, {
                     fallback: null,
-                    children: (0, Oz.jsx)(In, {
-                      show: bz === Hu.r.SHOP
+                    children: (0, SD.jsx)(sp, {
+                      show: cD === wC.q.SHOP
                     })
-                  }), (0, Oz.jsx)(Mi, {
-                    show: bz === Hu.r.LOBBY_LEADERBOARD
-                  }), (0, Oz.jsx)(Ul, {
-                    show: bz === Hu.r.COSMETIC_SHOP
-                  }), (0, Oz.jsx)(uM, {
-                    show: bz === Hu.r.SOCIAL
+                  }), (0, SD.jsx)(fi, {
+                    show: cD === wC.q.LOBBY_LEADERBOARD
+                  }), (0, SD.jsx)(Tf, {
+                    show: cD === wC.q.COSMETIC_SHOP
+                  }), (0, SD.jsx)(Cb, {
+                    show: cD === wC.q.SOCIAL
                   })]
-                }), !(0, wz.isMobileApp)() && (0, fE.g)(tz.getPlayerRanks()) && (0, Oz.jsx)(XE.e, {
-                  ref: Xz,
+                }), !(0, vD.isMobileApp)() && (0, gI.e)(QD.getPlayerRanks()) && (0, SD.jsx)(NI.c, {
+                  ref: ND,
                   className: "EverythingMenuBannerDiv",
-                  show: rz,
+                  show: mD,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, Oz.jsx)(Sl.e, {
+                  children: (0, SD.jsx)(kf.b, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: Xz
+                      parentRef: ND
                     },
-                    showing: sz && rz,
+                    showing: XD && mD,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -7609,135 +7609,135 @@ export const modules = {
         })
       }))
   },
-  8987: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz
+  9045: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => iD
     });
-    var Ez = bz(328),
-      nz = bz(8994);
+    var ID = cD(326),
+      pD = cD(9050);
 
-    function iz(zz, uz, bz) {
-      const iz = Object.entries(uz).sort(((zz, uz) => uz[1] - zz[1])),
-        lz = (0, Ez.vb)(zz);
-      lz.push(zz ? "\n\n" : "\n");
-      for (const [nz, Zz] of iz) {
-        var Mz, tz, Hz;
-        const zz = null !== (Mz = null === bz || void 0 === bz || null === (tz = bz[nz]) || void 0 === tz ? void 0 : tz.icon) && void 0 !== Mz ? Mz : `${nz} Enchantment`;
-        lz.push({
-          icon: zz,
+    function iD(DD, CD, cD) {
+      const iD = Object.entries(CD).sort(((DD, CD) => CD[1] - DD[1])),
+        fD = (0, ID.tb)(DD);
+      fD.push(DD ? "\n\n" : "\n");
+      for (const [pD, tD] of iD) {
+        var bD, QD, wD;
+        const DD = null !== (bD = null === cD || void 0 === cD || null === (QD = cD[pD]) || void 0 === QD ? void 0 : QD.icon) && void 0 !== bD ? bD : `${pD} Enchantment`;
+        fD.push({
+          icon: DD,
           style: {
             fontSize: "1.5rem"
           }
-        }), lz.push({
-          str: `${nz} ${null!==(Hz=(0,Ez.X)(Zz))&&void 0!==Hz?Hz:Zz}\n`
+        }), fD.push({
+          str: `${pD} ${null!==(wD=(0,ID.S)(tD))&&void 0!==wD?wD:tD}\n`
         })
       }
-      lz.push({
+      fD.push({
         str: "\n"
       });
-      for (const [Ez, Zz] of iz) {
-        var Oz, pz, dz, Fz;
-        const zz = null !== (Oz = null === bz || void 0 === bz || null === (pz = bz[Ez]) || void 0 === pz ? void 0 : pz.icon) && void 0 !== Oz ? Oz : `${Ez} Enchantment`,
-          uz = null !== (dz = null === bz || void 0 === bz || null === (Fz = bz[Ez]) || void 0 === Fz ? void 0 : Fz.description) && void 0 !== dz ? dz : (0, nz.i)(Ez);
-        lz.push({
-          icon: zz,
+      for (const [ID, tD] of iD) {
+        var SD, BD, yD, MD;
+        const DD = null !== (SD = null === cD || void 0 === cD || null === (BD = cD[ID]) || void 0 === BD ? void 0 : BD.icon) && void 0 !== SD ? SD : `${ID} Enchantment`,
+          CD = null !== (yD = null === cD || void 0 === cD || null === (MD = cD[ID]) || void 0 === MD ? void 0 : MD.description) && void 0 !== yD ? yD : (0, pD.j)(ID);
+        fD.push({
+          icon: DD,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), lz.push({
-          str: uz,
+        }), fD.push({
+          str: CD,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), lz.push({
+        }), fD.push({
           str: "\n"
         })
       }
-      return lz
+      return fD
     }
   },
-  8999: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Hz,
-      d: () => Xz,
-      h: () => Kz,
-      i: () => tz,
-      m: () => wz,
-      p: () => Oz,
-      q: () => dz,
-      t: () => Rz,
-      w: () => pz
+  9057: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => wD,
+      f: () => ND,
+      h: () => oD,
+      i: () => QD,
+      l: () => vD,
+      n: () => SD,
+      r: () => yD,
+      t: () => ZD,
+      w: () => BD
     });
-    var Ez = bz(316),
-      nz = bz(588),
-      iz = bz(328),
-      lz = bz(4027),
-      Mz = bz(8987);
+    var ID = cD(312),
+      pD = cD(624),
+      iD = cD(326),
+      fD = cD(4070),
+      bD = cD(9045);
 
-    function tz(zz, uz) {
-      var bz;
+    function QD(DD, CD) {
+      var cD;
       let {
-        player: Ez,
-        chestOrCreative: nz
-      } = zz;
-      var iz;
-      return uz < Ez.length ? null !== (iz = Ez[uz]) && void 0 !== iz ? iz : null : null !== (bz = nz[uz - Ez.length]) && void 0 !== bz ? bz : null
+        player: ID,
+        chestOrCreative: pD
+      } = DD;
+      var iD;
+      return CD < ID.length ? null !== (iD = ID[CD]) && void 0 !== iD ? iD : null : null !== (cD = pD[CD - ID.length]) && void 0 !== cD ? cD : null
     }
 
-    function Hz(zz) {
-      var uz;
-      return null !== (uz = zz.amount) && void 0 !== uz ? uz : 0
+    function wD(DD) {
+      var CD;
+      return null !== (CD = DD.amount) && void 0 !== CD ? CD : 0
     }
 
-    function Oz(zz) {
-      return 0 === zz.button || void 0 === zz.button
+    function SD(DD) {
+      return 0 === DD.button || void 0 === DD.button
     }
 
-    function pz(zz) {
-      return !!zz.shiftKey
+    function BD(DD) {
+      return !!DD.shiftKey
     }
 
-    function dz(zz) {
-      return "touches" in zz || "touch" === zz.pointerType || "pen" === zz.pointerType
+    function yD(DD) {
+      return "touches" in DD || "touch" === DD.pointerType || "pen" === DD.pointerType
     }
-    const Fz = new Set,
-      Zz = 50;
+    const MD = new Set,
+      tD = 50;
 
-    function Rz(zz, uz) {
-      var bz;
-      const Ez = null === (bz = zz[uz]) || void 0 === bz ? void 0 : bz.displayName;
-      return (0, nz.F)(Ez) ? "string" !== typeof uz ? "" : (!Fz.has(uz) && Fz.size < Zz && (Fz.add(uz), console.warn(`No item called "${uz}", so its hover shows the name as given`)), uz) : Ez
+    function ZD(DD, CD) {
+      var cD;
+      const ID = null === (cD = DD[CD]) || void 0 === cD ? void 0 : cD.displayName;
+      return (0, pD.C)(ID) ? "string" !== typeof CD ? "" : (!MD.has(CD) && MD.size < tD && (MD.add(CD), console.warn(`No item called "${CD}", so its hover shows the name as given`)), CD) : ID
     }
 
-    function Kz(zz, uz, bz) {
-      var tz, Hz, Oz, pz, dz, Fz, Zz, Kz, wz, Xz, fz, sz, rz, oz;
-      const Nz = zz.attributes,
-        vz = null !== (tz = null === (Hz = uz[zz.name]) || void 0 === Hz ? void 0 : Hz.rootName) && void 0 !== tz ? tz : zz.name,
-        xz = null !== (Oz = null !== (pz = Nz.customDisplayName) && void 0 !== pz ? pz : null === (dz = uz[zz.name]) || void 0 === dz ? void 0 : dz.displayName) && void 0 !== Oz ? Oz : Rz(uz, vz);
-      let Jz = xz;
-      const Az = null === (Fz = Nz.customAttributes) || void 0 === Fz ? void 0 : Fz.enchantmentTier;
-      Az && (Jz = (0, iz.vb)(xz, {
-        colour: iz.rb[Az]
+    function oD(DD, CD, cD) {
+      var QD, wD, SD, BD, yD, MD, tD, oD, vD, ND, gD, XD, mD, nD;
+      const OD = DD.attributes,
+        PD = null !== (QD = null === (wD = CD[DD.name]) || void 0 === wD ? void 0 : wD.rootName) && void 0 !== QD ? QD : DD.name,
+        HD = null !== (SD = null !== (BD = OD.customDisplayName) && void 0 !== BD ? BD : null === (yD = CD[DD.name]) || void 0 === yD ? void 0 : yD.displayName) && void 0 !== SD ? SD : ZD(CD, PD);
+      let UD = HD;
+      const xD = null === (MD = OD.customAttributes) || void 0 === MD ? void 0 : MD.enchantmentTier;
+      xD && (UD = (0, iD.tb)(HD, {
+        colour: iD.lb[xD]
       }));
-      const Tz = null !== (Zz = null !== (Kz = null !== (wz = function(zz, uz) {
-        var bz;
-        if (void 0 === zz || null !== (bz = uz.customAttributes) && void 0 !== bz && bz.author) return zz;
-        const nz = (0, Ez.uc)(zz);
-        return nz.every((zz => "string" === typeof zz)) ? zz : nz.map((zz => "string" === typeof zz ? zz : {
-          icon: zz.icon,
+      const qD = null !== (tD = null !== (oD = null !== (vD = function(DD, CD) {
+        var cD;
+        if (void 0 === DD || null !== (cD = CD.customAttributes) && void 0 !== cD && cD.author) return DD;
+        const pD = (0, ID.bc)(DD);
+        return pD.every((DD => "string" === typeof DD)) ? DD : pD.map((DD => "string" === typeof DD ? DD : {
+          icon: DD.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(Nz.customDescription, Nz)) && void 0 !== wz ? wz : null === (Xz = uz[zz.name]) || void 0 === Xz ? void 0 : Xz.description) && void 0 !== Kz ? Kz : null === (fz = uz[vz]) || void 0 === fz ? void 0 : fz.description) && void 0 !== Zz ? Zz : "";
-      let Lz = Tz;
-      if (null !== (sz = Nz.customAttributes) && void 0 !== sz && sz.enchantments) Lz = (0, Mz.c)(Tz, Nz.customAttributes.enchantments, Nz.customAttributes.enchantmentData);
-      else if (bz[vz]) Lz = (0, iz.vb)(Tz), Lz.push({
+      }(OD.customDescription, OD)) && void 0 !== vD ? vD : null === (ND = CD[DD.name]) || void 0 === ND ? void 0 : ND.description) && void 0 !== oD ? oD : null === (gD = CD[PD]) || void 0 === gD ? void 0 : gD.description) && void 0 !== tD ? tD : "";
+      let JD = qD;
+      if (null !== (XD = OD.customAttributes) && void 0 !== XD && XD.enchantments) JD = (0, bD.d)(qD, OD.customAttributes.enchantments, OD.customAttributes.enchantmentData);
+      else if (cD[PD]) JD = (0, iD.tb)(qD), JD.push({
         str: "\n"
-      }), Lz.push({
+      }), JD.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -7745,373 +7745,373 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (rz = Nz.customAttributes) && void 0 !== rz && rz.mobSettings) {
-        var Pz, Gz;
-        const zz = Nz.customAttributes.mobSettings;
-        var az, Vz;
-        if (Lz = [], (0, nz.F)(Nz.customAttributes.health) || (Lz.push({
+      else if (null !== (mD = OD.customAttributes) && void 0 !== mD && mD.mobSettings) {
+        var KD, aD;
+        const DD = OD.customAttributes.mobSettings;
+        var VD, zD;
+        if (JD = [], (0, pD.C)(OD.customAttributes.health) || (JD.push({
             str: "\n"
-          }), Lz.push({
+          }), JD.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), Lz.push({
+          }), JD.push({
             str: " "
-          }), Lz.push({
-            str: Nz.customAttributes.health.toString()
-          }), (0, nz.F)(zz.maxHealth) || (Lz.push({
+          }), JD.push({
+            str: OD.customAttributes.health.toString()
+          }), (0, pD.C)(DD.maxHealth) || (JD.push({
             str: "/"
-          }), Lz.push({
-            str: zz.maxHealth.toString()
-          }))), !(0, nz.F)(zz.attackDamage) && zz.attackDamage > 0 && (Lz.push({
+          }), JD.push({
+            str: DD.maxHealth.toString()
+          }))), !(0, pD.C)(DD.attackDamage) && DD.attackDamage > 0 && (JD.push({
             str: "\n"
-          }), Lz.push({
+          }), JD.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), Lz.push({
+          }), JD.push({
             str: " "
-          }), Lz.push({
-            str: zz.attackDamage.toString()
-          })), !(0, nz.F)(zz.secondaryAttackDamage) && zz.secondaryAttackDamage > 0 && (Lz.push({
+          }), JD.push({
+            str: DD.attackDamage.toString()
+          })), !(0, pD.C)(DD.secondaryAttackDamage) && DD.secondaryAttackDamage > 0 && (JD.push({
             str: "\n"
-          }), Lz.push({
+          }), JD.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), Lz.push({
+          }), JD.push({
             str: " "
-          }), Lz.push({
-            str: zz.secondaryAttackDamage.toString()
-          })), (0, nz.F)(zz.baseRunningSpeed) || (Lz.push({
+          }), JD.push({
+            str: DD.secondaryAttackDamage.toString()
+          })), (0, pD.C)(DD.baseRunningSpeed) || (JD.push({
             str: "\n"
-          }), Lz.push({
+          }), JD.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), Lz.push({
+          }), JD.push({
             str: " "
-          }), Lz.push({
-            str: zz.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === zz.metaInfo) Lz.push({
+          }), JD.push({
+            str: DD.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === DD.metaInfo) JD.push({
           str: "\n"
-        }), Lz.push({
+        }), JD.push({
           str: {
             translationKey: "general:has"
           }
-        }), Lz.push({
+        }), JD.push({
           str: " "
-        }), Lz.push({
-          icon: null !== (az = null === (Vz = zz.tameInfo) || void 0 === Vz ? void 0 : Vz.saddleItemName) && void 0 !== az ? az : "Saddle",
+        }), JD.push({
+          icon: null !== (VD = null === (zD = DD.tameInfo) || void 0 === zD ? void 0 : zD.saddleItemName) && void 0 !== VD ? VD : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (Lz.push({
+        if (JD.push({
             str: "\n"
-          }), Lz.push({
+          }), JD.push({
             str: "\n"
-          }), zz.petInfo && null !== (Pz = zz.tameInfo) && void 0 !== Pz && Pz.supportsFriendship) {
-          const uz = lz.d.getIconsFromFriendshipPoints(zz.petInfo.friendshipPoints);
-          for (const zz of uz) Lz.push({
-            icon: zz,
+          }), DD.petInfo && null !== (KD = DD.tameInfo) && void 0 !== KD && KD.supportsFriendship) {
+          const CD = fD.b.getIconsFromFriendshipPoints(DD.petInfo.friendshipPoints);
+          for (const DD of CD) JD.push({
+            icon: DD,
             style: {
               fontSize: "1.5em"
             }
           });
-          Lz.push({
+          JD.push({
             str: "\n"
           });
-          const bz = lz.d.getMobHungerLevel(zz.petInfo.lastFedAt);
-          for (const zz of lz.d.hungerLevelIcons[bz]) Lz.push({
-            icon: zz,
+          const cD = fD.b.getMobHungerLevel(DD.petInfo.lastFedAt);
+          for (const DD of fD.b.hungerLevelIcons[cD]) JD.push({
+            icon: DD,
             style: {
               fontSize: "1.5em"
             }
           });
-          Lz.push({
+          JD.push({
             str: " "
-          }), Lz.push({
-            str: lz.d.hungerLevelTranslations[bz],
+          }), JD.push({
+            str: fD.b.hungerLevelTranslations[cD],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (zz.tameInfo && null !== (Gz = zz.tameInfo) && void 0 !== Gz && Gz.supportsFriendship) {
-          var mz, qz;
-          let uz = null !== (mz = zz.tameInfo.likedFoods) && void 0 !== mz ? mz : [];
-          Lz.push({
+        if (DD.tameInfo && null !== (aD = DD.tameInfo) && void 0 !== aD && aD.supportsFriendship) {
+          var jD, lD;
+          let CD = null !== (jD = DD.tameInfo.likedFoods) && void 0 !== jD ? jD : [];
+          JD.push({
             str: "\n"
-          }), Lz.push({
+          }), JD.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: lz.d.feedTextColours[lz.d.MobFoodType.Superliked]
+              color: fD.b.feedTextColours[fD.b.MobFoodType.Superliked]
             }
-          }), Lz.push({
+          }), JD.push({
             str: " "
-          }), null !== (qz = zz.petInfo) && void 0 !== qz && qz.superlikedFoodKnown ? (Lz.push({
-            icon: zz.petInfo.superlikedFood,
+          }), null !== (lD = DD.petInfo) && void 0 !== lD && lD.superlikedFoodKnown ? (JD.push({
+            icon: DD.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), uz = uz.filter((uz => uz !== zz.petInfo.superlikedFood))) : Lz.push({
+          }), CD = CD.filter((CD => CD !== DD.petInfo.superlikedFood))) : JD.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), Lz.push({
+          }), JD.push({
             str: "\n"
-          }), Lz.push({
+          }), JD.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: lz.d.feedTextColours[lz.d.MobFoodType.Liked]
+              color: fD.b.feedTextColours[fD.b.MobFoodType.Liked]
             }
-          }), Lz.push({
+          }), JD.push({
             str: " "
           });
-          for (const zz of uz) Lz.push({
-            icon: zz,
+          for (const DD of CD) JD.push({
+            icon: DD,
             style: {
               fontSize: "1.5em"
             }
           });
-          Lz.push({
+          JD.push({
             str: "\n"
-          }), Lz.push({
+          }), JD.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: lz.d.feedTextColours[lz.d.MobFoodType.Neutral]
+              color: fD.b.feedTextColours[fD.b.MobFoodType.Neutral]
             }
-          }), Lz.push({
+          }), JD.push({
             str: " "
           });
-          for (const bz of null !== (hz = zz.tameInfo.neutralFoods) && void 0 !== hz ? hz : []) {
-            var hz;
-            Lz.push({
-              icon: bz,
+          for (const cD of null !== (LD = DD.tameInfo.neutralFoods) && void 0 !== LD ? LD : []) {
+            var LD;
+            JD.push({
+              icon: cD,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          Lz.push({
+          JD.push({
             str: "\n"
-          }), Lz.push({
+          }), JD.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: lz.d.feedTextColours[lz.d.MobFoodType.Disliked]
+              color: fD.b.feedTextColours[fD.b.MobFoodType.Disliked]
             }
-          }), Lz.push({
+          }), JD.push({
             str: " "
           });
-          for (const bz of null !== (Uz = zz.tameInfo.dislikedFoods) && void 0 !== Uz ? Uz : []) {
-            var Uz;
-            Lz.push({
-              icon: bz,
+          for (const cD of null !== (TD = DD.tameInfo.dislikedFoods) && void 0 !== TD ? TD : []) {
+            var TD;
+            JD.push({
+              icon: cD,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        Lz.length > 0 ? (Lz.shift(), Lz.unshift(...(0, iz.vb)(Tz))) : Lz = (0, iz.vb)(Tz)
+        JD.length > 0 ? (JD.shift(), JD.unshift(...(0, iD.tb)(qD))) : JD = (0, iD.tb)(qD)
       }
       return {
-        name: Jz,
-        desc: Lz,
-        fontStyle: null !== (oz = Nz.customAttributes) && void 0 !== oz && oz.author ? "italic" : "normal"
+        name: UD,
+        desc: JD,
+        fontStyle: null !== (nD = OD.customAttributes) && void 0 !== nD && nD.author ? "italic" : "normal"
       }
     }
 
-    function wz(zz, uz, bz, Ez) {
-      const nz = tz(zz, bz),
-        iz = tz(zz, Ez);
-      if (!nz) return !1;
-      const lz = uz[nz.name].armourReduction,
-        Mz = uz[iz.name].armourReduction;
-      if (Mz === lz) {
-        var Hz, Oz, pz, dz;
-        const zz = null !== (Hz = null === (Oz = nz.attributes.customAttributes) || void 0 === Oz ? void 0 : Oz.enchantmentTier) && void 0 !== Hz ? Hz : "Tier 0",
-          uz = null !== (pz = null === (dz = iz.attributes.customAttributes) || void 0 === dz ? void 0 : dz.enchantmentTier) && void 0 !== pz ? pz : "Tier 0";
-        return parseInt(zz.replace("Tier ", "")) >= parseInt(uz.replace("Tier ", ""))
+    function vD(DD, CD, cD, ID) {
+      const pD = QD(DD, cD),
+        iD = QD(DD, ID);
+      if (!pD) return !1;
+      const fD = CD[pD.name].armourReduction,
+        bD = CD[iD.name].armourReduction;
+      if (bD === fD) {
+        var wD, SD, BD, yD;
+        const DD = null !== (wD = null === (SD = pD.attributes.customAttributes) || void 0 === SD ? void 0 : SD.enchantmentTier) && void 0 !== wD ? wD : "Tier 0",
+          CD = null !== (BD = null === (yD = iD.attributes.customAttributes) || void 0 === yD ? void 0 : yD.enchantmentTier) && void 0 !== BD ? BD : "Tier 0";
+        return parseInt(DD.replace("Tier ", "")) >= parseInt(CD.replace("Tier ", ""))
       }
-      return lz > Mz
+      return fD > bD
     }
 
-    function Xz(zz) {
-      let uz;
-      if ("number" === typeof zz) {
-        const bz = document.querySelector(`[data-inven-idx="${zz}"]`);
-        if (!bz) return null;
-        uz = bz.getBoundingClientRect()
-      } else uz = zz.getBoundingClientRect();
+    function ND(DD) {
+      let CD;
+      if ("number" === typeof DD) {
+        const cD = document.querySelector(`[data-inven-idx="${DD}"]`);
+        if (!cD) return null;
+        CD = cD.getBoundingClientRect()
+      } else CD = DD.getBoundingClientRect();
       return {
-        x: uz.left + uz.width / 2,
-        y: uz.top + uz.height / 2
+        x: CD.left + CD.width / 2,
+        y: CD.top + CD.height / 2
       }
     }
   },
-  8892: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Fz,
-      e: () => Zz,
-      g: () => Rz
+  8940: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => MD,
+      h: () => tD,
+      k: () => ZD
     });
-    var Ez = bz(1419),
-      nz = bz(56),
-      iz = bz(1283),
-      lz = bz(4292),
-      Mz = bz(2256),
-      tz = bz(1181),
-      Hz = bz(96),
-      Oz = bz(1912),
-      pz = bz(1305),
-      dz = bz(1089);
+    var ID = cD(1442),
+      pD = cD(53),
+      iD = cD(1305),
+      fD = cD(4325),
+      bD = cD(2295),
+      QD = cD(1192),
+      wD = cD(90),
+      SD = cD(1954),
+      BD = cD(1328),
+      yD = cD(1093);
 
-    function Fz(zz) {
+    function MD(DD) {
       let {
-        show: uz,
-        onClose: bz
-      } = zz;
+        show: CD,
+        onClose: cD
+      } = DD;
       const {
-        requestedGameNameWithVariation: Ez,
-        lobbyName: nz,
-        shownLobbyName: iz
-      } = (0, Oz.h)("connectedGame"), tz = (0, Mz.b)(Ez, nz, !1);
-      return Hz.featureFlags.canUseInviteLinks && (0, dz.jsx)(lz.d, {
-        show: uz,
-        close: bz,
+        requestedGameNameWithVariation: ID,
+        lobbyName: pD,
+        shownLobbyName: iD
+      } = (0, SD.h)("connectedGame"), QD = (0, bD.b)(ID, pD, !1);
+      return wD.featureFlags.canUseInviteLinks && (0, yD.jsx)(fD.e, {
+        show: CD,
+        close: cD,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, dz.jsxs)("div", {
+        children: (0, yD.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, dz.jsx)("div", {
+          children: [(0, yD.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, dz.jsxs)("div", {
+          }), (0, yD.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, dz.jsx)("div", {
+            children: [(0, yD.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === tz ? (0, dz.jsx)(pz.c, {}) : tz, (0, dz.jsx)("br", {}), "Lobby Name: ", iz, (0, dz.jsx)("br", {}), (0, dz.jsx)("br", {}), (0, dz.jsx)("br", {}), (0, dz.jsx)("div", {
+            }), "Game: ", null === QD ? (0, yD.jsx)(BD.e, {}) : QD, (0, yD.jsx)("br", {}), "Lobby Name: ", iD, (0, yD.jsx)("br", {}), (0, yD.jsx)("br", {}), (0, yD.jsx)("br", {}), (0, yD.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, dz.jsx)(Zz, {})]
+          }), (0, yD.jsx)(tD, {})]
         })
       })
     }
 
-    function Zz() {
-      var zz;
+    function tD() {
+      var DD;
       const {
-        t: uz
-      } = (0, tz.F)(), bz = null !== (zz = Rz(Hz.featureFlags.canUseInviteLinks)) && void 0 !== zz ? zz : "Loading Link...", [iz, lz] = (0, nz.useState)(0), [Mz, Oz] = (0, nz.useReducer)((zz => zz + 1), 0);
-      return (0, nz.useEffect)((() => {
-        const zz = setTimeout((() => {
-          Oz()
+        t: CD
+      } = (0, QD.F)(), cD = null !== (DD = ZD(wD.featureFlags.canUseInviteLinks)) && void 0 !== DD ? DD : "Loading Link...", [iD, fD] = (0, pD.useState)(0), [bD, SD] = (0, pD.useReducer)((DD => DD + 1), 0);
+      return (0, pD.useEffect)((() => {
+        const DD = setTimeout((() => {
+          SD()
         }), 1100);
         return () => {
-          clearTimeout(zz)
+          clearTimeout(DD)
         }
-      }), [iz]), Hz.featureFlags.canUseInviteLinks && (0, dz.jsxs)("div", {
+      }), [iD]), wD.featureFlags.canUseInviteLinks && (0, yD.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, dz.jsx)("div", {
+        children: [(0, yD.jsx)("div", {
           className: "InviteLinkInner",
-          children: bz
-        }), (0, dz.jsx)(Ez.f, {
+          children: cD
+        }), (0, yD.jsx)(ID.i, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(bz).catch((zz => {
-              console.error("Failed to copy invite link:", zz)
-            })), lz(Date.now())
+            navigator.clipboard.writeText(cD).catch((DD => {
+              console.error("Failed to copy invite link:", DD)
+            })), fD(Date.now())
           },
-          disabled: Date.now() - iz < 1e3,
-          children: Date.now() - iz < 1e3 ? uz("general:copied") : uz("general:copy")
+          disabled: Date.now() - iD < 1e3,
+          children: Date.now() - iD < 1e3 ? CD("general:copied") : CD("general:copy")
         })]
       })
     }
 
-    function Rz(zz) {
-      const [uz, bz] = (0, nz.useState)(null);
-      return (0, nz.useEffect)((() => {
-        if (!zz) return;
-        let uz = !0;
-        return (0, iz.v)().then((zz => {
-          uz && bz(zz)
-        })).catch((zz => {
-          console.error("Failed to get invite link:", zz)
+    function ZD(DD) {
+      const [CD, cD] = (0, pD.useState)(null);
+      return (0, pD.useEffect)((() => {
+        if (!DD) return;
+        let CD = !0;
+        return (0, iD.u)().then((DD => {
+          CD && cD(DD)
+        })).catch((DD => {
+          console.error("Failed to get invite link:", DD)
         })), () => {
-          uz = !1
+          CD = !1
         }
-      }), [zz]), uz
+      }), [DD]), CD
     }
   },
-  8979: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Hz
+  9039: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => wD
     });
-    var Ez = bz(56),
-      nz = bz(1038),
-      iz = bz.n(nz),
-      lz = bz(1912),
-      Mz = bz(1089);
+    var ID = cD(53),
+      pD = cD(1049),
+      iD = cD.n(pD),
+      fD = cD(1954),
+      bD = cD(1093);
 
-    function tz(zz) {
-      const uz = Math.floor(zz / 3600),
-        bz = Math.floor(zz % 3600 / 60),
-        Ez = Math.floor(zz % 60),
-        nz = `${bz.toString().padStart(2,"0")}:${Ez.toString().padStart(2,"0")}`;
-      return uz > 0 ? `${uz}:${nz}` : nz
+    function QD(DD) {
+      const CD = Math.floor(DD / 3600),
+        cD = Math.floor(DD % 3600 / 60),
+        ID = Math.floor(DD % 60),
+        pD = `${cD.toString().padStart(2,"0")}:${ID.toString().padStart(2,"0")}`;
+      return CD > 0 ? `${CD}:${pD}` : pD
     }
-    const Hz = (0, Ez.memo)((function(zz) {
+    const wD = (0, ID.memo)((function(DD) {
       let {
-        className: uz
-      } = zz;
+        className: CD
+      } = DD;
       const {
-        recording: bz,
-        seconds: Ez
-      } = (0, lz.h)("replayRecorder");
-      return bz ? (0, Mz.jsxs)("div", {
-        className: iz()("RecordingIndicator", uz),
-        children: [(0, Mz.jsx)("span", {
+        recording: cD,
+        seconds: ID
+      } = (0, fD.h)("replayRecorder");
+      return cD ? (0, bD.jsxs)("div", {
+        className: iD()("RecordingIndicator", CD),
+        children: [(0, bD.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, Mz.jsx)("span", {
+        }), (0, bD.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, Mz.jsx)("span", {
+        }), (0, bD.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: tz(Ez)
+          children: QD(ID)
         })]
       }) : null
     }))
   },
-  4648: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Kz
+  4648: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => oD
     });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(4393),
-      lz = bz(1181),
-      Mz = bz(1047),
-      tz = bz(1419),
-      Hz = bz(1473),
-      Oz = bz(1322),
-      pz = bz(2384),
-      dz = bz(1089);
-    const Fz = {
+    var ID = cD(1049),
+      pD = cD.n(ID),
+      iD = cD(4438),
+      fD = cD(1192),
+      bD = cD(1064),
+      QD = cD(1442),
+      wD = cD(1497),
+      SD = cD(1340),
+      BD = cD(2421),
+      yD = cD(1093);
+    const MD = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -8139,354 +8139,354 @@ export const modules = {
       }
     };
 
-    function Zz(zz) {
+    function tD(DD) {
       let {
-        platform: uz
-      } = zz;
-      const bz = "youtube" === uz;
-      return (0, dz.jsxs)("span", {
-        className: nz()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: bz
+        platform: CD
+      } = DD;
+      const cD = "youtube" === CD;
+      return (0, yD.jsxs)("span", {
+        className: pD()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: cD
         }),
-        children: [bz && (0, dz.jsx)(pz.b, {
+        children: [cD && (0, yD.jsx)(BD.c, {
           variant: "white"
-        }), !bz && (0, dz.jsx)(Mz.c, {
-          name: Fz[uz].icon,
+        }), !cD && (0, yD.jsx)(bD.c, {
+          name: MD[CD].icon,
           kit: "brands"
         })]
       })
     }
 
-    function Rz(zz) {
+    function ZD(DD) {
       let {
-        platform: uz,
-        link: bz,
-        editable: Ez,
-        userContext: nz,
-        onLinksUpdated: pz
-      } = zz;
+        platform: CD,
+        link: cD,
+        editable: ID,
+        userContext: pD,
+        onLinksUpdated: BD
+      } = DD;
       const {
-        t: Rz
-      } = (0, lz.F)(), Kz = Fz[uz];
-      if (!bz && !Ez) return null;
+        t: ZD
+      } = (0, fD.F)(), oD = MD[CD];
+      if (!cD && !ID) return null;
 
-      function wz() {
-        var zz;
-        if (!nz || !pz) return;
-        Oz.NotificationProvider.showInputPopup({
+      function vD() {
+        var DD;
+        if (!pD || !BD) return;
+        SD.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: Kz.name
+              platform: oD.name
             }
           },
-          prefixText: iz.y[uz],
+          prefixText: iD.x[CD],
           placeholderText: "playBloxd",
-          initialValue: null !== (zz = null === bz || void 0 === bz ? void 0 : bz.handle) && void 0 !== zz ? zz : "",
+          initialValue: null !== (DD = null === cD || void 0 === cD ? void 0 : cD.handle) && void 0 !== DD ? DD : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: bz ? "general:remove" : void 0
-        }).getResult().then((async zz => {
-          if ("notificationTornDown" !== zz && null !== zz) try {
-            "submit" === zz.type ? await Hz.c.setSocialLink(nz, uz, zz.value) : await Hz.c.clearSocialLink(nz, uz), pz()
-          } catch (bz) {
-            console.error("Failed to update social link", bz), Oz.NotificationProvider.showAlertPopup({
-              title: bz.errorMessageForUser,
+          secondaryButtonText: cD ? "general:remove" : void 0
+        }).getResult().then((async DD => {
+          if ("notificationTornDown" !== DD && null !== DD) try {
+            "submit" === DD.type ? await wD.c.setSocialLink(pD, CD, DD.value) : await wD.c.clearSocialLink(pD, CD), BD()
+          } catch (cD) {
+            console.error("Failed to update social link", cD), SD.NotificationProvider.showAlertPopup({
+              title: cD.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (bz) {
-        const zz = `@${bz.handle}`;
-        return (0, dz.jsxs)("a", {
+      if (cD) {
+        const DD = `@${cD.handle}`;
+        return (0, yD.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: Kz.color
+            background: oD.color
           },
-          href: bz.profileUrl,
+          href: cD.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, dz.jsxs)("div", {
+          children: [(0, yD.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, dz.jsx)(Zz, {
-              platform: uz
-            }), (0, dz.jsx)("span", {
+            children: [(0, yD.jsx)(tD, {
+              platform: CD
+            }), (0, yD.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, dz.jsx)("span", {
+              children: (0, yD.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: zz
+                children: DD
               })
             })]
-          }), Ez && (0, dz.jsx)("button", {
+          }), ID && (0, yD.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, tz.ab)({
+            ...(0, QD.U)({
               stopPropagation: !0
             }),
-            onClick: zz => {
-              zz.stopPropagation(), zz.preventDefault(), wz()
+            onClick: DD => {
+              DD.stopPropagation(), DD.preventDefault(), vD()
             },
-            children: (0, dz.jsx)(Mz.c, {
+            children: (0, yD.jsx)(bD.c, {
               name: "pen-to-square"
             })
-          }), !Ez && (0, dz.jsx)("span", {
+          }), !ID && (0, yD.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, dz.jsx)(Mz.c, {
+            children: (0, yD.jsx)(bD.c, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, dz.jsxs)("button", {
+      return (0, yD.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: Kz.color
+          background: oD.color
         },
-        ...(0, tz.ab)(),
+        ...(0, QD.U)(),
         onClick: () => {
-          wz()
+          vD()
         },
-        children: [(0, dz.jsx)(Zz, {
-          platform: uz
-        }), (0, dz.jsxs)("span", {
+        children: [(0, yD.jsx)(tD, {
+          platform: CD
+        }), (0, yD.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, dz.jsx)("span", {
+          children: [(0, yD.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: Kz.name
-          }), (0, dz.jsx)("span", {
+            children: oD.name
+          }), (0, yD.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: Rz("homePage:profileSocialLinkAdd")
+            children: ZD("homePage:profileSocialLinkAdd")
           })]
-        }), (0, dz.jsx)("span", {
+        }), (0, yD.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, dz.jsx)(Mz.c, {
+          children: (0, yD.jsx)(bD.c, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function Kz(zz) {
+    function oD(DD) {
       let {
-        socialLinks: uz,
-        editable: bz = !1,
-        userContext: Ez,
-        onLinksUpdated: nz
-      } = zz;
-      if (!bz && 0 === uz.length) return null;
-      const lz = new Map(uz.map((zz => [zz.platform, zz]))),
-        Mz = bz ? iz.w : uz.map((zz => zz.platform));
-      return (0, dz.jsx)("div", {
+        socialLinks: CD,
+        editable: cD = !1,
+        userContext: ID,
+        onLinksUpdated: pD
+      } = DD;
+      if (!cD && 0 === CD.length) return null;
+      const fD = new Map(CD.map((DD => [DD.platform, DD]))),
+        bD = cD ? iD.u : CD.map((DD => DD.platform));
+      return (0, yD.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, dz.jsx)("div", {
+        children: (0, yD.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: Mz.map((zz => (0, dz.jsx)(Rz, {
-            platform: zz,
-            link: lz.get(zz),
-            editable: bz,
-            userContext: Ez,
-            onLinksUpdated: nz
-          }, zz)))
+          children: bD.map((DD => (0, yD.jsx)(ZD, {
+            platform: DD,
+            link: fD.get(DD),
+            editable: cD,
+            userContext: ID,
+            onLinksUpdated: pD
+          }, DD)))
         })
       })
     }
   },
-  8982: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
+  9041: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => iD
     });
-    var Ez = bz(4298),
-      nz = bz(4300);
+    var ID = cD(4329),
+      pD = cD(4337);
 
-    function iz(zz) {
+    function iD(DD) {
       let {
-        children: uz,
-        showing: bz,
-        globallyUniqueKey: iz,
-        alwaysMountChildren: lz = !1,
-        doGameplayStartStopOnShow: Mz = !0,
-        keepsMovement: tz = !1
-      } = zz;
-      return (0, nz.e)(!0, bz, iz, tz), (0, Ez.d)(Mz, bz), bz || lz ? uz : null
+        children: CD,
+        showing: cD,
+        globallyUniqueKey: iD,
+        alwaysMountChildren: fD = !1,
+        doGameplayStartStopOnShow: bD = !0,
+        keepsMovement: QD = !1
+      } = DD;
+      return (0, pD.e)(!0, cD, iD, QD), (0, ID.b)(bD, cD), cD || fD ? CD : null
     }
   },
-  9035: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz
+  9084: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => iD
     });
-    var Ez = bz(56),
-      nz = bz(3332);
+    var ID = cD(53),
+      pD = cD(3387);
 
-    function iz() {
-      const [zz, uz] = (0, Ez.useState)(!1);
-      return (0, Ez.useLayoutEffect)((() => {
-        let zz = !0;
-        return (0, nz.e)().then((() => {
-          zz && uz(!0)
+    function iD() {
+      const [DD, CD] = (0, ID.useState)(!1);
+      return (0, ID.useLayoutEffect)((() => {
+        let DD = !0;
+        return (0, pD.d)().then((() => {
+          DD && CD(!0)
         })), () => {
-          zz = !1
+          DD = !1
         }
-      }), []), zz
+      }), []), DD
     }
   },
-  6291: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
+  6320: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => iD
     });
-    var Ez = bz(56),
-      nz = bz(33);
+    var ID = cD(53),
+      pD = cD(36);
 
-    function iz(zz, uz) {
-      var bz;
-      const [iz, lz] = (0, Ez.useState)(null !== (bz = nz.g.getItem(zz)) && void 0 !== bz ? bz : uz);
-      return [iz, uz => {
-        nz.g.setItem(zz, uz), lz(uz)
+    function iD(DD, CD) {
+      var cD;
+      const [iD, fD] = (0, ID.useState)(null !== (cD = pD.h.getItem(DD)) && void 0 !== cD ? cD : CD);
+      return [iD, CD => {
+        pD.h.setItem(DD, CD), fD(CD)
       }]
     }
   },
-  8954: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => dz,
-      g: () => pz
+  9021: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => yD,
+      h: () => BD
     });
-    bz(8957);
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(56),
-      lz = bz(8928);
+    cD(9026);
+    var ID = cD(1049),
+      pD = cD.n(ID),
+      iD = cD(53),
+      fD = cD(8991);
 
-    function Mz(zz, uz) {
-      return Math.max(1, Math.round(zz * uz))
+    function bD(DD, CD) {
+      return Math.max(1, Math.round(DD * CD))
     }
 
-    function tz(zz, uz, bz) {
-      const Ez = 2 * bz >= uz - 1;
+    function QD(DD, CD, cD) {
+      const ID = 2 * cD >= CD - 1;
       return {
-        x: zz,
-        y: zz,
-        size: uz,
-        border: Math.min(bz, Math.floor(uz / 2)),
-        filled: Ez
+        x: DD,
+        y: DD,
+        size: CD,
+        border: Math.min(cD, Math.floor(CD / 2)),
+        filled: ID
       }
     }
-    var Hz = bz(1089);
-    const Oz = 1.4;
+    var wD = cD(1093);
+    const SD = 1.4;
 
-    function pz(zz, uz) {
-      return zz && uz ? `scale(${Oz})` : "scale(1)"
+    function BD(DD, CD) {
+      return DD && CD ? `scale(${SD})` : "scale(1)"
     }
 
-    function dz(zz) {
-      return "classic" === zz.settings.style ? (0, Hz.jsx)(Rz, {
-        ...zz
-      }) : (0, Hz.jsx)(oz, {
-        ...zz
+    function yD(DD) {
+      return "classic" === DD.settings.style ? (0, wD.jsx)(ZD, {
+        ...DD
+      }) : (0, wD.jsx)(nD, {
+        ...DD
       })
     }
-    const Fz = .125;
+    const MD = .125;
 
-    function Zz(zz, uz) {
-      const bz = {};
-      if (zz.color !== lz.f.color && (bz.color = (0, lz.m)(zz.color)), zz.opacity !== lz.f.opacity && (bz.opacity = zz.opacity / 100), zz.outline !== lz.f.outline || zz.outlineColor !== lz.f.outlineColor) {
-        const uz = zz.outline,
-          Ez = (0, lz.m)(zz.outlineColor);
-        bz.textShadow = uz > 0 ? `-${uz}px 0 ${Ez}, 0 ${uz}px ${Ez}, ${uz}px 0 ${Ez}, 0 -${uz}px ${Ez}` : "none"
+    function tD(DD, CD) {
+      const cD = {};
+      if (DD.color !== fD.h.color && (cD.color = (0, fD.o)(DD.color)), DD.opacity !== fD.h.opacity && (cD.opacity = DD.opacity / 100), DD.outline !== fD.h.outline || DD.outlineColor !== fD.h.outlineColor) {
+        const CD = DD.outline,
+          ID = (0, fD.o)(DD.outlineColor);
+        cD.textShadow = CD > 0 ? `-${CD}px 0 ${ID}, 0 ${CD}px ${ID}, ${CD}px 0 ${ID}, 0 -${CD}px ${ID}` : "none"
       }
-      if (zz.size !== lz.f.size) {
-        const Ez = zz.size / 100;
-        bz.fontSize = uz ? `calc(max(1.3rem, 18px) * ${Ez})` : `calc(1.3rem * ${Ez})`, bz.marginTop = `-${Fz}em`, bz.transformOrigin = `50% calc(50% + ${Fz}em)`
+      if (DD.size !== fD.h.size) {
+        const ID = DD.size / 100;
+        cD.fontSize = CD ? `calc(max(1.3rem, 18px) * ${ID})` : `calc(1.3rem * ${ID})`, cD.marginTop = `-${MD}em`, cD.transformOrigin = `50% calc(50% + ${MD}em)`
       }
-      return bz
+      return cD
     }
 
-    function Rz(zz) {
+    function ZD(DD) {
       let {
-        settings: uz,
-        touch: bz,
-        inPreview: Ez,
-        inEditor: iz,
-        pressed: lz = !1,
-        pressRef: Mz
-      } = zz;
-      return (0, Hz.jsx)("div", {
-        className: nz()("Crosshair", {
-          Touch: bz,
-          CrosshairInPreview: Ez,
-          CrosshairInEditor: iz || Ez
+        settings: CD,
+        touch: cD,
+        inPreview: ID,
+        inEditor: iD,
+        pressed: fD = !1,
+        pressRef: bD
+      } = DD;
+      return (0, wD.jsx)("div", {
+        className: pD()("Crosshair", {
+          Touch: cD,
+          CrosshairInPreview: ID,
+          CrosshairInEditor: iD || ID
         }),
-        ref: Mz,
+        ref: bD,
         style: {
-          transform: pz(lz, uz.growOnClick),
-          ...Zz(uz, bz)
+          transform: BD(fD, CD.growOnClick),
+          ...tD(CD, cD)
         },
         children: "+"
       })
     }
 
-    function Kz(zz, uz) {
-      return zz / uz + "px"
+    function oD(DD, CD) {
+      return DD / CD + "px"
     }
 
-    function wz(zz, uz, bz, Ez) {
+    function vD(DD, CD, cD, ID) {
       return {
-        ...sz(zz, uz, bz),
-        width: Kz(zz.w, bz),
-        height: Kz(zz.h, bz),
-        background: Ez
+        ...XD(DD, CD, cD),
+        width: oD(DD.w, cD),
+        height: oD(DD.h, cD),
+        background: ID
       }
     }
 
-    function Xz(zz, uz, bz) {
+    function ND(DD, CD, cD) {
       return {
-        left: Kz(zz.x, uz),
-        top: Kz(zz.y, uz),
-        width: Kz(zz.size, uz),
-        height: Kz(zz.size, uz),
-        borderWidth: Kz(zz.border, uz),
-        borderColor: bz,
-        background: zz.filled ? bz : void 0
+        left: oD(DD.x, CD),
+        top: oD(DD.y, CD),
+        width: oD(DD.size, CD),
+        height: oD(DD.size, CD),
+        borderWidth: oD(DD.border, CD),
+        borderColor: cD,
+        background: DD.filled ? cD : void 0
       }
     }
-    const fz = {
+    const gD = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function sz(zz, uz, bz) {
-      const [Ez, nz] = zz.arm ? fz[zz.arm] : [0, 0], iz = Math.round(uz * bz);
+    function XD(DD, CD, cD) {
+      const [ID, pD] = DD.arm ? gD[DD.arm] : [0, 0], iD = Math.round(CD * cD);
       return {
-        left: Kz(zz.x + Ez * iz, bz),
-        top: Kz(zz.y + nz * iz, bz)
+        left: oD(DD.x + ID * iD, cD),
+        top: oD(DD.y + pD * iD, cD)
       }
     }
 
-    function rz(zz) {
-      return zz.arm ? {
-        "data-arm": zz.arm,
-        "data-x": zz.x,
-        "data-y": zz.y
+    function mD(DD) {
+      return DD.arm ? {
+        "data-arm": DD.arm,
+        "data-x": DD.x,
+        "data-y": DD.y
       } : {}
     }
 
-    function oz(zz) {
+    function nD(DD) {
       let {
-        settings: uz,
-        inPreview: bz,
-        inEditor: Ez,
-        pressed: pz = !1,
-        spread: dz,
-        spreadRef: Fz
-      } = zz;
-      const Zz = (0, iz.useRef)(null),
+        settings: CD,
+        inPreview: cD,
+        inEditor: ID,
+        pressed: BD = !1,
+        spread: yD,
+        spreadRef: MD
+      } = DD;
+      const tD = (0, iD.useRef)(null),
         {
-          box: Rz,
-          dpr: Kz
-        } = function(zz) {
-          const [uz, bz] = (0, iz.useState)({
+          box: ZD,
+          dpr: oD
+        } = function(DD) {
+          const [CD, cD] = (0, iD.useState)({
             box: {
               left: 0,
               top: 0,
@@ -8495,282 +8495,282 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, iz.useLayoutEffect)((() => {
-            const uz = zz.current;
-            if (!uz) return;
-            const Ez = () => {
-              const zz = uz.getBoundingClientRect(),
-                Ez = window.devicePixelRatio || 1;
-              bz((uz => uz.dpr === Ez && uz.box.left === zz.left && uz.box.top === zz.top && uz.box.width === zz.width && uz.box.height === zz.height ? uz : {
+          return (0, iD.useLayoutEffect)((() => {
+            const CD = DD.current;
+            if (!CD) return;
+            const ID = () => {
+              const DD = CD.getBoundingClientRect(),
+                ID = window.devicePixelRatio || 1;
+              cD((CD => CD.dpr === ID && CD.box.left === DD.left && CD.box.top === DD.top && CD.box.width === DD.width && CD.box.height === DD.height ? CD : {
                 box: {
-                  left: zz.left,
-                  top: zz.top,
-                  width: zz.width,
-                  height: zz.height
+                  left: DD.left,
+                  top: DD.top,
+                  width: DD.width,
+                  height: DD.height
                 },
-                dpr: Ez
+                dpr: ID
               }))
             };
-            Ez();
-            const nz = new ResizeObserver(Ez);
-            return nz.observe(uz), window.addEventListener("resize", Ez), window.addEventListener("scroll", Ez, !0), () => {
-              nz.disconnect(), window.removeEventListener("resize", Ez), window.removeEventListener("scroll", Ez, !0)
+            ID();
+            const pD = new ResizeObserver(ID);
+            return pD.observe(CD), window.addEventListener("resize", ID), window.addEventListener("scroll", ID, !0), () => {
+              pD.disconnect(), window.removeEventListener("resize", ID), window.removeEventListener("scroll", ID, !0)
             }
-          }), [zz]), uz
-        }(Zz),
-        fz = (0, iz.useRef)(Kz);
-      fz.current = Kz;
-      const oz = function(zz, uz) {
-          const bz = Mz(zz.lineThickness, uz),
-            Ez = Mz(zz.lineLength, uz),
-            nz = Math.round(zz.gap * uz),
-            iz = Mz(zz.dotSize, uz),
-            lz = zz.outline > 0 ? Mz(zz.outline, uz) : 0,
-            Hz = Mz(zz.circleThickness, uz),
-            Oz = zz.circle ? Math.round(zz.circleRadius * uz * 2 + Hz) : 0,
-            pz = function(zz, uz, bz, Ez) {
-              return zz.lines ? uz : zz.dot ? bz : zz.circle && Ez % 2 === 0 ? 2 : 1
-            }(zz, bz, iz, Oz),
-            dz = [];
-          if (zz.lines && (dz.push({
-              x: pz + nz,
+          }), [DD]), CD
+        }(tD),
+        gD = (0, iD.useRef)(oD);
+      gD.current = oD;
+      const nD = function(DD, CD) {
+          const cD = bD(DD.lineThickness, CD),
+            ID = bD(DD.lineLength, CD),
+            pD = Math.round(DD.gap * CD),
+            iD = bD(DD.dotSize, CD),
+            fD = DD.outline > 0 ? bD(DD.outline, CD) : 0,
+            wD = bD(DD.circleThickness, CD),
+            SD = DD.circle ? Math.round(DD.circleRadius * CD * 2 + wD) : 0,
+            BD = function(DD, CD, cD, ID) {
+              return DD.lines ? CD : DD.dot ? cD : DD.circle && ID % 2 === 0 ? 2 : 1
+            }(DD, cD, iD, SD),
+            yD = [];
+          if (DD.lines && (yD.push({
+              x: BD + pD,
               y: 0,
-              w: Ez,
-              h: bz,
+              w: ID,
+              h: cD,
               arm: "right"
-            }), dz.push({
-              x: -nz - Ez,
+            }), yD.push({
+              x: -pD - ID,
               y: 0,
-              w: Ez,
-              h: bz,
+              w: ID,
+              h: cD,
               arm: "left"
-            }), dz.push({
+            }), yD.push({
               x: 0,
-              y: pz + nz,
-              w: bz,
-              h: Ez,
+              y: BD + pD,
+              w: cD,
+              h: ID,
               arm: "down"
-            }), zz.tStyle || dz.push({
+            }), DD.tStyle || yD.push({
               x: 0,
-              y: -nz - Ez,
-              w: bz,
-              h: Ez,
+              y: -pD - ID,
+              w: cD,
+              h: ID,
               arm: "up"
-            }), 0 === nz && dz.push({
+            }), 0 === pD && yD.push({
               x: 0,
               y: 0,
-              w: bz,
-              h: bz
-            })), zz.dot) {
-            const zz = Math.floor((pz - iz) / 2);
-            dz.push({
-              x: zz,
-              y: zz,
-              w: iz,
-              h: iz
+              w: cD,
+              h: cD
+            })), DD.dot) {
+            const DD = Math.floor((BD - iD) / 2);
+            yD.push({
+              x: DD,
+              y: DD,
+              w: iD,
+              h: iD
             })
           }
-          const Fz = dz.map((zz => ({
-            ...zz,
-            x: zz.x - lz,
-            y: zz.y - lz,
-            w: zz.w + 2 * lz,
-            h: zz.h + 2 * lz
+          const MD = yD.map((DD => ({
+            ...DD,
+            x: DD.x - fD,
+            y: DD.y - fD,
+            w: DD.w + 2 * fD,
+            h: DD.h + 2 * fD
           })));
-          let Zz = null,
-            Rz = null;
-          if (zz.circle) {
-            const zz = Oz + ((Oz - pz) % 2 === 0 ? 0 : 1),
-              uz = (pz - zz) / 2;
-            Zz = tz(uz, zz, Hz), lz > 0 && (Rz = tz(uz - lz, zz + 2 * lz, Hz + 2 * lz))
+          let tD = null,
+            ZD = null;
+          if (DD.circle) {
+            const DD = SD + ((SD - BD) % 2 === 0 ? 0 : 1),
+              CD = (BD - DD) / 2;
+            tD = QD(CD, DD, wD), fD > 0 && (ZD = QD(CD - fD, DD + 2 * fD, wD + 2 * fD))
           }
           return {
-            cell: pz,
-            fills: dz,
-            outlines: lz > 0 ? Fz : [],
-            ring: Zz,
-            ringOutline: Rz
+            cell: BD,
+            fills: yD,
+            outlines: fD > 0 ? MD : [],
+            ring: tD,
+            ringOutline: ZD
           }
-        }(pz && uz.growOnClick ? function(zz, uz) {
+        }(BD && CD.growOnClick ? function(DD, CD) {
           return {
-            ...zz,
-            outline: zz.outline * uz,
-            lineLength: zz.lineLength * uz,
-            lineThickness: zz.lineThickness * uz,
-            gap: zz.gap * uz,
-            dotSize: zz.dotSize * uz,
-            circleRadius: zz.circleRadius * uz,
-            circleThickness: zz.circleThickness * uz
+            ...DD,
+            outline: DD.outline * CD,
+            lineLength: DD.lineLength * CD,
+            lineThickness: DD.lineThickness * CD,
+            gap: DD.gap * CD,
+            dotSize: DD.dotSize * CD,
+            circleRadius: DD.circleRadius * CD,
+            circleThickness: DD.circleThickness * CD
           }
-        }(uz, Oz) : uz, Kz),
-        Nz = function(zz, uz, bz) {
-          const Ez = Math.round((zz.left + zz.width / 2) * bz - uz / 2),
-            nz = Math.round((zz.top + zz.height / 2) * bz - uz / 2);
+        }(CD, SD) : CD, oD),
+        OD = function(DD, CD, cD) {
+          const ID = Math.round((DD.left + DD.width / 2) * cD - CD / 2),
+            pD = Math.round((DD.top + DD.height / 2) * cD - CD / 2);
           return {
-            x: Ez / bz - zz.left,
-            y: nz / bz - zz.top
+            x: ID / cD - DD.left,
+            y: pD / cD - DD.top
           }
-        }(Rz, oz.cell, Kz),
-        vz = (0, lz.m)(uz.color),
-        xz = (0, lz.m)(uz.outlineColor),
-        Jz = (0, iz.useRef)(0);
-      (0, iz.useLayoutEffect)((() => {
-        if (Fz) return Fz.current = zz => {
-          var uz;
-          Jz.current = zz, null === (uz = Zz.current) || void 0 === uz || uz.querySelectorAll("[data-arm]").forEach((uz => {
-            Object.assign(uz.style, sz(function(zz) {
+        }(ZD, nD.cell, oD),
+        PD = (0, fD.o)(CD.color),
+        HD = (0, fD.o)(CD.outlineColor),
+        UD = (0, iD.useRef)(0);
+      (0, iD.useLayoutEffect)((() => {
+        if (MD) return MD.current = DD => {
+          var CD;
+          UD.current = DD, null === (CD = tD.current) || void 0 === CD || CD.querySelectorAll("[data-arm]").forEach((CD => {
+            Object.assign(CD.style, XD(function(DD) {
               return {
-                x: Number(zz.dataset.x),
-                y: Number(zz.dataset.y),
-                arm: zz.dataset.arm
+                x: Number(DD.dataset.x),
+                y: Number(DD.dataset.y),
+                arm: DD.dataset.arm
               }
-            }(uz), zz, fz.current))
+            }(CD), DD, gD.current))
           }))
         }, () => {
-          Fz.current = null
+          MD.current = null
         }
-      }), [Fz]);
-      const Az = null !== dz && void 0 !== dz ? dz : Jz.current;
-      return (0, Hz.jsx)("div", {
-        ref: Zz,
-        className: nz()("CrosshairShapes", {
-          CrosshairInPreview: bz,
-          CrosshairInEditor: Ez || bz,
-          CrosshairSpreads: void 0 !== Fz
+      }), [MD]);
+      const xD = null !== yD && void 0 !== yD ? yD : UD.current;
+      return (0, wD.jsx)("div", {
+        ref: tD,
+        className: pD()("CrosshairShapes", {
+          CrosshairInPreview: cD,
+          CrosshairInEditor: ID || cD,
+          CrosshairSpreads: void 0 !== MD
         }),
-        children: (0, Hz.jsx)("div", {
+        children: (0, wD.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: Nz.x,
-            top: Nz.y,
-            opacity: uz.opacity / 100
+            left: OD.x,
+            top: OD.y,
+            opacity: CD.opacity / 100
           },
-          children: (0, Hz.jsxs)("div", {
+          children: (0, wD.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [oz.ringOutline && (0, Hz.jsx)("div", {
+            children: [nD.ringOutline && (0, wD.jsx)("div", {
               className: "CrosshairRing",
-              style: Xz(oz.ringOutline, Kz, xz)
-            }), oz.outlines.map(((zz, uz) => (0, Hz.jsx)("div", {
+              style: ND(nD.ringOutline, oD, HD)
+            }), nD.outlines.map(((DD, CD) => (0, wD.jsx)("div", {
               className: "CrosshairPart",
-              ...rz(zz),
-              style: wz(zz, Az, Kz, xz)
-            }, `o${uz}`))), oz.ring && (0, Hz.jsx)("div", {
+              ...mD(DD),
+              style: vD(DD, xD, oD, HD)
+            }, `o${CD}`))), nD.ring && (0, wD.jsx)("div", {
               className: "CrosshairRing",
-              style: Xz(oz.ring, Kz, vz)
-            }), oz.fills.map(((zz, uz) => (0, Hz.jsx)("div", {
+              style: ND(nD.ring, oD, PD)
+            }), nD.fills.map(((DD, CD) => (0, wD.jsx)("div", {
               className: "CrosshairPart",
-              ...rz(zz),
-              style: wz(zz, Az, Kz, vz)
-            }, `f${uz}`)))]
+              ...mD(DD),
+              style: vD(DD, xD, oD, PD)
+            }, `f${CD}`)))]
           })
         })
       })
     }
   },
-  8962: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Oz,
-      g: () => Kz,
-      h: () => Rz
+  9028: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => SD,
+      e: () => oD,
+      g: () => ZD
     });
-    var Ez = bz(8928);
-    const nz = "XH1-",
-      iz = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      lz = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      Mz = ["color", "outlineColor"],
-      tz = 1 + 3 * Mz.length + lz.length + 1,
-      Hz = Math.ceil(8 * tz / Math.log2(62)),
-      Oz = nz.length + Hz;
+    var ID = cD(8991);
+    const pD = "XH1-",
+      iD = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      fD = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      bD = ["color", "outlineColor"],
+      QD = 1 + 3 * bD.length + fD.length + 1,
+      wD = Math.ceil(8 * QD / Math.log2(62)),
+      SD = pD.length + wD;
 
-    function pz(zz) {
-      let uz = 90;
-      for (const bz of zz) uz = 31 * uz + bz & 255;
-      return uz
+    function BD(DD) {
+      let CD = 90;
+      for (const cD of DD) CD = 31 * CD + cD & 255;
+      return CD
     }
-    const dz = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      Fz = BigInt(dz.length);
+    const yD = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      MD = BigInt(yD.length);
 
-    function Zz(zz, uz) {
-      let bz = 0n;
-      for (const nz of zz) {
-        const zz = dz.indexOf(nz);
-        if (zz < 0) return null;
-        bz = bz * Fz + BigInt(zz)
+    function tD(DD, CD) {
+      let cD = 0n;
+      for (const pD of DD) {
+        const DD = yD.indexOf(pD);
+        if (DD < 0) return null;
+        cD = cD * MD + BigInt(DD)
       }
-      if (bz >> BigInt(8 * uz) !== 0n) return null;
-      const Ez = [];
-      for (let nz = 0; nz < uz; nz++) Ez.unshift(Number(0xffn & bz)), bz >>= 8n;
-      return Ez
+      if (cD >> BigInt(8 * CD) !== 0n) return null;
+      const ID = [];
+      for (let pD = 0; pD < CD; pD++) ID.unshift(Number(0xffn & cD)), cD >>= 8n;
+      return ID
     }
 
-    function Rz(zz) {
-      let uz = "shapes" === zz.style ? 1 : 0;
-      iz.forEach(((bz, Ez) => {
-        zz[bz] && (uz |= 1 << Ez + 1)
+    function ZD(DD) {
+      let CD = "shapes" === DD.style ? 1 : 0;
+      iD.forEach(((cD, ID) => {
+        DD[cD] && (CD |= 1 << ID + 1)
       }));
-      const bz = [uz];
-      for (const nz of Mz) {
-        const uz = (0, Ez.j)(nz, zz[nz]);
-        bz.push(uz >> 16 & 255, uz >> 8 & 255, 255 & uz)
+      const cD = [CD];
+      for (const pD of bD) {
+        const CD = (0, ID.l)(pD, DD[pD]);
+        cD.push(CD >> 16 & 255, CD >> 8 & 255, 255 & CD)
       }
-      for (const nz of lz) {
+      for (const pD of fD) {
         const {
-          min: uz,
-          step: iz
-        } = Ez.b[nz];
-        bz.push(Math.round(((0, Ez.j)(nz, zz[nz]) - uz) / iz))
+          min: CD,
+          step: iD
+        } = ID.e[pD];
+        cD.push(Math.round(((0, ID.l)(pD, DD[pD]) - CD) / iD))
       }
-      return bz.push(pz(bz)), nz + function(zz, uz) {
-        let bz = 0n;
-        for (const nz of zz) bz = bz << 8n | BigInt(nz);
-        let Ez = "";
-        for (let nz = 0; nz < uz; nz++) Ez = dz[Number(bz % Fz)] + Ez, bz /= Fz;
-        return Ez
-      }(bz, Hz)
+      return cD.push(BD(cD)), pD + function(DD, CD) {
+        let cD = 0n;
+        for (const pD of DD) cD = cD << 8n | BigInt(pD);
+        let ID = "";
+        for (let pD = 0; pD < CD; pD++) ID = yD[Number(cD % MD)] + ID, cD /= MD;
+        return ID
+      }(cD, wD)
     }
 
-    function Kz(zz) {
-      for (const uz of zz.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Hz}})`, "gi"))) {
-        const zz = wz(Zz(uz[1], tz));
-        if (zz) return zz
+    function oD(DD) {
+      for (const CD of DD.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${wD}})`, "gi"))) {
+        const DD = vD(tD(CD[1], QD));
+        if (DD) return DD
       }
       return null
     }
 
-    function wz(zz) {
-      if (!zz || zz.length !== tz || pz(zz.slice(0, -1)) !== zz[zz.length - 1]) return null;
-      const uz = zz[0],
-        bz = {
-          ...Ez.f,
-          style: 1 & uz ? "shapes" : "classic"
+    function vD(DD) {
+      if (!DD || DD.length !== QD || BD(DD.slice(0, -1)) !== DD[DD.length - 1]) return null;
+      const CD = DD[0],
+        cD = {
+          ...ID.h,
+          style: 1 & CD ? "shapes" : "classic"
         };
-      iz.forEach(((zz, Ez) => {
-        bz[zz] = 0 !== (uz & 1 << Ez + 1)
+      iD.forEach(((DD, ID) => {
+        cD[DD] = 0 !== (CD & 1 << ID + 1)
       }));
-      let nz = 1;
-      for (const Ez of Mz) bz[Ez] = zz[nz] << 16 | zz[nz + 1] << 8 | zz[nz + 2], nz += 3;
-      for (const iz of lz) {
+      let pD = 1;
+      for (const ID of bD) cD[ID] = DD[pD] << 16 | DD[pD + 1] << 8 | DD[pD + 2], pD += 3;
+      for (const iD of fD) {
         const {
-          min: uz,
-          step: lz
-        } = Ez.b[iz];
-        bz[iz] = (0, Ez.j)(iz, uz + zz[nz] * lz), nz++
+          min: CD,
+          step: fD
+        } = ID.e[iD];
+        cD[iD] = (0, ID.l)(iD, CD + DD[pD] * fD), pD++
       }
-      return bz
+      return cD
     }
   },
-  8928: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez,
-      f: () => nz,
-      j: () => iz,
-      m: () => Hz,
-      n: () => tz,
-      p: () => Oz,
-      t: () => Mz,
-      u: () => lz
+  8991: (DD, CD, cD) => {
+    cD.d(CD, {
+      A: () => fD,
+      e: () => ID,
+      h: () => pD,
+      l: () => iD,
+      o: () => wD,
+      s: () => QD,
+      u: () => SD,
+      w: () => bD
     });
-    const Ez = {
+    const ID = {
         opacity: {
           min: 5,
           max: 100,
@@ -8827,7 +8827,7 @@ export const modules = {
           step: 1
         }
       },
-      nz = Object.freeze({
+      pD = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -8848,271 +8848,271 @@ export const modules = {
         forGuns: !1
       });
 
-    function iz(zz, uz) {
-      var bz;
+    function iD(DD, CD) {
+      var cD;
       const {
-        min: iz,
-        max: lz,
-        step: Mz
-      } = Ez[zz];
-      if (!Number.isFinite(uz)) return nz[zz];
-      const tz = (null !== (bz = String(Mz).split(".")[1]) && void 0 !== bz ? bz : "").length,
-        Hz = Number((Math.round(uz / Mz) * Mz).toFixed(tz));
-      return Math.min(lz, Math.max(iz, Hz))
+        min: iD,
+        max: fD,
+        step: bD
+      } = ID[DD];
+      if (!Number.isFinite(CD)) return pD[DD];
+      const QD = (null !== (cD = String(bD).split(".")[1]) && void 0 !== cD ? cD : "").length,
+        wD = Number((Math.round(CD / bD) * bD).toFixed(QD));
+      return Math.min(fD, Math.max(iD, wD))
     }
 
-    function lz(zz, uz, bz) {
-      const Ez = "number" === typeof bz ? iz(uz, bz) : bz;
+    function fD(DD, CD, cD) {
+      const ID = "number" === typeof cD ? iD(CD, cD) : cD;
       return {
-        ...zz,
-        [uz]: Ez
+        ...DD,
+        [CD]: ID
       }
     }
 
-    function Mz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(nz).every((Ez => bz.includes(Ez) || zz[Ez] === uz[Ez]))
+    function bD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(pD).every((ID => cD.includes(ID) || DD[ID] === CD[ID]))
     }
 
-    function tz(zz) {
-      return Mz(zz, nz)
+    function QD(DD) {
+      return bD(DD, pD)
     }
 
-    function Hz(zz) {
-      return `#${zz.toString(16).padStart(6,"0")}`
+    function wD(DD) {
+      return `#${DD.toString(16).padStart(6,"0")}`
     }
 
-    function Oz(zz) {
-      const uz = /^#?([0-9a-f]{6})$/i.exec(zz.trim());
-      return uz ? parseInt(uz[1], 16) : null
+    function SD(DD) {
+      const CD = /^#?([0-9a-f]{6})$/i.exec(DD.trim());
+      return CD ? parseInt(CD[1], 16) : null
     }
   },
-  8970: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => pz,
-      f: () => dz
+  9037: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => BD,
+      h: () => yD
     });
-    var Ez = bz(56),
-      nz = bz(33),
-      iz = bz(8962),
-      lz = bz(8928);
-    const Mz = "crosshairCode";
-    let tz = null;
-    const Hz = new Set;
+    var ID = cD(53),
+      pD = cD(36),
+      iD = cD(9028),
+      fD = cD(8991);
+    const bD = "crosshairCode";
+    let QD = null;
+    const wD = new Set;
 
-    function Oz() {
-      if (null === tz) {
-        var zz;
-        const uz = nz.g.getItem(Mz);
-        tz = null !== (zz = "string" === typeof uz ? (0, iz.g)(uz) : null) && void 0 !== zz ? zz : lz.f
+    function SD() {
+      if (null === QD) {
+        var DD;
+        const CD = pD.h.getItem(bD);
+        QD = null !== (DD = "string" === typeof CD ? (0, iD.e)(CD) : null) && void 0 !== DD ? DD : fD.h
       }
-      return tz
+      return QD
     }
 
-    function pz(zz) {
-      tz = zz, (0, lz.n)(zz) ? nz.g.removeItem(Mz) : nz.g.setItem(Mz, (0, iz.h)(zz));
-      for (const uz of Hz) uz()
+    function BD(DD) {
+      QD = DD, (0, fD.s)(DD) ? pD.h.removeItem(bD) : pD.h.setItem(bD, (0, iD.g)(DD));
+      for (const CD of wD) CD()
     }
 
-    function dz() {
-      const [zz, uz] = (0, Ez.useState)(Oz);
-      return (0, Ez.useEffect)((() => {
-        const zz = () => {
-          uz(Oz())
+    function yD() {
+      const [DD, CD] = (0, ID.useState)(SD);
+      return (0, ID.useEffect)((() => {
+        const DD = () => {
+          CD(SD())
         };
-        return zz(), bz = zz, Hz.add(bz), () => {
-          Hz.delete(bz)
+        return DD(), cD = DD, wD.add(cD), () => {
+          wD.delete(cD)
         };
-        var bz
-      }), []), zz
+        var cD
+      }), []), DD
     }
   },
-  8563: (zz, uz, bz) => {
-    function Ez(zz) {
+  8591: (DD, CD, cD) => {
+    function ID(DD) {
       return {
-        x: (zz.left + zz.right) / 2,
-        y: (zz.top + zz.bottom) / 2
+        x: (DD.left + DD.right) / 2,
+        y: (DD.top + DD.bottom) / 2
       }
     }
 
-    function nz(zz) {
-      return 0 === zz.length ? null : zz.reduce(((zz, uz) => ({
-        left: Math.min(zz.left, uz.left),
-        top: Math.min(zz.top, uz.top),
-        right: Math.max(zz.right, uz.right),
-        bottom: Math.max(zz.bottom, uz.bottom)
+    function pD(DD) {
+      return 0 === DD.length ? null : DD.reduce(((DD, CD) => ({
+        left: Math.min(DD.left, CD.left),
+        top: Math.min(DD.top, CD.top),
+        right: Math.max(DD.right, CD.right),
+        bottom: Math.max(DD.bottom, CD.bottom)
       })))
     }
 
-    function iz(zz, uz) {
-      const bz = Math.max(0, (uz - (zz.right - zz.left)) / 2),
-        Ez = Math.max(0, (uz - (zz.bottom - zz.top)) / 2);
+    function iD(DD, CD) {
+      const cD = Math.max(0, (CD - (DD.right - DD.left)) / 2),
+        ID = Math.max(0, (CD - (DD.bottom - DD.top)) / 2);
       return {
-        left: zz.left - bz,
-        top: zz.top - Ez,
-        right: zz.right + bz,
-        bottom: zz.bottom + Ez
+        left: DD.left - cD,
+        top: DD.top - ID,
+        right: DD.right + cD,
+        bottom: DD.bottom + ID
       }
     }
 
-    function lz(zz, uz) {
-      return uz.x >= zz.left && uz.x <= zz.right && uz.y >= zz.top && uz.y <= zz.bottom
+    function fD(DD, CD) {
+      return CD.x >= DD.left && CD.x <= DD.right && CD.y >= DD.top && CD.y <= DD.bottom
     }
 
-    function Mz(zz, uz, bz) {
-      let nz = null,
-        Mz = 1 / 0;
+    function bD(DD, CD, cD) {
+      let pD = null,
+        bD = 1 / 0;
       for (const {
-          id: Ez,
-          box: iz
+          id: ID,
+          box: iD
         }
-        of uz) {
-        const uz = (iz.right - iz.left) * (iz.bottom - iz.top);
-        lz(iz, zz) && uz < Mz && (Mz = uz, nz = Ez)
+        of CD) {
+        const CD = (iD.right - iD.left) * (iD.bottom - iD.top);
+        fD(iD, DD) && CD < bD && (bD = CD, pD = ID)
       }
-      if (null !== nz) return nz;
-      let tz = 1 / 0;
+      if (null !== pD) return pD;
+      let QD = 1 / 0;
       for (const {
-          id: Hz,
-          box: Oz
+          id: wD,
+          box: SD
         }
-        of uz) {
-        if (!lz(iz(Oz, bz), zz)) continue;
-        const uz = Ez(Oz),
-          Mz = Math.hypot(zz.x - uz.x, zz.y - uz.y);
-        Mz < tz && (tz = Mz, nz = Hz)
+        of CD) {
+        if (!fD(iD(SD, cD), DD)) continue;
+        const CD = ID(SD),
+          bD = Math.hypot(DD.x - CD.x, DD.y - CD.y);
+        bD < QD && (QD = bD, pD = wD)
       }
-      return nz
+      return pD
     }
 
-    function tz(zz, uz, bz) {
+    function QD(DD, CD, cD) {
       return {
-        left: bz.left,
-        top: bz.top,
-        right: zz - bz.right,
-        bottom: uz - bz.bottom
+        left: cD.left,
+        top: cD.top,
+        right: DD - cD.right,
+        bottom: CD - cD.bottom
       }
     }
 
-    function Hz(zz, uz, bz, Ez) {
-      const nz = (zz, uz, bz) => Math.max(Math.min(uz, 0), Math.min(Math.max(bz, 0), zz));
+    function wD(DD, CD, cD, ID) {
+      const pD = (DD, CD, cD) => Math.max(Math.min(CD, 0), Math.min(Math.max(cD, 0), DD));
       return {
-        x: nz(uz, Ez.left - zz.left, Ez.right - zz.right),
-        y: nz(bz, Ez.top - zz.top, Ez.bottom - zz.bottom)
+        x: pD(CD, ID.left - DD.left, ID.right - DD.right),
+        y: pD(cD, ID.top - DD.top, ID.bottom - DD.bottom)
       }
     }
 
-    function Oz(zz, uz, bz, Ez, nz) {
-      const iz = zz.dx * Ez + uz,
-        lz = zz.dy * nz + bz,
-        Mz = zz => Math.max(-1, Math.min(1, zz));
+    function SD(DD, CD, cD, ID, pD) {
+      const iD = DD.dx * ID + CD,
+        fD = DD.dy * pD + cD,
+        bD = DD => Math.max(-1, Math.min(1, DD));
       return {
-        dx: Mz(iz / Ez),
-        dy: Mz(lz / nz)
+        dx: bD(iD / ID),
+        dy: bD(fD / pD)
       }
     }
 
-    function pz(zz, uz, bz, Ez) {
-      return uz <= 0 || bz <= 0 ? 1 : Math.max(.05, Math.min(1, zz / uz, Ez / bz))
+    function BD(DD, CD, cD, ID) {
+      return CD <= 0 || cD <= 0 ? 1 : Math.max(.05, Math.min(1, DD / CD, ID / cD))
     }
 
-    function dz(zz, uz, bz) {
-      return Math.min(zz.right, uz.right) - Math.max(zz.left, uz.left) > bz && Math.min(zz.bottom, uz.bottom) - Math.max(zz.top, uz.top) > bz
+    function yD(DD, CD, cD) {
+      return Math.min(DD.right, CD.right) - Math.max(DD.left, CD.left) > cD && Math.min(DD.bottom, CD.bottom) - Math.max(DD.top, CD.top) > cD
     }
 
-    function Fz(zz, uz) {
-      const bz = (zz, uz, bz, Ez) => uz - zz > Ez - bz ? bz - zz > uz - Ez ? Ez - uz : bz - zz : zz < bz ? bz - zz : uz > Ez ? Ez - uz : 0;
+    function MD(DD, CD) {
+      const cD = (DD, CD, cD, ID) => CD - DD > ID - cD ? cD - DD > CD - ID ? ID - CD : cD - DD : DD < cD ? cD - DD : CD > ID ? ID - CD : 0;
       return {
-        x: bz(zz.left, zz.right, uz.left, uz.right),
-        y: bz(zz.top, zz.bottom, uz.top, uz.bottom)
+        x: cD(DD.left, DD.right, CD.left, CD.right),
+        y: cD(DD.top, DD.bottom, CD.top, CD.bottom)
       }
     }
 
-    function Zz(zz, uz) {
+    function tD(DD, CD) {
       let {
-        avoid: bz = null,
-        bounds: Ez = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, nz = 0, iz = 1 / 0;
-      return zz.forEach(((zz, lz) => {
-        const Mz = uz.filter((uz => dz(zz, uz, 0))).length,
-          tz = null !== Ez && (zz.left < Ez.left || zz.top < Ez.top || zz.right > Ez.right || zz.bottom > Ez.bottom),
-          Hz = Mz + (bz && dz(zz, bz, 0) ? 1e3 : 0) + (tz ? 1e6 : 0);
-        Hz < iz && (nz = lz, iz = Hz)
-      })), nz
+        avoid: cD = null,
+        bounds: ID = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, pD = 0, iD = 1 / 0;
+      return DD.forEach(((DD, fD) => {
+        const bD = CD.filter((CD => yD(DD, CD, 0))).length,
+          QD = null !== ID && (DD.left < ID.left || DD.top < ID.top || DD.right > ID.right || DD.bottom > ID.bottom),
+          wD = bD + (cD && yD(DD, cD, 0) ? 1e3 : 0) + (QD ? 1e6 : 0);
+        wD < iD && (pD = fD, iD = wD)
+      })), pD
     }
-    bz.d(uz, {
-      e: () => Ez,
-      h: () => lz,
-      i: () => dz,
-      l: () => Hz,
-      n: () => iz,
-      o: () => Zz,
-      p: () => Oz,
-      q: () => Mz,
-      r: () => pz,
-      u: () => tz,
-      w: () => Fz,
-      x: () => nz
+    cD.d(CD, {
+      B: () => BD,
+      F: () => QD,
+      I: () => MD,
+      J: () => pD,
+      c: () => ID,
+      f: () => fD,
+      j: () => yD,
+      m: () => wD,
+      q: () => iD,
+      s: () => tD,
+      v: () => SD,
+      y: () => bD
     })
   },
-  8920: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz,
-      g: () => nz
+  8986: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => iD,
+      g: () => pD
     });
-    var Ez = bz(20);
+    var ID = cD(16);
 
-    function nz(zz, uz) {
-      return zz && !uz
+    function pD(DD, CD) {
+      return DD && !CD
     }
 
-    function iz() {
-      return nz(Ez.e.get("isTouchScreen"), Ez.e.get("clientEscMenuOptions").touchActionButtons)
+    function iD() {
+      return pD(ID.d.get("isTouchScreen"), ID.d.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  8889: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Ez
+  8934: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => ID
     });
-    const Ez = new Set(["chunkBorders"])
+    const ID = new Set(["chunkBorders"])
   },
-  8886: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      ALL_DEV_TOOLS: () => lz,
-      coreDevTools: () => Hz,
-      devTools: () => tz
+  8925: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      ALL_DEV_TOOLS: () => fD,
+      coreDevTools: () => wD,
+      devTools: () => QD
     });
-    var Ez = bz(606),
-      nz = bz(1273),
-      iz = bz(8889);
-    const lz = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function Mz() {
+    var ID = cD(646),
+      pD = cD(1294),
+      iD = cD(8934);
+    const fD = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function bD() {
       const {
-        noaDevTools: zz
-      } = await bz.e(230).then((() => bz(40259)));
-      return zz
+        noaDevTools: DD
+      } = await cD.e(230).then((() => cD(40148)));
+      return DD
     }
-    const tz = new class {
+    const QD = new class {
         constructor() {
-          this.loadHost = Mz, this.tools = lz
+          this.loadHost = bD, this.tools = fD
         }
-        setHost(zz) {
-          this.tools = null === zz ? lz : zz.tools, this.loadHost = null === zz ? Mz : async () => zz
+        setHost(DD) {
+          this.tools = null === DD ? fD : DD.tools, this.loadHost = null === DD ? bD : async () => DD
         }
-        supports(zz) {
-          return this.tools.has(zz)
+        supports(DD) {
+          return this.tools.has(DD)
         }
-        async downloadScene(zz, uz) {
-          const bz = await this.loadHost();
-          await bz.downloadScene(zz, uz)
+        async downloadScene(DD, CD) {
+          const cD = await this.loadHost();
+          await cD.downloadScene(DD, CD)
         }
-        async setAmbientLightIntensity(zz) {
-          const uz = await this.loadHost();
-          await uz.setAmbientLightIntensity(zz)
+        async setAmbientLightIntensity(DD) {
+          const CD = await this.loadHost();
+          await CD.setAmbientLightIntensity(DD)
         }
       },
-      Hz = {
-        tools: iz.d,
+      wD = {
+        tools: iD.d,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -9120,121 +9120,121 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    Ez.x && tz.setHost(Hz), (0, nz.s)((() => {
-      tz.setHost(Hz)
+    ID.q && QD.setHost(wD), (0, pD.s)((() => {
+      QD.setHost(wD)
     }))
   },
-  9028: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => lz,
-      e: () => nz,
-      g: () => Oz
+  9080: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => fD,
+      g: () => pD,
+      h: () => SD
     });
-    var Ez = bz(1531);
+    var ID = cD(1562);
 
-    function nz(zz) {
-      var uz;
+    function pD(DD) {
+      var CD;
       return {
-        ...lz.store,
-        yaw: lz.store.yaw + (null !== (uz = Ez.c[zz].previewYaw) && void 0 !== uz ? uz : 0)
+        ...fD.store,
+        yaw: fD.store.yaw + (null !== (CD = ID.c[DD].previewYaw) && void 0 !== CD ? CD : 0)
       }
     }
-    const iz = {
+    const iD = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      lz = {
-        player: iz,
+      fD = {
+        player: iD,
         store: {
-          ...iz,
+          ...iD,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function Mz(zz, uz) {
-      zz instanceof Promise ? zz.then(uz).catch((zz => {
-        console.error("Couldn't open the preview", zz)
-      })) : uz(zz)
+    function bD(DD, CD) {
+      DD instanceof Promise ? DD.then(CD).catch((DD => {
+        console.error("Couldn't open the preview", DD)
+      })) : CD(DD)
     }
-    class tz {
-      constructor(zz) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, Mz(zz, (zz => {
-          this.closed ? zz.close() : (this.opened = zz, null !== this.size && zz.resize(this.size.width, this.size.height), null !== this.view && zz.show(this.view))
+    class QD {
+      constructor(DD) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, bD(DD, (DD => {
+          this.closed ? DD.close() : (this.opened = DD, null !== this.size && DD.resize(this.size.width, this.size.height), null !== this.view && DD.show(this.view))
         }))
       }
-      show(zz) {
-        var uz;
-        this.view = zz, null === (uz = this.opened) || void 0 === uz || uz.show(zz)
+      show(DD) {
+        var CD;
+        this.view = DD, null === (CD = this.opened) || void 0 === CD || CD.show(DD)
       }
-      resize(zz, uz) {
-        var bz;
+      resize(DD, CD) {
+        var cD;
         this.size = {
-          width: zz,
-          height: uz
-        }, null === (bz = this.opened) || void 0 === bz || bz.resize(zz, uz)
+          width: DD,
+          height: CD
+        }, null === (cD = this.opened) || void 0 === cD || cD.resize(DD, CD)
       }
       close() {
-        var zz;
-        this.closed = !0, null === (zz = this.opened) || void 0 === zz || zz.close(), this.opened = null
+        var DD;
+        this.closed = !0, null === (DD = this.opened) || void 0 === DD || DD.close(), this.opened = null
       }
     }
-    class Hz {
-      constructor(zz) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(zz).then((zz => zz.ready)), Mz(zz, (zz => {
-          this.closed ? zz.close() : (this.opened = zz, null !== this.size && zz.resize(this.size.width, this.size.height))
+    class wD {
+      constructor(DD) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(DD).then((DD => DD.ready)), bD(DD, (DD => {
+          this.closed ? DD.close() : (this.opened = DD, null !== this.size && DD.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var zz, uz;
-        return null !== (zz = null === (uz = this.opened) || void 0 === uz ? void 0 : uz.isReady()) && void 0 !== zz && zz
+        var DD, CD;
+        return null !== (DD = null === (CD = this.opened) || void 0 === CD ? void 0 : CD.isReady()) && void 0 !== DD && DD
       }
-      setCosmetic(zz, uz) {
-        var bz;
-        null === (bz = this.opened) || void 0 === bz || bz.setCosmetic(zz, uz)
+      setCosmetic(DD, CD) {
+        var cD;
+        null === (cD = this.opened) || void 0 === cD || cD.setCosmetic(DD, CD)
       }
-      playEmote(zz) {
-        var uz;
-        null === (uz = this.opened) || void 0 === uz || uz.playEmote(zz)
+      playEmote(DD) {
+        var CD;
+        null === (CD = this.opened) || void 0 === CD || CD.playEmote(DD)
       }
-      setOrbit(zz) {
-        var uz;
-        null === (uz = this.opened) || void 0 === uz || uz.setOrbit(zz)
+      setOrbit(DD) {
+        var CD;
+        null === (CD = this.opened) || void 0 === CD || CD.setOrbit(DD)
       }
       resetCamera() {
-        var zz;
-        null === (zz = this.opened) || void 0 === zz || zz.resetCamera()
+        var DD;
+        null === (DD = this.opened) || void 0 === DD || DD.resetCamera()
       }
-      async untilDrawn(zz) {
-        var uz;
-        await this.ready, await (null === (uz = this.opened) || void 0 === uz ? void 0 : uz.untilDrawn(zz))
+      async untilDrawn(DD) {
+        var CD;
+        await this.ready, await (null === (CD = this.opened) || void 0 === CD ? void 0 : CD.untilDrawn(DD))
       }
-      resize(zz, uz) {
-        var bz;
+      resize(DD, CD) {
+        var cD;
         this.size = {
-          width: zz,
-          height: uz
-        }, null === (bz = this.opened) || void 0 === bz || bz.resize(zz, uz)
+          width: DD,
+          height: CD
+        }, null === (cD = this.opened) || void 0 === cD || cD.resize(DD, CD)
       }
       close() {
-        var zz;
-        this.closed = !0, null === (zz = this.opened) || void 0 === zz || zz.close(), this.opened = null
+        var DD;
+        this.closed = !0, null === (DD = this.opened) || void 0 === DD || DD.close(), this.opened = null
       }
     }
-    const Oz = new class {
+    const SD = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(zz) {
-        this.host = zz
+      setHost(DD) {
+        this.host = DD
       }
-      setDefaultHost(zz) {
-        this.makeDefault = zz
+      setDefaultHost(DD) {
+        this.makeDefault = DD
       }
       current() {
         if (null === this.host) {
@@ -9243,99 +9243,99 @@ export const modules = {
         }
         return this.host
       }
-      openMob(zz) {
-        return new tz(this.current().openMob(zz))
+      openMob(DD) {
+        return new QD(this.current().openMob(DD))
       }
-      openPet(zz) {
-        return new tz(this.current().openPet(zz))
+      openPet(DD) {
+        return new QD(this.current().openPet(DD))
       }
-      openMobLineup(zz) {
-        return new tz(this.current().openMobLineup(zz))
+      openMobLineup(DD) {
+        return new QD(this.current().openMobLineup(DD))
       }
-      openCharacter(zz, uz) {
-        return new Hz(this.current().openCharacter(zz, uz))
+      openCharacter(DD, CD) {
+        return new wD(this.current().openCharacter(DD, CD))
       }
     }
   },
-  9020: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Ez.b,
-      g: () => Ez.e,
-      j: () => Ez.g
+  9074: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => ID.c,
+      e: () => ID.g,
+      f: () => ID.h
     });
-    var Ez = bz(9028);
-    class nz {
-      constructor(zz) {
-        this.load = zz, this.loaded = null, this.loading = null
+    var ID = cD(9080);
+    class pD {
+      constructor(DD) {
+        this.load = DD, this.loaded = null, this.loading = null
       }
-      run(zz) {
-        return null !== this.loaded ? zz(this.loaded) : (this.loading ??= this.load().then((zz => (this.loaded = zz, zz)), (zz => {
-          throw this.loading = null, zz
-        })), this.loading.then(zz))
+      run(DD) {
+        return null !== this.loaded ? DD(this.loaded) : (this.loading ??= this.load().then((DD => (this.loaded = DD, DD)), (DD => {
+          throw this.loading = null, DD
+        })), this.loading.then(DD))
       }
     }
-    class iz {
+    class iD {
       constructor() {
-        this.mobScene = new nz((() => Promise.all([bz.e(69), bz.e(226), bz.e(225), bz.e(244), bz.e(94), bz.e(245), bz.e(72), bz.e(71), bz.e(242), bz.e(70), bz.e(252), bz.e(246), bz.e(251), bz.e(249), bz.e(241), bz.e(218), bz.e(264), bz.e(222), bz.e(236), bz.e(247), bz.e(250), bz.e(74), bz.e(196), bz.e(215), bz.e(219), bz.e(93), bz.e(113), bz.e(234), bz.e(73), bz.e(112), bz.e(153)]).then((() => bz(40273))))), this.characterScene = new nz((() => Promise.all([bz.e(69), bz.e(226), bz.e(225), bz.e(244), bz.e(94), bz.e(245), bz.e(72), bz.e(71), bz.e(242), bz.e(70), bz.e(252), bz.e(246), bz.e(251), bz.e(249), bz.e(241), bz.e(218), bz.e(264), bz.e(222), bz.e(236), bz.e(247), bz.e(250), bz.e(74), bz.e(196), bz.e(215), bz.e(219), bz.e(93), bz.e(113), bz.e(234), bz.e(73), bz.e(112), bz.e(152)]).then((() => bz(40383)))))
+        this.mobScene = new pD((() => Promise.all([cD.e(69), cD.e(226), cD.e(225), cD.e(244), cD.e(94), cD.e(245), cD.e(72), cD.e(71), cD.e(242), cD.e(70), cD.e(252), cD.e(246), cD.e(251), cD.e(249), cD.e(241), cD.e(218), cD.e(264), cD.e(222), cD.e(236), cD.e(247), cD.e(250), cD.e(74), cD.e(196), cD.e(215), cD.e(219), cD.e(93), cD.e(113), cD.e(234), cD.e(73), cD.e(112), cD.e(153)]).then((() => cD(40157))))), this.characterScene = new pD((() => Promise.all([cD.e(69), cD.e(226), cD.e(225), cD.e(244), cD.e(94), cD.e(245), cD.e(72), cD.e(71), cD.e(242), cD.e(70), cD.e(252), cD.e(246), cD.e(251), cD.e(249), cD.e(241), cD.e(218), cD.e(264), cD.e(222), cD.e(236), cD.e(247), cD.e(250), cD.e(74), cD.e(196), cD.e(215), cD.e(219), cD.e(93), cD.e(113), cD.e(234), cD.e(73), cD.e(112), cD.e(152)]).then((() => cD(40228)))))
       }
-      openMob(zz) {
-        return this.mobScene.run((uz => uz.openMobPreview(zz)))
+      openMob(DD) {
+        return this.mobScene.run((CD => CD.openMobPreview(DD)))
       }
-      openPet(zz) {
-        return this.mobScene.run((uz => uz.openPetPreview(zz)))
+      openPet(DD) {
+        return this.mobScene.run((CD => CD.openPetPreview(DD)))
       }
-      openMobLineup(zz) {
-        return this.mobScene.run((uz => uz.openMobLineupPreview(zz)))
+      openMobLineup(DD) {
+        return this.mobScene.run((CD => CD.openMobLineupPreview(DD)))
       }
-      openCharacter(zz, uz) {
-        return this.characterScene.run((bz => bz.openCharacterPreview(zz, uz)))
+      openCharacter(DD, CD) {
+        return this.characterScene.run((cD => cD.openCharacterPreview(DD, CD)))
       }
     }
-    Ez.g.setDefaultHost((() => new iz))
+    ID.h.setDefaultHost((() => new iD))
   },
-  6382: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => nz,
-      e: () => iz
+  6409: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => pD,
+      d: () => iD
     });
-    var Ez = bz(33);
-    const nz = "shaderPack";
-    async function iz() {
-      var zz;
-      let uz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (zz = await Ez.d.getItem(nz, uz)) && void 0 !== zz ? zz : null
+    var ID = cD(36);
+    const pD = "shaderPack";
+    async function iD() {
+      var DD;
+      let CD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (DD = await ID.f.getItem(pD, CD)) && void 0 !== DD ? DD : null
     }
   },
-  8902: (zz, uz, bz) => {
-    function Ez(zz, uz) {
-      return zz && !uz
+  8950: (DD, CD, cD) => {
+    function ID(DD, CD) {
+      return DD && !CD
     }
-    bz.d(uz, {
-      b: () => Ez
+    cD.d(CD, {
+      e: () => ID
     })
   },
-  8915: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
+  8983: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => iD
     });
-    var Ez = bz(1068);
+    var ID = cD(1077);
 
-    function nz() {
-      var zz, uz;
-      return null !== (zz = null === (uz = screen.orientation) || void 0 === uz ? void 0 : uz.type) && void 0 !== zz ? zz : innerWidth > innerHeight ? "landscape" : "portrait"
+    function pD() {
+      var DD, CD;
+      return null !== (DD = null === (CD = screen.orientation) || void 0 === CD ? void 0 : CD.type) && void 0 !== DD ? DD : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const iz = new class {
+    const iD = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && nz() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && pD() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = nz(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, Ez.WR)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = pD(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, ID.WZ)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -9343,34 +9343,34 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const zz of this.resizers) zz()
+            for (const DD of this.resizers) DD()
           }
         }), 1e3)
       }
-      heldSizer(zz) {
-        let uz = !1;
+      heldSizer(DD) {
+        let CD = !1;
         return () => {
-          if (uz && this.isHeld()) return null;
-          const bz = zz();
-          return uz ||= null !== bz, bz
+          if (CD && this.isHeld()) return null;
+          const cD = DD();
+          return CD ||= null !== cD, cD
         }
       }
-      onRelease(zz) {
-        return this.resizers.add(zz), () => {
-          this.resizers.delete(zz)
+      onRelease(DD) {
+        return this.resizers.add(DD), () => {
+          this.resizers.delete(DD)
         }
       }
     }
   },
-  8554: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Mz,
-      e: () => tz
+  8583: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => bD,
+      d: () => QD
     });
-    var Ez = bz(20),
-      nz = bz(1296),
-      iz = bz(96);
-    const lz = {
+    var ID = cD(16),
+      pD = cD(1317),
+      iD = cD(90);
+    const fD = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -9413,111 +9413,111 @@ export const modules = {
       }
     };
 
-    function Mz() {
-      return (0, iz.isMobile)() && "function" === typeof navigator.vibrate
+    function bD() {
+      return (0, iD.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const tz = new class {
-      constructor(zz) {
-        this.deps = zz, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const QD = new class {
+      constructor(DD) {
+        this.deps = DD, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(zz, uz) {
-        var bz;
+      play(DD, CD) {
+        var cD;
         if (!this.deps.enabled()) return;
-        const Ez = lz[zz],
-          nz = null !== uz && void 0 !== uz ? uz : Ez.pattern;
-        if (null === nz) return void console.warn("No vibration pattern for", zz);
-        const iz = this.deps.now();
-        iz - this.lastAnyAt < 40 && Ez.priority < this.playingPriority || iz - (null !== (bz = this.lastAt.get(zz)) && void 0 !== bz ? bz : -1 / 0) < Ez.minGapMs || iz < this.playingUntil && Ez.priority < this.playingPriority || (this.lastAt.set(zz, iz), this.lastAnyAt = iz, this.playingUntil = iz + nz.reduce(((zz, uz) => zz + uz), 0), this.playingPriority = Ez.priority, this.deps.vibrate(nz))
+        const ID = fD[DD],
+          pD = null !== CD && void 0 !== CD ? CD : ID.pattern;
+        if (null === pD) return void console.warn("No vibration pattern for", DD);
+        const iD = this.deps.now();
+        iD - this.lastAnyAt < 40 && ID.priority < this.playingPriority || iD - (null !== (cD = this.lastAt.get(DD)) && void 0 !== cD ? cD : -1 / 0) < ID.minGapMs || iD < this.playingUntil && ID.priority < this.playingPriority || (this.lastAt.set(DD, iD), this.lastAnyAt = iD, this.playingUntil = iD + pD.reduce(((DD, CD) => DD + CD), 0), this.playingPriority = ID.priority, this.deps.vibrate(pD))
       }
     }({
-      vibrate: zz => {
-        navigator.vibrate([...zz])
+      vibrate: DD => {
+        navigator.vibrate([...DD])
       },
       now: () => performance.now(),
-      enabled: () => Mz() && Ez.e.get("isTouchScreen") && Ez.e.get("clientEscMenuOptions").vibration && !(0, nz.d)()
+      enabled: () => bD() && ID.d.get("isTouchScreen") && ID.d.get("clientEscMenuOptions").vibration && !(0, pD.c)()
     })
   },
-  8896: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Fz,
-      e: () => dz
+  8944: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => MD,
+      g: () => yD
     });
-    var Ez = bz(20),
-      nz = bz(1638),
-      iz = bz(33),
-      lz = bz(1322),
-      Mz = bz(3409),
-      tz = bz(1448),
-      Hz = bz(1362);
-    const Oz = 2592e5,
-      pz = "notificationOptInLastPromptedAt";
-    async function dz() {
-      var zz;
-      const uz = await Fz();
-      if (null === uz) return;
-      const bz = null !== (zz = iz.g.getItem(pz)) && void 0 !== zz ? zz : 0;
-      if (Date.now() - bz < Oz) return;
-      if ((0, Hz.f)()) return;
-      const Ez = await lz.NotificationProvider.showPromptPopup({
+    var ID = cD(16),
+      pD = cD(1664),
+      iD = cD(36),
+      fD = cD(1340),
+      bD = cD(3474),
+      QD = cD(1471),
+      wD = cD(1388);
+    const SD = 2592e5,
+      BD = "notificationOptInLastPromptedAt";
+    async function yD() {
+      var DD;
+      const CD = await MD();
+      if (null === CD) return;
+      const cD = null !== (DD = iD.h.getItem(BD)) && void 0 !== DD ? DD : 0;
+      if (Date.now() - cD < SD) return;
+      if ((0, wD.e)()) return;
+      const ID = await fD.NotificationProvider.showPromptPopup({
         icon: "bell",
         title: "mobilePushNotifications:optInTitle",
-        subtitle: nz.d.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
+        subtitle: pD.b.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
         confirmText: "mobilePushNotifications:optInConfirm",
         cancelText: "mobilePushNotifications:optInCancel",
         padStartsOn: "cancel"
       }).getResult();
-      "notificationTornDown" !== Ez && (iz.g.setItem(pz, Date.now()), (0, tz.reportAnalyticsClick)({
-        id: !0 === Ez ? "push.allow" : "push.deny",
-        value: nz.d.supports("notifications") ? "app" : "browser"
-      }), !0 === Ez && uz().catch((zz => {
-        console.error("Failed to ask for push notifications:", zz)
+      "notificationTornDown" !== ID && (iD.h.setItem(BD, Date.now()), (0, QD.reportAnalyticsClick)({
+        id: !0 === ID ? "push.allow" : "push.deny",
+        value: pD.b.supports("notifications") ? "app" : "browser"
+      }), !0 === ID && CD().catch((DD => {
+        console.error("Failed to ask for push notifications:", DD)
       })))
     }
-    async function Fz() {
-      return await nz.d.ready, nz.d.supports("notifications") ? Ez.e.get("mobilePushNotificationsCanAsk") ? async () => {
-        nz.d.request("notifications.requestPermission", {}).then((zz => {
+    async function MD() {
+      return await pD.b.ready, pD.b.supports("notifications") ? ID.d.get("mobilePushNotificationsCanAsk") ? async () => {
+        pD.b.request("notifications.requestPermission", {}).then((DD => {
           let {
-            canAsk: uz
-          } = zz;
-          Ez.e.set({
-            mobilePushNotificationsCanAsk: uz
+            canAsk: CD
+          } = DD;
+          ID.d.set({
+            mobilePushNotificationsCanAsk: CD
           })
-        }), (zz => {
-          console.error("The app couldn't ask for push notifications:", zz)
+        }), (DD => {
+          console.error("The app couldn't ask for push notifications:", DD)
         }))
-      }: null: await Mz.c.canAsk() ? () => Mz.c.requestPermission() : null
+      }: null: await bD.c.canAsk() ? () => bD.c.requestPermission() : null
     }
   },
-  8908: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Mz,
-      d: () => tz
+  8958: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => bD,
+      f: () => QD
     });
-    var Ez = bz(20);
-    const nz = 24,
-      iz = "farNametags",
-      lz = 1e5;
+    var ID = cD(16);
+    const pD = 24,
+      iD = "farNametags",
+      fD = 1e5;
 
-    function Mz() {
-      var zz;
-      return null === (zz = Ez.e.get("showDistantNametags")) || void 0 === zz || zz
+    function bD() {
+      var DD;
+      return null === (DD = ID.d.get("showDistantNametags")) || void 0 === DD || DD
     }
 
-    function tz() {
-      var zz;
-      return null !== (zz = function() {
-        const zz = new URLSearchParams(window.location.search).get(iz),
-          uz = null === zz || "" === zz ? NaN : Number(zz);
-        return Number.isFinite(uz) && uz >= 0 ? Math.min(uz, lz) : null
-      }()) && void 0 !== zz ? zz : Mz() ? 0 : nz
+    function QD() {
+      var DD;
+      return null !== (DD = function() {
+        const DD = new URLSearchParams(window.location.search).get(iD),
+          CD = null === DD || "" === DD ? NaN : Number(DD);
+        return Number.isFinite(CD) && CD >= 0 ? Math.min(CD, fD) : null
+      }()) && void 0 !== DD ? DD : bD() ? 0 : pD
     }
   },
-  9013: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => nz,
-      d: () => lz
+  9065: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => pD,
+      g: () => fD
     });
-    const Ez = [{
+    const ID = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -9699,79 +9699,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function nz(zz) {
-      let uz, bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof zz) {
-        if (!Number.isFinite(zz)) return "0";
-        if (Math.abs(zz) < 100) {
-          const uz = zz < 0 ? "-" : "",
-            bz = Math.abs(zz);
-          return bz >= 10 ? `${uz}${bz.toFixed(1).replace(/\.0$/,"")}` : `${uz}${bz.toFixed(2).replace(/\.?0+$/,"")}`
+    function pD(DD) {
+      let CD, cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof DD) {
+        if (!Number.isFinite(DD)) return "0";
+        if (Math.abs(DD) < 100) {
+          const CD = DD < 0 ? "-" : "",
+            cD = Math.abs(DD);
+          return cD >= 10 ? `${CD}${cD.toFixed(1).replace(/\.0$/,"")}` : `${CD}${cD.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        uz = BigInt(Math.floor(zz))
-      } else uz = zz;
-      const nz = uz < 0n ? -uz : uz,
-        iz = uz < 0n ? "-" : "",
-        lz = nz.toString();
-      if (lz.length <= bz) return `${iz}${lz}`;
-      const Mz = 3 * Math.floor((lz.length - 1) / 3);
-      if (Mz < 3) return `${iz}${lz}`;
-      if (Mz > 3 * Ez.length) {
-        const zz = lz[0],
-          uz = lz.slice(1, 3).replace(/0+$/, "");
-        return `${iz}${uz?`${zz}.${uz}`:zz}e${lz.length-1}`
+        CD = BigInt(Math.floor(DD))
+      } else CD = DD;
+      const pD = CD < 0n ? -CD : CD,
+        iD = CD < 0n ? "-" : "",
+        fD = pD.toString();
+      if (fD.length <= cD) return `${iD}${fD}`;
+      const bD = 3 * Math.floor((fD.length - 1) / 3);
+      if (bD < 3) return `${iD}${fD}`;
+      if (bD > 3 * ID.length) {
+        const DD = fD[0],
+          CD = fD.slice(1, 3).replace(/0+$/, "");
+        return `${iD}${CD?`${DD}.${CD}`:DD}e${fD.length-1}`
       }
       const {
-        threshold: tz,
-        suffix: Hz
-      } = Ez[Ez.length - Mz / 3], Oz = nz / tz, pz = Number(1000n * (nz % tz) / tz), dz = Number(Oz) + pz / 1e3;
-      let Fz;
-      return Fz = dz >= 100 ? Math.floor(dz).toString() : dz >= 10 ? dz.toFixed(1).replace(/\.0$/, "") : dz.toFixed(2).replace(/\.?0+$/, ""), `${iz}${Fz}${Hz}`
+        threshold: QD,
+        suffix: wD
+      } = ID[ID.length - bD / 3], SD = pD / QD, BD = Number(1000n * (pD % QD) / QD), yD = Number(SD) + BD / 1e3;
+      let MD;
+      return MD = yD >= 100 ? Math.floor(yD).toString() : yD >= 10 ? yD.toFixed(1).replace(/\.0$/, "") : yD.toFixed(2).replace(/\.?0+$/, ""), `${iD}${MD}${wD}`
     }
-    const iz = Ez.map((zz => {
+    const iD = ID.map((DD => {
       let {
-        threshold: uz,
-        suffix: bz
-      } = zz;
+        threshold: CD,
+        suffix: cD
+      } = DD;
       return {
-        threshold: Number(uz),
-        suffix: bz
+        threshold: Number(CD),
+        suffix: cD
       }
-    })).filter((zz => {
+    })).filter((DD => {
       let {
-        threshold: uz
-      } = zz;
-      return Number.isFinite(uz)
+        threshold: CD
+      } = DD;
+      return Number.isFinite(CD)
     }));
 
-    function lz(zz) {
-      const uz = Math.abs(zz),
-        bz = zz < 0 ? "-" : "";
+    function fD(DD) {
+      const CD = Math.abs(DD),
+        cD = DD < 0 ? "-" : "";
       for (const {
-          threshold: Ez,
-          suffix: nz
+          threshold: ID,
+          suffix: pD
         }
-        of iz)
-        if (uz >= Ez) {
-          const zz = uz / Ez;
-          if (zz >= 1e3) return `${bz}${uz.toExponential(2).replace("e+","e")}`;
-          let iz;
-          return iz = zz >= 100 ? Math.floor(zz).toString() : zz >= 10 ? zz.toFixed(1).replace(/\.0$/, "") : zz.toFixed(2).replace(/\.?0+$/, ""), `${bz}${iz}${nz}`
-        } return `${bz}${uz}`
+        of iD)
+        if (CD >= ID) {
+          const DD = CD / ID;
+          if (DD >= 1e3) return `${cD}${CD.toExponential(2).replace("e+","e")}`;
+          let iD;
+          return iD = DD >= 100 ? Math.floor(DD).toString() : DD >= 10 ? DD.toFixed(1).replace(/\.0$/, "") : DD.toFixed(2).replace(/\.?0+$/, ""), `${cD}${iD}${pD}`
+        } return `${cD}${CD}`
     }
   },
-  8994: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Oz,
-      f: () => dz,
-      g: () => pz,
-      i: () => lz,
-      m: () => Hz,
-      o: () => tz
+  9050: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => SD,
+      f: () => yD,
+      i: () => BD,
+      j: () => fD,
+      l: () => wD,
+      n: () => QD
     });
-    var Ez = bz(328);
-    const nz = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      iz = {
+    var ID = cD(326);
+    const pD = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      iD = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -9846,13 +9846,13 @@ export const modules = {
         }
       };
 
-    function lz(zz) {
-      var uz;
-      return null !== (uz = iz[zz]) && void 0 !== uz ? uz : {
+    function fD(DD) {
+      var CD;
+      return null !== (CD = iD[DD]) && void 0 !== CD ? CD : {
         translationKey: ""
       }
     }
-    const Mz = {
+    const bD = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -9905,107 +9905,107 @@ export const modules = {
       }]
     };
 
-    function tz(zz) {
-      return nz.includes(zz)
+    function QD(DD) {
+      return pD.includes(DD)
     }
 
-    function Hz(zz) {
-      var uz;
-      return !0 === (null === zz || void 0 === zz || null === (uz = zz.customAttributes) || void 0 === uz ? void 0 : uz.cannotEnchant)
+    function wD(DD) {
+      var CD;
+      return !0 === (null === DD || void 0 === DD || null === (CD = DD.customAttributes) || void 0 === CD ? void 0 : CD.cannotEnchant)
     }
 
-    function Oz(zz, uz) {
+    function SD(DD, CD) {
       const {
-        max: bz
-      } = Mz[zz].at(-1);
-      return uz <= bz
+        max: cD
+      } = bD[DD].at(-1);
+      return CD <= cD
     }
 
-    function pz(zz) {
-      const uz = Math.sin(zz / 80),
-        bz = zz => {
-          if (zz <= 0) return 0;
-          if (zz > 1) return 1;
-          let uz = 0;
-          const bz = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let Ez = 0; Ez < bz.length; Ez++) {
-            uz += (Ez % 2 === 0 ? 1 : -1) * bz[Ez] * Math.pow(zz, 2 + Ez) / (2 + Ez)
+    function BD(DD) {
+      const CD = Math.sin(DD / 80),
+        cD = DD => {
+          if (DD <= 0) return 0;
+          if (DD > 1) return 1;
+          let CD = 0;
+          const cD = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let ID = 0; ID < cD.length; ID++) {
+            CD += (ID % 2 === 0 ? 1 : -1) * cD[ID] * Math.pow(DD, 2 + ID) / (2 + ID)
           }
-          return 72 * uz
+          return 72 * CD
         },
-        Ez = .3 - .78 * uz,
-        nz = .5 - .78 * uz,
-        iz = .6 - .7 * uz,
-        lz = .8 - .6 * uz;
-      let Mz = bz(Ez),
-        tz = bz(nz) - Mz,
-        Hz = bz(iz) - tz - Mz,
-        Oz = bz(lz) - Hz - tz - Mz;
-      Ez < .041 && (tz /= 1 - Mz, Hz /= 1 - Mz, Oz /= 1 - Mz, Mz = 0), nz < .041 && (Mz /= 1 - tz, Hz /= 1 - tz, Oz /= 1 - tz, tz = 0), iz < .041 && (Mz /= 1 - Hz, tz /= 1 - Hz, Oz /= 1 - Hz, Hz = 0), lz < .041 && (Mz /= 1 - Oz, tz /= 1 - Oz, Hz /= 1 - Oz, Oz = 0);
+        ID = .3 - .78 * CD,
+        pD = .5 - .78 * CD,
+        iD = .6 - .7 * CD,
+        fD = .8 - .6 * CD;
+      let bD = cD(ID),
+        QD = cD(pD) - bD,
+        wD = cD(iD) - QD - bD,
+        SD = cD(fD) - wD - QD - bD;
+      ID < .041 && (QD /= 1 - bD, wD /= 1 - bD, SD /= 1 - bD, bD = 0), pD < .041 && (bD /= 1 - QD, wD /= 1 - QD, SD /= 1 - QD, QD = 0), iD < .041 && (bD /= 1 - wD, QD /= 1 - wD, SD /= 1 - wD, wD = 0), fD < .041 && (bD /= 1 - SD, QD /= 1 - SD, wD /= 1 - SD, SD = 0);
       return {
-        commonProb: Mz,
-        uncommonProb: tz,
-        rareProb: Hz,
-        epicProb: Oz,
-        legendaryProb: 1 - (Oz + Hz + tz + Mz)
+        commonProb: bD,
+        uncommonProb: QD,
+        rareProb: wD,
+        epicProb: SD,
+        legendaryProb: 1 - (SD + wD + QD + bD)
       }
     }
 
-    function dz(zz, uz) {
+    function yD(DD, CD) {
       const {
-        min: bz,
-        max: nz
-      } = Mz[zz][uz], iz = Ez.d.sampleUniformIntDistribution(bz, nz, "includeMax");
+        min: cD,
+        max: pD
+      } = bD[DD][CD], iD = ID.e.sampleUniformIntDistribution(cD, pD, "includeMax");
       return {
-        ...pz(iz),
-        level: iz
+        ...BD(iD),
+        level: iD
       }
     }
   },
-  8434: (zz, uz, bz) => {
-    function Ez(zz, uz) {
-      return !zz.hidden && (uz || !zz.isRewardedAd)
+  8463: (DD, CD, cD) => {
+    function ID(DD, CD) {
+      return !DD.hidden && (CD || !DD.isRewardedAd)
     }
 
-    function nz(zz) {
-      return "object" === typeof zz ? zz.option : zz
+    function pD(DD) {
+      return "object" === typeof DD ? DD.option : DD
     }
 
-    function iz(zz, uz) {
-      var bz;
-      if ("dropdown" === (null === (bz = zz.userInput) || void 0 === bz ? void 0 : bz.type) && "object" === typeof zz.userInput.dropdownOptions[0]) {
-        for (const bz of zz.userInput.dropdownOptions)
-          if (nz(bz) === uz) return "object" === typeof bz ? bz.cost : zz.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", zz, "input:", uz)
+    function iD(DD, CD) {
+      var cD;
+      if ("dropdown" === (null === (cD = DD.userInput) || void 0 === cD ? void 0 : cD.type) && "object" === typeof DD.userInput.dropdownOptions[0]) {
+        for (const cD of DD.userInput.dropdownOptions)
+          if (pD(cD) === CD) return "object" === typeof cD ? cD.cost : DD.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", DD, "input:", CD)
       }
-      return zz.cost
+      return DD.cost
     }
 
-    function lz(zz, uz, bz) {
-      var Ez;
-      const nz = null !== (Ez = bz.excludedPlayers) && void 0 !== Ez ? Ez : [uz];
-      return zz.filter((zz => !nz.includes(zz)))
+    function fD(DD, CD, cD) {
+      var ID;
+      const pD = null !== (ID = cD.excludedPlayers) && void 0 !== ID ? ID : [CD];
+      return DD.filter((DD => !pD.includes(DD)))
     }
-    bz.d(uz, {
-      b: () => iz,
-      e: () => nz,
-      f: () => lz,
-      j: () => Ez
+    cD.d(CD, {
+      c: () => iD,
+      d: () => pD,
+      f: () => fD,
+      i: () => ID
     })
   },
-  8957: () => {},
-  8936: zz => {
-    zz.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  9026: () => {},
+  8998: DD => {
+    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  8938: zz => {
-    zz.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  9003: DD => {
+    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  8942: zz => {
-    zz.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  9012: DD => {
+    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  8947: zz => {
-    zz.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  9014: DD => {
+    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

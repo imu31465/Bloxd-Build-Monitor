@@ -1,257 +1,257 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  36066: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Fz,
-      d: () => Zz,
-      g: () => dz,
-      h: () => pz
+  35994: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => MD,
+      e: () => tD,
+      f: () => yD,
+      h: () => BD
     });
-    var Ez = bz(8982),
-      nz = bz(36071),
-      iz = bz(36080),
-      lz = bz(8378),
-      Mz = bz(1417),
-      tz = bz(56),
-      Hz = bz(79),
-      Oz = bz(1089);
+    var ID = cD(9041),
+      pD = cD(35996),
+      iD = cD(36002),
+      fD = cD(8394),
+      bD = cD(1440),
+      QD = cD(53),
+      wD = cD(62),
+      SD = cD(1093);
 
-    function pz() {
-      var zz;
-      return (0, Mz.h)(nz.e, (0, nz.o)()), (0, Oz.jsx)(Oz.Fragment, {
-        children: null === (zz = (0, nz.o)()) || void 0 === zz ? void 0 : zz.content
+    function BD() {
+      var DD;
+      return (0, bD.g)(pD.b, (0, pD.o)()), (0, SD.jsx)(SD.Fragment, {
+        children: null === (DD = (0, pD.o)()) || void 0 === DD ? void 0 : DD.content
       })
     }
 
-    function dz(zz) {
-      var uz;
+    function yD(DD) {
+      var CD;
       let {
-        show: bz
-      } = zz;
-      (0, Mz.h)(nz.e, (0, nz.o)());
-      const Hz = null === (uz = (0, nz.o)()) || void 0 === uz ? void 0 : uz.menu;
-      return (0, tz.useEffect)((() => {
-        var zz;
-        bz || (null === Hz || void 0 === Hz || null === (zz = Hz.onClose) || void 0 === zz || zz.call(Hz), (0, iz.j)())
-      }), [bz, Hz]), (0, tz.useEffect)((() => bz ? (0, lz.e)(iz.u, iz.d) : void 0), [bz]), (0, Oz.jsx)(Ez.d, {
-        showing: bz,
+        show: cD
+      } = DD;
+      (0, bD.g)(pD.b, (0, pD.o)());
+      const wD = null === (CD = (0, pD.o)()) || void 0 === CD ? void 0 : CD.menu;
+      return (0, QD.useEffect)((() => {
+        var DD;
+        cD || (null === wD || void 0 === wD || null === (DD = wD.onClose) || void 0 === DD || DD.call(wD), (0, iD.q)())
+      }), [cD, wD]), (0, QD.useEffect)((() => cD ? (0, fD.i)(iD.B, iD.e) : void 0), [cD]), (0, SD.jsx)(ID.c, {
+        showing: cD,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Hz || void 0 === Hz ? void 0 : Hz.content
+        children: null === wD || void 0 === wD ? void 0 : wD.content
       })
     }
 
-    function Fz(zz) {
+    function MD(DD) {
       let {
-        placement: uz = "bottom"
-      } = zz;
-      return (0, Oz.jsx)("div", {
-        id: `clientGameHud-${uz}`,
+        placement: CD = "bottom"
+      } = DD;
+      return (0, SD.jsx)("div", {
+        id: `clientGameHud-${CD}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Zz(zz) {
+    function tD(DD) {
       let {
-        children: uz,
-        placement: bz = "bottom"
-      } = zz;
-      const [Ez, nz] = (0, tz.useState)(null);
-      return (0, tz.useEffect)((() => {
-        nz(document.getElementById(`clientGameHud-${bz}`))
-      }), [bz]), Ez ? (0, Hz.createPortal)(uz, Ez) : null
+        children: CD,
+        placement: cD = "bottom"
+      } = DD;
+      const [ID, pD] = (0, QD.useState)(null);
+      return (0, QD.useEffect)((() => {
+        pD(document.getElementById(`clientGameHud-${cD}`))
+      }), [cD]), ID ? (0, wD.createPortal)(CD, ID) : null
     }
   },
-  8982: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
+  9041: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => iD
     });
-    var Ez = bz(4298),
-      nz = bz(4300);
+    var ID = cD(4329),
+      pD = cD(4337);
 
-    function iz(zz) {
+    function iD(DD) {
       let {
-        children: uz,
-        showing: bz,
-        globallyUniqueKey: iz,
-        alwaysMountChildren: lz = !1,
-        doGameplayStartStopOnShow: Mz = !0,
-        keepsMovement: tz = !1
-      } = zz;
-      return (0, nz.e)(!0, bz, iz, tz), (0, Ez.d)(Mz, bz), bz || lz ? uz : null
+        children: CD,
+        showing: cD,
+        globallyUniqueKey: iD,
+        alwaysMountChildren: fD = !1,
+        doGameplayStartStopOnShow: bD = !0,
+        keepsMovement: QD = !1
+      } = DD;
+      return (0, pD.e)(!0, cD, iD, QD), (0, ID.b)(bD, cD), cD || fD ? CD : null
     }
   },
-  8378: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz,
-      e: () => nz
+  8394: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => iD,
+      i: () => pD
     });
-    let Ez = null;
-    const nz = function(zz) {
-        const uz = {
-          cycle: zz,
+    let ID = null;
+    const pD = function(DD) {
+        const CD = {
+          cycle: DD,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Ez = uz, () => {
-          Ez === uz && (Ez = null)
+        return ID = CD, () => {
+          ID === CD && (ID = null)
         }
       },
-      iz = () => {
-        var zz;
-        return null !== (zz = Ez) && void 0 !== zz && zz.canCycle() ? Ez.cycle : null
+      iD = () => {
+        var DD;
+        return null !== (DD = ID) && void 0 !== DD && DD.canCycle() ? ID.cycle : null
       }
   },
-  36080: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz,
-      d: () => Rz,
-      g: () => Kz,
-      h: () => Mz,
-      i: () => dz,
-      j: () => wz,
-      n: () => pz,
-      q: () => fz,
-      u: () => Zz,
-      x: () => Xz
+  36002: (DD, CD, cD) => {
+    cD.d(CD, {
+      B: () => tD,
+      C: () => ND,
+      b: () => iD,
+      e: () => ZD,
+      i: () => oD,
+      l: () => bD,
+      p: () => yD,
+      q: () => vD,
+      t: () => BD,
+      x: () => gD
     });
-    var Ez = bz(20),
-      nz = bz(22);
-    const iz = "clientGameInventoryButtonsChanged",
-      lz = new Map;
+    var ID = cD(16),
+      pD = cD(20);
+    const iD = "clientGameInventoryButtonsChanged",
+      fD = new Map;
 
-    function Mz() {
-      return [...lz.values()].sort(((zz, uz) => {
-        var bz, Ez;
-        return (null !== (bz = zz.order) && void 0 !== bz ? bz : 0) - (null !== (Ez = uz.order) && void 0 !== Ez ? Ez : 0)
+    function bD() {
+      return [...fD.values()].sort(((DD, CD) => {
+        var cD, ID;
+        return (null !== (cD = DD.order) && void 0 !== cD ? cD : 0) - (null !== (ID = CD.order) && void 0 !== ID ? ID : 0)
       }))
     }
-    let tz = null;
+    let QD = null;
 
-    function Hz(zz) {
-      tz = zz
+    function wD(DD) {
+      QD = DD
     }
-    let Oz = !1;
+    let SD = !1;
 
-    function pz(zz) {
-      Oz = !0;
+    function BD(DD) {
+      SD = !0;
       try {
-        zz.onClick()
+        DD.onClick()
       } finally {
-        Oz = !1
+        SD = !1
       }
-      zz.panel && "clientGame" === Ez.e.get("openInGameMenuName") && Hz(zz.id)
+      DD.panel && "clientGame" === ID.d.get("openInGameMenuName") && wD(DD.id)
     }
 
-    function dz() {
-      return Oz
+    function yD() {
+      return SD
     }
 
-    function Fz() {
-      return Mz().filter((zz => zz.panel && !zz.disabled))
+    function MD() {
+      return bD().filter((DD => DD.panel && !DD.disabled))
     }
 
-    function Zz(zz) {
-      const uz = Fz(),
-        bz = uz.findIndex((zz => zz.id === tz));
-      return !(bz < 0 || uz.length < 2) && (pz(uz[(bz + zz + uz.length) % uz.length]), !0)
+    function tD(DD) {
+      const CD = MD(),
+        cD = CD.findIndex((DD => DD.id === QD));
+      return !(cD < 0 || CD.length < 2) && (BD(CD[(cD + DD + CD.length) % CD.length]), !0)
     }
 
-    function Rz() {
-      return null !== tz && Fz().length > 1
+    function ZD() {
+      return null !== QD && MD().length > 1
     }
 
-    function Kz() {
-      Hz(null)
+    function oD() {
+      wD(null)
     }
 
-    function wz() {
-      "inventory" !== Ez.e.get("openInGameMenuName") && Hz(null)
+    function vD() {
+      "inventory" !== ID.d.get("openInGameMenuName") && wD(null)
     }
 
-    function Xz() {
-      const zz = tz;
-      return Hz(null), zz
+    function ND() {
+      const DD = QD;
+      return wD(null), DD
     }
 
-    function fz(zz) {
-      return lz.set(zz.id, zz), nz.k.sK(iz, Mz(), !0), () => {
-        lz.get(zz.id) === zz && (lz.delete(zz.id), nz.k.sK(iz, Mz()))
+    function gD(DD) {
+      return fD.set(DD.id, DD), pD.i.Uo(iD, bD(), !0), () => {
+        fD.get(DD.id) === DD && (fD.delete(DD.id), pD.i.Uo(iD, bD()))
       }
     }
   },
-  36071: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz,
-      i: () => Kz,
-      l: () => wz,
-      n: () => dz,
-      o: () => Hz,
-      p: () => Rz,
-      t: () => Fz,
-      x: () => Oz
+  35996: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => bD,
+      e: () => oD,
+      i: () => vD,
+      m: () => yD,
+      o: () => wD,
+      s: () => ZD,
+      u: () => MD,
+      v: () => SD
     });
-    var Ez = bz(20),
-      nz = bz(22),
-      iz = bz(1269),
-      lz = bz(36080);
-    const Mz = "clientGameUiChanged";
-    let tz = null;
+    var ID = cD(16),
+      pD = cD(20),
+      iD = cD(1284),
+      fD = cD(36002);
+    const bD = "clientGameUiChanged";
+    let QD = null;
 
-    function Hz() {
-      return tz
+    function wD() {
+      return QD
     }
 
-    function Oz(zz, uz) {
-      const bz = {
-        content: zz,
-        menu: uz
+    function SD(DD, CD) {
+      const cD = {
+        content: DD,
+        menu: CD
       };
-      return tz = bz, nz.k.sK(Mz, tz, !0), () => {
-        tz === bz && (tz = null, Zz = !1, Kz(), nz.k.sK(Mz, null))
+      return QD = cD, pD.i.Uo(bD, QD, !0), () => {
+        QD === cD && (QD = null, tD = !1, oD(), pD.i.Uo(bD, null))
       }
     }
-    let pz = null;
+    let BD = null;
 
-    function dz() {
-      return pz
+    function yD() {
+      return BD
     }
 
-    function Fz(zz) {
-      return pz = zz, () => {
-        pz === zz && (pz = null)
+    function MD(DD) {
+      return BD = DD, () => {
+        BD === DD && (BD = null)
       }
     }
-    let Zz = !1;
+    let tD = !1;
 
-    function Rz() {
-      const zz = Ez.e.get("openInGameMenuName");
-      "clientGame" !== zz && (Zz = "inventory" === zz), (0, lz.i)() || (0, lz.g)(), (0, iz.m)(iz.b), Ez.e.set({
+    function ZD() {
+      const DD = ID.d.get("openInGameMenuName");
+      "clientGame" !== DD && (tD = "inventory" === DD), (0, fD.p)() || (0, fD.i)(), (0, iD.p)(iD.e), ID.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Kz() {
-      Xz(!1)
+    function oD() {
+      ND(!1)
     }
 
-    function wz() {
-      Xz(Zz)
+    function vD() {
+      ND(tD)
     }
 
-    function Xz(zz) {
-      "clientGame" === Ez.e.get("openInGameMenuName") && Ez.e.set({
-        openInGameMenuName: zz ? "inventory" : null
-      }), zz || (0, lz.g)(), Zz = !1
+    function ND(DD) {
+      "clientGame" === ID.d.get("openInGameMenuName") && ID.d.set({
+        openInGameMenuName: DD ? "inventory" : null
+      }), DD || (0, fD.i)(), tD = !1
     }
   },
-  38803: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      default: () => kz
+  38746: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      default: () => FD
     });
-    const Ez = {
+    const ID = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +261,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var nz = bz(56),
-      iz = bz(37452),
-      lz = bz(328);
-    const Mz = ["Basic", "Rare", "Super"];
+    var pD = cD(53),
+      iD = cD(37425),
+      fD = cD(326);
+    const bD = ["Basic", "Rare", "Super"];
 
-    function tz(zz, uz) {
-      return `${"Basic"===uz?"":`${uz} `}${"Simple"===zz?"":`${zz} `}Lucky Block`
+    function QD(DD, CD) {
+      return `${"Basic"===CD?"":`${CD} `}${"Simple"===DD?"":`${DD} `}Lucky Block`
     }
-    const Hz = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((zz => Mz.map((uz => [tz(zz, uz), {
-      category: zz,
-      rarity: uz
+    const wD = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((DD => bD.map((CD => [QD(DD, CD), {
+      category: DD,
+      rarity: CD
     }])))));
-    Hz.keys();
+    wD.keys();
 
-    function Oz(zz) {
-      return Hz.get(zz)
+    function SD(DD) {
+      return wD.get(DD)
     }
-    const pz = "Obsidian",
-      dz = ["Cobweb"],
-      Fz = [...["Red", "Blue", "Green", "Yellow"].map((zz => `${(0,lz.bb)(zz)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", pz, ...dz];
+    const BD = "Obsidian",
+      yD = ["Cobweb"],
+      MD = [...["Red", "Blue", "Green", "Yellow"].map((DD => `${(0,fD.Y)(DD)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", BD, ...yD];
 
-    function Zz(zz) {
-      return Fz.includes(zz)
+    function tD(DD) {
+      return MD.includes(DD)
     }
-    var Rz = bz(588);
+    var ZD = cD(624);
 
-    function Kz(zz, uz) {
-      const bz = Oz(zz);
-      if (bz) {
-        const zz = Oz(uz);
-        if (!zz) return;
-        const Ez = Mz.length - 1 - Mz.indexOf(zz.rarity);
-        return (zz.category === bz.category ? 0 : 1) * Mz.length + Ez
+    function oD(DD, CD) {
+      const cD = SD(DD);
+      if (cD) {
+        const DD = SD(CD);
+        if (!DD) return;
+        const ID = bD.length - 1 - bD.indexOf(DD.rarity);
+        return (DD.category === cD.category ? 0 : 1) * bD.length + ID
       }
-      if (!Zz(zz)) return;
-      if (uz === zz) return 0;
-      const Ez = zz => Zz(zz) && !dz.includes(zz) && zz !== pz;
-      return Ez(zz) && Ez(uz) ? 1 : void 0
+      if (!tD(DD)) return;
+      if (CD === DD) return 0;
+      const ID = DD => tD(DD) && !yD.includes(DD) && DD !== BD;
+      return ID(DD) && ID(CD) ? 1 : void 0
     }
-    const wz = [...Array.from({
-      length: Rz.n - Rz.l
-    }, ((zz, uz) => Rz.l + uz)), ...Array.from({
-      length: Rz.l
-    }, ((zz, uz) => uz))];
-    class Xz {
-      constructor(zz) {
-        this.inventory = zz, this.pending = new Map
+    const vD = [...Array.from({
+      length: ZD.n - ZD.m
+    }, ((DD, CD) => ZD.m + CD)), ...Array.from({
+      length: ZD.m
+    }, ((DD, CD) => CD))];
+    class ND {
+      constructor(DD) {
+        this.inventory = DD, this.pending = new Map
       }
-      onPlace(zz) {
-        var uz;
-        const bz = this.inventory.selectedSlot(),
-          Ez = this.inventory.itemAt(bz);
-        (null === Ez || void 0 === Ez ? void 0 : Ez.name) === zz && (null !== (uz = Ez.amount) && void 0 !== uz ? uz : 1) <= 1 && fz(zz) && this.pending.set(bz, zz)
+      onPlace(DD) {
+        var CD;
+        const cD = this.inventory.selectedSlot(),
+          ID = this.inventory.itemAt(cD);
+        (null === ID || void 0 === ID ? void 0 : ID.name) === DD && (null !== (CD = ID.amount) && void 0 !== CD ? CD : 1) <= 1 && gD(DD) && this.pending.set(cD, DD)
       }
-      onDrop(zz, uz) {
-        uz < Rz.l && null === this.inventory.itemAt(uz) && fz(zz) && this.refill(uz, zz)
+      onDrop(DD, CD) {
+        CD < ZD.m && null === this.inventory.itemAt(CD) && gD(DD) && this.refill(CD, DD)
       }
-      sd() {
-        const zz = [...this.pending];
+      wy() {
+        const DD = [...this.pending];
         this.pending.clear();
-        for (const [uz, bz] of zz) null === this.inventory.itemAt(uz) && this.refill(uz, bz)
+        for (const [CD, cD] of DD) null === this.inventory.itemAt(CD) && this.refill(CD, cD)
       }
-      refill(zz, uz) {
-        const bz = function(zz, uz, bz, Ez) {
-          let nz, iz = 1 / 0;
-          for (const lz of wz) {
-            if (lz === uz) continue;
-            const Mz = Ez(lz);
-            if (!Mz || lz < Rz.l && uz !== bz) continue;
-            const tz = Kz(zz, Mz.name);
-            void 0 !== tz && tz < iz && (nz = lz, iz = tz)
+      refill(DD, CD) {
+        const cD = function(DD, CD, cD, ID) {
+          let pD, iD = 1 / 0;
+          for (const fD of vD) {
+            if (fD === CD) continue;
+            const bD = ID(fD);
+            if (!bD || fD < ZD.m && CD !== cD) continue;
+            const QD = oD(DD, bD.name);
+            void 0 !== QD && QD < iD && (pD = fD, iD = QD)
           }
-          return nz
-        }(uz, zz, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== bz && this.inventory.swap(zz, bz)
+          return pD
+        }(CD, DD, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== cD && this.inventory.swap(DD, cD)
       }
     }
 
-    function fz(zz) {
-      return !!Oz(zz) || Zz(zz)
+    function gD(DD) {
+      return !!SD(DD) || tD(DD)
     }
-    var sz = bz(36071),
-      rz = bz(79),
-      oz = bz(1038),
-      Nz = bz.n(oz);
-    const vz = "Lucky Clover",
-      xz = {
+    var XD = cD(35996),
+      mD = cD(62),
+      nD = cD(1049),
+      OD = cD.n(nD);
+    const PD = "Lucky Clover",
+      HD = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function Jz(zz) {
-      return xz[zz][0]
+    function UD(DD) {
+      return HD[DD][0]
     }
 
-    function Az(zz) {
-      return Mz.filter((uz => zz >= Jz(uz)))
+    function xD(DD) {
+      return bD.filter((CD => DD >= UD(CD)))
     }
-    var Tz = bz(316),
-      Lz = bz(2313),
-      Pz = bz(20),
-      Gz = bz(2433),
-      az = bz(1856),
-      Vz = bz(36066),
-      mz = bz(1047);
-    var qz = bz(1089);
-    const hz = {
-      Basic: lz.N.whiteUiText,
-      Rare: lz.N.goldUiText,
-      Super: lz.N.cyanUiText
+    var qD = cD(312),
+      JD = cD(2358),
+      KD = cD(16),
+      aD = cD(2450),
+      VD = cD(1893),
+      zD = cD(35994),
+      jD = cD(1064);
+    var lD = cD(1093);
+    const LD = {
+      Basic: fD.J.whiteUiText,
+      Rare: fD.J.goldUiText,
+      Super: fD.J.cyanUiText
     };
-    let Uz = 1;
+    let TD = 1;
 
-    function cz() {
-      const zz = (0, Lz.g)("currencyAmounts"),
-        uz = null === zz || void 0 === zz ? void 0 : zz.Clovers;
-      return !uz || uz.hidden ? null : (0, qz.jsx)(Vz.d, {
-        children: (0, qz.jsx)(gz, {
-          amount: uz.amount
+    function GD() {
+      const DD = (0, JD.h)("currencyAmounts"),
+        CD = null === DD || void 0 === DD ? void 0 : DD.Clovers;
+      return !CD || CD.hidden ? null : (0, lD.jsx)(zD.e, {
+        children: (0, lD.jsx)(RD, {
+          amount: CD.amount
         })
       })
     }
 
-    function gz(zz) {
-      var uz, bz, Ez;
+    function RD(DD) {
+      var CD, cD, ID;
       let {
-        amount: iz
-      } = zz;
+        amount: iD
+      } = DD;
       const {
-        openEverythingMenuName: tz
-      } = (0, Pz.m)(["openEverythingMenuName"]), Hz = (0, Gz.c)(), [Oz, pz] = (0, nz.useState)(iz), [dz, Fz] = (0, nz.useState)(null), [Zz, Rz] = (0, nz.useState)(0), [Kz, wz] = (0, nz.useState)([]), Xz = (0, nz.useRef)(iz), fz = (0, nz.useRef)(!1), sz = (0, nz.useRef)(null), oz = tz === Tz.r.SHOP;
-      (0, nz.useEffect)((() => {
-        const zz = Xz.current;
-        if (Xz.current = iz, iz <= zz || oz) return void pz(iz);
-        const uz = Hz || Kz.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (bz = iz - zz, Ez = !fz.current, bz <= 0 || !Ez && bz < 40 ? 0 : Math.min(4, Math.ceil(bz / 30)));
-        var bz, Ez;
-        if (fz.current = !0, Az(iz).length > Az(zz).length && Rz(Uz++), uz > 0) {
-          const zz = [];
-          for (let bz = 0; bz < uz; bz++) zz.push({
-            id: Uz++,
+        openEverythingMenuName: QD
+      } = (0, KD.o)(["openEverythingMenuName"]), wD = (0, aD.e)(), [SD, BD] = (0, pD.useState)(iD), [yD, MD] = (0, pD.useState)(null), [tD, ZD] = (0, pD.useState)(0), [oD, vD] = (0, pD.useState)([]), ND = (0, pD.useRef)(iD), gD = (0, pD.useRef)(!1), XD = (0, pD.useRef)(null), nD = QD === qD.q.SHOP;
+      (0, pD.useEffect)((() => {
+        const DD = ND.current;
+        if (ND.current = iD, iD <= DD || nD) return void BD(iD);
+        const CD = wD || oD.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (cD = iD - DD, ID = !gD.current, cD <= 0 || !ID && cD < 40 ? 0 : Math.min(4, Math.ceil(cD / 30)));
+        var cD, ID;
+        if (gD.current = !0, xD(iD).length > xD(DD).length && ZD(TD++), CD > 0) {
+          const DD = [];
+          for (let cD = 0; cD < CD; cD++) DD.push({
+            id: TD++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * bz
+            delayMs: 70 * cD
           });
-          wz((uz => [...uz, ...zz]))
+          vD((CD => [...CD, ...DD]))
         }
-        const nz = uz > 0 ? 600 : 0;
-        Fz({
-          id: Uz++,
-          delayMs: nz
+        const pD = CD > 0 ? 600 : 0;
+        MD({
+          id: TD++,
+          delayMs: pD
         });
-        const Mz = performance.now() + nz;
-        let tz = 0;
-        const Oz = uz => {
-          const bz = lz.d.clamp((uz - Mz) / 600, 0, 1);
-          pz(Math.round(zz + (iz - zz) * bz)), bz < 1 && (tz = requestAnimationFrame(Oz))
+        const bD = performance.now() + pD;
+        let QD = 0;
+        const SD = CD => {
+          const cD = fD.e.clamp((CD - bD) / 600, 0, 1);
+          BD(Math.round(DD + (iD - DD) * cD)), cD < 1 && (QD = requestAnimationFrame(SD))
         };
-        return tz = requestAnimationFrame(Oz), () => {
-          cancelAnimationFrame(tz)
+        return QD = requestAnimationFrame(SD), () => {
+          cancelAnimationFrame(QD)
         }
-      }), [iz, oz]);
-      const xz = function(zz) {
-          var uz;
-          const bz = null !== (uz = Mz.find((uz => zz < Jz(uz)))) && void 0 !== uz ? uz : "Super";
+      }), [iD, nD]);
+      const HD = function(DD) {
+          var CD;
+          const cD = null !== (CD = bD.find((CD => DD < UD(CD)))) && void 0 !== CD ? CD : "Super";
           return {
-            rarity: bz,
-            progress: lz.d.clamp(zz / Jz(bz), 0, 1)
+            rarity: cD,
+            progress: fD.e.clamp(DD / UD(cD), 0, 1)
           }
-        }(Oz),
-        Lz = Az(Oz).at(-1);
-      return (0, qz.jsxs)(qz.Fragment, {
-        children: [(0, qz.jsx)("div", {
+        }(SD),
+        JD = xD(SD).at(-1);
+      return (0, lD.jsxs)(lD.Fragment, {
+        children: [(0, lD.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, qz.jsxs)("div", {
-            className: Nz()("LuckyCloverWallet", {
-              Capped: Lz && "Basic" !== Lz
+          children: (0, lD.jsxs)("div", {
+            className: OD()("LuckyCloverWallet", {
+              Capped: JD && "Basic" !== JD
             }),
-            style: Lz && {
-              "--luckyTierColour": hz[Lz]
+            style: JD && {
+              "--luckyTierColour": LD[JD]
             },
-            children: [(0, qz.jsx)("div", {
+            children: [(0, lD.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${xz.progress})`
+                transform: `scaleX(${HD.progress})`
               }
-            }), Zz > 0 && (0, qz.jsx)("div", {
+            }), tD > 0 && (0, lD.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(uz=null===dz||void 0===dz?void 0:dz.delayMs)&&void 0!==uz?uz:0}ms`
+                animationDelay: `${null!==(CD=null===yD||void 0===yD?void 0:yD.delayMs)&&void 0!==CD?CD:0}ms`
               }
-            }, Zz), (0, qz.jsx)("div", {
-              ref: sz,
-              className: Nz()("LuckyCloverWalletIcon", dz && "Bounce"),
+            }, tD), (0, lD.jsx)("div", {
+              ref: XD,
+              className: OD()("LuckyCloverWalletIcon", yD && "Bounce"),
               style: {
-                animationDelay: `${null!==(Ez=null===dz||void 0===dz?void 0:dz.delayMs)&&void 0!==Ez?Ez:0}ms`
+                animationDelay: `${null!==(ID=null===yD||void 0===yD?void 0:yD.delayMs)&&void 0!==ID?ID:0}ms`
               },
-              children: (0, qz.jsx)(az.c, {
-                itemName: vz,
+              children: (0, lD.jsx)(VD.d, {
+                itemName: PD,
                 amount: 0
               })
-            }, null !== (bz = null === dz || void 0 === dz ? void 0 : dz.id) && void 0 !== bz ? bz : 0), (0, qz.jsx)("span", {
+            }, null !== (cD = null === yD || void 0 === yD ? void 0 : yD.id) && void 0 !== cD ? cD : 0), (0, lD.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: Oz
-            }), Lz && (0, qz.jsx)(mz.c, {
+              children: SD
+            }), JD && (0, lD.jsx)(jD.c, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, rz.createPortal)(Kz.map((zz => (0, qz.jsx)(Sz, {
-          flyer: zz,
-          target: sz,
+        }), (0, mD.createPortal)(oD.map((DD => (0, lD.jsx)(kD, {
+          flyer: DD,
+          target: XD,
           onDone: () => {
-            wz((uz => uz.filter((uz => uz.id !== zz.id))))
+            vD((CD => CD.filter((CD => CD.id !== DD.id))))
           }
-        }, zz.id))), document.body)]
+        }, DD.id))), document.body)]
       })
     }
 
-    function Sz(zz) {
+    function kD(DD) {
       let {
-        flyer: uz,
-        target: bz,
-        onDone: Ez
-      } = zz;
-      const iz = (0, nz.useRef)(null);
-      return (0, nz.useEffect)((() => {
-        var zz;
-        const nz = null === (zz = bz.current) || void 0 === zz ? void 0 : zz.getBoundingClientRect();
-        if (!iz.current || !nz) return void Ez();
+        flyer: CD,
+        target: cD,
+        onDone: ID
+      } = DD;
+      const iD = (0, pD.useRef)(null);
+      return (0, pD.useEffect)((() => {
+        var DD;
+        const pD = null === (DD = cD.current) || void 0 === DD ? void 0 : DD.getBoundingClientRect();
+        if (!iD.current || !pD) return void ID();
         const {
-          x: lz,
-          y: Mz
-        } = uz, tz = lz + 140 * (Math.random() - .5), Hz = Mz - 30 - 40 * Math.random(), Oz = iz.current.animate([{
-          transform: `translate(${lz}px, ${Mz}px) scale(0.3)`,
+          x: fD,
+          y: bD
+        } = CD, QD = fD + 140 * (Math.random() - .5), wD = bD - 30 - 40 * Math.random(), SD = iD.current.animate([{
+          transform: `translate(${fD}px, ${bD}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${tz}px, ${Hz}px) scale(1.3)`,
+          transform: `translate(${QD}px, ${wD}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${nz.left}px, ${nz.top}px) scale(0.8)`,
+          transform: `translate(${pD.left}px, ${pD.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: uz.delayMs,
+          delay: CD.delayMs,
           fill: "backwards"
         });
-        return Oz.onfinish = Ez, () => {
-          Oz.cancel()
+        return SD.onfinish = ID, () => {
+          SD.cancel()
         }
-      }), []), (0, qz.jsx)("div", {
-        ref: iz,
+      }), []), (0, lD.jsx)("div", {
+        ref: iD,
         className: "LuckyCloverFlying",
-        children: (0, qz.jsx)(az.c, {
-          itemName: vz,
+        children: (0, lD.jsx)(VD.d, {
+          itemName: PD,
           amount: 0
         })
       })
     }
-    var yz = bz(22);
-    const Dz = "luckyGearUpgradeView",
-      Qz = {
+    var dD = cD(20);
+    const YD = "luckyGearUpgradeView",
+      WD = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +532,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function Wz(zz) {
-      var uz;
-      return null !== (uz = Qz[zz.split(" ")[0]]) && void 0 !== uz ? uz : "#e07bff"
+    function sD(DD) {
+      var CD;
+      return null !== (CD = WD[DD.split(" ")[0]]) && void 0 !== CD ? CD : "#e07bff"
     }
-    class ez {
-      constructor(zz, uz) {
-        this.selectedSlot = zz, this.itemAt = uz, this.rings = [], this.unseen = new Map, this.view = {
+    class ED {
+      constructor(DD, CD) {
+        this.selectedSlot = DD, this.itemAt = CD, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,200 +546,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      WZ(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [bz, Ez, nz] of zz) this.rings.push({
+      kt(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [cD, ID, pD] of DD) this.rings.push({
           id: this.nextId++,
-          slot: bz,
-          colour: Wz(nz),
-          until: uz + 1200
-        }), bz !== this.selectedSlot() && this.unseen.set(bz, {
-          from: Ez,
-          to: nz
+          slot: cD,
+          colour: sD(pD),
+          until: CD + 1200
+        }), cD !== this.selectedSlot() && this.unseen.set(cD, {
+          from: ID,
+          to: pD
         });
-        this.sK()
+        this.Uo()
       }
-      sd() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      wy() {
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const uz = this.rings.filter((uz => uz.until > zz));
-        let bz = uz.length !== this.rings.length;
-        this.rings = uz;
-        for (const [Ez, {
-            from: nz,
-            to: iz
+        const CD = this.rings.filter((CD => CD.until > DD));
+        let cD = CD.length !== this.rings.length;
+        this.rings = CD;
+        for (const [ID, {
+            from: pD,
+            to: iD
           }] of this.unseen) {
-          const zz = this.itemAt(Ez);
-          (Ez === this.selectedSlot() || zz !== iz && zz !== nz) && (this.unseen.delete(Ez), bz = !0)
+          const DD = this.itemAt(ID);
+          (ID === this.selectedSlot() || DD !== iD && DD !== pD) && (this.unseen.delete(ID), cD = !0)
         }
-        bz && this.sK()
+        cD && this.Uo()
       }
-      sK() {
+      Uo() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, yz.k.sK(Dz, this.view)
+        }, dD.i.Uo(YD, this.view)
       }
     }
-    var jz = bz(1417);
+    var eD = cD(1440);
 
-    function Iz(zz) {
-      return document.querySelector(`.HotBar [data-inven-idx="${zz}"]`)
+    function uD(DD) {
+      return document.querySelector(`.HotBar [data-inven-idx="${DD}"]`)
     }
 
-    function Bz(zz) {
+    function hD(DD) {
       let {
-        ring: uz
-      } = zz;
-      const [bz, Ez] = (0, nz.useState)(null);
-      return (0, nz.useLayoutEffect)((() => {
-        var zz, bz;
-        Ez(null !== (zz = null === (bz = Iz(uz.slot)) || void 0 === bz ? void 0 : bz.getBoundingClientRect()) && void 0 !== zz ? zz : null)
-      }), [uz]), bz ? (0, qz.jsx)("div", {
+        ring: CD
+      } = DD;
+      const [cD, ID] = (0, pD.useState)(null);
+      return (0, pD.useLayoutEffect)((() => {
+        var DD, cD;
+        ID(null !== (DD = null === (cD = uD(CD.slot)) || void 0 === cD ? void 0 : cD.getBoundingClientRect()) && void 0 !== DD ? DD : null)
+      }), [CD]), cD ? (0, lD.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: bz.left,
-          top: bz.top,
-          width: bz.width,
-          height: bz.height,
-          "--ringColour": uz.colour,
+          left: cD.left,
+          top: cD.top,
+          width: cD.width,
+          height: cD.height,
+          "--ringColour": CD.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function Cz(zz) {
+    function rD(DD) {
       let {
-        slot: uz
-      } = zz;
-      const [bz, Ez] = (0, nz.useState)(null);
-      return (0, nz.useLayoutEffect)((() => {
-        const zz = () => {
-          Ez(Iz(uz))
+        slot: CD
+      } = DD;
+      const [cD, ID] = (0, pD.useState)(null);
+      return (0, pD.useLayoutEffect)((() => {
+        const DD = () => {
+          ID(uD(CD))
         };
-        zz();
-        const bz = new MutationObserver(zz),
-          nz = document.querySelector(".BottomMiddleElements");
-        return nz && bz.observe(nz, {
+        DD();
+        const cD = new MutationObserver(DD),
+          pD = document.querySelector(".BottomMiddleElements");
+        return pD && cD.observe(pD, {
           childList: !0,
           subtree: !0
         }), () => {
-          bz.disconnect()
+          cD.disconnect()
         }
-      }), [uz]), bz ? (0, rz.createPortal)((0, qz.jsx)("div", {
+      }), [CD]), cD ? (0, mD.createPortal)((0, lD.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), bz) : null
+      }), cD) : null
     }
 
-    function Yz(zz) {
+    function AD(DD) {
       let {
-        controller: uz
-      } = zz;
-      const bz = (0, jz.h)(Dz, uz.getView());
-      return (0, qz.jsxs)(qz.Fragment, {
-        children: [bz.rings.map((zz => (0, qz.jsx)(Bz, {
-          ring: zz
-        }, zz.id))), bz.unseenSlots.map((zz => (0, qz.jsx)(Cz, {
-          slot: zz
-        }, zz)))]
+        controller: CD
+      } = DD;
+      const cD = (0, eD.g)(YD, CD.getView());
+      return (0, lD.jsxs)(lD.Fragment, {
+        children: [cD.rings.map((DD => (0, lD.jsx)(hD, {
+          ring: DD
+        }, DD.id))), cD.unseenSlots.map((DD => (0, lD.jsx)(rD, {
+          slot: DD
+        }, DD)))]
       })
     }
-    const kz = function(zz, uz, bz, lz) {
-      let Mz, {
-          localPlayerId: tz
-        } = lz,
-        Hz = null;
-      const Oz = new Xz({
-          itemAt: zz => Mz.getItemSlot(tz, zz),
-          selectedSlot: () => Mz.getSelectedInventorySlotI(tz),
-          swap: (zz, uz) => {
-            Mz.swapInventorySlots(zz, uz)
+    const FD = function(DD, CD, cD, fD) {
+      let bD, {
+          localPlayerId: QD
+        } = fD,
+        wD = null;
+      const SD = new ND({
+          itemAt: DD => bD.getItemSlot(QD, DD),
+          selectedSlot: () => bD.getSelectedInventorySlotI(QD),
+          swap: (DD, CD) => {
+            bD.swapInventorySlots(DD, CD)
           }
         }),
-        pz = new ez((() => Mz.getSelectedInventorySlotI(tz)), (zz => {
-          var uz;
-          return null === (uz = Mz.getItemSlot(tz, zz)) || void 0 === uz ? void 0 : uz.name
+        BD = new ED((() => bD.getSelectedInventorySlotI(QD)), (DD => {
+          var CD;
+          return null === (CD = bD.getItemSlot(QD, DD)) || void 0 === CD ? void 0 : CD.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, iz.c)()
+          placeAgainstBeds: (0, iD.d)()
         },
-        onCreate: zz => {
-          Mz = zz, Hz = (0, sz.x)((0, nz.createElement)(nz.Fragment, null, (0, nz.createElement)(cz), (0, nz.createElement)(Yz, {
-            controller: pz
+        onCreate: DD => {
+          bD = DD, wD = (0, XD.v)((0, pD.createElement)(pD.Fragment, null, (0, pD.createElement)(GD), (0, pD.createElement)(AD, {
+            controller: BD
           })))
         },
         onClose: () => {
-          var zz;
-          null === (zz = Hz) || void 0 === zz || zz()
+          var DD;
+          null === (DD = wD) || void 0 === DD || DD()
         },
-        sd: () => {
-          Oz.sd(), pz.sd()
+        wy: () => {
+          SD.wy(), BD.wy()
         },
-        onReceivedMessageFromServer: (zz, uz) => {
-          "luckyGearUpgrade" === zz && pz.WZ(uz)
+        onReceivedMessageFromServer: (DD, CD) => {
+          "luckyGearUpgrade" === DD && BD.kt(CD)
         },
-        onPlayerChangeBlock: (zz, uz, bz, Ez, nz, iz) => {
-          "Air" !== iz && Oz.onPlace(iz)
+        onPlayerChangeBlock: (DD, CD, cD, ID, pD, iD) => {
+          "Air" !== iD && SD.onPlace(iD)
         },
-        onPlayerDropItem: (zz, uz, bz, Ez) => {
-          Oz.onDrop(uz, Ez)
+        onPlayerDropItem: (DD, CD, cD, ID) => {
+          SD.onDrop(CD, ID)
         },
-        onPlayerAltAction: (zz, uz, bz, nz, iz, lz) => {
-          if (!lz || "Mesh" !== Mz.getEntityType(lz)) return;
-          const tz = Mz.getEntityName(lz),
-            Hz = Object.values(Ez).find((zz => zz.name === tz));
-          Hz && Mz.openShop(zz, !1, Hz.shopTab)
+        onPlayerAltAction: (DD, CD, cD, pD, iD, fD) => {
+          if (!fD || "Mesh" !== bD.getEntityType(fD)) return;
+          const QD = bD.getEntityName(fD),
+            wD = Object.values(ID).find((DD => DD.name === QD));
+          wD && bD.openShop(DD, !1, wD.shopTab)
         }
       }
     }
   },
-  37452: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Mz
+  37425: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => bD
     });
-    var Ez = bz(328),
-      nz = bz(36365),
-      iz = bz(4251);
-    const lz = ["Leaf Bed", "_Leaf Bed Head", ...Ez.Jc.flatMap((zz => [`${zz} Bed`, `_${zz} Bed Head`, `${zz} Strongbed`, `_${zz} Strongbed Head`]))];
+    var ID = cD(326),
+      pD = cD(36300),
+      iD = cD(4279);
+    const fD = ["Leaf Bed", "_Leaf Bed Head", ...ID.Gc.flatMap((DD => [`${DD} Bed`, `_${DD} Bed Head`, `${DD} Strongbed`, `_${DD} Strongbed Head`]))];
 
-    function Mz() {
-      let zz;
+    function bD() {
+      let DD;
       return {
-        onCreate(uz) {
-          zz = uz
+        onCreate(CD) {
+          DD = CD
         },
-        altVetoBlocks: lz,
-        onPlayerAttemptAltAction(uz, bz, Ez, lz, Mz, tz) {
-          var Hz;
-          if ((0, nz.e)(zz.getMetaInfo(Mz).rootName) && !zz.isEntityInteractable(tz) && (0, iz.c)(null === (Hz = zz.luz(uz)) || void 0 === Hz ? void 0 : Hz.typeObj.type)) return "preventAction"
+        altVetoBlocks: fD,
+        onPlayerAttemptAltAction(CD, cD, ID, fD, bD, QD) {
+          var wD;
+          if ((0, pD.b)(DD.getMetaInfo(bD).rootName) && !DD.isEntityInteractable(QD) && (0, iD.e)(null === (wD = DD.FDD(CD)) || void 0 === wD ? void 0 : wD.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36365: (zz, uz, bz) => {
-    function Ez(zz) {
-      return zz.includes("Leaf Bed")
+  36300: (DD, CD, cD) => {
+    function ID(DD) {
+      return DD.includes("Leaf Bed")
     }
 
-    function nz(zz) {
-      return / Bed(?: Head)?(?:\||$)/.test(zz) && !Ez(zz)
+    function pD(DD) {
+      return / Bed(?: Head)?(?:\||$)/.test(DD) && !ID(DD)
     }
 
-    function iz(zz) {
-      return zz.includes(" Strongbed")
+    function iD(DD) {
+      return DD.includes(" Strongbed")
     }
 
-    function lz(zz) {
-      return Ez(zz) || nz(zz) || iz(zz)
+    function fD(DD) {
+      return ID(DD) || pD(DD) || iD(DD)
     }
-    bz.d(uz, {
-      e: () => lz,
-      g: () => Ez,
-      j: () => iz,
-      k: () => nz
+    cD.d(CD, {
+      b: () => fD,
+      e: () => ID,
+      h: () => iD,
+      i: () => pD
     })
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

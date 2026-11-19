@@ -1,272 +1,272 @@
 export const id = 75;
 export const ids = [75, 91];
 export const modules = {
-    4590: (zz, uz, bz) => {
-      bz.d(uz, {
-        b: () => Kz,
-        f: () => wz
+    4599: (DD, CD, cD) => {
+      cD.d(CD, {
+        c: () => oD,
+        e: () => vD
       });
-      var Ez = bz(1038),
-        nz = bz.n(Ez),
-        iz = bz(56),
-        lz = bz(1181),
-        Mz = bz(4598),
-        tz = bz(1846),
-        Hz = bz(2313),
-        Oz = bz(4601),
-        pz = bz(1089);
-      const dz = new WeakMap;
-      let Fz = 0;
+      var ID = cD(1049),
+        pD = cD.n(ID),
+        iD = cD(53),
+        fD = cD(1192),
+        bD = cD(4606),
+        QD = cD(1872),
+        wD = cD(2358),
+        SD = cD(4608),
+        BD = cD(1093);
+      const yD = new WeakMap;
+      let MD = 0;
 
-      function Zz(zz) {
-        let uz = dz.get(zz);
-        return void 0 === uz && (uz = Fz++, dz.set(zz, uz)), uz
+      function tD(DD) {
+        let CD = yD.get(DD);
+        return void 0 === CD && (CD = MD++, yD.set(DD, CD)), CD
       }
 
-      function Rz(zz) {
+      function ZD(DD) {
         let {
-          piece: uz
-        } = zz;
-        return "space" === uz.kind ? (0, pz.jsx)(pz.Fragment, {
-          children: uz.text
-        }) : (0, pz.jsx)("span", {
+          piece: CD
+        } = DD;
+        return "space" === CD.kind ? (0, BD.jsx)(BD.Fragment, {
+          children: CD.text
+        }) : (0, BD.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${uz.delayMs}ms`
+            "--word-delay": `${CD.delayMs}ms`
           },
-          children: (0, pz.jsx)(Mz.b, {
-            text: "icon" === uz.kind ? `[[${uz.icon}]]` : uz.text
+          children: (0, BD.jsx)(bD.b, {
+            text: "icon" === CD.kind ? `[[${CD.icon}]]` : CD.text
           })
         })
       }
 
-      function Kz(zz) {
+      function oD(DD) {
         let {
-          display: uz
-        } = zz;
+          display: CD
+        } = DD;
         const {
-          selectedLanguage: bz
-        } = (0, lz.F)(), Ez = (0, iz.useMemo)((() => (0, Oz.e)((0, Oz.g)(uz).plan.pieces)), [uz, bz.code]);
-        return (0, pz.jsxs)("div", {
-          className: nz()("Dialogue", {
-            DialogueAnimateIn: !1 !== uz.animateIn
+          selectedLanguage: cD
+        } = (0, fD.F)(), ID = (0, iD.useMemo)((() => (0, SD.d)((0, SD.e)(CD).plan.pieces)), [CD, cD.code]);
+        return (0, BD.jsxs)("div", {
+          className: pD()("Dialogue", {
+            DialogueAnimateIn: !1 !== CD.animateIn
           }),
-          children: [uz.speakerName && (0, pz.jsx)(tz.b, {
-            text: uz.speakerName,
+          children: [CD.speakerName && (0, BD.jsx)(QD.c, {
+            text: CD.speakerName,
             className: "DialogueSpeaker"
-          }), (0, pz.jsx)("p", {
+          }), (0, BD.jsx)("p", {
             className: "DialogueLine",
-            children: Ez.map(((zz, uz) => 1 === zz.length && "space" === zz[0].kind ? zz[0].text : (0, pz.jsx)("span", {
+            children: ID.map(((DD, CD) => 1 === DD.length && "space" === DD[0].kind ? DD[0].text : (0, BD.jsx)("span", {
               className: "DialogueGlue",
-              children: zz.map(((zz, uz) => (0, pz.jsx)(Rz, {
-                piece: zz
-              }, uz)))
-            }, uz)))
+              children: DD.map(((DD, CD) => (0, BD.jsx)(ZD, {
+                piece: DD
+              }, CD)))
+            }, CD)))
           })]
         })
       }
-      const wz = (0, iz.memo)((function() {
-        const zz = (0, Hz.g)("dialogue");
-        return (0, pz.jsx)("div", {
+      const vD = (0, iD.memo)((function() {
+        const DD = (0, wD.h)("dialogue");
+        return (0, BD.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: zz && (0, pz.jsx)(Kz, {
-            display: zz
-          }, Zz(zz))
+          children: DD && (0, BD.jsx)(oD, {
+            display: DD
+          }, tD(DD))
         })
       }))
     },
-    4463: (zz, uz, bz) => {
-        bz.r(uz), bz.d(uz, {
-          default: () => El
+    4504: (DD, CD, cD) => {
+        cD.r(CD), cD.d(CD, {
+          default: () => Cf
         });
-        var Ez = bz(56),
-          nz = bz(1038),
-          iz = bz.n(nz),
-          lz = bz(1485),
-          Mz = bz(1490),
-          tz = bz(20),
-          Hz = bz(79),
-          Oz = bz(4465),
-          pz = bz(4480),
-          dz = bz(4483),
-          Fz = bz(4139),
-          Zz = bz(1089);
-        const Rz = "/textures/docs/icons";
+        var ID = cD(53),
+          pD = cD(1049),
+          iD = cD.n(pD),
+          fD = cD(1510),
+          bD = cD(1517),
+          QD = cD(16),
+          wD = cD(62),
+          SD = cD(4512),
+          BD = cD(4524),
+          yD = cD(4526),
+          MD = cD(4175),
+          tD = cD(1093);
+        const ZD = "/textures/docs/icons";
 
-        function Kz(zz) {
+        function oD(DD) {
           let {
-            name: uz,
-            isTinted: bz,
-            className: Ez,
-            style: nz
-          } = zz;
-          const lz = `${Rz}/${uz}.png`;
-          return bz ? (0, Zz.jsxs)("span", {
-            className: iz()("DocsPixelIcon", "Tinted", Ez),
+            name: CD,
+            isTinted: cD,
+            className: ID,
+            style: pD
+          } = DD;
+          const fD = `${ZD}/${CD}.png`;
+          return cD ? (0, tD.jsxs)("span", {
+            className: iD()("DocsPixelIcon", "Tinted", ID),
             "aria-hidden": "true",
-            style: nz,
-            children: [(0, Zz.jsx)("span", {
+            style: pD,
+            children: [(0, tD.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${lz}")`,
-                WebkitMaskImage: `url("${lz}")`
+                maskImage: `url("${fD}")`,
+                WebkitMaskImage: `url("${fD}")`
               }
-            }), (0, Zz.jsx)("img", {
-              src: lz,
+            }), (0, tD.jsx)("img", {
+              src: fD,
               alt: ""
             })]
-          }) : (0, Zz.jsx)("img", {
-            className: iz()("DocsPixelIcon", Ez),
-            src: lz,
+          }) : (0, tD.jsx)("img", {
+            className: iD()("DocsPixelIcon", ID),
+            src: fD,
             alt: "",
             "aria-hidden": "true",
-            style: nz
+            style: pD
           })
         }
-        const wz = 1500;
+        const vD = 1500;
 
-        function Xz() {
-          const [zz, uz] = (0, Ez.useState)(null);
-          (0, Ez.useEffect)((() => {
-            if (null === zz) return;
-            const bz = setTimeout((() => {
-              uz(null)
-            }), wz);
+        function ND() {
+          const [DD, CD] = (0, ID.useState)(null);
+          (0, ID.useEffect)((() => {
+            if (null === DD) return;
+            const cD = setTimeout((() => {
+              CD(null)
+            }), vD);
             return () => {
-              clearTimeout(bz)
+              clearTimeout(cD)
             }
-          }), [zz]);
-          return [zz, zz => {
-            (0, Fz.b)(zz).then((() => {
-              uz({
-                text: zz,
+          }), [DD]);
+          return [DD, DD => {
+            (0, MD.c)(DD).then((() => {
+              CD({
+                text: DD,
                 failed: !1
               })
-            }), (bz => {
-              console.error("Could not copy to the clipboard", bz), uz({
-                text: zz,
+            }), (cD => {
+              console.error("Could not copy to the clipboard", cD), CD({
+                text: DD,
                 failed: !0
               })
             }))
           }]
         }
 
-        function fz(zz) {
+        function gD(DD) {
           let {
-            text: uz,
-            label: bz,
-            className: Ez
-          } = zz;
-          const [nz, lz] = Xz(), Mz = !1 === (null === nz || void 0 === nz ? void 0 : nz.failed);
-          return (0, Zz.jsxs)("button", {
+            text: CD,
+            label: cD,
+            className: ID
+          } = DD;
+          const [pD, fD] = ND(), bD = !1 === (null === pD || void 0 === pD ? void 0 : pD.failed);
+          return (0, tD.jsxs)("button", {
             type: "button",
-            className: iz()("DocsCopyButton", Ez, {
-              Copied: Mz
+            className: iD()("DocsCopyButton", ID, {
+              Copied: bD
             }),
-            title: `Copy ${uz.length>40?"to clipboard":uz}`,
-            "aria-label": bz ? void 0 : `Copy ${uz}`,
-            onClick: zz => {
-              zz.stopPropagation(), lz(uz)
+            title: `Copy ${CD.length>40?"to clipboard":CD}`,
+            "aria-label": cD ? void 0 : `Copy ${CD}`,
+            onClick: DD => {
+              DD.stopPropagation(), fD(CD)
             },
-            children: [(0, Zz.jsx)(Kz, {
-              name: Mz ? "check" : "copy"
-            }), bz && (0, Zz.jsx)("span", {
-              children: Mz ? "Copied" : null !== nz && void 0 !== nz && nz.failed ? "Copy failed" : bz
+            children: [(0, tD.jsx)(oD, {
+              name: bD ? "check" : "copy"
+            }), cD && (0, tD.jsx)("span", {
+              children: bD ? "Copied" : null !== pD && void 0 !== pD && pD.failed ? "Copy failed" : cD
             })]
           })
         }
-        Oz.e.registerLanguage("javascript", pz.d), Oz.e.registerLanguage("typescript", dz.e);
-        const sz = {
+        SD.c.registerLanguage("javascript", BD.e), SD.c.registerLanguage("typescript", yD.d);
+        const XD = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          rz = {
+          mD = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          oz = 24;
+          nD = 24;
 
-        function Nz(zz) {
+        function OD(DD) {
           let {
-            code: uz,
-            lang: bz,
-            compact: nz = !1
-          } = zz;
-          const lz = (0, Ez.useMemo)((() => function(zz, uz) {
-              const bz = sz[uz];
-              return bz ? Oz.e.highlight(zz, {
-                language: bz
-              }).value : zz.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(uz, bz)), [uz, bz]),
-            Mz = uz.split("\n").length,
-            tz = !nz && Mz > oz + 6,
-            [Hz, pz] = (0, Ez.useState)(!1),
-            dz = sz[bz];
-          return (0, Zz.jsxs)("div", {
-            className: iz()("DocsCodeBlock", {
-              Compact: nz,
-              Collapsed: tz && !Hz
+            code: CD,
+            lang: cD,
+            compact: pD = !1
+          } = DD;
+          const fD = (0, ID.useMemo)((() => function(DD, CD) {
+              const cD = XD[CD];
+              return cD ? SD.c.highlight(DD, {
+                language: cD
+              }).value : DD.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(CD, cD)), [CD, cD]),
+            bD = CD.split("\n").length,
+            QD = !pD && bD > nD + 6,
+            [wD, BD] = (0, ID.useState)(!1),
+            yD = XD[cD];
+          return (0, tD.jsxs)("div", {
+            className: iD()("DocsCodeBlock", {
+              Compact: pD,
+              Collapsed: QD && !wD
             }),
-            children: [!nz && (0, Zz.jsxs)("div", {
+            children: [!pD && (0, tD.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, Zz.jsx)("span", {
+              children: [(0, tD.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: dz ? rz[dz] : "Text"
-              }), (0, Zz.jsx)(fz, {
-                text: uz,
+                children: yD ? mD[yD] : "Text"
+              }), (0, tD.jsx)(gD, {
+                text: CD,
                 label: "Copy"
               })]
-            }), (0, Zz.jsx)("pre", {
-              children: (0, Zz.jsx)("code", {
+            }), (0, tD.jsx)("pre", {
+              children: (0, tD.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: lz
+                  __html: fD
                 }
               })
-            }), tz && (0, Zz.jsxs)("button", {
+            }), QD && (0, tD.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": Hz,
+              "aria-expanded": wD,
               onClick: () => {
-                pz(!Hz)
+                BD(!wD)
               },
-              children: [(0, Zz.jsx)(Kz, {
-                name: Hz ? "chevron-up" : "chevron-down"
-              }), Hz ? "Show less" : `Show all ${Mz} lines`]
+              children: [(0, tD.jsx)(oD, {
+                name: wD ? "chevron-up" : "chevron-down"
+              }), wD ? "Show less" : `Show all ${bD} lines`]
             })]
           })
         }
-        var vz = bz(4489);
-        var xz = bz(4497);
-        const Jz = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var PD = cD(4534);
+        var HD = cD(4537);
+        const UD = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function Az(zz) {
-          const uz = new Map;
-          let bz, Ez = [],
-            nz = !1;
-          const iz = () => {
-            bz && uz.set(bz.name, bz.lines.join("\n").trimEnd())
+        function xD(DD) {
+          const CD = new Map;
+          let cD, ID = [],
+            pD = !1;
+          const iD = () => {
+            cD && CD.set(cD.name, cD.lines.join("\n").trimEnd())
           };
-          for (const lz of zz.split("\n")) {
-            const zz = lz.match(Jz);
-            nz || lz.startsWith("/*") ? (nz || (iz(), bz = void 0), Ez.push(lz), nz = !lz.includes("*/")) : zz ? (iz(), bz = {
-              name: zz[1],
-              lines: [...Ez, lz]
-            }, Ez = []) : bz && (lz.startsWith(" ") || lz.startsWith("\t") || /^[}\])|]/.test(lz)) ? bz.lines.push(lz) : bz && "" !== lz.trim() && (iz(), bz = void 0)
+          for (const fD of DD.split("\n")) {
+            const DD = fD.match(UD);
+            pD || fD.startsWith("/*") ? (pD || (iD(), cD = void 0), ID.push(fD), pD = !fD.includes("*/")) : DD ? (iD(), cD = {
+              name: DD[1],
+              lines: [...ID, fD]
+            }, ID = []) : cD && (fD.startsWith(" ") || fD.startsWith("\t") || /^[}\])|]/.test(fD)) ? cD.lines.push(fD) : cD && "" !== fD.trim() && (iD(), cD = void 0)
           }
-          return iz(), uz
+          return iD(), CD
         }
 
-        function Tz(zz) {
-          return "methods" === zz || "callbacks" === zz || "settings" === zz
+        function qD(DD) {
+          return "methods" === DD || "callbacks" === DD || "settings" === DD
         }
-        const Lz = {
+        const JD = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (zz, uz) => `api.setClientOption(playerId, "${zz}", ${uz})`
+              setterSnippet: (DD, CD) => `api.setClientOption(playerId, "${DD}", ${CD})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (zz, uz) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${zz}", ${uz})`
+              setterSnippet: (DD, CD) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${DD}", ${CD})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (zz, uz) => `api.setMobSetting(mobId, "${zz}", ${uz})`
+              setterSnippet: (DD, CD) => `api.setMobSetting(mobId, "${DD}", ${CD})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (zz, uz) => `api.setVehicleSetting(vehicleId, "${zz}", ${uz})`
+              setterSnippet: (DD, CD) => `api.setVehicleSetting(vehicleId, "${DD}", ${CD})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          Pz = {
+          KD = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function Gz(zz) {
-          return zz.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function aD(DD) {
+          return DD.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function az(zz) {
-          let uz = !1;
-          return zz.split("\n").map((zz => (zz.startsWith("```") && (uz = !uz), !uz && /^#{3,} /.test(zz) ? zz.slice(1) : zz))).join("\n")
+        function VD(DD) {
+          let CD = !1;
+          return DD.split("\n").map((DD => (DD.startsWith("```") && (CD = !CD), !CD && /^#{3,} /.test(DD) ? DD.slice(1) : DD))).join("\n")
         }
 
-        function Vz(zz) {
-          return "readme" === zz ? "getting-started" : Gz(zz)
+        function zD(DD) {
+          return "readme" === DD ? "getting-started" : aD(DD)
         }
-        const mz = "## Glossary of Referenced Types";
-        const qz = [{
+        const jD = "## Glossary of Referenced Types";
+        const lD = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...xz.d.flatMap((zz => {
-            const uz = {
-              id: zz.id,
-              slug: Vz(zz.id),
-              title: zz.title,
-              markdown: zz.content,
-              ...Lz[zz.id]
+          }, ...HD.c.flatMap((DD => {
+            const CD = {
+              id: DD.id,
+              slug: zD(DD.id),
+              title: DD.title,
+              markdown: DD.content,
+              ...JD[DD.id]
             };
-            if ("readme" === zz.id) return function(zz) {
-              const uz = zz.markdown.indexOf(mz),
-                bz = zz.markdown.indexOf("\n```", uz),
-                Ez = zz.markdown.indexOf("\n```", bz + 1);
-              if (-1 === uz || -1 === bz || -1 === Ez) throw new Error(`Getting started has no "${mz}" section with a code block`);
-              const nz = zz.markdown.slice(uz + 31, bz).trim(),
-                iz = [...Az(zz.markdown.slice(zz.markdown.indexOf("\n", bz + 1) + 1, Ez))].map((zz => {
-                  let [uz, bz] = zz;
-                  return `## ${uz}\n\n\`\`\`ts\n${bz}\n\`\`\`\n`
+            if ("readme" === DD.id) return function(DD) {
+              const CD = DD.markdown.indexOf(jD),
+                cD = DD.markdown.indexOf("\n```", CD),
+                ID = DD.markdown.indexOf("\n```", cD + 1);
+              if (-1 === CD || -1 === cD || -1 === ID) throw new Error(`Getting started has no "${jD}" section with a code block`);
+              const pD = DD.markdown.slice(CD + 31, cD).trim(),
+                iD = [...xD(DD.markdown.slice(DD.markdown.indexOf("\n", cD + 1) + 1, ID))].map((DD => {
+                  let [CD, cD] = DD;
+                  return `## ${CD}\n\n\`\`\`ts\n${cD}\n\`\`\`\n`
                 })),
-                lz = zz.markdown.slice(zz.markdown.indexOf("\n", Ez + 1) + 1);
+                fD = DD.markdown.slice(DD.markdown.indexOf("\n", ID + 1) + 1);
               return [{
-                ...zz,
-                markdown: `${zz.markdown.slice(0,uz)}${lz}`
+                ...DD,
+                markdown: `${DD.markdown.slice(0,CD)}${fD}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${nz}\n\n${iz.join("\n")}`
+                markdown: `# Types\n\n${pD}\n\n${iD.join("\n")}`
               }]
-            }(uz);
-            if ("howTo" === zz.id) {
+            }(CD);
+            if ("howTo" === DD.id) {
               const {
-                parent: zz,
-                guides: bz
-              } = function(zz) {
-                const [uz, ...bz] = zz.markdown.split(/^(?=## )/m), Ez = [uz], nz = [];
-                for (const lz of bz) {
-                  var iz;
-                  const uz = lz.indexOf("\n"),
-                    bz = lz.slice(3, uz).trim(),
-                    Mz = lz.slice(uz + 1);
-                  if (!Mz.includes("```")) {
-                    Ez.push(lz);
+                parent: DD,
+                guides: cD
+              } = function(DD) {
+                const [CD, ...cD] = DD.markdown.split(/^(?=## )/m), ID = [CD], pD = [];
+                for (const fD of cD) {
+                  var iD;
+                  const CD = fD.indexOf("\n"),
+                    cD = fD.slice(3, CD).trim(),
+                    bD = fD.slice(CD + 1);
+                  if (!bD.includes("```")) {
+                    ID.push(fD);
                     continue
                   }
-                  const tz = null !== (iz = Pz[bz]) && void 0 !== iz ? iz : {
+                  const QD = null !== (iD = KD[cD]) && void 0 !== iD ? iD : {
                     icon: "lightbulb",
-                    summary: `How to use ${bz.toLowerCase()} in World Code.`
+                    summary: `How to use ${cD.toLowerCase()} in World Code.`
                   };
-                  nz.push({
-                    id: `${zz.id}${bz.split(/[^A-Za-z0-9]+/).map((zz=>zz.charAt(0).toUpperCase()+zz.slice(1))).join("")}`,
-                    slug: `${zz.slug}-${Gz(bz)}`,
-                    title: bz,
+                  pD.push({
+                    id: `${DD.id}${cD.split(/[^A-Za-z0-9]+/).map((DD=>DD.charAt(0).toUpperCase()+DD.slice(1))).join("")}`,
+                    slug: `${DD.slug}-${aD(cD)}`,
+                    title: cD,
                     layout: "article",
-                    sourceAnchor: (0, vz.k)(bz),
-                    markdown: `# ${bz}\n\n${az(Mz)}`,
-                    ...tz
+                    sourceAnchor: (0, PD.u)(cD),
+                    markdown: `# ${cD}\n\n${VD(bD)}`,
+                    ...QD
                   })
                 }
                 return {
                   parent: {
-                    ...zz,
-                    markdown: Ez.join(""),
-                    childPageIds: nz.map((zz => zz.id))
+                    ...DD,
+                    markdown: ID.join(""),
+                    childPageIds: pD.map((DD => DD.id))
                   },
-                  guides: nz
+                  guides: pD
                 }
-              }(uz);
-              return [zz, ...bz]
+              }(CD);
+              return [DD, ...cD]
             }
-            return [uz]
+            return [CD]
           }))],
-          hz = [{
+          LD = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...qz.filter((zz => void 0 !== zz.sourceAnchor)).map((zz => zz.id))]
+            pageIds: ["howTo", ...lD.filter((DD => void 0 !== DD.sourceAnchor)).map((DD => DD.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function Uz(zz) {
-          return qz.find((uz => uz.id === zz))
+        function TD(DD) {
+          return lD.find((CD => CD.id === DD))
         }
-        const cz = new Map;
+        const GD = new Map;
 
-        function gz(zz) {
-          let uz = cz.get(zz.id);
-          return uz || (uz = (0, vz.q)(zz.markdown, "changelog" === zz.layout ? 3 : 2), cz.set(zz.id, uz)), uz
-        }
-
-        function Sz(zz, uz) {
-          return gz(zz).sections.some((zz => zz.heading.anchor === uz || zz.blocks.some((zz => "heading" === zz.kind && zz.anchor === uz))))
+        function RD(DD) {
+          let CD = GD.get(DD.id);
+          return CD || (CD = (0, PD.B)(DD.markdown, "changelog" === DD.layout ? 3 : 2), GD.set(DD.id, CD)), CD
         }
 
-        function yz(zz) {
-          const [uz, ...bz] = zz.replace(/^#/, "").split("-"), Ez = qz.find((zz => zz.id === uz));
-          if (!Ez) return null;
-          const nz = bz.length > 0 ? (0, vz.k)(bz.join("-")) : "";
-          for (const lz of null !== (iz = Ez.childPageIds) && void 0 !== iz ? iz : []) {
-            var iz;
-            const zz = Uz(lz);
-            if (zz.sourceAnchor === nz) return {
-              page: zz,
+        function kD(DD, CD) {
+          return RD(DD).sections.some((DD => DD.heading.anchor === CD || DD.blocks.some((DD => "heading" === DD.kind && DD.anchor === CD))))
+        }
+
+        function dD(DD) {
+          const [CD, ...cD] = DD.replace(/^#/, "").split("-"), ID = lD.find((DD => DD.id === CD));
+          if (!ID) return null;
+          const pD = cD.length > 0 ? (0, PD.u)(cD.join("-")) : "";
+          for (const fD of null !== (iD = ID.childPageIds) && void 0 !== iD ? iD : []) {
+            var iD;
+            const DD = TD(fD);
+            if (DD.sourceAnchor === pD) return {
+              page: DD,
               anchor: ""
             };
-            if (Sz(zz, nz)) return {
-              page: zz,
-              anchor: nz
+            if (kD(DD, pD)) return {
+              page: DD,
+              anchor: pD
             }
           }
           return {
-            page: Ez,
-            anchor: nz
+            page: ID,
+            anchor: pD
           }
         }
-        const Dz = {
+        const YD = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function Qz(zz, uz) {
-          let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const Ez = uz.slug ? `${zz}/${uz.slug}` : zz;
-          return bz ? `${Ez}#${bz}` : Ez
+        function WD(DD, CD) {
+          let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const ID = CD.slug ? `${DD}/${CD.slug}` : DD;
+          return cD ? `${ID}#${cD}` : ID
         }
-        var Wz = bz(4517);
-        const ez = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          jz = new Set(["GameApi", "Console", "_TypeOf"]),
-          Iz = 4;
+        var sD = cD(4550);
+        const ED = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          eD = new Set(["GameApi", "Console", "_TypeOf"]),
+          uD = 4;
 
-        function Bz(zz) {
-          let uz = zz.length;
-          for (; uz > 0 && "" === zz[uz - 1].trim();) uz--;
-          return zz.slice(0, uz)
+        function hD(DD) {
+          let CD = DD.length;
+          for (; CD > 0 && "" === DD[CD - 1].trim();) CD--;
+          return DD.slice(0, CD)
         }
 
-        function Cz(zz) {
-          var uz;
-          const bz = Bz(zz);
-          if (null === (uz = bz.at(-1)) || void 0 === uz || !uz.trimEnd().endsWith("*/")) return {
-            lines: bz,
+        function rD(DD) {
+          var CD;
+          const cD = hD(DD);
+          if (null === (CD = cD.at(-1)) || void 0 === CD || !CD.trimEnd().endsWith("*/")) return {
+            lines: cD,
             doc: ""
           };
-          const Ez = bz.findLastIndex((zz => zz.startsWith("/**")));
-          return -1 === Ez ? {
-            lines: bz,
+          const ID = cD.findLastIndex((DD => DD.startsWith("/**")));
+          return -1 === ID ? {
+            lines: cD,
             doc: ""
           } : {
-            lines: Bz(bz.slice(0, Ez)),
-            doc: bz.slice(Ez).join("\n")
+            lines: hD(cD.slice(0, ID)),
+            doc: cD.slice(ID).join("\n")
           }
         }
 
-        function Yz(zz) {
-          var uz;
-          const bz = zz.split("\n"),
-            Ez = bz.flatMap(((zz, uz) => ez.test(zz) ? [uz] : []));
-          let nz = Cz(bz.slice(0, null !== (uz = Ez[0]) && void 0 !== uz ? uz : bz.length)).doc;
-          return Ez.map(((zz, uz) => {
-            var iz;
-            const lz = Cz(bz.slice(zz, null !== (iz = Ez[uz + 1]) && void 0 !== iz ? iz : bz.length)),
-              Mz = {
-                name: bz[zz].match(ez)[1],
-                doc: nz,
-                lines: lz.lines
+        function AD(DD) {
+          var CD;
+          const cD = DD.split("\n"),
+            ID = cD.flatMap(((DD, CD) => ED.test(DD) ? [CD] : []));
+          let pD = rD(cD.slice(0, null !== (CD = ID[0]) && void 0 !== CD ? CD : cD.length)).doc;
+          return ID.map(((DD, CD) => {
+            var iD;
+            const fD = rD(cD.slice(DD, null !== (iD = ID[CD + 1]) && void 0 !== iD ? iD : cD.length)),
+              bD = {
+                name: cD[DD].match(ED)[1],
+                doc: pD,
+                lines: fD.lines
               };
-            return nz = lz.doc, Mz
+            return pD = fD.doc, bD
           }))
         }
 
-        function kz(zz) {
-          var uz;
-          const bz = zz.match(/^readonly \[([\s\S]*)\]$/);
-          return bz ? null !== (uz = bz[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== uz ? uz : [] : null
+        function FD(DD) {
+          var CD;
+          const cD = DD.match(/^readonly \[([\s\S]*)\]$/);
+          return cD ? null !== (CD = cD[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== CD ? CD : [] : null
         }
 
-        function zu(zz) {
-          if (!zz.startsWith("{") || !zz.endsWith("}")) return null;
-          const uz = {
+        function DC(DD) {
+          if (!DD.startsWith("{") || !DD.endsWith("}")) return null;
+          const CD = {
               keys: [],
               values: []
             },
-            bz = zz => {
-              const bz = zz.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              bz && (uz.keys.push(bz[1].startsWith('"') ? bz[1] : `"${bz[1]}"`), uz.values.push(bz[2].trim()))
+            cD = DD => {
+              const cD = DD.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              cD && (CD.keys.push(cD[1].startsWith('"') ? cD[1] : `"${cD[1]}"`), CD.values.push(cD[2].trim()))
             };
-          let Ez = 0,
-            nz = "";
-          for (const iz of zz.slice(1, -1)) "{[(".includes(iz) ? Ez++ : "}])".includes(iz) && Ez--, ";" === iz && 0 === Ez ? (bz(nz), nz = "") : nz += iz;
-          return bz(nz), uz
+          let ID = 0,
+            pD = "";
+          for (const iD of DD.slice(1, -1)) "{[(".includes(iD) ? ID++ : "}])".includes(iD) && ID--, ";" === iD && 0 === ID ? (cD(pD), pD = "") : pD += iD;
+          return cD(pD), CD
         }
 
-        function uu(zz) {
-          return zz.length > Iz ? `\n\t| ${zz.join("\n\t| ")}` : zz.join(" | ")
+        function CC(DD) {
+          return DD.length > uD ? `\n\t| ${DD.join("\n\t| ")}` : DD.join(" | ")
         }
 
-        function bu(zz, uz) {
-          const bz = function(zz, uz) {
-            return zz.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((zz, bz) => {
-              var Ez;
-              const nz = null === (Ez = uz.get(bz)) || void 0 === Ez ? void 0 : Ez.object;
-              return nz ? uu(nz.values) : zz
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((zz, bz) => {
-              var Ez, nz;
-              const iz = null === (Ez = uz.get(bz)) || void 0 === Ez || null === (nz = Ez.object) || void 0 === nz ? void 0 : nz.values.map(kz);
-              return null !== iz && void 0 !== iz && iz.every((zz => null !== zz)) ? uu([...new Set(iz.flat())]) : zz
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((zz, bz) => {
-              var Ez;
-              const nz = null === (Ez = uz.get(bz)) || void 0 === Ez ? void 0 : Ez.members;
-              return nz ? uu(nz) : zz
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((zz, bz) => {
-              var Ez;
-              const nz = null === (Ez = uz.get(bz)) || void 0 === Ez ? void 0 : Ez.object;
-              return nz ? uu(nz.keys) : zz
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((zz, bz) => {
-              var Ez, nz;
-              return null !== (Ez = null === (nz = uz.get(bz)) || void 0 === nz ? void 0 : nz.text) && void 0 !== Ez ? Ez : zz
+        function cC(DD, CD) {
+          const cD = function(DD, CD) {
+            return DD.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((DD, cD) => {
+              var ID;
+              const pD = null === (ID = CD.get(cD)) || void 0 === ID ? void 0 : ID.object;
+              return pD ? CC(pD.values) : DD
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((DD, cD) => {
+              var ID, pD;
+              const iD = null === (ID = CD.get(cD)) || void 0 === ID || null === (pD = ID.object) || void 0 === pD ? void 0 : pD.values.map(FD);
+              return null !== iD && void 0 !== iD && iD.every((DD => null !== DD)) ? CC([...new Set(iD.flat())]) : DD
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((DD, cD) => {
+              var ID;
+              const pD = null === (ID = CD.get(cD)) || void 0 === ID ? void 0 : ID.members;
+              return pD ? CC(pD) : DD
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((DD, cD) => {
+              var ID;
+              const pD = null === (ID = CD.get(cD)) || void 0 === ID ? void 0 : ID.object;
+              return pD ? CC(pD.keys) : DD
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((DD, cD) => {
+              var ID, pD;
+              return null !== (ID = null === (pD = CD.get(cD)) || void 0 === pD ? void 0 : pD.text) && void 0 !== ID ? ID : DD
             }))
-          }(zz.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), uz);
-          return [zz.doc, bz].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(DD.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), CD);
+          return [DD.doc, cD].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function Eu(zz) {
-          const uz = Yz(zz),
-            bz = function(zz) {
-              const uz = new Map,
-                bz = zz.find((zz => "_TypeOf" === zz.name));
-              let Ez = null;
-              const nz = () => {
-                if (Ez) {
-                  const zz = Ez.lines.join("\n");
-                  uz.set(Ez.name, {
-                    text: zz,
-                    members: kz(zz),
-                    object: zu(zz)
+        function IC(DD) {
+          const CD = AD(DD),
+            cD = function(DD) {
+              const CD = new Map,
+                cD = DD.find((DD => "_TypeOf" === DD.name));
+              let ID = null;
+              const pD = () => {
+                if (ID) {
+                  const DD = ID.lines.join("\n");
+                  CD.set(ID.name, {
+                    text: DD,
+                    members: FD(DD),
+                    object: DC(DD)
                   })
                 }
               };
-              for (const iz of bz.lines.slice(1, -1)) {
-                const zz = iz.match(/^\t([\w$]+): (.+)$/);
-                zz ? (nz(), Ez = {
-                  name: zz[1],
-                  lines: [zz[2]]
-                }) : Ez && Ez.lines.push(iz.replace(/^\t/, ""))
+              for (const iD of cD.lines.slice(1, -1)) {
+                const DD = iD.match(/^\t([\w$]+): (.+)$/);
+                DD ? (pD(), ID = {
+                  name: DD[1],
+                  lines: [DD[2]]
+                }) : ID && ID.lines.push(iD.replace(/^\t/, ""))
               }
-              return nz(), uz
-            }(uz),
-            Ez = new Map;
-          for (const nz of uz) jz.has(nz.name) || Ez.has(nz.name) || Ez.set(nz.name, bu(nz, bz));
-          return Ez
+              return pD(), CD
+            }(CD),
+            ID = new Map;
+          for (const pD of CD) eD.has(pD.name) || ID.has(pD.name) || ID.set(pD.name, cC(pD, cD));
+          return ID
         }
-        let nu, iu, lu;
+        let pC, iC, fC;
 
-        function Mu() {
-          return iu ??= function(zz) {
-            const uz = Yz(zz).find((zz => "GameApi" === zz.name)),
-              bz = new Map,
-              Ez = uz.lines;
-            for (let iz = 0; iz < Ez.length; iz++) {
-              var nz;
-              if (!Ez[iz].trimStart().startsWith("/**")) continue;
-              const zz = iz;
-              for (; iz < Ez.length && !Ez[iz].includes("*/");) iz++;
-              const uz = null === (nz = Ez[iz + 1]) || void 0 === nz ? void 0 : nz.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!uz) continue;
-              let lz = null;
-              const Mz = [];
-              let tz = "description",
-                Hz = !1;
-              for (const bz of Ez.slice(zz, iz + 1).join("\n").split("\n").map((zz => zz.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const zz = bz.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                zz ? (lz = zz[1].trim(), tz = "deprecation") : bz.startsWith("@") ? (tz = "otherTag", Hz = !0) : "" === bz.trim() ? Hz || (tz = "description", Mz.push(bz)) : "deprecation" !== tz || /^[A-Z]/.test(bz.trim()) ? "otherTag" !== tz && (tz = "description", Mz.push(bz)) : lz = `${lz} ${bz.trim()}`.trim()
+        function bC() {
+          return iC ??= function(DD) {
+            const CD = AD(DD).find((DD => "GameApi" === DD.name)),
+              cD = new Map,
+              ID = CD.lines;
+            for (let iD = 0; iD < ID.length; iD++) {
+              var pD;
+              if (!ID[iD].trimStart().startsWith("/**")) continue;
+              const DD = iD;
+              for (; iD < ID.length && !ID[iD].includes("*/");) iD++;
+              const CD = null === (pD = ID[iD + 1]) || void 0 === pD ? void 0 : pD.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!CD) continue;
+              let fD = null;
+              const bD = [];
+              let QD = "description",
+                wD = !1;
+              for (const cD of ID.slice(DD, iD + 1).join("\n").split("\n").map((DD => DD.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const DD = cD.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                DD ? (fD = DD[1].trim(), QD = "deprecation") : cD.startsWith("@") ? (QD = "otherTag", wD = !0) : "" === cD.trim() ? wD || (QD = "description", bD.push(cD)) : "deprecation" !== QD || /^[A-Z]/.test(cD.trim()) ? "otherTag" !== QD && (QD = "description", bD.push(cD)) : fD = `${fD} ${cD.trim()}`.trim()
               }
-              bz.set(uz[1], {
-                deprecation: lz,
-                description: Mz.join("\n").trim()
+              cD.set(CD[1], {
+                deprecation: fD,
+                description: bD.join("\n").trim()
               })
             }
-            return bz
-          }(Wz.default), iu
+            return cD
+          }(sD.default), iC
         }
 
-        function tu() {
-          if (!lu) {
-            lu = new Map;
-            for (const zz of qz) {
-              const uz = (0, vz.n)(gz(zz)).flatMap((zz => zz.blocks));
-              for (const zz of (0, vz.f)(uz))
-                if ("ts" === zz.lang || "typescript" === zz.lang)
-                  for (const [uz, bz] of Az(zz.code)) lu.set(uz, bz)
+        function QC() {
+          if (!fC) {
+            fC = new Map;
+            for (const DD of lD) {
+              const CD = (0, PD.y)(RD(DD)).flatMap((DD => DD.blocks));
+              for (const DD of (0, PD.l)(CD))
+                if ("ts" === DD.lang || "typescript" === DD.lang)
+                  for (const [CD, cD] of xD(DD.code)) fC.set(CD, cD)
             }
-            for (const [zz, uz] of(nu ??= Eu(Wz.default), nu)) lu.has(zz) || lu.set(zz, uz)
+            for (const [DD, CD] of(pC ??= IC(sD.default), pC)) fC.has(DD) || fC.set(DD, CD)
           }
-          return lu
+          return fC
         }
-        const Hu = {
+        const wC = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let Ou;
+        let SC;
 
-        function pu() {
-          if (!Ou) {
-            Ou = new Map;
-            for (const zz of qz)
-              if (Tz(zz.layout))
-                for (const uz of gz(zz).sections) Ou.has(uz.heading.text) || Ou.set(uz.heading.text, {
-                  pageId: zz.id,
-                  anchor: uz.heading.anchor
+        function BC() {
+          if (!SC) {
+            SC = new Map;
+            for (const DD of lD)
+              if (qD(DD.layout))
+                for (const CD of RD(DD).sections) SC.has(CD.heading.text) || SC.set(CD.heading.text, {
+                  pageId: DD.id,
+                  anchor: CD.heading.anchor
                 })
           }
-          return Ou
+          return SC
         }
 
-        function du(zz) {
-          const uz = zz.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return uz ? pu().get(uz[1]) : void 0
+        function yC(DD) {
+          const CD = DD.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return CD ? BC().get(CD[1]) : void 0
         }
-        const Fu = (0, Ez.createContext)("/docs"),
-          Zu = (0, Ez.createContext)(null),
-          Ru = (0, Ez.createContext)(!1),
-          Ku = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const MC = (0, ID.createContext)("/docs"),
+          tC = (0, ID.createContext)(null),
+          ZC = (0, ID.createContext)(!1),
+          oC = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function wu(zz) {
-          const uz = zz.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return uz ? uz[1] : null
+        function vC(DD) {
+          const CD = DD.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return CD ? CD[1] : null
         }
 
-        function Xu(zz) {
+        function NC(DD) {
           let {
-            colour: uz
-          } = zz;
-          return (0, Zz.jsx)("span", {
+            colour: CD
+          } = DD;
+          return (0, tD.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: uz
+              background: CD
             },
             "aria-hidden": "true"
           })
         }
 
-        function fu(zz) {
-          const uz = [];
-          let bz = 0;
-          for (const Ez of zz.matchAll(Ku)) uz.push(zz.slice(bz, Ez.index), (0, Zz.jsx)(Xu, {
-            colour: Ez[0]
-          }), Ez[0]), bz = Ez.index + Ez[0].length;
-          return uz.push(zz.slice(bz)), uz
+        function gC(DD) {
+          const CD = [];
+          let cD = 0;
+          for (const ID of DD.matchAll(oC)) CD.push(DD.slice(cD, ID.index), (0, tD.jsx)(NC, {
+            colour: ID[0]
+          }), ID[0]), cD = ID.index + ID[0].length;
+          return CD.push(DD.slice(cD)), CD
         }
 
-        function su(zz) {
+        function XC(DD) {
           let {
-            href: uz,
-            children: bz
-          } = zz;
-          const nz = (0, Ez.useContext)(Fu);
-          if (uz.startsWith("#")) {
-            const zz = yz(uz);
-            if (zz) return (0, Zz.jsx)(lz.e, {
-              to: Qz(nz, zz.page, zz.anchor),
-              children: (0, Zz.jsx)(Ru.Provider, {
+            href: CD,
+            children: cD
+          } = DD;
+          const pD = (0, ID.useContext)(MC);
+          if (CD.startsWith("#")) {
+            const DD = dD(CD);
+            if (DD) return (0, tD.jsx)(fD.d, {
+              to: WD(pD, DD.page, DD.anchor),
+              children: (0, tD.jsx)(ZC.Provider, {
                 value: !0,
-                children: bz
+                children: cD
               })
             })
           }
-          return (0, Zz.jsx)("a", {
-            href: uz,
+          return (0, tD.jsx)("a", {
+            href: CD,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, Zz.jsx)(Ru.Provider, {
+            children: (0, tD.jsx)(ZC.Provider, {
               value: !0,
-              children: bz
+              children: cD
             })
           })
         }
 
-        function ru(zz) {
+        function mC(DD) {
           let {
-            code: uz
-          } = zz;
-          const bz = (0, Ez.useContext)(Fu);
-          if ((0, Ez.useContext)(Ru)) return (0, Zz.jsx)("code", {
+            code: CD
+          } = DD;
+          const cD = (0, ID.useContext)(MC);
+          if ((0, ID.useContext)(ZC)) return (0, tD.jsx)("code", {
             className: "DocsInlineCode",
-            children: uz
+            children: CD
           });
-          if (tu().has(uz)) return (0, Zz.jsx)(xu, {
-            type: uz
+          if (QC().has(CD)) return (0, tD.jsx)(HC, {
+            type: CD
           });
-          const nz = du(uz);
-          if (nz) return (0, Zz.jsx)(lz.e, {
+          const pD = yC(CD);
+          if (pD) return (0, tD.jsx)(fD.d, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: Qz(bz, Uz(nz.pageId), nz.anchor),
-            children: uz
+            to: WD(cD, TD(pD.pageId), pD.anchor),
+            children: CD
           });
-          const iz = wu(uz);
-          return (0, Zz.jsxs)("code", {
+          const iD = vC(CD);
+          return (0, tD.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [iz && (0, Zz.jsx)(Xu, {
-              colour: iz
-            }), uz]
+            children: [iD && (0, tD.jsx)(NC, {
+              colour: iD
+            }), CD]
           })
         }
 
-        function ou(zz) {
+        function nC(DD) {
           let {
-            text: uz
-          } = zz;
-          const bz = [];
-          let nz = 0;
-          for (const Ez of uz.matchAll(vz.c)) {
-            Ez.index > nz && bz.push(...fu(uz.slice(nz, Ez.index)));
-            const [, zz, iz, lz, Mz, tz] = Ez;
-            zz ? bz.push((0, Zz.jsx)(ru, {
-              code: (0, vz.g)(zz, iz)
-            })) : lz ? bz.push((0, Zz.jsx)("strong", {
-              children: (0, Zz.jsx)(ou, {
-                text: lz
+            text: CD
+          } = DD;
+          const cD = [];
+          let pD = 0;
+          for (const ID of CD.matchAll(PD.i)) {
+            ID.index > pD && cD.push(...gC(CD.slice(pD, ID.index)));
+            const [, DD, iD, fD, bD, QD] = ID;
+            DD ? cD.push((0, tD.jsx)(mC, {
+              code: (0, PD.o)(DD, iD)
+            })) : fD ? cD.push((0, tD.jsx)("strong", {
+              children: (0, tD.jsx)(nC, {
+                text: fD
               })
-            })) : bz.push((0, Zz.jsx)(su, {
-              href: tz,
-              children: (0, Zz.jsx)(ou, {
-                text: Mz
+            })) : cD.push((0, tD.jsx)(XC, {
+              href: QD,
+              children: (0, tD.jsx)(nC, {
+                text: bD
               })
-            })), nz = Ez.index + Ez[0].length
+            })), pD = ID.index + ID[0].length
           }
-          return nz < uz.length && bz.push(...fu(uz.slice(nz))), (0, Zz.jsx)(Zz.Fragment, {
-            children: bz.map(((zz, uz) => (0, Zz.jsx)(Ez.Fragment, {
-              children: zz
-            }, uz)))
+          return pD < CD.length && cD.push(...gC(CD.slice(pD))), (0, tD.jsx)(tD.Fragment, {
+            children: cD.map(((DD, CD) => (0, tD.jsx)(ID.Fragment, {
+              children: DD
+            }, CD)))
           })
         }
-        const Nu = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          vu = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const OC = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          PC = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function xu(zz) {
+        function HC(DD) {
           let {
-            type: uz
-          } = zz;
-          const bz = tu(),
-            nz = [];
-          for (const Ez of uz.trim().matchAll(Nu)) {
-            const [zz, uz, iz, lz, Mz] = Ez;
-            uz ? nz.push((0, Zz.jsx)("span", {
+            type: CD
+          } = DD;
+          const cD = QC(),
+            pD = [];
+          for (const ID of CD.trim().matchAll(OC)) {
+            const [DD, CD, iD, fD, bD] = ID;
+            CD ? pD.push((0, tD.jsx)("span", {
               className: "DocsTypeString",
-              children: zz
-            })) : iz && bz.has(iz) ? nz.push((0, Zz.jsx)(Pu, {
-              name: iz,
-              definition: bz.get(iz)
-            })) : iz ? nz.push((0, Zz.jsx)("span", {
-              className: vu.has(iz) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: zz
-            })) : lz ? nz.push((0, Zz.jsx)("span", {
+              children: DD
+            })) : iD && cD.has(iD) ? pD.push((0, tD.jsx)(KC, {
+              name: iD,
+              definition: cD.get(iD)
+            })) : iD ? pD.push((0, tD.jsx)("span", {
+              className: PC.has(iD) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: DD
+            })) : fD ? pD.push((0, tD.jsx)("span", {
               className: "DocsTypeNumber",
-              children: zz
-            })) : Mz ? nz.push(" ") : nz.push((0, Zz.jsx)("span", {
+              children: DD
+            })) : bD ? pD.push(" ") : pD.push((0, tD.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: zz
+              children: DD
             }))
           }
-          return (0, Zz.jsx)("code", {
+          return (0, tD.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: nz.map(((zz, uz) => (0, Zz.jsx)(Ez.Fragment, {
-              children: zz
-            }, uz)))
+            children: pD.map(((DD, CD) => (0, tD.jsx)(ID.Fragment, {
+              children: DD
+            }, CD)))
           })
         }
-        const Ju = 480,
-          Au = 6,
-          Tu = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let Lu = 0;
+        const UC = 480,
+          xC = 6,
+          qC = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let JC = 0;
 
-        function Pu(zz) {
+        function KC(DD) {
           let {
-            name: uz,
-            definition: bz
-          } = zz;
-          const nz = (0, Ez.useContext)(Fu),
-            iz = Hu[uz],
-            Mz = (0, Ez.useRef)(null),
-            tz = (0, Ez.useRef)(null),
-            Oz = (0, Ez.useRef)(null),
-            [pz, dz] = (0, Ez.useState)(!1),
-            [Fz, Rz] = (0, Ez.useState)(null),
-            wz = (0, Ez.useRef)(),
-            Xz = (0, Ez.useContext)(Zu),
-            [fz] = (0, Ez.useState)((() => "DocsTypePopover-" + Lu++)),
-            sz = () => {
-              clearTimeout(wz.current), dz(!0)
+            name: CD,
+            definition: cD
+          } = DD;
+          const pD = (0, ID.useContext)(MC),
+            iD = wC[CD],
+            bD = (0, ID.useRef)(null),
+            QD = (0, ID.useRef)(null),
+            SD = (0, ID.useRef)(null),
+            [BD, yD] = (0, ID.useState)(!1),
+            [MD, ZD] = (0, ID.useState)(null),
+            vD = (0, ID.useRef)(),
+            ND = (0, ID.useContext)(tC),
+            [gD] = (0, ID.useState)((() => "DocsTypePopover-" + JC++)),
+            XD = () => {
+              clearTimeout(vD.current), yD(!0)
             },
-            rz = () => {
-              clearTimeout(wz.current), wz.current = setTimeout((() => {
-                dz(!1)
+            mD = () => {
+              clearTimeout(vD.current), vD.current = setTimeout((() => {
+                yD(!1)
               }), 120)
             };
-          return (0, Ez.useEffect)((() => {
-            if (!pz) return;
-            const zz = zz => {
-              if ("Escape" === zz.key) {
-                var uz, bz;
-                if (null !== (uz = tz.current) && void 0 !== uz && uz.contains(document.activeElement)) null === (bz = Mz.current) || void 0 === bz || bz.focus();
-                dz(!1)
+          return (0, ID.useEffect)((() => {
+            if (!BD) return;
+            const DD = DD => {
+              if ("Escape" === DD.key) {
+                var CD, cD;
+                if (null !== (CD = QD.current) && void 0 !== CD && CD.contains(document.activeElement)) null === (cD = bD.current) || void 0 === cD || cD.focus();
+                yD(!1)
               }
             };
-            return document.addEventListener("keydown", zz), () => {
-              document.removeEventListener("keydown", zz)
+            return document.addEventListener("keydown", DD), () => {
+              document.removeEventListener("keydown", DD)
             }
-          }), [pz]), (0, Ez.useEffect)((() => () => {
-            clearTimeout(wz.current)
-          }), []), (0, Ez.useLayoutEffect)((() => {
-            if (!pz || !Mz.current || !tz.current) return void Rz(null);
-            const zz = Mz.current.getBoundingClientRect(),
-              uz = tz.current.offsetHeight,
-              bz = Math.min(Ju, window.innerWidth - 32),
-              Ez = Math.min(Math.max(16, zz.left), window.innerWidth - bz - 16),
-              nz = zz.bottom + Au + uz < window.innerHeight;
-            Rz({
-              left: Ez,
-              top: nz ? zz.bottom + Au : Math.max(16, zz.top - Au - uz)
+          }), [BD]), (0, ID.useEffect)((() => () => {
+            clearTimeout(vD.current)
+          }), []), (0, ID.useLayoutEffect)((() => {
+            if (!BD || !bD.current || !QD.current) return void ZD(null);
+            const DD = bD.current.getBoundingClientRect(),
+              CD = QD.current.offsetHeight,
+              cD = Math.min(UC, window.innerWidth - 32),
+              ID = Math.min(Math.max(16, DD.left), window.innerWidth - cD - 16),
+              pD = DD.bottom + xC + CD < window.innerHeight;
+            ZD({
+              left: ID,
+              top: pD ? DD.bottom + xC : Math.max(16, DD.top - xC - CD)
             })
-          }), [pz]), (0, Zz.jsxs)(Zz.Fragment, {
-            children: [(0, Zz.jsx)("button", {
+          }), [BD]), (0, tD.jsxs)(tD.Fragment, {
+            children: [(0, tD.jsx)("button", {
               type: "button",
-              ref: Mz,
+              ref: bD,
               className: "DocsTypeLink",
-              "aria-expanded": pz,
-              "aria-describedby": pz ? fz : void 0,
-              onMouseEnter: sz,
-              onMouseLeave: rz,
-              onFocus: sz,
-              onBlur: rz,
-              onKeyDown: zz => {
-                "Tab" === zz.key && !zz.shiftKey && Oz.current && (zz.preventDefault(), Oz.current.focus())
+              "aria-expanded": BD,
+              "aria-describedby": BD ? gD : void 0,
+              onMouseEnter: XD,
+              onMouseLeave: mD,
+              onFocus: XD,
+              onBlur: mD,
+              onKeyDown: DD => {
+                "Tab" === DD.key && !DD.shiftKey && SD.current && (DD.preventDefault(), SD.current.focus())
               },
-              onClick: sz,
-              children: uz
-            }), pz && (0, Hz.createPortal)((0, Zz.jsxs)("span", {
-              ref: tz,
-              id: fz,
+              onClick: XD,
+              children: CD
+            }), BD && (0, wD.createPortal)((0, tD.jsxs)("span", {
+              ref: QD,
+              id: gD,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: Fz ? {
-                left: Fz.left,
-                top: Fz.top,
-                maxWidth: Ju
+              style: MD ? {
+                left: MD.left,
+                top: MD.top,
+                maxWidth: UC
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: sz,
-              onMouseLeave: rz,
-              onFocus: sz,
-              onBlur: rz,
-              children: [(0, Zz.jsxs)("span", {
+              onMouseEnter: XD,
+              onMouseLeave: mD,
+              onFocus: XD,
+              onBlur: mD,
+              children: [(0, tD.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, Zz.jsx)("span", {
+                children: [(0, tD.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: uz
-                }), iz && (0, Zz.jsxs)(lz.e, {
-                  ref: Oz,
+                  children: CD
+                }), iD && (0, tD.jsxs)(fD.d, {
+                  ref: SD,
                   className: "DocsTypePopoverLink",
-                  to: Qz(nz, Uz(iz)),
+                  to: WD(pD, TD(iD)),
                   onClick: () => {
-                    dz(!1)
+                    yD(!1)
                   },
-                  onKeyDown: zz => {
-                    if ("Tab" === zz.key) {
-                      var uz;
-                      if (zz.preventDefault(), zz.shiftKey || !Mz.current || ! function(zz, uz) {
-                          const bz = [...document.querySelectorAll(Tu)],
-                            Ez = bz.slice(bz.indexOf(zz) + 1).find((zz => zz.getClientRects().length > 0 && !(null !== uz && void 0 !== uz && uz.contains(zz))));
-                          return null === Ez || void 0 === Ez || Ez.focus(), void 0 !== Ez
-                        }(Mz.current, tz.current)) null === (uz = Mz.current) || void 0 === uz || uz.focus();
-                      zz.shiftKey || dz(!1)
+                  onKeyDown: DD => {
+                    if ("Tab" === DD.key) {
+                      var CD;
+                      if (DD.preventDefault(), DD.shiftKey || !bD.current || ! function(DD, CD) {
+                          const cD = [...document.querySelectorAll(qC)],
+                            ID = cD.slice(cD.indexOf(DD) + 1).find((DD => DD.getClientRects().length > 0 && !(null !== CD && void 0 !== CD && CD.contains(DD))));
+                          return null === ID || void 0 === ID || ID.focus(), void 0 !== ID
+                        }(bD.current, QD.current)) null === (CD = bD.current) || void 0 === CD || CD.focus();
+                      DD.shiftKey || yD(!1)
                     }
                   },
-                  children: [Uz(iz).title, (0, Zz.jsx)(Kz, {
+                  children: [TD(iD).title, (0, tD.jsx)(oD, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, Zz.jsx)(Nz, {
+              }), (0, tD.jsx)(OD, {
                 lang: "ts",
-                code: bz,
+                code: cD,
                 compact: !0
               })]
-            }), null !== Xz && void 0 !== Xz ? Xz : document.body)]
+            }), null !== ND && void 0 !== ND ? ND : document.body)]
           })
         }
-        var Gu = bz(195),
-          au = bz(4524),
-          Vu = bz(4531),
-          mu = bz(4540);
-        const qu = {
+        var aC = cD(194),
+          VC = cD(4557),
+          zC = cD(4560),
+          jC = cD(4562);
+        const lC = {
           progressBar: {
-            Vz: 30,
-            mz: .075,
-            qz: 5,
-            hz: !1,
+            KD: 30,
+            aD: .075,
+            VD: 5,
+            zD: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            Sz: "fa-solid fa-computer-mouse",
+            LD: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            Dz: 3e3,
+            GD: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            Qz: !0,
+            RD: !0,
             scale: 3,
             rotation: 15,
-            Wz: !1
+            kD: !1
           },
           gravityBar: {
-            Vz: 30,
-            jz: .25,
-            Iz: 3,
-            Bz: .8,
+            KD: 30,
+            YD: .25,
+            WD: 3,
+            sD: .8,
             gravity: 1,
-            Cz: 1.5,
-            Yz: 8,
-            kz: 4,
-            hz: !1,
+            ED: 1.5,
+            eD: 8,
+            uD: 4,
+            zD: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            uu: .15,
+            rD: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            nu: 5,
-            iu: 1200,
-            lu: .15,
-            Mu: 3,
+            FD: 5,
+            DC: 1200,
+            CC: .15,
+            cC: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var hu = bz(316),
-          Uu = bz(1934);
+        var LC = cD(312),
+          TC = cD(1969);
 
-        function cu(zz) {
-          return zz.startsWith("fa-")
+        function GC(DD) {
+          return DD.startsWith("fa-")
         }
-        const gu = {
+        const RC = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          Su = {
+          kC = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function yu(zz) {
-          return "string" === typeof zz ? "text" : "entityName" in zz || "translationKey" in zz ? "other" : (0, hu.Kb)(zz) ? "progressBar" : (0, hu.Gb)(zz) ? "keyBinding" : "icon" in zz ? "icon" : "str" in zz && "string" === typeof zz.str ? "text" : "other"
+        function dC(DD) {
+          return "string" === typeof DD ? "text" : "entityName" in DD || "translationKey" in DD ? "other" : (0, LC.wb)(DD) ? "progressBar" : (0, LC.sb)(DD) ? "keyBinding" : "icon" in DD ? "icon" : "str" in DD && "string" === typeof DD.str ? "text" : "other"
         }
-        const Du = [{
+        const YC = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          Qu = {
+          WC = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...Du],
+            }, ...YC],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: Uu.m
+                options: TC.k
               },
               isRequired: !0
-            }, ...Du],
+            }, ...YC],
             other: []
           };
 
-        function Wu(zz) {
-          return "string" === typeof zz ? {
-            str: zz
-          } : zz
+        function sC(DD) {
+          return "string" === typeof DD ? {
+            str: DD
+          } : DD
         }
 
-        function eu(zz, uz) {
-          let bz = Wu(zz);
-          for (const Ez of uz) bz = bz && "object" === typeof bz ? bz[Ez] : void 0;
-          return bz
+        function EC(DD, CD) {
+          let cD = sC(DD);
+          for (const ID of CD) cD = cD && "object" === typeof cD ? cD[ID] : void 0;
+          return cD
         }
 
-        function ju(zz, uz, bz) {
-          const Ez = (zz, nz) => {
-            var iz;
-            const lz = uz[nz],
-              Mz = {
-                ...zz
+        function eC(DD, CD, cD) {
+          const ID = (DD, pD) => {
+            var iD;
+            const fD = CD[pD],
+              bD = {
+                ...DD
               };
-            if (nz === uz.length - 1) return void 0 === bz ? delete Mz[lz] : Mz[lz] = bz, Mz;
-            const tz = Ez(null !== (iz = zz[lz]) && void 0 !== iz ? iz : {}, nz + 1);
-            return 0 === Object.keys(tz).length ? delete Mz[lz] : Mz[lz] = tz, Mz
+            if (pD === CD.length - 1) return void 0 === cD ? delete bD[fD] : bD[fD] = cD, bD;
+            const QD = ID(null !== (iD = DD[fD]) && void 0 !== iD ? iD : {}, pD + 1);
+            return 0 === Object.keys(QD).length ? delete bD[fD] : bD[fD] = QD, bD
           };
-          return function(zz) {
-            const uz = Object.keys(zz);
-            return "string" === typeof zz.str && 1 === uz.length ? zz.str : zz
-          }(Ez(Wu(zz), 0))
+          return function(DD) {
+            const CD = Object.keys(DD);
+            return "string" === typeof DD.str && 1 === CD.length ? DD.str : DD
+          }(ID(sC(DD), 0))
         }
 
-        function Iu(zz, uz) {
-          const bz = yu(zz),
-            Ez = Qu[bz].find((zz => zz.path.join(".") === uz.join("."))),
-            nz = null !== Ez && void 0 !== Ez && Ez.isRequired && "other" !== bz ? eu(Su[bz], uz) : void 0;
-          return ju(zz, uz, nz)
+        function uC(DD, CD) {
+          const cD = dC(DD),
+            ID = WC[cD].find((DD => DD.path.join(".") === CD.join("."))),
+            pD = null !== ID && void 0 !== ID && ID.isRequired && "other" !== cD ? EC(kC[cD], CD) : void 0;
+          return eC(DD, CD, pD)
         }
 
-        function Bu(zz) {
-          switch (yu(zz)) {
+        function hC(DD) {
+          switch (dC(DD)) {
             case "text":
-              return String(eu(zz, ["str"]));
+              return String(EC(DD, ["str"]));
             case "icon":
-              return String(eu(zz, ["icon"]));
+              return String(EC(DD, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(eu(zz,["progress"])))}%`;
+              return `${Math.round(100*Number(EC(DD,["progress"])))}%`;
             case "keyBinding":
-              return String(eu(zz, ["action"]));
+              return String(EC(DD, ["action"]));
             case "other":
-              return JSON.stringify(zz)
+              return JSON.stringify(DD)
           }
         }
-        const Cu = /^[A-Za-z_$][\w$]*$/;
+        const rC = /^[A-Za-z_$][\w$]*$/;
 
-        function Yu(zz) {
-          if (Array.isArray(zz)) return `[${zz.map(Yu).join(", ")}]`;
-          if (zz && "object" === typeof zz) {
-            const uz = Object.entries(zz).map((zz => {
-              let [uz, bz] = zz;
-              return `${Cu.test(uz)?uz:JSON.stringify(uz)}: ${Yu(bz)}`
+        function AC(DD) {
+          if (Array.isArray(DD)) return `[${DD.map(AC).join(", ")}]`;
+          if (DD && "object" === typeof DD) {
+            const CD = Object.entries(DD).map((DD => {
+              let [CD, cD] = DD;
+              return `${rC.test(CD)?CD:JSON.stringify(CD)}: ${AC(cD)}`
             }));
-            return 0 === uz.length ? "{}" : `{ ${uz.join(", ")} }`
+            return 0 === CD.length ? "{}" : `{ ${CD.join(", ")} }`
           }
-          return JSON.stringify(zz)
+          return JSON.stringify(DD)
         }
 
-        function ku(zz) {
-          const uz = zz.map(Yu),
-            bz = `[${uz.join(", ")}]`;
-          return bz.length <= 60 ? bz : `[\n${uz.map((zz=>`    ${zz},`)).join("\n")}\n]`
+        function FC(DD) {
+          const CD = DD.map(AC),
+            cD = `[${CD.join(", ")}]`;
+          return cD.length <= 60 ? cD : `[\n${CD.map((DD=>`    ${DD},`)).join("\n")}\n]`
         }
-        const zb = {
+        const Dc = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function ub(zz) {
-          let uz = "";
-          for (let nz = 0; nz < zz.length; nz++) {
-            const iz = zz[nz];
-            if ("\\" === iz) {
-              var bz;
-              const Ez = null !== (bz = zz[nz + 1]) && void 0 !== bz ? bz : "";
-              uz += "'" === Ez ? "'" : iz + Ez, nz++
-            } else if ('"' === iz) uz += '\\"';
+        function Cc(DD) {
+          let CD = "";
+          for (let pD = 0; pD < DD.length; pD++) {
+            const iD = DD[pD];
+            if ("\\" === iD) {
+              var cD;
+              const ID = null !== (cD = DD[pD + 1]) && void 0 !== cD ? cD : "";
+              CD += "'" === ID ? "'" : iD + ID, pD++
+            } else if ('"' === iD) CD += '\\"';
             else {
-              var Ez;
-              uz += null !== (Ez = zb[iz]) && void 0 !== Ez ? Ez : iz
+              var ID;
+              CD += null !== (ID = Dc[iD]) && void 0 !== ID ? ID : iD
             }
           }
-          return `"${uz}"`
+          return `"${CD}"`
         }
 
-        function bb(zz) {
-          if ("string" === typeof zz) return !0;
-          if (!zz || "object" !== typeof zz || Array.isArray(zz)) return !1;
-          const uz = zz;
-          return "ProgressBar" === uz.type ? "number" === typeof uz.progress : "StyledKeyBinding" === uz.type ? Uu.m.includes(uz.action) : "string" === typeof uz.icon || "string" === typeof uz.str || "string" === typeof uz.entityName || "string" === typeof uz.translationKey
+        function cc(DD) {
+          if ("string" === typeof DD) return !0;
+          if (!DD || "object" !== typeof DD || Array.isArray(DD)) return !1;
+          const CD = DD;
+          return "ProgressBar" === CD.type ? "number" === typeof CD.progress : "StyledKeyBinding" === CD.type ? TC.k.includes(CD.action) : "string" === typeof CD.icon || "string" === typeof CD.str || "string" === typeof CD.entityName || "string" === typeof CD.translationKey
         }
 
-        function Eb(zz) {
-          let uz;
+        function Ic(DD) {
+          let CD;
           try {
-            uz = function(zz) {
-              let uz = "",
-                bz = "",
-                Ez = 0;
-              const nz = () => {
-                uz += bz.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), bz = ""
+            CD = function(DD) {
+              let CD = "",
+                cD = "",
+                ID = 0;
+              const pD = () => {
+                CD += cD.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), cD = ""
               };
-              for (; Ez < zz.length;) {
-                const iz = zz.slice(Ez).search(/["'`]|\/\//);
-                if (-1 === iz) {
-                  bz += zz.slice(Ez);
+              for (; ID < DD.length;) {
+                const iD = DD.slice(ID).search(/["'`]|\/\//);
+                if (-1 === iD) {
+                  cD += DD.slice(ID);
                   break
                 }
-                bz += zz.slice(Ez, Ez + iz);
-                const lz = Ez + iz,
-                  Mz = zz[lz];
-                if ("/" === Mz) {
-                  const uz = zz.indexOf("\n", lz);
-                  Ez = -1 === uz ? zz.length : uz;
+                cD += DD.slice(ID, ID + iD);
+                const fD = ID + iD,
+                  bD = DD[fD];
+                if ("/" === bD) {
+                  const CD = DD.indexOf("\n", fD);
+                  ID = -1 === CD ? DD.length : CD;
                   continue
                 }
-                if (nz(), "`" === Mz) throw new Error("Use quotes rather than template strings.");
-                let tz = lz + 1;
-                for (; tz < zz.length && zz[tz] !== Mz;) tz += "\\" === zz[tz] ? 2 : 1;
-                if (tz >= zz.length) throw new Error("A string is missing its closing quote.");
-                const Hz = zz.slice(lz + 1, tz);
-                uz += ub(Hz), Ez = tz + 1
+                if (pD(), "`" === bD) throw new Error("Use quotes rather than template strings.");
+                let QD = fD + 1;
+                for (; QD < DD.length && DD[QD] !== bD;) QD += "\\" === DD[QD] ? 2 : 1;
+                if (QD >= DD.length) throw new Error("A string is missing its closing quote.");
+                const wD = DD.slice(fD + 1, QD);
+                CD += Cc(wD), ID = QD + 1
               }
-              return nz(), JSON.parse(uz)
-            }(zz.trim())
-          } catch (Ez) {
+              return pD(), JSON.parse(CD)
+            }(DD.trim())
+          } catch (ID) {
             return {
               parts: null,
-              error: Ez instanceof SyntaxError ? "This isn't a valid array yet." : Ez.message
+              error: ID instanceof SyntaxError ? "This isn't a valid array yet." : ID.message
             }
           }
-          if (!Array.isArray(uz)) return {
+          if (!Array.isArray(CD)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const bz = uz.findIndex((zz => !bb(zz)));
-          return -1 !== bz ? {
+          const cD = CD.findIndex((DD => !cc(DD)));
+          return -1 !== cD ? {
             parts: null,
-            error: `Part ${bz+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${cD+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: uz,
+            parts: CD,
             error: null
           }
         }
-        const nb = 1 / Gu.e.clientTicksPerSecond,
-          ib = 700,
-          lb = {
+        const pc = 1 / aC.h.clientTicksPerSecond,
+          ic = 700,
+          fc = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          Mb = {
-            progressBar: qu.progressBar.Sz,
-            timedClick: qu.timedClick.icon,
-            gravityBar: qu.gravityBar.icon,
-            precisionBar: qu.precisionBar.icon,
-            rhythmClick: qu.rhythmClick.icon
+          bc = {
+            progressBar: lC.progressBar.LD,
+            timedClick: lC.timedClick.icon,
+            gravityBar: lC.gravityBar.icon,
+            precisionBar: lC.precisionBar.icon,
+            rhythmClick: lC.rhythmClick.icon
           };
 
-        function tb(zz) {
+        function Qc(DD) {
           let {
-            type: uz
-          } = zz;
-          const [bz, nz] = (0, Ez.useState)("ready"), [lz, Mz] = (0, Ez.useState)(1), [tz, Hz] = (0, Ez.useState)(!0), Oz = (0, Ez.useRef)(null), pz = (0, Ez.useRef)(null), dz = (0, Ez.useRef)(null), Fz = (0, Ez.useRef)(new Set), Rz = (0, Ez.useRef)(!1), wz = Mb[uz], Xz = (0, Ez.useMemo)((() => ({
+            type: CD
+          } = DD;
+          const [cD, pD] = (0, ID.useState)("ready"), [fD, bD] = (0, ID.useState)(1), [QD, wD] = (0, ID.useState)(!0), SD = (0, ID.useRef)(null), BD = (0, ID.useRef)(null), yD = (0, ID.useRef)(null), MD = (0, ID.useRef)(new Set), ZD = (0, ID.useRef)(!1), vD = bc[CD], ND = (0, ID.useMemo)((() => ({
             getState: () => {
-              var zz, uz;
-              return null !== (zz = null === (uz = dz.current) || void 0 === uz ? void 0 : uz.getState()) && void 0 !== zz ? zz : lb
+              var DD, CD;
+              return null !== (DD = null === (CD = yD.current) || void 0 === CD ? void 0 : CD.getState()) && void 0 !== DD ? DD : fc
             },
-            onFrame: zz => (Fz.current.add(zz), () => {
-              Fz.current.delete(zz)
+            onFrame: DD => (MD.current.add(DD), () => {
+              MD.current.delete(DD)
             })
           })), []);
-          (0, Ez.useEffect)((() => {
-            const zz = Oz.current,
-              uz = pz.current;
-            if (!zz || !uz) return;
-            const bz = new ResizeObserver((() => {
-              Mz(zz.clientWidth / Math.max(1, uz.offsetWidth))
+          (0, ID.useEffect)((() => {
+            const DD = SD.current,
+              CD = BD.current;
+            if (!DD || !CD) return;
+            const cD = new ResizeObserver((() => {
+              bD(DD.clientWidth / Math.max(1, CD.offsetWidth))
             }));
-            return bz.observe(zz), () => {
-              bz.disconnect()
+            return cD.observe(DD), () => {
+              cD.disconnect()
             }
-          }), []), (0, Ez.useEffect)((() => {
-            var zz;
-            if ("playing" !== bz) return;
-            let Ez = !1;
-            const iz = new mu.f[uz](qu[uz], (zz => {
-              Ez = !0, Hz(!1), nz(zz ? "succeeded" : "failed")
+          }), []), (0, ID.useEffect)((() => {
+            var DD;
+            if ("playing" !== cD) return;
+            let ID = !1;
+            const iD = new jC.f[CD](lC[CD], (DD => {
+              ID = !0, wD(!1), pD(DD ? "succeeded" : "failed")
             }), (() => {}));
-            dz.current = iz;
-            let lz = 0,
-              Mz = performance.now(),
-              tz = requestAnimationFrame((function zz(uz) {
-                for (lz += Math.min(.25, (uz - Mz) / 1e3), Mz = uz; lz >= nb && !Ez;) lz -= nb, iz.handleTick(nb);
-                for (const bz of Fz.current) bz();
-                Ez || (tz = requestAnimationFrame(zz))
+            yD.current = iD;
+            let fD = 0,
+              bD = performance.now(),
+              QD = requestAnimationFrame((function DD(CD) {
+                for (fD += Math.min(.25, (CD - bD) / 1e3), bD = CD; fD >= pc && !ID;) fD -= pc, iD.handleTick(pc);
+                for (const cD of MD.current) cD();
+                ID || (QD = requestAnimationFrame(DD))
               }));
-            return null === (zz = Oz.current) || void 0 === zz || zz.focus({
+            return null === (DD = SD.current) || void 0 === DD || DD.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(tz), iz.tearDown(), dz.current = null, Rz.current = !1
+              cancelAnimationFrame(QD), iD.tearDown(), yD.current = null, ZD.current = !1
             }
-          }), [bz, uz]), (0, Ez.useEffect)((() => {
-            if (tz) return;
-            const zz = setTimeout((() => {
-              Hz(!0)
-            }), ib);
+          }), [cD, CD]), (0, ID.useEffect)((() => {
+            if (QD) return;
+            const DD = setTimeout((() => {
+              wD(!0)
+            }), ic);
             return () => {
-              clearTimeout(zz)
+              clearTimeout(DD)
             }
-          }), [tz]);
-          const fz = zz => {
-            var uz;
-            "playing" === bz && Rz.current !== zz && (Rz.current = zz, null === (uz = dz.current) || void 0 === uz || uz.handleMouseInput(zz))
+          }), [QD]);
+          const gD = DD => {
+            var CD;
+            "playing" === cD && ZD.current !== DD && (ZD.current = DD, null === (CD = yD.current) || void 0 === CD || CD.handleMouseInput(DD))
           };
-          return (0, Zz.jsxs)("div", {
+          return (0, tD.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, Zz.jsxs)("div", {
-              ref: Oz,
-              className: iz()("DocsQteStage", {
-                Playing: "playing" === bz
+            children: [(0, tD.jsxs)("div", {
+              ref: SD,
+              className: iD()("DocsQteStage", {
+                Playing: "playing" === cD
               }),
-              tabIndex: "playing" === bz ? 0 : -1,
-              role: "playing" === bz ? "button" : void 0,
-              "aria-label": "playing" === bz ? `${uz} quick time event: click or press Space` : void 0,
-              onPointerDown: zz => {
-                0 === zz.button && fz(!0)
+              tabIndex: "playing" === cD ? 0 : -1,
+              role: "playing" === cD ? "button" : void 0,
+              "aria-label": "playing" === cD ? `${CD} quick time event: click or press Space` : void 0,
+              onPointerDown: DD => {
+                0 === DD.button && gD(!0)
               },
               onPointerUp: () => {
-                fz(!1)
+                gD(!1)
               },
               onPointerLeave: () => {
-                fz(!1)
+                gD(!1)
               },
               onPointerCancel: () => {
-                fz(!1)
+                gD(!1)
               },
-              onKeyDown: zz => {
-                "playing" !== bz || " " !== zz.key && "Enter" !== zz.key || (zz.preventDefault(), fz(!0))
+              onKeyDown: DD => {
+                "playing" !== cD || " " !== DD.key && "Enter" !== DD.key || (DD.preventDefault(), gD(!0))
               },
-              onKeyUp: zz => {
-                "playing" !== bz || " " !== zz.key && "Enter" !== zz.key || fz(!1)
+              onKeyUp: DD => {
+                "playing" !== cD || " " !== DD.key && "Enter" !== DD.key || gD(!1)
               },
-              children: [(0, Zz.jsx)("div", {
-                ref: pz,
+              children: [(0, tD.jsx)("div", {
+                ref: BD,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${lz})`
+                  transform: `scale(${fD})`
                 },
-                children: "playing" === bz && (0, Zz.jsx)(Vu.e.Provider, {
-                  value: Xz,
-                  children: (0, Zz.jsx)(au.b, {
+                children: "playing" === cD && (0, tD.jsx)(zC.c.Provider, {
+                  value: ND,
+                  children: (0, tD.jsx)(VC.b, {
                     qte: {
-                      type: uz,
-                      parameters: qu[uz]
+                      type: CD,
+                      parameters: lC[CD]
                     }
                   })
                 })
-              }), "playing" !== bz && (0, Zz.jsxs)("div", {
+              }), "playing" !== cD && (0, tD.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== bz && (0, Zz.jsxs)("div", {
-                  className: iz()("DocsQteResult", "succeeded" === bz ? "Succeeded" : "Failed"),
-                  children: [(0, Zz.jsx)(Kz, {
-                    name: "succeeded" === bz ? "check" : "cross",
+                children: ["ready" !== cD && (0, tD.jsxs)("div", {
+                  className: iD()("DocsQteResult", "succeeded" === cD ? "Succeeded" : "Failed"),
+                  children: [(0, tD.jsx)(oD, {
+                    name: "succeeded" === cD ? "check" : "cross",
                     isTinted: !0
-                  }), (0, Zz.jsx)("span", {
-                    children: "succeeded" === bz ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, tD.jsx)("span", {
+                    children: "succeeded" === cD ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, Zz.jsxs)("button", {
+                }), (0, tD.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !tz,
+                  disabled: !QD,
                   onClick: () => {
-                    nz("playing")
+                    pD("playing")
                   },
-                  children: [(0, Zz.jsx)(Kz, {
-                    name: "ready" === bz ? "play" : "replay"
-                  }), (0, Zz.jsx)("span", {
-                    children: "ready" === bz ? `Try ${uz}` : "Play again"
+                  children: [(0, tD.jsx)(oD, {
+                    name: "ready" === cD ? "play" : "replay"
+                  }), (0, tD.jsx)("span", {
+                    children: "ready" === cD ? `Try ${CD}` : "Play again"
                   })]
                 })]
               })]
-            }), wz && !cu(wz) && (0, Zz.jsxs)("p", {
+            }), vD && !GC(vD) && (0, tD.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, Zz.jsx)("code", {
-                children: wz
+              children: ["The ", (0, tD.jsx)("code", {
+                children: vD
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function Hb(zz) {
+        function wc(DD) {
           let {
-            level: uz,
-            text: bz,
-            anchor: Ez,
-            className: nz
-          } = zz;
-          const lz = `h${Math.min(uz,6)}`;
-          return (0, Zz.jsxs)(lz, {
-                id: Ez,
-                className: iz()("DocsHeading", nz),
-                children: [(0, Zz.jsx)(ou, {
-                      text: bz
-                    }), (0, Zz.jsx)("a", {
+            level: CD,
+            text: cD,
+            anchor: ID,
+            className: pD
+          } = DD;
+          const fD = `h${Math.min(CD,6)}`;
+          return (0, tD.jsxs)(fD, {
+                id: ID,
+                className: iD()("DocsHeading", pD),
+                children: [(0, tD.jsx)(nC, {
+                      text: cD
+                    }), (0, tD.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${Ez}`,
-                        "aria-label": `Link to ${bz.replace(/`/g,"")}`,children:"#"})]})}function Ob(zz){let{items:uz,ordered:bz}=zz;const Ez=bz?"ol":"ul";return(0,Zz.jsx)(Ez,{className:"DocsList",children:uz.map(((zz,uz)=>(0,Zz.jsxs)("li",{children:[(0,Zz.jsx)(ou,{text:zz.text}),zz.children.length>0&&(0,Zz.jsx)(Ob,{items:zz.children,ordered:bz})]},uz)))})}function pb(zz){const uz=zz[0],bz="paragraph"===(null===uz||void 0===uz?void 0:uz.kind)?uz.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(bz)?"warning":/^\*\*(tip|prefer)/.test(bz)?"tip":"note"}function db(zz){let{block:uz}=zz;switch(uz.kind){case"heading":return(0,Zz.jsx)(Hb,{level:uz.level,text:uz.text,anchor:uz.anchor});case"paragraph":return(0,Zz.jsx)("p",{children:(0,Zz.jsx)(ou,{text:uz.text})});case"code":{const zz="ts"===uz.lang?function(zz){const uz=zz.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return uz&&Object.hasOwn(qu,uz[1])?uz[1]:null}(uz.code):null;return(0,Zz.jsxs)(Zz.Fragment,{children:[(0,Zz.jsx)(Nz,{code:uz.code,lang:uz.lang}),zz&&(0,Zz.jsx)(tb,{type:zz})]})}case"table":return(0,Zz.jsx)("div",{className:"DocsTableScroll",children:(0,Zz.jsxs)("table",{className:"DocsTable",children:[(0,Zz.jsx)("thead",{children:(0,Zz.jsx)("tr",{children:uz.header.map(((zz,uz)=>(0,Zz.jsx)("th",{children:(0,Zz.jsx)(ou,{text:zz})},uz)))})}),(0,Zz.jsx)("tbody",{children:uz.rows.map(((zz,uz)=>(0,Zz.jsx)("tr",{children:zz.map(((zz,uz)=>(0,Zz.jsx)("td",{children:(0,Zz.jsx)(ou,{text:zz})},uz)))},uz)))})]})});case"list":return(0,Zz.jsx)(Ob,{items:uz.items,ordered:uz.ordered});case"quote":return(0,Zz.jsx)("aside",{className:iz()("DocsCallout",pb(uz.blocks)),children:(0,Zz.jsx)(Fb,{blocks:uz.blocks})});case"rule":return(0,Zz.jsx)("hr",{className:"DocsRule"})}}function Fb(zz){let{blocks:uz}=zz;return(0,Zz.jsx)(Zz.Fragment,{children:uz.map(((zz,uz)=>(0,Zz.jsx)(db,{block:zz},uz)))})}var Zb=bz(4503),Rb=bz(4509);function Kb(zz){return"blocks"===zz||"items"===zz}const wb=new Map;function Xb(zz){let uz=wb.get(zz);return uz||(uz=function(zz){const uz={entries:[],legend:[],notes:[],examples:[]};let bz=!1;for(const iz of zz.split(/\r?\n/).slice(1)){if(iz.startsWith("#")){const zz=iz.replace(/^# ?/,""),Ez=zz.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Ez?uz.legend.push({code:Ez[1],meaning:Ez[2],usage:Ez[3].trim()}):/^Examples:/.test(zz.trim())?bz=!0:bz&&zz.trim()?uz.examples.push(zz.trim()):zz.trim()&&!/^\s/.test(zz)&&uz.notes.push(zz.trim());continue}const zz=iz.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Ez,nz;zz&&uz.entries.push({name:zz[1],variants:null!==(Ez=null===(nz=zz[2])||void 0===nz?void 0:nz.split(","))&&void 0!==Ez?Ez:[]})}return uz}("blocks"===zz?Zb:Rb),wb.set(zz,uz)),uz}function fb(zz){let{className:uz,value:bz,placeholder:Ez,label:nz,onChange:iz,count:lz,children:Mz}=zz;return(0,Zz.jsxs)("div",{className:uz,children:[(0,Zz.jsx)(Kz,{name:"magnifying-glass"}),(0,Zz.jsx)("input",{type:"search",value:bz,placeholder:Ez,"aria-label":nz,onChange:zz=>{iz(zz.target.value)}}),Mz,lz&&(0,Zz.jsxs)("span",{className:"DocsFilterCount",children:[lz.visible," of ",lz.total]})]})}var sb=bz(1047);function rb(zz){const uz=zz.trim().match(/^(` {
+                        href: `#${ID}`,
+                        "aria-label": `Link to ${cD.replace(/`/g,"")}`,children:"#"})]})}function Sc(DD){let{items:CD,ordered:cD}=DD;const ID=cD?"ol":"ul";return(0,tD.jsx)(ID,{className:"DocsList",children:CD.map(((DD,CD)=>(0,tD.jsxs)("li",{children:[(0,tD.jsx)(nC,{text:DD.text}),DD.children.length>0&&(0,tD.jsx)(Sc,{items:DD.children,ordered:cD})]},CD)))})}function Bc(DD){const CD=DD[0],cD="paragraph"===(null===CD||void 0===CD?void 0:CD.kind)?CD.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(cD)?"warning":/^\*\*(tip|prefer)/.test(cD)?"tip":"note"}function yc(DD){let{block:CD}=DD;switch(CD.kind){case"heading":return(0,tD.jsx)(wc,{level:CD.level,text:CD.text,anchor:CD.anchor});case"paragraph":return(0,tD.jsx)("p",{children:(0,tD.jsx)(nC,{text:CD.text})});case"code":{const DD="ts"===CD.lang?function(DD){const CD=DD.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return CD&&Object.hasOwn(lC,CD[1])?CD[1]:null}(CD.code):null;return(0,tD.jsxs)(tD.Fragment,{children:[(0,tD.jsx)(OD,{code:CD.code,lang:CD.lang}),DD&&(0,tD.jsx)(Qc,{type:DD})]})}case"table":return(0,tD.jsx)("div",{className:"DocsTableScroll",children:(0,tD.jsxs)("table",{className:"DocsTable",children:[(0,tD.jsx)("thead",{children:(0,tD.jsx)("tr",{children:CD.header.map(((DD,CD)=>(0,tD.jsx)("th",{children:(0,tD.jsx)(nC,{text:DD})},CD)))})}),(0,tD.jsx)("tbody",{children:CD.rows.map(((DD,CD)=>(0,tD.jsx)("tr",{children:DD.map(((DD,CD)=>(0,tD.jsx)("td",{children:(0,tD.jsx)(nC,{text:DD})},CD)))},CD)))})]})});case"list":return(0,tD.jsx)(Sc,{items:CD.items,ordered:CD.ordered});case"quote":return(0,tD.jsx)("aside",{className:iD()("DocsCallout",Bc(CD.blocks)),children:(0,tD.jsx)(Mc,{blocks:CD.blocks})});case"rule":return(0,tD.jsx)("hr",{className:"DocsRule"})}}function Mc(DD){let{blocks:CD}=DD;return(0,tD.jsx)(tD.Fragment,{children:CD.map(((DD,CD)=>(0,tD.jsx)(yc,{block:DD},CD)))})}var tc=cD(4543),Zc=cD(4548);function oc(DD){return"blocks"===DD||"items"===DD}const vc=new Map;function Nc(DD){let CD=vc.get(DD);return CD||(CD=function(DD){const CD={entries:[],legend:[],notes:[],examples:[]};let cD=!1;for(const iD of DD.split(/\r?\n/).slice(1)){if(iD.startsWith("#")){const DD=iD.replace(/^# ?/,""),ID=DD.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);ID?CD.legend.push({code:ID[1],meaning:ID[2],usage:ID[3].trim()}):/^Examples:/.test(DD.trim())?cD=!0:cD&&DD.trim()?CD.examples.push(DD.trim()):DD.trim()&&!/^\s/.test(DD)&&CD.notes.push(DD.trim());continue}const DD=iD.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var ID,pD;DD&&CD.entries.push({name:DD[1],variants:null!==(ID=null===(pD=DD[2])||void 0===pD?void 0:pD.split(","))&&void 0!==ID?ID:[]})}return CD}("blocks"===DD?tc:Zc),vc.set(DD,CD)),CD}function gc(DD){let{className:CD,value:cD,placeholder:ID,label:pD,onChange:iD,count:fD,children:bD}=DD;return(0,tD.jsxs)("div",{className:CD,children:[(0,tD.jsx)(oD,{name:"magnifying-glass"}),(0,tD.jsx)("input",{type:"search",value:cD,placeholder:ID,"aria-label":pD,onChange:DD=>{iD(DD.target.value)}}),bD,fD&&(0,tD.jsxs)("span",{className:"DocsFilterCount",children:[fD.visible," of ",fD.total]})]})}var Xc=cD(1064);function mc(DD){const CD=DD.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return uz?uz[2]:null}function ob(zz){return"paragraph"===zz.kind&&""===zz.text.trim()}function Nb(zz){const uz={name:zz.heading.text,description:[],params:[],returns:null};let bz="description";for(const nz of zz.blocks)if(!ob(nz))if("heading"===nz.kind&&/^Parameters:?$/.test(nz.text))bz="params";else if("heading"===nz.kind&&/^Returns:?$/.test(nz.text))bz="returns",uz.returns={type:"",description:[]};else if("params"!==bz||"table"!==nz.kind){if("returns"===bz&&"paragraph"===nz.kind&&""===uz.returns.type){const zz=rb(nz.text);if(null!==zz){uz.returns.type=zz.replaceAll("\\|","|");continue}}"returns"===bz?uz.returns.description.push(nz):uz.description.push(nz)}else for(const[zz,bz,iz]of nz.rows){var Ez;uz.params.push({name:zz,type:null!==(Ez=rb(bz))&&void 0!==Ez?Ez:bz,description:null!==iz&&void 0!==iz?iz:""})}return uz}const vb=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function xb(zz){return zz.filter((zz=>!ob(zz)))}const Jb=/^[\w][\w .'&!:()-]*$/,Ab=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Tb(zz){var uz;if("code"===zz.kind&&"text"===zz.lang){const uz=zz.code.split("\n").map((zz=>zz.trim())).filter(Boolean);return uz.length>0&&uz.every((zz=>Jb.test(zz)))?uz.map((zz=>({name:zz}))):null}return"paragraph"===zz.kind&&Ab.test(zz.text.trim())?[...zz.text.matchAll(/`([ ^ `]+)` / g)].flatMap((zz => zz[1].split(/,\s*/).map((zz => ({
-                              name: zz.trim()
-                            }))))): "table" === zz.kind && null !== (uz = zz.header[0]) && void 0 !== uz && uz.startsWith("Song") ? zz.rows.map((zz => {
-                              let [uz, bz] = zz;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return CD?CD[2]:null}function nc(DD){return"paragraph"===DD.kind&&""===DD.text.trim()}function Oc(DD){const CD={name:DD.heading.text,description:[],params:[],returns:null};let cD="description";for(const pD of DD.blocks)if(!nc(pD))if("heading"===pD.kind&&/^Parameters:?$/.test(pD.text))cD="params";else if("heading"===pD.kind&&/^Returns:?$/.test(pD.text))cD="returns",CD.returns={type:"",description:[]};else if("params"!==cD||"table"!==pD.kind){if("returns"===cD&&"paragraph"===pD.kind&&""===CD.returns.type){const DD=mc(pD.text);if(null!==DD){CD.returns.type=DD.replaceAll("\\|","|");continue}}"returns"===cD?CD.returns.description.push(pD):CD.description.push(pD)}else for(const[DD,cD,iD]of pD.rows){var ID;CD.params.push({name:DD,type:null!==(ID=mc(cD))&&void 0!==ID?ID:cD,description:null!==iD&&void 0!==iD?iD:""})}return CD}const Pc=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function Hc(DD){return DD.filter((DD=>!nc(DD)))}const Uc=/^[\w][\w .'&!:()-]*$/,xc=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function qc(DD){var CD;if("code"===DD.kind&&"text"===DD.lang){const CD=DD.code.split("\n").map((DD=>DD.trim())).filter(Boolean);return CD.length>0&&CD.every((DD=>Uc.test(DD)))?CD.map((DD=>({name:DD}))):null}return"paragraph"===DD.kind&&xc.test(DD.text.trim())?[...DD.text.matchAll(/`([ ^ `]+)` / g)].flatMap((DD => DD[1].split(/,\s*/).map((DD => ({
+                              name: DD.trim()
+                            }))))): "table" === DD.kind && null !== (CD = DD.header[0]) && void 0 !== CD && CD.startsWith("Song") ? DD.rows.map((DD => {
+                              let [CD, cD] = DD;
                               return {
-                                name: uz.replace(/`/g, ""),
-                                caption: bz
+                                name: CD.replace(/`/g, ""),
+                                caption: cD
                               }
                             })) : null
                           }
 
-                          function Lb(zz) {
-                            const uz = [];
-                            for (const bz of zz) {
-                              const zz = Tb(bz),
-                                Ez = uz.at(-1),
-                                nz = "table" === bz.kind;
-                              zz ? "names" === (null === Ez || void 0 === Ez ? void 0 : Ez.kind) && Ez.isSongs === nz ? Ez.names.push(...zz) : uz.push({
+                          function Jc(DD) {
+                            const CD = [];
+                            for (const cD of DD) {
+                              const DD = qc(cD),
+                                ID = CD.at(-1),
+                                pD = "table" === cD.kind;
+                              DD ? "names" === (null === ID || void 0 === ID ? void 0 : ID.kind) && ID.isSongs === pD ? ID.names.push(...DD) : CD.push({
                                 kind: "names",
-                                names: zz,
-                                isSongs: nz
-                              }) : uz.push({
+                                names: DD,
+                                isSongs: pD
+                              }) : CD.push({
                                 kind: "block",
-                                block: bz
+                                block: cD
                               })
                             }
-                            return uz
+                            return CD
                           }
-                          const Pb = {
+                          const Kc = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function Gb(zz, uz) {
-                            return `${Pb[zz]}-${(0,vz.k)(uz)}`
+                          function ac(DD, CD) {
+                            return `${Kc[DD]}-${(0,PD.u)(CD)}`
                           }
-                          const ab = new WeakMap;
+                          const Vc = new WeakMap;
 
-                          function Vb(zz, uz, bz) {
-                            let Ez = ab.get(uz);
-                            if (!Ez) {
-                              Ez = new Map;
-                              const bz = new Set;
-                              for (const nz of (0, vz.n)(uz)) {
-                                const uz = Lb(xb(nz.blocks)).map((uz => {
-                                  if ("block" === uz.kind) return uz;
+                          function zc(DD, CD, cD) {
+                            let ID = Vc.get(CD);
+                            if (!ID) {
+                              ID = new Map;
+                              const cD = new Set;
+                              for (const pD of (0, PD.y)(CD)) {
+                                const CD = Jc(Hc(pD.blocks)).map((CD => {
+                                  if ("block" === CD.kind) return CD;
                                   return {
                                     kind: "names",
-                                    names: uz.names.map((uz => {
-                                      var Ez, iz;
-                                      const lz = Gb(zz, uz.name);
-                                      let Mz = lz;
-                                      for (let zz = 2; bz.has(Mz); zz++) Mz = `${lz}-${zz}`;
-                                      return bz.add(Mz), {
-                                        ...uz,
-                                        anchor: Mz,
-                                        heading: null !== (Ez = null === (iz = nz.heading) || void 0 === iz ? void 0 : iz.text) && void 0 !== Ez ? Ez : ""
+                                    names: CD.names.map((CD => {
+                                      var ID, iD;
+                                      const fD = ac(DD, CD.name);
+                                      let bD = fD;
+                                      for (let DD = 2; cD.has(bD); DD++) bD = `${fD}-${DD}`;
+                                      return cD.add(bD), {
+                                        ...CD,
+                                        anchor: bD,
+                                        heading: null !== (ID = null === (iD = pD.heading) || void 0 === iD ? void 0 : iD.text) && void 0 !== ID ? ID : ""
                                       }
                                     })),
-                                    isSongs: uz.isSongs
+                                    isSongs: CD.isSongs
                                   }
                                 }));
-                                Ez.set(nz.blocks, uz)
+                                ID.set(pD.blocks, CD)
                               }
-                              ab.set(uz, Ez)
+                              Vc.set(CD, ID)
                             }
-                            const nz = Ez.get(bz);
-                            if (!nz) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return nz
+                            const pD = ID.get(cD);
+                            if (!pD) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return pD
                           }
-                          const mb = "/textures/docs/skinPreviews",
-                            qb = [{
+                          const jc = "/textures/docs/skinPreviews",
+                            lc = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var hb = bz(4018),
-                            Ub = bz(4035);
+                          var Lc = cD(4068),
+                            Tc = cD(4081);
 
-                          function cb(zz) {
-                            return Object.hasOwn(hb.e, zz) ? hb.e[zz] : null
+                          function Gc(DD) {
+                            return Object.hasOwn(Lc.i, DD) ? Lc.i[DD] : null
                           }
-                          const gb = {
+                          const Rc = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: Ub.d.Standard
+                            blendMode: Tc.c.Standard
                           };
 
-                          function Sb(zz, uz, bz) {
-                            return uz + (bz - uz) * zz()
+                          function kc(DD, CD, cD) {
+                            return CD + (cD - CD) * DD()
                           }
 
-                          function yb(zz, uz, bz) {
-                            return zz + (uz - zz) * bz
+                          function dc(DD, CD, cD) {
+                            return DD + (CD - DD) * cD
                           }
 
-                          function Db(zz) {
-                            return zz.length > 0 && "timeFraction" in zz[0]
+                          function Yc(DD) {
+                            return DD.length > 0 && "timeFraction" in DD[0]
                           }
 
-                          function Qb(zz, uz) {
-                            if (0 === zz.colorGradients.length) return [{
+                          function Wc(DD, CD) {
+                            if (0 === DD.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!Db(zz.colorGradients)) {
-                              const bz = zz.colorGradients,
+                            if (!Yc(DD.colorGradients)) {
+                              const cD = DD.colorGradients,
                                 {
-                                  color: Ez
-                                } = bz[Math.floor(uz() * bz.length) % bz.length];
+                                  color: ID
+                                } = cD[Math.floor(CD() * cD.length) % cD.length];
                               return [{
                                 at: 0,
-                                colour: [Ez[0] / 255, Ez[1] / 255, Ez[2] / 255, 1]
+                                colour: [ID[0] / 255, ID[1] / 255, ID[2] / 255, 1]
                               }]
                             }
-                            return [...zz.colorGradients].sort(((zz, uz) => zz.timeFraction - uz.timeFraction)).map((zz => {
-                              var bz, Ez, nz;
-                              const iz = zz.minColor,
-                                lz = null !== (bz = zz.maxColor) && void 0 !== bz ? bz : iz,
-                                Mz = uz(),
-                                tz = [yb(iz[0], lz[0], Mz) / 255, yb(iz[1], lz[1], Mz) / 255, yb(iz[2], lz[2], Mz) / 255, yb(null !== (Ez = iz[3]) && void 0 !== Ez ? Ez : 1, null !== (nz = lz[3]) && void 0 !== nz ? nz : 1, Mz)];
+                            return [...DD.colorGradients].sort(((DD, CD) => DD.timeFraction - CD.timeFraction)).map((DD => {
+                              var cD, ID, pD;
+                              const iD = DD.minColor,
+                                fD = null !== (cD = DD.maxColor) && void 0 !== cD ? cD : iD,
+                                bD = CD(),
+                                QD = [dc(iD[0], fD[0], bD) / 255, dc(iD[1], fD[1], bD) / 255, dc(iD[2], fD[2], bD) / 255, dc(null !== (ID = iD[3]) && void 0 !== ID ? ID : 1, null !== (pD = fD[3]) && void 0 !== pD ? pD : 1, bD)];
                               return {
-                                at: zz.timeFraction,
-                                colour: tz
+                                at: DD.timeFraction,
+                                colour: QD
                               }
                             }))
                           }
 
-                          function Wb(zz, uz, bz, Ez) {
-                            const nz = Sb(Ez, zz.minEmitPower, zz.maxEmitPower),
-                              iz = uz => Sb(Ez, Math.min(zz.dir1[uz], zz.dir2[uz]), Math.max(zz.dir1[uz], zz.dir2[uz])) * nz,
-                              lz = [...zz.velocityGradients].sort(((zz, uz) => zz.timeFraction - uz.timeFraction)).map((zz => ({
-                                at: zz.timeFraction,
-                                factor: Sb(Ez, zz.factor, zz.factor2)
+                          function sc(DD, CD, cD, ID) {
+                            const pD = kc(ID, DD.minEmitPower, DD.maxEmitPower),
+                              iD = CD => kc(ID, Math.min(DD.dir1[CD], DD.dir2[CD]), Math.max(DD.dir1[CD], DD.dir2[CD])) * pD,
+                              fD = [...DD.velocityGradients].sort(((DD, CD) => DD.timeFraction - CD.timeFraction)).map((DD => ({
+                                at: DD.timeFraction,
+                                factor: kc(ID, DD.factor, DD.factor2)
                               })));
                             return {
-                              pos: [Sb(Ez, uz[0], bz[0]), Sb(Ez, uz[1], bz[1]), Sb(Ez, uz[2], bz[2])],
-                              dir: [iz(0), iz(1), iz(2)],
+                              pos: [kc(ID, CD[0], cD[0]), kc(ID, CD[1], cD[1]), kc(ID, CD[2], cD[2])],
+                              dir: [iD(0), iD(1), iD(2)],
                               age: 0,
-                              life: Sb(Ez, zz.minLifeTime, zz.maxLifeTime),
-                              size: Sb(Ez, zz.minSize, zz.maxSize),
-                              colours: Qb(zz, Ez),
-                              velocityFactors: lz
+                              life: kc(ID, DD.minLifeTime, DD.maxLifeTime),
+                              size: kc(ID, DD.minSize, DD.maxSize),
+                              colours: Wc(DD, ID),
+                              velocityFactors: fD
                             }
                           }
 
-                          function eb(zz, uz, bz, Ez) {
-                            if (uz < zz[0].at) return bz(Math.min(1, zz.length - 1));
-                            for (let nz = 0; nz < zz.length - 1; nz++)
-                              if (uz <= zz[nz + 1].at) {
-                                const iz = zz[nz + 1].at - zz[nz].at;
-                                return Ez(bz(nz), bz(nz + 1), iz > 0 ? (uz - zz[nz].at) / iz : 1)
-                              } return bz(zz.length - 1)
+                          function Ec(DD, CD, cD, ID) {
+                            if (CD < DD[0].at) return cD(Math.min(1, DD.length - 1));
+                            for (let pD = 0; pD < DD.length - 1; pD++)
+                              if (CD <= DD[pD + 1].at) {
+                                const iD = DD[pD + 1].at - DD[pD].at;
+                                return ID(cD(pD), cD(pD + 1), iD > 0 ? (CD - DD[pD].at) / iD : 1)
+                              } return cD(DD.length - 1)
                           }
 
-                          function jb(zz) {
-                            return eb(zz.colours, zz.age / zz.life, (uz => zz.colours[uz].colour), ((zz, uz, bz) => [yb(zz[0], uz[0], bz), yb(zz[1], uz[1], bz), yb(zz[2], uz[2], bz), yb(zz[3], uz[3], bz)]))
+                          function ec(DD) {
+                            return Ec(DD.colours, DD.age / DD.life, (CD => DD.colours[CD].colour), ((DD, CD, cD) => [dc(DD[0], CD[0], cD), dc(DD[1], CD[1], cD), dc(DD[2], CD[2], cD), dc(DD[3], CD[3], cD)]))
                           }
 
-                          function Ib(zz, uz, bz) {
-                            if (zz.age += bz, zz.age >= zz.life) return !1;
-                            const Ez = function(zz) {
-                              return 0 === zz.velocityFactors.length ? 1 : eb(zz.velocityFactors, zz.age / zz.life, (uz => zz.velocityFactors[uz].factor), yb)
-                            }(zz) * bz;
-                            for (let iz = 0; iz < 3; iz++) {
-                              var nz;
-                              zz.pos[iz] += zz.dir[iz] * Ez, zz.dir[iz] += (null !== (nz = uz[iz]) && void 0 !== nz ? nz : 0) * bz
+                          function uc(DD, CD, cD) {
+                            if (DD.age += cD, DD.age >= DD.life) return !1;
+                            const ID = function(DD) {
+                              return 0 === DD.velocityFactors.length ? 1 : Ec(DD.velocityFactors, DD.age / DD.life, (CD => DD.velocityFactors[CD].factor), dc)
+                            }(DD) * cD;
+                            for (let iD = 0; iD < 3; iD++) {
+                              var pD;
+                              DD.pos[iD] += DD.dir[iD] * ID, DD.dir[iD] += (null !== (pD = CD[iD]) && void 0 !== pD ? pD : 0) * cD
                             }
                             return !0
                           }
 
-                          function Bb(zz) {
-                            return String(Math.round(1e6 * zz) / 1e6)
+                          function hc(DD) {
+                            return String(Math.round(1e6 * DD) / 1e6)
                           }
 
-                          function Cb(zz) {
-                            return `[${zz.map(Bb).join(", ")}]`
+                          function rc(DD) {
+                            return `[${DD.map(hc).join(", ")}]`
                           }
 
-                          function Yb(zz, uz) {
-                            const bz = `${uz}    `;
-                            return `[\n${(Db(zz)?zz.map((zz=>{const uz=[`${bz}    timeFraction: ${Bb(zz.timeFraction)},`,`${bz}    minColor: ${Cb(zz.minColor)},`];return zz.maxColor&&uz.push(`${bz}    maxColor: ${Cb(zz.maxColor)},`),`${bz}{\n${uz.join("\n")}\n${bz}},`})):zz.map((zz=>`
+                          function Ac(DD, CD) {
+                            const cD = `${CD}    `;
+                            return `[\n${(Yc(DD)?DD.map((DD=>{const CD=[`${cD}    timeFraction: ${hc(DD.timeFraction)},`,`${cD}    minColor: ${rc(DD.minColor)},`];return DD.maxColor&&CD.push(`${cD}    maxColor: ${rc(DD.maxColor)},`),`${cD}{\n${CD.join("\n")}\n${cD}},`})):DD.map((DD=>`
                             $ {
-                              bz
+                              cD
                             } {
                               color: $ {
-                                Cb(zz.color)
+                                rc(DD.color)
                               }
-                            }, `))).join("\n")}\n${uz}]`
+                            }, `))).join("\n")}\n${CD}]`
                           }
-                          const kb = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            zE = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const uE = .6;
+                          const Fc = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            DI = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const CI = .6;
 
-                          function bE(zz, uz) {
-                            return `${uz?"song":"sound"}:${zz}`
+                          function cI(DD, CD) {
+                            return `${CD?"song":"sound"}:${DD}`
                           }
-                          let EE = {
+                          let II = {
                               track: null,
-                              volume: uE
+                              volume: CI
                             },
-                            nE = null,
-                            iE = 0,
-                            lE = 0;
-                          const ME = new Set;
+                            pI = null,
+                            iI = 0,
+                            fI = 0;
+                          const bI = new Set;
 
-                          function tE(zz) {
-                            EE = {
-                              ...EE,
-                              ...zz
-                            }, ME.forEach((zz => {
-                              zz()
+                          function QI(DD) {
+                            II = {
+                              ...II,
+                              ...DD
+                            }, bI.forEach((DD => {
+                              DD()
                             }))
                           }
 
-                          function HE(zz) {
-                            EE.track && tE({
+                          function wI(DD) {
+                            II.track && QI({
                               track: {
-                                ...EE.track,
-                                ...zz
+                                ...II.track,
+                                ...DD
                               }
                             })
                           }
 
-                          function OE(zz) {
-                            const [uz, bz] = (0, Ez.useState)((() => zz(EE))), nz = (0, Ez.useRef)(zz);
-                            return nz.current = zz, (0, Ez.useEffect)((() => {
-                              const zz = () => {
-                                bz((() => nz.current(EE)))
+                          function SI(DD) {
+                            const [CD, cD] = (0, ID.useState)((() => DD(II))), pD = (0, ID.useRef)(DD);
+                            return pD.current = DD, (0, ID.useEffect)((() => {
+                              const DD = () => {
+                                cD((() => pD.current(II)))
                               };
-                              return ME.add(zz), zz(), () => {
-                                ME.delete(zz)
+                              return bI.add(DD), DD(), () => {
+                                bI.delete(DD)
                               }
-                            }), []), uz
+                            }), []), CD
                           }
 
-                          function pE() {
-                            iE++;
-                            const zz = nE;
-                            nE = null, null === zz || void 0 === zz || zz.stop()
+                          function BI() {
+                            iI++;
+                            const DD = pI;
+                            pI = null, null === DD || void 0 === DD || DD.stop()
                           }
 
-                          function dE(zz, uz) {
-                            let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            pE();
-                            const nz = iE,
+                          function yI(DD, CD) {
+                            let ID = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            BI();
+                            const pD = iI,
                               {
-                                track: iz
-                              } = EE,
-                              lz = iz && iz.name === zz && iz.isSong === uz ? iz.duration : 0;
-                            lE = Ez, tE({
+                                track: iD
+                              } = II,
+                              fD = iD && iD.name === DD && iD.isSong === CD ? iD.duration : 0;
+                            fI = ID, QI({
                               track: {
-                                name: zz,
-                                isSong: uz,
+                                name: DD,
+                                isSong: CD,
                                 status: "loading",
-                                duration: lz
+                                duration: fD
                               }
-                            }), Promise.all([bz.e(215), bz.e(239)]).then((() => bz(38987))).then((bz => {
+                            }), Promise.all([cD.e(215), cD.e(239)]).then((() => cD(38947))).then((cD => {
                               let {
-                                playDocsSound: iz
-                              } = bz;
-                              nz === iE && (nE = iz(zz, uz, EE.volume, Ez, {
-                                onPlay: zz => {
-                                  nz === iE && HE({
+                                playDocsSound: iD
+                              } = cD;
+                              pD === iI && (pI = iD(DD, CD, II.volume, ID, {
+                                onPlay: DD => {
+                                  pD === iI && wI({
                                     status: "playing",
-                                    duration: zz
+                                    duration: DD
                                   })
                                 },
-                                onEnd: zz => {
-                                  var uz, bz;
-                                  nz === iE && (nE = null, zz ? tE({
+                                onEnd: DD => {
+                                  var CD, cD;
+                                  pD === iI && (pI = null, DD ? QI({
                                     track: null
-                                  }) : (lE = null !== (uz = null === (bz = EE.track) || void 0 === bz ? void 0 : bz.duration) && void 0 !== uz ? uz : 0, HE({
+                                  }) : (fI = null !== (CD = null === (cD = II.track) || void 0 === cD ? void 0 : cD.duration) && void 0 !== CD ? CD : 0, wI({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((uz => {
-                              console.error(`Could not play docs sound ${zz}`, uz), nz === iE && tE({
+                            })).catch((CD => {
+                              console.error(`Could not play docs sound ${DD}`, CD), pD === iI && QI({
                                 track: null
                               })
                             }))
                           }
 
-                          function FE() {
+                          function MI() {
                             const {
-                              track: zz
-                            } = EE;
-                            if (!zz) return;
-                            if ("playing" === zz.status && nE) return lE = nE.Gs(), nE.pause(), void HE({
+                              track: DD
+                            } = II;
+                            if (!DD) return;
+                            if ("playing" === DD.status && pI) return fI = pI.FX(), pI.pause(), void wI({
                               status: "paused"
                             });
-                            if ("loading" === zz.status) return pE(), void HE({
+                            if ("loading" === DD.status) return BI(), void wI({
                               status: "paused"
                             });
-                            if (nE) return void nE.resume();
-                            const uz = zz.duration > 0 && lE >= zz.duration - .05;
-                            dE(zz.name, zz.isSong, uz ? 0 : lE)
+                            if (pI) return void pI.resume();
+                            const CD = DD.duration > 0 && fI >= DD.duration - .05;
+                            yI(DD.name, DD.isSong, CD ? 0 : fI)
                           }
 
-                          function ZE() {
-                            var zz;
-                            return nE && "playing" === (null === (zz = EE.track) || void 0 === zz ? void 0 : zz.status) ? nE.Gs() : lE
+                          function tI() {
+                            var DD;
+                            return pI && "playing" === (null === (DD = II.track) || void 0 === DD ? void 0 : DD.status) ? pI.FX() : fI
                           }
 
-                          function RE(zz) {
-                            var uz;
-                            null === (uz = nE) || void 0 === uz || uz.setVolume(zz), tE({
-                              volume: zz
+                          function ZI(DD) {
+                            var CD;
+                            null === (CD = pI) || void 0 === CD || CD.setVolume(DD), QI({
+                              volume: DD
                             })
                           }
 
-                          function KE() {
-                            pE(), lE = 0, tE({
+                          function oI() {
+                            BI(), fI = 0, QI({
                               track: null
                             })
                           }
-                          const wE = (0, Ez.createContext)(null);
-                          let XE = null;
+                          const vI = (0, ID.createContext)(null);
+                          let NI = null;
 
-                          function fE() {
-                            const [zz, uz] = (0, Ez.useState)(null);
-                            return (0, Ez.useEffect)((() => {
-                              let zz = !1;
-                              return XE ??= Promise.all([bz.e(69), bz.e(72), bz.e(71), bz.e(70), bz.e(196), bz.e(96), bz.e(220)]).then((() => bz(38983))), XE.then((bz => {
-                                zz || uz(bz)
-                              }), (zz => {
-                                console.error("Could not load the docs gallery's textures", zz), XE = null
+                          function gI() {
+                            const [DD, CD] = (0, ID.useState)(null);
+                            return (0, ID.useEffect)((() => {
+                              let DD = !1;
+                              return NI ??= Promise.all([cD.e(69), cD.e(72), cD.e(71), cD.e(70), cD.e(196), cD.e(96), cD.e(220)]).then((() => cD(38945))), NI.then((cD => {
+                                DD || CD(cD)
+                              }), (DD => {
+                                console.error("Could not load the docs gallery's textures", DD), NI = null
                               })), () => {
-                                zz = !0
+                                DD = !0
                               }
-                            }), []), zz
+                            }), []), DD
                           }
-                          const sE = 24,
-                            rE = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const XI = 24,
+                            mI = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function oE(zz, uz) {
-                            const bz = "skins" === zz ? function(zz, uz) {
-                              const bz = qb.find((uz => zz.startsWith(uz.heading)));
-                              return bz ? function(zz, uz) {
-                                return `${zz}-${uz}`
-                              }(bz.prefix, uz) : null
-                            }(uz.heading, uz.name) : null;
-                            return null === bz ? null : `${mb}/${bz}.webp`
+                          function nI(DD, CD) {
+                            const cD = "skins" === DD ? function(DD, CD) {
+                              const cD = lc.find((CD => DD.startsWith(CD.heading)));
+                              return cD ? function(DD, CD) {
+                                return `${DD}-${CD}`
+                              }(cD.prefix, CD) : null
+                            }(CD.heading, CD.name) : null;
+                            return null === cD ? null : `${jc}/${cD}.webp`
                           }
 
-                          function NE(zz) {
+                          function OI(DD) {
                             let {
-                              kind: uz,
-                              entry: bz,
-                              assets: nz,
-                              renderedUrl: lz
-                            } = zz;
+                              kind: CD,
+                              entry: cD,
+                              assets: pD,
+                              renderedUrl: fD
+                            } = DD;
                             const {
-                              name: Mz
-                            } = bz, [tz, Hz] = (0, Ez.useState)(!1);
-                            if ("icons" === uz && cu(Mz)) return (0, Zz.jsx)(sb.c, {
+                              name: bD
+                            } = cD, [QD, wD] = (0, ID.useState)(!1);
+                            if ("icons" === CD && GC(bD)) return (0, tD.jsx)(Xc.c, {
                               className: "DocsTileIcon",
-                              name: Mz
+                              name: bD
                             });
-                            let Oz = null;
-                            var pz;
-                            if ("icons" === uz) Oz = null !== (pz = null === nz || void 0 === nz ? void 0 : nz.getIngameIconUrl(Mz)) && void 0 !== pz ? pz : null;
-                            else if ("particles" === uz) {
-                              var dz, Fz, Rz;
-                              Oz = null !== (dz = null === nz || void 0 === nz ? void 0 : nz.getParticleTextureUrl(null !== (Fz = null === (Rz = cb(Mz)) || void 0 === Rz ? void 0 : Rz.texture) && void 0 !== Fz ? Fz : Mz)) && void 0 !== dz ? dz : null
-                            } else "skins" === uz && (Oz = null !== lz && void 0 !== lz ? lz : rE.test(Mz) ? `/textures/charSkins/previews/${Mz}_preview.png` : null);
-                            return !Oz || tz ? (0, Zz.jsx)(Kz, {
+                            let SD = null;
+                            var BD;
+                            if ("icons" === CD) SD = null !== (BD = null === pD || void 0 === pD ? void 0 : pD.getIngameIconUrl(bD)) && void 0 !== BD ? BD : null;
+                            else if ("particles" === CD) {
+                              var yD, MD, ZD;
+                              SD = null !== (yD = null === pD || void 0 === pD ? void 0 : pD.getParticleTextureUrl(null !== (MD = null === (ZD = Gc(bD)) || void 0 === ZD ? void 0 : ZD.texture) && void 0 !== MD ? MD : bD)) && void 0 !== yD ? yD : null
+                            } else "skins" === CD && (SD = null !== fD && void 0 !== fD ? fD : mI.test(bD) ? `/textures/charSkins/previews/${bD}_preview.png` : null);
+                            return !SD || QD ? (0, tD.jsx)(oD, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === uz ? "person" : "image"
-                            }) : (0, Zz.jsx)("img", {
-                              className: iz()("DocsTileImage", {
-                                Pixelated: "skins" !== uz
+                              name: "skins" === CD ? "person" : "image"
+                            }) : (0, tD.jsx)("img", {
+                              className: iD()("DocsTileImage", {
+                                Pixelated: "skins" !== CD
                               }),
-                              src: Oz,
-                              srcSet: Oz === lz ? `${Oz} 2x` : void 0,
+                              src: SD,
+                              srcSet: SD === fD ? `${SD} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${Oz}`), Hz(!0)
+                                console.warn(`Docs gallery: could not load ${SD}`), wD(!0)
                               }
                             })
                           }
 
-                          function vE(zz) {
+                          function PI(DD) {
                             let {
-                              entry: uz,
-                              isSong: bz
-                            } = zz;
-                            const Ez = OE((zz => {
+                              entry: CD,
+                              isSong: cD
+                            } = DD;
+                            const ID = SI((DD => {
                                 let {
-                                  track: Ez
-                                } = zz;
-                                return (null === Ez || void 0 === Ez ? void 0 : Ez.name) === uz.name && Ez.isSong === bz ? Ez.status : null
+                                  track: ID
+                                } = DD;
+                                return (null === ID || void 0 === ID ? void 0 : ID.name) === CD.name && ID.isSong === cD ? ID.status : null
                               })),
-                              nz = null !== Ez && "paused" !== Ez;
-                            return (0, Zz.jsxs)("button", {
+                              pD = null !== ID && "paused" !== ID;
+                            return (0, tD.jsxs)("button", {
                               type: "button",
-                              id: uz.anchor,
-                              className: iz()("DocsSoundTile", {
-                                Playing: nz
+                              id: CD.anchor,
+                              className: iD()("DocsSoundTile", {
+                                Playing: pD
                               }),
-                              "data-docs-track": bE(uz.name, bz),
-                              "aria-label": nz ? `Pause ${uz.name}` : `Play ${uz.name}`,
+                              "data-docs-track": cI(CD.name, cD),
+                              "aria-label": pD ? `Pause ${CD.name}` : `Play ${CD.name}`,
                               onClick: () => {
-                                null !== Ez ? FE() : dE(uz.name, bz)
+                                null !== ID ? MI() : yI(CD.name, cD)
                               },
-                              children: [(0, Zz.jsx)("span", {
+                              children: [(0, tD.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, Zz.jsx)(Kz, {
-                                  name: nz ? "pause" : "play"
+                                children: (0, tD.jsx)(oD, {
+                                  name: pD ? "pause" : "play"
                                 })
-                              }), (0, Zz.jsx)("code", {
+                              }), (0, tD.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: uz.name
-                              }), uz.caption && (0, Zz.jsx)("span", {
+                                children: CD.name
+                              }), CD.caption && (0, tD.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: uz.caption
+                                children: CD.caption
                               })]
                             })
                           }
 
-                          function xE(zz) {
+                          function HI(DD) {
                             let {
-                              kind: uz,
-                              names: bz,
-                              isSongs: nz
-                            } = zz;
-                            const lz = fE(),
-                              [Mz, tz] = Xz(),
-                              Hz = !1 === (null === Mz || void 0 === Mz ? void 0 : Mz.failed) ? Mz.text : null,
-                              Oz = (0, Ez.useContext)(wE),
-                              [pz, dz] = (0, Ez.useState)(""),
-                              Fz = pz.trim().toLowerCase(),
-                              Rz = Fz ? bz.filter((zz => zz.name.toLowerCase().includes(Fz))) : bz;
-                            return (0, Zz.jsxs)("div", {
+                              kind: CD,
+                              names: cD,
+                              isSongs: pD
+                            } = DD;
+                            const fD = gI(),
+                              [bD, QD] = ND(),
+                              wD = !1 === (null === bD || void 0 === bD ? void 0 : bD.failed) ? bD.text : null,
+                              SD = (0, ID.useContext)(vI),
+                              [BD, yD] = (0, ID.useState)(""),
+                              MD = BD.trim().toLowerCase(),
+                              ZD = MD ? cD.filter((DD => DD.name.toLowerCase().includes(MD))) : cD;
+                            return (0, tD.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [bz.length > sE && (0, Zz.jsx)(fb, {
+                              children: [cD.length > XI && (0, tD.jsx)(gc, {
                                 className: "DocsGalleryFilter",
-                                value: pz,
-                                placeholder: `Filter ${bz.length} names\u2026`,
+                                value: BD,
+                                placeholder: `Filter ${cD.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: dz,
-                                count: Fz ? {
-                                  visible: Rz.length,
-                                  total: bz.length
+                                onChange: yD,
+                                count: MD ? {
+                                  visible: ZD.length,
+                                  total: cD.length
                                 } : null
-                              }), (0, Zz.jsx)("div", {
-                                className: iz()("DocsGalleryGrid", `Kind-${uz}`, {
-                                  Songs: nz
+                              }), (0, tD.jsx)("div", {
+                                className: iD()("DocsGalleryGrid", `Kind-${CD}`, {
+                                  Songs: pD
                                 }),
-                                children: Rz.map((zz => {
-                                  if ("sounds" === uz) return (0, Zz.jsx)(vE, {
-                                    entry: zz,
-                                    isSong: nz
-                                  }, zz.anchor);
-                                  if (Oz && "particles" === uz && cb(zz.name)) return (0, Zz.jsxs)("button", {
+                                children: ZD.map((DD => {
+                                  if ("sounds" === CD) return (0, tD.jsx)(PI, {
+                                    entry: DD,
+                                    isSong: pD
+                                  }, DD.anchor);
+                                  if (SD && "particles" === CD && Gc(DD.name)) return (0, tD.jsxs)("button", {
                                     type: "button",
-                                    id: zz.anchor,
-                                    className: iz()("DocsTile Previewable", {
-                                      Copied: Hz === zz.name
+                                    id: DD.anchor,
+                                    className: iD()("DocsTile Previewable", {
+                                      Copied: wD === DD.name
                                     }),
-                                    title: `Play "${zz.name}" in the playground and copy its name`,
+                                    title: `Play "${DD.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      Oz(zz.name), tz(zz.name)
+                                      SD(DD.name), QD(DD.name)
                                     },
-                                    children: [(0, Zz.jsxs)("span", {
+                                    children: [(0, tD.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, Zz.jsx)(NE, {
-                                        kind: uz,
-                                        entry: zz,
-                                        assets: lz,
+                                      children: [(0, tD.jsx)(OI, {
+                                        kind: CD,
+                                        entry: DD,
+                                        assets: fD,
                                         renderedUrl: null
-                                      }), (0, Zz.jsx)("span", {
+                                      }), (0, tD.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, Zz.jsx)(Kz, {
+                                        children: (0, tD.jsx)(oD, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, Zz.jsx)("span", {
+                                    }), (0, tD.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Hz === zz.name ? "Copied!" : zz.name
+                                      children: wD === DD.name ? "Copied!" : DD.name
                                     })]
-                                  }, zz.anchor);
-                                  const bz = oE(uz, zz);
-                                  return (0, Zz.jsxs)("button", {
+                                  }, DD.anchor);
+                                  const cD = nI(CD, DD);
+                                  return (0, tD.jsxs)("button", {
                                     type: "button",
-                                    id: zz.anchor,
-                                    className: iz()("DocsTile", {
-                                      Copied: Hz === zz.name
+                                    id: DD.anchor,
+                                    className: iD()("DocsTile", {
+                                      Copied: wD === DD.name
                                     }),
-                                    title: `Copy "${zz.name}"`,
+                                    title: `Copy "${DD.name}"`,
                                     onClick: () => {
-                                      tz(zz.name)
+                                      QD(DD.name)
                                     },
-                                    children: [(0, Zz.jsx)("span", {
-                                      className: iz()("DocsTilePreview", {
-                                        Rendered: null !== bz
+                                    children: [(0, tD.jsx)("span", {
+                                      className: iD()("DocsTilePreview", {
+                                        Rendered: null !== cD
                                       }),
-                                      children: (0, Zz.jsx)(NE, {
-                                        kind: uz,
-                                        entry: zz,
-                                        assets: lz,
-                                        renderedUrl: bz
+                                      children: (0, tD.jsx)(OI, {
+                                        kind: CD,
+                                        entry: DD,
+                                        assets: fD,
+                                        renderedUrl: cD
                                       })
-                                    }), (0, Zz.jsx)("span", {
+                                    }), (0, tD.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Hz === zz.name ? "Copied!" : zz.name
+                                      children: wD === DD.name ? "Copied!" : DD.name
                                     })]
-                                  }, zz.anchor)
+                                  }, DD.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function JE(zz) {
+                          function UI(DD) {
                             let {
-                              kind: uz,
-                              content: bz,
-                              blocks: Ez
-                            } = zz;
-                            return (0, Zz.jsx)(Zz.Fragment, {
-                              children: Vb(uz, bz, Ez).map(((zz, bz) => "block" === zz.kind ? (0, Zz.jsx)(db, {
-                                block: zz.block
-                              }, bz) : (0, Zz.jsx)(xE, {
-                                kind: uz,
-                                names: zz.names,
-                                isSongs: zz.isSongs
-                              }, bz)))
+                              kind: CD,
+                              content: cD,
+                              blocks: ID
+                            } = DD;
+                            return (0, tD.jsx)(tD.Fragment, {
+                              children: zc(CD, cD, ID).map(((DD, cD) => "block" === DD.kind ? (0, tD.jsx)(yc, {
+                                block: DD.block
+                              }, cD) : (0, tD.jsx)(HI, {
+                                kind: CD,
+                                names: DD.names,
+                                isSongs: DD.isSongs
+                              }, cD)))
                             })
                           }
-                          const AE = [{
+                          const xI = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,420 +2161,420 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function TE(zz) {
+                          function qI(DD) {
                             let {
-                              cards: uz = AE,
-                              label: bz = "Start here"
-                            } = zz;
-                            const nz = (0, Ez.useContext)(Fu);
-                            return (0, Zz.jsx)("nav", {
+                              cards: CD = xI,
+                              label: cD = "Start here"
+                            } = DD;
+                            const pD = (0, ID.useContext)(MC);
+                            return (0, tD.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": bz,
-                              children: uz.map((zz => {
+                              "aria-label": cD,
+                              children: CD.map((DD => {
                                 let {
-                                  pageId: uz,
-                                  countNoun: bz
-                                } = zz;
-                                const Ez = Uz(uz);
-                                return (0, Zz.jsxs)(lz.e, {
-                                  to: Qz(nz, Ez),
+                                  pageId: CD,
+                                  countNoun: cD
+                                } = DD;
+                                const ID = TD(CD);
+                                return (0, tD.jsxs)(fD.d, {
+                                  to: WD(pD, ID),
                                   className: "DocsLandingCard",
-                                  children: [(0, Zz.jsx)("span", {
+                                  children: [(0, tD.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, Zz.jsx)(Kz, {
-                                      name: Ez.icon
+                                    children: (0, tD.jsx)(oD, {
+                                      name: ID.icon
                                     })
-                                  }), (0, Zz.jsx)("span", {
+                                  }), (0, tD.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: Ez.title
-                                  }), (0, Zz.jsx)("span", {
+                                    children: ID.title
+                                  }), (0, tD.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: Ez.summary
-                                  }), bz && (0, Zz.jsxs)("span", {
+                                    children: ID.summary
+                                  }), cD && (0, tD.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [gz(Ez).sections.length, " ", bz]
+                                    children: [RD(ID).sections.length, " ", cD]
                                   })]
-                                }, uz)
+                                }, CD)
                               }))
                             })
                           }
-                          const LE = 240;
+                          const JI = 240;
 
-                          function PE(zz) {
+                          function KI(DD) {
                             let {
-                              faces: uz
-                            } = zz;
-                            return (0, Zz.jsxs)("span", {
+                              faces: CD
+                            } = DD;
+                            return (0, tD.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, Zz.jsx)("span", {
+                              children: [(0, tD.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${uz.top}")`
+                                  backgroundImage: `url("${CD.top}")`
                                 }
-                              }), (0, Zz.jsx)("span", {
+                              }), (0, tD.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${uz.left}")`
+                                  backgroundImage: `url("${CD.left}")`
                                 }
-                              }), (0, Zz.jsx)("span", {
+                              }), (0, tD.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${uz.right}")`
+                                  backgroundImage: `url("${CD.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function GE(zz) {
+                          function aI(DD) {
                             let {
-                              src: uz
-                            } = zz;
-                            const [bz, nz] = (0, Ez.useState)(!1);
-                            return bz ? null : (0, Zz.jsx)("img", {
-                              src: uz,
+                              src: CD
+                            } = DD;
+                            const [cD, pD] = (0, ID.useState)(!1);
+                            return cD ? null : (0, tD.jsx)("img", {
+                              src: CD,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${uz}`), nz(!0)
+                                console.warn(`Docs catalogue: could not load ${CD}`), pD(!0)
                               }
                             })
                           }
 
-                          function aE(zz) {
+                          function VI(DD) {
                             let {
-                              kind: uz
-                            } = zz;
-                            const bz = Xb(uz),
-                              nz = fE(),
-                              lz = (0, Mz.v)(),
-                              [tz, Hz] = (0, Ez.useState)(""),
-                              [Oz, pz] = (0, Ez.useState)(null),
-                              [dz, Fz] = (0, Ez.useState)(LE),
-                              [Rz, wz] = (0, Ez.useState)(null),
-                              Xz = (0, Ez.useRef)(null),
-                              sz = tz.trim().toLowerCase();
-                            (0, Ez.useEffect)((() => {
-                              const zz = (0, vz.h)(lz.hash),
-                                Ez = bz.entries.find((bz => Gb(uz, bz.name) === zz));
-                              if (Ez) Xz.current = Ez.name, Hz(Ez.name), pz(null), wz(Ez.name);
-                              else if (null !== Xz.current) {
-                                const zz = Xz.current;
-                                Xz.current = null, Hz((uz => uz === zz ? "" : uz)), wz(null)
+                              kind: CD
+                            } = DD;
+                            const cD = Nc(CD),
+                              pD = gI(),
+                              fD = (0, bD.w)(),
+                              [QD, wD] = (0, ID.useState)(""),
+                              [SD, BD] = (0, ID.useState)(null),
+                              [yD, MD] = (0, ID.useState)(JI),
+                              [ZD, vD] = (0, ID.useState)(null),
+                              ND = (0, ID.useRef)(null),
+                              XD = QD.trim().toLowerCase();
+                            (0, ID.useEffect)((() => {
+                              const DD = (0, PD.s)(fD.hash),
+                                ID = cD.entries.find((cD => ac(CD, cD.name) === DD));
+                              if (ID) ND.current = ID.name, wD(ID.name), BD(null), vD(ID.name);
+                              else if (null !== ND.current) {
+                                const DD = ND.current;
+                                ND.current = null, wD((CD => CD === DD ? "" : CD)), vD(null)
                               }
-                            }), [bz, uz, lz.hash, lz.key]), (0, Ez.useEffect)((() => {
-                              var zz;
-                              null !== Rz && (null === (zz = document.getElementById(Gb(uz, Rz))) || void 0 === zz || zz.scrollIntoView({
+                            }), [cD, CD, fD.hash, fD.key]), (0, ID.useEffect)((() => {
+                              var DD;
+                              null !== ZD && (null === (DD = document.getElementById(ac(CD, ZD))) || void 0 === DD || DD.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [uz, Rz]);
-                            const rz = bz.entries.filter((zz => (!sz || zz.name.toLowerCase().includes(sz)) && (!Oz || zz.variants.includes(Oz))));
-                            return (0, Zz.jsxs)("div", {
+                            }), [CD, ZD]);
+                            const mD = cD.entries.filter((DD => (!XD || DD.name.toLowerCase().includes(XD)) && (!SD || DD.variants.includes(SD))));
+                            return (0, tD.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [bz.notes.length > 0 && (0, Zz.jsx)("div", {
+                              children: [cD.notes.length > 0 && (0, tD.jsx)("div", {
                                 className: "DocsProse",
-                                children: bz.notes.map((zz => (0, Zz.jsx)("p", {
-                                  children: zz
-                                }, zz)))
-                              }), bz.legend.length > 0 && (0, Zz.jsx)("div", {
+                                children: cD.notes.map((DD => (0, tD.jsx)("p", {
+                                  children: DD
+                                }, DD)))
+                              }), cD.legend.length > 0 && (0, tD.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, Zz.jsxs)("table", {
+                                children: (0, tD.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, Zz.jsx)("thead", {
-                                    children: (0, Zz.jsxs)("tr", {
-                                      children: [(0, Zz.jsx)("th", {
+                                  children: [(0, tD.jsx)("thead", {
+                                    children: (0, tD.jsxs)("tr", {
+                                      children: [(0, tD.jsx)("th", {
                                         children: "Code"
-                                      }), (0, Zz.jsx)("th", {
+                                      }), (0, tD.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, Zz.jsx)("th", {
+                                      }), (0, tD.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, Zz.jsx)("tbody", {
-                                    children: bz.legend.map((zz => (0, Zz.jsxs)("tr", {
-                                      children: [(0, Zz.jsx)("td", {
-                                        children: (0, Zz.jsx)("button", {
+                                  }), (0, tD.jsx)("tbody", {
+                                    children: cD.legend.map((DD => (0, tD.jsxs)("tr", {
+                                      children: [(0, tD.jsx)("td", {
+                                        children: (0, tD.jsx)("button", {
                                           type: "button",
-                                          className: iz()("DocsVariantChip", {
-                                            Active: Oz === zz.code
+                                          className: iD()("DocsVariantChip", {
+                                            Active: SD === DD.code
                                           }),
-                                          "aria-pressed": Oz === zz.code,
-                                          title: `Show only ${uz} with ${zz.meaning} variants`,
+                                          "aria-pressed": SD === DD.code,
+                                          title: `Show only ${CD} with ${DD.meaning} variants`,
                                           onClick: () => {
-                                            pz(Oz === zz.code ? null : zz.code)
+                                            BD(SD === DD.code ? null : DD.code)
                                           },
-                                          children: zz.code
+                                          children: DD.code
                                         })
-                                      }), (0, Zz.jsx)("td", {
-                                        children: zz.meaning
-                                      }), (0, Zz.jsx)("td", {
-                                        children: (0, Zz.jsx)("code", {
+                                      }), (0, tD.jsx)("td", {
+                                        children: DD.meaning
+                                      }), (0, tD.jsx)("td", {
+                                        children: (0, tD.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: zz.usage
+                                          children: DD.usage
                                         })
                                       })]
-                                    }, zz.code)))
+                                    }, DD.code)))
                                   })]
                                 })
-                              }), bz.examples.length > 0 && (0, Zz.jsx)(Nz, {
+                              }), cD.examples.length > 0 && (0, tD.jsx)(OD, {
                                 lang: "text",
-                                code: bz.examples.join("\n")
-                              }), (0, Zz.jsx)(fb, {
+                                code: cD.examples.join("\n")
+                              }), (0, tD.jsx)(gc, {
                                 className: "DocsFilterBar",
-                                value: tz,
-                                placeholder: `Search ${bz.entries.length} ${uz}\u2026`,
-                                label: `Search ${uz}`,
-                                onChange: zz => {
-                                  Hz(zz), Fz(LE)
+                                value: QD,
+                                placeholder: `Search ${cD.entries.length} ${CD}\u2026`,
+                                label: `Search ${CD}`,
+                                onChange: DD => {
+                                  wD(DD), MD(JI)
                                 },
-                                count: sz || Oz ? {
-                                  visible: rz.length,
-                                  total: bz.entries.length
+                                count: XD || SD ? {
+                                  visible: mD.length,
+                                  total: cD.entries.length
                                 } : null,
-                                children: Oz && (0, Zz.jsxs)("button", {
+                                children: SD && (0, tD.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    pz(null)
+                                    BD(null)
                                   },
-                                  children: [Oz, " ", (0, Zz.jsx)(Kz, {
+                                  children: [SD, " ", (0, tD.jsx)(oD, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, Zz.jsx)("div", {
+                              }), (0, tD.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: rz.slice(0, dz).map((zz => {
-                                  const bz = "blocks" === uz ? null === nz || void 0 === nz ? void 0 : nz.getBlockFaces(zz.name) : null,
-                                    Ez = nz && !bz ? nz.getItemTextureUrl(zz.name) : null;
-                                  return (0, Zz.jsxs)("div", {
-                                    id: Gb(uz, zz.name),
-                                    className: iz()("DocsCatalogueTile", {
-                                      Linked: zz.name === Rz
+                                children: mD.slice(0, yD).map((DD => {
+                                  const cD = "blocks" === CD ? null === pD || void 0 === pD ? void 0 : pD.getBlockFaces(DD.name) : null,
+                                    ID = pD && !cD ? pD.getItemTextureUrl(DD.name) : null;
+                                  return (0, tD.jsxs)("div", {
+                                    id: ac(CD, DD.name),
+                                    className: iD()("DocsCatalogueTile", {
+                                      Linked: DD.name === ZD
                                     }),
-                                    children: [(0, Zz.jsxs)("span", {
+                                    children: [(0, tD.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [bz && (0, Zz.jsx)(PE, {
-                                        faces: bz
-                                      }), Ez && (0, Zz.jsx)(GE, {
-                                        src: Ez
+                                      children: [cD && (0, tD.jsx)(KI, {
+                                        faces: cD
+                                      }), ID && (0, tD.jsx)(aI, {
+                                        src: ID
                                       })]
-                                    }), (0, Zz.jsx)("span", {
+                                    }), (0, tD.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: zz.name
-                                    }), zz.variants.length > 0 && (0, Zz.jsx)("span", {
+                                      children: DD.name
+                                    }), DD.variants.length > 0 && (0, tD.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: zz.variants.map((zz => (0, Zz.jsx)("span", {
-                                        children: zz
-                                      }, zz)))
-                                    }), (0, Zz.jsx)(fz, {
-                                      text: zz.name,
+                                      children: DD.variants.map((DD => (0, tD.jsx)("span", {
+                                        children: DD
+                                      }, DD)))
+                                    }), (0, tD.jsx)(gD, {
+                                      text: DD.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, zz.name)
+                                  }, DD.name)
                                 }))
-                              }), rz.length > dz && (0, Zz.jsxs)("button", {
+                              }), mD.length > yD && (0, tD.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  Fz(rz.length)
+                                  MD(mD.length)
                                 },
-                                children: ["Show all ", rz.length]
-                              }), 0 === rz.length && (0, Zz.jsxs)("p", {
+                                children: ["Show all ", mD.length]
+                              }), 0 === mD.length && (0, tD.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", uz, " match."]
+                                children: ["No ", CD, " match."]
                               })]
                             })
                           }
-                          var VE = bz(4581),
-                            mE = bz(1547);
-                          const qE = .95 * VE.e;
+                          var zI = cD(4597),
+                            jI = cD(1577);
+                          const lI = .95 * zI.b;
 
-                          function hE(zz) {
-                            return /^\s*```/.test(zz)
+                          function LI(DD) {
+                            return /^\s*```/.test(DD)
                           }
 
-                          function UE(zz, uz) {
-                            const bz = [
+                          function TI(DD, CD) {
+                            const cD = [
                               []
                             ];
-                            let Ez = !1;
-                            for (const nz of zz.split("\n")) !Ez && uz(nz) && bz.at(-1).length > 0 && bz.push([]), hE(nz) && (Ez = !Ez), bz.at(-1).push(nz);
-                            return bz.map((zz => zz.join("\n").trim())).filter(Boolean)
+                            let ID = !1;
+                            for (const pD of DD.split("\n")) !ID && CD(pD) && cD.at(-1).length > 0 && cD.push([]), LI(pD) && (ID = !ID), cD.at(-1).push(pD);
+                            return cD.map((DD => DD.join("\n").trim())).filter(Boolean)
                           }
 
-                          function cE(zz, uz) {
-                            const bz = `${"#".repeat(uz)} `,
-                              Ez = [];
-                            let nz = !1;
-                            for (const iz of zz.split("\n")) hE(iz) ? nz = !nz : !nz && iz.startsWith(bz) && Ez.push(iz.slice(bz.length).trim());
-                            return Ez
+                          function GI(DD, CD) {
+                            const cD = `${"#".repeat(CD)} `,
+                              ID = [];
+                            let pD = !1;
+                            for (const iD of DD.split("\n")) LI(iD) ? pD = !pD : !pD && iD.startsWith(cD) && ID.push(iD.slice(cD.length).trim());
+                            return ID
                           }
 
-                          function gE(zz) {
-                            return zz.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function RI(DD) {
+                            return DD.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class SE {
-                            constructor(zz, uz) {
-                              this.origin = uz, this.pages = void 0, this.partPaths = new Map;
-                              const bz = zz.map((zz => {
-                                const uz = uz => this.resolveLinks(zz, uz).length,
-                                  bz = function(zz, uz) {
-                                    const bz = zz.map((zz => uz(zz.markdown) + 2)),
-                                      Ez = bz.reduce(((zz, uz) => zz + uz), 0),
-                                      nz = Ez / Math.ceil(Ez / qE),
-                                      iz = [];
-                                    let lz = 0;
-                                    return zz.forEach(((zz, uz) => {
-                                      const Ez = bz[uz];
-                                      (0 === iz.length || lz + Ez > qE || lz + Ez / 2 > nz) && (iz.push([]), lz = 0), iz.at(-1).push(zz), lz += Ez
-                                    })), iz
-                                  }(function(zz, uz) {
-                                    return UE(zz, (zz => zz.startsWith("## "))).flatMap((zz => {
-                                      var bz;
-                                      const Ez = null !== (bz = cE(zz, 2)[0]) && void 0 !== bz ? bz : "";
-                                      if (uz(zz) <= qE) return [{
-                                        markdown: zz,
-                                        section: Ez
+                          class kI {
+                            constructor(DD, CD) {
+                              this.origin = CD, this.pages = void 0, this.partPaths = new Map;
+                              const cD = DD.map((DD => {
+                                const CD = CD => this.resolveLinks(DD, CD).length,
+                                  cD = function(DD, CD) {
+                                    const cD = DD.map((DD => CD(DD.markdown) + 2)),
+                                      ID = cD.reduce(((DD, CD) => DD + CD), 0),
+                                      pD = ID / Math.ceil(ID / lI),
+                                      iD = [];
+                                    let fD = 0;
+                                    return DD.forEach(((DD, CD) => {
+                                      const ID = cD[CD];
+                                      (0 === iD.length || fD + ID > lI || fD + ID / 2 > pD) && (iD.push([]), fD = 0), iD.at(-1).push(DD), fD += ID
+                                    })), iD
+                                  }(function(DD, CD) {
+                                    return TI(DD, (DD => DD.startsWith("## "))).flatMap((DD => {
+                                      var cD;
+                                      const ID = null !== (cD = GI(DD, 2)[0]) && void 0 !== cD ? cD : "";
+                                      if (CD(DD) <= lI) return [{
+                                        markdown: DD,
+                                        section: ID
                                       }];
-                                      let nz = !1,
-                                        iz = "";
-                                      return UE(zz, (zz => {
-                                        const uz = nz && "" !== zz.trim();
-                                        return nz = "" === zz.trim(), uz
-                                      })).map((zz => {
-                                        var uz;
-                                        const bz = cE(zz, 3),
-                                          nz = zz.startsWith("### ") ? bz[0] : iz;
-                                        return iz = null !== (uz = bz.at(-1)) && void 0 !== uz ? uz : iz, {
-                                          markdown: zz,
-                                          section: Ez || nz
+                                      let pD = !1,
+                                        iD = "";
+                                      return TI(DD, (DD => {
+                                        const CD = pD && "" !== DD.trim();
+                                        return pD = "" === DD.trim(), CD
+                                      })).map((DD => {
+                                        var CD;
+                                        const cD = GI(DD, 3),
+                                          pD = DD.startsWith("### ") ? cD[0] : iD;
+                                        return iD = null !== (CD = cD.at(-1)) && void 0 !== CD ? CD : iD, {
+                                          markdown: DD,
+                                          section: ID || pD
                                         }
                                       }))
                                     }))
-                                  }(gE(zz), uz), uz);
+                                  }(RI(DD), CD), CD);
                                 return {
-                                  page: zz,
-                                  groups: bz.length > 1 ? bz : []
+                                  page: DD,
+                                  groups: cD.length > 1 ? cD : []
                                 }
                               }));
                               for (const {
-                                  page: Ez,
-                                  groups: nz
+                                  page: ID,
+                                  groups: pD
                                 }
-                                of bz) nz.forEach(((zz, uz) => {
-                                const bz = (0, VE.s)(Ez.slug, uz);
-                                for (const nz of zz.flatMap((zz => [...cE(zz.markdown, 2), ...cE(zz.markdown, 3)]))) {
-                                  const zz = `${Ez.id}#${(0,vz.k)(nz)}`;
-                                  this.partPaths.has(zz) || this.partPaths.set(zz, bz)
+                                of cD) pD.forEach(((DD, CD) => {
+                                const cD = (0, zI.p)(ID.slug, CD);
+                                for (const pD of DD.flatMap((DD => [...GI(DD.markdown, 2), ...GI(DD.markdown, 3)]))) {
+                                  const DD = `${ID.id}#${(0,PD.u)(pD)}`;
+                                  this.partPaths.has(DD) || this.partPaths.set(DD, cD)
                                 }
                               }));
-                              this.pages = bz.map((zz => {
+                              this.pages = cD.map((DD => {
                                 let {
-                                  page: uz,
-                                  groups: bz
-                                } = zz;
+                                  page: CD,
+                                  groups: cD
+                                } = DD;
                                 return {
-                                  page: uz,
-                                  path: (0, VE.r)(uz.slug),
-                                  markdown: `# ${uz.title}\n\n${this.resolveLinks(uz,gE(uz))}\n`,
-                                  parts: bz.map(((zz, Ez) => this.renderPart(uz, zz, Ez, bz.length)))
+                                  page: CD,
+                                  path: (0, zI.m)(CD.slug),
+                                  markdown: `# ${CD.title}\n\n${this.resolveLinks(CD,RI(CD))}\n`,
+                                  parts: cD.map(((DD, ID) => this.renderPart(CD, DD, ID, cD.length)))
                                 }
                               }))
                             }
-                            url(zz) {
-                              return `${this.origin}${zz}`
+                            url(DD) {
+                              return `${this.origin}${DD}`
                             }
-                            getPage(zz) {
-                              return this.pages.find((uz => uz.page.id === zz))
+                            getPage(DD) {
+                              return this.pages.find((CD => CD.page.id === DD))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((zz => (zz.parts.length > 0 ? zz.parts : [{
-                                path: zz.path,
+                              return this.pages.flatMap((DD => (DD.parts.length > 0 ? DD.parts : [{
+                                path: DD.path,
                                 label: "",
-                                markdown: zz.markdown
-                              }]).filter((zz => zz.markdown.length > VE.e))))
+                                markdown: DD.markdown
+                              }]).filter((DD => DD.markdown.length > zI.b))))
                             }
-                            markdownUrl(zz, uz) {
-                              const bz = uz && this.partPaths.get(`${zz.id}#${uz}`) || (0, VE.r)(zz.slug);
-                              return this.url(uz ? `${bz}#${uz}` : bz)
+                            markdownUrl(DD, CD) {
+                              const cD = CD && this.partPaths.get(`${DD.id}#${CD}`) || (0, zI.m)(DD.slug);
+                              return this.url(CD ? `${cD}#${CD}` : cD)
                             }
-                            resolveLinks(zz, uz) {
-                              return uz.replace(/\]\((#[^)]+)\)/g, ((uz, bz) => {
-                                var Ez;
-                                const nz = null !== (Ez = yz(bz)) && void 0 !== Ez ? Ez : this.samePageTarget(zz, bz);
-                                return nz ? `](${this.markdownUrl(nz.page,nz.anchor)})` : uz
+                            resolveLinks(DD, CD) {
+                              return CD.replace(/\]\((#[^)]+)\)/g, ((CD, cD) => {
+                                var ID;
+                                const pD = null !== (ID = dD(cD)) && void 0 !== ID ? ID : this.samePageTarget(DD, cD);
+                                return pD ? `](${this.markdownUrl(pD.page,pD.anchor)})` : CD
                               }))
                             }
-                            samePageTarget(zz, uz) {
-                              const bz = (0, vz.k)(uz.slice(1));
-                              return Sz(zz, bz) ? {
-                                page: zz,
-                                anchor: bz
+                            samePageTarget(DD, CD) {
+                              const cD = (0, PD.u)(CD.slice(1));
+                              return kD(DD, cD) ? {
+                                page: DD,
+                                anchor: cD
                               } : null
                             }
-                            renderPart(zz, uz, bz, Ez) {
-                              const nz = function(zz) {
-                                  const uz = zz.map((zz => zz.section)).filter(Boolean);
-                                  if (0 === uz.length) return "";
-                                  const bz = uz[0],
-                                    Ez = uz.at(-1);
-                                  return bz === Ez ? bz : `${bz} to ${Ez}`
-                                }(uz),
-                                iz = uz.map((zz => zz.markdown)).join("\n\n"),
-                                lz = nz ? `It covers ${nz}. ` : "",
-                                Mz = `Part ${bz+1} of ${Ez} of [${zz.title}](${this.url((0,VE.r)(zz.slug))}). ${lz}[llms.txt](${this.url(VE.i)}) lists every part.`;
+                            renderPart(DD, CD, cD, ID) {
+                              const pD = function(DD) {
+                                  const CD = DD.map((DD => DD.section)).filter(Boolean);
+                                  if (0 === CD.length) return "";
+                                  const cD = CD[0],
+                                    ID = CD.at(-1);
+                                  return cD === ID ? cD : `${cD} to ${ID}`
+                                }(CD),
+                                iD = CD.map((DD => DD.markdown)).join("\n\n"),
+                                fD = pD ? `It covers ${pD}. ` : "",
+                                bD = `Part ${cD+1} of ${ID} of [${DD.title}](${this.url((0,zI.m)(DD.slug))}). ${fD}[llms.txt](${this.url(zI.g)}) lists every part.`;
                               return {
-                                path: (0, VE.s)(zz.slug, bz),
-                                label: nz,
-                                markdown: `# ${zz.title}, part ${bz+1} of ${Ez}\n\n${Mz}\n\n${this.resolveLinks(zz,iz)}\n`
+                                path: (0, zI.p)(DD.slug, cD),
+                                label: pD,
+                                markdown: `# ${DD.title}, part ${cD+1} of ${ID}\n\n${bD}\n\n${this.resolveLinks(DD,iD)}\n`
                               }
                             }
-                            llmsTxt(zz) {
-                              const uz = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${yE(VE.e)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const bz of hz) {
-                                uz.push("", `## ${bz.title}`, "");
-                                for (const zz of bz.pageIds) {
-                                  const bz = this.getPage(zz),
+                            llmsTxt(DD) {
+                              const CD = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${dI(zI.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const cD of LD) {
+                                CD.push("", `## ${cD.title}`, "");
+                                for (const DD of cD.pageIds) {
+                                  const cD = this.getPage(DD),
                                     {
-                                      page: Ez,
-                                      parts: nz
-                                    } = bz,
-                                    iz = `About ${yE(bz.markdown.length)} tokens${nz.length>0?`, in ${nz.length} parts:`:"."}`;
-                                  uz.push(`- [${Ez.title}](${this.url(bz.path)}): ${Ez.summary} ${iz}`), nz.forEach(((zz, bz) => {
-                                    uz.push(`  - [Part ${bz+1}${zz.label?`: ${zz.label}`:""}](${this.url(zz.path)})`)
+                                      page: ID,
+                                      parts: pD
+                                    } = cD,
+                                    iD = `About ${dI(cD.markdown.length)} tokens${pD.length>0?`, in ${pD.length} parts:`:"."}`;
+                                  CD.push(`- [${ID.title}](${this.url(cD.path)}): ${ID.summary} ${iD}`), pD.forEach(((DD, cD) => {
+                                    CD.push(`  - [Part ${cD+1}${DD.label?`: ${DD.label}`:""}](${this.url(DD.path)})`)
                                   }))
                                 }
                               }
-                              return uz.push("", "## Optional", "", `- [Every page in one file](${this.url(VE.g)}): About ${yE(zz.length)} tokens, for a model with a large context window.`, ""), uz.join("\n")
+                              return CD.push("", "## Optional", "", `- [Every page in one file](${this.url(zI.c)}): About ${dI(DD.length)} tokens, for a model with a large context window.`, ""), CD.join("\n")
                             }
                             llmsFullTxt() {
-                              return hz.flatMap((zz => zz.pageIds.map((zz => this.getPage(zz).markdown)))).join("\n---\n\n")
+                              return LD.flatMap((DD => DD.pageIds.map((DD => this.getPage(DD).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const zz = this.llmsFullTxt(),
-                                uz = this.llmsTxt(zz),
-                                bz = new Map([
-                                  [VE.n, uz],
-                                  [VE.i, uz],
-                                  [VE.g, zz]
+                              const DD = this.llmsFullTxt(),
+                                CD = this.llmsTxt(DD),
+                                cD = new Map([
+                                  [zI.k, CD],
+                                  [zI.g, CD],
+                                  [zI.c, DD]
                                 ]);
-                              for (const Ez of this.pages) {
-                                bz.set(Ez.path, Ez.markdown);
-                                for (const zz of Ez.parts) bz.set(zz.path, zz.markdown)
+                              for (const ID of this.pages) {
+                                cD.set(ID.path, ID.markdown);
+                                for (const DD of ID.parts) cD.set(DD.path, DD.markdown)
                               }
-                              return bz
+                              return cD
                             }
                           }
 
-                          function yE(zz) {
-                            return `${Math.max(1,Math.round(zz/4e3))}K`
+                          function dI(DD) {
+                            return `${Math.max(1,Math.round(DD/4e3))}K`
                           }
-                          let DE = null;
+                          let YI = null;
 
-                          function QE() {
-                            return DE ??= new SE(qz, mE.e), DE
+                          function WI() {
+                            return YI ??= new kI(lD, jI.c), YI
                           }
-                          const WE = [{
+                          const sI = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function eE(zz) {
-                            return QE().getPage(zz.id).parts.length > 0 ? `Read ${VE.k}, then the parts of the Bloxd Code API's ${zz.title} page it lists, so I can ask questions about it.` : `Read ${mE.e}${(0,VE.r)(zz.slug)} so I can ask questions about it. ${VE.k} lists every page of the Bloxd Code API docs.`
+                          function EI(DD) {
+                            return WI().getPage(DD.id).parts.length > 0 ? `Read ${zI.i}, then the parts of the Bloxd Code API's ${DD.title} page it lists, so I can ask questions about it.` : `Read ${jI.c}${(0,zI.m)(DD.slug)} so I can ask questions about it. ${zI.i} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function jE(zz) {
+                          function eI(DD) {
                             let {
-                              page: uz
-                            } = zz;
-                            const [bz, Ez] = Xz();
-                            return (0, Zz.jsxs)("div", {
+                              page: CD
+                            } = DD;
+                            const [cD, ID] = ND();
+                            return (0, tD.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, Zz.jsxs)("button", {
+                              children: [(0, tD.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  Ez(QE().getPage(uz.id).markdown)
+                                  ID(WI().getPage(CD.id).markdown)
                                 },
-                                children: [(0, Zz.jsx)(Kz, {
-                                  name: !1 === (null === bz || void 0 === bz ? void 0 : bz.failed) ? "check" : "copy"
-                                }), (0, Zz.jsx)("span", {
-                                  children: bz ? bz.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, tD.jsx)(oD, {
+                                  name: !1 === (null === cD || void 0 === cD ? void 0 : cD.failed) ? "check" : "copy"
+                                }), (0, tD.jsx)("span", {
+                                  children: cD ? cD.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), WE.map((zz => (0, Zz.jsxs)("a", {
+                              }), sI.map((DD => (0, tD.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${zz.url}${encodeURIComponent(eE(uz))}`,
+                                href: `${DD.url}${encodeURIComponent(EI(CD))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, Zz.jsx)(Kz, {
+                                children: [(0, tD.jsx)(oD, {
                                   name: "external-link"
-                                }), (0, Zz.jsxs)("span", {
-                                  children: ["Open in ", zz.name]
+                                }), (0, tD.jsxs)("span", {
+                                  children: ["Open in ", DD.name]
                                 })]
-                              }, zz.name)))]
+                              }, DD.name)))]
                             })
                           }
 
-                          function IE(zz) {
-                            return `#${[0,1,2].map((uz=>Math.round(Math.min(255,Math.max(0,zz[uz]))).toString(16).padStart(2,"0"))).join("")}`
+                          function uI(DD) {
+                            return `#${[0,1,2].map((CD=>Math.round(Math.min(255,Math.max(0,DD[CD]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function BE(zz) {
-                            return [parseInt(zz.slice(1, 3), 16), parseInt(zz.slice(3, 5), 16), parseInt(zz.slice(5, 7), 16)]
+                          function hI(DD) {
+                            return [parseInt(DD.slice(1, 3), 16), parseInt(DD.slice(3, 5), 16), parseInt(DD.slice(5, 7), 16)]
                           }
 
-                          function CE(zz) {
+                          function rI(DD) {
                             let {
-                              label: uz,
-                              min: bz,
-                              max: Ez,
-                              step: nz,
-                              low: iz,
-                              high: lz,
-                              onChange: Mz
-                            } = zz;
-                            return (0, Zz.jsxs)("div", {
+                              label: CD,
+                              min: cD,
+                              max: ID,
+                              step: pD,
+                              low: iD,
+                              high: fD,
+                              onChange: bD
+                            } = DD;
+                            return (0, tD.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Zz.jsxs)("div", {
+                              children: [(0, tD.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Zz.jsx)("span", {
-                                  children: uz
-                                }), (0, Zz.jsx)("span", {
+                                children: [(0, tD.jsx)("span", {
+                                  children: CD
+                                }), (0, tD.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: iz === lz ? iz : `${iz}\u2013${lz}`
+                                  children: iD === fD ? iD : `${iD}\u2013${fD}`
                                 })]
-                              }), (0, Zz.jsxs)("div", {
+                              }), (0, tD.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, Zz.jsx)("input", {
+                                children: [(0, tD.jsx)("input", {
                                   type: "range",
-                                  min: bz,
-                                  max: Ez,
-                                  step: nz,
-                                  value: Math.min(Ez, iz),
-                                  "aria-label": `Minimum ${uz.toLowerCase()}`,
-                                  onChange: zz => {
-                                    const uz = Number(zz.target.value);
-                                    Mz(uz, Math.max(uz, lz))
+                                  min: cD,
+                                  max: ID,
+                                  step: pD,
+                                  value: Math.min(ID, iD),
+                                  "aria-label": `Minimum ${CD.toLowerCase()}`,
+                                  onChange: DD => {
+                                    const CD = Number(DD.target.value);
+                                    bD(CD, Math.max(CD, fD))
                                   }
-                                }), (0, Zz.jsx)("input", {
+                                }), (0, tD.jsx)("input", {
                                   type: "range",
-                                  min: bz,
-                                  max: Ez,
-                                  step: nz,
-                                  value: Math.min(Ez, lz),
-                                  "aria-label": `Maximum ${uz.toLowerCase()}`,
-                                  onChange: zz => {
-                                    const uz = Number(zz.target.value);
-                                    Mz(Math.min(uz, iz), uz)
+                                  min: cD,
+                                  max: ID,
+                                  step: pD,
+                                  value: Math.min(ID, fD),
+                                  "aria-label": `Maximum ${CD.toLowerCase()}`,
+                                  onChange: DD => {
+                                    const CD = Number(DD.target.value);
+                                    bD(Math.min(CD, iD), CD)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function YE(zz) {
+                          function AI(DD) {
                             let {
-                              label: uz,
-                              min: bz,
-                              max: Ez,
-                              step: nz,
-                              value: iz,
-                              onChange: lz,
-                              format: Mz = String
-                            } = zz;
-                            return (0, Zz.jsxs)("div", {
+                              label: CD,
+                              min: cD,
+                              max: ID,
+                              step: pD,
+                              value: iD,
+                              onChange: fD,
+                              format: bD = String
+                            } = DD;
+                            return (0, tD.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Zz.jsxs)("div", {
+                              children: [(0, tD.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Zz.jsx)("span", {
-                                  children: uz
-                                }), (0, Zz.jsx)("span", {
+                                children: [(0, tD.jsx)("span", {
+                                  children: CD
+                                }), (0, tD.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Mz(iz)
+                                  children: bD(iD)
                                 })]
-                              }), (0, Zz.jsx)("input", {
+                              }), (0, tD.jsx)("input", {
                                 type: "range",
-                                min: bz,
-                                max: Ez,
-                                step: nz,
-                                value: Math.min(Ez, Math.max(bz, iz)),
-                                "aria-label": uz,
-                                onChange: zz => {
-                                  lz(Number(zz.target.value))
+                                min: cD,
+                                max: ID,
+                                step: pD,
+                                value: Math.min(ID, Math.max(cD, iD)),
+                                "aria-label": CD,
+                                onChange: DD => {
+                                  fD(Number(DD.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function kE(zz) {
+                          function FI(DD) {
                             let {
-                              opts: uz,
-                              onChange: bz
-                            } = zz;
-                            const Ez = uz.colorGradients;
-                            if (!Db(Ez)) return (0, Zz.jsxs)("div", {
+                              opts: CD,
+                              onChange: cD
+                            } = DD;
+                            const ID = CD.colorGradients;
+                            if (!Yc(ID)) return (0, tD.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Zz.jsx)("div", {
+                              children: [(0, tD.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, Zz.jsx)("span", {
+                                children: (0, tD.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, Zz.jsx)("div", {
+                              }), (0, tD.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: Ez.map(((zz, uz) => (0, Zz.jsx)("input", {
+                                children: ID.map(((DD, CD) => (0, tD.jsx)("input", {
                                   type: "color",
-                                  value: IE(zz.color),
-                                  "aria-label": `Colour ${uz+1}`,
-                                  onChange: zz => {
-                                    const nz = [...Ez];
-                                    nz[uz] = {
-                                      color: BE(zz.target.value)
-                                    }, bz(nz)
+                                  value: uI(DD.color),
+                                  "aria-label": `Colour ${CD+1}`,
+                                  onChange: DD => {
+                                    const pD = [...ID];
+                                    pD[CD] = {
+                                      color: hI(DD.target.value)
+                                    }, cD(pD)
                                   }
-                                }, uz)))
+                                }, CD)))
                               })]
                             });
-                            const nz = (zz, uz) => {
-                              const nz = [...Ez];
-                              nz[zz] = uz, bz(nz)
+                            const pD = (DD, CD) => {
+                              const pD = [...ID];
+                              pD[DD] = CD, cD(pD)
                             };
-                            return (0, Zz.jsxs)("div", {
+                            return (0, tD.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Zz.jsxs)("div", {
+                              children: [(0, tD.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Zz.jsx)("span", {
+                                children: [(0, tD.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, Zz.jsx)("span", {
+                                }), (0, tD.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), Ez.map(((zz, uz) => {
-                                var bz;
-                                const Ez = null !== (bz = zz.maxColor) && void 0 !== bz ? bz : zz.minColor;
-                                return (0, Zz.jsxs)("div", {
+                              }), ID.map(((DD, CD) => {
+                                var cD;
+                                const ID = null !== (cD = DD.maxColor) && void 0 !== cD ? cD : DD.minColor;
+                                return (0, tD.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, Zz.jsxs)("span", {
+                                  children: [(0, tD.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * zz.timeFraction), "%"]
-                                  }), (0, Zz.jsx)("span", {
+                                    children: [Math.round(100 * DD.timeFraction), "%"]
+                                  }), (0, tD.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${IE(zz.minColor)}, ${IE(Ez)})`
+                                      background: `linear-gradient(90deg, ${uI(DD.minColor)}, ${uI(ID)})`
                                     }
-                                  }), (0, Zz.jsx)("input", {
+                                  }), (0, tD.jsx)("input", {
                                     type: "color",
-                                    value: IE(zz.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*zz.timeFraction)}%`,
-                                    onChange: bz => {
-                                      nz(uz, {
-                                        ...zz,
-                                        minColor: [...BE(bz.target.value), zz.minColor[3]]
+                                    value: uI(DD.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*DD.timeFraction)}%`,
+                                    onChange: cD => {
+                                      pD(CD, {
+                                        ...DD,
+                                        minColor: [...hI(cD.target.value), DD.minColor[3]]
                                       })
                                     }
-                                  }), (0, Zz.jsx)("input", {
+                                  }), (0, tD.jsx)("input", {
                                     type: "color",
-                                    value: IE(Ez),
-                                    "aria-label": `Maximum colour at ${Math.round(100*zz.timeFraction)}%`,
-                                    onChange: bz => {
-                                      nz(uz, {
-                                        ...zz,
-                                        maxColor: [...BE(bz.target.value), Ez[3]]
+                                    value: uI(ID),
+                                    "aria-label": `Maximum colour at ${Math.round(100*DD.timeFraction)}%`,
+                                    onChange: cD => {
+                                      pD(CD, {
+                                        ...DD,
+                                        maxColor: [...hI(cD.target.value), ID[3]]
                                       })
                                     }
                                   })]
-                                }, uz)
+                                }, CD)
                               }))]
                             })
                           }
-                          const zn = [-.5, -.5, -.5],
-                            un = [.5, .5, .5],
-                            bn = [0, 1, 2, 3, 4, 5, 6, 7].map((zz => [1 & zz ? un[0] : zn[0], 2 & zz ? un[1] : zn[1], 4 & zz ? un[2] : zn[2]]));class En {
+                          const Dp = [-.5, -.5, -.5],
+                            Cp = [.5, .5, .5],
+                            cp = [0, 1, 2, 3, 4, 5, 6, 7].map((DD => [1 & DD ? Cp[0] : Dp[0], 2 & DD ? Cp[1] : Dp[1], 4 & DD ? Cp[2] : Dp[2]]));class Ip {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(zz, uz, bz, Ez) {
-                              const nz = Math.round(31 * uz),
-                                iz = Math.round(31 * bz),
-                                lz = Math.round(31 * Ez),
-                                Mz = `${nz}|${iz}|${lz}`;
-                              let tz = this.tints.get(zz);
-                              (!tz || tz.size > 2e3) && (tz = new Map, this.tints.set(zz, tz));
-                              let Hz = tz.get(Mz);
-                              if (Hz) return Hz;
-                              Hz = document.createElement("canvas"), Hz.width = zz.naturalWidth || 16, Hz.height = zz.naturalHeight || 16;
-                              const Oz = Hz.getContext("2d");
-                              return Oz ? (Oz.imageSmoothingEnabled = !1, Oz.drawImage(zz, 0, 0, Hz.width, Hz.height), Oz.globalCompositeOperation = "multiply", Oz.fillStyle = `rgb(${nz/31*255}, ${iz/31*255}, ${lz/31*255})`, Oz.fillRect(0, 0, Hz.width, Hz.height), Oz.globalCompositeOperation = "destination-in", Oz.drawImage(zz, 0, 0, Hz.width, Hz.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), tz.set(Mz, Hz), Hz
+                            get(DD, CD, cD, ID) {
+                              const pD = Math.round(31 * CD),
+                                iD = Math.round(31 * cD),
+                                fD = Math.round(31 * ID),
+                                bD = `${pD}|${iD}|${fD}`;
+                              let QD = this.tints.get(DD);
+                              (!QD || QD.size > 2e3) && (QD = new Map, this.tints.set(DD, QD));
+                              let wD = QD.get(bD);
+                              if (wD) return wD;
+                              wD = document.createElement("canvas"), wD.width = DD.naturalWidth || 16, wD.height = DD.naturalHeight || 16;
+                              const SD = wD.getContext("2d");
+                              return SD ? (SD.imageSmoothingEnabled = !1, SD.drawImage(DD, 0, 0, wD.width, wD.height), SD.globalCompositeOperation = "multiply", SD.fillStyle = `rgb(${pD/31*255}, ${iD/31*255}, ${fD/31*255})`, SD.fillRect(0, 0, wD.width, wD.height), SD.globalCompositeOperation = "destination-in", SD.drawImage(DD, 0, 0, wD.width, wD.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), QD.set(bD, wD), wD
                             }
                           }
 
-                          function nn(zz) {
+                          function pp(DD) {
                             let {
-                              opts: uz,
-                              textureUrl: bz,
-                              burst: nz,
-                              paused: iz
-                            } = zz;
-                            const lz = (0, Ez.useRef)(null),
-                              Mz = (0, Ez.useRef)(uz);
-                            Mz.current = uz;
-                            const tz = (0, Ez.useRef)(iz);
-                            tz.current = iz;
-                            const Hz = (0, Ez.useRef)(null),
-                              Oz = (0, Ez.useRef)(null),
-                              pz = (0, Ez.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(zz) {
-                                let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const bz = [-.5, -.5, -.5],
-                                  Ez = [.5, .5, .5];
-                                let nz = .5;
-                                for (let iz = 0; iz < 40; iz++) {
-                                  const iz = Wb(zz, bz, Ez, uz),
-                                    lz = Math.max(iz.life / 30, .001);
-                                  for (; Ib(iz, zz.gravity, lz);) nz = Math.max(nz, Math.hypot(iz.pos[0], iz.pos[1], iz.pos[2]) + iz.size / 2)
+                              opts: CD,
+                              textureUrl: cD,
+                              burst: pD,
+                              paused: iD
+                            } = DD;
+                            const fD = (0, ID.useRef)(null),
+                              bD = (0, ID.useRef)(CD);
+                            bD.current = CD;
+                            const QD = (0, ID.useRef)(iD);
+                            QD.current = iD;
+                            const wD = (0, ID.useRef)(null),
+                              SD = (0, ID.useRef)(null),
+                              BD = (0, ID.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(DD) {
+                                let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const cD = [-.5, -.5, -.5],
+                                  ID = [.5, .5, .5];
+                                let pD = .5;
+                                for (let iD = 0; iD < 40; iD++) {
+                                  const iD = sc(DD, cD, ID, CD),
+                                    fD = Math.max(iD.life / 30, .001);
+                                  for (; uc(iD, DD.gravity, fD);) pD = Math.max(pD, Math.hypot(iD.pos[0], iD.pos[1], iD.pos[2]) + iD.size / 2)
                                 }
-                                return nz
-                              }(uz)))), [uz]),
-                              dz = (0, Ez.useRef)(pz);
-                            return dz.current = pz, (0, Ez.useEffect)((() => {
-                              if (Hz.current = null, !bz) return;
-                              const zz = new Image;
-                              let uz = !1;
-                              return zz.onload = () => {
-                                uz || (Hz.current = zz)
-                              }, zz.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${bz}`)
-                              }, zz.src = bz, () => {
-                                uz = !0
+                                return pD
+                              }(CD)))), [CD]),
+                              yD = (0, ID.useRef)(BD);
+                            return yD.current = BD, (0, ID.useEffect)((() => {
+                              if (wD.current = null, !cD) return;
+                              const DD = new Image;
+                              let CD = !1;
+                              return DD.onload = () => {
+                                CD || (wD.current = DD)
+                              }, DD.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${cD}`)
+                              }, DD.src = cD, () => {
+                                CD = !0
                               }
-                            }), [bz]), (0, Ez.useEffect)((() => {
-                              var zz;
-                              null === (zz = Oz.current) || void 0 === zz || zz.call(Oz)
-                            }), [uz, nz]), (0, Ez.useEffect)((() => {
-                              const zz = lz.current,
-                                uz = null === zz || void 0 === zz ? void 0 : zz.getContext("2d");
-                              if (!zz || !uz) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const bz = new En;
-                              let Ez = [],
-                                nz = 0,
-                                iz = -.7,
-                                pz = dz.current,
-                                Fz = performance.now(),
-                                Zz = 0,
-                                Rz = !0,
-                                Kz = null;
-                              const wz = () => {
-                                const zz = Mz.current,
-                                  uz = Math.min(400, Math.max(0, Math.ceil(zz.manualEmitCount)));
-                                Ez = [];
-                                for (let bz = 0; bz < uz; bz++) Ez.push(Wb(zz, zn, un, Math.random));
-                                nz = 0
+                            }), [cD]), (0, ID.useEffect)((() => {
+                              var DD;
+                              null === (DD = SD.current) || void 0 === DD || DD.call(SD)
+                            }), [CD, pD]), (0, ID.useEffect)((() => {
+                              const DD = fD.current,
+                                CD = null === DD || void 0 === DD ? void 0 : DD.getContext("2d");
+                              if (!DD || !CD) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const cD = new Ip;
+                              let ID = [],
+                                pD = 0,
+                                iD = -.7,
+                                BD = yD.current,
+                                MD = performance.now(),
+                                tD = 0,
+                                ZD = !0,
+                                oD = null;
+                              const vD = () => {
+                                const DD = bD.current,
+                                  CD = Math.min(400, Math.max(0, Math.ceil(DD.manualEmitCount)));
+                                ID = [];
+                                for (let cD = 0; cD < CD; cD++) ID.push(sc(DD, Dp, Cp, Math.random));
+                                pD = 0
                               };
-                              Oz.current = wz, wz();
-                              const Xz = lz => {
-                                Zz = requestAnimationFrame(Xz);
-                                const Oz = Math.min(.05, (lz - Fz) / 1e3);
-                                if (Fz = lz, !Rz) return;
-                                const fz = window.devicePixelRatio || 1,
-                                  sz = Math.round(zz.clientWidth * fz),
-                                  rz = Math.round(zz.clientHeight * fz);
-                                if (0 === sz || 0 === rz) return;
-                                zz.width === sz && zz.height === rz || (zz.width = sz, zz.height = rz);
-                                const oz = Mz.current;
-                                null === Kz && (iz += .18 * Oz), pz += (dz.current - pz) * Math.min(1, 4 * Oz);
-                                const Nz = .6 * Oz;
-                                Ez = Ez.filter((zz => Ib(zz, oz.gravity, Nz))), 0 !== Ez.length || tz.current || (nz += Oz, nz > .6 && wz());
-                                const vz = function(zz, uz, bz, Ez) {
-                                  const nz = 3.2 * Ez,
-                                    iz = .44 * Math.min(zz, uz) * nz / Ez,
-                                    lz = Math.cos(bz),
-                                    Mz = Math.sin(bz),
-                                    tz = Math.cos(.42),
-                                    Hz = Math.sin(.42);
-                                  return (bz, Ez, Oz) => {
-                                    const pz = bz * Mz + Oz * lz,
-                                      dz = nz - (Ez * Hz + pz * tz);
-                                    if (dz < .05) return null;
-                                    const Fz = iz / dz;
+                              SD.current = vD, vD();
+                              const ND = fD => {
+                                tD = requestAnimationFrame(ND);
+                                const SD = Math.min(.05, (fD - MD) / 1e3);
+                                if (MD = fD, !ZD) return;
+                                const gD = window.devicePixelRatio || 1,
+                                  XD = Math.round(DD.clientWidth * gD),
+                                  mD = Math.round(DD.clientHeight * gD);
+                                if (0 === XD || 0 === mD) return;
+                                DD.width === XD && DD.height === mD || (DD.width = XD, DD.height = mD);
+                                const nD = bD.current;
+                                null === oD && (iD += .18 * SD), BD += (yD.current - BD) * Math.min(1, 4 * SD);
+                                const OD = .6 * SD;
+                                ID = ID.filter((DD => uc(DD, nD.gravity, OD))), 0 !== ID.length || QD.current || (pD += SD, pD > .6 && vD());
+                                const PD = function(DD, CD, cD, ID) {
+                                  const pD = 3.2 * ID,
+                                    iD = .44 * Math.min(DD, CD) * pD / ID,
+                                    fD = Math.cos(cD),
+                                    bD = Math.sin(cD),
+                                    QD = Math.cos(.42),
+                                    wD = Math.sin(.42);
+                                  return (cD, ID, SD) => {
+                                    const BD = cD * bD + SD * fD,
+                                      yD = pD - (ID * wD + BD * QD);
+                                    if (yD < .05) return null;
+                                    const MD = iD / yD;
                                     return {
-                                      x: zz / 2 + (bz * lz - Oz * Mz) * Fz,
-                                      y: uz / 2 - (Ez * tz - pz * Hz) * Fz,
-                                      scale: Fz,
-                                      depth: dz
+                                      x: DD / 2 + (cD * fD - SD * bD) * MD,
+                                      y: CD / 2 - (ID * QD - BD * wD) * MD,
+                                      scale: MD,
+                                      depth: yD
                                     }
                                   }
-                                }(sz, rz, iz, pz);
-                                ! function(zz, uz, bz, Ez, nz) {
-                                  const iz = zz.createLinearGradient(0, 0, 0, bz);
-                                  iz.addColorStop(0, "#23262d"), iz.addColorStop(1, "#16181c"), zz.globalCompositeOperation = "source-over", zz.globalAlpha = 1, zz.fillStyle = iz, zz.fillRect(0, 0, uz, bz);
-                                  const lz = (uz, bz) => {
-                                      const nz = Ez(uz[0], uz[1], uz[2]),
-                                        iz = Ez(bz[0], bz[1], bz[2]);
-                                      nz && iz && (zz.beginPath(), zz.moveTo(nz.x, nz.y), zz.lineTo(iz.x, iz.y), zz.stroke())
+                                }(XD, mD, iD, BD);
+                                ! function(DD, CD, cD, ID, pD) {
+                                  const iD = DD.createLinearGradient(0, 0, 0, cD);
+                                  iD.addColorStop(0, "#23262d"), iD.addColorStop(1, "#16181c"), DD.globalCompositeOperation = "source-over", DD.globalAlpha = 1, DD.fillStyle = iD, DD.fillRect(0, 0, CD, cD);
+                                  const fD = (CD, cD) => {
+                                      const pD = ID(CD[0], CD[1], CD[2]),
+                                        iD = ID(cD[0], cD[1], cD[2]);
+                                      pD && iD && (DD.beginPath(), DD.moveTo(pD.x, pD.y), DD.lineTo(iD.x, iD.y), DD.stroke())
                                     },
-                                    Mz = Math.ceil(nz) + 1,
-                                    tz = zn[1];
-                                  zz.lineWidth = 1, zz.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let Hz = -Mz; Hz <= Mz; Hz++) lz([Hz + .5, tz, .5 - Mz], [Hz + .5, tz, Mz + .5]), lz([.5 - Mz, tz, Hz + .5], [Mz + .5, tz, Hz + .5]);
-                                  zz.strokeStyle = "rgba(255, 255, 255, 0.28)", zz.setLineDash([4, 4]);
-                                  for (const Hz of bn)
-                                    for (const zz of bn) {
-                                      const uz = [0, 1, 2].filter((uz => Hz[uz] !== zz[uz]));
-                                      1 === uz.length && Hz[uz[0]] < zz[uz[0]] && lz(Hz, zz)
+                                    bD = Math.ceil(pD) + 1,
+                                    QD = Dp[1];
+                                  DD.lineWidth = 1, DD.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let wD = -bD; wD <= bD; wD++) fD([wD + .5, QD, .5 - bD], [wD + .5, QD, bD + .5]), fD([.5 - bD, QD, wD + .5], [bD + .5, QD, wD + .5]);
+                                  DD.strokeStyle = "rgba(255, 255, 255, 0.28)", DD.setLineDash([4, 4]);
+                                  for (const wD of cp)
+                                    for (const DD of cp) {
+                                      const CD = [0, 1, 2].filter((CD => wD[CD] !== DD[CD]));
+                                      1 === CD.length && wD[CD[0]] < DD[CD[0]] && fD(wD, DD)
                                     }
-                                  zz.setLineDash([])
-                                }(uz, sz, rz, vz, pz);
-                                const xz = Hz.current,
-                                  Jz = Ez.map((zz => ({
-                                    particle: zz,
-                                    at: vz(zz.pos[0], zz.pos[1], zz.pos[2])
-                                  }))).filter((zz => null !== zz.at)).sort(((zz, uz) => uz.at.depth - zz.at.depth));
-                                uz.imageSmoothingEnabled = !1;
-                                for (const zz of function(zz) {
-                                    switch (zz) {
-                                      case Ub.d.OneOne:
+                                  DD.setLineDash([])
+                                }(CD, XD, mD, PD, BD);
+                                const HD = wD.current,
+                                  UD = ID.map((DD => ({
+                                    particle: DD,
+                                    at: PD(DD.pos[0], DD.pos[1], DD.pos[2])
+                                  }))).filter((DD => null !== DD.at)).sort(((DD, CD) => CD.at.depth - DD.at.depth));
+                                CD.imageSmoothingEnabled = !1;
+                                for (const DD of function(DD) {
+                                    switch (DD) {
+                                      case Tc.c.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case Ub.d.Add:
+                                      case Tc.c.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case Ub.d.Multiply:
+                                      case Tc.c.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case Ub.d.MultiplyAdd:
+                                      case Tc.c.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(oz.blendMode)) {
-                                  uz.globalCompositeOperation = zz.operation;
+                                  }(nD.blendMode)) {
+                                  CD.globalCompositeOperation = DD.operation;
                                   for (const {
-                                      particle: Ez,
-                                      at: nz
+                                      particle: ID,
+                                      at: pD
                                     }
-                                    of Jz) {
-                                    const [iz, lz, Mz, tz] = jb(Ez), Hz = Math.max(1, Ez.size * nz.scale);
-                                    uz.globalAlpha = zz.usesAlpha ? Math.min(1, Math.max(0, tz)) : 1, xz ? uz.drawImage(bz.get(xz, iz, lz, Mz), nz.x - Hz / 2, nz.y - Hz / 2, Hz, Hz) : (uz.fillStyle = `rgb(${255*iz}, ${255*lz}, ${255*Mz})`, uz.fillRect(nz.x - Hz / 2, nz.y - Hz / 2, Hz, Hz))
+                                    of UD) {
+                                    const [iD, fD, bD, QD] = ec(ID), wD = Math.max(1, ID.size * pD.scale);
+                                    CD.globalAlpha = DD.usesAlpha ? Math.min(1, Math.max(0, QD)) : 1, HD ? CD.drawImage(cD.get(HD, iD, fD, bD), pD.x - wD / 2, pD.y - wD / 2, wD, wD) : (CD.fillStyle = `rgb(${255*iD}, ${255*fD}, ${255*bD})`, CD.fillRect(pD.x - wD / 2, pD.y - wD / 2, wD, wD))
                                   }
                                 }
-                                uz.globalCompositeOperation = "source-over", uz.globalAlpha = 1
+                                CD.globalCompositeOperation = "source-over", CD.globalAlpha = 1
                               };
-                              Zz = requestAnimationFrame(Xz);
-                              const fz = new IntersectionObserver((zz => {
-                                let [uz] = zz;
-                                Rz = uz.isIntersecting
+                              tD = requestAnimationFrame(ND);
+                              const gD = new IntersectionObserver((DD => {
+                                let [CD] = DD;
+                                ZD = CD.isIntersecting
                               }));
-                              fz.observe(zz);
-                              const sz = uz => {
-                                  Kz = uz.clientX, zz.setPointerCapture(uz.pointerId)
+                              gD.observe(DD);
+                              const XD = CD => {
+                                  oD = CD.clientX, DD.setPointerCapture(CD.pointerId)
                                 },
-                                rz = zz => {
-                                  null !== Kz && (iz += .01 * (zz.clientX - Kz), Kz = zz.clientX)
+                                mD = DD => {
+                                  null !== oD && (iD += .01 * (DD.clientX - oD), oD = DD.clientX)
                                 },
-                                oz = () => {
-                                  Kz = null
+                                nD = () => {
+                                  oD = null
                                 };
-                              return zz.addEventListener("pointerdown", sz), zz.addEventListener("pointermove", rz), zz.addEventListener("pointerup", oz), zz.addEventListener("pointercancel", oz), () => {
-                                cancelAnimationFrame(Zz), fz.disconnect(), Oz.current = null, zz.removeEventListener("pointerdown", sz), zz.removeEventListener("pointermove", rz), zz.removeEventListener("pointerup", oz), zz.removeEventListener("pointercancel", oz)
+                              return DD.addEventListener("pointerdown", XD), DD.addEventListener("pointermove", mD), DD.addEventListener("pointerup", nD), DD.addEventListener("pointercancel", nD), () => {
+                                cancelAnimationFrame(tD), gD.disconnect(), SD.current = null, DD.removeEventListener("pointerdown", XD), DD.removeEventListener("pointermove", mD), DD.removeEventListener("pointerup", nD), DD.removeEventListener("pointercancel", nD)
                               }
-                            }), []), (0, Zz.jsx)("canvas", {
-                              ref: lz,
+                            }), []), (0, tD.jsx)("canvas", {
+                              ref: fD,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${uz.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${CD.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const Mn = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            tn = [{
-                              mode: Ub.d.OneOne,
+                          const ip = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            fp = [{
+                              mode: Tc.c.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: Ub.d.Standard,
+                              mode: Tc.c.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: Ub.d.Add,
+                              mode: Tc.c.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: Ub.d.Multiply,
+                              mode: Tc.c.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: Ub.d.MultiplyAdd,
+                              mode: Tc.c.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            Hn = (0, Ez.forwardRef)((function(zz, uz) {
-                              var bz, nz;
+                            bp = (0, ID.forwardRef)((function(DD, CD) {
+                              var cD, pD;
                               let {
-                                textures: lz
-                              } = zz;
-                              const Mz = fE(),
-                                tz = (0, Ez.useRef)(null),
-                                [Hz, Oz] = (0, Ez.useState)(gb),
-                                [pz, dz] = (0, Ez.useState)("example"),
-                                [Fz, Rz] = (0, Ez.useState)(0),
-                                [wz, Xz] = (0, Ez.useState)(!1),
-                                sz = zz => {
-                                  const uz = "example" === zz ? gb : cb(zz);
-                                  uz && (Oz(uz), dz(zz))
+                                textures: fD
+                              } = DD;
+                              const bD = gI(),
+                                QD = (0, ID.useRef)(null),
+                                [wD, SD] = (0, ID.useState)(Rc),
+                                [BD, yD] = (0, ID.useState)("example"),
+                                [MD, ZD] = (0, ID.useState)(0),
+                                [vD, ND] = (0, ID.useState)(!1),
+                                XD = DD => {
+                                  const CD = "example" === DD ? Rc : Gc(DD);
+                                  CD && (SD(CD), yD(DD))
                                 };
-                              (0, Ez.useImperativeHandle)(uz, (() => ({
-                                preview: zz => {
-                                  var uz;
-                                  sz(zz), null === (uz = tz.current) || void 0 === uz || uz.scrollIntoView({
+                              (0, ID.useImperativeHandle)(CD, (() => ({
+                                preview: DD => {
+                                  var CD;
+                                  XD(DD), null === (CD = QD.current) || void 0 === CD || CD.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const rz = zz => {
-                                  Oz({
-                                    ...Hz,
-                                    ...zz
-                                  }), dz(null)
+                              const mD = DD => {
+                                  SD({
+                                    ...wD,
+                                    ...DD
+                                  }), yD(null)
                                 },
-                                oz = function(zz, uz) {
-                                  if (null !== uz) return `${kb}    presetId: "${uz}",\n${zE}\n})`;
-                                  const bz = zz.velocityGradients.map((zz => `        {\n            timeFraction: ${Bb(zz.timeFraction)},\n            factor: ${Bb(zz.factor)},\n            factor2: ${Bb(zz.factor2)},\n        },`)),
-                                    Ez = [`    dir1: ${Cb(zz.dir1)},`, `    dir2: ${Cb(zz.dir2)},`, zE, `    texture: "${zz.texture}",`, `    minLifeTime: ${Bb(zz.minLifeTime)},`, `    maxLifeTime: ${Bb(zz.maxLifeTime)},`, `    minEmitPower: ${Bb(zz.minEmitPower)},`, `    maxEmitPower: ${Bb(zz.maxEmitPower)},`, `    minSize: ${Bb(zz.minSize)},`, `    maxSize: ${Bb(zz.maxSize)},`, `    manualEmitCount: ${Bb(zz.manualEmitCount)},`, `    gravity: ${Cb(zz.gravity)},`, `    colorGradients: ${Yb(zz.colorGradients,"    ")},`, `    velocityGradients: ${bz.length>0?`[\n${bz.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Bb(zz.blendMode)},`];
-                                  return void 0 !== zz.hideDist && Ez.push(`    hideDist: ${Bb(zz.hideDist)},`), `${kb}${Ez.join("\n")}\n})`
-                                }(Hz, null === pz || "example" === pz ? null : pz),
-                                vz = lz.includes(Hz.texture) ? lz : [...lz, Hz.texture];
-                              return (0, Zz.jsxs)("section", {
-                                ref: tz,
+                                nD = function(DD, CD) {
+                                  if (null !== CD) return `${Fc}    presetId: "${CD}",\n${DI}\n})`;
+                                  const cD = DD.velocityGradients.map((DD => `        {\n            timeFraction: ${hc(DD.timeFraction)},\n            factor: ${hc(DD.factor)},\n            factor2: ${hc(DD.factor2)},\n        },`)),
+                                    ID = [`    dir1: ${rc(DD.dir1)},`, `    dir2: ${rc(DD.dir2)},`, DI, `    texture: "${DD.texture}",`, `    minLifeTime: ${hc(DD.minLifeTime)},`, `    maxLifeTime: ${hc(DD.maxLifeTime)},`, `    minEmitPower: ${hc(DD.minEmitPower)},`, `    maxEmitPower: ${hc(DD.maxEmitPower)},`, `    minSize: ${hc(DD.minSize)},`, `    maxSize: ${hc(DD.maxSize)},`, `    manualEmitCount: ${hc(DD.manualEmitCount)},`, `    gravity: ${rc(DD.gravity)},`, `    colorGradients: ${Ac(DD.colorGradients,"    ")},`, `    velocityGradients: ${cD.length>0?`[\n${cD.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${hc(DD.blendMode)},`];
+                                  return void 0 !== DD.hideDist && ID.push(`    hideDist: ${hc(DD.hideDist)},`), `${Fc}${ID.join("\n")}\n})`
+                                }(wD, null === BD || "example" === BD ? null : BD),
+                                PD = fD.includes(wD.texture) ? fD : [...fD, wD.texture];
+                              return (0, tD.jsxs)("section", {
+                                ref: QD,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, Zz.jsxs)("header", {
+                                children: [(0, tD.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, Zz.jsxs)("div", {
-                                    children: [(0, Zz.jsx)("div", {
+                                  children: [(0, tD.jsxs)("div", {
+                                    children: [(0, tD.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, Zz.jsx)("div", {
+                                    }), (0, tD.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, Zz.jsx)(fz, {
-                                    text: oz,
+                                  }), (0, tD.jsx)(gD, {
+                                    text: nD,
                                     label: "Copy code"
                                   })]
-                                }), (0, Zz.jsxs)("div", {
+                                }), (0, tD.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, Zz.jsx)("button", {
+                                  children: [(0, tD.jsx)("button", {
                                     type: "button",
-                                    className: iz()("DocsVariantChip", {
-                                      Active: "example" === pz
+                                    className: iD()("DocsVariantChip", {
+                                      Active: "example" === BD
                                     }),
                                     onClick: () => {
-                                      sz("example")
+                                      XD("example")
                                     },
                                     children: "Example"
-                                  }), Mn.filter((zz => null !== cb(zz))).map((zz => (0, Zz.jsx)("button", {
+                                  }), ip.filter((DD => null !== Gc(DD))).map((DD => (0, tD.jsx)("button", {
                                     type: "button",
-                                    className: iz()("DocsVariantChip", {
-                                      Active: pz === zz
+                                    className: iD()("DocsVariantChip", {
+                                      Active: BD === DD
                                     }),
                                     onClick: () => {
-                                      sz(zz)
+                                      XD(DD)
                                     },
-                                    children: zz
-                                  }, zz))), (0, Zz.jsxs)("select", {
+                                    children: DD
+                                  }, DD))), (0, tD.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== pz && void 0 !== pz ? pz : "custom",
+                                    value: null !== BD && void 0 !== BD ? BD : "custom",
                                     "aria-label": "Preset",
-                                    onChange: zz => {
-                                      sz(zz.target.value)
+                                    onChange: DD => {
+                                      XD(DD.target.value)
                                     },
-                                    children: [(0, Zz.jsx)("option", {
+                                    children: [(0, tD.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === pz && (0, Zz.jsx)("option", {
+                                    }), null === BD && (0, tD.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), hb.d.map((zz => (0, Zz.jsx)("option", {
-                                      value: zz,
-                                      children: zz
-                                    }, zz)))]
+                                    }), Lc.e.map((DD => (0, tD.jsx)("option", {
+                                      value: DD,
+                                      children: DD
+                                    }, DD)))]
                                   })]
-                                }), (0, Zz.jsxs)("div", {
+                                }), (0, tD.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, Zz.jsxs)("div", {
+                                  children: [(0, tD.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, Zz.jsx)(nn, {
-                                      opts: Hz,
-                                      textureUrl: null !== (bz = null === Mz || void 0 === Mz ? void 0 : Mz.getParticleTextureUrl(Hz.texture)) && void 0 !== bz ? bz : null,
-                                      burst: Fz,
-                                      paused: wz
-                                    }), (0, Zz.jsxs)("div", {
+                                    children: [(0, tD.jsx)(pp, {
+                                      opts: wD,
+                                      textureUrl: null !== (cD = null === bD || void 0 === bD ? void 0 : bD.getParticleTextureUrl(wD.texture)) && void 0 !== cD ? cD : null,
+                                      burst: MD,
+                                      paused: vD
+                                    }), (0, tD.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, Zz.jsxs)("button", {
+                                      children: [(0, tD.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          Rz(Fz + 1)
+                                          ZD(MD + 1)
                                         },
-                                        children: [(0, Zz.jsx)(Kz, {
+                                        children: [(0, tD.jsx)(oD, {
                                           name: "replay"
-                                        }), (0, Zz.jsx)("span", {
+                                        }), (0, tD.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, Zz.jsxs)("button", {
+                                      }), (0, tD.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": wz,
+                                        "aria-pressed": vD,
                                         onClick: () => {
-                                          Xz(!wz)
+                                          ND(!vD)
                                         },
-                                        children: [(0, Zz.jsx)(Kz, {
-                                          name: wz ? "play" : "pause"
-                                        }), (0, Zz.jsx)("span", {
-                                          children: wz ? "Loop" : "Stop looping"
+                                        children: [(0, tD.jsx)(oD, {
+                                          name: vD ? "play" : "pause"
+                                        }), (0, tD.jsx)("span", {
+                                          children: vD ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, Zz.jsxs)("div", {
+                                  }), (0, tD.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, Zz.jsxs)("div", {
+                                    children: [(0, tD.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, Zz.jsxs)("div", {
+                                      children: [(0, tD.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, Zz.jsx)("span", {
+                                        children: [(0, tD.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, Zz.jsx)("code", {
+                                        }), (0, tD.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: Hz.texture
+                                          children: wD.texture
                                         })]
-                                      }), (0, Zz.jsx)("div", {
+                                      }), (0, tD.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: vz.map((zz => {
-                                          var uz;
-                                          const bz = null !== (uz = null === Mz || void 0 === Mz ? void 0 : Mz.getParticleTextureUrl(zz)) && void 0 !== uz ? uz : null;
-                                          return (0, Zz.jsx)("button", {
+                                        children: PD.map((DD => {
+                                          var CD;
+                                          const cD = null !== (CD = null === bD || void 0 === bD ? void 0 : bD.getParticleTextureUrl(DD)) && void 0 !== CD ? CD : null;
+                                          return (0, tD.jsx)("button", {
                                             type: "button",
-                                            className: iz()("DocsParticleTexture", {
-                                              Active: Hz.texture === zz
+                                            className: iD()("DocsParticleTexture", {
+                                              Active: wD.texture === DD
                                             }),
-                                            title: zz,
-                                            "aria-label": zz,
-                                            "aria-pressed": Hz.texture === zz,
+                                            title: DD,
+                                            "aria-label": DD,
+                                            "aria-pressed": wD.texture === DD,
                                             onClick: () => {
-                                              rz({
-                                                texture: zz
+                                              mD({
+                                                texture: DD
                                               })
                                             },
-                                            children: bz ? (0, Zz.jsx)("img", {
-                                              src: bz,
+                                            children: cD ? (0, tD.jsx)("img", {
+                                              src: cD,
                                               alt: ""
-                                            }) : (0, Zz.jsx)(Kz, {
+                                            }) : (0, tD.jsx)(oD, {
                                               name: "image"
                                             })
-                                          }, zz)
+                                          }, DD)
                                         }))
                                       })]
-                                    }), (0, Zz.jsx)(YE, {
+                                    }), (0, tD.jsx)(AI, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: Hz.manualEmitCount,
-                                      onChange: zz => {
-                                        rz({
-                                          manualEmitCount: zz
+                                      value: wD.manualEmitCount,
+                                      onChange: DD => {
+                                        mD({
+                                          manualEmitCount: DD
                                         })
                                       }
-                                    }), (0, Zz.jsx)(CE, {
+                                    }), (0, tD.jsx)(rI, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: Hz.minLifeTime,
-                                      high: Hz.maxLifeTime,
-                                      onChange: (zz, uz) => {
-                                        rz({
-                                          minLifeTime: zz,
-                                          maxLifeTime: uz
+                                      low: wD.minLifeTime,
+                                      high: wD.maxLifeTime,
+                                      onChange: (DD, CD) => {
+                                        mD({
+                                          minLifeTime: DD,
+                                          maxLifeTime: CD
                                         })
                                       }
-                                    }), (0, Zz.jsx)(CE, {
+                                    }), (0, tD.jsx)(rI, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: Hz.minEmitPower,
-                                      high: Hz.maxEmitPower,
-                                      onChange: (zz, uz) => {
-                                        rz({
-                                          minEmitPower: zz,
-                                          maxEmitPower: uz
+                                      low: wD.minEmitPower,
+                                      high: wD.maxEmitPower,
+                                      onChange: (DD, CD) => {
+                                        mD({
+                                          minEmitPower: DD,
+                                          maxEmitPower: CD
                                         })
                                       }
-                                    }), (0, Zz.jsx)(CE, {
+                                    }), (0, tD.jsx)(rI, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: Hz.minSize,
-                                      high: Hz.maxSize,
-                                      onChange: (zz, uz) => {
-                                        rz({
-                                          minSize: zz,
-                                          maxSize: uz
+                                      low: wD.minSize,
+                                      high: wD.maxSize,
+                                      onChange: (DD, CD) => {
+                                        mD({
+                                          minSize: DD,
+                                          maxSize: CD
                                         })
                                       }
-                                    }), (0, Zz.jsx)(YE, {
+                                    }), (0, tD.jsx)(AI, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (nz = Hz.gravity[1]) && void 0 !== nz ? nz : 0,
-                                      onChange: zz => {
-                                        var uz, bz;
-                                        rz({
-                                          gravity: [null !== (uz = Hz.gravity[0]) && void 0 !== uz ? uz : 0, zz, null !== (bz = Hz.gravity[2]) && void 0 !== bz ? bz : 0]
+                                      value: null !== (pD = wD.gravity[1]) && void 0 !== pD ? pD : 0,
+                                      onChange: DD => {
+                                        var CD, cD;
+                                        mD({
+                                          gravity: [null !== (CD = wD.gravity[0]) && void 0 !== CD ? CD : 0, DD, null !== (cD = wD.gravity[2]) && void 0 !== cD ? cD : 0]
                                         })
                                       }
-                                    }), (0, Zz.jsxs)("div", {
+                                    }), (0, tD.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, Zz.jsx)("div", {
+                                      children: [(0, tD.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, Zz.jsx)("span", {
+                                        children: (0, tD.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, Zz.jsx)("select", {
+                                      }), (0, tD.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: Hz.blendMode,
+                                        value: wD.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: zz => {
-                                          rz({
-                                            blendMode: Number(zz.target.value)
+                                        onChange: DD => {
+                                          mD({
+                                            blendMode: Number(DD.target.value)
                                           })
                                         },
-                                        children: tn.map((zz => {
+                                        children: fp.map((DD => {
                                           let {
-                                            mode: uz,
-                                            label: bz
-                                          } = zz;
-                                          return (0, Zz.jsx)("option", {
-                                            value: uz,
-                                            children: bz
-                                          }, uz)
+                                            mode: CD,
+                                            label: cD
+                                          } = DD;
+                                          return (0, tD.jsx)("option", {
+                                            value: CD,
+                                            children: cD
+                                          }, CD)
                                         }))
                                       })]
-                                    }), (0, Zz.jsx)(kE, {
-                                      opts: Hz,
-                                      onChange: zz => {
-                                        rz({
-                                          colorGradients: zz
+                                    }), (0, tD.jsx)(FI, {
+                                      opts: wD,
+                                      onChange: DD => {
+                                        mD({
+                                          colorGradients: DD
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, Zz.jsx)(Nz, {
-                                  code: oz,
+                                }), (0, tD.jsx)(OD, {
+                                  code: nD,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var On = bz(4249),
-                            pn = bz(1846);
+                          var Qp = cD(4274),
+                            wp = cD(1872);
 
-                          function dn(zz, uz) {
-                            return zz ? On.d.includes(uz) ? zz.getIngameIconUrl(uz) : zz.getItemIconUrl(uz) : null
+                          function Sp(DD, CD) {
+                            return DD ? Qp.b.includes(CD) ? DD.getIngameIconUrl(CD) : DD.getItemIconUrl(CD) : null
                           }
 
-                          function Fn(zz) {
-                            var uz, bz, Ez;
+                          function Bp(DD) {
+                            var CD, cD, ID;
                             let {
-                              part: nz,
-                              assets: lz
-                            } = zz;
-                            const Mz = dn(lz, nz.icon),
-                              tz = null !== (uz = null === (bz = nz.style) || void 0 === bz ? void 0 : bz.fontSize) && void 0 !== uz ? uz : "1.8em",
-                              Hz = (0, hu.jc)(nz.style);
-                            return (0, Zz.jsxs)("span", {
-                              className: iz()("DocsBloxdTextIcon", {
-                                Missing: !Mz
+                              part: pD,
+                              assets: fD
+                            } = DD;
+                            const bD = Sp(fD, pD.icon),
+                              QD = null !== (CD = null === (cD = pD.style) || void 0 === cD ? void 0 : cD.fontSize) && void 0 !== CD ? CD : "1.8em",
+                              wD = (0, LC.Xb)(pD.style);
+                            return (0, tD.jsxs)("span", {
+                              className: iD()("DocsBloxdTextIcon", {
+                                Missing: !bD
                               }),
                               style: {
-                                width: tz,
-                                height: tz,
-                                opacity: null === (Ez = nz.style) || void 0 === Ez ? void 0 : Ez.opacity
+                                width: QD,
+                                height: QD,
+                                opacity: null === (ID = pD.style) || void 0 === ID ? void 0 : ID.opacity
                               },
-                              title: Mz ? void 0 : `No Bloxd icon, item or block is called "${nz.icon}"`,
-                              children: [Mz && Hz && (0, Zz.jsx)("span", {
+                              title: bD ? void 0 : `No Bloxd icon, item or block is called "${pD.icon}"`,
+                              children: [bD && wD && (0, tD.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: Hz,
-                                  maskImage: `url("${Mz}")`,
-                                  WebkitMaskImage: `url("${Mz}")`
+                                  background: wD,
+                                  maskImage: `url("${bD}")`,
+                                  WebkitMaskImage: `url("${bD}")`
                                 }
-                              }), Mz ? (0, Zz.jsx)("img", {
-                                src: Mz,
+                              }), bD ? (0, tD.jsx)("img", {
+                                src: bD,
                                 alt: "",
-                                className: iz()({
-                                  Tinted: Hz
+                                className: iD()({
+                                  Tinted: wD
                                 })
-                              }) : (0, Zz.jsx)(Kz, {
+                              }) : (0, tD.jsx)(oD, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function Zn(zz) {
+                          function yp(DD) {
                             let {
-                              parts: uz,
-                              className: bz
-                            } = zz;
-                            const Ez = fE(),
-                              nz = [];
-                            let lz = [];
-                            const Mz = zz => {
-                              lz.length > 0 && (nz.push((0, Zz.jsx)(pn.b, {
-                                text: lz
-                              }, `run-${zz}`)), lz = [])
+                              parts: CD,
+                              className: cD
+                            } = DD;
+                            const ID = gI(),
+                              pD = [];
+                            let fD = [];
+                            const bD = DD => {
+                              fD.length > 0 && (pD.push((0, tD.jsx)(wp.c, {
+                                text: fD
+                              }, `run-${DD}`)), fD = [])
                             };
-                            return uz.forEach(((zz, uz) => {
-                              "icon" !== yu(zz) || cu(zz.icon) ? lz.push(zz) : (Mz(uz), nz.push((0, Zz.jsx)(Fn, {
-                                part: zz,
-                                assets: Ez
-                              }, `icon-${uz}`)))
-                            })), Mz(uz.length), (0, Zz.jsx)("div", {
-                              className: iz()("DocsStyledTextPreview", bz),
-                              children: nz
+                            return CD.forEach(((DD, CD) => {
+                              "icon" !== dC(DD) || GC(DD.icon) ? fD.push(DD) : (bD(CD), pD.push((0, tD.jsx)(Bp, {
+                                part: DD,
+                                assets: ID
+                              }, `icon-${CD}`)))
+                            })), bD(CD.length), (0, tD.jsx)("div", {
+                              className: iD()("DocsStyledTextPreview", cD),
+                              children: pD
                             })
                           }
-                          const Rn = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let Kn = null;
+                          const Mp = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let tp = null;
 
-                          function wn(zz) {
-                            if (Kn ??= document.createElement("canvas").getContext("2d"), !Kn) return "#000000";
-                            Kn.fillStyle = "#000000", Kn.fillStyle = zz;
-                            const uz = Kn.fillStyle;
-                            return uz.startsWith("#") ? uz : "#000000"
+                          function Zp(DD) {
+                            if (tp ??= document.createElement("canvas").getContext("2d"), !tp) return "#000000";
+                            tp.fillStyle = "#000000", tp.fillStyle = DD;
+                            const CD = tp.fillStyle;
+                            return CD.startsWith("#") ? CD : "#000000"
                           }
 
-                          function Xn(zz) {
+                          function op(DD) {
                             let {
-                              value: uz,
-                              label: bz,
-                              onChange: Ez
-                            } = zz;
-                            return (0, Zz.jsxs)("span", {
+                              value: CD,
+                              label: cD,
+                              onChange: ID
+                            } = DD;
+                            return (0, tD.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, Zz.jsx)("input", {
+                              children: [(0, tD.jsx)("input", {
                                 type: "color",
-                                value: wn(uz),
-                                "aria-label": `${bz} picker`,
-                                onChange: zz => {
-                                  Ez(zz.target.value)
+                                value: Zp(CD),
+                                "aria-label": `${cD} picker`,
+                                onChange: DD => {
+                                  ID(DD.target.value)
                                 }
-                              }), (0, Zz.jsx)("input", {
+                              }), (0, tD.jsx)("input", {
                                 type: "text",
-                                value: uz,
+                                value: CD,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": bz,
+                                "aria-label": cD,
                                 spellCheck: !1,
-                                onChange: zz => {
-                                  Ez(zz.target.value)
+                                onChange: DD => {
+                                  ID(DD.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function fn(zz) {
+                          function vp(DD) {
                             let {
-                              value: uz,
-                              fontAwesomeIcons: bz,
-                              onChange: nz
-                            } = zz;
-                            const lz = fE(),
-                              [Mz, tz] = (0, Ez.useState)(cu(uz) ? "fontAwesome" : "bloxd"),
-                              [Hz, Oz] = (0, Ez.useState)(""),
-                              pz = Hz.trim().toLowerCase(),
-                              dz = "bloxd" === Mz ? On.d : bz,
-                              Fz = pz ? dz.filter((zz => zz.toLowerCase().includes(pz))) : dz;
-                            return (0, Zz.jsxs)("div", {
+                              value: CD,
+                              fontAwesomeIcons: cD,
+                              onChange: pD
+                            } = DD;
+                            const fD = gI(),
+                              [bD, QD] = (0, ID.useState)(GC(CD) ? "fontAwesome" : "bloxd"),
+                              [wD, SD] = (0, ID.useState)(""),
+                              BD = wD.trim().toLowerCase(),
+                              yD = "bloxd" === bD ? Qp.b : cD,
+                              MD = BD ? yD.filter((DD => DD.toLowerCase().includes(BD))) : yD;
+                            return (0, tD.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, Zz.jsx)("input", {
+                              children: [(0, tD.jsx)("input", {
                                 type: "text",
-                                value: uz,
+                                value: CD,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: zz => {
-                                  nz(zz.target.value)
+                                onChange: DD => {
+                                  pD(DD.target.value)
                                 }
-                              }), (0, Zz.jsx)("p", {
+                              }), (0, tD.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, Zz.jsxs)("div", {
+                              }), (0, tD.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((zz => (0, Zz.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((DD => (0, tD.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": Mz === zz,
-                                    className: iz()("DocsVariantChip", {
-                                      Active: Mz === zz
+                                    "aria-selected": bD === DD,
+                                    className: iD()("DocsVariantChip", {
+                                      Active: bD === DD
                                     }),
                                     onClick: () => {
-                                      tz(zz)
+                                      QD(DD)
                                     },
-                                    children: "bloxd" === zz ? `Bloxd icons (${On.d.length})` : `Font Awesome (${bz.length})`
-                                  }, zz))), (0, Zz.jsx)("input", {
+                                    children: "bloxd" === DD ? `Bloxd icons (${Qp.b.length})` : `Font Awesome (${cD.length})`
+                                  }, DD))), (0, tD.jsx)("input", {
                                     type: "search",
-                                    value: Hz,
+                                    value: wD,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: zz => {
-                                      Oz(zz.target.value)
+                                    onChange: DD => {
+                                      SD(DD.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, Zz.jsxs)("div", {
+                              }), (0, tD.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [Fz.map((zz => {
-                                  const bz = "bloxd" === Mz ? dn(lz, zz) : null;
-                                  return (0, Zz.jsx)("button", {
+                                children: [MD.map((DD => {
+                                  const cD = "bloxd" === bD ? Sp(fD, DD) : null;
+                                  return (0, tD.jsx)("button", {
                                     type: "button",
-                                    title: zz,
-                                    "aria-label": zz,
-                                    "aria-pressed": zz === uz,
-                                    className: iz()("DocsIconPickerOption", {
-                                      Active: zz === uz
+                                    title: DD,
+                                    "aria-label": DD,
+                                    "aria-pressed": DD === CD,
+                                    className: iD()("DocsIconPickerOption", {
+                                      Active: DD === CD
                                     }),
                                     onClick: () => {
-                                      nz(zz)
+                                      pD(DD)
                                     },
-                                    children: "fontAwesome" === Mz ? (0, Zz.jsx)(sb.c, {
-                                      name: zz
-                                    }) : bz ? (0, Zz.jsx)("img", {
-                                      src: bz,
+                                    children: "fontAwesome" === bD ? (0, tD.jsx)(Xc.c, {
+                                      name: DD
+                                    }) : cD ? (0, tD.jsx)("img", {
+                                      src: cD,
                                       alt: ""
-                                    }) : (0, Zz.jsx)(Kz, {
+                                    }) : (0, tD.jsx)(oD, {
                                       name: "image"
                                     })
-                                  }, zz)
-                                })), 0 === Fz.length && (0, Zz.jsxs)("p", {
+                                  }, DD)
+                                })), 0 === MD.length && (0, tD.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", Hz, "\u201d."]
+                                  children: ["No icons match \u201c", wD, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function sn(zz) {
+                          function Np(DD) {
                             let {
-                              property: uz,
-                              value: bz,
-                              fontAwesomeIcons: Ez,
-                              onChange: nz
-                            } = zz;
+                              property: CD,
+                              value: cD,
+                              fontAwesomeIcons: ID,
+                              onChange: pD
+                            } = DD;
                             const {
-                              field: iz,
-                              label: lz
-                            } = uz, Mz = zz => "" !== zz || uz.isRequired ? zz : void 0;
-                            switch (iz.kind) {
+                              field: iD,
+                              label: fD
+                            } = CD, bD = DD => "" !== DD || CD.isRequired ? DD : void 0;
+                            switch (iD.kind) {
                               case "text":
-                                return iz.multiline ? (0, Zz.jsx)("textarea", {
-                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
+                                return iD.multiline ? (0, tD.jsx)("textarea", {
+                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
                                   rows: 2,
-                                  "aria-label": lz,
-                                  onChange: zz => {
-                                    nz(zz.target.value)
+                                  "aria-label": fD,
+                                  onChange: DD => {
+                                    pD(DD.target.value)
                                   }
-                                }) : (0, Zz.jsx)("input", {
+                                }) : (0, tD.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
-                                  "aria-label": lz,
-                                  onChange: zz => {
-                                    nz(Mz(zz.target.value))
+                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
+                                  "aria-label": fD,
+                                  onChange: DD => {
+                                    pD(bD(DD.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, Zz.jsx)("input", {
+                                return (0, tD.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
-                                  placeholder: uz.defaultText,
+                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
+                                  placeholder: CD.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": lz,
+                                  "aria-label": fD,
                                   spellCheck: !1,
-                                  onChange: zz => {
-                                    nz(Mz(zz.target.value.trim()))
+                                  onChange: DD => {
+                                    pD(bD(DD.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, Zz.jsx)(Xn, {
-                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
-                                  label: lz,
-                                  onChange: zz => {
-                                    nz(Mz(zz))
+                                return (0, tD.jsx)(op, {
+                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
+                                  label: fD,
+                                  onChange: DD => {
+                                    pD(bD(DD))
                                   }
                                 });
                               case "colours": {
-                                const zz = Array.isArray(bz) ? bz : [],
-                                  uz = zz => {
-                                    nz(zz.length > 0 ? zz : void 0)
+                                const DD = Array.isArray(cD) ? cD : [],
+                                  CD = DD => {
+                                    pD(DD.length > 0 ? DD : void 0)
                                   };
-                                return (0, Zz.jsxs)("div", {
+                                return (0, tD.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [zz.map(((bz, Ez) => (0, Zz.jsxs)("span", {
+                                  children: [DD.map(((cD, ID) => (0, tD.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, Zz.jsx)(Xn, {
-                                      value: bz,
-                                      label: `${lz} ${Ez+1}`,
-                                      onChange: bz => {
-                                        uz(zz.map(((zz, uz) => uz === Ez ? bz : zz)))
+                                    children: [(0, tD.jsx)(op, {
+                                      value: cD,
+                                      label: `${fD} ${ID+1}`,
+                                      onChange: cD => {
+                                        CD(DD.map(((DD, CD) => CD === ID ? cD : DD)))
                                       }
-                                    }), (0, Zz.jsx)("button", {
+                                    }), (0, tD.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${Ez+1}`,
+                                      "aria-label": `Remove colour ${ID+1}`,
                                       onClick: () => {
-                                        uz(zz.filter(((zz, uz) => uz !== Ez)))
+                                        CD(DD.filter(((DD, CD) => CD !== ID)))
                                       },
-                                      children: (0, Zz.jsx)(Kz, {
+                                      children: (0, tD.jsx)(oD, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, Ez))), (0, Zz.jsxs)("button", {
+                                  }, ID))), (0, tD.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var bz;
-                                      uz([...zz, null !== (bz = zz.at(-1)) && void 0 !== bz ? bz : "#ffffff"])
+                                      var cD;
+                                      CD([...DD, null !== (cD = DD.at(-1)) && void 0 !== cD ? cD : "#ffffff"])
                                     },
-                                    children: [(0, Zz.jsx)(Kz, {
+                                    children: [(0, tD.jsx)(oD, {
                                       name: "plus"
-                                    }), 0 === zz.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === DD.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var tz;
-                                const zz = "number" === typeof bz ? bz : Number(null !== (tz = uz.defaultText) && void 0 !== tz ? tz : 0);
-                                return (0, Zz.jsxs)("span", {
+                                var QD;
+                                const DD = "number" === typeof cD ? cD : Number(null !== (QD = CD.defaultText) && void 0 !== QD ? QD : 0);
+                                return (0, tD.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, Zz.jsx)("input", {
+                                  children: [(0, tD.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: zz,
-                                    "aria-label": lz,
-                                    onChange: zz => {
-                                      nz(Number(zz.target.value))
+                                    value: DD,
+                                    "aria-label": fD,
+                                    onChange: DD => {
+                                      pD(Number(DD.target.value))
                                     }
-                                  }), (0, Zz.jsx)("output", {
-                                    children: zz.toFixed(2)
+                                  }), (0, tD.jsx)("output", {
+                                    children: DD.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, Zz.jsxs)("select", {
-                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
-                                  "aria-label": lz,
-                                  onChange: zz => {
-                                    nz(Mz(zz.target.value))
+                                return (0, tD.jsxs)("select", {
+                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
+                                  "aria-label": fD,
+                                  onChange: DD => {
+                                    pD(bD(DD.target.value))
                                   },
-                                  children: [!uz.isRequired && (0, Zz.jsxs)("option", {
+                                  children: [!CD.isRequired && (0, tD.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", uz.defaultText, ")"]
-                                  }), iz.options.map((zz => (0, Zz.jsx)("option", {
-                                    value: zz,
-                                    children: zz
-                                  }, zz)))]
+                                    children: ["Default (", CD.defaultText, ")"]
+                                  }), iD.options.map((DD => (0, tD.jsx)("option", {
+                                    value: DD,
+                                    children: DD
+                                  }, DD)))]
                                 });
                               case "icon":
-                                return (0, Zz.jsx)(fn, {
-                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
-                                  fontAwesomeIcons: Ez,
-                                  onChange: nz
+                                return (0, tD.jsx)(vp, {
+                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
+                                  fontAwesomeIcons: ID,
+                                  onChange: pD
                                 })
                             }
                           }
 
-                          function rn(zz) {
-                            let uz;
+                          function gp(DD) {
+                            let CD;
                             try {
-                              uz = JSON.parse(zz)
-                            } catch (bz) {
+                              CD = JSON.parse(DD)
+                            } catch (cD) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${bz.message}`
+                                error: `Not valid JSON yet: ${cD.message}`
                               }
                             }
-                            return bb(uz) ? {
-                              part: uz,
+                            return cc(CD) ? {
+                              part: CD,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function Nn(zz) {
+                          function Xp(DD) {
                             let {
-                              parts: uz,
-                              index: bz,
-                              fontAwesomeIcons: nz,
-                              onChange: iz,
-                              aJ: lz,
-                              onClose: Mz
-                            } = zz;
-                            const tz = (0, Ez.useContext)(Zu),
-                              Oz = (0, Ez.useRef)(null),
-                              pz = uz[bz],
-                              dz = yu(pz),
-                              [Fz, Rz] = (0, Ez.useState)((() => JSON.stringify(pz, null, 2))),
-                              wz = (0, Ez.useMemo)((() => "other" === dz ? rn(Fz).error : null), [dz, Fz]);
-                            (0, Ez.useEffect)((() => {
-                              var zz;
-                              null === (zz = Oz.current) || void 0 === zz || zz.focus()
+                              parts: CD,
+                              index: cD,
+                              fontAwesomeIcons: pD,
+                              onChange: iD,
+                              Zx: fD,
+                              onClose: bD
+                            } = DD;
+                            const QD = (0, ID.useContext)(tC),
+                              SD = (0, ID.useRef)(null),
+                              BD = CD[cD],
+                              yD = dC(BD),
+                              [MD, ZD] = (0, ID.useState)((() => JSON.stringify(BD, null, 2))),
+                              vD = (0, ID.useMemo)((() => "other" === yD ? gp(MD).error : null), [yD, MD]);
+                            (0, ID.useEffect)((() => {
+                              var DD;
+                              null === (DD = SD.current) || void 0 === DD || DD.focus()
                             }), []);
-                            const Xz = (0, Zz.jsx)("div", {
+                            const ND = (0, tD.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: zz => {
-                                zz.target === zz.currentTarget && Mz()
+                              onMouseDown: DD => {
+                                DD.target === DD.currentTarget && bD()
                               },
-                              children: (0, Zz.jsxs)("div", {
-                                ref: Oz,
+                              children: (0, tD.jsxs)("div", {
+                                ref: SD,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${bz+1}: ${gu[dz]}`,
+                                "aria-label": `Edit part ${cD+1}: ${RC[yD]}`,
                                 tabIndex: -1,
-                                onKeyDown: zz => {
-                                  "Escape" === zz.key ? (zz.stopPropagation(), Mz()) : "Tab" === zz.key && Oz.current && function(zz, uz) {
-                                    const bz = Array.from(zz.querySelectorAll(Tu)),
-                                      Ez = bz[0],
-                                      nz = bz.at(-1);
-                                    if (!Ez || !nz) return;
-                                    const iz = document.activeElement;
-                                    !uz.shiftKey || iz !== Ez && iz !== zz ? uz.shiftKey || iz !== nz || (uz.preventDefault(), Ez.focus()) : (uz.preventDefault(), nz.focus())
-                                  }(Oz.current, zz)
+                                onKeyDown: DD => {
+                                  "Escape" === DD.key ? (DD.stopPropagation(), bD()) : "Tab" === DD.key && SD.current && function(DD, CD) {
+                                    const cD = Array.from(DD.querySelectorAll(qC)),
+                                      ID = cD[0],
+                                      pD = cD.at(-1);
+                                    if (!ID || !pD) return;
+                                    const iD = document.activeElement;
+                                    !CD.shiftKey || iD !== ID && iD !== DD ? CD.shiftKey || iD !== pD || (CD.preventDefault(), ID.focus()) : (CD.preventDefault(), pD.focus())
+                                  }(SD.current, DD)
                                 },
-                                children: [(0, Zz.jsxs)("header", {
+                                children: [(0, tD.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, Zz.jsxs)("div", {
-                                    children: [(0, Zz.jsxs)("div", {
+                                  children: [(0, tD.jsxs)("div", {
+                                    children: [(0, tD.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", bz + 1]
-                                    }), (0, Zz.jsx)("div", {
+                                      children: ["Part ", cD + 1]
+                                    }), (0, tD.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: gu[dz]
+                                      children: RC[yD]
                                     })]
-                                  }), (0, Zz.jsx)("button", {
+                                  }), (0, tD.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: Mz,
-                                    children: (0, Zz.jsx)(Kz, {
+                                    onClick: bD,
+                                    children: (0, tD.jsx)(oD, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, Zz.jsx)(Zn, {
-                                  parts: uz,
+                                }), (0, tD.jsx)(yp, {
+                                  parts: CD,
                                   className: "DocsTextDialogPreview"
-                                }), (0, Zz.jsx)("div", {
+                                }), (0, tD.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === dz ? (0, Zz.jsxs)("label", {
+                                  children: "other" === yD ? (0, tD.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, Zz.jsx)("span", {
+                                    children: [(0, tD.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, Zz.jsx)("textarea", {
+                                    }), (0, tD.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: Fz,
+                                      value: MD,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: zz => {
-                                        Rz(zz.target.value);
-                                        const uz = rn(zz.target.value);
-                                        null !== uz.part && iz(uz.part)
+                                      onChange: DD => {
+                                        ZD(DD.target.value);
+                                        const CD = gp(DD.target.value);
+                                        null !== CD.part && iD(CD.part)
                                       }
-                                    }), wz && (0, Zz.jsx)("span", {
+                                    }), vD && (0, tD.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: wz
+                                      children: vD
                                     })]
-                                  }) : Qu[dz].map((zz => {
-                                    const uz = eu(pz, zz.path),
-                                      bz = zz.isRequired ? JSON.stringify(Iu(pz, zz.path)) === JSON.stringify(pz) : void 0 === uz;
-                                    return (0, Zz.jsxs)("div", {
+                                  }) : WC[yD].map((DD => {
+                                    const CD = EC(BD, DD.path),
+                                      cD = DD.isRequired ? JSON.stringify(uC(BD, DD.path)) === JSON.stringify(BD) : void 0 === CD;
+                                    return (0, tD.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, Zz.jsxs)("div", {
+                                      children: [(0, tD.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, Zz.jsx)("span", {
-                                          children: zz.label
-                                        }), (0, Zz.jsxs)("button", {
+                                        children: [(0, tD.jsx)("span", {
+                                          children: DD.label
+                                        }), (0, tD.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: bz,
-                                          "aria-label": `Reset ${zz.label.toLowerCase()} to default`,
+                                          disabled: cD,
+                                          "aria-label": `Reset ${DD.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            iz(Iu(pz, zz.path))
+                                            iD(uC(BD, DD.path))
                                           },
-                                          children: [(0, Zz.jsx)(Kz, {
+                                          children: [(0, tD.jsx)(oD, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, Zz.jsx)(sn, {
-                                        property: zz,
-                                        value: uz,
-                                        fontAwesomeIcons: nz,
-                                        onChange: uz => {
-                                          iz(ju(pz, zz.path, uz))
+                                      }), (0, tD.jsx)(Np, {
+                                        property: DD,
+                                        value: CD,
+                                        fontAwesomeIcons: pD,
+                                        onChange: CD => {
+                                          iD(eC(BD, DD.path, CD))
                                         }
-                                      }), !zz.isRequired && (0, Zz.jsxs)("span", {
+                                      }), !DD.isRequired && (0, tD.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", zz.defaultText]
+                                        children: ["Default: ", DD.defaultText]
                                       })]
-                                    }, zz.path.join("."))
+                                    }, DD.path.join("."))
                                   }))
-                                }), (0, Zz.jsxs)("footer", {
+                                }), (0, tD.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, Zz.jsxs)("button", {
+                                  children: [(0, tD.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: lz,
-                                    children: [(0, Zz.jsx)(Kz, {
+                                    onClick: fD,
+                                    children: [(0, tD.jsx)(oD, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, Zz.jsx)("button", {
+                                  }), (0, tD.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: Mz,
+                                    onClick: bD,
                                     children: "Done"
                                   })]
-                                }), (0, Zz.jsx)("datalist", {
+                                }), (0, tD.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: Rn.map((zz => (0, Zz.jsx)("option", {
-                                    value: zz
-                                  }, zz)))
+                                  children: Mp.map((DD => (0, tD.jsx)("option", {
+                                    value: DD
+                                  }, DD)))
                                 })]
                               })
                             });
-                            return tz ? (0, Hz.createPortal)(Xz, tz) : Xz
+                            return QD ? (0, wD.createPortal)(ND, QD) : ND
                           }
-                          const vn = [{
+                          const mp = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            xn = Object.keys(Su);
+                            np = Object.keys(kC);
 
-                          function Jn(zz) {
+                          function Op(DD) {
                             let {
-                              fontAwesomeIcons: uz
-                            } = zz;
-                            const [bz, nz] = (0, Ez.useState)(vn[0].parts), [lz, Mz] = (0, Ez.useState)((() => ku(vn[0].parts))), [tz, Hz] = (0, Ez.useState)(null), [Oz, pz] = (0, Ez.useState)(!1), [dz, Fz] = (0, Ez.useState)(null), [Rz, wz] = (0, Ez.useState)(!1), [Xz, fz] = (0, Ez.useState)(null), sz = (0, Ez.useRef)(null), rz = ku(bz);
-                            (0, Ez.useLayoutEffect)((() => {
-                              var zz;
-                              if (!Xz) return;
-                              const uz = zz => {
-                                  var uz;
-                                  return null === (uz = sz.current) || void 0 === uz ? void 0 : uz.querySelector(`[data-focus-key="${zz}"]`)
+                              fontAwesomeIcons: CD
+                            } = DD;
+                            const [cD, pD] = (0, ID.useState)(mp[0].parts), [fD, bD] = (0, ID.useState)((() => FC(mp[0].parts))), [QD, wD] = (0, ID.useState)(null), [SD, BD] = (0, ID.useState)(!1), [yD, MD] = (0, ID.useState)(null), [ZD, vD] = (0, ID.useState)(!1), [ND, gD] = (0, ID.useState)(null), XD = (0, ID.useRef)(null), mD = FC(cD);
+                            (0, ID.useLayoutEffect)((() => {
+                              var DD;
+                              if (!ND) return;
+                              const CD = DD => {
+                                  var CD;
+                                  return null === (CD = XD.current) || void 0 === CD ? void 0 : CD.querySelector(`[data-focus-key="${DD}"]`)
                                 },
-                                bz = uz(Xz.key);
-                              null === (zz = bz && !bz.disabled ? bz : uz(Xz.fallback)) || void 0 === zz || zz.focus(), fz(null)
-                            }), [Xz]);
-                            const oz = zz => {
-                                nz(zz), Mz(ku(zz)), Hz(null)
+                                cD = CD(ND.key);
+                              null === (DD = cD && !cD.disabled ? cD : CD(ND.fallback)) || void 0 === DD || DD.focus(), gD(null)
+                            }), [ND]);
+                            const nD = DD => {
+                                pD(DD), bD(FC(DD)), wD(null)
                               },
-                              vz = zz => {
-                                oz(bz.filter(((uz, bz) => bz !== zz))), fz({
-                                  key: `edit-${Math.min(zz,bz.length-2)}`,
+                              PD = DD => {
+                                nD(cD.filter(((CD, cD) => cD !== DD))), gD({
+                                  key: `edit-${Math.min(DD,cD.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              xz = (zz, uz) => {
-                                const Ez = [...bz],
-                                  [nz] = Ez.splice(zz, 1);
-                                Ez.splice(zz + uz, 0, nz), oz(Ez);
-                                fz({
-                                  key: `${uz<0?"up":"down"}-${zz+uz}`,
-                                  fallback: `edit-${zz+uz}`
+                              HD = (DD, CD) => {
+                                const ID = [...cD],
+                                  [pD] = ID.splice(DD, 1);
+                                ID.splice(DD + CD, 0, pD), nD(ID);
+                                gD({
+                                  key: `${CD<0?"up":"down"}-${DD+CD}`,
+                                  fallback: `edit-${DD+CD}`
                                 })
                               };
-                            return (0, Zz.jsxs)("section", {
-                              ref: sz,
+                            return (0, tD.jsxs)("section", {
+                              ref: XD,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, Zz.jsx)("header", {
+                              children: [(0, tD.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, Zz.jsxs)("div", {
-                                  children: [(0, Zz.jsx)("div", {
+                                children: (0, tD.jsxs)("div", {
+                                  children: [(0, tD.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, Zz.jsx)("div", {
+                                  }), (0, tD.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, Zz.jsx)("div", {
+                              }), (0, tD.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: vn.map((zz => (0, Zz.jsx)("button", {
+                                children: mp.map((DD => (0, tD.jsx)("button", {
                                   type: "button",
-                                  className: iz()("DocsVariantChip", {
-                                    Active: rz === ku(zz.parts)
+                                  className: iD()("DocsVariantChip", {
+                                    Active: mD === FC(DD.parts)
                                   }),
                                   onClick: () => {
-                                    oz(zz.parts)
+                                    nD(DD.parts)
                                   },
-                                  children: zz.label
-                                }, zz.label)))
-                              }), (0, Zz.jsx)(Zn, {
-                                parts: bz,
+                                  children: DD.label
+                                }, DD.label)))
+                              }), (0, tD.jsx)(yp, {
+                                parts: cD,
                                 className: "DocsTextEditorPreview"
-                              }), (0, Zz.jsxs)("div", {
+                              }), (0, tD.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, Zz.jsxs)("div", {
+                                children: [(0, tD.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, Zz.jsx)("div", {
+                                  children: [(0, tD.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, Zz.jsxs)("ol", {
+                                  }), (0, tD.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [bz.map(((zz, uz) => {
-                                      const Ez = yu(zz);
-                                      return (0, Zz.jsxs)("li", {
+                                    children: [cD.map(((DD, CD) => {
+                                      const ID = dC(DD);
+                                      return (0, tD.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, Zz.jsxs)("button", {
+                                        children: [(0, tD.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${uz}`,
-                                          "aria-label": `Edit part ${uz+1}, ${gu[Ez]}`,
+                                          "data-focus-key": `edit-${CD}`,
+                                          "aria-label": `Edit part ${CD+1}, ${RC[ID]}`,
                                           onClick: () => {
-                                            Fz(uz)
+                                            MD(CD)
                                           },
-                                          children: [(0, Zz.jsx)("span", {
+                                          children: [(0, tD.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: gu[Ez]
-                                          }), (0, Zz.jsx)(Zn, {
-                                            parts: [zz],
+                                            children: RC[ID]
+                                          }), (0, tD.jsx)(yp, {
+                                            parts: [DD],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== Ez && (0, Zz.jsx)("code", {
+                                          }), "text" !== ID && (0, tD.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: Bu(zz)
+                                            children: hC(DD)
                                           })]
-                                        }), (0, Zz.jsxs)("span", {
+                                        }), (0, tD.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, Zz.jsx)("button", {
+                                          children: [(0, tD.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${uz+1} up`,
-                                            "data-focus-key": `up-${uz}`,
-                                            disabled: 0 === uz,
+                                            "aria-label": `Move part ${CD+1} up`,
+                                            "data-focus-key": `up-${CD}`,
+                                            disabled: 0 === CD,
                                             onClick: () => {
-                                              xz(uz, -1)
+                                              HD(CD, -1)
                                             },
-                                            children: (0, Zz.jsx)(Kz, {
+                                            children: (0, tD.jsx)(oD, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, Zz.jsx)("button", {
+                                          }), (0, tD.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${uz+1} down`,
-                                            "data-focus-key": `down-${uz}`,
-                                            disabled: uz === bz.length - 1,
+                                            "aria-label": `Move part ${CD+1} down`,
+                                            "data-focus-key": `down-${CD}`,
+                                            disabled: CD === cD.length - 1,
                                             onClick: () => {
-                                              xz(uz, 1)
+                                              HD(CD, 1)
                                             },
-                                            children: (0, Zz.jsx)(Kz, {
+                                            children: (0, tD.jsx)(oD, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, Zz.jsx)("button", {
+                                          }), (0, tD.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${uz+1}`,
+                                            "aria-label": `Remove part ${CD+1}`,
                                             onClick: () => {
-                                              vz(uz)
+                                              PD(CD)
                                             },
-                                            children: (0, Zz.jsx)(Kz, {
+                                            children: (0, tD.jsx)(oD, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, uz)
-                                    })), 0 === bz.length && (0, Zz.jsx)("li", {
+                                      }, CD)
+                                    })), 0 === cD.length && (0, tD.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, Zz.jsxs)("div", {
+                                  }), (0, tD.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: zz => {
-                                      "Escape" === zz.key && Rz && (zz.stopPropagation(), wz(!1), fz({
+                                    onKeyDown: DD => {
+                                      "Escape" === DD.key && ZD && (DD.stopPropagation(), vD(!1), gD({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, Zz.jsxs)("button", {
+                                    children: [(0, tD.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": Rz,
+                                      "aria-expanded": ZD,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        wz(!Rz)
+                                        vD(!ZD)
                                       },
-                                      children: [(0, Zz.jsx)(Kz, {
+                                      children: [(0, tD.jsx)(oD, {
                                         name: "plus"
-                                      }), "Add a part", (0, Zz.jsx)(Kz, {
-                                        name: Rz ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, tD.jsx)(oD, {
+                                        name: ZD ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), Rz && (0, Zz.jsx)("ul", {
+                                    }), ZD && (0, tD.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: xn.map((zz => (0, Zz.jsx)("li", {
-                                        children: (0, Zz.jsx)("button", {
+                                      children: np.map((DD => (0, tD.jsx)("li", {
+                                        children: (0, tD.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (zz => {
-                                              oz([...bz, Su[zz]]), wz(!1), Fz(bz.length)
-                                            })(zz)
+                                            (DD => {
+                                              nD([...cD, kC[DD]]), vD(!1), MD(cD.length)
+                                            })(DD)
                                           },
-                                          children: gu[zz]
+                                          children: RC[DD]
                                         })
-                                      }, zz)))
+                                      }, DD)))
                                     })]
                                   })]
-                                }), (0, Zz.jsxs)("div", {
+                                }), (0, tD.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, Zz.jsxs)("div", {
+                                  children: [(0, tD.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, Zz.jsxs)("button", {
+                                    children: ["Code", (0, tD.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": Oz,
+                                      "aria-pressed": SD,
                                       onClick: () => {
-                                        pz(!Oz)
+                                        BD(!SD)
                                       },
-                                      children: [(0, Zz.jsx)(Kz, {
-                                        name: Oz ? "check" : "pencil"
-                                      }), Oz ? "Done" : "Edit"]
+                                      children: [(0, tD.jsx)(oD, {
+                                        name: SD ? "check" : "pencil"
+                                      }), SD ? "Done" : "Edit"]
                                     })]
-                                  }), Oz ? (0, Zz.jsxs)(Zz.Fragment, {
-                                    children: [(0, Zz.jsx)("textarea", {
+                                  }), SD ? (0, tD.jsxs)(tD.Fragment, {
+                                    children: [(0, tD.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: lz,
+                                      value: fD,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: zz => {
-                                        Mz(zz.target.value);
-                                        const uz = Eb(zz.target.value);
-                                        Hz(uz.error), uz.parts && nz(uz.parts)
+                                      onChange: DD => {
+                                        bD(DD.target.value);
+                                        const CD = Ic(DD.target.value);
+                                        wD(CD.error), CD.parts && pD(CD.parts)
                                       }
-                                    }), tz && (0, Zz.jsx)("p", {
+                                    }), QD && (0, tD.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: tz
+                                      children: QD
                                     })]
-                                  }) : (0, Zz.jsx)(Nz, {
+                                  }) : (0, tD.jsx)(OD, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${rz})`
+                                    code: `api.sendMessage(playerId, ${mD})`
                                   })]
                                 })]
-                              }), null !== dz && dz < bz.length && (0, Zz.jsx)(Nn, {
-                                parts: bz,
-                                index: dz,
-                                fontAwesomeIcons: uz,
-                                onChange: zz => {
-                                  ((zz, uz) => {
-                                    oz(bz.map(((bz, Ez) => Ez === zz ? uz : bz)))
-                                  })(dz, zz)
+                              }), null !== yD && yD < cD.length && (0, tD.jsx)(Xp, {
+                                parts: cD,
+                                index: yD,
+                                fontAwesomeIcons: CD,
+                                onChange: DD => {
+                                  ((DD, CD) => {
+                                    nD(cD.map(((cD, ID) => ID === DD ? CD : cD)))
+                                  })(yD, DD)
                                 },
-                                aJ: () => {
-                                  vz(dz), Fz(null)
+                                Zx: () => {
+                                  PD(yD), MD(null)
                                 },
                                 onClose: () => {
-                                  Fz(null), fz({
-                                    key: `edit-${dz}`,
+                                  MD(null), gD({
+                                    key: `edit-${yD}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var An = bz(4605),
-                            Tn = bz(4590),
-                            Ln = bz(4601),
-                            Pn = bz(4609);
-                          const Gn = 40,
-                            an = 800,
-                            Vn = 150,
-                            mn = 8e3,
-                            qn = 2e3;
+                          var Pp = cD(4615),
+                            Hp = cD(4599),
+                            Up = cD(4608),
+                            xp = cD(4618);
+                          const qp = 40,
+                            Jp = 800,
+                            Kp = 150,
+                            ap = 8e3,
+                            Vp = 2e3;
 
-                          function hn(zz, uz) {
-                            return 12 * Math.log2(uz / zz)
+                          function zp(DD, CD) {
+                            return 12 * Math.log2(CD / DD)
                           }
 
-                          function Un(zz, uz) {
-                            return Math.round(zz * 2 ** (uz / 12) * 10) / 10
+                          function jp(DD, CD) {
+                            return Math.round(DD * 2 ** (CD / 12) * 10) / 10
                           }
 
-                          function cn(zz) {
-                            return `${zz} ms`
+                          function lp(DD) {
+                            return `${DD} ms`
                           }
 
-                          function gn(zz) {
-                            return `${zz} st`
+                          function Lp(DD) {
+                            return `${DD} st`
                           }
-                          const Sn = [{
+                          const Tp = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function yn(zz) {
+                          function Gp(DD) {
                             let {
-                              synth: uz,
-                              onChange: bz
-                            } = zz;
-                            const Ez = (0, An.k)(uz);
-                            return (0, Zz.jsxs)("div", {
+                              synth: CD,
+                              onChange: cD
+                            } = DD;
+                            const ID = (0, Pp.l)(CD);
+                            return (0, tD.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, Zz.jsxs)("div", {
+                              children: [(0, tD.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Zz.jsx)("div", {
+                                children: [(0, tD.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, Zz.jsxs)("div", {
+                                }), (0, tD.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, Zz.jsx)("div", {
+                                  children: [(0, tD.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, Zz.jsx)("span", {
+                                    children: (0, tD.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, Zz.jsx)("div", {
+                                  }), (0, tD.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: An.h.map((zz => (0, Zz.jsx)("button", {
+                                    children: Pp.h.map((DD => (0, tD.jsx)("button", {
                                       type: "button",
-                                      className: iz()("DocsVariantChip", {
-                                        Active: uz.waveform === zz
+                                      className: iD()("DocsVariantChip", {
+                                        Active: CD.waveform === DD
                                       }),
-                                      "aria-pressed": uz.waveform === zz,
+                                      "aria-pressed": CD.waveform === DD,
                                       onClick: () => {
-                                        bz({
-                                          waveform: zz
+                                        cD({
+                                          waveform: DD
                                         })
                                       },
-                                      children: zz
-                                    }, zz)))
+                                      children: DD
+                                    }, DD)))
                                   })]
-                                }), (0, Zz.jsx)(YE, {
+                                }), (0, tD.jsx)(AI, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: hn(Gn, an),
+                                  max: zp(qp, Jp),
                                   step: .1,
-                                  value: hn(Gn, uz.pitchHz),
-                                  format: () => `${uz.pitchHz} Hz`,
-                                  onChange: zz => {
-                                    bz({
-                                      pitchHz: Un(Gn, zz)
+                                  value: zp(qp, CD.pitchHz),
+                                  format: () => `${CD.pitchHz} Hz`,
+                                  onChange: DD => {
+                                    cD({
+                                      pitchHz: jp(qp, DD)
                                     })
                                   }
-                                }), (0, Zz.jsx)(YE, {
+                                }), (0, tD.jsx)(AI, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: uz.syllableMs,
-                                  format: cn,
-                                  onChange: zz => {
-                                    bz({
-                                      syllableMs: zz
+                                  value: CD.syllableMs,
+                                  format: lp,
+                                  onChange: DD => {
+                                    cD({
+                                      syllableMs: DD
                                     })
                                   }
-                                }), (0, Zz.jsx)(YE, {
+                                }), (0, tD.jsx)(AI, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: uz.volume,
-                                  onChange: zz => {
-                                    bz({
-                                      volume: zz
+                                  value: CD.volume,
+                                  onChange: DD => {
+                                    cD({
+                                      volume: DD
                                     })
                                   }
                                 })]
-                              }), (0, Zz.jsxs)("div", {
+                              }), (0, tD.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Zz.jsx)("div", {
+                                children: [(0, tD.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, Zz.jsx)(YE, {
+                                }), (0, tD.jsx)(AI, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: uz.durationMs,
-                                  format: cn,
-                                  onChange: zz => {
-                                    bz({
-                                      durationMs: zz
+                                  value: CD.durationMs,
+                                  format: lp,
+                                  onChange: DD => {
+                                    cD({
+                                      durationMs: DD
                                     })
                                   }
-                                }), (0, Zz.jsx)(YE, {
+                                }), (0, tD.jsx)(AI, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: Ez.durationMs,
+                                  max: ID.durationMs,
                                   step: 1,
-                                  value: Ez.attackMs,
-                                  format: cn,
-                                  onChange: zz => {
-                                    bz({
-                                      attackMs: zz
+                                  value: ID.attackMs,
+                                  format: lp,
+                                  onChange: DD => {
+                                    cD({
+                                      attackMs: DD
                                     })
                                   }
-                                }), (0, Zz.jsx)(YE, {
+                                }), (0, tD.jsx)(AI, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: Ez.durationMs - Ez.attackMs,
+                                  max: ID.durationMs - ID.attackMs,
                                   step: 1,
-                                  value: Ez.releaseMs,
-                                  format: cn,
-                                  onChange: zz => {
-                                    bz({
-                                      releaseMs: zz
+                                  value: ID.releaseMs,
+                                  format: lp,
+                                  onChange: DD => {
+                                    cD({
+                                      releaseMs: DD
                                     })
                                   }
-                                }), (0, Zz.jsx)(YE, {
+                                }), (0, tD.jsx)(AI, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: uz.glideSemitones,
-                                  format: gn,
-                                  onChange: zz => {
-                                    bz({
-                                      glideSemitones: zz
+                                  value: CD.glideSemitones,
+                                  format: Lp,
+                                  onChange: DD => {
+                                    cD({
+                                      glideSemitones: DD
                                     })
                                   }
-                                }), (0, Zz.jsxs)("label", {
+                                }), (0, tD.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, Zz.jsx)("input", {
+                                  children: [(0, tD.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== uz.lowpassHz,
-                                    onChange: zz => {
-                                      bz({
-                                        lowpassHz: zz.target.checked ? qn : null
+                                    checked: null !== CD.lowpassHz,
+                                    onChange: DD => {
+                                      cD({
+                                        lowpassHz: DD.target.checked ? Vp : null
                                       })
                                     }
-                                  }), (0, Zz.jsx)("span", {
+                                  }), (0, tD.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== uz.lowpassHz && (0, Zz.jsx)(YE, {
+                                }), null !== CD.lowpassHz && (0, tD.jsx)(AI, {
                                   label: "Filter",
                                   min: 0,
-                                  max: hn(Vn, mn),
+                                  max: zp(Kp, ap),
                                   step: .1,
-                                  value: hn(Vn, uz.lowpassHz),
-                                  format: () => `${uz.lowpassHz} Hz`,
-                                  onChange: zz => {
-                                    bz({
-                                      lowpassHz: Un(Vn, zz)
+                                  value: zp(Kp, CD.lowpassHz),
+                                  format: () => `${CD.lowpassHz} Hz`,
+                                  onChange: DD => {
+                                    cD({
+                                      lowpassHz: jp(Kp, DD)
                                     })
                                   }
                                 })]
-                              }), (0, Zz.jsxs)("div", {
+                              }), (0, tD.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Zz.jsx)("div", {
+                                children: [(0, tD.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), Sn.map((zz => {
+                                }), Tp.map((DD => {
                                   let {
-                                    key: Ez,
-                                    label: nz,
-                                    max: iz
-                                  } = zz;
-                                  return (0, Zz.jsx)(YE, {
-                                    label: nz,
+                                    key: ID,
+                                    label: pD,
+                                    max: iD
+                                  } = DD;
+                                  return (0, tD.jsx)(AI, {
+                                    label: pD,
                                     min: 0,
-                                    max: iz,
+                                    max: iD,
                                     step: .1,
-                                    value: uz.intonation[Ez],
-                                    format: gn,
-                                    onChange: zz => {
-                                      bz({
+                                    value: CD.intonation[ID],
+                                    format: Lp,
+                                    onChange: DD => {
+                                      cD({
                                         intonation: {
-                                          ...uz.intonation,
-                                          [Ez]: zz
+                                          ...CD.intonation,
+                                          [ID]: DD
                                         }
                                       })
                                     }
-                                  }, Ez)
+                                  }, ID)
                                 }))]
                               })]
                             })
                           }
-                          const Dn = Object.keys(An.i),
-                            Qn = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const Rp = Object.keys(Pp.k),
+                            kp = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function Wn(zz) {
-                            var uz;
-                            const bz = JSON.stringify((0, An.k)(zz));
-                            return null !== (uz = Dn.find((zz => JSON.stringify((0, An.k)(An.i[zz])) === bz))) && void 0 !== uz ? uz : null
+                          function dp(DD) {
+                            var CD;
+                            const cD = JSON.stringify((0, Pp.l)(DD));
+                            return null !== (CD = Rp.find((DD => JSON.stringify((0, Pp.l)(Pp.k[DD])) === cD))) && void 0 !== CD ? CD : null
                           }
 
-                          function en(zz) {
-                            let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof zz || null === zz) return JSON.stringify(zz);
-                            return `{\n${Object.entries(zz).map((zz=>{let[bz,Ez]=zz;return`${uz}    ${bz}: ${en(Ez,`${uz}    `)},`})).join("\n")}\n${uz}}`
+                          function Yp(DD) {
+                            let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof DD || null === DD) return JSON.stringify(DD);
+                            return `{\n${Object.entries(DD).map((DD=>{let[cD,ID]=DD;return`${CD}    ${cD}: ${Yp(ID,`${CD}    `)},`})).join("\n")}\n${CD}}`
                           }
 
-                          function jn(zz, uz, bz) {
-                            const Ez = Wn(zz),
-                              nz = [`    line: ${JSON.stringify(uz)},`];
-                            return bz && nz.push(`    speakerName: ${JSON.stringify(bz)},`), nz.push("    voice,"), `const voice = ${Ez?JSON.stringify(Ez):en((0,An.k)(zz))}\n\napi.setClientOption(playerId, "dialogue", {\n${nz.join("\n")}\n})`
+                          function Wp(DD, CD, cD) {
+                            const ID = dp(DD),
+                              pD = [`    line: ${JSON.stringify(CD)},`];
+                            return cD && pD.push(`    speakerName: ${JSON.stringify(cD)},`), pD.push("    voice,"), `const voice = ${ID?JSON.stringify(ID):Yp((0,Pp.l)(DD))}\n\napi.setClientOption(playerId, "dialogue", {\n${pD.join("\n")}\n})`
                           }
-                          const In = 400,
-                            Bn = 90;
-                          let Cn = null;
+                          const sp = 400,
+                            Ep = 90;
+                          let ep = null;
 
-                          function Yn(zz, uz, bz) {
-                            return Cn ??= new AudioContext, Cn.resume(), (0, Pn.c)(Cn, Cn.destination, zz, uz, bz, (() => {}))
+                          function hp(DD, CD, cD) {
+                            return ep ??= new AudioContext, ep.resume(), (0, xp.d)(ep, ep.destination, DD, CD, cD, (() => {}))
                           }
 
-                          function kn() {
-                            const [zz, uz] = (0, Ez.useState)(An.i.regular), [bz, nz] = (0, Ez.useState)(Qn[0]), [lz, Mz] = (0, Ez.useState)("Innkeeper"), [tz, Hz] = (0, Ez.useState)(0), Oz = OE((zz => zz.volume)), pz = (0, Ez.useRef)(null), dz = (0, Ez.useRef)(0), Fz = (0, Ez.useRef)(0), Rz = () => {
-                              var zz;
-                              null === (zz = pz.current) || void 0 === zz || zz.call(pz), pz.current = null
+                          function rp() {
+                            const [DD, CD] = (0, ID.useState)(Pp.k.regular), [cD, pD] = (0, ID.useState)(kp[0]), [fD, bD] = (0, ID.useState)("Innkeeper"), [QD, wD] = (0, ID.useState)(0), SD = SI((DD => DD.volume)), BD = (0, ID.useRef)(null), yD = (0, ID.useRef)(0), MD = (0, ID.useRef)(0), ZD = () => {
+                              var DD;
+                              null === (DD = BD.current) || void 0 === DD || DD.call(BD), BD.current = null
                             };
-                            (0, Ez.useEffect)((() => () => {
-                              var zz;
-                              null === (zz = pz.current) || void 0 === zz || zz.call(pz), window.clearTimeout(dz.current)
+                            (0, ID.useEffect)((() => () => {
+                              var DD;
+                              null === (DD = BD.current) || void 0 === DD || DD.call(BD), window.clearTimeout(yD.current)
                             }), []);
-                            const wz = (0, Ez.useMemo)((() => ({
-                                line: bz,
-                                speakerName: lz || void 0,
-                                voice: zz
-                              })), [bz, lz, zz]),
-                              Xz = (0, Ez.useRef)(wz);
-                            Xz.current = wz;
-                            const sz = Wn(zz),
-                              rz = zz => {
-                                window.clearTimeout(dz.current), Rz();
+                            const vD = (0, ID.useMemo)((() => ({
+                                line: cD,
+                                speakerName: fD || void 0,
+                                voice: DD
+                              })), [cD, fD, DD]),
+                              ND = (0, ID.useRef)(vD);
+                            ND.current = vD;
+                            const XD = dp(DD),
+                              mD = DD => {
+                                window.clearTimeout(yD.current), ZD();
                                 const {
-                                  plan: uz,
-                                  synth: bz
-                                } = (0, Ln.g)(zz);
-                                bz && (pz.current = Yn(bz, uz.blips, Oz)), Hz((zz => zz + 1))
+                                  plan: CD,
+                                  synth: cD
+                                } = (0, Up.e)(DD);
+                                cD && (BD.current = hp(cD, CD.blips, SD)), wD((DD => DD + 1))
                               },
-                              oz = jn(zz, bz, lz);
-                            return (0, Zz.jsxs)("section", {
+                              nD = Wp(DD, cD, fD);
+                            return (0, tD.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, Zz.jsxs)("header", {
+                              children: [(0, tD.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, Zz.jsxs)("div", {
-                                  children: [(0, Zz.jsx)("div", {
+                                children: [(0, tD.jsxs)("div", {
+                                  children: [(0, tD.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, Zz.jsx)("div", {
+                                  }), (0, tD.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, Zz.jsx)(fz, {
-                                  text: oz,
+                                }), (0, tD.jsx)(gD, {
+                                  text: nD,
                                   label: "Copy code"
                                 })]
-                              }), (0, Zz.jsxs)("div", {
+                              }), (0, tD.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [Dn.map((zz => (0, Zz.jsx)("button", {
+                                children: [Rp.map((DD => (0, tD.jsx)("button", {
                                   type: "button",
-                                  className: iz()("DocsVariantChip", {
-                                    Active: sz === zz
+                                  className: iD()("DocsVariantChip", {
+                                    Active: XD === DD
                                   }),
-                                  "aria-pressed": sz === zz,
+                                  "aria-pressed": XD === DD,
                                   onClick: () => {
-                                    (zz => {
-                                      const bz = An.i[zz];
-                                      uz(bz), rz({
-                                        ...wz,
-                                        voice: bz
+                                    (DD => {
+                                      const cD = Pp.k[DD];
+                                      CD(cD), mD({
+                                        ...vD,
+                                        voice: cD
                                       })
-                                    })(zz)
+                                    })(DD)
                                   },
-                                  children: zz
-                                }, zz))), !sz && (0, Zz.jsx)("span", {
+                                  children: DD
+                                }, DD))), !XD && (0, tD.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, Zz.jsxs)("div", {
+                              }), (0, tD.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, Zz.jsxs)("div", {
+                                children: [(0, tD.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, Zz.jsx)("div", {
+                                  children: [(0, tD.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, Zz.jsx)(Tn.b, {
-                                      display: wz
-                                    }, tz)
-                                  }), (0, Zz.jsxs)("form", {
+                                    children: (0, tD.jsx)(Hp.c, {
+                                      display: vD
+                                    }, QD)
+                                  }), (0, tD.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: zz => {
-                                      zz.preventDefault(), rz(wz)
+                                    onSubmit: DD => {
+                                      DD.preventDefault(), mD(vD)
                                     },
-                                    children: [(0, Zz.jsx)("input", {
-                                      value: bz,
+                                    children: [(0, tD.jsx)("input", {
+                                      value: cD,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: zz => {
-                                        nz(zz.target.value)
+                                      onChange: DD => {
+                                        pD(DD.target.value)
                                       }
-                                    }), (0, Zz.jsxs)("button", {
+                                    }), (0, tD.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, Zz.jsx)(Kz, {
+                                      children: [(0, tD.jsx)(oD, {
                                         name: "play"
-                                      }), (0, Zz.jsx)("span", {
+                                      }), (0, tD.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, Zz.jsx)("div", {
+                                  }), (0, tD.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: Qn.map((zz => (0, Zz.jsx)("button", {
+                                    children: kp.map((DD => (0, tD.jsx)("button", {
                                       type: "button",
-                                      className: iz()("DocsVariantChip", {
-                                        Active: bz === zz
+                                      className: iD()("DocsVariantChip", {
+                                        Active: cD === DD
                                       }),
                                       onClick: () => {
-                                        var uz;
-                                        nz(uz = zz), rz({
-                                          ...wz,
-                                          line: uz
+                                        var CD;
+                                        pD(CD = DD), mD({
+                                          ...vD,
+                                          line: CD
                                         })
                                       },
-                                      children: zz
-                                    }, zz)))
-                                  }), (0, Zz.jsxs)("label", {
+                                      children: DD
+                                    }, DD)))
+                                  }), (0, tD.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, Zz.jsx)("span", {
+                                    children: [(0, tD.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, Zz.jsx)("input", {
-                                      value: lz,
+                                    }), (0, tD.jsx)("input", {
+                                      value: fD,
                                       placeholder: "No name",
-                                      onChange: zz => {
-                                        Mz(zz.target.value)
+                                      onChange: DD => {
+                                        bD(DD.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, Zz.jsx)(yn, {
-                                  synth: zz,
-                                  onChange: bz => {
-                                    const Ez = {
-                                      ...zz,
-                                      ...bz
+                                }), (0, tD.jsx)(Gp, {
+                                  synth: DD,
+                                  onChange: cD => {
+                                    const ID = {
+                                      ...DD,
+                                      ...cD
                                     };
-                                    uz(Ez);
-                                    const nz = {
-                                        ...wz,
-                                        voice: Ez
+                                    CD(ID);
+                                    const pD = {
+                                        ...vD,
+                                        voice: ID
                                       },
-                                      iz = performance.now();
-                                    if (iz - Fz.current >= Bn) {
-                                      Fz.current = iz, Rz();
-                                      const zz = (0, Ln.g)(nz).plan.blips[0];
-                                      zz && (pz.current = Yn((0, An.k)(Ez), [{
-                                        ...zz,
+                                      iD = performance.now();
+                                    if (iD - MD.current >= Ep) {
+                                      MD.current = iD, ZD();
+                                      const DD = (0, Up.e)(pD).plan.blips[0];
+                                      DD && (BD.current = hp((0, Pp.l)(ID), [{
+                                        ...DD,
                                         atMs: 0
-                                      }], Oz))
+                                      }], SD))
                                     }
-                                    window.clearTimeout(dz.current), dz.current = window.setTimeout((() => {
-                                      rz(Xz.current)
-                                    }), In)
+                                    window.clearTimeout(yD.current), yD.current = window.setTimeout((() => {
+                                      mD(ND.current)
+                                    }), sp)
                                   }
                                 })]
-                              }), (0, Zz.jsx)(Nz, {
-                                code: oz,
+                              }), (0, tD.jsx)(OD, {
+                                code: nD,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var zi = bz(4629);
-                          const ui = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            bi = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            Ei = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${bi}`, "g"), zi.l],
+                          var Ap = cD(4630);
+                          const Fp = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            Di = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            Ci = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${Di}`, "g"), Ap.q],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, zi.l]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, Ap.q]
                             ];
 
-                          function ni(zz) {
-                            return `${zz.pageId}#${zz.anchor}`
+                          function ci(DD) {
+                            return `${DD.pageId}#${DD.anchor}`
                           }
-                          let ii, li, Mi;
+                          let Ii, ii, fi;
 
-                          function ti(zz) {
-                            const uz = (0, vz.e)(zz),
-                              bz = new Set;
-                            for (const [, , Ez] of uz.matchAll(vz.b)) {
-                              const zz = Ez.startsWith("#") ? yz(Ez) : null,
-                                uz = zz ? ni({
-                                  pageId: zz.page.id,
-                                  anchor: zz.anchor
+                          function bi(DD) {
+                            const CD = (0, PD.j)(DD),
+                              cD = new Set;
+                            for (const [, , ID] of CD.matchAll(PD.e)) {
+                              const DD = ID.startsWith("#") ? dD(ID) : null,
+                                CD = DD ? ci({
+                                  pageId: DD.page.id,
+                                  anchor: DD.anchor
                                 }) : null;
-                              null !== uz && (ii || (ii = new Set(qz.flatMap((zz => Tz(zz.layout) ? gz(zz).sections.map((uz => ni({
-                                pageId: zz.id,
-                                anchor: uz.heading.anchor
-                              }))) : [])))), ii).has(uz) && bz.add(uz)
+                              null !== CD && (Ii || (Ii = new Set(lD.flatMap((DD => qD(DD.layout) ? RD(DD).sections.map((CD => ci({
+                                pageId: DD.id,
+                                anchor: CD.heading.anchor
+                              }))) : [])))), Ii).has(CD) && cD.add(CD)
                             }
-                            for (const [, , Ez] of uz.matchAll(ui)) {
-                              const zz = du(Ez);
-                              zz && bz.add(ni(zz))
+                            for (const [, , ID] of CD.matchAll(Fp)) {
+                              const DD = yC(ID);
+                              DD && cD.add(ci(DD))
                             }
-                            return bz
+                            return cD
                           }
 
-                          function Hi(zz, uz) {
-                            const bz = new Set,
-                              Ez = function(zz) {
-                                return zz.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(zz);
-                            for (const [, nz] of Ez.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) bz.add(nz);
-                            for (const [nz, iz] of Ei)
-                              for (const [, zz] of(0, zi.e)(Ez, nz, iz)) uz.has(zz) && bz.add(zz);
-                            return bz
+                          function Qi(DD, CD) {
+                            const cD = new Set,
+                              ID = function(DD) {
+                                return DD.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(DD);
+                            for (const [, pD] of ID.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) cD.add(pD);
+                            for (const [pD, iD] of Ci)
+                              for (const [, DD] of(0, Ap.f)(ID, pD, iD)) CD.has(DD) && cD.add(DD);
+                            return cD
                           }
 
-                          function Oi(zz, uz, bz, Ez) {
-                            const nz = zz.get(uz);
-                            nz ? !Ez && nz.some((zz => zz.pageId === bz.pageId)) || nz.push(bz) : zz.set(uz, [bz])
+                          function wi(DD, CD, cD, ID) {
+                            const pD = DD.get(CD);
+                            pD ? !ID && pD.some((DD => DD.pageId === cD.pageId)) || pD.push(cD) : DD.set(CD, [cD])
                           }
-                          const di = /^[A-Za-z_$][\w$]*$/;
+                          const Si = /^[A-Za-z_$][\w$]*$/;
 
-                          function Fi(zz) {
-                            return di.test(zz.name) ? zz.name : "options"
-                          }
-
-                          function Zi(zz, uz) {
-                            const bz = zz.params.map(Fi).join(", ");
-                            return uz ? `${zz.name} = (${bz}) => {\n\t\n}` : `api.${zz.name}(${bz})`
+                          function Bi(DD) {
+                            return Si.test(DD.name) ? DD.name : "options"
                           }
 
-                          function Ri(zz) {
+                          function yi(DD, CD) {
+                            const cD = DD.params.map(Bi).join(", ");
+                            return CD ? `${DD.name} = (${cD}) => {\n\t\n}` : `api.${DD.name}(${cD})`
+                          }
+
+                          function Mi(DD) {
                             let {
-                              method: uz,
-                              isCallback: bz
-                            } = zz;
-                            return (0, Zz.jsxs)("div", {
+                              method: CD,
+                              isCallback: cD
+                            } = DD;
+                            return (0, tD.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, Zz.jsxs)("span", {
+                              children: [(0, tD.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [bz ? (0, Zz.jsxs)(Zz.Fragment, {
-                                  children: [(0, Zz.jsx)("span", {
+                                children: [cD ? (0, tD.jsxs)(tD.Fragment, {
+                                  children: [(0, tD.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: uz.name
-                                  }), (0, Zz.jsx)("span", {
+                                    children: CD.name
+                                  }), (0, tD.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, Zz.jsxs)(Zz.Fragment, {
-                                  children: [(0, Zz.jsx)("span", {
+                                }) : (0, tD.jsxs)(tD.Fragment, {
+                                  children: [(0, tD.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, Zz.jsx)("span", {
+                                  }), (0, tD.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: uz.name
-                                  }), (0, Zz.jsx)("span", {
+                                    children: CD.name
+                                  }), (0, tD.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), uz.params.map(((zz, bz) => (0, Zz.jsxs)(Ez.Fragment, {
-                                  children: [bz > 0 && (0, Zz.jsx)("span", {
+                                }), CD.params.map(((DD, cD) => (0, tD.jsxs)(ID.Fragment, {
+                                  children: [cD > 0 && (0, tD.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, Zz.jsx)("a", {
+                                  }), (0, tD.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${uz.name}-${Fi(zz)}`,
-                                    children: zz.name
+                                    href: `#${CD.name}-${Bi(DD)}`,
+                                    children: DD.name
                                   })]
-                                }, zz.name))), (0, Zz.jsx)("span", {
+                                }, DD.name))), (0, tD.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: bz ? ") => " : ")"
-                                }), bz && !uz.returns && (0, Zz.jsx)("span", {
+                                  children: cD ? ") => " : ")"
+                                }), cD && !CD.returns && (0, tD.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), uz.returns && uz.returns.type && (0, Zz.jsxs)("span", {
+                              }), CD.returns && CD.returns.type && (0, tD.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!bz && (0, Zz.jsx)("span", {
+                                children: [!cD && (0, tD.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, Zz.jsx)(xu, {
-                                  type: uz.returns.type
+                                }), (0, tD.jsx)(HC, {
+                                  type: CD.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function Ki(zz) {
+                          function ti(DD) {
                             let {
-                              title: uz,
-                              references: bz
-                            } = zz;
-                            const nz = (0, Ez.useContext)(Fu);
-                            return (0, Zz.jsxs)("div", {
+                              title: CD,
+                              references: cD
+                            } = DD;
+                            const pD = (0, ID.useContext)(MC);
+                            return (0, tD.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, Zz.jsx)("span", {
+                              children: [(0, tD.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: uz
-                              }), bz.map((zz => (0, Zz.jsx)(lz.e, {
-                                to: Qz(nz, Uz(zz.pageId), zz.anchor),
-                                children: zz.label
-                              }, `${zz.pageId}#${zz.anchor}`)))]
+                                children: CD
+                              }), cD.map((DD => (0, tD.jsx)(fD.d, {
+                                to: WD(pD, TD(DD.pageId), DD.anchor),
+                                children: DD.label
+                              }, `${DD.pageId}#${DD.anchor}`)))]
                             })
                           }
 
-                          function wi(zz) {
-                            var uz, bz;
+                          function Zi(DD) {
+                            var CD, cD;
                             let {
-                              pageId: Ez,
-                              anchor: nz
-                            } = zz;
-                            const iz = ni({
-                                pageId: Ez,
-                                anchor: nz
+                              pageId: ID,
+                              anchor: pD
+                            } = DD;
+                            const iD = ci({
+                                pageId: ID,
+                                anchor: pD
                               }),
-                              lz = null !== (uz = function() {
-                                if (!Mi) {
-                                  Mi = new Map;
-                                  const Ez = new Set(qz.filter((zz => "callbacks" === zz.layout)).flatMap((zz => gz(zz).sections.map((zz => zz.heading.text)))));
-                                  for (const nz of qz)
-                                    if ("article" === nz.layout || "snippets" === nz.layout)
-                                      for (const iz of (0, vz.n)(gz(nz)))
+                              fD = null !== (CD = function() {
+                                if (!fi) {
+                                  fi = new Map;
+                                  const ID = new Set(lD.filter((DD => "callbacks" === DD.layout)).flatMap((DD => RD(DD).sections.map((DD => DD.heading.text)))));
+                                  for (const pD of lD)
+                                    if ("article" === pD.layout || "snippets" === pD.layout)
+                                      for (const iD of (0, PD.y)(RD(pD)))
                                         for (const {
-                                            code: lz
+                                            code: fD
                                           }
-                                          of(0, vz.f)(iz.blocks))
-                                          for (const Mz of Hi(lz, Ez)) {
-                                            const Ez = pu().get(Mz);
-                                            if (Ez) {
-                                              var zz, uz, bz;
-                                              const lz = {
-                                                pageId: nz.id,
-                                                anchor: null !== (zz = null === (uz = iz.heading) || void 0 === uz ? void 0 : uz.anchor) && void 0 !== zz ? zz : "",
-                                                label: null !== (bz = nz.navTitle) && void 0 !== bz ? bz : nz.title
+                                          of(0, PD.l)(iD.blocks))
+                                          for (const bD of Qi(fD, ID)) {
+                                            const ID = BC().get(bD);
+                                            if (ID) {
+                                              var DD, CD, cD;
+                                              const fD = {
+                                                pageId: pD.id,
+                                                anchor: null !== (DD = null === (CD = iD.heading) || void 0 === CD ? void 0 : CD.anchor) && void 0 !== DD ? DD : "",
+                                                label: null !== (cD = pD.navTitle) && void 0 !== cD ? cD : pD.title
                                               };
-                                              Oi(Mi, ni(Ez), lz, !1)
+                                              wi(fi, ci(ID), fD, !1)
                                             }
                                           }
                                 }
-                                return Mi
-                              }().get(iz)) && void 0 !== uz ? uz : [],
-                              Mz = null !== (bz = function() {
-                                if (!li) {
-                                  li = new Map;
-                                  const zz = Uz("changelog");
-                                  for (const uz of gz(zz).sections) {
-                                    const bz = new Set(uz.blocks.flatMap((zz => [...ti(zz)])));
-                                    for (const Ez of bz) {
-                                      const bz = {
-                                        pageId: zz.id,
-                                        anchor: uz.heading.anchor,
-                                        label: uz.heading.text
+                                return fi
+                              }().get(iD)) && void 0 !== CD ? CD : [],
+                              bD = null !== (cD = function() {
+                                if (!ii) {
+                                  ii = new Map;
+                                  const DD = TD("changelog");
+                                  for (const CD of RD(DD).sections) {
+                                    const cD = new Set(CD.blocks.flatMap((DD => [...bi(DD)])));
+                                    for (const ID of cD) {
+                                      const cD = {
+                                        pageId: DD.id,
+                                        anchor: CD.heading.anchor,
+                                        label: CD.heading.text
                                       };
-                                      Oi(li, Ez, bz, !0)
+                                      wi(ii, ID, cD, !0)
                                     }
                                   }
                                 }
-                                return li
-                              }().get(iz)) && void 0 !== bz ? bz : [];
-                            return 0 === lz.length && 0 === Mz.length ? null : (0, Zz.jsxs)("footer", {
+                                return ii
+                              }().get(iD)) && void 0 !== cD ? cD : [];
+                            return 0 === fD.length && 0 === bD.length ? null : (0, tD.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [lz.length > 0 && (0, Zz.jsx)(Ki, {
+                              children: [fD.length > 0 && (0, tD.jsx)(ti, {
                                 title: "Used in",
-                                references: lz
-                              }), Mz.length > 0 && (0, Zz.jsx)(Ki, {
+                                references: fD
+                              }), bD.length > 0 && (0, tD.jsx)(ti, {
                                 title: "Changelog",
-                                references: Mz
+                                references: bD
                               })]
                             })
                           }
 
-                          function Xi(zz) {
+                          function oi(DD) {
                             let {
-                              method: uz,
-                              pageId: bz,
-                              anchor: Ez,
-                              isCallback: nz
-                            } = zz;
-                            const iz = nz ? void 0 : Mu().get(uz.name),
-                              lz = uz.description.length > 0 || null === iz || void 0 === iz || !iz.description ? uz.description : (0, vz.t)(iz.description);
-                            return (0, Zz.jsxs)("article", {
+                              method: CD,
+                              pageId: cD,
+                              anchor: ID,
+                              isCallback: pD
+                            } = DD;
+                            const iD = pD ? void 0 : bC().get(CD.name),
+                              fD = CD.description.length > 0 || null === iD || void 0 === iD || !iD.description ? CD.description : (0, PD.C)(iD.description);
+                            return (0, tD.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, Zz.jsxs)("header", {
+                              children: [(0, tD.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, Zz.jsx)(Hb, {
+                                children: [(0, tD.jsx)(wc, {
                                   level: 2,
-                                  text: uz.name,
-                                  anchor: Ez,
+                                  text: CD.name,
+                                  anchor: ID,
                                   className: "DocsCardTitle"
-                                }), (0, Zz.jsx)(fz, {
-                                  text: Zi(uz, nz),
-                                  label: nz ? "Copy handler" : "Copy call",
+                                }), (0, tD.jsx)(gD, {
+                                  text: yi(CD, pD),
+                                  label: pD ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, Zz.jsx)(Ri, {
-                                method: uz,
-                                isCallback: nz
-                              }), iz && null !== iz.deprecation && (0, Zz.jsxs)("aside", {
+                              }), (0, tD.jsx)(Mi, {
+                                method: CD,
+                                isCallback: pD
+                              }), iD && null !== iD.deprecation && (0, tD.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, Zz.jsx)("strong", {
+                                children: [(0, tD.jsx)("strong", {
                                   children: "Deprecated"
-                                }), iz.deprecation && (0, Zz.jsxs)(Zz.Fragment, {
-                                  children: [": ", (0, Zz.jsx)(ou, {
-                                    text: (Mz = iz.deprecation, (0, zi.t)(Mz, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, zi.j)("`\\w"), (zz => {
-                                      let [uz] = zz;
-                                      return pu().has(uz) ? `\`${uz}\`` : uz
+                                }), iD.deprecation && (0, tD.jsxs)(tD.Fragment, {
+                                  children: [": ", (0, tD.jsx)(nC, {
+                                    text: (bD = iD.deprecation, (0, Ap.C)(bD, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, Ap.n)("`\\w"), (DD => {
+                                      let [CD] = DD;
+                                      return BC().has(CD) ? `\`${CD}\`` : CD
                                     })))
                                   })]
                                 })]
-                              }), lz.length > 0 && (0, Zz.jsx)("div", {
+                              }), fD.length > 0 && (0, tD.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, Zz.jsx)(Fb, {
-                                  blocks: lz
+                                children: (0, tD.jsx)(Mc, {
+                                  blocks: fD
                                 })
-                              }), uz.params.length > 0 && (0, Zz.jsxs)("section", {
+                              }), CD.params.length > 0 && (0, tD.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, Zz.jsx)("h3", {
+                                children: [(0, tD.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, Zz.jsx)("dl", {
+                                }), (0, tD.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: uz.params.map((zz => (0, Zz.jsxs)("div", {
-                                    id: `${uz.name}-${Fi(zz)}`,
+                                  children: CD.params.map((DD => (0, tD.jsxs)("div", {
+                                    id: `${CD.name}-${Bi(DD)}`,
                                     className: "DocsParam",
-                                    children: [(0, Zz.jsxs)("dt", {
-                                      children: [(0, Zz.jsx)("code", {
+                                    children: [(0, tD.jsxs)("dt", {
+                                      children: [(0, tD.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: zz.name
-                                      }), (0, Zz.jsx)(xu, {
-                                        type: zz.type
+                                        children: DD.name
+                                      }), (0, tD.jsx)(HC, {
+                                        type: DD.type
                                       })]
-                                    }), zz.description && (0, Zz.jsx)("dd", {
-                                      children: (0, Zz.jsx)(ou, {
-                                        text: zz.description
+                                    }), DD.description && (0, tD.jsx)("dd", {
+                                      children: (0, tD.jsx)(nC, {
+                                        text: DD.description
                                       })
                                     })]
-                                  }, zz.name)))
+                                  }, DD.name)))
                                 })]
-                              }), uz.returns && (uz.returns.type || uz.returns.description.length > 0) && (0, Zz.jsxs)("section", {
+                              }), CD.returns && (CD.returns.type || CD.returns.description.length > 0) && (0, tD.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, Zz.jsx)("h3", {
+                                children: [(0, tD.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, Zz.jsxs)("div", {
+                                }), (0, tD.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [uz.returns.type && (0, Zz.jsx)(xu, {
-                                    type: uz.returns.type
-                                  }), uz.returns.description.length > 0 && (0, Zz.jsx)("div", {
+                                  children: [CD.returns.type && (0, tD.jsx)(HC, {
+                                    type: CD.returns.type
+                                  }), CD.returns.description.length > 0 && (0, tD.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, Zz.jsx)(Fb, {
-                                      blocks: uz.returns.description
+                                    children: (0, tD.jsx)(Mc, {
+                                      blocks: CD.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, Zz.jsx)(wi, {
-                                pageId: bz,
-                                anchor: Ez
+                              }), (0, tD.jsx)(Zi, {
+                                pageId: cD,
+                                anchor: ID
                               })]
                             });
-                            var Mz
+                            var bD
                           }
 
-                          function fi(zz) {
-                            var uz;
-                            return null !== zz.defaultValue && "undefined" !== zz.defaultValue ? zz.defaultValue : null !== (uz = zz.example) && void 0 !== uz ? uz : "value"
+                          function vi(DD) {
+                            var CD;
+                            return null !== DD.defaultValue && "undefined" !== DD.defaultValue ? DD.defaultValue : null !== (CD = DD.example) && void 0 !== CD ? CD : "value"
                           }
 
-                          function si(zz) {
+                          function Ni(DD) {
                             let {
-                              setting: uz,
-                              pageId: bz,
-                              anchor: Ez,
-                              setterSnippet: nz
-                            } = zz;
-                            const iz = null === uz.defaultValue ? null : wu(uz.defaultValue);
-                            return (0, Zz.jsxs)("article", {
+                              setting: CD,
+                              pageId: cD,
+                              anchor: ID,
+                              setterSnippet: pD
+                            } = DD;
+                            const iD = null === CD.defaultValue ? null : vC(CD.defaultValue);
+                            return (0, tD.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, Zz.jsxs)("header", {
+                              children: [(0, tD.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, Zz.jsx)(Hb, {
+                                children: [(0, tD.jsx)(wc, {
                                   level: 2,
-                                  text: uz.name,
-                                  anchor: Ez,
+                                  text: CD.name,
+                                  anchor: ID,
                                   className: "DocsCardTitle"
-                                }), (0, Zz.jsx)(fz, {
-                                  text: nz(uz.name, fi(uz)),
+                                }), (0, tD.jsx)(gD, {
+                                  text: pD(CD.name, vi(CD)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, Zz.jsxs)("dl", {
+                              }), (0, tD.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, Zz.jsxs)("div", {
-                                  children: [(0, Zz.jsx)("dt", {
+                                children: [(0, tD.jsxs)("div", {
+                                  children: [(0, tD.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, Zz.jsx)("dd", {
-                                    children: (0, Zz.jsx)(xu, {
-                                      type: uz.type
+                                  }), (0, tD.jsx)("dd", {
+                                    children: (0, tD.jsx)(HC, {
+                                      type: CD.type
                                     })
                                   })]
-                                }), null !== uz.defaultValue && (0, Zz.jsxs)("div", {
-                                  children: [(0, Zz.jsx)("dt", {
+                                }), null !== CD.defaultValue && (0, tD.jsxs)("div", {
+                                  children: [(0, tD.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, Zz.jsx)("dd", {
-                                    children: (0, Zz.jsxs)("code", {
+                                  }), (0, tD.jsx)("dd", {
+                                    children: (0, tD.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [iz && (0, Zz.jsx)(Xu, {
-                                        colour: iz
-                                      }), uz.defaultValue]
+                                      children: [iD && (0, tD.jsx)(NC, {
+                                        colour: iD
+                                      }), CD.defaultValue]
                                     })
                                   })]
-                                }), null !== uz.example && (0, Zz.jsxs)("div", {
-                                  children: [(0, Zz.jsx)("dt", {
+                                }), null !== CD.example && (0, tD.jsxs)("div", {
+                                  children: [(0, tD.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, Zz.jsx)("dd", {
-                                    children: (0, Zz.jsx)("code", {
+                                  }), (0, tD.jsx)("dd", {
+                                    children: (0, tD.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: uz.example
+                                      children: CD.example
                                     })
                                   })]
                                 })]
-                              }), uz.description.length > 0 && (0, Zz.jsx)("div", {
+                              }), CD.description.length > 0 && (0, tD.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, Zz.jsx)(Fb, {
-                                  blocks: uz.description
+                                children: (0, tD.jsx)(Mc, {
+                                  blocks: CD.description
                                 })
-                              }), (0, Zz.jsx)(wi, {
-                                pageId: bz,
-                                anchor: Ez
+                              }), (0, tD.jsx)(Zi, {
+                                pageId: cD,
+                                anchor: ID
                               })]
                             })
                           }
 
-                          function ri(zz) {
+                          function gi(DD) {
                             let {
-                              section: uz
-                            } = zz;
-                            return (0, Zz.jsxs)("article", {
+                              section: CD
+                            } = DD;
+                            return (0, tD.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, Zz.jsx)(Hb, {
+                              children: [(0, tD.jsx)(wc, {
                                 level: 2,
-                                text: uz.heading.text,
-                                anchor: uz.heading.anchor,
+                                text: CD.heading.text,
+                                anchor: CD.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, Zz.jsx)("div", {
+                              }), (0, tD.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, Zz.jsx)(Fb, {
-                                  blocks: uz.blocks
+                                children: (0, tD.jsx)(Mc, {
+                                  blocks: CD.blocks
                                 })
                               })]
                             })
                           }
 
-                          function oi(zz) {
+                          function Xi(DD) {
                             let {
-                              section: uz
-                            } = zz;
-                            return (0, Zz.jsxs)("section", {
+                              section: CD
+                            } = DD;
+                            return (0, tD.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, Zz.jsx)(Hb, {
-                                level: uz.heading.level,
-                                text: uz.heading.text,
-                                anchor: uz.heading.anchor
-                              }), (0, Zz.jsx)(Fb, {
-                                blocks: uz.blocks
+                              children: [(0, tD.jsx)(wc, {
+                                level: CD.heading.level,
+                                text: CD.heading.text,
+                                anchor: CD.heading.anchor
+                              }), (0, tD.jsx)(Mc, {
+                                blocks: CD.blocks
                               })]
                             })
                           }
-                          const Ni = {
+                          const mi = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,337 +4862,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function vi(zz) {
+                          function ni(DD) {
                             let {
-                              page: uz,
-                              section: bz
-                            } = zz;
-                            if ("methods" === uz.layout || "callbacks" === uz.layout) return (0, Zz.jsx)(Xi, {
-                              method: Nb(bz),
-                              pageId: uz.id,
-                              anchor: bz.heading.anchor,
-                              isCallback: "callbacks" === uz.layout
+                              page: CD,
+                              section: cD
+                            } = DD;
+                            if ("methods" === CD.layout || "callbacks" === CD.layout) return (0, tD.jsx)(oi, {
+                              method: Oc(cD),
+                              pageId: CD.id,
+                              anchor: cD.heading.anchor,
+                              isCallback: "callbacks" === CD.layout
                             });
-                            if ("settings" === uz.layout) {
-                              const zz = function(zz) {
-                                const uz = {
-                                  name: zz.heading.text,
+                            if ("settings" === CD.layout) {
+                              const DD = function(DD) {
+                                const CD = {
+                                  name: DD.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const Ez of zz.blocks) {
-                                  var bz;
-                                  if (ob(Ez)) continue;
-                                  const zz = "paragraph" === Ez.kind ? Ez.text.match(vb) : null;
-                                  if (!zz) {
-                                    uz.description.push(Ez);
+                                for (const ID of DD.blocks) {
+                                  var cD;
+                                  if (nc(ID)) continue;
+                                  const DD = "paragraph" === ID.kind ? ID.text.match(Pc) : null;
+                                  if (!DD) {
+                                    CD.description.push(ID);
                                     continue
                                   }
-                                  const nz = null !== (bz = rb(zz[2])) && void 0 !== bz ? bz : zz[2];
-                                  "Type" === zz[1] ? uz.type = nz : "Default" === zz[1] ? uz.defaultValue = nz : "" !== nz && (uz.example = nz)
+                                  const pD = null !== (cD = mc(DD[2])) && void 0 !== cD ? cD : DD[2];
+                                  "Type" === DD[1] ? CD.type = pD : "Default" === DD[1] ? CD.defaultValue = pD : "" !== pD && (CD.example = pD)
                                 }
-                                return uz.type ? uz : null
-                              }(bz);
-                              if (zz) return (0, Zz.jsx)(si, {
-                                setting: zz,
-                                pageId: uz.id,
-                                anchor: bz.heading.anchor,
-                                setterSnippet: uz.setterSnippet
+                                return CD.type ? CD : null
+                              }(cD);
+                              if (DD) return (0, tD.jsx)(Ni, {
+                                setting: DD,
+                                pageId: CD.id,
+                                anchor: cD.heading.anchor,
+                                setterSnippet: CD.setterSnippet
                               })
                             }
-                            return "snippets" === uz.layout ? (0, Zz.jsx)(ri, {
-                              section: bz
-                            }) : "changelog" === uz.layout ? (0, Zz.jsxs)("section", {
+                            return "snippets" === CD.layout ? (0, tD.jsx)(gi, {
+                              section: cD
+                            }) : "changelog" === CD.layout ? (0, tD.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, Zz.jsx)("div", {
+                              children: [(0, tD.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, Zz.jsx)(Hb, {
+                                children: (0, tD.jsx)(wc, {
                                   level: 2,
-                                  text: bz.heading.text,
-                                  anchor: bz.heading.anchor
+                                  text: cD.heading.text,
+                                  anchor: cD.heading.anchor
                                 })
-                              }), (0, Zz.jsx)("div", {
+                              }), (0, tD.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, Zz.jsx)(Fb, {
-                                  blocks: xb(bz.blocks)
+                                children: (0, tD.jsx)(Mc, {
+                                  blocks: Hc(cD.blocks)
                                 })
                               })]
-                            }) : uz.gallery ? (0, Zz.jsxs)("section", {
+                            }) : CD.gallery ? (0, tD.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, Zz.jsx)(Hb, {
-                                level: bz.heading.level,
-                                text: bz.heading.text,
-                                anchor: bz.heading.anchor
-                              }), (0, Zz.jsx)(JE, {
-                                kind: uz.gallery,
-                                content: gz(uz),
-                                blocks: bz.blocks
+                              children: [(0, tD.jsx)(wc, {
+                                level: cD.heading.level,
+                                text: cD.heading.text,
+                                anchor: cD.heading.anchor
+                              }), (0, tD.jsx)(UI, {
+                                kind: CD.gallery,
+                                content: RD(CD),
+                                blocks: cD.blocks
                               })]
-                            }) : (0, Zz.jsx)(oi, {
-                              section: bz
+                            }) : (0, tD.jsx)(Xi, {
+                              section: cD
                             })
                           }
 
-                          function xi(zz) {
+                          function Oi(DD) {
                             let {
-                              page: uz,
-                              onTocChange: bz
-                            } = zz;
-                            const nz = gz(uz),
-                              [iz, lz] = (0, Ez.useState)(""),
-                              Mz = "article" !== uz.layout,
-                              tz = Kb(uz.gallery) ? uz.gallery : null,
-                              Hz = null !== tz,
-                              Oz = iz.trim().toLowerCase(),
-                              pz = (0, Ez.useRef)(null),
-                              dz = (0, Ez.useCallback)((zz => {
-                                var uz;
-                                null === (uz = pz.current) || void 0 === uz || uz.preview(zz)
+                              page: CD,
+                              onTocChange: cD
+                            } = DD;
+                            const pD = RD(CD),
+                              [iD, fD] = (0, ID.useState)(""),
+                              bD = "article" !== CD.layout,
+                              QD = oc(CD.gallery) ? CD.gallery : null,
+                              wD = null !== QD,
+                              SD = iD.trim().toLowerCase(),
+                              BD = (0, ID.useRef)(null),
+                              yD = (0, ID.useCallback)((DD => {
+                                var CD;
+                                null === (CD = BD.current) || void 0 === CD || CD.preview(DD)
                               }), []),
-                              Fz = (0, Ez.useMemo)((() => {
-                                if (!uz.hasParticlePlayground) return [];
-                                const zz = Lb(nz.intro).find((zz => "names" === zz.kind && !zz.names.some((zz => null !== cb(zz.name)))));
-                                return "names" === (null === zz || void 0 === zz ? void 0 : zz.kind) ? zz.names.map((zz => zz.name)) : []
-                              }), [uz, nz]),
-                              Rz = (0, Ez.useMemo)((() => {
-                                if (!uz.hasTextPlayground) return [];
-                                const zz = nz.sections.flatMap((zz => zz.blocks.flatMap((zz => {
-                                  var uz;
-                                  return (null !== (uz = Tb(zz)) && void 0 !== uz ? uz : []).flatMap((zz => cu(zz.name) ? [zz.name] : []))
+                              MD = (0, ID.useMemo)((() => {
+                                if (!CD.hasParticlePlayground) return [];
+                                const DD = Jc(pD.intro).find((DD => "names" === DD.kind && !DD.names.some((DD => null !== Gc(DD.name)))));
+                                return "names" === (null === DD || void 0 === DD ? void 0 : DD.kind) ? DD.names.map((DD => DD.name)) : []
+                              }), [CD, pD]),
+                              ZD = (0, ID.useMemo)((() => {
+                                if (!CD.hasTextPlayground) return [];
+                                const DD = pD.sections.flatMap((DD => DD.blocks.flatMap((DD => {
+                                  var CD;
+                                  return (null !== (CD = qc(DD)) && void 0 !== CD ? CD : []).flatMap((DD => GC(DD.name) ? [DD.name] : []))
                                 }))));
-                                return [...new Set(zz)]
-                              }), [uz, nz]),
-                              Kz = (0, Ez.useMemo)((() => Oz ? nz.sections.filter((zz => function(zz, uz) {
-                                return !!zz.heading.text.toLowerCase().includes(uz) || zz.blocks.some((zz => (0, vz.e)(zz).toLowerCase().includes(uz)))
-                              }(zz, Oz))) : nz.sections), [nz, Oz]),
-                              wz = (0, Ez.useMemo)((() => function(zz, uz) {
-                                return "article" !== zz.layout ? uz.map((zz => ({
-                                  anchor: zz.heading.anchor,
-                                  text: zz.heading.text,
+                                return [...new Set(DD)]
+                              }), [CD, pD]),
+                              oD = (0, ID.useMemo)((() => SD ? pD.sections.filter((DD => function(DD, CD) {
+                                return !!DD.heading.text.toLowerCase().includes(CD) || DD.blocks.some((DD => (0, PD.j)(DD).toLowerCase().includes(CD)))
+                              }(DD, SD))) : pD.sections), [pD, SD]),
+                              vD = (0, ID.useMemo)((() => function(DD, CD) {
+                                return "article" !== DD.layout ? CD.map((DD => ({
+                                  anchor: DD.heading.anchor,
+                                  text: DD.heading.text,
                                   level: 2
-                                }))) : uz.flatMap((zz => {
-                                  const uz = zz.blocks.flatMap((zz => "heading" === zz.kind && 3 === zz.level ? [{
-                                    anchor: zz.anchor,
-                                    text: zz.text,
+                                }))) : CD.flatMap((DD => {
+                                  const CD = DD.blocks.flatMap((DD => "heading" === DD.kind && 3 === DD.level ? [{
+                                    anchor: DD.anchor,
+                                    text: DD.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: zz.heading.anchor,
-                                    text: zz.heading.text,
+                                    anchor: DD.heading.anchor,
+                                    text: DD.heading.text,
                                     level: 2
-                                  }, ...uz]
+                                  }, ...CD]
                                 }))
-                              }(uz, Kz)), [uz, Kz]);
-                            return (0, Ez.useEffect)((() => {
-                              bz(wz)
-                            }), [wz, bz]), (0, Zz.jsxs)("article", {
+                              }(CD, oD)), [CD, oD]);
+                            return (0, ID.useEffect)((() => {
+                              cD(vD)
+                            }), [vD, cD]), (0, tD.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, Zz.jsxs)("header", {
+                              children: [(0, tD.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, Zz.jsx)("h1", {
+                                children: [(0, tD.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: nz.title || uz.title
-                                }), (0, Zz.jsx)("p", {
+                                  children: pD.title || CD.title
+                                }), (0, tD.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: uz.summary
-                                }), (0, Zz.jsx)(jE, {
-                                  page: uz
-                                }), Mz && (0, Zz.jsx)("div", {
+                                  children: CD.summary
+                                }), (0, tD.jsx)(eI, {
+                                  page: CD
+                                }), bD && (0, tD.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, Zz.jsxs)("span", {
-                                    children: [(0, Zz.jsx)("strong", {
-                                      children: nz.sections.length
-                                    }), " ", Ni[uz.layout]]
+                                  children: (0, tD.jsxs)("span", {
+                                    children: [(0, tD.jsx)("strong", {
+                                      children: pD.sections.length
+                                    }), " ", mi[CD.layout]]
                                   })
                                 })]
-                              }), "" === uz.slug && (0, Zz.jsx)(TE, {}), tz && (0, Zz.jsx)(aE, {
-                                kind: tz
-                              }, tz), uz.hasParticlePlayground && (0, Zz.jsx)(Hn, {
-                                ref: pz,
-                                textures: Fz
-                              }), !Hz && nz.intro.length > 0 && (0, Zz.jsx)("div", {
+                              }), "" === CD.slug && (0, tD.jsx)(qI, {}), QD && (0, tD.jsx)(VI, {
+                                kind: QD
+                              }, QD), CD.hasParticlePlayground && (0, tD.jsx)(bp, {
+                                ref: BD,
+                                textures: MD
+                              }), !wD && pD.intro.length > 0 && (0, tD.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: uz.gallery ? (0, Zz.jsx)(wE.Provider, {
-                                  value: uz.hasParticlePlayground ? dz : null,
-                                  children: (0, Zz.jsx)(JE, {
-                                    kind: uz.gallery,
-                                    content: nz,
-                                    blocks: nz.intro
+                                children: CD.gallery ? (0, tD.jsx)(vI.Provider, {
+                                  value: CD.hasParticlePlayground ? yD : null,
+                                  children: (0, tD.jsx)(UI, {
+                                    kind: CD.gallery,
+                                    content: pD,
+                                    blocks: pD.intro
                                   })
-                                }) : (0, Zz.jsx)(Fb, {
-                                  blocks: xb(nz.intro)
+                                }) : (0, tD.jsx)(Mc, {
+                                  blocks: Hc(pD.intro)
                                 })
-                              }), uz.hasTextPlayground && (0, Zz.jsx)(Jn, {
-                                fontAwesomeIcons: Rz
-                              }), uz.hasVoicePlayground && (0, Zz.jsx)(kn, {}), uz.childPageIds && (0, Zz.jsx)(TE, {
-                                cards: uz.childPageIds.map((zz => ({
-                                  pageId: zz
+                              }), CD.hasTextPlayground && (0, tD.jsx)(Op, {
+                                fontAwesomeIcons: ZD
+                              }), CD.hasVoicePlayground && (0, tD.jsx)(rp, {}), CD.childPageIds && (0, tD.jsx)(qI, {
+                                cards: CD.childPageIds.map((DD => ({
+                                  pageId: DD
                                 }))),
-                                label: uz.title
-                              }), Mz && (0, Zz.jsx)(fb, {
+                                label: CD.title
+                              }), bD && (0, tD.jsx)(gc, {
                                 className: "DocsFilterBar",
-                                value: iz,
-                                placeholder: `Filter ${nz.sections.length} ${Ni[uz.layout]}\u2026`,
-                                label: `Filter ${Ni[uz.layout]}`,
-                                onChange: lz,
-                                count: Oz ? {
-                                  visible: Kz.length,
-                                  total: nz.sections.length
+                                value: iD,
+                                placeholder: `Filter ${pD.sections.length} ${mi[CD.layout]}\u2026`,
+                                label: `Filter ${mi[CD.layout]}`,
+                                onChange: fD,
+                                count: SD ? {
+                                  visible: oD.length,
+                                  total: pD.sections.length
                                 } : null
-                              }), !Hz && (0, Zz.jsxs)("div", {
-                                className: `DocsSections Layout-${uz.layout}`,
-                                children: [Kz.map((zz => (0, Zz.jsx)(vi, {
-                                  page: uz,
-                                  section: zz
-                                }, zz.heading.anchor))), 0 === Kz.length && (0, Zz.jsxs)("p", {
+                              }), !wD && (0, tD.jsxs)("div", {
+                                className: `DocsSections Layout-${CD.layout}`,
+                                children: [oD.map((DD => (0, tD.jsx)(ni, {
+                                  page: CD,
+                                  section: DD
+                                }, DD.heading.anchor))), 0 === oD.length && (0, tD.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", Ni[uz.layout], " match \u201c", iz, "\u201d."]
+                                  children: ["No ", mi[CD.layout], " match \u201c", iD, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const Ji = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const Pi = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function Ai(zz) {
+                          function Hi(DD) {
                             let {
-                              entry: uz,
-                              isActive: bz,
-                              onNavigate: Ez,
-                              label: nz,
-                              children: lz
-                            } = zz;
-                            return (0, Zz.jsx)("a", {
-                              href: `#${uz.anchor}`,
-                              "aria-label": nz,
-                              className: iz()(`Level${uz.level}`, {
-                                Active: bz
+                              entry: CD,
+                              isActive: cD,
+                              onNavigate: ID,
+                              label: pD,
+                              children: fD
+                            } = DD;
+                            return (0, tD.jsx)("a", {
+                              href: `#${CD.anchor}`,
+                              "aria-label": pD,
+                              className: iD()(`Level${CD.level}`, {
+                                Active: cD
                               }),
-                              "aria-current": bz ? "location" : void 0,
-                              onClick: zz => {
-                                zz.preventDefault(), Ez(uz.anchor)
+                              "aria-current": cD ? "location" : void 0,
+                              onClick: DD => {
+                                DD.preventDefault(), ID(CD.anchor)
                               },
-                              children: lz
+                              children: fD
                             })
                           }
 
-                          function Ti(zz) {
+                          function Ui(DD) {
                             let {
-                              toc: uz,
-                              activeAnchor: bz,
-                              onNavigate: nz
-                            } = zz;
-                            const lz = Math.max(0, uz.findIndex((zz => zz.anchor === bz))),
-                              Mz = (0, Ez.useRef)(null),
-                              tz = (0, Ez.useRef)(!1);
-                            (0, Ez.useEffect)((() => {
-                              var zz, bz;
-                              const Ez = null === (zz = Mz.current) || void 0 === zz ? void 0 : zz.closest(".DocsToc"),
-                                nz = null === (bz = Mz.current) || void 0 === bz ? void 0 : bz.querySelector(".DocsTimelineNotch.Active");
-                              if (!Ez || !nz) return;
-                              let iz = 0;
-                              if (lz === uz.length - 1) iz = Ez.scrollHeight;
-                              else if (lz > 0) {
-                                const zz = Ez.getBoundingClientRect(),
-                                  uz = nz.getBoundingClientRect();
-                                iz = Ez.scrollTop + uz.top + uz.height / 2 - (zz.top + Ez.clientHeight / 2)
+                              toc: CD,
+                              activeAnchor: cD,
+                              onNavigate: pD
+                            } = DD;
+                            const fD = Math.max(0, CD.findIndex((DD => DD.anchor === cD))),
+                              bD = (0, ID.useRef)(null),
+                              QD = (0, ID.useRef)(!1);
+                            (0, ID.useEffect)((() => {
+                              var DD, cD;
+                              const ID = null === (DD = bD.current) || void 0 === DD ? void 0 : DD.closest(".DocsToc"),
+                                pD = null === (cD = bD.current) || void 0 === cD ? void 0 : cD.querySelector(".DocsTimelineNotch.Active");
+                              if (!ID || !pD) return;
+                              let iD = 0;
+                              if (fD === CD.length - 1) iD = ID.scrollHeight;
+                              else if (fD > 0) {
+                                const DD = ID.getBoundingClientRect(),
+                                  CD = pD.getBoundingClientRect();
+                                iD = ID.scrollTop + CD.top + CD.height / 2 - (DD.top + ID.clientHeight / 2)
                               }
-                              Ez.scrollTo({
-                                top: iz,
-                                behavior: tz.current ? "smooth" : "auto"
-                              }), tz.current = !0
-                            }), [lz, uz.length]);
-                            const Hz = [];
-                            return uz.forEach(((zz, uz) => {
-                              var bz, Ez, nz;
-                              const iz = function(zz) {
-                                  const uz = zz.trim().match(Ji);
-                                  return uz ? {
-                                    day: uz[1],
-                                    month: `${uz[2]} ${uz[3]}`
+                              ID.scrollTo({
+                                top: iD,
+                                behavior: QD.current ? "smooth" : "auto"
+                              }), QD.current = !0
+                            }), [fD, CD.length]);
+                            const wD = [];
+                            return CD.forEach(((DD, CD) => {
+                              var cD, ID, pD;
+                              const iD = function(DD) {
+                                  const CD = DD.trim().match(Pi);
+                                  return CD ? {
+                                    day: CD[1],
+                                    month: `${CD[2]} ${CD[3]}`
                                   } : null
-                                }(zz.text),
-                                lz = null !== (bz = null === iz || void 0 === iz ? void 0 : iz.month) && void 0 !== bz ? bz : null;
-                              null !== lz && (null === (Ez = Hz.at(-1)) || void 0 === Ez ? void 0 : Ez.month) === lz || Hz.push({
-                                month: lz,
+                                }(DD.text),
+                                fD = null !== (cD = null === iD || void 0 === iD ? void 0 : iD.month) && void 0 !== cD ? cD : null;
+                              null !== fD && (null === (ID = wD.at(-1)) || void 0 === ID ? void 0 : ID.month) === fD || wD.push({
+                                month: fD,
                                 entries: []
-                              }), Hz.at(-1).entries.push({
-                                entry: zz,
-                                day: null !== (nz = null === iz || void 0 === iz ? void 0 : iz.day) && void 0 !== nz ? nz : null,
-                                index: uz
+                              }), wD.at(-1).entries.push({
+                                entry: DD,
+                                day: null !== (pD = null === iD || void 0 === iD ? void 0 : iD.day) && void 0 !== pD ? pD : null,
+                                index: CD
                               })
-                            })), (0, Zz.jsx)("ol", {
-                              ref: Mz,
+                            })), (0, tD.jsx)("ol", {
+                              ref: bD,
                               className: "DocsTimeline",
-                              children: Hz.map((zz => {
+                              children: wD.map((DD => {
                                 let {
-                                  month: uz,
-                                  entries: bz
-                                } = zz;
-                                return (0, Zz.jsxs)("li", {
+                                  month: CD,
+                                  entries: cD
+                                } = DD;
+                                return (0, tD.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [uz && (0, Zz.jsx)("span", {
+                                  children: [CD && (0, tD.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: uz
-                                  }), (0, Zz.jsx)("ol", {
-                                    children: bz.map((zz => {
+                                    children: CD
+                                  }), (0, tD.jsx)("ol", {
+                                    children: cD.map((DD => {
                                       let {
-                                        entry: uz,
-                                        day: bz,
-                                        index: Ez
-                                      } = zz;
-                                      return (0, Zz.jsx)("li", {
-                                        className: iz()("DocsTimelineNotch", {
-                                          Passed: Ez < lz,
-                                          Active: Ez === lz
+                                        entry: CD,
+                                        day: cD,
+                                        index: ID
+                                      } = DD;
+                                      return (0, tD.jsx)("li", {
+                                        className: iD()("DocsTimelineNotch", {
+                                          Passed: ID < fD,
+                                          Active: ID === fD
                                         }),
-                                        children: (0, Zz.jsx)(Ai, {
-                                          entry: uz,
-                                          isActive: Ez === lz,
-                                          onNavigate: nz,
-                                          label: uz.text,
-                                          children: (0, Zz.jsx)("span", {
+                                        children: (0, tD.jsx)(Hi, {
+                                          entry: CD,
+                                          isActive: ID === fD,
+                                          onNavigate: pD,
+                                          label: CD.text,
+                                          children: (0, tD.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== bz && void 0 !== bz ? bz : uz.text
+                                            children: null !== cD && void 0 !== cD ? cD : CD.text
                                           })
                                         })
-                                      }, uz.anchor)
+                                      }, CD.anchor)
                                     }))
                                   })]
-                                }, bz[0].entry.anchor)
+                                }, cD[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function Li(zz) {
+                          function xi(DD) {
                             let {
-                              isChangelog: uz,
-                              toc: bz,
-                              activeAnchor: Ez,
-                              onNavigate: nz
-                            } = zz;
-                            return 0 === bz.length ? null : (0, Zz.jsxs)(Zz.Fragment, {
-                              children: [(0, Zz.jsx)("div", {
+                              isChangelog: CD,
+                              toc: cD,
+                              activeAnchor: ID,
+                              onNavigate: pD
+                            } = DD;
+                            return 0 === cD.length ? null : (0, tD.jsxs)(tD.Fragment, {
+                              children: [(0, tD.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: uz ? "Updates" : "On this page"
-                              }), uz ? (0, Zz.jsx)(Ti, {
-                                toc: bz,
-                                activeAnchor: Ez,
-                                onNavigate: nz
-                              }) : (0, Zz.jsx)("ul", {
-                                children: bz.map((zz => (0, Zz.jsx)("li", {
-                                  children: (0, Zz.jsx)(Ai, {
-                                    entry: zz,
-                                    isActive: zz.anchor === Ez,
-                                    onNavigate: nz,
-                                    children: zz.text.replace(/`/g, "")
+                                children: CD ? "Updates" : "On this page"
+                              }), CD ? (0, tD.jsx)(Ui, {
+                                toc: cD,
+                                activeAnchor: ID,
+                                onNavigate: pD
+                              }) : (0, tD.jsx)("ul", {
+                                children: cD.map((DD => (0, tD.jsx)("li", {
+                                  children: (0, tD.jsx)(Hi, {
+                                    entry: DD,
+                                    isActive: DD.anchor === ID,
+                                    onNavigate: pD,
+                                    children: DD.text.replace(/`/g, "")
                                   })
-                                }, zz.anchor)))
+                                }, DD.anchor)))
                               })]
                             })
                           }
-                          const Pi = {
+                          const qi = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            Gi = {
+                            Ji = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,1086 +5208,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            ai = 20,
-                            Vi = 10,
-                            mi = 40,
-                            qi = 120;
-                          let Ui;
+                            Ki = 20,
+                            ai = 10,
+                            Vi = 40,
+                            zi = 120;
+                          let ji;
 
-                          function ci(zz) {
-                            const uz = zz.gallery;
-                            if (!uz) return [];
-                            if (Kb(uz)) return function(zz) {
-                              return Xb(zz).entries.map((zz => zz.name))
-                            }(uz).map((bz => ({
-                              page: zz,
-                              anchor: Gb(uz, bz),
-                              title: bz,
-                              kind: Gi[uz],
+                          function li(DD) {
+                            const CD = DD.gallery;
+                            if (!CD) return [];
+                            if (oc(CD)) return function(DD) {
+                              return Nc(DD).entries.map((DD => DD.name))
+                            }(CD).map((cD => ({
+                              page: DD,
+                              anchor: ac(CD, cD),
+                              title: cD,
+                              kind: Ji[CD],
                               text: "",
-                              listedUnder: zz.title
+                              listedUnder: DD.title
                             })));
-                            const bz = gz(zz);
-                            return (0, vz.n)(bz).flatMap((Ez => {
-                              const nz = Ez.heading ? `${zz.title} \u203a ${Ez.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : zz.title;
-                              return Vb(uz, bz, Ez.blocks).flatMap((bz => "names" !== bz.kind ? [] : bz.names.map((Ez => {
-                                const iz = bz.isSongs ? "Song" : Gi[uz];
+                            const cD = RD(DD);
+                            return (0, PD.y)(cD).flatMap((ID => {
+                              const pD = ID.heading ? `${DD.title} \u203a ${ID.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : DD.title;
+                              return zc(CD, cD, ID.blocks).flatMap((cD => "names" !== cD.kind ? [] : cD.names.map((ID => {
+                                const iD = cD.isSongs ? "Song" : Ji[CD];
                                 return {
-                                  page: zz,
-                                  anchor: Ez.anchor,
-                                  title: Ez.name,
-                                  kind: iz,
+                                  page: DD,
+                                  anchor: ID.anchor,
+                                  title: ID.name,
+                                  kind: iD,
                                   text: "",
-                                  listedUnder: nz
+                                  listedUnder: pD
                                 }
                               }))))
                             }))
                           }
 
-                          function gi(zz, uz, bz) {
-                            const Ez = zz.title.toLowerCase();
-                            let nz = 0;
-                            if (Ez === uz) nz = 100;
-                            else if (Ez.startsWith(uz)) nz = 80;
-                            else if (Ez.includes(uz)) nz = 60;
-                            else if (bz.every((zz => Ez.includes(zz)))) nz = 45;
+                          function Li(DD, CD, cD) {
+                            const ID = DD.title.toLowerCase();
+                            let pD = 0;
+                            if (ID === CD) pD = 100;
+                            else if (ID.startsWith(CD)) pD = 80;
+                            else if (ID.includes(CD)) pD = 60;
+                            else if (cD.every((DD => ID.includes(DD)))) pD = 45;
                             else {
-                              if (!zz.text.toLowerCase().includes(uz)) return 0;
-                              nz = 20
+                              if (!DD.text.toLowerCase().includes(CD)) return 0;
+                              pD = 20
                             }
-                            return nz - Math.min(Ez.length / 10, 9) + ("Page" === zz.kind ? 8 : "Method" === zz.kind ? 3 : 0) - (zz.listedUnder ? ai : 0)
+                            return pD - Math.min(ID.length / 10, 9) + ("Page" === DD.kind ? 8 : "Method" === DD.kind ? 3 : 0) - (DD.listedUnder ? Ki : 0)
                           }
 
-                          function Si(zz, uz) {
-                            const bz = zz.toLowerCase().indexOf(uz),
-                              Ez = Math.max(0, bz - qi / 3);
-                            return `${Ez>0?"\u2026":""}${zz.slice(Ez,Ez+qi)}${Ez+qi<zz.length?"\u2026":""}`
+                          function Ti(DD, CD) {
+                            const cD = DD.toLowerCase().indexOf(CD),
+                              ID = Math.max(0, cD - zi / 3);
+                            return `${ID>0?"\u2026":""}${DD.slice(ID,ID+zi)}${ID+zi<DD.length?"\u2026":""}`
                           }
 
-                          function yi(zz) {
+                          function Gi(DD) {
                             let {
-                              text: uz,
-                              query: bz
-                            } = zz;
-                            const Ez = bz ? uz.toLowerCase().indexOf(bz) : -1;
-                            return -1 === Ez ? (0, Zz.jsx)(Zz.Fragment, {
-                              children: uz
-                            }) : (0, Zz.jsxs)(Zz.Fragment, {
-                              children: [uz.slice(0, Ez), (0, Zz.jsx)("mark", {
-                                children: uz.slice(Ez, Ez + bz.length)
-                              }), uz.slice(Ez + bz.length)]
+                              text: CD,
+                              query: cD
+                            } = DD;
+                            const ID = cD ? CD.toLowerCase().indexOf(cD) : -1;
+                            return -1 === ID ? (0, tD.jsx)(tD.Fragment, {
+                              children: CD
+                            }) : (0, tD.jsxs)(tD.Fragment, {
+                              children: [CD.slice(0, ID), (0, tD.jsx)("mark", {
+                                children: CD.slice(ID, ID + cD.length)
+                              }), CD.slice(ID + cD.length)]
                             })
                           }
 
-                          function Di(zz) {
+                          function Ri(DD) {
                             let {
-                              basePath: uz,
-                              onClose: bz
-                            } = zz;
-                            const nz = (0, Mz.z)(),
-                              [lz, tz] = (0, Ez.useState)(""),
-                              [Hz, Oz] = (0, Ez.useState)(0),
-                              pz = (0, Ez.useRef)(null),
-                              dz = (0, Ez.useRef)(null),
-                              Fz = lz.trim().toLowerCase(),
-                              Rz = (0, Ez.useMemo)((() => {
-                                const zz = (Ui || (Ui = qz.flatMap((zz => {
-                                  const uz = gz(zz);
+                              basePath: CD,
+                              onClose: cD
+                            } = DD;
+                            const pD = (0, bD.x)(),
+                              [fD, QD] = (0, ID.useState)(""),
+                              [wD, SD] = (0, ID.useState)(0),
+                              BD = (0, ID.useRef)(null),
+                              yD = (0, ID.useRef)(null),
+                              MD = fD.trim().toLowerCase(),
+                              ZD = (0, ID.useMemo)((() => {
+                                const DD = (ji || (ji = lD.flatMap((DD => {
+                                  const CD = RD(DD);
                                   return [{
-                                    page: zz,
+                                    page: DD,
                                     anchor: "",
-                                    title: zz.title,
+                                    title: DD.title,
                                     kind: "Page",
-                                    text: zz.summary
-                                  }, ...uz.sections.flatMap((uz => {
-                                    const bz = uz.blocks.filter((zz => "paragraph" === zz.kind)).map(vz.e).join(" ").replace(/[`*]/g, ""),
-                                      Ez = {
-                                        page: zz,
-                                        anchor: uz.heading.anchor,
-                                        title: uz.heading.text.replace(/`/g, ""),
-                                        kind: Pi[zz.layout],
-                                        text: bz
+                                    text: DD.summary
+                                  }, ...CD.sections.flatMap((CD => {
+                                    const cD = CD.blocks.filter((DD => "paragraph" === DD.kind)).map(PD.j).join(" ").replace(/[`*]/g, ""),
+                                      ID = {
+                                        page: DD,
+                                        anchor: CD.heading.anchor,
+                                        title: CD.heading.text.replace(/`/g, ""),
+                                        kind: qi[DD.layout],
+                                        text: cD
                                       },
-                                      nz = uz.blocks.flatMap((uz => "article" === zz.layout && "heading" === uz.kind && 3 === uz.level ? [{
-                                        page: zz,
-                                        anchor: uz.anchor,
-                                        title: uz.text.replace(/`/g, ""),
+                                      pD = CD.blocks.flatMap((CD => "article" === DD.layout && "heading" === CD.kind && 3 === CD.level ? [{
+                                        page: DD,
+                                        anchor: CD.anchor,
+                                        title: CD.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: Ez.title
+                                        text: ID.title
                                       }] : []));
-                                    return [Ez, ...nz]
-                                  })), ...ci(zz)]
-                                }))), Ui);
-                                if (!Fz) return zz.filter((zz => "Page" === zz.kind));
-                                const uz = Fz.split(/\s+/);
-                                let bz = 0;
-                                return zz.map((zz => ({
-                                  entry: zz,
-                                  score: gi(zz, Fz, uz)
-                                }))).filter((zz => zz.score > 0)).sort(((zz, uz) => uz.score - zz.score)).filter((zz => !zz.entry.listedUnder || (bz++, bz <= Vi))).slice(0, mi).map((zz => zz.entry))
-                              }), [Fz]);
-                            (0, Ez.useEffect)((() => {
-                              Oz(0)
-                            }), [Fz]), (0, Ez.useEffect)((() => {
-                              const zz = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [ID, ...pD]
+                                  })), ...li(DD)]
+                                }))), ji);
+                                if (!MD) return DD.filter((DD => "Page" === DD.kind));
+                                const CD = MD.split(/\s+/);
+                                let cD = 0;
+                                return DD.map((DD => ({
+                                  entry: DD,
+                                  score: Li(DD, MD, CD)
+                                }))).filter((DD => DD.score > 0)).sort(((DD, CD) => CD.score - DD.score)).filter((DD => !DD.entry.listedUnder || (cD++, cD <= ai))).slice(0, Vi).map((DD => DD.entry))
+                              }), [MD]);
+                            (0, ID.useEffect)((() => {
+                              SD(0)
+                            }), [MD]), (0, ID.useEffect)((() => {
+                              const DD = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === zz || void 0 === zz || zz.focus()
+                                null === DD || void 0 === DD || DD.focus()
                               }
-                            }), []), (0, Ez.useEffect)((() => {
-                              var zz, uz;
-                              null === (zz = pz.current) || void 0 === zz || null === (uz = zz.querySelector(".Active")) || void 0 === uz || uz.scrollIntoView({
+                            }), []), (0, ID.useEffect)((() => {
+                              var DD, CD;
+                              null === (DD = BD.current) || void 0 === DD || null === (CD = DD.querySelector(".Active")) || void 0 === CD || CD.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [Hz]);
-                            const wz = zz => {
-                              nz(Qz(uz, zz.page, zz.anchor)), bz()
+                            }), [wD]);
+                            const vD = DD => {
+                              pD(WD(CD, DD.page, DD.anchor)), cD()
                             };
-                            return (0, Zz.jsx)("div", {
+                            return (0, tD.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: zz => {
-                                zz.target === zz.currentTarget && bz()
+                              onMouseDown: DD => {
+                                DD.target === DD.currentTarget && cD()
                               },
-                              children: (0, Zz.jsxs)("div", {
+                              children: (0, tD.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: zz => {
-                                  zz.target !== dz.current && zz.preventDefault()
+                                onMouseDown: DD => {
+                                  DD.target !== yD.current && DD.preventDefault()
                                 },
-                                onKeyDown: zz => {
-                                  if ("Escape" === zz.key) bz();
-                                  else if ("Tab" === zz.key) {
-                                    var uz;
-                                    zz.preventDefault(), null === (uz = dz.current) || void 0 === uz || uz.focus()
+                                onKeyDown: DD => {
+                                  if ("Escape" === DD.key) cD();
+                                  else if ("Tab" === DD.key) {
+                                    var CD;
+                                    DD.preventDefault(), null === (CD = yD.current) || void 0 === CD || CD.focus()
                                   }
                                 },
-                                children: [(0, Zz.jsxs)("div", {
+                                children: [(0, tD.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, Zz.jsx)(Kz, {
+                                  children: [(0, tD.jsx)(oD, {
                                     name: "magnifying-glass"
-                                  }), (0, Zz.jsx)("input", {
-                                    ref: dz,
+                                  }), (0, tD.jsx)("input", {
+                                    ref: yD,
                                     autoFocus: !0,
-                                    value: lz,
+                                    value: fD,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": Rz.length > 0 ? `DocsSearchResult-${Hz}` : void 0,
-                                    onChange: zz => {
-                                      tz(zz.target.value)
+                                    "aria-activedescendant": ZD.length > 0 ? `DocsSearchResult-${wD}` : void 0,
+                                    onChange: DD => {
+                                      QD(DD.target.value)
                                     },
-                                    onKeyDown: zz => {
-                                      if ("ArrowDown" === zz.key || "ArrowUp" === zz.key) {
-                                        zz.preventDefault();
-                                        const uz = "ArrowDown" === zz.key ? 1 : -1;
-                                        Oz((Hz + uz + Rz.length) % Math.max(Rz.length, 1))
-                                      } else "Enter" === zz.key && Rz[Hz] && wz(Rz[Hz])
+                                    onKeyDown: DD => {
+                                      if ("ArrowDown" === DD.key || "ArrowUp" === DD.key) {
+                                        DD.preventDefault();
+                                        const CD = "ArrowDown" === DD.key ? 1 : -1;
+                                        SD((wD + CD + ZD.length) % Math.max(ZD.length, 1))
+                                      } else "Enter" === DD.key && ZD[wD] && vD(ZD[wD])
                                     }
-                                  }), (0, Zz.jsx)("kbd", {
+                                  }), (0, tD.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, Zz.jsxs)("ul", {
+                                }), (0, tD.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: pz,
+                                  ref: BD,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!Fz && (0, Zz.jsx)("li", {
+                                  children: [!MD && (0, tD.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), Rz.map(((zz, uz) => {
-                                    var bz;
-                                    return (0, Zz.jsxs)("li", {
-                                      id: `DocsSearchResult-${uz}`,
+                                  }), ZD.map(((DD, CD) => {
+                                    var cD;
+                                    return (0, tD.jsxs)("li", {
+                                      id: `DocsSearchResult-${CD}`,
                                       role: "option",
-                                      "aria-selected": uz === Hz,
-                                      className: iz()("DocsSearchResult", {
-                                        Active: uz === Hz
+                                      "aria-selected": CD === wD,
+                                      className: iD()("DocsSearchResult", {
+                                        Active: CD === wD
                                       }),
                                       onMouseMove: () => {
-                                        Oz(uz)
+                                        SD(CD)
                                       },
                                       onClick: () => {
-                                        wz(zz)
+                                        vD(DD)
                                       },
-                                      children: [(0, Zz.jsx)(Kz, {
-                                        name: zz.page.icon
-                                      }), (0, Zz.jsxs)("div", {
+                                      children: [(0, tD.jsx)(oD, {
+                                        name: DD.page.icon
+                                      }), (0, tD.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, Zz.jsx)("div", {
+                                        children: [(0, tD.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, Zz.jsx)(yi, {
-                                            text: zz.title,
-                                            query: Fz
+                                          children: (0, tD.jsx)(Gi, {
+                                            text: DD.title,
+                                            query: MD
                                           })
-                                        }), zz.text && (0, Zz.jsx)("div", {
+                                        }), DD.text && (0, tD.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, Zz.jsx)(yi, {
-                                            text: Si(zz.text, Fz),
-                                            query: Fz
+                                          children: (0, tD.jsx)(Gi, {
+                                            text: Ti(DD.text, MD),
+                                            query: MD
                                           })
                                         })]
-                                      }), (0, Zz.jsx)("span", {
+                                      }), (0, tD.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === zz.kind ? "Page" : null !== (bz = zz.listedUnder) && void 0 !== bz ? bz : `${zz.kind} \xb7 ${zz.page.title}`
+                                        children: "Page" === DD.kind ? "Page" : null !== (cD = DD.listedUnder) && void 0 !== cD ? cD : `${DD.kind} \xb7 ${DD.page.title}`
                                       })]
-                                    }, `${zz.page.id}#${zz.anchor}`)
-                                  })), Fz && 0 === Rz.length && (0, Zz.jsxs)("li", {
+                                    }, `${DD.page.id}#${DD.anchor}`)
+                                  })), MD && 0 === ZD.length && (0, tD.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", lz, "\u201d."]
+                                    children: ["Nothing matches \u201c", fD, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function Qi(zz, uz) {
-                            if (uz < 10) return `${zz.toFixed(1)}s`;
-                            const bz = Math.floor(zz);
-                            return `${Math.floor(bz/60)}:${String(bz%60).padStart(2,"0")}`
+                          function ki(DD, CD) {
+                            if (CD < 10) return `${DD.toFixed(1)}s`;
+                            const cD = Math.floor(DD);
+                            return `${Math.floor(cD/60)}:${String(cD%60).padStart(2,"0")}`
                           }
 
-                          function Wi() {
-                            const zz = OE((zz => zz.track)),
-                              uz = OE((zz => zz.volume)),
-                              [bz, nz] = (0, Ez.useState)(0),
-                              lz = (0, Ez.useRef)(uE);
-                            if ((0, Ez.useEffect)((() => {
-                                if (!zz) return;
-                                if (nz(ZE()), "playing" !== zz.status) return;
-                                let uz = 0;
-                                const bz = () => {
-                                  nz(ZE()), uz = requestAnimationFrame(bz)
+                          function di() {
+                            const DD = SI((DD => DD.track)),
+                              CD = SI((DD => DD.volume)),
+                              [cD, pD] = (0, ID.useState)(0),
+                              fD = (0, ID.useRef)(CI);
+                            if ((0, ID.useEffect)((() => {
+                                if (!DD) return;
+                                if (pD(tI()), "playing" !== DD.status) return;
+                                let CD = 0;
+                                const cD = () => {
+                                  pD(tI()), CD = requestAnimationFrame(cD)
                                 };
-                                return uz = requestAnimationFrame(bz), () => {
-                                  cancelAnimationFrame(uz)
+                                return CD = requestAnimationFrame(cD), () => {
+                                  cancelAnimationFrame(CD)
                                 }
-                              }), [zz]), !zz) return null;
-                            const Mz = "paused" !== zz.status,
-                              tz = Math.min(bz, zz.duration);
-                            return (0, Zz.jsx)("div", {
+                              }), [DD]), !DD) return null;
+                            const bD = "paused" !== DD.status,
+                              QD = Math.min(cD, DD.duration);
+                            return (0, tD.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, Zz.jsxs)("section", {
+                              children: (0, tD.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, Zz.jsx)("button", {
+                                children: [(0, tD.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": Mz ? `Pause ${zz.name}` : `Play ${zz.name}`,
-                                  onClick: FE,
-                                  children: (0, Zz.jsx)(Kz, {
-                                    name: Mz ? "pause" : "play"
+                                  "aria-label": bD ? `Pause ${DD.name}` : `Play ${DD.name}`,
+                                  onClick: MI,
+                                  children: (0, tD.jsx)(oD, {
+                                    name: bD ? "pause" : "play"
                                   })
-                                }), (0, Zz.jsxs)("div", {
+                                }), (0, tD.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, Zz.jsxs)("div", {
+                                  children: [(0, tD.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, Zz.jsx)("code", {
-                                      children: zz.name
-                                    }), (0, Zz.jsx)("span", {
-                                      children: zz.isSong ? "Song" : "Sound"
+                                    children: [(0, tD.jsx)("code", {
+                                      children: DD.name
+                                    }), (0, tD.jsx)("span", {
+                                      children: DD.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, Zz.jsxs)("div", {
+                                  }), (0, tD.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, Zz.jsx)("span", {
-                                      children: Qi(tz, zz.duration)
-                                    }), (0, Zz.jsx)("input", {
+                                    children: [(0, tD.jsx)("span", {
+                                      children: ki(QD, DD.duration)
+                                    }), (0, tD.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: zz.duration || 1,
+                                      max: DD.duration || 1,
                                       step: .01,
-                                      value: tz,
-                                      disabled: 0 === zz.duration,
+                                      value: QD,
+                                      disabled: 0 === DD.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${Qi(tz,zz.duration)} of ${Qi(zz.duration,zz.duration)}`,
-                                      onChange: zz => {
-                                        const uz = Number(zz.target.value);
-                                        ! function(zz) {
-                                          var uz;
-                                          lE = zz, null === (uz = nE) || void 0 === uz || uz.seek(zz)
-                                        }(uz), nz(uz)
+                                      "aria-valuetext": `${ki(QD,DD.duration)} of ${ki(DD.duration,DD.duration)}`,
+                                      onChange: DD => {
+                                        const CD = Number(DD.target.value);
+                                        ! function(DD) {
+                                          var CD;
+                                          fI = DD, null === (CD = pI) || void 0 === CD || CD.seek(DD)
+                                        }(CD), pD(CD)
                                       }
-                                    }), (0, Zz.jsx)("span", {
-                                      children: zz.duration > 0 ? Qi(zz.duration, zz.duration) : "\u2013"
+                                    }), (0, tD.jsx)("span", {
+                                      children: DD.duration > 0 ? ki(DD.duration, DD.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, Zz.jsxs)("div", {
+                                }), (0, tD.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, Zz.jsx)("button", {
+                                  children: [(0, tD.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === uz ? "Unmute" : "Mute",
+                                    "aria-label": 0 === CD ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === uz ? RE(lz.current) : (lz.current = uz, RE(0))
+                                      0 === CD ? ZI(fD.current) : (fD.current = CD, ZI(0))
                                     },
-                                    children: (0, Zz.jsx)(Kz, {
+                                    children: (0, tD.jsx)(oD, {
                                       name: "volume",
-                                      className: iz()({
-                                        Muted: 0 === uz
+                                      className: iD()({
+                                        Muted: 0 === CD
                                       })
                                     })
-                                  }), (0, Zz.jsx)("input", {
+                                  }), (0, tD.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: uz,
+                                    value: CD,
                                     "aria-label": "Volume",
-                                    onChange: zz => {
-                                      RE(Number(zz.target.value))
+                                    onChange: DD => {
+                                      ZI(Number(DD.target.value))
                                     }
                                   })]
-                                }), (0, Zz.jsx)("button", {
+                                }), (0, tD.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var uz;
-                                    null === (uz = document.querySelector(`[data-docs-track="${CSS.escape(bE(zz.name,zz.isSong))}"]`)) || void 0 === uz || uz.focus(), KE()
+                                    var CD;
+                                    null === (CD = document.querySelector(`[data-docs-track="${CSS.escape(cI(DD.name,DD.isSong))}"]`)) || void 0 === CD || CD.focus(), oI()
                                   },
-                                  children: (0, Zz.jsx)(Kz, {
+                                  children: (0, tD.jsx)(oD, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var ei = bz(33);
-                          const ji = "docsTheme",
-                            Ii = window.matchMedia("(prefers-color-scheme: light)");
+                          var Yi = cD(36);
+                          const Wi = "docsTheme",
+                            si = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function Bi(zz) {
+                          function Ei(DD) {
                             let {
-                              theme: uz,
-                              onChange: bz
-                            } = zz;
-                            const Ez = "dark" === uz ? "light" : "dark";
-                            return (0, Zz.jsx)("button", {
+                              theme: CD,
+                              onChange: cD
+                            } = DD;
+                            const ID = "dark" === CD ? "light" : "dark";
+                            return (0, tD.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${Ez} theme`,
-                              title: `Switch to ${Ez} theme`,
+                              "aria-label": `Switch to ${ID} theme`,
+                              title: `Switch to ${ID} theme`,
                               onClick: () => {
-                                bz(Ez)
+                                cD(ID)
                               },
-                              children: (0, Zz.jsx)(Kz, {
-                                name: "dark" === uz ? "moon" : "sun"
+                              children: (0, tD.jsx)(oD, {
+                                name: "dark" === CD ? "moon" : "sun"
                               })
                             })
                           }
-                          const Ci = "https://github.com/Bloxdy/code-api",
-                            Yi = "https://discord.gg/playbloxd",
-                            ki = 180,
-                            zl = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const ei = "https://github.com/Bloxdy/code-api",
+                            ui = "https://discord.gg/playbloxd",
+                            ri = 180,
+                            Ai = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function ul(zz) {
+                          function Fi(DD) {
                             let {
-                              basePath: uz,
-                              activePageId: bz,
-                              onNavigate: Ez
-                            } = zz;
-                            return (0, Zz.jsx)("nav", {
+                              basePath: CD,
+                              activePageId: cD,
+                              onNavigate: ID
+                            } = DD;
+                            return (0, tD.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: hz.map((zz => (0, Zz.jsxs)("div", {
+                              children: LD.map((DD => (0, tD.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, Zz.jsx)("div", {
+                                children: [(0, tD.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: zz.title
-                                }), zz.pageIds.map((zz => {
-                                  var nz;
-                                  const Mz = Uz(zz);
-                                  return (0, Zz.jsxs)(lz.e, {
-                                    to: Qz(uz, Mz),
-                                    className: iz()("DocsNavLink", {
-                                      Active: Mz.id === bz
+                                  children: DD.title
+                                }), DD.pageIds.map((DD => {
+                                  var pD;
+                                  const bD = TD(DD);
+                                  return (0, tD.jsxs)(fD.d, {
+                                    to: WD(CD, bD),
+                                    className: iD()("DocsNavLink", {
+                                      Active: bD.id === cD
                                     }),
-                                    "aria-current": Mz.id === bz ? "page" : void 0,
-                                    onClick: Ez,
-                                    children: [(0, Zz.jsx)(Kz, {
-                                      name: Mz.icon
-                                    }), (0, Zz.jsx)("span", {
-                                      children: null !== (nz = Mz.navTitle) && void 0 !== nz ? nz : Mz.title
+                                    "aria-current": bD.id === cD ? "page" : void 0,
+                                    onClick: ID,
+                                    children: [(0, tD.jsx)(oD, {
+                                      name: bD.icon
+                                    }), (0, tD.jsx)("span", {
+                                      children: null !== (pD = bD.navTitle) && void 0 !== pD ? pD : bD.title
                                     })]
-                                  }, Mz.id)
+                                  }, bD.id)
                                 }))]
-                              }, zz.title)))
+                              }, DD.title)))
                             })
                           }
 
-                          function bl(zz) {
+                          function Df(DD) {
                             let {
-                              basePath: uz,
-                              pageId: bz
-                            } = zz;
-                            const Ez = hz.flatMap((zz => zz.pageIds)),
-                              nz = Ez.indexOf(bz),
-                              iz = nz > 0 ? Uz(Ez[nz - 1]) : null,
-                              Mz = nz < Ez.length - 1 ? Uz(Ez[nz + 1]) : null;
-                            return (0, Zz.jsxs)("nav", {
+                              basePath: CD,
+                              pageId: cD
+                            } = DD;
+                            const ID = LD.flatMap((DD => DD.pageIds)),
+                              pD = ID.indexOf(cD),
+                              iD = pD > 0 ? TD(ID[pD - 1]) : null,
+                              bD = pD < ID.length - 1 ? TD(ID[pD + 1]) : null;
+                            return (0, tD.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [iz ? (0, Zz.jsxs)(lz.e, {
+                              children: [iD ? (0, tD.jsxs)(fD.d, {
                                 className: "DocsPagerLink Previous",
-                                to: Qz(uz, iz),
-                                children: [(0, Zz.jsx)("span", {
+                                to: WD(CD, iD),
+                                children: [(0, tD.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, Zz.jsx)("span", {
+                                }), (0, tD.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: iz.title
+                                  children: iD.title
                                 })]
-                              }) : (0, Zz.jsx)("span", {}), Mz && (0, Zz.jsxs)(lz.e, {
+                              }) : (0, tD.jsx)("span", {}), bD && (0, tD.jsxs)(fD.d, {
                                 className: "DocsPagerLink Next",
-                                to: Qz(uz, Mz),
-                                children: [(0, Zz.jsx)("span", {
+                                to: WD(CD, bD),
+                                children: [(0, tD.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, Zz.jsx)("span", {
+                                }), (0, tD.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Mz.title
+                                  children: bD.title
                                 })]
                               })]
                             })
                           }
 
-                          function El(zz) {
+                          function Cf(DD) {
                             let {
-                              basePath: uz,
-                              embedded: bz = !1
-                            } = zz;
+                              basePath: CD,
+                              embedded: cD = !1
+                            } = DD;
                             const {
-                              pageSlug: nz = ""
-                            } = (0, Mz.D)(), Hz = (0, Mz.v)(), Oz = (0, Mz.z)(), pz = (dz = nz, qz.find((zz => zz.slug === dz)));
-                            var dz;
-                            const [Fz, Rz] = function() {
-                              const [zz, uz] = (0, Ez.useState)((() => {
-                                const zz = ei.g.getItem(ji);
-                                return "dark" === zz || "light" === zz ? zz : null
-                              })), [bz, nz] = (0, Ez.useState)(Ii.matches ? "light" : "dark");
-                              return (0, Ez.useEffect)((() => {
-                                const zz = () => {
-                                  nz(Ii.matches ? "light" : "dark")
+                              pageSlug: pD = ""
+                            } = (0, bD.F)(), wD = (0, bD.w)(), SD = (0, bD.x)(), BD = (yD = pD, lD.find((DD => DD.slug === yD)));
+                            var yD;
+                            const [MD, ZD] = function() {
+                              const [DD, CD] = (0, ID.useState)((() => {
+                                const DD = Yi.h.getItem(Wi);
+                                return "dark" === DD || "light" === DD ? DD : null
+                              })), [cD, pD] = (0, ID.useState)(si.matches ? "light" : "dark");
+                              return (0, ID.useEffect)((() => {
+                                const DD = () => {
+                                  pD(si.matches ? "light" : "dark")
                                 };
-                                return Ii.addEventListener("change", zz), () => {
-                                  Ii.removeEventListener("change", zz)
+                                return si.addEventListener("change", DD), () => {
+                                  si.removeEventListener("change", DD)
                                 }
-                              }), []), [null !== zz && void 0 !== zz ? zz : bz, zz => {
-                                ei.g.setItem(ji, zz), uz(zz)
+                              }), []), [null !== DD && void 0 !== DD ? DD : cD, DD => {
+                                Yi.h.setItem(Wi, DD), CD(DD)
                               }]
-                            }(), [wz, Xz] = (0, Ez.useState)(null), [fz, sz] = (0, Ez.useState)(!1), [rz, oz] = (0, Ez.useState)(!1), [Nz, xz] = (0, Ez.useState)([]), Jz = function(zz, uz) {
-                              const [bz, nz] = (0, Ez.useState)("");
-                              return (0, Ez.useEffect)((() => {
-                                if (!uz) return;
-                                let bz = 0;
-                                const Ez = () => {
-                                    var Ez, iz;
-                                    bz = 0;
-                                    const lz = uz.getBoundingClientRect().top + ki;
-                                    let Mz = null !== (Ez = null === (iz = zz[0]) || void 0 === iz ? void 0 : iz.anchor) && void 0 !== Ez ? Ez : "";
-                                    for (const uz of zz) {
-                                      const zz = document.getElementById(uz.anchor);
-                                      zz && zz.getBoundingClientRect().top <= lz && (Mz = uz.anchor)
+                            }(), [vD, ND] = (0, ID.useState)(null), [gD, XD] = (0, ID.useState)(!1), [mD, nD] = (0, ID.useState)(!1), [OD, HD] = (0, ID.useState)([]), UD = function(DD, CD) {
+                              const [cD, pD] = (0, ID.useState)("");
+                              return (0, ID.useEffect)((() => {
+                                if (!CD) return;
+                                let cD = 0;
+                                const ID = () => {
+                                    var ID, iD;
+                                    cD = 0;
+                                    const fD = CD.getBoundingClientRect().top + ri;
+                                    let bD = null !== (ID = null === (iD = DD[0]) || void 0 === iD ? void 0 : iD.anchor) && void 0 !== ID ? ID : "";
+                                    for (const CD of DD) {
+                                      const DD = document.getElementById(CD.anchor);
+                                      DD && DD.getBoundingClientRect().top <= fD && (bD = CD.anchor)
                                     }
-                                    uz.scrollTop + uz.clientHeight >= uz.scrollHeight - 2 && uz.scrollTop > 0 && zz.length > 0 && (Mz = zz[zz.length - 1].anchor), nz(Mz)
+                                    CD.scrollTop + CD.clientHeight >= CD.scrollHeight - 2 && CD.scrollTop > 0 && DD.length > 0 && (bD = DD[DD.length - 1].anchor), pD(bD)
                                   },
-                                  iz = () => {
-                                    bz || (bz = requestAnimationFrame(Ez))
+                                  iD = () => {
+                                    cD || (cD = requestAnimationFrame(ID))
                                   };
-                                return Ez(), uz.addEventListener("scroll", iz, {
+                                return ID(), CD.addEventListener("scroll", iD, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(bz), uz.removeEventListener("scroll", iz)
+                                  cancelAnimationFrame(cD), CD.removeEventListener("scroll", iD)
                                 }
-                              }), [zz, uz]), bz
-                            }(Nz, wz), Az = "" === nz && Hz.hash ? function(zz) {
-                              const uz = (0, vz.h)(zz);
-                              if (Sz(Uz("welcome"), uz)) return null;
-                              const bz = Object.hasOwn(Dz, uz) ? Dz[uz] : null;
-                              if (bz) return {
-                                page: Uz(bz.pageId),
-                                anchor: bz.anchor
+                              }), [DD, CD]), cD
+                            }(OD, vD), xD = "" === pD && wD.hash ? function(DD) {
+                              const CD = (0, PD.s)(DD);
+                              if (kD(TD("welcome"), CD)) return null;
+                              const cD = Object.hasOwn(YD, CD) ? YD[CD] : null;
+                              if (cD) return {
+                                page: TD(cD.pageId),
+                                anchor: cD.anchor
                               };
-                              const Ez = Uz("readme");
-                              return Sz(Ez, uz) ? {
-                                page: Ez,
-                                anchor: uz
-                              } : yz(`#${uz}`)
-                            }(Hz.hash) : null;
-                            (0, Ez.useEffect)((() => (tz.e.set({
+                              const ID = TD("readme");
+                              return kD(ID, CD) ? {
+                                page: ID,
+                                anchor: CD
+                              } : dD(`#${CD}`)
+                            }(wD.hash) : null;
+                            (0, ID.useEffect)((() => (QD.d.set({
                               musicOnFromPage: !1
                             }), () => {
-                              tz.e.set({
+                              QD.d.set({
                                 musicOnFromPage: !0
-                              }), KE()
-                            })), []), (0, Ez.useEffect)((() => {
-                              const zz = zz => {
-                                const uz = zz.target;
-                                if (uz.closest(".DocsTextDialog")) return;
-                                const bz = uz.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(uz.tagName);
-                                "k" === zz.key && (zz.metaKey || zz.ctrlKey) || "/" === zz.key && !bz ? (zz.preventDefault(), oz(!0)) : "Escape" === zz.key && sz(!1)
+                              }), oI()
+                            })), []), (0, ID.useEffect)((() => {
+                              const DD = DD => {
+                                const CD = DD.target;
+                                if (CD.closest(".DocsTextDialog")) return;
+                                const cD = CD.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(CD.tagName);
+                                "k" === DD.key && (DD.metaKey || DD.ctrlKey) || "/" === DD.key && !cD ? (DD.preventDefault(), nD(!0)) : "Escape" === DD.key && XD(!1)
                               };
-                              return window.addEventListener("keydown", zz), () => {
-                                window.removeEventListener("keydown", zz)
+                              return window.addEventListener("keydown", DD), () => {
+                                window.removeEventListener("keydown", DD)
                               }
                             }), []);
-                            const Tz = (0, Ez.useRef)(null);
-                            (0, Ez.useLayoutEffect)((() => {
-                              var zz, uz;
-                              if (!wz) return;
-                              const bz = Tz.current === Hz.pathname;
-                              Tz.current = Hz.pathname;
-                              const Ez = (0, vz.h)(Hz.hash),
-                                nz = Ez ? document.getElementById(Ez) : null;
-                              if (null === (zz = wz.querySelector(".DocsTargeted")) || void 0 === zz || zz.classList.remove("DocsTargeted"), null === nz || void 0 === nz || null === (uz = nz.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === uz || uz.classList.add("DocsTargeted"), nz) {
-                                var iz;
-                                const zz = nz.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (iz = nz.closest(".DocsChangelogEntry")) && void 0 !== iz ? iz : nz).scrollIntoView({
-                                  block: zz ? "center" : "start",
-                                  behavior: bz ? "smooth" : "auto"
+                            const qD = (0, ID.useRef)(null);
+                            (0, ID.useLayoutEffect)((() => {
+                              var DD, CD;
+                              if (!vD) return;
+                              const cD = qD.current === wD.pathname;
+                              qD.current = wD.pathname;
+                              const ID = (0, PD.s)(wD.hash),
+                                pD = ID ? document.getElementById(ID) : null;
+                              if (null === (DD = vD.querySelector(".DocsTargeted")) || void 0 === DD || DD.classList.remove("DocsTargeted"), null === pD || void 0 === pD || null === (CD = pD.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === CD || CD.classList.add("DocsTargeted"), pD) {
+                                var iD;
+                                const DD = pD.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (iD = pD.closest(".DocsChangelogEntry")) && void 0 !== iD ? iD : pD).scrollIntoView({
+                                  block: DD ? "center" : "start",
+                                  behavior: cD ? "smooth" : "auto"
                                 })
-                              } else bz || wz.scrollTo({
+                              } else cD || vD.scrollTo({
                                 top: 0
                               })
-                            }), [wz, Hz.pathname, Hz.hash, Hz.key]);
-                            const Lz = (0, Ez.useCallback)((() => {
-                                sz(!1)
+                            }), [vD, wD.pathname, wD.hash, wD.key]);
+                            const JD = (0, ID.useCallback)((() => {
+                                XD(!1)
                               }), []),
-                              Pz = (0, Ez.useCallback)((zz => {
-                                Oz({
-                                  hash: zz
+                              KD = (0, ID.useCallback)((DD => {
+                                SD({
+                                  hash: DD
                                 })
-                              }), [Oz]);
-                            if (Az) return (0, Zz.jsx)(Mz.c, {
+                              }), [SD]);
+                            if (xD) return (0, tD.jsx)(bD.c, {
                               replace: !0,
-                              to: Qz(uz, Az.page, Az.anchor)
+                              to: WD(CD, xD.page, xD.anchor)
                             });
-                            if (!pz) return (0, Zz.jsx)(Mz.c, {
+                            if (!BD) return (0, tD.jsx)(bD.c, {
                               replace: !0,
-                              to: uz
+                              to: CD
                             });
-                            const Gz = bz ? "div" : "main";
-                            return (0, Zz.jsx)(Fu.Provider, {
-                              value: uz,
-                              children: (0, Zz.jsx)(Zu.Provider, {
-                                value: wz,
-                                children: (0, Zz.jsxs)("div", {
-                                  ref: Xz,
-                                  className: iz()("DocsSite", {
-                                    Embedded: bz,
-                                    NavOpen: fz
+                            const aD = cD ? "div" : "main";
+                            return (0, tD.jsx)(MC.Provider, {
+                              value: CD,
+                              children: (0, tD.jsx)(tC.Provider, {
+                                value: vD,
+                                children: (0, tD.jsxs)("div", {
+                                  ref: ND,
+                                  className: iD()("DocsSite", {
+                                    Embedded: cD,
+                                    NavOpen: gD
                                   }),
-                                  "data-theme": Fz,
-                                  children: [(0, Zz.jsxs)("header", {
+                                  "data-theme": MD,
+                                  children: [(0, tD.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, Zz.jsx)("button", {
+                                    children: [(0, tD.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": fz ? "Close menu" : "Open menu",
-                                      "aria-expanded": fz,
+                                      "aria-label": gD ? "Close menu" : "Open menu",
+                                      "aria-expanded": gD,
                                       onClick: () => {
-                                        sz(!fz)
+                                        XD(!gD)
                                       },
-                                      children: (0, Zz.jsx)(Kz, {
-                                        name: fz ? "cross" : "menu"
+                                      children: (0, tD.jsx)(oD, {
+                                        name: gD ? "cross" : "menu"
                                       })
-                                    }), (0, Zz.jsxs)(lz.e, {
-                                      to: uz,
+                                    }), (0, tD.jsxs)(fD.d, {
+                                      to: CD,
                                       className: "DocsBrand",
-                                      children: [(0, Zz.jsx)("img", {
+                                      children: [(0, tD.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, Zz.jsx)("span", {
+                                      }), (0, tD.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, Zz.jsx)("span", {
+                                      }), (0, tD.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, Zz.jsxs)("button", {
+                                    }), (0, tD.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        oz(!0)
+                                        nD(!0)
                                       },
-                                      children: [(0, Zz.jsx)(Kz, {
+                                      children: [(0, tD.jsx)(oD, {
                                         name: "magnifying-glass"
-                                      }), (0, Zz.jsx)("span", {
+                                      }), (0, tD.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, Zz.jsxs)("kbd", {
-                                        children: [zl ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, tD.jsxs)("kbd", {
+                                        children: [Ai ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, Zz.jsxs)("div", {
+                                    }), (0, tD.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, Zz.jsxs)("a", {
-                                        href: Yi,
+                                      children: [(0, tD.jsxs)("a", {
+                                        href: ui,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, Zz.jsx)(Kz, {
+                                        children: [(0, tD.jsx)(oD, {
                                           name: "discord"
-                                        }), (0, Zz.jsx)("span", {
+                                        }), (0, tD.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, Zz.jsxs)("a", {
-                                        href: Ci,
+                                      }), (0, tD.jsxs)("a", {
+                                        href: ei,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, Zz.jsx)(Kz, {
+                                        children: [(0, tD.jsx)(oD, {
                                           name: "external-link"
-                                        }), (0, Zz.jsx)("span", {
+                                        }), (0, tD.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !bz && (0, Zz.jsxs)(lz.e, {
+                                      }), !cD && (0, tD.jsxs)(fD.d, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, Zz.jsx)(Kz, {
+                                        children: [(0, tD.jsx)(oD, {
                                           name: "play"
-                                        }), (0, Zz.jsx)("span", {
+                                        }), (0, tD.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, Zz.jsx)(Bi, {
-                                        theme: Fz,
-                                        onChange: Rz
+                                      }), (0, tD.jsx)(Ei, {
+                                        theme: MD,
+                                        onChange: ZD
                                       })]
                                     })]
-                                  }), (0, Zz.jsxs)("div", {
+                                  }), (0, tD.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, Zz.jsx)("aside", {
+                                    children: [(0, tD.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, Zz.jsx)(ul, {
-                                        basePath: uz,
-                                        activePageId: pz.id,
-                                        onNavigate: Lz
+                                      children: (0, tD.jsx)(Fi, {
+                                        basePath: CD,
+                                        activePageId: BD.id,
+                                        onNavigate: JD
                                       })
-                                    }), (0, Zz.jsx)("div", {
+                                    }), (0, tD.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: Lz
-                                    }), (0, Zz.jsxs)(Gz, {
+                                      onClick: JD
+                                    }), (0, tD.jsxs)(aD, {
                                       className: "DocsMain",
-                                      children: [(0, Zz.jsx)(xi, {
-                                        page: pz,
-                                        onTocChange: xz
-                                      }, pz.id), (0, Zz.jsx)(bl, {
-                                        basePath: uz,
-                                        pageId: pz.id
+                                      children: [(0, tD.jsx)(Oi, {
+                                        page: BD,
+                                        onTocChange: HD
+                                      }, BD.id), (0, tD.jsx)(Df, {
+                                        basePath: CD,
+                                        pageId: BD.id
                                       })]
-                                    }), (0, Zz.jsx)("aside", {
-                                      className: iz()("DocsToc", {
-                                        Timeline: "changelog" === pz.layout
+                                    }), (0, tD.jsx)("aside", {
+                                      className: iD()("DocsToc", {
+                                        Timeline: "changelog" === BD.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, Zz.jsx)(Li, {
-                                        isChangelog: "changelog" === pz.layout,
-                                        toc: Nz,
-                                        activeAnchor: Jz,
-                                        onNavigate: Pz
+                                      children: (0, tD.jsx)(xi, {
+                                        isChangelog: "changelog" === BD.layout,
+                                        toc: OD,
+                                        activeAnchor: UD,
+                                        onNavigate: KD
                                       })
                                     })]
-                                  }), (0, Zz.jsx)(Wi, {}), rz && (0, Zz.jsx)(Di, {
-                                    basePath: uz,
+                                  }), (0, tD.jsx)(di, {}), mD && (0, tD.jsx)(Ri, {
+                                    basePath: CD,
                                     onClose: () => {
-                                      oz(!1)
+                                      nD(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4489: (zz, uz, bz) => {
-                          bz.d(uz, {
-                            b: () => Ez,
-                            c: () => lz,
-                            e: () => Kz,
-                            f: () => Rz,
-                            g: () => Mz,
-                            h: () => nz,
-                            k: () => iz,
-                            n: () => Zz,
-                            q: () => Fz,
-                            t: () => dz
+                        }, 4534: (DD, CD, cD) => {
+                          cD.d(CD, {
+                            B: () => MD,
+                            C: () => yD,
+                            e: () => ID,
+                            i: () => fD,
+                            j: () => oD,
+                            l: () => ZD,
+                            o: () => bD,
+                            s: () => pD,
+                            u: () => iD,
+                            y: () => tD
                           });
-                          const Ez = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const ID = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function nz(zz) {
+                          function pD(DD) {
                             try {
-                              return decodeURIComponent(zz.slice(1))
+                              return decodeURIComponent(DD.slice(1))
                             } catch {
-                              return zz.slice(1)
+                              return DD.slice(1)
                             }
                           }
 
-                          function iz(zz) {
-                            return zz.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function iD(DD) {
+                            return DD.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const lz = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Ez.source}`, "g");
+                          const fD = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${ID.source}`, "g");
 
-                          function Mz(zz, uz) {
-                            return 2 === zz.length ? uz.replace(/^ (.*) $/, "$1") : uz
-                          }
-
-                          function tz(zz) {
-                            return "" === zz.trim()
+                          function bD(DD, CD) {
+                            return 2 === DD.length ? CD.replace(/^ (.*) $/, "$1") : CD
                           }
 
-                          function Hz(zz) {
-                            const uz = [];
-                            for (const bz of zz.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) uz.length > 0 && uz[uz.length - 1].endsWith("\\") ? uz[uz.length - 1] += `|${bz}` : uz.push(bz);
-                            return uz.map((zz => zz.trim().replaceAll("\\|", "|")))
+                          function QD(DD) {
+                            return "" === DD.trim()
                           }
-                          const Oz = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function pz(zz) {
-                            const uz = [],
-                              bz = [{
+                          function wD(DD) {
+                            const CD = [];
+                            for (const cD of DD.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) CD.length > 0 && CD[CD.length - 1].endsWith("\\") ? CD[CD.length - 1] += `|${cD}` : CD.push(cD);
+                            return CD.map((DD => DD.trim().replaceAll("\\|", "|")))
+                          }
+                          const SD = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function BD(DD) {
+                            const CD = [],
+                              cD = [{
                                 indent: -1,
-                                items: uz
+                                items: CD
                               }];
-                            let Ez = null;
-                            for (const nz of zz) {
-                              const zz = nz.match(Oz);
-                              if (!zz) {
-                                Ez && (Ez.text += ` ${nz.trim()}`);
+                            let ID = null;
+                            for (const pD of DD) {
+                              const DD = pD.match(SD);
+                              if (!DD) {
+                                ID && (ID.text += ` ${pD.trim()}`);
                                 continue
                               }
-                              const uz = zz[1].replace(/\t/g, "  ").length;
-                              for (; uz <= bz[bz.length - 1].indent;) bz.pop();
-                              Ez = {
-                                text: zz[3].trim(),
+                              const CD = DD[1].replace(/\t/g, "  ").length;
+                              for (; CD <= cD[cD.length - 1].indent;) cD.pop();
+                              ID = {
+                                text: DD[3].trim(),
                                 children: []
-                              }, bz[bz.length - 1].items.push(Ez), bz.push({
-                                indent: uz,
-                                items: Ez.children
+                              }, cD[cD.length - 1].items.push(ID), cD.push({
+                                indent: CD,
+                                items: ID.children
                               })
                             }
-                            return uz
+                            return CD
                           }
 
-                          function dz(zz) {
-                            const uz = zz.replace(/\r\n/g, "\n").split("\n"),
-                              bz = [];
-                            let Ez = 0;
-                            for (; Ez < uz.length;) {
-                              const zz = uz[Ez];
-                              if (tz(zz)) {
-                                Ez++;
+                          function yD(DD) {
+                            const CD = DD.replace(/\r\n/g, "\n").split("\n"),
+                              cD = [];
+                            let ID = 0;
+                            for (; ID < CD.length;) {
+                              const DD = CD[ID];
+                              if (QD(DD)) {
+                                ID++;
                                 continue
                               }
-                              const nz = zz.match(/^\s*```\s*(\w*)\s*$/);
-                              if (nz) {
-                                const zz = [];
-                                for (Ez++; Ez < uz.length && !/^\s*```\s*$/.test(uz[Ez]);) zz.push(uz[Ez]), Ez++;
-                                Ez++, bz.push({
+                              const pD = DD.match(/^\s*```\s*(\w*)\s*$/);
+                              if (pD) {
+                                const DD = [];
+                                for (ID++; ID < CD.length && !/^\s*```\s*$/.test(CD[ID]);) DD.push(CD[ID]), ID++;
+                                ID++, cD.push({
                                   kind: "code",
-                                  lang: nz[1] || "text",
-                                  code: zz.join("\n").replace(/\s+$/, "")
+                                  lang: pD[1] || "text",
+                                  code: DD.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const lz = zz.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (lz) {
-                                const zz = lz[2].trim();
-                                bz.push({
+                              const fD = DD.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (fD) {
+                                const DD = fD[2].trim();
+                                cD.push({
                                   kind: "heading",
-                                  level: lz[1].length,
-                                  text: zz,
-                                  anchor: iz(zz)
-                                }), Ez++;
+                                  level: fD[1].length,
+                                  text: DD,
+                                  anchor: iD(DD)
+                                }), ID++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(zz)) {
-                                bz.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(DD)) {
+                                cD.push({
                                   kind: "rule"
-                                }), Ez++;
+                                }), ID++;
                                 continue
                               }
-                              if (zz.trim().startsWith("|") && Ez + 1 < uz.length && /^\s*\|[\s:|-]+\|\s*$/.test(uz[Ez + 1])) {
-                                const nz = Hz(zz),
-                                  iz = [];
-                                for (Ez += 2; Ez < uz.length && uz[Ez].trim().startsWith("|");) iz.push(Hz(uz[Ez])), Ez++;
-                                bz.push({
+                              if (DD.trim().startsWith("|") && ID + 1 < CD.length && /^\s*\|[\s:|-]+\|\s*$/.test(CD[ID + 1])) {
+                                const pD = wD(DD),
+                                  iD = [];
+                                for (ID += 2; ID < CD.length && CD[ID].trim().startsWith("|");) iD.push(wD(CD[ID])), ID++;
+                                cD.push({
                                   kind: "table",
-                                  header: nz,
-                                  rows: iz
+                                  header: pD,
+                                  rows: iD
                                 });
                                 continue
                               }
-                              if (zz.startsWith(">")) {
-                                const zz = [];
-                                for (; Ez < uz.length && uz[Ez].startsWith(">");) zz.push(uz[Ez].replace(/^>\s?/, "")), Ez++;
-                                bz.push({
+                              if (DD.startsWith(">")) {
+                                const DD = [];
+                                for (; ID < CD.length && CD[ID].startsWith(">");) DD.push(CD[ID].replace(/^>\s?/, "")), ID++;
+                                cD.push({
                                   kind: "quote",
-                                  blocks: dz(zz.join("\n"))
+                                  blocks: yD(DD.join("\n"))
                                 });
                                 continue
                               }
-                              if (Oz.test(zz)) {
-                                const nz = [],
-                                  iz = /^\s*\d+\./.test(zz);
-                                for (; Ez < uz.length && !tz(uz[Ez]) && (Oz.test(uz[Ez]) || /^\s+\S/.test(uz[Ez]));) nz.push(uz[Ez]), Ez++;
-                                bz.push({
+                              if (SD.test(DD)) {
+                                const pD = [],
+                                  iD = /^\s*\d+\./.test(DD);
+                                for (; ID < CD.length && !QD(CD[ID]) && (SD.test(CD[ID]) || /^\s+\S/.test(CD[ID]));) pD.push(CD[ID]), ID++;
+                                cD.push({
                                   kind: "list",
-                                  ordered: iz,
-                                  items: pz(nz)
+                                  ordered: iD,
+                                  items: BD(pD)
                                 });
                                 continue
                               }
-                              const Mz = [];
-                              for (; Ez < uz.length && !tz(uz[Ez]) && !/^\s*```/.test(uz[Ez]) && !/^#{1,6}\s/.test(uz[Ez]) && !uz[Ez].startsWith(">") && !Oz.test(uz[Ez]) && (!uz[Ez].trim().startsWith("|") || 0 !== Mz.length);) Mz.push(uz[Ez].trim()), Ez++;
-                              0 === Mz.length && (Mz.push(uz[Ez].trim()), Ez++), bz.push({
+                              const bD = [];
+                              for (; ID < CD.length && !QD(CD[ID]) && !/^\s*```/.test(CD[ID]) && !/^#{1,6}\s/.test(CD[ID]) && !CD[ID].startsWith(">") && !SD.test(CD[ID]) && (!CD[ID].trim().startsWith("|") || 0 !== bD.length);) bD.push(CD[ID].trim()), ID++;
+                              0 === bD.length && (bD.push(CD[ID].trim()), ID++), cD.push({
                                 kind: "paragraph",
-                                text: Mz.join(" ")
+                                text: bD.join(" ")
                               })
                             }
-                            return bz
+                            return cD
                           }
 
-                          function Fz(zz) {
-                            let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const bz = dz(zz);
-                            let Ez = "";
-                            const nz = [],
-                              iz = [],
-                              lz = new Map;
-                            for (const Hz of bz) {
-                              if ("heading" === Hz.kind) {
-                                var Mz;
-                                const zz = (null !== (Mz = lz.get(Hz.anchor)) && void 0 !== Mz ? Mz : 0) + 1;
-                                lz.set(Hz.anchor, zz), zz > 1 && (Hz.anchor = `${Hz.anchor}-${zz}`)
+                          function MD(DD) {
+                            let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const cD = yD(DD);
+                            let ID = "";
+                            const pD = [],
+                              iD = [],
+                              fD = new Map;
+                            for (const wD of cD) {
+                              if ("heading" === wD.kind) {
+                                var bD;
+                                const DD = (null !== (bD = fD.get(wD.anchor)) && void 0 !== bD ? bD : 0) + 1;
+                                fD.set(wD.anchor, DD), DD > 1 && (wD.anchor = `${wD.anchor}-${DD}`)
                               }
-                              if ("heading" === Hz.kind && 1 === Hz.level && !Ez) {
-                                Ez = Hz.text;
+                              if ("heading" === wD.kind && 1 === wD.level && !ID) {
+                                ID = wD.text;
                                 continue
                               }
-                              if ("heading" === Hz.kind && Hz.level <= uz) {
-                                iz.push({
-                                  heading: Hz,
+                              if ("heading" === wD.kind && wD.level <= CD) {
+                                iD.push({
+                                  heading: wD,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const zz = iz.at(-1);
-                              zz ? zz.blocks.push(Hz) : nz.push(Hz)
+                              const DD = iD.at(-1);
+                              DD ? DD.blocks.push(wD) : pD.push(wD)
                             }
-                            const tz = zz => {
+                            const QD = DD => {
                               for (;
-                                "rule" === (null === (uz = zz.at(-1)) || void 0 === uz ? void 0 : uz.kind);) {
-                                var uz;
-                                zz.pop()
+                                "rule" === (null === (CD = DD.at(-1)) || void 0 === CD ? void 0 : CD.kind);) {
+                                var CD;
+                                DD.pop()
                               }
                             };
-                            tz(nz);
-                            for (const Hz of iz) tz(Hz.blocks);
+                            QD(pD);
+                            for (const wD of iD) QD(wD.blocks);
                             return {
-                              title: Ez,
-                              intro: nz,
-                              sections: iz
+                              title: ID,
+                              intro: pD,
+                              sections: iD
                             }
                           }
 
-                          function Zz(zz) {
+                          function tD(DD) {
                             return [{
                               heading: null,
-                              blocks: zz.intro
-                            }, ...zz.sections.map((zz => ({
-                              heading: zz.heading,
-                              blocks: zz.blocks
+                              blocks: DD.intro
+                            }, ...DD.sections.map((DD => ({
+                              heading: DD.heading,
+                              blocks: DD.blocks
                             })))]
                           }
 
-                          function Rz(zz) {
-                            return zz.flatMap((zz => "code" === zz.kind ? [zz] : "quote" === zz.kind ? Rz(zz.blocks) : []))
+                          function ZD(DD) {
+                            return DD.flatMap((DD => "code" === DD.kind ? [DD] : "quote" === DD.kind ? ZD(DD.blocks) : []))
                           }
 
-                          function Kz(zz) {
-                            switch (zz.kind) {
+                          function oD(DD) {
+                            switch (DD.kind) {
                               case "heading":
                               case "paragraph":
-                                return zz.text;
+                                return DD.text;
                               case "code":
-                                return zz.code;
+                                return DD.code;
                               case "table":
-                                return [zz.header, ...zz.rows].map((zz => zz.join(" "))).join(" ");
+                                return [DD.header, ...DD.rows].map((DD => DD.join(" "))).join(" ");
                               case "list": {
-                                const uz = zz => zz.map((zz => `${zz.text} ${uz(zz.children)}`)).join(" ");
-                                return uz(zz.items)
+                                const CD = DD => DD.map((DD => `${DD.text} ${CD(DD.children)}`)).join(" ");
+                                return CD(DD.items)
                               }
                               case "quote":
-                                return zz.blocks.map(Kz).join(" ");
+                                return DD.blocks.map(oD).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4598: (zz, uz, bz) => {
-                          bz.d(uz, {
-                            b: () => Mz
+                        }, 4606: (DD, CD, cD) => {
+                          cD.d(CD, {
+                            b: () => bD
                           });
-                          var Ez = bz(56),
-                            nz = bz(316),
-                            iz = bz(1856),
-                            lz = bz(1089);
+                          var ID = cD(53),
+                            pD = cD(312),
+                            iD = cD(1893),
+                            fD = cD(1093);
 
-                          function Mz(zz) {
+                          function bD(DD) {
                             let {
-                              text: uz
-                            } = zz;
-                            const bz = [];
-                            let Mz = "";
-                            return (0, nz.uc)(uz).forEach(((zz, uz) => {
-                              if ("string" === typeof zz || !(0, iz.d)(zz.icon)) return void(Mz += "string" === typeof zz ? zz : zz.icon);
-                              const nz = Math.max(0, Mz.trimEnd().search(/\S{1,12}$/));
-                              bz.push((0, lz.jsxs)(Ez.Fragment, {
-                                children: [Mz.slice(0, nz), (0, lz.jsxs)("span", {
+                              text: CD
+                            } = DD;
+                            const cD = [];
+                            let bD = "";
+                            return (0, pD.bc)(CD).forEach(((DD, CD) => {
+                              if ("string" === typeof DD || !(0, iD.g)(DD.icon)) return void(bD += "string" === typeof DD ? DD : DD.icon);
+                              const pD = Math.max(0, bD.trimEnd().search(/\S{1,12}$/));
+                              cD.push((0, fD.jsxs)(ID.Fragment, {
+                                children: [bD.slice(0, pD), (0, fD.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [Mz.slice(nz), (0, lz.jsx)("span", {
+                                  children: [bD.slice(pD), (0, fD.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": zz.icon,
-                                    children: (0, lz.jsx)(iz.c, {
-                                      itemName: zz.icon,
+                                    "aria-label": DD.icon,
+                                    children: (0, fD.jsx)(iD.d, {
+                                      itemName: DD.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, uz)), Mz = ""
-                            })), bz.push(Mz), (0, lz.jsx)(lz.Fragment, {
-                              children: bz
+                              }, CD)), bD = ""
+                            })), cD.push(bD), (0, fD.jsx)(fD.Fragment, {
+                              children: cD
                             })
                           }
-                        }, 4524: (zz, uz, bz) => {
-                          bz.d(uz, {
-                            c: () => Xz,
-                            b: () => wz
+                        }, 4557: (DD, CD, cD) => {
+                          cD.d(CD, {
+                            f: () => ND,
+                            b: () => vD
                           });
-                          var Ez = bz(56),
-                            nz = bz(1417),
-                            iz = bz(1846),
-                            lz = bz(4531),
-                            Mz = bz(1089);
-                          const tz = (0, Ez.memo)((function(zz) {
+                          var ID = cD(53),
+                            pD = cD(1440),
+                            iD = cD(1872),
+                            fD = cD(4560),
+                            bD = cD(1093);
+                          const QD = (0, ID.memo)((function(DD) {
                             let {
-                              initialParameters: uz
-                            } = zz;
-                            const bz = (0, Ez.useRef)(null),
-                              nz = (0, Ez.useRef)(null),
-                              tz = (0, Ez.useRef)(0),
-                              Hz = (0, Ez.useRef)(null),
-                              Oz = uz.description,
-                              pz = uz.Sz,
+                              initialParameters: CD
+                            } = DD;
+                            const cD = (0, ID.useRef)(null),
+                              pD = (0, ID.useRef)(null),
+                              QD = (0, ID.useRef)(0),
+                              wD = (0, ID.useRef)(null),
+                              SD = CD.description,
+                              BD = CD.LD,
                               {
-                                scale: dz,
-                                rotation: Fz
-                              } = null !== uz && void 0 !== uz ? uz : {},
-                              Zz = (0, lz.f)();
-                            return (0, Ez.useEffect)((() => {
-                              const zz = Zz.onFrame((() => {
-                                const zz = Zz.getState();
-                                if (!zz.isActive || !bz.current || !nz.current) return;
-                                const uz = zz.state;
-                                if (bz.current.value = uz.progress, uz.clickCount > tz.current) {
-                                  tz.current = uz.clickCount;
-                                  const zz = nz.current;
-                                  zz.classList.add("pulse"), Hz.current = setTimeout((() => {
-                                    zz.classList.remove("pulse")
+                                scale: yD,
+                                rotation: MD
+                              } = null !== CD && void 0 !== CD ? CD : {},
+                              tD = (0, fD.e)();
+                            return (0, ID.useEffect)((() => {
+                              const DD = tD.onFrame((() => {
+                                const DD = tD.getState();
+                                if (!DD.isActive || !cD.current || !pD.current) return;
+                                const CD = DD.state;
+                                if (cD.current.value = CD.progress, CD.clickCount > QD.current) {
+                                  QD.current = CD.clickCount;
+                                  const DD = pD.current;
+                                  DD.classList.add("pulse"), wD.current = setTimeout((() => {
+                                    DD.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(Hz.current), zz()
+                                clearTimeout(wD.current), DD()
                               }
-                            }), [Zz]), (0, Mz.jsx)(Mz.Fragment, {
-                              children: (0, Mz.jsxs)("div", {
+                            }), [tD]), (0, bD.jsx)(bD.Fragment, {
+                              children: (0, bD.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== dz && {
-                                    "--scale": dz
+                                  ...null !== yD && {
+                                    "--scale": yD
                                   },
-                                  ...null !== Fz && {
-                                    "--rotation": `${Fz}deg`
+                                  ...null !== MD && {
+                                    "--rotation": `${MD}deg`
                                   }
                                 },
-                                children: [(0, Mz.jsx)("progress", {
+                                children: [(0, bD.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: bz
-                                }), (0, Mz.jsx)("span", {
+                                  ref: cD
+                                }), (0, bD.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: nz,
-                                  children: (0, Mz.jsx)(iz.b, {
+                                  ref: pD,
+                                  children: (0, bD.jsx)(iD.c, {
                                     text: [{
-                                      icon: pz
+                                      icon: BD
                                     }]
                                   })
-                                }), (0, Mz.jsx)("div", {
+                                }), (0, bD.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, Mz.jsx)(iz.b, {
-                                    text: Oz
+                                  children: (0, bD.jsx)(iD.c, {
+                                    text: SD
                                   })
                                 })]
                               })
                             })
                           }));
-                          var Hz = bz(1038),
-                            Oz = bz.n(Hz);
-                          const pz = 2 * Math.PI * 90,
-                            dz = (0, Ez.memo)((function(zz) {
+                          var wD = cD(1049),
+                            SD = cD.n(wD);
+                          const BD = 2 * Math.PI * 90,
+                            yD = (0, ID.memo)((function(DD) {
                               let {
-                                initialParameters: uz
-                              } = zz;
-                              const bz = (0, Ez.useRef)(null),
-                                nz = (0, Ez.useRef)(null),
-                                tz = (0, Ez.useRef)(null),
-                                Hz = uz.label,
-                                dz = uz.icon,
-                                Fz = uz.Qz,
+                                initialParameters: CD
+                              } = DD;
+                              const cD = (0, ID.useRef)(null),
+                                pD = (0, ID.useRef)(null),
+                                QD = (0, ID.useRef)(null),
+                                wD = CD.label,
+                                yD = CD.icon,
+                                MD = CD.RD,
                                 {
-                                  scale: Zz,
-                                  rotation: Rz,
-                                  Wz: Kz
-                                } = null !== uz && void 0 !== uz ? uz : {},
-                                wz = (0, lz.f)();
-                              return (0, Ez.useEffect)((() => {
-                                const zz = wz.onFrame((() => {
-                                  var zz, uz;
-                                  const Ez = wz.getState();
-                                  if (!Ez.isActive || !nz.current) return;
-                                  const iz = Ez.state,
-                                    lz = null !== (zz = iz.timeRemaining) && void 0 !== zz ? zz : 0,
-                                    Mz = null !== (uz = iz.Dz) && void 0 !== uz ? uz : 1,
-                                    Hz = pz * (1 - lz / Mz);
-                                  nz.current.style.strokeDashoffset = `${Hz}`, bz.current && (bz.current.style.opacity = lz > 0 ? "1" : "0"), tz.current && Fz && (tz.current.textContent = `${(lz/1e3).toFixed(1)}s`)
+                                  scale: tD,
+                                  rotation: ZD,
+                                  kD: oD
+                                } = null !== CD && void 0 !== CD ? CD : {},
+                                vD = (0, fD.e)();
+                              return (0, ID.useEffect)((() => {
+                                const DD = vD.onFrame((() => {
+                                  var DD, CD;
+                                  const ID = vD.getState();
+                                  if (!ID.isActive || !pD.current) return;
+                                  const iD = ID.state,
+                                    fD = null !== (DD = iD.timeRemaining) && void 0 !== DD ? DD : 0,
+                                    bD = null !== (CD = iD.GD) && void 0 !== CD ? CD : 1,
+                                    wD = BD * (1 - fD / bD);
+                                  pD.current.style.strokeDashoffset = `${wD}`, cD.current && (cD.current.style.opacity = fD > 0 ? "1" : "0"), QD.current && MD && (QD.current.textContent = `${(fD/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  zz()
+                                  DD()
                                 }
-                              }), [wz, Fz]), (0, Mz.jsxs)("div", {
+                              }), [vD, MD]), (0, bD.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: bz,
+                                ref: cD,
                                 style: {
-                                  ...null !== Zz && {
-                                    "--scale": Zz
+                                  ...null !== tD && {
+                                    "--scale": tD
                                   },
-                                  ...null !== Rz && {
-                                    "--rotation": `${Rz}deg`
+                                  ...null !== ZD && {
+                                    "--rotation": `${ZD}deg`
                                   }
                                 },
-                                children: [(0, Mz.jsxs)("div", {
+                                children: [(0, bD.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, Mz.jsxs)("svg", {
+                                  children: [(0, bD.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Mz.jsx)("circle", {
+                                    children: [(0, bD.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, Mz.jsx)("circle", {
+                                    }), (0, bD.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: pz,
-                                      ref: nz
+                                      strokeDasharray: BD,
+                                      ref: pD
                                     })]
-                                  }), (0, Mz.jsx)("div", {
+                                  }), (0, bD.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, Mz.jsx)(iz.b, {
+                                    children: (0, bD.jsx)(iD.c, {
                                       text: [{
-                                        icon: dz
+                                        icon: yD
                                       }],
-                                      className: Oz()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: Kz
+                                      className: SD()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: oD
                                       })
                                     })
                                   })]
-                                }), (0, Mz.jsxs)("div", {
+                                }), (0, bD.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, Mz.jsx)(iz.b, {
-                                    text: Hz,
+                                  children: [(0, bD.jsx)(iD.c, {
+                                    text: wD,
                                     className: "QTETimedClickLabelText"
-                                  }), Fz && (0, Mz.jsx)("span", {
+                                  }), MD && (0, bD.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: tz
+                                    ref: QD
                                   })]
                                 })]
                               })
                             })),
-                            Fz = (0, Ez.memo)((function(zz) {
+                            MD = (0, ID.memo)((function(DD) {
                               let {
-                                initialParameters: uz
-                              } = zz;
-                              const bz = (0, Ez.useRef)(null),
-                                nz = (0, Ez.useRef)(null),
-                                tz = (0, Ez.useRef)(null),
-                                Hz = (0, Ez.useRef)(!1),
-                                Oz = uz.description,
-                                pz = null === uz || void 0 === uz ? void 0 : uz.icon,
-                                dz = (0, lz.f)();
-                              return (0, Ez.useEffect)((() => {
-                                const zz = dz.onFrame((() => {
-                                  const zz = dz.getState();
-                                  if (!zz.isActive) return;
-                                  const uz = zz.state;
-                                  if (bz.current) {
-                                    const zz = 100 * (uz.catchZonePosition - uz.jz / 2);
-                                    bz.current.style.left = `${zz}%`, bz.current.style.width = 100 * uz.jz + "%", uz.isCatching !== Hz.current && (Hz.current = uz.isCatching, uz.isCatching ? bz.current.classList.add("catching") : bz.current.classList.remove("catching"))
+                                initialParameters: CD
+                              } = DD;
+                              const cD = (0, ID.useRef)(null),
+                                pD = (0, ID.useRef)(null),
+                                QD = (0, ID.useRef)(null),
+                                wD = (0, ID.useRef)(!1),
+                                SD = CD.description,
+                                BD = null === CD || void 0 === CD ? void 0 : CD.icon,
+                                yD = (0, fD.e)();
+                              return (0, ID.useEffect)((() => {
+                                const DD = yD.onFrame((() => {
+                                  const DD = yD.getState();
+                                  if (!DD.isActive) return;
+                                  const CD = DD.state;
+                                  if (cD.current) {
+                                    const DD = 100 * (CD.catchZonePosition - CD.YD / 2);
+                                    cD.current.style.left = `${DD}%`, cD.current.style.width = 100 * CD.YD + "%", CD.isCatching !== wD.current && (wD.current = CD.isCatching, CD.isCatching ? cD.current.classList.add("catching") : cD.current.classList.remove("catching"))
                                   }
-                                  nz.current && (nz.current.style.left = 100 * uz.moverPosition + "%"), tz.current && (tz.current.value = uz.progress)
+                                  pD.current && (pD.current.style.left = 100 * CD.moverPosition + "%"), QD.current && (QD.current.value = CD.progress)
                                 }));
                                 return () => {
-                                  zz()
+                                  DD()
                                 }
-                              }), [dz]), (0, Mz.jsxs)("div", {
+                              }), [yD]), (0, bD.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, Mz.jsx)("div", {
+                                children: [(0, bD.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, Mz.jsx)(iz.b, {
-                                    text: Oz
+                                  children: (0, bD.jsx)(iD.c, {
+                                    text: SD
                                   })
-                                }), (0, Mz.jsx)("progress", {
+                                }), (0, bD.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: tz
-                                }), (0, Mz.jsxs)("div", {
+                                  ref: QD
+                                }), (0, bD.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, Mz.jsx)("div", {
+                                  children: [(0, bD.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: bz
-                                  }), (0, Mz.jsx)("div", {
+                                    ref: cD
+                                  }), (0, bD.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: nz,
-                                    children: (0, Mz.jsx)("span", {
-                                      children: pz && (0, Mz.jsx)(iz.b, {
+                                    ref: pD,
+                                    children: (0, bD.jsx)("span", {
+                                      children: BD && (0, bD.jsx)(iD.c, {
                                         text: [{
-                                          icon: pz,
+                                          icon: BD,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,703 +6379,703 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var Zz = bz(588);
-                          const Rz = (0, Ez.memo)((function(zz) {
+                          var tD = cD(624);
+                          const ZD = (0, ID.memo)((function(DD) {
                               let {
-                                initialParameters: uz
-                              } = zz;
-                              const bz = (0, Ez.useRef)(null),
-                                nz = uz.label,
-                                tz = uz.uu,
+                                initialParameters: CD
+                              } = DD;
+                              const cD = (0, ID.useRef)(null),
+                                pD = CD.label,
+                                QD = CD.rD,
                                 {
-                                  icon: Hz,
-                                  scale: Oz,
-                                  rotation: pz
-                                } = null !== uz && void 0 !== uz ? uz : {},
-                                dz = 100 * (.5 - tz / 2),
-                                Fz = 100 * tz,
-                                Rz = (0, lz.f)();
-                              return (0, Ez.useEffect)((() => {
-                                const zz = Rz.onFrame((() => {
-                                  const zz = Rz.getState();
-                                  if (!zz.isActive || !bz.current) return;
-                                  const uz = zz.state;
-                                  bz.current.style.left = 100 * uz.markerPosition + "%"
+                                  icon: wD,
+                                  scale: SD,
+                                  rotation: BD
+                                } = null !== CD && void 0 !== CD ? CD : {},
+                                yD = 100 * (.5 - QD / 2),
+                                MD = 100 * QD,
+                                ZD = (0, fD.e)();
+                              return (0, ID.useEffect)((() => {
+                                const DD = ZD.onFrame((() => {
+                                  const DD = ZD.getState();
+                                  if (!DD.isActive || !cD.current) return;
+                                  const CD = DD.state;
+                                  cD.current.style.left = 100 * CD.markerPosition + "%"
                                 }));
                                 return () => {
-                                  zz()
+                                  DD()
                                 }
-                              }), [Rz]), (0, Mz.jsxs)("div", {
+                              }), [ZD]), (0, bD.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, Zz.F)(Oz) && {
-                                    "--scale": Oz
+                                  ...!(0, tD.C)(SD) && {
+                                    "--scale": SD
                                   },
-                                  ...!(0, Zz.F)(pz) && {
-                                    "--rotation": `${pz}deg`
+                                  ...!(0, tD.C)(BD) && {
+                                    "--rotation": `${BD}deg`
                                   }
                                 },
-                                children: [Hz && (0, Mz.jsx)(iz.b, {
+                                children: [wD && (0, bD.jsx)(iD.c, {
                                   text: [{
-                                    icon: Hz
+                                    icon: wD
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, Mz.jsxs)("div", {
+                                }), (0, bD.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, Mz.jsx)("div", {
+                                  children: [(0, bD.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${dz}%`,
-                                      width: `${Fz}%`
+                                      left: `${yD}%`,
+                                      width: `${MD}%`
                                     }
-                                  }), (0, Mz.jsx)("div", {
+                                  }), (0, bD.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: bz
+                                    ref: cD
                                   })]
-                                }), (0, Mz.jsx)("div", {
+                                }), (0, bD.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, Mz.jsx)(iz.b, {
-                                    text: nz
+                                  children: (0, bD.jsx)(iD.c, {
+                                    text: pD
                                   })
                                 })]
                               })
                             })),
-                            Kz = (0, Ez.memo)((function(zz) {
+                            oD = (0, ID.memo)((function(DD) {
                               let {
-                                initialParameters: uz
-                              } = zz;
-                              const bz = (0, Ez.useRef)(null),
-                                [nz, tz] = (0, Ez.useState)((() => new Array(uz.nu).fill("pending"))),
-                                [Hz, Oz] = (0, Ez.useState)((() => {
-                                  const zz = uz.Mu;
-                                  return (0, Zz.F)(zz) || zz <= 0 ? [] : new Array(zz).fill("pending")
+                                initialParameters: CD
+                              } = DD;
+                              const cD = (0, ID.useRef)(null),
+                                [pD, QD] = (0, ID.useState)((() => new Array(CD.FD).fill("pending"))),
+                                [wD, SD] = (0, ID.useState)((() => {
+                                  const DD = CD.cC;
+                                  return (0, tD.C)(DD) || DD <= 0 ? [] : new Array(DD).fill("pending")
                                 })),
-                                pz = uz.label,
+                                BD = CD.label,
                                 {
-                                  icon: dz
-                                } = uz,
-                                Fz = (0, Ez.useRef)(0),
-                                Rz = (0, Ez.useRef)(0),
-                                Kz = (0, Ez.useRef)([]),
-                                wz = (0, lz.f)();
-                              return (0, Ez.useEffect)((() => {
-                                const zz = wz.onFrame((() => {
-                                  const zz = wz.getState();
-                                  if (!zz.isActive || !bz.current) return;
-                                  const uz = zz.state,
-                                    Ez = 30 + 60 * uz.outerCircleProgress;
-                                  if (bz.current.setAttribute("r", String(Ez)), !0 === uz.lastClickResult && uz.successes > Fz.current) {
-                                    bz.current.classList.remove("QTERhythmClickOuterCircle--miss"), bz.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const zz = setTimeout((() => {
-                                      var zz;
-                                      null === (zz = bz.current) || void 0 === zz || zz.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: yD
+                                } = CD,
+                                MD = (0, ID.useRef)(0),
+                                ZD = (0, ID.useRef)(0),
+                                oD = (0, ID.useRef)([]),
+                                vD = (0, fD.e)();
+                              return (0, ID.useEffect)((() => {
+                                const DD = vD.onFrame((() => {
+                                  const DD = vD.getState();
+                                  if (!DD.isActive || !cD.current) return;
+                                  const CD = DD.state,
+                                    ID = 30 + 60 * CD.outerCircleProgress;
+                                  if (cD.current.setAttribute("r", String(ID)), !0 === CD.lastClickResult && CD.successes > MD.current) {
+                                    cD.current.classList.remove("QTERhythmClickOuterCircle--miss"), cD.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const DD = setTimeout((() => {
+                                      var DD;
+                                      null === (DD = cD.current) || void 0 === DD || DD.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    Kz.current.push(zz)
-                                  } else if (!1 === uz.lastClickResult && uz.misses > Rz.current) {
-                                    bz.current.classList.remove("QTERhythmClickOuterCircle--hit"), bz.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const zz = setTimeout((() => {
-                                      var zz;
-                                      null === (zz = bz.current) || void 0 === zz || zz.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    oD.current.push(DD)
+                                  } else if (!1 === CD.lastClickResult && CD.misses > ZD.current) {
+                                    cD.current.classList.remove("QTERhythmClickOuterCircle--hit"), cD.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const DD = setTimeout((() => {
+                                      var DD;
+                                      null === (DD = cD.current) || void 0 === DD || DD.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    Kz.current.push(zz)
+                                    oD.current.push(DD)
                                   }
-                                  uz.successes === Fz.current && uz.misses === Rz.current || (Fz.current = uz.successes, Rz.current = uz.misses, tz((zz => {
-                                    const bz = [...zz];
-                                    for (let Ez = 0; Ez < uz.nu; Ez++) bz[Ez] = Ez < uz.successes ? "success" : "pending";
-                                    return bz
-                                  })), Oz((zz => {
-                                    if (0 === zz.length) return zz;
-                                    const bz = [...zz];
-                                    for (let Ez = 0; Ez < bz.length; Ez++) bz[Ez] = Ez < uz.misses ? "miss" : "pending";
-                                    return bz
+                                  CD.successes === MD.current && CD.misses === ZD.current || (MD.current = CD.successes, ZD.current = CD.misses, QD((DD => {
+                                    const cD = [...DD];
+                                    for (let ID = 0; ID < CD.FD; ID++) cD[ID] = ID < CD.successes ? "success" : "pending";
+                                    return cD
+                                  })), SD((DD => {
+                                    if (0 === DD.length) return DD;
+                                    const cD = [...DD];
+                                    for (let ID = 0; ID < cD.length; ID++) cD[ID] = ID < CD.misses ? "miss" : "pending";
+                                    return cD
                                   })))
                                 }));
                                 return () => {
-                                  zz();
-                                  for (const zz of Kz.current) clearTimeout(zz);
-                                  Kz.current = []
+                                  DD();
+                                  for (const DD of oD.current) clearTimeout(DD);
+                                  oD.current = []
                                 }
-                              }), [wz]), (0, Mz.jsxs)("div", {
+                              }), [vD]), (0, bD.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, Mz.jsx)("div", {
+                                children: [(0, bD.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: nz.map(((zz, uz) => (0, Mz.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === zz ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, uz)))
-                                }), (0, Mz.jsxs)("div", {
+                                  children: pD.map(((DD, CD) => (0, bD.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === DD ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, CD)))
+                                }), (0, bD.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, Mz.jsxs)("svg", {
+                                  children: [(0, bD.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Mz.jsx)("circle", {
+                                    children: [(0, bD.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, Mz.jsx)("circle", {
+                                    }), (0, bD.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: bz
+                                      ref: cD
                                     })]
-                                  }), dz && (0, Mz.jsx)("div", {
+                                  }), yD && (0, bD.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, Mz.jsx)(iz.b, {
+                                    children: (0, bD.jsx)(iD.c, {
                                       text: [{
-                                        icon: dz
+                                        icon: yD
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), Hz.length > 0 && (0, Mz.jsx)("div", {
+                                }), wD.length > 0 && (0, bD.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Hz.map(((zz, uz) => (0, Mz.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === zz ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, uz)))
-                                }), (0, Mz.jsx)("div", {
+                                  children: wD.map(((DD, CD) => (0, bD.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === DD ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, CD)))
+                                }), (0, bD.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, Mz.jsx)(iz.b, {
-                                    text: pz
+                                  children: (0, bD.jsx)(iD.c, {
+                                    text: BD
                                   })
                                 })]
                               })
                             }));
 
-                          function wz(zz) {
+                          function vD(DD) {
                             let {
-                              qte: uz
-                            } = zz;
-                            switch (uz.type) {
+                              qte: CD
+                            } = DD;
+                            switch (CD.type) {
                               case "progressBar":
-                                return (0, Mz.jsx)(tz, {
-                                  initialParameters: uz.parameters
+                                return (0, bD.jsx)(QD, {
+                                  initialParameters: CD.parameters
                                 });
                               case "timedClick":
-                                return (0, Mz.jsx)(dz, {
-                                  initialParameters: uz.parameters
+                                return (0, bD.jsx)(yD, {
+                                  initialParameters: CD.parameters
                                 });
                               case "gravityBar":
-                                return (0, Mz.jsx)(Fz, {
-                                  initialParameters: uz.parameters
+                                return (0, bD.jsx)(MD, {
+                                  initialParameters: CD.parameters
                                 });
                               case "precisionBar":
-                                return (0, Mz.jsx)(Rz, {
-                                  initialParameters: uz.parameters
+                                return (0, bD.jsx)(ZD, {
+                                  initialParameters: CD.parameters
                                 });
                               case "rhythmClick":
-                                return (0, Mz.jsx)(Kz, {
-                                  initialParameters: uz.parameters
+                                return (0, bD.jsx)(oD, {
+                                  initialParameters: CD.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const Xz = (0, Ez.memo)((function() {
-                            const [zz, uz] = (0, Ez.useState)({
+                          const ND = (0, ID.memo)((function() {
+                            const [DD, CD] = (0, ID.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, nz.g)("qteStateUpdated", (zz => {
-                              uz(zz)
-                            })), zz.isActive && zz.type ? (0, Mz.jsx)("div", {
+                            return (0, pD.f)("qteStateUpdated", (DD => {
+                              CD(DD)
+                            })), DD.isActive && DD.type ? (0, bD.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, Mz.jsx)(wz, {
-                                qte: zz
+                              children: (0, bD.jsx)(vD, {
+                                qte: DD
                               })
                             }) : null
                           }))
-                        }, 4531: (zz, uz, bz) => {
-                          bz.d(uz, {
-                            e: () => Mz,
-                            f: () => tz
+                        }, 4560: (DD, CD, cD) => {
+                          cD.d(CD, {
+                            c: () => bD,
+                            e: () => QD
                           });
-                          var Ez = bz(56),
-                            nz = bz(1273),
-                            iz = bz(4540);
-                          const lz = {
-                              getState: () => iz.d.getCurrentState(),
-                              onFrame: nz.m
+                          var ID = cD(53),
+                            pD = cD(1294),
+                            iD = cD(4562);
+                          const fD = {
+                              getState: () => iD.e.getCurrentState(),
+                              onFrame: pD.n
                             },
-                            Mz = (0, Ez.createContext)(lz);
+                            bD = (0, ID.createContext)(fD);
 
-                          function tz() {
-                            return (0, Ez.useContext)(Mz)
+                          function QD() {
+                            return (0, ID.useContext)(bD)
                           }
-                        }, 4601: (zz, uz, bz) => {
-                          bz.d(uz, {
-                            e: () => Vz,
-                            g: () => az
+                        }, 4608: (DD, CD, cD) => {
+                          cD.d(CD, {
+                            d: () => zD,
+                            e: () => VD
                           });
-                          var Ez = bz(4605),
-                            nz = bz(316);
-                          const iz = 120,
-                            lz = 260,
-                            Mz = 1.15,
-                            tz = 1.2,
-                            Hz = 2,
-                            Oz = 1.08,
-                            pz = .8,
-                            dz = .95,
-                            Fz = 8,
-                            Zz = "[\"')\\]\u300d\u300f\uff09]*",
-                            Rz = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Zz}$`),
-                            Kz = new RegExp(`[?\uff1f]${Zz}$`),
-                            wz = new RegExp(`[!\uff01]${Zz}$`),
-                            Xz = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            fz = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            sz = new RegExp(`[${fz}]`),
-                            rz = new RegExp(`[${fz}]|[^${fz}]+`, "g"),
-                            oz = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var ID = cD(4615),
+                            pD = cD(312);
+                          const iD = 120,
+                            fD = 260,
+                            bD = 1.15,
+                            QD = 1.2,
+                            wD = 2,
+                            SD = 1.08,
+                            BD = .8,
+                            yD = .95,
+                            MD = 8,
+                            tD = "[\"')\\]\u300d\u300f\uff09]*",
+                            ZD = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${tD}$`),
+                            oD = new RegExp(`[?\uff1f]${tD}$`),
+                            vD = new RegExp(`[!\uff01]${tD}$`),
+                            ND = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            gD = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            XD = new RegExp(`[${gD}]`),
+                            mD = new RegExp(`[${gD}]|[^${gD}]+`, "g"),
+                            nD = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function Nz(zz) {
-                            let uz = 2166136261;
-                            for (let bz = 0; bz < zz.length; bz++) uz ^= zz.charCodeAt(bz), uz = Math.imul(uz, 16777619);
-                            return (uz >>> 0) / 4294967295 * 2 - 1
+                          function OD(DD) {
+                            let CD = 2166136261;
+                            for (let cD = 0; cD < DD.length; cD++) CD ^= DD.charCodeAt(cD), CD = Math.imul(CD, 16777619);
+                            return (CD >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function vz(zz) {
-                            var uz;
-                            if (sz.test(zz)) return 1;
-                            const bz = zz.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              Ez = bz.replace(/[^0-9]/g, "");
-                            if (Ez.length > 0 && !/\p{L}/u.test(bz)) return Math.min(Ez.length, 4);
-                            const nz = null !== (uz = bz.match(oz)) && void 0 !== uz ? uz : [];
-                            if (0 === nz.length) {
-                              var iz, lz;
-                              const zz = null !== (iz = null === (lz = bz.match(/\p{L}/gu)) || void 0 === lz ? void 0 : lz.length) && void 0 !== iz ? iz : 0;
-                              return 0 === zz ? 0 : Math.min(Math.max(1, Math.round(zz / 2.5)), Fz)
+                          function PD(DD) {
+                            var CD;
+                            if (XD.test(DD)) return 1;
+                            const cD = DD.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              ID = cD.replace(/[^0-9]/g, "");
+                            if (ID.length > 0 && !/\p{L}/u.test(cD)) return Math.min(ID.length, 4);
+                            const pD = null !== (CD = cD.match(nD)) && void 0 !== CD ? CD : [];
+                            if (0 === pD.length) {
+                              var iD, fD;
+                              const DD = null !== (iD = null === (fD = cD.match(/\p{L}/gu)) || void 0 === fD ? void 0 : fD.length) && void 0 !== iD ? iD : 0;
+                              return 0 === DD ? 0 : Math.min(Math.max(1, Math.round(DD / 2.5)), MD)
                             }
-                            const Mz = bz.replace(/[^\p{L}]/gu, ""),
-                              tz = nz.length > 1 && "e" === nz.at(-1) && Mz.endsWith("e") && !Mz.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(zz.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(nz.length - (tz ? 1 : 0), Fz)
+                            const bD = cD.replace(/[^\p{L}]/gu, ""),
+                              QD = pD.length > 1 && "e" === pD.at(-1) && bD.endsWith("e") && !bD.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(DD.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(pD.length - (QD ? 1 : 0), MD)
                           }
 
-                          function xz(zz) {
-                            return zz.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function HD(DD) {
+                            return DD.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function Jz(zz) {
-                            const uz = zz.replace(/[^\p{L}]/gu, "");
-                            return uz.length >= 2 && uz === uz.toUpperCase() && uz !== uz.toLowerCase()
+                          function UD(DD) {
+                            const CD = DD.replace(/[^\p{L}]/gu, "");
+                            return CD.length >= 2 && CD === CD.toUpperCase() && CD !== CD.toLowerCase()
                           }
 
-                          function Az(zz, uz) {
-                            var bz;
-                            const Fz = uz && (0, Ez.k)(uz),
-                              Zz = null !== (bz = null === Fz || void 0 === Fz ? void 0 : Fz.syllableMs) && void 0 !== bz ? bz : Ez.e,
-                              fz = function(zz) {
-                                const uz = [];
-                                for (const Ez of (0, nz.uc)(zz))
-                                  if ("string" === typeof Ez)
-                                    for (const zz of Ez.split(/(\s+)/)) {
-                                      if ("" === zz) continue;
-                                      if (/^\s+$/.test(zz)) {
-                                        uz.push({
+                          function xD(DD, CD) {
+                            var cD;
+                            const MD = CD && (0, ID.l)(CD),
+                              tD = null !== (cD = null === MD || void 0 === MD ? void 0 : MD.syllableMs) && void 0 !== cD ? cD : ID.d,
+                              gD = function(DD) {
+                                const CD = [];
+                                for (const ID of (0, pD.bc)(DD))
+                                  if ("string" === typeof ID)
+                                    for (const DD of ID.split(/(\s+)/)) {
+                                      if ("" === DD) continue;
+                                      if (/^\s+$/.test(DD)) {
+                                        CD.push({
                                           kind: "space",
-                                          text: zz
+                                          text: DD
                                         });
                                         continue
                                       }
-                                      if (!sz.test(zz)) {
-                                        uz.push({
+                                      if (!XD.test(DD)) {
+                                        CD.push({
                                           kind: "word",
-                                          text: zz,
+                                          text: DD,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let Ez = !0;
-                                      for (const nz of null !== (bz = zz.match(rz)) && void 0 !== bz ? bz : []) {
-                                        var bz;
-                                        const zz = uz.at(-1);
-                                        Ez || "word" !== (null === zz || void 0 === zz ? void 0 : zz.kind) || sz.test(nz) || /[\p{L}\p{N}]/u.test(nz) ? (Ez || uz.push({
+                                      let ID = !0;
+                                      for (const pD of null !== (cD = DD.match(mD)) && void 0 !== cD ? cD : []) {
+                                        var cD;
+                                        const DD = CD.at(-1);
+                                        ID || "word" !== (null === DD || void 0 === DD ? void 0 : DD.kind) || XD.test(pD) || /[\p{L}\p{N}]/u.test(pD) ? (ID || CD.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), uz.push({
+                                        }), CD.push({
                                           kind: "word",
-                                          text: nz,
+                                          text: pD,
                                           delayMs: 0
-                                        }), Ez = !1) : zz.text += nz
+                                        }), ID = !1) : DD.text += pD
                                       }
-                                    } else uz.push({
+                                    } else CD.push({
                                       kind: "icon",
-                                      text: Ez.icon,
+                                      text: ID.icon,
                                       delayMs: 0
                                     });
-                                return uz
-                              }(zz),
-                              oz = [];
-                            let Az = [];
-                            for (const Ez of fz) "space" !== Ez.kind && (Az.push(Ez), Rz.test(Ez.text) && (oz.push(Az), Az = []));
-                            oz.push(Az);
-                            const Tz = [];
-                            let Lz = 0;
-                            for (const Ez of oz) {
-                              var Pz, Gz;
-                              const zz = null !== (Pz = null === (Gz = Ez.at(-1)) || void 0 === Gz ? void 0 : Gz.text) && void 0 !== Pz ? Pz : "",
-                                uz = Kz.test(zz),
-                                bz = wz.test(zz),
-                                nz = Ez.map((zz => "word" === zz.kind ? vz(zz.text) : 1)),
-                                fz = nz.findLastIndex((zz => zz > 0));
-                              for (const [Kz, wz] of Ez.entries()) {
-                                const zz = "word" === wz.kind,
-                                  Ez = nz[Kz];
-                                wz.delayMs = Lz;
-                                for (let nz = 0; Fz && nz < Ez; nz++) {
+                                return CD
+                              }(DD),
+                              nD = [];
+                            let xD = [];
+                            for (const ID of gD) "space" !== ID.kind && (xD.push(ID), ZD.test(ID.text) && (nD.push(xD), xD = []));
+                            nD.push(xD);
+                            const qD = [];
+                            let JD = 0;
+                            for (const ID of nD) {
+                              var KD, aD;
+                              const DD = null !== (KD = null === (aD = ID.at(-1)) || void 0 === aD ? void 0 : aD.text) && void 0 !== KD ? KD : "",
+                                CD = oD.test(DD),
+                                cD = vD.test(DD),
+                                pD = ID.map((DD => "word" === DD.kind ? PD(DD.text) : 1)),
+                                gD = pD.findLastIndex((DD => DD > 0));
+                              for (const [oD, vD] of ID.entries()) {
+                                const DD = "word" === vD.kind,
+                                  ID = pD[oD];
+                                vD.delayMs = JD;
+                                for (let pD = 0; MD && pD < ID; pD++) {
                                   const {
-                                    intonation: iz
-                                  } = Fz;
-                                  let lz = fz > 0 ? -iz.declineSemitones * (Kz / fz) : 0;
-                                  lz += Nz(`${xz(wz.text)}|${nz}`) * iz.variationSemitones;
-                                  const Rz = Math.min(1, iz.variationSemitones);
-                                  let Xz = Fz.glideSemitones,
-                                    sz = 1;
-                                  bz && (lz += iz.exclaimLiftSemitones, sz *= Mz), uz && Kz === fz && (lz += iz.questionRiseSemitones * (Ez > 1 ? .5 + .5 * nz / (Ez - 1) : 1), nz === Ez - 1 && (Xz = Math.abs(Xz) + iz.questionRiseSemitones / 2)), zz && Jz(wz.text) && (lz += Hz * Rz, sz *= tz), Ez > 1 && 0 === nz && (lz += pz * Rz, sz *= Oz), Tz.push({
-                                    atMs: Lz + nz * Zz,
-                                    semitones: lz,
-                                    glideSemitones: Xz,
-                                    durationMs: nz < Ez - 1 ? Math.min(Fz.durationMs, Zz * dz) : Fz.durationMs,
-                                    level: sz
+                                    intonation: iD
+                                  } = MD;
+                                  let fD = gD > 0 ? -iD.declineSemitones * (oD / gD) : 0;
+                                  fD += OD(`${HD(vD.text)}|${pD}`) * iD.variationSemitones;
+                                  const ZD = Math.min(1, iD.variationSemitones);
+                                  let ND = MD.glideSemitones,
+                                    XD = 1;
+                                  cD && (fD += iD.exclaimLiftSemitones, XD *= bD), CD && oD === gD && (fD += iD.questionRiseSemitones * (ID > 1 ? .5 + .5 * pD / (ID - 1) : 1), pD === ID - 1 && (ND = Math.abs(ND) + iD.questionRiseSemitones / 2)), DD && UD(vD.text) && (fD += wD * ZD, XD *= QD), ID > 1 && 0 === pD && (fD += BD * ZD, XD *= SD), qD.push({
+                                    atMs: JD + pD * tD,
+                                    semitones: fD,
+                                    glideSemitones: ND,
+                                    durationMs: pD < ID - 1 ? Math.min(MD.durationMs, tD * yD) : MD.durationMs,
+                                    level: XD
                                   })
                                 }
-                                Lz += Ez * Zz + (Rz.test(wz.text) ? lz : Xz.test(wz.text) ? iz : 0)
+                                JD += ID * tD + (ZD.test(vD.text) ? fD : ND.test(vD.text) ? iD : 0)
                               }
                             }
                             return {
-                              pieces: fz.map((zz => "space" === zz.kind ? zz : "icon" === zz.kind ? {
+                              pieces: gD.map((DD => "space" === DD.kind ? DD : "icon" === DD.kind ? {
                                 kind: "icon",
-                                icon: zz.text,
-                                delayMs: zz.delayMs
+                                icon: DD.text,
+                                delayMs: DD.delayMs
                               } : {
                                 kind: "word",
-                                text: zz.text,
-                                delayMs: zz.delayMs
+                                text: DD.text,
+                                delayMs: DD.delayMs
                               })),
-                              blips: Tz
+                              blips: qD
                             }
                           }
-                          var Tz = bz(1181),
-                            Lz = bz(1241),
-                            Pz = bz(1873);
+                          var qD = cD(1192),
+                            JD = cD(1250),
+                            KD = cD(1913);
 
-                          function Gz(zz) {
-                            if ("string" === typeof zz) return zz;
-                            const uz = Lz.h.get().getCurrentLanguageCode();
-                            return (0, Tz.s)(uz, zz.translationKey, (0, Tz.q)(zz.params, Pz.b.shown))
+                          function aD(DD) {
+                            if ("string" === typeof DD) return DD;
+                            const CD = JD.e.get().getCurrentLanguageCode();
+                            return (0, qD.s)(CD, DD.translationKey, (0, qD.o)(DD.params, KD.c.shown))
                           }
 
-                          function az(zz) {
-                            const uz = void 0 === zz.voice ? null : (0, Ez.n)(zz.voice),
-                              bz = uz && (0, Ez.k)(uz);
+                          function VD(DD) {
+                            const CD = void 0 === DD.voice ? null : (0, ID.p)(DD.voice),
+                              cD = CD && (0, ID.l)(CD);
                             return {
-                              plan: Az(Gz(zz.line), bz),
-                              synth: bz
+                              plan: xD(aD(DD.line), cD),
+                              synth: cD
                             }
                           }
 
-                          function Vz(zz) {
-                            const uz = [];
-                            let bz = [];
-                            for (const [nz, iz] of zz.entries()) {
-                              var Ez;
-                              "space" === iz.kind && (" " !== iz.text || "icon" !== (null === (Ez = zz[nz + 1]) || void 0 === Ez ? void 0 : Ez.kind)) ? (bz.length > 0 && uz.push(bz), uz.push([iz]), bz = []) : bz.push(iz)
+                          function zD(DD) {
+                            const CD = [];
+                            let cD = [];
+                            for (const [pD, iD] of DD.entries()) {
+                              var ID;
+                              "space" === iD.kind && (" " !== iD.text || "icon" !== (null === (ID = DD[pD + 1]) || void 0 === ID ? void 0 : ID.kind)) ? (cD.length > 0 && CD.push(cD), CD.push([iD]), cD = []) : cD.push(iD)
                             }
-                            return bz.length > 0 && uz.push(bz), uz
+                            return cD.length > 0 && CD.push(cD), CD
                           }
-                        }, 4609: (zz, uz, bz) => {
-                          bz.d(uz, {
-                            c: () => Oz,
-                            d: () => pz
+                        }, 4618: (DD, CD, cD) => {
+                          cD.d(CD, {
+                            d: () => SD,
+                            g: () => BD
                           });
-                          var Ez = bz(4616),
-                            nz = bz(20);
-                          const iz = .25,
-                            lz = .85,
-                            Mz = .02,
-                            tz = .01;
+                          var ID = cD(4621),
+                            pD = cD(16);
+                          const iD = .25,
+                            fD = .85,
+                            bD = .02,
+                            QD = .01;
 
-                          function Hz(zz, uz, bz, Ez, nz, iz, Mz) {
+                          function wD(DD, CD, cD, ID, pD, iD, bD) {
                             const {
-                              waveform: tz,
-                              pitchHz: Hz,
-                              attackMs: Oz,
-                              releaseMs: pz,
-                              lowpassHz: dz
-                            } = bz, Fz = nz + Ez.durationMs / 1e3, Zz = Hz * 2 ** (Ez.semitones / 12), Rz = zz.createOscillator();
-                            Rz.type = tz, Rz.frequency.setValueAtTime(Zz, nz), Rz.frequency.exponentialRampToValueAtTime(Zz * 2 ** (Ez.glideSemitones / 12), Fz);
-                            const Kz = nz + Math.min(Oz, Ez.durationMs) / 1e3,
-                              wz = zz.createGain();
-                            wz.gain.setValueAtTime(0, nz), wz.gain.linearRampToValueAtTime(iz, Kz), wz.gain.linearRampToValueAtTime(iz * lz, Math.max(Kz, Fz - pz / 1e3)), wz.gain.linearRampToValueAtTime(0, Fz);
-                            const Xz = [Rz];
-                            if (null !== dz) {
-                              const uz = zz.createBiquadFilter();
-                              uz.type = "lowpass", uz.frequency.value = dz, Xz.push(uz)
+                              waveform: QD,
+                              pitchHz: wD,
+                              attackMs: SD,
+                              releaseMs: BD,
+                              lowpassHz: yD
+                            } = cD, MD = pD + ID.durationMs / 1e3, tD = wD * 2 ** (ID.semitones / 12), ZD = DD.createOscillator();
+                            ZD.type = QD, ZD.frequency.setValueAtTime(tD, pD), ZD.frequency.exponentialRampToValueAtTime(tD * 2 ** (ID.glideSemitones / 12), MD);
+                            const oD = pD + Math.min(SD, ID.durationMs) / 1e3,
+                              vD = DD.createGain();
+                            vD.gain.setValueAtTime(0, pD), vD.gain.linearRampToValueAtTime(iD, oD), vD.gain.linearRampToValueAtTime(iD * fD, Math.max(oD, MD - BD / 1e3)), vD.gain.linearRampToValueAtTime(0, MD);
+                            const ND = [ZD];
+                            if (null !== yD) {
+                              const CD = DD.createBiquadFilter();
+                              CD.type = "lowpass", CD.frequency.value = yD, ND.push(CD)
                             }
-                            Xz.push(wz, uz);
-                            for (let lz = 1; lz < Xz.length; lz++) Xz[lz - 1].connect(Xz[lz]);
-                            return Rz.onended = () => {
-                              for (const zz of Xz.slice(0, -1)) zz.disconnect();
-                              Mz()
-                            }, Rz.start(nz), Rz.stop(Fz), Rz
+                            ND.push(vD, CD);
+                            for (let fD = 1; fD < ND.length; fD++) ND[fD - 1].connect(ND[fD]);
+                            return ZD.onended = () => {
+                              for (const DD of ND.slice(0, -1)) DD.disconnect();
+                              bD()
+                            }, ZD.start(pD), ZD.stop(MD), ZD
                           }
 
-                          function Oz(zz, uz, bz, Ez, nz, lz) {
-                            if (0 === Ez.length) return lz(), () => {};
-                            const Oz = iz * bz.volume * nz,
-                              pz = zz.createGain();
-                            pz.connect(uz);
-                            const dz = zz.currentTime + Mz,
-                              Fz = new Set;
-                            for (const iz of Ez) {
-                              const uz = Hz(zz, pz, bz, iz, dz + iz.atMs / 1e3, Oz * iz.level, (() => {
-                                Fz.delete(uz), 0 === Fz.size && (pz.disconnect(), lz())
+                          function SD(DD, CD, cD, ID, pD, fD) {
+                            if (0 === ID.length) return fD(), () => {};
+                            const SD = iD * cD.volume * pD,
+                              BD = DD.createGain();
+                            BD.connect(CD);
+                            const yD = DD.currentTime + bD,
+                              MD = new Set;
+                            for (const iD of ID) {
+                              const CD = wD(DD, BD, cD, iD, yD + iD.atMs / 1e3, SD * iD.level, (() => {
+                                MD.delete(CD), 0 === MD.size && (BD.disconnect(), fD())
                               }));
-                              Fz.add(uz)
+                              MD.add(CD)
                             }
                             return () => {
-                              const uz = zz.currentTime;
-                              pz.gain.setTargetAtTime(0, uz, tz);
-                              for (const zz of Fz) try {
-                                zz.stop(uz + 5 * tz)
+                              const CD = DD.currentTime;
+                              BD.gain.setTargetAtTime(0, CD, QD);
+                              for (const DD of MD) try {
+                                DD.stop(CD + 5 * QD)
                               } catch {}
                             }
                           }
 
-                          function pz(zz, uz) {
-                            var bz;
-                            const iz = Ez.Howler.ctx,
-                              lz = Ez.Howler.masterGain;
-                            if (!iz || !lz || !nz.e.get("soundOnFromAd")) return () => {};
-                            const Mz = Ez.Howler;
-                            return null === (bz = Mz._autoResume) || void 0 === bz || bz.call(Mz), Oz(iz, lz, zz, uz, nz.e.get("soundVolume"), (() => {
-                              var zz;
-                              null === (zz = Mz._autoSuspend) || void 0 === zz || zz.call(Mz)
+                          function BD(DD, CD) {
+                            var cD;
+                            const iD = ID.Howler.ctx,
+                              fD = ID.Howler.masterGain;
+                            if (!iD || !fD || !pD.d.get("soundOnFromAd")) return () => {};
+                            const bD = ID.Howler;
+                            return null === (cD = bD._autoResume) || void 0 === cD || cD.call(bD), SD(iD, fD, DD, CD, pD.d.get("soundVolume"), (() => {
+                              var DD;
+                              null === (DD = bD._autoSuspend) || void 0 === DD || DD.call(bD)
                             }))
                           }
-                        }, 4616: (zz, uz, bz) => {
-                          bz.r(uz), bz.d(uz, {
-                            Howl: () => nz.Howl,
-                            Howler: () => nz.Howler,
-                            iosAudio: () => tz,
-                            musicOutput: () => Kz,
-                            readyAudioContext: () => wz
+                        }, 4621: (DD, CD, cD) => {
+                          cD.r(CD), cD.d(CD, {
+                            Howl: () => pD.Howl,
+                            Howler: () => pD.Howler,
+                            iosAudio: () => QD,
+                            musicOutput: () => oD,
+                            readyAudioContext: () => vD
                           });
-                          var Ez, nz = bz(4625),
-                            iz = bz(96);
-                          const lz = nz.Howler;
-                          let Mz;
+                          var ID, pD = cD(4626),
+                            iD = cD(90);
+                          const fD = pD.Howler;
+                          let bD;
 
-                          function tz() {
-                            return Mz ??= "ios" === (0, iz.getOperatingSystem)(), Mz
+                          function QD() {
+                            return bD ??= "ios" === (0, iD.getOperatingSystem)(), bD
                           }
 
-                          function Hz() {
-                            var zz, uz;
-                            if (lz.ctx || !lz.usingWebAudio || "undefined" === typeof AudioContext || !tz()) return;
-                            const bz = navigator.audioSession;
-                            let Ez;
-                            "auto" === (null === bz || void 0 === bz ? void 0 : bz.type) && (bz.type = "ambient");
+                          function wD() {
+                            var DD, CD;
+                            if (fD.ctx || !fD.usingWebAudio || "undefined" === typeof AudioContext || !QD()) return;
+                            const cD = navigator.audioSession;
+                            let ID;
+                            "auto" === (null === cD || void 0 === cD ? void 0 : cD.type) && (cD.type = "ambient");
                             try {
-                              Ez = new AudioContext({
+                              ID = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const nz = Ez.createGain();
-                            nz.gain.setValueAtTime(lz._muted ? 0 : null !== (zz = lz._volume) && void 0 !== zz ? zz : 1, Ez.currentTime), nz.connect(Ez.destination), lz.ctx = Ez, lz.masterGain = nz, null === (uz = lz._setup) || void 0 === uz || uz.call(lz)
+                            const pD = ID.createGain();
+                            pD.gain.setValueAtTime(fD._muted ? 0 : null !== (DD = fD._volume) && void 0 !== DD ? DD : 1, ID.currentTime), pD.connect(ID.destination), fD.ctx = ID, fD.masterGain = pD, null === (CD = fD._setup) || void 0 === CD || CD.call(fD)
                           }
-                          lz._mobileUnloaded = !0;
-                          const Oz = lz.volume.bind(nz.Howler);
-                          lz.volume = function() {
-                            return Hz(), Oz(...arguments)
+                          fD._mobileUnloaded = !0;
+                          const SD = fD.volume.bind(pD.Howler);
+                          fD.volume = function() {
+                            return wD(), SD(...arguments)
                           };
-                          const pz = lz.mute.bind(nz.Howler);
-                          lz.mute = zz => (Hz(), pz(zz));
-                          const dz = nz.Howl.prototype,
-                            Fz = dz.init;
-                          dz.init = function(zz) {
-                            return Hz(), Fz.call(this, zz)
+                          const BD = fD.mute.bind(pD.Howler);
+                          fD.mute = DD => (wD(), BD(DD));
+                          const yD = pD.Howl.prototype,
+                            MD = yD.init;
+                          yD.init = function(DD) {
+                            return wD(), MD.call(this, DD)
                           };
-                          let Zz = 0;
-                          const Rz = null === (Ez = lz._autoSuspend) || void 0 === Ez ? void 0 : Ez.bind(nz.Howler);
+                          let tD = 0;
+                          const ZD = null === (ID = fD._autoSuspend) || void 0 === ID ? void 0 : ID.bind(pD.Howler);
 
-                          function Kz() {
-                            wz();
+                          function oD() {
+                            vD();
                             const {
-                              ctx: zz,
-                              masterGain: uz
-                            } = lz;
-                            return zz && uz ? {
-                              ctx: zz,
-                              destination: uz,
-                              holdAwake: zz => {
-                                var uz, bz;
-                                (Zz += zz ? 1 : -1, zz) ? null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz): null === (bz = lz._autoSuspend) || void 0 === bz || bz.call(lz)
+                              ctx: DD,
+                              masterGain: CD
+                            } = fD;
+                            return DD && CD ? {
+                              ctx: DD,
+                              destination: CD,
+                              holdAwake: DD => {
+                                var CD, cD;
+                                (tD += DD ? 1 : -1, DD) ? null === (CD = fD._autoResume) || void 0 === CD || CD.call(fD): null === (cD = fD._autoSuspend) || void 0 === cD || cD.call(fD)
                               },
                               wake: () => {
-                                var uz;
-                                "running" !== zz.state && (null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz), zz.resume().catch((() => {})))
+                                var CD;
+                                "running" !== DD.state && (null === (CD = fD._autoResume) || void 0 === CD || CD.call(fD), DD.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function wz() {
-                            var zz;
-                            (lz.volume(), lz.ctx && lz.autoUnlock) && (null === (zz = lz._unlockAudio) || void 0 === zz || zz.call(lz))
+                          function vD() {
+                            var DD;
+                            (fD.volume(), fD.ctx && fD.autoUnlock) && (null === (DD = fD._unlockAudio) || void 0 === DD || DD.call(fD))
                           }
-                          Rz && (lz._autoSuspend = () => Zz > 0 ? nz.Howler : Rz())
-                        }, 4629: (zz, uz, bz) => {
-                          function Ez(zz) {
+                          ZD && (fD._autoSuspend = () => tD > 0 ? pD.Howler : ZD())
+                        }, 4630: (DD, CD, cD) => {
+                          function ID(DD) {
                             return {
-                              notAfter: zz
+                              notAfter: DD
                             }
                           }
-                          bz.d(uz, {
-                            c: () => tz,
-                            e: () => Hz,
-                            i: () => Mz,
-                            j: () => Ez,
-                            l: () => nz,
-                            m: () => iz,
-                            q: () => lz,
-                            t: () => Oz,
-                            u: () => pz
+                          cD.d(CD, {
+                            C: () => SD,
+                            F: () => BD,
+                            e: () => QD,
+                            f: () => wD,
+                            j: () => bD,
+                            n: () => ID,
+                            q: () => pD,
+                            u: () => iD,
+                            y: () => fD
                           });
-                          const nz = Ez("\\w$."),
-                            iz = Ez("\\w.,");
+                          const pD = ID("\\w$."),
+                            iD = ID("\\w.,");
 
-                          function lz(zz) {
-                            return uz => tz(uz, zz)
+                          function fD(DD) {
+                            return CD => QD(CD, DD)
                           }
 
-                          function Mz(zz) {
-                            return uz => !zz.test(uz.input.slice(0, uz.index))
+                          function bD(DD) {
+                            return CD => !DD.test(CD.input.slice(0, CD.index))
                           }
 
-                          function tz(zz, uz) {
-                            return zz.index > 0 && new RegExp(`[${uz}]`).test(zz.input[zz.index - 1])
+                          function QD(DD, CD) {
+                            return DD.index > 0 && new RegExp(`[${CD}]`).test(DD.input[DD.index - 1])
                           }
 
-                          function Hz(zz, uz, bz) {
-                            return function(zz) {
-                              return void 0 !== zz && "function" !== typeof zz
-                            }(bz) ? function(zz, uz, bz) {
-                              const Ez = uz.flags.replace(/[gy]/g, ""),
-                                nz = new RegExp(`[^${bz}](?:${uz.source})`, `${Ez}g`),
-                                iz = [],
-                                lz = bz => {
-                                  const Ez = bz.index + bz[0].length;
-                                  return ("" === bz[0] ? dz(zz, uz, Ez) : Ez) - 1
+                          function wD(DD, CD, cD) {
+                            return function(DD) {
+                              return void 0 !== DD && "function" !== typeof DD
+                            }(cD) ? function(DD, CD, cD) {
+                              const ID = CD.flags.replace(/[gy]/g, ""),
+                                pD = new RegExp(`[^${cD}](?:${CD.source})`, `${ID}g`),
+                                iD = [],
+                                fD = cD => {
+                                  const ID = cD.index + cD[0].length;
+                                  return ("" === cD[0] ? yD(DD, CD, ID) : ID) - 1
                                 },
-                                Mz = new RegExp(`(?:${uz.source})`, `${Ez}y`).exec(zz);
-                              if (Mz) {
-                                if (iz.push(Mz), !uz.global) return iz;
-                                nz.lastIndex = lz(Mz)
+                                bD = new RegExp(`(?:${CD.source})`, `${ID}y`).exec(DD);
+                              if (bD) {
+                                if (iD.push(bD), !CD.global) return iD;
+                                pD.lastIndex = fD(bD)
                               }
-                              for (let tz = nz.exec(zz); tz; tz = nz.exec(zz)) {
-                                const bz = dz(zz, uz, tz.index) - tz.index;
-                                if (tz[0] = tz[0].slice(bz), tz.index += bz, iz.push(tz), !uz.global) break;
-                                nz.lastIndex = lz(tz)
+                              for (let QD = pD.exec(DD); QD; QD = pD.exec(DD)) {
+                                const cD = yD(DD, CD, QD.index) - QD.index;
+                                if (QD[0] = QD[0].slice(cD), QD.index += cD, iD.push(QD), !CD.global) break;
+                                pD.lastIndex = fD(QD)
                               }
-                              return iz
-                            }(zz, uz, bz.notAfter) : function(zz, uz, bz) {
-                              const Ez = new RegExp(uz.source, `${uz.flags.replace(/[gy]/g,"")}g`),
-                                nz = [];
-                              for (let iz = Ez.exec(zz); iz; iz = Ez.exec(zz))
-                                if (!bz || bz(iz)) {
-                                  if (nz.push(iz), !uz.global) break;
-                                  "" === iz[0] && (Ez.lastIndex = dz(zz, uz, Ez.lastIndex))
-                                } else Ez.lastIndex = dz(zz, uz, iz.index);
-                              return nz
-                            }(zz, uz, bz)
+                              return iD
+                            }(DD, CD, cD.notAfter) : function(DD, CD, cD) {
+                              const ID = new RegExp(CD.source, `${CD.flags.replace(/[gy]/g,"")}g`),
+                                pD = [];
+                              for (let iD = ID.exec(DD); iD; iD = ID.exec(DD))
+                                if (!cD || cD(iD)) {
+                                  if (pD.push(iD), !CD.global) break;
+                                  "" === iD[0] && (ID.lastIndex = yD(DD, CD, ID.lastIndex))
+                                } else ID.lastIndex = yD(DD, CD, iD.index);
+                              return pD
+                            }(DD, CD, cD)
                           }
 
-                          function Oz(zz, uz, bz, Ez) {
-                            let nz = "",
-                              iz = 0;
-                            for (const lz of Hz(zz, uz, bz)) nz += zz.slice(iz, lz.index) + Ez(lz), iz = lz.index + lz[0].length;
-                            return nz + zz.slice(iz)
+                          function SD(DD, CD, cD, ID) {
+                            let pD = "",
+                              iD = 0;
+                            for (const fD of wD(DD, CD, cD)) pD += DD.slice(iD, fD.index) + ID(fD), iD = fD.index + fD[0].length;
+                            return pD + DD.slice(iD)
                           }
 
-                          function pz(zz, uz, bz) {
-                            const Ez = [];
-                            let nz = 0;
-                            for (const iz of Hz(zz, uz, bz)) Ez.push(zz.slice(nz, iz.index)), nz = iz.index + iz[0].length;
-                            return [...Ez, zz.slice(nz)]
+                          function BD(DD, CD, cD) {
+                            const ID = [];
+                            let pD = 0;
+                            for (const iD of wD(DD, CD, cD)) ID.push(DD.slice(pD, iD.index)), pD = iD.index + iD[0].length;
+                            return [...ID, DD.slice(pD)]
                           }
 
-                          function dz(zz, uz, bz) {
-                            var Ez;
-                            return bz + (uz.unicode && (null !== (Ez = zz.codePointAt(bz)) && void 0 !== Ez ? Ez : 0) > 65535 ? 2 : 1)
+                          function yD(DD, CD, cD) {
+                            var ID;
+                            return cD + (CD.unicode && (null !== (ID = DD.codePointAt(cD)) && void 0 !== ID ? ID : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4581: (zz, uz, bz) => {
-                          bz.d(uz, {
-                            A: () => Fz,
-                            e: () => nz,
-                            g: () => tz,
-                            i: () => iz,
-                            k: () => lz,
-                            n: () => Mz,
-                            p: () => Kz,
-                            r: () => Oz,
-                            s: () => pz,
-                            w: () => Rz
+                        }, 4597: (DD, CD, cD) => {
+                          cD.d(CD, {
+                            b: () => pD,
+                            c: () => QD,
+                            g: () => iD,
+                            i: () => fD,
+                            k: () => bD,
+                            l: () => oD,
+                            m: () => SD,
+                            p: () => BD,
+                            q: () => ZD,
+                            t: () => MD
                           });
-                          var Ez = bz(1547);
-                          const nz = 24e3,
-                            iz = "/docs/llms.txt",
-                            lz = `${Ez.e}${iz}`,
-                            Mz = "/llms.txt",
-                            tz = "/docs/llms-full.txt";
+                          var ID = cD(1577);
+                          const pD = 24e3,
+                            iD = "/docs/llms.txt",
+                            fD = `${ID.c}${iD}`,
+                            bD = "/llms.txt",
+                            QD = "/docs/llms-full.txt";
 
-                          function Hz(zz) {
-                            return zz || "index"
+                          function wD(DD) {
+                            return DD || "index"
                           }
 
-                          function Oz(zz) {
-                            return `/docs/${Hz(zz)}.md`
+                          function SD(DD) {
+                            return `/docs/${wD(DD)}.md`
                           }
 
-                          function pz(zz, uz) {
-                            return `/docs/${Hz(zz)}/${uz+1}.md`
+                          function BD(DD, CD) {
+                            return `/docs/${wD(DD)}/${CD+1}.md`
                           }
-                          const dz = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const yD = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function Fz(zz) {
-                            const uz = dz.exec(zz);
-                            return null === uz ? null : {
-                              name: uz[1],
-                              part: void 0 === uz[2] ? null : Number(uz[2])
+                          function MD(DD) {
+                            const CD = yD.exec(DD);
+                            return null === CD ? null : {
+                              name: CD[1],
+                              part: void 0 === CD[2] ? null : Number(CD[2])
                             }
                           }
-                          const Zz = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const tD = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function Rz(zz) {
-                            const uz = Zz.exec(zz);
-                            if (null === uz) return null;
-                            const [, bz = "", Ez] = uz;
-                            return void 0 === Ez ? Oz(bz) : pz(bz, Number(Ez) - 1)
+                          function ZD(DD) {
+                            const CD = tD.exec(DD);
+                            if (null === CD) return null;
+                            const [, cD = "", ID] = CD;
+                            return void 0 === ID ? SD(cD) : BD(cD, Number(ID) - 1)
                           }
 
-                          function Kz(zz) {
-                            return `/docsHtml/${Hz(zz)}.html`
+                          function oD(DD) {
+                            return `/docsHtml/${wD(DD)}.html`
                           }
-                        }, 4605: (zz, uz, bz) => {
-                          bz.d(uz, {
-                            e: () => nz,
-                            h: () => Ez,
-                            i: () => iz,
-                            k: () => tz,
-                            n: () => lz
+                        }, 4615: (DD, CD, cD) => {
+                          cD.d(CD, {
+                            d: () => pD,
+                            h: () => ID,
+                            k: () => iD,
+                            l: () => QD,
+                            p: () => fD
                           });
-                          const Ez = ["sine", "triangle", "square", "sawtooth"],
-                            nz = 55,
-                            iz = {
+                          const ID = ["sine", "triangle", "square", "sawtooth"],
+                            pD = 55,
+                            iD = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7214,38 +7214,38 @@ export const modules = {
                               }
                             };
 
-                          function lz(zz) {
-                            return "string" !== typeof zz ? zz : Object.hasOwn(iz, zz) ? iz[zz] : null
+                          function fD(DD) {
+                            return "string" !== typeof DD ? DD : Object.hasOwn(iD, DD) ? iD[DD] : null
                           }
 
-                          function Mz(zz, uz, bz) {
-                            return Math.min(bz, Math.max(uz, zz))
+                          function bD(DD, CD, cD) {
+                            return Math.min(cD, Math.max(CD, DD))
                           }
 
-                          function tz(zz) {
-                            const uz = Mz(zz.durationMs, 10, 500),
-                              bz = Mz(zz.attackMs, 0, uz),
+                          function QD(DD) {
+                            const CD = bD(DD.durationMs, 10, 500),
+                              cD = bD(DD.attackMs, 0, CD),
                               {
-                                intonation: nz
-                              } = zz;
+                                intonation: pD
+                              } = DD;
                             return {
-                              waveform: Ez.includes(zz.waveform) ? zz.waveform : "sine",
-                              pitchHz: Mz(zz.pitchHz, 20, 4e3),
-                              glideSemitones: Mz(zz.glideSemitones, -24, 24),
-                              durationMs: uz,
-                              attackMs: bz,
-                              releaseMs: Mz(zz.releaseMs, 0, uz - bz),
-                              lowpassHz: null === zz.lowpassHz ? null : Mz(zz.lowpassHz, 20, 2e4),
-                              volume: Mz(zz.volume, 0, 2),
+                              waveform: ID.includes(DD.waveform) ? DD.waveform : "sine",
+                              pitchHz: bD(DD.pitchHz, 20, 4e3),
+                              glideSemitones: bD(DD.glideSemitones, -24, 24),
+                              durationMs: CD,
+                              attackMs: cD,
+                              releaseMs: bD(DD.releaseMs, 0, CD - cD),
+                              lowpassHz: null === DD.lowpassHz ? null : bD(DD.lowpassHz, 20, 2e4),
+                              volume: bD(DD.volume, 0, 2),
                               intonation: {
-                                variationSemitones: Mz(nz.variationSemitones, 0, 6),
-                                declineSemitones: Mz(nz.declineSemitones, 0, 12),
-                                questionRiseSemitones: Mz(nz.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: Mz(nz.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: bD(pD.variationSemitones, 0, 6),
+                                declineSemitones: bD(pD.declineSemitones, 0, 12),
+                                questionRiseSemitones: bD(pD.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: bD(pD.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: Mz(zz.syllableMs, 25, 200)
+                              syllableMs: bD(DD.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const zz in modules) Object.freeze(modules[zz]);
+                      for (const DD in modules) Object.freeze(modules[DD]);

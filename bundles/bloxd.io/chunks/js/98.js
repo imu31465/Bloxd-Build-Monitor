@@ -1,26 +1,26 @@
 export const id = 98;
 export const ids = [98];
 export const modules = {
-  4654: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      default: () => sz
+  4652: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      default: () => XD
     });
-    var Ez = bz(1490),
-      nz = bz(56),
-      iz = bz(1181),
-      lz = bz(1114),
-      Mz = bz(1102),
-      tz = bz(2009),
-      Hz = bz(1482),
-      Oz = bz(1305),
-      pz = bz(1096),
-      dz = bz(20),
-      Fz = bz(1419),
-      Zz = bz(1047),
-      Rz = bz(2425),
-      Kz = bz(1513),
-      wz = bz(1089);
-    const Xz = [{
+    var ID = cD(1517),
+      pD = cD(53),
+      iD = cD(1192),
+      fD = cD(1120),
+      bD = cD(1108),
+      QD = cD(2043),
+      wD = cD(1508),
+      SD = cD(1328),
+      BD = cD(1102),
+      yD = cD(16),
+      MD = cD(1442),
+      tD = cD(1064),
+      ZD = cD(2447),
+      oD = cD(1537),
+      vD = cD(1093);
+    const ND = [{
         id: "myGames",
         icon: "joystick",
         title: "studio:myGames"
@@ -33,79 +33,79 @@ export const modules = {
         icon: "file-lines",
         title: "general:docs"
       }],
-      fz = {
+      gD = {
         myGames: "/studio",
         leaderboard: "/studio/leaderboard",
         docs: "/studio/docs"
       };
 
-    function sz() {
+    function XD() {
       const {
-        t: zz
-      } = (0, iz.F)(), uz = (0, Hz.useNavigatePreserveSearch)(), bz = (0, Ez.v)(), {
-        isUserContextUpdating: sz
-      } = (0, lz.c)(), rz = (0, tz.e)(), oz = (0, Mz.n)(), Nz = (vz = bz.pathname).startsWith(Kz.u) ? null : vz.startsWith(fz.docs) ? "docs" : vz.startsWith(fz.leaderboard) ? "leaderboard" : "myGames";
-      var vz;
-      const xz = function(zz) {
-        if (!zz.startsWith(Kz.u)) return {
+        t: DD
+      } = (0, iD.F)(), CD = (0, wD.useNavigatePreserveSearch)(), cD = (0, ID.w)(), {
+        isUserContextUpdating: XD
+      } = (0, fD.c)(), mD = (0, QD.e)(), nD = (0, bD.o)(), OD = (PD = cD.pathname).startsWith(oD.r) ? null : PD.startsWith(gD.docs) ? "docs" : PD.startsWith(gD.leaderboard) ? "leaderboard" : "myGames";
+      var PD;
+      const HD = function(DD) {
+        if (!DD.startsWith(oD.r)) return {
           title: "studio:leaveStudio",
           icon: "left-from-bracket",
           to: "/"
         };
-        const uz = (0, Hz.getPreviousLocation)();
+        const CD = (0, wD.getPreviousLocation)();
         return {
           title: "general:back",
           icon: "arrow-left",
-          to: null !== uz && uz.startsWith(fz.myGames) ? -1 : fz.myGames
+          to: null !== CD && CD.startsWith(gD.myGames) ? -1 : gD.myGames
         }
-      }(bz.pathname);
-      return (0, nz.useEffect)((() => {
-        dz.e.set({
+      }(cD.pathname);
+      return (0, pD.useEffect)((() => {
+        yD.d.set({
           gameState: "studio",
           openEverythingMenuName: null
         })
-      }), []), (0, wz.jsxs)("div", {
+      }), []), (0, vD.jsxs)("div", {
         className: "StudioLayout AnimFadeIn",
-        children: [rz && (0, wz.jsx)("aside", {
+        children: [mD && (0, vD.jsx)("aside", {
           className: "StudioLayoutLeft",
-          children: (0, wz.jsx)(Rz.c, {})
-        }), (0, wz.jsxs)("div", {
+          children: (0, vD.jsx)(ZD.e, {})
+        }), (0, vD.jsxs)("div", {
           className: "StudioLayoutRight",
-          children: [(0, wz.jsxs)("div", {
+          children: [(0, vD.jsxs)("div", {
             className: "StudioTop",
-            children: [(0, wz.jsx)(pz.d, {
+            children: [(0, vD.jsx)(BD.b, {
               show: !0,
-              socialBarIsDocked: rz
-            }), (0, wz.jsxs)("nav", {
+              socialBarIsDocked: mD
+            }), (0, vD.jsxs)("nav", {
               className: "StudioNav",
-              children: [(0, wz.jsx)(Fz.d, {
-                icon: xz.icon,
+              children: [(0, vD.jsx)(MD.e, {
+                icon: HD.icon,
                 onClick: () => {
-                  uz(xz.to)
+                  CD(HD.to)
                 },
-                children: zz(xz.title)
-              }), (0, wz.jsx)("div", {
+                children: DD(HD.title)
+              }), (0, vD.jsx)("div", {
                 className: "StudioNavTabs",
-                children: Xz.map((bz => (0, wz.jsxs)(Fz.V, {
-                  active: Nz === bz.id,
-                  href: fz[bz.id],
+                children: ND.map((cD => (0, vD.jsxs)(MD.P, {
+                  active: OD === cD.id,
+                  href: gD[cD.id],
                   onClick: () => {
-                    uz(fz[bz.id])
+                    CD(gD[cD.id])
                   },
-                  children: [(0, wz.jsx)(Zz.c, {
-                    name: bz.icon
-                  }), !oz && zz(bz.title)]
-                }, bz.id)))
+                  children: [(0, vD.jsx)(tD.c, {
+                    name: cD.icon
+                  }), !nD && DD(cD.title)]
+                }, cD.id)))
               })]
             })]
-          }), (0, wz.jsxs)("main", {
+          }), (0, vD.jsxs)("main", {
             className: "StudioBottom",
-            children: [sz && (0, wz.jsx)("div", {
+            children: [XD && (0, vD.jsx)("div", {
               className: "StudioCentredMessage",
-              children: (0, wz.jsx)(Oz.c, {})
-            }), !sz && (0, wz.jsx)("div", {
+              children: (0, vD.jsx)(SD.e, {})
+            }), !XD && (0, vD.jsx)("div", {
               className: "StudioContent",
-              children: (0, wz.jsx)(Ez.f, {})
+              children: (0, vD.jsx)(ID.f, {})
             })]
           })]
         })]
@@ -114,4 +114,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,38 +1,38 @@
 export const id = 56;
 export const ids = [56];
 export const modules = {
-  38017: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => nz,
-      d: () => iz
+  38009: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => pD,
+      f: () => iD
     });
-    const Ez = new WeakMap;
+    const ID = new WeakMap;
 
-    function nz(zz, uz) {
-      return Ez.set(zz, uz), zz
+    function pD(DD, CD) {
+      return ID.set(DD, CD), DD
     }
 
-    function iz(zz) {
-      var uz;
-      return null !== (uz = Ez.get(zz)) && void 0 !== uz ? uz : null
+    function iD(DD) {
+      var CD;
+      return null !== (CD = ID.get(DD)) && void 0 !== CD ? CD : null
     }
   },
-  38036: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz
+  38030: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => bD
     });
-    var Ez = bz(1212);
+    var ID = cD(1221);
 
-    function nz(zz) {
-      const uz = /(\d*\.?\d+)px/.exec(zz);
-      return uz ? Number(uz[1]) : null
+    function pD(DD) {
+      const CD = /(\d*\.?\d+)px/.exec(DD);
+      return CD ? Number(CD[1]) : null
     }
 
-    function iz(zz) {
-      return zz.split(/[\s,]+/).pop()
+    function iD(DD) {
+      return DD.split(/[\s,]+/).pop()
     }
-    let lz = !1;
-    const Mz = {
+    let fD = !1;
+    const bD = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,569 +43,569 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(zz, uz, Ez, Mz, tz, Hz) {
-        if (tz <= 0 || Hz <= 0 || this.fontSize <= 0) return {
+      drawText: function(DD, CD, ID, bD, QD, wD) {
+        if (QD <= 0 || wD <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: Oz,
-          fontVariant: pz,
-          fontWeight: dz,
-          fontSize: Fz,
-          font: Zz
-        } = this, Rz = [Oz, pz, dz, `${Fz}px`, Zz].filter(Boolean).join(" "), Kz = [
-          [dz, `${Fz}px`, iz(Zz)].filter(Boolean).join(" "), `${Fz}px sans-serif`
-        ], wz = zz.font, Xz = function(zz, uz, bz) {
-          for (const Ez of uz) {
-            zz.font = Ez;
-            const uz = nz(zz.font),
-              lz = iz(Ez);
-            if (null !== uz && Math.abs(uz - bz) <= .5 && zz.font.toLowerCase().includes(lz.toLowerCase())) return Ez
+          fontStyle: SD,
+          fontVariant: BD,
+          fontWeight: yD,
+          fontSize: MD,
+          font: tD
+        } = this, ZD = [SD, BD, yD, `${MD}px`, tD].filter(Boolean).join(" "), oD = [
+          [yD, `${MD}px`, iD(tD)].filter(Boolean).join(" "), `${MD}px sans-serif`
+        ], vD = DD.font, ND = function(DD, CD, cD) {
+          for (const ID of CD) {
+            DD.font = ID;
+            const CD = pD(DD.font),
+              fD = iD(ID);
+            if (null !== CD && Math.abs(CD - cD) <= .5 && DD.font.toLowerCase().includes(fD.toLowerCase())) return ID
           }
           return null
-        }(zz, [Rz, ...Kz], Fz);
-        Xz !== Rz && function(zz, uz, Ez) {
-          lz || (lz = !0, Promise.resolve().then((() => bz(1068))).then((bz => {
+        }(DD, [ZD, ...oD], MD);
+        ND !== ZD && function(DD, CD, ID) {
+          fD || (fD = !0, Promise.resolve().then((() => cD(1077))).then((cD => {
             let {
-              WR: nz
-            } = bz;
-            nz(new Error("A canvas didn't take canvasTxt's font"), {
-              font: zz,
-              MZ: uz,
-              drawnWith: null !== Ez && void 0 !== Ez ? Ez : "the kept font, scaled"
+              WZ: pD
+            } = cD;
+            pD(new Error("A canvas didn't take canvasTxt's font"), {
+              font: DD,
+              uM: CD,
+              drawnWith: null !== ID && void 0 !== ID ? ID : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(Rz, wz, Xz);
-        const fz = nz(zz.font);
-        if (null === Xz && null !== fz && fz > 0) {
-          const bz = Fz / fz;
-          zz.save();
+        }(ZD, vD, ND);
+        const gD = pD(DD.font);
+        if (null === ND && null !== gD && gD > 0) {
+          const cD = MD / gD;
+          DD.save();
           try {
-            return zz.scale(bz, bz), {
-              height: this.drawLines(zz, uz, Ez / bz, Mz / bz, tz / bz, Hz / bz, fz).height * bz
+            return DD.scale(cD, cD), {
+              height: this.drawLines(DD, CD, ID / cD, bD / cD, QD / cD, wD / cD, gD).height * cD
             }
           } finally {
-            zz.restore()
+            DD.restore()
           }
         }
-        return this.drawLines(zz, uz, Ez, Mz, tz, Hz, Fz)
+        return this.drawLines(DD, CD, ID, bD, QD, wD, MD)
       },
-      drawLines: function(zz, uz, bz, nz, iz, lz, Mz) {
-        const tz = bz + iz,
-          Hz = nz + lz;
-        let Oz, pz = nz + lz / 2 + Mz / 2;
-        "right" === this.align ? (Oz = tz, zz.textAlign = "right") : "left" === this.align ? (Oz = bz, zz.textAlign = "left") : (Oz = bz + iz / 2, zz.textAlign = "center");
-        for (const Ez of uz) {
-          zz.measureText(Ez).width >= iz && (uz = uz.replace(Ez, ""))
+      drawLines: function(DD, CD, cD, pD, iD, fD, bD) {
+        const QD = cD + iD,
+          wD = pD + fD;
+        let SD, BD = pD + fD / 2 + bD / 2;
+        "right" === this.align ? (SD = QD, DD.textAlign = "right") : "left" === this.align ? (SD = cD, DD.textAlign = "left") : (SD = cD + iD / 2, DD.textAlign = "center");
+        for (const ID of CD) {
+          DD.measureText(ID).width >= iD && (CD = CD.replace(ID, ""))
         }
-        uz = (0, Ez.W)(uz);
-        const dz = [],
-          Fz = uz.split("\n"),
-          Zz = this.justify ? zz.measureText("\u200a").width : 0;
-        Fz.forEach((uz => {
-          let bz = zz.measureText(uz).width;
-          if (bz <= iz) dz.push(uz);
+        CD = (0, ID.V)(CD);
+        const yD = [],
+          MD = CD.split("\n"),
+          tD = this.justify ? DD.measureText("\u200a").width : 0;
+        MD.forEach((CD => {
+          let cD = DD.measureText(CD).width;
+          if (cD <= iD) yD.push(CD);
           else {
-            let Ez = uz;
-            const nz = iz;
-            let lz, Mz, tz;
-            for (bz = zz.measureText(Ez).width; bz > nz;) {
-              for (lz = 0, Mz = 0, tz = ""; Mz < nz;) lz++, tz = Ez.substr(0, lz), Mz = zz.measureText(tz).width;
-              lz--, tz = tz.substr(0, lz);
-              const uz = lz;
-              if (" " !== Ez.substr(lz, 1)) {
+            let ID = CD;
+            const pD = iD;
+            let fD, bD, QD;
+            for (cD = DD.measureText(ID).width; cD > pD;) {
+              for (fD = 0, bD = 0, QD = ""; bD < pD;) fD++, QD = ID.substr(0, fD), bD = DD.measureText(QD).width;
+              fD--, QD = QD.substr(0, fD);
+              const CD = fD;
+              if (" " !== ID.substr(fD, 1)) {
                 for (;
-                  " " !== Ez.substr(lz, 1) && 0 !== lz;) lz--;
-                0 === lz && (lz = uz), tz = Ez.substr(0, lz)
+                  " " !== ID.substr(fD, 1) && 0 !== fD;) fD--;
+                0 === fD && (fD = CD), QD = ID.substr(0, fD)
               }
-              tz = this.justify ? this.justifyLine(zz, tz, Zz, "\u200a", iz) : tz, Ez = Ez.substr(lz), bz = zz.measureText(Ez).width, dz.push(tz)
+              QD = this.justify ? this.justifyLine(DD, QD, tD, "\u200a", iD) : QD, ID = ID.substr(fD), cD = DD.measureText(ID).width, yD.push(QD)
             }
-            bz > 0 && dz.push(Ez)
+            cD > 0 && yD.push(ID)
           }
         }));
-        const Rz = this.lineHeight ? this.lineHeight : this.getTextHeight(zz, uz),
-          Kz = Rz * (dz.length - 1),
-          wz = Kz / 2;
-        let Xz = nz;
-        "top" === this.vAlign ? pz = nz + Mz : "bottom" === this.vAlign ? (pz = Hz - Kz, Xz = Hz) : (Xz = nz + lz / 2, pz -= wz), dz.forEach((uz => {
-          uz = uz.trim(), zz.fillText(uz, Oz, pz), pz += Rz
-        })), this.debug && (zz.lineWidth = 3, zz.strokeStyle = "#00909e", zz.strokeRect(bz, nz, iz, lz), zz.lineWidth = 2, zz.strokeStyle = "#f6d743", zz.beginPath(), zz.moveTo(Oz, nz), zz.lineTo(Oz, Hz), zz.stroke(), zz.strokeStyle = "#ff6363", zz.beginPath(), zz.moveTo(bz, Xz), zz.lineTo(tz, Xz), zz.stroke());
+        const ZD = this.lineHeight ? this.lineHeight : this.getTextHeight(DD, CD),
+          oD = ZD * (yD.length - 1),
+          vD = oD / 2;
+        let ND = pD;
+        "top" === this.vAlign ? BD = pD + bD : "bottom" === this.vAlign ? (BD = wD - oD, ND = wD) : (ND = pD + fD / 2, BD -= vD), yD.forEach((CD => {
+          CD = CD.trim(), DD.fillText(CD, SD, BD), BD += ZD
+        })), this.debug && (DD.lineWidth = 3, DD.strokeStyle = "#00909e", DD.strokeRect(cD, pD, iD, fD), DD.lineWidth = 2, DD.strokeStyle = "#f6d743", DD.beginPath(), DD.moveTo(SD, pD), DD.lineTo(SD, wD), DD.stroke(), DD.strokeStyle = "#ff6363", DD.beginPath(), DD.moveTo(cD, ND), DD.lineTo(QD, ND), DD.stroke());
         return {
-          height: Kz + Rz
+          height: oD + ZD
         }
       },
-      getTextHeight: function(zz, uz) {
-        const bz = zz.textBaseline;
-        zz.textBaseline = "bottom";
+      getTextHeight: function(DD, CD) {
+        const cD = DD.textBaseline;
+        DD.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: Ez
-        } = zz.measureText(uz);
-        return zz.textBaseline = bz, Ez
+          actualBoundingBoxAscent: ID
+        } = DD.measureText(CD);
+        return DD.textBaseline = cD, ID
       },
-      justifyLine: function(zz, uz, bz, Ez, nz) {
-        const iz = uz.trim(),
-          lz = zz.measureText(iz).width,
-          Mz = iz.split(/\s+/).length - 1,
-          tz = Math.floor((nz - lz) / bz);
-        if (Mz <= 0 || tz <= 0) return iz;
-        const Hz = Math.floor(tz / Mz);
-        let Oz = tz - Mz * Hz,
-          pz = [];
-        for (let dz = 0; dz < Hz; dz++) pz.push(Ez);
-        pz = pz.join("");
-        return iz.replace(/\s+/g, (zz => {
-          const uz = Oz > 0 ? pz + Ez : pz;
-          return Oz--, zz + uz
+      justifyLine: function(DD, CD, cD, ID, pD) {
+        const iD = CD.trim(),
+          fD = DD.measureText(iD).width,
+          bD = iD.split(/\s+/).length - 1,
+          QD = Math.floor((pD - fD) / cD);
+        if (bD <= 0 || QD <= 0) return iD;
+        const wD = Math.floor(QD / bD);
+        let SD = QD - bD * wD,
+          BD = [];
+        for (let yD = 0; yD < wD; yD++) BD.push(ID);
+        BD = BD.join("");
+        return iD.replace(/\s+/g, (DD => {
+          const CD = SD > 0 ? BD + ID : BD;
+          return SD--, DD + CD
         }))
       }
     }
   },
-  38040: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Rz,
-      h: () => Zz,
-      k: () => dz,
-      l: () => Oz,
-      n: () => pz
+  38038: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => ZD,
+      e: () => tD,
+      f: () => yD,
+      i: () => SD,
+      k: () => BD
     });
-    var Ez = bz(4035),
-      nz = bz(328);
-    const iz = 1024,
-      lz = 1536,
-      Mz = 2 * Ez.i + 1,
-      tz = new Intl.NumberFormat("en", {
+    var ID = cD(4081),
+      pD = cD(326);
+    const iD = 1024,
+      fD = 1536,
+      bD = 2 * ID.h + 1,
+      QD = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      Hz = 1.5;
+      wD = 1.5;
 
-    function Oz(zz, uz, bz) {
-      if ("string" !== typeof zz) return uz;
+    function SD(DD, CD, cD) {
+      if ("string" !== typeof DD) return CD;
       try {
-        const bz = JSON.parse(zz);
-        return bz && "object" === typeof bz ? bz : uz
-      } catch (Ez) {
-        return void 0 !== bz && console.error(`Couldn't parse ${bz}`, Ez), uz
+        const cD = JSON.parse(DD);
+        return cD && "object" === typeof cD ? cD : CD
+      } catch (ID) {
+        return void 0 !== cD && console.error(`Couldn't parse ${cD}`, ID), CD
       }
     }
 
-    function pz(zz) {
-      return Oz(zz, null, "a leaderboard's rows")
+    function BD(DD) {
+      return SD(DD, null, "a leaderboard's rows")
     }
 
-    function dz(zz, uz) {
-      var bz, Ez;
-      return null !== uz && void 0 !== uz ? uz : {
-        status: null !== (bz = zz.status) && void 0 !== bz ? bz : "loading",
-        entries: null !== (Ez = zz.entries) && void 0 !== Ez ? Ez : []
+    function yD(DD, CD) {
+      var cD, ID;
+      return null !== CD && void 0 !== CD ? CD : {
+        status: null !== (cD = DD.status) && void 0 !== cD ? cD : "loading",
+        entries: null !== (ID = DD.entries) && void 0 !== ID ? ID : []
       }
     }
 
-    function Fz(zz, uz) {
-      return "number" === typeof zz && Number.isFinite(zz) && zz > 0 ? zz : uz
+    function MD(DD, CD) {
+      return "number" === typeof DD && Number.isFinite(DD) && DD > 0 ? DD : CD
     }
 
-    function Zz(zz, uz) {
-      const bz = Fz(zz.size, 1);
-      let Ez = Fz(zz.width, Fz(2.5 * bz, 2.5)),
-        nz = Fz(zz.height, Fz(3.75 * bz, 3.75));
-      Number.isFinite(iz * nz / Ez) && Number.isFinite(lz * Ez / nz) || (Ez = 2.5, nz = 3.75);
-      const Mz = nz / Ez,
-        tz = Math.max(1, Math.min(iz, uz / Mz));
+    function tD(DD, CD) {
+      const cD = MD(DD.size, 1);
+      let ID = MD(DD.width, MD(2.5 * cD, 2.5)),
+        pD = MD(DD.height, MD(3.75 * cD, 3.75));
+      Number.isFinite(iD * pD / ID) && Number.isFinite(fD * ID / pD) || (ID = 2.5, pD = 3.75);
+      const bD = pD / ID,
+        QD = Math.max(1, Math.min(iD, CD / bD));
       return {
-        width: Ez,
-        height: nz,
-        layoutWidth: Math.max(iz, lz / Mz),
-        layoutHeight: Math.max(lz, iz * Mz),
-        pixelWidth: Math.round(tz),
-        pixelHeight: Math.round(Math.max(1, Math.min(uz, tz * Mz)))
+        width: ID,
+        height: pD,
+        layoutWidth: Math.max(iD, fD / bD),
+        layoutHeight: Math.max(fD, iD * bD),
+        pixelWidth: Math.round(QD),
+        pixelHeight: Math.round(Math.max(1, Math.min(CD, QD * bD)))
       }
     }
 
-    function Rz(zz, uz, bz, lz, Oz, pz) {
-      zz.setTransform(1, 0, 0, 1, 0, 0), zz.fillStyle = nz.N.defaultNameTagBackground, zz.fillRect(0, 0, uz, bz), zz.scale(uz / lz.layoutWidth, bz / lz.layoutHeight), zz.translate((lz.layoutWidth - iz) / 2, 0),
-        function(zz, uz, bz, iz) {
-          var lz, Oz, pz, dz;
+    function ZD(DD, CD, cD, fD, SD, BD) {
+      DD.setTransform(1, 0, 0, 1, 0, 0), DD.fillStyle = pD.J.defaultNameTagBackground, DD.fillRect(0, 0, CD, cD), DD.scale(CD / fD.layoutWidth, cD / fD.layoutHeight), DD.translate((fD.layoutWidth - iD) / 2, 0),
+        function(DD, CD, cD, iD) {
+          var fD, SD, BD, yD;
           const {
-            top: Fz,
-            around: Zz,
-            showPlayerText: Rz,
-            localPlayerDbId: Xz
-          } = bz, {
-            whiteUiText: fz,
-            grayUiText: sz,
-            yellowUiText: rz
-          } = nz.N;
-          zz.textBaseline = "middle";
-          const oz = function(uz, bz, Ez, nz, iz, lz) {
-              let Mz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              zz.font = `bold ${nz}px 'Jetbrains Mono', monospace`, zz.fillStyle = iz, zz.textAlign = Mz;
-              let tz = uz.replace(/[\r\n\t]/g, " ");
-              if (zz.measureText(tz).width > lz) {
-                for (; tz.length > 0 && zz.measureText(`${tz}\u2026`).width > lz;) tz = tz.slice(0, -1);
-                tz += "\u2026"
+            top: MD,
+            around: tD,
+            showPlayerText: ZD,
+            localPlayerDbId: ND
+          } = cD, {
+            whiteUiText: gD,
+            grayUiText: XD,
+            yellowUiText: mD
+          } = pD.J;
+          DD.textBaseline = "middle";
+          const nD = function(CD, cD, ID, pD, iD, fD) {
+              let bD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              DD.font = `bold ${pD}px 'Jetbrains Mono', monospace`, DD.fillStyle = iD, DD.textAlign = bD;
+              let QD = CD.replace(/[\r\n\t]/g, " ");
+              if (DD.measureText(QD).width > fD) {
+                for (; QD.length > 0 && DD.measureText(`${QD}\u2026`).width > fD;) QD = QD.slice(0, -1);
+                QD += "\u2026"
               }
-              zz.fillText(tz, bz, Ez)
+              DD.fillText(QD, cD, ID)
             },
-            Nz = uz => {
-              zz.fillStyle = fz, zz.globalAlpha = .15, zz.fillRect(24, uz, 976, 2), zz.globalAlpha = 1
+            OD = CD => {
+              DD.fillStyle = gD, DD.globalAlpha = .15, DD.fillRect(24, CD, 976, 2), DD.globalAlpha = 1
             },
-            vz = null === Xz ? null : (0, nz.oc)(Xz),
-            xz = zz => null !== vz && zz.playerHash === vz,
-            Jz = Kz(Fz.entries, Ez.j),
-            Az = "ready" === Fz.status && Jz.length > 0,
-            Tz = null === Zz ? [] : Kz(Zz.entries, Mz),
-            Lz = Jz.some(xz),
-            Pz = null === Zz ? null : function(zz) {
-              const uz = zz;
-              if (!uz || !Number.isFinite(uz.rank) || !Number.isFinite(uz.tied) || !Number.isFinite(uz.total)) return null;
-              return uz
-            }(Zz.standing),
-            Gz = Tz.find(xz),
-            az = Jz.find(xz),
-            Vz = null === Pz || void 0 === Gz ? null : {
-              value: Gz.value,
-              rank: Pz.rank
+            PD = null === ND ? null : (0, pD.rc)(ND),
+            HD = DD => null !== PD && DD.playerHash === PD,
+            UD = oD(MD.entries, ID.l),
+            xD = "ready" === MD.status && UD.length > 0,
+            qD = null === tD ? [] : oD(tD.entries, bD),
+            JD = UD.some(HD),
+            KD = null === tD ? null : function(DD) {
+              const CD = DD;
+              if (!CD || !Number.isFinite(CD.rank) || !Number.isFinite(CD.tied) || !Number.isFinite(CD.total)) return null;
+              return CD
+            }(tD.standing),
+            aD = qD.find(HD),
+            VD = UD.find(HD),
+            zD = null === KD || void 0 === aD ? null : {
+              value: aD.value,
+              rank: KD.rank
             },
-            mz = wz(Jz, void 0 === az || az.value === (null === Vz || void 0 === Vz ? void 0 : Vz.value) ? Vz : null),
-            qz = wz(Tz, Vz),
-            hz = (zz, uz) => {
-              const bz = zz.findIndex(xz);
-              return bz >= 0 ? uz[bz] : null
+            jD = vD(UD, void 0 === VD || VD.value === (null === zD || void 0 === zD ? void 0 : zD.value) ? zD : null),
+            lD = vD(qD, zD),
+            LD = (DD, CD) => {
+              const cD = DD.findIndex(HD);
+              return cD >= 0 ? CD[cD] : null
             },
-            Uz = null !== (lz = null !== (Oz = null === Pz || void 0 === Pz ? void 0 : Pz.rank) && void 0 !== Oz ? Oz : hz(Tz, qz)) && void 0 !== lz ? lz : hz(Jz, mz);
-          zz.font = "bold 34px 'Jetbrains Mono', monospace";
-          const cz = [...Az ? mz : [], ...Lz ? [] : qz],
-            gz = Math.min(280, Math.max(0, ...cz.map((uz => zz.measureText(tz.format(uz)).width)))),
-            Sz = gz <= 80,
-            yz = Sz ? 80 : 32 + gz,
-            Dz = Sz ? 148 : yz + 28,
-            Qz = 660 - Dz;
-          oz(`TOP ${Ez.j}  /  ALL TIME`, 24, 52, 28, sz, 976), oz(Rz ? String(null !== (pz = uz.title) && void 0 !== pz ? pz : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, fz, 976), oz("RANK", 32, 174, 28, sz, Dz - 40), oz("PLAYER", Dz, 174, 28, sz, Qz), oz(Rz ? String(null !== (dz = uz.scoreLabel) && void 0 !== dz ? dz : "Score").slice(0, 24) : "Score", 992, 174, 28, sz, 304, "right"), Nz(202);
-          const Wz = (iz - 232) / (Ez.j + Hz + Mz),
-            ez = 208 + Ez.j * Wz,
-            jz = ez + Hz * Wz,
-            Iz = (uz, bz, Ez, nz) => {
-              const iz = xz(uz);
-              zz.fillStyle = iz ? rz : fz, zz.globalAlpha = iz ? .15 : nz ? .035 : 0, zz.fillRect(24, Ez - Wz / 2 + 1, 976, Wz - 2), zz.globalAlpha = 1;
-              const lz = iz ? rz : fz;
-              oz(tz.format(bz), yz, Ez, 34, lz, Sz ? 80 : gz, Sz ? "center" : "right"), oz(Rz ? String(uz.name).slice(0, 64) : "Player", Dz, Ez, 34, lz, Qz);
-              const Mz = tz.format(uz.value);
-              oz(zz.measureText(Mz).width > 304 ? uz.value.toExponential(6) : Mz, 992, Ez, 34, lz, 304, "right")
+            TD = null !== (fD = null !== (SD = null === KD || void 0 === KD ? void 0 : KD.rank) && void 0 !== SD ? SD : LD(qD, lD)) && void 0 !== fD ? fD : LD(UD, jD);
+          DD.font = "bold 34px 'Jetbrains Mono', monospace";
+          const GD = [...xD ? jD : [], ...JD ? [] : lD],
+            RD = Math.min(280, Math.max(0, ...GD.map((CD => DD.measureText(QD.format(CD)).width)))),
+            kD = RD <= 80,
+            dD = kD ? 80 : 32 + RD,
+            YD = kD ? 148 : dD + 28,
+            WD = 660 - YD;
+          nD(`TOP ${ID.l}  /  ALL TIME`, 24, 52, 28, XD, 976), nD(ZD ? String(null !== (BD = CD.title) && void 0 !== BD ? BD : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, gD, 976), nD("RANK", 32, 174, 28, XD, YD - 40), nD("PLAYER", YD, 174, 28, XD, WD), nD(ZD ? String(null !== (yD = CD.scoreLabel) && void 0 !== yD ? yD : "Score").slice(0, 24) : "Score", 992, 174, 28, XD, 304, "right"), OD(202);
+          const sD = (iD - 232) / (ID.l + wD + bD),
+            ED = 208 + ID.l * sD,
+            eD = ED + wD * sD,
+            uD = (CD, cD, ID, pD) => {
+              const iD = HD(CD);
+              DD.fillStyle = iD ? mD : gD, DD.globalAlpha = iD ? .15 : pD ? .035 : 0, DD.fillRect(24, ID - sD / 2 + 1, 976, sD - 2), DD.globalAlpha = 1;
+              const fD = iD ? mD : gD;
+              nD(QD.format(cD), dD, ID, 34, fD, kD ? 80 : RD, kD ? "center" : "right"), nD(ZD ? String(CD.name).slice(0, 64) : "Player", YD, ID, 34, fD, WD);
+              const bD = QD.format(CD.value);
+              nD(DD.measureText(bD).width > 304 ? CD.value.toExponential(6) : bD, 992, ID, 34, fD, 304, "right")
             };
-          if (Az)
-            for (const [Ez, nz] of Jz.entries()) Iz(nz, mz[Ez], 208 + (Ez + .5) * Wz, Ez % 2 === 0);
+          if (xD)
+            for (const [ID, pD] of UD.entries()) uD(pD, jD[ID], 208 + (ID + .5) * sD, ID % 2 === 0);
           else {
-            const zz = "error" === Fz.status,
-              uz = zz ? "Couldn't load leaderboard" : "ready" === Fz.status ? "No scores yet" : "Loading leaderboard\u2026",
-              bz = zz ? "Trying again shortly" : "ready" === Fz.status ? "Be the first on the board!" : "Fetching the top players",
-              Ez = (208 + ez) / 2;
-            oz(uz, 512, Ez - 28, 40, zz ? nz.N.redUiText : fz, 960, "center"), oz(bz, 512, Ez + 27, 30, sz, 960, "center")
+            const DD = "error" === MD.status,
+              CD = DD ? "Couldn't load leaderboard" : "ready" === MD.status ? "No scores yet" : "Loading leaderboard\u2026",
+              cD = DD ? "Trying again shortly" : "ready" === MD.status ? "Be the first on the board!" : "Fetching the top players",
+              ID = (208 + ED) / 2;
+            nD(CD, 512, ID - 28, 40, DD ? pD.J.redUiText : gD, 960, "center"), nD(cD, 512, ID + 27, 30, XD, 960, "center")
           }
-          const Bz = ez + Hz * Wz / 2;
-          if (null === Uz) Nz(Bz);
+          const hD = ED + wD * sD / 2;
+          if (null === TD) OD(hD);
           else {
-            const uz = null === Pz ? 0 : Pz.tied - 1,
-              bz = `YOUR RANK #${tz.format(Uz)}${null===Pz?"":` of ${tz.format(Pz.total)}`}`;
-            zz.font = "bold 36px 'Jetbrains Mono', monospace";
-            const Ez = Math.max(20, Math.min(36, Math.floor(34560 / zz.measureText(bz).width)));
-            oz(bz, 512, Bz - (uz > 0 ? 15 : 0), Ez, rz, 960, "center"), uz > 0 && oz(`Tied with ${tz.format(uz)} other${1===uz?"":"s"}`, 512, Bz + 24, 24, sz, 960, "center")
+            const CD = null === KD ? 0 : KD.tied - 1,
+              cD = `YOUR RANK #${QD.format(TD)}${null===KD?"":` of ${QD.format(KD.total)}`}`;
+            DD.font = "bold 36px 'Jetbrains Mono', monospace";
+            const ID = Math.max(20, Math.min(36, Math.floor(34560 / DD.measureText(cD).width)));
+            nD(cD, 512, hD - (CD > 0 ? 15 : 0), ID, mD, 960, "center"), CD > 0 && nD(`Tied with ${QD.format(CD)} other${1===CD?"":"s"}`, 512, hD + 24, 24, XD, 960, "center")
           }
-          if (null === Zz) return;
-          const Cz = jz + Mz * Wz / 2;
-          if (Lz) oz(`You're in the top ${Ez.j}!`, 512, Cz, 40, rz, 960, "center");
-          else if (0 === Tz.length) oz("You're not on this board yet", 512, Cz, 34, sz, 960, "center");
+          if (null === tD) return;
+          const rD = eD + bD * sD / 2;
+          if (JD) nD(`You're in the top ${ID.l}!`, 512, rD, 40, mD, 960, "center");
+          else if (0 === qD.length) nD("You're not on this board yet", 512, rD, 34, XD, 960, "center");
           else
-            for (const [Ez, nz] of Tz.entries()) Iz(nz, qz[Ez], jz + (Ez + .5) * Wz, Ez % 2 === 0)
-        }(zz, Oz, pz, lz.layoutHeight)
+            for (const [ID, pD] of qD.entries()) uD(pD, lD[ID], eD + (ID + .5) * sD, ID % 2 === 0)
+        }(DD, SD, BD, fD.layoutHeight)
     }
 
-    function Kz(zz, uz) {
-      return Array.isArray(zz) ? zz.slice(0, uz).filter((zz => zz && Number.isFinite(zz.rank) && Number.isFinite(zz.value))) : []
+    function oD(DD, CD) {
+      return Array.isArray(DD) ? DD.slice(0, CD).filter((DD => DD && Number.isFinite(DD.rank) && Number.isFinite(DD.value))) : []
     }
 
-    function wz(zz, uz) {
-      const bz = [];
-      let Ez = !1;
-      return zz.forEach(((nz, iz) => {
-        if (null !== uz && nz.value === uz.value) return void bz.push(uz.rank);
-        const lz = iz > 0 && nz.value === zz[iz - 1].value;
-        lz || (Ez = 0 === iz && 1 !== nz.rank), bz.push(lz && !Ez ? bz[iz - 1] : nz.rank)
-      })), bz
+    function vD(DD, CD) {
+      const cD = [];
+      let ID = !1;
+      return DD.forEach(((pD, iD) => {
+        if (null !== CD && pD.value === CD.value) return void cD.push(CD.rank);
+        const fD = iD > 0 && pD.value === DD[iD - 1].value;
+        fD || (ID = 0 === iD && 1 !== pD.rank), cD.push(fD && !ID ? cD[iD - 1] : pD.rank)
+      })), cD
     }
   },
-  38239: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => nz,
-      e: () => iz
+  38233: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => pD,
+      e: () => iD
     });
-    const Ez = 32;
+    const ID = 32;
 
-    function nz(zz) {
-      return Array.from(zz).length
+    function pD(DD) {
+      return Array.from(DD).length
     }
 
-    function iz(zz) {
-      const uz = [""];
-      let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        nz = "";
-      const iz = () => {
-        uz.push(""), bz = 0, nz = ""
+    function iD(DD) {
+      const CD = [""];
+      let cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        pD = "";
+      const iD = () => {
+        CD.push(""), cD = 0, pD = ""
       };
-      for (const lz of zz.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(lz)) iz();
-        else if (/^\s+$/.test(lz)) nz += lz;
-      else if (lz.length > 0) {
-        const zz = Array.from(lz);
-        bz > 0 && bz + nz.length + zz.length > Ez && iz(), uz[uz.length - 1] += nz, bz += nz.length, nz = "";
-        for (const nz of zz) bz >= Ez && iz(), uz[uz.length - 1] += nz, bz++
+      for (const fD of DD.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(fD)) iD();
+        else if (/^\s+$/.test(fD)) pD += fD;
+      else if (fD.length > 0) {
+        const DD = Array.from(fD);
+        cD > 0 && cD + pD.length + DD.length > ID && iD(), CD[CD.length - 1] += pD, cD += pD.length, pD = "";
+        for (const pD of DD) cD >= ID && iD(), CD[CD.length - 1] += pD, cD++
       }
-      return uz[uz.length - 1] += nz, uz
+      return CD[CD.length - 1] += pD, CD
     }
   },
-  42555: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      WasmPreviewHost: () => ru,
-      pageBuiltInAnimationPack: () => dz,
-      pagePreviews: () => zu,
-      previewModule: () => Wz
+  42436: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      WasmPreviewHost: () => mC,
+      pageBuiltInAnimationPack: () => yD,
+      pagePreviews: () => DC,
+      previewModule: () => sD
     });
-    var Ez = bz(3475),
-      nz = bz(597);
-    const iz = "[bloxd-wasm-client]";
+    var ID = cD(3529),
+      pD = cD(630);
+    const iD = "[bloxd-wasm-client]";
 
-    function lz(zz) {
-      const uz = {
+    function fD(DD) {
+      const CD = {
         wasm: "unknown",
-        client: String(nz.c)
+        client: String(pD.c)
       };
       try {
-        var bz;
-        uz.wasm = null !== (bz = null === zz || void 0 === zz ? void 0 : zz.Wp()) && void 0 !== bz ? bz : uz.wasm
+        var cD;
+        CD.wasm = null !== (cD = null === DD || void 0 === DD ? void 0 : DD.zB()) && void 0 !== cD ? cD : CD.wasm
       } catch {}
-      return uz
+      return CD
     }
-    async function Mz(zz) {
-      if (zz.length < 2 || 31 !== zz[0] || 139 !== zz[1]) return zz;
+    async function bD(DD) {
+      if (DD.length < 2 || 31 !== DD[0] || 139 !== DD[1]) return DD;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: uz
-        } = await bz.e(218).then((() => bz(36402)));
-        return uz(zz)
+          ungzip: CD
+        } = await cD.e(218).then((() => cD(36343)));
+        return CD(DD)
       }
-      const uz = new Blob([zz]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(uz).arrayBuffer())
+      const CD = new Blob([DD]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(CD).arrayBuffer())
     }
 
-    function tz(zz, uz, Ez, nz) {
-      Promise.resolve().then((() => bz(40140))).then((bz => {
+    function QD(DD, CD, ID, pD) {
+      Promise.resolve().then((() => cD(40032))).then((cD => {
         let {
-          reportDataLoadFailure: iz
-        } = bz;
-        iz(zz, uz, Ez, nz)
-      }), (uz => {
-        console.warn(`${iz} ${zz} didn't load, and the report couldn't be sent`, Ez.error, uz)
+          reportDataLoadFailure: iD
+        } = cD;
+        iD(DD, CD, ID, pD)
+      }), (CD => {
+        console.warn(`${iD} ${DD} didn't load, and the report couldn't be sent`, ID.error, CD)
       }))
     }
-    const Hz = [3e4, 12e4, 3e5];
-    class Oz {
-      constructor(zz) {
-        this.deps = zz, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((zz => {
-          this.resolveSet = zz
+    const wD = [3e4, 12e4, 3e5];
+    class SD {
+      constructor(DD) {
+        this.deps = DD, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((DD => {
+          this.resolveSet = DD
         }))
       }
-      provide(zz) {
-        return this.loading ??= this.load(zz), this.loading
+      provide(DD) {
+        return this.loading ??= this.load(DD), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(zz) {
-        const uz = lz(zz),
-          bz = await async function(zz, uz) {
-            let bz;
+      async load(DD) {
+        const CD = fD(DD),
+          cD = await async function(DD, CD) {
+            let cD;
             try {
-              bz = await zz()
-            } catch (Ez) {
+              cD = await DD()
+            } catch (ID) {
               return {
                 stage: "fetch",
-                error: Ez
+                error: ID
               }
             }
             try {
-              return uz(bz) ? null : {
+              return CD(cD) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (Ez) {
+            } catch (ID) {
               return {
                 stage: "decode",
-                error: Ez
+                error: ID
               }
             }
-          }((() => this.deps.fetch()), (uz => {
-            const bz = zz.Tnz(uz);
-            return bz && this.resolveSet(uz), bz
+          }((() => this.deps.fetch()), (CD => {
+            const cD = DD.kpD(CD);
+            return cD && this.resolveSet(CD), cD
           }));
-        if (null !== bz) {
-          if ("fetch" === bz.stage) {
+        if (null !== cD) {
+          if ("fetch" === cD.stage) {
             this.loading = null;
-            const uz = Hz[this.retries++];
-            void 0 !== uz && this.deps.later((() => {
-              this.provide(zz)
-            }), uz)
+            const CD = wD[this.retries++];
+            void 0 !== CD && this.deps.later((() => {
+              this.provide(DD)
+            }), CD)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(bz, uz))
+          this.reported || (this.reported = !0, this.deps.onFailed(cD, CD))
         }
       }
     }
-    let pz = null;
+    let BD = null;
 
-    function dz() {
-      return pz ??= new Oz({
-        fetch: async () => Mz(await (0, Ez.z)(Fz(), {
+    function yD() {
+      return BD ??= new SD({
+        fetch: async () => bD(await (0, ID.I)(MD(), {
           priority: "low"
         })),
-        onFailed: (zz, uz) => {
-          tz("builtInAnimations", Fz(), zz, uz)
+        onFailed: (DD, CD) => {
+          QD("builtInAnimations", MD(), DD, CD)
         },
-        later: (zz, uz) => {
-          setTimeout(zz, uz)
+        later: (DD, CD) => {
+          setTimeout(DD, CD)
         }
-      }), pz
+      }), BD
     }
 
-    function Fz() {
-      return bz(42562)
+    function MD() {
+      return cD(42443)
     }
-    var Zz = bz(3468),
-      Rz = bz(35811),
-      Kz = bz(39940),
-      wz = bz(1195),
-      Xz = bz(311),
-      fz = bz(39965),
-      sz = bz(40209),
-      rz = (bz(39987), bz(40163)),
-      oz = bz(40165),
-      Nz = bz(40169),
-      vz = bz(39976),
-      xz = bz(40217),
-      Jz = bz(40223),
-      Az = bz(40002),
-      Tz = bz(40093),
-      Lz = bz(40099),
-      Pz = bz(40213),
-      Gz = bz(41816),
-      az = bz(39979);
-    const Vz = "[bloxd-previews]",
-      mz = 4e5,
-      qz = 0,
-      hz = 1,
-      Uz = 2,
-      cz = 1,
-      gz = 2,
-      Sz = 3,
-      yz = 0,
-      Dz = 1,
-      Qz = 2;
+    var tD = cD(3525),
+      ZD = cD(35734),
+      oD = cD(39834),
+      vD = cD(1199),
+      ND = cD(309),
+      gD = cD(39852),
+      XD = cD(40104),
+      mD = (cD(39875), cD(40056)),
+      nD = cD(40065),
+      OD = cD(40071),
+      PD = cD(39866),
+      HD = cD(40114),
+      UD = cD(40117),
+      xD = cD(39890),
+      qD = cD(39980),
+      JD = cD(39987),
+      KD = cD(40112),
+      aD = cD(41737),
+      VD = cD(39872);
+    const zD = "[bloxd-previews]",
+      jD = 4e5,
+      lD = 0,
+      LD = 1,
+      TD = 2,
+      GD = 1,
+      RD = 2,
+      kD = 3,
+      dD = 0,
+      YD = 1,
+      WD = 2;
 
-    function Wz(zz) {
-      const uz = zz,
-        bz = (0, fz.E)(zz),
-        Ez = (0, fz.i)(zz);
-      return null !== bz && null !== Ez && "function" === typeof uz.xnz && "function" === typeof uz.Jnz && "function" === typeof uz.Anz ? uz : null
-    }
-
-    function ez(zz, uz, bz) {
-      let [Ez, nz] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [zz, uz], iz = Math.min(Number.isFinite(bz) && bz > 0 ? bz : 1, 2);
-      const lz = Math.max(0, Ez, zz) * Math.max(0, nz, uz) * iz * iz;
-      return lz > mz && (iz *= Math.sqrt(mz / lz)), [Math.max(1, Math.floor(Math.max(0, zz) * iz)), Math.max(1, Math.floor(Math.max(0, uz) * iz))]
+    function sD(DD) {
+      const CD = DD,
+        cD = (0, gD.H)(DD),
+        ID = (0, gD.k)(DD);
+      return null !== cD && null !== ID && "function" === typeof CD.TpD && "function" === typeof CD.GpD && "function" === typeof CD.RpD ? CD : null
     }
 
-    function jz() {
-      return bz(42571)
+    function ED(DD, CD, cD) {
+      let [ID, pD] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [DD, CD], iD = Math.min(Number.isFinite(cD) && cD > 0 ? cD : 1, 2);
+      const fD = Math.max(0, ID, DD) * Math.max(0, pD, CD) * iD * iD;
+      return fD > jD && (iD *= Math.sqrt(jD / fD)), [Math.max(1, Math.floor(Math.max(0, DD) * iD)), Math.max(1, Math.floor(Math.max(0, CD) * iD))]
     }
-    async function Iz(zz, uz) {
-      "lost" === zz && (0, Az.y)();
-      const Ez = await (0, Az.I)();
-      if (null === Ez || (0, fz.m)(Ez) || (0, Az.e)()) return;
-      const nz = "webgpu" === Ez.backend;
-      if (!nz && "lost" !== zz) return;
-      const iz = nz ? (0, fz.N)(zz) : null;
-      if (null !== iz) {
-        const bz = `WebGPU failed at home (${zz}${void 0===uz?"":`: ${uz instanceof Error?uz.message:(0,az.e)(uz)}`}) and ${iz}`;
-        return console.warn(`${Vz} ${bz}: the previews stop`, null !== uz && void 0 !== uz ? uz : ""), void(0, Az.v)(bz)
-      }(0, Az.s)();
+
+    function eD() {
+      return cD(42452)
+    }
+    async function uD(DD, CD) {
+      "lost" === DD && (0, xD.y)();
+      const ID = await (0, xD.N)();
+      if (null === ID || (0, gD.o)(ID) || (0, xD.e)()) return;
+      const pD = "webgpu" === ID.backend;
+      if (!pD && "lost" !== DD) return;
+      const iD = pD ? (0, gD.T)(DD) : null;
+      if (null !== iD) {
+        const cD = `WebGPU failed at home (${DD}${void 0===CD?"":`: ${CD instanceof Error?CD.message:(0,VD.h)(CD)}`}) and ${iD}`;
+        return console.warn(`${zD} ${cD}: the previews stop`, null !== CD && void 0 !== CD ? CD : ""), void(0, xD.s)(cD)
+      }(0, xD.p)();
       try {
-        await async function(zz, uz, Ez) {
-          var nz;
+        await async function(DD, CD, ID) {
+          var pD;
           let {
-            backend: iz,
-            adapter: Mz
-          } = zz;
-          const tz = (0, Zz.R)(),
+            backend: iD,
+            adapter: bD
+          } = DD;
+          const QD = (0, tD.F)(),
             {
-              flushCrashReports: Hz,
-              reportRenderReload: Oz
-            } = await Promise.resolve().then((() => bz(40140)));
-          Oz(iz, "start_failed" === uz ? 0 : 1, lz(tz ? (0, Zz.G)() : null), {
-            cause: uz,
-            error: "lost" === uz && null !== (nz = (0, fz.S)(tz ? (0, fz.E)((0, Zz.G)()) : null)) && void 0 !== nz ? nz : Ez,
+              flushCrashReports: wD,
+              reportRenderReload: SD
+            } = await Promise.resolve().then((() => cD(40032)));
+          SD(iD, "start_failed" === CD ? 0 : 1, fD(QD ? (0, tD.x)() : null), {
+            cause: CD,
+            error: "lost" === CD && null !== (pD = (0, gD.Z)(QD ? (0, gD.H)((0, tD.x)()) : null)) && void 0 !== pD ? pD : ID,
             context: {
-              adapter: Mz,
-              boundAtMs: "start_failed" === uz ? null : (0, Az.F)(),
-              indirectHangs: (0, Az.z)()
+              adapter: bD,
+              boundAtMs: "start_failed" === CD ? null : (0, xD.M)(),
+              indirectHangs: (0, xD.B)()
             }
-          }), await Hz(Tz.c)
-        }(Ez, zz, uz)
-      } catch (Mz) {
-        console.warn(`${Vz} ${Ez.backend} failed at home (${zz}), and its report couldn't be sent`, Mz)
-      }(0, Tz.j)()
+          }), await wD(qD.c)
+        }(ID, DD, CD)
+      } catch (bD) {
+        console.warn(`${zD} ${ID.backend} failed at home (${DD}), and its report couldn't be sent`, bD)
+      }(0, qD.j)()
     }
-    async function Bz() {
-      if (!(0, Zz.R)()) {
-        const zz = await (0, Az.I)();
-        if (null === zz || (0, fz.m)(zz)) return null;
-        if (await (0, Rz.g)(await zz.load(), Kz.h), !(0, Zz.R)()) return null
+    async function hD() {
+      if (!(0, tD.F)()) {
+        const DD = await (0, xD.N)();
+        if (null === DD || (0, gD.o)(DD)) return null;
+        if (await (0, ZD.i)(await DD.load(), oD.e), !(0, tD.F)()) return null
       }
-      return Wz((0, Zz.G)())
+      return sD((0, tD.x)())
     }
-    class Cz {
-      constructor(zz, uz, bz, Ez, nz, iz) {
-        this.page = zz, this.host = uz, this.id = bz, this.canvas = Ez, this.size = nz, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const lz = {
-            ...iz.images,
-            glbUrl: zz => {
-              var uz;
-              return null !== (uz = this.models.drawnUrl(zz)) && void 0 !== uz ? uz : iz.images.glbUrl(zz)
+    class rD {
+      constructor(DD, CD, cD, ID, pD, iD) {
+        this.page = DD, this.host = CD, this.id = cD, this.canvas = ID, this.size = pD, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const fD = {
+            ...iD.images,
+            glbUrl: DD => {
+              var CD;
+              return null !== (CD = this.models.drawnUrl(DD)) && void 0 !== CD ? CD : iD.images.glbUrl(DD)
             }
           },
-          Mz = uz => zz.modelFile(uz);
-        this.images = new sz.f(lz, (zz => {
-          console.warn(`${Vz} image ${zz.key.kind}:${zz.key.index}:${zz.key.word} failed`, zz.error)
+          bD = CD => DD.modelFile(CD);
+        this.images = new XD.e(fD, (DD => {
+          console.warn(`${zD} image ${DD.key.kind}:${DD.key.index}:${DD.key.word} failed`, DD.error)
         }), {
-          fetchFile: Mz,
-          fetchImage: uz => zz.imageFile(uz)
-        }), zz.startModels(), this.models = new rz.l(iz.files, ((uz, bz) => zz.buildModel(uz, bz)), (zz => {
-          console.warn(`${Vz} model file ${zz.file} (${zz.url}) failed`, zz.error)
+          fetchFile: bD,
+          fetchImage: CD => DD.imageFile(CD)
+        }), DD.startModels(), this.models = new mD.i(iD.files, ((CD, cD) => DD.buildModel(CD, cD)), (DD => {
+          console.warn(`${zD} model file ${DD.file} (${DD.url}) failed`, DD.error)
         }), {
-          fetchFile: Mz,
-          onWritten: (zz, uz) => {
-            this.images.glbWritten(zz, uz)
+          fetchFile: bD,
+          onWritten: (DD, CD) => {
+            this.images.glbWritten(DD, CD)
           },
-          onTaken: (zz, uz) => {
-            this.images.glbTaken(zz, uz)
+          onTaken: (DD, CD) => {
+            this.images.glbTaken(DD, CD)
           }
-        }), this.write = (zz, uz, bz) => {
+        }), this.write = (DD, CD, cD) => {
           if (this.closed) return !0;
-          if (zz === rz.e) {
-            const zz = new DataView(bz.buffer, bz.byteOffset, Nz.b),
-              Ez = zz.getUint32(0, !0),
-              nz = zz.getUint32(Nz.c, !0),
-              iz = this.page.hostCall(Qz, (() => this.host.Viz(this.id, Ez, uz, bz.subarray(Nz.b))));
-            return this.outcomes.push([nz, iz]), !0
+          if (DD === mD.d) {
+            const DD = new DataView(cD.buffer, cD.byteOffset, OD.e),
+              ID = DD.getUint32(0, !0),
+              pD = DD.getUint32(OD.i, !0),
+              iD = this.page.hostCall(WD, (() => this.host.EiD(this.id, ID, CD, cD.subarray(OD.e))));
+            return this.outcomes.push([pD, iD]), !0
           }
-          return zz === sz.c && (this.page.hostCall(void 0, (() => {
-            this.host.qiz(this.id, bz)
+          return DD === XD.c && (this.page.hostCall(void 0, (() => {
+            this.host.uiD(this.id, cD)
           })), !0)
         }
       }
@@ -615,74 +615,74 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(zz, uz, bz) {
+      resize(DD, CD, cD) {
         if (this.closed) return;
-        const [Ez, nz] = ez(zz, uz, this.page.dpr(), bz);
-        Ez === this.size[0] && nz === this.size[1] || (this.size = [Ez, nz], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, Ez, nz)
+        const [ID, pD] = ED(DD, CD, this.page.dpr(), cD);
+        ID === this.size[0] && pD === this.size[1] || (this.size = [ID, pD], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, ID, pD)
         })))
       }
-      setMob(zz, uz, bz, Ez) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Diz(this.id, zz, uz, bz, Ez))))
+      setMob(DD, CD, cD, ID) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.DfD(this.id, DD, CD, cD, ID))))
       }
-      setPet(zz, uz, bz, Ez) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Wiz(this.id, zz, uz, bz, Ez))))
+      setPet(DD, CD, cD, ID) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.cfD(this.id, DD, CD, cD, ID))))
       }
-      setPlayer(zz, uz, bz) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.giz(this.id, zz, uz, bz))))
+      setPlayer(DD, CD, cD) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.riD(this.id, DD, CD, cD))))
       }
-      setFigure(zz, uz, bz, Ez) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Siz(this.id, zz, uz, bz, Ez))))
+      setFigure(DD, CD, cD, ID) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.AiD(this.id, DD, CD, cD, ID))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const zz = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === zz || zz.length < 3 ? null : {
-          alpha: zz[0],
-          beta: zz[1],
-          radius: zz[2]
+        const DD = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === DD || DD.length < 3 ? null : {
+          alpha: DD[0],
+          beta: DD[1],
+          radius: DD[2]
         }
       }
-      setOrbit(zz) {
+      setOrbit(DD) {
         let {
-          alpha: uz,
-          beta: bz,
-          radius: Ez
-        } = zz;
+          alpha: CD,
+          beta: cD,
+          radius: ID
+        } = DD;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.Qiz(this.id, uz, bz, Ez)
+          this.host.CfD(this.id, CD, cD, ID)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((zz => {
-          this.settled.push(zz)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((DD => {
+          this.settled.push(DD)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, xz.j)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, HD.h)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [zz, uz] of this.outcomes) {
-          const bz = uz === yz ? [] : [uz === Dz ? zz : (zz | rz.i) >>> 0];
-          this.models.taken(zz, bz)
+        for (const [DD, CD] of this.outcomes) {
+          const cD = CD === dD ? [] : [CD === YD ? DD : (DD | mD.g) >>> 0];
+          this.models.taken(DD, cD)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(zz) {
-        let uz = !1;
-        if (zz) {
-          const zz = this.host.Biz(this.id);
-          for (const uz of zz) this.models.request(uz);
-          const bz = this.host.Iiz(this.id);
-          bz.length > 0 && this.images.onEvent(bz), uz = zz.length > 0 || bz.length > 0
+      collect(DD) {
+        let CD = !1;
+        if (DD) {
+          const DD = this.host.ifD(this.id);
+          for (const CD of DD) this.models.request(CD);
+          const cD = this.host.pfD(this.id);
+          cD.length > 0 && this.images.onEvent(cD), CD = DD.length > 0 || cD.length > 0
         }
-        const bz = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          Ez = uz || bz > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = Ez ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const cD = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          ID = CD || cD > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = ID ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -690,418 +690,418 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(zz) {
+      dispose(DD) {
         this.page.hostCall(void 0, (() => {
-          const uz = this.host.close(this.id);
-          uz.length > 0 && this.images.onEvent(uz), this.page.isTrapped || zz.Anz(this.id)
+          const CD = this.host.close(this.id);
+          CD.length > 0 && this.images.onEvent(CD), this.page.isTrapped || DD.RpD(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const zz = this.settled;
+        const DD = this.settled;
         this.settled = [];
-        for (const uz of zz) uz()
+        for (const CD of DD) CD()
       }
     }
-    class Yz {
-      constructor(zz) {
-        this.deps = zz, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: zz => {
-            this.modelsFailed(zz)
+    class AD {
+      constructor(DD) {
+        this.deps = DD, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: DD => {
+            this.modelsFailed(DD)
           },
-          onDecoderFailed: zz => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${Vz} the Draco decoder didn't load: models waiting on it won't draw`, zz))
+          onDecoderFailed: DD => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${zD} the Draco decoder didn't load: models waiting on it won't draw`, DD))
           },
-          onWorkerLost: zz => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${Vz} a model worker was lost: ${zz}`))
+          onWorkerLost: DD => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${zD} a model worker was lost: ${DD}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.JZ = {
-          setShaderPack: (zz, uz, bz, Ez, nz) => (this.shaderPackArgs = [zz, uz, bz, Ez, nz], this.handOverShaderPack(), !0)
-        }, this.frame = zz => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.gt = {
+          setShaderPack: (DD, CD, cD, ID, pD) => (this.shaderPackArgs = [DD, CD, cD, ID, pD], this.handOverShaderPack(), !0)
+        }, this.frame = DD => {
           this.frameId = null;
-          const uz = this.host;
-          if (null !== uz && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(uz, zz)
-          } catch (bz) {
-            if (!this.stopIfTrapped(bz) && (this.stop(), (0, fz.o)(bz))) return void this.deps.onRenderFailed("frames_refused", bz);
-            console.warn(`${Vz} the previews stopped: their frame threw`, bz)
+          const CD = this.host;
+          if (null !== CD && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(CD, DD)
+          } catch (cD) {
+            if (!this.stopIfTrapped(cD) && (this.stop(), (0, gD.p)(cD))) return void this.deps.onRenderFailed("frames_refused", cD);
+            console.warn(`${zD} the previews stopped: their frame threw`, cD)
           }
-        }, zz.pack.onChange((() => {
+        }, DD.pack.onChange((() => {
           this.packChanged()
-        })), zz.game.onGameChange((() => {
+        })), DD.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const zz of this.previews.values()) zz.packChanged()
+          for (const DD of this.previews.values()) DD.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var zz, uz;
-        return null !== (zz = null === (uz = this.host) || void 0 === uz ? void 0 : uz.attached()) && void 0 !== zz && zz
+        var DD, CD;
+        return null !== (DD = null === (CD = this.host) || void 0 === CD ? void 0 : CD.attached()) && void 0 !== DD && DD
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((zz, uz) => zz + uz), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((DD, CD) => DD + CD), 0) / this.costs.length
       }
-      async bindSession(zz, uz, bz) {
-        const Ez = this.binding,
-          nz = this.sessionEnds;
+      async bindSession(DD, CD, cD) {
+        const ID = this.binding,
+          pD = this.sessionEnds;
         try {
-          const iz = this.hostOf(zz);
-          if (!iz.miz()) {
-            const uz = (0, Lz.f)().sampleCount,
-              lz = await bz(uz);
-            if (this.sessionEnds !== nz) return this.keepRendererOfEndedSession(zz, iz, lz, uz, Ez), uz;
-            if (!iz.fiz(lz)) throw new Error("the page has a renderer already");
-            (0, Az.w)(performance.now()), this.samples = uz, (0, Pz.e)((0, fz.i)(zz))
+          const iD = this.hostOf(DD);
+          if (!iD.eiD()) {
+            const CD = (0, JD.d)().sampleCount,
+              fD = await cD(CD);
+            if (this.sessionEnds !== pD) return this.keepRendererOfEndedSession(DD, iD, fD, CD, ID), CD;
+            if (!iD.aiD(fD)) throw new Error("the page has a renderer already");
+            (0, xD.u)(performance.now()), this.samples = CD, (0, KD.d)((0, gD.k)(DD))
           }
-          if (!iz.attach(uz)) throw new Error("the page's renderer is lent to another session");
+          if (!iD.attach(CD)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === Ez && this.endBinding()
+          this.binding === ID && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(zz, uz, bz, Ez, nz) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== nz) try {
-          bz.free()
-        } catch (iz) {
-          console.warn(`${Vz} an ended session's renderer didn't free`, iz)
-        } else uz.fiz(bz) && ((0, Az.w)(performance.now()), this.samples = Ez, (0, Pz.e)(this.registryOf(zz)))
+      keepRendererOfEndedSession(DD, CD, cD, ID, pD) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== pD) try {
+          cD.free()
+        } catch (iD) {
+          console.warn(`${zD} an ended session's renderer didn't free`, iD)
+        } else CD.aiD(cD) && ((0, xD.u)(performance.now()), this.samples = ID, (0, KD.d)(this.registryOf(DD)))
       }
       async beginSession() {
-        var zz;
-        let uz = () => {};
-        const bz = new Promise((zz => {
-          uz = zz
+        var DD;
+        let CD = () => {};
+        const cD = new Promise((DD => {
+          CD = DD
         }));
         this.binding = {
-          done: bz,
-          release: uz
-        }, await (null === (zz = this.opening) || void 0 === zz ? void 0 : zz.catch((() => null)));
-        const Ez = this.pageCanvas;
-        return this.pageCanvas = null, Ez
+          done: cD,
+          release: CD
+        }, await (null === (DD = this.opening) || void 0 === DD ? void 0 : DD.catch((() => null)));
+        const ID = this.pageCanvas;
+        return this.pageCanvas = null, ID
       }
-      endSession(zz) {
-        var uz, bz;
-        if (this.sessionEnds++, this.lastEndReturned = zz, this.endBinding(), zz) {
+      endSession(DD) {
+        var CD, cD;
+        if (this.sessionEnds++, this.lastEndReturned = DD, this.endBinding(), DD) {
           try {
-            var Ez;
-            null === (Ez = this.host) || void 0 === Ez || Ez.detach()
-          } catch (nz) {
-            return void console.warn(`${Vz} the session's core kept the page's renderer`, nz)
-          }!0 === (null === (uz = this.host) || void 0 === uz ? void 0 : uz.attached()) && console.warn(`${Vz} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (bz = this.host) || void 0 === bz ? void 0 : bz.miz()) && (0, Pz.e)(this.registryOf(this.module))
+            var ID;
+            null === (ID = this.host) || void 0 === ID || ID.detach()
+          } catch (pD) {
+            return void console.warn(`${zD} the session's core kept the page's renderer`, pD)
+          }!0 === (null === (CD = this.host) || void 0 === CD ? void 0 : CD.attached()) && console.warn(`${zD} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (cD = this.host) || void 0 === cD ? void 0 : cD.eiD()) && (0, KD.d)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var zz;
-        null === (zz = this.binding) || void 0 === zz || zz.release(), this.binding = null
+        var DD;
+        null === (DD = this.binding) || void 0 === DD || DD.release(), this.binding = null
       }
-      async openPreview(zz, uz, bz, Ez) {
-        const nz = await this.renderingHost(),
-          iz = this.module;
-        if (null === nz || null === iz) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(nz), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(DD, CD, cD, ID) {
+        const pD = await this.renderingHost(),
+          iD = this.module;
+        if (null === pD || null === iD) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(pD), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(iz)
+          this.deps.provideBuiltInAnimationPack(iD)
         }));
-        const lz = this.nextId++,
-          Mz = this.deps.createCanvas(),
-          [tz, Hz] = ez(uz, bz, this.deps.dpr(), Ez);
-        Mz.width = tz, Mz.height = Hz;
-        if (!this.guarded((() => (iz.Jnz(lz, Mz), nz.open(lz, tz, Hz, zz))))) throw this.hostCall(void 0, (() => {
-          iz.Anz(lz)
+        const fD = this.nextId++,
+          bD = this.deps.createCanvas(),
+          [QD, wD] = ED(CD, cD, this.deps.dpr(), ID);
+        bD.width = QD, bD.height = wD;
+        if (!this.guarded((() => (iD.GpD(fD, bD), pD.open(fD, QD, wD, DD))))) throw this.hostCall(void 0, (() => {
+          iD.RpD(fD)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const Oz = new Cz(this, nz, lz, Mz, [tz, Hz], this.deps);
-        return this.previews.set(lz, Oz), this.startFrames(), Oz
+        const SD = new rD(this, pD, fD, bD, [QD, wD], this.deps);
+        return this.previews.set(fD, SD), this.startFrames(), SD
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, Az.e)() || null !== (0, Az.D)()) return;
+        if (this.prefetched || this.isStopped || (0, xD.e)() || null !== (0, xD.I)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((zz => {
-          null === zz || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((DD => {
+          null === DD || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(zz) {
-        return this.prefetchedOr(zz, this.deps.fetchModel)
+      modelFile(DD) {
+        return this.prefetchedOr(DD, this.deps.fetchModel)
       }
-      imageFile(zz) {
-        return this.prefetchedOr(zz, Ez.z)
+      imageFile(DD) {
+        return this.prefetchedOr(DD, ID.I)
       }
-      prefetchedOr(zz, uz) {
-        const bz = this.prefetchedFiles.get(zz);
-        return void 0 === bz ? uz(zz) : bz.catch((() => uz(zz)))
+      prefetchedOr(DD, CD) {
+        const cD = this.prefetchedFiles.get(DD);
+        return void 0 === cD ? CD(DD) : cD.catch((() => CD(DD)))
       }
       async prefetchPlayerFiles() {
-        const zz = this.deps.playerFile().then((zz => this.deps.files.url(zz))),
-          uz = await Promise.all([zz, this.deps.images.lifeformAtlasUrl(xz.c)]).catch((() => null));
-        if (null === uz) return;
-        const [bz, Ez] = uz, nz = (zz, uz) => {
-          if (null === zz) return;
-          const bz = uz(zz);
-          this.prefetchedFiles.set(zz, bz), bz.catch((() => {
-            this.prefetchedFiles.delete(zz)
+        const DD = this.deps.playerFile().then((DD => this.deps.files.url(DD))),
+          CD = await Promise.all([DD, this.deps.images.lifeformAtlasUrl(HD.b)]).catch((() => null));
+        if (null === CD) return;
+        const [cD, ID] = CD, pD = (DD, CD) => {
+          if (null === DD) return;
+          const cD = CD(DD);
+          this.prefetchedFiles.set(DD, cD), cD.catch((() => {
+            this.prefetchedFiles.delete(DD)
           }))
         };
-        nz(bz, (zz => this.modelFile(zz))), nz(Ez, (zz => this.imageFile(zz)))
+        pD(cD, (DD => this.modelFile(DD))), pD(ID, (DD => this.imageFile(DD)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((zz => (null === zz && (this.moduleLoad = null), zz)), (zz => {
-          throw this.moduleLoad = null, zz
+        return this.moduleLoad ??= this.deps.loadModule().then((DD => (null === DD && (this.moduleLoad = null), DD)), (DD => {
+          throw this.moduleLoad = null, DD
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((zz => {
-          throw this.animationTable = null, zz
+        return this.animationTable ??= this.deps.fetchAnimations().catch((DD => {
+          throw this.animationTable = null, DD
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((zz => (this.modelsFailed(zz), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((DD => (this.modelsFailed(DD), () => new Promise((() => {})))))
       }
-      buildModel(zz, uz) {
-        return this.startModels(), this.models.then((bz => bz(zz, uz))).then((zz => this.unavailable ? new Promise((() => {})) : zz))
+      buildModel(DD, CD) {
+        return this.startModels(), this.models.then((cD => cD(DD, CD))).then((DD => this.unavailable ? new Promise((() => {})) : DD))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(zz) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${Vz} the model workers didn't start: models won't draw in the previews`, zz))
+      modelsFailed(DD) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${zD} the model workers didn't start: models won't draw in the previews`, DD))
       }
-      called(zz) {
-        return 0 !== zz && this.logError(zz, 0), zz
+      called(DD) {
+        return 0 !== DD && this.logError(DD, 0), DD
       }
-      closePreview(zz) {
-        this.previews.delete(zz.id), null !== this.module && zz.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(DD) {
+        this.previews.delete(DD.id), null !== this.module && DD.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(zz) {
-        if (null !== this.module && this.module !== zz) throw new Error("a second renderer module on one page");
-        return this.module = zz, null === this.host && (this.host = this.guarded((() => new zz.xnz)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(DD) {
+        if (null !== this.module && this.module !== DD) throw new Error("a second renderer module on one page");
+        return this.module = DD, null === this.host && (this.host = this.guarded((() => new DD.TpD)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: zz
+          host: DD
         } = this;
-        null !== zz && this.outsideCall("the game's start or end", (() => {
-          zz.yiz(this.deps.game.inGame())
+        null !== DD && this.outsideCall("the game's start or end", (() => {
+          DD.FiD(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: zz,
-          shaderPackArgs: uz
+          host: DD,
+          shaderPackArgs: CD
         } = this;
-        null !== zz && null !== uz && this.outsideCall("the shader pack's hand-over", (() => {
-          zz.xbz(...uz) || console.warn(`${Vz} the host refused the shader pack: previews draw without it at home`)
+        null !== DD && null !== CD && this.outsideCall("the shader pack's hand-over", (() => {
+          DD.UcD(...CD) || console.warn(`${zD} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(zz, uz) {
+      outsideCall(DD, CD) {
         try {
-          this.hostCall(void 0, uz)
-        } catch (bz) {
-          this.stop(), console.warn(`${Vz} the previews stopped: ${zz} threw`, bz)
+          this.hostCall(void 0, CD)
+        } catch (cD) {
+          this.stop(), console.warn(`${zD} the previews stopped: ${DD} threw`, cD)
         }
       }
-      async loadAnimations(zz) {
-        const uz = lz(null),
-          bz = this.module;
+      async loadAnimations(DD) {
+        const CD = fD(null),
+          cD = this.module;
         try {
-          uz.wasm = null === bz ? uz.wasm : this.hostCall(uz.wasm, (() => bz.Wp()))
+          CD.wasm = null === cD ? CD.wasm : this.hostCall(CD.wasm, (() => cD.zB()))
         } catch {}
-        let Ez, nz;
+        let ID, pD;
         try {
-          Ez = await this.fetchAnimationTable()
-        } catch (iz) {
+          ID = await this.fetchAnimationTable()
+        } catch (iD) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: iz
-          }, uz)
+            error: iD
+          }, CD)
         }
         if (!this.settleIfTrapped()) {
           try {
-            nz = zz.Uiz(Ez)
-          } catch (iz) {
-            if (this.stopIfTrapped(iz)) return;
+            pD = DD.hiD(ID)
+          } catch (iD) {
+            if (this.stopIfTrapped(iD)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: iz
-            }, uz)
+              error: iD
+            }, CD)
           }
-          nz || this.deps.onAnimationsFailed({
+          pD || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, uz)
+          }, CD)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const zz = this.host;
-        return null !== zz && this.guarded((() => zz.miz())) ? zz : (this.opening ??= this.openAtHome().finally((() => {
+        const DD = this.host;
+        return null !== DD && this.guarded((() => DD.eiD())) ? DD : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var zz;
-        const uz = null !== (zz = this.module) && void 0 !== zz ? zz : await this.loadModule();
-        if (null === uz) return null;
-        const bz = this.hostOf(uz),
-          Ez = () => this.guarded((() => bz.miz()));
-        if (Ez()) return bz;
-        if (null !== (0, Az.D)() || (0, Az.e)()) return null;
-        const nz = this.deps.createCanvas();
-        nz.width = 1, nz.height = 1;
-        const iz = await this.deps.openExtras();
+        var DD;
+        const CD = null !== (DD = this.module) && void 0 !== DD ? DD : await this.loadModule();
+        if (null === CD) return null;
+        const cD = this.hostOf(CD),
+          ID = () => this.guarded((() => cD.eiD()));
+        if (ID()) return cD;
+        if (null !== (0, xD.I)() || (0, xD.e)()) return null;
+        const pD = this.deps.createCanvas();
+        pD.width = 1, pD.height = 1;
+        const iD = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const lz = (0, Lz.f)().sampleCount;
-        let Mz;
+        const fD = (0, JD.d)().sampleCount;
+        let bD;
         try {
-          Mz = await (0, fz.t)(uz, "previewRenderer", nz, lz, Gz.d, iz)
-        } catch (tz) {
-          throw tz instanceof vz.e ? this.stopForTrap(tz) : (0, fz.r)(tz) && await this.deps.onRenderFailed("start_failed", tz), tz
+          bD = await (0, gD.v)(CD, "previewRenderer", pD, fD, aD.c, iD)
+        } catch (QD) {
+          throw QD instanceof PD.d ? this.stopForTrap(QD) : (0, gD.s)(QD) && await this.deps.onRenderFailed("start_failed", QD), QD
         }
-        return this.guarded((() => bz.fiz(Mz))) ? ((0, Az.w)(performance.now()), this.samples = lz, this.pageCanvas = nz, (0, Pz.e)(this.registryOf(uz)), bz) : Ez() ? bz : null
+        return this.guarded((() => cD.aiD(bD))) ? ((0, xD.u)(performance.now()), this.samples = fD, this.pageCanvas = pD, (0, KD.d)(this.registryOf(CD)), cD) : ID() ? cD : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(zz, uz) {
-        for (const lz of this.previews.values()) lz.feed();
+      drawFrame(DD, CD) {
+        for (const fD of this.previews.values()) fD.feed();
         if (this.stopped) return;
-        const bz = this.deps.now(),
-          Ez = zz.frame(uz);
-        this.costs.push(this.deps.now() - bz), this.costs.length > 120 && this.costs.shift();
-        const nz = 0 !== (256 & Ez),
-          iz = 255 & Ez;
-        for (const lz of this.previews.values()) {
+        const cD = this.deps.now(),
+          ID = DD.frame(CD);
+        this.costs.push(this.deps.now() - cD), this.costs.length > 120 && this.costs.shift();
+        const pD = 0 !== (256 & ID),
+          iD = 255 & ID;
+        for (const fD of this.previews.values()) {
           if (this.stopped) return;
-          lz.collect(nz)
+          fD.collect(pD)
         }
         if (!this.stopped) {
-          if (nz) {
-            const uz = zz.eiz();
-            for (let zz = 0; zz + 1 < uz.length; zz += 2) this.logError(uz[zz], uz[zz + 1])
+          if (pD) {
+            const CD = DD.IfD();
+            for (let DD = 0; DD + 1 < CD.length; DD += 2) this.logError(CD[DD], CD[DD + 1])
           }
-          if (iz === cz) return this.stop(), void this.deps.onRenderFailed("lost");
-          if (iz === gz) return this.stop(), void this.deps.onFatal(zz.Giz(), zz.aiz());
-          if (iz === Sz) return this.stop(), void console.warn(`${Vz} the previews stopped: the page's renderer went with its session`);
-          (0, Xz.d)(uz), this.startFrames()
+          if (iD === GD) return this.stop(), void this.deps.onRenderFailed("lost");
+          if (iD === RD) return this.stop(), void this.deps.onFatal(DD.WiD(), DD.siD());
+          if (iD === kD) return this.stop(), void console.warn(`${zD} the previews stopped: the page's renderer went with its session`);
+          (0, ND.c)(CD), this.startFrames()
         }
       }
       get isStopped() {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, vz.m)(this.module) || "failed" === (0, Zz.E)())
+        return null !== this.module && ((0, PD.g)(this.module) || "failed" === (0, tD.u)())
       }
-      hostCall(zz, uz) {
-        if (this.settleIfTrapped()) return zz;
+      hostCall(DD, CD) {
+        if (this.settleIfTrapped()) return DD;
         try {
-          return uz()
-        } catch (bz) {
-          if (this.stopIfTrapped(bz)) return zz;
-          throw bz
+          return CD()
+        } catch (cD) {
+          if (this.stopIfTrapped(cD)) return DD;
+          throw cD
         }
       }
-      guarded(zz) {
+      guarded(DD) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return zz()
-        } catch (uz) {
-          throw this.stopIfTrapped(uz), uz
+          return DD()
+        } catch (CD) {
+          throw this.stopIfTrapped(CD), CD
         }
       }
-      registryOf(zz) {
+      registryOf(DD) {
         return {
-          Obz: (uz, bz) => {
+          bcD: (CD, cD) => {
             this.hostCall(void 0, (() => {
-              zz.Obz(uz, bz)
+              DD.bcD(CD, cD)
             }))
           },
-          pbz: uz => {
+          QcD: CD => {
             this.hostCall(void 0, (() => {
-              zz.pbz(uz)
+              DD.QcD(CD)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, Pz.e)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, KD.d)(null)), !0)
       }
-      stopIfTrapped(zz) {
-        return !(null === this.module || !(0, vz.q)(this.module, zz)) && (this.stopForTrap(zz), !0)
+      stopIfTrapped(DD) {
+        return !(null === this.module || !(0, PD.j)(this.module, DD)) && (this.stopForTrap(DD), !0)
       }
-      stopForTrap(zz) {
-        this.stop(), (0, Pz.e)(null), (0, Zz.V)(zz)
+      stopForTrap(DD) {
+        this.stop(), (0, KD.d)(null), (0, tD.I)(DD)
       }
       stop() {
         this.stopped = !0;
-        for (const zz of this.previews.values()) zz.abandon()
+        for (const DD of this.previews.values()) DD.abandon()
       }
-      logError(zz, uz) {
-        const bz = `${zz}:${uz}`;
-        this.loggedErrors.has(bz) || (this.loggedErrors.add(bz), console.warn(`${Vz} error ${zz} (detail ${uz})`))
+      logError(DD, CD) {
+        const cD = `${DD}:${CD}`;
+        this.loggedErrors.has(cD) || (this.loggedErrors.add(cD), console.warn(`${zD} error ${DD} (detail ${CD})`))
       }
     }
-    let kz = null;
+    let FD = null;
 
-    function zu() {
-      return kz ??= new Yz(function() {
-        const zz = (0, oz.q)(wz.clientSideServerUrls.staticUrl, {
-          packUrl: zz => {
-            var uz, bz;
-            return null !== (uz = null === (bz = xz.f.current) || void 0 === bz ? void 0 : bz.modelUrl(zz)) && void 0 !== uz ? uz : null
+    function DC() {
+      return FD ??= new AD(function() {
+        const DD = (0, nD.p)(vD.clientSideServerUrls.staticUrl, {
+          packUrl: DD => {
+            var CD, cD;
+            return null !== (CD = null === (cD = HD.d.current) || void 0 === cD ? void 0 : cD.modelUrl(DD)) && void 0 !== CD ? CD : null
           }
         });
         return {
-          loadModule: Bz,
-          startModels: async zz => {
+          loadModule: hD,
+          startModels: async DD => {
             const {
-              pageModelPool: uz
-            } = await bz.e(42).then((() => bz(42647))), {
-              pool: Ez
-            } = uz(zz);
-            return (zz, uz) => Ez.build(zz, uz)
+              pageModelPool: CD
+            } = await cD.e(42).then((() => cD(42518))), {
+              pool: ID
+            } = CD(DD);
+            return (DD, CD) => ID.build(DD, CD)
           },
-          fetchAnimations: async () => Mz(await (0, Ez.z)(jz())),
-          playerFile: async () => (await (0, oz.m)()).PLAYER_FILE,
-          onAnimationsFailed: (zz, uz) => {
-            tz("previewAnimations", jz(), zz, uz)
+          fetchAnimations: async () => bD(await (0, ID.I)(eD())),
+          playerFile: async () => (await (0, nD.o)()).PLAYER_FILE,
+          onAnimationsFailed: (DD, CD) => {
+            QD("previewAnimations", eD(), DD, CD)
           },
-          provideBuiltInAnimationPack: zz => {
-            dz().provide(zz)
+          provideBuiltInAnimationPack: DD => {
+            yD().provide(DD)
           },
-          openExtras: Az.B,
-          files: zz,
-          images: (0, xz.m)((0, sz.n)(zz.url), (() => xz.f.current)),
-          pack: xz.f,
-          game: Jz.e,
-          fetchModel: zz => (0, oz.h)(zz),
+          openExtras: xD.F,
+          files: DD,
+          images: (0, HD.l)((0, XD.k)(DD.url), (() => HD.d.current)),
+          pack: HD.d,
+          game: UD.d,
+          fetchModel: DD => (0, nD.i)(DD),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: zz => requestAnimationFrame(zz),
-          cancelFrame: zz => {
-            cancelAnimationFrame(zz)
+          requestFrame: DD => requestAnimationFrame(DD),
+          cancelFrame: DD => {
+            cancelAnimationFrame(DD)
           },
-          onRenderFailed: Iz,
-          onFatal: (zz, uz) => {
-            console.error(`${Vz} the previews stopped: renderer error ${zz} (detail ${uz})`)
+          onRenderFailed: uD,
+          onFatal: (DD, CD) => {
+            console.error(`${zD} the previews stopped: renderer error ${DD} (detail ${CD})`)
           }
         }
-      }()), kz
+      }()), FD
     }
-    var uu = bz(584),
-      bu = bz(38017),
-      Eu = bz(3043);
-    const nu = {
+    var CC = cD(613),
+      cC = cD(38009),
+      IC = cD(3083);
+    const pC = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1119,320 +1119,320 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const iu = "[bloxd-previews]",
-      lu = new Uint32Array(5);
+    const iC = "[bloxd-previews]",
+      fC = new Uint32Array(5);
 
-    function Mu(zz) {
-      return uu.j.indexOf(zz)
+    function bC(DD) {
+      return CC.j.indexOf(DD)
     }
-    const tu = new WeakSet;
+    const QC = new WeakSet;
 
-    function Hu(zz) {
-      const uz = (0, bu.d)(zz),
-        bz = null === uz ? -1 : Ou(uz);
-      return -1 !== bz ? bz : (tu.has(zz) || (tu.add(zz), console.warn(`${iu} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function Ou(zz) {
-      var uz;
-      return null !== (uz = nu[zz]) && void 0 !== uz ? uz : -1
+    function wC(DD) {
+      const CD = (0, cC.f)(DD),
+        cD = null === CD ? -1 : SC(CD);
+      return -1 !== cD ? cD : (QC.has(DD) || (QC.add(DD), console.warn(`${iC} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function pu(zz, uz) {
+    function SC(DD) {
+      var CD;
+      return null !== (CD = pC[DD]) && void 0 !== CD ? CD : -1
+    }
+
+    function BC(DD, CD) {
       const {
-        canvas: bz
-      } = uz;
-      bz.style.width = "100%", bz.style.height = "100%", bz.style.display = "block", zz.appendChild(bz)
+        canvas: cD
+      } = CD;
+      cD.style.width = "100%", cD.style.height = "100%", cD.style.display = "block", DD.appendChild(cD)
     }
 
-    function du(zz) {
-      const uz = zz.getBoundingClientRect();
-      return [uz.width, uz.height]
+    function yC(DD) {
+      const CD = DD.getBoundingClientRect();
+      return [CD.width, CD.height]
     }
-    class Fu {
-      constructor(zz, uz) {
-        this.preview = zz, this.showView = uz
+    class MC {
+      constructor(DD, CD) {
+        this.preview = DD, this.showView = CD
       }
-      show(zz) {
-        this.showView(this.preview, zz)
+      show(DD) {
+        this.showView(this.preview, DD)
       }
-      resize(zz, uz) {
-        this.preview.resize(zz, uz)
+      resize(DD, CD) {
+        this.preview.resize(DD, CD)
       }
       close() {
         this.preview.close()
       }
     }
-    class Zu {
-      constructor(zz) {
-        this.preview = zz, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(zz) {
+    class tC {
+      constructor(DD) {
+        this.preview = DD, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(DD) {
           const {
-            canvas: uz
-          } = zz;
-          let bz = null;
-          const Ez = zz => {
-              var Ez;
-              bz = {
-                pointer: zz.pointerId,
-                x: zz.clientX,
-                y: zz.clientY
-              }, null === (Ez = uz.setPointerCapture) || void 0 === Ez || Ez.call(uz, zz.pointerId)
+            canvas: CD
+          } = DD;
+          let cD = null;
+          const ID = DD => {
+              var ID;
+              cD = {
+                pointer: DD.pointerId,
+                x: DD.clientX,
+                y: DD.clientY
+              }, null === (ID = CD.setPointerCapture) || void 0 === ID || ID.call(CD, DD.pointerId)
             },
-            nz = uz => {
-              var Ez;
-              const nz = zz.orbit;
-              if ((null === (Ez = bz) || void 0 === Ez ? void 0 : Ez.pointer) !== uz.pointerId || null === nz) return;
-              const iz = uz.clientX - bz.x,
-                lz = uz.clientY - bz.y;
-              bz = {
-                ...bz,
-                x: uz.clientX,
-                y: uz.clientY
-              }, zz.setOrbit({
-                alpha: nz.alpha - .01 * iz,
-                beta: Math.min(Math.PI - .01, Math.max(.01, nz.beta - .01 * lz)),
-                radius: nz.radius
+            pD = CD => {
+              var ID;
+              const pD = DD.orbit;
+              if ((null === (ID = cD) || void 0 === ID ? void 0 : ID.pointer) !== CD.pointerId || null === pD) return;
+              const iD = CD.clientX - cD.x,
+                fD = CD.clientY - cD.y;
+              cD = {
+                ...cD,
+                x: CD.clientX,
+                y: CD.clientY
+              }, DD.setOrbit({
+                alpha: pD.alpha - .01 * iD,
+                beta: Math.min(Math.PI - .01, Math.max(.01, pD.beta - .01 * fD)),
+                radius: pD.radius
               })
             },
-            iz = zz => {
-              var uz;
-              (null === (uz = bz) || void 0 === uz ? void 0 : uz.pointer) === zz.pointerId && (bz = null)
+            iD = DD => {
+              var CD;
+              (null === (CD = cD) || void 0 === CD ? void 0 : CD.pointer) === DD.pointerId && (cD = null)
             },
-            lz = uz => {
-              const bz = zz.orbit;
-              if (null === bz) return;
-              uz.preventDefault();
-              const Ez = uz.deltaY * (uz.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : uz.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                nz = Math.min(100, Math.max(5, bz.radius + .08 * Ez));
-              zz.setOrbit({
-                ...bz,
-                radius: nz
+            fD = CD => {
+              const cD = DD.orbit;
+              if (null === cD) return;
+              CD.preventDefault();
+              const ID = CD.deltaY * (CD.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : CD.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                pD = Math.min(100, Math.max(5, cD.radius + .08 * ID));
+              DD.setOrbit({
+                ...cD,
+                radius: pD
               })
             };
-          return uz.style.touchAction = "none", uz.addEventListener("pointerdown", Ez), uz.addEventListener("pointermove", nz), uz.addEventListener("pointerup", iz), uz.addEventListener("pointercancel", iz), uz.addEventListener("wheel", lz, {
+          return CD.style.touchAction = "none", CD.addEventListener("pointerdown", ID), CD.addEventListener("pointermove", pD), CD.addEventListener("pointerup", iD), CD.addEventListener("pointercancel", iD), CD.addEventListener("wheel", fD, {
             passive: !1
           }), () => {
-            uz.removeEventListener("pointerdown", Ez), uz.removeEventListener("pointermove", nz), uz.removeEventListener("pointerup", iz), uz.removeEventListener("pointercancel", iz), uz.removeEventListener("wheel", lz)
+            CD.removeEventListener("pointerdown", ID), CD.removeEventListener("pointermove", pD), CD.removeEventListener("pointerup", iD), CD.removeEventListener("pointercancel", iD), CD.removeEventListener("wheel", fD)
           }
-        }(zz), this.dev = {
-          canvas: () => zz.canvas,
+        }(DD), this.dev = {
+          canvas: () => DD.canvas,
           isolateHead: () => {
-            console.warn(`${iu} isolateHead: noa's character preview only`)
+            console.warn(`${iC} isolateHead: noa's character preview only`)
           }
-        }, this.apply(), this.ready = zz.untilSettled().then((() => {
-          if (zz.isStopped) throw new Error(`${iu} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = DD.untilSettled().then((() => {
+          if (DD.isStopped) throw new Error(`${iC} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(zz, uz) {
-        this.cosmetics[zz] = uz, this.apply()
+      setCosmetic(DD, CD) {
+        this.cosmetics[DD] = CD, this.apply()
       }
-      playEmote(zz) {
-        null === zz || zz !== this.emote ? (this.emote = zz, this.apply()) : this.preview.replay()
+      playEmote(DD) {
+        null === DD || DD !== this.emote ? (this.emote = DD, this.apply()) : this.preview.replay()
       }
-      untilDrawn(zz) {
+      untilDrawn(DD) {
         return this.preview.untilSettled()
       }
-      setOrbit(zz) {
+      setOrbit(DD) {
         let {
-          yaw: uz,
-          pitch: bz,
-          radius: Ez
-        } = zz;
-        const nz = this.preview.orbit;
-        null !== nz && this.preview.setOrbit({
-          alpha: uz,
-          beta: bz,
-          radius: null !== Ez && void 0 !== Ez ? Ez : nz.radius
+          yaw: CD,
+          pitch: cD,
+          radius: ID
+        } = DD;
+        const pD = this.preview.orbit;
+        null !== pD && this.preview.setOrbit({
+          alpha: CD,
+          beta: cD,
+          radius: null !== ID && void 0 !== ID ? ID : pD.radius
         })
       }
       resetCamera() {}
-      resize(zz, uz) {
-        this.preview.resize(zz, uz)
+      resize(DD, CD) {
+        this.preview.resize(DD, CD)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var zz;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), lu, null === (zz = this.emote) ? -1 : Ou(zz))
+        var DD;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), fC, null === (DD = this.emote) ? -1 : SC(DD))
       }
     }
 
-    function Ru(zz, uz) {
+    function ZC(DD, CD) {
       let {
-        mobType: bz,
-        variation: Ez,
-        animation: nz
-      } = uz;
-      zz.setMob(Mu(bz), null !== Ez && void 0 !== Ez ? Ez : "", 1, Hu(nz))
+        mobType: cD,
+        variation: ID,
+        animation: pD
+      } = CD;
+      DD.setMob(bC(cD), null !== ID && void 0 !== ID ? ID : "", 1, wC(pD))
     }
 
-    function Ku(zz, uz) {
+    function oC(DD, CD) {
       let {
-        mobType: bz,
-        variation: Ez,
-        metaInfo: nz,
-        tamed: iz
-      } = uz;
-      zz.setPet(Mu(bz), Ez, nz, iz)
+        mobType: cD,
+        variation: ID,
+        metaInfo: pD,
+        tamed: iD
+      } = CD;
+      DD.setPet(bC(cD), ID, pD, iD)
     }
-    const wu = {
+    const vC = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class Xu {
-      constructor(zz, uz, bz, Ez) {
+    class NC {
+      constructor(DD, CD, cD, ID) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, zz(bz.width, Ez[1], Ez).then((zz => {
-          if (this.closed) return void zz.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, DD(cD.width, ID[1], ID).then((DD => {
+          if (this.closed) return void DD.close();
           const {
-            style: bz
-          } = zz.canvas;
-          bz.position = "absolute", bz.top = "0", bz.visibility = "hidden", pu(uz, zz), this.preview = zz, this.apply()
-        })).catch((zz => {
-          console.error(`${iu} couldn't open a lineup figure`, zz)
+            style: cD
+          } = DD.canvas;
+          cD.position = "absolute", cD.top = "0", cD.visibility = "hidden", BC(CD, DD), this.preview = DD, this.apply()
+        })).catch((DD => {
+          console.error(`${iC} couldn't open a lineup figure`, DD)
         }))
       }
-      update(zz, uz, bz, Ez, nz) {
-        this.figure = zz, this.shown = uz, this.order = bz, this.span = Ez, this.lineup = nz, this.apply()
+      update(DD, CD, cD, ID, pD) {
+        this.figure = DD, this.shown = CD, this.order = cD, this.span = ID, this.lineup = pD, this.apply()
       }
       close() {
-        var zz;
-        this.closed = !0, null === (zz = this.preview) || void 0 === zz || zz.close(), this.preview = null
+        var DD;
+        this.closed = !0, null === (DD = this.preview) || void 0 === DD || DD.close(), this.preview = null
       }
       apply() {
         const {
-          preview: zz,
-          figure: uz,
-          lineup: bz
+          preview: DD,
+          figure: CD,
+          lineup: cD
         } = this;
-        if (null === zz || null === uz) return;
-        if (this.given !== uz) {
-          var Ez;
-          this.given = uz, this.loaded = !1;
-          const bz = null === uz.Fv ? 0 : null !== (Ez = (0, Eu.e)(uz.Fv)) && void 0 !== Ez ? Ez : 0;
-          zz.setFigure(function(zz) {
-            return JSON.stringify(Object.fromEntries(zz.cosmetics))
-          }(uz), bz, Hu(uz.animation), uz.size), zz.untilSettled().then((() => {
-            this.given === uz && (this.loaded = !0, this.apply())
+        if (null === DD || null === CD) return;
+        if (this.given !== CD) {
+          var ID;
+          this.given = CD, this.loaded = !1;
+          const cD = null === CD.gH ? 0 : null !== (ID = (0, IC.e)(CD.gH)) && void 0 !== ID ? ID : 0;
+          DD.setFigure(function(DD) {
+            return JSON.stringify(Object.fromEntries(DD.cosmetics))
+          }(CD), cD, wC(CD.animation), CD.size), DD.untilSettled().then((() => {
+            this.given === CD && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: nz,
-          width: iz
+          left: pD,
+          width: iD
         } = this.span;
-        zz.resize(iz, bz[1], bz);
+        DD.resize(iD, cD[1], cD);
         const {
-          style: lz
-        } = zz.canvas;
-        lz.left = `${nz}px`, lz.width = `${iz}px`, lz.zIndex = this.order, lz.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: fD
+        } = DD.canvas;
+        fD.left = `${pD}px`, fD.width = `${iD}px`, fD.zIndex = this.order, fD.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class fu {
-      constructor(zz, uz) {
-        this.open = uz, this.layer = void 0, this.figures = [], this.view = {
+    class gC {
+      constructor(DD, CD) {
+        this.open = CD, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = du(zz), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = yC(DD), this.layer = document.createElement("div");
         const {
-          style: bz
+          style: cD
         } = this.layer;
-        bz.position = "relative", bz.isolation = "isolate", bz.overflow = "hidden", bz.width = "100%", bz.height = "100%", bz.pointerEvents = "none", zz.appendChild(this.layer)
+        cD.position = "relative", cD.isolation = "isolate", cD.overflow = "hidden", cD.width = "100%", cD.height = "100%", cD.pointerEvents = "none", DD.appendChild(this.layer)
       }
-      show(zz) {
-        this.view = zz, this.place()
+      show(DD) {
+        this.view = DD, this.place()
       }
-      resize(zz, uz) {
-        this.size = [zz, uz], this.place()
+      resize(DD, CD) {
+        this.size = [DD, CD], this.place()
       }
       close() {
-        for (const zz of this.figures) zz.close();
+        for (const DD of this.figures) DD.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: zz,
-          shown: uz
+          figures: DD,
+          shown: CD
         } = this.view;
-        for (const Ez of this.figures.splice(zz.length)) Ez.close();
+        for (const ID of this.figures.splice(DD.length)) ID.close();
         const {
-          size: bz
+          size: cD
         } = this;
-        zz.forEach(((Ez, nz) => {
-          var iz;
-          const lz = function(zz, uz, bz, Ez) {
-            let [nz, iz] = Ez;
-            const lz = (zz + .5) * nz / uz,
-              Mz = Math.min(Math.max(nz / uz, 2 * bz * iz), 2 * Math.max(lz, nz - lz));
+        DD.forEach(((ID, pD) => {
+          var iD;
+          const fD = function(DD, CD, cD, ID) {
+            let [pD, iD] = ID;
+            const fD = (DD + .5) * pD / CD,
+              bD = Math.min(Math.max(pD / CD, 2 * cD * iD), 2 * Math.max(fD, pD - fD));
             return {
-              left: lz - Mz / 2,
-              width: Mz
+              left: fD - bD / 2,
+              width: bD
             }
-          }(nz, zz.length, function(zz) {
+          }(pD, DD.length, function(DD) {
             let {
-              animation: uz,
-              size: bz
-            } = zz;
+              animation: CD,
+              size: cD
+            } = DD;
             const {
-              aimed: Ez,
-              ready: nz
-            } = wu;
-            return (Hu(uz) === nu.gunAimed ? Ez : nz) * bz
-          }(Ez), bz);
-          this.figures[nz] ??= new Xu(this.open, this.layer, lz, bz), this.figures[nz].update(Ez, null !== (iz = uz[nz]) && void 0 !== iz && iz, function(zz, uz) {
-            return String(Math.round(1e3 * zz) + uz)
-          }(Ez.size, nz), lz, bz)
+              aimed: ID,
+              ready: pD
+            } = vC;
+            return (wC(CD) === pC.gunAimed ? ID : pD) * cD
+          }(ID), cD);
+          this.figures[pD] ??= new NC(this.open, this.layer, fD, cD), this.figures[pD].update(ID, null !== (iD = CD[pD]) && void 0 !== iD && iD, function(DD, CD) {
+            return String(Math.round(1e3 * DD) + CD)
+          }(ID.size, pD), fD, cD)
         }))
       }
     }
-    const su = {
-      player: hz,
-      store: Uz
+    const XC = {
+      player: LD,
+      store: TD
     };
-    class ru {
-      constructor(zz) {
-        this.page = zz
+    class mC {
+      constructor(DD) {
+        this.page = DD
       }
-      async openMob(zz) {
-        return new Fu(await this.open(zz, qz), Ru)
+      async openMob(DD) {
+        return new MC(await this.open(DD, lD), ZC)
       }
-      async openPet(zz) {
-        return new Fu(await this.open(zz, qz), Ku)
+      async openPet(DD) {
+        return new MC(await this.open(DD, lD), oC)
       }
-      openMobLineup(zz) {
-        return new fu(zz, ((zz, uz, bz) => this.page.openPreview(qz, zz, uz, bz)))
+      openMobLineup(DD) {
+        return new gC(DD, ((DD, CD, cD) => this.page.openPreview(lD, DD, CD, cD)))
       }
-      async openCharacter(zz, uz) {
-        return new Zu(await this.open(zz, su[uz]))
+      async openCharacter(DD, CD) {
+        return new tC(await this.open(DD, XC[CD]))
       }
-      async open(zz, uz) {
-        const [bz, Ez] = du(zz), nz = await this.page.openPreview(uz, bz, Ez);
-        return pu(zz, nz), nz
+      async open(DD, CD) {
+        const [cD, ID] = yC(DD), pD = await this.page.openPreview(CD, cD, ID);
+        return BC(DD, pD), pD
       }
     }
   },
-  36185: (zz, uz, bz) => {
-    bz.d(uz, {
-      A: () => Fz,
-      B: () => Zz,
-      C: () => Rz,
-      E: () => wz,
-      d: () => Ez,
-      f: () => nz,
-      i: () => dz,
-      m: () => Kz,
-      n: () => Oz,
-      r: () => Xz,
-      t: () => tz,
-      x: () => Hz
+  36107: (DD, CD, cD) => {
+    cD.d(CD, {
+      D: () => vD,
+      e: () => ID,
+      g: () => pD,
+      h: () => yD,
+      j: () => oD,
+      n: () => SD,
+      o: () => ND,
+      p: () => QD,
+      t: () => wD,
+      u: () => MD,
+      y: () => tD,
+      z: () => ZD
     });
-    const Ez = [{
+    const ID = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1449,64 +1449,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function nz(zz, uz) {
+    function pD(DD, CD) {
       const {
-        numLines: bz,
-        charsPerLine: nz
-      } = Ez[uz];
-      return fz(zz, bz, nz, !1)
+        numLines: cD,
+        charsPerLine: pD
+      } = ID[CD];
+      return gD(DD, cD, pD, !1)
     }
-    const iz = 7 / 8,
-      lz = .25,
-      Mz = 8;
+    const iD = 7 / 8,
+      fD = .25,
+      bD = 8;
 
-    function tz(zz, uz) {
+    function QD(DD, CD) {
       return {
-        width: Math.min(zz, Mz) - 2 * lz,
-        height: Math.min(uz, Mz) - 2 * lz
+        width: Math.min(DD, bD) - 2 * fD,
+        height: Math.min(CD, bD) - 2 * fD
       }
     }
 
-    function Hz(zz, uz, bz) {
-      const nz = tz(zz, uz),
+    function wD(DD, CD, cD) {
+      const pD = QD(DD, CD),
         {
-          numLines: lz,
-          charsPerLine: Mz
-        } = Ez[bz];
+          numLines: fD,
+          charsPerLine: bD
+        } = ID[cD];
       return {
-        numLines: Math.max(1, Math.floor(lz / iz * nz.height)),
-        charsPerLine: Math.max(1, Math.floor(Mz * nz.width))
+        numLines: Math.max(1, Math.floor(fD / iD * pD.height)),
+        charsPerLine: Math.max(1, Math.floor(bD * pD.width))
       }
     }
 
-    function Oz(zz, uz, bz, Ez) {
+    function SD(DD, CD, cD, ID) {
       const {
-        numLines: nz,
-        charsPerLine: iz
-      } = Hz(bz, Ez, uz);
-      return fz(zz, nz, iz, !1)
+        numLines: pD,
+        charsPerLine: iD
+      } = wD(cD, ID, CD);
+      return gD(DD, pD, iD, !1)
     }
-    const pz = 32e3;
+    const BD = 32e3;
 
-    function dz(zz) {
-      return zz.slice(0, pz)
+    function yD(DD) {
+      return DD.slice(0, BD)
     }
-    const Fz = 512e3,
-      Zz = 64,
-      Rz = Fz;
+    const MD = 512e3,
+      tD = 64,
+      ZD = MD;
 
-    function Kz(zz, uz) {
-      const bz = Math.max(0, Rz - uz),
-        Ez = Math.min(Fz, bz);
-      return zz.slice(0, Ez)
+    function oD(DD, CD) {
+      const cD = Math.max(0, ZD - CD),
+        ID = Math.min(MD, cD);
+      return DD.slice(0, ID)
     }
-    const wz = {
+    const vD = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      cM: {
+      Vb: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1518,31 +1518,31 @@ export const modules = {
       }
     };
 
-    function Xz(zz, uz) {
+    function ND(DD, CD) {
       const {
-        numLines: bz,
-        charsPerLine: Ez
-      } = wz[uz];
-      return fz(zz, bz, Ez, !1)
+        numLines: cD,
+        charsPerLine: ID
+      } = vD[CD];
+      return gD(DD, cD, ID, !1)
     }
 
-    function fz(zz, uz, bz, Ez, nz) {
-      (nz || Ez) && (zz = zz.slice(0, null !== nz && void 0 !== nz ? nz : uz * bz));
-      const iz = zz.split("\n");
-      if (iz.length > uz && iz.splice(uz, iz.length - uz), !Ez)
-        for (let lz = 0; lz < iz.length; lz++) {
-          const zz = iz[lz];
-          zz.length > bz && (iz[lz] = zz.substring(0, bz), iz.length < uz && iz.splice(lz + 1, 0, zz.substring(bz)))
+    function gD(DD, CD, cD, ID, pD) {
+      (pD || ID) && (DD = DD.slice(0, null !== pD && void 0 !== pD ? pD : CD * cD));
+      const iD = DD.split("\n");
+      if (iD.length > CD && iD.splice(CD, iD.length - CD), !ID)
+        for (let fD = 0; fD < iD.length; fD++) {
+          const DD = iD[fD];
+          DD.length > cD && (iD[fD] = DD.substring(0, cD), iD.length < CD && iD.splice(fD + 1, 0, DD.substring(cD)))
         }
-      return iz.join("\n")
+      return iD.join("\n")
     }
   },
-  42562: (zz, uz, bz) => {
-    zz.exports = bz.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
+  42443: (DD, CD, cD) => {
+    DD.exports = cD.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
   },
-  42571: (zz, uz, bz) => {
-    zz.exports = bz.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  42452: (DD, CD, cD) => {
+    DD.exports = cD.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,24 +1,24 @@
 export const id = 24;
 export const ids = [24];
 export const modules = {
-  38894: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      default: () => Ez
+  38835: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      default: () => ID
     });
-    const Ez = function() {
-      let zz;
+    const ID = function() {
+      let DD;
       return {
-        onCreate: uz => {
-          zz = uz
+        onCreate: CD => {
+          DD = CD
         },
-        onPlayerAltAction: (uz, bz, Ez, nz, iz, lz) => {
-          if (!lz || "Mesh" !== zz.getEntityType(lz)) return;
-          const Mz = zz.getEntityName(lz);
-          "Perks" === Mz ? zz.openShop(uz, !1, "Perks") : "Returning Bonus" === Mz && zz.openShop(uz, !1, "Returning Player Bonus")
+        onPlayerAltAction: (CD, cD, ID, pD, iD, fD) => {
+          if (!fD || "Mesh" !== DD.getEntityType(fD)) return;
+          const bD = DD.getEntityName(fD);
+          "Perks" === bD ? DD.openShop(CD, !1, "Perks") : "Returning Bonus" === bD && DD.openShop(CD, !1, "Returning Player Bonus")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

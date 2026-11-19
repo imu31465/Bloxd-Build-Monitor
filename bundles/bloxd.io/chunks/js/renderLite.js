@@ -1,62 +1,62 @@
 export const id = 48;
 export const ids = [48];
 export const modules = {
-  42598: (zz, uz, bz) => {
-    bz.d(uz, {
-      startRenderLite: () => Nz
+  42476: (DD, CD, cD) => {
+    cD.d(CD, {
+      startRenderLite: () => OD
     });
-    var Ez = bz(3468),
-      nz = bz(606),
-      iz = bz(125),
-      lz = bz(4564),
-      Mz = bz(39902),
-      tz = bz(4560),
-      Hz = bz(39965),
-      Oz = bz(39750),
-      pz = bz(40153),
-      dz = bz(2689),
-      Fz = bz(4282);
-    const Zz = new Map([
+    var ID = cD(3525),
+      pD = cD(646),
+      iD = cD(116),
+      fD = cD(4585),
+      bD = cD(39804),
+      QD = cD(4581),
+      wD = cD(39852),
+      SD = cD(39692),
+      BD = cD(40048),
+      yD = cD(2727),
+      MD = cD(4310);
+    const tD = new Map([
       ["r", " retry"],
       ["f", " fallback"]
     ]);
-    class Rz {
+    class ZD {
       constructor() {
         this.failuresLogged = 0, this.summary = void 0, this.summaries = 0, this.summaryAtMs = -1 / 0
       }
-      failures(zz) {
-        const uz = zz ? zz.split(" ") : [],
-          bz = uz.slice(this.failuresLogged).map((zz => {
-            var uz;
-            const [bz, Ez] = zz.split(":"), nz = null !== (uz = Zz.get(bz.slice(-1))) && void 0 !== uz ? uz : "";
-            return `gl link failed: program row ${parseInt(bz)}${nz}, read ${Ez} ms after issue`
+      failures(DD) {
+        const CD = DD ? DD.split(" ") : [],
+          cD = CD.slice(this.failuresLogged).map((DD => {
+            var CD;
+            const [cD, ID] = DD.split(":"), pD = null !== (CD = tD.get(cD.slice(-1))) && void 0 !== CD ? CD : "";
+            return `gl link failed: program row ${parseInt(cD)}${pD}, read ${ID} ms after issue`
           }));
-        return this.failuresLogged = uz.length, bz
+        return this.failuresLogged = CD.length, cD
       }
-      summaryLine(zz, uz) {
-        const bz = this.summaries < 10 ? 6e4 : 6e5;
-        return void 0 === zz || zz === this.summary || uz - this.summaryAtMs < bz ? null : (this.summary = zz, this.summaries++, this.summaryAtMs = uz, `gl links: ${zz}`)
+      summaryLine(DD, CD) {
+        const cD = this.summaries < 10 ? 6e4 : 6e5;
+        return void 0 === DD || DD === this.summary || CD - this.summaryAtMs < cD ? null : (this.summary = DD, this.summaries++, this.summaryAtMs = CD, `gl links: ${DD}`)
       }
     }
-    var Kz = bz(4454);
-    class wz {
+    var oD = cD(4498);
+    class vD {
       constructor() {
         this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, this.lastDrawnMs = null
       }
-      frame(zz, uz, bz) {
-        if ("none" !== uz && (this.frames++, "paced" === uz && this.paced++, "drawn" === uz)) {
-          if (this.drawn++, this.renderUs += bz, this.renderUsMax = Math.max(this.renderUsMax, bz), null !== this.lastDrawnMs) {
-            const uz = zz - this.lastDrawnMs;
-            this.gapMaxMs = Math.max(this.gapMaxMs, uz), uz >= 50 && this.longGaps++
+      frame(DD, CD, cD) {
+        if ("none" !== CD && (this.frames++, "paced" === CD && this.paced++, "drawn" === CD)) {
+          if (this.drawn++, this.renderUs += cD, this.renderUsMax = Math.max(this.renderUsMax, cD), null !== this.lastDrawnMs) {
+            const CD = DD - this.lastDrawnMs;
+            this.gapMaxMs = Math.max(this.gapMaxMs, CD), CD >= 50 && this.longGaps++
           }
-          this.lastDrawnMs = zz
+          this.lastDrawnMs = DD
         }
       }
       restart() {
         this.take(), this.lastDrawnMs = null
       }
       take() {
-        const zz = {
+        const DD = {
           frames: this.frames,
           drawn: this.drawn,
           paced: this.paced,
@@ -65,228 +65,228 @@ export const modules = {
           renderUs: this.renderUs,
           renderUsMax: this.renderUsMax
         };
-        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, zz
+        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, DD
       }
     }
 
-    function Xz(zz) {
-      return (zz / 1048576).toFixed(1)
+    function ND(DD) {
+      return (DD / 1048576).toFixed(1)
     }
-    class fz {
+    class gD {
       constructor() {
         this.logged = 0, this.seen = new Set, this.unlogged = 0
       }
-      admit(zz) {
-        return this.logged >= 20 || this.seen.has(zz) ? (this.unlogged++, null) : (this.seen.add(zz), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${zz}` : zz)
+      admit(DD) {
+        return this.logged >= 20 || this.seen.has(DD) ? (this.unlogged++, null) : (this.seen.add(DD), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${DD}` : DD)
       }
       takeUnlogged() {
-        const zz = this.unlogged;
-        return this.unlogged = 0, zz
+        const DD = this.unlogged;
+        return this.unlogged = 0, DD
       }
     }
 
-    function sz(zz) {
-      (0, dz.i)("renderlite", function(zz) {
-        let uz = 0,
-          bz = 0,
-          Ez = 0;
-        for (const iz of zz) {
-          var nz;
-          const lz = null !== (nz = iz.codePointAt(0)) && void 0 !== nz ? nz : 0;
-          if (uz += lz < 128 ? 1 : lz < 2048 ? 2 : lz < 65536 ? 3 : 4, uz > 375) return `${zz.slice(0,Ez)}...`;
-          bz += iz.length, uz <= 372 && (Ez = bz)
+    function XD(DD) {
+      (0, yD.j)("renderlite", function(DD) {
+        let CD = 0,
+          cD = 0,
+          ID = 0;
+        for (const iD of DD) {
+          var pD;
+          const fD = null !== (pD = iD.codePointAt(0)) && void 0 !== pD ? pD : 0;
+          if (CD += fD < 128 ? 1 : fD < 2048 ? 2 : fD < 65536 ? 3 : 4, CD > 375) return `${DD.slice(0,ID)}...`;
+          cD += iD.length, CD <= 372 && (ID = cD)
         }
-        return zz
-      }(zz))
+        return DD
+      }(DD))
     }
-    class rz {
-      constructor(zz) {
-        this.frames = new wz, this.events = new fz, this.links = new Rz, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.visibilityChanged = () => {
+    class mD {
+      constructor(DD) {
+        this.frames = new vD, this.events = new gD, this.links = new ZD, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.visibilityChanged = () => {
           this.restartWindow(performance.now())
-        }, this.sd = () => {
-          var zz, uz;
-          const bz = this.session,
-            nz = (0, Oz.j)(),
-            iz = performance.now();
-          if (this.logLinks(iz), null === bz || bz.isStopped || !0 !== (null === nz || void 0 === nz ? void 0 : nz.isCoreRunning)) return void this.restartWindow(iz);
+        }, this.wy = () => {
+          var DD, CD;
+          const cD = this.session,
+            pD = (0, SD.g)(),
+            iD = performance.now();
+          if (this.logLinks(iD), null === cD || cD.isStopped || !0 !== (null === pD || void 0 === pD ? void 0 : pD.isCoreRunning)) return void this.restartWindow(iD);
           if (document.hidden) return;
-          if (iz - this.windowStart < 2500) return;
-          if (! function(zz) {
-              return zz < 12 || (zz - 12) % 3 === 2
+          if (iD - this.windowStart < 2500) return;
+          if (! function(DD) {
+              return DD < 12 || (DD - 12) % 3 === 2
             }(this.windows++)) return;
           this.logRenderer();
-          const tz = bz.headerWord(lz.A.GpuTimed),
-            pz = bz.headerWord(lz.A.GpuFrameUs),
-            dz = this.sampled === bz ? {
-              timed: tz - this.gpuTimed >>> 0,
-              us: pz - this.gpuUs >>> 0
+          const QD = cD.headerWord(fD.A.GpuTimed),
+            BD = cD.headerWord(fD.A.GpuFrameUs),
+            yD = this.sampled === cD ? {
+              timed: QD - this.gpuTimed >>> 0,
+              us: BD - this.gpuUs >>> 0
             } : null;
-          this.sampled = bz, this.gpuTimed = tz, this.gpuUs = pz;
-          const Fz = null !== (zz = null === (uz = (0, Hz.E)((0, Ez.G)())) || void 0 === uz ? void 0 : uz.wbz()) && void 0 !== zz ? zz : 0;
-          sz(function(zz, uz) {
-            const bz = uz.windowMs / 1e3,
-              Ez = [`${Math.round(bz)}s: ${zz.drawn} drawn (${(zz.drawn/bz).toFixed(1)}/s), ${zz.paced} paced, ${zz.frames-zz.drawn-zz.paced} skipped`, `gap max ${Math.round(zz.gapMaxMs)} ms, ${zz.longGaps} over 50 ms`, `render cpu ${zz.drawn?(zz.renderUs/zz.drawn/1e3).toFixed(2):"-"} ms mean, ${(zz.renderUsMax/1e3).toFixed(1)} max`];
-            null !== uz.gpu && Ez.push(`gpu ${uz.gpu.timed?(uz.gpu.us/uz.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${uz.gpu.timed} timed`);
-            const nz = uz.census;
-            Ez.push(null === nz ? "draws none yet" : `draws ${(0,Mz.b)(nz)} (terrain ${nz.terrainOpaque}+${nz.terrainTransparent}, pack ${nz.terrainPack}, meshes ${nz.regular+nz.thin+nz.line+nz.text}, sky ${nz.earthSky+nz.skyMeshes}, particles ${nz.particles})`);
-            const iz = null === uz.gpuBytesBefore ? "" : ` (${uz.gpuBytes>=uz.gpuBytesBefore?"+":"-"}${Xz(Math.abs(uz.gpuBytes-uz.gpuBytesBefore))})`;
-            return Ez.push(`gpu mem ${Xz(uz.gpuBytes)} MiB${iz}`), Ez.push(`pending ${uz.pending}`, "terrain " + (uz.terrainDrawn ? "drawn" : "not drawn yet")), uz.eventsUnlogged > 0 && Ez.push(`${uz.eventsUnlogged} events unlogged`), Ez.join("; ")
+          this.sampled = cD, this.gpuTimed = QD, this.gpuUs = BD;
+          const MD = null !== (DD = null === (CD = (0, wD.H)((0, ID.x)())) || void 0 === CD ? void 0 : CD.ZcD()) && void 0 !== DD ? DD : 0;
+          XD(function(DD, CD) {
+            const cD = CD.windowMs / 1e3,
+              ID = [`${Math.round(cD)}s: ${DD.drawn} drawn (${(DD.drawn/cD).toFixed(1)}/s), ${DD.paced} paced, ${DD.frames-DD.drawn-DD.paced} skipped`, `gap max ${Math.round(DD.gapMaxMs)} ms, ${DD.longGaps} over 50 ms`, `render cpu ${DD.drawn?(DD.renderUs/DD.drawn/1e3).toFixed(2):"-"} ms mean, ${(DD.renderUsMax/1e3).toFixed(1)} max`];
+            null !== CD.gpu && ID.push(`gpu ${CD.gpu.timed?(CD.gpu.us/CD.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${CD.gpu.timed} timed`);
+            const pD = CD.census;
+            ID.push(null === pD ? "draws none yet" : `draws ${(0,bD.e)(pD)} (terrain ${pD.terrainOpaque}+${pD.terrainTransparent}, pack ${pD.terrainPack}, meshes ${pD.regular+pD.thin+pD.line+pD.text}, sky ${pD.earthSky+pD.skyMeshes}, particles ${pD.particles})`);
+            const iD = null === CD.gpuBytesBefore ? "" : ` (${CD.gpuBytes>=CD.gpuBytesBefore?"+":"-"}${ND(Math.abs(CD.gpuBytes-CD.gpuBytesBefore))})`;
+            return ID.push(`gpu mem ${ND(CD.gpuBytes)} MiB${iD}`), ID.push(`pending ${CD.pending}`, "terrain " + (CD.terrainDrawn ? "drawn" : "not drawn yet")), CD.eventsUnlogged > 0 && ID.push(`${CD.eventsUnlogged} events unlogged`), ID.join("; ")
           }(this.frames.take(), {
-            windowMs: iz - this.windowStart,
-            gpu: dz,
-            census: (0, Mz.d)(nz.api),
-            gpuBytes: Fz,
+            windowMs: iD - this.windowStart,
+            gpu: yD,
+            census: (0, bD.g)(pD.api),
+            gpuBytes: MD,
             gpuBytesBefore: this.gpuBytes,
-            pending: bz.headerWord(lz.A.RenderPending),
-            terrainDrawn: 0 !== (bz.headerWord(lz.A.LoadSteps) & lz.M.TerrainDrawn),
+            pending: cD.headerWord(fD.A.RenderPending),
+            terrainDrawn: 0 !== (cD.headerWord(fD.A.LoadSteps) & fD.I.TerrainDrawn),
             eventsUnlogged: this.events.takeUnlogged()
-          })), this.gpuBytes = Fz, this.windowStart = iz
-        }, sz(`${(0,Kz.d)(zz)}; client ${nz.o.client} (${nz.o.reason})`), setInterval(this.sd, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
+          })), this.gpuBytes = MD, this.windowStart = iD
+        }, XD(`${(0,oD.e)(DD)}; client ${pD.g.client} (${pD.g.reason})`), setInterval(this.wy, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      frame(zz, uz, bz) {
-        this.session = zz, this.frames.frame(uz, bz, "drawn" === bz ? zz.headerWord(lz.A.RenderUs) : 0)
+      frame(DD, CD, cD) {
+        this.session = DD, this.frames.frame(CD, cD, "drawn" === cD ? DD.headerWord(fD.A.RenderUs) : 0)
       }
-      coreErrors(zz) {
+      coreErrors(DD) {
         for (const {
-            code: Ez,
-            detail: nz
+            code: ID,
+            detail: pD
           }
-          of zz) {
-          var uz, bz;
-          if (Ez >= lz.g.RenderDeviceLost && Ez <= lz.g.RenderSerialLinks) this.event(`render error ${(0,tz.Td)(Ez)}${null!==(uz=null===(bz=(0,pz.b)(Ez,nz))||void 0===bz?void 0:bz.words)&&void 0!==uz?uz:""} (detail ${nz})`)
+          of DD) {
+          var CD, cD;
+          if (ID >= fD.g.RenderDeviceLost && ID <= fD.g.RenderSerialLinks) this.event(`render error ${(0,QD.Sd)(ID)}${null!==(CD=null===(cD=(0,BD.e)(ID,pD))||void 0===cD?void 0:cD.words)&&void 0!==CD?CD:""} (detail ${pD})`)
         }
       }
-      reload(zz, uz, bz, Ez) {
-        this.event(`render reload: ${zz?"webgpu":"gl"} ${bz}, losses ${uz}${void 0===Ez?"":`: ${Ez}`}`)
+      reload(DD, CD, cD, ID) {
+        this.event(`render reload: ${DD?"webgpu":"gl"} ${cD}, losses ${CD}${void 0===ID?"":`: ${ID}`}`)
       }
-      crashed(zz) {
+      crashed(DD) {
         let {
-          site: uz,
-          error: bz,
-          header: Ez
-        } = zz;
-        const nz = null !== Ez && 0 !== Ez.lastError ? `, last error ${(0,tz.Td)(Ez.lastError)} (detail ${Ez.lastErrorDetail})` : "",
-          iz = bz instanceof Error ? `${bz.name}: ${bz.message}` : null === bz || void 0 === bz ? "" : String(bz);
-        this.event(`core stopped at ${uz}${nz}${iz&&`: ${iz}`}`)
+          site: CD,
+          error: cD,
+          header: ID
+        } = DD;
+        const pD = null !== ID && 0 !== ID.lastError ? `, last error ${(0,QD.Sd)(ID.lastError)} (detail ${ID.lastErrorDetail})` : "",
+          iD = cD instanceof Error ? `${cD.name}: ${cD.message}` : null === cD || void 0 === cD ? "" : String(cD);
+        this.event(`core stopped at ${CD}${pD}${iD&&`: ${iD}`}`)
       }
-      event(zz) {
-        const uz = this.events.admit(zz);
-        null !== uz && sz(uz)
+      event(DD) {
+        const CD = this.events.admit(DD);
+        null !== CD && XD(CD)
       }
-      restartWindow(zz) {
-        this.frames.restart(), this.windowStart = zz;
-        const uz = this.session;
-        null === uz || uz.isStopped ? this.sampled = null : (this.sampled = uz, this.gpuTimed = uz.headerWord(lz.A.GpuTimed), this.gpuUs = uz.headerWord(lz.A.GpuFrameUs))
+      restartWindow(DD) {
+        this.frames.restart(), this.windowStart = DD;
+        const CD = this.session;
+        null === CD || CD.isStopped ? this.sampled = null : (this.sampled = CD, this.gpuTimed = CD.headerWord(fD.A.GpuTimed), this.gpuUs = CD.headerWord(fD.A.GpuFrameUs))
       }
-      logLinks(zz) {
-        const uz = window.bloxdRenderDebug;
-        for (const Ez of this.links.failures(null === uz || void 0 === uz ? void 0 : uz.linkFailures)) this.event(Ez);
-        const bz = this.links.summaryLine(null === uz || void 0 === uz ? void 0 : uz.links, zz);
-        null !== bz && sz(bz)
+      logLinks(DD) {
+        const CD = window.bloxdRenderDebug;
+        for (const ID of this.links.failures(null === CD || void 0 === CD ? void 0 : CD.linkFailures)) this.event(ID);
+        const cD = this.links.summaryLine(null === CD || void 0 === CD ? void 0 : CD.links, DD);
+        null !== cD && XD(cD)
       }
       logRenderer() {
-        var zz, uz;
+        var DD, CD;
         if (this.rendererLogged) return;
         this.rendererLogged = !0;
-        const bz = window.bloxdRenderDebug,
-          Ez = (0, iz.m)(),
-          nz = void 0 === (null === bz || void 0 === bz ? void 0 : bz.parallelCompile) ? "" : `; parallel compile ${bz.parallelCompile}`;
-        sz(`renderer gl ${Ez?`${Ez.vendor} / ${Ez.renderer}`:"(not read)"}; terrain fetch ${null!==(zz=null===bz||void 0===bz?void 0:bz.fetch)&&void 0!==zz?zz:"(not noted)"}${nz}`), sz(`renderer caps ${null!==(uz=null===bz||void 0===bz?void 0:bz.caps)&&void 0!==uz?uz:"(not noted)"}`)
+        const cD = window.bloxdRenderDebug,
+          ID = (0, iD.l)(),
+          pD = void 0 === (null === cD || void 0 === cD ? void 0 : cD.parallelCompile) ? "" : `; parallel compile ${cD.parallelCompile}`;
+        XD(`renderer gl ${ID?`${ID.vendor} / ${ID.renderer}`:"(not read)"}; terrain fetch ${null!==(DD=null===cD||void 0===cD?void 0:cD.fetch)&&void 0!==DD?DD:"(not noted)"}${pD}`), XD(`renderer caps ${null!==(CD=null===cD||void 0===cD?void 0:cD.caps)&&void 0!==CD?CD:"(not noted)"}`)
       }
     }
-    let oz = null;
+    let nD = null;
 
-    function Nz(zz) {
-      return (0, Fz.h)(), oz ??= new rz(zz), oz
+    function OD(DD) {
+      return (0, MD.d)(), nD ??= new mD(DD), nD
     }
   },
-  4454: (zz, uz, bz) => {
-    function Ez(zz) {
-      if (null === zz) return "backend: none picked (no renderer build)";
-      const uz = zz.adapter ? `${zz.adapter.vendor}/${zz.adapter.architecture}` : "none";
-      return `backend ${zz.backend}: reason ${zz.reason}, source ${zz.source}, adapter ${uz}`
+  4498: (DD, CD, cD) => {
+    function ID(DD) {
+      if (null === DD) return "backend: none picked (no renderer build)";
+      const CD = DD.adapter ? `${DD.adapter.vendor}/${DD.adapter.architecture}` : "none";
+      return `backend ${DD.backend}: reason ${DD.reason}, source ${DD.source}, adapter ${CD}`
     }
-    bz.d(uz, {
-      d: () => Ez
+    cD.d(CD, {
+      e: () => ID
     })
   },
-  39902: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => lz,
-      d: () => iz,
-      h: () => Mz
+  39804: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => fD,
+      g: () => iD,
+      i: () => bD
     });
-    var Ez = bz(39740),
-      nz = bz(39750);
+    var ID = cD(39680),
+      pD = cD(39692);
 
-    function iz(zz) {
-      if (zz.queries.drawCensus() < Ez.Hb.BYTES) return null;
-      const uz = zz.memoryData(zz.scratch(), Ez.Hb.BYTES, 4, "the draw census");
-      return null === uz ? null : {
-        terrainOpaque: Ez.Hb.terrainOpaque(uz, 0),
-        terrainTransparent: Ez.Hb.terrainTransparent(uz, 0),
-        terrainPack: Ez.Hb.terrainPack(uz, 0),
-        earthSky: Ez.Hb.earthSky(uz, 0),
-        skyMeshes: Ez.Hb.skyMeshes(uz, 0),
-        regular: Ez.Hb.regular(uz, 0),
-        thin: Ez.Hb.thin(uz, 0),
-        line: Ez.Hb.line(uz, 0),
-        text: Ez.Hb.text(uz, 0),
-        particles: Ez.Hb.particles(uz, 0)
+    function iD(DD) {
+      if (DD.queries.drawCensus() < ID.Jb.BYTES) return null;
+      const CD = DD.memoryData(DD.scratch(), ID.Jb.BYTES, 4, "the draw census");
+      return null === CD ? null : {
+        terrainOpaque: ID.Jb.terrainOpaque(CD, 0),
+        terrainTransparent: ID.Jb.terrainTransparent(CD, 0),
+        terrainPack: ID.Jb.terrainPack(CD, 0),
+        earthSky: ID.Jb.earthSky(CD, 0),
+        skyMeshes: ID.Jb.skyMeshes(CD, 0),
+        regular: ID.Jb.regular(CD, 0),
+        thin: ID.Jb.thin(CD, 0),
+        line: ID.Jb.line(CD, 0),
+        text: ID.Jb.text(CD, 0),
+        particles: ID.Jb.particles(CD, 0)
       }
     }
 
-    function lz(zz) {
+    function fD(DD) {
       const {
-        terrainOpaque: uz,
-        terrainTransparent: bz,
-        earthSky: Ez,
-        skyMeshes: nz,
-        regular: iz,
-        thin: lz,
-        line: Mz,
-        text: tz,
-        particles: Hz
-      } = zz;
-      return uz + bz + Ez + nz + iz + lz + Mz + tz + Hz
+        terrainOpaque: CD,
+        terrainTransparent: cD,
+        earthSky: ID,
+        skyMeshes: pD,
+        regular: iD,
+        thin: fD,
+        line: bD,
+        text: QD,
+        particles: wD
+      } = DD;
+      return CD + cD + ID + pD + iD + fD + bD + QD + wD
     }
 
-    function Mz() {
-      const zz = (0, nz.j)();
-      return !0 === (null === zz || void 0 === zz ? void 0 : zz.isCoreRunning) ? function(zz) {
-        const uz = iz(zz);
-        if (null === uz) return [];
+    function bD() {
+      const DD = (0, pD.g)();
+      return !0 === (null === DD || void 0 === DD ? void 0 : DD.isCoreRunning) ? function(DD) {
+        const CD = iD(DD);
+        if (null === CD) return [];
         const {
-          terrainOpaque: bz,
-          terrainTransparent: Ez,
-          terrainPack: nz,
-          earthSky: Mz,
-          skyMeshes: tz,
-          regular: Hz,
-          thin: Oz,
-          line: pz,
-          text: dz,
-          particles: Fz
-        } = uz;
+          terrainOpaque: cD,
+          terrainTransparent: ID,
+          terrainPack: pD,
+          earthSky: bD,
+          skyMeshes: QD,
+          regular: wD,
+          thin: SD,
+          line: BD,
+          text: yD,
+          particles: MD
+        } = CD;
         return [{
           label: "Drawn",
-          value: `${lz(uz)}`
+          value: `${fD(CD)}`
         }, {
           label: "Terrain",
-          value: `${bz} opaque / ${Ez} transparent (${nz} shader pack)`
+          value: `${cD} opaque / ${ID} transparent (${pD} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${Hz} / ${Oz}`
+          value: `${wD} / ${SD}`
         }, {
           label: "Text / Lines",
-          value: `${dz} / ${pz}`
+          value: `${yD} / ${BD}`
         }, {
           label: "Sky / Particles",
-          value: `${Mz+tz} / ${Fz}`
+          value: `${bD+QD} / ${MD}`
         }]
-      }(zz.api) : []
+      }(DD.api) : []
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,156 +1,156 @@
 export const id = 282;
 export const ids = [282];
 export const modules = {
-  40500: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      CharacterPreview: () => pz
+  40352: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      CharacterPreview: () => BD
     });
-    var Ez = bz(56),
-      nz = bz(2602),
-      iz = bz(1226),
-      lz = bz(8494),
-      Mz = bz(9020),
-      tz = bz(3382),
-      Hz = bz(1089);
-    const Oz = .6 * Math.PI,
-      pz = (0, Ez.memo)((0, Ez.forwardRef)((function(zz, uz) {
+    var ID = cD(53),
+      pD = cD(2621),
+      iD = cD(1240),
+      fD = cD(8520),
+      bD = cD(9074),
+      QD = cD(3447),
+      wD = cD(1093);
+    const SD = .6 * Math.PI,
+      BD = (0, ID.memo)((0, ID.forwardRef)((function(DD, CD) {
         let {
-          onReady: bz,
-          onDrawn: pz,
-          owner: dz = "other",
-          framing: Fz = "player",
-          forcedCosmetics: Zz,
-          GM: Rz,
-          emotePlaySeq: Kz,
-          turntableFromYaw: wz = null
-        } = zz;
-        const Xz = (0, Ez.useRef)(null),
+          onReady: cD,
+          onDrawn: BD,
+          owner: yD = "other",
+          framing: MD = "player",
+          forcedCosmetics: tD,
+          Pb: ZD,
+          emotePlaySeq: oD,
+          turntableFromYaw: vD = null
+        } = DD;
+        const ND = (0, ID.useRef)(null),
           {
-            width: fz,
-            height: sz
-          } = (0, nz.e)(Xz),
-          rz = (0, Ez.useRef)(null),
-          oz = (0, Ez.useRef)({}),
-          Nz = (0, Ez.useRef)({}),
-          [vz, xz] = (0, Ez.useState)(!1),
-          Jz = (0, Ez.useRef)(bz);
-        Jz.current = bz;
-        const Az = (0, Ez.useRef)(pz);
-        Az.current = pz;
-        const Tz = (0, Ez.useRef)(null),
-          Lz = (0, Ez.useRef)(!1),
-          Pz = (0, Ez.useRef)(!1),
-          Gz = (0, Ez.useCallback)((() => {
-            const zz = rz.current;
-            if (!zz || !Az.current || Lz.current || !Pz.current) return;
-            const uz = {};
-            Tz.current = uz, queueMicrotask((() => {
-              if (Tz.current !== uz) return;
-              const bz = Promise.all(iz.u.map((uz => zz.untilDrawn(uz)))).catch((zz => {
-                  console.error("Failed to draw the character preview", zz)
+            width: gD,
+            height: XD
+          } = (0, pD.e)(ND),
+          mD = (0, ID.useRef)(null),
+          nD = (0, ID.useRef)({}),
+          OD = (0, ID.useRef)({}),
+          [PD, HD] = (0, ID.useState)(!1),
+          UD = (0, ID.useRef)(cD);
+        UD.current = cD;
+        const xD = (0, ID.useRef)(BD);
+        xD.current = BD;
+        const qD = (0, ID.useRef)(null),
+          JD = (0, ID.useRef)(!1),
+          KD = (0, ID.useRef)(!1),
+          aD = (0, ID.useCallback)((() => {
+            const DD = mD.current;
+            if (!DD || !xD.current || JD.current || !KD.current) return;
+            const CD = {};
+            qD.current = CD, queueMicrotask((() => {
+              if (qD.current !== CD) return;
+              const cD = Promise.all(iD.u.map((CD => DD.untilDrawn(CD)))).catch((DD => {
+                  console.error("Failed to draw the character preview", DD)
                 })),
-                Ez = new Promise((zz => {
-                  setTimeout(zz, 1e4)
+                ID = new Promise((DD => {
+                  setTimeout(DD, 1e4)
                 }));
-              Promise.race([bz, Ez]).then((() => {
-                var bz;
-                rz.current !== zz || Tz.current !== uz || Lz.current || (Lz.current = !0, null === (bz = Az.current) || void 0 === bz || bz.call(Az))
+              Promise.race([cD, ID]).then((() => {
+                var cD;
+                mD.current !== DD || qD.current !== CD || JD.current || (JD.current = !0, null === (cD = xD.current) || void 0 === cD || cD.call(xD))
               }))
             }))
           }), []);
-        return (0, Ez.useImperativeHandle)(uz, (() => {
-          const zz = (zz, uz) => {
-            var bz;
-            (oz.current[zz] = uz, null !== Zz && void 0 !== Zz && Zz[zz]) || (null === (bz = rz.current) || void 0 === bz || bz.setCosmetic(zz, uz), Gz())
+        return (0, ID.useImperativeHandle)(CD, (() => {
+          const DD = (DD, CD) => {
+            var cD;
+            (nD.current[DD] = CD, null !== tD && void 0 !== tD && tD[DD]) || (null === (cD = mD.current) || void 0 === cD || cD.setCosmetic(DD, CD), aD())
           };
           return {
-            updateCosmetic: zz,
-            setAllCosmetics(uz) {
-              for (const Ez of iz.u) {
-                var bz;
-                zz(Ez, null !== (bz = uz[Ez]) && void 0 !== bz ? bz : (0, lz.b)(Ez))
+            updateCosmetic: DD,
+            setAllCosmetics(CD) {
+              for (const ID of iD.u) {
+                var cD;
+                DD(ID, null !== (cD = CD[ID]) && void 0 !== cD ? cD : (0, fD.b)(ID))
               }
             },
             isReady() {
-              var zz, uz;
-              return null !== (zz = null === (uz = rz.current) || void 0 === uz ? void 0 : uz.isReady()) && void 0 !== zz && zz
+              var DD, CD;
+              return null !== (DD = null === (CD = mD.current) || void 0 === CD ? void 0 : CD.isReady()) && void 0 !== DD && DD
             },
             resetCamera() {
-              var zz;
-              null === (zz = rz.current) || void 0 === zz || zz.resetCamera()
+              var DD;
+              null === (DD = mD.current) || void 0 === DD || DD.resetCamera()
             },
-            setOrbit(zz) {
-              var uz;
-              null === (uz = rz.current) || void 0 === uz || uz.setOrbit(zz)
+            setOrbit(DD) {
+              var CD;
+              null === (CD = mD.current) || void 0 === CD || CD.setOrbit(DD)
             },
-            async ensureReadyForCapture(zz) {
-              var uz;
-              await (null === (uz = rz.current) || void 0 === uz ? void 0 : uz.untilDrawn(zz))
+            async ensureReadyForCapture(DD) {
+              var CD;
+              await (null === (CD = mD.current) || void 0 === CD ? void 0 : CD.untilDrawn(DD))
             },
             getDevTools() {
-              var zz;
-              return null !== (zz = rz.current) && void 0 !== zz && zz.isReady() ? rz.current.dev : null
+              var DD;
+              return null !== (DD = mD.current) && void 0 !== DD && DD.isReady() ? mD.current.dev : null
             }
           }
-        }), [Zz, Gz]), (0, Ez.useEffect)((() => {
-          const zz = tz.c.register(dz),
-            uz = Mz.j.openCharacter(Xz.current, Fz);
-          rz.current = uz;
-          let bz = !0;
-          return uz.ready.then((() => {
-            bz && (xz(!0), Jz.current())
-          })).catch((zz => {
-            console.error("Failed to set up the character preview", zz)
+        }), [tD, aD]), (0, ID.useEffect)((() => {
+          const DD = QD.e.register(yD),
+            CD = bD.f.openCharacter(ND.current, MD);
+          mD.current = CD;
+          let cD = !0;
+          return CD.ready.then((() => {
+            cD && (HD(!0), UD.current())
+          })).catch((DD => {
+            console.error("Failed to set up the character preview", DD)
           })), () => {
-            bz = !1, zz(), uz.resetCamera(), uz.close(), rz.current = null
+            cD = !1, DD(), CD.resetCamera(), CD.close(), mD.current = null
           }
-        }), []), (0, Ez.useEffect)((() => {
-          fz <= 0 || sz <= 0 || rz.current.resize(fz, sz)
-        }), [fz, sz]), (0, Ez.useEffect)((() => {
-          if (!vz) return;
-          const zz = Nz.current;
-          for (const uz of iz.u) {
-            const bz = null === Zz || void 0 === Zz ? void 0 : Zz[uz],
-              Ez = zz[uz];
-            bz && bz !== Ez ? rz.current.setCosmetic(uz, bz) : !bz && Ez && oz.current[uz] && rz.current.setCosmetic(uz, oz.current[uz])
+        }), []), (0, ID.useEffect)((() => {
+          gD <= 0 || XD <= 0 || mD.current.resize(gD, XD)
+        }), [gD, XD]), (0, ID.useEffect)((() => {
+          if (!PD) return;
+          const DD = OD.current;
+          for (const CD of iD.u) {
+            const cD = null === tD || void 0 === tD ? void 0 : tD[CD],
+              ID = DD[CD];
+            cD && cD !== ID ? mD.current.setCosmetic(CD, cD) : !cD && ID && nD.current[CD] && mD.current.setCosmetic(CD, nD.current[CD])
           }
-          Nz.current = {
-            ...Zz
-          }, Pz.current = !0, Gz()
-        }), [Zz, vz, Gz]), (0, Ez.useEffect)((() => {
-          vz && rz.current.playEmote(null !== Rz && void 0 !== Rz ? Rz : null)
-        }), [Rz, Kz, vz]), (0, Ez.useEffect)((() => {
-          if (!vz || null === wz) return;
-          const zz = rz.current,
+          OD.current = {
+            ...tD
+          }, KD.current = !0, aD()
+        }), [tD, PD, aD]), (0, ID.useEffect)((() => {
+          PD && mD.current.playEmote(null !== ZD && void 0 !== ZD ? ZD : null)
+        }), [ZD, oD, PD]), (0, ID.useEffect)((() => {
+          if (!PD || null === vD) return;
+          const DD = mD.current,
             {
-              pitch: uz,
-              radius: bz
-            } = Mz.c[Fz];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return zz.setOrbit({
-            yaw: wz + Oz,
-            pitch: uz,
-            radius: bz
+              pitch: CD,
+              radius: cD
+            } = bD.c[MD];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return DD.setOrbit({
+            yaw: vD + SD,
+            pitch: CD,
+            radius: cD
           }), () => {
-            zz.resetCamera()
+            DD.resetCamera()
           };
-          const Ez = performance.now();
-          let nz = 0;
-          const iz = lz => {
-            zz.setOrbit({
-              yaw: wz + (lz - Ez) / 6e3 * 2 * Math.PI,
-              pitch: uz,
-              radius: bz
-            }), nz = requestAnimationFrame(iz)
+          const ID = performance.now();
+          let pD = 0;
+          const iD = fD => {
+            DD.setOrbit({
+              yaw: vD + (fD - ID) / 6e3 * 2 * Math.PI,
+              pitch: CD,
+              radius: cD
+            }), pD = requestAnimationFrame(iD)
           };
-          return nz = requestAnimationFrame(iz), () => {
-            cancelAnimationFrame(nz), zz.resetCamera()
+          return pD = requestAnimationFrame(iD), () => {
+            cancelAnimationFrame(pD), DD.resetCamera()
           }
-        }), [vz, wz]), (0, Hz.jsx)("div", {
+        }), [PD, vD]), (0, wD.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: Xz
+          ref: ND
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

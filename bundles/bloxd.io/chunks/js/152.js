@@ -1,567 +1,536 @@
 export const id = 152;
 export const ids = [152];
 export const modules = {
-  38171: (zz, uz, bz) => {
-    var Ez = {
-      "./cape_cow_cream.png": 27647,
-      "./cape_cow_normal.png": 27653,
-      "./cape_creator_level1.png": 27662,
-      "./cape_creator_level2.png": 27665,
-      "./cape_creator_level3.png": 27672,
-      "./cape_none.png": 27676,
-      "./cape_pig.png": 27685,
-      "./cape_sheep.png": 27694,
-      "./cape_super.png": 27699,
-      "./cape_super_inverted.png": 27703,
-      "./cape_youtuber.png": 27711
-    };
-
-    function nz(zz) {
-      var uz = iz(zz);
-      return bz(uz)
-    }
-
-    function iz(zz) {
-      if (!bz.o(Ez, zz)) {
-        var uz = new Error("Cannot find module '" + zz + "'");
-        throw uz.code = "MODULE_NOT_FOUND", uz
-      }
-      return Ez[zz]
-    }
-    nz.keys = function() {
-      return Object.keys(Ez)
-    }, nz.resolve = iz, zz.exports = nz, nz.id = 38171
-  },
-  40383: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      openCharacterPreview: () => ez
+  40228: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      openCharacterPreview: () => ED
     });
-    var Ez = bz(37522),
-      nz = bz(2623),
-      iz = bz(577),
-      lz = bz(36588),
-      Mz = bz(2136),
-      tz = bz(36577),
-      Hz = bz(38998),
-      Oz = bz(39250),
-      pz = bz(40281),
-      dz = bz(36514),
-      Fz = bz(39406),
-      Zz = bz(36709),
-      Rz = bz(39425),
-      Kz = bz(40341),
-      wz = bz(36506),
-      Xz = bz(1212),
-      fz = bz(2132),
-      sz = bz(36668),
-      rz = bz(36762);
-    class oz {
-      constructor(zz, uz) {
-        this.pose = zz, this.nodes = void 0, this.nodes = zz.boneNames.map((zz => uz.get(zz)))
+    var ID = cD(37481),
+      pD = cD(2642),
+      iD = cD(611),
+      fD = cD(36517),
+      bD = cD(2195),
+      QD = cD(36501),
+      wD = cD(38968),
+      SD = cD(39231),
+      BD = cD(40160),
+      yD = cD(36440),
+      MD = cD(39382),
+      tD = cD(36613),
+      ZD = cD(39396),
+      oD = cD(40198),
+      vD = cD(36431),
+      ND = cD(1221),
+      gD = cD(2192),
+      XD = cD(36587),
+      mD = cD(36675);
+    class nD {
+      constructor(DD, CD) {
+        this.pose = DD, this.nodes = void 0, this.nodes = DD.boneNames.map((DD => CD.get(DD)))
       }
-      write(zz) {
-        this.pose.pose(zz);
+      write(DD) {
+        this.pose.pose(DD);
         const {
-          rotations: uz
+          rotations: CD
         } = this.pose;
-        for (let bz = 0; bz < this.nodes.length; bz++) {
-          const zz = 4 * bz;
-          this.nodes[bz].rotationQuaternion.set(uz[zz], uz[zz + 1], uz[zz + 2], uz[zz + 3])
+        for (let cD = 0; cD < this.nodes.length; cD++) {
+          const DD = 4 * cD;
+          this.nodes[cD].rotationQuaternion.set(CD[DD], CD[DD + 1], CD[DD + 2], CD[DD + 3])
         }
       }
     }
 
-    function Nz(zz) {
-      zz.unfreezeWorldMatrix();
-      for (const uz of zz.getChildren()) Nz(uz)
+    function OD(DD) {
+      DD.unfreezeWorldMatrix();
+      for (const CD of DD.getChildren()) OD(CD)
     }
 
-    function vz(zz, uz) {
-      zz.isVisible = uz;
-      for (const bz of zz.getChildMeshes()) bz.isVisible = uz
+    function PD(DD, CD) {
+      DD.isVisible = CD;
+      for (const cD of DD.getChildMeshes()) cD.isVisible = CD
     }
-    class xz {
-      constructor(zz, uz, bz) {
-        this.tK = zz, this.thinInstMgr = uz, this.eT = bz, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
+    class HD {
+      constructor(DD, CD, cD) {
+        this.wo = DD, this.thinInstMgr = CD, this.bJ = cD, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
       }
-      loadModel(zz, uz, bz) {
-        const Ez = (0, sz.g)(zz, uz);
-        return Ez in this.modelCache || (this.modelCache[Ez] = (async () => {
+      loadModel(DD, CD, cD) {
+        const ID = (0, XD.e)(DD, CD);
+        return ID in this.modelCache || (this.modelCache[ID] = (async () => {
           try {
-            const Ez = await (0, sz.j)(zz, this.tK),
-              nz = new Map;
-            for (const zz of Ez.getNodes()) nz.set(zz.name, zz);
-            const iz = (0, sz.d)(null !== uz && void 0 !== uz ? uz : zz, this.tK);
-            (0, sz.n)(Ez, iz, {
-              keepTransforms: void 0 !== bz,
-              onProcessedMesh: zz => {
-                (0, sz.p)(zz), this.tK.vbz(zz, !1), zz.isVisible = !1
+            const ID = await (0, XD.i)(DD, this.wo),
+              pD = new Map;
+            for (const DD of ID.getNodes()) pD.set(DD.name, DD);
+            const iD = (0, XD.c)(null !== CD && void 0 !== CD ? CD : DD, this.wo);
+            (0, XD.m)(ID, iD, {
+              keepTransforms: void 0 !== cD,
+              onProcessedMesh: DD => {
+                (0, XD.p)(DD), this.wo.HcD(DD, !1), DD.isVisible = !1
               }
             });
-            for (const zz of Ez.rootNodes) Nz(zz);
-            const lz = void 0 === bz ? null : (0, rz.f)(bz, (zz => {
-              var uz, bz;
-              return null !== (uz = null === (bz = nz.get(zz)) || void 0 === bz ? void 0 : bz.rotationQuaternion) && void 0 !== uz ? uz : null
+            for (const DD of ID.rootNodes) OD(DD);
+            const fD = void 0 === cD ? null : (0, mD.f)(cD, (DD => {
+              var CD, cD;
+              return null !== (CD = null === (cD = pD.get(DD)) || void 0 === cD ? void 0 : cD.rotationQuaternion) && void 0 !== CD ? CD : null
             }));
             return {
-              nodesByName: nz,
-              bones: null === lz ? null : new oz(lz, nz)
+              nodesByName: pD,
+              bones: null === fD ? null : new nD(fD, pD)
             }
-          } catch (nz) {
-            throw delete this.modelCache[Ez], console.error(`Failed to load preview attachment ${Ez}:`, nz), nz
+          } catch (pD) {
+            throw delete this.modelCache[ID], console.error(`Failed to load preview attachment ${ID}:`, pD), pD
           }
-        })()), this.modelCache[Ez]
+        })()), this.modelCache[ID]
       }
-      async update(zz, uz) {
-        var bz;
+      async update(DD, CD) {
+        var cD;
         const {
-          thinInstMgr: Ez,
-          eT: nz
+          thinInstMgr: ID,
+          bJ: pD
         } = this;
-        this.cosmeticNames[zz] = uz;
-        const iz = this.attachmentsByType[zz];
-        if (iz)
+        this.cosmeticNames[DD] = CD;
+        const iD = this.attachmentsByType[DD];
+        if (iD)
           for (const {
-              mesh: Mz,
-              destNode: tz,
-              bones: Hz
+              mesh: bD,
+              destNode: QD,
+              bones: wD
             }
-            of iz) {
-            null !== Hz && (0, Xz.sb)(this.shownBones, Hz), vz(Mz, !1);
-            const zz = Ez.getNamedNode(nz, tz);
-            Ez.detachTransformNodeIfFound(Mz, nz, zz)
+            of iD) {
+            null !== wD && (0, ND.lb)(this.shownBones, wD), PD(bD, !1);
+            const DD = ID.getNamedNode(pD, QD);
+            ID.detachTransformNodeIfFound(bD, pD, DD)
           }
-        this.attachmentsByType[zz] = [];
-        const lz = (0, fz.m)(zz, uz);
-        if (null !== lz && void 0 !== lz && null !== (bz = lz.attachments) && void 0 !== bz && bz.length)
-          for (const Mz of lz.attachments) {
-            let bz;
+        this.attachmentsByType[DD] = [];
+        const fD = (0, gD.k)(DD, CD);
+        if (null !== fD && void 0 !== fD && null !== (cD = fD.attachments) && void 0 !== cD && cD.length)
+          for (const bD of fD.attachments) {
+            let cD;
             try {
-              bz = await this.loadModel(Mz.modelGlb, Mz.texture, Mz.animation)
+              cD = await this.loadModel(bD.modelGlb, bD.texture, bD.animation)
             } catch {
               continue
             }
-            if (this.cosmeticNames[zz] !== uz) return;
-            const iz = bz.nodesByName.get(Mz.modelNode);
-            if (!iz) {
-              console.error(`Preview attachment node ${Mz.modelNode} not found in ${Mz.modelGlb}`);
+            if (this.cosmeticNames[DD] !== CD) return;
+            const iD = cD.nodesByName.get(bD.modelNode);
+            if (!iD) {
+              console.error(`Preview attachment node ${bD.modelNode} not found in ${bD.modelGlb}`);
               continue
             }
-            vz(iz, !0), (0, sz.v)(iz, Mz.overlayColour);
-            const lz = Ez.getNamedNode(nz, Mz.destNode);
-            Ez.attachTransformNode(iz, nz, lz), this.attachmentsByType[zz].push({
-              mesh: iz,
-              destNode: Mz.destNode,
-              bones: bz.bones
-            }), null !== bz.bones && this.shownBones.push(bz.bones)
+            PD(iD, !0), (0, XD.x)(iD, bD.overlayColour);
+            const fD = ID.getNamedNode(pD, bD.destNode);
+            ID.attachTransformNode(iD, pD, fD), this.attachmentsByType[DD].push({
+              mesh: iD,
+              destNode: bD.destNode,
+              bones: cD.bones
+            }), null !== cD.bones && this.shownBones.push(cD.bones)
           }
       }
-      writePoses(zz) {
-        for (const uz of this.shownBones) uz.write(zz)
+      writePoses(DD) {
+        for (const CD of this.shownBones) CD.write(DD)
       }
     }
-    var Jz = bz(36597),
-      Az = (bz(40310), bz(39642), bz(40318), bz(9028));
-    let Tz, Lz, Pz, Gz, az, Vz, mz, qz, hz, Uz;
-    const cz = document.createElement("canvas");
-    async function gz() {
-      await new Promise((zz => {
+    var UD = cD(36524),
+      xD = (cD(40180), cD(39602), cD(40189), cD(9080));
+    let qD, JD, KD, aD, VD, zD, jD, lD, LD, TD;
+    const GD = document.createElement("canvas");
+    async function RD() {
+      await new Promise((DD => {
         setTimeout((() => {
-          zz()
+          DD()
         }), 100)
       }))
     }
-    cz.classList.add("CharCustomisationPreviewCanvas");
-    const Sz = {};
+    GD.classList.add("CharCustomisationPreviewCanvas");
+    const kD = {};
 
-    function yz(zz, uz) {
-      cz.width = zz, cz.height = uz, Tz.resize()
+    function dD(DD, CD) {
+      GD.width = DD, GD.height = CD, qD.resize()
     }
-    let Dz = 0;
-    class Qz {
-      constructor(zz, uz) {
-        this.framing = uz, this.ready = Uz, this.dev = {
-          canvas: () => cz,
-          isolateHead(zz) {
-            const uz = Vz.getNodeNames(mz);
-            for (let bz = 0; bz < uz.length; bz++) "HeadMesh" !== uz[bz] && "__root__" !== uz[bz] && "TorsoNode" !== uz[bz] && Vz.setNodeEnabled(mz, bz, !1);
-            if (zz) {
-              const zz = Vz.getNamedNode(mz, "HeadMesh");
-              Vz.setNodeDisableColorWrite(mz, zz, !0, (zz => {
-                const uz = new Rz.StandardMaterial(`${zz.name}_depthOnly`, zz.XT());
-                return uz.disableColorWrite = !0, uz
+    let YD = 0;
+    class WD {
+      constructor(DD, CD) {
+        this.framing = CD, this.ready = TD, this.dev = {
+          canvas: () => GD,
+          isolateHead(DD) {
+            const CD = zD.getNodeNames(jD);
+            for (let cD = 0; cD < CD.length; cD++) "HeadMesh" !== CD[cD] && "__root__" !== CD[cD] && "TorsoNode" !== CD[cD] && zD.setNodeEnabled(jD, cD, !1);
+            if (DD) {
+              const DD = zD.getNamedNode(jD, "HeadMesh");
+              zD.setNodeDisableColorWrite(jD, DD, !0, (DD => {
+                const CD = new ZD.StandardMaterial(`${DD.name}_depthOnly`, DD.hq());
+                return CD.disableColorWrite = !0, CD
               }))
             }
-            Vz.setPosition(mz, 0, -12, 0)
+            zD.setPosition(jD, 0, -12, 0)
           }
         }, this.closed = !1, this.resetCamera();
-        const bz = zz.getBoundingClientRect();
-        yz(bz.width, bz.height), Dz++, Tz.stopRenderLoop(), Tz.runRenderLoop((() => {
-          var zz, uz;
-          null === (zz = qz) || void 0 === zz || zz.render(Tz.getDeltaTime()), null === (uz = hz) || void 0 === uz || uz.writePoses(performance.now() / 1e3), Pz.render()
+        const cD = DD.getBoundingClientRect();
+        dD(cD.width, cD.height), YD++, qD.stopRenderLoop(), qD.runRenderLoop((() => {
+          var DD, CD;
+          null === (DD = lD) || void 0 === DD || DD.render(qD.getDeltaTime()), null === (CD = LD) || void 0 === CD || CD.writePoses(performance.now() / 1e3), KD.render()
         }))
       }
       isReady() {
-        return !!Gz
+        return !!aD
       }
-      setCosmetic(zz, uz) {
-        ! function(zz, uz) {
-          if (!Gz) return;
-          const lz = (0, nz.g)();
-          lz.ZJ(!1), Ez.e.Player.meshApi.updatePlayerCosmetic(lz.iG, mz, zz, uz, !0), "cape" === zz && (uz === iz.d ? az.Zx(!1) : (az.Zx(!0), az.material.diffuseTexture = new Kz.e(bz(38171)(`./cape_${uz}.png`), az.XT(), {
+      setCosmetic(DD, CD) {
+        ! function(DD, CD) {
+          if (!aD) return;
+          const fD = (0, pD.i)();
+          fD.kU(!1), ID.b.Player.meshApi.updatePlayerCosmetic(fD.aJ, jD, DD, CD, !0), "cape" === DD && (CD === iD.e ? VD.lH(!1) : (VD.lH(!0), VD.material.diffuseTexture = new oD.e(cD(38163)(`./cape_${CD}.png`), VD.hq(), {
             invertY: !1,
-            samplingMode: Kz.e.NEAREST_NEAREST_MIPLINEAR
+            samplingMode: oD.e.NEAREST_NEAREST_MIPLINEAR
           })));
-          Sz[zz] = hz.update(zz, uz)
-        }(zz, uz)
+          kD[DD] = LD.update(DD, CD)
+        }(DD, CD)
       }
-      playEmote(zz) {
-        if (!qz) return;
-        if (!zz) return void qz.stopAnimation(tz.g.Emote);
-        const uz = (0, lz.f)((0, Mz.j)(zz).animation);
-        qz.startAnimation(uz, tz.g.Emote, 0, Mz.d)
+      playEmote(DD) {
+        if (!lD) return;
+        if (!DD) return void lD.stopAnimation(QD.d.Emote);
+        const CD = (0, fD.f)((0, bD.h)(DD).animation);
+        lD.startAnimation(CD, QD.d.Emote, 0, bD.d)
       }
-      async untilDrawn(zz) {
-        if (await gz(), "cape" === zz && az) {
-          const zz = az.material,
-            uz = null === zz || void 0 === zz ? void 0 : zz.diffuseTexture;
-          uz && !uz.isReady() && (await new Promise((zz => {
-            uz.onLoadObservable.addOnce((() => {
-              zz()
+      async untilDrawn(DD) {
+        if (await RD(), "cape" === DD && VD) {
+          const DD = VD.material,
+            CD = null === DD || void 0 === DD ? void 0 : DD.diffuseTexture;
+          CD && !CD.isReady() && (await new Promise((DD => {
+            CD.onLoadObservable.addOnce((() => {
+              DD()
             }))
-          })), await gz())
+          })), await RD())
         }
-        Sz[zz] && (await Sz[zz], await gz()), await Pz.whenReadyAsync(), await new Promise((zz => {
-          Pz.onAfterRenderObservable.addOnce((() => {
-            zz()
+        kD[DD] && (await kD[DD], await RD()), await KD.whenReadyAsync(), await new Promise((DD => {
+          KD.onAfterRenderObservable.addOnce((() => {
+            DD()
           }))
         }))
       }
-      setOrbit(zz) {
-        Wz(zz)
+      setOrbit(DD) {
+        sD(DD)
       }
       resetCamera() {
-        Lz.inertialAlphaOffset = 0, Lz.inertialBetaOffset = 0, Lz.inertialRadiusOffset = 0, Wz(Az.b[this.framing])
+        JD.inertialAlphaOffset = 0, JD.inertialBetaOffset = 0, JD.inertialRadiusOffset = 0, sD(xD.c[this.framing])
       }
-      resize(zz, uz) {
-        yz(zz, uz)
+      resize(DD, CD) {
+        dD(DD, CD)
       }
       close() {
-        this.closed || (this.closed = !0, Dz--, 0 === Dz && Tz.stopRenderLoop())
+        this.closed || (this.closed = !0, YD--, 0 === YD && qD.stopRenderLoop())
       }
     }
 
-    function Wz(zz) {
+    function sD(DD) {
       let {
-        yaw: uz,
-        pitch: bz,
-        radius: Ez,
-        target: nz
-      } = zz;
-      Lz.alpha = uz, Lz.beta = bz, Ez && (Lz.radius = Ez), nz && Lz.target.set(nz[0], nz[1], nz[2])
+        yaw: CD,
+        pitch: cD,
+        radius: ID,
+        target: pD
+      } = DD;
+      JD.alpha = CD, JD.beta = cD, ID && (JD.radius = ID), pD && JD.target.set(pD[0], pD[1], pD[2])
     }
 
-    function ez(zz, uz) {
-      return zz.appendChild(cz), Tz || function() {
-        Tz = new Hz.c(cz, !0, {
+    function ED(DD, CD) {
+      return DD.appendChild(GD), qD || function() {
+        qD = new wD.e(GD, !0, {
           preserveDrawingBuffer: !0
         });
-        const zz = (0, nz.g)();
-        Tz.fbz = zz.oR.engine.fbz, Pz = new Oz.e(Tz), Pz.clearColor = new Zz.d(0, 0, 0, 0), Pz.ambientColor = new Zz.Color3(1, 1, 1), Lz = new pz.e("JK", 0, 0, 1, dz.ER.Zero(), Pz), Lz.attachControl(cz, !0), Lz.panningSensibility = 0, Uz = (0, Ez.u)("Player", Pz, !0).then((uz => {
-          Gz = uz.meshApi, az = uz.capeMesh, Vz = zz.oR.hT;
-          const bz = 8.33;
-          mz = (0, Ez.i)("Player", bz, !0, !0), Vz.setPosition(mz, 0, -8.33, 0);
-          const nz = Vz.getNamedNode(mz, "BodyMesh");
-          Vz.attachTransformNode(az, mz, nz), Vz.set(mz, "aOpacity", 1), Vz.pG(mz, "aOpacity", 1), hz = new xz(Pz, Vz, mz), qz = new wz.AnimatorState, qz.Gd = zz, qz.thinInstMgr = Vz, qz.eT = mz, qz.Quz = Vz.sbz(mz, 0), qz.modelLifeformType = "Player", qz.nodeNameAliases = (0, Jz.c)("Player").nodeNameAliases;
-          const iz = az.lG().boundingBox;
-          az.position.y = ((24 - iz.maximum.y + iz.minimum.y) / 2 - 1 / 32) / bz, az.position.z = -1 / bz, az.rotationQuaternion = null;
-          const lz = Math.PI / 18,
-            Mz = iz.maximum.y / bz;
-          az.rotation.x = lz;
-          const tz = Math.cos(lz),
-            Hz = Math.sin(lz);
-          az.position.y += Mz * (1 - tz) + 0 * Hz, az.position.z -= Mz * Hz + 0 * (1 - tz);
-          const Oz = new Rz.StandardMaterial("capeMaterial", az.XT());
-          az.material = Oz;
-          const pz = new Zz.Color3(1, 1, 1);
-          Oz.diffuseColor = new Zz.Color3, Oz.specularColor = new Zz.Color3, Oz.emissiveColor = new Zz.Color3, Oz.ambientColor = new Zz.Color3, pz.scaleToRef(.43, Oz.diffuseColor), pz.scaleToRef(1.75, Oz.ambientColor), Oz.freeze();
-          const Kz = new Fz.c("light", new dz.ER(-.1, 1, -.3), Pz);
-          Kz.diffuse = new Zz.Color3(1, 1, 1), Kz.specular = new Zz.Color3(1, 1, 1), Kz.groundColor = new Zz.Color3(.5, .5, .5)
+        const DD = (0, pD.i)();
+        qD.vcD = DD.XZ.engine.vcD, KD = new SD.d(qD), KD.clearColor = new tD.c(0, 0, 0, 0), KD.ambientColor = new tD.Color3(1, 1, 1), JD = new BD.d("To", 0, 0, 1, yD.cZ.Zero(), KD), JD.attachControl(GD, !0), JD.panningSensibility = 0, TD = (0, ID.r)("Player", KD, !0).then((CD => {
+          aD = CD.meshApi, VD = CD.capeMesh, zD = DD.XZ.iJ;
+          const cD = 8.33;
+          jD = (0, ID.i)("Player", cD, !0, !0), zD.setPosition(jD, 0, -8.33, 0);
+          const pD = zD.getNamedNode(jD, "BodyMesh");
+          zD.attachTransformNode(VD, jD, pD), zD.set(jD, "aOpacity", 1), zD.LJ(jD, "aOpacity", 1), LD = new HD(KD, zD, jD), lD = new vD.AnimatorState, lD.ny = DD, lD.thinInstMgr = zD, lD.bJ = jD, lD.kCD = zD.NcD(jD, 0), lD.modelLifeformType = "Player", lD.nodeNameAliases = (0, UD.b)("Player").nodeNameAliases;
+          const iD = VD.VJ().boundingBox;
+          VD.position.y = ((24 - iD.maximum.y + iD.minimum.y) / 2 - 1 / 32) / cD, VD.position.z = -1 / cD, VD.rotationQuaternion = null;
+          const fD = Math.PI / 18,
+            bD = iD.maximum.y / cD;
+          VD.rotation.x = fD;
+          const QD = Math.cos(fD),
+            wD = Math.sin(fD);
+          VD.position.y += bD * (1 - QD) + 0 * wD, VD.position.z -= bD * wD + 0 * (1 - QD);
+          const SD = new ZD.StandardMaterial("capeMaterial", VD.hq());
+          VD.material = SD;
+          const BD = new tD.Color3(1, 1, 1);
+          SD.diffuseColor = new tD.Color3, SD.specularColor = new tD.Color3, SD.emissiveColor = new tD.Color3, SD.ambientColor = new tD.Color3, BD.scaleToRef(.43, SD.diffuseColor), BD.scaleToRef(1.75, SD.ambientColor), SD.freeze();
+          const oD = new MD.c("light", new yD.cZ(-.1, 1, -.3), KD);
+          oD.diffuse = new tD.Color3(1, 1, 1), oD.specular = new tD.Color3(1, 1, 1), oD.groundColor = new tD.Color3(.5, .5, .5)
         }))
-      }(), new Qz(zz, uz)
+      }(), new WD(DD, CD)
     }
   },
-  38162: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => dz
+  38157: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => yD
     });
-    var Ez = bz(36611),
-      nz = bz(36627),
-      iz = bz(36894),
-      lz = bz(36633),
-      Mz = bz(36619);
+    var ID = cD(36537),
+      pD = cD(36546),
+      iD = cD(36802),
+      fD = cD(36553),
+      bD = cD(36539);
 
-    function tz(zz) {
-      return `\n\t\t\t\t${(0,Mz.t)(zz,"mat2","rotate",[{name:"ang",type:"float"}],`\
+    function QD(DD) {
+      return `\n\t\t\t\t${(0,bD.B)(DD,"mat2","rotate",[{name:"ang",type:"float"}],`\
       n\ t\ t\ t\ t\ t$ {
-        (0, Mz.y)(zz, "float", "s", "sin(ang)")
+        (0, bD.G)(DD, "float", "s", "sin(ang)")
       }\
       n\ t\ t\ t\ t\ t$ {
-        (0, Mz.y)(zz, "float", "c", "cos(ang)")
+        (0, bD.G)(DD, "float", "c", "cos(ang)")
       }\
       n\ t\ t\ t\ t\ treturn $ {
-        (0, Mz.l)(zz, "mat2", "c", "s", "-s", "c")
+        (0, bD.q)(DD, "mat2", "c", "s", "-s", "c")
       };\
       n\ t\ t\ t\ t`)}\n\t\t\t`
     }
 
-    function Hz(zz, uz) {
-      let bz = (0, Mz.vb)(zz, "skele" + (uz - 1));
-      for (let nz = uz - 2; nz >= 0; nz--) bz = (0, Mz.mb)(zz, `boneIdx == ${nz}`, (0, Mz.vb)(zz, `skele${nz}`), bz);
-      const Ez = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,Mz.y)(zz,"int","boneIdx",(0,Mz.pb)(zz,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,Mz.y)(zz,"vec3","bone",bz)}\n\t\t\t\t${(0,Mz.y)(zz,"vec2","pivot",(0,Mz.l)(zz,"vec2","0.0",`${(0,Mz.Fb)(zz,"position")}.z`))}\n\t\t\t\t${(0,Mz.R)(zz)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${Ez}));`:`positionUpdated.yz += ${Ez};`}\n\t\t`
+    function wD(DD, CD) {
+      let cD = (0, bD.zb)(DD, "skele" + (CD - 1));
+      for (let pD = CD - 2; pD >= 0; pD--) cD = (0, bD.qb)(DD, `boneIdx == ${pD}`, (0, bD.zb)(DD, `skele${pD}`), cD);
+      const ID = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,bD.G)(DD,"int","boneIdx",(0,bD.vb)(DD,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,bD.G)(DD,"vec3","bone",cD)}\n\t\t\t\t${(0,bD.G)(DD,"vec2","pivot",(0,bD.q)(DD,"vec2","0.0",`${(0,bD.Hb)(DD,"position")}.z`))}\n\t\t\t\t${(0,bD.Y)(DD)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${ID}));`:`positionUpdated.yz += ${ID};`}\n\t\t`
     }
 
-    function Oz(zz) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,Mz.l)(zz,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    function SD(DD) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,bD.q)(DD,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
     }
-    const pz = {
+    const BD = {
         x: 0,
         y: 0,
         z: 0,
-        Fuz(zz, uz) {
-          return this.x = zz[uz], this.y = zz[uz + 1], this.z = zz[uz + 2], this
+        QCD(DD, CD) {
+          return this.x = DD[CD], this.y = DD[CD + 1], this.z = DD[CD + 2], this
         }
       },
-      dz = {
+      yD = {
         name: "Cape",
         className: "CapeMaterialPlugin",
         priority: 200,
-        defines: (zz, uz) => ({
-          ...(0, Ez.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${zz}`,
-          BLOXD_CAPE_MAX_Y: (0, nz.pb)(uz)
+        defines: (DD, CD) => ({
+          ...(0, ID.e)("CAPE"),
+          BLOXD_CAPE_BONES: `${DD}`,
+          BLOXD_CAPE_MAX_Y: (0, pD.pb)(CD)
         }),
-        getUniforms(zz) {
-          return (0, iz.c)(function(zz) {
-            const uz = [];
-            for (let bz = 0; bz < zz; bz++) uz.push({
-              name: `skele${bz}`,
+        getUniforms(DD) {
+          return (0, iD.c)(function(DD) {
+            const CD = [];
+            for (let cD = 0; cD < DD; cD++) CD.push({
+              name: `skele${cD}`,
               type: "highp vec3"
             });
-            return uz
-          }(this.skeleLen), "vertex", zz)
+            return CD
+          }(this.skeleLen), "vertex", DD)
         },
-        bind(zz) {
-          for (let uz = 0; uz < this.skeleLen; uz++) zz.updateVector3(`skele${uz}`, pz.Fuz(this.skele, 3 * uz))
+        bind(DD) {
+          for (let CD = 0; CD < this.skeleLen; CD++) DD.updateVector3(`skele${CD}`, BD.QCD(this.skele, 3 * CD))
         },
         uniformsVersion() {
           return this.bonesVersion
         },
-        getCustomCode(zz, uz) {
-          return "vertex" !== zz ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: tz(uz),
-            CUSTOM_VERTEX_UPDATE_POSITION: Hz(uz, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: Oz(uz)
+        getCustomCode(DD, CD) {
+          return "vertex" !== DD ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: QD(CD),
+            CUSTOM_VERTEX_UPDATE_POSITION: wD(CD, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: SD(CD)
           }
         }
       };
-    (0, lz.q)(dz)
+    (0, fD.n)(yD)
   },
-  38075: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Oz,
-      e: () => pz
+  38064: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => SD,
+      g: () => BD
     });
-    var Ez = bz(36611),
-      nz = bz(36894),
-      iz = bz(36619),
-      lz = bz(36633);
-    const Mz = "bloxdTextLodBias",
-      tz = [{
-        name: Mz,
+    var ID = cD(36537),
+      pD = cD(36802),
+      iD = cD(36539),
+      fD = cD(36553);
+    const bD = "bloxdTextLodBias",
+      QD = [{
+        name: bD,
         type: "float"
       }],
-      Hz = "bloxdTextSample",
-      Oz = {
+      wD = "bloxdTextSample",
+      SD = {
         planes: -.5,
         boards: -.5
       },
-      pz = {
+      BD = {
         name: "TextSampler",
         className: "TextSamplerMaterialPlugin",
         priority: 60,
-        defines: () => (0, Ez.b)("TEXT_SAMPLER"),
-        getUniforms: zz => (0, nz.c)(tz, "fragment", zz),
-        bind(zz) {
-          zz.updateFloat(Mz, this.lodBias)
+        defines: () => (0, ID.e)("TEXT_SAMPLER"),
+        getUniforms: DD => (0, pD.c)(QD, "fragment", DD),
+        bind(DD) {
+          DD.updateFloat(bD, this.lodBias)
         },
         uniformsVersion: () => 0,
-        getCustomCode(zz, uz) {
-          if ("fragment" !== zz) return null;
-          const bz = (0, iz.G)(uz, `vec4 ${Hz}(sampler2D s, vec2 uv, float bias)`, `fn ${Hz}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            Ez = (0, iz.G)(uz, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            nz = `${(0,iz.M)(uz,"vDiffuseUV")} + uvOffset`,
-            lz = (0, iz.G)(uz, `${Hz}(diffuseSampler, ${nz}, ${(0,iz.vb)(uz,Mz)})`, `${Hz}(diffuseSampler, diffuseSamplerSampler, ${nz}, ${(0,iz.vb)(uz,Mz)})`);
+        getCustomCode(DD, CD) {
+          if ("fragment" !== DD) return null;
+          const cD = (0, iD.L)(CD, `vec4 ${wD}(sampler2D s, vec2 uv, float bias)`, `fn ${wD}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            ID = (0, iD.L)(CD, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            pD = `${(0,iD.R)(CD,"vDiffuseUV")} + uvOffset`,
+            fD = (0, iD.L)(CD, `${wD}(diffuseSampler, ${pD}, ${(0,iD.zb)(CD,bD)})`, `${wD}(diffuseSampler, diffuseSamplerSampler, ${pD}, ${(0,iD.zb)(CD,bD)})`);
           return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${bz} {\n\t\t\t\t\t${(0,iz.y)(uz,"vec4","texel",Ez)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,iz.l)(uz,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,iz.l)(uz,"vec3","0.0")}, ${(0,iz.l)(uz,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, iz.B)(uz)]: `baseColor = ${lz};`
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${cD} {\n\t\t\t\t\t${(0,iD.G)(CD,"vec4","texel",ID)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,iD.q)(CD,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,iD.q)(CD,"vec3","0.0")}, ${(0,iD.q)(CD,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, iD.I)(CD)]: `baseColor = ${fD};`
           }
         }
       };
-    (0, lz.q)(pz)
+    (0, fD.n)(BD)
   },
-  40318: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      CapeMaterialPlugin: () => sz,
-      HueTintMaterialPlugin: () => rz,
-      LifeformMaterialPlugin: () => oz,
-      OverlayMaterialPlugin: () => Nz
+  40189: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      CapeMaterialPlugin: () => XD,
+      HueTintMaterialPlugin: () => mD,
+      LifeformMaterialPlugin: () => nD,
+      OverlayMaterialPlugin: () => OD
     });
-    var Ez = bz(40326),
-      nz = bz(37435);
-    class iz extends((0, Ez.f)(nz.c)) {}(0, Ez.i)(nz.c, iz);
-    var lz = bz(36604);
-    class Mz extends((0, Ez.f)(lz.e)) {}(0, Ez.i)(lz.e, Mz);
-    var tz = bz(37295);
-    class Hz extends((0, Ez.f)(tz.e)) {}(0, Ez.i)(tz.e, Hz);
-    var Oz = bz(36878),
-      pz = bz(39425),
-      dz = bz(36870);
-    class Fz extends((0, Ez.f)(dz.e)) {
-      constructor(zz, uz, bz) {
-        super(zz, uz, bz), (0, Oz.k)(zz)
+    var ID = cD(40194),
+      pD = cD(37406);
+    class iD extends((0, ID.e)(pD.c)) {}(0, ID.f)(pD.c, iD);
+    var fD = cD(36528);
+    class bD extends((0, ID.e)(fD.i)) {}(0, ID.f)(fD.i, bD);
+    var QD = cD(37235);
+    class wD extends((0, ID.e)(QD.g)) {}(0, ID.f)(QD.g, wD);
+    var SD = cD(36780),
+      BD = cD(39396),
+      yD = cD(36771);
+    class MD extends((0, ID.e)(yD.i)) {
+      constructor(DD, CD, cD) {
+        super(DD, CD, cD), (0, SD.j)(DD)
       }
-      dispose(zz) {
-        (0, Oz.n)(this._material), super.dispose(zz)
+      dispose(DD) {
+        (0, SD.l)(this._material), super.dispose(DD)
       }
-    }(0, Ez.i)(dz.e, Fz), (0, dz.i)({
-      disableUnusedSpecularTerm: Ez.d,
-      isLightingDisabled: zz => zz instanceof pz.StandardMaterial && zz.disableLighting
+    }(0, ID.f)(yD.i, MD), (0, yD.j)({
+      disableUnusedSpecularTerm: ID.c,
+      isLightingDisabled: DD => DD instanceof BD.StandardMaterial && DD.disableLighting
     });
-    var Zz = bz(38075);
-    class Rz extends((0, Ez.f)(Zz.e)) {}(0, Ez.i)(Zz.e, Rz);
-    var Kz = bz(38162),
-      wz = bz(36724),
-      Xz = bz(37548),
-      fz = bz(36661);
-    class sz extends((0, Ez.f)(Kz.c)) {}(0, Ez.i)(Kz.c, sz);
-    class rz extends((0, Ez.f)(wz.d)) {}(0, Ez.i)(wz.d, rz);
-    class oz extends((0, Ez.f)(Xz.p)) {}(0, Ez.i)(Xz.p, oz);
-    class Nz extends((0, Ez.f)(fz.e)) {}(0, Ez.i)(fz.e, Nz)
+    var tD = cD(38064);
+    class ZD extends((0, ID.e)(tD.g)) {}(0, ID.f)(tD.g, ZD);
+    var oD = cD(38157),
+      vD = cD(36626),
+      ND = cD(37506),
+      gD = cD(36585);
+    class XD extends((0, ID.e)(oD.b)) {}(0, ID.f)(oD.b, XD);
+    class mD extends((0, ID.e)(vD.c)) {}(0, ID.f)(vD.c, mD);
+    class nD extends((0, ID.e)(ND.p)) {}(0, ID.f)(ND.p, nD);
+    class OD extends((0, ID.e)(gD.c)) {}(0, ID.f)(gD.c, OD)
   },
-  40326: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => gz,
-      f: () => Xz,
-      i: () => ez
+  40194: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => RD,
+      e: () => ND,
+      f: () => ED
     });
-    var Ez = bz(39425),
-      nz = bz(40334),
-      iz = bz(40379),
-      lz = bz(40341),
-      Mz = bz(37276),
-      tz = bz(37282),
-      Hz = bz(37287),
-      Oz = bz(37290),
-      pz = bz(36648),
-      dz = bz(36654),
-      Fz = bz(40350),
-      Zz = bz(36633),
-      Rz = bz(36636),
-      Kz = bz(36619);
+    var ID = cD(39396),
+      pD = cD(40196),
+      iD = cD(40226),
+      fD = cD(40198),
+      bD = cD(37201),
+      QD = cD(37211),
+      wD = cD(37218),
+      SD = cD(37222),
+      BD = cD(36572),
+      yD = cD(36579),
+      MD = cD(40201),
+      tD = cD(36553),
+      ZD = cD(36561),
+      oD = cD(36539);
 
-    function wz(zz, uz) {
-      return Object.assign((function(zz, bz, Ez, nz) {
-        return uz(this.featureState, zz, bz, Ez, nz)
+    function vD(DD, CD) {
+      return Object.assign((function(DD, cD, ID, pD) {
+        return CD(this.featureState, DD, cD, ID, pD)
       }), {
-        TZ: zz
+        Ot: DD
       })
     }
 
-    function Xz(zz) {
-      const uz = class extends Fz.d {
-          constructor(uz, bz) {
-            const Ez = (0, Rz.W)(uz),
-              nz = Ez && (0, Rz.u)(Ez, zz.name);
-            for (var iz = arguments.length, lz = new Array(iz > 2 ? iz - 2 : 0), Mz = 2; Mz < iz; Mz++) lz[Mz - 2] = arguments[Mz];
-            super(uz, zz.name, zz.priority, nz ? nz.defines : zz.defines(...lz), !1), this.featureState = void 0, this.featureState = bz, this._pluginManager._addPlugin(this), this._enable(!0), (0, Rz.v)(this._material, zz, this.featureState, this._pluginDefineNames)
+    function ND(DD) {
+      const CD = class extends MD.c {
+          constructor(CD, cD) {
+            const ID = (0, ZD.N)(CD),
+              pD = ID && (0, ZD.q)(ID, DD.name);
+            for (var iD = arguments.length, fD = new Array(iD > 2 ? iD - 2 : 0), bD = 2; bD < iD; bD++) fD[bD - 2] = arguments[bD];
+            super(CD, DD.name, DD.priority, pD ? pD.defines : DD.defines(...fD), !1), this.featureState = void 0, this.featureState = cD, this._pluginManager._addPlugin(this), this._enable(!0), (0, ZD.t)(this._material, DD, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return zz.className
+            return DD.className
           }
-          isCompatible(zz) {
-            return zz === Kz.c.GLSL || zz === Kz.c.WGSL
+          isCompatible(DD) {
+            return DD === oD.e.GLSL || DD === oD.e.WGSL
           }
         },
-        bz = (0, Zz.j)(zz);
-      for (const [Ez, nz] of Object.entries(Zz.e)) {
-        const iz = zz[Ez];
-        if (iz) {
-          const zz = bz[Ez];
-          Object.defineProperty(uz.prototype, nz, {
-            value: wz(iz, zz),
+        cD = (0, tD.h)(DD);
+      for (const [ID, pD] of Object.entries(tD.e)) {
+        const iD = DD[ID];
+        if (iD) {
+          const DD = cD[ID];
+          Object.defineProperty(CD.prototype, pD, {
+            value: vD(iD, DD),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return uz
+      return CD
     }
-    class fz extends(Xz(Mz.d)) {}
-    var sz = bz(38998),
-      rz = bz(40354);
-    const oz = new WeakMap;
+    class gD extends(ND(bD.c)) {}
+    var XD = cD(38968),
+      mD = cD(40203);
+    const nD = new WeakMap;
 
-    function Nz(zz, uz, bz) {
-      let Ez = oz.get(bz);
-      Ez || (Ez = new Map, oz.set(bz, Ez));
+    function OD(DD, CD, cD) {
+      let ID = nD.get(cD);
+      ID || (ID = new Map, nD.set(cD, ID));
       const {
-        url: nz
-      } = zz;
-      let iz = Ez.get(nz);
-      return iz || (iz = async function(zz, uz, bz) {
+        url: pD
+      } = DD;
+      let iD = ID.get(pD);
+      return iD || (iD = async function(DD, CD, cD) {
         const {
-          width: Ez,
-          height: nz
-        } = zz.getSize(), iz = Math.round(nz / Ez), Mz = uz && uz.byteLength === Ez * Ez * iz * 4 ? uz : zz._readPixelsSync();
-        return new rz.c(Mz, Ez, Ez, iz, sz.c.TEXTUREFORMAT_RGBA, bz, !0, !1, lz.e.NEAREST_NEAREST_MIPLINEAR)
-      }(zz, uz, bz), Ez.set(nz, iz), iz.catch((() => {
-        Ez.delete(nz)
-      }))), iz
+          width: ID,
+          height: pD
+        } = DD.getSize(), iD = Math.round(pD / ID), bD = CD && CD.byteLength === ID * ID * iD * 4 ? CD : DD._readPixelsSync();
+        return new mD.d(bD, ID, ID, iD, XD.e.TEXTUREFORMAT_RGBA, cD, !0, !1, fD.e.NEAREST_NEAREST_MIPLINEAR)
+      }(DD, CD, cD), ID.set(pD, iD), iD.catch((() => {
+        ID.delete(pD)
+      }))), iD
     }
-    var vz = bz(37292);
-    class xz extends(Xz(tz.j)) {
-      constructor(zz, uz) {
-        super(zz, uz), uz.textures.forEach(((zz, uz) => {
-          zz.mirror.onLoadObservable.add((zz => {
-            this.setTextureArrayData(zz, uz).catch((zz => {
-              console.error(`Failed to build texture array for atlas ${uz}`, zz)
+    var PD = cD(37227);
+    class HD extends(ND(QD.k)) {
+      constructor(DD, CD) {
+        super(DD, CD), CD.textures.forEach(((DD, CD) => {
+          DD.mirror.onLoadObservable.add((DD => {
+            this.setTextureArrayData(DD, CD).catch((DD => {
+              console.error(`Failed to build texture array for atlas ${CD}`, DD)
             }))
           }))
-        })), (0, vz.i)(uz, zz.shaderLanguage)
+        })), (0, PD.f)(CD, DD.shaderLanguage)
       }
-      async setTextureArrayData(zz, uz) {
-        var bz, Ez;
-        const nz = this.featureState,
+      async setTextureArrayData(DD, CD) {
+        var cD, ID;
+        const pD = this.featureState,
           {
-            width: iz,
-            height: lz
-          } = zz.getSize(),
-          Mz = nz.useWebGL2 ? await Nz(zz, null !== (bz = null === (Ez = nz.sources.pixels) || void 0 === Ez ? void 0 : Ez[uz]) && void 0 !== bz ? bz : null, this._material.XT()) : null;
-        (0, vz.b)(this._material, nz, uz, Mz, iz, Math.round(lz / iz), this._material.shaderLanguage)
+            width: iD,
+            height: fD
+          } = DD.getSize(),
+          bD = pD.useWebGL2 ? await OD(DD, null !== (cD = null === (ID = pD.sources.pixels) || void 0 === ID ? void 0 : ID[CD]) && void 0 !== cD ? cD : null, this._material.hq()) : null;
+        (0, PD.b)(this._material, pD, CD, bD, iD, Math.round(fD / iD), this._material.shaderLanguage)
       }
     }
-    var Jz = bz(40360),
-      Az = bz(39474),
-      Tz = bz(36514),
-      Lz = bz(40369),
-      Pz = bz(39596),
-      Gz = bz(39459),
-      az = bz(40308),
-      Vz = bz(37046),
-      mz = bz(40373);
-    class qz extends Jz.c {
+    var UD = cD(40207),
+      xD = cD(39441),
+      qD = cD(36440),
+      JD = cD(40215),
+      KD = cD(39545),
+      aD = cD(39425),
+      VD = cD(40178),
+      zD = cD(36969),
+      jD = cD(40224);
+    class lD extends UD.c {
       getData() {
         return null
       }
@@ -570,368 +539,399 @@ export const modules = {
         super._rebuild()
       }
     }
-    const hz = {
-      Mesh: Lz.d,
-      TransformNode: az.e,
-      gZ: Jz.c,
-      VertexBuffer: Jz.d,
-      BoundingInfo: Az.e,
-      ER: Tz.ER,
-      ArenaBuffer: qz,
-      SubMesh: Gz.e,
-      VertexData: Pz.b,
-      MirroredGeometry: mz.d,
-      meshFromArrays: mz.e,
-      plainMeshFromArrays: mz.i
+    const LD = {
+      Mesh: JD.d,
+      TransformNode: VD.e,
+      lt: UD.c,
+      VertexBuffer: UD.e,
+      BoundingInfo: xD.e,
+      cZ: qD.cZ,
+      ArenaBuffer: lD,
+      SubMesh: aD.c,
+      VertexData: KD.c,
+      MirroredGeometry: jD.c,
+      meshFromArrays: jD.f,
+      plainMeshFromArrays: jD.j
     };
-    (0, Vz.f)(hz);
-    var Uz = bz(36878);
-    class cz extends(Xz(Oz.i)) {
-      constructor(zz, uz) {
-        if (super(zz, uz), zz instanceof Ez.StandardMaterial && uz.dirLightCount > 0) {
-          const uz = zz,
-            bz = uz._blockDirtyMechanism;
-          uz._blockDirtyMechanism = !0, zz.disableLighting = !0, uz._blockDirtyMechanism = bz;
-          const Ez = (0, Rz.W)(zz);
-          Ez && (Ez.disableLighting = !0, (0, Rz.U)(Ez))
-        }(0, Uz.k)(zz)
+    (0, zD.h)(LD);
+    var TD = cD(36780);
+    class GD extends(ND(SD.i)) {
+      constructor(DD, CD) {
+        if (super(DD, CD), DD instanceof ID.StandardMaterial && CD.dirLightCount > 0) {
+          const CD = DD,
+            cD = CD._blockDirtyMechanism;
+          CD._blockDirtyMechanism = !0, DD.disableLighting = !0, CD._blockDirtyMechanism = cD;
+          const ID = (0, ZD.N)(DD);
+          ID && (ID.disableLighting = !0, (0, ZD.K)(ID))
+        }(0, TD.j)(DD)
       }
-      dispose(zz) {
-        (0, Uz.n)(this._material), super.dispose(zz)
+      dispose(DD) {
+        (0, TD.l)(this._material), super.dispose(DD)
       }
     }
 
-    function gz(zz, uz) {
-      if (!(uz instanceof Ez.StandardMaterial) || uz.specularTexture) return;
+    function RD(DD, CD) {
+      if (!(CD instanceof ID.StandardMaterial) || CD.specularTexture) return;
       const {
-        r: bz,
-        g: nz,
-        b: iz
-      } = uz.specularColor;
-      0 === bz && 0 === nz && 0 === iz && (zz.SPECULARTERM = !1)
-    }(0, Oz.g)({
-      disableUnusedSpecularTerm: gz
+        r: cD,
+        g: pD,
+        b: iD
+      } = CD.specularColor;
+      0 === cD && 0 === pD && 0 === iD && (DD.SPECULARTERM = !1)
+    }(0, SD.h)({
+      disableUnusedSpecularTerm: RD
     });
-    var Sz = bz(36743),
-      yz = bz(37058);
-    const Dz = new RegExp(`^#define ${Hz.c}\\s*$`, "m");
-    class Qz extends(Xz(Hz.i)) {
-      constructor(zz, uz) {
-        super(zz, uz), this.SZ = !1, uz.ditherOnlyWhileFading && (yz.f.add(zz), this.prewarmDitherTwins(zz))
+    var kD = cD(36647),
+      dD = cD(36975);
+    const YD = new RegExp(`^#define ${wD.d}\\s*$`, "m");
+    class WD extends(ND(wD.i)) {
+      constructor(DD, CD) {
+        super(DD, CD), this.Lt = !1, CD.ditherOnlyWhileFading && (dD.c.add(DD), this.prewarmDitherTwins(DD))
       }
-      prewarmDitherTwins(zz) {
-        const uz = new WeakSet;
-        zz.onEffectCreatedObservable.add((bz => {
+      prewarmDitherTwins(DD) {
+        const CD = new WeakSet;
+        DD.onEffectCreatedObservable.add((cD => {
           let {
-            effect: Ez,
-            subMesh: nz
-          } = bz;
-          if (this.featureState.prewarmingDither || uz.has(Ez)) return;
-          uz.add(Ez);
-          const iz = null === nz || void 0 === nz ? void 0 : nz.getMesh();
-          iz && !Dz.test(Ez.defines) && zz.XT().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(iz) || uz.delete(Ez)
+            effect: ID,
+            subMesh: pD
+          } = cD;
+          if (this.featureState.prewarmingDither || CD.has(ID)) return;
+          CD.add(ID);
+          const iD = null === pD || void 0 === pD ? void 0 : pD.getMesh();
+          iD && !YD.test(ID.defines) && DD.hq().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(iD) || CD.delete(ID)
           }))
         }))
       }
-      prewarmDither(zz) {
-        if (this.SZ || zz.Uuz()) return !1;
-        const uz = new Gz.e(0, 0, 0, 0, 0, zz, void 0, !1, !1);
+      prewarmDither(DD) {
+        if (this.Lt || DD.jCD()) return !1;
+        const CD = new aD.c(0, 0, 0, 0, 0, DD, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(zz, uz)
+          this._material.isReadyForSubMesh(DD, CD)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== uz.effect
+        return null !== CD.effect
       }
-      dispose(zz) {
-        this.SZ = !0, super.dispose(zz)
+      dispose(DD) {
+        this.Lt = !0, super.dispose(DD)
       }
     }
-    const Wz = new Map;
+    const sD = new Map;
 
-    function ez(zz, uz) {
-      Wz.set(zz, uz)
+    function ED(DD, CD) {
+      sD.set(DD, CD)
     }
-    ez(Mz.d, fz), ez(tz.j, xz), ez(Hz.i, Qz), ez(Oz.i, cz), (0, pz.c)({
-      create: (zz, uz) => {
-        const bz = new Ez.StandardMaterial(zz.name, uz);
-        return (0, Sz.r)(zz, bz), bz.detailMap._pluginDefineNames
+    ED(bD.c, gD), ED(QD.k, HD), ED(wD.i, WD), ED(SD.i, GD), (0, BD.d)({
+      create: (DD, CD) => {
+        const cD = new ID.StandardMaterial(DD.name, CD);
+        return (0, kD.r)(DD, cD), cD.detailMap._pluginDefineNames
       },
-      write: (zz, uz, bz) => {
-        (0, Sz.X)(zz.mirror, uz, bz)
+      write: (DD, CD, cD) => {
+        (0, kD.U)(DD.mirror, CD, cD)
       },
-      addFeature: (zz, uz, bz) => {
-        const Ez = Wz.get(uz.feature);
-        if (!Ez) throw new Error(`${uz.feature.name} has no plugin class (registerPluginClass)`);
-        new Ez(zz.mirror, uz.state, ...bz)
+      addFeature: (DD, CD, cD) => {
+        const ID = sD.get(CD.feature);
+        if (!ID) throw new Error(`${CD.feature.name} has no plugin class (registerPluginClass)`);
+        new ID(DD.mirror, CD.state, ...cD)
       },
-      texture: (zz, uz, bz) => {
+      texture: (DD, CD, cD) => {
         let {
-          url: Ez,
-          noMipmap: nz,
-          invertY: iz,
-          samplingMode: Mz,
-          data: tz,
-          sets: Hz
-        } = bz;
-        if (!tz) {
-          const bz = new lz.e(Ez, uz, nz, iz, Mz);
-          return Object.assign(bz, Hz), void(0, dz.H)(zz, bz)
+          url: ID,
+          noMipmap: pD,
+          invertY: iD,
+          samplingMode: bD,
+          data: QD,
+          sets: wD
+        } = cD;
+        if (!QD) {
+          const cD = new fD.e(ID, CD, pD, iD, bD);
+          return Object.assign(cD, wD), void(0, yD.G)(DD, cD)
         }
-        const Oz = {},
-          pz = new Promise(((zz, uz) => {
-            Oz.onLoad = zz, Oz.onError = (zz, bz) => {
-              uz(new Error(`${tz.context}: ${(null===bz||void 0===bz?void 0:bz.message)||zz||"Failed to load texture"}`))
+        const SD = {},
+          BD = new Promise(((DD, CD) => {
+            SD.onLoad = DD, SD.onError = (DD, cD) => {
+              CD(new Error(`${QD.context}: ${(null===cD||void 0===cD?void 0:cD.message)||DD||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: Fz,
-            bytes: Zz,
-            label: Rz
-          } = tz,
-          Kz = {
-            noMipmap: nz,
+            mimeType: MD,
+            bytes: tD,
+            label: ZD
+          } = QD,
+          oD = {
+            noMipmap: pD,
             invertY: !1,
-            samplingMode: Mz,
-            ...Oz,
-            mimeType: Fz,
+            samplingMode: bD,
+            ...SD,
+            mimeType: MD,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          wz = new lz.e(null, uz, Kz);
-        Sz.s.set(wz, pz), Object.assign(wz, Hz), wz.updateURL(Ez, Zz);
-        const Xz = wz.getInternalTexture();
-        Xz && (Xz.label = Rz), zz.uvSet = wz.coordinatesIndex, zz.matrix.set((0, Sz.N)(wz)), (0, dz.H)(zz, wz)
+          vD = new fD.e(null, CD, oD);
+        kD.t.set(vD, BD), Object.assign(vD, wD), vD.updateURL(ID, tD);
+        const ND = vD.getInternalTexture();
+        ND && (ND.label = ZD), DD.uvSet = vD.coordinatesIndex, DD.matrix.set((0, kD.M)(vD)), (0, yD.G)(DD, vD)
       },
-      cube: (zz, uz, bz) => {
+      cube: (DD, CD, cD) => {
         let {
-          rootUrl: Ez,
-          files: iz,
-          noMipmap: Mz,
-          luminance: tz
-        } = bz;
+          rootUrl: ID,
+          files: iD,
+          noMipmap: bD,
+          luminance: QD
+        } = cD;
         const {
-          samplingMode: Hz
-        } = zz.sampler, Oz = Hz === (0, dz.w)(Mz) ? null : () => {
-          (0, Sz.M)(pz, Hz)
-        }, pz = new nz.e(Ez, uz, null, Mz, iz, Oz, null, (0, dz.t)(tz));
-        pz.coordinatesMode = lz.e.SKYBOX_MODE, (0, dz.H)(zz, pz)
+          samplingMode: wD
+        } = DD.sampler, SD = wD === (0, yD.x)(bD) ? null : () => {
+          (0, kD.L)(BD, wD)
+        }, BD = new pD.b(ID, CD, null, bD, iD, SD, null, (0, yD.w)(QD));
+        BD.coordinatesMode = fD.e.SKYBOX_MODE, (0, yD.G)(DD, BD)
       },
-      canvas: (zz, uz, bz) => {
+      canvas: (DD, CD, cD) => {
         let {
-          width: Ez,
-          height: nz,
-          mipmaps: Mz,
-          samplingMode: tz,
-          hasAlpha: Hz = !1,
-          wrap: Oz = lz.e.CLAMP_ADDRESSMODE
-        } = bz;
-        const pz = new iz.b(uz, {
-          width: Ez,
-          height: nz
-        }, zz, Mz, tz);
-        pz.hasAlpha = Hz, pz.wrapU = Oz, pz.wrapV = Oz;
-        const dz = (0, Sz.z)(pz);
-        return (0, Sz.D)(dz, pz), dz
+          width: ID,
+          height: pD,
+          mipmaps: bD,
+          samplingMode: QD,
+          hasAlpha: wD = !1,
+          wrap: SD = fD.e.CLAMP_ADDRESSMODE
+        } = cD;
+        const BD = new iD.e(CD, {
+          width: ID,
+          height: pD
+        }, DD, bD, QD);
+        BD.hasAlpha = wD, BD.wrapU = SD, BD.wrapV = SD;
+        const yD = (0, kD.A)(BD);
+        return (0, kD.C)(yD, BD), yD
       }
     })
   },
-  40373: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Oz,
-      e: () => pz,
-      i: () => dz
+  40224: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => SD,
+      f: () => BD,
+      j: () => yD
     });
-    var Ez = bz(40360),
-      nz = bz(39226),
-      iz = bz(39474),
-      lz = bz(39605),
-      Mz = bz(40369),
-      tz = bz(39596),
-      Hz = bz(36930);
-    class Oz extends lz.b {
+    var ID = cD(40207),
+      pD = cD(39213),
+      iD = cD(39441),
+      fD = cD(39549),
+      bD = cD(40215),
+      QD = cD(39545),
+      wD = cD(36845);
+    class SD extends fD.e {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (zz, uz) => {
-          this.releaseUnlessInstanced(uz)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (DD, CD) => {
+          this.releaseUnlessInstanced(CD)
         }, this.onLinked = null
       }
-      link(zz) {
-        var uz;
-        (0, Hz.n)(zz), this.model = zz, null === (uz = this.onLinked) || void 0 === uz || uz.call(this, zz)
+      link(DD) {
+        var CD;
+        (0, wD.m)(DD), this.model = DD, null === (CD = this.onLinked) || void 0 === CD || CD.call(this, DD)
       }
       relink() {
         this.release();
-        const zz = [];
-        for (const nz of Object.values(this._vertexBuffers))
-          if (!nz.getIsInstanced()) {
+        const DD = [];
+        for (const pD of Object.values(this._vertexBuffers))
+          if (!pD.getIsInstanced()) {
             const {
-              byteOffset: uz,
-              byteStride: bz,
-              type: Ez,
-              normalized: iz
-            } = nz;
-            zz.push({
-              kind: nz.getKind(),
-              data: nz.getData(),
-              offset: uz,
-              stride: bz,
-              components: nz.getSize(),
-              glType: Ez,
-              isNormalized: iz
+              byteOffset: CD,
+              byteStride: cD,
+              type: ID,
+              normalized: iD
+            } = pD;
+            DD.push({
+              kind: pD.getKind(),
+              data: pD.getData(),
+              offset: CD,
+              stride: cD,
+              components: pD.getSize(),
+              glType: ID,
+              isNormalized: iD
             })
-          } const uz = this._indices.length ? this._indices : null,
+          } const CD = this._indices.length ? this._indices : null,
           {
-            minimum: bz,
-            maximum: Ez
+            minimum: cD,
+            maximum: ID
           } = this.extend;
-        this.link(new Hz.d(zz, uz, this.getTotalVertices(), new Float64Array(bz.obz()), new Float64Array(Ez.obz())))
+        this.link(new wD.f(DD, CD, this.getTotalVertices(), new Float64Array(cD.XcD()), new Float64Array(ID.XcD())))
       }
-      copy(zz) {
-        if (!this.model) return super.copy(zz);
-        const uz = new Oz(zz, this.XT()),
-          bz = this.Nbz(void 0, !0);
-        bz && uz.setIndices(bz);
-        let lz = !1;
-        for (const iz in this._vertexBuffers) {
-          const zz = this._vertexBuffers[iz],
-            bz = zz.getData();
-          if (!bz) continue;
-          const Mz = zz.getSize(),
+      copy(DD) {
+        if (!this.model) return super.copy(DD);
+        const CD = new SD(DD, this.hq()),
+          cD = this.ncD(void 0, !0);
+        cD && CD.setIndices(cD);
+        let fD = !1;
+        for (const iD in this._vertexBuffers) {
+          const DD = this._vertexBuffers[iD],
+            cD = DD.getData();
+          if (!cD) continue;
+          const bD = DD.getSize(),
             {
-              type: tz,
-              byteOffset: Hz,
-              byteStride: Oz,
-              normalized: pz
-            } = zz;
-          lz ||= zz.isUpdatable();
-          const dz = zz.getIsInstanced() ? (bz instanceof Array ? 4 * bz.length : bz.byteLength) / Oz : this.getTotalVertices(),
-            Fz = (0, nz.u)(bz, Mz, tz, Hz, Oz, dz, !0),
-            Zz = {
-              updatable: zz.isUpdatable(),
-              stride: Mz,
-              type: tz,
-              normalized: pz,
+              type: QD,
+              byteOffset: wD,
+              byteStride: SD,
+              normalized: BD
+            } = DD;
+          fD ||= DD.isUpdatable();
+          const yD = DD.getIsInstanced() ? (cD instanceof Array ? 4 * cD.length : cD.byteLength) / SD : this.getTotalVertices(),
+            MD = (0, pD.u)(cD, bD, QD, wD, SD, yD, !0),
+            tD = {
+              updatable: DD.isUpdatable(),
+              stride: bD,
+              type: QD,
+              normalized: BD,
               takeBufferOwnership: !0,
-              instanced: zz.getIsInstanced()
+              instanced: DD.getIsInstanced()
             };
-          uz.setVerticesBuffer(new Ez.d(this.uR(), Fz, iz, Zz), dz)
+          CD.setVerticesBuffer(new ID.e(this.DZ(), MD, iD, tD), yD)
         }
-        return uz._updatable = lz, uz._boundingInfo = new iz.e(this.extend.minimum, this.extend.maximum), uz.relink(), uz
+        return CD._updatable = fD, CD._boundingInfo = new iD.e(this.extend.minimum, this.extend.maximum), CD.relink(), CD
       }
-      static mergeMeshes(zz, uz, bz, Ez, nz, iz) {
-        const tz = zz[0].XT(),
-          Hz = new Mz.d(zz[0].name + "_merged", tz),
-          pz = new Oz(lz.b.RandomId(), tz, void 0, !1, Hz);
+      static mergeMeshes(DD, CD, cD, ID, pD, iD) {
+        const QD = DD[0].hq(),
+          wD = new bD.d(DD[0].name + "_merged", QD),
+          BD = new SD(fD.e.RandomId(), QD, void 0, !1, wD);
         try {
-          if (!Mz.d.MergeMeshes(zz, uz, bz, Hz, nz, iz)) return Hz.dispose(), null
-        } catch (dz) {
-          throw Hz.dispose(), dz
+          if (!bD.d.MergeMeshes(DD, CD, cD, wD, pD, iD)) return wD.dispose(), null
+        } catch (yD) {
+          throw wD.dispose(), yD
         }
-        return pz.relink(), Hz
+        return BD.relink(), wD
       }
-      removeVerticesData(zz) {
-        this.releaseUnlessInstanced(zz), super.removeVerticesData(zz)
+      removeVerticesData(DD) {
+        this.releaseUnlessInstanced(DD), super.removeVerticesData(DD)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(zz) {
-        var uz;
-        zz && null !== (uz = this.getVertexBuffer(zz)) && void 0 !== uz && uz.getIsInstanced() || this.release()
+      releaseUnlessInstanced(DD) {
+        var CD;
+        DD && null !== (CD = this.getVertexBuffer(DD)) && void 0 !== CD && CD.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, Hz.s)(this.model), this.model = null)
+        this.model && ((0, wD.s)(this.model), this.model = null)
       }
     }
 
-    function pz(zz, uz, bz) {
-      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Mz.d(zz, bz);
-      const nz = (0, Hz.j)(uz),
+    function BD(DD, CD, cD) {
+      let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new bD.d(DD, cD);
+      const pD = (0, wD.l)(CD),
         {
-          positions: iz,
-          normals: pz,
-          uvs: dz,
-          indices: Fz,
-          named: Zz = {}
-        } = uz,
-        Rz = new tz.b;
-      Rz.positions = iz, Rz.normals = null !== pz && void 0 !== pz ? pz : null, Rz.uvs = null !== dz && void 0 !== dz ? dz : null, Rz.indices = Fz;
-      const Kz = new Oz(lz.b.RandomId(), bz, Rz, !1, Ez);
+          positions: iD,
+          normals: BD,
+          uvs: yD,
+          indices: MD,
+          named: tD = {}
+        } = CD,
+        ZD = new QD.c;
+      ZD.positions = iD, ZD.normals = null !== BD && void 0 !== BD ? BD : null, ZD.uvs = null !== yD && void 0 !== yD ? yD : null, ZD.indices = MD;
+      const oD = new SD(fD.e.RandomId(), cD, ZD, !1, ID);
       for (const {
-          kind: lz,
-          components: Mz
+          kind: fD,
+          components: bD
         }
-        of nz.vertexAttributes) lz in Zz && Ez.setVerticesData(lz, Zz[lz], !1, Mz);
-      return Kz.link(nz), Ez
+        of pD.vertexAttributes) fD in tD && ID.setVerticesData(fD, tD[fD], !1, bD);
+      return oD.link(pD), ID
     }
 
-    function dz(zz, uz, bz) {
-      let Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const nz = new Mz.d(zz, bz),
+    function yD(DD, CD, cD) {
+      let ID = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const pD = new bD.d(DD, cD),
         {
-          positions: iz,
-          normals: lz,
-          uvs: Hz,
-          indices: Oz
-        } = uz;
-      return Object.assign(new tz.b, {
-        positions: iz,
-        normals: lz,
-        uvs: Hz,
-        indices: Oz
-      }).applyToMesh(nz, Ez), nz
+          positions: iD,
+          normals: fD,
+          uvs: wD,
+          indices: SD
+        } = CD;
+      return Object.assign(new QD.c, {
+        positions: iD,
+        normals: fD,
+        uvs: wD,
+        indices: SD
+      }).applyToMesh(pD, ID), pD
     }
   },
-  8494: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Oz,
-      e: () => Mz,
-      g: () => tz
+  8520: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => SD,
+      f: () => bD,
+      g: () => QD
     });
-    var Ez = bz(2132),
-      nz = bz(1226),
-      iz = bz(2136);
-    const lz = ",";
+    var ID = cD(2192),
+      pD = cD(1240),
+      iD = cD(2195);
+    const fD = ",";
 
-    function Mz(zz) {
-      if (!zz) return [];
-      const uz = new Set,
-        bz = [];
-      for (const Ez of zz.split(lz)) {
-        const zz = Ez.trim();
-        if ((0, iz.l)(zz) && !uz.has(zz) && (uz.add(zz), bz.push(zz), bz.length >= nz.o)) break
+    function bD(DD) {
+      if (!DD) return [];
+      const CD = new Set,
+        cD = [];
+      for (const ID of DD.split(fD)) {
+        const DD = ID.trim();
+        if ((0, iD.i)(DD) && !CD.has(DD) && (CD.add(DD), cD.push(DD), cD.length >= pD.l)) break
       }
-      return bz
+      return cD
     }
 
-    function tz(zz) {
-      const uz = new Set,
-        bz = [];
-      for (const Ez of zz)
-        if ((0, iz.l)(Ez) && !uz.has(Ez) && (uz.add(Ez), bz.push(Ez), bz.length >= nz.o)) break;
-      return bz.join(lz)
+    function QD(DD) {
+      const CD = new Set,
+        cD = [];
+      for (const ID of DD)
+        if ((0, iD.i)(ID) && !CD.has(ID) && (CD.add(ID), cD.push(ID), cD.length >= pD.l)) break;
+      return cD.join(fD)
     }
 
-    function Hz() {
-      return tz(iz.g)
+    function wD() {
+      return QD(iD.f)
     }
 
-    function Oz(zz) {
-      var uz;
-      return "emote" === zz ? Hz() : null !== (uz = pz[zz][0]) && void 0 !== uz ? uz : dz[zz]
+    function SD(DD) {
+      var CD;
+      return "emote" === DD ? wD() : null !== (CD = BD[DD][0]) && void 0 !== CD ? CD : yD[DD]
     }
-    const pz = nz.u.reduce(((zz, uz) => {
-        const bz = [];
-        for (const iz in Ez.h[uz]) {
-          var nz;
-          "default" === (null === (nz = (0, Ez.m)(uz, iz)) || void 0 === nz ? void 0 : nz.cosmeticPack) && bz.push(iz)
+    const BD = pD.u.reduce(((DD, CD) => {
+        const cD = [];
+        for (const iD in ID.f[CD]) {
+          var pD;
+          "default" === (null === (pD = (0, ID.k)(CD, iD)) || void 0 === pD ? void 0 : pD.cosmeticPack) && cD.push(iD)
         }
-        return zz[uz] = bz, zz
+        return DD[CD] = cD, DD
       }), {}),
-      dz = nz.u.reduce(((zz, uz) => (zz[uz] = Object.keys(Ez.h[uz])[0], zz)), {})
+      yD = pD.u.reduce(((DD, CD) => (DD[CD] = Object.keys(ID.f[CD])[0], DD)), {})
+  },
+  38163: (DD, CD, cD) => {
+    var ID = {
+      "./cape_cow_cream.png": 27656,
+      "./cape_cow_normal.png": 27659,
+      "./cape_creator_level1.png": 27667,
+      "./cape_creator_level2.png": 27669,
+      "./cape_creator_level3.png": 27675,
+      "./cape_none.png": 27678,
+      "./cape_pig.png": 27683,
+      "./cape_sheep.png": 27685,
+      "./cape_super.png": 27687,
+      "./cape_super_inverted.png": 27694,
+      "./cape_youtuber.png": 27699
+    };
+
+    function pD(DD) {
+      var CD = iD(DD);
+      return cD(CD)
+    }
+
+    function iD(DD) {
+      if (!cD.o(ID, DD)) {
+        var CD = new Error("Cannot find module '" + DD + "'");
+        throw CD.code = "MODULE_NOT_FOUND", CD
+      }
+      return ID[DD]
+    }
+    pD.keys = function() {
+      return Object.keys(ID)
+    }, pD.resolve = iD, DD.exports = pD, pD.id = 38163
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

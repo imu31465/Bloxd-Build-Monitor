@@ -1,319 +1,319 @@
 export const id = 216;
 export const ids = [216];
 export const modules = {
-  38974: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Ez,
-      h: () => nz
+  38931: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => ID,
+      i: () => pD
     });
-    const Ez = "The world isn't loaded, so no blocks can be seen.",
-      nz = "The world isn't loaded, so nothing in it can be seen."
+    const ID = "The world isn't loaded, so no blocks can be seen.",
+      pD = "The world isn't loaded, so nothing in it can be seen."
   },
-  36237: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz,
-      e: () => nz
+  36156: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => iD,
+      c: () => pD
     });
-    let Ez = () => null;
+    let ID = () => null;
 
-    function nz(zz) {
-      Ez = zz
+    function pD(DD) {
+      ID = DD
     }
 
-    function iz(zz, uz) {
-      return Ez(zz, uz)
+    function iD(DD, CD) {
+      return ID(DD, CD)
     }
   },
-  39765: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Rz,
-      e: () => fz,
-      h: () => Xz,
-      l: () => Kz
+  39703: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => ZD,
+      f: () => gD,
+      g: () => ND,
+      i: () => oD
     });
-    var Ez = bz(22),
-      nz = bz(39769),
-      iz = bz(39750),
-      lz = bz(39776),
-      Mz = bz(39758),
-      tz = bz(39779),
-      Hz = bz(39798);
+    var ID = cD(20),
+      pD = cD(39709),
+      iD = cD(39692),
+      fD = cD(39711),
+      bD = cD(39701),
+      QD = cD(39715),
+      wD = cD(39727);
 
-    function Oz(zz) {
-      var uz, bz;
-      const Ez = (0, iz.j)();
-      return Ez ? null === (uz = (0, nz.b)(Ez.api, zz[0], zz[1], zz[2])) || void 0 === uz || null === (bz = uz.persisted) || void 0 === bz ? void 0 : bz.shared : void 0
+    function SD(DD) {
+      var CD, cD;
+      const ID = (0, iD.g)();
+      return ID ? null === (CD = (0, pD.d)(ID.api, DD[0], DD[1], DD[2])) || void 0 === CD || null === (cD = CD.persisted) || void 0 === cD ? void 0 : cD.shared : void 0
     }
 
-    function pz(zz) {
-      return `${zz[0]},${zz[1]},${zz[2]}`
+    function BD(DD) {
+      return `${DD[0]},${DD[1]},${DD[2]}`
     }
-    const dz = new Map;
-    let Fz = null,
-      Zz = 0;
+    const yD = new Map;
+    let MD = null,
+      tD = 0;
 
-    function Rz() {
-      return Zz
+    function ZD() {
+      return tD
     }
 
-    function Kz(zz) {
-      const uz = null !== Fz && Fz.key === pz(zz.pos) ? Fz.type : null;
-      if (null === uz) return zz;
-      let bz = null;
-      if ("Iron" === uz) {
+    function oD(DD) {
+      const CD = null !== MD && MD.key === BD(DD.pos) ? MD.type : null;
+      if (null === CD) return DD;
+      let cD = null;
+      if ("Iron" === CD) {
         const {
-          cachedPasskey: uz,
-          ...Ez
-        } = wz(zz.pos);
-        bz = {
-          jH: null !== uz && void 0 !== uz ? uz : [0, 0, 0, 0],
-          ...Ez
+          cachedPasskey: CD,
+          ...ID
+        } = vD(DD.pos);
+        cD = {
+          Lw: null !== CD && void 0 !== CD ? CD : [0, 0, 0, 0],
+          ...ID
         }
       }
       return {
-        ...zz,
-        type: uz,
-        ironChest: bz
+        ...DD,
+        type: CD,
+        ironChest: cD
       }
     }
 
-    function wz(zz) {
-      const uz = Oz(zz),
-        bz = null === uz || void 0 === uz ? void 0 : uz.ownerDbId,
-        Ez = function(zz) {
-          var uz;
-          let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Oz(zz);
-          const Ez = pz(zz),
-            nz = dz.get(Ez);
-          return nz ? nz.lastOpened < (null !== (uz = null === bz || void 0 === bz ? void 0 : bz.passkeyLastUpdated) && void 0 !== uz ? uz : 0) ? (dz.delete(Ez), null) : [...nz.jH] : null
-        }(zz, uz);
-      return void 0 === bz ? {
-        cachedPasskey: Ez
+    function vD(DD) {
+      const CD = SD(DD),
+        cD = null === CD || void 0 === CD ? void 0 : CD.ownerDbId,
+        ID = function(DD) {
+          var CD;
+          let cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SD(DD);
+          const ID = BD(DD),
+            pD = yD.get(ID);
+          return pD ? pD.lastOpened < (null !== (CD = null === cD || void 0 === cD ? void 0 : cD.passkeyLastUpdated) && void 0 !== CD ? CD : 0) ? (yD.delete(ID), null) : [...pD.Lw] : null
+        }(DD, CD);
+      return void 0 === cD ? {
+        cachedPasskey: ID
       } : {
-        ownerDbId: bz,
-        cachedPasskey: Ez
+        ownerDbId: cD,
+        cachedPasskey: ID
       }
-    }(0, Hz.i)(lz.e, (zz => {
-      const uz = (0, tz.i)(lz.e, zz);
-      if (!(0, tz.e)(uz) || uz.Fl) return;
-      if (Zz++, !uz.tl || null === uz.pl) return void(Fz = null);
-      const bz = pz(uz.pl);
-      Fz = {
-        key: bz,
-        type: uz.Ol
-      }, null !== uz.dl && dz.set(bz, {
-        jH: [...uz.dl],
+    }(0, wD.l)(fD.d, (DD => {
+      const CD = (0, QD.g)(fD.d, DD);
+      if (!(0, QD.e)(CD) || CD.ui) return;
+      if (tD++, !CD.ki || null === CD.si) return void(MD = null);
+      const cD = BD(CD.si);
+      MD = {
+        key: cD,
+        type: CD.Wi
+      }, null !== CD.Ei && yD.set(cD, {
+        Lw: [...CD.Ei],
         lastOpened: Date.now()
       })
-    })), (0, Hz.d)((() => {
-      dz.clear(), Fz = null, Zz++
-    })), (0, Hz.h)((() => {
-      null !== Fz && (Fz = null, Zz++, Ez.k.sK("chestToggleFromServer", !1, !0))
+    })), (0, wD.i)((() => {
+      yD.clear(), MD = null, tD++
+    })), (0, wD.j)((() => {
+      null !== MD && (MD = null, tD++, ID.i.Uo("chestToggleFromServer", !1, !0))
     }));
-    const Xz = {
+    const ND = {
         boardEditRequested: {
-          watch: zz => (0, Ez.o)("EditBoard", (uz => {
+          watch: DD => (0, ID.k)("EditBoard", (CD => {
             let {
-              pos: bz
-            } = uz;
-            if (null === bz) return void zz(null);
-            const Ez = (0, iz.j)(),
-              nz = (0, iz.q)();
-            Ez && nz && zz(nz.readBoardToEdit(Ez.api, Ez.chunks, bz))
+              pos: cD
+            } = CD;
+            if (null === cD) return void DD(null);
+            const ID = (0, iD.g)(),
+              pD = (0, iD.q)();
+            ID && pD && DD(pD.readBoardToEdit(ID.api, ID.chunks, cD))
           }))
         },
         ironChestOpenRequested: {
-          watch: zz => (0, Ez.o)("OpenIronChest", (uz => {
+          watch: DD => (0, ID.k)("OpenIronChest", (CD => {
             let {
-              pos: bz
-            } = uz;
-            zz(function(zz) {
+              pos: cD
+            } = CD;
+            DD(function(DD) {
               return {
-                pos: zz,
-                ...wz(zz)
+                pos: DD,
+                ...vD(DD)
               }
-            }(bz))
+            }(cD))
           }))
         }
       },
-      fz = {
-        writeOnBoard(zz) {
-          var uz;
+      gD = {
+        writeOnBoard(DD) {
+          var CD;
           let {
-            pos: bz,
-            text: Ez,
-            textSize: nz
-          } = zz;
-          null === (uz = (0, iz.j)()) || void 0 === uz || uz.send(Mz.d.UpdateBoard, (0, Mz.S)({
-            ql: bz,
-            hl: Ez,
-            Ul: nz
+            pos: cD,
+            text: ID,
+            textSize: pD
+          } = DD;
+          null === (CD = (0, iD.g)()) || void 0 === CD || CD.send(bD.e.UpdateBoard, (0, bD.ib)({
+            Xf: cD,
+            mf: ID,
+            Pf: pD
           }))
         },
-        writeBook(zz) {
-          var uz;
+        writeBook(DD) {
+          var CD;
           let {
-            pages: bz,
-            title: Ez,
-            published: nz
-          } = zz;
-          null === (uz = (0, iz.j)()) || void 0 === uz || uz.send(Mz.d.UpdateBook, (0, Mz.U)({
-            UM: bz,
-            cM: Ez,
-            gM: nz
+            pages: cD,
+            title: ID,
+            published: pD
+          } = DD;
+          null === (CD = (0, iD.g)()) || void 0 === CD || CD.send(bD.e.UpdateBook, (0, bD.kb)({
+            Kb: cD,
+            Vb: ID,
+            zb: pD
           }))
         },
-        writeNameTag(zz) {
-          var uz;
-          null === (uz = (0, iz.j)()) || void 0 === uz || uz.send(Mz.d.UpdateNameTag, zz)
+        writeNameTag(DD) {
+          var CD;
+          null === (CD = (0, iD.g)()) || void 0 === CD || CD.send(bD.e.UpdateNameTag, DD)
         },
-        setCustomLobbyBlock(zz) {
+        setCustomLobbyBlock(DD) {
           let {
-            pos: uz,
-            blockName: bz
-          } = zz;
-          const Ez = (0, iz.q)(),
-            nz = (0, iz.j)();
-          Ez && nz && nz.send(Mz.d.SetCustomLobbyBlock, (0, Mz.F)({
-            hO: Ez.blockIdOf(bz),
-            qO: uz
+            pos: CD,
+            blockName: cD
+          } = DD;
+          const ID = (0, iD.q)(),
+            pD = (0, iD.g)();
+          ID && pD && pD.send(bD.e.SetCustomLobbyBlock, (0, bD.Q)({
+            HS: ID.blockIdOf(cD),
+            PS: CD
           }))
         }
       }
   },
-  39815: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => tz,
-      g: () => lz,
-      k: () => Mz
+  39741: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => QD,
+      h: () => fD,
+      j: () => bD
     });
-    var Ez = bz(39740),
-      nz = bz(4544),
-      iz = bz(39750);
+    var ID = cD(39680),
+      pD = cD(4571),
+      iD = cD(39692);
 
-    function lz() {
-      var zz;
-      const uz = null === (zz = (0, iz.j)()) || void 0 === zz ? void 0 : zz.api.localId;
-      return void 0 === uz || uz === Ez.bd ? null : String(uz)
+    function fD() {
+      var DD;
+      const CD = null === (DD = (0, iD.g)()) || void 0 === DD ? void 0 : DD.api.localId;
+      return void 0 === CD || CD === ID.nd ? null : String(CD)
     }
 
-    function Mz(zz) {
-      const uz = (0, iz.j)();
-      if (null !== uz) return zz(uz);
-      let bz = null;
-      const Ez = (0, nz.w)((() => {
-        const uz = (0, iz.j)();
-        null !== uz && null === bz && (Ez(), bz = zz(uz))
+    function bD(DD) {
+      const CD = (0, iD.g)();
+      if (null !== CD) return DD(CD);
+      let cD = null;
+      const ID = (0, pD.t)((() => {
+        const CD = (0, iD.g)();
+        null !== CD && null === cD && (ID(), cD = DD(CD))
       }));
       return () => {
-        var zz;
-        Ez(), null === (zz = bz) || void 0 === zz || zz()
+        var DD;
+        ID(), null === (DD = cD) || void 0 === DD || DD()
       }
     }
 
-    function tz(zz, uz, bz) {
+    function QD(DD, CD, cD) {
       return {
         current: () => {
-          const bz = (0, iz.j)();
-          return null === bz ? uz : zz(bz)()
+          const cD = (0, iD.g)();
+          return null === cD ? CD : DD(cD)()
         },
-        watch: uz => Mz((Ez => {
-          const nz = zz(Ez);
-          let iz = nz();
-          return uz(iz), bz((() => {
-            const zz = nz();
-            zz !== iz && (iz = zz, uz(zz))
+        watch: CD => bD((ID => {
+          const pD = DD(ID);
+          let iD = pD();
+          return CD(iD), cD((() => {
+            const DD = pD();
+            DD !== iD && (iD = DD, CD(DD))
           }))
         }))
       }
     }
   },
-  39806: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Hz
+  39739: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => wD
     });
-    var Ez = bz(39750),
-      nz = bz(39815),
-      iz = bz(39823);
+    var ID = cD(39692),
+      pD = cD(39741),
+      iD = cD(39743);
 
-    function lz() {
-      var zz, uz;
-      return null !== (zz = null === (uz = (0, Ez.j)()) || void 0 === uz ? void 0 : uz.itemBridgeSources) && void 0 !== zz ? zz : iz.e
+    function fD() {
+      var DD, CD;
+      return null !== (DD = null === (CD = (0, ID.g)()) || void 0 === CD ? void 0 : CD.itemBridgeSources) && void 0 !== DD ? DD : iD.e
     }
 
-    function Mz(zz) {
+    function bD(DD) {
       return {
-        current: () => lz().states[zz].current(),
-        watch: uz => (0, nz.k)((bz => {
-          const Ez = bz.itemBridgeSources.states[zz];
-          return uz(Ez.current()), Ez.watch(uz)
+        current: () => fD().states[DD].current(),
+        watch: CD => (0, pD.j)((cD => {
+          const ID = cD.itemBridgeSources.states[DD];
+          return CD(ID.current()), ID.watch(CD)
         }))
       }
     }
 
-    function tz(zz) {
+    function QD(DD) {
       return {
-        watch: uz => (0, nz.k)((bz => bz.itemBridgeSources.events[zz].watch(uz)))
+        watch: CD => (0, pD.j)((cD => cD.itemBridgeSources.events[DD].watch(CD)))
       }
     }
-    const Hz = {
+    const wD = {
       states: {
-        inventory: Mz("inventory"),
-        hotbar: Mz("hotbar"),
-        crafting: Mz("crafting"),
-        heldItemAim: Mz("heldItemAim")
+        inventory: bD("inventory"),
+        hotbar: bD("hotbar"),
+        crafting: bD("crafting"),
+        heldItemAim: bD("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: tz("hotbarSlotRequested"),
-        hotbarScrolled: tz("hotbarScrolled"),
-        numberKeyPressed: tz("numberKeyPressed"),
-        inventoryDropRequested: tz("inventoryDropRequested"),
-        chestToggled: tz("chestToggled"),
-        chestRefreshed: tz("chestRefreshed"),
-        inventorySynced: tz("inventorySynced"),
-        enchantingTableOpened: tz("enchantingTableOpened")
+        hotbarSlotRequested: QD("hotbarSlotRequested"),
+        hotbarScrolled: QD("hotbarScrolled"),
+        numberKeyPressed: QD("numberKeyPressed"),
+        inventoryDropRequested: QD("inventoryDropRequested"),
+        chestToggled: QD("chestToggled"),
+        chestRefreshed: QD("chestRefreshed"),
+        inventorySynced: QD("inventorySynced"),
+        enchantingTableOpened: QD("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: zz => lz().commands.selectHotbarSlot(zz),
-        removeInventoryItem: zz => lz().commands.removeInventoryItem(zz),
-        swapInventorySlots: zz => lz().commands.swapInventorySlots(zz),
-        moveInventoryItem: zz => lz().commands.moveInventoryItem(zz),
-        quickMoveInventoryItem: zz => lz().commands.quickMoveInventoryItem(zz),
-        closeChest: zz => lz().commands.closeChest(zz),
-        focusCrafting: zz => lz().commands.focusCrafting(zz),
-        craftRecipe: zz => lz().commands.craftRecipe(zz),
-        salvageItem: zz => lz().commands.salvageItem(zz),
-        enchantItem: zz => lz().commands.enchantItem(zz)
+        selectHotbarSlot: DD => fD().commands.selectHotbarSlot(DD),
+        removeInventoryItem: DD => fD().commands.removeInventoryItem(DD),
+        swapInventorySlots: DD => fD().commands.swapInventorySlots(DD),
+        moveInventoryItem: DD => fD().commands.moveInventoryItem(DD),
+        quickMoveInventoryItem: DD => fD().commands.quickMoveInventoryItem(DD),
+        closeChest: DD => fD().commands.closeChest(DD),
+        focusCrafting: DD => fD().commands.focusCrafting(DD),
+        craftRecipe: DD => fD().commands.craftRecipe(DD),
+        salvageItem: DD => fD().commands.salvageItem(DD),
+        enchantItem: DD => fD().commands.enchantItem(DD)
       },
       queries: {
-        enchantingOffer: zz => lz().queries.enchantingOffer(zz)
+        enchantingOffer: DD => fD().queries.enchantingOffer(DD)
       }
     }
   },
-  39823: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz
+  39743: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => bD
     });
-    var Ez = bz(38974);
+    var ID = cD(38931);
 
-    function nz(zz) {
+    function pD(DD) {
       return {
-        current: () => zz,
+        current: () => DD,
         watch: () => () => {}
       }
     }
 
-    function iz() {}
-    const lz = Object.freeze([0, 0, 0]),
-      Mz = {
+    function iD() {}
+    const fD = Object.freeze([0, 0, 0]),
+      bD = {
         states: {
-          health: nz({
+          health: pD({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: nz({
+          inventory: pD({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -321,63 +321,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: nz({
+          hotbar: pD({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: nz({
+          stationItems: pD({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: nz({}),
-          creativeVisibility: nz({
+          itemInfo: pD({}),
+          creativeVisibility: pD({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: nz(null),
-          heldItemAim: nz({
+          aura: pD(null),
+          heldItemAim: pD({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: nz(!1),
-          gliderBoostFuel: nz(0),
-          flight: nz({
+          crouching: pD(!1),
+          gliderBoostFuel: pD(0),
+          flight: pD({
             canFly: !1,
             flying: !1
           }),
-          crafting: nz({
+          crafting: pD({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: nz({
+          players: pD({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: nz({}),
-          fullInventory: nz(!1),
-          crosshairTarget: nz({
+          lobbyLeaderboardRows: pD({}),
+          fullInventory: pD(!1),
+          crosshairTarget: pD({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: nz(!0),
-          freeCamera: nz({
+          localPlayerAlive: pD(!0),
+          freeCamera: pD({
             allowed: !1,
             movesFly: !1
           }),
-          replay: nz(null),
-          replayEdits: nz(null),
-          replayRecorder: nz({
+          replay: pD(null),
+          replayEdits: pD(null),
+          replayRecorder: pD({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: nz(!1)
+          replayVideoExporting: pD(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -439,86 +439,86 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: iz,
+          selectHotbarSlot: iD,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: iz,
-          setInventoryOpen: iz,
-          changeIronChestPasskey: iz,
-          dragReplayCamera: iz,
-          applyTemporaryThirdPerson: iz,
-          holdEmoteWheel: iz,
-          recordFlyingMiddleText: iz,
-          focusCrafting: iz,
+          closeChest: iD,
+          setInventoryOpen: iD,
+          changeIronChestPasskey: iD,
+          dragReplayCamera: iD,
+          applyTemporaryThirdPerson: iD,
+          holdEmoteWheel: iD,
+          recordFlyingMiddleText: iD,
+          focusCrafting: iD,
           craftRecipe: () => ({
-            gO: 0,
-            Rp: null,
+            qS: 0,
+            iB: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: iz,
-          setShopOpen: iz,
-          buyShopItem: iz,
-          sendChatMessage: iz,
-          ignorePlayer: iz,
-          reportPlayer: iz,
-          reportWorldCodeChat: iz,
-          requestDiscordReportKey: iz,
-          reportLobbyOrGame: iz,
-          playEmote: iz,
-          updateMyCosmetic: iz,
-          writeOnBoard: iz,
-          writeBook: iz,
-          writeNameTag: iz,
-          setCustomLobbyBlock: iz,
-          openIronChest: iz,
-          sendCodeCollab: iz,
-          clickCodeBlock: iz,
-          bindCustomButtonKeys: iz,
-          pressCustomButton: iz,
-          moveReplayFreecam: iz,
-          holdReplayFreecamVertical: iz,
-          respawn: iz,
-          wakeUp: iz,
-          requestLeaderboard: iz,
-          completeTask: iz,
-          setServerCookie: iz,
-          answerUiRequest: iz,
-          chooseRewardedAd: iz,
-          setCameraZoom: iz,
-          setFreeCameraMovesFly: iz,
-          setBlockHighlight: iz,
-          setCrosshairInteractPrompt: iz,
-          setLookSensitivity: iz,
-          replayAction: iz,
-          setReplayPlaying: iz,
-          seekReplay: iz,
-          setReplayCameraMode: iz,
-          syncReplayCameraMode: iz,
-          setReplayCameraKeyframe: iz,
-          moveReplayCameraKeyframe: iz,
-          deleteReplayCameraKeyframes: iz,
-          setReplayPlaybackMark: iz,
+          enchantItem: iD,
+          setShopOpen: iD,
+          buyShopItem: iD,
+          sendChatMessage: iD,
+          ignorePlayer: iD,
+          reportPlayer: iD,
+          reportWorldCodeChat: iD,
+          requestDiscordReportKey: iD,
+          reportLobbyOrGame: iD,
+          playEmote: iD,
+          updateMyCosmetic: iD,
+          writeOnBoard: iD,
+          writeBook: iD,
+          writeNameTag: iD,
+          setCustomLobbyBlock: iD,
+          openIronChest: iD,
+          sendCodeCollab: iD,
+          clickCodeBlock: iD,
+          bindCustomButtonKeys: iD,
+          pressCustomButton: iD,
+          moveReplayFreecam: iD,
+          holdReplayFreecamVertical: iD,
+          respawn: iD,
+          wakeUp: iD,
+          requestLeaderboard: iD,
+          completeTask: iD,
+          setServerCookie: iD,
+          answerUiRequest: iD,
+          chooseRewardedAd: iD,
+          setCameraZoom: iD,
+          setFreeCameraMovesFly: iD,
+          setBlockHighlight: iD,
+          setCrosshairInteractPrompt: iD,
+          setLookSensitivity: iD,
+          replayAction: iD,
+          setReplayPlaying: iD,
+          seekReplay: iD,
+          setReplayCameraMode: iD,
+          syncReplayCameraMode: iD,
+          setReplayCameraKeyframe: iD,
+          moveReplayCameraKeyframe: iD,
+          deleteReplayCameraKeyframes: iD,
+          setReplayPlaybackMark: iD,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: iz,
-          exportReplayVideo: iz,
-          toggleRecording: iz,
-          saveClip: iz,
-          setRecorderPrefs: iz,
-          setReplayViewerOpen: iz
+          holdReplayForShaderPackFailure: iD,
+          exportReplayVideo: iD,
+          toggleRecording: iD,
+          saveClip: iD,
+          setRecorderPrefs: iD,
+          setReplayViewerOpen: iD
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => Ez.e,
-          worldCodeAiGameState: () => Ez.h
+          worldCodeAiChunk: () => ID.e,
+          worldCodeAiGameState: () => ID.i
         },
         lookups: {
-          localPos: () => lz,
+          localPos: () => fD,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -536,321 +536,321 @@ export const modules = {
         }
       }
   },
-  39742: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => xz,
-      c: () => vz,
-      d: () => Jz,
-      e: () => Nz,
-      g: () => rz
+  39688: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => HD,
+      f: () => PD,
+      i: () => UD,
+      j: () => OD,
+      m: () => mD
     });
-    var Ez = bz(38584),
-      nz = bz(1212),
-      iz = bz(1892),
-      lz = bz(1909),
-      Mz = bz(3043),
-      tz = bz(36237),
-      Hz = bz(1296),
-      Oz = bz(39750),
-      pz = bz(4575),
-      dz = bz(2289),
-      Fz = bz(39758),
-      Zz = bz(39765),
-      Rz = bz(39806);
-    let Kz = null;
+    var ID = cD(38540),
+      pD = cD(1221),
+      iD = cD(1928),
+      fD = cD(1945),
+      bD = cD(3083),
+      QD = cD(36156),
+      wD = cD(1317),
+      SD = cD(39692),
+      BD = cD(4592),
+      yD = cD(2338),
+      MD = cD(39701),
+      tD = cD(39703),
+      ZD = cD(39739);
+    let oD = null;
 
-    function wz(zz) {
-      const uz = new Map,
-        bz = bz => {
-          if ("string" !== typeof bz) return;
-          let Ez = uz.get(bz);
-          return void 0 === Ez && (Ez = zz(bz), void 0 !== Ez && uz.set(bz, Ez)), Ez
+    function vD(DD) {
+      const CD = new Map,
+        cD = cD => {
+          if ("string" !== typeof cD) return;
+          let ID = CD.get(cD);
+          return void 0 === ID && (ID = DD(cD), void 0 !== ID && CD.set(cD, ID)), ID
         };
       return new Proxy({}, {
-        get: (zz, uz) => bz(uz),
-        has: (zz, uz) => void 0 !== bz(uz)
+        get: (DD, CD) => cD(CD),
+        has: (DD, CD) => void 0 !== cD(CD)
       })
     }
 
-    function Xz(zz) {
-      const uz = (0, Mz.e)(zz);
-      return void 0 !== uz && (0, Mz.g)(uz) === zz
+    function ND(DD) {
+      const CD = (0, bD.e)(DD);
+      return void 0 !== CD && (0, bD.h)(CD) === DD
     }
 
-    function fz(zz) {
-      var uz;
-      const bz = null === (uz = (0, Oz.j)()) || void 0 === uz ? void 0 : uz.tables;
-      if (void 0 === bz || !Xz(zz)) return;
-      const Ez = {
-          displayName: bz.getDisplayName(zz)
+    function gD(DD) {
+      var CD;
+      const cD = null === (CD = (0, SD.g)()) || void 0 === CD ? void 0 : CD.tables;
+      if (void 0 === cD || !ND(DD)) return;
+      const ID = {
+          displayName: cD.getDisplayName(DD)
         },
-        nz = bz.getItemStat(zz, "description");
-      void 0 !== nz && null !== nz && (Ez.description = nz);
+        pD = cD.getItemStat(DD, "description");
+      void 0 !== pD && null !== pD && (ID.description = pD);
       const {
-        rootName: iz
-      } = bz.getMetaInfo(zz);
-      iz !== zz && (Ez.rootName = iz);
-      const lz = bz.getItemStat(zz, "armourReduction");
-      return void 0 !== lz && null !== lz && (Ez.armourReduction = lz), Ez
-    }(0, Oz.s)((zz => {
-      Kz = zz
+        rootName: iD
+      } = cD.getMetaInfo(DD);
+      iD !== DD && (ID.rootName = iD);
+      const fD = cD.getItemStat(DD, "armourReduction");
+      return void 0 !== fD && null !== fD && (ID.armourReduction = fD), ID
+    }(0, SD.r)((DD => {
+      oD = DD
     }));
-    const sz = (0, lz.h)("DisplayName", "Description");
+    const XD = (0, fD.j)("DisplayName", "Description");
 
-    function rz() {
-      return Boolean(iz.b.get("useInventory") && iz.b.get("useFullInventory"))
+    function mD() {
+      return Boolean(iD.d.get("useInventory") && iD.d.get("useFullInventory"))
     }
-    let oz = null;
-    const Nz = {
+    let nD = null;
+    const OD = {
         inventory: function() {
-          const zz = Rz.b.states.inventory;
-          let uz = null;
-          const bz = zz => {
-            var bz;
-            return null === zz.chest ? zz : ((null === (bz = uz) || void 0 === bz ? void 0 : bz.from) === zz && uz.chestVersion === (0, Zz.d)() || (uz = {
-              from: zz,
-              chestVersion: (0, Zz.d)(),
+          const DD = ZD.e.states.inventory;
+          let CD = null;
+          const cD = DD => {
+            var cD;
+            return null === DD.chest ? DD : ((null === (cD = CD) || void 0 === cD ? void 0 : cD.from) === DD && CD.chestVersion === (0, tD.e)() || (CD = {
+              from: DD,
+              chestVersion: (0, tD.e)(),
               view: {
-                ...zz,
-                chest: (0, Zz.l)(zz.chest)
+                ...DD,
+                chest: (0, tD.i)(DD.chest)
               }
-            }), uz.view)
+            }), CD.view)
           };
           return {
-            current: () => bz(zz.current()),
-            watch: uz => zz.watch((zz => {
-              uz(bz(zz))
+            current: () => cD(DD.current()),
+            watch: CD => DD.watch((DD => {
+              CD(cD(DD))
             }))
           }
         }(),
-        crafting: Rz.b.states.crafting,
+        crafting: ZD.e.states.crafting,
         stationItems: {
           current() {
-            var zz;
-            return (null === (zz = oz) || void 0 === zz ? void 0 : zz.namesVersion) !== (0, Mz.k)() && (oz = {
-              namesVersion: (0, Mz.k)(),
+            var DD;
+            return (null === (DD = nD) || void 0 === DD ? void 0 : DD.namesVersion) !== (0, bD.l)() && (nD = {
+              namesVersion: (0, bD.l)(),
               items: {
-                enchantable: wz((zz => {
-                  const uz = (0, Mz.e)(zz);
-                  return void 0 !== uz && null !== Kz && Kz.enchantmentPerksOf(uz).length > 0 || void 0
+                enchantable: vD((DD => {
+                  const CD = (0, bD.e)(DD);
+                  return void 0 !== CD && null !== oD && oD.enchantmentPerksOf(CD).length > 0 || void 0
                 })),
-                salvageable: wz((zz => !(!Xz(zz) || null === (0, tz.c)(zz)) || void 0))
+                salvageable: vD((DD => !(!ND(DD) || null === (0, QD.b)(DD)) || void 0))
               }
-            }), oz.items
+            }), nD.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let zz = null;
-          const uz = () => {
-            var uz;
-            return (null === (uz = zz) || void 0 === uz ? void 0 : uz.namesVersion) !== (0, Mz.k)() && (zz = {
-              namesVersion: (0, Mz.k)(),
-              infos: wz(fz)
-            }), zz.infos
+          let DD = null;
+          const CD = () => {
+            var CD;
+            return (null === (CD = DD) || void 0 === CD ? void 0 : CD.namesVersion) !== (0, bD.l)() && (DD = {
+              namesVersion: (0, bD.l)(),
+              infos: vD(gD)
+            }), DD.infos
           };
           return {
-            current: uz,
-            watch: bz => (0, lz.r)((Ez => {
-              Ez.some(sz) && (zz = null, bz(uz()))
+            current: CD,
+            watch: cD => (0, fD.t)((ID => {
+              ID.some(XD) && (DD = null, cD(CD()))
             }))
           }
         }(),
-        creativeVisibility: (0, lz.m)((function() {
-          const zz = {};
-          for (const nz of null !== (uz = null === (bz = Kz) || void 0 === bz ? void 0 : bz.creativeItemIds()) && void 0 !== uz ? uz : []) {
-            var uz, bz, lz, tz;
-            const Hz = (0, Mz.g)(nz);
-            if (void 0 === Hz) continue;
-            const Oz = null !== (lz = iz.b.get((0, Ez.f)(Hz, "showInCreativeInven"))) && void 0 !== lz ? lz : null === (tz = Kz) || void 0 === tz ? void 0 : tz.showInCreativeInvenOf(nz);
-            "boolean" === typeof Oz && (zz[Hz] = Oz)
+        creativeVisibility: (0, fD.o)((function() {
+          const DD = {};
+          for (const pD of null !== (CD = null === (cD = oD) || void 0 === cD ? void 0 : cD.creativeItemIds()) && void 0 !== CD ? CD : []) {
+            var CD, cD, fD, QD;
+            const wD = (0, bD.h)(pD);
+            if (void 0 === wD) continue;
+            const SD = null !== (fD = iD.d.get((0, ID.d)(wD, "showInCreativeInven"))) && void 0 !== fD ? fD : null === (QD = oD) || void 0 === QD ? void 0 : QD.showInCreativeInvenOf(pD);
+            "boolean" === typeof SD && (DD[wD] = SD)
           }
           return {
-            publicLobby: (0, nz.M)((0, Hz.b)().lobbyName),
-            shownInGame: zz
+            publicLobby: (0, pD.N)((0, wD.b)().lobbyName),
+            shownInGame: DD
           }
-        }), ["connectedGameChanged"], (0, lz.h)("ShowInCreativeInven")),
-        fullInventory: (0, lz.m)(rz, [], (0, lz.k)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, fD.j)("ShowInCreativeInven")),
+        fullInventory: (0, fD.o)(mD, [], (0, fD.l)("useInventory", "useFullInventory"))
       },
-      vz = {
-        inventoryDropRequested: Rz.b.events.inventoryDropRequested,
-        chestToggled: Rz.b.events.chestToggled,
-        chestRefreshed: Rz.b.events.chestRefreshed,
-        inventorySynced: Rz.b.events.inventorySynced,
-        enchantingTableOpened: Rz.b.events.enchantingTableOpened
+      PD = {
+        inventoryDropRequested: ZD.e.events.inventoryDropRequested,
+        chestToggled: ZD.e.events.chestToggled,
+        chestRefreshed: ZD.e.events.chestRefreshed,
+        inventorySynced: ZD.e.events.inventorySynced,
+        enchantingTableOpened: ZD.e.events.enchantingTableOpened
       },
-      xz = {
-        removeInventoryItem: Rz.b.commands.removeInventoryItem,
-        swapInventorySlots: Rz.b.commands.swapInventorySlots,
-        moveInventoryItem: Rz.b.commands.moveInventoryItem,
-        quickMoveInventoryItem: Rz.b.commands.quickMoveInventoryItem,
-        closeChest: Rz.b.commands.closeChest,
-        setInventoryOpen(zz) {
-          (0, pz.i)(dz.z.InventoryOpen, zz ? dz.z.InventoryOpen : 0)
+      HD = {
+        removeInventoryItem: ZD.e.commands.removeInventoryItem,
+        swapInventorySlots: ZD.e.commands.swapInventorySlots,
+        moveInventoryItem: ZD.e.commands.moveInventoryItem,
+        quickMoveInventoryItem: ZD.e.commands.quickMoveInventoryItem,
+        closeChest: ZD.e.commands.closeChest,
+        setInventoryOpen(DD) {
+          (0, BD.k)(yD.C.InventoryOpen, DD ? yD.C.InventoryOpen : 0)
         },
-        focusCrafting: Rz.b.commands.focusCrafting,
-        craftRecipe: Rz.b.commands.craftRecipe,
-        salvageItem: Rz.b.commands.salvageItem,
-        enchantItem: Rz.b.commands.enchantItem,
-        changeIronChestPasskey(zz) {
-          var uz;
+        focusCrafting: ZD.e.commands.focusCrafting,
+        craftRecipe: ZD.e.commands.craftRecipe,
+        salvageItem: ZD.e.commands.salvageItem,
+        enchantItem: ZD.e.commands.enchantItem,
+        changeIronChestPasskey(DD) {
+          var CD;
           let {
-            pos: bz,
-            jH: Ez
-          } = zz;
-          null === (uz = (0, Oz.j)()) || void 0 === uz || uz.send(Fz.d.ChangeIronChestPasskey, (0, Fz.f)({
-            pl: bz,
-            jH: Ez
+            pos: cD,
+            Lw: ID
+          } = DD;
+          null === (CD = (0, SD.g)()) || void 0 === CD || CD.send(MD.e.ChangeIronChestPasskey, (0, MD.m)({
+            si: cD,
+            Lw: ID
           }))
         },
-        openIronChest(zz) {
-          var uz;
+        openIronChest(DD) {
+          var CD;
           let {
-            pos: bz,
-            jH: Ez
-          } = zz;
-          null === (uz = (0, Oz.j)()) || void 0 === uz || uz.send(Fz.d.OpenIronChest, (0, Fz.y)({
-            pl: bz,
-            jH: Ez
+            pos: cD,
+            Lw: ID
+          } = DD;
+          null === (CD = (0, SD.g)()) || void 0 === CD || CD.send(MD.e.OpenIronChest, (0, MD.I)({
+            si: cD,
+            Lw: ID
           }))
         }
       },
-      Jz = {
-        enchantingOffer: Rz.b.queries.enchantingOffer
+      UD = {
+        enchantingOffer: ZD.e.queries.enchantingOffer
       }
   },
-  39800: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez,
-      f: () => pz,
-      h: () => Mz,
-      j: () => iz,
-      l: () => nz,
-      p: () => tz,
-      q: () => Oz
+  39730: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => ID,
+      h: () => BD,
+      j: () => bD,
+      k: () => iD,
+      n: () => pD,
+      o: () => QD,
+      r: () => SD
     });
-    class Ez extends Error {
+    class ID extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function nz(zz) {
-      return zz instanceof RangeError && /call stack/i.test(zz.message) || zz instanceof Error && "InternalError" === zz.name && /recursion/i.test(zz.message)
+    function pD(DD) {
+      return DD instanceof RangeError && /call stack/i.test(DD.message) || DD instanceof Error && "InternalError" === DD.name && /recursion/i.test(DD.message)
     }
 
-    function iz(zz) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(zz))
+    function iD(DD) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(DD))
     }
-    const lz = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const fD = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function Mz(zz) {
-      var uz;
-      return zz instanceof WebAssembly.RuntimeError || zz instanceof Ez || nz(zz) && lz.test(null !== (uz = zz.stack) && void 0 !== uz ? uz : "")
-    }
-
-    function tz(zz, uz) {
-      if (Mz(zz)) throw zz;
-      console.error(uz, zz)
+    function bD(DD) {
+      var CD;
+      return DD instanceof WebAssembly.RuntimeError || DD instanceof ID || pD(DD) && fD.test(null !== (CD = DD.stack) && void 0 !== CD ? CD : "")
     }
 
-    function Hz(zz, uz, bz, nz, iz) {
-      if (uz % nz !== 0 || uz + bz > zz.byteLength) throw new Ez(`${iz}: ${bz} bytes at ${uz}, ${nz}-aligned, outside ${zz.byteLength} bytes of memory`)
+    function QD(DD, CD) {
+      if (bD(DD)) throw DD;
+      console.error(CD, DD)
     }
 
-    function Oz(zz, uz, bz, Ez, nz) {
-      return 0 === bz ? null : (Hz(uz, bz, Ez * zz.BYTES_PER_ELEMENT, zz.BYTES_PER_ELEMENT, nz), new zz(uz, bz, Ez))
+    function wD(DD, CD, cD, pD, iD) {
+      if (CD % pD !== 0 || CD + cD > DD.byteLength) throw new ID(`${iD}: ${cD} bytes at ${CD}, ${pD}-aligned, outside ${DD.byteLength} bytes of memory`)
     }
 
-    function pz(zz, uz, bz, Ez, nz) {
-      return 0 === uz ? null : (Hz(zz, uz, bz, Ez, nz), new DataView(zz, uz, bz))
+    function SD(DD, CD, cD, ID, pD) {
+      return 0 === cD ? null : (wD(CD, cD, ID * DD.BYTES_PER_ELEMENT, DD.BYTES_PER_ELEMENT, pD), new DD(CD, cD, ID))
+    }
+
+    function BD(DD, CD, cD, ID, pD) {
+      return 0 === CD ? null : (wD(DD, CD, cD, ID, pD), new DataView(DD, CD, cD))
     }
   },
-  39750: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez,
-      f: () => wz,
-      j: () => Rz,
-      l: () => Kz,
-      m: () => dz,
-      o: () => Fz,
-      q: () => Oz,
-      s: () => pz,
-      v: () => Zz
+  39692: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => ID,
+      d: () => vD,
+      g: () => ZD,
+      j: () => oD,
+      l: () => yD,
+      p: () => MD,
+      q: () => SD,
+      r: () => BD,
+      t: () => tD
     });
-    class Ez extends Error {
-      constructor(zz) {
-        super(`the join's code did not load: ${zz instanceof Error?zz.message:String(zz)}`, {
-          cause: zz
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === zz || void 0 === zz ? void 0 : zz.request
+    class ID extends Error {
+      constructor(DD) {
+        super(`the join's code did not load: ${DD instanceof Error?DD.message:String(DD)}`, {
+          cause: DD
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === DD || void 0 === DD ? void 0 : DD.request
       }
     }
-    let nz = null,
-      iz = null,
-      lz = null;
-    const Mz = [];
-    let tz = null;
+    let pD = null,
+      iD = null,
+      fD = null;
+    const bD = [];
+    let QD = null;
 
-    function Hz(zz, uz) {
+    function wD(DD, CD) {
       try {
-        zz(uz)
-      } catch (bz) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", bz)
+        DD(CD)
+      } catch (cD) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", cD)
       }
     }
 
-    function Oz() {
-      return tz
+    function SD() {
+      return QD
     }
 
-    function pz(zz) {
-      Mz.push(zz), null !== tz && Hz(zz, tz)
+    function BD(DD) {
+      bD.push(DD), null !== QD && wD(DD, QD)
     }
 
-    function dz(zz) {
-      return nz ??= Promise.all([bz.e(69), bz.e(94), bz.e(214), bz.e(74), bz.e(215), bz.e(189), bz.e(93), bz.e(259), bz.e(187), bz.e(262), bz.e(199), bz.e(186), bz.e(200), bz.e(136), bz.e(85), bz.e(114), bz.e(237), bz.e(53)]).then((() => bz(41801))).then((uz => {
-        uz.loadAudio(zz), tz = uz;
-        for (const zz of Mz) Hz(zz, uz);
-        return uz
-      })).catch((zz => {
-        throw nz = null, zz
-      })), nz
+    function yD(DD) {
+      return pD ??= Promise.all([cD.e(69), cD.e(94), cD.e(214), cD.e(74), cD.e(215), cD.e(189), cD.e(93), cD.e(259), cD.e(187), cD.e(262), cD.e(199), cD.e(186), cD.e(200), cD.e(136), cD.e(85), cD.e(114), cD.e(237), cD.e(53)]).then((() => cD(41730))).then((CD => {
+        CD.loadAudio(DD), QD = CD;
+        for (const DD of bD) wD(DD, CD);
+        return CD
+      })).catch((DD => {
+        throw pD = null, DD
+      })), pD
     }
-    async function Fz(zz, uz) {
+    async function MD(DD, CD) {
       try {
-        const bz = await dz(zz);
-        await bz.loadClientGame(uz)
-      } catch (bz) {
-        throw new Ez(bz)
+        const cD = await yD(DD);
+        await cD.loadClientGame(CD)
+      } catch (cD) {
+        throw new ID(cD)
       }
     }
 
-    function Zz(zz, uz) {
-      iz = {
-        running: zz,
-        shell: uz
+    function tD(DD, CD) {
+      iD = {
+        running: DD,
+        shell: CD
       }
     }
 
-    function Rz() {
-      return lz
+    function ZD() {
+      return fD
     }
-    async function Kz(zz) {
-      const uz = iz;
-      if ((null === uz || void 0 === uz ? void 0 : uz.running) !== zz) throw new Error("the core's session has ended");
-      const bz = await dz(uz.shell.audio).catch((zz => {
-        throw new Ez(zz)
+    async function oD(DD) {
+      const CD = iD;
+      if ((null === CD || void 0 === CD ? void 0 : CD.running) !== DD) throw new Error("the core's session has ended");
+      const cD = await yD(CD.shell.audio).catch((DD => {
+        throw new ID(DD)
       }));
-      if (null !== lz) return lz;
-      if (iz !== uz || zz.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (lz = bz.startGameHost(zz, uz.shell), null === lz) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return lz
+      if (null !== fD) return fD;
+      if (iD !== CD || DD.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (fD = cD.startGameHost(DD, CD.shell), null === fD) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return fD
     }
 
-    function wz() {
-      null !== lz && (null !== tz ? tz.endGameHost(lz) : lz.closeGame()), lz = null, iz = null
+    function vD() {
+      null !== fD && (null !== QD ? QD.endGameHost(fD) : fD.closeGame()), fD = null, iD = null
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

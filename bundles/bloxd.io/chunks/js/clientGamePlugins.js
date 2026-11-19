@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  4601: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Vz,
-      g: () => az
+  4608: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => zD,
+      e: () => VD
     });
-    var Ez = bz(4605),
-      nz = bz(316);
-    const iz = 120,
-      lz = 260,
-      Mz = 1.15,
-      tz = 1.2,
-      Hz = 2,
-      Oz = 1.08,
-      pz = .8,
-      dz = .95,
-      Fz = 8,
-      Zz = "[\"')\\]\u300d\u300f\uff09]*",
-      Rz = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Zz}$`),
-      Kz = new RegExp(`[?\uff1f]${Zz}$`),
-      wz = new RegExp(`[!\uff01]${Zz}$`),
-      Xz = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      fz = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      sz = new RegExp(`[${fz}]`),
-      rz = new RegExp(`[${fz}]|[^${fz}]+`, "g"),
-      oz = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var ID = cD(4615),
+      pD = cD(312);
+    const iD = 120,
+      fD = 260,
+      bD = 1.15,
+      QD = 1.2,
+      wD = 2,
+      SD = 1.08,
+      BD = .8,
+      yD = .95,
+      MD = 8,
+      tD = "[\"')\\]\u300d\u300f\uff09]*",
+      ZD = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${tD}$`),
+      oD = new RegExp(`[?\uff1f]${tD}$`),
+      vD = new RegExp(`[!\uff01]${tD}$`),
+      ND = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      gD = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      XD = new RegExp(`[${gD}]`),
+      mD = new RegExp(`[${gD}]|[^${gD}]+`, "g"),
+      nD = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function Nz(zz) {
-      let uz = 2166136261;
-      for (let bz = 0; bz < zz.length; bz++) uz ^= zz.charCodeAt(bz), uz = Math.imul(uz, 16777619);
-      return (uz >>> 0) / 4294967295 * 2 - 1
+    function OD(DD) {
+      let CD = 2166136261;
+      for (let cD = 0; cD < DD.length; cD++) CD ^= DD.charCodeAt(cD), CD = Math.imul(CD, 16777619);
+      return (CD >>> 0) / 4294967295 * 2 - 1
     }
 
-    function vz(zz) {
-      var uz;
-      if (sz.test(zz)) return 1;
-      const bz = zz.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Ez = bz.replace(/[^0-9]/g, "");
-      if (Ez.length > 0 && !/\p{L}/u.test(bz)) return Math.min(Ez.length, 4);
-      const nz = null !== (uz = bz.match(oz)) && void 0 !== uz ? uz : [];
-      if (0 === nz.length) {
-        var iz, lz;
-        const zz = null !== (iz = null === (lz = bz.match(/\p{L}/gu)) || void 0 === lz ? void 0 : lz.length) && void 0 !== iz ? iz : 0;
-        return 0 === zz ? 0 : Math.min(Math.max(1, Math.round(zz / 2.5)), Fz)
+    function PD(DD) {
+      var CD;
+      if (XD.test(DD)) return 1;
+      const cD = DD.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        ID = cD.replace(/[^0-9]/g, "");
+      if (ID.length > 0 && !/\p{L}/u.test(cD)) return Math.min(ID.length, 4);
+      const pD = null !== (CD = cD.match(nD)) && void 0 !== CD ? CD : [];
+      if (0 === pD.length) {
+        var iD, fD;
+        const DD = null !== (iD = null === (fD = cD.match(/\p{L}/gu)) || void 0 === fD ? void 0 : fD.length) && void 0 !== iD ? iD : 0;
+        return 0 === DD ? 0 : Math.min(Math.max(1, Math.round(DD / 2.5)), MD)
       }
-      const Mz = bz.replace(/[^\p{L}]/gu, ""),
-        tz = nz.length > 1 && "e" === nz.at(-1) && Mz.endsWith("e") && !Mz.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(zz.replace(/[^\p{L}]/gu, ""));
-      return Math.min(nz.length - (tz ? 1 : 0), Fz)
+      const bD = cD.replace(/[^\p{L}]/gu, ""),
+        QD = pD.length > 1 && "e" === pD.at(-1) && bD.endsWith("e") && !bD.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(DD.replace(/[^\p{L}]/gu, ""));
+      return Math.min(pD.length - (QD ? 1 : 0), MD)
     }
 
-    function xz(zz) {
-      return zz.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function HD(DD) {
+      return DD.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Jz(zz) {
-      const uz = zz.replace(/[^\p{L}]/gu, "");
-      return uz.length >= 2 && uz === uz.toUpperCase() && uz !== uz.toLowerCase()
+    function UD(DD) {
+      const CD = DD.replace(/[^\p{L}]/gu, "");
+      return CD.length >= 2 && CD === CD.toUpperCase() && CD !== CD.toLowerCase()
     }
 
-    function Az(zz, uz) {
-      var bz;
-      const Fz = uz && (0, Ez.k)(uz),
-        Zz = null !== (bz = null === Fz || void 0 === Fz ? void 0 : Fz.syllableMs) && void 0 !== bz ? bz : Ez.e,
-        fz = function(zz) {
-          const uz = [];
-          for (const Ez of (0, nz.uc)(zz))
-            if ("string" === typeof Ez)
-              for (const zz of Ez.split(/(\s+)/)) {
-                if ("" === zz) continue;
-                if (/^\s+$/.test(zz)) {
-                  uz.push({
+    function xD(DD, CD) {
+      var cD;
+      const MD = CD && (0, ID.l)(CD),
+        tD = null !== (cD = null === MD || void 0 === MD ? void 0 : MD.syllableMs) && void 0 !== cD ? cD : ID.d,
+        gD = function(DD) {
+          const CD = [];
+          for (const ID of (0, pD.bc)(DD))
+            if ("string" === typeof ID)
+              for (const DD of ID.split(/(\s+)/)) {
+                if ("" === DD) continue;
+                if (/^\s+$/.test(DD)) {
+                  CD.push({
                     kind: "space",
-                    text: zz
+                    text: DD
                   });
                   continue
                 }
-                if (!sz.test(zz)) {
-                  uz.push({
+                if (!XD.test(DD)) {
+                  CD.push({
                     kind: "word",
-                    text: zz,
+                    text: DD,
                     delayMs: 0
                   });
                   continue
                 }
-                let Ez = !0;
-                for (const nz of null !== (bz = zz.match(rz)) && void 0 !== bz ? bz : []) {
-                  var bz;
-                  const zz = uz.at(-1);
-                  Ez || "word" !== (null === zz || void 0 === zz ? void 0 : zz.kind) || sz.test(nz) || /[\p{L}\p{N}]/u.test(nz) ? (Ez || uz.push({
+                let ID = !0;
+                for (const pD of null !== (cD = DD.match(mD)) && void 0 !== cD ? cD : []) {
+                  var cD;
+                  const DD = CD.at(-1);
+                  ID || "word" !== (null === DD || void 0 === DD ? void 0 : DD.kind) || XD.test(pD) || /[\p{L}\p{N}]/u.test(pD) ? (ID || CD.push({
                     kind: "space",
                     text: "\u200b"
-                  }), uz.push({
+                  }), CD.push({
                     kind: "word",
-                    text: nz,
+                    text: pD,
                     delayMs: 0
-                  }), Ez = !1) : zz.text += nz
+                  }), ID = !1) : DD.text += pD
                 }
-              } else uz.push({
+              } else CD.push({
                 kind: "icon",
-                text: Ez.icon,
+                text: ID.icon,
                 delayMs: 0
               });
-          return uz
-        }(zz),
-        oz = [];
-      let Az = [];
-      for (const Ez of fz) "space" !== Ez.kind && (Az.push(Ez), Rz.test(Ez.text) && (oz.push(Az), Az = []));
-      oz.push(Az);
-      const Tz = [];
-      let Lz = 0;
-      for (const Ez of oz) {
-        var Pz, Gz;
-        const zz = null !== (Pz = null === (Gz = Ez.at(-1)) || void 0 === Gz ? void 0 : Gz.text) && void 0 !== Pz ? Pz : "",
-          uz = Kz.test(zz),
-          bz = wz.test(zz),
-          nz = Ez.map((zz => "word" === zz.kind ? vz(zz.text) : 1)),
-          fz = nz.findLastIndex((zz => zz > 0));
-        for (const [Kz, wz] of Ez.entries()) {
-          const zz = "word" === wz.kind,
-            Ez = nz[Kz];
-          wz.delayMs = Lz;
-          for (let nz = 0; Fz && nz < Ez; nz++) {
+          return CD
+        }(DD),
+        nD = [];
+      let xD = [];
+      for (const ID of gD) "space" !== ID.kind && (xD.push(ID), ZD.test(ID.text) && (nD.push(xD), xD = []));
+      nD.push(xD);
+      const qD = [];
+      let JD = 0;
+      for (const ID of nD) {
+        var KD, aD;
+        const DD = null !== (KD = null === (aD = ID.at(-1)) || void 0 === aD ? void 0 : aD.text) && void 0 !== KD ? KD : "",
+          CD = oD.test(DD),
+          cD = vD.test(DD),
+          pD = ID.map((DD => "word" === DD.kind ? PD(DD.text) : 1)),
+          gD = pD.findLastIndex((DD => DD > 0));
+        for (const [oD, vD] of ID.entries()) {
+          const DD = "word" === vD.kind,
+            ID = pD[oD];
+          vD.delayMs = JD;
+          for (let pD = 0; MD && pD < ID; pD++) {
             const {
-              intonation: iz
-            } = Fz;
-            let lz = fz > 0 ? -iz.declineSemitones * (Kz / fz) : 0;
-            lz += Nz(`${xz(wz.text)}|${nz}`) * iz.variationSemitones;
-            const Rz = Math.min(1, iz.variationSemitones);
-            let Xz = Fz.glideSemitones,
-              sz = 1;
-            bz && (lz += iz.exclaimLiftSemitones, sz *= Mz), uz && Kz === fz && (lz += iz.questionRiseSemitones * (Ez > 1 ? .5 + .5 * nz / (Ez - 1) : 1), nz === Ez - 1 && (Xz = Math.abs(Xz) + iz.questionRiseSemitones / 2)), zz && Jz(wz.text) && (lz += Hz * Rz, sz *= tz), Ez > 1 && 0 === nz && (lz += pz * Rz, sz *= Oz), Tz.push({
-              atMs: Lz + nz * Zz,
-              semitones: lz,
-              glideSemitones: Xz,
-              durationMs: nz < Ez - 1 ? Math.min(Fz.durationMs, Zz * dz) : Fz.durationMs,
-              level: sz
+              intonation: iD
+            } = MD;
+            let fD = gD > 0 ? -iD.declineSemitones * (oD / gD) : 0;
+            fD += OD(`${HD(vD.text)}|${pD}`) * iD.variationSemitones;
+            const ZD = Math.min(1, iD.variationSemitones);
+            let ND = MD.glideSemitones,
+              XD = 1;
+            cD && (fD += iD.exclaimLiftSemitones, XD *= bD), CD && oD === gD && (fD += iD.questionRiseSemitones * (ID > 1 ? .5 + .5 * pD / (ID - 1) : 1), pD === ID - 1 && (ND = Math.abs(ND) + iD.questionRiseSemitones / 2)), DD && UD(vD.text) && (fD += wD * ZD, XD *= QD), ID > 1 && 0 === pD && (fD += BD * ZD, XD *= SD), qD.push({
+              atMs: JD + pD * tD,
+              semitones: fD,
+              glideSemitones: ND,
+              durationMs: pD < ID - 1 ? Math.min(MD.durationMs, tD * yD) : MD.durationMs,
+              level: XD
             })
           }
-          Lz += Ez * Zz + (Rz.test(wz.text) ? lz : Xz.test(wz.text) ? iz : 0)
+          JD += ID * tD + (ZD.test(vD.text) ? fD : ND.test(vD.text) ? iD : 0)
         }
       }
       return {
-        pieces: fz.map((zz => "space" === zz.kind ? zz : "icon" === zz.kind ? {
+        pieces: gD.map((DD => "space" === DD.kind ? DD : "icon" === DD.kind ? {
           kind: "icon",
-          icon: zz.text,
-          delayMs: zz.delayMs
+          icon: DD.text,
+          delayMs: DD.delayMs
         } : {
           kind: "word",
-          text: zz.text,
-          delayMs: zz.delayMs
+          text: DD.text,
+          delayMs: DD.delayMs
         })),
-        blips: Tz
+        blips: qD
       }
     }
-    var Tz = bz(1181),
-      Lz = bz(1241),
-      Pz = bz(1873);
+    var qD = cD(1192),
+      JD = cD(1250),
+      KD = cD(1913);
 
-    function Gz(zz) {
-      if ("string" === typeof zz) return zz;
-      const uz = Lz.h.get().getCurrentLanguageCode();
-      return (0, Tz.s)(uz, zz.translationKey, (0, Tz.q)(zz.params, Pz.b.shown))
+    function aD(DD) {
+      if ("string" === typeof DD) return DD;
+      const CD = JD.e.get().getCurrentLanguageCode();
+      return (0, qD.s)(CD, DD.translationKey, (0, qD.o)(DD.params, KD.c.shown))
     }
 
-    function az(zz) {
-      const uz = void 0 === zz.voice ? null : (0, Ez.n)(zz.voice),
-        bz = uz && (0, Ez.k)(uz);
+    function VD(DD) {
+      const CD = void 0 === DD.voice ? null : (0, ID.p)(DD.voice),
+        cD = CD && (0, ID.l)(CD);
       return {
-        plan: Az(Gz(zz.line), bz),
-        synth: bz
+        plan: xD(aD(DD.line), cD),
+        synth: cD
       }
     }
 
-    function Vz(zz) {
-      const uz = [];
-      let bz = [];
-      for (const [nz, iz] of zz.entries()) {
-        var Ez;
-        "space" === iz.kind && (" " !== iz.text || "icon" !== (null === (Ez = zz[nz + 1]) || void 0 === Ez ? void 0 : Ez.kind)) ? (bz.length > 0 && uz.push(bz), uz.push([iz]), bz = []) : bz.push(iz)
+    function zD(DD) {
+      const CD = [];
+      let cD = [];
+      for (const [pD, iD] of DD.entries()) {
+        var ID;
+        "space" === iD.kind && (" " !== iD.text || "icon" !== (null === (ID = DD[pD + 1]) || void 0 === ID ? void 0 : ID.kind)) ? (cD.length > 0 && CD.push(cD), CD.push([iD]), cD = []) : cD.push(iD)
       }
-      return bz.length > 0 && uz.push(bz), uz
+      return cD.length > 0 && CD.push(cD), CD
     }
   },
-  4609: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Oz,
-      d: () => pz
+  4618: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => SD,
+      g: () => BD
     });
-    var Ez = bz(4616),
-      nz = bz(20);
-    const iz = .25,
-      lz = .85,
-      Mz = .02,
-      tz = .01;
+    var ID = cD(4621),
+      pD = cD(16);
+    const iD = .25,
+      fD = .85,
+      bD = .02,
+      QD = .01;
 
-    function Hz(zz, uz, bz, Ez, nz, iz, Mz) {
+    function wD(DD, CD, cD, ID, pD, iD, bD) {
       const {
-        waveform: tz,
-        pitchHz: Hz,
-        attackMs: Oz,
-        releaseMs: pz,
-        lowpassHz: dz
-      } = bz, Fz = nz + Ez.durationMs / 1e3, Zz = Hz * 2 ** (Ez.semitones / 12), Rz = zz.createOscillator();
-      Rz.type = tz, Rz.frequency.setValueAtTime(Zz, nz), Rz.frequency.exponentialRampToValueAtTime(Zz * 2 ** (Ez.glideSemitones / 12), Fz);
-      const Kz = nz + Math.min(Oz, Ez.durationMs) / 1e3,
-        wz = zz.createGain();
-      wz.gain.setValueAtTime(0, nz), wz.gain.linearRampToValueAtTime(iz, Kz), wz.gain.linearRampToValueAtTime(iz * lz, Math.max(Kz, Fz - pz / 1e3)), wz.gain.linearRampToValueAtTime(0, Fz);
-      const Xz = [Rz];
-      if (null !== dz) {
-        const uz = zz.createBiquadFilter();
-        uz.type = "lowpass", uz.frequency.value = dz, Xz.push(uz)
+        waveform: QD,
+        pitchHz: wD,
+        attackMs: SD,
+        releaseMs: BD,
+        lowpassHz: yD
+      } = cD, MD = pD + ID.durationMs / 1e3, tD = wD * 2 ** (ID.semitones / 12), ZD = DD.createOscillator();
+      ZD.type = QD, ZD.frequency.setValueAtTime(tD, pD), ZD.frequency.exponentialRampToValueAtTime(tD * 2 ** (ID.glideSemitones / 12), MD);
+      const oD = pD + Math.min(SD, ID.durationMs) / 1e3,
+        vD = DD.createGain();
+      vD.gain.setValueAtTime(0, pD), vD.gain.linearRampToValueAtTime(iD, oD), vD.gain.linearRampToValueAtTime(iD * fD, Math.max(oD, MD - BD / 1e3)), vD.gain.linearRampToValueAtTime(0, MD);
+      const ND = [ZD];
+      if (null !== yD) {
+        const CD = DD.createBiquadFilter();
+        CD.type = "lowpass", CD.frequency.value = yD, ND.push(CD)
       }
-      Xz.push(wz, uz);
-      for (let lz = 1; lz < Xz.length; lz++) Xz[lz - 1].connect(Xz[lz]);
-      return Rz.onended = () => {
-        for (const zz of Xz.slice(0, -1)) zz.disconnect();
-        Mz()
-      }, Rz.start(nz), Rz.stop(Fz), Rz
+      ND.push(vD, CD);
+      for (let fD = 1; fD < ND.length; fD++) ND[fD - 1].connect(ND[fD]);
+      return ZD.onended = () => {
+        for (const DD of ND.slice(0, -1)) DD.disconnect();
+        bD()
+      }, ZD.start(pD), ZD.stop(MD), ZD
     }
 
-    function Oz(zz, uz, bz, Ez, nz, lz) {
-      if (0 === Ez.length) return lz(), () => {};
-      const Oz = iz * bz.volume * nz,
-        pz = zz.createGain();
-      pz.connect(uz);
-      const dz = zz.currentTime + Mz,
-        Fz = new Set;
-      for (const iz of Ez) {
-        const uz = Hz(zz, pz, bz, iz, dz + iz.atMs / 1e3, Oz * iz.level, (() => {
-          Fz.delete(uz), 0 === Fz.size && (pz.disconnect(), lz())
+    function SD(DD, CD, cD, ID, pD, fD) {
+      if (0 === ID.length) return fD(), () => {};
+      const SD = iD * cD.volume * pD,
+        BD = DD.createGain();
+      BD.connect(CD);
+      const yD = DD.currentTime + bD,
+        MD = new Set;
+      for (const iD of ID) {
+        const CD = wD(DD, BD, cD, iD, yD + iD.atMs / 1e3, SD * iD.level, (() => {
+          MD.delete(CD), 0 === MD.size && (BD.disconnect(), fD())
         }));
-        Fz.add(uz)
+        MD.add(CD)
       }
       return () => {
-        const uz = zz.currentTime;
-        pz.gain.setTargetAtTime(0, uz, tz);
-        for (const zz of Fz) try {
-          zz.stop(uz + 5 * tz)
+        const CD = DD.currentTime;
+        BD.gain.setTargetAtTime(0, CD, QD);
+        for (const DD of MD) try {
+          DD.stop(CD + 5 * QD)
         } catch {}
       }
     }
 
-    function pz(zz, uz) {
-      var bz;
-      const iz = Ez.Howler.ctx,
-        lz = Ez.Howler.masterGain;
-      if (!iz || !lz || !nz.e.get("soundOnFromAd")) return () => {};
-      const Mz = Ez.Howler;
-      return null === (bz = Mz._autoResume) || void 0 === bz || bz.call(Mz), Oz(iz, lz, zz, uz, nz.e.get("soundVolume"), (() => {
-        var zz;
-        null === (zz = Mz._autoSuspend) || void 0 === zz || zz.call(Mz)
+    function BD(DD, CD) {
+      var cD;
+      const iD = ID.Howler.ctx,
+        fD = ID.Howler.masterGain;
+      if (!iD || !fD || !pD.d.get("soundOnFromAd")) return () => {};
+      const bD = ID.Howler;
+      return null === (cD = bD._autoResume) || void 0 === cD || cD.call(bD), SD(iD, fD, DD, CD, pD.d.get("soundVolume"), (() => {
+        var DD;
+        null === (DD = bD._autoSuspend) || void 0 === DD || DD.call(bD)
       }))
     }
   },
-  38489: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      closeClientGame: () => mz,
-      createDefaultClientPlugins: () => Vz
+  38470: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      closeClientGame: () => jD,
+      createDefaultClientPlugins: () => zD
     });
-    var Ez = bz(328);
+    var ID = cD(326);
 
-    function nz() {
-      let zz;
+    function pD() {
+      let DD;
       return {
-        onCreate(uz) {
-          zz = uz
+        onCreate(CD) {
+          DD = CD
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(uz, bz, nz, iz, lz, Mz) {
-          var tz, Hz;
-          if ("Iron Chest" !== zz.getMetaInfo(lz).rootName) return;
-          if (!zz.hasEffect(uz, "Thief")) return;
-          const Oz = zz.getBlockData(bz, nz, iz);
-          return zz.getPlayerDbId(uz) !== (null === Oz || void 0 === Oz || null === (tz = Oz.persisted) || void 0 === tz || null === (Hz = tz.shared) || void 0 === Hz ? void 0 : Hz.ownerDbId) ? (zz.sendMessage(uz, [{
+        onPlayerAttemptAltAction(CD, cD, pD, iD, fD, bD) {
+          var QD, wD;
+          if ("Iron Chest" !== DD.getMetaInfo(fD).rootName) return;
+          if (!DD.hasEffect(CD, "Thief")) return;
+          const SD = DD.getBlockData(cD, pD, iD);
+          return DD.getPlayerDbId(CD) !== (null === SD || void 0 === SD || null === (QD = SD.persisted) || void 0 === QD || null === (wD = QD.shared) || void 0 === wD ? void 0 : wD.ownerDbId) ? (DD.sendMessage(CD, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: Ez.N.redUiText
+              color: ID.J.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var iz = bz(4035),
-      lz = bz(1226);
-    const Mz = 8.4,
-      tz = 1e-4,
-      Hz = .15,
-      Oz = .04,
-      pz = [.12, .04, .12],
-      dz = 26,
-      Fz = {
+    var iD = cD(4081),
+      fD = cD(1240);
+    const bD = 8.4,
+      QD = 1e-4,
+      wD = .15,
+      SD = .04,
+      BD = [.12, .04, .12],
+      yD = 26,
+      MD = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        Bp: 1,
-        minLifeTime: tz,
-        maxLifeTime: tz,
+        LB: 1,
+        minLifeTime: QD,
+        maxLifeTime: QD,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: iz.d.Standard
+        blendMode: iD.c.Standard
       },
-      Zz = {
+      tD = {
         texture: "bubble",
         mipmaps: !1,
-        Bp: 96,
+        LB: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: dz,
+        emitRate: yD,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: iz.d.Standard
+        blendMode: iD.c.Standard
       },
-      Rz = [0, 0, 0],
-      Kz = [0, 0, 0];
+      ZD = [0, 0, 0],
+      oD = [0, 0, 0];
 
-    function wz(zz) {
-      const uz = new Map;
-      let bz = null;
+    function vD(DD) {
+      const CD = new Map;
+      let cD = null;
 
-      function Ez(zz) {
-        var uz, bz;
-        null === (uz = zz.bubbles) || void 0 === uz || uz.stop(), null === (bz = zz.fish) || void 0 === bz || bz.stop()
+      function ID(DD) {
+        var CD, cD;
+        null === (CD = DD.bubbles) || void 0 === CD || CD.stop(), null === (cD = DD.fish) || void 0 === cD || cD.stop()
       }
 
-      function nz(bz) {
-        if (!bz.readDrawnPosition(zz, Kz)) {
-          for (const zz of uz.values()) {
-            var Ez;
-            null === (Ez = zz.bubbles) || void 0 === Ez || Ez.setEmitRate(0)
+      function pD(cD) {
+        if (!cD.readDrawnPosition(DD, oD)) {
+          for (const DD of CD.values()) {
+            var ID;
+            null === (ID = DD.bubbles) || void 0 === ID || ID.setEmitRate(0)
           }
           return
         }
-        const nz = performance.now();
-        for (const [zz, lz] of uz) {
-          var iz;
-          if (null === (iz = lz.bubbles) || void 0 === iz || iz.setEmitRate(0), !bz.readDrawnPosition(zz, Rz)) continue;
-          if (!((Rz[0] - Kz[0]) ** 2 + (Rz[1] - Kz[1]) ** 2 + (Rz[2] - Kz[2]) ** 2 < 900)) continue;
-          const uz = Math.max(0, lz.biteAt - nz),
-            Ez = lz.approachDurationMs > 0 ? Math.min(1, 1 - uz / lz.approachDurationMs) : 1,
-            tz = (lz.approachDurationMs - uz) / 1e3,
-            wz = lz.phase + .25 * Math.sin(1.7 * tz + lz.phase),
-            Xz = Math.min(lz.approachDurationMs / 3e3 * 2.8, Mz) * (1 - Ez) * (1 + .15 * Math.sin(2.1 * tz + lz.phase)),
-            fz = Math.min(1, 4 * (1 - Ez)),
-            sz = (.45 * Math.sin(4.1 * tz + lz.phase) + .18 * Math.sin(9.7 * tz + 2 * lz.phase)) * fz,
-            rz = Rz[0] + Math.cos(wz) * Xz - Math.sin(wz) * sz,
-            oz = Math.ceil(lz.surfaceY),
-            Nz = Rz[2] + Math.sin(wz) * Xz + Math.cos(wz) * sz,
+        const pD = performance.now();
+        for (const [DD, fD] of CD) {
+          var iD;
+          if (null === (iD = fD.bubbles) || void 0 === iD || iD.setEmitRate(0), !cD.readDrawnPosition(DD, ZD)) continue;
+          if (!((ZD[0] - oD[0]) ** 2 + (ZD[1] - oD[1]) ** 2 + (ZD[2] - oD[2]) ** 2 < 900)) continue;
+          const CD = Math.max(0, fD.biteAt - pD),
+            ID = fD.approachDurationMs > 0 ? Math.min(1, 1 - CD / fD.approachDurationMs) : 1,
+            QD = (fD.approachDurationMs - CD) / 1e3,
+            vD = fD.phase + .25 * Math.sin(1.7 * QD + fD.phase),
+            ND = Math.min(fD.approachDurationMs / 3e3 * 2.8, bD) * (1 - ID) * (1 + .15 * Math.sin(2.1 * QD + fD.phase)),
+            gD = Math.min(1, 4 * (1 - ID)),
+            XD = (.45 * Math.sin(4.1 * QD + fD.phase) + .18 * Math.sin(9.7 * QD + 2 * fD.phase)) * gD,
+            mD = ZD[0] + Math.cos(vD) * ND - Math.sin(vD) * XD,
+            nD = Math.ceil(fD.surfaceY),
+            OD = ZD[2] + Math.sin(vD) * ND + Math.cos(vD) * XD,
             {
-              fishAt: vz,
-              bubblesAt: xz
-            } = lz;
-          vz[0] = xz[0] = rz, vz[1] = oz + Hz, xz[1] = oz + Oz, vz[2] = xz[2] = Nz, lz.fish ??= bz.createParticles(Fz, {
-            pos: vz
-          }), lz.fish.moveTo(vz), lz.fish.emit(1), lz.bubbles ??= bz.createParticles(Zz, {
-            pos: xz,
-            half: pz
-          }), lz.bubbles.moveTo(xz), lz.bubbles.setEmitRate(dz + 32 * (.5 + .5 * Math.sin(9 * tz + lz.phase)) ** 4 + 13 * Ez)
+              fishAt: PD,
+              bubblesAt: HD
+            } = fD;
+          PD[0] = HD[0] = mD, PD[1] = nD + wD, HD[1] = nD + SD, PD[2] = HD[2] = OD, fD.fish ??= cD.createParticles(MD, {
+            pos: PD
+          }), fD.fish.moveTo(PD), fD.fish.emit(1), fD.bubbles ??= cD.createParticles(tD, {
+            pos: HD,
+            half: BD
+          }), fD.bubbles.moveTo(HD), fD.bubbles.setEmitRate(yD + 32 * (.5 + .5 * Math.sin(9 * QD + fD.phase)) ** 4 + 13 * ID)
         }
       }
       return {
-        onCreate(zz) {
-          bz = zz
+        onCreate(DD) {
+          cD = DD
         },
         onAfterRender() {
-          bz && nz(bz)
+          cD && pD(cD)
         },
         onClose() {
-          for (const zz of uz.values()) Ez(zz);
-          uz.clear(), bz = null
+          for (const DD of CD.values()) ID(DD);
+          CD.clear(), cD = null
         },
-        onReceivedMessageFromServer(zz, bz) {
-          if (zz !== lz.y) return;
+        onReceivedMessageFromServer(DD, cD) {
+          if (DD !== fD.w) return;
           const {
-            hookId: nz,
-            waiting: iz
-          } = bz;
-          if (iz) uz.has(nz) || uz.set(nz, {
+            hookId: pD,
+            waiting: iD
+          } = cD;
+          if (iD) CD.has(pD) || CD.set(pD, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + iz.remainingMs,
-            approachDurationMs: iz.durationMs,
-            surfaceY: iz.surfaceY,
+            biteAt: performance.now() + iD.remainingMs,
+            approachDurationMs: iD.durationMs,
+            surfaceY: iD.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const zz = uz.get(nz);
-            zz && Ez(zz), uz.delete(nz)
+            const DD = CD.get(pD);
+            DD && ID(DD), CD.delete(pD)
           }
         }
       }
     }
-    var Xz = bz(4609),
-      fz = bz(4601);
+    var ND = cD(4618),
+      gD = cD(4608);
 
-    function sz(zz) {
-      let uz, bz = null,
-        Ez = null;
-      const nz = () => {
-        var zz;
-        null === (zz = Ez) || void 0 === zz || zz(), Ez = null
+    function XD(DD) {
+      let CD, cD = null,
+        ID = null;
+      const pD = () => {
+        var DD;
+        null === (DD = ID) || void 0 === DD || DD(), ID = null
       };
       return {
-        onCreate(Ez) {
-          uz = Ez, bz = uz.getClientOption(zz, "dialogue")
+        onCreate(ID) {
+          CD = ID, cD = CD.getClientOption(DD, "dialogue")
         },
         onAfterRender() {
-          if (!uz) return;
-          const iz = uz.getClientOption(zz, "dialogue");
-          if (iz === bz) return;
-          if (bz = iz, nz(), !iz || !1 === iz.animateIn) return;
+          if (!CD) return;
+          const iD = CD.getClientOption(DD, "dialogue");
+          if (iD === cD) return;
+          if (cD = iD, pD(), !iD || !1 === iD.animateIn) return;
           const {
-            plan: lz,
-            synth: Mz
-          } = (0, fz.g)(iz);
-          Mz && (Ez = (0, Xz.d)(Mz, lz.blips))
+            plan: fD,
+            synth: bD
+          } = (0, gD.e)(iD);
+          bD && (ID = (0, ND.g)(bD, fD.blips))
         },
-        onClose: nz
+        onClose: pD
       }
     }
-    var rz = bz(38496);
-    const oz = [
+    var mD = cD(38478);
+    const nD = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      Nz = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      vz = [0, 1, 2, 0, 2, 3];
+      OD = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      PD = [0, 1, 2, 0, 2, 3];
 
-    function xz(zz, uz, bz) {
-      var Ez;
-      let [nz, iz, lz] = uz;
-      if (zz.hasPackModel("Furnace")) return null;
-      const Mz = ((null !== (Ez = zz.getMetaInfo(bz).rot) && void 0 !== Ez ? Ez : 1) - 1) * Math.PI / 2,
-        tz = Math.PI + Mz,
-        Hz = Math.cos(tz),
-        Oz = Math.sin(tz),
-        pz = [];
-      for (const [Zz, Rz] of oz) pz.push(Zz * Hz, Rz, -Zz * Oz);
-      const dz = {
-          positions: pz,
-          indices: vz,
-          uvs: Nz
+    function HD(DD, CD, cD) {
+      var ID;
+      let [pD, iD, fD] = CD;
+      if (DD.hasPackModel("Furnace")) return null;
+      const bD = ((null !== (ID = DD.getMetaInfo(cD).rot) && void 0 !== ID ? ID : 1) - 1) * Math.PI / 2,
+        QD = Math.PI + bD,
+        wD = Math.cos(QD),
+        SD = Math.sin(QD),
+        BD = [];
+      for (const [tD, ZD] of nD) BD.push(tD * wD, ZD, -tD * SD);
+      const yD = {
+          positions: BD,
+          indices: PD,
+          uvs: OD
         },
-        Fz = [nz + .5 + .51 * Math.sin(Mz), iz + .375, lz + .5 + .51 * Math.cos(Mz)];
-      return zz.createGameMesh(dz, {
+        MD = [pD + .5 + .51 * Math.sin(bD), iD + .375, fD + .5 + .51 * Math.cos(bD)];
+      return DD.createGameMesh(yD, {
         kind: "furnaceFire"
-      }, Fz)
+      }, MD)
     }
 
-    function Jz(zz) {
-      return Math.floor(zz / 200) % 3
+    function UD(DD) {
+      return Math.floor(DD / 200) % 3
     }
 
-    function Az(zz, uz, bz) {
-      zz.setGameMesh(uz, {
-        uvOffset: [0, bz / 3]
+    function xD(DD, CD, cD) {
+      DD.setGameMesh(CD, {
+        uvOffset: [0, cD / 3]
       })
     }
-    const Tz = [.12, .025, .12],
-      Lz = [{
+    const qD = [.12, .025, .12],
+      JD = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: iz.d.Standard,
+          blendMode: iD.c.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: iz.d.Add,
+          blendMode: iD.c.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class Pz {
+    class KD {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(zz, uz) {
-        const bz = zz.getBlockId(uz[0], uz[1], uz[2]);
-        if ("Furnace" !== zz.getMetaInfo(bz).rootName) return;
-        const Ez = performance.now();
-        let nz = this.smokes.find((zz => zz.pos[0] === uz[0] && zz.pos[1] === uz[1] && zz.pos[2] === uz[2] && zz.hO === bz));
-        if (nz || (nz = {
-            pos: [uz[0], uz[1], uz[2]],
-            hO: bz,
-            endMs: Ez,
+      start(DD, CD) {
+        const cD = DD.getBlockId(CD[0], CD[1], CD[2]);
+        if ("Furnace" !== DD.getMetaInfo(cD).rootName) return;
+        const ID = performance.now();
+        let pD = this.smokes.find((DD => DD.pos[0] === CD[0] && DD.pos[1] === CD[1] && DD.pos[2] === CD[2] && DD.HS === cD));
+        if (pD || (pD = {
+            pos: [CD[0], CD[1], CD[2]],
+            HS: cD,
+            endMs: ID,
             lastBurstMs: -1 / 0,
-            pending: new Array(Lz.length).fill(0),
-            fire: xz(zz, uz, bz)
-          }, this.smokes.push(nz), null !== nz.fire && (Az(zz, nz.fire, Jz(Ez)), this.shownFireFrame = -1)), nz.endMs = Ez + 6e3, this.smokes.length > 4) {
-          const uz = this.smokes.reduce(((zz, uz) => uz.endMs < zz.endMs ? uz : zz));
-          Gz(zz, uz), this.smokes.splice(this.smokes.indexOf(uz), 1)
+            pending: new Array(JD.length).fill(0),
+            fire: HD(DD, CD, cD)
+          }, this.smokes.push(pD), null !== pD.fire && (xD(DD, pD.fire, UD(ID)), this.shownFireFrame = -1)), pD.endMs = ID + 6e3, this.smokes.length > 4) {
+          const CD = this.smokes.reduce(((DD, CD) => CD.endMs < DD.endMs ? CD : DD));
+          aD(DD, CD), this.smokes.splice(this.smokes.indexOf(CD), 1)
         }
-        Ez - nz.lastBurstMs >= 300 && (nz.lastBurstMs = Ez, Lz.forEach(((zz, uz) => {
-          nz.pending[uz] += zz.style.count
+        ID - pD.lastBurstMs >= 300 && (pD.lastBurstMs = ID, JD.forEach(((DD, CD) => {
+          pD.pending[CD] += DD.style.count
         })))
       }
-      onAfterRender(zz, uz) {
+      onAfterRender(DD, CD) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const bz = performance.now();
-        this.smokes = this.smokes.filter((uz => {
-          const [Ez, nz, iz] = uz.pos, lz = bz < uz.endMs && zz.getBlockId(Ez, nz, iz) === uz.hO;
-          return lz || Gz(zz, uz), lz
+        const cD = performance.now();
+        this.smokes = this.smokes.filter((CD => {
+          const [ID, pD, iD] = CD.pos, fD = cD < CD.endMs && DD.getBlockId(ID, pD, iD) === CD.HS;
+          return fD || aD(DD, CD), fD
         }));
-        const Ez = Jz(bz);
-        if (Ez !== this.shownFireFrame) {
-          this.shownFireFrame = Ez;
-          for (const uz of this.smokes) null !== uz.fire && Az(zz, uz.fire, Ez)
+        const ID = UD(cD);
+        if (ID !== this.shownFireFrame) {
+          this.shownFireFrame = ID;
+          for (const CD of this.smokes) null !== CD.fire && xD(DD, CD.fire, ID)
         }
-        if (!zz.particlesEnabled()) {
-          for (const zz of this.smokes) zz.pending.fill(0);
+        if (!DD.particlesEnabled()) {
+          for (const DD of this.smokes) DD.pending.fill(0);
           return
         }
-        const nz = Math.min(uz, 250) / 1e3;
-        for (const iz of this.smokes) {
-          const [uz, Ez, lz] = iz.pos;
-          if (0 !== zz.getBlockId(uz, Ez + 1, lz)) {
-            iz.pending.fill(0);
+        const pD = Math.min(CD, 250) / 1e3;
+        for (const iD of this.smokes) {
+          const [CD, ID, fD] = iD.pos;
+          if (0 !== DD.getBlockId(CD, ID + 1, fD)) {
+            iD.pending.fill(0);
             continue
           }
-          const Mz = (iz.endMs - bz) / 6e3,
-            tz = this.centre;
-          tz[0] = uz + .5, tz[1] = Ez + 1.275, tz[2] = lz + .5, Lz.forEach(((uz, bz) => {
-            iz.pending[bz] += uz.perSecond * Mz * nz;
-            const Ez = Math.floor(iz.pending[bz]);
-            Ez > 0 && this.emit(zz, bz, tz, Ez) && (iz.pending[bz] -= Ez)
+          const bD = (iD.endMs - cD) / 6e3,
+            QD = this.centre;
+          QD[0] = CD + .5, QD[1] = ID + 1.275, QD[2] = fD + .5, JD.forEach(((CD, cD) => {
+            iD.pending[cD] += CD.perSecond * bD * pD;
+            const ID = Math.floor(iD.pending[cD]);
+            ID > 0 && this.emit(DD, cD, QD, ID) && (iD.pending[cD] -= ID)
           }))
         }
       }
-      dispose(zz) {
-        for (const bz of this.smokes) Gz(zz, bz);
+      dispose(DD) {
+        for (const cD of this.smokes) aD(DD, cD);
         this.smokes = [];
-        for (const bz of null !== (uz = this.puffers) && void 0 !== uz ? uz : []) {
-          var uz;
-          bz.dispose()
+        for (const cD of null !== (CD = this.puffers) && void 0 !== CD ? CD : []) {
+          var CD;
+          cD.dispose()
         }
         this.puffers = null
       }
-      emit(zz, uz, bz, Ez) {
-        return this.puffers ??= Lz.map((zz => {
+      emit(DD, CD, cD, ID) {
+        return this.puffers ??= JD.map((DD => {
           let {
-            style: uz,
-            perSecond: bz
-          } = zz;
-          const Ez = (uz.count / .3 + bz) * uz.life[1];
-          return new rz.f(uz, Math.ceil(4 * Ez), Tz)
-        })), this.puffers[uz].emit(zz, bz, this.renderFrame, Ez)
+            style: CD,
+            perSecond: cD
+          } = DD;
+          const ID = (CD.count / .3 + cD) * CD.life[1];
+          return new mD.f(CD, Math.ceil(4 * ID), qD)
+        })), this.puffers[CD].emit(DD, cD, this.renderFrame, ID)
       }
     }
 
-    function Gz(zz, uz) {
-      null !== uz.fire && (zz.disposeGameMesh(uz.fire), uz.fire = null)
+    function aD(DD, CD) {
+      null !== CD.fire && (DD.disposeGameMesh(CD.fire), CD.fire = null)
     }
 
-    function az() {
-      let zz;
-      const uz = new Pz;
+    function VD() {
+      let DD;
+      const CD = new KD;
       return {
-        onCreate(uz) {
-          zz = uz
+        onCreate(CD) {
+          DD = CD
         },
-        onReceivedMessageFromServer(bz, Ez) {
-          bz === lz.A && uz.start(zz, Ez)
+        onReceivedMessageFromServer(cD, ID) {
+          cD === fD.A && CD.start(DD, ID)
         },
-        onAfterRender(bz) {
-          uz.onAfterRender(zz, bz)
+        onAfterRender(cD) {
+          CD.onAfterRender(DD, cD)
         },
         onClose() {
-          uz.dispose(zz)
+          CD.dispose(DD)
         }
       }
     }
 
-    function Vz(zz, uz, bz, Ez) {
+    function zD(DD, CD, cD, ID) {
       return {
-        dialogue: sz(Ez.localPlayerId),
-        fishing: wz(Ez.localPlayerId),
-        furnaceSmoke: az(),
-        ironChest: nz()
+        dialogue: XD(ID.localPlayerId),
+        fishing: vD(ID.localPlayerId),
+        furnaceSmoke: VD(),
+        ironChest: pD()
       }
     }
 
-    function mz(zz, uz) {
-      for (const nz of [zz, ...null !== uz && void 0 !== uz ? uz : []]) try {
-        var bz;
-        null === nz || void 0 === nz || null === (bz = nz.onClose) || void 0 === bz || bz.call(nz)
-      } catch (Ez) {
-        console.error("Error in client onClose callback", Ez)
+    function jD(DD, CD) {
+      for (const pD of [DD, ...null !== CD && void 0 !== CD ? CD : []]) try {
+        var cD;
+        null === pD || void 0 === pD || null === (cD = pD.onClose) || void 0 === cD || cD.call(pD)
+      } catch (ID) {
+        console.error("Error in client onClose callback", ID)
       }
     }
   },
-  38496: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Ez,
-      f: () => iz
+  38478: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => ID,
+      f: () => iD
     });
-    const Ez = 1 / .6,
-      nz = {
+    const ID = 1 / .6,
+      pD = {
         kind: "smokePuff"
       };
-    class iz {
-      constructor(zz, uz, bz) {
-        this.style = zz, this.Bp = uz, this.half = bz, this.particles = null, this.lastFrame = -1
+    class iD {
+      constructor(DD, CD, cD) {
+        this.style = DD, this.LB = CD, this.half = cD, this.particles = null, this.lastFrame = -1
       }
-      emit(zz, uz, bz) {
-        let iz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return bz !== this.lastFrame && (this.lastFrame = bz, this.particles || (this.particles = zz.createParticles(function(zz, uz) {
+      emit(DD, CD, cD) {
+        let iD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return cD !== this.lastFrame && (this.lastFrame = cD, this.particles || (this.particles = DD.createParticles(function(DD, CD) {
           const [
-            [bz, iz, lz],
-            [Mz, tz, Hz]
-          ] = zz.colours;
+            [cD, iD, fD],
+            [bD, QD, wD]
+          ] = DD.colours;
           return {
-            texture: zz.soft ? nz : "square_particle",
-            Bp: uz,
-            minLifeTime: zz.life[0] / Ez,
-            maxLifeTime: zz.life[1] / Ez,
-            minEmitPower: zz.power[0] * Ez,
-            maxEmitPower: zz.power[1] * Ez,
-            minSize: zz.size[0],
-            maxSize: zz.size[1],
+            texture: DD.soft ? pD : "square_particle",
+            LB: CD,
+            minLifeTime: DD.life[0] / ID,
+            maxLifeTime: DD.life[1] / ID,
+            minEmitPower: DD.power[0] * ID,
+            maxEmitPower: DD.power[1] * ID,
+            minSize: DD.size[0],
+            maxSize: DD.size[1],
             emitRate: 0,
-            gravity: [0, zz.lift * Ez * Ez, 0],
-            dir1: [-zz.spread, 1, -zz.spread],
-            dir2: [zz.spread, 1, zz.spread],
+            gravity: [0, DD.lift * ID * ID, 0],
+            dir1: [-DD.spread, 1, -DD.spread],
+            dir2: [DD.spread, 1, DD.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [bz, iz, lz, zz.alpha],
-              maxColor: [Mz, tz, Hz, zz.alpha]
+              minColor: [cD, iD, fD, DD.alpha],
+              maxColor: [bD, QD, wD, DD.alpha]
             }, {
               timeFraction: 1,
-              minColor: [bz, iz, lz, 0],
-              maxColor: [Mz, tz, Hz, 0]
+              minColor: [cD, iD, fD, 0],
+              maxColor: [bD, QD, wD, 0]
             }],
-            blendMode: zz.blendMode
+            blendMode: DD.blendMode
           }
-        }(this.style, this.Bp), {
-          pos: uz,
+        }(this.style, this.LB), {
+          pos: CD,
           half: this.half
-        })), this.particles.moveTo(uz, this.half), this.particles.emit(iz), !0)
+        })), this.particles.moveTo(CD, this.half), this.particles.emit(iD), !0)
       }
       dispose() {
-        var zz;
-        null === (zz = this.particles) || void 0 === zz || zz.stop(), this.particles = null
+        var DD;
+        null === (DD = this.particles) || void 0 === DD || DD.stop(), this.particles = null
       }
     }
   },
-  4605: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => nz,
-      h: () => Ez,
-      i: () => iz,
-      k: () => tz,
-      n: () => lz
+  4615: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => pD,
+      h: () => ID,
+      k: () => iD,
+      l: () => QD,
+      p: () => fD
     });
-    const Ez = ["sine", "triangle", "square", "sawtooth"],
-      nz = 55,
-      iz = {
+    const ID = ["sine", "triangle", "square", "sawtooth"],
+      pD = 55,
+      iD = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function lz(zz) {
-      return "string" !== typeof zz ? zz : Object.hasOwn(iz, zz) ? iz[zz] : null
+    function fD(DD) {
+      return "string" !== typeof DD ? DD : Object.hasOwn(iD, DD) ? iD[DD] : null
     }
 
-    function Mz(zz, uz, bz) {
-      return Math.min(bz, Math.max(uz, zz))
+    function bD(DD, CD, cD) {
+      return Math.min(cD, Math.max(CD, DD))
     }
 
-    function tz(zz) {
-      const uz = Mz(zz.durationMs, 10, 500),
-        bz = Mz(zz.attackMs, 0, uz),
+    function QD(DD) {
+      const CD = bD(DD.durationMs, 10, 500),
+        cD = bD(DD.attackMs, 0, CD),
         {
-          intonation: nz
-        } = zz;
+          intonation: pD
+        } = DD;
       return {
-        waveform: Ez.includes(zz.waveform) ? zz.waveform : "sine",
-        pitchHz: Mz(zz.pitchHz, 20, 4e3),
-        glideSemitones: Mz(zz.glideSemitones, -24, 24),
-        durationMs: uz,
-        attackMs: bz,
-        releaseMs: Mz(zz.releaseMs, 0, uz - bz),
-        lowpassHz: null === zz.lowpassHz ? null : Mz(zz.lowpassHz, 20, 2e4),
-        volume: Mz(zz.volume, 0, 2),
+        waveform: ID.includes(DD.waveform) ? DD.waveform : "sine",
+        pitchHz: bD(DD.pitchHz, 20, 4e3),
+        glideSemitones: bD(DD.glideSemitones, -24, 24),
+        durationMs: CD,
+        attackMs: cD,
+        releaseMs: bD(DD.releaseMs, 0, CD - cD),
+        lowpassHz: null === DD.lowpassHz ? null : bD(DD.lowpassHz, 20, 2e4),
+        volume: bD(DD.volume, 0, 2),
         intonation: {
-          variationSemitones: Mz(nz.variationSemitones, 0, 6),
-          declineSemitones: Mz(nz.declineSemitones, 0, 12),
-          questionRiseSemitones: Mz(nz.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: Mz(nz.exclaimLiftSemitones, 0, 12)
+          variationSemitones: bD(pD.variationSemitones, 0, 6),
+          declineSemitones: bD(pD.declineSemitones, 0, 12),
+          questionRiseSemitones: bD(pD.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: bD(pD.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: Mz(zz.syllableMs, 25, 200)
+        syllableMs: bD(DD.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

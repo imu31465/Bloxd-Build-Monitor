@@ -1,279 +1,279 @@
 export const id = 260;
 export const ids = [260];
 export const modules = {
-  39919: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz,
-      h: () => lz
+  39815: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => iD,
+      e: () => fD
     });
-    var Ez = bz(1878);
-    let nz = !1;
+    var ID = cD(1922);
+    let pD = !1;
 
-    function iz() {
-      nz = !0
+    function iD() {
+      pD = !0
     }
 
-    function lz() {
-      nz && (nz = !1, (0, Ez.c)())
+    function fD() {
+      pD && (pD = !1, (0, ID.b)())
     }
   },
-  39925: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz,
-      f: () => lz
+  39822: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => bD,
+      h: () => fD
     });
-    var Ez = bz(3052);
-    let nz = null,
-      iz = null;
+    var ID = cD(3090);
+    let pD = null,
+      iD = null;
 
-    function lz() {
-      return iz ??= bz.e(208).then((() => bz(35817))).then((zz => {
+    function fD() {
+      return iD ??= cD.e(208).then((() => cD(35741))).then((DD => {
         let {
-          ITEM_SPRITES: uz,
-          ITEM_SPRITES_WITHOUT_FILE: bz,
-          ITEM_FILES_WITHOUT_SPRITE: iz
-        } = zz;
-        nz = function(zz, uz, bz) {
-          const nz = new Set,
-            iz = (0, Ez.y)(uz);
-          let lz = 0;
-          for (const [Ez, Mz] of zz.entries()) Ez === iz[lz] ? lz++ : nz.add(Mz);
-          if ("" !== bz)
-            for (const Mz of bz.split(Ez.t)) nz.add(Mz);
-          return nz
-        }(uz.split(Ez.t), bz, iz)
-      }), (zz => {
-        throw iz = null, zz
-      })), iz
+          ITEM_SPRITES: CD,
+          ITEM_SPRITES_WITHOUT_FILE: cD,
+          ITEM_FILES_WITHOUT_SPRITE: iD
+        } = DD;
+        pD = function(DD, CD, cD) {
+          const pD = new Set,
+            iD = (0, ID.z)(CD);
+          let fD = 0;
+          for (const [ID, bD] of DD.entries()) ID === iD[fD] ? fD++ : pD.add(bD);
+          if ("" !== cD)
+            for (const bD of cD.split(ID.v)) pD.add(bD);
+          return pD
+        }(CD.split(ID.v), cD, iD)
+      }), (DD => {
+        throw iD = null, DD
+      })), iD
     }
 
-    function Mz(zz) {
-      var uz, bz;
-      return null !== (uz = null === (bz = nz) || void 0 === bz ? void 0 : bz.has(zz)) && void 0 !== uz && uz
+    function bD(DD) {
+      var CD, cD;
+      return null !== (CD = null === (cD = pD) || void 0 === cD ? void 0 : cD.has(DD)) && void 0 !== CD && CD
     }
   },
-  39910: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      loadIcons: () => Az,
-      setIconFileOverrides: () => Tz,
-      wasmIconLookups: () => Uz,
-      wasmIconQueries: () => hz
+  39808: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      loadIcons: () => xD,
+      setIconFileOverrides: () => qD,
+      wasmIconLookups: () => TD,
+      wasmIconQueries: () => LD
     });
-    var Ez = bz(4263),
-      nz = bz(4247),
-      iz = bz(39919),
-      lz = bz(1878),
-      Mz = bz(1871),
-      tz = bz(3043),
-      Hz = bz(3052);
-    let Oz = null,
-      pz = null;
+    var ID = cD(4288),
+      pD = cD(4272),
+      iD = cD(39815),
+      fD = cD(1922),
+      bD = cD(1905),
+      QD = cD(3083),
+      wD = cD(3090);
+    let SD = null,
+      BD = null;
 
-    function dz(zz) {
-      const uz = zz.startsWith(Hz.n),
-        [bz, Ez = bz, nz = bz] = (uz ? zz.slice(Hz.n.length) : zz).split(Hz.k);
+    function yD(DD) {
+      const CD = DD.startsWith(wD.m),
+        [cD, ID = cD, pD = cD] = (CD ? DD.slice(wD.m.length) : DD).split(wD.k);
       return {
-        top: bz,
-        left: Ez,
-        right: nz,
-        half: uz
+        top: cD,
+        left: ID,
+        right: pD,
+        half: CD
       }
     }
 
-    function Fz(zz) {
-      const uz = null === Oz ? void 0 : (0, tz.e)(zz),
-        bz = void 0 === uz ? 0 : Oz.codes[uz];
-      return 0 === bz ? void 0 : Oz.pool[bz - 1]
+    function MD(DD) {
+      const CD = null === SD ? void 0 : (0, QD.e)(DD),
+        cD = void 0 === CD ? 0 : SD.codes[CD];
+      return 0 === cD ? void 0 : SD.pool[cD - 1]
     }
-    var Zz = bz(3036),
-      Rz = bz(4229),
-      Kz = bz(4258),
-      wz = bz(39922);
-    const Xz = "item:";
-    let fz = null,
-      sz = null,
-      rz = null,
-      oz = null,
-      Nz = !1,
-      vz = !1,
-      xz = null,
-      Jz = 0;
+    var tD = cD(3076),
+      ZD = cD(4259),
+      oD = cD(4284),
+      vD = cD(39817);
+    const ND = "item:";
+    let gD = null,
+      XD = null,
+      mD = null,
+      nD = null,
+      OD = !1,
+      PD = !1,
+      HD = null,
+      UD = 0;
 
-    function Az() {
-      return vz || (vz = !0, (0, Kz.g)().then((zz => {
-        zz && (0, lz.c)()
-      }))), rz ??= Promise.all([(0, Zz.e)(), (pz ??= bz.e(1).then((() => bz(41847))).then((zz => {
+    function xD() {
+      return PD || (PD = !0, (0, oD.i)().then((DD => {
+        DD && (0, fD.b)()
+      }))), mD ??= Promise.all([(0, tD.e)(), (BD ??= cD.e(1).then((() => cD(41770))).then((DD => {
         let {
-          BLOCK_FACE_RUNS: uz,
-          BLOCK_FACES: bz,
-          MAX_FACE_ITEM_ID: Ez
-        } = zz;
-        Oz = {
-          codes: (0, Hz.B)(uz, Ez + 1),
-          pool: bz.split(Hz.t).map(dz)
+          BLOCK_FACE_RUNS: CD,
+          BLOCK_FACES: cD,
+          MAX_FACE_ITEM_ID: ID
+        } = DD;
+        SD = {
+          codes: (0, wD.A)(CD, ID + 1),
+          pool: cD.split(wD.v).map(yD)
         }
-      }), (zz => {
-        throw pz = null, zz
-      })), pz), (0, wz.g)(), bz.e(189).then((() => bz(9007)))]).then((zz => {
-        let [, , uz, bz] = zz;
-        uz.followBundledTextures(), fz = uz, sz = bz, (0, lz.c)()
-      }), (zz => {
-        rz = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", zz)
-      })), rz
+      }), (DD => {
+        throw BD = null, DD
+      })), BD), (0, vD.d)(), cD.e(189).then((() => cD(9062)))]).then((DD => {
+        let [, , CD, cD] = DD;
+        CD.followBundledTextures(), gD = CD, XD = cD, (0, fD.b)()
+      }), (DD => {
+        mD = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", DD)
+      })), mD
     }
 
-    function Tz(zz) {
-      xz = zz, Jz++, (0, lz.c)()
+    function qD(DD) {
+      HD = DD, UD++, (0, fD.b)()
     }
 
-    function Lz(zz) {
-      var uz, bz;
-      return null !== (uz = null === (bz = xz) || void 0 === bz ? void 0 : bz.itemSprite(zz)) && void 0 !== uz ? uz : fz.itemSpriteUrl(zz)
+    function JD(DD) {
+      var CD, cD;
+      return null !== (CD = null === (cD = HD) || void 0 === cD ? void 0 : cD.itemSprite(DD)) && void 0 !== CD ? CD : gD.itemSpriteUrl(DD)
     }
 
-    function Pz(zz) {
-      var uz, bz;
-      return null !== (uz = null === (bz = xz) || void 0 === bz ? void 0 : bz.blockTexture(zz)) && void 0 !== uz ? uz : fz.blockTextureUrl(zz)
+    function KD(DD) {
+      var CD, cD;
+      return null !== (CD = null === (cD = HD) || void 0 === cD ? void 0 : cD.blockTexture(DD)) && void 0 !== CD ? CD : gD.blockTextureUrl(DD)
     }
 
-    function Gz(zz) {
-      var uz;
-      return null !== (uz = (0, Zz.d)(zz)) && void 0 !== uz ? uz : zz
+    function aD(DD) {
+      var CD;
+      return null !== (CD = (0, tD.d)(DD)) && void 0 !== CD ? CD : DD
     }
 
-    function az(zz, uz) {
-      var bz, Ez, nz;
-      return null !== (bz = null !== (Ez = null !== (nz = Pz(zz)) && void 0 !== nz ? nz : null === uz || void 0 === uz ? void 0 : uz.rotated[zz]) && void 0 !== Ez ? Ez : null === uz || void 0 === uz ? void 0 : uz.animated[zz]) && void 0 !== bz ? bz : fz.notFoundUrl()
+    function VD(DD, CD) {
+      var cD, ID, pD;
+      return null !== (cD = null !== (ID = null !== (pD = KD(DD)) && void 0 !== pD ? pD : null === CD || void 0 === CD ? void 0 : CD.rotated[DD]) && void 0 !== ID ? ID : null === CD || void 0 === CD ? void 0 : CD.animated[DD]) && void 0 !== cD ? cD : gD.notFoundUrl()
     }
 
-    function Vz(zz) {
-      return void 0 !== (0, tz.e)(zz) ? zz : /^[1-9][0-9]*$/.test(zz) ? (0, tz.g)(Number(zz)) : void 0
+    function zD(DD) {
+      return void 0 !== (0, QD.e)(DD) ? DD : /^[1-9][0-9]*$/.test(DD) ? (0, QD.h)(Number(DD)) : void 0
     }
 
-    function mz(zz) {
-      var uz;
-      if (zz.startsWith(Xz)) {
-        var bz;
-        const uz = (0, Zz.d)(zz.slice(5));
-        return null !== (bz = void 0 === uz ? null : Lz(uz)) && void 0 !== bz ? bz : fz.notFoundUrl()
+    function jD(DD) {
+      var CD;
+      if (DD.startsWith(ND)) {
+        var cD;
+        const CD = (0, tD.d)(DD.slice(5));
+        return null !== (cD = void 0 === CD ? null : JD(CD)) && void 0 !== cD ? cD : gD.notFoundUrl()
       }
-      return null !== (uz = fz.particleUrl(zz)) && void 0 !== uz ? uz : fz.notFoundUrl()
+      return null !== (CD = gD.particleUrl(DD)) && void 0 !== CD ? CD : gD.notFoundUrl()
     }
 
-    function qz(zz, uz) {
-      return "StairsBlock" === zz ? zz : uz ? "SlabBlock" : "CubeBlock"
+    function lD(DD, CD) {
+      return "StairsBlock" === DD ? DD : CD ? "SlabBlock" : "CubeBlock"
     }
-    const hz = {
-        async blockIcon(zz) {
-          var uz;
+    const LD = {
+        async blockIcon(DD) {
+          var CD;
           let {
-            name: Ez,
-            size: nz,
-            lineWidth: iz
-          } = zz;
-          await Az();
-          const Mz = null !== (uz = Vz(Ez)) && void 0 !== uz ? uz : Ez,
-            Hz = (0, Kz.d)(Mz, nz, iz);
-          if (null !== Hz) return Hz;
-          const Oz = Fz(Mz),
-            pz = (0, tz.e)(Mz),
-            dz = void 0 === pz || null === sz ? void 0 : sz.itemTypeNameOf(pz);
-          if (null === fz || void 0 === Oz) return "";
-          const Zz = [Oz.top, Oz.left, Oz.right].some((zz => null === Pz(zz))),
-            wz = Zz ? await (oz ??= bz.e(201).then((() => bz(33750))).then((zz => (Nz && (Nz = !1, (0, lz.c)()), {
-              rotated: zz.rotatedBlockTextures,
-              animated: zz.animatedBlockTextures
-            })), (zz => (oz = null, Nz = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", zz), null))), oz) : null;
-          if (Zz && null === wz) return "";
-          const Xz = {
-              top: az(Oz.top, wz),
-              left: az(Oz.left, wz),
-              right: az(Oz.right, wz),
-              itemType: qz(dz, Oz.half)
+            name: ID,
+            size: pD,
+            lineWidth: iD
+          } = DD;
+          await xD();
+          const bD = null !== (CD = zD(ID)) && void 0 !== CD ? CD : ID,
+            wD = (0, oD.c)(bD, pD, iD);
+          if (null !== wD) return wD;
+          const SD = MD(bD),
+            BD = (0, QD.e)(bD),
+            yD = void 0 === BD || null === XD ? void 0 : XD.itemTypeNameOf(BD);
+          if (null === gD || void 0 === SD) return "";
+          const tD = [SD.top, SD.left, SD.right].some((DD => null === KD(DD))),
+            vD = tD ? await (nD ??= cD.e(201).then((() => cD(33733))).then((DD => (OD && (OD = !1, (0, fD.b)()), {
+              rotated: DD.rotatedBlockTextures,
+              animated: DD.animatedBlockTextures
+            })), (DD => (nD = null, OD = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", DD), null))), nD) : null;
+          if (tD && null === vD) return "";
+          const ND = {
+              top: VD(SD.top, vD),
+              left: VD(SD.left, vD),
+              right: VD(SD.right, vD),
+              itemType: lD(yD, SD.half)
             },
-            rz = 0 === Jz ? Mz : `${Mz}#${Jz}`;
-          return (await (0, Rz.d)()).drawBlockIconUrl(rz, nz, iz, (() => Xz))
+            mD = 0 === UD ? bD : `${bD}#${UD}`;
+          return (await (0, ZD.d)()).drawBlockIconUrl(mD, pD, iD, (() => ND))
         }
       },
-      Uz = {
-        itemIcon: function(zz) {
-          var uz, bz;
-          if (null === fz) return Az(), Mz.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(zz);
-          if ((0, nz.i)(zz)) return {
+      TD = {
+        itemIcon: function(DD) {
+          var CD, cD;
+          if (null === gD) return xD(), bD.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(DD);
+          if ((0, pD.h)(DD)) return {
             kind: "icon",
-            url: null !== (bz = fz.ingameIconUrl(zz)) && void 0 !== bz ? bz : fz.notFoundUrl()
+            url: null !== (cD = gD.ingameIconUrl(DD)) && void 0 !== cD ? cD : gD.notFoundUrl()
           };
-          if (zz.startsWith(nz.c)) return {
+          if (DD.startsWith(pD.c)) return {
             kind: "icon",
-            url: mz(zz.slice(nz.c.length))
+            url: jD(DD.slice(pD.c.length))
           };
-          if (0 === (0, tz.k)()) return (0, iz.d)(), Mz.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(zz);
-          const lz = null !== (uz = Vz(zz)) && void 0 !== uz ? uz : zz,
-            Hz = (0, tz.e)(lz),
-            Oz = void 0 === Hz ? void 0 : sz.itemTypeNameOf(Hz);
-          if (void 0 !== Fz(lz)) return {
+          if (0 === (0, QD.l)()) return (0, iD.c)(), bD.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(DD);
+          const fD = null !== (CD = zD(DD)) && void 0 !== CD ? CD : DD,
+            wD = (0, QD.e)(fD),
+            SD = void 0 === wD ? void 0 : XD.itemTypeNameOf(wD);
+          if (void 0 !== MD(fD)) return {
             kind: "drawnBlock"
           };
-          const pz = function(zz) {
-            var uz;
-            return null !== (uz = Lz(Gz(zz))) && void 0 !== uz ? uz : fz.notFoundUrl()
-          }(lz);
-          if ((0, Kz.e)(lz) && ! function(zz) {
-              return null !== xz && (null !== xz.itemSprite(Gz(zz)) || null !== xz.model(zz))
-            }(lz)) return {
+          const BD = function(DD) {
+            var CD;
+            return null !== (CD = JD(aD(DD))) && void 0 !== CD ? CD : gD.notFoundUrl()
+          }(fD);
+          if ((0, oD.f)(fD) && ! function(DD) {
+              return null !== HD && (null !== HD.itemSprite(aD(DD)) || null !== HD.model(DD))
+            }(fD)) return {
             kind: "model",
-            url: pz
+            url: BD
           };
-          if ("Gun" === Oz) return {
+          if ("Gun" === SD) return {
             kind: "gun",
-            url: pz
+            url: BD
           };
-          if (void 0 !== Hz && "GrayscaleArmour" === sz.itemTypeOf(Hz) || Object.hasOwn(Ez.c, lz)) {
-            var dz;
-            const uz = null !== (dz = (0, Ez.d)(zz)) && void 0 !== dz ? dz : (0, Ez.d)(lz);
-            if (uz) return {
+          if (void 0 !== wD && "GrayscaleArmour" === XD.itemTypeOf(wD) || Object.hasOwn(ID.b, fD)) {
+            var yD;
+            const CD = null !== (yD = (0, ID.d)(DD)) && void 0 !== yD ? yD : (0, ID.d)(fD);
+            if (CD) return {
               kind: "item",
-              url: pz,
-              tint: uz
+              url: BD,
+              tint: CD
             }
           }
           return {
             kind: "item",
-            url: pz
+            url: BD
           }
         },
-        hasIcon: function(zz) {
-          return void 0 !== Vz(zz) || (0, nz.i)(zz) || zz.startsWith(nz.c)
+        hasIcon: function(DD) {
+          return void 0 !== zD(DD) || (0, pD.h)(DD) || DD.startsWith(pD.c)
         },
-        isItemName: function(zz) {
-          return void 0 !== Vz(zz)
+        isItemName: function(DD) {
+          return void 0 !== zD(DD)
         }
       }
   },
-  39922: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => lz,
-      g: () => Mz
+  39817: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => fD,
+      d: () => bD
     });
-    var Ez = bz(39925);
-    let nz = null,
-      iz = null;
+    var ID = cD(39822);
+    let pD = null,
+      iD = null;
 
-    function lz() {
-      return nz ??= bz.e(58).then((() => bz(41849))).catch((zz => {
-        throw nz = null, zz
-      })), nz
+    function fD() {
+      return pD ??= cD.e(58).then((() => cD(41772))).catch((DD => {
+        throw pD = null, DD
+      })), pD
     }
 
-    function Mz() {
-      return iz ??= Promise.all([lz(), (0, Ez.f)()]).then((zz => {
-        let [uz] = zz;
-        return uz
-      }), (zz => {
-        throw iz = null, zz
-      })), iz
+    function bD() {
+      return iD ??= Promise.all([fD(), (0, ID.h)()]).then((DD => {
+        let [CD] = DD;
+        return CD
+      }), (DD => {
+        throw iD = null, DD
+      })), iD
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

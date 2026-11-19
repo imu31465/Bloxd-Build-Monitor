@@ -1,183 +1,183 @@
 export const id = 46;
 export const ids = [46];
 export const modules = {
-  38972: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => tz,
-      f: () => iz,
-      g: () => nz
+  38928: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => QD,
+      e: () => iD,
+      i: () => pD
     });
-    const Ez = 6e3;
+    const ID = 6e3;
 
-    function nz(zz, uz) {
-      return [Math.floor(zz[0] / uz) * uz, Math.floor(zz[1] / uz) * uz, Math.floor(zz[2] / uz) * uz]
+    function pD(DD, CD) {
+      return [Math.floor(DD[0] / CD) * CD, Math.floor(DD[1] / CD) * CD, Math.floor(DD[2] / CD) * CD]
     }
 
-    function iz(zz) {
-      const uz = (null !== zz && void 0 !== zz ? zz : "").match(/-?\d+(?:\.\d+)?/g);
-      return uz && uz.length >= 3 ? [Number(uz[0]), Number(uz[1]), Number(uz[2])] : null
+    function iD(DD) {
+      const CD = (null !== DD && void 0 !== DD ? DD : "").match(/-?\d+(?:\.\d+)?/g);
+      return CD && CD.length >= 3 ? [Number(CD[0]), Number(CD[1]), Number(CD[2])] : null
     }
 
-    function lz(zz, uz) {
-      return zz === uz ? String(zz) : `${zz}-${uz}`
+    function fD(DD, CD) {
+      return DD === CD ? String(DD) : `${DD}-${CD}`
     }
 
-    function Mz(zz, uz, bz, Ez) {
-      const nz = [];
-      let iz = new Map;
-      for (let lz = zz[2]; lz < zz[2] + uz; lz++) {
-        const Mz = new Map;
-        let tz = zz[0];
-        for (; tz < zz[0] + uz;) {
-          const nz = Ez(tz, bz, lz);
-          let Hz = tz;
-          for (; Hz + 1 < zz[0] + uz && Ez(Hz + 1, bz, lz) === nz;) Hz++;
-          if (null !== nz) {
-            const zz = `${tz} ${Hz} ${nz}`,
-              uz = iz.get(zz);
-            uz ? (uz.z1 = lz, iz.delete(zz), Mz.set(zz, uz)) : Mz.set(zz, {
-              x0: tz,
-              x1: Hz,
-              z0: lz,
-              z1: lz,
-              name: nz
+    function bD(DD, CD, cD, ID) {
+      const pD = [];
+      let iD = new Map;
+      for (let fD = DD[2]; fD < DD[2] + CD; fD++) {
+        const bD = new Map;
+        let QD = DD[0];
+        for (; QD < DD[0] + CD;) {
+          const pD = ID(QD, cD, fD);
+          let wD = QD;
+          for (; wD + 1 < DD[0] + CD && ID(wD + 1, cD, fD) === pD;) wD++;
+          if (null !== pD) {
+            const DD = `${QD} ${wD} ${pD}`,
+              CD = iD.get(DD);
+            CD ? (CD.z1 = fD, iD.delete(DD), bD.set(DD, CD)) : bD.set(DD, {
+              x0: QD,
+              x1: wD,
+              z0: fD,
+              z1: fD,
+              name: pD
             })
           }
-          tz = Hz + 1
+          QD = wD + 1
         }
-        nz.push(...iz.values()), iz = Mz
+        pD.push(...iD.values()), iD = bD
       }
-      return nz.push(...iz.values()), nz.sort(((zz, uz) => zz.z0 - uz.z0 || zz.x0 - uz.x0)).map((zz => `x${lz(zz.x0,zz.x1)} z${lz(zz.z0,zz.z1)} ${zz.name}`))
+      return pD.push(...iD.values()), pD.sort(((DD, CD) => DD.z0 - CD.z0 || DD.x0 - CD.x0)).map((DD => `x${fD(DD.x0,DD.x1)} z${fD(DD.z0,DD.z1)} ${DD.name}`))
     }
 
-    function tz(zz, uz, bz, nz) {
-      let iz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Ez;
-      const tz = [zz[0] + uz - 1, zz[1] + uz - 1, zz[2] + uz - 1],
-        Hz = null !== nz && nz.every(((uz, bz) => Math.floor(uz) >= zz[bz] && Math.floor(uz) <= tz[bz])),
-        Oz = [`The chunk from ${zz.join(" ")} to ${tz.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== nz && Oz.push(`The player's feet are at ${nz.map(Math.floor).join(" ")}, ${Hz?"in this chunk":"outside this chunk"}.`);
-      const pz = [];
-      for (let Ez = zz[1]; Ez <= tz[1]; Ez++) {
-        const nz = Mz(zz, uz, Ez, bz).join("; "),
-          iz = pz[pz.length - 1];
-        (null === iz || void 0 === iz ? void 0 : iz.boxes) === nz ? iz.to = Ez : pz.push({
-          from: Ez,
-          to: Ez,
-          boxes: nz
+    function QD(DD, CD, cD, pD) {
+      let iD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : ID;
+      const QD = [DD[0] + CD - 1, DD[1] + CD - 1, DD[2] + CD - 1],
+        wD = null !== pD && pD.every(((CD, cD) => Math.floor(CD) >= DD[cD] && Math.floor(CD) <= QD[cD])),
+        SD = [`The chunk from ${DD.join(" ")} to ${QD.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== pD && SD.push(`The player's feet are at ${pD.map(Math.floor).join(" ")}, ${wD?"in this chunk":"outside this chunk"}.`);
+      const BD = [];
+      for (let ID = DD[1]; ID <= QD[1]; ID++) {
+        const pD = bD(DD, CD, ID, cD).join("; "),
+          iD = BD[BD.length - 1];
+        (null === iD || void 0 === iD ? void 0 : iD.boxes) === pD ? iD.to = ID : BD.push({
+          from: ID,
+          to: ID,
+          boxes: pD
         })
       }
-      const dz = pz.filter((zz => "" !== zz.boxes));
-      0 === dz.length && Oz.push("It is all air.");
-      let Fz = Oz.join("\n").length;
-      for (const Ez of dz) {
-        const zz = `y${lz(Ez.from,Ez.to)}: ${Ez.boxes}`;
-        if (Fz += zz.length + 1, Fz > iz) {
-          Oz.push(`Cut short: the layers from y${Ez.from} up aren't shown, as there are too many blocks.`);
+      const yD = BD.filter((DD => "" !== DD.boxes));
+      0 === yD.length && SD.push("It is all air.");
+      let MD = SD.join("\n").length;
+      for (const ID of yD) {
+        const DD = `y${fD(ID.from,ID.to)}: ${ID.boxes}`;
+        if (MD += DD.length + 1, MD > iD) {
+          SD.push(`Cut short: the layers from y${ID.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        Oz.push(zz)
+        SD.push(DD)
       }
-      return Oz.join("\n")
+      return SD.join("\n")
     }
   },
-  8466: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => nz
+  8487: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => pD
     });
-    var Ez = bz(20);
+    var ID = cD(16);
 
-    function nz() {
-      return !Ez.e.get("isTouchScreen") && null !== document.pointerLockElement
+    function pD() {
+      return !ID.d.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  36378: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => lz,
-      h: () => iz,
-      k: () => nz
+  36315: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => fD,
+      f: () => iD,
+      i: () => pD
     });
-    const Ez = [.25, .5, 1, 2, 4, 8, 16];
+    const ID = [.25, .5, 1, 2, 4, 8, 16];
 
-    function nz(zz, uz) {
-      const bz = Ez;
-      let nz = bz.indexOf(zz);
-      return -1 === nz && (nz = bz.findIndex((uz => uz >= zz)), -1 === nz && (nz = bz.length - 1)), "up" === uz ? bz[Math.min(nz + 1, bz.length - 1)] : bz[Math.max(nz - 1, 0)]
+    function pD(DD, CD) {
+      const cD = ID;
+      let pD = cD.indexOf(DD);
+      return -1 === pD && (pD = cD.findIndex((CD => CD >= DD)), -1 === pD && (pD = cD.length - 1)), "up" === CD ? cD[Math.min(pD + 1, cD.length - 1)] : cD[Math.max(pD - 1, 0)]
     }
 
-    function iz(zz) {
-      return zz <= Ez[0]
+    function iD(DD) {
+      return DD <= ID[0]
     }
 
-    function lz(zz) {
-      return zz >= Ez[Ez.length - 1]
+    function fD(DD) {
+      return DD >= ID[ID.length - 1]
     }
   },
-  35970: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => nz,
-      e: () => iz
+  35908: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => pD,
+      f: () => iD
     });
-    let Ez = !1;
+    let ID = !1;
 
-    function nz() {
-      return Ez
+    function pD() {
+      return ID
     }
 
-    function iz(zz) {
-      return Ez !== zz && (Ez = zz, !0)
+    function iD(DD) {
+      return ID !== DD && (ID = DD, !0)
     }
   },
-  38334: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz
+  38323: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => iD
     });
-    var Ez = bz(22),
-      nz = bz(1892);
+    var ID = cD(20),
+      pD = cD(1928);
 
-    function iz(zz) {
+    function iD(DD) {
       let {
-        taskId: uz,
-        progress: bz
-      } = zz;
-      const Ez = nz.b.get("_tasks");
-      null !== Ez && void 0 !== Ez && Ez[uz] && nz.b.apply({
+        taskId: CD,
+        progress: cD
+      } = DD;
+      const ID = pD.d.get("_tasks");
+      null !== ID && void 0 !== ID && ID[CD] && pD.d.apply({
         _tasks: {
-          ...Ez,
-          [uz]: {
-            ...Ez[uz],
-            progress: bz
+          ...ID,
+          [CD]: {
+            ...ID[CD],
+            progress: cD
           }
         }
       })
     }
-    Ez.k.subscribe("clientTaskProgress", (zz => {
-      iz(zz)
+    ID.i.subscribe("clientTaskProgress", (DD => {
+      iD(DD)
     }))
   },
-  38950: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => dz,
-      e: () => Zz,
-      f: () => Hz,
-      i: () => pz,
-      k: () => tz,
-      l: () => lz,
-      n: () => Oz,
-      o: () => Rz
+  38895: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => yD,
+      e: () => tD,
+      h: () => wD,
+      i: () => BD,
+      k: () => QD,
+      m: () => fD,
+      p: () => SD,
+      t: () => ZD
     });
-    var Ez = bz(1892),
-      nz = bz(22),
-      iz = bz(1909);
-    const lz = (0, iz.m)((function() {
-        var zz, uz, bz, nz;
+    var ID = cD(1928),
+      pD = cD(20),
+      iD = cD(1945);
+    const fD = (0, iD.o)((function() {
+        var DD, CD, cD, pD;
         return {
-          health: null !== (zz = Ez.b.get("_health")) && void 0 !== zz ? zz : null,
-          maxHealth: null !== (uz = Ez.b.get("_totalMaxHealth")) && void 0 !== uz ? uz : null,
-          shield: null !== (bz = Ez.b.get("_shield")) && void 0 !== bz ? bz : null,
-          maxShield: null !== (nz = Ez.b.get("maxShield")) && void 0 !== nz ? nz : null
+          health: null !== (DD = ID.d.get("_health")) && void 0 !== DD ? DD : null,
+          maxHealth: null !== (CD = ID.d.get("_totalMaxHealth")) && void 0 !== CD ? CD : null,
+          shield: null !== (cD = ID.d.get("_shield")) && void 0 !== cD ? cD : null,
+          maxShield: null !== (pD = ID.d.get("maxShield")) && void 0 !== pD ? pD : null
         }
-      }), [], (0, iz.k)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      Mz = [{
+      }), [], (0, iD.l)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      bD = [{
         canFly: !1,
         flying: !1
       }, {
@@ -191,1059 +191,1059 @@ export const modules = {
         flying: !0
       }];
 
-    function tz(zz, uz) {
-      return Mz[(zz ? 2 : 0) + (uz ? 1 : 0)]
+    function QD(DD, CD) {
+      return bD[(DD ? 2 : 0) + (CD ? 1 : 0)]
     }
-    const Hz = (0, iz.m)((function() {
-      var zz;
-      return null !== (zz = Ez.b.get("_aura")) && void 0 !== zz ? zz : null
-    }), [], (0, iz.k)("_aura"));
+    const wD = (0, iD.o)((function() {
+      var DD;
+      return null !== (DD = ID.d.get("_aura")) && void 0 !== DD ? DD : null
+    }), [], (0, iD.l)("_aura"));
 
-    function Oz(zz) {
+    function SD(DD) {
       return {
-        watch: uz => (0, nz.o)("shotPlayer", (bz => {
+        watch: CD => (0, pD.k)("shotPlayer", (cD => {
           let {
-            playerId: Ez,
-            damage: nz,
-            wasCrit: iz,
-            distance: lz
-          } = bz;
-          zz(Ez) && uz({
-            damage: nz,
-            wasCrit: iz,
-            distance: lz
+            playerId: ID,
+            damage: pD,
+            wasCrit: iD,
+            distance: fD
+          } = cD;
+          DD(ID) && CD({
+            damage: pD,
+            wasCrit: iD,
+            distance: fD
           })
         }))
       }
     }
 
-    function pz(zz) {
-      return (0, iz.e)("chat", (uz => {
+    function BD(DD) {
+      return (0, iD.d)("chat", (CD => {
         let {
-          serverChatMsgId: bz,
-          content: Ez,
-          chatterEId: nz
-        } = uz;
+          serverChatMsgId: cD,
+          content: ID,
+          chatterEId: pD
+        } = CD;
         return {
-          serverChatMsgId: null !== bz && void 0 !== bz ? bz : null,
-          content: Ez,
-          author: nz ? zz(nz) : null
+          serverChatMsgId: null !== cD && void 0 !== cD ? cD : null,
+          content: ID,
+          author: pD ? DD(pD) : null
         }
       }))
     }
-    class dz {
+    class yD {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const bz = this.shown;
-        return zz !== this.needed && (this.needed = zz, this.neededSince = uz, null === zz && (this.shown = null)), this.shown !== this.needed && uz - this.neededSince > 200 && (this.shown = this.needed), this.shown !== bz
+      update(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const cD = this.shown;
+        return DD !== this.needed && (this.needed = DD, this.neededSince = CD, null === DD && (this.shown = null)), this.shown !== this.needed && CD - this.neededSince > 200 && (this.shown = this.needed), this.shown !== cD
       }
     }
 
-    function Fz(zz) {
+    function MD(DD) {
       return [{
-        translationKey: `touchKeys:${zz}`
+        translationKey: `touchKeys:${DD}`
       }]
     }
-    const Zz = {
-      open: Fz("open"),
-      close: Fz("close"),
-      milk: Fz("milk"),
-      shear: Fz("shear"),
-      tame: Fz("tame"),
-      feed: Fz("feed"),
-      ride: Fz("ride")
+    const tD = {
+      open: MD("open"),
+      close: MD("close"),
+      milk: MD("milk"),
+      shear: MD("shear"),
+      tame: MD("tame"),
+      feed: MD("feed"),
+      ride: MD("ride")
     };
 
-    function Rz(zz) {
+    function ZD(DD) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: zz
+        icon: DD
       }]
     }
   },
-  39925: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz,
-      f: () => lz
+  39822: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => bD,
+      h: () => fD
     });
-    var Ez = bz(3052);
-    let nz = null,
-      iz = null;
+    var ID = cD(3090);
+    let pD = null,
+      iD = null;
 
-    function lz() {
-      return iz ??= bz.e(208).then((() => bz(35817))).then((zz => {
+    function fD() {
+      return iD ??= cD.e(208).then((() => cD(35741))).then((DD => {
         let {
-          ITEM_SPRITES: uz,
-          ITEM_SPRITES_WITHOUT_FILE: bz,
-          ITEM_FILES_WITHOUT_SPRITE: iz
-        } = zz;
-        nz = function(zz, uz, bz) {
-          const nz = new Set,
-            iz = (0, Ez.y)(uz);
-          let lz = 0;
-          for (const [Ez, Mz] of zz.entries()) Ez === iz[lz] ? lz++ : nz.add(Mz);
-          if ("" !== bz)
-            for (const Mz of bz.split(Ez.t)) nz.add(Mz);
-          return nz
-        }(uz.split(Ez.t), bz, iz)
-      }), (zz => {
-        throw iz = null, zz
-      })), iz
+          ITEM_SPRITES: CD,
+          ITEM_SPRITES_WITHOUT_FILE: cD,
+          ITEM_FILES_WITHOUT_SPRITE: iD
+        } = DD;
+        pD = function(DD, CD, cD) {
+          const pD = new Set,
+            iD = (0, ID.z)(CD);
+          let fD = 0;
+          for (const [ID, bD] of DD.entries()) ID === iD[fD] ? fD++ : pD.add(bD);
+          if ("" !== cD)
+            for (const bD of cD.split(ID.v)) pD.add(bD);
+          return pD
+        }(CD.split(ID.v), cD, iD)
+      }), (DD => {
+        throw iD = null, DD
+      })), iD
     }
 
-    function Mz(zz) {
-      var uz, bz;
-      return null !== (uz = null === (bz = nz) || void 0 === bz ? void 0 : bz.has(zz)) && void 0 !== uz && uz
+    function bD(DD) {
+      var CD, cD;
+      return null !== (CD = null === (cD = pD) || void 0 === cD ? void 0 : cD.has(DD)) && void 0 !== CD && CD
     }
   },
-  38966: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Ez,
-      f: () => iz,
-      h: () => nz
+  38913: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => ID,
+      d: () => iD,
+      e: () => pD
     });
-    const Ez = 128;
+    const ID = 128;
 
-    function nz(zz, uz, bz, Ez) {
-      const nz = 2 * uz - 1,
-        iz = 1 - 2 * bz,
-        lz = zz(0) - nz * zz(3),
-        Mz = zz(4) - nz * zz(7),
-        tz = zz(8) - nz * zz(11),
-        Hz = zz(1) - iz * zz(3),
-        Oz = zz(5) - iz * zz(7),
-        pz = zz(9) - iz * zz(11);
-      Ez[0] = Mz * pz - tz * Oz, Ez[1] = tz * Hz - lz * pz, Ez[2] = lz * Oz - Mz * Hz;
-      const dz = Ez[0] * zz(3) + Ez[1] * zz(7) + Ez[2] * zz(11) < 0 ? -1 : 1,
-        Fz = Math.hypot(Ez[0], Ez[1], Ez[2]) * dz;
-      return Ez[0] /= Fz, Ez[1] /= Fz, Ez[2] /= Fz, Ez
+    function pD(DD, CD, cD, ID) {
+      const pD = 2 * CD - 1,
+        iD = 1 - 2 * cD,
+        fD = DD(0) - pD * DD(3),
+        bD = DD(4) - pD * DD(7),
+        QD = DD(8) - pD * DD(11),
+        wD = DD(1) - iD * DD(3),
+        SD = DD(5) - iD * DD(7),
+        BD = DD(9) - iD * DD(11);
+      ID[0] = bD * BD - QD * SD, ID[1] = QD * wD - fD * BD, ID[2] = fD * SD - bD * wD;
+      const yD = ID[0] * DD(3) + ID[1] * DD(7) + ID[2] * DD(11) < 0 ? -1 : 1,
+        MD = Math.hypot(ID[0], ID[1], ID[2]) * yD;
+      return ID[0] /= MD, ID[1] /= MD, ID[2] /= MD, ID
     }
 
-    function iz(zz, uz, bz, Ez, nz, iz) {
-      const lz = [Math.floor(uz[0]), Math.floor(uz[1]), Math.floor(uz[2])],
-        Mz = [0, 0, 0],
-        tz = [1 / 0, 1 / 0, 1 / 0],
-        Hz = [1 / 0, 1 / 0, 1 / 0];
-      for (let dz = 0; dz < 3; dz++) Mz[dz] = Math.sign(bz[dz]), 0 !== Mz[dz] && (Hz[dz] = Math.abs(1 / bz[dz]), tz[dz] = (lz[dz] + (Mz[dz] > 0 ? 1 : 0) - uz[dz]) / bz[dz]);
-      let Oz = 0,
-        pz = Math.abs(bz[0]) > Math.abs(bz[1]) ? 0 : 1;
-      for (Math.abs(bz[2]) > Math.abs(bz[pz]) && (pz = 2); Oz <= Ez;) {
-        if (zz(lz[0], lz[1], lz[2])) return nz[0] = lz[0], nz[1] = lz[1], nz[2] = lz[2], iz[0] = 0, iz[1] = 0, iz[2] = 0, iz[pz] = -Mz[pz], !0;
-        pz = tz[0] < tz[1] ? 0 : 1, tz[2] < tz[pz] && (pz = 2), Oz = tz[pz], lz[pz] += Mz[pz], tz[pz] += Hz[pz]
+    function iD(DD, CD, cD, ID, pD, iD) {
+      const fD = [Math.floor(CD[0]), Math.floor(CD[1]), Math.floor(CD[2])],
+        bD = [0, 0, 0],
+        QD = [1 / 0, 1 / 0, 1 / 0],
+        wD = [1 / 0, 1 / 0, 1 / 0];
+      for (let yD = 0; yD < 3; yD++) bD[yD] = Math.sign(cD[yD]), 0 !== bD[yD] && (wD[yD] = Math.abs(1 / cD[yD]), QD[yD] = (fD[yD] + (bD[yD] > 0 ? 1 : 0) - CD[yD]) / cD[yD]);
+      let SD = 0,
+        BD = Math.abs(cD[0]) > Math.abs(cD[1]) ? 0 : 1;
+      for (Math.abs(cD[2]) > Math.abs(cD[BD]) && (BD = 2); SD <= ID;) {
+        if (DD(fD[0], fD[1], fD[2])) return pD[0] = fD[0], pD[1] = fD[1], pD[2] = fD[2], iD[0] = 0, iD[1] = 0, iD[2] = 0, iD[BD] = -bD[BD], !0;
+        BD = QD[0] < QD[1] ? 0 : 1, QD[2] < QD[BD] && (BD = 2), SD = QD[BD], fD[BD] += bD[BD], QD[BD] += wD[BD]
       }
       return !1
     }
   },
-  38946: (zz, uz, bz) => {
-    function Ez(zz, uz, bz) {
-      return Math.hypot(zz[0] - uz[0], zz[1] - uz[1], zz[2] - uz[2]) < bz + .5
+  38890: (DD, CD, cD) => {
+    function ID(DD, CD, cD) {
+      return Math.hypot(DD[0] - CD[0], DD[1] - CD[1], DD[2] - CD[2]) < cD + .5
     }
-    bz.d(uz, {
-      b: () => Ez
+    cD.d(CD, {
+      e: () => ID
     })
   },
-  38351: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Oz
+  38339: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => SD
     });
-    var Ez = bz(1212),
-      nz = bz(1298),
-      iz = bz(20),
-      lz = bz(1283),
-      Mz = bz(1296),
-      tz = bz(1482),
-      Hz = bz(35952);
+    var ID = cD(1221),
+      pD = cD(1319),
+      iD = cD(16),
+      fD = cD(1305),
+      bD = cD(1317),
+      QD = cD(1508),
+      wD = cD(35883);
 
-    function Oz(zz) {
+    function SD(DD) {
       let {
-        zz: uz,
-        bz: bz
-      } = zz;
-      const Oz = null !== uz && void 0 !== uz ? uz : (0, Mz.b)().gameNameWithVariation;
-      (0, Ez.J)(Oz) && ((0, Hz.j)(), (0, lz.$)((() => {
-        console.log("Received matchmaking order from game server to game", uz), (0, iz.k)("inGameReplay"), (0, tz.navigatePreserveSearch)((0, nz.c)(Oz, null !== bz && void 0 !== bz ? bz : void 0))
+        DD: CD,
+        CD: cD
+      } = DD;
+      const SD = null !== CD && void 0 !== CD ? CD : (0, bD.b)().gameNameWithVariation;
+      (0, ID.J)(SD) && ((0, wD.i)(), (0, fD.ab)((() => {
+        console.log("Received matchmaking order from game server to game", CD), (0, iD.k)("inGameReplay"), (0, QD.navigatePreserveSearch)((0, pD.b)(SD, null !== cD && void 0 !== cD ? cD : void 0))
       }), "video_start"))
     }
   },
-  38527: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => iz
+  38498: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => iD
     });
-    var Ez = bz(22),
-      nz = bz(1923);
+    var ID = cD(20),
+      pD = cD(1961);
 
-    function iz(zz) {
-      var uz, bz;
-      const iz = (0, nz.l)(null !== (uz = null === (bz = nz.s.toggleFreeCam) || void 0 === bz ? void 0 : bz[0]) && void 0 !== uz ? uz : null);
-      Ez.k.sK("showBottomMessage", {
-        message: `Free Camera ${zz?"Enabled":"Disabled"}${iz?` - Press ${iz} to toggle`:""}`,
+    function iD(DD) {
+      var CD, cD;
+      const iD = (0, pD.m)(null !== (CD = null === (cD = pD.q.toggleFreeCam) || void 0 === cD ? void 0 : cD[0]) && void 0 !== CD ? CD : null);
+      ID.i.Uo("showBottomMessage", {
+        message: `Free Camera ${DD?"Enabled":"Disabled"}${iD?` - Press ${iD} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  38342: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => tz,
-      e: () => lz,
-      i: () => Mz,
-      m: () => Hz
+  38331: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => QD,
+      g: () => fD,
+      i: () => bD,
+      m: () => wD
     });
-    var Ez = bz(22),
-      nz = bz(1322);
-    const iz = new Map;
+    var ID = cD(20),
+      pD = cD(1340);
+    const iD = new Map;
 
-    function lz(zz, uz) {
-      Ez.k.sK("newUiRequest", {
-        id: zz,
-        clientParameters: uz
+    function fD(DD, CD) {
+      ID.i.Uo("newUiRequest", {
+        id: DD,
+        clientParameters: CD
       }, !0)
     }
 
-    function Mz(zz) {
-      Ez.k.sK("removeUiRequest", zz, !0);
-      const uz = iz.get(zz);
-      uz && (uz.tearDownNotification(), iz.delete(zz))
+    function bD(DD) {
+      ID.i.Uo("removeUiRequest", DD, !0);
+      const CD = iD.get(DD);
+      CD && (CD.tearDownNotification(), iD.delete(DD))
     }
 
-    function tz() {
-      Ez.k.sK("clearUiRequests");
-      for (const zz of iz.values()) zz.tearDownNotification();
-      iz.clear()
+    function QD() {
+      ID.i.Uo("clearUiRequests");
+      for (const DD of iD.values()) DD.tearDownNotification();
+      iD.clear()
     }
 
-    function Hz(zz, uz, bz) {
-      const Ez = nz.NotificationProvider.showPromptPopup({
-        title: uz,
+    function wD(DD, CD, cD) {
+      const ID = pD.NotificationProvider.showPromptPopup({
+        title: CD,
         confirmText: "general:yes",
         cancelText: "general:no",
         unlockPointerKey: "uiRequestPopup"
       });
-      iz.set(zz, Ez), Ez.getResult().then((uz => {
-        iz.delete(zz), "notificationTornDown" !== uz && bz(uz)
+      iD.set(DD, ID), ID.getResult().then((CD => {
+        iD.delete(DD), "notificationTornDown" !== CD && cD(CD)
       }))
     }
   },
-  38970: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => pz,
-      i: () => dz
+  38921: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => BD,
+      e: () => yD
     });
-    var Ez = bz(195),
-      nz = bz(38972);
-    const iz = 20;
+    var ID = cD(194),
+      pD = cD(38928);
+    const iD = 20;
 
-    function lz(zz) {
-      return zz.map(Math.floor).join(" ")
+    function fD(DD) {
+      return DD.map(Math.floor).join(" ")
     }
 
-    function Mz(zz) {
-      return null === zz.amount || 1 === zz.amount ? zz.name : `${zz.amount} ${zz.name}`
+    function bD(DD) {
+      return null === DD.amount || 1 === DD.amount ? DD.name : `${DD.amount} ${DD.name}`
     }
-    var tz = bz(38974),
-      Hz = bz(1892),
-      Oz = bz(1296);
+    var QD = cD(38931),
+      wD = cD(1928),
+      SD = cD(1317);
 
-    function pz(zz, uz) {
-      if (!zz) return tz.e;
-      const bz = zz.playerFeet();
-      if (!bz) return "The player isn't in the world yet, so no blocks can be seen.";
-      const iz = Ez.e.IZ,
-        lz = (0, nz.g)(null !== uz && void 0 !== uz ? uz : bz, iz),
-        Mz = zz.chunkBlocks(lz);
-      return Mz ? (0, nz.d)(lz, iz, ((uz, bz, Ez) => {
-        const nz = Mz(uz, bz, Ez);
-        return 0 === nz ? null : zz.blockName(nz).split("|")[0]
-      }), bz) : `The chunk from ${lz.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${bz.map(Math.floor).join(" ")}.`
+    function BD(DD, CD) {
+      if (!DD) return QD.e;
+      const cD = DD.playerFeet();
+      if (!cD) return "The player isn't in the world yet, so no blocks can be seen.";
+      const iD = ID.h.Wt,
+        fD = (0, pD.i)(null !== CD && void 0 !== CD ? CD : cD, iD),
+        bD = DD.chunkBlocks(fD);
+      return bD ? (0, pD.b)(fD, iD, ((CD, cD, ID) => {
+        const pD = bD(CD, cD, ID);
+        return 0 === pD ? null : DD.blockName(pD).split("|")[0]
+      }), cD) : `The chunk from ${fD.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${cD.map(Math.floor).join(" ")}.`
     }
 
-    function dz(zz) {
-      var uz, bz, Ez;
-      if (!zz) return tz.h;
-      const nz = zz.playerFeet();
-      if (!nz) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function yD(DD) {
+      var CD, cD, ID;
+      if (!DD) return QD.i;
+      const pD = DD.playerFeet();
+      if (!pD) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: pz,
-        heldSlot: dz
-      } = zz.inventory();
-      return function(zz) {
-        const uz = [];
-        null !== zz.game && uz.push(`Game: ${zz.game}.`);
-        const bz = null === zz.health ? "" : `, health ${Math.round(zz.health)}${null===zz.maxHealth?"":` of ${Math.round(zz.maxHealth)}`}`;
-        uz.push(`The player (the creator) stands at ${lz(zz.position)}${bz}, ${zz.creative?"in":"not in"} creative mode.`);
-        const Ez = zz.slots[zz.heldSlot];
-        uz.push(Ez ? `Holding (slot ${zz.heldSlot}): ${Mz(Ez)}.` : `Holding nothing (slot ${zz.heldSlot} is empty).`);
-        const nz = zz.slots.flatMap(((zz, uz) => zz ? [`slot ${uz}: ${Mz(zz)}`] : []));
-        uz.push(nz.length > 0 ? `Inventory: ${nz.join(", ")}.` : "Inventory: empty.");
-        const tz = uz => Math.hypot(uz.position[0] - zz.position[0], uz.position[1] - zz.position[1], uz.position[2] - zz.position[2]),
-          Hz = [...zz.nearby].sort(((zz, uz) => tz(zz) - tz(uz)));
-        if (0 === Hz.length) uz.push("No other players or mobs are near enough to see.");
+        slots: BD,
+        heldSlot: yD
+      } = DD.inventory();
+      return function(DD) {
+        const CD = [];
+        null !== DD.game && CD.push(`Game: ${DD.game}.`);
+        const cD = null === DD.health ? "" : `, health ${Math.round(DD.health)}${null===DD.maxHealth?"":` of ${Math.round(DD.maxHealth)}`}`;
+        CD.push(`The player (the creator) stands at ${fD(DD.position)}${cD}, ${DD.creative?"in":"not in"} creative mode.`);
+        const ID = DD.slots[DD.heldSlot];
+        CD.push(ID ? `Holding (slot ${DD.heldSlot}): ${bD(ID)}.` : `Holding nothing (slot ${DD.heldSlot} is empty).`);
+        const pD = DD.slots.flatMap(((DD, CD) => DD ? [`slot ${CD}: ${bD(DD)}`] : []));
+        CD.push(pD.length > 0 ? `Inventory: ${pD.join(", ")}.` : "Inventory: empty.");
+        const QD = CD => Math.hypot(CD.position[0] - DD.position[0], CD.position[1] - DD.position[1], CD.position[2] - DD.position[2]),
+          wD = [...DD.nearby].sort(((DD, CD) => QD(DD) - QD(CD)));
+        if (0 === wD.length) CD.push("No other players or mobs are near enough to see.");
         else {
-          uz.push("Near them, nearest first:");
-          for (const zz of Hz.slice(0, iz)) {
-            const bz = "player" === zz.kind ? `player "${zz.name||"?"}"` : zz.name && zz.name !== zz.kind ? `${zz.kind} "${zz.name}"` : zz.kind,
-              Ez = Math.round(tz(zz));
-            uz.push(`- ${bz} at ${lz(zz.position)}, ${Ez} block${1===Ez?"":"s"} away`)
+          CD.push("Near them, nearest first:");
+          for (const DD of wD.slice(0, iD)) {
+            const cD = "player" === DD.kind ? `player "${DD.name||"?"}"` : DD.name && DD.name !== DD.kind ? `${DD.kind} "${DD.name}"` : DD.kind,
+              ID = Math.round(QD(DD));
+            CD.push(`- ${cD} at ${fD(DD.position)}, ${ID} block${1===ID?"":"s"} away`)
           }
-          Hz.length > iz && uz.push(`- and ${Hz.length-iz} more further away`)
+          wD.length > iD && CD.push(`- and ${wD.length-iD} more further away`)
         }
-        return zz.droppedItems > 0 && uz.push(`${zz.droppedItems} dropped item${1===zz.droppedItems?" is":"s are"} on the ground nearby.`), uz.join("\n")
+        return DD.droppedItems > 0 && CD.push(`${DD.droppedItems} dropped item${1===DD.droppedItems?" is":"s are"} on the ground nearby.`), CD.join("\n")
       }({
-        game: null !== (uz = (0, Oz.b)().gameNameWithVariation) && void 0 !== uz ? uz : null,
-        position: nz,
-        health: null !== (bz = Hz.b.get("_health")) && void 0 !== bz ? bz : null,
-        maxHealth: null !== (Ez = Hz.b.get("_totalMaxHealth")) && void 0 !== Ez ? Ez : null,
-        creative: !0 === Hz.b.get("creative"),
-        heldSlot: dz,
-        slots: pz,
-        nearby: zz.nearby(),
-        droppedItems: zz.droppedItems()
+        game: null !== (CD = (0, SD.b)().gameNameWithVariation) && void 0 !== CD ? CD : null,
+        position: pD,
+        health: null !== (cD = wD.d.get("_health")) && void 0 !== cD ? cD : null,
+        maxHealth: null !== (ID = wD.d.get("_totalMaxHealth")) && void 0 !== ID ? ID : null,
+        creative: !0 === wD.d.get("creative"),
+        heldSlot: yD,
+        slots: BD,
+        nearby: DD.nearby(),
+        droppedItems: DD.droppedItems()
       })
     }
   },
-  38364: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Mz,
-      f: () => tz,
-      i: () => Hz
+  38356: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => bD,
+      c: () => QD,
+      e: () => wD
     });
-    var Ez = bz(1212),
-      nz = bz(994),
-      iz = bz(36297),
-      lz = bz(22);
+    var ID = cD(1221),
+      pD = cD(1011),
+      iD = cD(36216),
+      fD = cD(20);
 
-    function Mz(zz) {
+    function bD(DD) {
       let {
-        lobbyName: uz,
-        gameNameWithVariation: bz
-      } = zz;
-      return !(0, Ez.M)(uz) || null !== bz && (bz.startsWith("testGym") || (0, nz.k)(bz))
+        lobbyName: CD,
+        gameNameWithVariation: cD
+      } = DD;
+      return !(0, ID.N)(CD) || null !== cD && (cD.startsWith("testGym") || (0, pD.m)(cD))
     }
 
-    function tz(zz) {
-      return zz.ru === iz.e.Leave || zz.ru === iz.e.Cursor
+    function QD(DD) {
+      return DD.tC === iD.e.Leave || DD.tC === iD.e.Cursor
     }
 
-    function Hz(zz) {
-      lz.k.sK("codeCollab", {
-        type: zz.ru,
-        docKey: zz.ou,
-        version: zz.Nu,
-        editorCount: zz.vu,
-        peers: zz.xu,
-        updates: zz.Ju,
-        playerId: zz.Au,
-        playerName: zz.Tu,
-        colour: zz.Lu,
-        anchor: zz.Pu,
-        head: zz.Gu,
-        existingCursors: zz.au,
-        files: zz.Vu,
-        engineSettings: zz.mu
+    function wD(DD) {
+      fD.i.Uo("codeCollab", {
+        type: DD.tC,
+        docKey: DD.ZC,
+        version: DD.oC,
+        editorCount: DD.vC,
+        peers: DD.NC,
+        updates: DD.gC,
+        playerId: DD.XC,
+        playerName: DD.mC,
+        colour: DD.nC,
+        anchor: DD.OC,
+        head: DD.PC,
+        existingCursors: DD.HC,
+        files: DD.UC,
+        engineSettings: DD.xC
       })
     }
   },
-  39881: (zz, uz, bz) => {
-    bz.d(uz, {
-      A: () => az,
-      C: () => Bz,
-      D: () => qz,
-      E: () => Lz,
-      H: () => mz,
-      J: () => Tz,
-      N: () => Qz,
-      Q: () => Dz,
-      S: () => Gz,
-      e: () => Wz,
-      h: () => Uz,
-      k: () => Jz,
-      o: () => ez,
-      r: () => Az,
-      s: () => xz,
-      v: () => hz,
-      w: () => Pz,
-      x: () => Vz
+  39789: (DD, CD, cD) => {
+    cD.d(CD, {
+      A: () => VD,
+      B: () => hD,
+      C: () => lD,
+      G: () => JD,
+      K: () => jD,
+      L: () => qD,
+      O: () => WD,
+      Q: () => YD,
+      S: () => aD,
+      c: () => sD,
+      d: () => TD,
+      g: () => UD,
+      j: () => ED,
+      l: () => xD,
+      p: () => HD,
+      s: () => LD,
+      u: () => KD,
+      x: () => zD
     });
-    var Ez = bz(1362),
-      nz = bz(22),
-      iz = bz(1269),
-      lz = bz(2289),
-      Mz = bz(4575),
-      tz = bz(4544);
-    let Hz, Oz = !1,
-      pz = !1,
-      dz = !1,
-      Fz = !1;
-    const Zz = 1300,
-      Rz = 3e3;
-    let Kz = 0,
-      wz = !1,
-      Xz = !1,
-      fz = 0;
-    const sz = 2;
-    let rz = !1,
-      oz = !1;
-    const Nz = new Set,
-      vz = new Set;
+    var ID = cD(1388),
+      pD = cD(20),
+      iD = cD(1284),
+      fD = cD(2338),
+      bD = cD(4592),
+      QD = cD(4571);
+    let wD, SD = !1,
+      BD = !1,
+      yD = !1,
+      MD = !1;
+    const tD = 1300,
+      ZD = 3e3;
+    let oD = 0,
+      vD = !1,
+      ND = !1,
+      gD = 0;
+    const XD = 2;
+    let mD = !1,
+      nD = !1;
+    const OD = new Set,
+      PD = new Set;
 
-    function xz() {
-      return Oz
+    function HD() {
+      return SD
     }
 
-    function Jz() {
-      return Xz
+    function UD() {
+      return ND
     }
 
-    function Az() {
-      return oz
+    function xD() {
+      return nD
     }
 
-    function Tz() {
-      return (0, iz.q)() && !oz
+    function qD() {
+      return (0, iD.r)() && !nD
     }
 
-    function Lz(zz) {
-      let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (zz !== oz) {
-        oz = zz;
-        for (const zz of [...vz]) zz(oz);
-        uz && Dz()
+    function JD(DD) {
+      let CD = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (DD !== nD) {
+        nD = DD;
+        for (const DD of [...PD]) DD(nD);
+        CD && YD()
       }
     }
 
-    function Pz(zz) {
-      return vz.add(zz), () => {
-        vz.delete(zz)
+    function KD(DD) {
+      return PD.add(DD), () => {
+        PD.delete(DD)
       }
     }
 
-    function Gz() {
-      (0, Mz.i)(lz.z.Menu, (0, iz.q)() ? 0 : lz.z.Menu)
+    function aD() {
+      (0, bD.k)(fD.C.Menu, (0, iD.r)() ? 0 : fD.C.Menu)
     }
 
-    function az() {
-      Xz = !1, fz = 0, Gz(), Dz()
+    function VD() {
+      ND = !1, gD = 0, aD(), YD()
     }
 
-    function Vz(zz) {
-      return Nz.add(zz), () => {
-        Nz.delete(zz)
+    function zD(DD) {
+      return OD.add(DD), () => {
+        OD.delete(DD)
       }
     }
 
-    function mz(zz) {
-      pz = !1, zz !== Oz && (Oz = zz, Fz = !1, clearTimeout(Hz), dz = !Oz && rz, Oz ? (wz = !1, Xz = !1, fz = 0) : Tz() && !rz && (Xz = !0), rz = !1, Oz && !Tz() && Iz(), Cz(), dz && Dz())
+    function jD(DD) {
+      BD = !1, DD !== SD && (SD = DD, MD = !1, clearTimeout(wD), yD = !SD && mD, SD ? (vD = !1, ND = !1, gD = 0) : qD() && !mD && (ND = !0), mD = !1, SD && !qD() && uD(), rD(), yD && YD())
     }
 
-    function qz(zz) {
-      zz !== wz && (wz = zz, zz || Dz())
+    function lD(DD) {
+      DD !== vD && (vD = DD, DD || YD())
     }
 
-    function hz() {
-      pz = !1, Fz || !0 !== Sz() || (Fz = !0, clearTimeout(Hz), Hz = setTimeout(cz, Zz))
+    function LD() {
+      BD = !1, MD || !0 !== kD() || (MD = !0, clearTimeout(wD), wD = setTimeout(GD, tD))
     }
 
-    function Uz() {
-      return (!pz || performance.now() - Kz > Rz) && (pz = (0, tz.M)().lockPointer(), Kz = performance.now()), pz
+    function TD() {
+      return (!BD || performance.now() - oD > ZD) && (BD = (0, QD.K)().lockPointer(), oD = performance.now()), BD
     }
 
-    function cz() {
-      gz() && yz() && Uz()
+    function GD() {
+      RD() && dD() && TD()
     }
 
-    function gz() {
-      return Tz() && !Oz && !wz && !(0, Ez.f)()
+    function RD() {
+      return qD() && !SD && !vD && !(0, ID.e)()
     }
 
-    function Sz() {
-      var zz;
-      return "undefined" === typeof navigator || null === (zz = navigator.userActivation) || void 0 === zz ? void 0 : zz.isActive
+    function kD() {
+      var DD;
+      return "undefined" === typeof navigator || null === (DD = navigator.userActivation) || void 0 === DD ? void 0 : DD.isActive
     }
 
-    function yz() {
-      return dz && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== Sz()
+    function dD() {
+      return yD && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== kD()
     }
 
-    function Dz() {
-      Tz() ? gz() && !Xz && yz() && Uz() : Oz && !rz && Iz()
+    function YD() {
+      qD() ? RD() && !ND && dD() && TD() : SD && !mD && uD()
     }
 
-    function Qz() {
-      Xz ? navigator.vendor.startsWith("Apple") ? jz() : fz = sz : Dz()
+    function WD() {
+      ND ? navigator.vendor.startsWith("Apple") ? eD() : gD = XD : YD()
     }
 
-    function Wz() {
-      fz > 0 && 0 === --fz && jz()
+    function sD() {
+      gD > 0 && 0 === --gD && eD()
     }
 
-    function ez() {
-      fz = 0
+    function ED() {
+      gD = 0
     }
 
-    function jz() {
-      gz() && !0 === Sz() && Uz()
+    function eD() {
+      RD() && !0 === kD() && TD()
     }
 
-    function Iz() {
-      rz = !0, (0, tz.M)().unlockPointer()
+    function uD() {
+      mD = !0, (0, QD.K)().unlockPointer()
     }
 
-    function Bz() {
-      pz = !1, dz = !1, Fz = !1, clearTimeout(Hz), wz = !1, Xz = !1, fz = 0, rz = !1;
-      const zz = Oz;
-      Oz = !1, zz && Cz()
+    function hD() {
+      BD = !1, yD = !1, MD = !1, clearTimeout(wD), vD = !1, ND = !1, gD = 0, mD = !1;
+      const DD = SD;
+      SD = !1, DD && rD()
     }
 
-    function Cz() {
-      for (const zz of [...Nz]) zz(Oz);
-      nz.k.sK("pointerLockUpdate", Oz)
+    function rD() {
+      for (const DD of [...OD]) DD(SD);
+      pD.i.Uo("pointerLockUpdate", SD)
     }
   },
-  39848: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => dz,
-      e: () => Mz,
-      g: () => pz,
-      h: () => Hz,
-      l: () => lz,
-      m: () => Oz,
-      o: () => tz
+  39768: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => yD,
+      f: () => bD,
+      j: () => BD,
+      n: () => wD,
+      q: () => fD,
+      r: () => SD,
+      u: () => QD
     });
-    let Ez = null,
-      nz = null,
-      iz = null;
+    let ID = null,
+      pD = null,
+      iD = null;
 
-    function lz(zz) {
-      Ez = zz
+    function fD(DD) {
+      ID = DD
     }
 
-    function Mz() {
-      return Ez
+    function bD() {
+      return ID
     }
 
-    function tz(zz) {
-      nz = zz
+    function QD(DD) {
+      pD = DD
     }
 
-    function Hz() {
-      return nz
+    function wD() {
+      return pD
     }
 
-    function Oz(zz) {
-      iz = zz
+    function SD(DD) {
+      iD = DD
     }
 
-    function pz() {
-      return iz
+    function BD() {
+      return iD
     }
 
-    function dz() {
-      var zz, uz;
-      return !0 === (null === (zz = nz) || void 0 === zz || null === (uz = zz.currentViewer) || void 0 === uz ? void 0 : uz.inPlayback)
+    function yD() {
+      var DD, CD;
+      return !0 === (null === (DD = pD) || void 0 === DD || null === (CD = DD.currentViewer) || void 0 === CD ? void 0 : CD.inPlayback)
     }
   },
-  39902: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => lz,
-      d: () => iz,
-      h: () => Mz
+  39804: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => fD,
+      g: () => iD,
+      i: () => bD
     });
-    var Ez = bz(39740),
-      nz = bz(39750);
+    var ID = cD(39680),
+      pD = cD(39692);
 
-    function iz(zz) {
-      if (zz.queries.drawCensus() < Ez.Hb.BYTES) return null;
-      const uz = zz.memoryData(zz.scratch(), Ez.Hb.BYTES, 4, "the draw census");
-      return null === uz ? null : {
-        terrainOpaque: Ez.Hb.terrainOpaque(uz, 0),
-        terrainTransparent: Ez.Hb.terrainTransparent(uz, 0),
-        terrainPack: Ez.Hb.terrainPack(uz, 0),
-        earthSky: Ez.Hb.earthSky(uz, 0),
-        skyMeshes: Ez.Hb.skyMeshes(uz, 0),
-        regular: Ez.Hb.regular(uz, 0),
-        thin: Ez.Hb.thin(uz, 0),
-        line: Ez.Hb.line(uz, 0),
-        text: Ez.Hb.text(uz, 0),
-        particles: Ez.Hb.particles(uz, 0)
+    function iD(DD) {
+      if (DD.queries.drawCensus() < ID.Jb.BYTES) return null;
+      const CD = DD.memoryData(DD.scratch(), ID.Jb.BYTES, 4, "the draw census");
+      return null === CD ? null : {
+        terrainOpaque: ID.Jb.terrainOpaque(CD, 0),
+        terrainTransparent: ID.Jb.terrainTransparent(CD, 0),
+        terrainPack: ID.Jb.terrainPack(CD, 0),
+        earthSky: ID.Jb.earthSky(CD, 0),
+        skyMeshes: ID.Jb.skyMeshes(CD, 0),
+        regular: ID.Jb.regular(CD, 0),
+        thin: ID.Jb.thin(CD, 0),
+        line: ID.Jb.line(CD, 0),
+        text: ID.Jb.text(CD, 0),
+        particles: ID.Jb.particles(CD, 0)
       }
     }
 
-    function lz(zz) {
+    function fD(DD) {
       const {
-        terrainOpaque: uz,
-        terrainTransparent: bz,
-        earthSky: Ez,
-        skyMeshes: nz,
-        regular: iz,
-        thin: lz,
-        line: Mz,
-        text: tz,
-        particles: Hz
-      } = zz;
-      return uz + bz + Ez + nz + iz + lz + Mz + tz + Hz
+        terrainOpaque: CD,
+        terrainTransparent: cD,
+        earthSky: ID,
+        skyMeshes: pD,
+        regular: iD,
+        thin: fD,
+        line: bD,
+        text: QD,
+        particles: wD
+      } = DD;
+      return CD + cD + ID + pD + iD + fD + bD + QD + wD
     }
 
-    function Mz() {
-      const zz = (0, nz.j)();
-      return !0 === (null === zz || void 0 === zz ? void 0 : zz.isCoreRunning) ? function(zz) {
-        const uz = iz(zz);
-        if (null === uz) return [];
+    function bD() {
+      const DD = (0, pD.g)();
+      return !0 === (null === DD || void 0 === DD ? void 0 : DD.isCoreRunning) ? function(DD) {
+        const CD = iD(DD);
+        if (null === CD) return [];
         const {
-          terrainOpaque: bz,
-          terrainTransparent: Ez,
-          terrainPack: nz,
-          earthSky: Mz,
-          skyMeshes: tz,
-          regular: Hz,
-          thin: Oz,
-          line: pz,
-          text: dz,
-          particles: Fz
-        } = uz;
+          terrainOpaque: cD,
+          terrainTransparent: ID,
+          terrainPack: pD,
+          earthSky: bD,
+          skyMeshes: QD,
+          regular: wD,
+          thin: SD,
+          line: BD,
+          text: yD,
+          particles: MD
+        } = CD;
         return [{
           label: "Drawn",
-          value: `${lz(uz)}`
+          value: `${fD(CD)}`
         }, {
           label: "Terrain",
-          value: `${bz} opaque / ${Ez} transparent (${nz} shader pack)`
+          value: `${cD} opaque / ${ID} transparent (${pD} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${Hz} / ${Oz}`
+          value: `${wD} / ${SD}`
         }, {
           label: "Text / Lines",
-          value: `${dz} / ${pz}`
+          value: `${yD} / ${BD}`
         }, {
           label: "Sky / Particles",
-          value: `${Mz+tz} / ${Fz}`
+          value: `${bD+QD} / ${MD}`
         }]
-      }(zz.api) : []
+      }(DD.api) : []
     }
   },
-  39910: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      loadIcons: () => Az,
-      setIconFileOverrides: () => Tz,
-      wasmIconLookups: () => Uz,
-      wasmIconQueries: () => hz
+  39808: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      loadIcons: () => xD,
+      setIconFileOverrides: () => qD,
+      wasmIconLookups: () => TD,
+      wasmIconQueries: () => LD
     });
-    var Ez = bz(4263),
-      nz = bz(4247),
-      iz = bz(39919),
-      lz = bz(1878),
-      Mz = bz(1871),
-      tz = bz(3043),
-      Hz = bz(3052);
-    let Oz = null,
-      pz = null;
+    var ID = cD(4288),
+      pD = cD(4272),
+      iD = cD(39815),
+      fD = cD(1922),
+      bD = cD(1905),
+      QD = cD(3083),
+      wD = cD(3090);
+    let SD = null,
+      BD = null;
 
-    function dz(zz) {
-      const uz = zz.startsWith(Hz.n),
-        [bz, Ez = bz, nz = bz] = (uz ? zz.slice(Hz.n.length) : zz).split(Hz.k);
+    function yD(DD) {
+      const CD = DD.startsWith(wD.m),
+        [cD, ID = cD, pD = cD] = (CD ? DD.slice(wD.m.length) : DD).split(wD.k);
       return {
-        top: bz,
-        left: Ez,
-        right: nz,
-        half: uz
+        top: cD,
+        left: ID,
+        right: pD,
+        half: CD
       }
     }
 
-    function Fz(zz) {
-      const uz = null === Oz ? void 0 : (0, tz.e)(zz),
-        bz = void 0 === uz ? 0 : Oz.codes[uz];
-      return 0 === bz ? void 0 : Oz.pool[bz - 1]
+    function MD(DD) {
+      const CD = null === SD ? void 0 : (0, QD.e)(DD),
+        cD = void 0 === CD ? 0 : SD.codes[CD];
+      return 0 === cD ? void 0 : SD.pool[cD - 1]
     }
-    var Zz = bz(3036),
-      Rz = bz(4229),
-      Kz = bz(4258),
-      wz = bz(39922);
-    const Xz = "item:";
-    let fz = null,
-      sz = null,
-      rz = null,
-      oz = null,
-      Nz = !1,
-      vz = !1,
-      xz = null,
-      Jz = 0;
+    var tD = cD(3076),
+      ZD = cD(4259),
+      oD = cD(4284),
+      vD = cD(39817);
+    const ND = "item:";
+    let gD = null,
+      XD = null,
+      mD = null,
+      nD = null,
+      OD = !1,
+      PD = !1,
+      HD = null,
+      UD = 0;
 
-    function Az() {
-      return vz || (vz = !0, (0, Kz.g)().then((zz => {
-        zz && (0, lz.c)()
-      }))), rz ??= Promise.all([(0, Zz.e)(), (pz ??= bz.e(1).then((() => bz(41847))).then((zz => {
+    function xD() {
+      return PD || (PD = !0, (0, oD.i)().then((DD => {
+        DD && (0, fD.b)()
+      }))), mD ??= Promise.all([(0, tD.e)(), (BD ??= cD.e(1).then((() => cD(41770))).then((DD => {
         let {
-          BLOCK_FACE_RUNS: uz,
-          BLOCK_FACES: bz,
-          MAX_FACE_ITEM_ID: Ez
-        } = zz;
-        Oz = {
-          codes: (0, Hz.B)(uz, Ez + 1),
-          pool: bz.split(Hz.t).map(dz)
+          BLOCK_FACE_RUNS: CD,
+          BLOCK_FACES: cD,
+          MAX_FACE_ITEM_ID: ID
+        } = DD;
+        SD = {
+          codes: (0, wD.A)(CD, ID + 1),
+          pool: cD.split(wD.v).map(yD)
         }
-      }), (zz => {
-        throw pz = null, zz
-      })), pz), (0, wz.g)(), bz.e(189).then((() => bz(9007)))]).then((zz => {
-        let [, , uz, bz] = zz;
-        uz.followBundledTextures(), fz = uz, sz = bz, (0, lz.c)()
-      }), (zz => {
-        rz = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", zz)
-      })), rz
+      }), (DD => {
+        throw BD = null, DD
+      })), BD), (0, vD.d)(), cD.e(189).then((() => cD(9062)))]).then((DD => {
+        let [, , CD, cD] = DD;
+        CD.followBundledTextures(), gD = CD, XD = cD, (0, fD.b)()
+      }), (DD => {
+        mD = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", DD)
+      })), mD
     }
 
-    function Tz(zz) {
-      xz = zz, Jz++, (0, lz.c)()
+    function qD(DD) {
+      HD = DD, UD++, (0, fD.b)()
     }
 
-    function Lz(zz) {
-      var uz, bz;
-      return null !== (uz = null === (bz = xz) || void 0 === bz ? void 0 : bz.itemSprite(zz)) && void 0 !== uz ? uz : fz.itemSpriteUrl(zz)
+    function JD(DD) {
+      var CD, cD;
+      return null !== (CD = null === (cD = HD) || void 0 === cD ? void 0 : cD.itemSprite(DD)) && void 0 !== CD ? CD : gD.itemSpriteUrl(DD)
     }
 
-    function Pz(zz) {
-      var uz, bz;
-      return null !== (uz = null === (bz = xz) || void 0 === bz ? void 0 : bz.blockTexture(zz)) && void 0 !== uz ? uz : fz.blockTextureUrl(zz)
+    function KD(DD) {
+      var CD, cD;
+      return null !== (CD = null === (cD = HD) || void 0 === cD ? void 0 : cD.blockTexture(DD)) && void 0 !== CD ? CD : gD.blockTextureUrl(DD)
     }
 
-    function Gz(zz) {
-      var uz;
-      return null !== (uz = (0, Zz.d)(zz)) && void 0 !== uz ? uz : zz
+    function aD(DD) {
+      var CD;
+      return null !== (CD = (0, tD.d)(DD)) && void 0 !== CD ? CD : DD
     }
 
-    function az(zz, uz) {
-      var bz, Ez, nz;
-      return null !== (bz = null !== (Ez = null !== (nz = Pz(zz)) && void 0 !== nz ? nz : null === uz || void 0 === uz ? void 0 : uz.rotated[zz]) && void 0 !== Ez ? Ez : null === uz || void 0 === uz ? void 0 : uz.animated[zz]) && void 0 !== bz ? bz : fz.notFoundUrl()
+    function VD(DD, CD) {
+      var cD, ID, pD;
+      return null !== (cD = null !== (ID = null !== (pD = KD(DD)) && void 0 !== pD ? pD : null === CD || void 0 === CD ? void 0 : CD.rotated[DD]) && void 0 !== ID ? ID : null === CD || void 0 === CD ? void 0 : CD.animated[DD]) && void 0 !== cD ? cD : gD.notFoundUrl()
     }
 
-    function Vz(zz) {
-      return void 0 !== (0, tz.e)(zz) ? zz : /^[1-9][0-9]*$/.test(zz) ? (0, tz.g)(Number(zz)) : void 0
+    function zD(DD) {
+      return void 0 !== (0, QD.e)(DD) ? DD : /^[1-9][0-9]*$/.test(DD) ? (0, QD.h)(Number(DD)) : void 0
     }
 
-    function mz(zz) {
-      var uz;
-      if (zz.startsWith(Xz)) {
-        var bz;
-        const uz = (0, Zz.d)(zz.slice(5));
-        return null !== (bz = void 0 === uz ? null : Lz(uz)) && void 0 !== bz ? bz : fz.notFoundUrl()
+    function jD(DD) {
+      var CD;
+      if (DD.startsWith(ND)) {
+        var cD;
+        const CD = (0, tD.d)(DD.slice(5));
+        return null !== (cD = void 0 === CD ? null : JD(CD)) && void 0 !== cD ? cD : gD.notFoundUrl()
       }
-      return null !== (uz = fz.particleUrl(zz)) && void 0 !== uz ? uz : fz.notFoundUrl()
+      return null !== (CD = gD.particleUrl(DD)) && void 0 !== CD ? CD : gD.notFoundUrl()
     }
 
-    function qz(zz, uz) {
-      return "StairsBlock" === zz ? zz : uz ? "SlabBlock" : "CubeBlock"
+    function lD(DD, CD) {
+      return "StairsBlock" === DD ? DD : CD ? "SlabBlock" : "CubeBlock"
     }
-    const hz = {
-        async blockIcon(zz) {
-          var uz;
+    const LD = {
+        async blockIcon(DD) {
+          var CD;
           let {
-            name: Ez,
-            size: nz,
-            lineWidth: iz
-          } = zz;
-          await Az();
-          const Mz = null !== (uz = Vz(Ez)) && void 0 !== uz ? uz : Ez,
-            Hz = (0, Kz.d)(Mz, nz, iz);
-          if (null !== Hz) return Hz;
-          const Oz = Fz(Mz),
-            pz = (0, tz.e)(Mz),
-            dz = void 0 === pz || null === sz ? void 0 : sz.itemTypeNameOf(pz);
-          if (null === fz || void 0 === Oz) return "";
-          const Zz = [Oz.top, Oz.left, Oz.right].some((zz => null === Pz(zz))),
-            wz = Zz ? await (oz ??= bz.e(201).then((() => bz(33750))).then((zz => (Nz && (Nz = !1, (0, lz.c)()), {
-              rotated: zz.rotatedBlockTextures,
-              animated: zz.animatedBlockTextures
-            })), (zz => (oz = null, Nz = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", zz), null))), oz) : null;
-          if (Zz && null === wz) return "";
-          const Xz = {
-              top: az(Oz.top, wz),
-              left: az(Oz.left, wz),
-              right: az(Oz.right, wz),
-              itemType: qz(dz, Oz.half)
+            name: ID,
+            size: pD,
+            lineWidth: iD
+          } = DD;
+          await xD();
+          const bD = null !== (CD = zD(ID)) && void 0 !== CD ? CD : ID,
+            wD = (0, oD.c)(bD, pD, iD);
+          if (null !== wD) return wD;
+          const SD = MD(bD),
+            BD = (0, QD.e)(bD),
+            yD = void 0 === BD || null === XD ? void 0 : XD.itemTypeNameOf(BD);
+          if (null === gD || void 0 === SD) return "";
+          const tD = [SD.top, SD.left, SD.right].some((DD => null === KD(DD))),
+            vD = tD ? await (nD ??= cD.e(201).then((() => cD(33733))).then((DD => (OD && (OD = !1, (0, fD.b)()), {
+              rotated: DD.rotatedBlockTextures,
+              animated: DD.animatedBlockTextures
+            })), (DD => (nD = null, OD = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", DD), null))), nD) : null;
+          if (tD && null === vD) return "";
+          const ND = {
+              top: VD(SD.top, vD),
+              left: VD(SD.left, vD),
+              right: VD(SD.right, vD),
+              itemType: lD(yD, SD.half)
             },
-            rz = 0 === Jz ? Mz : `${Mz}#${Jz}`;
-          return (await (0, Rz.d)()).drawBlockIconUrl(rz, nz, iz, (() => Xz))
+            mD = 0 === UD ? bD : `${bD}#${UD}`;
+          return (await (0, ZD.d)()).drawBlockIconUrl(mD, pD, iD, (() => ND))
         }
       },
-      Uz = {
-        itemIcon: function(zz) {
-          var uz, bz;
-          if (null === fz) return Az(), Mz.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(zz);
-          if ((0, nz.i)(zz)) return {
+      TD = {
+        itemIcon: function(DD) {
+          var CD, cD;
+          if (null === gD) return xD(), bD.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(DD);
+          if ((0, pD.h)(DD)) return {
             kind: "icon",
-            url: null !== (bz = fz.ingameIconUrl(zz)) && void 0 !== bz ? bz : fz.notFoundUrl()
+            url: null !== (cD = gD.ingameIconUrl(DD)) && void 0 !== cD ? cD : gD.notFoundUrl()
           };
-          if (zz.startsWith(nz.c)) return {
+          if (DD.startsWith(pD.c)) return {
             kind: "icon",
-            url: mz(zz.slice(nz.c.length))
+            url: jD(DD.slice(pD.c.length))
           };
-          if (0 === (0, tz.k)()) return (0, iz.d)(), Mz.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(zz);
-          const lz = null !== (uz = Vz(zz)) && void 0 !== uz ? uz : zz,
-            Hz = (0, tz.e)(lz),
-            Oz = void 0 === Hz ? void 0 : sz.itemTypeNameOf(Hz);
-          if (void 0 !== Fz(lz)) return {
+          if (0 === (0, QD.l)()) return (0, iD.c)(), bD.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(DD);
+          const fD = null !== (CD = zD(DD)) && void 0 !== CD ? CD : DD,
+            wD = (0, QD.e)(fD),
+            SD = void 0 === wD ? void 0 : XD.itemTypeNameOf(wD);
+          if (void 0 !== MD(fD)) return {
             kind: "drawnBlock"
           };
-          const pz = function(zz) {
-            var uz;
-            return null !== (uz = Lz(Gz(zz))) && void 0 !== uz ? uz : fz.notFoundUrl()
-          }(lz);
-          if ((0, Kz.e)(lz) && ! function(zz) {
-              return null !== xz && (null !== xz.itemSprite(Gz(zz)) || null !== xz.model(zz))
-            }(lz)) return {
+          const BD = function(DD) {
+            var CD;
+            return null !== (CD = JD(aD(DD))) && void 0 !== CD ? CD : gD.notFoundUrl()
+          }(fD);
+          if ((0, oD.f)(fD) && ! function(DD) {
+              return null !== HD && (null !== HD.itemSprite(aD(DD)) || null !== HD.model(DD))
+            }(fD)) return {
             kind: "model",
-            url: pz
+            url: BD
           };
-          if ("Gun" === Oz) return {
+          if ("Gun" === SD) return {
             kind: "gun",
-            url: pz
+            url: BD
           };
-          if (void 0 !== Hz && "GrayscaleArmour" === sz.itemTypeOf(Hz) || Object.hasOwn(Ez.c, lz)) {
-            var dz;
-            const uz = null !== (dz = (0, Ez.d)(zz)) && void 0 !== dz ? dz : (0, Ez.d)(lz);
-            if (uz) return {
+          if (void 0 !== wD && "GrayscaleArmour" === XD.itemTypeOf(wD) || Object.hasOwn(ID.b, fD)) {
+            var yD;
+            const CD = null !== (yD = (0, ID.d)(DD)) && void 0 !== yD ? yD : (0, ID.d)(fD);
+            if (CD) return {
               kind: "item",
-              url: pz,
-              tint: uz
+              url: BD,
+              tint: CD
             }
           }
           return {
             kind: "item",
-            url: pz
+            url: BD
           }
         },
-        hasIcon: function(zz) {
-          return void 0 !== Vz(zz) || (0, nz.i)(zz) || zz.startsWith(nz.c)
+        hasIcon: function(DD) {
+          return void 0 !== zD(DD) || (0, pD.h)(DD) || DD.startsWith(pD.c)
         },
-        isItemName: function(zz) {
-          return void 0 !== Vz(zz)
+        isItemName: function(DD) {
+          return void 0 !== zD(DD)
         }
       }
   },
-  39840: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      attachPlayGameSources: () => Db,
-      playGameSources: () => yb
+  39760: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      attachPlayGameSources: () => Yc,
+      playGameSources: () => dc
     });
-    var Ez = bz(1871),
-      nz = bz(39848),
-      iz = bz(4544),
-      lz = bz(39750),
-      Mz = bz(39851),
-      tz = bz(38950),
-      Hz = bz(22),
-      Oz = bz(4564),
-      pz = bz(4560),
-      dz = bz(39784),
-      Fz = bz(39815),
-      Zz = bz(39859),
-      Rz = bz(39798);
-    (0, Rz.i)(Oz.Wb.Chat, (zz => {
-      if (zz.payloadKind !== pz.bc.Msgpack) return;
-      const uz = function(zz) {
-        if (null === zz || "object" !== typeof zz || !("content" in zz)) return null;
+    var ID = cD(1905),
+      pD = cD(39768),
+      iD = cD(4571),
+      fD = cD(39692),
+      bD = cD(39771),
+      QD = cD(38895),
+      wD = cD(20),
+      SD = cD(4585),
+      BD = cD(4581),
+      yD = cD(39718),
+      MD = cD(39741),
+      tD = cD(39773),
+      ZD = cD(39727);
+    (0, ZD.l)(SD.dc.Chat, (DD => {
+      if (DD.payloadKind !== BD.ic.Msgpack) return;
+      const CD = function(DD) {
+        if (null === DD || "object" !== typeof DD || !("content" in DD)) return null;
         const {
-          chatMsgId: uz,
-          content: bz,
-          chatterEId: Ez
-        } = zz;
+          chatMsgId: CD,
+          content: cD,
+          chatterEId: ID
+        } = DD;
         return {
-          serverChatMsgId: null !== uz && void 0 !== uz ? uz : void 0,
-          content: bz,
-          chatterEId: void 0 === Ez || null === Ez ? void 0 : String(Ez)
+          serverChatMsgId: null !== CD && void 0 !== CD ? CD : void 0,
+          content: cD,
+          chatterEId: void 0 === ID || null === ID ? void 0 : String(ID)
         }
-      }((0, dz.b)(zz.payload));
-      null !== uz && Hz.k.sK("chat", uz, !0)
+      }((0, yD.c)(DD.payload));
+      null !== CD && wD.i.Uo("chat", CD, !0)
     }));
-    const Kz = {
-        chatReceived: (0, tz.i)((function(zz) {
-          var uz, bz, Ez;
+    const oD = {
+        chatReceived: (0, QD.i)((function(DD) {
+          var CD, cD, ID;
           return {
-            id: zz,
-            name: null !== (uz = Zz.f.getName(zz)) && void 0 !== uz ? uz : null,
-            local: (0, Fz.g)() === zz,
-            profileEffect: null !== (bz = null === (Ez = (0, Zz.h)(zz)) || void 0 === Ez ? void 0 : Ez.profileEffect) && void 0 !== bz ? bz : null
+            id: DD,
+            name: null !== (CD = tD.f.getName(DD)) && void 0 !== CD ? CD : null,
+            local: (0, MD.h)() === DD,
+            profileEffect: null !== (cD = null === (ID = (0, tD.g)(DD)) || void 0 === ID ? void 0 : ID.profileEffect) && void 0 !== cD ? cD : null
           }
         }))
       },
-      wz = {
-        sendChatMessage(zz) {
-          var uz;
+      vD = {
+        sendChatMessage(DD) {
+          var CD;
           let {
-            zM: bz,
-            channelName: Ez
-          } = zz;
-          null === (uz = (0, lz.j)()) || void 0 === uz || uz.clientApi.sendChat(bz, Ez)
+            Rf: cD,
+            channelName: ID
+          } = DD;
+          null === (CD = (0, fD.g)()) || void 0 === CD || CD.clientApi.sendChat(cD, ID)
         }
       };
-    var Xz = bz(195),
-      fz = bz(1892),
-      sz = bz(39740),
-      rz = bz(38946);
-    const oz = [0, 0, 0],
-      Nz = {
-        codeBlockClickable(zz) {
-          var uz;
-          const bz = (0, lz.j)();
-          if (null === bz || void 0 === bz || !bz.isSessionLive) return !1;
-          const Ez = bz.api;
-          if (0 !== (sz.z.playerFlags(Ez.apiView, 0) & sz.Id.Crouching)) return !1;
-          const nz = Ez.queries.directorEntity(Ez.localId) >= sz.yb.BYTES ? Ez.memoryData(Ez.scratch(), sz.yb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === nz) return !1;
-          for (let iz = 0; iz < 3; iz++) oz[iz] = sz.yb.feet(nz, 0, iz);
-          return oz[1] += sz.yb.eyeHeight(nz, 0), (0, rz.b)(oz, zz, null !== (uz = fz.b.get("blockReach")) && void 0 !== uz ? uz : Xz.e.Cw)
+    var ND = cD(194),
+      gD = cD(1928),
+      XD = cD(39680),
+      mD = cD(38890);
+    const nD = [0, 0, 0],
+      OD = {
+        codeBlockClickable(DD) {
+          var CD;
+          const cD = (0, fD.g)();
+          if (null === cD || void 0 === cD || !cD.isSessionLive) return !1;
+          const ID = cD.api;
+          if (0 !== (XD.s.playerFlags(ID.apiView, 0) & XD.Zd.Crouching)) return !1;
+          const pD = ID.queries.directorEntity(ID.localId) >= XD.Bb.BYTES ? ID.memoryData(ID.scratch(), XD.Bb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === pD) return !1;
+          for (let iD = 0; iD < 3; iD++) nD[iD] = XD.Bb.feet(pD, 0, iD);
+          return nD[1] += XD.Bb.eyeHeight(pD, 0), (0, mD.e)(nD, DD, null !== (CD = gD.d.get("blockReach")) && void 0 !== CD ? CD : ND.h.qN)
         }
       },
-      vz = {
-        clickCodeBlock(zz) {
-          var uz;
-          null === (uz = (0, lz.j)()) || void 0 === uz || uz.clickCodeBlock(zz)
+      PD = {
+        clickCodeBlock(DD) {
+          var CD;
+          null === (CD = (0, fD.g)()) || void 0 === CD || CD.clickCodeBlock(DD)
         }
       };
-    var xz = bz(39765),
-      Jz = bz(39867),
-      Az = bz(994),
-      Tz = bz(38407),
-      Lz = bz(4540),
-      Pz = bz(39776),
-      Gz = bz(39758),
-      az = bz(39779);
+    var HD = cD(39703),
+      UD = cD(39781),
+      xD = cD(1011),
+      qD = cD(38388),
+      JD = cD(4562),
+      KD = cD(39711),
+      aD = cD(39701),
+      VD = cD(39715);
 
-    function Vz(zz) {
-      if (null === zz) return null;
-      const uz = [];
-      for (const bz of zz) {
-        const zz = Object.keys(bz)[0];
-        if ("Uz" === zz) {
+    function zD(DD) {
+      if (null === DD) return null;
+      const CD = [];
+      for (const cD of DD) {
+        const DD = Object.keys(cD)[0];
+        if ("jD" === DD) {
           const {
-            str: zz,
-            style: Ez,
-            clickableUrl: nz
-          } = bz.Uz, iz = Object.keys(zz)[0], lz = zz[iz];
-          "string" !== iz && "styledEntityName" !== iz && "styledTranslatedText" !== iz || uz.push({
-            str: lz,
-            style: Ez,
-            clickableUrl: nz
+            str: DD,
+            style: ID,
+            clickableUrl: pD
+          } = cD.jD, iD = Object.keys(DD)[0], fD = DD[iD];
+          "string" !== iD && "styledEntityName" !== iD && "styledTranslatedText" !== iD || CD.push({
+            str: fD,
+            style: ID,
+            clickableUrl: pD
           })
-        } else uz.push(bz[zz])
+        } else CD.push(cD[DD])
       }
-      return uz
+      return CD
     }
-    const mz = {
-      screenPos(zz) {
-        var uz, bz;
-        return null !== (uz = null === (bz = (0, lz.j)()) || void 0 === bz ? void 0 : bz.renderFrame.projectWorldPosToScreenPos(zz)) && void 0 !== uz ? uz : {
+    const jD = {
+      screenPos(DD) {
+        var CD, cD;
+        return null !== (CD = null === (cD = (0, fD.g)()) || void 0 === cD ? void 0 : cD.renderFrame.projectWorldPosToScreenPos(DD)) && void 0 !== CD ? CD : {
           x: 0,
           y: 0
         }
       }
     };
-    let qz = !1;
+    let lD = !1;
 
-    function hz() {
-      qz || (qz = !0, (0, Rz.i)(Oz.Wb.ProgressBarUpdate, (zz => {
-        const uz = (0, az.l)(zz);
-        (0, az.e)(uz) && Hz.k.sK("progressBarUpdate", uz, !0)
-      })), (0, Rz.i)(Pz.x, (zz => {
-        const uz = (0, az.i)(Pz.x, zz);
-        uz && Hz.k.sK("middleScreenBarInitiate", {
-          duration: uz.RE,
-          KE: uz.KE,
-          horizBarRemOffset: uz.wE
+    function LD() {
+      lD || (lD = !0, (0, ZD.l)(SD.dc.ProgressBarUpdate, (DD => {
+        const CD = (0, VD.k)(DD);
+        (0, VD.e)(CD) && wD.i.Uo("progressBarUpdate", CD, !0)
+      })), (0, ZD.l)(KD.F, (DD => {
+        const CD = (0, VD.g)(KD.F, DD);
+        CD && wD.i.Uo("middleScreenBarInitiate", {
+          duration: CD.pI,
+          iI: CD.iI,
+          horizBarRemOffset: CD.fI
         }, !0)
-      })), (0, Rz.i)(Oz.Wb.RemoveMiddleScreenBar, (() => {
-        Hz.k.sK("middleScreenBarRemove")
-      })), (0, Rz.i)(Pz.cb, (zz => {
-        const uz = (0, az.i)(Pz.cb, zz);
-        if (uz) {
-          var bz;
-          const zz = uz.Mb ? null === (bz = (0, lz.j)()) || void 0 === bz ? void 0 : bz.renderFrame.projectDirectionToScreenPos(uz.Mb) : void 0;
-          Hz.k.sK("sendHitmarker", {
-            ib: uz.ib,
-            screenPos: zz
+      })), (0, ZD.l)(SD.dc.RemoveMiddleScreenBar, (() => {
+        wD.i.Uo("middleScreenBarRemove")
+      })), (0, ZD.l)(KD.hb, (DD => {
+        const CD = (0, VD.g)(KD.hb, DD);
+        if (CD) {
+          var cD;
+          const DD = CD.AC ? null === (cD = (0, fD.g)()) || void 0 === cD ? void 0 : cD.renderFrame.projectDirectionToScreenPos(CD.AC) : void 0;
+          wD.i.Uo("sendHitmarker", {
+            rC: CD.rC,
+            screenPos: DD
           }, !0)
         }
-      })), (0, Rz.i)(Pz.kb, (zz => {
-        const uz = (0, az.i)(Pz.kb, zz);
-        if (uz) {
+      })), (0, ZD.l)(KD.nb, (DD => {
+        const CD = (0, VD.g)(KD.nb, DD);
+        if (CD) {
           const {
-            id: zz,
-            position: bz,
-            style: Ez,
-            Zi: nz,
-            Ki: iz
-          } = uz;
-          Hz.k.sK("setDirectionArrow", {
-            id: zz,
-            position: bz,
-            style: Ez,
-            text: Vz(nz),
-            Ki: iz
+            id: DD,
+            position: cD,
+            style: ID,
+            rp: pD,
+            Fp: iD
+          } = CD;
+          wD.i.Uo("setDirectionArrow", {
+            id: DD,
+            position: cD,
+            style: ID,
+            text: zD(pD),
+            Fp: iD
           }, !0)
         }
-      })), (0, Rz.i)(Pz.g, (zz => {
-        const uz = (0, az.i)(Pz.g, zz);
-        uz && Hz.k.sK("clearDirectionArrow", {
-          id: uz.id
+      })), (0, ZD.l)(KD.h, (DD => {
+        const CD = (0, VD.g)(KD.h, DD);
+        CD && wD.i.Uo("clearDirectionArrow", {
+          id: CD.id
         }, !0)
-      })), (0, Rz.i)(Pz.p, (zz => {
-        const uz = (0, az.i)(Pz.p, zz);
-        uz && Hz.k.sK("flyingMiddleMessage", {
-          content: Vz(uz.Yi),
-          ki: uz.ki,
-          zl: uz.zl
+      })), (0, ZD.l)(KD.x, (DD => {
+        const CD = (0, VD.g)(KD.x, DD);
+        CD && wD.i.Uo("flyingMiddleMessage", {
+          content: zD(CD.Vi),
+          zi: CD.zi,
+          ji: CD.ji
         }, !0)
-      })), (0, Rz.i)(Oz.Wb.WorldVariation, (zz => {
-        const uz = (0, az.l)(zz);
-        if ("string" === typeof uz) {
-          const zz = uz === Az.e ? null : {
-            message: `Currently loaded as variation: ${uz}`,
+      })), (0, ZD.l)(SD.dc.WorldVariation, (DD => {
+        const CD = (0, VD.k)(DD);
+        if ("string" === typeof CD) {
+          const DD = CD === xD.g ? null : {
+            message: `Currently loaded as variation: ${CD}`,
             type: "Warning"
           };
-          Hz.k.sK("showPermanentBottomMessage", zz, !0)
+          wD.i.Uo("showPermanentBottomMessage", DD, !0)
         }
-      })), (0, Rz.i)(Pz.J, (zz => {
-        const uz = (0, az.i)(Pz.J, zz);
-        uz && function(zz, uz) {
+      })), (0, ZD.l)(KD.P, (DD => {
+        const CD = (0, VD.g)(KD.P, DD);
+        CD && function(DD, CD) {
           const {
-            type: bz,
-            params: Ez
-          } = (0, Tz.e)(uz), nz = {
-            ...Ez
+            type: cD,
+            params: ID
+          } = (0, qD.h)(CD), pD = {
+            ...ID
           };
-          for (const iz of Tz.b) nz[iz] && (nz[iz] = Vz(nz[iz]));
-          Lz.d.queueQTE(zz, bz, nz).getResult().then((uz => {
-            var bz;
-            "boolean" === typeof uz && (null === (bz = (0, lz.j)()) || void 0 === bz || bz.send(Gz.d.QteResponse, {
-              qteId: zz,
-              qteResponse: uz
+          for (const iD of qD.d) pD[iD] && (pD[iD] = zD(pD[iD]));
+          JD.e.queueQTE(DD, cD, pD).getResult().then((CD => {
+            var cD;
+            "boolean" === typeof CD && (null === (cD = (0, fD.g)()) || void 0 === cD || cD.send(aD.e.QteResponse, {
+              qteId: DD,
+              qteResponse: CD
             }))
           }))
-        }(uz.id, uz.Lz)
-      })), (0, Rz.i)(Pz.W, (zz => {
-        const uz = (0, az.i)(Pz.W, zz);
-        "number" === typeof uz && Lz.d.cancelQTE(uz)
-      })), (0, Rz.d)((() => {
-        Lz.d.reset(), Hz.k.sK("showPermanentBottomMessage", null, !0)
-      })), (0, Rz.h)((() => {
-        Lz.d.reset()
-      })), (0, Rz.i)(Oz.Wb.EditItemCraftingRecipes, (zz => {
-        const uz = (0, az.l)(zz);
-        (0, az.e)(uz) && Hz.k.sK("craftingRecipesEdited", {
-          itemName: uz.craftingRecipeItemName,
-          recipesForItem: uz.recipesForItem
+        }(CD.id, CD.UD)
+      })), (0, ZD.l)(KD.bb, (DD => {
+        const CD = (0, VD.g)(KD.bb, DD);
+        "number" === typeof CD && JD.e.cancelQTE(CD)
+      })), (0, ZD.i)((() => {
+        JD.e.reset(), wD.i.Uo("showPermanentBottomMessage", null, !0)
+      })), (0, ZD.j)((() => {
+        JD.e.reset()
+      })), (0, ZD.l)(SD.dc.EditItemCraftingRecipes, (DD => {
+        const CD = (0, VD.k)(DD);
+        (0, VD.e)(CD) && wD.i.Uo("craftingRecipesEdited", {
+          itemName: CD.craftingRecipeItemName,
+          recipesForItem: CD.recipesForItem
         })
-      })), (0, Rz.i)(Pz.S, (zz => {
-        const uz = (0, az.i)(Pz.S, zz);
-        uz && Hz.k.sK("craftingRecipesEdited", {
-          itemName: uz.Un,
+      })), (0, ZD.l)(KD._, (DD => {
+        const CD = (0, VD.g)(KD._, DD);
+        CD && wD.i.Uo("craftingRecipesEdited", {
+          itemName: CD.np,
           recipesForItem: []
         })
       })))
     }
-    var Uz = bz(20);
-    const cz = [{
+    var TD = cD(16);
+    const GD = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -1257,1308 +1257,1308 @@ export const modules = {
       movesFly: !0
     }];
 
-    function gz(zz) {
-      return sz.z.playerFlags(zz.api.apiView, 0)
+    function RD(DD) {
+      return XD.s.playerFlags(DD.api.apiView, 0)
     }
-    const Sz = {
-        freeCamera: (0, Fz.d)((zz => () => {
-          const uz = zz.isSessionLive && 0 !== (gz(zz) & sz.Id.FreeCamMoves),
-            bz = zz.freeCameraAllowed() && null === Uz.e.get("scriptedCameraFacing");
-          return cz[(bz ? 2 : 0) + (uz ? 1 : 0)]
-        }), cz[0], (zz => (0, iz.w)(zz)))
+    const kD = {
+        freeCamera: (0, MD.e)((DD => () => {
+          const CD = DD.isSessionLive && 0 !== (RD(DD) & XD.Zd.FreeCamMoves),
+            cD = DD.freeCameraAllowed() && null === TD.d.get("scriptedCameraFacing");
+          return GD[(cD ? 2 : 0) + (CD ? 1 : 0)]
+        }), GD[0], (DD => (0, iD.t)(DD)))
       },
-      yz = {
-        setFreeCameraMovesFly: zz => {
-          var uz;
-          null === (uz = (0, lz.j)()) || void 0 === uz || uz.setFreeCameraMovesFly(zz)
+      dD = {
+        setFreeCameraMovesFly: DD => {
+          var CD;
+          null === (CD = (0, fD.g)()) || void 0 === CD || CD.setFreeCameraMovesFly(DD)
         }
       },
-      Dz = {
+      YD = {
         freeCameraPos: () => {
-          const zz = (0, lz.j)();
-          return null !== zz && void 0 !== zz && zz.isSessionLive && zz.renderFrame.hasView && 0 !== (gz(zz) & sz.Id.FreeCam) ? zz.renderFrame.cameraPosition : null
+          const DD = (0, fD.g)();
+          return null !== DD && void 0 !== DD && DD.isSessionLive && DD.renderFrame.hasView && 0 !== (RD(DD) & XD.Zd.FreeCam) ? DD.renderFrame.cameraPosition : null
         }
       };
-    var Qz = bz(38527);
-    let Wz = !1,
-      ez = !1;
+    var WD = cD(38498);
+    let sD = !1,
+      ED = !1;
 
-    function jz() {
-      const zz = (0, lz.j)();
-      if (null === zz || void 0 === zz || !zz.isSessionLive) return void(Wz = !1);
-      const uz = 0 !== (sz.z.playerFlags(zz.api.apiView, 0) & sz.Id.FreeCam);
-      uz !== Wz && (Wz = uz, (0, Qz.e)(uz))
+    function eD() {
+      const DD = (0, fD.g)();
+      if (null === DD || void 0 === DD || !DD.isSessionLive) return void(sD = !1);
+      const CD = 0 !== (XD.s.playerFlags(DD.api.apiView, 0) & XD.Zd.FreeCam);
+      CD !== sD && (sD = CD, (0, WD.c)(CD))
     }
-    var Iz = bz(328),
-      Bz = bz(36465),
-      Cz = bz(1909);
-    var Yz = bz(39872),
-      kz = bz(39806);
-    const zu = {
+    var uD = cD(326),
+      hD = cD(36402),
+      rD = cD(1945);
+    var AD = cD(39785),
+      FD = cD(39739);
+    const DC = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let uu = "off";
+    let CC = "off";
 
-    function bu(zz) {
-      var uz;
-      return null === zz ? null : {
-        label: null !== (uz = (0, Yz.b)(zz, "interactionPrompt")) && void 0 !== uz ? uz : null
+    function cC(DD) {
+      var CD;
+      return null === DD ? null : {
+        label: null !== (CD = (0, AD.b)(DD, "interactionPrompt")) && void 0 !== CD ? CD : null
       }
     }
-    const Eu = new Map([
-      [sz.yc.Open, {
-        label: tz.e.open
+    const IC = new Map([
+      [XD.Ic.Open, {
+        label: QD.e.open
       }],
-      [sz.yc.Close, {
-        label: tz.e.close
+      [XD.Ic.Close, {
+        label: QD.e.close
       }],
-      [sz.yc.Milk, {
-        label: tz.e.milk
+      [XD.Ic.Milk, {
+        label: QD.e.milk
       }],
-      [sz.yc.Shear, {
-        label: tz.e.shear
+      [XD.Ic.Shear, {
+        label: QD.e.shear
       }],
-      [sz.yc.Tame, {
-        label: tz.e.tame
+      [XD.Ic.Tame, {
+        label: QD.e.tame
       }],
-      [sz.yc.Feed, {
-        label: tz.e.feed
+      [XD.Ic.Feed, {
+        label: QD.e.feed
       }],
-      [sz.yc.Ride, {
-        label: tz.e.ride
+      [XD.Ic.Ride, {
+        label: QD.e.ride
       }]
     ]);
-    class nu {
+    class pC {
       constructor() {
-        this.target = zu, this.hO = sz.cd, this.optionName = null, this.pickaxe = new tz.d
+        this.target = DC, this.HS = XD.qd, this.optionName = null, this.pickaxe = new QD.b
       }
-      read(zz) {
-        var uz;
-        const bz = sz.z.targetBlockId(zz.api.apiView, 0);
-        bz !== this.hO && (this.hO = bz, this.optionName = bz === sz.cd ? null : `${zz.tables.getMetaInfo(bz).rootName}CrosshairText`);
-        const Ez = null === this.optionName ? null : null !== (uz = zz.tables.getClientOption(this.optionName)) && void 0 !== uz ? uz : null;
-        this.pickaxe.update(function(zz, uz) {
-          var bz, Ez, nz;
-          if (0 === (sz.z.playerFlags(zz.api.apiView, 0) & sz.Id.Breaking) || uz === sz.cd || 0 === uz) return null;
+      read(DD) {
+        var CD;
+        const cD = XD.s.targetBlockId(DD.api.apiView, 0);
+        cD !== this.HS && (this.HS = cD, this.optionName = cD === XD.qd ? null : `${DD.tables.getMetaInfo(cD).rootName}CrosshairText`);
+        const ID = null === this.optionName ? null : null !== (CD = DD.tables.getClientOption(this.optionName)) && void 0 !== CD ? CD : null;
+        this.pickaxe.update(function(DD, CD) {
+          var cD, ID, pD;
+          if (0 === (XD.s.playerFlags(DD.api.apiView, 0) & XD.Zd.Breaking) || CD === XD.qd || 0 === CD) return null;
           const {
-            tables: iz
-          } = zz;
-          if (!0 === iz.getClientOption("creative")) return null;
-          const lz = iz.nameOfId(uz),
-            Mz = null === (bz = zz.items.yM()) || void 0 === bz ? void 0 : bz.name,
-            tz = null !== (Ez = iz.getItemStat(lz, "harvestLevel")) && void 0 !== Ez ? Ez : 0;
-          return (0, Iz.Dc)({
-            blockHarvestType: iz.getDefaultItemStat(lz, "harvestType"),
-            blockHarvestLevel: iz.getDefaultItemStat(lz, "harvestLevel"),
-            harvestLevel: tz,
-            heldToolType: void 0 === Mz ? void 0 : iz.getDefaultItemStat(Mz, "harvests"),
-            heldToolLevel: void 0 === Mz ? void 0 : iz.getDefaultItemStat(Mz, "level")
-          }) && null !== (nz = Bz.p[tz]) && void 0 !== nz ? nz : null
-        }(zz, bz)), zz.watchPromptPick(uu);
-        const nz = "touch" === uu ? function(zz) {
-          var uz;
-          const bz = zz.interactLabel;
-          return bz === sz.yc.Entity ? bu(zz.promptEntity) : bz === sz.yc.TameWith ? {
-            label: (0, tz.o)(zz.tables.nameOfId(zz.interactIcon))
-          } : null !== (uz = Eu.get(bz)) && void 0 !== uz ? uz : null
-        }(zz) : bu(zz.promptEntity);
-        return this.target = (0, Cz.n)(this.target, {
-          interactPrompt: nz,
-          blockText: Ez,
+            tables: iD
+          } = DD;
+          if (!0 === iD.getClientOption("creative")) return null;
+          const fD = iD.nameOfId(CD),
+            bD = null === (cD = DD.items.Lb()) || void 0 === cD ? void 0 : cD.name,
+            QD = null !== (ID = iD.getItemStat(fD, "harvestLevel")) && void 0 !== ID ? ID : 0;
+          return (0, uD.Cc)({
+            blockHarvestType: iD.getDefaultItemStat(fD, "harvestType"),
+            blockHarvestLevel: iD.getDefaultItemStat(fD, "harvestLevel"),
+            harvestLevel: QD,
+            heldToolType: void 0 === bD ? void 0 : iD.getDefaultItemStat(bD, "harvests"),
+            heldToolLevel: void 0 === bD ? void 0 : iD.getDefaultItemStat(bD, "level")
+          }) && null !== (pD = hD.p[QD]) && void 0 !== pD ? pD : null
+        }(DD, cD)), DD.watchPromptPick(CC);
+        const pD = "touch" === CC ? function(DD) {
+          var CD;
+          const cD = DD.interactLabel;
+          return cD === XD.Ic.Entity ? cC(DD.promptEntity) : cD === XD.Ic.TameWith ? {
+            label: (0, QD.t)(DD.tables.nameOfId(DD.interactIcon))
+          } : null !== (CD = IC.get(cD)) && void 0 !== CD ? CD : null
+        }(DD) : cC(DD.promptEntity);
+        return this.target = (0, rD.q)(this.target, {
+          interactPrompt: pD,
+          blockText: ID,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let iu = null;
-    const lu = {
+    let iC = null;
+    const fC = {
       current: () => {
-        var zz, uz;
-        return null !== (zz = null === (uz = iu) || void 0 === uz ? void 0 : uz.target) && void 0 !== zz ? zz : zu
+        var DD, CD;
+        return null !== (DD = null === (CD = iC) || void 0 === CD ? void 0 : CD.target) && void 0 !== DD ? DD : DC
       },
-      watch: zz => {
-        const uz = new nu;
-        iu = uz;
-        const bz = (0, Fz.k)((bz => {
-          let Ez = uz.read(bz);
-          zz(Ez);
-          const nz = (0, iz.A)((() => {
-            const nz = uz.read(bz);
-            nz !== Ez && (Ez = nz, zz(nz))
+      watch: DD => {
+        const CD = new pC;
+        iC = CD;
+        const cD = (0, MD.j)((cD => {
+          let ID = CD.read(cD);
+          DD(ID);
+          const pD = (0, iD.w)((() => {
+            const pD = CD.read(cD);
+            pD !== ID && (ID = pD, DD(pD))
           }));
           return () => {
-            nz(), bz.watchPromptPick("off")
+            pD(), cD.watchPromptPick("off")
           }
         }));
         return () => {
-          bz(), iu === uz && (iu = null)
+          cD(), iC === CD && (iC = null)
         }
       }
     };
-    let Mu = 0,
-      tu = 0;
-    const Hu = {
-        health: tz.l,
-        aura: tz.f,
-        hotbar: kz.b.states.hotbar,
-        heldItemAim: kz.b.states.heldItemAim,
-        crouching: (0, Fz.d)((zz => function(zz) {
-          const uz = () => 0 !== (sz.z.playerFlags(zz.apiView, 0) & sz.Id.Crouching);
+    let bC = 0,
+      QC = 0;
+    const wC = {
+        health: QD.m,
+        aura: QD.h,
+        hotbar: FD.e.states.hotbar,
+        heldItemAim: FD.e.states.heldItemAim,
+        crouching: (0, MD.e)((DD => function(DD) {
+          const CD = () => 0 !== (XD.s.playerFlags(DD.apiView, 0) & XD.Zd.Crouching);
           return {
-            current: uz,
-            watch(zz) {
-              let bz = uz();
-              return (0, iz.w)((() => {
-                const Ez = uz();
-                Ez !== bz && (bz = Ez, zz(Ez))
+            current: CD,
+            watch(DD) {
+              let cD = CD();
+              return (0, iD.t)((() => {
+                const ID = CD();
+                ID !== cD && (cD = ID, DD(ID))
               }))
             }
           }
-        }(zz.api).current), !1, (zz => (0, iz.w)(zz))),
-        flight: (0, Fz.d)((zz => () => function(zz) {
-          const uz = sz.z.playerFlags(zz.apiView, 0);
-          return (0, tz.k)(0 !== (uz & sz.Id.CanFly), 0 !== (uz & sz.Id.Flying))
-        }(zz.api)), (0, tz.k)(!1, !1), (zz => (0, iz.w)(zz))),
-        gliderBoostFuel: (0, Fz.d)((zz => () => sz.z.gliderBoostFuel(zz.api.apiView, 0)), 0, (zz => (0, iz.w)(zz))),
-        crosshairTarget: lu
+        }(DD.api).current), !1, (DD => (0, iD.t)(DD))),
+        flight: (0, MD.e)((DD => () => function(DD) {
+          const CD = XD.s.playerFlags(DD.apiView, 0);
+          return (0, QD.k)(0 !== (CD & XD.Zd.CanFly), 0 !== (CD & XD.Zd.Flying))
+        }(DD.api)), (0, QD.k)(!1, !1), (DD => (0, iD.t)(DD))),
+        gliderBoostFuel: (0, MD.e)((DD => () => XD.s.gliderBoostFuel(DD.api.apiView, 0)), 0, (DD => (0, iD.t)(DD))),
+        crosshairTarget: fC
       },
-      Ou = {
-        hotbarSlotRequested: kz.b.events.hotbarSlotRequested,
-        hotbarScrolled: kz.b.events.hotbarScrolled,
-        numberKeyPressed: kz.b.events.numberKeyPressed,
-        shotDamageToShow: (0, tz.n)((zz => !0 === (0, Yz.b)(zz, "showDamageAmounts")))
+      SC = {
+        hotbarSlotRequested: FD.e.events.hotbarSlotRequested,
+        hotbarScrolled: FD.e.events.hotbarScrolled,
+        numberKeyPressed: FD.e.events.numberKeyPressed,
+        shotDamageToShow: (0, QD.p)((DD => !0 === (0, AD.b)(DD, "showDamageAmounts")))
       },
-      pu = {
-        selectHotbarSlot: kz.b.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: zz => {
-          uu = zz
+      BC = {
+        selectHotbarSlot: FD.e.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: DD => {
+          CC = DD
         }
       },
-      du = {
+      yC = {
         momentumFrac: function() {
-          var zz, uz, bz;
-          const Ez = (0, lz.j)(),
-            nz = performance.now(),
-            iz = null === Ez || void 0 === Ez || null === (zz = Ez.items.yM()) || void 0 === zz || null === (uz = zz.attributes) || void 0 === uz || null === (bz = uz.customAttributes) || void 0 === bz ? void 0 : bz.enchantments;
-          return Mu = null !== Ez && null !== iz && void 0 !== iz && iz.Momentum ? 0 !== (sz.z.playerFlags(Ez.api.apiView, 0) & sz.Id.Breaking) ? Math.max(0, sz.z.momentumFrac(Ez.api.apiView, 0)) : Math.max(0, Mu - (nz - tu) / 1500) : 0, tu = nz, Mu
+          var DD, CD, cD;
+          const ID = (0, fD.g)(),
+            pD = performance.now(),
+            iD = null === ID || void 0 === ID || null === (DD = ID.items.Lb()) || void 0 === DD || null === (CD = DD.attributes) || void 0 === CD || null === (cD = CD.customAttributes) || void 0 === cD ? void 0 : cD.enchantments;
+          return bC = null !== ID && null !== iD && void 0 !== iD && iD.Momentum ? 0 !== (XD.s.playerFlags(ID.api.apiView, 0) & XD.Zd.Breaking) ? Math.max(0, XD.s.momentumFrac(ID.api.apiView, 0)) : Math.max(0, bC - (pD - QC) / 1500) : 0, QC = pD, bC
         }
       };
-    var Fu = bz(39742),
-      Zu = bz(1226),
-      Ru = bz(35970),
-      Ku = bz(8466),
-      wu = bz(1595),
-      Xu = bz(2289),
-      fu = bz(4567);
-    let su = !1;
+    var MC = cD(39688),
+      tC = cD(1240),
+      ZC = cD(35908),
+      oC = cD(8487),
+      vC = cD(1627),
+      NC = cD(2338),
+      gC = cD(4588);
+    let XC = !1;
 
-    function ru(zz) {
-      su = zz
+    function mC(DD) {
+      XC = DD
     }
 
-    function ou() {
-      "inGame" !== Uz.e.get("gameState") || (0, wu.p)() || Hz.k.sK("ctrlCrouchWithoutFullscreen")
+    function nC() {
+      "inGame" !== TD.d.get("gameState") || (0, vC.v)() || wD.i.Uo("ctrlCrouchWithoutFullscreen")
     }
-    let Nu = !1;
-    const vu = {
+    let OC = !1;
+    const PC = {
         OpenEmoteWheel: () => {
-          ru(!0), Nu = !0, queueMicrotask((() => {
-            Nu && (Nu = !1, Hz.k.sK("requestEmoteWheelHoldOpen"))
+          mC(!0), OC = !0, queueMicrotask((() => {
+            OC && (OC = !1, wD.i.Uo("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          Hz.k.sK("toggleFullCoordinateOverlay")
+          wD.i.Uo("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, Ru.d)() || Hz.k.sK("YKeyPressed")
+          (0, ZC.d)() || wD.i.Uo("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, Ru.d)() || Hz.k.sK("XKeyPressed")
+          (0, ZC.d)() || wD.i.Uo("XKeyPressed")
         },
-        CtrlCrouch: ou,
+        CtrlCrouch: nC,
         "primary-fire": () => {
-          Hz.k.sK("mouseState", {
-            WO: Zu.e.DownFirePrimary,
+          wD.i.Uo("mouseState", {
+            jS: tC.d.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          Hz.k.sK("mouseState", {
-            WO: Zu.e.DownFireSecondary,
+          wD.i.Uo("mouseState", {
+            jS: tC.d.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          Hz.k.sK("mouseState", {
-            WO: Zu.e.TouchDownLong,
+          wD.i.Uo("mouseState", {
+            jS: tC.d.TouchDownLong,
             isDown: !0
           })
         }
       },
-      xu = {
+      HC = {
         OpenEmoteWheel: () => {
-          ru(!1), Nu ? (Nu = !1, (0, Ku.c)() || Hz.k.sK("requestEmoteWheelHoldOpen")) : Hz.k.sK("requestEmoteWheelHoldRelease")
+          mC(!1), OC ? (OC = !1, (0, oC.d)() || wD.i.Uo("requestEmoteWheelHoldOpen")) : wD.i.Uo("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: ou,
+        CtrlCrouch: nC,
         "primary-fire": () => {
-          Hz.k.sK("mouseState", {
-            WO: Zu.e.UpFirePrimary,
+          wD.i.Uo("mouseState", {
+            jS: tC.d.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          Hz.k.sK("mouseState", {
-            WO: Zu.e.UpFireSecondary,
+          wD.i.Uo("mouseState", {
+            jS: tC.d.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          Hz.k.sK("mouseState", {
-            WO: Zu.e.UpFirePrimary,
+          wD.i.Uo("mouseState", {
+            jS: tC.d.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let Ju = !1;
+    let UC = !1;
 
-    function Au() {
-      Ju || (Ju = !0, (0, fu.g)((zz => {
-        if ((0, nz.c)()) return;
-        const uz = (0, fu.c)(zz) ? "primary-fire" : zz.action;
-        var bz;
-        if (zz.down) {
-          if (0 === (zz.flags & Xu.b.Synthetic)) {
-            var Ez;
-            null === (Ez = vu[uz]) || void 0 === Ez || Ez.call(vu)
+    function xC() {
+      UC || (UC = !0, (0, gC.k)((DD => {
+        if ((0, pD.e)()) return;
+        const CD = (0, gC.g)(DD) ? "primary-fire" : DD.action;
+        var cD;
+        if (DD.down) {
+          if (0 === (DD.flags & NC.d.Synthetic)) {
+            var ID;
+            null === (ID = PC[CD]) || void 0 === ID || ID.call(PC)
           }
-        } else null === (bz = xu[uz]) || void 0 === bz || bz.call(xu)
+        } else null === (cD = HC[CD]) || void 0 === cD || cD.call(HC)
       })))
     }
-    var Tu = bz(316),
-      Lu = bz(96),
-      Pu = bz(33),
-      Gu = bz(39881),
-      au = bz(1296),
-      Vu = bz(38364);
-    let mu = !1;
-    const qu = {
-      sendCodeCollab(zz) {
-        var uz;
-        null === (uz = (0, lz.j)()) || void 0 === uz || uz.send(Gz.d.CodeCollab, (0, Gz.l)(zz), (0, Vu.f)(zz))
+    var qC = cD(312),
+      JC = cD(90),
+      KC = cD(36),
+      aC = cD(39789),
+      VC = cD(1317),
+      zC = cD(38356);
+    let jC = !1;
+    const lC = {
+      sendCodeCollab(DD) {
+        var CD;
+        null === (CD = (0, fD.g)()) || void 0 === CD || CD.send(aD.e.CodeCollab, (0, aD.q)(DD), (0, zC.c)(DD))
       }
     };
-    let hu = null,
-      Uu = !1,
-      cu = null;
+    let LC = null,
+      TC = !1,
+      GC = null;
 
-    function gu() {
-      return "inGame" === Uz.e.get("gameState") && !(0, Ru.d)()
+    function RC() {
+      return "inGame" === TD.d.get("gameState") && !(0, ZC.d)()
     }
-    const Su = {
-        OpenInventory: zz => {
-          (0, wu.x)(zz, "inventory", (0, Fu.g)())
+    const kC = {
+        OpenInventory: DD => {
+          (0, vC.z)(DD, "inventory", (0, MC.m)())
         },
-        OpenShop: zz => {
-          hu && gu() && (0, wu.t)(zz, Tu.r.SHOP, !hu.shopIsEmpty(fz.b.get("shopInfo")))
+        OpenShop: DD => {
+          LC && RC() && (0, vC.y)(DD, qC.q.SHOP, !LC.shopIsEmpty(gD.d.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: zz => {
-          gu() && (0, wu.t)(zz, Tu.r.LOBBY_LEADERBOARD, !!fz.b.get("lobbyLeaderboardInfo"))
+        OpenLobbyLeaderboard: DD => {
+          RC() && (0, vC.y)(DD, qC.q.LOBBY_LEADERBOARD, !!gD.d.get("lobbyLeaderboardInfo"))
         },
-        OpenTasksAndLeaderboard: zz => {
-          var uz;
-          const bz = null === (uz = hu) || void 0 === uz ? void 0 : uz.getClientGameMapKey();
-          bz ? (0, wu.A)(zz, !0, bz) : (0, wu.x)(zz, "retentionFeatures", !(!fz.b.get("_tasks") && !fz.b.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: DD => {
+          var CD;
+          const cD = null === (CD = LC) || void 0 === CD ? void 0 : CD.getClientGameMapKey();
+          cD ? (0, vC.B)(DD, !0, cD) : (0, vC.z)(DD, "retentionFeatures", !(!gD.d.get("_tasks") && !gD.d.get("_availableLeaderboards")))
         },
-        OpenInviteLink: zz => {
-          (0, wu.x)(zz, "inviteLink", Lu.featureFlags.canUseInviteLinks)
+        OpenInviteLink: DD => {
+          (0, vC.z)(DD, "inviteLink", JC.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: zz => {
-          gu() && function(zz) {
-            var uz;
-            const bz = (0, lz.j)(),
-              Ez = null !== bz && void 0 !== bz && bz.isSessionLive ? bz.api : null,
-              nz = Ez ? Ez.Gs(Ez.localId) : null,
-              iz = null !== (uz = null === nz || void 0 === nz ? void 0 : nz.map((zz => Math.floor(zz)))) && void 0 !== uz ? uz : null;
-            (0, wu.A)(zz, null !== iz && (0, Vu.d)((0, au.b)()), (() => {
-              Hz.k.sK("EditLobbyCode", iz)
+        OpenCodeEditor: DD => {
+          RC() && function(DD) {
+            var CD;
+            const cD = (0, fD.g)(),
+              ID = null !== cD && void 0 !== cD && cD.isSessionLive ? cD.api : null,
+              pD = ID ? ID.FX(ID.localId) : null,
+              iD = null !== (CD = null === pD || void 0 === pD ? void 0 : pD.map((DD => Math.floor(DD)))) && void 0 !== CD ? CD : null;
+            (0, vC.B)(DD, null !== iD && (0, zC.b)((0, VC.b)()), (() => {
+              wD.i.Uo("EditLobbyCode", iD)
             }))
-          }(zz)
+          }(DD)
         },
         HideUi: () => {
-          Hz.k.sK("showUi", !1)
+          wD.i.Uo("showUi", !1)
         }
       },
-      yu = {
+      dC = {
         HideUi: () => {
-          Hz.k.sK("showUi", !0)
+          wD.i.Uo("showUi", !0)
         }
       };
 
-    function Du() {
-      Uu || (Uu = !0, bz.e(151).then((() => bz(41833))).then((zz => {
-        hu = zz
-      }), (zz => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", zz)
-      })), (0, Gu.x)((zz => {
-        zz || !(0, Gu.k)() || (0, Lu.isMobile)() || !Pu.g.getItem("disableFullscreen") || (0, wu.l)() || Uz.e.set({
-          openEverythingMenuName: Tu.r.SETTINGS
+    function YC() {
+      TC || (TC = !0, cD.e(151).then((() => cD(41749))).then((DD => {
+        LC = DD
+      }), (DD => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", DD)
+      })), (0, aC.x)((DD => {
+        DD || !(0, aC.g)() || (0, JC.isMobile)() || !KC.h.getItem("disableFullscreen") || (0, vC.s)() || TD.d.set({
+          openEverythingMenuName: qC.q.SETTINGS
         })
-      })), (0, fu.g)((zz => {
+      })), (0, gC.k)((DD => {
         let {
-          action: uz,
-          down: bz,
-          press: Ez
-        } = zz;
-        var iz, lz;
-        (0, nz.c)() || (bz ? null === (iz = Su[uz]) || void 0 === iz || iz.call(Su, function(zz) {
-          var uz;
-          if (0 === zz || (null === (uz = cu) || void 0 === uz ? void 0 : uz.press) !== zz) {
-            const uz = {
-              press: zz,
+          action: CD,
+          down: cD,
+          press: ID
+        } = DD;
+        var iD, fD;
+        (0, pD.e)() || (cD ? null === (iD = kC[CD]) || void 0 === iD || iD.call(kC, function(DD) {
+          var CD;
+          if (0 === DD || (null === (CD = GC) || void 0 === CD ? void 0 : CD.press) !== DD) {
+            const CD = {
+              press: DD,
               event: new Event("inputAction")
             };
-            cu = uz, queueMicrotask((() => {
-              cu === uz && (cu = null)
+            GC = CD, queueMicrotask((() => {
+              GC === CD && (GC = null)
             }))
           }
-          return cu.event
-        }(Ez)) : null === (lz = yu[uz]) || void 0 === lz || lz.call(yu))
+          return GC.event
+        }(ID)) : null === (fD = dC[CD]) || void 0 === fD || fD.call(dC))
       })))
     }
-    var Qu = bz(38334),
-      Wu = bz(38351),
-      eu = bz(38342);
-    const ju = {
-      completeTask(zz) {
-        var uz;
-        null === (uz = (0, lz.j)()) || void 0 === uz || uz.send(Gz.d.CompleteTask, (0, Gz.p)(zz))
+    var WC = cD(38323),
+      sC = cD(38339),
+      EC = cD(38331);
+    const eC = {
+      completeTask(DD) {
+        var CD;
+        null === (CD = (0, fD.g)()) || void 0 === CD || CD.send(aD.e.CompleteTask, (0, aD.u)(DD))
       },
-      setServerCookie(zz) {
-        var uz;
+      setServerCookie(DD) {
+        var CD;
         let {
-          key: bz,
-          value: Ez
-        } = zz;
-        null === (uz = (0, lz.j)()) || void 0 === uz || uz.send(Gz.d.GeneralCookieSet, (0, Gz.t)({
-          Al: bz,
-          Tl: Ez
+          key: cD,
+          value: ID
+        } = DD;
+        null === (CD = (0, fD.g)()) || void 0 === CD || CD.send(aD.e.GeneralCookieSet, (0, aD.z)({
+          Mf: cD,
+          tf: ID
         }))
       },
-      answerUiRequest(zz) {
-        var uz;
+      answerUiRequest(DD) {
+        var CD;
         let {
-          id: bz,
-          Vl: Ez
-        } = zz;
-        null === (uz = (0, lz.j)()) || void 0 === uz || uz.send(Gz.d.UiRequestResp, (0, Gz.R)({
-          QM: bz,
-          WM: Ez,
-          eM: 5
+          id: cD,
+          gf: ID
+        } = DD;
+        null === (CD = (0, fD.g)()) || void 0 === CD || CD.send(aD.e.UiRequestResp, (0, aD.eb)({
+          Gb: cD,
+          Rb: ID,
+          kb: 5
         }))
       },
-      chooseRewardedAd(zz) {
-        var uz;
+      chooseRewardedAd(DD) {
+        var CD;
         let {
-          id: bz,
-          Vl: Ez
-        } = zz;
-        null === (uz = (0, lz.j)()) || void 0 === uz || uz.send(Gz.d.UiRequestResponded, (0, Gz.O)({
-          id: bz,
-          Vl: Ez
+          id: cD,
+          gf: ID
+        } = DD;
+        null === (CD = (0, fD.g)()) || void 0 === CD || CD.send(aD.e.UiRequestResponded, (0, aD.ab)({
+          id: cD,
+          gf: ID
         }))
       },
-      requestLeaderboard(zz) {
-        var uz;
+      requestLeaderboard(DD) {
+        var CD;
         let {
-          category: bz,
-          timeframe: Ez,
-          seeTop: nz
-        } = zz;
-        null === (uz = (0, lz.j)()) || void 0 === uz || uz.send(Gz.d.LeaderboardRequest, {
-          category: bz,
-          timeframe: Ez,
-          seeTop: nz
+          category: cD,
+          timeframe: ID,
+          seeTop: pD
+        } = DD;
+        null === (CD = (0, fD.g)()) || void 0 === CD || CD.send(aD.e.LeaderboardRequest, {
+          category: cD,
+          timeframe: ID,
+          seeTop: pD
         })
       }
     };
-    let Iu = !1;
-    const Bu = Xz.e.Gw / 2,
-      Cu = [Bu, -Bu, -Bu, -Bu, Bu, Bu, -Bu, Bu],
-      Yu = [0, 0, 0];
+    let uC = !1;
+    const hC = ND.h.vN / 2,
+      rC = [hC, -hC, -hC, -hC, hC, hC, -hC, hC],
+      AC = [0, 0, 0];
 
-    function ku(zz, uz, bz) {
-      for (let Ez = 0; Ez < zz.length; Ez += 2)
-        if (zz[Ez] === uz && zz[Ez + 1] === bz) return !0;
+    function FC(DD, CD, cD) {
+      for (let ID = 0; ID < DD.length; ID += 2)
+        if (DD[ID] === CD && DD[ID + 1] === cD) return !0;
       return !1
     }
-    const zb = {
+    const Dc = {
       blocksStandingOn: function() {
-        const zz = (0, lz.j)();
-        if (null === zz) return [];
+        const DD = (0, fD.g)();
+        if (null === DD) return [];
         const {
-          api: uz,
-          chunks: bz,
-          tables: Ez
-        } = zz;
-        if (!uz.readPosition(uz.localId, Yu)) return [];
-        const [nz, iz, Mz] = Yu, tz = Math.ceil(iz) - 1, Hz = [], Oz = [];
-        for (let lz = 0; lz < Cu.length; lz += 2) {
-          const zz = nz + Cu[lz],
-            uz = Mz + Cu[lz + 1];
-          if (Number.isInteger(zz) || Number.isInteger(uz)) continue;
-          const iz = Math.floor(zz),
-            pz = Math.floor(uz);
-          if (ku(Oz, iz, pz)) continue;
-          const dz = bz.hO(iz, tz, pz);
-          Ez.isSolidBlockId(dz) && (Oz.push(iz, pz), Hz.push(Ez.nameOfId(dz)))
+          api: CD,
+          chunks: cD,
+          tables: ID
+        } = DD;
+        if (!CD.readPosition(CD.localId, AC)) return [];
+        const [pD, iD, bD] = AC, QD = Math.ceil(iD) - 1, wD = [], SD = [];
+        for (let fD = 0; fD < rC.length; fD += 2) {
+          const DD = pD + rC[fD],
+            CD = bD + rC[fD + 1];
+          if (Number.isInteger(DD) || Number.isInteger(CD)) continue;
+          const iD = Math.floor(DD),
+            BD = Math.floor(CD);
+          if (FC(SD, iD, BD)) continue;
+          const yD = cD.HS(iD, QD, BD);
+          ID.isSolidBlockId(yD) && (SD.push(iD, BD), wD.push(ID.nameOfId(yD)))
         }
-        return Hz
+        return wD
       },
       dropAhead: function() {
-        const zz = (0, lz.j)();
-        return null !== zz && 0 !== (sz.z.playerFlags(zz.api.apiView, 0) & sz.Id.DropAhead)
+        const DD = (0, fD.g)();
+        return null !== DD && 0 !== (XD.s.playerFlags(DD.api.apiView, 0) & XD.Zd.DropAhead)
       }
     };
-    var ub = bz(36378),
-      bb = bz(38441),
-      Eb = bz(1322),
-      nb = bz(39823);
-    const ib = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      lb = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var Cc = cD(36315),
+      cc = cD(38431),
+      Ic = cD(1340),
+      pc = cD(39743);
+    const ic = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      fc = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function Mb() {
-      const zz = new Set;
+    function bc() {
+      const DD = new Set;
       return {
-        add: uz => (zz.add(uz), () => {
-          zz.delete(uz)
+        add: CD => (DD.add(CD), () => {
+          DD.delete(CD)
         }),
         fire() {
-          for (const uz of zz) uz()
+          for (const CD of DD) CD()
         }
       }
     }
-    const tb = Object.freeze([]);
+    const Qc = Object.freeze([]);
 
-    function Hb(zz, uz) {
-      let bz, {
-        rereads: Ez,
-        followLocalId: nz
-      } = uz;
-      const lz = () => (bz = (0, Cz.n)(bz, zz()), bz);
+    function wc(DD, CD) {
+      let cD, {
+        rereads: ID,
+        followLocalId: pD
+      } = CD;
+      const fD = () => (cD = (0, rD.q)(cD, DD()), cD);
       return {
-        current: lz,
-        watch(zz) {
-          const uz = (0, Zz.d)((uz => {
-            Ez(uz) && zz(lz())
+        current: fD,
+        watch(DD) {
+          const CD = (0, tD.b)((CD => {
+            ID(CD) && DD(fD())
           }));
-          if (!nz) return uz;
-          let bz = (0, Fz.g)();
-          const Mz = (0, iz.A)((() => {
-            const uz = (0, Fz.g)();
-            uz !== bz && (bz = uz, zz(lz()))
+          if (!pD) return CD;
+          let cD = (0, MD.h)();
+          const bD = (0, iD.w)((() => {
+            const CD = (0, MD.h)();
+            CD !== cD && (cD = CD, DD(fD()))
           }));
           return () => {
-            uz(), Mz()
+            CD(), bD()
           }
         }
       }
     }
-    const Ob = {
-        players: Hb((function() {
-          const zz = Zz.f.ids(),
-            uz = {};
-          for (const iz of zz) {
-            var bz, Ez, nz;
-            uz[iz] = {
-              name: null !== (bz = Zz.f.getName(iz)) && void 0 !== bz ? bz : null,
-              ranks: null !== (Ez = Zz.f.getSetting(iz, "ranks")) && void 0 !== Ez ? Ez : tb,
-              cosmetics: null !== (nz = (0, Zz.h)(iz)) && void 0 !== nz ? nz : null
+    const Sc = {
+        players: wc((function() {
+          const DD = tD.f.ids(),
+            CD = {};
+          for (const iD of DD) {
+            var cD, ID, pD;
+            CD[iD] = {
+              name: null !== (cD = tD.f.getName(iD)) && void 0 !== cD ? cD : null,
+              ranks: null !== (ID = tD.f.getSetting(iD, "ranks")) && void 0 !== ID ? ID : Qc,
+              cosmetics: null !== (pD = (0, tD.g)(iD)) && void 0 !== pD ? pD : null
             }
           }
           return {
-            ids: zz,
-            byId: uz,
-            localId: (0, Fz.g)()
+            ids: DD,
+            byId: CD,
+            localId: (0, MD.h)()
           }
         }), {
-          rereads: zz => "roster" !== zz.kind || zz.members || zz.settings.has("ranks"),
+          rereads: DD => "roster" !== DD.kind || DD.members || DD.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: Hb((function() {
-          const zz = {};
-          for (const nz of Zz.f.ids()) {
-            var uz, bz, Ez;
-            zz[nz] = {
-              colour: null !== (uz = Zz.f.getSetting(nz, "colorInLobbyLeaderboard")) && void 0 !== uz ? uz : null,
-              values: null !== (bz = Zz.f.getSetting(nz, "lobbyLeaderboardValues")) && void 0 !== bz ? bz : null,
-              tags: null !== (Ez = Zz.f.getSetting(nz, "lobbyLeaderboardTags")) && void 0 !== Ez ? Ez : null
+        lobbyLeaderboardRows: wc((function() {
+          const DD = {};
+          for (const pD of tD.f.ids()) {
+            var CD, cD, ID;
+            DD[pD] = {
+              colour: null !== (CD = tD.f.getSetting(pD, "colorInLobbyLeaderboard")) && void 0 !== CD ? CD : null,
+              values: null !== (cD = tD.f.getSetting(pD, "lobbyLeaderboardValues")) && void 0 !== cD ? cD : null,
+              tags: null !== (ID = tD.f.getSetting(pD, "lobbyLeaderboardTags")) && void 0 !== ID ? ID : null
             }
           }
-          return zz
+          return DD
         }), {
-          rereads: function(zz) {
-            if ("roster" !== zz.kind) return "reset" === zz.kind;
+          rereads: function(DD) {
+            if ("roster" !== DD.kind) return "reset" === DD.kind;
             const {
-              members: uz,
-              settings: bz
-            } = zz;
-            return uz || bz.has("colorInLobbyLeaderboard") || bz.has("lobbyLeaderboardValues") || bz.has("lobbyLeaderboardTags")
+              members: CD,
+              settings: cD
+            } = DD;
+            return CD || cD.has("colorInLobbyLeaderboard") || cD.has("lobbyLeaderboardValues") || cD.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      pb = {
+      Bc = {
         cosmeticsUpdated: {
-          watch: zz => (0, Zz.d)((uz => {
-            if ("cosmetics" !== uz.kind) return;
-            const bz = (0, Fz.g)();
-            zz(uz.updates.map((zz => {
+          watch: DD => (0, tD.b)((CD => {
+            if ("cosmetics" !== CD.kind) return;
+            const cD = (0, MD.h)();
+            DD(CD.updates.map((DD => {
               let {
-                Yb: uz,
-                kb: Ez,
-                zE: nz
-              } = zz;
+                Tc: CD,
+                Gc: ID,
+                Rc: pD
+              } = DD;
               return {
-                local: uz === bz,
-                kb: Ez,
-                zE: nz
+                local: CD === cD,
+                Gc: ID,
+                Rc: pD
               }
             })))
           }))
         }
       };
-    var db = bz(2709),
-      Fb = bz(1673),
-      Zb = bz(627),
-      Rb = bz(39887);
-    let Kb = !1,
-      wb = null;
-    const Xb = {
-      setShopOpen(zz) {
-        var uz;
-        null === (uz = (0, lz.j)()) || void 0 === uz || uz.send(Gz.d.ShopMenuChanged, (0, Gz.J)(zz))
+    var yc = cD(2737),
+      Mc = cD(1701),
+      tc = cD(659),
+      Zc = cD(39791);
+    let oc = !1,
+      vc = null;
+    const Nc = {
+      setShopOpen(DD) {
+        var CD;
+        null === (CD = (0, fD.g)()) || void 0 === CD || CD.send(aD.e.ShopMenuChanged, (0, aD.U)(DD))
       },
-      buyShopItem(zz) {
-        var uz;
+      buyShopItem(DD) {
+        var CD;
         let {
-          categoryKey: bz,
-          itemKey: Ez,
-          userInput: nz
-        } = zz;
-        null === (uz = (0, lz.j)()) || void 0 === uz || uz.send(Gz.d.ItemBought, {
-          categoryKey: bz,
-          itemKey: Ez,
-          shopVersion: fz.b.get("_shopVersion"),
-          userInput: nz
+          categoryKey: cD,
+          itemKey: ID,
+          userInput: pD
+        } = DD;
+        null === (CD = (0, fD.g)()) || void 0 === CD || CD.send(aD.e.ItemBought, {
+          categoryKey: cD,
+          itemKey: ID,
+          shopVersion: gD.d.get("_shopVersion"),
+          userInput: pD
         })
       }
     };
-    let fb = !1;
-    var sb = bz(4575);
-    const rb = Xu.z.LookFrozen | Xu.z.ClicksSuppressed;
+    let gc = !1;
+    var Xc = cD(4592);
+    const mc = NC.C.LookFrozen | NC.C.ClicksSuppressed;
 
-    function ob(zz, uz) {
-      var bz;
-      null !== (bz = (0, lz.j)()) && void 0 !== bz && bz.send(zz, uz) || console.warn(`[bloxd-wasm-client] message ${zz} not sent: no live game or the core's command ring is full`)
-    }(0, Rz.i)(Pz.lb, (zz => {
-      const uz = (0, az.i)(Pz.lb, zz);
-      void 0 !== uz && Hz.k.sK("setDiscordReportKey", uz)
+    function nc(DD, CD) {
+      var cD;
+      null !== (cD = (0, fD.g)()) && void 0 !== cD && cD.send(DD, CD) || console.warn(`[bloxd-wasm-client] message ${DD} not sent: no live game or the core's command ring is full`)
+    }(0, ZD.l)(KD.ob, (DD => {
+      const CD = (0, VD.g)(KD.ob, DD);
+      void 0 !== CD && wD.i.Uo("setDiscordReportKey", CD)
     }));
-    const Nb = {
-      ignorePlayer(zz) {
-        ob(Gz.d.IgnoreUser, (0, Gz.v)({
-          bM: zz
+    const Oc = {
+      ignorePlayer(DD) {
+        nc(aD.e.IgnoreUser, (0, aD.D)({
+          Yf: DD
         }))
       },
-      reportPlayer(zz) {
+      reportPlayer(DD) {
         let {
-          playerId: uz,
-          chatMsgId: bz,
-          Nl: Ez,
-          details: nz
-        } = zz;
-        ob(Gz.d.UserReport, (0, Gz.$)({
-          dp: uz,
-          Fp: bz,
-          Nl: Ez,
-          vl: nz
+          playerId: CD,
+          chatMsgId: cD,
+          wf: ID,
+          details: pD
+        } = DD;
+        nc(aD.e.UserReport, (0, aD.rb)({
+          cB: CD,
+          IB: cD,
+          wf: ID,
+          Sf: pD
         }))
       },
-      reportWorldCodeChat(zz) {
+      reportWorldCodeChat(DD) {
         let {
-          chatMsgId: uz,
-          Nl: bz,
-          details: Ez
-        } = zz;
-        ob(Gz.d.UserReport, (0, Gz.$)({
-          dp: "",
-          Fp: uz,
-          Nl: bz,
-          vl: Ez
+          chatMsgId: CD,
+          wf: cD,
+          details: ID
+        } = DD;
+        nc(aD.e.UserReport, (0, aD.rb)({
+          cB: "",
+          IB: CD,
+          wf: cD,
+          Sf: ID
         }))
       },
-      requestDiscordReportKey(zz) {
-        ob(Gz.d.ReqDiscordReportKey, (0, Gz.B)(zz))
+      requestDiscordReportKey(DD) {
+        nc(aD.e.ReqDiscordReportKey, (0, aD.P)(DD))
       },
-      reportLobbyOrGame(zz) {
+      reportLobbyOrGame(DD) {
         let {
-          target: uz,
-          Nl: bz,
-          details: Ez
-        } = zz;
-        "customGame" === uz ? ob(Gz.d.CustomGameReport, (0, Gz.r)({
-          Nl: bz,
-          vl: Ez
-        })) : ob(Gz.d.LobbyReport, (0, Gz.w)({
-          Nl: bz,
-          vl: Ez
+          target: CD,
+          wf: cD,
+          details: ID
+        } = DD;
+        "customGame" === CD ? nc(aD.e.CustomGameReport, (0, aD.y)({
+          wf: cD,
+          Sf: ID
+        })) : nc(aD.e.LobbyReport, (0, aD.G)({
+          wf: cD,
+          Sf: ID
         }))
       },
-      updateMyCosmetic(zz) {
-        ob(Gz.d.UpdateMyCosmetic, (0, Gz.Y)(zz))
+      updateMyCosmetic(DD) {
+        nc(aD.e.UpdateMyCosmetic, (0, aD.ob)(DD))
       },
-      holdEmoteWheel(zz) {
-        !zz || su ? (0, sb.i)(rb, zz ? rb : 0) : Hz.k.sK("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(DD) {
+        !DD || XC ? (0, Xc.k)(mc, DD ? mc : 0) : wD.i.Uo("requestEmoteWheelHoldRelease")
       }
     };
-    var vb = bz(39895),
-      xb = bz(9078),
-      Jb = bz(38966);
-    const Ab = [0, 0, 0],
-      Tb = [0, 0, 0],
-      Lb = [0, 0, 0],
-      Pb = {
-        blockAtViewPoint(zz) {
+    var Pc = cD(39793),
+      Hc = cD(9141),
+      Uc = cD(38913);
+    const xc = [0, 0, 0],
+      qc = [0, 0, 0],
+      Jc = [0, 0, 0],
+      Kc = {
+        blockAtViewPoint(DD) {
           let {
-            x: uz,
-            y: bz
-          } = zz;
-          const Ez = (0, lz.j)();
-          if (null === Ez || void 0 === Ez || !Ez.renderFrame.hasView) return null;
+            x: CD,
+            y: cD
+          } = DD;
+          const ID = (0, fD.g)();
+          if (null === ID || void 0 === ID || !ID.renderFrame.hasView) return null;
           const {
-            renderFrame: nz,
-            clientApi: iz,
-            api: Mz
-          } = Ez;
-          let tz = 0;
-          return (0, Jb.f)(((zz, uz, bz) => (tz = iz.getBlockId(zz, uz, bz), 0 !== tz)), nz.cameraPosition, (0, Jb.h)((zz => sz.z.viewProj(Mz.apiView, 0, zz)), uz, bz, Ab), Jb.e, Tb, Lb) ? {
-            pos: [Tb[0], Tb[1], Tb[2]],
-            normal: [Lb[0], Lb[1], Lb[2]],
-            name: (0, xb.g)(tz)
+            renderFrame: pD,
+            clientApi: iD,
+            api: bD
+          } = ID;
+          let QD = 0;
+          return (0, Uc.d)(((DD, CD, cD) => (QD = iD.getBlockId(DD, CD, cD), 0 !== QD)), pD.cameraPosition, (0, Uc.e)((DD => XD.s.viewProj(bD.apiView, 0, DD)), CD, cD, xc), Uc.c, qc, Jc) ? {
+            pos: [qc[0], qc[1], qc[2]],
+            normal: [Jc[0], Jc[1], Jc[2]],
+            name: (0, Hc.f)(QD)
           } : null
         }
       },
-      Gb = {
-        setBlockHighlight(zz) {
-          var uz;
-          null === (uz = (0, lz.j)()) || void 0 === uz || uz.setBlockHighlight(zz)
+      ac = {
+        setBlockHighlight(DD) {
+          var CD;
+          null === (CD = (0, fD.g)()) || void 0 === CD || CD.setBlockHighlight(DD)
         }
       };
-    var ab = bz(1878),
-      Vb = bz(39898),
-      mb = bz(39902),
-      qb = bz(39910);
-    var hb = bz(584),
-      Ub = bz(38970);
+    var Vc = cD(1922),
+      zc = cD(39800),
+      jc = cD(39804),
+      lc = cD(39808);
+    var Lc = cD(613),
+      Tc = cD(38921);
 
-    function cb(zz) {
-      if (null === zz || void 0 === zz || !zz.isCoreRunning) return null;
+    function Gc(DD) {
+      if (null === DD || void 0 === DD || !DD.isCoreRunning) return null;
       const {
-        api: uz,
-        chunks: bz,
-        items: Ez,
-        tables: nz
-      } = zz;
+        api: CD,
+        chunks: cD,
+        items: ID,
+        tables: pD
+      } = DD;
       return {
         playerFeet() {
-          const zz = uz.Gs(uz.localId);
-          return null !== zz && void 0 !== zz && zz.every(Number.isFinite) ? zz : null
+          const DD = CD.FX(CD.localId);
+          return null !== DD && void 0 !== DD && DD.every(Number.isFinite) ? DD : null
         },
-        chunkBlocks: zz => bz.isLoaded(zz[0], zz[1], zz[2]) ? (zz, uz, Ez) => bz.hO(zz, uz, Ez) : null,
-        blockName: zz => nz.nameOfId(zz),
+        chunkBlocks: DD => cD.isLoaded(DD[0], DD[1], DD[2]) ? (DD, CD, ID) => cD.HS(DD, CD, ID) : null,
+        blockName: DD => pD.nameOfId(DD),
         inventory: () => ({
-          slots: Ez.playerItems().map((zz => zz ? {
-            name: zz.name,
-            amount: zz.amount
+          slots: ID.playerItems().map((DD => DD ? {
+            name: DD.name,
+            amount: DD.amount
           } : null)),
-          heldSlot: Ez.selectedSlot
+          heldSlot: ID.selectedSlot
         }),
         nearby() {
-          const bz = [];
-          for (let nz = 0; nz < uz.idStr.length; nz++) {
-            var Ez;
-            const iz = uz.idStr[nz],
-              lz = uz.serverIds[nz],
-              Mz = uz.kinds[nz];
-            if (null === iz || uz.isLocal(lz) || Mz >>> sz.e !== sz.w.Lifeform) continue;
-            const tz = uz.Gs(lz),
-              Hz = hb.j[Mz & sz.i];
-            tz && void 0 !== Hz && bz.push({
-              kind: "Player" === Hz ? "player" : Hz,
-              name: null !== (Ez = zz.clientApi.getEntityName(iz)) && void 0 !== Ez ? Ez : null,
-              position: tz
+          const cD = [];
+          for (let pD = 0; pD < CD.idStr.length; pD++) {
+            var ID;
+            const iD = CD.idStr[pD],
+              fD = CD.serverIds[pD],
+              bD = CD.kinds[pD];
+            if (null === iD || CD.isLocal(fD) || bD >>> XD.d !== XD.o.Lifeform) continue;
+            const QD = CD.FX(fD),
+              wD = Lc.j[bD & XD.g];
+            QD && void 0 !== wD && cD.push({
+              kind: "Player" === wD ? "player" : wD,
+              name: null !== (ID = DD.clientApi.getEntityName(iD)) && void 0 !== ID ? ID : null,
+              position: QD
             })
           }
-          return bz
+          return cD
         },
         droppedItems() {
-          let zz = 0;
-          for (let bz = 0; bz < uz.idStr.length; bz++) null !== uz.idStr[bz] && uz.kinds[bz] >>> sz.e === sz.w.Item && zz++;
-          return zz
+          let DD = 0;
+          for (let cD = 0; cD < CD.idStr.length; cD++) null !== CD.idStr[cD] && CD.kinds[cD] >>> XD.d === XD.o.Item && DD++;
+          return DD
         }
       }
     }
-    const gb = {
-        worldCodeAiChunk: zz => Promise.resolve((0, Ub.e)(cb((0, lz.j)()), zz)),
-        worldCodeAiGameState: () => Promise.resolve((0, Ub.i)(cb((0, lz.j)())))
+    const Rc = {
+        worldCodeAiChunk: DD => Promise.resolve((0, Tc.b)(Gc((0, fD.g)()), DD)),
+        worldCodeAiGameState: () => Promise.resolve((0, Tc.e)(Gc((0, fD.g)())))
       },
-      Sb = function(zz) {
-        const uz = Mb(),
-          Ez = Mb(),
-          nz = new Set,
-          iz = new Set,
-          lz = () => {
-            var uz, bz;
-            return null !== (uz = null === (bz = zz.runtime()) || void 0 === bz ? void 0 : bz.currentViewer) && void 0 !== uz ? uz : null
+      kc = function(DD) {
+        const CD = bc(),
+          ID = bc(),
+          pD = new Set,
+          iD = new Set,
+          fD = () => {
+            var CD, cD;
+            return null !== (CD = null === (cD = DD.runtime()) || void 0 === cD ? void 0 : cD.currentViewer) && void 0 !== CD ? CD : null
           };
-        let Mz = null,
-          tz = null;
-        const Oz = (zz, uz) => ({
-            current: zz,
-            watch(bz) {
-              let Ez = zz();
-              return uz.add((() => {
-                const uz = zz();
-                uz !== Ez && (Ez = uz, bz(uz))
+        let bD = null,
+          QD = null;
+        const SD = (DD, CD) => ({
+            current: DD,
+            watch(cD) {
+              let ID = DD();
+              return CD.add((() => {
+                const CD = DD();
+                CD !== ID && (ID = CD, cD(CD))
               }))
             }
           }),
-          dz = zz => ({
-            watch: uz => (zz.add(uz), () => {
-              zz.delete(uz)
+          yD = DD => ({
+            watch: CD => (DD.add(CD), () => {
+              DD.delete(CD)
             })
           }),
-          Fz = zz => {
-            const uz = lz(),
-              bz = null === uz || void 0 === uz ? void 0 : uz.view;
-            uz && bz && uz.seek(Math.max(0, Math.min(bz.totalTicks - 1, bz.sd + zz * pz.qd)))
+          MD = DD => {
+            const CD = fD(),
+              cD = null === CD || void 0 === CD ? void 0 : CD.view;
+            CD && cD && CD.seek(Math.max(0, Math.min(cD.totalTicks - 1, cD.wy + DD * BD.nd)))
           },
-          Zz = {
-            replay: Oz((() => {
-              var zz;
-              const uz = lz(),
-                bz = null !== (zz = null === uz || void 0 === uz ? void 0 : uz.view) && void 0 !== zz ? zz : null;
-              return null === uz || null === bz || bz.state === pz.dd.None ? (Mz = null, null) : (Mz = (0, Cz.n)(Mz, {
-                id: uz.id,
-                sd: bz.sd,
-                totalTicks: bz.totalTicks,
-                pT: pz.qd,
-                playing: bz.state === pz.dd.Playing,
-                speed: bz.speed,
-                cameraMode: bz.cameraMode,
-                freecam: "freecam" === bz.cameraMode
-              }), Mz)
-            }), uz),
-            replayEdits: Oz((() => {
-              var zz;
-              const uz = lz(),
-                bz = null !== (zz = null === uz || void 0 === uz ? void 0 : uz.view) && void 0 !== zz ? zz : null;
-              return null === uz || null === bz || bz.state === pz.dd.None ? (tz = null, null) : (tz = (0, Cz.n)(tz, {
-                cameraKeyframes: [...uz.keyframes],
-                playbackMark: bz.mark,
-                fileName: uz.fileName,
-                unsavedChanges: uz.unsavedChanges,
-                suggestSaveAs: uz.suggestSaveAs
-              }), tz)
-            }), uz),
-            replayRecorder: Oz((() => {
-              var uz, bz;
-              return null !== (uz = null === (bz = zz.runtime()) || void 0 === bz ? void 0 : bz.recorder.current) && void 0 !== uz ? uz : nb.e.states.replayRecorder.current()
-            }), Ez),
+          tD = {
+            replay: SD((() => {
+              var DD;
+              const CD = fD(),
+                cD = null !== (DD = null === CD || void 0 === CD ? void 0 : CD.view) && void 0 !== DD ? DD : null;
+              return null === CD || null === cD || cD.state === BD.ad.None ? (bD = null, null) : (bD = (0, rD.q)(bD, {
+                id: CD.id,
+                wy: cD.wy,
+                totalTicks: cD.totalTicks,
+                Yq: BD.nd,
+                playing: cD.state === BD.ad.Playing,
+                speed: cD.speed,
+                cameraMode: cD.cameraMode,
+                freecam: "freecam" === cD.cameraMode
+              }), bD)
+            }), CD),
+            replayEdits: SD((() => {
+              var DD;
+              const CD = fD(),
+                cD = null !== (DD = null === CD || void 0 === CD ? void 0 : CD.view) && void 0 !== DD ? DD : null;
+              return null === CD || null === cD || cD.state === BD.ad.None ? (QD = null, null) : (QD = (0, rD.q)(QD, {
+                cameraKeyframes: [...CD.keyframes],
+                playbackMark: cD.mark,
+                fileName: CD.fileName,
+                unsavedChanges: CD.unsavedChanges,
+                suggestSaveAs: CD.suggestSaveAs
+              }), QD)
+            }), CD),
+            replayRecorder: SD((() => {
+              var CD, cD;
+              return null !== (CD = null === (cD = DD.runtime()) || void 0 === cD ? void 0 : cD.recorder.current) && void 0 !== CD ? CD : pc.e.states.replayRecorder.current()
+            }), ID),
             replayVideoExporting: {
-              current: bb.b,
-              watch: zz => (0, Hz.o)("replayViewer|videoExportChanged", (() => {
-                zz((0, bb.b)())
+              current: cc.d,
+              watch: DD => (0, wD.k)("replayViewer|videoExportChanged", (() => {
+                DD((0, cc.d)())
               }))
             }
           },
-          Rz = {
-            replayUiActionRequested: dz(iz),
-            replayViewerRequested: dz(nz)
+          ZD = {
+            replayUiActionRequested: yD(iD),
+            replayViewerRequested: yD(pD)
           },
-          Kz = zz => {
-            for (const uz of nz) uz(zz)
+          oD = DD => {
+            for (const CD of pD) CD(DD)
           },
-          wz = () => {
-            var Ez;
-            !0 === (null === (Ez = lz()) || void 0 === Ez ? void 0 : Ez.isOpen) && Promise.all([bz.e(94), bz.e(63)]).then((() => bz(41838))).then((bz => {
+          vD = () => {
+            var ID;
+            !0 === (null === (ID = fD()) || void 0 === ID ? void 0 : ID.isOpen) && Promise.all([cD.e(94), cD.e(63)]).then((() => cD(41755))).then((cD => {
               let {
-                startWasmReplayVideoExport: Ez
-              } = bz;
-              return Ez({
-                viewer: lz,
+                startWasmReplayVideoExport: ID
+              } = cD;
+              return ID({
+                viewer: fD,
                 canvas: () => {
-                  var uz, bz;
-                  return null !== (uz = null === (bz = zz.canvas) || void 0 === bz ? void 0 : bz.call(zz)) && void 0 !== uz ? uz : null
+                  var CD, cD;
+                  return null !== (CD = null === (cD = DD.canvas) || void 0 === cD ? void 0 : cD.call(DD)) && void 0 !== CD ? CD : null
                 },
-                watchViewer: uz.add,
-                requestViewer: Kz
+                watchViewer: CD.add,
+                requestViewer: oD
               })
-            }), (zz => {
-              console.error("Couldn't load the video export", zz), Eb.NotificationProvider.showAlertPopup({
+            }), (DD => {
+              console.error("Couldn't load the video export", DD), Ic.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((zz => {
-              console.error("The video export failed", zz)
+            })).catch((DD => {
+              console.error("The video export failed", DD)
             }))
           },
-          Xz = {
-            replayAction(zz) {
-              if ((0, bb.b)()) return;
-              const uz = lz();
-              switch (zz) {
+          ND = {
+            replayAction(DD) {
+              if ((0, cc.d)()) return;
+              const CD = fD();
+              switch (DD) {
                 case "replaySkipBack":
-                  Fz(-1);
+                  MD(-1);
                   break;
                 case "replaySkipForward":
-                  Fz(1);
+                  MD(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== uz && void 0 !== uz && uz.view && uz.setSpeed((0, ub.k)(uz.view.speed, "replaySpeedUp" === zz ? "up" : "down"));
+                  null !== CD && void 0 !== CD && CD.view && CD.setSpeed((0, Cc.i)(CD.view.speed, "replaySpeedUp" === DD ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === uz || void 0 === uz || uz.addKeyframe()
+                  null === CD || void 0 === CD || CD.addKeyframe()
               }
             },
-            setReplayPlaying(zz) {
-              var uz, bz;
-              (0, bb.b)() || (zz ? null === (uz = lz()) || void 0 === uz || uz.play() : null === (bz = lz()) || void 0 === bz || bz.pause())
+            setReplayPlaying(DD) {
+              var CD, cD;
+              (0, cc.d)() || (DD ? null === (CD = fD()) || void 0 === CD || CD.play() : null === (cD = fD()) || void 0 === cD || cD.pause())
             },
-            seekReplay(zz) {
-              var uz;
+            seekReplay(DD) {
+              var CD;
               let {
-                sd: bz,
-                ignorePlaybackMark: Ez
-              } = zz;
-              null === (uz = lz()) || void 0 === uz || uz.seek(bz, null !== Ez && void 0 !== Ez && Ez)
+                wy: cD,
+                ignorePlaybackMark: ID
+              } = DD;
+              null === (CD = fD()) || void 0 === CD || CD.seek(cD, null !== ID && void 0 !== ID && ID)
             },
-            setReplayCameraMode(zz) {
-              var uz;
-              null === (uz = lz()) || void 0 === uz || uz.setCameraMode(zz)
+            setReplayCameraMode(DD) {
+              var CD;
+              null === (CD = fD()) || void 0 === CD || CD.setCameraMode(DD)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(zz) {
-              var uz;
-              null === (uz = lz()) || void 0 === uz || uz.setKeyframe(zz)
+            setReplayCameraKeyframe(DD) {
+              var CD;
+              null === (CD = fD()) || void 0 === CD || CD.setKeyframe(DD)
             },
-            moveReplayCameraKeyframe(zz) {
-              var uz;
+            moveReplayCameraKeyframe(DD) {
+              var CD;
               let {
-                from: bz,
-                to: Ez
-              } = zz;
-              null === (uz = lz()) || void 0 === uz || uz.moveKeyframe(bz, Ez)
+                from: cD,
+                to: ID
+              } = DD;
+              null === (CD = fD()) || void 0 === CD || CD.moveKeyframe(cD, ID)
             },
-            deleteReplayCameraKeyframes(zz) {
-              var uz;
+            deleteReplayCameraKeyframes(DD) {
+              var CD;
               let {
-                start: bz,
-                end: Ez
-              } = zz;
-              null === (uz = lz()) || void 0 === uz || uz.deleteKeyframes(bz, Ez)
+                start: cD,
+                end: ID
+              } = DD;
+              null === (CD = fD()) || void 0 === CD || CD.deleteKeyframes(cD, ID)
             },
-            setReplayPlaybackMark(zz) {
-              var uz;
-              null === (uz = lz()) || void 0 === uz || uz.setMark(zz)
+            setReplayPlaybackMark(DD) {
+              var CD;
+              null === (CD = fD()) || void 0 === CD || CD.setMark(DD)
             },
-            cropReplay(zz) {
-              var uz, bz;
+            cropReplay(DD) {
+              var CD, cD;
               let {
-                start: Ez,
-                end: nz
-              } = zz;
-              return !(0, bb.b)() && (null !== (uz = null === (bz = lz()) || void 0 === bz ? void 0 : bz.crop(Ez, nz)) && void 0 !== uz && uz)
+                start: ID,
+                end: pD
+              } = DD;
+              return !(0, cc.d)() && (null !== (CD = null === (cD = fD()) || void 0 === cD ? void 0 : cD.crop(ID, pD)) && void 0 !== CD && CD)
             },
-            holdReplayForShaderPackFailure(zz) {
-              const uz = lz();
-              uz && (uz.holdForShaderPackFailure(), function(zz) {
-                bz.e(129).then((() => bz(38566))).then((uz => {
+            holdReplayForShaderPackFailure(DD) {
+              const CD = fD();
+              CD && (CD.holdForShaderPackFailure(), function(DD) {
+                cD.e(129).then((() => cD(38527))).then((CD => {
                   let {
-                    shaderPackPage: bz
-                  } = uz;
-                  bz.block(zz)
-                })).catch((zz => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", zz)
+                    shaderPackPage: cD
+                  } = CD;
+                  cD.block(DD)
+                })).catch((DD => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", DD)
                 }))
-              }(zz))
+              }(DD))
             },
             exportReplayVideo() {
-              wz()
+              vD()
             },
             toggleRecording() {
-              var uz;
-              null === (uz = zz.runtime()) || void 0 === uz || uz.recorder.toggleRecording()
+              var CD;
+              null === (CD = DD.runtime()) || void 0 === CD || CD.recorder.toggleRecording()
             },
             saveClip() {
-              var uz;
-              null === (uz = zz.runtime()) || void 0 === uz || uz.recorder.saveClip()
+              var CD;
+              null === (CD = DD.runtime()) || void 0 === CD || CD.recorder.saveClip()
             },
-            setRecorderPrefs(uz) {
-              var bz;
+            setRecorderPrefs(CD) {
+              var cD;
               let {
-                clipping: Ez,
-                clipSeconds: nz
-              } = uz;
-              null === (bz = zz.runtime()) || void 0 === bz || bz.recorder.setPrefs(Ez, nz)
+                clipping: ID,
+                clipSeconds: pD
+              } = CD;
+              null === (cD = DD.runtime()) || void 0 === cD || cD.recorder.setPrefs(ID, pD)
             },
-            setReplayViewerOpen(uz) {
-              var bz;
-              (0, Ru.e)(uz) && (null === (bz = zz.runtime()) || void 0 === bz || bz.recorder.viewerShown(uz))
+            setReplayViewerOpen(CD) {
+              var cD;
+              (0, ZC.f)(CD) && (null === (cD = DD.runtime()) || void 0 === cD || cD.recorder.viewerShown(CD))
             },
-            recordFlyingMiddleText(uz) {
-              var bz;
+            recordFlyingMiddleText(CD) {
+              var cD;
               let {
-                content: Ez,
-                ki: nz,
-                angle: iz,
-                zl: lz
-              } = uz;
-              null === (bz = zz.runtime()) || void 0 === bz || bz.recorder.recordFlyingText(JSON.stringify(Ez), nz, iz, lz)
+                content: ID,
+                zi: pD,
+                angle: iD,
+                ji: fD
+              } = CD;
+              null === (cD = DD.runtime()) || void 0 === cD || cD.recorder.recordFlyingText(JSON.stringify(ID), pD, iD, fD)
             },
-            dragReplayCamera(uz) {
-              var bz;
+            dragReplayCamera(CD) {
+              var cD;
               let {
-                dx: Ez,
-                dy: nz
-              } = uz;
-              null === (bz = zz.freecam()) || void 0 === bz || bz.drag(Ez, nz)
+                dx: ID,
+                dy: pD
+              } = CD;
+              null === (cD = DD.freecam()) || void 0 === cD || cD.drag(ID, pD)
             },
-            moveReplayFreecam(uz) {
-              var bz;
-              null === (bz = zz.freecam()) || void 0 === bz || bz.move(uz)
+            moveReplayFreecam(CD) {
+              var cD;
+              null === (cD = DD.freecam()) || void 0 === cD || cD.move(CD)
             },
-            holdReplayFreecamVertical(uz) {
-              var bz;
+            holdReplayFreecamVertical(CD) {
+              var cD;
               let {
-                action: Ez,
-                yM: nz
-              } = uz;
-              null === (bz = zz.freecam()) || void 0 === bz || bz.holdVertical(Ez, nz)
+                action: ID,
+                Lb: pD
+              } = CD;
+              null === (cD = DD.freecam()) || void 0 === cD || cD.holdVertical(ID, pD)
             }
           },
-          fz = zz => {
-            var uz;
-            const bz = lz(),
-              Ez = null !== (uz = null === bz || void 0 === bz ? void 0 : bz.view) && void 0 !== uz ? uz : null;
-            ib.has(zz) ? (zz => {
-              for (const uz of iz) uz(zz)
-            })(zz) : lb.has(zz) ? Xz.replayAction(zz) : "replayPlayPause" === zz ? bz && Ez && Ez.state !== pz.dd.None && Xz.setReplayPlaying(Ez.state !== pz.dd.Playing) : "replayChangeCameraMode" === zz ? null === bz || void 0 === bz || bz.cycleCameraMode() : "replayExit" === zz ? !0 === (null === bz || void 0 === bz ? void 0 : bz.inPlayback) && (0, au.k)("/") : "replayExportVideo" === zz && wz()
+          gD = DD => {
+            var CD;
+            const cD = fD(),
+              ID = null !== (CD = null === cD || void 0 === cD ? void 0 : cD.view) && void 0 !== CD ? CD : null;
+            ic.has(DD) ? (DD => {
+              for (const CD of iD) CD(DD)
+            })(DD) : fc.has(DD) ? ND.replayAction(DD) : "replayPlayPause" === DD ? cD && ID && ID.state !== BD.ad.None && ND.setReplayPlaying(ID.state !== BD.ad.Playing) : "replayChangeCameraMode" === DD ? null === cD || void 0 === cD || cD.cycleCameraMode() : "replayExit" === DD ? !0 === (null === cD || void 0 === cD ? void 0 : cD.inPlayback) && (0, VC.i)("/") : "replayExportVideo" === DD && vD()
           };
-        let sz = !1;
+        let XD = !1;
         return {
-          states: Zz,
-          events: Rz,
-          commands: Xz,
+          states: tD,
+          events: ZD,
+          commands: ND,
           lookups: {
             replayCamera() {
-              var uz, bz, Ez;
-              return !0 !== (null === (uz = lz()) || void 0 === uz ? void 0 : uz.isOpen) ? null : null !== (bz = null === (Ez = zz.cameraView) || void 0 === Ez ? void 0 : Ez.call(zz)) && void 0 !== bz ? bz : null
+              var CD, cD, ID;
+              return !0 !== (null === (CD = fD()) || void 0 === CD ? void 0 : CD.isOpen) ? null : null !== (cD = null === (ID = DD.cameraView) || void 0 === ID ? void 0 : ID.call(DD)) && void 0 !== cD ? cD : null
             },
             leaveGameReloadsPage() {
-              var zz;
-              return !0 === (null === (zz = lz()) || void 0 === zz ? void 0 : zz.inPlayback)
+              var DD;
+              return !0 === (null === (DD = fD()) || void 0 === DD ? void 0 : DD.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var zz;
-              const bz = !0 === (null === (zz = lz()) || void 0 === zz ? void 0 : zz.inPlayback);
-              bz !== sz && (sz = bz, Hz.k.sK("connectedGameChanged")), uz.fire()
+              var DD;
+              const cD = !0 === (null === (DD = fD()) || void 0 === DD ? void 0 : DD.inPlayback);
+              cD !== XD && (XD = cD, wD.i.Uo("connectedGameChanged")), CD.fire()
             },
-            recorderChanged: Ez.fire,
-            keyDown: zz => {
-              var uz;
-              switch (zz) {
+            recorderChanged: ID.fire,
+            keyDown: DD => {
+              var CD;
+              switch (DD) {
                 case "recordGame":
-                  return void Xz.toggleRecording();
+                  return void ND.toggleRecording();
                 case "recordClip":
-                  return void((0, Ru.d)() || Xz.saveClip())
-              }(0, bb.b)() || ("replayViewerOpen" !== zz ? zz.startsWith("replay") && ((0, Ru.d)() || !0 === (null === (uz = lz()) || void 0 === uz ? void 0 : uz.inPlayback)) && fz(zz) : Kz("toggle"))
+                  return void((0, ZC.d)() || ND.saveClip())
+              }(0, cc.d)() || ("replayViewerOpen" !== DD ? DD.startsWith("replay") && ((0, ZC.d)() || !0 === (null === (CD = fD()) || void 0 === CD ? void 0 : CD.inPlayback)) && gD(DD) : oD("toggle"))
             }
           }
         }
       }({
-        runtime: nz.h,
+        runtime: pD.n,
         cameraView: () => {
-          var zz;
-          const uz = null === (zz = (0, lz.j)()) || void 0 === zz ? void 0 : zz.renderFrame;
-          if (!uz) return null;
-          const [bz, Ez, nz] = uz.cameraPosition, [iz, Mz, tz] = uz.cameraDirection;
+          var DD;
+          const CD = null === (DD = (0, fD.g)()) || void 0 === DD ? void 0 : DD.renderFrame;
+          if (!CD) return null;
+          const [cD, ID, pD] = CD.cameraPosition, [iD, bD, QD] = CD.cameraDirection;
           return {
-            position: [bz, Ez, nz],
-            direction: [iz, Mz, tz]
+            position: [cD, ID, pD],
+            direction: [iD, bD, QD]
           }
         },
         canvas: () => {
-          var zz, uz, bz;
-          return null !== (zz = null === (uz = (bz = (0, iz.M)()).canvas) || void 0 === uz ? void 0 : uz.call(bz)) && void 0 !== zz ? zz : null
+          var DD, CD, cD;
+          return null !== (DD = null === (CD = (cD = (0, iD.K)()).canvas) || void 0 === CD ? void 0 : CD.call(cD)) && void 0 !== DD ? DD : null
         },
-        freecam: nz.g
+        freecam: pD.j
       }),
-      yb = {
+      dc = {
         states: {
-          ...Hu,
-          ...Fu.e,
-          ...Sb.states,
-          ...Ob,
-          ...Sz
+          ...wC,
+          ...MC.j,
+          ...kc.states,
+          ...Sc,
+          ...kD
         },
         events: {
-          ...Ou,
-          ...Kz,
-          ...Fu.c,
-          ...Jz.d,
-          ...vb.h,
-          ...Sb.events,
-          ...pb,
-          ...xz.h
+          ...SC,
+          ...oD,
+          ...MC.f,
+          ...UD.e,
+          ...Pc.f,
+          ...kc.events,
+          ...Bc,
+          ...HD.g
         },
         commands: {
-          ...vz,
-          ...pu,
-          ...wz,
-          ...Fu.b,
-          ...ju,
-          ...Nb,
-          ...xz.e,
-          ...qu,
-          ...Sb.commands,
-          ...Xb,
-          ...yz,
-          ...Gb
+          ...PD,
+          ...BC,
+          ...vD,
+          ...MC.c,
+          ...eC,
+          ...Oc,
+          ...HD.f,
+          ...lC,
+          ...kc.commands,
+          ...Nc,
+          ...dD,
+          ...ac
         },
         queries: {
-          ...Fu.d,
-          ...gb
+          ...MC.i,
+          ...Rc
         },
         lookups: {
-          ...du,
-          ...mz,
-          ...vb.l,
-          ...Sb.lookups,
-          ...Nz,
-          ...zb,
-          ...Pb,
-          ...Dz
+          ...yC,
+          ...jD,
+          ...Pc.g,
+          ...kc.lookups,
+          ...OD,
+          ...Dc,
+          ...Kc,
+          ...YD
         }
       };
 
-    function Db() {
-      (0, Mz.g)(Rz.k), (0, nz.l)(Sb.feed), (0, Jz.h)(), Iu || (Iu = !0, (0, Rz.i)(Pz.l, (zz => {
-        const uz = (0, az.i)(Pz.l, zz);
-        "string" === typeof uz && Promise.resolve().then((() => bz(3398))).then((zz => {
+    function Yc() {
+      (0, bD.h)(ZD.o), (0, pD.q)(kc.feed), (0, UD.g)(), uC || (uC = !0, (0, ZD.l)(KD.p, (DD => {
+        const CD = (0, VD.g)(KD.p, DD);
+        "string" === typeof CD && Promise.resolve().then((() => cD(3460))).then((DD => {
           let {
-            onCosmeticPackGranted: bz
-          } = zz;
-          bz(uz)
+            onCosmeticPackGranted: cD
+          } = DD;
+          cD(CD)
         }))
-      })), (0, Rz.i)(Pz.gb, (zz => {
-        const uz = (0, az.i)(Pz.gb, zz);
-        "number" === typeof uz && Hz.k.sK("serverUpdating", Date.now() + uz, !0)
-      })), (0, Rz.i)(Pz.F, (zz => {
-        const uz = (0, az.i)(Pz.F, zz);
-        if ((0, az.e)(uz)) {
+      })), (0, ZD.l)(KD.lb, (DD => {
+        const CD = (0, VD.g)(KD.lb, DD);
+        "number" === typeof CD && wD.i.Uo("serverUpdating", Date.now() + CD, !0)
+      })), (0, ZD.l)(KD.M, (DD => {
+        const CD = (0, VD.g)(KD.M, DD);
+        if ((0, VD.e)(CD)) {
           const {
-            zz: zz,
-            bz: bz
-          } = uz;
-          (0, Wu.c)({
-            zz: "string" === typeof zz ? zz : null,
-            bz: "string" === typeof bz ? bz : null
+            DD: DD,
+            CD: cD
+          } = CD;
+          (0, sC.d)({
+            DD: "string" === typeof DD ? DD : null,
+            CD: "string" === typeof cD ? cD : null
           })
         }
-      })), (0, Rz.i)(Oz.Wb.NewUiRequest, (zz => {
-        const uz = (0, az.l)(zz);
-        (0, az.e)(uz) && "number" === typeof uz.id && (0, az.e)(uz.clientParameters) && (0, eu.e)(uz.id, uz.clientParameters)
-      })), (0, Rz.i)(Pz.Z, (zz => {
-        const uz = (0, az.i)(Pz.Z, zz);
-        "number" === typeof uz && (0, eu.i)(uz)
-      })), (0, Rz.h)(eu.c), (0, Rz.i)(Oz.Wb.UiRequestPopup, (zz => {
-        const uz = (0, az.l)(zz);
-        if ((0, az.e)(uz) && "number" === typeof uz.id && "string" === typeof uz.text) {
-          const zz = uz.id;
-          (0, eu.m)(zz, uz.text, (uz => {
-            ju.answerUiRequest({
-              id: zz,
-              Vl: uz
+      })), (0, ZD.l)(SD.dc.NewUiRequest, (DD => {
+        const CD = (0, VD.k)(DD);
+        (0, VD.e)(CD) && "number" === typeof CD.id && (0, VD.e)(CD.clientParameters) && (0, EC.g)(CD.id, CD.clientParameters)
+      })), (0, ZD.l)(KD.cb, (DD => {
+        const CD = (0, VD.g)(KD.cb, DD);
+        "number" === typeof CD && (0, EC.i)(CD)
+      })), (0, ZD.j)(EC.c), (0, ZD.l)(SD.dc.UiRequestPopup, (DD => {
+        const CD = (0, VD.k)(DD);
+        if ((0, VD.e)(CD) && "number" === typeof CD.id && "string" === typeof CD.text) {
+          const DD = CD.id;
+          (0, EC.m)(DD, CD.text, (CD => {
+            eC.answerUiRequest({
+              id: DD,
+              gf: CD
             })
           }))
         }
-      })), (0, Rz.i)(Oz.Wb.TopRightHelper, (zz => {
-        const uz = (0, az.l)(zz);
-        void 0 !== uz && Hz.k.sK("TopRightHelper", uz, !0)
-      })), (0, Rz.i)(Oz.Wb.TaskProgress, (zz => {
-        const uz = (0, az.l)(zz);
-        (0, az.e)(uz) && "string" === typeof uz.taskId && "number" === typeof uz.progress && (0, Qu.b)({
-          taskId: uz.taskId,
-          progress: uz.progress
+      })), (0, ZD.l)(SD.dc.TopRightHelper, (DD => {
+        const CD = (0, VD.k)(DD);
+        void 0 !== CD && wD.i.Uo("TopRightHelper", CD, !0)
+      })), (0, ZD.l)(SD.dc.TaskProgress, (DD => {
+        const CD = (0, VD.k)(DD);
+        (0, VD.e)(CD) && "string" === typeof CD.taskId && "number" === typeof CD.progress && (0, WC.d)({
+          taskId: CD.taskId,
+          progress: CD.progress
         })
-      }))), fb || (fb = !0, (0, Rz.i)(Pz.q, (zz => {
-        const uz = (0, az.i)(Pz.q, zz);
-        (0, az.e)(uz) && Hz.k.sK("showShopFromServer", {
-          toggle: uz.Ru,
-          Ku: uz.Ku
+      }))), gc || (gc = !0, (0, ZD.l)(KD.y, (DD => {
+        const CD = (0, VD.g)(KD.y, DD);
+        (0, VD.e)(CD) && wD.i.Uo("showShopFromServer", {
+          toggle: CD.wC,
+          SC: CD.SC
         }, !0)
-      })), (0, Rz.i)(Oz.Wb.OverShopInfo, (zz => {
-        const uz = (0, az.l)(zz);
-        (0, az.e)(uz) && Hz.k.sK("overShopInfo", uz.info, !0)
-      })), (0, Rz.i)(Oz.Wb.ShowShopTutorial, (() => {
-        Hz.k.sK("showShopTutorial", null, !0)
-      }))), Kb || (Kb = !0, (0, Rz.d)((() => {
-        var zz;
-        (0, db.G)(), null === (zz = wb) || void 0 === zz || zz(), wb = (0, Rz.b)() ? (0, Zb.f)(Rz.b) : null
-      })), (0, Rz.i)(Oz.Wb.SetCookie, (zz => {
-        const uz = (0, az.l)(zz),
-          bz = (0, au.b)().gameNameWithVariation;
-        (0, az.e)(uz) && "string" === typeof uz.key && null !== bz && (0, Fb.setCookie)(bz, uz.key, uz.value)
-      })), (0, Rz.i)(Oz.Wb.LeaveValues, (zz => {
-        const uz = (0, az.l)(zz);
-        if ((0, az.e)(uz) && "string" === typeof uz.leaveEventType) {
+      })), (0, ZD.l)(SD.dc.OverShopInfo, (DD => {
+        const CD = (0, VD.k)(DD);
+        (0, VD.e)(CD) && wD.i.Uo("overShopInfo", CD.info, !0)
+      })), (0, ZD.l)(SD.dc.ShowShopTutorial, (() => {
+        wD.i.Uo("showShopTutorial", null, !0)
+      }))), oc || (oc = !0, (0, ZD.i)((() => {
+        var DD;
+        (0, yc.D)(), null === (DD = vc) || void 0 === DD || DD(), vc = (0, ZD.e)() ? (0, tc.e)(ZD.e) : null
+      })), (0, ZD.l)(SD.dc.SetCookie, (DD => {
+        const CD = (0, VD.k)(DD),
+          cD = (0, VC.b)().gameNameWithVariation;
+        (0, VD.e)(CD) && "string" === typeof CD.key && null !== cD && (0, Mc.setCookie)(cD, CD.key, CD.value)
+      })), (0, ZD.l)(SD.dc.LeaveValues, (DD => {
+        const CD = (0, VD.k)(DD);
+        if ((0, VD.e)(CD) && "string" === typeof CD.leaveEventType) {
           const {
-            leaveEventType: zz,
-            category: bz,
-            subCategory: Ez,
-            value: nz
-          } = uz;
-          (0, db.J)({
-            leaveEventType: zz,
-            category: bz,
-            subCategory: Ez,
-            value: nz
+            leaveEventType: DD,
+            category: cD,
+            subCategory: ID,
+            value: pD
+          } = CD;
+          (0, yc.G)({
+            leaveEventType: DD,
+            category: cD,
+            subCategory: ID,
+            value: pD
           })
         }
-      })), (0, Rz.i)(Oz.Wb.CustomAnalyticsEvent, (zz => {
-        const uz = (0, az.l)(zz);
-        if ((0, az.e)(uz) && "string" === typeof uz.cat1) {
+      })), (0, ZD.l)(SD.dc.CustomAnalyticsEvent, (DD => {
+        const CD = (0, VD.k)(DD);
+        if ((0, VD.e)(CD) && "string" === typeof CD.cat1) {
           const {
-            cat1: zz,
-            cat2: bz,
-            cat3: Ez,
-            value: nz
-          } = uz;
-          (0, db.s)({
-            cat1: zz,
-            cat2: bz,
-            cat3: Ez,
-            value: nz
+            cat1: DD,
+            cat2: cD,
+            cat3: ID,
+            value: pD
+          } = CD;
+          (0, yc.q)({
+            cat1: DD,
+            cat2: cD,
+            cat3: ID,
+            value: pD
           })
         }
-      })), (0, Rz.i)(Oz.Wb.ProgressionEvent, (zz => {
-        const uz = (0, az.l)(zz);
-        if ((0, az.e)(uz)) {
+      })), (0, ZD.l)(SD.dc.ProgressionEvent, (DD => {
+        const CD = (0, VD.k)(DD);
+        if ((0, VD.e)(CD)) {
           const {
-            type: zz,
-            location1: bz,
-            location2: Ez,
-            location3: nz,
-            score: iz
-          } = uz;
-          (0, db.A)({
-            type: zz,
-            location1: bz,
-            location2: Ez,
-            location3: nz,
-            score: iz
+            type: DD,
+            location1: cD,
+            location2: ID,
+            location3: pD,
+            score: iD
+          } = CD;
+          (0, yc.x)({
+            type: DD,
+            location1: cD,
+            location2: ID,
+            location3: pD,
+            score: iD
           })
         }
-      })), (0, Rz.i)(Oz.Wb.ResourceEvent, (zz => {
-        const uz = (0, az.l)(zz);
-        if ((0, az.e)(uz)) {
+      })), (0, ZD.l)(SD.dc.ResourceEvent, (DD => {
+        const CD = (0, VD.k)(DD);
+        if ((0, VD.e)(CD)) {
           const {
-            type: zz,
-            resourceType: bz,
-            amount: Ez,
-            category: nz,
-            itemName: iz
-          } = uz;
-          (0, db.B)({
-            type: zz,
-            resourceType: bz,
-            amount: Ez,
-            category: nz,
-            itemName: iz
+            type: DD,
+            resourceType: cD,
+            amount: ID,
+            category: pD,
+            itemName: iD
+          } = CD;
+          (0, yc.A)({
+            type: DD,
+            resourceType: cD,
+            amount: ID,
+            category: pD,
+            itemName: iD
           })
         }
-      })), (0, Rz.i)(Oz.Wb.LeaderboardResponse, (zz => {
-        const uz = (0, az.l)(zz);
-        if ((0, az.e)(uz)) {
+      })), (0, ZD.l)(SD.dc.LeaderboardResponse, (DD => {
+        const CD = (0, VD.k)(DD);
+        if ((0, VD.e)(CD)) {
           const {
-            category: zz,
-            timeframe: bz,
-            data: Ez
-          } = uz;
-          Hz.k.sK("leaderboardResponse", {
-            category: zz,
-            timeframe: bz,
-            data: Ez
+            category: DD,
+            timeframe: cD,
+            data: ID
+          } = CD;
+          wD.i.Uo("leaderboardResponse", {
+            category: DD,
+            timeframe: cD,
+            data: ID
           })
         }
-      })), (0, Rz.i)(Pz.y, (zz => {
-        const uz = (0, az.i)(Pz.y, zz);
-        "string" === typeof uz && (0, Rb.b)(zz.conn, uz)
-      })), (0, Rz.i)(Pz.B, (zz => {
-        const uz = (0, az.i)(Pz.B, zz);
-        "string" === typeof uz && console.error(`[logErrorToConsole]: ${uz}`)
-      }))), hz(), (0, vb.c)(), mu || (mu = !0, (0, Rz.i)(Pz.h, (zz => {
-        const uz = (0, az.i)(Pz.h, zz);
-        void 0 !== uz && (0, Vu.i)(uz)
-      }))), Du(), Au(), ez || (ez = !0, (0, iz.w)(jz)), Ez.gameBridge.attach(yb), (0, Ez.installPageSources)({
+      })), (0, ZD.l)(KD.J, (DD => {
+        const CD = (0, VD.g)(KD.J, DD);
+        "string" === typeof CD && (0, Zc.e)(DD.conn, CD)
+      })), (0, ZD.l)(KD.K, (DD => {
+        const CD = (0, VD.g)(KD.K, DD);
+        "string" === typeof CD && console.error(`[logErrorToConsole]: ${CD}`)
+      }))), LD(), (0, Pc.b)(), jC || (jC = !0, (0, ZD.l)(KD.l, (DD => {
+        const CD = (0, VD.g)(KD.l, DD);
+        void 0 !== CD && (0, zC.e)(CD)
+      }))), YC(), xC(), ED || (ED = !0, (0, iD.t)(eD)), ID.gameBridge.attach(dc), (0, ID.installPageSources)({
         commands: {
-          ...Ez.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: Vb.f
+          ...ID.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: zc.h
         },
-        queries: qb.wasmIconQueries,
+        queries: lc.wasmIconQueries,
         lookups: {
-          ...Ez.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...qb.wasmIconLookups,
-          Kr: Vb.d,
-          drawCallStats: mb.h
+          ...ID.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...lc.wasmIconLookups,
+          Om: zc.d,
+          drawCallStats: jc.i
         }
-      }), (0, ab.c)(), (0, qb.loadIcons)()
+      }), (0, Vc.b)(), (0, lc.loadIcons)()
     }
   },
-  39922: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => lz,
-      g: () => Mz
+  39817: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => fD,
+      d: () => bD
     });
-    var Ez = bz(39925);
-    let nz = null,
-      iz = null;
+    var ID = cD(39822);
+    let pD = null,
+      iD = null;
 
-    function lz() {
-      return nz ??= bz.e(58).then((() => bz(41849))).catch((zz => {
-        throw nz = null, zz
-      })), nz
+    function fD() {
+      return pD ??= cD.e(58).then((() => cD(41772))).catch((DD => {
+        throw pD = null, DD
+      })), pD
     }
 
-    function Mz() {
-      return iz ??= Promise.all([lz(), (0, Ez.f)()]).then((zz => {
-        let [uz] = zz;
-        return uz
-      }), (zz => {
-        throw iz = null, zz
-      })), iz
+    function bD() {
+      return iD ??= Promise.all([fD(), (0, ID.h)()]).then((DD => {
+        let [CD] = DD;
+        return CD
+      }), (DD => {
+        throw iD = null, DD
+      })), iD
     }
   },
-  36491: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez
+  36420: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => ID
     });
-    const Ez = {
+    const ID = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -2718,87 +2718,87 @@ export const modules = {
       }
     }
   },
-  36297: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => nz,
-      h: () => iz,
-      l: () => dz,
-      m: () => Mz,
-      o: () => tz,
-      s: () => Hz,
-      t: () => pz,
-      v: () => Oz,
-      z: () => lz
+  36216: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => pD,
+      f: () => iD,
+      g: () => yD,
+      i: () => bD,
+      k: () => QD,
+      n: () => wD,
+      q: () => BD,
+      r: () => SD,
+      u: () => fD
     });
-    var Ez = bz(1226);
-    let nz = function(zz) {
-        return zz[zz.Join = 0] = "Join", zz[zz.Leave = 1] = "Leave", zz[zz.Push = 2] = "Push", zz[zz.Cursor = 3] = "Cursor", zz[zz.Submit = 4] = "Submit", zz[zz.ReloadAsVariation = 5] = "ReloadAsVariation", zz[zz.CreateFile = 6] = "CreateFile", zz[zz.RenameFile = 7] = "RenameFile", zz[zz.DeleteFile = 8] = "DeleteFile", zz[zz.SetEngine = 9] = "SetEngine", zz[zz.RenameFolder = 10] = "RenameFolder", zz
+    var ID = cD(1240);
+    let pD = function(DD) {
+        return DD[DD.Join = 0] = "Join", DD[DD.Leave = 1] = "Leave", DD[DD.Push = 2] = "Push", DD[DD.Cursor = 3] = "Cursor", DD[DD.Submit = 4] = "Submit", DD[DD.ReloadAsVariation = 5] = "ReloadAsVariation", DD[DD.CreateFile = 6] = "CreateFile", DD[DD.RenameFile = 7] = "RenameFile", DD[DD.DeleteFile = 8] = "DeleteFile", DD[DD.SetEngine = 9] = "SetEngine", DD[DD.RenameFolder = 10] = "RenameFolder", DD
       }({}),
-      iz = function(zz) {
-        return zz[zz.Joined = 0] = "Joined", zz[zz.Updates = 1] = "Updates", zz[zz.Presence = 2] = "Presence", zz[zz.RemoteCursor = 3] = "RemoteCursor", zz[zz.ForceClose = 4] = "ForceClose", zz[zz.LobbyFilesChanged = 5] = "LobbyFilesChanged", zz[zz.EngineSettings = 6] = "EngineSettings", zz
+      iD = function(DD) {
+        return DD[DD.Joined = 0] = "Joined", DD[DD.Updates = 1] = "Updates", DD[DD.Presence = 2] = "Presence", DD[DD.RemoteCursor = 3] = "RemoteCursor", DD[DD.ForceClose = 4] = "ForceClose", DD[DD.LobbyFilesChanged = 5] = "LobbyFilesChanged", DD[DD.EngineSettings = 6] = "EngineSettings", DD
       }({});
 
-    function lz(zz) {
-      return "lobby" === zz.kind ? `lobby:${zz.path}` : `codeBlock:${zz.pos[0]},${zz.pos[1]},${zz.pos[2]}`
+    function fD(DD) {
+      return "lobby" === DD.kind ? `lobby:${DD.path}` : `codeBlock:${DD.pos[0]},${DD.pos[1]},${DD.pos[2]}`
     }
 
-    function Mz(zz) {
-      if ("lobby" === zz) return {
+    function bD(DD) {
+      if ("lobby" === DD) return {
         kind: "lobby",
-        path: Ez.i
+        path: ID.g
       };
-      if (zz.startsWith("lobby:")) {
-        const uz = zz.slice(6);
-        return pz(uz) ? {
+      if (DD.startsWith("lobby:")) {
+        const CD = DD.slice(6);
+        return BD(CD) ? {
           kind: "lobby",
-          path: uz
+          path: CD
         } : null
       }
-      const uz = zz.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
-      return uz ? {
+      const CD = DD.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
+      return CD ? {
         kind: "codeBlock",
-        pos: [parseInt(uz[1]), parseInt(uz[2]), parseInt(uz[3])]
+        pos: [parseInt(CD[1]), parseInt(CD[2]), parseInt(CD[3])]
       } : null
     }
 
-    function tz(zz) {
-      return zz.endsWith(".d.ts")
+    function QD(DD) {
+      return DD.endsWith(".d.ts")
     }
 
-    function Hz(zz) {
-      return zz.endsWith(".ts") && !tz(zz)
+    function wD(DD) {
+      return DD.endsWith(".ts") && !QD(DD)
     }
-    const Oz = 64;
+    const SD = 64;
 
-    function pz(zz) {
-      if (!zz || zz !== zz.trim()) return !1;
-      if (zz.length > Oz) return !1;
-      if (zz.startsWith("/") || zz.includes("\\") || zz.includes("\0")) return !1;
-      if (!tz(zz) && !Hz(zz) && ! function(zz) {
-          return zz.endsWith(".js") && !zz.endsWith(".min.js") && !zz.endsWith(".bundle.js")
-        }(zz)) return !1;
-      const uz = zz.split("/");
-      for (const bz of uz)
-        if ("" === bz || "." === bz || ".." === bz) return !1;
+    function BD(DD) {
+      if (!DD || DD !== DD.trim()) return !1;
+      if (DD.length > SD) return !1;
+      if (DD.startsWith("/") || DD.includes("\\") || DD.includes("\0")) return !1;
+      if (!QD(DD) && !wD(DD) && ! function(DD) {
+          return DD.endsWith(".js") && !DD.endsWith(".min.js") && !DD.endsWith(".bundle.js")
+        }(DD)) return !1;
+      const CD = DD.split("/");
+      for (const cD of CD)
+        if ("" === cD || "." === cD || ".." === cD) return !1;
       return !0
     }
-    const dz = 14e3
+    const yD = 14e3
   },
-  38407: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez,
-      e: () => nz
+  38388: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => ID,
+      h: () => pD
     });
-    const Ez = ["description", "label"];
+    const ID = ["description", "label"];
 
-    function nz(zz) {
-      const uz = zz.type;
+    function pD(DD) {
+      const CD = DD.type;
       return {
-        type: uz,
-        params: zz[uz]
+        type: CD,
+        params: DD[CD]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

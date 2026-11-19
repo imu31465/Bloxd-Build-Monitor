@@ -1,77 +1,77 @@
 export const id = 200;
 export const ids = [200];
 export const modules = {
-  38482: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez
+  38465: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => ID
     });
-    class Ez {
-      constructor(zz, uz) {
-        this.read = zz, this.apply = uz, this.release = null
+    class ID {
+      constructor(DD, CD) {
+        this.read = DD, this.apply = CD, this.release = null
       }
-      turn(zz, uz) {
-        const bz = null === this.release ? this.read() : this.release.transitionMs;
+      turn(DD, CD) {
+        const cD = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: uz,
-          forcedCameraDirection: [zz[0], zz[1], zz[2]]
+          forcedCameraDirectionTransitionMs: CD,
+          forcedCameraDirection: [DD[0], DD[1], DD[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), uz + 100),
-          transitionMs: bz
+          }), CD + 100),
+          transitionMs: cD
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(zz) {
-        null !== this.release && (clearTimeout(this.release.timer), zz && this.apply({
+      stop(DD) {
+        null !== this.release && (clearTimeout(this.release.timer), DD && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  38026: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz,
-      h: () => nz
+  38017: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => iD,
+      f: () => pD
     });
-    const Ez = new Map;
+    const ID = new Map;
 
-    function nz(zz, uz) {
-      Ez.set(zz, uz)
+    function pD(DD, CD) {
+      ID.set(DD, CD)
     }
 
-    function iz(zz) {
-      return zz ? Ez.get(zz) : void 0
+    function iD(DD) {
+      return DD ? ID.get(DD) : void 0
     }
   },
-  38955: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => nz
+  38901: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => pD
     });
-    var Ez = bz(37630);
+    var ID = cD(37584);
 
-    function nz(zz, uz, bz) {
-      var nz, iz, lz, Mz, tz, Hz, Oz;
-      const pz = (0, Ez.b)(zz, uz, bz[0], bz[1], bz[2]),
-        dz = pz ? null !== (nz = pz.textCell) && void 0 !== nz ? nz : pz.rect.anchor : bz,
-        Fz = uz(dz[0], dz[1], dz[2]);
+    function pD(DD, CD, cD) {
+      var pD, iD, fD, bD, QD, wD, SD;
+      const BD = (0, ID.d)(DD, CD, cD[0], cD[1], cD[2]),
+        yD = BD ? null !== (pD = BD.textCell) && void 0 !== pD ? pD : BD.rect.anchor : cD,
+        MD = CD(yD[0], yD[1], yD[2]);
       return {
-        pos: [bz[0], bz[1], bz[2]],
-        noticeboardSpan: pz && {
-          width: pz.rect.width,
-          height: pz.rect.height
+        pos: [cD[0], cD[1], cD[2]],
+        noticeboardSpan: BD && {
+          width: BD.rect.width,
+          height: BD.rect.height
         },
-        text: null !== (iz = null === Fz || void 0 === Fz || null === (lz = Fz.persisted) || void 0 === lz || null === (Mz = lz.shared) || void 0 === Mz ? void 0 : Mz.text) && void 0 !== iz ? iz : "",
-        textSize: null !== (tz = null === Fz || void 0 === Fz || null === (Hz = Fz.persisted) || void 0 === Hz || null === (Oz = Hz.shared) || void 0 === Oz ? void 0 : Oz.textSize) && void 0 !== tz ? tz : null
+        text: null !== (iD = null === MD || void 0 === MD || null === (fD = MD.persisted) || void 0 === fD || null === (bD = fD.shared) || void 0 === bD ? void 0 : bD.text) && void 0 !== iD ? iD : "",
+        textSize: null !== (QD = null === MD || void 0 === MD || null === (wD = MD.persisted) || void 0 === wD || null === (SD = wD.shared) || void 0 === SD ? void 0 : SD.textSize) && void 0 !== QD ? QD : null
       }
     }
   },
-  37890: (zz, uz, bz) => {
-    function Ez(zz) {
-      switch (zz.kind) {
+  37879: (DD, CD, cD) => {
+    function ID(DD) {
+      switch (DD.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -80,452 +80,452 @@ export const modules = {
           return !0
       }
     }
-    bz.d(uz, {
-      d: () => nz,
-      h: () => iz,
-      l: () => Ez
+    cD.d(CD, {
+      b: () => pD,
+      f: () => iD,
+      j: () => ID
     });
-    const nz = 4,
-      iz = 3
+    const pD = 4,
+      iD = 3
   },
-  38498: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => nz,
-      g: () => iz
+  38481: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => pD,
+      e: () => iD
     });
-    var Ez = bz(328);
-    const nz = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
-    class iz {
-      constructor(zz) {
-        this.importGame = zz, this.loads = new Map, this.loaded = new Map
+    var ID = cD(326);
+    const pD = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
+    class iD {
+      constructor(DD) {
+        this.importGame = DD, this.loads = new Map, this.loaded = new Map
       }
-      load(zz) {
-        const uz = (0, Ez.Sb)(zz);
-        if (!nz.has(uz)) return Promise.resolve(void 0);
-        let bz = this.loads.get(uz);
-        return bz || (bz = this.importGame(uz).then((zz => {
-          const bz = zz.default;
-          if ("function" !== typeof bz) throw new Error(`${uz}'s client code has no default-exported factory`);
-          return this.loaded.set(uz, bz), bz
-        })).catch((zz => {
-          throw this.loads.delete(uz), zz
-        })), this.loads.set(uz, bz)), bz
+      load(DD) {
+        const CD = (0, ID.Vb)(DD);
+        if (!pD.has(CD)) return Promise.resolve(void 0);
+        let cD = this.loads.get(CD);
+        return cD || (cD = this.importGame(CD).then((DD => {
+          const cD = DD.default;
+          if ("function" !== typeof cD) throw new Error(`${CD}'s client code has no default-exported factory`);
+          return this.loaded.set(CD, cD), cD
+        })).catch((DD => {
+          throw this.loads.delete(CD), DD
+        })), this.loads.set(CD, cD)), cD
       }
-      loadedFactory(zz) {
-        const uz = (0, Ez.Sb)(zz);
-        if (!nz.has(uz)) return;
-        const bz = this.loaded.get(uz);
-        if (!bz) throw new Error(`${uz}'s client code started before it loaded`);
-        return bz
+      loadedFactory(DD) {
+        const CD = (0, ID.Vb)(DD);
+        if (!pD.has(CD)) return;
+        const cD = this.loaded.get(CD);
+        if (!cD) throw new Error(`${CD}'s client code started before it loaded`);
+        return cD
       }
     }
   },
-  38961: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => lz
+  38904: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => fD
     });
-    var Ez = bz(9165),
-      nz = bz(9007),
-      iz = bz(3043);
+    var ID = cD(9237),
+      pD = cD(9062),
+      iD = cD(3083);
 
-    function lz(zz) {
-      if (zz === Ez.b) return 0;
-      const uz = (0, iz.e)(zz);
-      if (void 0 !== uz && uz <= nz.MAX_BLOCK_ID) return uz;
-      const bz = (0, iz.e)(zz.split("|")[0]);
-      if (void 0 !== bz && bz <= nz.MAX_BLOCK_ID && (0, nz.rootMetaDescOf)(bz) === zz) return bz;
-      throw new Error(`Invalid block name. You sent ${zz}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function fD(DD) {
+      if (DD === ID.c) return 0;
+      const CD = (0, iD.e)(DD);
+      if (void 0 !== CD && CD <= pD.MAX_BLOCK_ID) return CD;
+      const cD = (0, iD.e)(DD.split("|")[0]);
+      if (void 0 !== cD && cD <= pD.MAX_BLOCK_ID && (0, pD.rootMetaDescOf)(cD) === DD) return cD;
+      throw new Error(`Invalid block name. You sent ${DD}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  38560: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => nz
+  38524: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => pD
     });
-    var Ez = bz(20);
-    class nz {
-      constructor(zz) {
-        this.screen = zz, this.hidesHud = !1
+    var ID = cD(16);
+    class pD {
+      constructor(DD) {
+        this.screen = DD, this.hidesHud = !1
       }
-      show(zz, uz) {
-        this.screen.setFade(zz.colour, zz.alpha), this.screen.setLetterbox(!0 === uz.letterbox, zz.alpha < 1), this.setHudHidden(!0 === uz.hideHud)
+      show(DD, CD) {
+        this.screen.setFade(DD.colour, DD.alpha), this.screen.setLetterbox(!0 === CD.letterbox, DD.alpha < 1), this.setHudHidden(!0 === CD.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(zz) {
-        this.hidesHud !== zz && (this.hidesHud = zz, Ez.e.set({
-          isUiHiddenByCamera: zz
+      setHudHidden(DD) {
+        this.hidesHud !== DD && (this.hidesHud = DD, ID.d.set({
+          isUiHiddenByCamera: DD
         }))
       }
     }
   },
-  38518: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Ez,
-      f: () => dz,
-      i: () => pz,
-      j: () => lz,
-      m: () => Zz,
-      o: () => tz,
-      s: () => Rz,
-      t: () => Hz,
-      x: () => Mz,
-      y: () => Oz
+  38496: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => ID,
+      i: () => yD,
+      j: () => BD,
+      l: () => fD,
+      m: () => tD,
+      p: () => QD,
+      r: () => ZD,
+      u: () => wD,
+      w: () => bD,
+      x: () => SD
     });
-    const Ez = Math.PI / 2 - .001,
-      nz = 2 * Math.PI,
-      iz = 1e-9;
+    const ID = Math.PI / 2 - .001,
+      pD = 2 * Math.PI,
+      iD = 1e-9;
 
-    function lz(zz, uz) {
-      uz.heading = zz.heading, uz.pitch = zz.pitch
+    function fD(DD, CD) {
+      CD.heading = DD.heading, CD.pitch = DD.pitch
     }
 
-    function Mz(zz, uz) {
-      const bz = uz - zz;
-      return bz - nz * Math.floor((bz + Math.PI) / nz)
+    function bD(DD, CD) {
+      const cD = CD - DD;
+      return cD - pD * Math.floor((cD + Math.PI) / pD)
     }
 
-    function tz(zz, uz, bz) {
-      return zz + Mz(zz, uz) * bz
+    function QD(DD, CD, cD) {
+      return DD + bD(DD, CD) * cD
     }
 
-    function Hz(zz) {
-      if (!Number.isFinite(zz)) return zz;
-      const uz = zz - nz * Math.floor(zz / nz);
-      return uz < nz ? uz : 0
+    function wD(DD) {
+      if (!Number.isFinite(DD)) return DD;
+      const CD = DD - pD * Math.floor(DD / pD);
+      return CD < pD ? CD : 0
     }
 
-    function Oz(zz, uz) {
-      return zz + Mz(zz, uz)
+    function SD(DD, CD) {
+      return DD + bD(DD, CD)
     }
 
-    function pz(zz) {
-      return Math.max(-Ez, Math.min(Ez, zz))
+    function BD(DD) {
+      return Math.max(-ID, Math.min(ID, DD))
     }
 
-    function dz(zz, uz, bz) {
-      const Ez = Math.cos(uz);
-      return bz[0] = Ez * Math.sin(zz), bz[1] = -Math.sin(uz), bz[2] = Ez * Math.cos(zz), bz
+    function yD(DD, CD, cD) {
+      const ID = Math.cos(CD);
+      return cD[0] = ID * Math.sin(DD), cD[1] = -Math.sin(CD), cD[2] = ID * Math.cos(DD), cD
     }
 
-    function Fz(zz, uz, bz, Ez) {
-      const nz = Math.sqrt(zz * zz + bz * bz);
-      return nz < iz && Math.abs(uz) < iz || (nz >= iz && (Ez.heading = Math.atan2(zz, bz)), Ez.pitch = pz(Math.atan2(-uz, nz) + 0)), Ez
+    function MD(DD, CD, cD, ID) {
+      const pD = Math.sqrt(DD * DD + cD * cD);
+      return pD < iD && Math.abs(CD) < iD || (pD >= iD && (ID.heading = Math.atan2(DD, cD)), ID.pitch = BD(Math.atan2(-CD, pD) + 0)), ID
     }
 
-    function Zz(zz, uz) {
-      return Fz(zz[0], zz[1], zz[2], uz)
+    function tD(DD, CD) {
+      return MD(DD[0], DD[1], DD[2], CD)
     }
 
-    function Rz(zz, uz, bz) {
-      return Fz(uz[0] - zz[0], uz[1] - zz[1], uz[2] - zz[2], bz)
+    function ZD(DD, CD, cD) {
+      return MD(CD[0] - DD[0], CD[1] - DD[1], CD[2] - DD[2], cD)
     }
   },
-  38553: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz,
-      e: () => nz
+  38517: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => iD,
+      h: () => pD
     });
-    var Ez = bz(38518);
+    var ID = cD(38496);
 
-    function nz(zz) {
-      var uz;
-      const bz = "default" === zz.mode ? "movement" : null !== (uz = zz.playerFacing) && void 0 !== uz ? uz : "movement";
-      return "cursor" === bz ? {
-        facing: bz,
+    function pD(DD) {
+      var CD;
+      const cD = "default" === DD.mode ? "movement" : null !== (CD = DD.playerFacing) && void 0 !== CD ? CD : "movement";
+      return "cursor" === cD ? {
+        facing: cD,
         mouseTurns: null
       } : {
-        facing: bz,
-        mouseTurns: "default" !== zz.mode && void 0 !== zz.playerLook ? "look" : "view"
+        facing: cD,
+        mouseTurns: "default" !== DD.mode && void 0 !== DD.playerLook ? "look" : "view"
       }
     }
 
-    function iz(zz, uz, bz, nz, iz, lz) {
-      return lz.QJ = 0, lz.eJ = 0, lz.pointedAt = void 0, void 0 !== nz ? iz ? (lz.pointedAt = nz, zz) : (0, Ez.t)(nz.heading) : iz ? (lz.QJ = uz, lz.eJ = bz, zz) : (0, Ez.t)(zz + uz)
+    function iD(DD, CD, cD, pD, iD, fD) {
+      return fD.Qq = 0, fD.wq = 0, fD.pointedAt = void 0, void 0 !== pD ? iD ? (fD.pointedAt = pD, DD) : (0, ID.u)(pD.heading) : iD ? (fD.Qq = CD, fD.wq = cD, DD) : (0, ID.u)(DD + CD)
     }
   },
-  38531: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => yz
+  38503: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => dD
     });
-    var Ez = bz(38540),
-      nz = bz(38518),
-      iz = bz(36427);
+    var ID = cD(38505),
+      pD = cD(38496),
+      iD = cD(36366);
 
-    function lz(zz, uz, bz, Ez) {
-      if (!(Ez > 0)) return uz;
-      const nz = uz > zz ? Math.min(uz, zz + bz / Ez) : Math.max(uz, zz - bz / Ez);
-      return Math.abs(uz - nz) < 1e-9 ? uz : nz
+    function fD(DD, CD, cD, ID) {
+      if (!(ID > 0)) return CD;
+      const pD = CD > DD ? Math.min(CD, DD + cD / ID) : Math.max(CD, DD - cD / ID);
+      return Math.abs(CD - pD) < 1e-9 ? CD : pD
     }
-    class Mz {
+    class bD {
       constructor() {
         this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: Ez.f,
+          colour: ID.c,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(zz) {
-        !this.isGoingOut() && this.sinceTurnMs < Ez.m.minFadeTurnMs ? this.waiting = {
+      fadeOut(DD) {
+        !this.isGoingOut() && this.sinceTurnMs < ID.k.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: zz
-        } : (this.waiting = null, this.startOut(zz))
+          transition: DD
+        } : (this.waiting = null, this.startOut(DD))
       }
-      fadeIn(zz) {
-        this.isGoingOut() ? this.sinceTurnMs < Ez.m.minFadeTurnMs ? this.waiting = {
+      fadeIn(DD) {
+        this.isGoingOut() ? this.sinceTurnMs < ID.k.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: zz
-        } : (this.waiting = null, this.startIn(zz)) : this.waiting = null
+          minMs: DD
+        } : (this.waiting = null, this.startIn(DD)) : this.waiting = null
       }
-      advance(zz) {
-        const uz = this.waiting;
-        if (null === uz) return this.step(zz);
-        const bz = Ez.m.minFadeTurnMs - this.sinceTurnMs;
-        if (bz > zz) return this.step(zz);
-        const nz = this.step(bz);
-        return this.waiting = null, "out" === uz.turn ? this.startOut(uz.transition) : this.startIn(uz.minMs), this.step(zz - bz) || nz
+      advance(DD) {
+        const CD = this.waiting;
+        if (null === CD) return this.step(DD);
+        const cD = ID.k.minFadeTurnMs - this.sinceTurnMs;
+        if (cD > DD) return this.step(DD);
+        const pD = this.step(cD);
+        return this.waiting = null, "out" === CD.turn ? this.startOut(CD.transition) : this.startIn(CD.minMs), this.step(DD - cD) || pD
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(zz) {
-        ("in" === this.phase || null === this.phase && this.clearMs < Ez.m.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = zz.colour), this.outMs = zz.outMs, this.holdMs = zz.holdMs, this.inMs = zz.inMs
+      startOut(DD) {
+        ("in" === this.phase || null === this.phase && this.clearMs < ID.k.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = DD.colour), this.outMs = DD.outMs, this.holdMs = DD.holdMs, this.inMs = DD.inMs
       }
-      startIn(zz) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(zz, this.inMs)
+      startIn(DD) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(DD, this.inMs)
       }
-      step(zz) {
-        const uz = this.screen;
-        this.sinceTurnMs += zz, null === this.phase && (this.clearMs += zz);
-        let bz = !1,
-          nz = zz;
+      step(DD) {
+        const CD = this.screen;
+        this.sinceTurnMs += DD, null === this.phase && (this.clearMs += DD);
+        let cD = !1,
+          pD = DD;
         if ("out" === this.phase) {
-          const Ez = (1 - uz.alpha) * this.outMs;
-          if (uz.alpha = lz(uz.alpha, 1, zz, this.outMs), uz.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, nz = Math.max(0, zz - Ez), bz = !0
+          const ID = (1 - CD.alpha) * this.outMs;
+          if (CD.alpha = fD(CD.alpha, 1, DD, this.outMs), CD.alpha < 1) return !1;
+          this.phase = "hold", this.heldMs = 0, pD = Math.max(0, DD - ID), cD = !0
         }
-        let iz = zz;
+        let iD = DD;
         if ("hold" === this.phase) {
-          this.heldMs += nz;
-          const zz = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - Ez.m.minFadeTurnMs);
-          if (zz < 0 || bz) return bz;
-          this.phase = "in", this.sinceTurnMs = zz, iz = zz
+          this.heldMs += pD;
+          const DD = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - ID.k.minFadeTurnMs);
+          if (DD < 0 || cD) return cD;
+          this.phase = "in", this.sinceTurnMs = DD, iD = DD
         }
-        return "in" === this.phase && (uz.alpha = lz(uz.alpha, 0, iz, this.inMs), uz.alpha <= 0 && (this.phase = null, this.clearMs = 0)), bz
+        return "in" === this.phase && (CD.alpha = fD(CD.alpha, 0, iD, this.inMs), CD.alpha <= 0 && (this.phase = null, this.clearMs = 0)), cD
       }
     }
-    var tz = bz(38510),
-      Hz = bz(38549),
-      Oz = bz(1840),
-      pz = bz(36041);
+    var QD = cD(38494),
+      wD = cD(38510),
+      SD = cD(1865),
+      BD = cD(35972);
 
-    function dz(zz, uz) {
-      for (let bz = 0; bz < uz.length; bz++) uz[bz] = zz[bz]
+    function yD(DD, CD) {
+      for (let cD = 0; cD < CD.length; cD++) CD[cD] = DD[cD]
     }
 
-    function Fz(zz, uz) {
-      var bz;
-      return null !== (bz = zz.fov) && void 0 !== bz ? bz : uz.getDefaultFov()
+    function MD(DD, CD) {
+      var cD;
+      return null !== (cD = DD.fov) && void 0 !== cD ? cD : CD.getDefaultFov()
     }
 
-    function Zz(zz, uz, bz, Ez, nz) {
-      const iz = 2 / Ez,
-        lz = Math.exp(-iz * nz);
-      for (let Mz = 0; Mz < zz.length; Mz++) {
-        const Ez = zz[Mz] - bz[Mz],
-          tz = (uz[Mz] + iz * Ez) * nz;
-        zz[Mz] = bz[Mz] + (Ez + tz) * lz, uz[Mz] = (uz[Mz] - iz * tz) * lz
+    function tD(DD, CD, cD, ID, pD) {
+      const iD = 2 / ID,
+        fD = Math.exp(-iD * pD);
+      for (let bD = 0; bD < DD.length; bD++) {
+        const ID = DD[bD] - cD[bD],
+          QD = (CD[bD] + iD * ID) * pD;
+        DD[bD] = cD[bD] + (ID + QD) * fD, CD[bD] = (CD[bD] - iD * QD) * fD
       }
     }
-    class Rz {
-      constructor(zz, uz, bz, Ez) {
-        var iz, lz, Mz, tz, Hz;
-        this.settings = zz, this.xd = uz, this.targets = bz, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.ht = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class ZD {
+      constructor(DD, CD, cD, ID) {
+        var iD, fD, bD, QD, wD;
+        this.settings = DD, this.Zy = CD, this.targets = cD, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.lb = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, nz.t)((0, Oz.j)(null !== (iz = zz.viewHeading) && void 0 !== iz ? iz : 0)),
-          pitch: (0, nz.i)((0, Oz.j)(null !== (lz = zz.viewElevation) && void 0 !== lz ? lz : 45))
-        }, this.closestDistance = null !== (Mz = zz.closestDistance) && void 0 !== Mz ? Mz : Math.min(6, null !== (tz = zz.furthestDistance) && void 0 !== tz ? tz : 1 / 0), this.furthestDistance = null !== (Hz = zz.furthestDistance) && void 0 !== Hz ? Hz : Math.max(64, this.closestDistance);
-        const pz = (0, nz.f)(this.base.heading, this.base.pitch, this.forward),
-          dz = Ez.position,
-          Fz = this.closestDistance;
-        this.goal = [dz[0] + pz[0] * Fz, dz[1] + pz[1] * Fz, dz[2] + pz[2] * Fz, Fz, this.base.heading, this.base.pitch]
+          heading: (0, pD.u)((0, SD.o)(null !== (iD = DD.viewHeading) && void 0 !== iD ? iD : 0)),
+          pitch: (0, pD.j)((0, SD.o)(null !== (fD = DD.viewElevation) && void 0 !== fD ? fD : 45))
+        }, this.closestDistance = null !== (bD = DD.closestDistance) && void 0 !== bD ? bD : Math.min(6, null !== (QD = DD.furthestDistance) && void 0 !== QD ? QD : 1 / 0), this.furthestDistance = null !== (wD = DD.furthestDistance) && void 0 !== wD ? wD : Math.max(64, this.closestDistance);
+        const BD = (0, pD.i)(this.base.heading, this.base.pitch, this.forward),
+          yD = ID.position,
+          MD = this.closestDistance;
+        this.goal = [yD[0] + BD[0] * MD, yD[1] + BD[1] * MD, yD[2] + BD[2] * MD, MD, this.base.heading, this.base.pitch]
       }
-      update(zz, uz, bz) {
-        var Ez, iz;
-        this.placeGoal(null !== (Ez = this.settings.fov) && void 0 !== Ez ? Ez : this.xd.getBaseFov()), this.goal[4] = (0, nz.y)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const lz = null !== (iz = this.settings.smoothMs) && void 0 !== iz ? iz : 400;
-        !this.started || lz < 1 ? (dz(this.goal, this.smoothed), this.ht.fill(0), this.started = !0) : Zz(this.smoothed, this.ht, this.goal, lz, zz), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, nz.i)(this.smoothed[5]), uz.apply(this.angles, bz);
-        const Mz = (0, nz.f)(bz.heading, bz.pitch, this.forward);
-        for (let nz = 0; nz < 3; nz++) bz.position[nz] = this.smoothed[nz] - Mz[nz] * this.smoothed[3];
-        bz.fov = Fz(this.settings, this.xd)
+      update(DD, CD, cD) {
+        var ID, iD;
+        this.placeGoal(null !== (ID = this.settings.fov) && void 0 !== ID ? ID : this.Zy.getBaseFov()), this.goal[4] = (0, pD.x)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const fD = null !== (iD = this.settings.smoothMs) && void 0 !== iD ? iD : 400;
+        !this.started || fD < 1 ? (yD(this.goal, this.smoothed), this.lb.fill(0), this.started = !0) : tD(this.smoothed, this.lb, this.goal, fD, DD), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, pD.j)(this.smoothed[5]), CD.apply(this.angles, cD);
+        const bD = (0, pD.i)(cD.heading, cD.pitch, this.forward);
+        for (let pD = 0; pD < 3; pD++) cD.position[pD] = this.smoothed[pD] - bD[pD] * this.smoothed[3];
+        cD.fov = MD(this.settings, this.Zy)
       }
-      continueFrom(zz) {
-        zz instanceof Rz && (dz(zz.goal, this.goal), dz(zz.smoothed, this.smoothed), dz(zz.ht, this.ht), this.framedTargets = zz.framedTargets, this.started = zz.started)
+      continueFrom(DD) {
+        DD instanceof ZD && (yD(DD.goal, this.goal), yD(DD.smoothed, this.smoothed), yD(DD.lb, this.lb), this.framedTargets = DD.framedTargets, this.started = DD.started)
       }
       reset() {
-        this.ht.fill(0), this.started = !1
+        this.lb.fill(0), this.started = !1
       }
-      placeGoal(zz) {
-        var uz;
-        let bz = 0;
-        for (const Oz of this.settings.targets) {
-          const zz = this.targets.currentAimPoint(Oz);
-          zz && (0, tz.i)(zz, this.pointAt(bz++))
+      placeGoal(DD) {
+        var CD;
+        let cD = 0;
+        for (const SD of this.settings.targets) {
+          const DD = this.targets.currentAimPoint(SD);
+          DD && (0, QD.h)(DD, this.pointAt(cD++))
         }
-        if (bz > 0) this.framedTargets = !0;
+        if (cD > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const zz = this.targets.aimPoint(this.xd.localPlayerId);
-          zz && (0, tz.i)(zz, this.pointAt(bz++))
+          const DD = this.targets.aimPoint(this.Zy.localPlayerId);
+          DD && (0, QD.h)(DD, this.pointAt(cD++))
         }
-        const Ez = this.goal;
-        if (0 === bz) return void(Ez[3] = this.withinDistances(Ez[3]));
-        for (let tz = 0; tz < 3; tz++) {
-          let zz = 1 / 0,
-            uz = -1 / 0;
-          for (let Ez = 0; Ez < bz; Ez++) zz = Math.min(zz, this.points[Ez][tz]), uz = Math.max(uz, this.points[Ez][tz]);
-          Ez[tz] = (zz + uz) / 2
+        const ID = this.goal;
+        if (0 === cD) return void(ID[3] = this.withinDistances(ID[3]));
+        for (let QD = 0; QD < 3; QD++) {
+          let DD = 1 / 0,
+            CD = -1 / 0;
+          for (let ID = 0; ID < cD; ID++) DD = Math.min(DD, this.points[ID][QD]), CD = Math.max(CD, this.points[ID][QD]);
+          ID[QD] = (DD + CD) / 2
         }
-        let nz = 0;
-        for (let tz = 0; tz < bz; tz++) {
-          const zz = this.points[tz];
-          nz = Math.max(nz, Math.hypot(zz[0] - Ez[0], zz[1] - Ez[1], zz[2] - Ez[2]))
+        let pD = 0;
+        for (let QD = 0; QD < cD; QD++) {
+          const DD = this.points[QD];
+          pD = Math.max(pD, Math.hypot(DD[0] - ID[0], DD[1] - ID[1], DD[2] - ID[2]))
         }
-        const iz = Math.tan((0, Oz.j)(zz) / 2),
-          lz = Math.atan(iz * (!0 === this.settings.letterbox ? pz.d : 1)),
-          Mz = Math.atan(iz * this.xd.getAspectRatio()),
-          Hz = (nz + (null !== (uz = this.settings.padding) && void 0 !== uz ? uz : 2)) / Math.sin(Math.min(lz, Mz));
-        Ez[3] = this.withinDistances(Hz)
+        const iD = Math.tan((0, SD.o)(DD) / 2),
+          fD = Math.atan(iD * (!0 === this.settings.letterbox ? BD.g : 1)),
+          bD = Math.atan(iD * this.Zy.getAspectRatio()),
+          wD = (pD + (null !== (CD = this.settings.padding) && void 0 !== CD ? CD : 2)) / Math.sin(Math.min(fD, bD));
+        ID[3] = this.withinDistances(wD)
       }
-      withinDistances(zz) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, zz))
+      withinDistances(DD) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, DD))
       }
-      pointAt(zz) {
-        return zz === this.points.length && this.points.push([0, 0, 0]), this.points[zz]
+      pointAt(DD) {
+        return DD === this.points.length && this.points.push([0, 0, 0]), this.points[DD]
       }
     }
-    class Kz {
-      constructor(zz) {
-        this.limits = zz, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
+    class oD {
+      constructor(DD) {
+        this.limits = DD, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
       }
-      continueFrom(zz) {
-        this.limits && (this.yawOffset = zz.yawOffset, this.pitchOffset = zz.pitchOffset, this.idleMs = zz.idleMs)
+      continueFrom(DD) {
+        this.limits && (this.yawOffset = DD.yawOffset, this.pitchOffset = DD.pitchOffset, this.idleMs = DD.idleMs)
       }
-      update(zz, uz) {
-        const bz = this.limits;
-        if (!bz) return;
-        const Ez = Number.isFinite(uz.QJ) ? uz.QJ : 0,
-          nz = Number.isFinite(uz.eJ) ? uz.eJ : 0;
-        if (uz.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: uz.pointedAt.heading,
-          pitch: uz.pointedAt.pitch
+      update(DD, CD) {
+        const cD = this.limits;
+        if (!cD) return;
+        const ID = Number.isFinite(CD.Qq) ? CD.Qq : 0,
+          pD = Number.isFinite(CD.wq) ? CD.wq : 0;
+        if (CD.pointedAt) this.idleMs = 0, this.pointedAt = {
+          heading: CD.pointedAt.heading,
+          pitch: CD.pointedAt.pitch
         };
-        else if (0 !== Ez || 0 !== nz) this.idleMs = 0, this.yawOffset += Ez, this.pitchOffset += nz;
+        else if (0 !== ID || 0 !== pD) this.idleMs = 0, this.yawOffset += ID, this.pitchOffset += pD;
         else {
-          const uz = Math.max(0, this.idleMs + zz - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += zz, void 0 !== bz.returnMs && uz > 0) {
-            const zz = bz.returnMs > 0 ? Math.exp(-3 * uz / bz.returnMs) : 0;
-            this.yawOffset *= zz, this.pitchOffset *= zz
+          const CD = Math.max(0, this.idleMs + DD - 200) - Math.max(0, this.idleMs - 200);
+          if (this.idleMs += DD, void 0 !== cD.returnMs && CD > 0) {
+            const DD = cD.returnMs > 0 ? Math.exp(-3 * CD / cD.returnMs) : 0;
+            this.yawOffset *= DD, this.pitchOffset *= DD
           }
         }
-        this.clampOffsets(bz)
+        this.clampOffsets(cD)
       }
-      clampOffsets(zz) {
-        if (zz.maxYaw >= 180) this.yawOffset = (0, nz.x)(0, this.yawOffset);
+      clampOffsets(DD) {
+        if (DD.maxYaw >= 180) this.yawOffset = (0, pD.w)(0, this.yawOffset);
         else {
-          const uz = (0, Oz.j)(zz.maxYaw);
-          this.yawOffset = Math.max(-uz, Math.min(uz, this.yawOffset))
+          const CD = (0, SD.o)(DD.maxYaw);
+          this.yawOffset = Math.max(-CD, Math.min(CD, this.yawOffset))
         }
-        const uz = (0, Oz.j)(zz.maxPitch);
-        this.pitchOffset = Math.max(-uz, Math.min(uz, this.pitchOffset))
+        const CD = (0, SD.o)(DD.maxPitch);
+        this.pitchOffset = Math.max(-CD, Math.min(CD, this.pitchOffset))
       }
-      apply(zz, uz) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, nz.x)(zz.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - zz.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const bz = (0, nz.i)(zz.pitch + this.pitchOffset);
-        this.pitchOffset = bz - zz.pitch, uz.heading = (0, nz.t)(zz.heading + this.yawOffset), uz.pitch = bz
+      apply(DD, CD) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, pD.w)(DD.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - DD.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const cD = (0, pD.j)(DD.pitch + this.pitchOffset);
+        this.pitchOffset = cD - DD.pitch, CD.heading = (0, pD.u)(DD.heading + this.yawOffset), CD.pitch = cD
       }
-      unapply(zz, uz) {
-        uz.heading = (0, nz.t)(zz.heading - this.yawOffset), uz.pitch = (0, nz.i)(zz.pitch - this.pitchOffset)
+      unapply(DD, CD) {
+        CD.heading = (0, pD.u)(DD.heading - this.yawOffset), CD.pitch = (0, pD.j)(DD.pitch - this.pitchOffset)
       }
     }
-    const wz = 1e-6;
+    const vD = 1e-6;
 
-    function Xz(zz) {
-      return Math.sqrt(zz[0] * zz[0] + zz[1] * zz[1] + zz[2] * zz[2])
+    function ND(DD) {
+      return Math.sqrt(DD[0] * DD[0] + DD[1] * DD[1] + DD[2] * DD[2])
     }
 
-    function fz(zz, uz, bz, Ez, nz) {
-      const iz = nz * nz,
-        lz = iz * nz;
-      return (2 * lz - 3 * iz + 1) * zz + (lz - 2 * iz + nz) * uz + (-2 * lz + 3 * iz) * bz + (lz - iz) * Ez
+    function gD(DD, CD, cD, ID, pD) {
+      const iD = pD * pD,
+        fD = iD * pD;
+      return (2 * fD - 3 * iD + 1) * DD + (fD - 2 * iD + pD) * CD + (-2 * fD + 3 * iD) * cD + (fD - iD) * ID
     }
 
-    function sz(zz, uz, bz, Ez, nz) {
-      const iz = nz * nz;
-      return (6 * iz - 6 * nz) * zz + (3 * iz - 4 * nz + 1) * uz + (-6 * iz + 6 * nz) * bz + (3 * iz - 2 * nz) * Ez
+    function XD(DD, CD, cD, ID, pD) {
+      const iD = pD * pD;
+      return (6 * iD - 6 * pD) * DD + (3 * iD - 4 * pD + 1) * CD + (-6 * iD + 6 * pD) * cD + (3 * iD - 2 * pD) * ID
     }
 
-    function rz(zz, uz) {
-      const bz = uz[0] - zz[0],
-        Ez = uz[1] - zz[1],
-        nz = uz[2] - zz[2];
-      return Math.sqrt(bz * bz + Ez * Ez + nz * nz)
+    function mD(DD, CD) {
+      const cD = CD[0] - DD[0],
+        ID = CD[1] - DD[1],
+        pD = CD[2] - DD[2];
+      return Math.sqrt(cD * cD + ID * ID + pD * pD)
     }
 
-    function oz(zz, uz, bz, Ez, nz, iz) {
-      for (let lz = 0; lz < 3; lz++) iz[lz] = nz ? zz[lz] * Ez : bz[lz] - uz[lz];
-      return nz && function(zz, uz) {
-        const bz = Xz(zz);
-        if (bz > uz) {
-          const Ez = uz / bz;
-          zz[0] *= Ez, zz[1] *= Ez, zz[2] *= Ez
+    function nD(DD, CD, cD, ID, pD, iD) {
+      for (let fD = 0; fD < 3; fD++) iD[fD] = pD ? DD[fD] * ID : cD[fD] - CD[fD];
+      return pD && function(DD, CD) {
+        const cD = ND(DD);
+        if (cD > CD) {
+          const ID = CD / cD;
+          DD[0] *= ID, DD[1] *= ID, DD[2] *= ID
         }
-      }(iz, 3 * rz(uz, bz)), iz
+      }(iD, 3 * mD(CD, cD)), iD
     }
 
-    function Nz(zz, uz, bz, Ez) {
-      for (let nz = 0; nz < 3; nz++) Ez[nz] = 6 * (uz[nz] - zz[nz]) - 2 * bz[nz];
-      if (Xz(Ez) < wz)
-        for (let nz = 0; nz < 3; nz++) Ez[nz] = uz[nz] - zz[nz];
-      return Ez
+    function OD(DD, CD, cD, ID) {
+      for (let pD = 0; pD < 3; pD++) ID[pD] = 6 * (CD[pD] - DD[pD]) - 2 * cD[pD];
+      if (ND(ID) < vD)
+        for (let pD = 0; pD < 3; pD++) ID[pD] = CD[pD] - DD[pD];
+      return ID
     }
 
-    function vz(zz, uz) {
-      return [2 * uz[0] - zz[0], 2 * uz[1] - zz[1], 2 * uz[2] - zz[2]]
+    function PD(DD, CD) {
+      return [2 * CD[0] - DD[0], 2 * CD[1] - DD[1], 2 * CD[2] - DD[2]]
     }
 
-    function xz(zz, uz, bz, Ez, nz, iz, lz) {
-      if (!iz && !lz) return 0;
-      const Mz = iz ? zz : 2 * uz - bz,
-        tz = lz ? bz : 2 * uz - zz,
-        Hz = iz ? Ez : nz,
-        Oz = lz ? nz : Ez,
-        pz = (uz - Mz) / Hz,
-        dz = (tz - uz) / Oz;
-      if (pz * dz <= 0) return 0;
-      const Fz = (tz - Mz) / (Hz + Oz),
-        Zz = 3 * Math.min(Math.abs(pz), Math.abs(dz));
-      return Math.max(-Zz, Math.min(Zz, Fz))
+    function HD(DD, CD, cD, ID, pD, iD, fD) {
+      if (!iD && !fD) return 0;
+      const bD = iD ? DD : 2 * CD - cD,
+        QD = fD ? cD : 2 * CD - DD,
+        wD = iD ? ID : pD,
+        SD = fD ? pD : ID,
+        BD = (CD - bD) / wD,
+        yD = (QD - CD) / SD;
+      if (BD * yD <= 0) return 0;
+      const MD = (QD - bD) / (wD + SD),
+        tD = 3 * Math.min(Math.abs(BD), Math.abs(yD));
+      return Math.max(-tD, Math.min(tD, MD))
     }
 
-    function Jz(zz, uz, bz, Ez, nz, iz, lz) {
+    function UD(DD, CD, cD, ID, pD, iD, fD) {
       const {
-        u: Mz,
-        segmentMs: tz
-      } = zz;
-      if (!zz.curved) return bz + (Ez - bz) * Mz;
-      return fz(bz, xz(uz, bz, Ez, zz.beforeMs, tz, iz, !0) * tz, Ez, xz(bz, Ez, nz, tz, zz.afterMs, !0, lz) * tz, Mz)
+        u: bD,
+        segmentMs: QD
+      } = DD;
+      if (!DD.curved) return cD + (ID - cD) * bD;
+      return gD(cD, HD(CD, cD, ID, DD.beforeMs, QD, iD, !0) * QD, ID, HD(cD, ID, pD, QD, DD.afterMs, !0, fD) * QD, bD)
     }
 
-    function Az(zz) {
-      return Math.abs(zz.pitch) >= nz.e
+    function xD(DD) {
+      return Math.abs(DD.pitch) >= pD.e
     }
-    class Tz {
-      constructor(zz, uz, bz, Ez, nz) {
-        this.nodes = zz, this.prevNodes = bz, this.nextNodes = Ez, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class qD {
+      constructor(DD, CD, cD, ID, pD) {
+        this.nodes = DD, this.prevNodes = cD, this.nextNodes = ID, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -540,84 +540,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = zz.map(((zz, bz) => this.nodeTangent(uz, nz, bz)))
+        }, this.tangents = DD.map(((DD, cD) => this.nodeTangent(CD, pD, cD)))
       }
-      sample(zz, uz, bz) {
+      sample(DD, CD, cD) {
         const {
-          index: Ez,
-          toIndex: iz,
-          segmentMs: lz,
-          curved: Mz
-        } = zz, tz = this.fromAngles, Hz = this.toAngles, Oz = this.nodeAngles(Ez, bz.position, uz, tz), pz = this.nodeAngles(iz, bz.position, uz, Hz);
-        if (lz > 0 && "aim" !== Oz && "aim" !== pz && this.liveTangent(zz, tz)) return bz.heading = (0, nz.t)(tz.heading), void(bz.pitch = tz.pitch);
-        if ("none" === Oz && "none" === pz) return;
-        !Mz && lz > 0 && ("tangent" === Oz && this.liveTangent(zz, tz), "tangent" === pz && this.liveTangent(zz, Hz)), "none" === Oz ? (0, nz.j)(Hz, tz) : "none" === pz && (0, nz.j)(tz, Hz);
-        const dz = Mz && zz.beforeIndex >= 0 && "none" !== this.nodeAngles(zz.beforeIndex, bz.position, uz, this.beforeAngles),
-          Fz = Mz && zz.afterIndex >= 0 && "none" !== this.nodeAngles(zz.afterIndex, bz.position, uz, this.afterAngles),
-          Zz = (0, nz.y)(tz.heading, Hz.heading),
-          Rz = Jz(zz, dz ? (0, nz.y)(tz.heading, this.beforeAngles.heading) : 0, tz.heading, Zz, Fz ? (0, nz.y)(Zz, this.afterAngles.heading) : 0, dz, Fz);
-        bz.heading = (0, nz.t)(Rz), bz.pitch = (0, nz.i)(Jz(zz, this.beforeAngles.pitch, tz.pitch, Hz.pitch, this.afterAngles.pitch, dz, Fz))
+          index: ID,
+          toIndex: iD,
+          segmentMs: fD,
+          curved: bD
+        } = DD, QD = this.fromAngles, wD = this.toAngles, SD = this.nodeAngles(ID, cD.position, CD, QD), BD = this.nodeAngles(iD, cD.position, CD, wD);
+        if (fD > 0 && "aim" !== SD && "aim" !== BD && this.liveTangent(DD, QD)) return cD.heading = (0, pD.u)(QD.heading), void(cD.pitch = QD.pitch);
+        if ("none" === SD && "none" === BD) return;
+        !bD && fD > 0 && ("tangent" === SD && this.liveTangent(DD, QD), "tangent" === BD && this.liveTangent(DD, wD)), "none" === SD ? (0, pD.l)(wD, QD) : "none" === BD && (0, pD.l)(QD, wD);
+        const yD = bD && DD.beforeIndex >= 0 && "none" !== this.nodeAngles(DD.beforeIndex, cD.position, CD, this.beforeAngles),
+          MD = bD && DD.afterIndex >= 0 && "none" !== this.nodeAngles(DD.afterIndex, cD.position, CD, this.afterAngles),
+          tD = (0, pD.x)(QD.heading, wD.heading),
+          ZD = UD(DD, yD ? (0, pD.x)(QD.heading, this.beforeAngles.heading) : 0, QD.heading, tD, MD ? (0, pD.x)(tD, this.afterAngles.heading) : 0, yD, MD);
+        cD.heading = (0, pD.u)(ZD), cD.pitch = (0, pD.j)(UD(DD, this.beforeAngles.pitch, QD.pitch, wD.pitch, this.afterAngles.pitch, yD, MD))
       }
-      nodeAngles(zz, uz, bz, Ez) {
-        const nz = this.rawNodeAngles(zz, uz, bz, Ez);
-        return "none" !== nz && Az(Ez) && !this.borrowHeading(this.prevNodes[zz], uz, bz, Ez) && this.borrowHeading(this.nextNodes[zz], uz, bz, Ez), nz
+      nodeAngles(DD, CD, cD, ID) {
+        const pD = this.rawNodeAngles(DD, CD, cD, ID);
+        return "none" !== pD && xD(ID) && !this.borrowHeading(this.prevNodes[DD], CD, cD, ID) && this.borrowHeading(this.nextNodes[DD], CD, cD, ID), pD
       }
-      borrowHeading(zz, uz, bz, Ez) {
-        const nz = this.borrowedAngles;
-        return !(zz < 0 || "none" === this.rawNodeAngles(zz, uz, bz, nz) || Az(nz)) && (Ez.heading = nz.heading, !0)
+      borrowHeading(DD, CD, cD, ID) {
+        const pD = this.borrowedAngles;
+        return !(DD < 0 || "none" === this.rawNodeAngles(DD, CD, cD, pD) || xD(pD)) && (ID.heading = pD.heading, !0)
       }
-      rawNodeAngles(zz, uz, bz, Ez) {
-        const iz = this.nodes[zz].keyframe;
-        if (iz.lookDirection) return (0, nz.m)(iz.lookDirection, Ez), "aim";
-        if (void 0 !== iz.lookAt) {
-          const zz = bz(iz.lookAt);
-          if (zz) return (0, nz.s)(uz, zz, Ez), "aim"
+      rawNodeAngles(DD, CD, cD, ID) {
+        const iD = this.nodes[DD].keyframe;
+        if (iD.lookDirection) return (0, pD.m)(iD.lookDirection, ID), "aim";
+        if (void 0 !== iD.lookAt) {
+          const DD = cD(iD.lookAt);
+          if (DD) return (0, pD.r)(CD, DD, ID), "aim"
         }
-        const lz = this.tangents[zz];
-        return lz ? ((0, nz.j)(lz, Ez), "tangent") : "none"
+        const fD = this.tangents[DD];
+        return fD ? ((0, pD.l)(fD, ID), "tangent") : "none"
       }
-      liveTangent(zz, uz) {
-        const bz = this.nodes[zz.index].position,
-          Ez = this.nodes[zz.toIndex].position,
-          iz = this.derivative;
-        for (let nz = 0; nz < 3; nz++) iz[nz] = sz(bz[nz], zz.fromTangent[nz], Ez[nz], zz.toTangent[nz], zz.u);
-        return Xz(iz) > 1e-9 ? ((0, nz.m)(iz, uz), !0) : !(rz(bz, Ez) < wz) && ((0, nz.m)(Nz(bz, Ez, zz.u < .5 ? zz.toTangent : zz.fromTangent, iz), uz), !0)
+      liveTangent(DD, CD) {
+        const cD = this.nodes[DD.index].position,
+          ID = this.nodes[DD.toIndex].position,
+          iD = this.derivative;
+        for (let pD = 0; pD < 3; pD++) iD[pD] = XD(cD[pD], DD.fromTangent[pD], ID[pD], DD.toTangent[pD], DD.u);
+        return ND(iD) > 1e-9 ? ((0, pD.m)(iD, CD), !0) : !(mD(cD, ID) < vD) && ((0, pD.m)(OD(cD, ID, DD.u < .5 ? DD.toTangent : DD.fromTangent, iD), CD), !0)
       }
-      nodeTangent(zz, uz, bz) {
-        var Ez;
-        const iz = zz[bz];
-        if (Xz(iz) > 1e-9) return (0, nz.m)(iz, {
+      nodeTangent(DD, CD, cD) {
+        var ID;
+        const iD = DD[cD];
+        if (ND(iD) > 1e-9) return (0, pD.m)(iD, {
           heading: 0,
           pitch: 0
         });
-        const lz = null !== (Ez = this.restDirectionTo(bz, bz + 1, zz, uz)) && void 0 !== Ez ? Ez : this.restDirectionTo(bz, bz - 1, zz, uz);
-        return lz ? (0, nz.m)(lz, {
+        const fD = null !== (ID = this.restDirectionTo(cD, cD + 1, DD, CD)) && void 0 !== ID ? ID : this.restDirectionTo(cD, cD - 1, DD, CD);
+        return fD ? (0, pD.m)(fD, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(zz, uz, bz, Ez) {
-        const nz = this.nodes[zz],
-          iz = this.nodes[uz];
-        if (!iz || rz(nz.position, iz.position) < wz) return null;
-        const [lz, Mz] = uz > zz ? [nz, iz] : [iz, nz], tz = oz(bz[uz], lz.position, Mz.position, Mz.timeMs - lz.timeMs, Ez, [0, 0, 0]);
-        return Nz(lz.position, Mz.position, tz, [0, 0, 0])
+      restDirectionTo(DD, CD, cD, ID) {
+        const pD = this.nodes[DD],
+          iD = this.nodes[CD];
+        if (!iD || mD(pD.position, iD.position) < vD) return null;
+        const [fD, bD] = CD > DD ? [pD, iD] : [iD, pD], QD = nD(cD[CD], fD.position, bD.position, bD.timeMs - fD.timeMs, ID, [0, 0, 0]);
+        return OD(fD.position, bD.position, QD, [0, 0, 0])
       }
     }
 
-    function Lz(zz, uz) {
-      const bz = zz.lookDirection || uz.lookDirection ? function(zz, uz) {
-        if (!zz || !uz) return zz === uz;
-        const bz = Xz(zz),
-          Ez = Xz(uz);
-        return Math.hypot(zz[0] / bz - uz[0] / Ez, zz[1] / bz - uz[1] / Ez, zz[2] / bz - uz[2] / Ez) < wz
-      }(zz.lookDirection, uz.lookDirection) : (Ez = zz.lookAt, nz = uz.lookAt, "object" !== typeof Ez || "object" !== typeof nz ? Ez === nz : rz(Ez, nz) < wz);
-      var Ez, nz;
-      return rz(zz.position, uz.position) < wz && zz.fov === uz.fov && bz
+    function JD(DD, CD) {
+      const cD = DD.lookDirection || CD.lookDirection ? function(DD, CD) {
+        if (!DD || !CD) return DD === CD;
+        const cD = ND(DD),
+          ID = ND(CD);
+        return Math.hypot(DD[0] / cD - CD[0] / ID, DD[1] / cD - CD[1] / ID, DD[2] / cD - CD[2] / ID) < vD
+      }(DD.lookDirection, CD.lookDirection) : (ID = DD.lookAt, pD = CD.lookAt, "object" !== typeof ID || "object" !== typeof pD ? ID === pD : mD(ID, pD) < vD);
+      var ID, pD;
+      return mD(DD.position, CD.position) < vD && DD.fov === CD.fov && cD
     }
-    class Pz {
-      constructor(zz, uz, bz) {
-        if (this.smooth = uz, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class KD {
+      constructor(DD, CD, cD) {
+        if (this.smooth = CD, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -629,306 +629,306 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === zz.length) throw new Error("A camera path needs at least one keyframe");
-        for (let iz = 1; iz < zz.length; iz++)
-          if (!(zz[iz].timeMs > zz[iz - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = zz.map((zz => {
-          var uz;
+          }, 0 === DD.length) throw new Error("A camera path needs at least one keyframe");
+        for (let iD = 1; iD < DD.length; iD++)
+          if (!(DD[iD].timeMs > DD[iD - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = DD.map((DD => {
+          var CD;
           return {
-            timeMs: zz.timeMs,
-            position: [...zz.position],
-            keyframe: zz,
-            easing: (0, iz.m)(null !== (uz = zz.easing) && void 0 !== uz ? uz : "linear")
+            timeMs: DD.timeMs,
+            position: [...DD.position],
+            keyframe: DD,
+            easing: (0, iD.s)(null !== (CD = DD.easing) && void 0 !== CD ? CD : "linear")
           }
         }));
-        const Ez = this.nodes[0],
-          nz = this.nodes[this.nodes.length - 1],
-          lz = bz && this.nodes.length > 1;
-        lz && !Lz(Ez.keyframe, nz.keyframe) && this.nodes.push({
-          ...Ez,
-          timeMs: nz.timeMs + (nz.timeMs - Ez.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = lz ? this.nodes[this.nodes.length - 1].timeMs - Ez.timeMs : 0, this.prevNodes = this.nodes.map(((zz, uz) => this.neighbour(uz, -1))), this.nextNodes = this.nodes.map(((zz, uz) => this.neighbour(uz, 1))), this.prevGaps = this.prevNodes.map(((zz, uz) => zz >= 0 ? this.gapMs(uz, -1) : 0)), this.nextGaps = this.nextNodes.map(((zz, uz) => zz >= 0 ? this.gapMs(uz, 1) : 0)), this.velocities = this.nodes.map(((zz, uz) => {
-          const bz = this.prevNodes[uz],
-            Ez = this.nextNodes[uz];
-          return function(zz, uz, bz, Ez, nz, iz) {
-            if (iz[0] = 0, iz[1] = 0, iz[2] = 0, !zz && !bz) return iz;
-            const lz = null !== zz && void 0 !== zz ? zz : vz(null !== bz && void 0 !== bz ? bz : uz, uz),
-              Mz = null !== bz && void 0 !== bz ? bz : vz(null !== zz && void 0 !== zz ? zz : uz, uz),
-              tz = zz ? Ez : nz,
-              Hz = bz ? nz : Ez,
-              Oz = rz(lz, uz),
-              pz = rz(uz, Mz);
-            if (Oz < wz || pz < wz) return iz;
-            const dz = Math.sqrt(Oz),
-              Fz = Math.sqrt(pz),
-              Zz = (dz + Fz) / (tz + Hz);
-            for (let Rz = 0; Rz < 3; Rz++) {
-              const zz = (uz[Rz] - lz[Rz]) / dz - (Mz[Rz] - lz[Rz]) / (dz + Fz) + (Mz[Rz] - uz[Rz]) / Fz;
-              iz[Rz] = zz * Zz
+        const ID = this.nodes[0],
+          pD = this.nodes[this.nodes.length - 1],
+          fD = cD && this.nodes.length > 1;
+        fD && !JD(ID.keyframe, pD.keyframe) && this.nodes.push({
+          ...ID,
+          timeMs: pD.timeMs + (pD.timeMs - ID.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = fD ? this.nodes[this.nodes.length - 1].timeMs - ID.timeMs : 0, this.prevNodes = this.nodes.map(((DD, CD) => this.neighbour(CD, -1))), this.nextNodes = this.nodes.map(((DD, CD) => this.neighbour(CD, 1))), this.prevGaps = this.prevNodes.map(((DD, CD) => DD >= 0 ? this.gapMs(CD, -1) : 0)), this.nextGaps = this.nextNodes.map(((DD, CD) => DD >= 0 ? this.gapMs(CD, 1) : 0)), this.velocities = this.nodes.map(((DD, CD) => {
+          const cD = this.prevNodes[CD],
+            ID = this.nextNodes[CD];
+          return function(DD, CD, cD, ID, pD, iD) {
+            if (iD[0] = 0, iD[1] = 0, iD[2] = 0, !DD && !cD) return iD;
+            const fD = null !== DD && void 0 !== DD ? DD : PD(null !== cD && void 0 !== cD ? cD : CD, CD),
+              bD = null !== cD && void 0 !== cD ? cD : PD(null !== DD && void 0 !== DD ? DD : CD, CD),
+              QD = DD ? ID : pD,
+              wD = cD ? pD : ID,
+              SD = mD(fD, CD),
+              BD = mD(CD, bD);
+            if (SD < vD || BD < vD) return iD;
+            const yD = Math.sqrt(SD),
+              MD = Math.sqrt(BD),
+              tD = (yD + MD) / (QD + wD);
+            for (let ZD = 0; ZD < 3; ZD++) {
+              const DD = (CD[ZD] - fD[ZD]) / yD - (bD[ZD] - fD[ZD]) / (yD + MD) + (bD[ZD] - CD[ZD]) / MD;
+              iD[ZD] = DD * tD
             }
-            return iz
-          }(bz >= 0 ? this.nodes[bz].position : null, zz.position, Ez >= 0 ? this.nodes[Ez].position : null, this.prevGaps[uz], this.nextGaps[uz], [0, 0, 0])
-        })), this.aim = new Tz(this.nodes, this.velocities, this.prevNodes, this.nextNodes, uz)
+            return iD
+          }(cD >= 0 ? this.nodes[cD].position : null, DD.position, ID >= 0 ? this.nodes[ID].position : null, this.prevGaps[CD], this.nextGaps[CD], [0, 0, 0])
+        })), this.aim = new qD(this.nodes, this.velocities, this.prevNodes, this.nextNodes, CD)
       }
-      sample(zz, uz, bz, Ez) {
-        const nz = this.findSegment(this.pathTime(zz));
-        this.samplePosition(nz, Ez.position), this.aim.sample(nz, uz, Ez);
+      sample(DD, CD, cD, ID) {
+        const pD = this.findSegment(this.pathTime(DD));
+        this.samplePosition(pD, ID.position), this.aim.sample(pD, CD, ID);
         const {
-          beforeIndex: iz,
-          afterIndex: lz
-        } = nz;
-        Ez.fov = Jz(nz, iz >= 0 ? this.fovAt(iz, bz) : 0, this.fovAt(nz.index, bz), this.fovAt(nz.toIndex, bz), lz >= 0 ? this.fovAt(lz, bz) : 0, iz >= 0, lz >= 0)
+          beforeIndex: iD,
+          afterIndex: fD
+        } = pD;
+        ID.fov = UD(pD, iD >= 0 ? this.fovAt(iD, cD) : 0, this.fovAt(pD.index, cD), this.fovAt(pD.toIndex, cD), fD >= 0 ? this.fovAt(fD, cD) : 0, iD >= 0, fD >= 0)
       }
-      pathTime(zz) {
-        const uz = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || zz <= uz) return zz;
-        const bz = zz - uz;
-        return uz + bz - this.loopMs * Math.floor(bz / this.loopMs)
+      pathTime(DD) {
+        const CD = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || DD <= CD) return DD;
+        const cD = DD - CD;
+        return CD + cD - this.loopMs * Math.floor(cD / this.loopMs)
       }
-      findSegment(zz) {
-        const uz = this.nodes,
-          bz = this.segment;
-        let Ez = bz.index;
-        for (zz < uz[Ez].timeMs && (Ez = 0); Ez < uz.length - 2 && uz[Ez + 1].timeMs <= zz;) Ez++;
-        const nz = Math.min(Ez + 1, uz.length - 1),
-          lz = uz[nz].timeMs - uz[Ez].timeMs;
-        return bz.index = Ez, bz.toIndex = nz, bz.segmentMs = lz, bz.u = lz > 0 ? (0, iz.k)((zz - uz[Ez].timeMs) / lz, uz[Ez].easing) : 1, bz.curved = this.smooth && lz > 0, bz.beforeIndex = this.prevNodes[Ez], bz.afterIndex = this.nextNodes[nz], bz.beforeMs = this.prevGaps[Ez], bz.afterMs = this.nextGaps[nz], bz
+      findSegment(DD) {
+        const CD = this.nodes,
+          cD = this.segment;
+        let ID = cD.index;
+        for (DD < CD[ID].timeMs && (ID = 0); ID < CD.length - 2 && CD[ID + 1].timeMs <= DD;) ID++;
+        const pD = Math.min(ID + 1, CD.length - 1),
+          fD = CD[pD].timeMs - CD[ID].timeMs;
+        return cD.index = ID, cD.toIndex = pD, cD.segmentMs = fD, cD.u = fD > 0 ? (0, iD.p)((DD - CD[ID].timeMs) / fD, CD[ID].easing) : 1, cD.curved = this.smooth && fD > 0, cD.beforeIndex = this.prevNodes[ID], cD.afterIndex = this.nextNodes[pD], cD.beforeMs = this.prevGaps[ID], cD.afterMs = this.nextGaps[pD], cD
       }
-      samplePosition(zz, uz) {
+      samplePosition(DD, CD) {
         const {
-          fromTangent: bz,
-          toTangent: Ez,
-          curved: nz
-        } = zz, iz = this.nodes[zz.index].position, lz = this.nodes[zz.toIndex].position;
-        oz(this.velocities[zz.index], iz, lz, zz.segmentMs, nz, bz), oz(this.velocities[zz.toIndex], iz, lz, zz.segmentMs, nz, Ez);
-        const Mz = zz.u;
-        for (let tz = 0; tz < 3; tz++) uz[tz] = nz ? fz(iz[tz], bz[tz], lz[tz], Ez[tz], Mz) : iz[tz] + (lz[tz] - iz[tz]) * Mz
+          fromTangent: cD,
+          toTangent: ID,
+          curved: pD
+        } = DD, iD = this.nodes[DD.index].position, fD = this.nodes[DD.toIndex].position;
+        nD(this.velocities[DD.index], iD, fD, DD.segmentMs, pD, cD), nD(this.velocities[DD.toIndex], iD, fD, DD.segmentMs, pD, ID);
+        const bD = DD.u;
+        for (let QD = 0; QD < 3; QD++) CD[QD] = pD ? gD(iD[QD], cD[QD], fD[QD], ID[QD], bD) : iD[QD] + (fD[QD] - iD[QD]) * bD
       }
-      fovAt(zz, uz) {
-        var bz;
-        return null !== (bz = this.nodes[zz].keyframe.fov) && void 0 !== bz ? bz : uz
+      fovAt(DD, CD) {
+        var cD;
+        return null !== (cD = this.nodes[DD].keyframe.fov) && void 0 !== cD ? cD : CD
       }
-      neighbour(zz, uz) {
-        const bz = this.nodes.length - 1,
-          Ez = zz + uz;
-        return Ez >= 0 && Ez <= bz ? Ez : this.loopMs <= 0 || bz < 2 ? -1 : Ez < 0 ? bz - 1 : 1
+      neighbour(DD, CD) {
+        const cD = this.nodes.length - 1,
+          ID = DD + CD;
+        return ID >= 0 && ID <= cD ? ID : this.loopMs <= 0 || cD < 2 ? -1 : ID < 0 ? cD - 1 : 1
       }
-      gapMs(zz, uz) {
-        const bz = this.nodes.length - 1;
-        if (1 === uz) {
-          const uz = zz === bz ? 0 : zz;
-          return this.nodes[uz + 1].timeMs - this.nodes[uz].timeMs
+      gapMs(DD, CD) {
+        const cD = this.nodes.length - 1;
+        if (1 === CD) {
+          const CD = DD === cD ? 0 : DD;
+          return this.nodes[CD + 1].timeMs - this.nodes[CD].timeMs
         }
-        const Ez = 0 === zz ? bz : zz;
-        return this.nodes[Ez].timeMs - this.nodes[Ez - 1].timeMs
+        const ID = 0 === DD ? cD : DD;
+        return this.nodes[ID].timeMs - this.nodes[ID - 1].timeMs
       }
     }
-    class Gz {
-      constructor(zz) {
-        this.xd = zz, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = uz => zz.getEntityPosition(uz), this.readAimPoint = uz => zz.getEntityAimPoint(uz)
+    class aD {
+      constructor(DD) {
+        this.Zy = DD, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = CD => DD.getEntityPosition(CD), this.readAimPoint = CD => DD.getEntityAimPoint(CD)
       }
-      aimPoint(zz) {
-        return "string" !== typeof zz ? (0, tz.r)(zz, 3) ? zz : null : this.resolve(zz, this.readAimPoint, this.lastAimPoints)
+      aimPoint(DD) {
+        return "string" !== typeof DD ? (0, QD.q)(DD, 3) ? DD : null : this.resolve(DD, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(zz) {
-        const uz = "string" === typeof zz ? this.xd.getEntityAimPoint(zz) : zz;
-        return uz && (0, tz.r)(uz, 3) ? uz : null
+      currentAimPoint(DD) {
+        const CD = "string" === typeof DD ? this.Zy.getEntityAimPoint(DD) : DD;
+        return CD && (0, QD.q)(CD, 3) ? CD : null
       }
-      feetPosition(zz) {
-        return this.resolve(zz, this.readFeet, this.lastFeet)
+      feetPosition(DD) {
+        return this.resolve(DD, this.readFeet, this.lastFeet)
       }
-      heading(zz) {
-        const uz = this.xd.getEntityHeading(zz);
-        if (null !== uz && Number.isFinite(uz)) return this.lastHeadings.set(zz, uz), uz;
-        const bz = this.lastHeadings.get(zz);
-        return void 0 !== bz ? bz : zz === this.xd.localPlayerId ? 0 : this.heading(this.xd.localPlayerId)
+      heading(DD) {
+        const CD = this.Zy.getEntityHeading(DD);
+        if (null !== CD && Number.isFinite(CD)) return this.lastHeadings.set(DD, CD), CD;
+        const cD = this.lastHeadings.get(DD);
+        return void 0 !== cD ? cD : DD === this.Zy.localPlayerId ? 0 : this.heading(this.Zy.localPlayerId)
       }
-      resolve(zz, uz, bz) {
-        const Ez = uz(zz);
-        let nz = bz.get(zz);
-        return Ez && (0, tz.r)(Ez, 3) ? (nz || (nz = [0, 0, 0], bz.set(zz, nz)), nz[0] = Ez[0], nz[1] = Ez[1], nz[2] = Ez[2], nz) : nz || (zz === this.xd.localPlayerId ? null : this.resolve(this.xd.localPlayerId, uz, bz))
+      resolve(DD, CD, cD) {
+        const ID = CD(DD);
+        let pD = cD.get(DD);
+        return ID && (0, QD.q)(ID, 3) ? (pD || (pD = [0, 0, 0], cD.set(DD, pD)), pD[0] = ID[0], pD[1] = ID[1], pD[2] = ID[2], pD) : pD || (DD === this.Zy.localPlayerId ? null : this.resolve(this.Zy.localPlayerId, CD, cD))
       }
     }
 
-    function az(zz) {
+    function VD(DD) {
       return {
-        heading: zz.heading,
-        pitch: zz.pitch
+        heading: DD.heading,
+        pitch: DD.pitch
       }
     }
 
-    function Vz(zz, uz) {
-      Number.isFinite(zz.heading) && Number.isFinite(zz.pitch) || (0, nz.j)(uz, zz)
+    function zD(DD, CD) {
+      Number.isFinite(DD.heading) && Number.isFinite(DD.pitch) || (0, pD.l)(CD, DD)
     }
 
-    function mz(zz, uz, bz, Ez, iz) {
-      if (uz) return void(0, nz.m)(uz, iz);
-      const lz = Ez.aimPoint(bz);
-      lz && (0, nz.s)(zz, lz, iz)
+    function jD(DD, CD, cD, ID, iD) {
+      if (CD) return void(0, pD.m)(CD, iD);
+      const fD = ID.aimPoint(cD);
+      fD && (0, pD.r)(DD, fD, iD)
     }
-    class qz {
-      constructor(zz, uz, bz, Ez) {
-        this.settings = zz, this.xd = uz, this.targets = bz, this.base = void 0, this.base = az(Ez)
+    class lD {
+      constructor(DD, CD, cD, ID) {
+        this.settings = DD, this.Zy = CD, this.targets = cD, this.base = void 0, this.base = VD(ID)
       }
-      update(zz, uz, bz) {
-        var Ez;
-        const nz = this.settings;
-        (0, tz.i)(nz.position, bz.position), mz(nz.position, nz.lookDirection, null !== (Ez = nz.lookAt) && void 0 !== Ez ? Ez : this.xd.localPlayerId, this.targets, this.base), uz.apply(this.base, bz), bz.fov = Fz(nz, this.xd)
+      update(DD, CD, cD) {
+        var ID;
+        const pD = this.settings;
+        (0, QD.h)(pD.position, cD.position), jD(pD.position, pD.lookDirection, null !== (ID = pD.lookAt) && void 0 !== ID ? ID : this.Zy.localPlayerId, this.targets, this.base), CD.apply(this.base, cD), cD.fov = MD(pD, this.Zy)
       }
-      continueFrom(zz) {
-        zz instanceof qz && (0, nz.j)(zz.base, this.base)
+      continueFrom(DD) {
+        DD instanceof lD && (0, pD.l)(DD.base, this.base)
       }
-      reset(zz) {
-        Vz(this.base, zz)
+      reset(DD) {
+        zD(this.base, DD)
       }
     }
-    class hz {
-      constructor(zz, uz, bz, Ez) {
-        this.settings = zz, this.xd = uz, this.targets = bz, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.ht = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = az(Ez), this.goal = [...Ez.position]
+    class LD {
+      constructor(DD, CD, cD, ID) {
+        this.settings = DD, this.Zy = CD, this.targets = cD, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.lb = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = VD(ID), this.goal = [...ID.position]
       }
-      update(zz, uz, bz) {
-        var Ez, nz, iz;
-        const lz = this.settings,
-          Mz = null !== (Ez = lz.target) && void 0 !== Ez ? Ez : this.xd.localPlayerId,
-          Hz = this.targets.feetPosition(Mz);
-        let Oz = !1;
-        Hz && (Oz = this.foundFeet && rz(this.lastFeet, Hz) > 32 + .1 * zz, (0, tz.i)(Hz, this.lastFeet), this.foundFeet = !0, this.placeGoal(Hz, Mz));
-        const pz = null !== (nz = lz.smoothMs) && void 0 !== nz ? nz : 0;
-        !this.started || pz < 1 || Oz ? ((0, tz.i)(this.goal, this.smoothed), this.ht.fill(0), this.started = !0) : Zz(this.smoothed, this.ht, this.goal, pz, zz), Oz && (this.distance = -1), (0, tz.i)(this.smoothed, bz.position);
-        const dz = !0 === lz.avoidTerrain ? this.pullIn(Mz, zz, bz) : 1;
-        let Rz = this.goal;
-        if ("target" === lz.offsetSpace) Rz = bz.position;
-        else if (dz < 1) {
-          Rz = this.aimOrigin;
-          for (let zz = 0; zz < 3; zz++) Rz[zz] = bz.position[zz] + (this.goal[zz] - this.smoothed[zz]) * dz
+      update(DD, CD, cD) {
+        var ID, pD, iD;
+        const fD = this.settings,
+          bD = null !== (ID = fD.target) && void 0 !== ID ? ID : this.Zy.localPlayerId,
+          wD = this.targets.feetPosition(bD);
+        let SD = !1;
+        wD && (SD = this.foundFeet && mD(this.lastFeet, wD) > 32 + .1 * DD, (0, QD.h)(wD, this.lastFeet), this.foundFeet = !0, this.placeGoal(wD, bD));
+        const BD = null !== (pD = fD.smoothMs) && void 0 !== pD ? pD : 0;
+        !this.started || BD < 1 || SD ? ((0, QD.h)(this.goal, this.smoothed), this.lb.fill(0), this.started = !0) : tD(this.smoothed, this.lb, this.goal, BD, DD), SD && (this.distance = -1), (0, QD.h)(this.smoothed, cD.position);
+        const yD = !0 === fD.avoidTerrain ? this.pullIn(bD, DD, cD) : 1;
+        let ZD = this.goal;
+        if ("target" === fD.offsetSpace) ZD = cD.position;
+        else if (yD < 1) {
+          ZD = this.aimOrigin;
+          for (let DD = 0; DD < 3; DD++) ZD[DD] = cD.position[DD] + (this.goal[DD] - this.smoothed[DD]) * yD
         }
-        mz(Rz, lz.lookDirection, null !== (iz = lz.lookAt) && void 0 !== iz ? iz : Mz, this.targets, this.base), uz.apply(this.base, bz), bz.fov = Fz(lz, this.xd)
+        jD(ZD, fD.lookDirection, null !== (iD = fD.lookAt) && void 0 !== iD ? iD : bD, this.targets, this.base), CD.apply(this.base, cD), cD.fov = MD(fD, this.Zy)
       }
-      continueFrom(zz) {
-        zz instanceof hz && (0, Ez.w)(zz.settings.target, this.settings.target) && ((0, nz.j)(zz.base, this.base), (0, tz.i)(zz.goal, this.goal), (0, tz.i)(zz.lastFeet, this.lastFeet), this.foundFeet = zz.foundFeet, (0, tz.i)(zz.smoothed, this.smoothed), (0, tz.i)(zz.ht, this.ht), this.started = zz.started, !0 === zz.settings.avoidTerrain && (this.distance = zz.distance))
+      continueFrom(DD) {
+        DD instanceof LD && (0, ID.r)(DD.settings.target, this.settings.target) && ((0, pD.l)(DD.base, this.base), (0, QD.h)(DD.goal, this.goal), (0, QD.h)(DD.lastFeet, this.lastFeet), this.foundFeet = DD.foundFeet, (0, QD.h)(DD.smoothed, this.smoothed), (0, QD.h)(DD.lb, this.lb), this.started = DD.started, !0 === DD.settings.avoidTerrain && (this.distance = DD.distance))
       }
-      reset(zz) {
-        Vz(this.base, zz), this.ht.fill(0), this.started = !1, this.distance = -1
+      reset(DD) {
+        zD(this.base, DD), this.lb.fill(0), this.started = !1, this.distance = -1
       }
-      pullIn(zz, uz, bz) {
-        const Ez = this.targets.aimPoint(zz);
-        if (!Ez) return 1;
-        const nz = bz.position,
-          iz = rz(Ez, nz);
-        if (!(iz > 0)) return 1;
-        const lz = this.toCamera;
-        for (let tz = 0; tz < 3; tz++) lz[tz] = (nz[tz] - Ez[tz]) / iz;
-        const Mz = function(zz, uz, bz) {
-          return zz < 0 || uz < zz ? uz : uz + (zz - uz) * Math.exp(-bz / 150)
-        }(this.distance, function(zz, uz, bz, Ez) {
-          const nz = zz.raycastTerrain(uz, bz, Ez);
-          return null !== nz && Number.isFinite(nz) ? Math.min(Ez, Math.max(0, nz - .2)) : Ez
-        }(this.xd, Ez, lz, iz), uz);
-        if (iz - Mz < .001) return this.distance = -1, 1;
-        this.distance = Mz;
-        for (let tz = 0; tz < 3; tz++) nz[tz] = Ez[tz] + lz[tz] * Mz;
-        return Mz / iz
+      pullIn(DD, CD, cD) {
+        const ID = this.targets.aimPoint(DD);
+        if (!ID) return 1;
+        const pD = cD.position,
+          iD = mD(ID, pD);
+        if (!(iD > 0)) return 1;
+        const fD = this.toCamera;
+        for (let QD = 0; QD < 3; QD++) fD[QD] = (pD[QD] - ID[QD]) / iD;
+        const bD = function(DD, CD, cD) {
+          return DD < 0 || CD < DD ? CD : CD + (DD - CD) * Math.exp(-cD / 150)
+        }(this.distance, function(DD, CD, cD, ID) {
+          const pD = DD.raycastTerrain(CD, cD, ID);
+          return null !== pD && Number.isFinite(pD) ? Math.min(ID, Math.max(0, pD - .2)) : ID
+        }(this.Zy, ID, fD, iD), CD);
+        if (iD - bD < .001) return this.distance = -1, 1;
+        this.distance = bD;
+        for (let QD = 0; QD < 3; QD++) pD[QD] = ID[QD] + fD[QD] * bD;
+        return bD / iD
       }
-      placeGoal(zz, uz) {
-        const bz = this.settings.offset;
-        let Ez = bz[0],
-          nz = bz[2];
+      placeGoal(DD, CD) {
+        const cD = this.settings.offset;
+        let ID = cD[0],
+          pD = cD[2];
         if ("target" === this.settings.offsetSpace) {
-          const zz = this.targets.heading(uz),
-            iz = Math.cos(zz),
-            lz = Math.sin(zz);
-          Ez = bz[0] * iz + bz[2] * lz, nz = -bz[0] * lz + bz[2] * iz
+          const DD = this.targets.heading(CD),
+            iD = Math.cos(DD),
+            fD = Math.sin(DD);
+          ID = cD[0] * iD + cD[2] * fD, pD = -cD[0] * fD + cD[2] * iD
         }
-        this.goal[0] = zz[0] + Ez, this.goal[1] = zz[1] + bz[1], this.goal[2] = zz[2] + nz
+        this.goal[0] = DD[0] + ID, this.goal[1] = DD[1] + cD[1], this.goal[2] = DD[2] + pD
       }
     }
-    class Uz {
-      constructor(zz, uz, bz, Ez) {
-        var nz, iz;
-        this.settings = zz, this.xd = uz, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = zz.keyframes.length > 0 ? new Pz(zz.keyframes, null === (nz = zz.smooth) || void 0 === nz || nz, null !== (iz = zz.loop) && void 0 !== iz && iz) : null, this.base = (0, tz.g)(Ez, (0, tz.m)()), this.resolveTarget = zz => bz.aimPoint(zz)
+    class TD {
+      constructor(DD, CD, cD, ID) {
+        var pD, iD;
+        this.settings = DD, this.Zy = CD, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = DD.keyframes.length > 0 ? new KD(DD.keyframes, null === (pD = DD.smooth) || void 0 === pD || pD, null !== (iD = DD.loop) && void 0 !== iD && iD) : null, this.base = (0, QD.d)(ID, (0, QD.k)()), this.resolveTarget = DD => cD.aimPoint(DD)
       }
-      update(zz, uz, bz) {
-        this.elapsedMs += zz;
-        const Ez = Fz(this.settings, this.xd);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, Ez, this.base) : this.base.fov = Ez, (0, tz.i)(this.base.position, bz.position), bz.fov = this.base.fov, uz.apply(this.base, bz)
+      update(DD, CD, cD) {
+        this.elapsedMs += DD;
+        const ID = MD(this.settings, this.Zy);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, ID, this.base) : this.base.fov = ID, (0, QD.h)(this.base.position, cD.position), cD.fov = this.base.fov, CD.apply(this.base, cD)
       }
-      continueFrom(zz) {
-        zz instanceof Uz && (0, Ez.w)(zz.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = zz.elapsedMs, (0, tz.g)(zz.base, this.base))
+      continueFrom(DD) {
+        DD instanceof TD && (0, ID.r)(DD.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = DD.elapsedMs, (0, QD.d)(DD.base, this.base))
       }
-      reset(zz) {
-        Vz(this.base, zz), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(DD) {
+        zD(this.base, DD), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function cz(zz, uz) {
-      return (0, Ez.x)(zz, uz)
+    function GD(DD, CD) {
+      return (0, ID.v)(DD, CD)
     }
-    class gz {
-      constructor(zz, uz, bz) {
-        var Ez;
-        this.settings = zz, this.xd = uz, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const nz = null !== bz && bz.settings.mode === zz.mode,
-          iz = nz ? bz.pose : uz.getDefaultPose();
-        this.pose = (0, tz.g)(iz, (0, tz.m)()), this.lastGoodPose = (0, tz.g)(nz ? bz.lastGoodPose : iz, (0, tz.m)()), this.look = new Kz(zz.playerLook), this.targets = null !== (Ez = null === bz || void 0 === bz ? void 0 : bz.targets) && void 0 !== Ez ? Ez : new Gz(uz);
-        const lz = (0, tz.g)(iz, (0, tz.m)());
-        nz && bz.look.unapply(lz, lz), this.mode = function(zz, uz, bz, Ez) {
-          switch (zz.mode) {
+    class RD {
+      constructor(DD, CD, cD) {
+        var ID;
+        this.settings = DD, this.Zy = CD, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const pD = null !== cD && cD.settings.mode === DD.mode,
+          iD = pD ? cD.pose : CD.getDefaultPose();
+        this.pose = (0, QD.d)(iD, (0, QD.k)()), this.lastGoodPose = (0, QD.d)(pD ? cD.lastGoodPose : iD, (0, QD.k)()), this.look = new oD(DD.playerLook), this.targets = null !== (ID = null === cD || void 0 === cD ? void 0 : cD.targets) && void 0 !== ID ? ID : new aD(CD);
+        const fD = (0, QD.d)(iD, (0, QD.k)());
+        pD && cD.look.unapply(fD, fD), this.mode = function(DD, CD, cD, ID) {
+          switch (DD.mode) {
             case "fixed":
-              return new qz(zz, uz, bz, Ez);
+              return new lD(DD, CD, cD, ID);
             case "follow":
-              return new hz(zz, uz, bz, Ez);
+              return new LD(DD, CD, cD, ID);
             case "path":
-              return new Uz(zz, uz, bz, Ez);
+              return new TD(DD, CD, cD, ID);
             case "frame":
-              return new Rz(zz, uz, bz, Ez)
+              return new ZD(DD, CD, cD, ID)
           }
-        }(zz, uz, this.targets, lz), nz && (this.look.continueFrom(bz.look), this.mode.continueFrom(bz.mode))
+        }(DD, CD, this.targets, fD), pD && (this.look.continueFrom(cD.look), this.mode.continueFrom(cD.mode))
       }
-      update(zz, uz) {
-        return this.look.update(zz, uz), this.mode.update(zz, this.look, this.pose), (0, tz.n)(this.pose) ? (0, tz.g)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, tz.g)(this.lastGoodPose, this.pose), this.mode.reset((0, tz.n)(this.lastGoodPose) ? this.lastGoodPose : this.xd.getDefaultPose())), this.pose
+      update(DD, CD) {
+        return this.look.update(DD, CD), this.mode.update(DD, this.look, this.pose), (0, QD.n)(this.pose) ? (0, QD.d)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, QD.d)(this.lastGoodPose, this.pose), this.mode.reset((0, QD.n)(this.lastGoodPose) ? this.lastGoodPose : this.Zy.getDefaultPose())), this.pose
       }
     }
 
-    function Sz(zz) {
-      return [0, 0, zz[2], zz[3]]
+    function kD(DD) {
+      return [0, 0, DD[2], DD[3]]
     }
-    class yz {
-      constructor(zz) {
-        this.xd = zz, this.settings = {
+    class dD {
+      constructor(DD) {
+        this.Zy = DD, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new Mz, this.shot = null, this.blend = null, this.mixed = (0, tz.m)(), this.output = (0, tz.m)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new bD, this.shot = null, this.blend = null, this.mixed = (0, QD.k)(), this.output = (0, QD.k)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(zz) {
-        const uz = (0, Hz.d)(zz);
-        if ((0, Ez.w)(uz, this.pending ? this.pending.settings : this.settings)) return;
-        const bz = cz(this.settings, uz);
-        if (void 0 !== uz.transition && !bz) return this.pending = {
-          settings: uz,
-          shot: "default" === uz.mode ? null : new gz(uz, this.xd, null)
-        }, void this.fade.fadeOut(uz.transition);
-        const nz = null !== this.pending;
-        this.pending = null, !nz && bz || this.fade.fadeIn(Ez.m.minTransitionFadeMs), this.show(uz, !1)
+      setSettings(DD) {
+        const CD = (0, wD.c)(DD);
+        if ((0, ID.r)(CD, this.pending ? this.pending.settings : this.settings)) return;
+        const cD = GD(this.settings, CD);
+        if (void 0 !== CD.transition && !cD) return this.pending = {
+          settings: CD,
+          shot: "default" === CD.mode ? null : new RD(CD, this.Zy, null)
+        }, void this.fade.fadeOut(CD.transition);
+        const pD = null !== this.pending;
+        this.pending = null, !pD && cD || this.fade.fadeIn(ID.k.minTransitionFadeMs), this.show(CD, !1)
       }
-      show(zz, uz) {
-        var bz, nz;
-        if ((0, Ez.w)(zz, this.settings)) return;
-        const lz = !uz && cz(this.settings, zz);
-        this.settings = zz;
-        const Mz = null !== this.blend && this.blend.elapsedMs > 0,
-          Hz = (0, tz.g)(this.hasOutput ? this.output : this.xd.getDefaultPose(), (0, tz.m)());
-        if (this.shot = "default" === zz.mode ? null : new gz(zz, this.xd, uz ? null : this.shot), lz) return;
-        const Oz = uz || !this.shot && !this.hasOutput ? 0 : null !== (bz = zz.blendInMs) && void 0 !== bz ? bz : 0;
-        if (Oz <= 0) return void(this.blend = null);
-        const pz = (0, iz.m)(null !== (nz = zz.blendEasing) && void 0 !== nz ? nz : "easeInOut");
+      show(DD, CD) {
+        var cD, pD;
+        if ((0, ID.r)(DD, this.settings)) return;
+        const fD = !CD && GD(this.settings, DD);
+        this.settings = DD;
+        const bD = null !== this.blend && this.blend.elapsedMs > 0,
+          wD = (0, QD.d)(this.hasOutput ? this.output : this.Zy.getDefaultPose(), (0, QD.k)());
+        if (this.shot = "default" === DD.mode ? null : new RD(DD, this.Zy, CD ? null : this.shot), fD) return;
+        const SD = CD || !this.shot && !this.hasOutput ? 0 : null !== (cD = DD.blendInMs) && void 0 !== cD ? cD : 0;
+        if (SD <= 0) return void(this.blend = null);
+        const BD = (0, iD.s)(null !== (pD = DD.blendEasing) && void 0 !== pD ? pD : "easeInOut");
         this.blend = {
-          from: Hz,
+          from: wD,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: Oz,
-          easing: Mz ? Sz(pz) : pz
+          durationMs: SD,
+          easing: bD ? kD(BD) : BD
         }
       }
       getSettings() {
@@ -943,66 +943,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(zz, uz) {
-        const bz = Number.isFinite(zz) && zz > 0 ? zz : 0;
-        if (this.fade.advance(bz) && null !== this.pending) {
+      update(DD, CD) {
+        const cD = Number.isFinite(DD) && DD > 0 ? DD : 0;
+        if (this.fade.advance(cD) && null !== this.pending) {
           const {
-            settings: zz
+            settings: DD
           } = this.pending;
-          this.pending = null, this.show(zz, !0)
+          this.pending = null, this.show(DD, !0)
         }
         this.loadingPositions.length = 0;
-        const Ez = this.pending;
-        if (null !== Ez && void 0 !== Ez && Ez.shot) {
-          const zz = "path" === Ez.settings.mode ? 0 : bz;
-          this.noteLoadingPosition(Ez.shot.update(zz, tz.e).position)
+        const ID = this.pending;
+        if (null !== ID && void 0 !== ID && ID.shot) {
+          const DD = "path" === ID.settings.mode ? 0 : cD;
+          this.noteLoadingPosition(ID.shot.update(DD, QD.b).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const lz = this.shot ? this.shot.update(bz, uz) : this.xd.getDefaultPose();
-        this.shot && this.noteLoadingPosition(lz.position);
-        const Mz = this.blend;
-        if (!Mz) return this.writeOutput(lz);
-        Mz.elapsedMs += bz;
-        const Hz = Math.min(1, Mz.elapsedMs / Mz.durationMs);
-        if (Mz.headingDelta = Number.isFinite(Mz.headingDelta) ? (0, nz.y)(Mz.headingDelta, lz.heading - Mz.from.heading) : (0, nz.x)(Mz.from.heading, lz.heading), (0, tz.s)(Mz.from, lz, Mz.headingDelta, (0, iz.k)(Hz, Mz.easing), this.mixed), Hz >= 1) {
+        const fD = this.shot ? this.shot.update(cD, CD) : this.Zy.getDefaultPose();
+        this.shot && this.noteLoadingPosition(fD.position);
+        const bD = this.blend;
+        if (!bD) return this.writeOutput(fD);
+        bD.elapsedMs += cD;
+        const wD = Math.min(1, bD.elapsedMs / bD.durationMs);
+        if (bD.headingDelta = Number.isFinite(bD.headingDelta) ? (0, pD.x)(bD.headingDelta, fD.heading - bD.from.heading) : (0, pD.w)(bD.from.heading, fD.heading), (0, QD.r)(bD.from, fD, bD.headingDelta, (0, iD.p)(wD, bD.easing), this.mixed), wD >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else Mz.fromScripted && this.noteLoadingPosition(Mz.from.position);
+        } else bD.fromScripted && this.noteLoadingPosition(bD.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(zz) {
-        if (zz.every(Number.isFinite)) {
-          const uz = this.loadingPositions;
-          uz.push((0, tz.i)(zz, this.loadingSlots[uz.length]))
+      noteLoadingPosition(DD) {
+        if (DD.every(Number.isFinite)) {
+          const CD = this.loadingPositions;
+          CD.push((0, QD.h)(DD, this.loadingSlots[CD.length]))
         }
       }
-      writeOutput(zz) {
-        const uz = this.output;
-        (0, tz.n)(zz) ? (0, tz.g)(zz, uz) : this.hasOutput || (0, tz.g)(this.xd.getDefaultPose(), uz), uz.pitch = (0, nz.i)(uz.pitch);
-        const bz = this.xd.getDefaultFov(),
-          iz = Number.isFinite(bz) && bz > 0 && bz < 180,
-          lz = iz ? Math.min(Ez.m.minFov, bz) : Ez.m.minFov,
-          Mz = iz ? Math.max(Ez.m.maxFov, bz) : Ez.m.maxFov;
-        return uz.fov = Number.isFinite(uz.fov) ? Math.min(Mz, Math.max(lz, uz.fov)) : Mz, this.hasOutput = !0, uz
+      writeOutput(DD) {
+        const CD = this.output;
+        (0, QD.n)(DD) ? (0, QD.d)(DD, CD) : this.hasOutput || (0, QD.d)(this.Zy.getDefaultPose(), CD), CD.pitch = (0, pD.j)(CD.pitch);
+        const cD = this.Zy.getDefaultFov(),
+          iD = Number.isFinite(cD) && cD > 0 && cD < 180,
+          fD = iD ? Math.min(ID.k.minFov, cD) : ID.k.minFov,
+          bD = iD ? Math.max(ID.k.maxFov, cD) : ID.k.maxFov;
+        return CD.fov = Number.isFinite(CD.fov) ? Math.min(bD, Math.max(fD, CD.fov)) : bD, this.hasOutput = !0, CD
       }
     }
   },
-  38510: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => nz,
-      g: () => Mz,
-      i: () => lz,
-      m: () => iz,
-      n: () => Hz,
-      r: () => tz,
-      s: () => Oz
+  38494: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => pD,
+      d: () => bD,
+      h: () => fD,
+      k: () => iD,
+      n: () => wD,
+      q: () => QD,
+      r: () => SD
     });
-    var Ez = bz(38518);
-    const nz = {
-      QJ: 0,
-      eJ: 0
+    var ID = cD(38496);
+    const pD = {
+      Qq: 0,
+      wq: 0
     };
 
-    function iz() {
+    function iD() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1011,196 +1011,196 @@ export const modules = {
       }
     }
 
-    function lz(zz, uz) {
-      return uz[0] = zz[0], uz[1] = zz[1], uz[2] = zz[2], uz
+    function fD(DD, CD) {
+      return CD[0] = DD[0], CD[1] = DD[1], CD[2] = DD[2], CD
     }
 
-    function Mz(zz, uz) {
-      return lz(zz.position, uz.position), uz.heading = zz.heading, uz.pitch = zz.pitch, uz.fov = zz.fov, uz
+    function bD(DD, CD) {
+      return fD(DD.position, CD.position), CD.heading = DD.heading, CD.pitch = DD.pitch, CD.fov = DD.fov, CD
     }
 
-    function tz(zz, uz) {
-      return Array.isArray(zz) && zz.length === uz && zz.every(Number.isFinite)
+    function QD(DD, CD) {
+      return Array.isArray(DD) && DD.length === CD && DD.every(Number.isFinite)
     }
 
-    function Hz(zz) {
-      return tz(zz.position, 3) && Number.isFinite(zz.heading) && Number.isFinite(zz.pitch) && Number.isFinite(zz.fov)
+    function wD(DD) {
+      return QD(DD.position, 3) && Number.isFinite(DD.heading) && Number.isFinite(DD.pitch) && Number.isFinite(DD.fov)
     }
 
-    function Oz(zz, uz, bz, nz, iz) {
-      for (let Ez = 0; Ez < 3; Ez++) iz.position[Ez] = zz.position[Ez] + (uz.position[Ez] - zz.position[Ez]) * nz;
-      return iz.heading = (0, Ez.t)(zz.heading + bz * nz), iz.pitch = zz.pitch + (uz.pitch - zz.pitch) * nz, iz.fov = zz.fov + (uz.fov - zz.fov) * nz, iz
+    function SD(DD, CD, cD, pD, iD) {
+      for (let ID = 0; ID < 3; ID++) iD.position[ID] = DD.position[ID] + (CD.position[ID] - DD.position[ID]) * pD;
+      return iD.heading = (0, ID.u)(DD.heading + cD * pD), iD.pitch = DD.pitch + (CD.pitch - DD.pitch) * pD, iD.fov = DD.fov + (CD.fov - DD.fov) * pD, iD
     }
   },
-  38549: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Nz,
-      f: () => dz
+  38510: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => OD,
+      e: () => yD
     });
-    var Ez = bz(38540),
-      nz = bz(38510);
-    const iz = Ez.i,
-      lz = Ez.q;
+    var ID = cD(38505),
+      pD = cD(38494);
+    const iD = ID.g,
+      fD = ID.m;
 
-    function Mz(zz, uz, bz, Ez) {
-      return Number.isFinite(zz) ? Math.min(bz, Math.max(uz, zz)) : Ez
+    function bD(DD, CD, cD, ID) {
+      return Number.isFinite(DD) ? Math.min(cD, Math.max(CD, DD)) : ID
     }
 
-    function tz(zz, uz, bz) {
-      return void 0 !== zz && Number.isFinite(zz) ? Math.min(bz, Math.max(uz, zz)) : void 0
+    function QD(DD, CD, cD) {
+      return void 0 !== DD && Number.isFinite(DD) ? Math.min(cD, Math.max(CD, DD)) : void 0
     }
 
-    function Hz(zz) {
-      const uz = Ez.m.maxCoordinate;
-      return [Math.min(uz, Math.max(-uz, zz[0])), Math.min(uz, Math.max(-uz, zz[1])), Math.min(uz, Math.max(-uz, zz[2]))]
+    function wD(DD) {
+      const CD = ID.k.maxCoordinate;
+      return [Math.min(CD, Math.max(-CD, DD[0])), Math.min(CD, Math.max(-CD, DD[1])), Math.min(CD, Math.max(-CD, DD[2]))]
     }
 
-    function Oz(zz) {
-      return "string" === typeof zz ? zz : (0, nz.r)(zz, 3) ? Hz(zz) : void 0
+    function SD(DD) {
+      return "string" === typeof DD ? DD : (0, pD.q)(DD, 3) ? wD(DD) : void 0
     }
-    const pz = new RegExp(Ez.u);
+    const BD = new RegExp(ID.o);
 
-    function dz(zz) {
-      return "string" === typeof zz && pz.test(zz)
+    function yD(DD) {
+      return "string" === typeof DD && BD.test(DD)
     }
 
-    function Fz(zz) {
-      const uz = [];
-      if (!Array.isArray(zz)) return uz;
-      for (const bz of zz.slice(0, Ez.m.maxFrameTargets)) {
-        const zz = Oz(bz);
-        void 0 === zz || "string" === typeof zz && !dz(zz) || uz.push(zz)
+    function MD(DD) {
+      const CD = [];
+      if (!Array.isArray(DD)) return CD;
+      for (const cD of DD.slice(0, ID.k.maxFrameTargets)) {
+        const DD = SD(cD);
+        void 0 === DD || "string" === typeof DD && !yD(DD) || CD.push(DD)
       }
-      return uz
+      return CD
     }
 
-    function Zz(zz) {
-      if (!(0, nz.r)(zz, 3)) return;
-      const uz = Math.max(Math.abs(zz[0]), Math.abs(zz[1]), Math.abs(zz[2])),
-        bz = Math.hypot(zz[0] / uz, zz[1] / uz, zz[2] / uz);
-      return 0 === uz || uz * bz < Ez.m.minDirectionLength ? void 0 : [zz[0] / uz / bz, zz[1] / uz / bz, zz[2] / uz / bz]
+    function tD(DD) {
+      if (!(0, pD.q)(DD, 3)) return;
+      const CD = Math.max(Math.abs(DD[0]), Math.abs(DD[1]), Math.abs(DD[2])),
+        cD = Math.hypot(DD[0] / CD, DD[1] / CD, DD[2] / CD);
+      return 0 === CD || CD * cD < ID.k.minDirectionLength ? void 0 : [DD[0] / CD / cD, DD[1] / CD / cD, DD[2] / CD / cD]
     }
 
-    function Rz(zz) {
-      if (void 0 !== zz) return "string" === typeof zz ? iz.includes(zz) ? zz : void 0 : (0, nz.r)(zz, 4) ? [Mz(zz[0], 0, 1, 0), Mz(zz[1], Ez.m.minEasingY, Ez.m.maxEasingY, 0), Mz(zz[2], 0, 1, 1), Mz(zz[3], Ez.m.minEasingY, Ez.m.maxEasingY, 1)] : "linear"
+    function ZD(DD) {
+      if (void 0 !== DD) return "string" === typeof DD ? iD.includes(DD) ? DD : void 0 : (0, pD.q)(DD, 4) ? [bD(DD[0], 0, 1, 0), bD(DD[1], ID.k.minEasingY, ID.k.maxEasingY, 0), bD(DD[2], 0, 1, 1), bD(DD[3], ID.k.minEasingY, ID.k.maxEasingY, 1)] : "linear"
     }
 
-    function Kz(zz) {
-      if (zz) return {
-        maxYaw: Mz(zz.maxYaw, 0, Ez.m.maxPlayerLook, 0),
-        maxPitch: Mz(zz.maxPitch, 0, Ez.m.maxPlayerLook, 0),
-        returnMs: tz(zz.returnMs, 0, Ez.m.maxReturnMs)
+    function oD(DD) {
+      if (DD) return {
+        maxYaw: bD(DD.maxYaw, 0, ID.k.maxPlayerLook, 0),
+        maxPitch: bD(DD.maxPitch, 0, ID.k.maxPlayerLook, 0),
+        returnMs: QD(DD.returnMs, 0, ID.k.maxReturnMs)
       }
     }
-    const wz = new RegExp(Ez.b);
+    const vD = new RegExp(ID.b);
 
-    function Xz(zz) {
-      var uz;
-      if ("object" !== typeof zz || null === zz) return;
-      const bz = Ez.m.maxTransitionMs,
-        nz = Ez.m.minTransitionFadeMs;
+    function ND(DD) {
+      var CD;
+      if ("object" !== typeof DD || null === DD) return;
+      const cD = ID.k.maxTransitionMs,
+        pD = ID.k.minTransitionFadeMs;
       return {
-        colour: "string" === typeof zz.colour && wz.test(zz.colour) ? zz.colour : Ez.f,
-        outMs: Mz(zz.outMs, nz, bz, nz),
-        holdMs: Mz(null !== (uz = zz.holdMs) && void 0 !== uz ? uz : 0, 0, bz, 0),
-        inMs: Mz(zz.inMs, nz, bz, nz)
+        colour: "string" === typeof DD.colour && vD.test(DD.colour) ? DD.colour : ID.c,
+        outMs: bD(DD.outMs, pD, cD, pD),
+        holdMs: bD(null !== (CD = DD.holdMs) && void 0 !== CD ? CD : 0, 0, cD, 0),
+        inMs: bD(DD.inMs, pD, cD, pD)
       }
     }
 
-    function fz(zz) {
-      return !0 === zz || void 0
+    function gD(DD) {
+      return !0 === DD || void 0
     }
 
-    function sz(zz) {
-      if ("object" !== typeof zz || null === zz) return !1;
-      const uz = zz.lookAt;
-      return Number.isFinite(zz.timeMs) && (0, nz.r)(zz.position, 3) && (void 0 === uz || "string" === typeof uz || (0, nz.r)(uz, 3))
+    function XD(DD) {
+      if ("object" !== typeof DD || null === DD) return !1;
+      const CD = DD.lookAt;
+      return Number.isFinite(DD.timeMs) && (0, pD.q)(DD.position, 3) && (void 0 === CD || "string" === typeof CD || (0, pD.q)(CD, 3))
     }
 
-    function rz(zz) {
+    function mD(DD) {
       return {
-        ...zz,
-        timeMs: Mz(zz.timeMs, 0, Ez.m.maxPathMs, 0),
-        position: Hz(zz.position),
-        lookAt: Oz(zz.lookAt),
-        lookDirection: Zz(zz.lookDirection),
-        fov: tz(zz.fov, Ez.m.minFov, Ez.m.maxFov),
-        easing: Rz(zz.easing)
+        ...DD,
+        timeMs: bD(DD.timeMs, 0, ID.k.maxPathMs, 0),
+        position: wD(DD.position),
+        lookAt: SD(DD.lookAt),
+        lookDirection: tD(DD.lookDirection),
+        fov: QD(DD.fov, ID.k.minFov, ID.k.maxFov),
+        easing: ZD(DD.easing)
       }
     }
 
-    function oz(zz) {
-      const uz = [];
-      if (!Array.isArray(zz)) return uz;
-      for (const bz of zz.slice(0, Ez.m.maxKeyframes)) {
-        if (!sz(bz)) continue;
-        const zz = rz(bz);
-        (0 === uz.length || zz.timeMs > uz[uz.length - 1].timeMs) && uz.push(zz)
+    function nD(DD) {
+      const CD = [];
+      if (!Array.isArray(DD)) return CD;
+      for (const cD of DD.slice(0, ID.k.maxKeyframes)) {
+        if (!XD(cD)) continue;
+        const DD = mD(cD);
+        (0 === CD.length || DD.timeMs > CD[CD.length - 1].timeMs) && CD.push(DD)
       }
-      return uz
+      return CD
     }
 
-    function Nz(zz) {
-      if ("object" !== typeof zz || null === zz) return {
+    function OD(DD) {
+      if ("object" !== typeof DD || null === DD) return {
         mode: "default"
       };
-      const uz = {
-          blendInMs: tz(zz.blendInMs, 0, Ez.m.maxBlendInMs),
-          blendEasing: Rz(zz.blendEasing),
-          transition: Xz(zz.transition),
-          letterbox: fz(zz.letterbox),
-          hideHud: fz(zz.hideHud)
+      const CD = {
+          blendInMs: QD(DD.blendInMs, 0, ID.k.maxBlendInMs),
+          blendEasing: ZD(DD.blendEasing),
+          transition: ND(DD.transition),
+          letterbox: gD(DD.letterbox),
+          hideHud: gD(DD.hideHud)
         },
-        bz = {
+        cD = {
           mode: "default",
-          ...uz
+          ...CD
         };
-      if ("default" === zz.mode || "fixed" === zz.mode && !(0, nz.r)(zz.position, 3)) return bz;
-      const iz = {
-        ...uz,
-        fov: tz(zz.fov, Ez.m.minFov, Ez.m.maxFov),
-        playerFacing: (pz = zz.playerFacing, lz.includes(pz) ? pz : void 0),
-        playerLook: Kz(zz.playerLook)
+      if ("default" === DD.mode || "fixed" === DD.mode && !(0, pD.q)(DD.position, 3)) return cD;
+      const iD = {
+        ...CD,
+        fov: QD(DD.fov, ID.k.minFov, ID.k.maxFov),
+        playerFacing: (BD = DD.playerFacing, fD.includes(BD) ? BD : void 0),
+        playerLook: oD(DD.playerLook)
       };
-      var pz, dz;
-      switch (zz.mode) {
+      var BD, yD;
+      switch (DD.mode) {
         case "fixed":
           return {
-            ...zz, ...iz, position: Hz(zz.position), lookAt: Oz(zz.lookAt), lookDirection: Zz(zz.lookDirection)
+            ...DD, ...iD, position: wD(DD.position), lookAt: SD(DD.lookAt), lookDirection: tD(DD.lookDirection)
           };
         case "follow":
           return {
-            ...zz, ...iz, target: "string" === typeof zz.target ? zz.target : void 0, lookAt: Oz(zz.lookAt), offset: (dz = zz.offset, Array.isArray(dz) ? [Mz(dz[0], -Ez.m.maxOffset, Ez.m.maxOffset, 0), Mz(dz[1], -Ez.m.maxOffset, Ez.m.maxOffset, 0), Mz(dz[2], -Ez.m.maxOffset, Ez.m.maxOffset, 0)] : [0, 0, 0]), lookDirection: Zz(zz.lookDirection), smoothMs: tz(zz.smoothMs, 0, Ez.m.maxSmoothMs)
+            ...DD, ...iD, target: "string" === typeof DD.target ? DD.target : void 0, lookAt: SD(DD.lookAt), offset: (yD = DD.offset, Array.isArray(yD) ? [bD(yD[0], -ID.k.maxOffset, ID.k.maxOffset, 0), bD(yD[1], -ID.k.maxOffset, ID.k.maxOffset, 0), bD(yD[2], -ID.k.maxOffset, ID.k.maxOffset, 0)] : [0, 0, 0]), lookDirection: tD(DD.lookDirection), smoothMs: QD(DD.smoothMs, 0, ID.k.maxSmoothMs)
           };
         case "path":
           return {
-            ...zz, ...iz, keyframes: oz(zz.keyframes)
+            ...DD, ...iD, keyframes: nD(DD.keyframes)
           };
         case "frame":
           return {
-            ...zz, ...iz, targets: Fz(zz.targets), viewHeading: tz(zz.viewHeading, -Ez.m.maxFrameHeading, Ez.m.maxFrameHeading), viewElevation: tz(zz.viewElevation, 0, Ez.m.maxFrameElevation), padding: tz(zz.padding, 0, Ez.m.maxFrameDistance), closestDistance: tz(zz.closestDistance, 0, Ez.m.maxFrameDistance), furthestDistance: tz(zz.furthestDistance, 0, Ez.m.maxFrameDistance), smoothMs: tz(zz.smoothMs, 0, Ez.m.maxSmoothMs)
+            ...DD, ...iD, targets: MD(DD.targets), viewHeading: QD(DD.viewHeading, -ID.k.maxFrameHeading, ID.k.maxFrameHeading), viewElevation: QD(DD.viewElevation, 0, ID.k.maxFrameElevation), padding: QD(DD.padding, 0, ID.k.maxFrameDistance), closestDistance: QD(DD.closestDistance, 0, ID.k.maxFrameDistance), furthestDistance: QD(DD.furthestDistance, 0, ID.k.maxFrameDistance), smoothMs: QD(DD.smoothMs, 0, ID.k.maxSmoothMs)
           };
         default:
-          return bz
+          return cD
       }
     }
   },
-  38036: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz
+  38030: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => bD
     });
-    var Ez = bz(1212);
+    var ID = cD(1221);
 
-    function nz(zz) {
-      const uz = /(\d*\.?\d+)px/.exec(zz);
-      return uz ? Number(uz[1]) : null
+    function pD(DD) {
+      const CD = /(\d*\.?\d+)px/.exec(DD);
+      return CD ? Number(CD[1]) : null
     }
 
-    function iz(zz) {
-      return zz.split(/[\s,]+/).pop()
+    function iD(DD) {
+      return DD.split(/[\s,]+/).pop()
     }
-    let lz = !1;
-    const Mz = {
+    let fD = !1;
+    const bD = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -1211,360 +1211,360 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(zz, uz, Ez, Mz, tz, Hz) {
-        if (tz <= 0 || Hz <= 0 || this.fontSize <= 0) return {
+      drawText: function(DD, CD, ID, bD, QD, wD) {
+        if (QD <= 0 || wD <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: Oz,
-          fontVariant: pz,
-          fontWeight: dz,
-          fontSize: Fz,
-          font: Zz
-        } = this, Rz = [Oz, pz, dz, `${Fz}px`, Zz].filter(Boolean).join(" "), Kz = [
-          [dz, `${Fz}px`, iz(Zz)].filter(Boolean).join(" "), `${Fz}px sans-serif`
-        ], wz = zz.font, Xz = function(zz, uz, bz) {
-          for (const Ez of uz) {
-            zz.font = Ez;
-            const uz = nz(zz.font),
-              lz = iz(Ez);
-            if (null !== uz && Math.abs(uz - bz) <= .5 && zz.font.toLowerCase().includes(lz.toLowerCase())) return Ez
+          fontStyle: SD,
+          fontVariant: BD,
+          fontWeight: yD,
+          fontSize: MD,
+          font: tD
+        } = this, ZD = [SD, BD, yD, `${MD}px`, tD].filter(Boolean).join(" "), oD = [
+          [yD, `${MD}px`, iD(tD)].filter(Boolean).join(" "), `${MD}px sans-serif`
+        ], vD = DD.font, ND = function(DD, CD, cD) {
+          for (const ID of CD) {
+            DD.font = ID;
+            const CD = pD(DD.font),
+              fD = iD(ID);
+            if (null !== CD && Math.abs(CD - cD) <= .5 && DD.font.toLowerCase().includes(fD.toLowerCase())) return ID
           }
           return null
-        }(zz, [Rz, ...Kz], Fz);
-        Xz !== Rz && function(zz, uz, Ez) {
-          lz || (lz = !0, Promise.resolve().then((() => bz(1068))).then((bz => {
+        }(DD, [ZD, ...oD], MD);
+        ND !== ZD && function(DD, CD, ID) {
+          fD || (fD = !0, Promise.resolve().then((() => cD(1077))).then((cD => {
             let {
-              WR: nz
-            } = bz;
-            nz(new Error("A canvas didn't take canvasTxt's font"), {
-              font: zz,
-              MZ: uz,
-              drawnWith: null !== Ez && void 0 !== Ez ? Ez : "the kept font, scaled"
+              WZ: pD
+            } = cD;
+            pD(new Error("A canvas didn't take canvasTxt's font"), {
+              font: DD,
+              uM: CD,
+              drawnWith: null !== ID && void 0 !== ID ? ID : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(Rz, wz, Xz);
-        const fz = nz(zz.font);
-        if (null === Xz && null !== fz && fz > 0) {
-          const bz = Fz / fz;
-          zz.save();
+        }(ZD, vD, ND);
+        const gD = pD(DD.font);
+        if (null === ND && null !== gD && gD > 0) {
+          const cD = MD / gD;
+          DD.save();
           try {
-            return zz.scale(bz, bz), {
-              height: this.drawLines(zz, uz, Ez / bz, Mz / bz, tz / bz, Hz / bz, fz).height * bz
+            return DD.scale(cD, cD), {
+              height: this.drawLines(DD, CD, ID / cD, bD / cD, QD / cD, wD / cD, gD).height * cD
             }
           } finally {
-            zz.restore()
+            DD.restore()
           }
         }
-        return this.drawLines(zz, uz, Ez, Mz, tz, Hz, Fz)
+        return this.drawLines(DD, CD, ID, bD, QD, wD, MD)
       },
-      drawLines: function(zz, uz, bz, nz, iz, lz, Mz) {
-        const tz = bz + iz,
-          Hz = nz + lz;
-        let Oz, pz = nz + lz / 2 + Mz / 2;
-        "right" === this.align ? (Oz = tz, zz.textAlign = "right") : "left" === this.align ? (Oz = bz, zz.textAlign = "left") : (Oz = bz + iz / 2, zz.textAlign = "center");
-        for (const Ez of uz) {
-          zz.measureText(Ez).width >= iz && (uz = uz.replace(Ez, ""))
+      drawLines: function(DD, CD, cD, pD, iD, fD, bD) {
+        const QD = cD + iD,
+          wD = pD + fD;
+        let SD, BD = pD + fD / 2 + bD / 2;
+        "right" === this.align ? (SD = QD, DD.textAlign = "right") : "left" === this.align ? (SD = cD, DD.textAlign = "left") : (SD = cD + iD / 2, DD.textAlign = "center");
+        for (const ID of CD) {
+          DD.measureText(ID).width >= iD && (CD = CD.replace(ID, ""))
         }
-        uz = (0, Ez.W)(uz);
-        const dz = [],
-          Fz = uz.split("\n"),
-          Zz = this.justify ? zz.measureText("\u200a").width : 0;
-        Fz.forEach((uz => {
-          let bz = zz.measureText(uz).width;
-          if (bz <= iz) dz.push(uz);
+        CD = (0, ID.V)(CD);
+        const yD = [],
+          MD = CD.split("\n"),
+          tD = this.justify ? DD.measureText("\u200a").width : 0;
+        MD.forEach((CD => {
+          let cD = DD.measureText(CD).width;
+          if (cD <= iD) yD.push(CD);
           else {
-            let Ez = uz;
-            const nz = iz;
-            let lz, Mz, tz;
-            for (bz = zz.measureText(Ez).width; bz > nz;) {
-              for (lz = 0, Mz = 0, tz = ""; Mz < nz;) lz++, tz = Ez.substr(0, lz), Mz = zz.measureText(tz).width;
-              lz--, tz = tz.substr(0, lz);
-              const uz = lz;
-              if (" " !== Ez.substr(lz, 1)) {
+            let ID = CD;
+            const pD = iD;
+            let fD, bD, QD;
+            for (cD = DD.measureText(ID).width; cD > pD;) {
+              for (fD = 0, bD = 0, QD = ""; bD < pD;) fD++, QD = ID.substr(0, fD), bD = DD.measureText(QD).width;
+              fD--, QD = QD.substr(0, fD);
+              const CD = fD;
+              if (" " !== ID.substr(fD, 1)) {
                 for (;
-                  " " !== Ez.substr(lz, 1) && 0 !== lz;) lz--;
-                0 === lz && (lz = uz), tz = Ez.substr(0, lz)
+                  " " !== ID.substr(fD, 1) && 0 !== fD;) fD--;
+                0 === fD && (fD = CD), QD = ID.substr(0, fD)
               }
-              tz = this.justify ? this.justifyLine(zz, tz, Zz, "\u200a", iz) : tz, Ez = Ez.substr(lz), bz = zz.measureText(Ez).width, dz.push(tz)
+              QD = this.justify ? this.justifyLine(DD, QD, tD, "\u200a", iD) : QD, ID = ID.substr(fD), cD = DD.measureText(ID).width, yD.push(QD)
             }
-            bz > 0 && dz.push(Ez)
+            cD > 0 && yD.push(ID)
           }
         }));
-        const Rz = this.lineHeight ? this.lineHeight : this.getTextHeight(zz, uz),
-          Kz = Rz * (dz.length - 1),
-          wz = Kz / 2;
-        let Xz = nz;
-        "top" === this.vAlign ? pz = nz + Mz : "bottom" === this.vAlign ? (pz = Hz - Kz, Xz = Hz) : (Xz = nz + lz / 2, pz -= wz), dz.forEach((uz => {
-          uz = uz.trim(), zz.fillText(uz, Oz, pz), pz += Rz
-        })), this.debug && (zz.lineWidth = 3, zz.strokeStyle = "#00909e", zz.strokeRect(bz, nz, iz, lz), zz.lineWidth = 2, zz.strokeStyle = "#f6d743", zz.beginPath(), zz.moveTo(Oz, nz), zz.lineTo(Oz, Hz), zz.stroke(), zz.strokeStyle = "#ff6363", zz.beginPath(), zz.moveTo(bz, Xz), zz.lineTo(tz, Xz), zz.stroke());
+        const ZD = this.lineHeight ? this.lineHeight : this.getTextHeight(DD, CD),
+          oD = ZD * (yD.length - 1),
+          vD = oD / 2;
+        let ND = pD;
+        "top" === this.vAlign ? BD = pD + bD : "bottom" === this.vAlign ? (BD = wD - oD, ND = wD) : (ND = pD + fD / 2, BD -= vD), yD.forEach((CD => {
+          CD = CD.trim(), DD.fillText(CD, SD, BD), BD += ZD
+        })), this.debug && (DD.lineWidth = 3, DD.strokeStyle = "#00909e", DD.strokeRect(cD, pD, iD, fD), DD.lineWidth = 2, DD.strokeStyle = "#f6d743", DD.beginPath(), DD.moveTo(SD, pD), DD.lineTo(SD, wD), DD.stroke(), DD.strokeStyle = "#ff6363", DD.beginPath(), DD.moveTo(cD, ND), DD.lineTo(QD, ND), DD.stroke());
         return {
-          height: Kz + Rz
+          height: oD + ZD
         }
       },
-      getTextHeight: function(zz, uz) {
-        const bz = zz.textBaseline;
-        zz.textBaseline = "bottom";
+      getTextHeight: function(DD, CD) {
+        const cD = DD.textBaseline;
+        DD.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: Ez
-        } = zz.measureText(uz);
-        return zz.textBaseline = bz, Ez
+          actualBoundingBoxAscent: ID
+        } = DD.measureText(CD);
+        return DD.textBaseline = cD, ID
       },
-      justifyLine: function(zz, uz, bz, Ez, nz) {
-        const iz = uz.trim(),
-          lz = zz.measureText(iz).width,
-          Mz = iz.split(/\s+/).length - 1,
-          tz = Math.floor((nz - lz) / bz);
-        if (Mz <= 0 || tz <= 0) return iz;
-        const Hz = Math.floor(tz / Mz);
-        let Oz = tz - Mz * Hz,
-          pz = [];
-        for (let dz = 0; dz < Hz; dz++) pz.push(Ez);
-        pz = pz.join("");
-        return iz.replace(/\s+/g, (zz => {
-          const uz = Oz > 0 ? pz + Ez : pz;
-          return Oz--, zz + uz
+      justifyLine: function(DD, CD, cD, ID, pD) {
+        const iD = CD.trim(),
+          fD = DD.measureText(iD).width,
+          bD = iD.split(/\s+/).length - 1,
+          QD = Math.floor((pD - fD) / cD);
+        if (bD <= 0 || QD <= 0) return iD;
+        const wD = Math.floor(QD / bD);
+        let SD = QD - bD * wD,
+          BD = [];
+        for (let yD = 0; yD < wD; yD++) BD.push(ID);
+        BD = BD.join("");
+        return iD.replace(/\s+/g, (DD => {
+          const CD = SD > 0 ? BD + ID : BD;
+          return SD--, DD + CD
         }))
       }
     }
   },
-  38474: (zz, uz, bz) => {
-    function Ez(zz, uz) {
-      return uz.set(zz), uz
+  38463: (DD, CD, cD) => {
+    function ID(DD, CD) {
+      return CD.set(DD), CD
     }
-    bz.d(uz, {
-      d: () => Ez
+    cD.d(CD, {
+      d: () => ID
     })
   },
-  38040: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Rz,
-      h: () => Zz,
-      k: () => dz,
-      l: () => Oz,
-      n: () => pz
+  38038: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => ZD,
+      e: () => tD,
+      f: () => yD,
+      i: () => SD,
+      k: () => BD
     });
-    var Ez = bz(4035),
-      nz = bz(328);
-    const iz = 1024,
-      lz = 1536,
-      Mz = 2 * Ez.i + 1,
-      tz = new Intl.NumberFormat("en", {
+    var ID = cD(4081),
+      pD = cD(326);
+    const iD = 1024,
+      fD = 1536,
+      bD = 2 * ID.h + 1,
+      QD = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      Hz = 1.5;
+      wD = 1.5;
 
-    function Oz(zz, uz, bz) {
-      if ("string" !== typeof zz) return uz;
+    function SD(DD, CD, cD) {
+      if ("string" !== typeof DD) return CD;
       try {
-        const bz = JSON.parse(zz);
-        return bz && "object" === typeof bz ? bz : uz
-      } catch (Ez) {
-        return void 0 !== bz && console.error(`Couldn't parse ${bz}`, Ez), uz
+        const cD = JSON.parse(DD);
+        return cD && "object" === typeof cD ? cD : CD
+      } catch (ID) {
+        return void 0 !== cD && console.error(`Couldn't parse ${cD}`, ID), CD
       }
     }
 
-    function pz(zz) {
-      return Oz(zz, null, "a leaderboard's rows")
+    function BD(DD) {
+      return SD(DD, null, "a leaderboard's rows")
     }
 
-    function dz(zz, uz) {
-      var bz, Ez;
-      return null !== uz && void 0 !== uz ? uz : {
-        status: null !== (bz = zz.status) && void 0 !== bz ? bz : "loading",
-        entries: null !== (Ez = zz.entries) && void 0 !== Ez ? Ez : []
+    function yD(DD, CD) {
+      var cD, ID;
+      return null !== CD && void 0 !== CD ? CD : {
+        status: null !== (cD = DD.status) && void 0 !== cD ? cD : "loading",
+        entries: null !== (ID = DD.entries) && void 0 !== ID ? ID : []
       }
     }
 
-    function Fz(zz, uz) {
-      return "number" === typeof zz && Number.isFinite(zz) && zz > 0 ? zz : uz
+    function MD(DD, CD) {
+      return "number" === typeof DD && Number.isFinite(DD) && DD > 0 ? DD : CD
     }
 
-    function Zz(zz, uz) {
-      const bz = Fz(zz.size, 1);
-      let Ez = Fz(zz.width, Fz(2.5 * bz, 2.5)),
-        nz = Fz(zz.height, Fz(3.75 * bz, 3.75));
-      Number.isFinite(iz * nz / Ez) && Number.isFinite(lz * Ez / nz) || (Ez = 2.5, nz = 3.75);
-      const Mz = nz / Ez,
-        tz = Math.max(1, Math.min(iz, uz / Mz));
+    function tD(DD, CD) {
+      const cD = MD(DD.size, 1);
+      let ID = MD(DD.width, MD(2.5 * cD, 2.5)),
+        pD = MD(DD.height, MD(3.75 * cD, 3.75));
+      Number.isFinite(iD * pD / ID) && Number.isFinite(fD * ID / pD) || (ID = 2.5, pD = 3.75);
+      const bD = pD / ID,
+        QD = Math.max(1, Math.min(iD, CD / bD));
       return {
-        width: Ez,
-        height: nz,
-        layoutWidth: Math.max(iz, lz / Mz),
-        layoutHeight: Math.max(lz, iz * Mz),
-        pixelWidth: Math.round(tz),
-        pixelHeight: Math.round(Math.max(1, Math.min(uz, tz * Mz)))
+        width: ID,
+        height: pD,
+        layoutWidth: Math.max(iD, fD / bD),
+        layoutHeight: Math.max(fD, iD * bD),
+        pixelWidth: Math.round(QD),
+        pixelHeight: Math.round(Math.max(1, Math.min(CD, QD * bD)))
       }
     }
 
-    function Rz(zz, uz, bz, lz, Oz, pz) {
-      zz.setTransform(1, 0, 0, 1, 0, 0), zz.fillStyle = nz.N.defaultNameTagBackground, zz.fillRect(0, 0, uz, bz), zz.scale(uz / lz.layoutWidth, bz / lz.layoutHeight), zz.translate((lz.layoutWidth - iz) / 2, 0),
-        function(zz, uz, bz, iz) {
-          var lz, Oz, pz, dz;
+    function ZD(DD, CD, cD, fD, SD, BD) {
+      DD.setTransform(1, 0, 0, 1, 0, 0), DD.fillStyle = pD.J.defaultNameTagBackground, DD.fillRect(0, 0, CD, cD), DD.scale(CD / fD.layoutWidth, cD / fD.layoutHeight), DD.translate((fD.layoutWidth - iD) / 2, 0),
+        function(DD, CD, cD, iD) {
+          var fD, SD, BD, yD;
           const {
-            top: Fz,
-            around: Zz,
-            showPlayerText: Rz,
-            localPlayerDbId: Xz
-          } = bz, {
-            whiteUiText: fz,
-            grayUiText: sz,
-            yellowUiText: rz
-          } = nz.N;
-          zz.textBaseline = "middle";
-          const oz = function(uz, bz, Ez, nz, iz, lz) {
-              let Mz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              zz.font = `bold ${nz}px 'Jetbrains Mono', monospace`, zz.fillStyle = iz, zz.textAlign = Mz;
-              let tz = uz.replace(/[\r\n\t]/g, " ");
-              if (zz.measureText(tz).width > lz) {
-                for (; tz.length > 0 && zz.measureText(`${tz}\u2026`).width > lz;) tz = tz.slice(0, -1);
-                tz += "\u2026"
+            top: MD,
+            around: tD,
+            showPlayerText: ZD,
+            localPlayerDbId: ND
+          } = cD, {
+            whiteUiText: gD,
+            grayUiText: XD,
+            yellowUiText: mD
+          } = pD.J;
+          DD.textBaseline = "middle";
+          const nD = function(CD, cD, ID, pD, iD, fD) {
+              let bD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              DD.font = `bold ${pD}px 'Jetbrains Mono', monospace`, DD.fillStyle = iD, DD.textAlign = bD;
+              let QD = CD.replace(/[\r\n\t]/g, " ");
+              if (DD.measureText(QD).width > fD) {
+                for (; QD.length > 0 && DD.measureText(`${QD}\u2026`).width > fD;) QD = QD.slice(0, -1);
+                QD += "\u2026"
               }
-              zz.fillText(tz, bz, Ez)
+              DD.fillText(QD, cD, ID)
             },
-            Nz = uz => {
-              zz.fillStyle = fz, zz.globalAlpha = .15, zz.fillRect(24, uz, 976, 2), zz.globalAlpha = 1
+            OD = CD => {
+              DD.fillStyle = gD, DD.globalAlpha = .15, DD.fillRect(24, CD, 976, 2), DD.globalAlpha = 1
             },
-            vz = null === Xz ? null : (0, nz.oc)(Xz),
-            xz = zz => null !== vz && zz.playerHash === vz,
-            Jz = Kz(Fz.entries, Ez.j),
-            Az = "ready" === Fz.status && Jz.length > 0,
-            Tz = null === Zz ? [] : Kz(Zz.entries, Mz),
-            Lz = Jz.some(xz),
-            Pz = null === Zz ? null : function(zz) {
-              const uz = zz;
-              if (!uz || !Number.isFinite(uz.rank) || !Number.isFinite(uz.tied) || !Number.isFinite(uz.total)) return null;
-              return uz
-            }(Zz.standing),
-            Gz = Tz.find(xz),
-            az = Jz.find(xz),
-            Vz = null === Pz || void 0 === Gz ? null : {
-              value: Gz.value,
-              rank: Pz.rank
+            PD = null === ND ? null : (0, pD.rc)(ND),
+            HD = DD => null !== PD && DD.playerHash === PD,
+            UD = oD(MD.entries, ID.l),
+            xD = "ready" === MD.status && UD.length > 0,
+            qD = null === tD ? [] : oD(tD.entries, bD),
+            JD = UD.some(HD),
+            KD = null === tD ? null : function(DD) {
+              const CD = DD;
+              if (!CD || !Number.isFinite(CD.rank) || !Number.isFinite(CD.tied) || !Number.isFinite(CD.total)) return null;
+              return CD
+            }(tD.standing),
+            aD = qD.find(HD),
+            VD = UD.find(HD),
+            zD = null === KD || void 0 === aD ? null : {
+              value: aD.value,
+              rank: KD.rank
             },
-            mz = wz(Jz, void 0 === az || az.value === (null === Vz || void 0 === Vz ? void 0 : Vz.value) ? Vz : null),
-            qz = wz(Tz, Vz),
-            hz = (zz, uz) => {
-              const bz = zz.findIndex(xz);
-              return bz >= 0 ? uz[bz] : null
+            jD = vD(UD, void 0 === VD || VD.value === (null === zD || void 0 === zD ? void 0 : zD.value) ? zD : null),
+            lD = vD(qD, zD),
+            LD = (DD, CD) => {
+              const cD = DD.findIndex(HD);
+              return cD >= 0 ? CD[cD] : null
             },
-            Uz = null !== (lz = null !== (Oz = null === Pz || void 0 === Pz ? void 0 : Pz.rank) && void 0 !== Oz ? Oz : hz(Tz, qz)) && void 0 !== lz ? lz : hz(Jz, mz);
-          zz.font = "bold 34px 'Jetbrains Mono', monospace";
-          const cz = [...Az ? mz : [], ...Lz ? [] : qz],
-            gz = Math.min(280, Math.max(0, ...cz.map((uz => zz.measureText(tz.format(uz)).width)))),
-            Sz = gz <= 80,
-            yz = Sz ? 80 : 32 + gz,
-            Dz = Sz ? 148 : yz + 28,
-            Qz = 660 - Dz;
-          oz(`TOP ${Ez.j}  /  ALL TIME`, 24, 52, 28, sz, 976), oz(Rz ? String(null !== (pz = uz.title) && void 0 !== pz ? pz : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, fz, 976), oz("RANK", 32, 174, 28, sz, Dz - 40), oz("PLAYER", Dz, 174, 28, sz, Qz), oz(Rz ? String(null !== (dz = uz.scoreLabel) && void 0 !== dz ? dz : "Score").slice(0, 24) : "Score", 992, 174, 28, sz, 304, "right"), Nz(202);
-          const Wz = (iz - 232) / (Ez.j + Hz + Mz),
-            ez = 208 + Ez.j * Wz,
-            jz = ez + Hz * Wz,
-            Iz = (uz, bz, Ez, nz) => {
-              const iz = xz(uz);
-              zz.fillStyle = iz ? rz : fz, zz.globalAlpha = iz ? .15 : nz ? .035 : 0, zz.fillRect(24, Ez - Wz / 2 + 1, 976, Wz - 2), zz.globalAlpha = 1;
-              const lz = iz ? rz : fz;
-              oz(tz.format(bz), yz, Ez, 34, lz, Sz ? 80 : gz, Sz ? "center" : "right"), oz(Rz ? String(uz.name).slice(0, 64) : "Player", Dz, Ez, 34, lz, Qz);
-              const Mz = tz.format(uz.value);
-              oz(zz.measureText(Mz).width > 304 ? uz.value.toExponential(6) : Mz, 992, Ez, 34, lz, 304, "right")
+            TD = null !== (fD = null !== (SD = null === KD || void 0 === KD ? void 0 : KD.rank) && void 0 !== SD ? SD : LD(qD, lD)) && void 0 !== fD ? fD : LD(UD, jD);
+          DD.font = "bold 34px 'Jetbrains Mono', monospace";
+          const GD = [...xD ? jD : [], ...JD ? [] : lD],
+            RD = Math.min(280, Math.max(0, ...GD.map((CD => DD.measureText(QD.format(CD)).width)))),
+            kD = RD <= 80,
+            dD = kD ? 80 : 32 + RD,
+            YD = kD ? 148 : dD + 28,
+            WD = 660 - YD;
+          nD(`TOP ${ID.l}  /  ALL TIME`, 24, 52, 28, XD, 976), nD(ZD ? String(null !== (BD = CD.title) && void 0 !== BD ? BD : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, gD, 976), nD("RANK", 32, 174, 28, XD, YD - 40), nD("PLAYER", YD, 174, 28, XD, WD), nD(ZD ? String(null !== (yD = CD.scoreLabel) && void 0 !== yD ? yD : "Score").slice(0, 24) : "Score", 992, 174, 28, XD, 304, "right"), OD(202);
+          const sD = (iD - 232) / (ID.l + wD + bD),
+            ED = 208 + ID.l * sD,
+            eD = ED + wD * sD,
+            uD = (CD, cD, ID, pD) => {
+              const iD = HD(CD);
+              DD.fillStyle = iD ? mD : gD, DD.globalAlpha = iD ? .15 : pD ? .035 : 0, DD.fillRect(24, ID - sD / 2 + 1, 976, sD - 2), DD.globalAlpha = 1;
+              const fD = iD ? mD : gD;
+              nD(QD.format(cD), dD, ID, 34, fD, kD ? 80 : RD, kD ? "center" : "right"), nD(ZD ? String(CD.name).slice(0, 64) : "Player", YD, ID, 34, fD, WD);
+              const bD = QD.format(CD.value);
+              nD(DD.measureText(bD).width > 304 ? CD.value.toExponential(6) : bD, 992, ID, 34, fD, 304, "right")
             };
-          if (Az)
-            for (const [Ez, nz] of Jz.entries()) Iz(nz, mz[Ez], 208 + (Ez + .5) * Wz, Ez % 2 === 0);
+          if (xD)
+            for (const [ID, pD] of UD.entries()) uD(pD, jD[ID], 208 + (ID + .5) * sD, ID % 2 === 0);
           else {
-            const zz = "error" === Fz.status,
-              uz = zz ? "Couldn't load leaderboard" : "ready" === Fz.status ? "No scores yet" : "Loading leaderboard\u2026",
-              bz = zz ? "Trying again shortly" : "ready" === Fz.status ? "Be the first on the board!" : "Fetching the top players",
-              Ez = (208 + ez) / 2;
-            oz(uz, 512, Ez - 28, 40, zz ? nz.N.redUiText : fz, 960, "center"), oz(bz, 512, Ez + 27, 30, sz, 960, "center")
+            const DD = "error" === MD.status,
+              CD = DD ? "Couldn't load leaderboard" : "ready" === MD.status ? "No scores yet" : "Loading leaderboard\u2026",
+              cD = DD ? "Trying again shortly" : "ready" === MD.status ? "Be the first on the board!" : "Fetching the top players",
+              ID = (208 + ED) / 2;
+            nD(CD, 512, ID - 28, 40, DD ? pD.J.redUiText : gD, 960, "center"), nD(cD, 512, ID + 27, 30, XD, 960, "center")
           }
-          const Bz = ez + Hz * Wz / 2;
-          if (null === Uz) Nz(Bz);
+          const hD = ED + wD * sD / 2;
+          if (null === TD) OD(hD);
           else {
-            const uz = null === Pz ? 0 : Pz.tied - 1,
-              bz = `YOUR RANK #${tz.format(Uz)}${null===Pz?"":` of ${tz.format(Pz.total)}`}`;
-            zz.font = "bold 36px 'Jetbrains Mono', monospace";
-            const Ez = Math.max(20, Math.min(36, Math.floor(34560 / zz.measureText(bz).width)));
-            oz(bz, 512, Bz - (uz > 0 ? 15 : 0), Ez, rz, 960, "center"), uz > 0 && oz(`Tied with ${tz.format(uz)} other${1===uz?"":"s"}`, 512, Bz + 24, 24, sz, 960, "center")
+            const CD = null === KD ? 0 : KD.tied - 1,
+              cD = `YOUR RANK #${QD.format(TD)}${null===KD?"":` of ${QD.format(KD.total)}`}`;
+            DD.font = "bold 36px 'Jetbrains Mono', monospace";
+            const ID = Math.max(20, Math.min(36, Math.floor(34560 / DD.measureText(cD).width)));
+            nD(cD, 512, hD - (CD > 0 ? 15 : 0), ID, mD, 960, "center"), CD > 0 && nD(`Tied with ${QD.format(CD)} other${1===CD?"":"s"}`, 512, hD + 24, 24, XD, 960, "center")
           }
-          if (null === Zz) return;
-          const Cz = jz + Mz * Wz / 2;
-          if (Lz) oz(`You're in the top ${Ez.j}!`, 512, Cz, 40, rz, 960, "center");
-          else if (0 === Tz.length) oz("You're not on this board yet", 512, Cz, 34, sz, 960, "center");
+          if (null === tD) return;
+          const rD = eD + bD * sD / 2;
+          if (JD) nD(`You're in the top ${ID.l}!`, 512, rD, 40, mD, 960, "center");
+          else if (0 === qD.length) nD("You're not on this board yet", 512, rD, 34, XD, 960, "center");
           else
-            for (const [Ez, nz] of Tz.entries()) Iz(nz, qz[Ez], jz + (Ez + .5) * Wz, Ez % 2 === 0)
-        }(zz, Oz, pz, lz.layoutHeight)
+            for (const [ID, pD] of qD.entries()) uD(pD, lD[ID], eD + (ID + .5) * sD, ID % 2 === 0)
+        }(DD, SD, BD, fD.layoutHeight)
     }
 
-    function Kz(zz, uz) {
-      return Array.isArray(zz) ? zz.slice(0, uz).filter((zz => zz && Number.isFinite(zz.rank) && Number.isFinite(zz.value))) : []
+    function oD(DD, CD) {
+      return Array.isArray(DD) ? DD.slice(0, CD).filter((DD => DD && Number.isFinite(DD.rank) && Number.isFinite(DD.value))) : []
     }
 
-    function wz(zz, uz) {
-      const bz = [];
-      let Ez = !1;
-      return zz.forEach(((nz, iz) => {
-        if (null !== uz && nz.value === uz.value) return void bz.push(uz.rank);
-        const lz = iz > 0 && nz.value === zz[iz - 1].value;
-        lz || (Ez = 0 === iz && 1 !== nz.rank), bz.push(lz && !Ez ? bz[iz - 1] : nz.rank)
-      })), bz
+    function vD(DD, CD) {
+      const cD = [];
+      let ID = !1;
+      return DD.forEach(((pD, iD) => {
+        if (null !== CD && pD.value === CD.value) return void cD.push(CD.rank);
+        const fD = iD > 0 && pD.value === DD[iD - 1].value;
+        fD || (ID = 0 === iD && 1 !== pD.rank), cD.push(fD && !ID ? cD[iD - 1] : pD.rank)
+      })), cD
     }
   },
-  38239: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => nz,
-      e: () => iz
+  38233: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => pD,
+      e: () => iD
     });
-    const Ez = 32;
+    const ID = 32;
 
-    function nz(zz) {
-      return Array.from(zz).length
+    function pD(DD) {
+      return Array.from(DD).length
     }
 
-    function iz(zz) {
-      const uz = [""];
-      let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        nz = "";
-      const iz = () => {
-        uz.push(""), bz = 0, nz = ""
+    function iD(DD) {
+      const CD = [""];
+      let cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        pD = "";
+      const iD = () => {
+        CD.push(""), cD = 0, pD = ""
       };
-      for (const lz of zz.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(lz)) iz();
-        else if (/^\s+$/.test(lz)) nz += lz;
-      else if (lz.length > 0) {
-        const zz = Array.from(lz);
-        bz > 0 && bz + nz.length + zz.length > Ez && iz(), uz[uz.length - 1] += nz, bz += nz.length, nz = "";
-        for (const nz of zz) bz >= Ez && iz(), uz[uz.length - 1] += nz, bz++
+      for (const fD of DD.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(fD)) iD();
+        else if (/^\s+$/.test(fD)) pD += fD;
+      else if (fD.length > 0) {
+        const DD = Array.from(fD);
+        cD > 0 && cD + pD.length + DD.length > ID && iD(), CD[CD.length - 1] += pD, cD += pD.length, pD = "";
+        for (const pD of DD) cD >= ID && iD(), CD[CD.length - 1] += pD, cD++
       }
-      return uz[uz.length - 1] += nz, uz
+      return CD[CD.length - 1] += pD, CD
     }
   },
-  38467: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => lz
+  38460: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => fD
     });
-    var Ez = bz(36106),
-      nz = bz.n(Ez);
-    const iz = [1, 1, 1];
+    var ID = cD(36020),
+      pD = cD.n(ID);
+    const iD = [1, 1, 1];
 
-    function lz(zz) {
-      if (!zz) return [...iz];
+    function fD(DD) {
+      if (!DD) return [...iD];
       try {
-        const [uz, bz, Ez] = nz()(zz).rgb().array();
-        return [uz / 255, bz / 255, Ez / 255]
-      } catch (uz) {
-        return console.warn(`Invalid groundArrowPath colour "${zz}":`, uz), [...iz]
+        const [CD, cD, ID] = pD()(DD).rgb().array();
+        return [CD / 255, cD / 255, ID / 255]
+      } catch (CD) {
+        return console.warn(`Invalid groundArrowPath colour "${DD}":`, CD), [...iD]
       }
     }
   },
-  33745: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz,
-      f: () => Mz,
-      i: () => lz,
-      k: () => nz,
-      o: () => Ez
+  33724: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => iD,
+      e: () => bD,
+      f: () => fD,
+      g: () => pD,
+      i: () => ID
     });
-    const Ez = {
+    const ID = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1651,41 +1651,41 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      nz = "/textures/dayNight/sun.png",
-      iz = "/textures/dayNight/moon.png",
-      lz = "/textures/dayNight/stars",
-      Mz = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      pD = "/textures/dayNight/sun.png",
+      iD = "/textures/dayNight/moon.png",
+      fD = "/textures/dayNight/stars",
+      bD = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  38540: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Oz,
-      f: () => pz,
-      i: () => Ez,
-      m: () => tz,
-      q: () => nz,
-      u: () => Hz,
-      w: () => Mz,
-      x: () => lz
+  38505: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => SD,
+      c: () => BD,
+      g: () => ID,
+      k: () => QD,
+      m: () => pD,
+      o: () => wD,
+      r: () => bD,
+      v: () => fD
     });
-    const Ez = ["linear", "easeIn", "easeOut", "easeInOut"],
-      nz = ["movement", "camera", "cursor"],
-      iz = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const ID = ["linear", "easeIn", "easeOut", "easeInOut"],
+      pD = ["movement", "camera", "cursor"],
+      iD = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function lz(zz, uz) {
-      return Mz(zz, uz, iz)
+    function fD(DD, CD) {
+      return bD(DD, CD, iD)
     }
 
-    function Mz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (zz === uz || Number.isNaN(zz) && Number.isNaN(uz)) return !0;
-      if ("object" !== typeof zz || "object" !== typeof uz || null === zz || null === uz || Array.isArray(zz) !== Array.isArray(uz)) return !1;
-      const Ez = zz,
-        nz = uz;
-      for (const iz of new Set([...Object.keys(Ez), ...Object.keys(nz)]))
-        if (!bz.includes(iz) && !Mz(Ez[iz], nz[iz])) return !1;
+    function bD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (DD === CD || Number.isNaN(DD) && Number.isNaN(CD)) return !0;
+      if ("object" !== typeof DD || "object" !== typeof CD || null === DD || null === CD || Array.isArray(DD) !== Array.isArray(CD)) return !1;
+      const ID = DD,
+        pD = CD;
+      for (const iD of new Set([...Object.keys(ID), ...Object.keys(pD)]))
+        if (!cD.includes(iD) && !bD(ID[iD], pD[iD])) return !1;
       return !0
     }
-    const tz = {
+    const QD = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1707,10 +1707,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      Hz = "^-[1-9][0-9]*$",
-      Oz = "^#[0-9a-fA-F]{6}$",
-      pz = "#000000"
+      wD = "^-[1-9][0-9]*$",
+      SD = "^#[0-9a-fA-F]{6}$",
+      BD = "#000000"
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

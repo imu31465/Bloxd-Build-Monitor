@@ -1,28 +1,28 @@
 export const id = 64;
 export const ids = [64];
 export const modules = {
-  40386: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      ZstdErrorCode: () => Oz,
-      ZstdFrameDecoder: () => Tz
+  40237: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      ZstdErrorCode: () => SD,
+      ZstdFrameDecoder: () => qD
     });
-    const Ez = ArrayBuffer,
-      nz = Uint8Array,
-      iz = Uint16Array,
-      lz = Int16Array,
-      Mz = Int32Array,
-      tz = (zz, uz, bz) => {
-        if (nz.prototype.slice) return nz.prototype.slice.call(zz, uz, bz);
-        (null == uz || uz < 0) && (uz = 0), (null == bz || bz > zz.length) && (bz = zz.length);
-        const Ez = new nz(bz - uz);
-        return Ez.set(zz.subarray(uz, bz)), Ez
+    const ID = ArrayBuffer,
+      pD = Uint8Array,
+      iD = Uint16Array,
+      fD = Int16Array,
+      bD = Int32Array,
+      QD = (DD, CD, cD) => {
+        if (pD.prototype.slice) return pD.prototype.slice.call(DD, CD, cD);
+        (null == CD || CD < 0) && (CD = 0), (null == cD || cD > DD.length) && (cD = DD.length);
+        const ID = new pD(cD - CD);
+        return ID.set(DD.subarray(CD, cD)), ID
       },
-      Hz = (zz, uz, bz, Ez) => {
-        if (nz.prototype.fill) return nz.prototype.fill.call(zz, uz, bz, Ez);
-        for ((null == bz || bz < 0) && (bz = 0), (null == Ez || Ez > zz.length) && (Ez = zz.length); bz < Ez; ++bz) zz[bz] = uz;
-        return zz
+      wD = (DD, CD, cD, ID) => {
+        if (pD.prototype.fill) return pD.prototype.fill.call(DD, CD, cD, ID);
+        for ((null == cD || cD < 0) && (cD = 0), (null == ID || ID > DD.length) && (ID = DD.length); cD < ID; ++cD) DD[cD] = CD;
+        return DD
       },
-      Oz = {
+      SD = {
         InvalidData: 0,
         WindowSizeTooLarge: 1,
         InvalidBlockType: 2,
@@ -30,376 +30,376 @@ export const modules = {
         DistanceTooFarBack: 4,
         UnexpectedEOF: 5
       },
-      pz = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-      dz = (zz, uz, bz) => {
-        const Ez = new Error(uz || pz[zz]);
-        if (Ez.code = zz, Error.captureStackTrace && Error.captureStackTrace(Ez, dz), !bz) throw Ez;
-        return Ez
+      BD = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+      yD = (DD, CD, cD) => {
+        const ID = new Error(CD || BD[DD]);
+        if (ID.code = DD, Error.captureStackTrace && Error.captureStackTrace(ID, yD), !cD) throw ID;
+        return ID
       },
-      Fz = (zz, uz, bz) => {
-        let Ez = 0,
-          nz = 0;
-        for (; Ez < bz; ++Ez) nz |= zz[uz++] << (Ez << 3);
-        return nz
+      MD = (DD, CD, cD) => {
+        let ID = 0,
+          pD = 0;
+        for (; ID < cD; ++ID) pD |= DD[CD++] << (ID << 3);
+        return pD
       },
-      Zz = (zz, uz) => {
-        const bz = zz[0] | zz[1] << 8 | zz[2] << 16;
-        if (3126568 == bz && 253 == zz[3]) {
-          const bz = zz[4],
-            Ez = bz >> 5 & 1,
-            iz = bz >> 2 & 1,
-            lz = 3 & bz,
-            tz = bz >> 6;
-          8 & bz && dz(0);
-          let Hz = 6 - Ez;
-          const Oz = 3 == lz ? 4 : lz,
-            pz = Fz(zz, Hz, Oz);
-          Hz += Oz;
-          const Zz = tz ? 1 << tz : Ez,
-            Rz = Fz(zz, Hz, Zz) + (1 == tz && 256);
-          let Kz = Rz;
-          if (!Ez) {
-            const uz = 1 << 10 + (zz[5] >> 3);
-            Kz = uz + (uz >> 3) * (7 & zz[5])
+      tD = (DD, CD) => {
+        const cD = DD[0] | DD[1] << 8 | DD[2] << 16;
+        if (3126568 == cD && 253 == DD[3]) {
+          const cD = DD[4],
+            ID = cD >> 5 & 1,
+            iD = cD >> 2 & 1,
+            fD = 3 & cD,
+            QD = cD >> 6;
+          8 & cD && yD(0);
+          let wD = 6 - ID;
+          const SD = 3 == fD ? 4 : fD,
+            BD = MD(DD, wD, SD);
+          wD += SD;
+          const tD = QD ? 1 << QD : ID,
+            ZD = MD(DD, wD, tD) + (1 == QD && 256);
+          let oD = ZD;
+          if (!ID) {
+            const CD = 1 << 10 + (DD[5] >> 3);
+            oD = CD + (CD >> 3) * (7 & DD[5])
           }
-          Kz > 2145386496 && dz(1);
-          const wz = new nz((1 == uz ? Rz || Kz : uz ? 0 : Kz) + 12);
-          return wz[0] = 1, wz[4] = 4, wz[8] = 8, {
-            b: Hz + Zz,
+          oD > 2145386496 && yD(1);
+          const vD = new pD((1 == CD ? ZD || oD : CD ? 0 : oD) + 12);
+          return vD[0] = 1, vD[4] = 4, vD[8] = 8, {
+            b: wD + tD,
             y: 0,
             l: 0,
-            d: pz,
-            w: uz && 1 != uz ? uz : wz.subarray(12),
-            e: Kz,
-            o: new Mz(wz.buffer, 0, 3),
-            u: Rz,
-            c: iz,
-            m: Math.min(131072, Kz)
+            d: BD,
+            w: CD && 1 != CD ? CD : vD.subarray(12),
+            e: oD,
+            o: new bD(vD.buffer, 0, 3),
+            u: ZD,
+            c: iD,
+            m: Math.min(131072, oD)
           }
         }
-        if (25481893 == (bz >> 4 | zz[3] << 20)) return 8 + (((Ez = zz)[iz = 4] | Ez[iz + 1] << 8 | Ez[iz + 2] << 16 | Ez[iz + 3] << 24) >>> 0);
-        var Ez, iz;
-        dz(0)
+        if (25481893 == (cD >> 4 | DD[3] << 20)) return 8 + (((ID = DD)[iD = 4] | ID[iD + 1] << 8 | ID[iD + 2] << 16 | ID[iD + 3] << 24) >>> 0);
+        var ID, iD;
+        yD(0)
       },
-      Rz = zz => {
-        let uz = 0;
-        for (; 1 << uz <= zz; ++uz);
-        return uz - 1
+      ZD = DD => {
+        let CD = 0;
+        for (; 1 << CD <= DD; ++CD);
+        return CD - 1
       },
-      Kz = (zz, uz, bz) => {
-        let Mz = 4 + (uz << 3);
-        const tz = 5 + (15 & zz[uz]);
-        tz > bz && dz(3);
-        const Hz = 1 << tz;
-        let Oz = Hz,
-          pz = -1,
-          Fz = -1,
-          Zz = -1,
-          Kz = Hz;
-        const wz = new Ez(512 + (Hz << 2)),
-          Xz = new lz(wz, 0, 256),
-          fz = new iz(wz, 0, 256),
-          sz = new iz(wz, 512, Hz),
-          rz = 512 + (Hz << 1),
-          oz = new nz(wz, rz, Hz),
-          Nz = new nz(wz, rz + Hz);
-        for (; pz < 255 && Oz > 0;) {
-          const uz = Rz(Oz + 1),
-            bz = Mz >> 3,
-            Ez = (1 << uz + 1) - 1;
-          let nz = (zz[bz] | zz[bz + 1] << 8 | zz[bz + 2] << 16) >> (7 & Mz) & Ez;
-          const iz = (1 << uz) - 1,
-            lz = Ez - Oz - 1,
-            tz = nz & iz;
-          if (tz < lz ? (Mz += uz, nz = tz) : (Mz += uz + 1, nz > iz && (nz -= lz)), Xz[++pz] = --nz, -1 == nz ? (Oz += nz, oz[--Kz] = pz) : Oz -= nz, !nz)
+      oD = (DD, CD, cD) => {
+        let bD = 4 + (CD << 3);
+        const QD = 5 + (15 & DD[CD]);
+        QD > cD && yD(3);
+        const wD = 1 << QD;
+        let SD = wD,
+          BD = -1,
+          MD = -1,
+          tD = -1,
+          oD = wD;
+        const vD = new ID(512 + (wD << 2)),
+          ND = new fD(vD, 0, 256),
+          gD = new iD(vD, 0, 256),
+          XD = new iD(vD, 512, wD),
+          mD = 512 + (wD << 1),
+          nD = new pD(vD, mD, wD),
+          OD = new pD(vD, mD + wD);
+        for (; BD < 255 && SD > 0;) {
+          const CD = ZD(SD + 1),
+            cD = bD >> 3,
+            ID = (1 << CD + 1) - 1;
+          let pD = (DD[cD] | DD[cD + 1] << 8 | DD[cD + 2] << 16) >> (7 & bD) & ID;
+          const iD = (1 << CD) - 1,
+            fD = ID - SD - 1,
+            QD = pD & iD;
+          if (QD < fD ? (bD += CD, pD = QD) : (bD += CD + 1, pD > iD && (pD -= fD)), ND[++BD] = --pD, -1 == pD ? (SD += pD, nD[--oD] = BD) : SD -= pD, !pD)
             do {
-              const uz = Mz >> 3;
-              Fz = (zz[uz] | zz[uz + 1] << 8) >> (7 & Mz) & 3, Mz += 2, pz += Fz
-            } while (3 == Fz)
-        }(pz > 255 || Oz) && dz(0);
-        let vz = 0;
-        const xz = (Hz >> 1) + (Hz >> 3) + 3,
-          Jz = Hz - 1;
-        for (let Ez = 0; Ez <= pz; ++Ez) {
-          const zz = Xz[Ez];
-          if (zz < 1) fz[Ez] = -zz;
+              const CD = bD >> 3;
+              MD = (DD[CD] | DD[CD + 1] << 8) >> (7 & bD) & 3, bD += 2, BD += MD
+            } while (3 == MD)
+        }(BD > 255 || SD) && yD(0);
+        let PD = 0;
+        const HD = (wD >> 1) + (wD >> 3) + 3,
+          UD = wD - 1;
+        for (let ID = 0; ID <= BD; ++ID) {
+          const DD = ND[ID];
+          if (DD < 1) gD[ID] = -DD;
           else
-            for (Zz = 0; Zz < zz; ++Zz) {
-              oz[vz] = Ez;
+            for (tD = 0; tD < DD; ++tD) {
+              nD[PD] = ID;
               do {
-                vz = vz + xz & Jz
-              } while (vz >= Kz)
+                PD = PD + HD & UD
+              } while (PD >= oD)
             }
         }
-        for (vz && dz(0), Zz = 0; Zz < Hz; ++Zz) {
-          const zz = fz[oz[Zz]]++,
-            uz = Nz[Zz] = tz - Rz(zz);
-          sz[Zz] = (zz << uz) - Hz
+        for (PD && yD(0), tD = 0; tD < wD; ++tD) {
+          const DD = gD[nD[tD]]++,
+            CD = OD[tD] = QD - ZD(DD);
+          XD[tD] = (DD << CD) - wD
         }
-        return [Mz + 7 >> 3, {
-          b: tz,
-          s: oz,
-          n: Nz,
-          t: sz
+        return [bD + 7 >> 3, {
+          b: QD,
+          s: nD,
+          n: OD,
+          t: XD
         }]
       },
-      wz = Kz(new nz([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-      Xz = Kz(new nz([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-      fz = Kz(new nz([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-      sz = (zz, uz) => {
-        const bz = zz.length,
-          Ez = new Mz(bz);
-        for (let nz = 0; nz < bz; ++nz) Ez[nz] = uz, uz += 1 << zz[nz];
-        return Ez
+      vD = oD(new pD([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+      ND = oD(new pD([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+      gD = oD(new pD([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+      XD = (DD, CD) => {
+        const cD = DD.length,
+          ID = new bD(cD);
+        for (let pD = 0; pD < cD; ++pD) ID[pD] = CD, CD += 1 << DD[pD];
+        return ID
       },
-      rz = new nz(new Mz([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-      oz = sz(rz, 0),
-      Nz = new nz(new Mz([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-      vz = sz(Nz, 3),
-      xz = (zz, uz, bz) => {
-        const Ez = zz.length,
-          nz = uz.length,
-          iz = zz[Ez - 1],
-          lz = (1 << bz.b) - 1,
-          Mz = -bz.b;
-        iz || dz(0);
-        let tz = 0,
-          Hz = bz.b,
-          Oz = (Ez << 3) - 8 + Rz(iz) - Hz,
-          pz = -1;
-        for (; Oz > Mz && pz < nz;) {
-          const Ez = Oz >> 3;
-          tz = (tz << Hz | (zz[Ez] | zz[Ez + 1] << 8 | zz[Ez + 2] << 16) >> (7 & Oz)) & lz, uz[++pz] = bz.s[tz], Oz -= Hz = bz.n[tz]
+      mD = new pD(new bD([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+      nD = XD(mD, 0),
+      OD = new pD(new bD([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+      PD = XD(OD, 3),
+      HD = (DD, CD, cD) => {
+        const ID = DD.length,
+          pD = CD.length,
+          iD = DD[ID - 1],
+          fD = (1 << cD.b) - 1,
+          bD = -cD.b;
+        iD || yD(0);
+        let QD = 0,
+          wD = cD.b,
+          SD = (ID << 3) - 8 + ZD(iD) - wD,
+          BD = -1;
+        for (; SD > bD && BD < pD;) {
+          const ID = SD >> 3;
+          QD = (QD << wD | (DD[ID] | DD[ID + 1] << 8 | DD[ID + 2] << 16) >> (7 & SD)) & fD, CD[++BD] = cD.s[QD], SD -= wD = cD.n[QD]
         }
-        Oz == Mz && pz + 1 == nz || dz(0)
+        SD == bD && BD + 1 == pD || yD(0)
       },
-      Jz = (zz, uz, bz) => {
-        let Ez = 6;
-        const nz = uz.length + 3 >> 2,
-          iz = nz << 1,
-          lz = nz + iz;
-        xz(zz.subarray(Ez, Ez += zz[0] | zz[1] << 8), uz.subarray(0, nz), bz), xz(zz.subarray(Ez, Ez += zz[2] | zz[3] << 8), uz.subarray(nz, iz), bz), xz(zz.subarray(Ez, Ez += zz[4] | zz[5] << 8), uz.subarray(iz, lz), bz), xz(zz.subarray(Ez), uz.subarray(lz), bz)
+      UD = (DD, CD, cD) => {
+        let ID = 6;
+        const pD = CD.length + 3 >> 2,
+          iD = pD << 1,
+          fD = pD + iD;
+        HD(DD.subarray(ID, ID += DD[0] | DD[1] << 8), CD.subarray(0, pD), cD), HD(DD.subarray(ID, ID += DD[2] | DD[3] << 8), CD.subarray(pD, iD), cD), HD(DD.subarray(ID, ID += DD[4] | DD[5] << 8), CD.subarray(iD, fD), cD), HD(DD.subarray(ID), CD.subarray(fD), cD)
       },
-      Az = (zz, uz, bz) => {
-        let Ez = uz.b;
-        const lz = zz[Ez],
-          Mz = lz >> 1 & 3;
-        uz.l = 1 & lz;
-        const Oz = lz >> 3 | zz[Ez + 1] << 5 | zz[Ez + 2] << 13,
-          pz = (Ez += 3) + Oz;
-        if (1 == Mz) {
-          if (Ez >= zz.length) return;
-          return uz.b = Ez + 1, bz ? (Hz(bz, zz[Ez], uz.y, uz.y += Oz), bz) : Hz(new nz(Oz), zz[Ez])
+      xD = (DD, CD, cD) => {
+        let ID = CD.b;
+        const fD = DD[ID],
+          bD = fD >> 1 & 3;
+        CD.l = 1 & fD;
+        const SD = fD >> 3 | DD[ID + 1] << 5 | DD[ID + 2] << 13,
+          BD = (ID += 3) + SD;
+        if (1 == bD) {
+          if (ID >= DD.length) return;
+          return CD.b = ID + 1, cD ? (wD(cD, DD[ID], CD.y, CD.y += SD), cD) : wD(new pD(SD), DD[ID])
         }
-        if (!(pz > zz.length)) {
-          if (0 == Mz) return uz.b = pz, bz ? (bz.set(zz.subarray(Ez, pz), uz.y), uz.y += Oz, bz) : tz(zz, Ez, pz);
-          if (2 == Mz) {
-            const lz = zz[Ez],
-              Mz = 3 & lz,
-              Oz = lz >> 2 & 3;
-            let Fz = lz >> 4,
-              Zz = 0,
-              sz = 0;
-            Mz < 2 ? 1 & Oz ? Fz |= zz[++Ez] << 4 | (2 & Oz && zz[++Ez] << 12) : Fz = lz >> 3 : (sz = Oz, Oz < 2 ? (Fz |= (63 & zz[++Ez]) << 4, Zz = zz[Ez] >> 6 | zz[++Ez] << 2) : 2 == Oz ? (Fz |= zz[++Ez] << 4 | (3 & zz[++Ez]) << 12, Zz = zz[Ez] >> 2 | zz[++Ez] << 6) : (Fz |= zz[++Ez] << 4 | (63 & zz[++Ez]) << 12, Zz = zz[Ez] >> 6 | zz[++Ez] << 2 | zz[++Ez] << 10)), ++Ez;
-            let Az = bz ? bz.subarray(uz.y, uz.y + uz.m) : new nz(uz.m),
-              Tz = Az.length - Fz;
-            if (Tz < 0 && dz(0), 0 == Mz) Az.set(zz.subarray(Ez, Ez += Fz), Tz);
-            else if (1 == Mz) Hz(Az, zz[Ez++], Tz);
+        if (!(BD > DD.length)) {
+          if (0 == bD) return CD.b = BD, cD ? (cD.set(DD.subarray(ID, BD), CD.y), CD.y += SD, cD) : QD(DD, ID, BD);
+          if (2 == bD) {
+            const fD = DD[ID],
+              bD = 3 & fD,
+              SD = fD >> 2 & 3;
+            let MD = fD >> 4,
+              tD = 0,
+              XD = 0;
+            bD < 2 ? 1 & SD ? MD |= DD[++ID] << 4 | (2 & SD && DD[++ID] << 12) : MD = fD >> 3 : (XD = SD, SD < 2 ? (MD |= (63 & DD[++ID]) << 4, tD = DD[ID] >> 6 | DD[++ID] << 2) : 2 == SD ? (MD |= DD[++ID] << 4 | (3 & DD[++ID]) << 12, tD = DD[ID] >> 2 | DD[++ID] << 6) : (MD |= DD[++ID] << 4 | (63 & DD[++ID]) << 12, tD = DD[ID] >> 6 | DD[++ID] << 2 | DD[++ID] << 10)), ++ID;
+            let xD = cD ? cD.subarray(CD.y, CD.y + CD.m) : new pD(CD.m),
+              qD = xD.length - MD;
+            if (qD < 0 && yD(0), 0 == bD) xD.set(DD.subarray(ID, ID += MD), qD);
+            else if (1 == bD) wD(xD, DD[ID++], qD);
             else {
-              let bz = uz.h;
-              if (2 == Mz) {
-                const lz = ((zz, uz) => {
-                  let bz = 0,
-                    Ez = -1;
-                  const lz = new nz(292),
-                    Mz = zz[uz],
-                    tz = lz.subarray(0, 256),
-                    Oz = lz.subarray(256, 268),
-                    pz = new iz(lz.buffer, 268);
-                  if (Mz < 128) {
-                    const [bz, nz] = Kz(zz, uz + 1, 6), iz = bz << 3, lz = zz[uz += Mz];
-                    lz || dz(0);
-                    let Hz = 0,
-                      Oz = 0,
-                      pz = nz.b,
-                      Fz = pz,
-                      Zz = (++uz << 3) - 8 + Rz(lz);
-                    for (; Ez > 254 && dz(0), Zz -= pz, !(Zz < iz);) {
-                      let uz = Zz >> 3;
-                      if (Hz += (zz[uz] | zz[uz + 1] << 8) >> (7 & Zz) & (1 << pz) - 1, tz[++Ez] = nz.s[Hz], Zz -= Fz, Zz < iz) break;
-                      uz = Zz >> 3, Oz += (zz[uz] | zz[uz + 1] << 8) >> (7 & Zz) & (1 << Fz) - 1, tz[++Ez] = nz.s[Oz], pz = nz.n[Hz], Hz = nz.t[Hz], Fz = nz.n[Oz], Oz = nz.t[Oz]
-                    }++Ez > 255 && dz(0)
+              let cD = CD.h;
+              if (2 == bD) {
+                const fD = ((DD, CD) => {
+                  let cD = 0,
+                    ID = -1;
+                  const fD = new pD(292),
+                    bD = DD[CD],
+                    QD = fD.subarray(0, 256),
+                    SD = fD.subarray(256, 268),
+                    BD = new iD(fD.buffer, 268);
+                  if (bD < 128) {
+                    const [cD, pD] = oD(DD, CD + 1, 6), iD = cD << 3, fD = DD[CD += bD];
+                    fD || yD(0);
+                    let wD = 0,
+                      SD = 0,
+                      BD = pD.b,
+                      MD = BD,
+                      tD = (++CD << 3) - 8 + ZD(fD);
+                    for (; ID > 254 && yD(0), tD -= BD, !(tD < iD);) {
+                      let CD = tD >> 3;
+                      if (wD += (DD[CD] | DD[CD + 1] << 8) >> (7 & tD) & (1 << BD) - 1, QD[++ID] = pD.s[wD], tD -= MD, tD < iD) break;
+                      CD = tD >> 3, SD += (DD[CD] | DD[CD + 1] << 8) >> (7 & tD) & (1 << MD) - 1, QD[++ID] = pD.s[SD], BD = pD.n[wD], wD = pD.t[wD], MD = pD.n[SD], SD = pD.t[SD]
+                    }++ID > 255 && yD(0)
                   } else {
-                    for (Ez = Mz - 127; bz < Ez; bz += 2) {
-                      const Ez = zz[++uz];
-                      tz[bz] = Ez >> 4, tz[bz + 1] = 15 & Ez
-                    }++uz
+                    for (ID = bD - 127; cD < ID; cD += 2) {
+                      const ID = DD[++CD];
+                      QD[cD] = ID >> 4, QD[cD + 1] = 15 & ID
+                    }++CD
                   }
-                  let Fz = 0;
-                  for (bz = 0; bz < Ez; ++bz) {
-                    const zz = tz[bz];
-                    zz > 11 && dz(0), Fz += zz && 1 << zz - 1
+                  let MD = 0;
+                  for (cD = 0; cD < ID; ++cD) {
+                    const DD = QD[cD];
+                    DD > 11 && yD(0), MD += DD && 1 << DD - 1
                   }
-                  const Zz = Rz(Fz) + 1,
-                    wz = 1 << Zz,
-                    Xz = wz - Fz;
-                  for (Xz & Xz - 1 && dz(0), tz[Ez++] = Rz(Xz) + 1, bz = 0; bz < Ez; ++bz) {
-                    const zz = tz[bz];
-                    ++Oz[tz[bz] = zz && Zz + 1 - zz]
+                  const tD = ZD(MD) + 1,
+                    vD = 1 << tD,
+                    ND = vD - MD;
+                  for (ND & ND - 1 && yD(0), QD[ID++] = ZD(ND) + 1, cD = 0; cD < ID; ++cD) {
+                    const DD = QD[cD];
+                    ++SD[QD[cD] = DD && tD + 1 - DD]
                   }
-                  const fz = new nz(wz << 1),
-                    sz = fz.subarray(0, wz),
-                    rz = fz.subarray(wz);
-                  for (pz[Zz] = 0, bz = Zz; bz > 0; --bz) {
-                    const zz = pz[bz];
-                    Hz(rz, bz, zz, pz[bz - 1] = zz + Oz[bz] * (1 << Zz - bz))
+                  const gD = new pD(vD << 1),
+                    XD = gD.subarray(0, vD),
+                    mD = gD.subarray(vD);
+                  for (BD[tD] = 0, cD = tD; cD > 0; --cD) {
+                    const DD = BD[cD];
+                    wD(mD, cD, DD, BD[cD - 1] = DD + SD[cD] * (1 << tD - cD))
                   }
-                  for (pz[0] != wz && dz(0), bz = 0; bz < Ez; ++bz) {
-                    const zz = tz[bz];
-                    if (zz) {
-                      const uz = pz[zz];
-                      Hz(sz, bz, uz, pz[zz] = uz + (1 << Zz - zz))
+                  for (BD[0] != vD && yD(0), cD = 0; cD < ID; ++cD) {
+                    const DD = QD[cD];
+                    if (DD) {
+                      const CD = BD[DD];
+                      wD(XD, cD, CD, BD[DD] = CD + (1 << tD - DD))
                     }
                   }
-                  return [uz, {
-                    n: rz,
-                    b: Zz,
-                    s: sz
+                  return [CD, {
+                    n: mD,
+                    b: tD,
+                    s: XD
                   }]
-                })(zz, Ez);
-                Zz += Ez - (Ez = lz[0]), uz.h = bz = lz[1]
-              } else bz || dz(0);
-              (sz ? Jz : xz)(zz.subarray(Ez, Ez += Zz), Az.subarray(Tz), bz)
+                })(DD, ID);
+                tD += ID - (ID = fD[0]), CD.h = cD = fD[1]
+              } else cD || yD(0);
+              (XD ? UD : HD)(DD.subarray(ID, ID += tD), xD.subarray(qD), cD)
             }
-            let Lz = zz[Ez++];
-            if (Lz) {
-              255 == Lz ? Lz = 32512 + (zz[Ez++] | zz[Ez++] << 8) : Lz > 127 && (Lz = Lz - 128 << 8 | zz[Ez++]);
-              const lz = zz[Ez++];
-              3 & lz && dz(0);
-              const Mz = [Xz, fz, wz];
-              for (let bz = 2; bz > -1; --bz) {
-                const tz = lz >> 2 + (bz << 1) & 3;
-                if (1 == tz) {
-                  const uz = new nz([0, 0, zz[Ez++]]);
-                  Mz[bz] = {
-                    s: uz.subarray(2, 3),
-                    n: uz.subarray(0, 1),
-                    t: new iz(uz.buffer, 0, 1),
+            let JD = DD[ID++];
+            if (JD) {
+              255 == JD ? JD = 32512 + (DD[ID++] | DD[ID++] << 8) : JD > 127 && (JD = JD - 128 << 8 | DD[ID++]);
+              const fD = DD[ID++];
+              3 & fD && yD(0);
+              const bD = [ND, gD, vD];
+              for (let cD = 2; cD > -1; --cD) {
+                const QD = fD >> 2 + (cD << 1) & 3;
+                if (1 == QD) {
+                  const CD = new pD([0, 0, DD[ID++]]);
+                  bD[cD] = {
+                    s: CD.subarray(2, 3),
+                    n: CD.subarray(0, 1),
+                    t: new iD(CD.buffer, 0, 1),
                     b: 0
                   }
-                } else 2 == tz ? [Ez, Mz[bz]] = Kz(zz, Ez, 9 - (1 & bz)) : 3 == tz && (uz.t || dz(0), Mz[bz] = uz.t[bz])
+                } else 2 == QD ? [ID, bD[cD]] = oD(DD, ID, 9 - (1 & cD)) : 3 == QD && (CD.t || yD(0), bD[cD] = CD.t[cD])
               }
-              const [Hz, Oz, Fz] = uz.t = Mz, Zz = zz[pz - 1];
-              Zz || dz(0);
-              let sz = (pz << 3) - 8 + Rz(Zz) - Fz.b,
-                xz = sz >> 3,
-                Jz = 0,
-                Pz = (zz[xz] | zz[xz + 1] << 8) >> (7 & sz) & (1 << Fz.b) - 1;
-              xz = (sz -= Oz.b) >> 3;
-              let Gz = (zz[xz] | zz[xz + 1] << 8) >> (7 & sz) & (1 << Oz.b) - 1;
-              xz = (sz -= Hz.b) >> 3;
-              let az = (zz[xz] | zz[xz + 1] << 8) >> (7 & sz) & (1 << Hz.b) - 1;
-              for (++Lz; --Lz;) {
-                const bz = Fz.s[Pz],
-                  Ez = Fz.n[Pz],
-                  nz = Hz.s[az],
-                  iz = Hz.n[az],
-                  lz = Oz.s[Gz],
-                  Mz = Oz.n[Gz];
-                xz = (sz -= lz) >> 3;
-                const tz = 1 << lz;
-                let pz = tz + ((zz[xz] | zz[xz + 1] << 8 | zz[xz + 2] << 16 | zz[xz + 3] << 24) >>> (7 & sz) & tz - 1);
-                xz = (sz -= Nz[nz]) >> 3;
-                let Zz = vz[nz] + ((zz[xz] | zz[xz + 1] << 8 | zz[xz + 2] << 16) >> (7 & sz) & (1 << Nz[nz]) - 1);
-                xz = (sz -= rz[bz]) >> 3;
-                const Rz = oz[bz] + ((zz[xz] | zz[xz + 1] << 8 | zz[xz + 2] << 16) >> (7 & sz) & (1 << rz[bz]) - 1);
-                if ((sz < 0 || Tz + Rz > Az.length || Jz + Rz + Zz > Az.length) && dz(0), xz = (sz -= Ez) >> 3, Pz = Fz.t[Pz] + ((zz[xz] | zz[xz + 1] << 8) >> (7 & sz) & (1 << Ez) - 1), xz = (sz -= iz) >> 3, az = Hz.t[az] + ((zz[xz] | zz[xz + 1] << 8) >> (7 & sz) & (1 << iz) - 1), xz = (sz -= Mz) >> 3, Gz = Oz.t[Gz] + ((zz[xz] | zz[xz + 1] << 8) >> (7 & sz) & (1 << Mz) - 1), pz > 3) uz.o[2] = uz.o[1], uz.o[1] = uz.o[0], uz.o[0] = pz -= 3;
+              const [wD, SD, MD] = CD.t = bD, tD = DD[BD - 1];
+              tD || yD(0);
+              let XD = (BD << 3) - 8 + ZD(tD) - MD.b,
+                HD = XD >> 3,
+                UD = 0,
+                KD = (DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << MD.b) - 1;
+              HD = (XD -= SD.b) >> 3;
+              let aD = (DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << SD.b) - 1;
+              HD = (XD -= wD.b) >> 3;
+              let VD = (DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << wD.b) - 1;
+              for (++JD; --JD;) {
+                const cD = MD.s[KD],
+                  ID = MD.n[KD],
+                  pD = wD.s[VD],
+                  iD = wD.n[VD],
+                  fD = SD.s[aD],
+                  bD = SD.n[aD];
+                HD = (XD -= fD) >> 3;
+                const QD = 1 << fD;
+                let BD = QD + ((DD[HD] | DD[HD + 1] << 8 | DD[HD + 2] << 16 | DD[HD + 3] << 24) >>> (7 & XD) & QD - 1);
+                HD = (XD -= OD[pD]) >> 3;
+                let tD = PD[pD] + ((DD[HD] | DD[HD + 1] << 8 | DD[HD + 2] << 16) >> (7 & XD) & (1 << OD[pD]) - 1);
+                HD = (XD -= mD[cD]) >> 3;
+                const ZD = nD[cD] + ((DD[HD] | DD[HD + 1] << 8 | DD[HD + 2] << 16) >> (7 & XD) & (1 << mD[cD]) - 1);
+                if ((XD < 0 || qD + ZD > xD.length || UD + ZD + tD > xD.length) && yD(0), HD = (XD -= ID) >> 3, KD = MD.t[KD] + ((DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << ID) - 1), HD = (XD -= iD) >> 3, VD = wD.t[VD] + ((DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << iD) - 1), HD = (XD -= bD) >> 3, aD = SD.t[aD] + ((DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << bD) - 1), BD > 3) CD.o[2] = CD.o[1], CD.o[1] = CD.o[0], CD.o[0] = BD -= 3;
                 else {
-                  const zz = pz - (0 != Rz);
-                  zz ? (pz = 3 == zz ? uz.o[0] - 1 : uz.o[zz], zz > 1 && (uz.o[2] = uz.o[1]), uz.o[1] = uz.o[0], uz.o[0] = pz) : pz = uz.o[0]
+                  const DD = BD - (0 != ZD);
+                  DD ? (BD = 3 == DD ? CD.o[0] - 1 : CD.o[DD], DD > 1 && (CD.o[2] = CD.o[1]), CD.o[1] = CD.o[0], CD.o[0] = BD) : BD = CD.o[0]
                 }
-                for (let zz = 0; zz < Rz; ++zz) Az[Jz + zz] = Az[Tz + zz];
-                Jz += Rz, Tz += Rz;
-                let Kz = Jz - pz;
-                if (Kz < 0) {
-                  let zz = -Kz;
-                  const bz = uz.e + Kz;
-                  bz < 0 && dz(4), zz > Zz && (zz = Zz);
-                  for (let Ez = 0; Ez < zz; ++Ez) Az[Jz + Ez] = uz.w[bz + Ez];
-                  Jz += zz, Zz -= zz, Kz = 0
+                for (let DD = 0; DD < ZD; ++DD) xD[UD + DD] = xD[qD + DD];
+                UD += ZD, qD += ZD;
+                let oD = UD - BD;
+                if (oD < 0) {
+                  let DD = -oD;
+                  const cD = CD.e + oD;
+                  cD < 0 && yD(4), DD > tD && (DD = tD);
+                  for (let ID = 0; ID < DD; ++ID) xD[UD + ID] = CD.w[cD + ID];
+                  UD += DD, tD -= DD, oD = 0
                 }
-                for (let zz = 0; zz < Zz; ++zz) Az[Jz + zz] = Az[Kz + zz];
-                Jz += Zz
+                for (let DD = 0; DD < tD; ++DD) xD[UD + DD] = xD[oD + DD];
+                UD += tD
               }
-              if (Jz != Tz)
-                for (; Tz < Az.length;) Az[Jz++] = Az[Tz++];
-              else Jz = Az.length;
-              bz ? uz.y += Jz : Az = tz(Az, 0, Jz)
-            } else if (bz) {
-              if (uz.y += Fz, Tz)
-                for (let zz = 0; zz < Fz; ++zz) Az[zz] = Az[Tz + zz]
-            } else Tz && (Az = tz(Az, Tz));
-            return uz.b = pz, Az
+              if (UD != qD)
+                for (; qD < xD.length;) xD[UD++] = xD[qD++];
+              else UD = xD.length;
+              cD ? CD.y += UD : xD = QD(xD, 0, UD)
+            } else if (cD) {
+              if (CD.y += MD, qD)
+                for (let DD = 0; DD < MD; ++DD) xD[DD] = xD[qD + DD]
+            } else qD && (xD = QD(xD, qD));
+            return CD.b = BD, xD
           }
-          dz(2)
+          yD(2)
         }
       };
-    class Tz {
+    class qD {
       output = null;
       decoded = 0;
       done = !1;
       st = null;
       parts = [];
-      yM = 0;
+      Lb = 0;
       needed = 18;
       size;
-      constructor(zz) {
-        this.size = zz
+      constructor(DD) {
+        this.size = DD
       }
-      push(zz) {
+      push(DD) {
         if (this.done) return;
-        if (this.parts.push(zz), this.yM += zz.length, this.yM < this.needed) return;
-        const uz = ((zz, uz) => {
-          if (1 == zz.length) return zz[0];
-          const bz = new nz(uz);
-          for (let Ez = 0, nz = 0; Ez < zz.length; ++Ez) {
-            const uz = zz[Ez];
-            bz.set(uz, nz), nz += uz.length
+        if (this.parts.push(DD), this.Lb += DD.length, this.Lb < this.needed) return;
+        const CD = ((DD, CD) => {
+          if (1 == DD.length) return DD[0];
+          const cD = new pD(CD);
+          for (let ID = 0, pD = 0; ID < DD.length; ++ID) {
+            const CD = DD[ID];
+            cD.set(CD, pD), pD += CD.length
           }
-          return bz
-        })(this.parts, this.yM);
-        let bz = this.st;
-        if (!bz) {
-          const zz = Zz(uz, new nz(0));
-          "number" != typeof zz && zz.u === this.size || dz(0, `not a zstd frame of ${this.size} bytes`), bz = this.st = Zz(uz, 1), bz.e = 0, this.output = bz.w
+          return cD
+        })(this.parts, this.Lb);
+        let cD = this.st;
+        if (!cD) {
+          const DD = tD(CD, new pD(0));
+          "number" != typeof DD && DD.u === this.size || yD(0, `not a zstd frame of ${this.size} bytes`), cD = this.st = tD(CD, 1), cD.e = 0, this.output = cD.w
         }
         for (;;) {
-          const zz = uz.length - bz.b;
-          if (zz < 3) {
+          const DD = CD.length - cD.b;
+          if (DD < 3) {
             this.needed = 3;
             break
           }
-          const Ez = uz[bz.b],
-            nz = Ez >> 1 & 3;
-          3 == nz && dz(2);
-          const iz = Ez >> 3 | uz[bz.b + 1] << 5 | uz[bz.b + 2] << 13;
-          iz > bz.m && dz(0);
-          const lz = 1 == nz ? 4 : 3 + iz;
-          if (zz < lz) {
-            this.needed = lz;
+          const ID = CD[cD.b],
+            pD = ID >> 1 & 3;
+          3 == pD && yD(2);
+          const iD = ID >> 3 | CD[cD.b + 1] << 5 | CD[cD.b + 2] << 13;
+          iD > cD.m && yD(0);
+          const fD = 1 == pD ? 4 : 3 + iD;
+          if (DD < fD) {
+            this.needed = fD;
             break
           }
-          if (Az(uz, bz, bz.w) || dz(5), bz.e = bz.y, (bz.y > bz.u || bz.l && bz.y != bz.u) && dz(0), bz.l) {
+          if (xD(CD, cD, cD.w) || yD(5), cD.e = cD.y, (cD.y > cD.u || cD.l && cD.y != cD.u) && yD(0), cD.l) {
             this.done = !0;
             break
           }
         }
-        this.decoded = bz.y;
-        const Ez = uz.subarray(bz.b);
-        this.parts = Ez.length ? [Ez] : [], this.yM = Ez.length, bz.b = 0
+        this.decoded = cD.y;
+        const ID = CD.subarray(cD.b);
+        this.parts = ID.length ? [ID] : [], this.Lb = ID.length, cD.b = 0
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,36 +1,36 @@
 export const id = 243;
 export const ids = [243, 345];
 export const modules = {
-  39033: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Ez
+  39003: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => ID
     });
-    class Ez {
+    class ID {
       static GetShadersRepository() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Ez.ShadersRepository : Ez.ShadersRepositoryWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? ID.ShadersRepository : ID.ShadersRepositoryWGSL
       }
       static GetShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Ez.ShadersStore : Ez.ShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? ID.ShadersStore : ID.ShadersStoreWGSL
       }
       static GetIncludesShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Ez.IncludesShadersStore : Ez.IncludesShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? ID.IncludesShadersStore : ID.IncludesShadersStoreWGSL
       }
     }
-    Ez.ShadersRepository = "src/Shaders/", Ez.ShadersStore = {}, Ez.IncludesShadersStore = {}, Ez.ShadersRepositoryWGSL = "src/ShadersWGSL/", Ez.ShadersStoreWGSL = {}, Ez.IncludesShadersStoreWGSL = {}
+    ID.ShadersRepository = "src/Shaders/", ID.ShadersStore = {}, ID.IncludesShadersStore = {}, ID.ShadersRepositoryWGSL = "src/ShadersWGSL/", ID.ShadersStoreWGSL = {}, ID.IncludesShadersStoreWGSL = {}
   },
-  60333: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      postprocessVertexShader: () => lz
+  60393: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      postprocessVertexShader: () => fD
     });
-    var Ez = bz(39033);
-    const nz = "postprocessVertexShader",
-      iz = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    Ez.e.ShadersStore[nz] || (Ez.e.ShadersStore[nz] = iz);
-    const lz = {
-      name: nz,
-      shader: iz
+    var ID = cD(39003);
+    const pD = "postprocessVertexShader",
+      iD = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    ID.e.ShadersStore[pD] || (ID.e.ShadersStore[pD] = iD);
+    const fD = {
+      name: pD,
+      shader: iD
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,62 +1,62 @@
 export const id = 350;
 export const ids = [350];
 export const modules = {
-  60400: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      applyLightFoOffset: () => lz,
-      getFloatingOriginOffset: () => nz,
-      lightFoVersion: () => iz,
-      wrapRenderableForFO: () => Mz
+  60483: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      applyLightFoOffset: () => fD,
+      getFloatingOriginOffset: () => pD,
+      lightFoVersion: () => iD,
+      wrapRenderableForFO: () => bD
     });
-    var Ez = bz(40946);
+    var ID = cD(40830);
 
-    function nz(zz) {
-      const uz = zz.camera;
-      if (!uz) return {
+    function pD(DD) {
+      const CD = DD.camera;
+      if (!CD) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const bz = uz.worldMatrix;
+      const cD = CD.worldMatrix;
       return {
-        x: bz[12],
-        y: bz[13],
-        z: bz[14]
+        x: cD[12],
+        y: cD[13],
+        z: cD[14]
       }
     }
 
-    function iz(zz) {
-      return zz.camera ? zz.camera.worldMatrixVersion : 0
+    function iD(DD) {
+      return DD.camera ? DD.camera.worldMatrixVersion : 0
     }
 
-    function lz(zz, uz) {
-      const bz = uz.camera?.worldMatrix;
-      if (!bz) return;
-      const nz = bz[12],
-        iz = bz[13],
-        lz = bz[14];
-      let Mz = 0;
-      for (const tz of uz.lights) {
-        if (Mz >= Ez.b) break;
-        if (!tz._writeLightUbo) continue;
-        const uz = 4 + 16 * Mz,
-          bz = zz[uz + 3];
-        if (0 === bz || 2 === bz) {
-          const bz = tz.worldMatrix;
-          zz[uz] = bz[12] - nz, zz[uz + 1] = bz[13] - iz, zz[uz + 2] = bz[14] - lz
+    function fD(DD, CD) {
+      const cD = CD.camera?.worldMatrix;
+      if (!cD) return;
+      const pD = cD[12],
+        iD = cD[13],
+        fD = cD[14];
+      let bD = 0;
+      for (const QD of CD.lights) {
+        if (bD >= ID.b) break;
+        if (!QD._writeLightUbo) continue;
+        const CD = 4 + 16 * bD,
+          cD = DD[CD + 3];
+        if (0 === cD || 2 === cD) {
+          const cD = QD.worldMatrix;
+          DD[CD] = cD[12] - pD, DD[CD + 1] = cD[13] - iD, DD[CD + 2] = cD[14] - fD
         }
-        Mz++
+        bD++
       }
     }
 
-    function Mz(zz, uz, bz) {
-      let Ez = -1;
+    function bD(DD, CD, cD) {
+      let ID = -1;
       return () => {
-        const nz = uz.camera ? uz.camera.worldMatrixVersion : -1;
-        nz !== Ez && (bz(), Ez = nz), zz()
+        const pD = CD.camera ? CD.camera.worldMatrixVersion : -1;
+        pD !== ID && (cD(), ID = pD), DD()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

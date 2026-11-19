@@ -1,184 +1,184 @@
 export const id = 103;
 export const ids = [103];
 export const modules = {
-  4696: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => pz,
-      d: () => Oz,
-      e: () => dz
+  4713: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => BD,
+      e: () => SD,
+      f: () => yD
     });
-    bz(4700);
-    var Ez = bz(1181),
-      nz = bz(1038),
-      iz = bz.n(nz),
-      lz = bz(1332),
-      Mz = (bz(56), bz(4144)),
-      tz = bz(1047),
-      Hz = bz(1089);
+    cD(4720);
+    var ID = cD(1192),
+      pD = cD(1049),
+      iD = cD.n(pD),
+      fD = cD(1356),
+      bD = (cD(53), cD(4182)),
+      QD = cD(1064),
+      wD = cD(1093);
 
-    function Oz(zz) {
+    function SD(DD) {
       let {
-        children: uz,
-        label: bz,
-        className: nz,
-        circleInfoText: Mz,
-        disabled: Oz,
-        onLabelClick: pz
-      } = zz;
+        children: CD,
+        label: cD,
+        className: pD,
+        circleInfoText: bD,
+        disabled: SD,
+        onLabelClick: BD
+      } = DD;
       const {
-        t: dz
-      } = (0, Ez.F)(), Fz = (0, Hz.jsxs)("div", {
-        className: iz()("Label", {
-          ClickableLabel: void 0 !== pz
+        t: yD
+      } = (0, ID.F)(), MD = (0, wD.jsxs)("div", {
+        className: iD()("Label", {
+          ClickableLabel: void 0 !== BD
         }),
-        onClick: pz,
-        children: [dz(bz), Mz && (0, Hz.jsx)(tz.c, {
+        onClick: BD,
+        children: [yD(cD), bD && (0, wD.jsx)(QD.c, {
           name: "circle-info"
         })]
       });
-      return (0, Hz.jsxs)("div", {
-        className: iz()("LabeledInput", {
-          [nz]: nz,
-          DisabledLabelInput: Oz
+      return (0, wD.jsxs)("div", {
+        className: iD()("LabeledInput", {
+          [pD]: pD,
+          DisabledLabelInput: SD
         }),
-        children: [Mz && (0, Hz.jsx)(lz.f, {
-          tooltipInner: (0, Hz.jsx)("div", {
+        children: [bD && (0, wD.jsx)(fD.f, {
+          tooltipInner: (0, wD.jsx)("div", {
             className: "LabeledInputTooltip",
-            children: dz(Mz)
+            children: yD(bD)
           }),
-          children: Fz
-        }), !Mz && Fz, uz]
+          children: MD
+        }), !bD && MD, CD]
       })
     }
 
-    function pz(zz) {
+    function BD(DD) {
       let {
-        checked: uz,
-        setChecked: bz
-      } = zz;
-      return (0, Hz.jsx)("div", {
+        checked: CD,
+        setChecked: cD
+      } = DD;
+      return (0, wD.jsx)("div", {
         className: "OtherInput ClickableOtherInput",
         "data-pad-focusable": !0,
-        onClick: zz => {
-          bz(!uz)
+        onClick: DD => {
+          cD(!CD)
         },
-        children: (0, Hz.jsx)(Mz.b, {
-          checked: uz,
-          onChange: zz => {
-            bz(zz.target.checked)
+        children: (0, wD.jsx)(bD.e, {
+          checked: CD,
+          onChange: DD => {
+            cD(DD.target.checked)
           },
           disabled: !1
         })
       })
     }
 
-    function dz(zz) {
+    function yD(DD) {
       let {
-        checked: uz,
-        setChecked: bz,
-        disabled: Ez
-      } = zz;
-      return (0, Hz.jsx)("div", {
-        className: iz()("SwitchContainer", {
-          SwitchContainerDisabled: Ez
+        checked: CD,
+        setChecked: cD,
+        disabled: ID
+      } = DD;
+      return (0, wD.jsx)("div", {
+        className: iD()("SwitchContainer", {
+          SwitchContainerDisabled: ID
         }),
         onClick: () => {
-          Ez || bz(!uz)
+          ID || cD(!CD)
         },
-        children: (0, Hz.jsx)(Mz.b, {
+        children: (0, wD.jsx)(bD.e, {
           className: "SwitchCheckbox",
-          checked: uz,
-          onChange: zz => {
-            bz(zz.target.checked)
+          checked: CD,
+          onChange: DD => {
+            cD(DD.target.checked)
           },
-          disabled: !!Ez
+          disabled: !!ID
         })
       })
     }
   },
-  4702: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Hz
+  4727: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => wD
     });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(4385),
-      lz = bz(1181),
-      Mz = bz(1089);
-    const tz = [...iz.l, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var ID = cD(1049),
+      pD = cD.n(ID),
+      iD = cD(4431),
+      fD = cD(1192),
+      bD = cD(1093);
+    const QD = [...iD.j, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function Hz(zz) {
+    function wD(DD) {
       const {
-        disabled: uz,
-        hideWrapper: bz
-      } = zz, {
-        t: Ez
-      } = (0, lz.F)(), Hz = zz.advancedMode ? tz.map((uz => [uz, zz.callbacks[uz]])) : iz.l.map((uz => [uz, zz.callbacks[uz]])), pz = (0, Mz.jsx)("div", {
-        className: nz()("PluginsGrid", {
-          SectionBody: !bz
+        disabled: CD,
+        hideWrapper: cD
+      } = DD, {
+        t: ID
+      } = (0, fD.F)(), wD = DD.advancedMode ? QD.map((CD => [CD, DD.callbacks[CD]])) : iD.j.map((CD => [CD, DD.callbacks[CD]])), BD = (0, bD.jsx)("div", {
+        className: pD()("PluginsGrid", {
+          SectionBody: !cD
         }),
-        children: Hz.map((zz => {
-          let [bz, Ez] = zz;
-          return (0, Mz.jsx)(Oz, {
-            plugin: bz,
-            callbacks: Ez,
-            disabled: uz
-          }, bz)
+        children: wD.map((DD => {
+          let [cD, ID] = DD;
+          return (0, bD.jsx)(SD, {
+            plugin: cD,
+            callbacks: ID,
+            disabled: CD
+          }, cD)
         }))
       });
-      return bz ? pz : (0, Mz.jsxs)("div", {
+      return cD ? BD : (0, bD.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, Mz.jsx)("div", {
+        children: [(0, bD.jsx)("div", {
           className: "SectionTitle",
-          children: Ez("worldBuilder:pluginsSection")
-        }), pz]
+          children: ID("worldBuilder:pluginsSection")
+        }), BD]
       })
     }
 
-    function Oz(zz) {
+    function SD(DD) {
       let {
-        plugin: uz,
+        plugin: CD,
         callbacks: {
-          isEnabled: bz,
-          Zx: Ez
+          isEnabled: cD,
+          lH: ID
         },
-        disabled: iz
-      } = zz;
+        disabled: iD
+      } = DD;
       const {
-        t: tz
-      } = (0, lz.F)(), Hz = bz();
-      return (0, Mz.jsxs)("div", {
-        className: nz()("PluginCard", {
-          PluginCardEnabled: Hz,
-          PluginCardDisabledForm: iz
+        t: QD
+      } = (0, fD.F)(), wD = cD();
+      return (0, bD.jsxs)("div", {
+        className: pD()("PluginCard", {
+          PluginCardEnabled: wD,
+          PluginCardDisabledForm: iD
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": iz || void 0,
+        "aria-disabled": iD || void 0,
         onClick: () => {
-          iz || Ez(!Hz)
+          iD || ID(!wD)
         },
-        children: [(0, Mz.jsx)("div", {
+        children: [(0, bD.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, Mz.jsx)("img", {
-            src: `/textures/games/classic/customGames/${uz}.png`,
-            alt: uz
+          children: (0, bD.jsx)("img", {
+            src: `/textures/games/classic/customGames/${CD}.png`,
+            alt: CD
           })
-        }), (0, Mz.jsxs)("div", {
+        }), (0, bD.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, Mz.jsx)("div", {
+          children: [(0, bD.jsx)("div", {
             className: "PluginCardTitle",
-            children: tz(pz[uz])
-          }), (0, Mz.jsx)("div", {
+            children: QD(BD[CD])
+          }), (0, bD.jsx)("div", {
             className: "PluginCardDescription",
-            children: tz(dz[uz])
+            children: QD(yD[CD])
           })]
-        }), (0, Mz.jsx)("span", {
+        }), (0, bD.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: tz(Hz ? "general:on" : "general:off")
+          children: QD(wD ? "general:on" : "general:off")
         })]
       })
     }
-    const pz = {
+    const BD = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -187,7 +187,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      dz = {
+      yD = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -197,656 +197,656 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  4690: (zz, uz, bz) => {
-    bz.d(uz, {
-      i: () => nu,
-      d: () => Eu,
-      g: () => bu,
-      k: () => iu
+  4704: (DD, CD, cD) => {
+    cD.d(CD, {
+      i: () => pC,
+      e: () => IC,
+      h: () => cC,
+      l: () => iC
     });
-    var Ez = bz(56),
-      nz = bz(1322),
-      iz = bz(1419),
-      lz = bz(1628),
-      Mz = bz(1181),
-      tz = bz(1305),
-      Hz = bz(1332),
-      Oz = bz(1047),
-      pz = bz(1212),
-      dz = bz(1038),
-      Fz = bz.n(dz),
-      Zz = bz(316),
-      Rz = bz(4385),
-      Kz = bz(1226),
-      wz = bz(4696),
-      Xz = bz(2882),
-      fz = bz(4702),
-      sz = bz(1089);
+    var ID = cD(53),
+      pD = cD(1340),
+      iD = cD(1442),
+      fD = cD(1655),
+      bD = cD(1192),
+      QD = cD(1328),
+      wD = cD(1356),
+      SD = cD(1064),
+      BD = cD(1221),
+      yD = cD(1049),
+      MD = cD.n(yD),
+      tD = cD(312),
+      ZD = cD(4431),
+      oD = cD(1240),
+      vD = cD(4713),
+      ND = cD(2921),
+      gD = cD(4727),
+      XD = cD(1093);
 
-    function rz(zz) {
+    function mD(DD) {
       let {
-        icon: uz,
-        title: bz,
-        disabled: Ez,
-        children: nz
-      } = zz;
-      return (0, sz.jsxs)("div", {
-        className: Fz()("ManageCard", {
-          ManageCardDisabled: Ez
+        icon: CD,
+        title: cD,
+        disabled: ID,
+        children: pD
+      } = DD;
+      return (0, XD.jsxs)("div", {
+        className: MD()("ManageCard", {
+          ManageCardDisabled: ID
         }),
-        children: [(0, sz.jsxs)("div", {
+        children: [(0, XD.jsxs)("div", {
           className: "ManageCardHead",
-          children: [(0, sz.jsx)("div", {
+          children: [(0, XD.jsx)("div", {
             className: "ManageCardIcon",
-            children: (0, sz.jsx)(Oz.c, {
-              name: uz
+            children: (0, XD.jsx)(SD.c, {
+              name: CD
             })
-          }), (0, sz.jsx)("div", {
-            children: (0, sz.jsx)("h2", {
+          }), (0, XD.jsx)("div", {
+            children: (0, XD.jsx)("h2", {
               className: "ManageCardTitle",
-              children: bz
+              children: cD
             })
           })]
-        }), (0, sz.jsxs)("div", {
+        }), (0, XD.jsxs)("div", {
           className: "ManageCardBody",
-          children: [nz, Ez && (0, sz.jsx)("div", {
+          children: [pD, ID && (0, XD.jsx)("div", {
             className: "ManageCardDisabledOverlay"
           })]
         })]
       })
     }
 
-    function oz(zz) {
+    function nD(DD) {
       let {
-        label: uz,
-        caption: bz,
-        children: Ez
-      } = zz;
-      return (0, sz.jsxs)("div", {
+        label: CD,
+        caption: cD,
+        children: ID
+      } = DD;
+      return (0, XD.jsxs)("div", {
         className: "ManageStackedField",
-        children: [(0, sz.jsx)("div", {
+        children: [(0, XD.jsx)("div", {
           className: "ManageStackedFieldLabel",
-          children: uz
-        }), Ez, bz && (0, sz.jsx)("div", {
+          children: CD
+        }), ID, cD && (0, XD.jsx)("div", {
           className: "ManageStackedFieldCaption",
-          children: bz
+          children: cD
         })]
       })
     }
 
-    function Nz(zz) {
+    function OD(DD) {
       let {
-        label: uz,
-        caption: bz,
-        disabled: Ez,
-        children: nz
-      } = zz;
-      return (0, sz.jsxs)("div", {
-        className: Fz()("ManageField", {
-          ManageFieldDisabled: Ez
+        label: CD,
+        caption: cD,
+        disabled: ID,
+        children: pD
+      } = DD;
+      return (0, XD.jsxs)("div", {
+        className: MD()("ManageField", {
+          ManageFieldDisabled: ID
         }),
-        children: [(0, sz.jsxs)("div", {
+        children: [(0, XD.jsxs)("div", {
           className: "ManageFieldText",
-          children: [(0, sz.jsx)("div", {
+          children: [(0, XD.jsx)("div", {
             className: "ManageFieldLabel",
-            children: uz
-          }), (0, sz.jsx)("div", {
+            children: CD
+          }), (0, XD.jsx)("div", {
             className: "ManageFieldCaption",
-            children: bz
+            children: cD
           })]
-        }), (0, sz.jsx)("div", {
+        }), (0, XD.jsx)("div", {
           className: "ManageFieldControl",
-          children: nz
+          children: pD
         })]
       })
     }
 
-    function vz(zz) {
-      var uz, bz;
+    function PD(DD) {
+      var CD, cD;
       let {
-        schematicData: Ez,
-        updateSchematicData: nz,
-        publishFormEnabled: iz,
-        formEnabled: lz
-      } = zz;
+        schematicData: ID,
+        updateSchematicData: pD,
+        publishFormEnabled: iD,
+        formEnabled: fD
+      } = DD;
       const {
-        t: tz
-      } = (0, Mz.F)(), Hz = !iz, Oz = {
+        t: QD
+      } = (0, bD.F)(), wD = !iD, SD = {
         tpRequests: {
-          isEnabled: () => !Ez.disableTpRequests,
-          Zx: zz => nz("disableTpRequests", !zz)
+          isEnabled: () => !ID.disableTpRequests,
+          lH: DD => pD("disableTpRequests", !DD)
         },
         spawnProtection: {
-          isEnabled: () => !Ez.disableSpawnProtection,
-          Zx: zz => nz("disableSpawnProtection", !zz)
+          isEnabled: () => !ID.disableSpawnProtection,
+          lH: DD => pD("disableSpawnProtection", !DD)
         },
         spawnReset: {
-          isEnabled: () => !!Ez.enableSpawnReset,
-          Zx: zz => nz("enableSpawnReset", zz)
+          isEnabled: () => !!ID.enableSpawnReset,
+          lH: DD => pD("enableSpawnReset", DD)
         },
         smpMarketplace: {
-          isEnabled: () => !!Ez.enableSmpMarketplace,
-          Zx: zz => nz("enableSmpMarketplace", zz)
+          isEnabled: () => !!ID.enableSmpMarketplace,
+          lH: DD => pD("enableSmpMarketplace", DD)
         },
         survivalGuns: {
-          isEnabled: () => !!Ez.enableSurvivalGuns,
-          Zx: zz => nz("enableSurvivalGuns", zz)
+          isEnabled: () => !!ID.enableSurvivalGuns,
+          lH: DD => pD("enableSurvivalGuns", DD)
         },
         fallDamage: {
-          isEnabled: () => !Ez.disableFallDamage,
-          Zx: zz => nz("disableFallDamage", !zz)
+          isEnabled: () => !ID.disableFallDamage,
+          lH: DD => pD("disableFallDamage", !DD)
         },
         dayNight: {
-          isEnabled: () => !!Ez.enableDayNight,
-          Zx: zz => nz("enableDayNight", zz)
+          isEnabled: () => !!ID.enableDayNight,
+          lH: DD => pD("enableDayNight", DD)
         }
       };
-      return (0, sz.jsxs)(sz.Fragment, {
-        children: [!1 === Ez.schematicContainsSpawnBlock && (0, sz.jsx)("div", {
+      return (0, XD.jsxs)(XD.Fragment, {
+        children: [!1 === ID.schematicContainsSpawnBlock && (0, XD.jsx)("div", {
           className: "ManageWarningBanner",
-          children: tz("worldBuilder:mustContainSpawnBlock")
-        }), (0, sz.jsxs)("div", {
+          children: QD("worldBuilder:mustContainSpawnBlock")
+        }), (0, XD.jsxs)("div", {
           className: "ManageSettingsGrid",
-          children: [(0, sz.jsxs)(rz, {
+          children: [(0, XD.jsxs)(mD, {
             icon: "globe",
-            title: tz("worldBuilder:worldRulesSection"),
-            disabled: !lz,
-            children: [(0, sz.jsx)(Nz, {
-              label: tz("classic:defaultGamemode"),
-              caption: tz("classic:defaultGamemodeDescription"),
-              disabled: Hz,
-              children: (0, sz.jsx)(Xz.d, {
+            title: QD("worldBuilder:worldRulesSection"),
+            disabled: !fD,
+            children: [(0, XD.jsx)(OD, {
+              label: QD("classic:defaultGamemode"),
+              caption: QD("classic:defaultGamemodeDescription"),
+              disabled: wD,
+              children: (0, XD.jsx)(ND.b, {
                 controlClassName: "ManageDropdown",
-                options: Rz.I.map((zz => ({
-                  value: zz,
-                  label: Zz.u[zz]
+                options: ZD.C.map((DD => ({
+                  value: DD,
+                  label: tD.s[DD]
                 }))),
-                value: Ez.defaultGamemode,
-                onChange: zz => nz("defaultGamemode", zz.value)
+                value: ID.defaultGamemode,
+                onChange: DD => pD("defaultGamemode", DD.value)
               })
-            }), (0, sz.jsx)(Nz, {
-              label: tz("classic:voidDeathHeight"),
-              caption: tz("classic:voidDeathHeightDescription"),
-              disabled: Hz,
-              children: (0, sz.jsxs)("div", {
+            }), (0, XD.jsx)(OD, {
+              label: QD("classic:voidDeathHeight"),
+              caption: QD("classic:voidDeathHeightDescription"),
+              disabled: wD,
+              children: (0, XD.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, sz.jsx)("input", {
+                children: [(0, XD.jsx)("input", {
                   type: "number",
-                  max: Kz.C,
-                  value: null !== (uz = Ez.voidDeathHeight) && void 0 !== uz ? uz : "",
-                  onChange: zz => {
-                    const uz = parseInt(zz.target.value);
-                    nz("voidDeathHeight", uz)
+                  max: oD.D,
+                  value: null !== (CD = ID.voidDeathHeight) && void 0 !== CD ? CD : "",
+                  onChange: DD => {
+                    const CD = parseInt(DD.target.value);
+                    pD("voidDeathHeight", CD)
                   }
-                }), (0, sz.jsx)("span", {
+                }), (0, XD.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: tz("worldBuilder:blocksUnit")
+                  children: QD("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, sz.jsx)(Nz, {
-              label: tz("classic:worldBorder"),
-              caption: tz("classic:worldBorderDescription"),
-              disabled: Hz,
-              children: (0, sz.jsxs)("div", {
+            }), (0, XD.jsx)(OD, {
+              label: QD("classic:worldBorder"),
+              caption: QD("classic:worldBorderDescription"),
+              disabled: wD,
+              children: (0, XD.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, sz.jsx)("input", {
+                children: [(0, XD.jsx)("input", {
                   type: "number",
-                  min: Kz.G,
-                  max: Kz.D,
-                  placeholder: tz("worldBuilder:noWorldBorderLimit"),
-                  value: null !== (bz = Ez.worldBorder) && void 0 !== bz ? bz : "",
-                  onChange: zz => {
-                    const uz = parseInt(zz.target.value);
-                    nz("worldBorder", isNaN(uz) ? null : uz)
+                  min: oD.M,
+                  max: oD.H,
+                  placeholder: QD("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (cD = ID.worldBorder) && void 0 !== cD ? cD : "",
+                  onChange: DD => {
+                    const CD = parseInt(DD.target.value);
+                    pD("worldBorder", isNaN(CD) ? null : CD)
                   }
-                }), (0, sz.jsx)("span", {
+                }), (0, XD.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: tz("worldBuilder:blocksUnit")
+                  children: QD("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, sz.jsx)(Nz, {
-              label: tz("classic:disableMobs"),
-              caption: tz("classic:disableMobsDescription"),
-              disabled: Hz,
-              children: (0, sz.jsx)(wz.e, {
-                checked: Ez.disableMobs,
-                setChecked: zz => nz("disableMobs", zz),
-                disabled: Hz
+            }), (0, XD.jsx)(OD, {
+              label: QD("classic:disableMobs"),
+              caption: QD("classic:disableMobsDescription"),
+              disabled: wD,
+              children: (0, XD.jsx)(vD.f, {
+                checked: ID.disableMobs,
+                setChecked: DD => pD("disableMobs", DD),
+                disabled: wD
               })
             })]
-          }), (0, sz.jsxs)(rz, {
+          }), (0, XD.jsxs)(mD, {
             icon: "user-group",
-            title: tz("worldBuilder:playerAndLobbySection"),
-            disabled: !lz,
-            children: [(0, sz.jsx)(Nz, {
-              label: tz("classic:disableKeepInventory"),
-              caption: tz("classic:disableKeepInventoryDescription"),
-              disabled: Hz,
-              children: (0, sz.jsx)(wz.e, {
-                checked: Ez.disableKeepInventory,
-                setChecked: zz => nz("disableKeepInventory", zz),
-                disabled: Hz
+            title: QD("worldBuilder:playerAndLobbySection"),
+            disabled: !fD,
+            children: [(0, XD.jsx)(OD, {
+              label: QD("classic:disableKeepInventory"),
+              caption: QD("classic:disableKeepInventoryDescription"),
+              disabled: wD,
+              children: (0, XD.jsx)(vD.f, {
+                checked: ID.disableKeepInventory,
+                setChecked: DD => pD("disableKeepInventory", DD),
+                disabled: wD
               })
-            }), (0, sz.jsx)(Nz, {
-              label: tz("classic:persistInventory"),
-              caption: tz("classic:persistInventoryDescription"),
-              disabled: Hz,
-              children: (0, sz.jsx)(Xz.d, {
+            }), (0, XD.jsx)(OD, {
+              label: QD("classic:persistInventory"),
+              caption: QD("classic:persistInventoryDescription"),
+              disabled: wD,
+              children: (0, XD.jsx)(ND.b, {
                 controlClassName: "ManageDropdown",
-                options: Rz.p.map((zz => ({
-                  value: zz,
-                  label: Zz.i[zz]
+                options: ZD.m.map((DD => ({
+                  value: DD,
+                  label: tD.k[DD]
                 }))),
-                value: Ez.persistInventory,
-                onChange: zz => nz("persistInventory", zz.value)
+                value: ID.persistInventory,
+                onChange: DD => pD("persistInventory", DD.value)
               })
-            }), (0, sz.jsx)(Nz, {
-              label: tz("classic:persistWorld"),
-              caption: tz("classic:persistWorldDescription"),
-              disabled: Hz,
-              children: (0, sz.jsx)(wz.e, {
-                checked: Ez.persistWorld,
-                setChecked: zz => nz("persistWorld", zz),
-                disabled: Hz
+            }), (0, XD.jsx)(OD, {
+              label: QD("classic:persistWorld"),
+              caption: QD("classic:persistWorldDescription"),
+              disabled: wD,
+              children: (0, XD.jsx)(vD.f, {
+                checked: ID.persistWorld,
+                setChecked: DD => pD("persistWorld", DD),
+                disabled: wD
               })
-            }), (0, sz.jsx)(Nz, {
-              label: tz("classic:disableLobbySpawn"),
-              caption: tz("classic:disableLobbySpawnDescription"),
-              disabled: Hz,
-              children: (0, sz.jsx)(wz.e, {
-                checked: Ez.disableLobbySpawn,
-                setChecked: zz => nz("disableLobbySpawn", zz),
-                disabled: Hz
+            }), (0, XD.jsx)(OD, {
+              label: QD("classic:disableLobbySpawn"),
+              caption: QD("classic:disableLobbySpawnDescription"),
+              disabled: wD,
+              children: (0, XD.jsx)(vD.f, {
+                checked: ID.disableLobbySpawn,
+                setChecked: DD => pD("disableLobbySpawn", DD),
+                disabled: wD
               })
-            }), (0, sz.jsx)(Nz, {
-              label: tz("classic:hideLobbyCode"),
-              caption: tz("classic:hideLobbyCodeDescription"),
-              disabled: Hz,
-              children: (0, sz.jsx)(wz.e, {
-                checked: Ez.hideLobbyCode,
-                setChecked: zz => nz("hideLobbyCode", zz),
-                disabled: Hz
+            }), (0, XD.jsx)(OD, {
+              label: QD("classic:hideLobbyCode"),
+              caption: QD("classic:hideLobbyCodeDescription"),
+              disabled: wD,
+              children: (0, XD.jsx)(vD.f, {
+                checked: ID.hideLobbyCode,
+                setChecked: DD => pD("hideLobbyCode", DD),
+                disabled: wD
               })
             })]
           })]
-        }), (0, sz.jsx)(rz, {
+        }), (0, XD.jsx)(mD, {
           icon: "layer-group",
-          title: tz("worldBuilder:pluginsSection"),
-          disabled: !lz,
-          children: (0, sz.jsx)(fz.b, {
-            callbacks: Oz,
-            disabled: Hz,
+          title: QD("worldBuilder:pluginsSection"),
+          disabled: !fD,
+          children: (0, XD.jsx)(gD.e, {
+            callbacks: SD,
+            disabled: wD,
             advancedMode: !0,
             hideWrapper: !0
           })
         })]
       })
     }
-    var xz = bz(4704),
-      Jz = bz(4144),
-      Az = bz(1473),
-      Tz = bz(3238),
-      Lz = bz(1114),
-      Pz = bz(4670),
-      Gz = bz(4706),
-      az = bz(1424);
-    const Vz = 50,
-      mz = .3;
-    async function qz(zz) {
-      const uz = await
-      function(zz) {
-        return new Promise(((uz, bz) => {
-          const Ez = new FileReader;
-          Ez.onload = () => uz(Ez.result), Ez.onerror = bz, Ez.readAsDataURL(zz)
+    var HD = cD(4732),
+      UD = cD(4182),
+      xD = cD(1497),
+      qD = cD(3306),
+      JD = cD(1120),
+      KD = cD(4677),
+      aD = cD(4734),
+      VD = cD(1444);
+    const zD = 50,
+      jD = .3;
+    async function lD(DD) {
+      const CD = await
+      function(DD) {
+        return new Promise(((CD, cD) => {
+          const ID = new FileReader;
+          ID.onload = () => CD(ID.result), ID.onerror = cD, ID.readAsDataURL(DD)
         }))
-      }(zz), bz = await
-      function(zz) {
-        return new Promise(((uz, bz) => {
-          const Ez = new Image;
-          Ez.onload = () => uz(Ez), Ez.onerror = () => bz(new Error("Failed to load image")), Ez.src = zz
+      }(DD), cD = await
+      function(DD) {
+        return new Promise(((CD, cD) => {
+          const ID = new Image;
+          ID.onload = () => CD(ID), ID.onerror = () => cD(new Error("Failed to load image")), ID.src = DD
         }))
-      }(uz);
-      if (bz.naturalHeight > bz.naturalWidth) throw new hz;
-      const Ez = 1024 * Vz,
+      }(CD);
+      if (cD.naturalHeight > cD.naturalWidth) throw new LD;
+      const ID = 1024 * zD,
         {
-          dataUrl: nz,
-          finalQuality: iz
-        } = function(zz, uz) {
-          const bz = document.createElement("canvas");
-          bz.width = zz.naturalWidth, bz.height = zz.naturalHeight, bz.getContext("2d").drawImage(zz, 0, 0);
-          let Ez = .92,
-            nz = bz.toDataURL("image/jpeg", Ez);
-          for (; .75 * nz.length > uz && Ez > .05;) Ez -= .05, nz = bz.toDataURL("image/jpeg", Ez);
+          dataUrl: pD,
+          finalQuality: iD
+        } = function(DD, CD) {
+          const cD = document.createElement("canvas");
+          cD.width = DD.naturalWidth, cD.height = DD.naturalHeight, cD.getContext("2d").drawImage(DD, 0, 0);
+          let ID = .92,
+            pD = cD.toDataURL("image/jpeg", ID);
+          for (; .75 * pD.length > CD && ID > .05;) ID -= .05, pD = cD.toDataURL("image/jpeg", ID);
           return {
-            dataUrl: nz,
-            finalQuality: Ez
+            dataUrl: pD,
+            finalQuality: ID
           }
-        }(bz, Ez);
-      if (Math.ceil(.75 * nz.length) > Ez) throw new Uz;
+        }(cD, ID);
+      if (Math.ceil(.75 * pD.length) > ID) throw new TD;
       return {
-        base64Jpg: nz,
-        heavilyCompressed: iz < mz
+        base64Jpg: pD,
+        heavilyCompressed: iD < jD
       }
     }
-    class hz extends Error {}
-    class Uz extends Error {}
-    var cz = function(zz) {
-      return zz[zz.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", zz[zz.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", zz
-    }(cz || {});
+    class LD extends Error {}
+    class TD extends Error {}
+    var GD = function(DD) {
+      return DD[DD.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", DD[DD.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", DD
+    }(GD || {});
 
-    function gz(zz) {
-      var uz;
+    function RD(DD) {
+      var CD;
       let {
-        schematicId: bz,
-        hasReadUploadPolicy: nz,
-        onPolicyValidationError: tz,
-        onThumbnailReady: Hz
-      } = zz;
+        schematicId: cD,
+        hasReadUploadPolicy: pD,
+        onPolicyValidationError: QD,
+        onThumbnailReady: wD
+      } = DD;
       const {
-        t: dz
-      } = (0, Mz.F)(), [Zz, Rz] = (0, Ez.useState)(null), [Kz, wz] = (0, Ez.useState)(""), [Xz, fz] = (0, Ez.useState)(""), [rz, oz] = (0, Ez.useState)(!0), [Nz, vz] = (0, Ez.useState)(!1), xz = (0, Ez.useRef)(!1), [Jz, Az] = (0, Ez.useState)(null), [Tz, Lz] = (0, Ez.useState)(!1), [Pz, az] = (0, Ez.useState)(!1), Vz = (0, Ez.useRef)(0), {
-        getRootProps: mz,
-        getInputProps: cz,
-        isDragActive: gz
-      } = (0, Gz.b)({
+        t: yD
+      } = (0, bD.F)(), [tD, ZD] = (0, ID.useState)(null), [oD, vD] = (0, ID.useState)(""), [ND, gD] = (0, ID.useState)(""), [mD, nD] = (0, ID.useState)(!0), [OD, PD] = (0, ID.useState)(!1), HD = (0, ID.useRef)(!1), [UD, xD] = (0, ID.useState)(null), [qD, JD] = (0, ID.useState)(!1), [KD, VD] = (0, ID.useState)(!1), zD = (0, ID.useRef)(0), {
+        getRootProps: jD,
+        getInputProps: GD,
+        isDragActive: RD
+      } = (0, aD.b)({
         accept: {
           "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
         },
         multiple: !1,
-        onDrop: async zz => {
-          if (0 === zz.length) return;
-          const uz = zz[0],
-            bz = ++Vz.current;
-          Az(null), Lz(!1), Rz(null), wz(uz.name);
+        onDrop: async DD => {
+          if (0 === DD.length) return;
+          const CD = DD[0],
+            cD = ++zD.current;
+          xD(null), JD(!1), ZD(null), vD(CD.name);
           try {
-            const zz = await qz(uz);
-            if (bz !== Vz.current) return;
-            Rz(zz), Lz(zz.heavilyCompressed)
-          } catch (Ez) {
-            if (bz !== Vz.current) return;
-            Az(dz(Ez instanceof hz ? "thumbnail:portraitImagesNotAllowed" : Ez instanceof Uz ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+            const DD = await lD(CD);
+            if (cD !== zD.current) return;
+            ZD(DD), JD(DD.heavilyCompressed)
+          } catch (ID) {
+            if (cD !== zD.current) return;
+            xD(yD(ID instanceof LD ? "thumbnail:portraitImagesNotAllowed" : ID instanceof TD ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
           }
         },
         useFsAccessApi: !1
-      }), Sz = Kz.length <= 30 ? Kz : `${Kz.slice(0,27)}...`, yz = null !== (uz = null === Zz || void 0 === Zz ? void 0 : Zz.base64Jpg) && void 0 !== uz ? uz : null, Dz = Xz.trim(), Qz = Dz.length >= pz.l && Dz.length <= pz.i, Wz = Pz && !Zz && !Jz, ez = Pz && !Qz;
-      return (0, sz.jsxs)("div", {
+      }), kD = oD.length <= 30 ? oD : `${oD.slice(0,27)}...`, dD = null !== (CD = null === tD || void 0 === tD ? void 0 : tD.base64Jpg) && void 0 !== CD ? CD : null, YD = ND.trim(), WD = YD.length >= BD.i && YD.length <= BD.h, sD = KD && !tD && !UD, ED = KD && !WD;
+      return (0, XD.jsxs)("div", {
         className: "ThumbnailUploadContainer",
-        children: [(0, sz.jsxs)("div", {
-          ...mz({
-            className: Fz()("ThumbnailUploadDropzone", {
-              ActiveDrag: gz,
-              ValidationError: Wz
+        children: [(0, XD.jsxs)("div", {
+          ...jD({
+            className: MD()("ThumbnailUploadDropzone", {
+              ActiveDrag: RD,
+              ValidationError: sD
             })
           }),
-          children: [(0, sz.jsx)("input", {
-            ...cz()
-          }), !gz && yz ? (0, sz.jsxs)(sz.Fragment, {
-            children: [(0, sz.jsxs)("div", {
+          children: [(0, XD.jsx)("input", {
+            ...GD()
+          }), !RD && dD ? (0, XD.jsxs)(XD.Fragment, {
+            children: [(0, XD.jsxs)("div", {
               className: "ThumbnailAspectPreviews",
-              children: [(0, sz.jsxs)("div", {
+              children: [(0, XD.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, sz.jsx)("div", {
+                children: [(0, XD.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "1:1"
-                }), (0, sz.jsx)("div", {
+                }), (0, XD.jsx)("div", {
                   className: "ThumbnailAspectFrame Square",
-                  children: (0, sz.jsx)("img", {
-                    src: yz,
+                  children: (0, XD.jsx)("img", {
+                    src: dD,
                     alt: "1:1 preview"
                   })
                 })]
-              }), (0, sz.jsxs)("div", {
+              }), (0, XD.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, sz.jsx)("div", {
+                children: [(0, XD.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "16:9"
-                }), (0, sz.jsx)("div", {
+                }), (0, XD.jsx)("div", {
                   className: "ThumbnailAspectFrame Wide",
-                  children: (0, sz.jsx)("img", {
-                    src: yz,
+                  children: (0, XD.jsx)("img", {
+                    src: dD,
                     alt: "16:9 preview"
                   })
                 })]
               })]
-            }), (0, sz.jsxs)("div", {
-              children: [(0, sz.jsx)("div", {
+            }), (0, XD.jsxs)("div", {
+              children: [(0, XD.jsx)("div", {
                 className: "ThumbnailUploadInstructions Active",
-                children: Sz
-              }), (0, sz.jsx)("div", {
+                children: kD
+              }), (0, XD.jsx)("div", {
                 className: "ThumbnailUploadInstructions Preview",
-                children: dz("thumbnail:preview")
+                children: yD("thumbnail:preview")
               })]
             })]
-          }) : (0, sz.jsxs)(sz.Fragment, {
-            children: [(0, sz.jsx)("div", {
+          }) : (0, XD.jsxs)(XD.Fragment, {
+            children: [(0, XD.jsx)("div", {
               className: "ThumbnailUploadIcon",
-              children: (0, sz.jsx)(Oz.c, {
+              children: (0, XD.jsx)(SD.c, {
                 name: "image"
               })
-            }), (0, sz.jsx)("div", {
+            }), (0, XD.jsx)("div", {
               className: "ThumbnailUploadInstructions",
-              children: dz("thumbnail:dragImageHere")
+              children: yD("thumbnail:dragImageHere")
             })]
           })]
-        }), Wz && (0, sz.jsx)("div", {
+        }), sD && (0, XD.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: dz("thumbnail:imageRequired")
-        }), (0, sz.jsx)(lz.d, {
-          className: Fz()("ThumbnailUploadNameInput", {
-            ValidationError: ez
+          children: yD("thumbnail:imageRequired")
+        }), (0, XD.jsx)(fD.b, {
+          className: MD()("ThumbnailUploadNameInput", {
+            ValidationError: ED
           }),
-          placeholderText: dz("thumbnail:thumbnailName"),
-          defaultValue: Xz,
-          onValueChange: zz => {
-            fz(zz)
+          placeholderText: yD("thumbnail:thumbnailName"),
+          defaultValue: ND,
+          onValueChange: DD => {
+            gD(DD)
           },
-          maxLength: pz.i
-        }), ez && (0, sz.jsx)("div", {
+          maxLength: BD.h
+        }), ED && (0, XD.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: dz("thumbnail:nameRequired", {
-            min: pz.l,
-            max: pz.i
+          children: yD("thumbnail:nameRequired", {
+            min: BD.i,
+            max: BD.h
           })
-        }), (0, sz.jsxs)("label", {
+        }), (0, XD.jsxs)("label", {
           className: "ThumbnailUploadCheckbox",
-          children: [(0, sz.jsx)("input", {
+          children: [(0, XD.jsx)("input", {
             type: "checkbox",
-            checked: rz,
-            onChange: zz => {
-              oz(zz.target.checked)
+            checked: mD,
+            onChange: DD => {
+              nD(DD.target.checked)
             }
-          }), dz("thumbnail:setAsThumbnailOnceApproved")]
-        }), Tz && (0, sz.jsx)("div", {
+          }), yD("thumbnail:setAsThumbnailOnceApproved")]
+        }), qD && (0, XD.jsx)("div", {
           className: "ThumbnailUploadWarning",
-          children: dz("thumbnail:heavyCompressionWarning")
-        }), Jz && (0, sz.jsx)("div", {
+          children: yD("thumbnail:heavyCompressionWarning")
+        }), UD && (0, XD.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: Jz
-        }), (0, sz.jsx)(iz.q, {
-          disabled: Nz,
+          children: UD
+        }), (0, XD.jsx)(iD.o, {
+          disabled: OD,
           className: "ThumbnailUploadButton",
           onClick: async () => {
-            if (az(!0), !xz.current && Zz && Qz && nz) {
-              xz.current = !0, vz(!0), Az(null);
+            if (VD(!0), !HD.current && tD && WD && pD) {
+              HD.current = !0, PD(!0), xD(null);
               try {
-                await Hz(Zz.base64Jpg, Dz, rz ? bz : null)
-              } catch (zz) {
-                Az(zz.errorMessageForUser ? dz(zz.errorMessageForUser, zz.errorMessageTranslationParams) : dz("thumbnail:failedToUploadImage"))
+                await wD(tD.base64Jpg, YD, mD ? cD : null)
+              } catch (DD) {
+                xD(DD.errorMessageForUser ? yD(DD.errorMessageForUser, DD.errorMessageTranslationParams) : yD("thumbnail:failedToUploadImage"))
               } finally {
-                xz.current = !1, vz(!1)
+                HD.current = !1, PD(!1)
               }
-            } else nz || tz()
+            } else pD || QD()
           },
-          children: dz(Nz ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+          children: yD(OD ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
         })]
       })
     }
-    const Sz = 2e3;
+    const kD = 2e3;
 
-    function yz(zz) {
+    function dD(DD) {
       let {
-        schematicId: uz,
-        ownedThumbnailCount: bz,
-        onClose: nz,
-        onThumbnailReady: iz
-      } = zz;
+        schematicId: CD,
+        ownedThumbnailCount: cD,
+        onClose: pD,
+        onThumbnailReady: iD
+      } = DD;
       const {
-        t: lz
-      } = (0, Mz.F)(), {
-        userContext: tz
-      } = (0, Lz.c)(), [Hz, dz] = (0, Ez.useState)(!1), [Zz, Rz] = (0, Ez.useState)(!1), [Kz, wz] = (0, Ez.useState)(!1), Xz = (0, Ez.useRef)();
-      (0, Ez.useEffect)((() => () => {
-        clearTimeout(Xz.current)
+        t: fD
+      } = (0, bD.F)(), {
+        userContext: QD
+      } = (0, JD.c)(), [wD, yD] = (0, ID.useState)(!1), [tD, ZD] = (0, ID.useState)(!1), [oD, vD] = (0, ID.useState)(!1), ND = (0, ID.useRef)();
+      (0, ID.useEffect)((() => () => {
+        clearTimeout(ND.current)
       }), []);
-      const fz = function(zz, uz) {
-        const bz = [];
-        return zz.isLoggedIn() || bz.push(cz.NOT_LOGGED_IN), uz >= pz.X && bz.push(cz.THUMBNAIL_LIMIT_REACHED), bz
-      }(tz, bz);
-      if (fz.length > 0) {
-        const zz = {
-          [cz.NOT_LOGGED_IN]: {
+      const gD = function(DD, CD) {
+        const cD = [];
+        return DD.isLoggedIn() || cD.push(GD.NOT_LOGGED_IN), CD >= BD.W && cD.push(GD.THUMBNAIL_LIMIT_REACHED), cD
+      }(QD, cD);
+      if (gD.length > 0) {
+        const DD = {
+          [GD.NOT_LOGGED_IN]: {
             key: "thumbnail:mustBeLoggedInToUpload"
           },
-          [cz.THUMBNAIL_LIMIT_REACHED]: {
+          [GD.THUMBNAIL_LIMIT_REACHED]: {
             key: "thumbnail:thumbnailLimitReachedPleaseDelete",
             params: {
-              max: pz.X
+              max: BD.W
             }
           }
         };
-        return (0, sz.jsxs)("div", {
+        return (0, XD.jsxs)("div", {
           className: "ThumbnailUploaderInner",
-          children: [(0, sz.jsx)("h1", {
+          children: [(0, XD.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: lz("thumbnail:cannotUploadThumbnail")
-          }), fz.map(((uz, bz) => {
-            const Ez = zz[uz];
-            return (0, sz.jsxs)("div", {
+            children: fD("thumbnail:cannotUploadThumbnail")
+          }), gD.map(((CD, cD) => {
+            const ID = DD[CD];
+            return (0, XD.jsxs)("div", {
               className: "CannotUploadThumbnailItem",
-              children: [(0, sz.jsx)(Oz.c, {
+              children: [(0, XD.jsx)(SD.c, {
                 name: "triangle-exclamation"
-              }), (0, sz.jsx)("span", {
-                children: lz(Ez.key, Ez.params)
+              }), (0, XD.jsx)("span", {
+                children: fD(ID.key, ID.params)
               })]
-            }, bz)
+            }, cD)
           }))]
         })
       }
-      return (0, sz.jsxs)("div", {
-        className: Fz()("ThumbnailUploaderInner", {
-          ThumbnailUploaderSuccess: Hz
+      return (0, XD.jsxs)("div", {
+        className: MD()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: wD
         }),
-        children: [Hz && (0, sz.jsxs)("div", {
+        children: [wD && (0, XD.jsxs)("div", {
           className: "ThumbnailUploadSuccessOverlay",
-          children: [(0, sz.jsxs)("div", {
+          children: [(0, XD.jsxs)("div", {
             className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
-            children: [(0, sz.jsx)(Oz.c, {
+            children: [(0, XD.jsx)(SD.c, {
               name: "check"
-            }), (0, sz.jsx)(az.c, {})]
-          }), (0, sz.jsx)("div", {
+            }), (0, XD.jsx)(VD.c, {})]
+          }), (0, XD.jsx)("div", {
             className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
-            children: lz("thumbnail:thumbnailUploaded")
+            children: fD("thumbnail:thumbnailUploaded")
           })]
-        }), (0, sz.jsx)("h1", {
+        }), (0, XD.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: lz("thumbnail:uploadThumbnail")
-        }), (0, sz.jsxs)("div", {
+          children: fD("thumbnail:uploadThumbnail")
+        }), (0, XD.jsxs)("div", {
           className: "ThumbnailUploaderBody",
-          children: [(0, sz.jsxs)("div", {
+          children: [(0, XD.jsxs)("div", {
             className: "ThumbnailUploaderLeft",
-            children: [(0, sz.jsx)("h3", {
+            children: [(0, XD.jsx)("h3", {
               className: "SchematicPopupSubtitle",
-              children: lz("thumbnail:chooseImage", {
-                maxSizeKb: Vz
+              children: fD("thumbnail:chooseImage", {
+                maxSizeKb: zD
               })
-            }), (0, sz.jsx)(gz, {
-              schematicId: uz,
-              hasReadUploadPolicy: Zz,
+            }), (0, XD.jsx)(RD, {
+              schematicId: CD,
+              hasReadUploadPolicy: tD,
               onPolicyValidationError: () => {
-                wz(!0)
+                vD(!0)
               },
-              onThumbnailReady: async (zz, uz, bz) => {
-                await iz(zz, uz, bz), dz(!0), Xz.current = setTimeout(nz, Sz)
+              onThumbnailReady: async (DD, CD, cD) => {
+                await iD(DD, CD, cD), yD(!0), ND.current = setTimeout(pD, kD)
               }
             })]
-          }), (0, sz.jsxs)("div", {
+          }), (0, XD.jsxs)("div", {
             className: "ThumbnailUploadPolicy",
-            children: [(0, sz.jsx)("h3", {
+            children: [(0, XD.jsx)("h3", {
               className: "ThumbnailUploadPolicyTitle",
-              children: lz("thumbnail:uploadPolicy")
-            }), (0, sz.jsxs)("ul", {
+              children: fD("thumbnail:uploadPolicy")
+            }), (0, XD.jsxs)("ul", {
               className: "ThumbnailUploadPolicyList",
-              children: [(0, sz.jsxs)("li", {
+              children: [(0, XD.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, sz.jsx)(Oz.c, {
+                children: [(0, XD.jsx)(SD.c, {
                   name: "check"
-                }), (0, sz.jsx)("span", {
-                  children: lz("thumbnail:policyFollowGuidelines")
+                }), (0, XD.jsx)("span", {
+                  children: fD("thumbnail:policyFollowGuidelines")
                 })]
-              }), (0, sz.jsxs)("li", {
+              }), (0, XD.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, sz.jsx)(Oz.c, {
+                children: [(0, XD.jsx)(SD.c, {
                   name: "check"
-                }), (0, sz.jsx)("span", {
-                  children: lz("thumbnail:policyInGameAssets")
+                }), (0, XD.jsx)("span", {
+                  children: fD("thumbnail:policyInGameAssets")
                 })]
-              }), (0, sz.jsxs)("li", {
+              }), (0, XD.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, sz.jsx)(Oz.c, {
+                children: [(0, XD.jsx)(SD.c, {
                   name: "check"
-                }), (0, sz.jsx)("span", {
-                  children: lz("thumbnail:policyLimitText")
+                }), (0, XD.jsx)("span", {
+                  children: fD("thumbnail:policyLimitText")
                 })]
-              }), (0, sz.jsxs)("li", {
+              }), (0, XD.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, sz.jsx)(Oz.c, {
+                children: [(0, XD.jsx)(SD.c, {
                   name: "x"
-                }), (0, sz.jsx)("span", {
-                  children: lz("thumbnail:policyCopyrightContent")
+                }), (0, XD.jsx)("span", {
+                  children: fD("thumbnail:policyCopyrightContent")
                 })]
-              }), (0, sz.jsxs)("li", {
+              }), (0, XD.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, sz.jsx)(Oz.c, {
+                children: [(0, XD.jsx)(SD.c, {
                   name: "x"
-                }), (0, sz.jsx)("span", {
-                  children: lz("thumbnail:policyOutOfGameAssets")
+                }), (0, XD.jsx)("span", {
+                  children: fD("thumbnail:policyOutOfGameAssets")
                 })]
-              }), (0, sz.jsxs)("li", {
+              }), (0, XD.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, sz.jsx)(Oz.c, {
+                children: [(0, XD.jsx)(SD.c, {
                   name: "x"
-                }), (0, sz.jsx)("span", {
-                  children: lz("thumbnail:policyBloxdTags")
+                }), (0, XD.jsx)("span", {
+                  children: fD("thumbnail:policyBloxdTags")
                 })]
-              }), (0, sz.jsxs)("li", {
+              }), (0, XD.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, sz.jsx)(Oz.c, {
+                children: [(0, XD.jsx)(SD.c, {
                   name: "x"
-                }), (0, sz.jsx)("span", {
-                  children: lz("thumbnail:policyMustReflectGame")
+                }), (0, XD.jsx)("span", {
+                  children: fD("thumbnail:policyMustReflectGame")
                 })]
               })]
-            }), (0, sz.jsxs)("label", {
-              className: Fz()("ThumbnailUploadCheckbox Policy", {
-                ValidationError: Kz && !Zz
+            }), (0, XD.jsxs)("label", {
+              className: MD()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: oD && !tD
               }),
-              children: [(0, sz.jsx)("input", {
+              children: [(0, XD.jsx)("input", {
                 type: "checkbox",
-                checked: Zz,
-                onChange: zz => {
-                  Rz(zz.target.checked)
+                checked: tD,
+                onChange: DD => {
+                  ZD(DD.target.checked)
                 }
-              }), lz("thumbnail:agreeToUploadPolicy")]
-            }), Kz && !Zz && (0, sz.jsx)("div", {
+              }), fD("thumbnail:agreeToUploadPolicy")]
+            }), oD && !tD && (0, XD.jsx)("div", {
               className: "ThumbnailPolicyError",
-              children: lz("thumbnail:policyRequired")
+              children: fD("thumbnail:policyRequired")
             })]
           })]
         })]
       })
     }
-    var Dz = bz(1195);
-    const Qz = {
+    var YD = cD(1199);
+    const WD = {
       "custom-game-bad-thumbnail": {
         reason: "thumbnail:rejectionInappropriate",
         tips: ["thumbnail:rejectionInappropriateTip1", "thumbnail:rejectionInappropriateTip2", "thumbnail:rejectionInappropriateTip3"]
@@ -877,207 +877,207 @@ export const modules = {
       }
     };
 
-    function Wz(zz) {
-      var uz, bz;
+    function sD(DD) {
+      var CD, cD;
       let {
-        schematicData: lz,
-        updateSchematicData: Hz,
-        publishFormEnabled: pz,
-        onClose: dz
-      } = zz;
+        schematicData: fD,
+        updateSchematicData: wD,
+        publishFormEnabled: BD,
+        onClose: yD
+      } = DD;
       const {
-        t: Zz
-      } = (0, Mz.F)(), {
-        userContext: Rz,
-        isUserContextUpdating: Kz
-      } = (0, Lz.c)(), wz = (0, Tz.e)(), [Xz, fz] = (0, Ez.useState)([]), [rz, oz] = (0, Ez.useState)([]), [Nz, vz] = (0, Ez.useState)(!0), [xz, Jz] = (0, Ez.useState)(null !== (uz = lz.customThumbnailId) && void 0 !== uz ? uz : null), [Gz, az] = (0, Ez.useState)(null), Vz = (0, Ez.useRef)(null !== (bz = lz.customThumbnailId) && void 0 !== bz ? bz : null), mz = (0, Ez.useRef)(0), qz = (0, Ez.useRef)(null), hz = (0, Ez.useRef)(null), Uz = (0, Ez.useRef)(null), cz = (0, Ez.useRef)(!1);
+        t: tD
+      } = (0, bD.F)(), {
+        userContext: ZD,
+        isUserContextUpdating: oD
+      } = (0, JD.c)(), vD = (0, qD.d)(), [ND, gD] = (0, ID.useState)([]), [mD, nD] = (0, ID.useState)([]), [OD, PD] = (0, ID.useState)(!0), [HD, UD] = (0, ID.useState)(null !== (CD = fD.customThumbnailId) && void 0 !== CD ? CD : null), [aD, VD] = (0, ID.useState)(null), zD = (0, ID.useRef)(null !== (cD = fD.customThumbnailId) && void 0 !== cD ? cD : null), jD = (0, ID.useRef)(0), lD = (0, ID.useRef)(null), LD = (0, ID.useRef)(null), TD = (0, ID.useRef)(null), GD = (0, ID.useRef)(!1);
 
-      function gz(zz, uz) {
-        Uz.current && (clearTimeout(Uz.current), Uz.current = null), az(zz), null !== zz && uz && (Uz.current = setTimeout((() => {
-          az(null), Uz.current = null
+      function RD(DD, CD) {
+        TD.current && (clearTimeout(TD.current), TD.current = null), VD(DD), null !== DD && CD && (TD.current = setTimeout((() => {
+          VD(null), TD.current = null
         }), 5e3))
-      }(0, Ez.useEffect)((() => () => {
-        clearTimeout(hz.current), clearTimeout(Uz.current)
+      }(0, ID.useEffect)((() => () => {
+        clearTimeout(LD.current), clearTimeout(TD.current)
       }), []);
-      const Sz = (0, Ez.useCallback)((() => {
-        vz(!0), Az.c.getOwnedThumbnails(Rz).then((zz => {
-          const uz = [],
-            bz = [];
-          for (const Ez of zz.thumbnails) Ez.rejectionPolicyId ? uz.push(Ez) : bz.push(Ez);
-          uz.sort(((zz, uz) => zz.lastUpdatedAt - uz.lastUpdatedAt)), bz.sort(((zz, uz) => {
-            const bz = zz.approved ? 1 : 0,
-              Ez = (uz.approved ? 1 : 0) - bz;
-            return 0 !== Ez ? Ez : uz.lastUpdatedAt - zz.lastUpdatedAt
-          })), oz(uz), fz(bz)
-        })).catch((zz => {
-          console.error("Failed to fetch thumbnails:", zz)
+      const kD = (0, ID.useCallback)((() => {
+        PD(!0), xD.c.getOwnedThumbnails(ZD).then((DD => {
+          const CD = [],
+            cD = [];
+          for (const ID of DD.thumbnails) ID.rejectionPolicyId ? CD.push(ID) : cD.push(ID);
+          CD.sort(((DD, CD) => DD.lastUpdatedAt - CD.lastUpdatedAt)), cD.sort(((DD, CD) => {
+            const cD = DD.approved ? 1 : 0,
+              ID = (CD.approved ? 1 : 0) - cD;
+            return 0 !== ID ? ID : CD.lastUpdatedAt - DD.lastUpdatedAt
+          })), nD(CD), gD(cD)
+        })).catch((DD => {
+          console.error("Failed to fetch thumbnails:", DD)
         })).finally((() => {
-          vz(!1)
+          PD(!1)
         }))
-      }), [Rz]);
-      async function Qz(zz, uz, bz) {
-        return Az.c.uploadSchematicThumbnail(Rz, zz, uz, bz).then((() => {
-          gz({
-            text: Zz("thumbnail:uploadedAwaitingModeration"),
+      }), [ZD]);
+      async function WD(DD, CD, cD) {
+        return xD.c.uploadSchematicThumbnail(ZD, DD, CD, cD).then((() => {
+          RD({
+            text: tD("thumbnail:uploadedAwaitingModeration"),
             type: "success"
-          }, !0), Sz()
+          }, !0), kD()
         }))
       }
 
-      function Wz() {
-        mz.current = Date.now(), hz.current = null;
-        const zz = qz.current;
-        qz.current = null, gz({
-          text: Zz("thumbnail:settingThumbnail"),
+      function sD() {
+        jD.current = Date.now(), LD.current = null;
+        const DD = lD.current;
+        lD.current = null, RD({
+          text: tD("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), Az.c.setSchematicThumbnail(Rz, lz.schematicId, zz).then((() => {
-          wz.current && (gz({
-            text: Zz("thumbnail:thumbnailUpdated"),
+        }, !1), xD.c.setSchematicThumbnail(ZD, fD.schematicId, DD).then((() => {
+          vD.current && (RD({
+            text: tD("thumbnail:thumbnailUpdated"),
             type: "success"
-          }, !0), Vz.current = zz, Hz("customThumbnailId", zz), Hz("customThumbnailBlurhash", void 0), Hz("customThumbnailVariants", void 0))
-        })).catch((zz => {
-          wz.current && (gz({
-            text: zz.errorMessageForUser ? Zz(zz.errorMessageForUser, zz.errorMessageTranslationParams) : Zz("thumbnail:failedToSetThumbnail"),
+          }, !0), zD.current = DD, wD("customThumbnailId", DD), wD("customThumbnailBlurhash", void 0), wD("customThumbnailVariants", void 0))
+        })).catch((DD => {
+          vD.current && (RD({
+            text: DD.errorMessageForUser ? tD(DD.errorMessageForUser, DD.errorMessageTranslationParams) : tD("thumbnail:failedToSetThumbnail"),
             type: "error"
-          }, !0), Jz(Vz.current))
+          }, !0), UD(zD.current))
         }))
       }
 
-      function Iz(zz) {
-        Jz(zz), qz.current = zz;
-        const uz = Date.now() - mz.current;
-        uz >= 1e3 ? Wz() : (gz({
-          text: Zz("thumbnail:settingThumbnail"),
+      function uD(DD) {
+        UD(DD), lD.current = DD;
+        const CD = Date.now() - jD.current;
+        CD >= 1e3 ? sD() : (RD({
+          text: tD("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), hz.current || (hz.current = setTimeout((() => {
-          Wz()
-        }), 1e3 - uz)))
+        }, !1), LD.current || (LD.current = setTimeout((() => {
+          sD()
+        }), 1e3 - CD)))
       }
-      return (0, Ez.useEffect)((() => {
-        !1 === Kz && Sz()
-      }), [Kz, Sz]), rz.length > 0 ? (0, sz.jsx)(ez, {
-        rejectedThumbnails: rz,
-        userContext: Rz,
-        isMountedRef: wz,
-        onAcknowledged: Sz
-      }) : (0, sz.jsxs)("div", {
+      return (0, ID.useEffect)((() => {
+        !1 === oD && kD()
+      }), [oD, kD]), mD.length > 0 ? (0, XD.jsx)(ED, {
+        rejectedThumbnails: mD,
+        userContext: ZD,
+        isMountedRef: vD,
+        onAcknowledged: kD
+      }) : (0, XD.jsxs)("div", {
         className: "BloxdForm ThumbnailSection",
-        children: [(0, sz.jsxs)("div", {
+        children: [(0, XD.jsxs)("div", {
           className: "SectionTitle",
-          children: [Zz("thumbnail:gameThumbnail"), Gz && (0, sz.jsx)("span", {
-            className: Fz()("ThumbnailActionMsg", `ThumbnailActionMsg--${Gz.type}`),
-            children: Gz.text
+          children: [tD("thumbnail:gameThumbnail"), aD && (0, XD.jsx)("span", {
+            className: MD()("ThumbnailActionMsg", `ThumbnailActionMsg--${aD.type}`),
+            children: aD.text
           })]
-        }), (0, sz.jsx)("div", {
+        }), (0, XD.jsx)("div", {
           className: "SectionBody",
-          children: (0, sz.jsxs)("div", {
+          children: (0, XD.jsxs)("div", {
             className: "ThumbnailGrid",
-            children: [(0, sz.jsxs)("div", {
-              className: Fz()("ThumbnailGridItem ThumbnailGridItemDefault", {
-                ThumbnailGridItemSelected: null === xz
+            children: [(0, XD.jsxs)("div", {
+              className: MD()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === HD
               }),
-              onClick: () => Iz(null),
-              children: [(0, sz.jsx)(Pz.b, {
+              onClick: () => uD(null),
+              children: [(0, XD.jsx)(KD.e, {
                 game: {
-                  schematicId: lz.schematicId,
-                  imageBlurhash: lz.imageBlurhash
+                  schematicId: fD.schematicId,
+                  imageBlurhash: fD.imageBlurhash
                 }
-              }), (0, sz.jsx)("div", {
+              }), (0, XD.jsx)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
-                children: Zz("general:default")
+                children: tD("general:default")
               })]
-            }), Nz && (0, sz.jsx)(tz.c, {}), Xz.map(((zz, uz) => (0, sz.jsxs)("div", {
-              className: Fz()("ThumbnailGridItem", {
-                ThumbnailGridItemSelected: xz === zz.id,
-                ThumbnailGridItemPending: !zz.approved
+            }), OD && (0, XD.jsx)(QD.e, {}), ND.map(((DD, CD) => (0, XD.jsxs)("div", {
+              className: MD()("ThumbnailGridItem", {
+                ThumbnailGridItemSelected: HD === DD.id,
+                ThumbnailGridItemPending: !DD.approved
               }),
               onClick: () => {
-                zz.approved && Iz(zz.id)
+                DD.approved && uD(DD.id)
               },
-              children: [zz.approved && (0, sz.jsx)("img", {
-                src: `${Dz.clientSideServerUrls.s3Url}/customThumbnails/${zz.id}.jpg`,
+              children: [DD.approved && (0, XD.jsx)("img", {
+                src: `${YD.clientSideServerUrls.s3Url}/customThumbnails/${DD.id}.jpg`,
                 alt: "Thumbnail"
-              }), zz.approved && (0, sz.jsx)("div", {
+              }), DD.approved && (0, XD.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: zz.name
-              }), zz.id && (0, sz.jsx)(iz.K, {
+                children: DD.name
+              }), DD.id && (0, XD.jsx)(iD.J, {
                 className: "ThumbnailDeleteButton",
-                onClick: uz => async function(zz, uz, bz) {
-                  zz.stopPropagation();
-                  const Ez = await nz.NotificationProvider.showCustomPopup({
-                      body: zz => (0, sz.jsx)(jz, {
-                        thumbnailId: uz,
-                        thumbnailName: bz,
-                        onClose: uz => {
-                          uz && (cz.current = !0), zz()
+                onClick: CD => async function(DD, CD, cD) {
+                  DD.stopPropagation();
+                  const ID = await pD.NotificationProvider.showCustomPopup({
+                      body: DD => (0, XD.jsx)(eD, {
+                        thumbnailId: CD,
+                        thumbnailName: cD,
+                        onClose: CD => {
+                          CD && (GD.current = !0), DD()
                         }
                       }),
                       middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
-                      onClose: dz
+                      onClose: yD
                     }).getResult(),
-                    iz = cz.current;
-                  cz.current = !1, iz && !0 === Ez && (wz.current && gz({
-                    text: Zz("thumbnail:deletingThumbnail"),
+                    iD = GD.current;
+                  GD.current = !1, iD && !0 === ID && (vD.current && RD({
+                    text: tD("thumbnail:deletingThumbnail"),
                     type: "info"
-                  }, !1), Az.c.deleteSchematicThumbnail(Rz, uz).then((() => {
-                    wz.current && (gz({
-                      text: Zz("thumbnail:thumbnailDeleted"),
+                  }, !1), xD.c.deleteSchematicThumbnail(ZD, CD).then((() => {
+                    vD.current && (RD({
+                      text: tD("thumbnail:thumbnailDeleted"),
                       type: "success"
-                    }, !0), Vz.current === uz && Iz(null), Sz())
-                  })).catch((zz => {
-                    wz.current && gz({
-                      text: zz.errorMessageForUser ? Zz(zz.errorMessageForUser, zz.errorMessageTranslationParams) : Zz("thumbnail:failedToDeleteThumbnail"),
+                    }, !0), zD.current === CD && uD(null), kD())
+                  })).catch((DD => {
+                    vD.current && RD({
+                      text: DD.errorMessageForUser ? tD(DD.errorMessageForUser, DD.errorMessageTranslationParams) : tD("thumbnail:failedToDeleteThumbnail"),
                       type: "error"
                     }, !0)
                   })))
-                }(uz, zz.id, zz.name),
-                children: (0, sz.jsx)(Oz.c, {
+                }(CD, DD.id, DD.name),
+                children: (0, XD.jsx)(SD.c, {
                   name: "trash-can"
                 })
-              }), !zz.approved && (0, sz.jsx)("div", {
+              }), !DD.approved && (0, XD.jsx)("div", {
                 className: "ThumbnailUnapprovedIcon",
-                children: (0, sz.jsx)(Oz.c, {
+                children: (0, XD.jsx)(SD.c, {
                   name: "hourglass-clock"
                 })
-              }), !zz.approved && (0, sz.jsxs)("div", {
+              }), !DD.approved && (0, XD.jsxs)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
-                children: [zz.name, (0, sz.jsx)("br", {}), Zz("thumbnail:pendingApproval")]
+                children: [DD.name, (0, XD.jsx)("br", {}), tD("thumbnail:pendingApproval")]
               })]
-            }, uz))), (0, sz.jsxs)("div", {
-              className: Fz()("ThumbnailGridItem ThumbnailUploadTile", {
-                ThumbnailUploadTileDisabled: !pz
+            }, CD))), (0, XD.jsxs)("div", {
+              className: MD()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !BD
               }),
               onClick: () => {
-                pz && function(zz) {
+                BD && function(DD) {
                   let {
-                    schematicId: uz,
-                    ownedThumbnailCount: bz,
-                    onThumbnailReady: Ez,
-                    onClose: iz
-                  } = zz;
-                  nz.NotificationProvider.showCustomPopup({
-                    body: zz => (0, sz.jsx)(yz, {
-                      schematicId: uz,
-                      ownedThumbnailCount: bz,
-                      onClose: zz,
-                      onThumbnailReady: Ez
+                    schematicId: CD,
+                    ownedThumbnailCount: cD,
+                    onThumbnailReady: ID,
+                    onClose: iD
+                  } = DD;
+                  pD.NotificationProvider.showCustomPopup({
+                    body: DD => (0, XD.jsx)(dD, {
+                      schematicId: CD,
+                      ownedThumbnailCount: cD,
+                      onClose: DD,
+                      onThumbnailReady: ID
                     }),
                     middleScreenPopupClassName: "SchematicThumbnailPopup",
-                    onClose: iz,
+                    onClose: iD,
                     unlockPointerKey: "schematicThumbnailUploaderPopup"
                   })
                 }({
-                  schematicId: lz.schematicId,
-                  ownedThumbnailCount: Xz.length,
-                  onThumbnailReady: Qz,
-                  onClose: dz
+                  schematicId: fD.schematicId,
+                  ownedThumbnailCount: ND.length,
+                  onThumbnailReady: WD,
+                  onClose: yD
                 })
               },
-              children: [(0, sz.jsx)(Oz.c, {
+              children: [(0, XD.jsx)(SD.c, {
                 name: "plus"
-              }), (0, sz.jsx)("div", {
+              }), (0, XD.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: Zz("thumbnail:uploadThumbnail")
+                children: tD("thumbnail:uploadThumbnail")
               })]
             })]
           })
@@ -1085,640 +1085,640 @@ export const modules = {
       })
     }
 
-    function ez(zz) {
+    function ED(DD) {
       let {
-        rejectedThumbnails: uz,
-        userContext: bz,
-        isMountedRef: nz,
-        onAcknowledged: lz
-      } = zz;
+        rejectedThumbnails: CD,
+        userContext: cD,
+        isMountedRef: pD,
+        onAcknowledged: fD
+      } = DD;
       const {
-        t: Hz
-      } = (0, Mz.F)(), [pz, dz] = (0, Ez.useState)(!1), [Fz, Zz] = (0, Ez.useState)(!1), Rz = function(zz) {
-        const uz = new Map;
-        for (const bz of zz) {
-          const zz = bz.rejectionPolicyId,
-            Ez = uz.get(zz);
-          Ez ? Ez.push(bz) : uz.set(zz, [bz])
+        t: wD
+      } = (0, bD.F)(), [BD, yD] = (0, ID.useState)(!1), [MD, tD] = (0, ID.useState)(!1), ZD = function(DD) {
+        const CD = new Map;
+        for (const cD of DD) {
+          const DD = cD.rejectionPolicyId,
+            ID = CD.get(DD);
+          ID ? ID.push(cD) : CD.set(DD, [cD])
         }
-        return uz
-      }(uz);
-      return (0, sz.jsxs)("div", {
+        return CD
+      }(CD);
+      return (0, XD.jsxs)("div", {
         className: "ThumbnailRejectionNotice",
-        children: [(0, sz.jsxs)("div", {
+        children: [(0, XD.jsxs)("div", {
           className: "ThumbnailRejectionNoticeTitle",
-          children: [(0, sz.jsx)(Oz.c, {
+          children: [(0, XD.jsx)(SD.c, {
             name: "triangle-exclamation"
-          }), " ", Hz("thumbnail:thumbnailsRejected"), " ", (0, sz.jsx)(Oz.c, {
+          }), " ", wD("thumbnail:thumbnailsRejected"), " ", (0, XD.jsx)(SD.c, {
             name: "triangle-exclamation"
           })]
-        }), (0, sz.jsx)("div", {
+        }), (0, XD.jsx)("div", {
           className: "ThumbnailRejectionNoticeSubtitle",
-          children: Hz("thumbnail:thumbnailsRejectedDescription")
-        }), (0, sz.jsx)("div", {
+          children: wD("thumbnail:thumbnailsRejectedDescription")
+        }), (0, XD.jsx)("div", {
           className: "ThumbnailRejectionNoticeList",
-          children: [...Rz.entries()].map((zz => {
-            let [uz, bz] = zz;
-            const Ez = Qz[uz];
-            return (0, sz.jsxs)("div", {
+          children: [...ZD.entries()].map((DD => {
+            let [CD, cD] = DD;
+            const ID = WD[CD];
+            return (0, XD.jsxs)("div", {
               className: "ThumbnailRejectionNoticeGroup",
-              children: [(0, sz.jsx)("div", {
+              children: [(0, XD.jsx)("div", {
                 className: "ThumbnailRejectionNoticeItems",
-                children: bz.map((zz => (0, sz.jsxs)("div", {
+                children: cD.map((DD => (0, XD.jsxs)("div", {
                   className: "ThumbnailRejectionNoticeItem",
-                  children: [(0, sz.jsx)("div", {
+                  children: [(0, XD.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemIcon",
-                    children: (0, sz.jsx)(Oz.c, {
+                    children: (0, XD.jsx)(SD.c, {
                       name: "image-slash"
                     })
-                  }), (0, sz.jsx)("div", {
+                  }), (0, XD.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemDetails",
-                    children: (0, sz.jsx)("div", {
+                    children: (0, XD.jsx)("div", {
                       className: "ThumbnailRejectionNoticeItemName",
-                      children: zz.name
+                      children: DD.name
                     })
                   })]
-                }, zz.id)))
-              }), (0, sz.jsxs)("div", {
+                }, DD.id)))
+              }), (0, XD.jsxs)("div", {
                 className: "ThumbnailRejectionNoticeGroupReason",
-                children: [Hz("thumbnail:rejectionReason"), " ", Ez ? Hz(Ez.reason) : uz]
-              }), Ez && (0, sz.jsx)("ul", {
+                children: [wD("thumbnail:rejectionReason"), " ", ID ? wD(ID.reason) : CD]
+              }), ID && (0, XD.jsx)("ul", {
                 className: "ThumbnailRejectionNoticeGroupTips",
-                children: Ez.tips.map((zz => (0, sz.jsx)("li", {
-                  children: Hz(zz)
-                }, zz)))
+                children: ID.tips.map((DD => (0, XD.jsx)("li", {
+                  children: wD(DD)
+                }, DD)))
               })]
-            }, uz)
+            }, CD)
           }))
-        }), (0, sz.jsxs)("label", {
+        }), (0, XD.jsxs)("label", {
           className: "ThumbnailRejectionNoticeCheckbox",
-          children: [(0, sz.jsx)(Jz.b, {
-            checked: pz,
-            onChange: zz => dz(zz.target.checked),
-            disabled: Fz
-          }), (0, sz.jsx)("span", {
-            children: Hz("thumbnail:haveReadRejectionReasons")
+          children: [(0, XD.jsx)(UD.e, {
+            checked: BD,
+            onChange: DD => yD(DD.target.checked),
+            disabled: MD
+          }), (0, XD.jsx)("span", {
+            children: wD("thumbnail:haveReadRejectionReasons")
           })]
-        }), (0, sz.jsx)(iz.q, {
+        }), (0, XD.jsx)(iD.o, {
           onClick: async function() {
-            Zz(!0);
-            const zz = await Promise.allSettled(uz.map((zz => Az.c.deleteSchematicThumbnail(bz, zz.id))));
-            if (!nz.current) return;
-            const Ez = zz.filter((zz => "rejected" === zz.status));
-            Ez.length > 0 && console.error("Some rejected thumbnails failed to delete:", Ez), lz()
+            tD(!0);
+            const DD = await Promise.allSettled(CD.map((DD => xD.c.deleteSchematicThumbnail(cD, DD.id))));
+            if (!pD.current) return;
+            const ID = DD.filter((DD => "rejected" === DD.status));
+            ID.length > 0 && console.error("Some rejected thumbnails failed to delete:", ID), fD()
           },
-          disabled: !pz || Fz,
+          disabled: !BD || MD,
           className: "ThumbnailRejectionNoticeAcceptButton",
-          children: Fz ? (0, sz.jsx)(tz.c, {}) : Hz("general:accept")
+          children: MD ? (0, XD.jsx)(QD.e, {}) : wD("general:accept")
         })]
       })
     }
 
-    function jz(zz) {
+    function eD(DD) {
       let {
-        thumbnailId: uz,
-        thumbnailName: bz,
-        onClose: Ez
-      } = zz;
+        thumbnailId: CD,
+        thumbnailName: cD,
+        onClose: ID
+      } = DD;
       const {
-        t: nz
-      } = (0, Mz.F)();
-      return (0, sz.jsxs)("div", {
+        t: pD
+      } = (0, bD.F)();
+      return (0, XD.jsxs)("div", {
         className: "ThumbnailDeleteConfirm",
-        children: [(0, sz.jsx)("div", {
+        children: [(0, XD.jsx)("div", {
           className: "ThumbnailDeleteConfirmTitle",
-          children: nz("thumbnail:deleteThumbnail")
-        }), (0, sz.jsxs)("div", {
+          children: pD("thumbnail:deleteThumbnail")
+        }), (0, XD.jsxs)("div", {
           className: "ThumbnailDeleteConfirmImageContainer",
-          children: [(0, sz.jsx)("img", {
+          children: [(0, XD.jsx)("img", {
             className: "ThumbnailDeleteConfirmImage",
-            src: `${Dz.clientSideServerUrls.s3Url}/customThumbnails/${uz}.jpg`,
+            src: `${YD.clientSideServerUrls.s3Url}/customThumbnails/${CD}.jpg`,
             alt: "Thumbnail to delete"
-          }), (0, sz.jsx)("div", {
+          }), (0, XD.jsx)("div", {
             className: "ThumbnailGridItemLabel",
-            children: bz
+            children: cD
           })]
-        }), (0, sz.jsx)("div", {
+        }), (0, XD.jsx)("div", {
           className: "ThumbnailDeleteConfirmSubtitle",
-          children: nz("thumbnail:deleteThumbnailConfirmation")
-        }), (0, sz.jsxs)("div", {
+          children: pD("thumbnail:deleteThumbnailConfirmation")
+        }), (0, XD.jsxs)("div", {
           className: "ThumbnailDeleteConfirmButtons",
-          children: [(0, sz.jsxs)(iz.K, {
+          children: [(0, XD.jsxs)(iD.J, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => Ez(!0),
-            children: [(0, sz.jsx)(Oz.c, {
+            onClick: () => ID(!0),
+            children: [(0, XD.jsx)(SD.c, {
               name: "trash-can"
-            }), " ", nz("general:delete")]
-          }), (0, sz.jsx)(iz.j, {
+            }), " ", pD("general:delete")]
+          }), (0, XD.jsx)(iD.k, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => Ez(!1),
-            children: nz("general:cancel")
+            onClick: () => ID(!1),
+            children: pD("general:cancel")
           })]
         })]
       })
     }
-    var Iz = bz(2916),
-      Bz = bz(4737),
-      Cz = bz(4744),
-      Yz = bz(4780);
+    var uD = cD(2952),
+      hD = cD(4762),
+      rD = cD(4767),
+      AD = cD(4808);
 
-    function kz(zz) {
+    function FD(DD) {
       let {
-        schematicData: uz,
-        setTexturePack: bz,
-        initializeTexturePack: nz,
-        publishFormEnabled: iz
-      } = zz;
+        schematicData: CD,
+        setTexturePack: cD,
+        initializeTexturePack: pD,
+        publishFormEnabled: iD
+      } = DD;
       const {
-        t: lz
-      } = (0, Mz.F)(), [tz, Hz] = (0, Ez.useState)(null), [Oz, pz] = (0, Ez.useState)(null), [dz, Zz] = (0, Ez.useState)(!1), Rz = (0, Tz.e)(), Kz = iz && !dz, wz = uz.customTexturePackKey;
+        t: fD
+      } = (0, bD.F)(), [QD, wD] = (0, ID.useState)(null), [SD, BD] = (0, ID.useState)(null), [yD, tD] = (0, ID.useState)(!1), ZD = (0, qD.d)(), oD = iD && !yD, vD = CD.customTexturePackKey;
 
-      function Xz(zz) {
-        var uz;
-        Hz(zz.metaData.id), pz(null !== (uz = zz.metaData.fromFolderName) && void 0 !== uz ? uz : null), (zz.metaData.id !== Iz.r.CUSTOM || zz.metaData.fromFolderName) && bz(zz)
+      function ND(DD) {
+        var CD;
+        wD(DD.metaData.id), BD(null !== (CD = DD.metaData.fromFolderName) && void 0 !== CD ? CD : null), (DD.metaData.id !== uD.r.CUSTOM || DD.metaData.fromFolderName) && cD(DD)
       }
-      return (0, Ez.useEffect)((() => {
-        wz && (Zz(!0), (0, Bz.c)(wz).then((zz => {
-          var uz;
-          Rz.current && (zz ? (Hz(zz.metaData.id), pz(null !== (uz = zz.metaData.fromFolderName) && void 0 !== uz ? uz : null), nz(zz)) : console.error(`No texture pack at ${wz}`))
-        })).catch((zz => {
-          console.error("Error fetching texture pack: ", zz)
+      return (0, ID.useEffect)((() => {
+        vD && (tD(!0), (0, hD.c)(vD).then((DD => {
+          var CD;
+          ZD.current && (DD ? (wD(DD.metaData.id), BD(null !== (CD = DD.metaData.fromFolderName) && void 0 !== CD ? CD : null), pD(DD)) : console.error(`No texture pack at ${vD}`))
+        })).catch((DD => {
+          console.error("Error fetching texture pack: ", DD)
         })).finally((() => {
-          Zz(!1)
+          tD(!1)
         })))
-      }), [wz, nz, Rz]), (0, sz.jsxs)("div", {
+      }), [vD, pD, ZD]), (0, XD.jsxs)("div", {
         className: "BloxdForm TexturePackSection",
-        children: [(0, sz.jsx)("div", {
+        children: [(0, XD.jsx)("div", {
           className: "SectionTitle",
-          children: lz("customTexturePack:customTexturePack")
-        }), (0, sz.jsxs)("div", {
+          children: fD("customTexturePack:customTexturePack")
+        }), (0, XD.jsxs)("div", {
           className: "TexturePackList",
-          children: [(0, sz.jsx)("div", {
-            className: Fz()("TexturePack", {
-              Selected: null === tz && !dz,
-              Disabled: !Kz
+          children: [(0, XD.jsx)("div", {
+            className: MD()("TexturePack", {
+              Selected: null === QD && !yD,
+              Disabled: !oD
             }),
             onClick: () => {
-              Kz && (Hz(null), bz(null), pz(null))
+              oD && (wD(null), cD(null), BD(null))
             },
-            children: (0, sz.jsx)("div", {
+            children: (0, XD.jsx)("div", {
               className: "TexturePackName",
               children: "No Override"
             })
-          }), Object.values(Iz.r).map((zz => (0, sz.jsx)(Cz.e, {
-            id: zz,
-            isSelected: zz === tz,
-            setSelected: Xz,
-            disabled: !Kz
-          }, zz)))]
-        }), tz === Iz.r.CUSTOM && (0, sz.jsx)(Yz.c, {
-          folderName: Oz,
-          onTexturePackUpdated: Xz,
-          disabled: !Kz,
+          }), Object.values(uD.r).map((DD => (0, XD.jsx)(rD.f, {
+            id: DD,
+            isSelected: DD === QD,
+            setSelected: ND,
+            disabled: !oD
+          }, DD)))]
+        }), QD === uD.r.CUSTOM && (0, XD.jsx)(AD.d, {
+          folderName: SD,
+          onTexturePackUpdated: ND,
+          disabled: !oD,
           maxFileSizeMb: 25,
           packOwner: "customGame"
         })]
       })
     }
-    var zu = bz(4792);
+    var DC = cD(4826);
 
-    function uu(zz) {
-      var uz;
+    function CC(DD) {
+      var CD;
       let {
-        gameCategory: bz,
-        setGameCategory: Ez,
-        disabled: nz
-      } = zz;
-      const lz = null !== (uz = (0, Zz.rb)(bz)) && void 0 !== uz ? uz : "other";
-      return (0, sz.jsxs)("div", {
+        gameCategory: cD,
+        setGameCategory: ID,
+        disabled: pD
+      } = DD;
+      const fD = null !== (CD = (0, tD.eb)(cD)) && void 0 !== CD ? CD : "other";
+      return (0, XD.jsxs)("div", {
         className: "GameCategoryPicker",
-        children: [(0, sz.jsx)(wz.d, {
+        children: [(0, XD.jsx)(vD.e, {
           label: "worldBuilder:gameCategoryGroup",
           className: "GameCategoryGroup",
-          disabled: nz,
-          children: (0, sz.jsx)(Xz.d, {
-            options: Zz.eb.map((zz => ({
-              value: zz,
-              label: Zz.db[zz]
+          disabled: pD,
+          children: (0, XD.jsx)(ND.b, {
+            options: tD.V.map((DD => ({
+              value: DD,
+              label: tD.U[DD]
             }))),
-            value: lz,
-            onChange: zz => {
-              zz.value !== lz && Ez(Zz.Z[zz.value][0])
+            value: fD,
+            onChange: DD => {
+              DD.value !== fD && ID(tD.Q[DD.value][0])
             }
           })
-        }), (0, sz.jsx)(wz.d, {
+        }), (0, XD.jsx)(vD.e, {
           label: "worldBuilder:gameCategory",
           className: "GameCategory",
-          disabled: nz,
-          children: (0, sz.jsx)("div", {
+          disabled: pD,
+          children: (0, XD.jsx)("div", {
             className: "GameCategoryOptions",
-            children: Zz.Z[lz].map((zz => (0, sz.jsx)(iz.V, {
-              active: zz === bz,
+            children: tD.Q[fD].map((DD => (0, XD.jsx)(iD.P, {
+              active: DD === cD,
               onClick: () => {
-                Ez(zz)
+                ID(DD)
               },
-              children: (0, Zz.nb)(zz)
-            }, zz)))
+              children: (0, tD.ab)(DD)
+            }, DD)))
           })
         })]
       })
     }
 
-    function bu(zz) {
+    function cC(DD) {
       let {
-        editor: uz,
-        onClose: bz
-      } = zz;
+        editor: CD,
+        onClose: cD
+      } = DD;
       const {
-        t: Ez
-      } = (0, Mz.F)(), {
-        schematicData: nz,
-        updateSchematicData: iz,
-        publishFormEnabled: tz,
-        formEnabled: Hz
-      } = uz;
-      return (0, sz.jsxs)(sz.Fragment, {
-        children: [(0, sz.jsxs)(rz, {
+        t: ID
+      } = (0, bD.F)(), {
+        schematicData: pD,
+        updateSchematicData: iD,
+        publishFormEnabled: QD,
+        formEnabled: wD
+      } = CD;
+      return (0, XD.jsxs)(XD.Fragment, {
+        children: [(0, XD.jsxs)(mD, {
           icon: "pen-to-square",
-          title: Ez("worldBuilder:basicsSection"),
-          disabled: !Hz,
-          children: [(0, sz.jsx)(oz, {
-            label: Ez("general:name"),
-            caption: Ez("worldBuilder:schematicNameTagsHint"),
-            children: (0, sz.jsx)(lz.d, {
+          title: ID("worldBuilder:basicsSection"),
+          disabled: !wD,
+          children: [(0, XD.jsx)(nD, {
+            label: ID("general:name"),
+            caption: ID("worldBuilder:schematicNameTagsHint"),
+            children: (0, XD.jsx)(fD.b, {
               className: "SchematicPageName",
-              defaultValue: nz.name,
-              onValueChange: zz => iz("name", zz),
-              placeholderText: Ez("worldBuilder:schematicNamePlaceholder"),
-              maxLength: pz.xb
+              defaultValue: pD.name,
+              onValueChange: DD => iD("name", DD),
+              placeholderText: ID("worldBuilder:schematicNamePlaceholder"),
+              maxLength: BD.qb
             })
-          }), (0, sz.jsx)(oz, {
-            label: Ez("general:description"),
-            children: (0, sz.jsx)(lz.d, {
+          }), (0, XD.jsx)(nD, {
+            label: ID("general:description"),
+            children: (0, XD.jsx)(fD.b, {
               className: "SchematicPageDescription",
               useTextarea: !0,
-              defaultValue: nz.description,
-              onValueChange: zz => iz("description", zz),
-              placeholderText: Ez("worldBuilder:schematicDescriptionPlaceholder"),
-              maxLength: pz.ub
+              defaultValue: pD.description,
+              onValueChange: DD => iD("description", DD),
+              placeholderText: ID("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: BD.nb
             })
-          }), (0, sz.jsx)(uu, {
-            gameCategory: nz.gameCategory,
-            setGameCategory: zz => iz("gameCategory", zz),
-            disabled: !tz
-          }), !0 === nz.gamePublished && (0, sz.jsx)(Wz, {
-            schematicData: nz,
-            updateSchematicData: iz,
-            publishFormEnabled: tz,
+          }), (0, XD.jsx)(CC, {
+            gameCategory: pD.gameCategory,
+            setGameCategory: DD => iD("gameCategory", DD),
+            disabled: !QD
+          }), !0 === pD.gamePublished && (0, XD.jsx)(sD, {
+            schematicData: pD,
+            updateSchematicData: iD,
+            publishFormEnabled: QD,
             onClose: function() {
-              null === bz || void 0 === bz || bz()
+              null === cD || void 0 === cD || cD()
             }
           })]
-        }), (0, sz.jsx)(vz, {
-          schematicData: nz,
-          updateSchematicData: iz,
-          publishFormEnabled: tz,
-          formEnabled: Hz
-        }), !0 === nz.gamePublished && (0, sz.jsx)(rz, {
+        }), (0, XD.jsx)(PD, {
+          schematicData: pD,
+          updateSchematicData: iD,
+          publishFormEnabled: QD,
+          formEnabled: wD
+        }), !0 === pD.gamePublished && (0, XD.jsx)(mD, {
           icon: "palette",
-          title: Ez("worldBuilder:texturePackSection"),
-          disabled: !Hz,
-          children: (0, sz.jsx)(kz, {
-            schematicData: nz,
-            setTexturePack: uz.setTexturePack,
-            initializeTexturePack: uz.initializeTexturePack,
-            publishFormEnabled: tz
+          title: ID("worldBuilder:texturePackSection"),
+          disabled: !wD,
+          children: (0, XD.jsx)(FD, {
+            schematicData: pD,
+            setTexturePack: CD.setTexturePack,
+            initializeTexturePack: CD.initializeTexturePack,
+            publishFormEnabled: QD
           })
         })]
       })
     }
 
-    function Eu(zz) {
+    function IC(DD) {
       let {
-        editor: uz
-      } = zz;
+        editor: CD
+      } = DD;
       const {
-        t: bz
-      } = (0, Mz.F)(), {
-        schematicData: Ez,
-        formEnabled: nz,
-        hasUnsavedChanges: lz
-      } = uz, pz = nz && lz;
-      return (0, sz.jsxs)("footer", {
+        t: cD
+      } = (0, bD.F)(), {
+        schematicData: ID,
+        formEnabled: pD,
+        hasUnsavedChanges: fD
+      } = CD, BD = pD && fD;
+      return (0, XD.jsxs)("footer", {
         className: "SchematicPageFooter",
-        children: [nz && lz && (0, sz.jsxs)("div", {
+        children: [pD && fD && (0, XD.jsxs)("div", {
           className: "SchematicPageFooterStatus",
-          children: [(0, sz.jsx)("span", {
+          children: [(0, XD.jsx)("span", {
             className: "SchematicPageFooterStatusDot"
-          }), bz("worldBuilder:unsavedChanges")]
-        }), (0, sz.jsx)(Hz.f, {
-          tooltipInner: (0, sz.jsx)("div", {
+          }), cD("worldBuilder:unsavedChanges")]
+        }), (0, XD.jsx)(wD.f, {
+          tooltipInner: (0, XD.jsx)("div", {
             className: "SaveButtonTooltip",
-            children: bz(nz && !lz ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+            children: cD(pD && !fD ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
           }),
-          children: (0, sz.jsxs)(iz.f, {
+          children: (0, XD.jsxs)(iD.i, {
             className: "SaveChangesButton",
-            onClick: () => uz.saveSchematic(Ez.gamePublished),
-            disabled: !pz,
-            children: [(0, sz.jsxs)("span", {
-              className: nz ? "" : "SaveChangesButtonBodyHidden",
-              children: [(0, sz.jsx)(Oz.c, {
+            onClick: () => CD.saveSchematic(ID.gamePublished),
+            disabled: !BD,
+            children: [(0, XD.jsxs)("span", {
+              className: pD ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, XD.jsx)(SD.c, {
                 name: "wrench"
-              }), " ", bz("worldBuilder:saveChanges")]
-            }), !nz && (0, sz.jsx)(tz.c, {})]
+              }), " ", cD("worldBuilder:saveChanges")]
+            }), !pD && (0, XD.jsx)(QD.e, {})]
           })
         })]
       })
     }
 
-    function nu(zz) {
+    function pC(DD) {
       let {
-        schematic: uz,
-        onSchematicUpdate: bz,
-        onClose: nz,
-        inSourceWorld: lz
-      } = zz;
+        schematic: CD,
+        onSchematicUpdate: cD,
+        onClose: pD,
+        inSourceWorld: fD
+      } = DD;
       const {
-        t: tz
-      } = (0, Mz.F)();
+        t: QD
+      } = (0, bD.F)();
 
-      function Hz() {
-        null === nz || void 0 === nz || nz()
+      function wD() {
+        null === pD || void 0 === pD || pD()
       }
-      const Oz = (0, zu.c)(uz, {
-        onNavigateAway: Hz,
-        inSourceWorld: lz
+      const SD = (0, DC.d)(CD, {
+        onNavigateAway: wD,
+        inSourceWorld: fD
       });
-      return (0, Ez.useEffect)((() => {
-        null === bz || void 0 === bz || bz(Oz.schematicData)
-      }), [Oz.schematicData, bz]), (0, sz.jsxs)("div", {
+      return (0, ID.useEffect)((() => {
+        null === cD || void 0 === cD || cD(SD.schematicData)
+      }), [SD.schematicData, cD]), (0, XD.jsxs)("div", {
         className: "SchematicPage SchematicPagePopupVariant",
-        children: [(0, sz.jsxs)("div", {
+        children: [(0, XD.jsxs)("div", {
           className: "SchematicPageBody",
-          children: [(0, sz.jsx)(iz.d, {
-            onClick: Hz,
-            children: tz("worldBuilder:back")
-          }), (0, sz.jsx)(rz, {
+          children: [(0, XD.jsx)(iD.e, {
+            onClick: wD,
+            children: QD("worldBuilder:back")
+          }), (0, XD.jsx)(mD, {
             icon: "rocket-launch",
-            title: tz("worldBuilder:actionsSection"),
-            disabled: !Oz.formEnabled,
-            children: (0, sz.jsx)(xz.d, {
-              editor: Oz
+            title: QD("worldBuilder:actionsSection"),
+            disabled: !SD.formEnabled,
+            children: (0, XD.jsx)(HD.d, {
+              editor: SD
             })
-          }), (0, sz.jsx)(bu, {
-            editor: Oz,
-            onClose: Hz
+          }), (0, XD.jsx)(cC, {
+            editor: SD,
+            onClose: wD
           })]
-        }), (0, sz.jsx)(Eu, {
-          editor: Oz
+        }), (0, XD.jsx)(IC, {
+          editor: SD
         })]
       })
     }
 
-    function iu(zz) {
+    function iC(DD) {
       let {
-        schematic: uz,
-        onSchematicUpdate: bz,
-        onClose: Ez,
-        inSourceWorld: iz
-      } = zz;
-      nz.NotificationProvider.showCustomPopup({
-        body: zz => (0, sz.jsx)(nu, {
-          schematic: uz,
-          onSchematicUpdate: bz,
-          onClose: zz,
-          inSourceWorld: iz
+        schematic: CD,
+        onSchematicUpdate: cD,
+        onClose: ID,
+        inSourceWorld: iD
+      } = DD;
+      pD.NotificationProvider.showCustomPopup({
+        body: DD => (0, XD.jsx)(pC, {
+          schematic: CD,
+          onSchematicUpdate: cD,
+          onClose: DD,
+          inSourceWorld: iD
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: Ez,
+        onClose: ID,
         unlockPointerKey: "schematicPagePopup"
       })
     }
   },
-  4704: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => pz
+  4732: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => BD
     });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(1181),
-      lz = bz(1047),
-      Mz = bz(1419),
-      tz = bz(1332),
-      Hz = bz(1305),
-      Oz = bz(1089);
+    var ID = cD(1049),
+      pD = cD.n(ID),
+      iD = cD(1192),
+      fD = cD(1064),
+      bD = cD(1442),
+      QD = cD(1356),
+      wD = cD(1328),
+      SD = cD(1093);
 
-    function pz(zz) {
+    function BD(DD) {
       let {
-        editor: uz,
-        className: bz
-      } = zz;
+        editor: CD,
+        className: cD
+      } = DD;
       const {
-        t: Ez
-      } = (0, iz.F)(), {
-        schematicData: pz,
-        formEnabled: dz,
-        publishFormEnabled: Fz
-      } = uz, Zz = !dz || !Fz;
-      return (0, Oz.jsxs)("div", {
-        className: nz()("PublishButtonContainer", bz),
-        children: [uz.canEditSourceWorld && (0, Oz.jsxs)(Mz.f, {
-          onClick: uz.editSourceWorld,
-          disabled: Zz,
-          children: [(0, Oz.jsx)(lz.c, {
+        t: ID
+      } = (0, iD.F)(), {
+        schematicData: BD,
+        formEnabled: yD,
+        publishFormEnabled: MD
+      } = CD, tD = !yD || !MD;
+      return (0, SD.jsxs)("div", {
+        className: pD()("PublishButtonContainer", cD),
+        children: [CD.canEditSourceWorld && (0, SD.jsxs)(bD.i, {
+          onClick: CD.editSourceWorld,
+          disabled: tD,
+          children: [(0, SD.jsx)(fD.c, {
             name: "edit"
-          }), " ", Ez("worldBuilder:editSourceWorld")]
-        }), !pz.gamePublished && (0, Oz.jsx)(tz.f, {
-          tooltipInner: (0, Oz.jsx)("div", {
+          }), " ", ID("worldBuilder:editSourceWorld")]
+        }), !BD.gamePublished && (0, SD.jsx)(QD.f, {
+          tooltipInner: (0, SD.jsx)("div", {
             className: "PublishButtonTooltip",
-            children: Ez("worldBuilder:publishAsGameDescription")
+            children: ID("worldBuilder:publishAsGameDescription")
           }),
-          children: (0, Oz.jsxs)(Mz.q, {
-            onClick: () => uz.saveSchematic(!0),
-            disabled: Zz,
-            children: [(0, Oz.jsx)(lz.c, {
+          children: (0, SD.jsxs)(bD.o, {
+            onClick: () => CD.saveSchematic(!0),
+            disabled: tD,
+            children: [(0, SD.jsx)(fD.c, {
               name: "rocket-launch"
-            }), " ", Ez("worldBuilder:publishAsGame"), " ", (0, Oz.jsx)(lz.c, {
+            }), " ", ID("worldBuilder:publishAsGame"), " ", (0, SD.jsx)(fD.c, {
               name: "info-circle"
             })]
           })
-        }), !0 === pz.gamePublished && (0, Oz.jsxs)(Oz.Fragment, {
-          children: [(0, Oz.jsx)(tz.f, {
-            tooltipInner: (0, Oz.jsx)("div", {
+        }), !0 === BD.gamePublished && (0, SD.jsxs)(SD.Fragment, {
+          children: [(0, SD.jsx)(QD.f, {
+            tooltipInner: (0, SD.jsx)("div", {
               className: "PublishButtonTooltip",
-              children: Ez("worldBuilder:unpublishAsGameDescription")
+              children: ID("worldBuilder:unpublishAsGameDescription")
             }),
-            children: (0, Oz.jsxs)(Mz.K, {
-              onClick: uz.unpublishSchematic,
-              disabled: Zz,
-              children: [(0, Oz.jsx)(lz.c, {
+            children: (0, SD.jsxs)(bD.J, {
+              onClick: CD.unpublishSchematic,
+              disabled: tD,
+              children: [(0, SD.jsx)(fD.c, {
                 name: "rocket-launch"
-              }), " ", Ez("worldBuilder:unpublishAsGame"), " ", (0, Oz.jsx)(lz.c, {
+              }), " ", ID("worldBuilder:unpublishAsGame"), " ", (0, SD.jsx)(fD.c, {
                 name: "info-circle"
               })]
             })
-          }), (0, Oz.jsxs)(Mz.f, {
-            onClick: uz.playGame,
-            disabled: Zz,
-            children: [(0, Oz.jsx)(lz.c, {
+          }), (0, SD.jsxs)(bD.i, {
+            onClick: CD.playGame,
+            disabled: tD,
+            children: [(0, SD.jsx)(fD.c, {
               name: "joystick"
-            }), " ", Ez("general:playGame")]
+            }), " ", ID("general:playGame")]
           })]
-        }), !dz && (0, Oz.jsx)(Hz.c, {
+        }), !yD && (0, SD.jsx)(wD.e, {
           loaderType: "Secondary"
         })]
       })
     }
   },
-  4737: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => nz
+  4762: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => pD
     });
-    var Ez = bz(1195);
-    async function nz(zz) {
-      const uz = await fetch(`${Ez.clientSideServerUrls.s3Url}/${zz}`, {
+    var ID = cD(1199);
+    async function pD(DD) {
+      const CD = await fetch(`${ID.clientSideServerUrls.s3Url}/${DD}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === uz.status || 403 === uz.status) return null;
-      if (!uz.ok) throw new Error(`Failed to download the texture pack (${uz.status})`);
-      return await uz.json()
+      if (404 === CD.status || 403 === CD.status) return null;
+      if (!CD.ok) throw new Error(`Failed to download the texture pack (${CD.status})`);
+      return await CD.json()
     }
   },
-  4792: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Kz
+  4826: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => oD
     });
-    var Ez = bz(56),
-      nz = bz(1298),
-      iz = bz(994),
-      lz = bz(158),
-      Mz = bz(1519),
-      tz = bz(20),
-      Hz = bz(1871),
-      Oz = bz(1473),
-      pz = bz(4335),
-      dz = bz(1322),
-      Fz = bz(1114),
-      Zz = bz(1482);
+    var ID = cD(53),
+      pD = cD(1319),
+      iD = cD(1011),
+      fD = cD(162),
+      bD = cD(1540),
+      QD = cD(16),
+      wD = cD(1905),
+      SD = cD(1497),
+      BD = cD(4388),
+      yD = cD(1340),
+      MD = cD(1120),
+      tD = cD(1508);
 
-    function Rz(zz, uz) {
+    function ZD(DD, CD) {
       return {
-        schematicId: zz.schematicId,
-        name: zz.name,
-        description: zz.description,
-        gamePublished: uz,
-        gameCategory: zz.gameCategory,
-        defaultGamemode: zz.defaultGamemode,
-        voidDeathHeight: zz.voidDeathHeight,
-        disableKeepInventory: zz.disableKeepInventory,
-        disableTpRequests: zz.disableTpRequests,
-        disableLobbySpawn: zz.disableLobbySpawn,
-        disableMobs: zz.disableMobs,
-        disableSpawnProtection: zz.disableSpawnProtection,
-        disableFallDamage: zz.disableFallDamage,
-        worldBorder: zz.worldBorder,
-        hideLobbyCode: zz.hideLobbyCode,
-        enableSmpMarketplace: zz.enableSmpMarketplace,
-        enableSurvivalGuns: zz.enableSurvivalGuns,
-        enableSpawnReset: zz.enableSpawnReset,
-        enableDayNight: zz.enableDayNight,
-        persistWorld: zz.persistWorld,
-        persistInventory: zz.persistInventory
+        schematicId: DD.schematicId,
+        name: DD.name,
+        description: DD.description,
+        gamePublished: CD,
+        gameCategory: DD.gameCategory,
+        defaultGamemode: DD.defaultGamemode,
+        voidDeathHeight: DD.voidDeathHeight,
+        disableKeepInventory: DD.disableKeepInventory,
+        disableTpRequests: DD.disableTpRequests,
+        disableLobbySpawn: DD.disableLobbySpawn,
+        disableMobs: DD.disableMobs,
+        disableSpawnProtection: DD.disableSpawnProtection,
+        disableFallDamage: DD.disableFallDamage,
+        worldBorder: DD.worldBorder,
+        hideLobbyCode: DD.hideLobbyCode,
+        enableSmpMarketplace: DD.enableSmpMarketplace,
+        enableSurvivalGuns: DD.enableSurvivalGuns,
+        enableSpawnReset: DD.enableSpawnReset,
+        enableDayNight: DD.enableDayNight,
+        persistWorld: DD.persistWorld,
+        persistInventory: DD.persistInventory
       }
     }
 
-    function Kz(zz) {
+    function oD(DD) {
       let {
-        onNavigateAway: uz,
-        inSourceWorld: bz = !1
+        onNavigateAway: CD,
+        inSourceWorld: cD = !1
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
       const {
-        userContext: Kz
-      } = (0, Fz.c)(), wz = (0, Zz.useNavigatePreserveSearch)(), [Xz, fz] = (0, Ez.useState)({
-        ...zz
-      }), [sz, rz] = (0, Ez.useState)("Enter"), [oz, Nz] = (0, Ez.useState)(void 0), vz = (0, Ez.useRef)(Rz(zz, zz.gamePublished)), xz = (0, Ez.useRef)(void 0), Jz = "Enter" === sz, Az = Kz.playerHasRank("developer") || Kz.playerHasRank("admin") || "Enter" === sz && !1 !== Xz.schematicContainsSpawnBlock, Tz = void 0 !== oz && oz !== xz.current || JSON.stringify(Rz(Xz, Xz.gamePublished)) !== JSON.stringify(vz.current);
+        userContext: oD
+      } = (0, MD.c)(), vD = (0, tD.useNavigatePreserveSearch)(), [ND, gD] = (0, ID.useState)({
+        ...DD
+      }), [XD, mD] = (0, ID.useState)("Enter"), [nD, OD] = (0, ID.useState)(void 0), PD = (0, ID.useRef)(ZD(DD, DD.gamePublished)), HD = (0, ID.useRef)(void 0), UD = "Enter" === XD, xD = oD.playerHasRank("developer") || oD.playerHasRank("admin") || "Enter" === XD && !1 !== ND.schematicContainsSpawnBlock, qD = void 0 !== nD && nD !== HD.current || JSON.stringify(ZD(ND, ND.gamePublished)) !== JSON.stringify(PD.current);
 
-      function Lz(zz, uz) {
-        fz((bz => ({
-          ...bz,
-          [zz]: uz
+      function JD(DD, CD) {
+        gD((cD => ({
+          ...cD,
+          [DD]: CD
         })))
       }
-      const Pz = (0, Ez.useCallback)((zz => {
-        xz.current = zz, Nz(zz)
+      const KD = (0, ID.useCallback)((DD => {
+        HD.current = DD, OD(DD)
       }), []);
 
-      function Gz(zz) {
-        rz("Loading");
-        const uz = Rz(Xz, zz),
-          bz = oz !== xz.current ? oz : void 0;
-        Oz.c.updateSchematic(Kz, uz, bz).then((bz => {
+      function aD(DD) {
+        mD("Loading");
+        const CD = ZD(ND, DD),
+          cD = nD !== HD.current ? nD : void 0;
+        SD.c.updateSchematic(oD, CD, cD).then((cD => {
           let {
-            customTexturePackKey: Ez
-          } = bz;
-          rz("Success"), Lz("customTexturePackKey", Ez), vz.current = uz, xz.current = void 0, Nz(void 0), setTimeout((() => {
-            Lz("gamePublished", zz), rz("Enter")
+            customTexturePackKey: ID
+          } = cD;
+          mD("Success"), JD("customTexturePackKey", ID), PD.current = CD, HD.current = void 0, OD(void 0), setTimeout((() => {
+            JD("gamePublished", DD), mD("Enter")
           }), 1e3)
-        })).catch((zz => {
-          var uz;
-          (console.error("Failed to save schematic:", zz), rz("Error"), zz instanceof lz.c && zz.errorMessageForUser) && dz.NotificationProvider.showAlertPopup({
+        })).catch((DD => {
+          var CD;
+          (console.error("Failed to save schematic:", DD), mD("Error"), DD instanceof fD.d && DD.errorMessageForUser) && yD.NotificationProvider.showAlertPopup({
             title: "worldBuilder:changesNotSaved",
-            subtitle: zz.errorMessageForUser,
+            subtitle: DD.errorMessageForUser,
             textOpts: {
-              subtitle: null !== (uz = zz.errorMessageTranslationParams) && void 0 !== uz ? uz : void 0
+              subtitle: null !== (CD = DD.errorMessageTranslationParams) && void 0 !== CD ? CD : void 0
             },
             confirmText: "general:ok"
           });
           setTimeout((() => {
-            rz("Enter")
+            mD("Enter")
           }), 1e3)
         }))
       }
       return {
-        schematicData: Xz,
-        updateSchematicData: Lz,
-        setTexturePack: Nz,
-        initializeTexturePack: Pz,
-        updateState: sz,
-        formEnabled: Jz,
-        publishFormEnabled: Az,
-        hasUnsavedChanges: Tz,
-        canEditSourceWorld: !bz,
-        saveSchematic: Gz,
+        schematicData: ND,
+        updateSchematicData: JD,
+        setTexturePack: OD,
+        initializeTexturePack: KD,
+        updateState: XD,
+        formEnabled: UD,
+        publishFormEnabled: xD,
+        hasUnsavedChanges: qD,
+        canEditSourceWorld: !cD,
+        saveSchematic: aD,
         unpublishSchematic: function() {
-          dz.NotificationProvider.showPromptPopup({
+          yD.NotificationProvider.showPromptPopup({
             icon: "rocket-launch",
             title: "worldBuilder:unpublishAsGameConfirmTitle",
             subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
             confirmText: "worldBuilder:unpublishAsGame",
             cancelText: "general:cancel",
             unlockPointerKey: "unpublishGamePrompt"
-          }).getResult().then((zz => {
-            !0 === zz && Gz(!1)
+          }).getResult().then((DD => {
+            !0 === DD && aD(!1)
           }))
         },
         editSourceWorld: function() {
-          rz("Loading"), pz.e.getSourceWorld(Xz.schematicId).then((zz => {
-            Hz.gameBridge.send("leaveGame", {
+          mD("Loading"), BD.b.getSourceWorld(ND.schematicId).then((DD => {
+            wD.gameBridge.send("leaveGame", {
               reloadPath: "/"
-            }), (0, tz.k)("other"), wz((0, nz.c)("classic", zz)), null === uz || void 0 === uz || uz()
-          })).catch((zz => {
-            console.error("Failed to get source world:", zz), rz("Error"), setTimeout((() => {
-              rz("Enter")
+            }), (0, QD.k)("other"), vD((0, pD.b)("classic", DD)), null === CD || void 0 === CD || CD()
+          })).catch((DD => {
+            console.error("Failed to get source world:", DD), mD("Error"), setTimeout((() => {
+              mD("Enter")
             }), 1e3)
           }))
         },
         playGame: function() {
-          Hz.gameBridge.send("leaveGame", {
+          wD.gameBridge.send("leaveGame", {
             reloadPath: "/"
-          }), wz((0, Mz.C)((0, iz.s)(Xz.schematicId), Xz)), null === uz || void 0 === uz || uz()
+          }), vD((0, bD.A)((0, iD.v)(ND.schematicId), ND)), null === CD || void 0 === CD || CD()
         }
       }
     }
   },
-  4700: () => {}
+  4720: () => {}
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

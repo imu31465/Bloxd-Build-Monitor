@@ -1,52 +1,52 @@
 export const id = 240;
 export const ids = [240];
 export const modules = {
-  38992: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      default: () => jz
+  38959: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      default: () => eD
     });
-    bz(6189);
-    var Ez = bz(56),
-      nz = bz(38998),
-      iz = bz(39250),
-      lz = bz(39365),
-      Mz = bz(39406),
-      tz = bz(39425),
-      Hz = bz(36709),
-      Oz = bz(36514),
-      pz = bz(39582),
-      dz = bz(39624),
-      Fz = (bz(39642), bz(1212)),
-      Zz = bz(195),
-      Rz = bz(1181),
-      Kz = bz(20),
-      wz = bz(2602),
-      Xz = bz(1419),
-      fz = bz(1047),
-      sz = bz(6181),
-      rz = bz(6195),
-      oz = bz(4215),
-      Nz = bz(1089);
-    const vz = 1.2,
-      xz = .2,
-      Jz = .0066 * Math.PI / 180,
-      Az = new Set(["Escape", "KeyG"]),
-      Tz = {
+    cD(6195);
+    var ID = cD(53),
+      pD = cD(38968),
+      iD = cD(39231),
+      fD = cD(39347),
+      bD = cD(39382),
+      QD = cD(39396),
+      wD = cD(36613),
+      SD = cD(36440),
+      BD = cD(39526),
+      yD = cD(39576),
+      MD = (cD(39602), cD(1221)),
+      tD = cD(194),
+      ZD = cD(1192),
+      oD = cD(16),
+      vD = cD(2621),
+      ND = cD(1442),
+      gD = cD(1064),
+      XD = cD(6187),
+      mD = cD(6197),
+      nD = cD(4247),
+      OD = cD(1093);
+    const PD = 1.2,
+      HD = .2,
+      UD = .0066 * Math.PI / 180,
+      xD = new Set(["Escape", "KeyG"]),
+      qD = {
         ArrowLeft: -1,
         ArrowRight: 1
       },
-      Lz = "ArrowUp",
-      Pz = new Set([...Object.keys(Tz), Lz, "ArrowDown"]),
-      Gz = 32,
-      az = 1,
-      Vz = 10,
-      mz = "F4",
-      qz = "Period",
-      hz = Math.PI / 2 - .001,
-      Uz = Math.PI / 6,
-      cz = Math.PI / 6,
-      gz = 1.08,
-      Sz = [{
+      JD = "ArrowUp",
+      KD = new Set([...Object.keys(qD), JD, "ArrowDown"]),
+      aD = 32,
+      VD = 1,
+      zD = 10,
+      jD = "F4",
+      lD = "Period",
+      LD = Math.PI / 2 - .001,
+      TD = Math.PI / 6,
+      GD = Math.PI / 6,
+      RD = 1.08,
+      kD = [{
         name: "X",
         direction: [1, 0, 0],
         colour: "#e5534b"
@@ -59,387 +59,387 @@ export const modules = {
         direction: [0, 0, 1],
         colour: "#539bf5"
       }],
-      yz = 24,
-      Dz = 7,
-      Qz = 4,
-      Wz = .01,
-      ez = 4;
+      dD = 24,
+      YD = 7,
+      WD = 4,
+      sD = .01,
+      ED = 4;
 
-    function jz(zz) {
+    function eD(DD) {
       let {
-        heatmap: uz,
-        scale: bz,
-        fullyOpaqueFrom: az,
-        bounds: Uz,
-        fitBounds: cz,
-        schematic: gz,
-        controls: Sz,
-        onStepTime: yz,
-        onShowAllTime: Dz,
-        onTogglePlaying: Qz,
-        getReadout: ez = null
-      } = zz;
+        heatmap: CD,
+        scale: cD,
+        fullyOpaqueFrom: VD,
+        bounds: TD,
+        fitBounds: GD,
+        schematic: RD,
+        controls: kD,
+        onStepTime: dD,
+        onShowAllTime: YD,
+        onTogglePlaying: WD,
+        getReadout: ED = null
+      } = DD;
       const {
-        t: jz
-      } = (0, Rz.F)(), {
-        clientEscMenuOptions: iu
-      } = (0, Kz.m)(["clientEscMenuOptions"]), tu = (0, Ez.useRef)(null), Hu = (0, Ez.useRef)(null), Ou = (0, Ez.useRef)(null), pu = (0, wz.e)(tu), [du, Fu] = (0, Ez.useState)(!1), [Zu, Ru] = (0, Ez.useState)(!1), [Ku, wu] = (0, Ez.useState)(!0), Xu = (0, Ez.useRef)(!1), [fu, su] = (0, Ez.useState)(!1), ru = Zu || !Ku && fu, [ou, Nu] = (0, Ez.useState)(!1), [vu, xu] = (0, Ez.useState)(!0), [Ju, Au] = (0, Ez.useState)(null), Tu = Uz.min, [Lu, Pu] = (0, Ez.useState)(Tu);
-      Lu[0] === Tu[0] && Lu[1] === Tu[1] && Lu[2] === Tu[2] || (Pu(Tu), null !== Ju && Au({
-        ...Ju,
-        position: lu(Ju.position, lu(Lu, Mu(Tu, -1)))
+        t: eD
+      } = (0, ZD.F)(), {
+        clientEscMenuOptions: iC
+      } = (0, oD.o)(["clientEscMenuOptions"]), QC = (0, ID.useRef)(null), wC = (0, ID.useRef)(null), SC = (0, ID.useRef)(null), BC = (0, vD.e)(QC), [yC, MC] = (0, ID.useState)(!1), [tC, ZC] = (0, ID.useState)(!1), [oC, vC] = (0, ID.useState)(!0), NC = (0, ID.useRef)(!1), [gC, XC] = (0, ID.useState)(!1), mC = tC || !oC && gC, [nC, OC] = (0, ID.useState)(!1), [PC, HC] = (0, ID.useState)(!0), [UC, xC] = (0, ID.useState)(null), qC = TD.min, [JC, KC] = (0, ID.useState)(qC);
+      JC[0] === qC[0] && JC[1] === qC[1] && JC[2] === qC[2] || (KC(qC), null !== UC && xC({
+        ...UC,
+        position: fC(UC.position, fC(JC, bC(qC, -1)))
       }));
-      const Gu = (0, Ez.useMemo)((() => function(zz) {
-          return [zz.max[0] - zz.min[0] + 1, zz.max[1] - zz.min[1] + 1, zz.max[2] - zz.min[2] + 1]
-        }(Uz)), [Uz]),
-        au = (0, Ez.useMemo)((() => function(zz, uz) {
-          const bz = [],
-            Ez = [];
-          for (const [nz, iz] of Object.entries(zz.frequencies)) {
-            const zz = Number(nz);
-            for (const [nz, lz] of Object.entries(iz)) {
-              const iz = Number(nz);
-              for (const [nz, Mz] of Object.entries(lz)) Mz <= 0 || (bz.push(zz - uz[0], iz - uz[1], Number(nz) - uz[2]), Ez.push(Mz))
+      const aC = (0, ID.useMemo)((() => function(DD) {
+          return [DD.max[0] - DD.min[0] + 1, DD.max[1] - DD.min[1] + 1, DD.max[2] - DD.min[2] + 1]
+        }(TD)), [TD]),
+        VC = (0, ID.useMemo)((() => function(DD, CD) {
+          const cD = [],
+            ID = [];
+          for (const [pD, iD] of Object.entries(DD.frequencies)) {
+            const DD = Number(pD);
+            for (const [pD, fD] of Object.entries(iD)) {
+              const iD = Number(pD);
+              for (const [pD, bD] of Object.entries(fD)) bD <= 0 || (cD.push(DD - CD[0], iD - CD[1], Number(pD) - CD[2]), ID.push(bD))
             }
           }
           return {
-            positions: Int32Array.from(bz),
-            values: Float64Array.from(Ez),
-            count: Ez.length
+            positions: Int32Array.from(cD),
+            values: Float64Array.from(ID),
+            count: ID.length
           }
-        }(uz, Tu)), [uz, Tu]),
-        Vu = vz * iu.cameraFOV / 100,
-        mu = pu.height > 0 ? pu.width / pu.height : 1,
-        qu = (0, Ez.useMemo)((() => function(zz, uz) {
+        }(CD, qC)), [CD, qC]),
+        zC = PD * iC.cameraFOV / 100,
+        jC = BC.height > 0 ? BC.width / BC.height : 1,
+        lC = (0, ID.useMemo)((() => function(DD, CD) {
           return {
-            min: [zz.min[0] - uz[0], zz.min[1] - uz[1], zz.min[2] - uz[2]],
-            max: [zz.max[0] - uz[0] + 1, zz.max[1] - uz[1] + 1, zz.max[2] - uz[2] + 1]
+            min: [DD.min[0] - CD[0], DD.min[1] - CD[1], DD.min[2] - CD[2]],
+            max: [DD.max[0] - CD[0] + 1, DD.max[1] - CD[1] + 1, DD.max[2] - CD[2] + 1]
           }
-        }(cz, Tu)), [cz, Tu]),
-        hu = bu(qu, mu, Vu),
-        Uu = null !== Ju && void 0 !== Ju ? Ju : hu,
-        cu = (0, Ez.useRef)({
-          fittedView: hu,
-          fieldOfView: Vu,
-          mouseSensitivity: iu.mouseSensitivity,
-          canLock: Ku
+        }(GD, qC)), [GD, qC]),
+        LC = cC(lC, jC, zC),
+        TC = null !== UC && void 0 !== UC ? UC : LC,
+        GC = (0, ID.useRef)({
+          fittedView: LC,
+          fieldOfView: zC,
+          mouseSensitivity: iC.mouseSensitivity,
+          canLock: oC
         });
-      cu.current = {
-        fittedView: hu,
-        fieldOfView: Vu,
-        mouseSensitivity: iu.mouseSensitivity,
-        canLock: Ku
+      GC.current = {
+        fittedView: LC,
+        fieldOfView: zC,
+        mouseSensitivity: iC.mouseSensitivity,
+        canLock: oC
       };
-      const gu = (0, Ez.useMemo)((() => {
-          if (!ru) return null;
-          const zz = (zz, bz, Ez) => {
-              var nz, iz, lz;
-              return null !== (nz = null === (iz = uz.frequencies[zz + Tu[0]]) || void 0 === iz || null === (lz = iz[bz + Tu[1]]) || void 0 === lz ? void 0 : lz[Ez + Tu[2]]) && void 0 !== nz ? nz : 0
+      const RC = (0, ID.useMemo)((() => {
+          if (!mC) return null;
+          const DD = (DD, cD, ID) => {
+              var pD, iD, fD;
+              return null !== (pD = null === (iD = CD.frequencies[DD + qC[0]]) || void 0 === iD || null === (fD = iD[cD + qC[1]]) || void 0 === fD ? void 0 : fD[ID + qC[2]]) && void 0 !== pD ? pD : 0
             },
-            Ez = function(zz, uz, bz, Ez) {
-              let nz = 0,
-                iz = 1 / 0;
-              for (const pz of [0, 1, 2]) {
-                if (0 === uz[pz]) {
-                  if (zz[pz] < 0 || zz[pz] > bz[pz]) return null;
+            ID = function(DD, CD, cD, ID) {
+              let pD = 0,
+                iD = 1 / 0;
+              for (const BD of [0, 1, 2]) {
+                if (0 === CD[BD]) {
+                  if (DD[BD] < 0 || DD[BD] > cD[BD]) return null;
                   continue
                 }
-                const Ez = (0 - zz[pz]) / uz[pz],
-                  lz = (bz[pz] - zz[pz]) / uz[pz];
-                nz = Math.max(nz, Math.min(Ez, lz)), iz = Math.min(iz, Math.max(Ez, lz))
+                const ID = (0 - DD[BD]) / CD[BD],
+                  fD = (cD[BD] - DD[BD]) / CD[BD];
+                pD = Math.max(pD, Math.min(ID, fD)), iD = Math.min(iD, Math.max(ID, fD))
               }
-              if (nz > iz) return null;
-              const lz = [0, 1, 2].map((Ez => Math.min(bz[Ez] - 1, Math.max(0, Math.floor(zz[Ez] + uz[Ez] * nz))))),
-                Mz = [0, 1, 2].map((zz => Math.sign(uz[zz]))),
-                tz = [0, 1, 2].map((bz => {
-                  if (0 === Mz[bz]) return 1 / 0;
-                  return ((Mz[bz] > 0 ? lz[bz] + 1 : lz[bz]) - zz[bz]) / uz[bz]
+              if (pD > iD) return null;
+              const fD = [0, 1, 2].map((ID => Math.min(cD[ID] - 1, Math.max(0, Math.floor(DD[ID] + CD[ID] * pD))))),
+                bD = [0, 1, 2].map((DD => Math.sign(CD[DD]))),
+                QD = [0, 1, 2].map((cD => {
+                  if (0 === bD[cD]) return 1 / 0;
+                  return ((bD[cD] > 0 ? fD[cD] + 1 : fD[cD]) - DD[cD]) / CD[cD]
                 })),
-                Hz = [0, 1, 2].map((zz => 0 === Mz[zz] ? 1 / 0 : Math.abs(1 / uz[zz])));
-              let Oz = null;
+                wD = [0, 1, 2].map((DD => 0 === bD[DD] ? 1 / 0 : Math.abs(1 / CD[DD])));
+              let SD = null;
               for (;;) {
-                const zz = Ez(lz[0], lz[1], lz[2]);
-                if (zz >= 1) return lz;
-                zz > 0 && (Oz = [lz[0], lz[1], lz[2]]);
-                const uz = tz[0] < tz[1] ? tz[0] < tz[2] ? 0 : 2 : tz[1] < tz[2] ? 1 : 2;
-                if (tz[uz] > iz) return Oz;
-                if (lz[uz] += Mz[uz], tz[uz] += Hz[uz], lz[uz] < 0 || lz[uz] >= bz[uz]) return Oz
+                const DD = ID(fD[0], fD[1], fD[2]);
+                if (DD >= 1) return fD;
+                DD > 0 && (SD = [fD[0], fD[1], fD[2]]);
+                const CD = QD[0] < QD[1] ? QD[0] < QD[2] ? 0 : 2 : QD[1] < QD[2] ? 1 : 2;
+                if (QD[CD] > iD) return SD;
+                if (fD[CD] += bD[CD], QD[CD] += wD[CD], fD[CD] < 0 || fD[CD] >= cD[CD]) return SD
               }
-            }(Uu.position, zu(Uu), Gu, ((uz, Ez, nz) => (0, sz.y)(zz(uz, Ez, nz), bz, az)));
-          return null === Ez ? null : {
-            x: Ez[0] + Tu[0],
-            y: Ez[1] + Tu[1],
-            z: Ez[2] + Tu[2],
-            value: zz(Ez[0], Ez[1], Ez[2])
+            }(TC.position, DC(TC), aC, ((CD, ID, pD) => (0, XD.s)(DD(CD, ID, pD), cD, VD)));
+          return null === ID ? null : {
+            x: ID[0] + qC[0],
+            y: ID[1] + qC[1],
+            z: ID[2] + qC[2],
+            value: DD(ID[0], ID[1], ID[2])
           }
-        }), [ru, uz, Tu, Uu, Gu, bz, az]),
+        }), [mC, CD, qC, TC, aC, cD, VD]),
         {
-          keyHandlers: Su
-        } = (0, rz.i)({
-          isEnabled: ru,
-          claimedKeyCodes: Pz,
-          yd: zz => {
-            Au((uz => function(zz, uz) {
-              const bz = [Math.sin(zz.heading), 0, Math.cos(zz.heading)],
-                Ez = lu(lu(Mu(bz, uz.forward), Mu(uu(zz.heading), uz.right)), [0, uz.up, 0]);
+          keyHandlers: kC
+        } = (0, mD.f)({
+          isEnabled: mC,
+          claimedKeyCodes: KD,
+          Jy: DD => {
+            xC((CD => function(DD, CD) {
+              const cD = [Math.sin(DD.heading), 0, Math.cos(DD.heading)],
+                ID = fC(fC(bC(cD, CD.forward), bC(CC(DD.heading), CD.right)), [0, CD.up, 0]);
               return {
-                ...zz,
-                position: lu(zz.position, Ez)
+                ...DD,
+                position: fC(DD.position, ID)
               }
-            }(null !== uz && void 0 !== uz ? uz : cu.current.fittedView, zz)))
+            }(null !== CD && void 0 !== CD ? CD : GC.current.fittedView, DD)))
           },
-          onZoomChange: Nu
+          onZoomChange: OC
         });
-      (0, Ez.useEffect)((() => {
-        const zz = Hu.current;
-        if (!zz) return;
-        let uz;
+      (0, ID.useEffect)((() => {
+        const DD = wC.current;
+        if (!DD) return;
+        let CD;
         try {
-          uz = function(zz, uz) {
-            const bz = new nz.c(zz, !0, {
+          CD = function(DD, CD) {
+            const cD = new pD.e(DD, !0, {
                 stencil: !1
               }, !0),
-              Ez = new iz.e(bz),
-              [Fz, Zz, Rz] = sz.L;
-            Ez.clearColor = new Hz.d(Fz / 255, Zz / 255, Rz / 255, 1);
-            const Kz = new lz.d("Heatmap3DCamera", Oz.ER.Zero(), Ez);
-            Kz.fov = uz, Kz.minZ = .05;
-            const wz = new Mz.c("Heatmap3DLight", new Oz.ER(.4, 1, -.6), Ez);
-            wz.diffuse = Hz.Color3.White(), wz.groundColor = Hz.Color3.Black(), wz.specular = Hz.Color3.Black();
-            const Xz = new tz.StandardMaterial("Heatmap3DCellMaterial", Ez);
-            Xz.diffuseColor = new Hz.Color3(.4, .4, .4), Xz.emissiveColor = new Hz.Color3(.62, .62, .62), Xz.specularColor = Hz.Color3.Black();
-            const fz = (0, pz.d)("Heatmap3DCells", {
+              ID = new iD.d(cD),
+              [MD, tD, ZD] = XD.J;
+            ID.clearColor = new wD.c(MD / 255, tD / 255, ZD / 255, 1);
+            const oD = new fD.c("Heatmap3DCamera", SD.cZ.Zero(), ID);
+            oD.fov = CD, oD.minZ = .05;
+            const vD = new bD.c("Heatmap3DLight", new SD.cZ(.4, 1, -.6), ID);
+            vD.diffuse = wD.Color3.White(), vD.groundColor = wD.Color3.Black(), vD.specular = wD.Color3.Black();
+            const ND = new QD.StandardMaterial("Heatmap3DCellMaterial", ID);
+            ND.diffuseColor = new wD.Color3(.4, .4, .4), ND.emissiveColor = new wD.Color3(.62, .62, .62), ND.specularColor = wD.Color3.Black();
+            const gD = (0, BD.e)("Heatmap3DCells", {
               size: 1
-            }, Ez);
-            fz.material = Xz, fz.pK = !1, fz.bR = !0, fz.isVisible = !1;
-            const rz = (0, pz.d)("Heatmap3DTranslucentCells", {
+            }, ID);
+            gD.material = ND, gD.yo = !1, gD.CZ = !0, gD.isVisible = !1;
+            const mD = (0, BD.e)("Heatmap3DTranslucentCells", {
               size: 1
-            }, Ez);
-            rz.material = Xz, rz.hasVertexAlpha = !0, rz.pK = !1, rz.bR = !0, rz.isVisible = !1;
-            const oz = new tz.StandardMaterial("Heatmap3DSchematicMaterial", Ez);
-            oz.diffuseColor = new Hz.Color3(.6, .6, .6), oz.emissiveColor = new Hz.Color3(.4, .4, .4), oz.specularColor = Hz.Color3.Black();
-            const Nz = (0, pz.d)("Heatmap3DSchematicBlocks", {
+            }, ID);
+            mD.material = ND, mD.hasVertexAlpha = !0, mD.yo = !1, mD.CZ = !0, mD.isVisible = !1;
+            const nD = new QD.StandardMaterial("Heatmap3DSchematicMaterial", ID);
+            nD.diffuseColor = new wD.Color3(.6, .6, .6), nD.emissiveColor = new wD.Color3(.4, .4, .4), nD.specularColor = wD.Color3.Black();
+            const OD = (0, BD.e)("Heatmap3DSchematicBlocks", {
               size: 1
-            }, Ez);
-            Nz.material = oz, Nz.pK = !1, Nz.bR = !0, Nz.isVisible = !1;
-            const vz = (0, dz.e)("Heatmap3DTarget", {
-              lines: kz([-.52, -.52, -.52], [.52, .52, .52])
-            }, Ez);
-            return vz.color = new Hz.Color3(.06, .14, .23), vz.renderingGroupId = 1, vz.pK = !1, vz.isVisible = !1, {
-              engine: bz,
-              tK: Ez,
-              camera: Kz,
-              cells: fz,
-              translucentCells: rz,
+            }, ID);
+            OD.material = nD, OD.yo = !1, OD.CZ = !0, OD.isVisible = !1;
+            const PD = (0, yD.c)("Heatmap3DTarget", {
+              lines: FD([-.52, -.52, -.52], [.52, .52, .52])
+            }, ID);
+            return PD.color = new wD.Color3(.06, .14, .23), PD.renderingGroupId = 1, PD.yo = !1, PD.isVisible = !1, {
+              engine: cD,
+              wo: ID,
+              camera: oD,
+              cells: gD,
+              translucentCells: mD,
               translucent: {
-                fi: new Float32Array(0),
+                wi: new Float32Array(0),
                 colours: new Float32Array(0),
                 count: 0
               },
               translucentSortedFrom: null,
-              schematicBlocks: Nz,
-              targetOutline: vz,
+              schematicBlocks: OD,
+              targetOutline: PD,
               chunkGrid: null,
               chunkGridCentre: null,
               chunkGridOrigin: null,
-              targetFieldOfView: uz,
+              targetFieldOfView: CD,
               needsRender: !0
             }
-          }(zz, cu.current.fieldOfView)
-        } catch (bz) {
-          return console.error("Failed to start the 3D heatmap", bz), void Fu(!0)
+          }(DD, GC.current.fieldOfView)
+        } catch (cD) {
+          return console.error("Failed to start the 3D heatmap", cD), void MC(!0)
         }
-        return Ou.current = uz, uz.engine.runRenderLoop((() => {
-          const zz = uz.camera;
-          zz.fov !== uz.targetFieldOfView && (zz.fov += (uz.targetFieldOfView - zz.fov) * (zz.fov > uz.targetFieldOfView ? .3 : .2), Math.abs(uz.targetFieldOfView - zz.fov) < 5e-4 && (zz.fov = uz.targetFieldOfView), uz.needsRender = !0), uz.needsRender && (uz.tK.render(), uz.needsRender = !uz.tK.isReady() || !uz.engine.areAllEffectsReady())
+        return SC.current = CD, CD.engine.runRenderLoop((() => {
+          const DD = CD.camera;
+          DD.fov !== CD.targetFieldOfView && (DD.fov += (CD.targetFieldOfView - DD.fov) * (DD.fov > CD.targetFieldOfView ? .3 : .2), Math.abs(CD.targetFieldOfView - DD.fov) < 5e-4 && (DD.fov = CD.targetFieldOfView), CD.needsRender = !0), CD.needsRender && (CD.wo.render(), CD.needsRender = !CD.wo.isReady() || !CD.engine.areAllEffectsReady())
         })), () => {
-          Ou.current = null, uz.engine.dispose()
+          SC.current = null, CD.engine.dispose()
         }
-      }), []), (0, Ez.useEffect)((() => {
-        const zz = Hu.current;
-        if (!zz) return;
-        const uz = () => {
-            Xu.current = !1, Ru(document.pointerLockElement === zz)
+      }), []), (0, ID.useEffect)((() => {
+        const DD = wC.current;
+        if (!DD) return;
+        const CD = () => {
+            NC.current = !1, ZC(document.pointerLockElement === DD)
           },
-          bz = () => {
-            Xu.current && (Xu.current = !1, wu(!1))
+          cD = () => {
+            NC.current && (NC.current = !1, vC(!1))
           },
-          Ez = uz => {
-            const bz = !cu.current.canLock && document.activeElement === zz && 0 !== (1 & uz.buttons);
-            if (document.pointerLockElement !== zz && !bz) return;
-            const Ez = cu.current.mouseSensitivity * Jz;
-            Au((zz => function(zz, uz, bz) {
-              const Ez = 2 * Math.PI;
+          ID = CD => {
+            const cD = !GC.current.canLock && document.activeElement === DD && 0 !== (1 & CD.buttons);
+            if (document.pointerLockElement !== DD && !cD) return;
+            const ID = GC.current.mouseSensitivity * UD;
+            xC((DD => function(DD, CD, cD) {
+              const ID = 2 * Math.PI;
               return {
-                ...zz,
-                heading: ((zz.heading + uz) % Ez + Ez) % Ez,
-                pitch: Math.max(-hz, Math.min(hz, zz.pitch + bz))
+                ...DD,
+                heading: ((DD.heading + CD) % ID + ID) % ID,
+                pitch: Math.max(-LD, Math.min(LD, DD.pitch + cD))
               }
-            }(null !== zz && void 0 !== zz ? zz : cu.current.fittedView, uz.movementX * Ez, uz.movementY * Ez)))
+            }(null !== DD && void 0 !== DD ? DD : GC.current.fittedView, CD.movementX * ID, CD.movementY * ID)))
           };
-        return document.addEventListener("pointerlockchange", uz), document.addEventListener("pointerlockerror", bz), document.addEventListener("pointermove", Ez), () => {
-          document.removeEventListener("pointerlockchange", uz), document.removeEventListener("pointerlockerror", bz), document.removeEventListener("pointermove", Ez), document.pointerLockElement === zz && (0, oz.b)()
+        return document.addEventListener("pointerlockchange", CD), document.addEventListener("pointerlockerror", cD), document.addEventListener("pointermove", ID), () => {
+          document.removeEventListener("pointerlockchange", CD), document.removeEventListener("pointerlockerror", cD), document.removeEventListener("pointermove", ID), document.pointerLockElement === DD && (0, nD.b)()
         }
-      }), []), (0, Ez.useEffect)((() => {
-        const zz = Ou.current;
-        null !== zz && 0 !== pu.width && 0 !== pu.height && (zz.engine.resize(), zz.needsRender = !0)
-      }), [pu.width, pu.height]), (0, Ez.useEffect)((() => {
-        const zz = Ou.current;
-        null !== zz && (zz.targetFieldOfView = Vu * (ou ? xz : 1))
-      }), [Vu, ou]), (0, Ez.useEffect)((() => {
-        const zz = Ou.current;
-        null !== zz && function(zz, uz, bz, Ez) {
-          const nz = [],
-            iz = [],
-            lz = [],
-            Mz = [];
-          for (let tz = 0; tz < uz.count; tz++) {
-            const zz = uz.values[tz],
-              Hz = (0, sz.y)(zz, bz, Ez);
-            if (Hz <= 0) continue;
-            const [Oz, pz, dz] = (0, sz.q)((0, sz.G)(zz, bz)), Fz = Hz >= 1;
-            (Fz ? nz : lz).push(uz.positions[3 * tz] + .5, uz.positions[3 * tz + 1] + .5, uz.positions[3 * tz + 2] + .5), (Fz ? iz : Mz).push(Oz / 255, pz / 255, dz / 255, Hz)
+      }), []), (0, ID.useEffect)((() => {
+        const DD = SC.current;
+        null !== DD && 0 !== BC.width && 0 !== BC.height && (DD.engine.resize(), DD.needsRender = !0)
+      }), [BC.width, BC.height]), (0, ID.useEffect)((() => {
+        const DD = SC.current;
+        null !== DD && (DD.targetFieldOfView = zC * (nC ? HD : 1))
+      }), [zC, nC]), (0, ID.useEffect)((() => {
+        const DD = SC.current;
+        null !== DD && function(DD, CD, cD, ID) {
+          const pD = [],
+            iD = [],
+            fD = [],
+            bD = [];
+          for (let QD = 0; QD < CD.count; QD++) {
+            const DD = CD.values[QD],
+              wD = (0, XD.s)(DD, cD, ID);
+            if (wD <= 0) continue;
+            const [SD, BD, yD] = (0, XD.m)((0, XD.A)(DD, cD)), MD = wD >= 1;
+            (MD ? pD : fD).push(CD.positions[3 * QD] + .5, CD.positions[3 * QD + 1] + .5, CD.positions[3 * QD + 2] + .5), (MD ? iD : bD).push(SD / 255, BD / 255, yD / 255, wD)
           }
-          Cz(zz.cells, Float32Array.from(nz), Float32Array.from(iz), iz.length / 4), zz.translucent = {
-            fi: Float32Array.from(lz),
-            colours: Float32Array.from(Mz),
-            count: Mz.length / 4
-          }, zz.translucentSortedFrom = null, Yz(zz), zz.needsRender = !0
-        }(zz, au, bz, az)
-      }), [au, bz, az]), (0, Ez.useEffect)((() => {
-        const zz = Ou.current;
-        null !== zz && function(zz, uz) {
-          zz.chunkGridOrigin = uz, zz.chunkGridCentre = null, Bz(zz)
-        }(zz, Uz.min)
-      }), [Uz]), (0, Ez.useEffect)((() => {
-        const zz = Ou.current;
-        null !== zz && function(zz, uz, bz) {
-          const Ez = [],
-            nz = [];
-          if (null !== uz) {
+          rD(DD.cells, Float32Array.from(pD), Float32Array.from(iD), iD.length / 4), DD.translucent = {
+            wi: Float32Array.from(fD),
+            colours: Float32Array.from(bD),
+            count: bD.length / 4
+          }, DD.translucentSortedFrom = null, AD(DD), DD.needsRender = !0
+        }(DD, VC, cD, VD)
+      }), [VC, cD, VD]), (0, ID.useEffect)((() => {
+        const DD = SC.current;
+        null !== DD && function(DD, CD) {
+          DD.chunkGridOrigin = CD, DD.chunkGridCentre = null, hD(DD)
+        }(DD, TD.min)
+      }), [TD]), (0, ID.useEffect)((() => {
+        const DD = SC.current;
+        null !== DD && function(DD, CD, cD) {
+          const ID = [],
+            pD = [];
+          if (null !== CD) {
             const {
-              positions: zz,
-              colours: iz,
-              count: lz
-            } = uz.surface;
-            for (let uz = 0; uz < lz; uz++) {
-              const lz = [zz[3 * uz], zz[3 * uz + 1], zz[3 * uz + 2]];
-              [0, 1, 2].every((zz => lz[zz] >= bz.min[zz] - Gz && lz[zz] <= bz.max[zz] + Gz)) && (Ez.push(lz[0] - bz.min[0] + .5, lz[1] - bz.min[1] + .5, lz[2] - bz.min[2] + .5), nz.push(iz[3 * uz] / 255, iz[3 * uz + 1] / 255, iz[3 * uz + 2] / 255, 1))
+              positions: DD,
+              colours: iD,
+              count: fD
+            } = CD.surface;
+            for (let CD = 0; CD < fD; CD++) {
+              const fD = [DD[3 * CD], DD[3 * CD + 1], DD[3 * CD + 2]];
+              [0, 1, 2].every((DD => fD[DD] >= cD.min[DD] - aD && fD[DD] <= cD.max[DD] + aD)) && (ID.push(fD[0] - cD.min[0] + .5, fD[1] - cD.min[1] + .5, fD[2] - cD.min[2] + .5), pD.push(iD[3 * CD] / 255, iD[3 * CD + 1] / 255, iD[3 * CD + 2] / 255, 1))
             }
           }
-          Cz(zz.schematicBlocks, Float32Array.from(Ez), Float32Array.from(nz), nz.length / 4), zz.needsRender = !0
-        }(zz, gz, Uz)
-      }), [gz, Uz]), (0, Ez.useEffect)((() => {
-        const zz = Ou.current;
-        null !== zz && null !== zz.chunkGrid && (zz.chunkGrid.isVisible = vu, zz.needsRender = !0)
-      }), [vu, Uz]), (0, Ez.useEffect)((() => {
-        const zz = Ou.current;
-        null !== zz && function(zz, uz, bz) {
+          rD(DD.schematicBlocks, Float32Array.from(ID), Float32Array.from(pD), pD.length / 4), DD.needsRender = !0
+        }(DD, RD, TD)
+      }), [RD, TD]), (0, ID.useEffect)((() => {
+        const DD = SC.current;
+        null !== DD && null !== DD.chunkGrid && (DD.chunkGrid.isVisible = PC, DD.needsRender = !0)
+      }), [PC, TD]), (0, ID.useEffect)((() => {
+        const DD = SC.current;
+        null !== DD && function(DD, CD, cD) {
           const {
-            camera: Ez
-          } = zz;
-          Ez.position.set(uz.position[0], uz.position[1], uz.position[2]), Ez.rotation.set(uz.pitch, uz.heading, 0);
-          const nz = (Vz + 1) * Zz.e.IZ * Math.sqrt(3);
-          Ez.maxZ = Math.max(nz, Math.hypot(...lu(uz.position, Mu(nu({
+            camera: ID
+          } = DD;
+          ID.position.set(CD.position[0], CD.position[1], CD.position[2]), ID.rotation.set(CD.pitch, CD.heading, 0);
+          const pD = (zD + 1) * tD.h.Wt * Math.sqrt(3);
+          ID.maxZ = Math.max(pD, Math.hypot(...fC(CD.position, bC(pC({
             min: [0, 0, 0],
-            max: bz
-          }), -1))) + 2 * Math.hypot(...bz)), Bz(zz), Yz(zz), zz.needsRender = !0
-        }(zz, Uu, Gu)
-      }), [Uu, Gu]), (0, Ez.useEffect)((() => {
-        const zz = Ou.current;
-        null !== zz && (zz.targetOutline.isVisible = null !== gu, null !== gu && zz.targetOutline.position.set(gu.x - Tu[0] + .5, gu.y - Tu[1] + .5, gu.z - Tu[2] + .5), zz.needsRender = !0)
-      }), [gu, Tu]);
-      return (0, Nz.jsxs)("div", {
+            max: cD
+          }), -1))) + 2 * Math.hypot(...cD)), hD(DD), AD(DD), DD.needsRender = !0
+        }(DD, TC, aC)
+      }), [TC, aC]), (0, ID.useEffect)((() => {
+        const DD = SC.current;
+        null !== DD && (DD.targetOutline.isVisible = null !== RC, null !== RC && DD.targetOutline.position.set(RC.x - qC[0] + .5, RC.y - qC[1] + .5, RC.z - qC[2] + .5), DD.needsRender = !0)
+      }), [RC, qC]);
+      return (0, OD.jsxs)("div", {
         className: "StudioHeatmapMap StudioHeatmap3D",
-        ref: tu,
-        children: [(0, Nz.jsx)("canvas", {
+        ref: QC,
+        children: [(0, OD.jsx)("canvas", {
           className: "StudioHeatmapMapCanvas",
-          ref: Hu,
+          ref: wC,
           style: {
-            width: `${pu.width}px`,
-            height: `${pu.height}px`
+            width: `${BC.width}px`,
+            height: `${BC.height}px`
           },
           tabIndex: 0,
-          "aria-label": jz("3D heatmap"),
+          "aria-label": eD("3D heatmap"),
           onClick: () => {
-            const zz = Hu.current;
-            if (null === zz) return;
-            if (zz.focus({
+            const DD = wC.current;
+            if (null === DD) return;
+            if (DD.focus({
                 preventScroll: !0
-              }), Zu || !Ku) return;
-            const uz = zz.requestPointerLock();
-            uz instanceof Promise ? uz.catch((zz => {
-              zz instanceof DOMException && ("WrongDocumentError" === zz.name || "NotSupportedError" === zz.name) && wu(!1)
-            })) : Xu.current = !0
+              }), tC || !oC) return;
+            const CD = DD.requestPointerLock();
+            CD instanceof Promise ? CD.catch((DD => {
+              DD instanceof DOMException && ("WrongDocumentError" === DD.name || "NotSupportedError" === DD.name) && vC(!1)
+            })) : NC.current = !0
           },
-          ...Su,
-          onKeyDown: zz => {
-            if (ru && Az.has(zz.code)) return zz.preventDefault(), void(() => {
-              const zz = Hu.current;
-              null !== zz && document.pointerLockElement === zz ? (0, oz.b)() : null === zz || void 0 === zz || zz.blur()
+          ...kC,
+          onKeyDown: DD => {
+            if (mC && xD.has(DD.code)) return DD.preventDefault(), void(() => {
+              const DD = wC.current;
+              null !== DD && document.pointerLockElement === DD ? (0, nD.b)() : null === DD || void 0 === DD || DD.blur()
             })();
-            const uz = Tz[zz.code];
-            return ru && void 0 !== uz ? (zz.preventDefault(), void yz(uz)) : ru && (0, rz.e)("replayPlayPause", zz.code) && !(0, rz.e)("Zoom", zz.code) ? (zz.preventDefault(), void(zz.repeat || Qz())) : ru && zz.code === Lz ? (zz.preventDefault(), void Dz()) : ru && zz.code === qz ? (zz.preventDefault(), void Au(null)) : ru && zz.code === mz ? (zz.preventDefault(), void xu((zz => !zz))) : void Su.onKeyDown(zz)
+            const CD = qD[DD.code];
+            return mC && void 0 !== CD ? (DD.preventDefault(), void dD(CD)) : mC && (0, mD.e)("replayPlayPause", DD.code) && !(0, mD.e)("Zoom", DD.code) ? (DD.preventDefault(), void(DD.repeat || WD())) : mC && DD.code === JD ? (DD.preventDefault(), void YD()) : mC && DD.code === lD ? (DD.preventDefault(), void xC(null)) : mC && DD.code === jD ? (DD.preventDefault(), void HC((DD => !DD))) : void kC.onKeyDown(DD)
           },
           onFocus: () => {
-            su(!0)
+            XC(!0)
           },
           onBlur: () => {
-            su(!1), Su.onBlur()
+            XC(!1), kC.onBlur()
           }
-        }), du && (0, Nz.jsx)("div", {
+        }), yC && (0, OD.jsx)("div", {
           className: "StudioHeatmap3DUnavailable SmallTextLight",
-          children: jz("3D view isn't available in this browser.")
-        }), ru && (0, Nz.jsx)("div", {
+          children: eD("3D view isn't available in this browser.")
+        }), mC && (0, OD.jsx)("div", {
           className: "StudioHeatmap3DCrosshair"
-        }), (0, Nz.jsx)("div", {
+        }), (0, OD.jsx)("div", {
           className: "StudioHeatmap3DCoordinates SmallTextLight",
-          children: Uu.position.map(((zz, uz) => (zz + Tu[uz]).toFixed(2))).join(" ")
-        }), vu && (0, Nz.jsx)(Iz, {
-          heading: Uu.heading,
-          pitch: Uu.pitch,
-          onViewFrom: zz => {
-            const uz = Mu(zz, -1),
-              bz = 0 === uz[1] ? {
-                heading: Math.atan2(uz[0], uz[2]),
+          children: TC.position.map(((DD, CD) => (DD + qC[CD]).toFixed(2))).join(" ")
+        }), PC && (0, OD.jsx)(uD, {
+          heading: TC.heading,
+          pitch: TC.pitch,
+          onViewFrom: DD => {
+            const CD = bC(DD, -1),
+              cD = 0 === CD[1] ? {
+                heading: Math.atan2(CD[0], CD[2]),
                 pitch: 0
               } : {
-                heading: Uu.heading,
-                pitch: uz[1] < 0 ? hz : -hz
+                heading: TC.heading,
+                pitch: CD[1] < 0 ? LD : -LD
               };
-            Au(bu(qu, mu, Vu, bz))
+            xC(cC(lC, jC, zC, cD))
           },
-          onTurn: (zz, uz) => {
-            Au((bz => function(zz, uz, bz, Ez) {
-              return Eu(zz, uz, {
-                heading: zz.heading + bz * Wz,
-                pitch: Math.max(-hz, Math.min(hz, zz.pitch + Ez * Wz))
+          onTurn: (DD, CD) => {
+            xC((cD => function(DD, CD, cD, ID) {
+              return IC(DD, CD, {
+                heading: DD.heading + cD * sD,
+                pitch: Math.max(-LD, Math.min(LD, DD.pitch + ID * sD))
               })
-            }(null !== bz && void 0 !== bz ? bz : cu.current.fittedView, nu(qu), zz, uz)))
+            }(null !== cD && void 0 !== cD ? cD : GC.current.fittedView, pC(lC), DD, CD)))
           },
           onFlip: () => {
-            Au((zz => function(zz, uz) {
-              return Eu(zz, uz, {
-                heading: zz.heading + Math.PI,
-                pitch: -zz.pitch
+            xC((DD => function(DD, CD) {
+              return IC(DD, CD, {
+                heading: DD.heading + Math.PI,
+                pitch: -DD.pitch
               })
-            }(null !== zz && void 0 !== zz ? zz : cu.current.fittedView, nu(qu))))
+            }(null !== DD && void 0 !== DD ? DD : GC.current.fittedView, pC(lC))))
           }
-        }), null !== gu && (0, Nz.jsx)("div", {
+        }), null !== RC && (0, OD.jsx)("div", {
           className: "StudioHeatmapMapReadout SmallTextLight",
-          children: null === ez ? jz("studio:heatmapBlockReadout", {
-            x: gu.x,
-            y: gu.y,
-            z: gu.z,
-            count: (0, Fz.T)(gu.value)
-          }) : ez(gu.x, gu.y, gu.z, gu.value)
-        }), (0, Nz.jsxs)("div", {
+          children: null === ED ? eD("studio:heatmapBlockReadout", {
+            x: RC.x,
+            y: RC.y,
+            z: RC.z,
+            count: (0, MD.S)(RC.value)
+          }) : ED(RC.x, RC.y, RC.z, RC.value)
+        }), (0, OD.jsxs)("div", {
           className: "StudioHeatmapMapControls",
-          children: [Sz, (0, Nz.jsx)(Xz.V, {
-            active: null === Ju,
+          children: [kD, (0, OD.jsx)(ND.P, {
+            active: null === UC,
             onClick: () => {
-              Au(null)
+              xC(null)
             },
-            children: (0, Nz.jsx)(fz.c, {
+            children: (0, OD.jsx)(gD.c, {
               name: "eye"
             })
           })]
@@ -447,255 +447,255 @@ export const modules = {
       })
     }
 
-    function Iz(zz) {
+    function uD(DD) {
       let {
-        heading: uz,
-        pitch: bz,
-        onViewFrom: nz,
-        onTurn: iz,
-        onFlip: lz
-      } = zz;
+        heading: CD,
+        pitch: cD,
+        onViewFrom: pD,
+        onTurn: iD,
+        onFlip: fD
+      } = DD;
       const {
-        t: Mz
-      } = (0, Rz.F)(), tz = (0, Ez.useRef)(null), Hz = zu({
-        heading: uz,
-        pitch: bz
-      }), Oz = uu(uz), pz = Hu(Hz, Oz), dz = yz + Dz + 2, Fz = Sz.flatMap((zz => [1, -1].map((uz => {
-        const bz = Mu(zz.direction, uz);
+        t: bD
+      } = (0, ZD.F)(), QD = (0, ID.useRef)(null), wD = DC({
+        heading: CD,
+        pitch: cD
+      }), SD = CC(CD), BD = wC(wD, SD), yD = dD + YD + 2, MD = kD.flatMap((DD => [1, -1].map((CD => {
+        const cD = bC(DD.direction, CD);
         return {
-          ...zz,
-          sign: uz,
-          direction: bz,
-          endX: dz + tu(bz, Oz) * yz,
-          endY: dz - tu(bz, pz) * yz,
-          depth: tu(bz, Hz)
+          ...DD,
+          sign: CD,
+          direction: cD,
+          endX: yD + QC(cD, SD) * dD,
+          endY: yD - QC(cD, BD) * dD,
+          depth: QC(cD, wD)
         }
-      })))).sort(((zz, uz) => uz.depth - zz.depth));
-      return (0, Nz.jsxs)("svg", {
+      })))).sort(((DD, CD) => CD.depth - DD.depth));
+      return (0, OD.jsxs)("svg", {
         className: "StudioHeatmap3DGizmo",
-        width: 2 * dz,
-        height: 2 * dz,
+        width: 2 * yD,
+        height: 2 * yD,
         "aria-hidden": !0,
-        onPointerDown: zz => {
-          var uz, bz;
-          zz.currentTarget.setPointerCapture(zz.pointerId);
-          const Ez = zz.target,
-            nz = Ez.getAttribute("data-end");
-          tz.current = {
-            pointerId: zz.pointerId,
-            x: zz.clientX,
-            y: zz.clientY,
+        onPointerDown: DD => {
+          var CD, cD;
+          DD.currentTarget.setPointerCapture(DD.pointerId);
+          const ID = DD.target,
+            pD = ID.getAttribute("data-end");
+          QD.current = {
+            pointerId: DD.pointerId,
+            x: DD.clientX,
+            y: DD.clientY,
             travel: 0,
-            side: null === nz ? null : null !== (uz = null === (bz = Fz[Number(nz)]) || void 0 === bz ? void 0 : bz.direction) && void 0 !== uz ? uz : null,
-            isOnMiddle: Ez.hasAttribute("data-middle")
+            side: null === pD ? null : null !== (CD = null === (cD = MD[Number(pD)]) || void 0 === cD ? void 0 : cD.direction) && void 0 !== CD ? CD : null,
+            isOnMiddle: ID.hasAttribute("data-middle")
           }
         },
-        onPointerMove: zz => {
-          const uz = tz.current;
-          if (null === uz || uz.pointerId !== zz.pointerId) return;
-          const bz = zz.clientX - uz.x,
-            Ez = zz.clientY - uz.y;
-          uz.x = zz.clientX, uz.y = zz.clientY, uz.travel += Math.abs(bz) + Math.abs(Ez), uz.travel >= ez && iz(bz, Ez)
+        onPointerMove: DD => {
+          const CD = QD.current;
+          if (null === CD || CD.pointerId !== DD.pointerId) return;
+          const cD = DD.clientX - CD.x,
+            ID = DD.clientY - CD.y;
+          CD.x = DD.clientX, CD.y = DD.clientY, CD.travel += Math.abs(cD) + Math.abs(ID), CD.travel >= ED && iD(cD, ID)
         },
-        onPointerUp: zz => {
-          const uz = tz.current;
-          tz.current = null, null === uz || uz.pointerId !== zz.pointerId || uz.travel >= ez || (null !== uz.side ? nz(uz.side) : uz.isOnMiddle && lz())
+        onPointerUp: DD => {
+          const CD = QD.current;
+          QD.current = null, null === CD || CD.pointerId !== DD.pointerId || CD.travel >= ED || (null !== CD.side ? pD(CD.side) : CD.isOnMiddle && fD())
         },
         onPointerCancel: () => {
-          tz.current = null
+          QD.current = null
         },
-        children: [Fz.map(((zz, uz) => {
-          const bz = zz.sign > 0;
-          return (0, Nz.jsxs)("g", {
-            children: [(0, Nz.jsx)("line", {
-              x1: dz,
-              y1: dz,
-              x2: zz.endX,
-              y2: zz.endY,
-              stroke: zz.colour,
-              strokeOpacity: bz ? 1 : .5,
+        children: [MD.map(((DD, CD) => {
+          const cD = DD.sign > 0;
+          return (0, OD.jsxs)("g", {
+            children: [(0, OD.jsx)("line", {
+              x1: yD,
+              y1: yD,
+              x2: DD.endX,
+              y2: DD.endY,
+              stroke: DD.colour,
+              strokeOpacity: cD ? 1 : .5,
               strokeWidth: 2,
               strokeLinecap: "round"
-            }), (0, Nz.jsx)("circle", {
+            }), (0, OD.jsx)("circle", {
               className: "StudioHeatmap3DGizmoEnd",
-              "data-end": uz,
-              cx: zz.endX,
-              cy: zz.endY,
-              r: bz ? Dz : Dz - 1,
-              fill: zz.colour,
-              fillOpacity: bz ? 1 : .3,
-              stroke: zz.colour,
-              strokeWidth: bz ? 0 : 1.5,
-              children: (0, Nz.jsx)("title", {
-                children: `${Mz("View from")} ${bz?"+":"\u2212"}${zz.name}`
+              "data-end": CD,
+              cx: DD.endX,
+              cy: DD.endY,
+              r: cD ? YD : YD - 1,
+              fill: DD.colour,
+              fillOpacity: cD ? 1 : .3,
+              stroke: DD.colour,
+              strokeWidth: cD ? 0 : 1.5,
+              children: (0, OD.jsx)("title", {
+                children: `${bD("View from")} ${cD?"+":"\u2212"}${DD.name}`
               })
-            }), bz && (0, Nz.jsx)("text", {
+            }), cD && (0, OD.jsx)("text", {
               pointerEvents: "none",
-              x: zz.endX,
-              y: zz.endY,
+              x: DD.endX,
+              y: DD.endY,
               fill: "#151515",
               fontSize: 9,
               fontWeight: "bold",
               textAnchor: "middle",
               dominantBaseline: "central",
-              children: zz.name
+              children: DD.name
             })]
-          }, `${bz?"+":"-"}${zz.name}`)
-        })), (0, Nz.jsx)("circle", {
+          }, `${cD?"+":"-"}${DD.name}`)
+        })), (0, OD.jsx)("circle", {
           className: "StudioHeatmap3DGizmoEnd",
           "data-middle": !0,
-          cx: dz,
-          cy: dz,
-          r: Qz,
+          cx: yD,
+          cy: yD,
+          r: WD,
           fill: "#d0d0d0",
           fillOpacity: .85,
-          children: (0, Nz.jsx)("title", {
-            children: Mz("View from the opposite side")
+          children: (0, OD.jsx)("title", {
+            children: bD("View from the opposite side")
           })
         })]
       })
     }
 
-    function Bz(zz) {
-      var uz, bz, Ez;
+    function hD(DD) {
+      var CD, cD, ID;
       const {
-        chunkGridOrigin: nz,
-        camera: iz
-      } = zz;
-      if (null === nz) return;
-      const lz = [iz.position.x, iz.position.y, iz.position.z],
-        Mz = [0, 2].map((zz => Math.floor((lz[zz] + nz[zz]) / Zz.e.IZ))),
-        tz = zz.chunkGridCentre;
-      if (null !== tz && tz.every(((zz, uz) => zz === Mz[uz]))) return;
-      const pz = null === (uz = null === (bz = zz.chunkGrid) || void 0 === bz ? void 0 : bz.isVisible) || void 0 === uz || uz;
-      null === (Ez = zz.chunkGrid) || void 0 === Ez || Ez.dispose();
-      const [Fz, Rz] = [0, 2].map(((zz, uz) => {
-        const bz = [];
-        for (let Ez = Mz[uz] - Vz; Ez <= Mz[uz] + Vz + 1; Ez++) bz.push(Ez * Zz.e.IZ - nz[zz]);
-        return bz
-      })), Kz = -nz[1], wz = [];
-      for (const Hz of Rz) wz.push([new Oz.ER(Fz[0], Kz, Hz), new Oz.ER(Fz[Fz.length - 1], Kz, Hz)]);
-      for (const Hz of Fz) wz.push([new Oz.ER(Hz, Kz, Rz[0]), new Oz.ER(Hz, Kz, Rz[Rz.length - 1])]);
-      const Xz = (0, dz.e)("Heatmap3DChunkGrid", {
-        lines: wz
-      }, zz.tK);
-      Xz.color = new Hz.Color3(.45, .6, .78), Xz.pK = !1, Xz.isVisible = pz, zz.chunkGrid = Xz, zz.chunkGridCentre = Mz, zz.needsRender = !0
+        chunkGridOrigin: pD,
+        camera: iD
+      } = DD;
+      if (null === pD) return;
+      const fD = [iD.position.x, iD.position.y, iD.position.z],
+        bD = [0, 2].map((DD => Math.floor((fD[DD] + pD[DD]) / tD.h.Wt))),
+        QD = DD.chunkGridCentre;
+      if (null !== QD && QD.every(((DD, CD) => DD === bD[CD]))) return;
+      const BD = null === (CD = null === (cD = DD.chunkGrid) || void 0 === cD ? void 0 : cD.isVisible) || void 0 === CD || CD;
+      null === (ID = DD.chunkGrid) || void 0 === ID || ID.dispose();
+      const [MD, ZD] = [0, 2].map(((DD, CD) => {
+        const cD = [];
+        for (let ID = bD[CD] - zD; ID <= bD[CD] + zD + 1; ID++) cD.push(ID * tD.h.Wt - pD[DD]);
+        return cD
+      })), oD = -pD[1], vD = [];
+      for (const wD of ZD) vD.push([new SD.cZ(MD[0], oD, wD), new SD.cZ(MD[MD.length - 1], oD, wD)]);
+      for (const wD of MD) vD.push([new SD.cZ(wD, oD, ZD[0]), new SD.cZ(wD, oD, ZD[ZD.length - 1])]);
+      const ND = (0, yD.c)("Heatmap3DChunkGrid", {
+        lines: vD
+      }, DD.wo);
+      ND.color = new wD.Color3(.45, .6, .78), ND.yo = !1, ND.isVisible = BD, DD.chunkGrid = ND, DD.chunkGridCentre = bD, DD.needsRender = !0
     }
 
-    function Cz(zz, uz, bz, Ez) {
-      zz.v_("matrix", function(zz, uz) {
-        const bz = new Float32Array(16 * uz);
-        for (let Ez = 0; Ez < uz; Ez++) {
-          const uz = 16 * Ez;
-          bz[uz] = 1, bz[uz + 5] = 1, bz[uz + 10] = 1, bz[uz + 12] = zz[3 * Ez], bz[uz + 13] = zz[3 * Ez + 1], bz[uz + 14] = zz[3 * Ez + 2], bz[uz + 15] = 1
+    function rD(DD, CD, cD, ID) {
+      DD.U3("matrix", function(DD, CD) {
+        const cD = new Float32Array(16 * CD);
+        for (let ID = 0; ID < CD; ID++) {
+          const CD = 16 * ID;
+          cD[CD] = 1, cD[CD + 5] = 1, cD[CD + 10] = 1, cD[CD + 12] = DD[3 * ID], cD[CD + 13] = DD[3 * ID + 1], cD[CD + 14] = DD[3 * ID + 2], cD[CD + 15] = 1
         }
-        return bz
-      }(uz, Ez), 16, !0), zz.v_("color", bz, 4, !0), zz.isVisible = Ez > 0
+        return cD
+      }(CD, ID), 16, !0), DD.U3("color", cD, 4, !0), DD.isVisible = ID > 0
     }
 
-    function Yz(zz) {
+    function AD(DD) {
       const {
-        camera: uz,
-        translucent: bz
-      } = zz, Ez = [uz.position.x, uz.position.y, uz.position.z], nz = zz.translucentSortedFrom;
-      if (null !== nz && Math.hypot(Ez[0] - nz[0], Ez[1] - nz[1], Ez[2] - nz[2]) < az) return;
-      zz.translucentSortedFrom = Ez;
-      const iz = new Float64Array(bz.count),
-        lz = new Uint32Array(bz.count);
-      for (let Hz = 0; Hz < bz.count; Hz++) {
-        const zz = bz.fi[3 * Hz] - Ez[0],
-          uz = bz.fi[3 * Hz + 1] - Ez[1],
-          nz = bz.fi[3 * Hz + 2] - Ez[2];
-        iz[Hz] = zz * zz + uz * uz + nz * nz, lz[Hz] = Hz
+        camera: CD,
+        translucent: cD
+      } = DD, ID = [CD.position.x, CD.position.y, CD.position.z], pD = DD.translucentSortedFrom;
+      if (null !== pD && Math.hypot(ID[0] - pD[0], ID[1] - pD[1], ID[2] - pD[2]) < VD) return;
+      DD.translucentSortedFrom = ID;
+      const iD = new Float64Array(cD.count),
+        fD = new Uint32Array(cD.count);
+      for (let wD = 0; wD < cD.count; wD++) {
+        const DD = cD.wi[3 * wD] - ID[0],
+          CD = cD.wi[3 * wD + 1] - ID[1],
+          pD = cD.wi[3 * wD + 2] - ID[2];
+        iD[wD] = DD * DD + CD * CD + pD * pD, fD[wD] = wD
       }
-      lz.sort(((zz, uz) => iz[uz] - iz[zz]));
-      const Mz = new Float32Array(3 * bz.count),
-        tz = new Float32Array(4 * bz.count);
-      lz.forEach(((zz, uz) => {
-        Mz.set(bz.fi.subarray(3 * zz, 3 * zz + 3), 3 * uz), tz.set(bz.colours.subarray(4 * zz, 4 * zz + 4), 4 * uz)
-      })), Cz(zz.translucentCells, Mz, tz, bz.count), zz.needsRender = !0
+      fD.sort(((DD, CD) => iD[CD] - iD[DD]));
+      const bD = new Float32Array(3 * cD.count),
+        QD = new Float32Array(4 * cD.count);
+      fD.forEach(((DD, CD) => {
+        bD.set(cD.wi.subarray(3 * DD, 3 * DD + 3), 3 * CD), QD.set(cD.colours.subarray(4 * DD, 4 * DD + 4), 4 * CD)
+      })), rD(DD.translucentCells, bD, QD, cD.count), DD.needsRender = !0
     }
 
-    function kz(zz, uz) {
-      const bz = (bz, Ez, nz) => new Oz.ER(0 === bz ? zz[0] : uz[0], 0 === Ez ? zz[1] : uz[1], 0 === nz ? zz[2] : uz[2]),
-        Ez = [];
-      for (const nz of [0, 1])
-        for (const zz of [0, 1]) Ez.push([bz(0, nz, zz), bz(1, nz, zz)], [bz(nz, 0, zz), bz(nz, 1, zz)], [bz(nz, zz, 0), bz(nz, zz, 1)]);
-      return Ez
+    function FD(DD, CD) {
+      const cD = (cD, ID, pD) => new SD.cZ(0 === cD ? DD[0] : CD[0], 0 === ID ? DD[1] : CD[1], 0 === pD ? DD[2] : CD[2]),
+        ID = [];
+      for (const pD of [0, 1])
+        for (const DD of [0, 1]) ID.push([cD(0, pD, DD), cD(1, pD, DD)], [cD(pD, 0, DD), cD(pD, 1, DD)], [cD(pD, DD, 0), cD(pD, DD, 1)]);
+      return ID
     }
 
-    function zu(zz) {
-      return [Math.sin(zz.heading) * Math.cos(zz.pitch), -Math.sin(zz.pitch), Math.cos(zz.heading) * Math.cos(zz.pitch)]
+    function DC(DD) {
+      return [Math.sin(DD.heading) * Math.cos(DD.pitch), -Math.sin(DD.pitch), Math.cos(DD.heading) * Math.cos(DD.pitch)]
     }
 
-    function uu(zz) {
-      return [Math.cos(zz), 0, -Math.sin(zz)]
+    function CC(DD) {
+      return [Math.cos(DD), 0, -Math.sin(DD)]
     }
 
-    function bu(zz, uz, bz) {
-      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-        heading: Uz,
-        pitch: cz
+    function cC(DD, CD, cD) {
+      let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+        heading: TD,
+        pitch: GD
       };
-      const nz = [zz.max[0] - zz.min[0], zz.max[1] - zz.min[1], zz.max[2] - zz.min[2]],
-        iz = zu(Ez),
-        lz = uu(Ez.heading),
-        Mz = Hu(iz, lz),
-        tz = Math.tan(bz / 2),
-        Hz = tz * uz;
-      let Oz = 1;
-      for (const pz of [-nz[0] / 2, nz[0] / 2])
-        for (const zz of [-nz[1] / 2, nz[1] / 2])
-          for (const uz of [-nz[2] / 2, nz[2] / 2]) {
-            const bz = [pz, zz, uz],
-              Ez = tu(bz, iz);
-            Oz = Math.max(Oz, Math.abs(tu(bz, lz)) / Hz - Ez, Math.abs(tu(bz, Mz)) / tz - Ez)
+      const pD = [DD.max[0] - DD.min[0], DD.max[1] - DD.min[1], DD.max[2] - DD.min[2]],
+        iD = DC(ID),
+        fD = CC(ID.heading),
+        bD = wC(iD, fD),
+        QD = Math.tan(cD / 2),
+        wD = QD * CD;
+      let SD = 1;
+      for (const BD of [-pD[0] / 2, pD[0] / 2])
+        for (const DD of [-pD[1] / 2, pD[1] / 2])
+          for (const CD of [-pD[2] / 2, pD[2] / 2]) {
+            const cD = [BD, DD, CD],
+              ID = QC(cD, iD);
+            SD = Math.max(SD, Math.abs(QC(cD, fD)) / wD - ID, Math.abs(QC(cD, bD)) / QD - ID)
           }
       return {
-        position: lu([zz.min[0] + nz[0] / 2, zz.min[1] + nz[1] / 2, zz.min[2] + nz[2] / 2], Mu(iz, -Oz * gz)),
-        heading: Ez.heading,
-        pitch: Ez.pitch
+        position: fC([DD.min[0] + pD[0] / 2, DD.min[1] + pD[1] / 2, DD.min[2] + pD[2] / 2], bC(iD, -SD * RD)),
+        heading: ID.heading,
+        pitch: ID.pitch
       }
     }
 
-    function Eu(zz, uz, bz) {
-      const Ez = iu(zz),
-        nz = iu(bz),
-        iz = lu(zz.position, Mu(uz, -1)),
-        lz = [0, 1, 2].reduce(((zz, uz) => lu(zz, Mu(nz[uz], tu(iz, Ez[uz])))), [0, 0, 0]);
+    function IC(DD, CD, cD) {
+      const ID = iC(DD),
+        pD = iC(cD),
+        iD = fC(DD.position, bC(CD, -1)),
+        fD = [0, 1, 2].reduce(((DD, CD) => fC(DD, bC(pD[CD], QC(iD, ID[CD])))), [0, 0, 0]);
       return {
-        position: lu(uz, lz),
-        heading: bz.heading,
-        pitch: bz.pitch
+        position: fC(CD, fD),
+        heading: cD.heading,
+        pitch: cD.pitch
       }
     }
 
-    function nu(zz) {
-      return Mu(lu(zz.min, zz.max), .5)
+    function pC(DD) {
+      return bC(fC(DD.min, DD.max), .5)
     }
 
-    function iu(zz) {
-      const uz = zu(zz),
-        bz = uu(zz.heading);
-      return [uz, bz, Hu(uz, bz)]
+    function iC(DD) {
+      const CD = DC(DD),
+        cD = CC(DD.heading);
+      return [CD, cD, wC(CD, cD)]
     }
 
-    function lu(zz, uz) {
-      return [zz[0] + uz[0], zz[1] + uz[1], zz[2] + uz[2]]
+    function fC(DD, CD) {
+      return [DD[0] + CD[0], DD[1] + CD[1], DD[2] + CD[2]]
     }
 
-    function Mu(zz, uz) {
-      return [zz[0] * uz, zz[1] * uz, zz[2] * uz]
+    function bC(DD, CD) {
+      return [DD[0] * CD, DD[1] * CD, DD[2] * CD]
     }
 
-    function tu(zz, uz) {
-      return zz[0] * uz[0] + zz[1] * uz[1] + zz[2] * uz[2]
+    function QC(DD, CD) {
+      return DD[0] * CD[0] + DD[1] * CD[1] + DD[2] * CD[2]
     }
 
-    function Hu(zz, uz) {
-      return [zz[1] * uz[2] - zz[2] * uz[1], zz[2] * uz[0] - zz[0] * uz[2], zz[0] * uz[1] - zz[1] * uz[0]]
+    function wC(DD, CD) {
+      return [DD[1] * CD[2] - DD[2] * CD[1], DD[2] * CD[0] - DD[0] * CD[2], DD[0] * CD[1] - DD[1] * CD[0]]
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

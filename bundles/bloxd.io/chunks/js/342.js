@@ -1,97 +1,97 @@
 export const id = 342;
 export const ids = [342, 343];
 export const modules = {
-  42594: (zz, uz, bz) => {
-    bz.d(uz, {
-      gamePackSource: () => iz
+  42472: (DD, CD, cD) => {
+    cD.d(CD, {
+      gamePackSource: () => iD
     });
-    var Ez = bz(4737),
-      nz = bz(1473);
+    var ID = cD(4762),
+      pD = cD(1497);
 
-    function iz(zz) {
+    function iD(DD) {
       return {
-        packKey: async uz => (await nz.c.getGame(zz, uz, !0)).customTexturePackKey,
-        fetchPack: Ez.c
+        packKey: async CD => (await pD.c.getGame(DD, CD, !0)).customTexturePackKey,
+        fetchPack: ID.c
       }
     }
   },
-  42586: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      fetchGuestContext: () => dz,
-      guestJoinTarget: () => fz,
-      guestJoinWithPack: () => Zz,
-      guestPackForGame: () => Fz,
-      invalidateGuestTrafficCode: () => Xz
+  42463: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      fetchGuestContext: () => yD,
+      guestJoinTarget: () => gD,
+      guestJoinWithPack: () => tD,
+      guestPackForGame: () => MD,
+      invalidateGuestTrafficCode: () => ND
     });
-    var Ez = bz(1195),
-      nz = bz(1473),
-      iz = bz(96),
-      lz = bz(35945),
-      Mz = bz(1118),
-      tz = bz(40140),
-      Hz = bz(42594),
-      Oz = bz(40077);
+    var ID = cD(1199),
+      pD = cD(1497),
+      iD = cD(90),
+      fD = cD(35879),
+      bD = cD(1127),
+      QD = cD(40032),
+      wD = cD(42472),
+      SD = cD(39968);
 
-    function pz() {
-      if (iz.featureFlags.useTurnstile) throw new tz.TurnstilePageError
+    function BD() {
+      if (iD.featureFlags.useTurnstile) throw new QD.TurnstilePageError
     }
 
-    function dz() {
-      return (0, Mz.fetchAnonymousUserContext)().catch((zz => (console.warn("the guest context didn't load", zz), null)))
+    function yD() {
+      return (0, bD.fetchAnonymousUserContext)().catch((DD => (console.warn("the guest context didn't load", DD), null)))
     }
-    async function Fz(zz, uz, bz, Ez) {
+    async function MD(DD, CD, cD, ID) {
       try {
-        const nz = await bz;
-        if (null === nz) return void console.warn(`the texture pack step for ${zz} has no guest context: the pack in play stays`);
-        await uz.packForGame(zz, (0, Hz.gamePackSource)(nz), Ez)
-      } catch (nz) {
-        console.warn(`the texture pack step for ${zz} failed: the pack in play stays`, nz)
+        const pD = await cD;
+        if (null === pD) return void console.warn(`the texture pack step for ${DD} has no guest context: the pack in play stays`);
+        await CD.packForGame(DD, (0, wD.gamePackSource)(pD), ID)
+      } catch (pD) {
+        console.warn(`the texture pack step for ${DD} failed: the pack in play stays`, pD)
       }
     }
-    async function Zz(zz, uz, bz, Ez) {
-      pz();
-      const nz = dz();
-      return await bz(((uz, bz) => Fz(zz, uz, nz, bz))), fz(zz, uz, Ez(), await nz)
+    async function tD(DD, CD, cD, ID) {
+      BD();
+      const pD = yD();
+      return await cD(((CD, cD) => MD(DD, CD, pD, cD))), gD(DD, CD, ID(), await pD)
     }
-    let Rz = null,
-      Kz = null;
-    async function wz() {
-      if ((null === Rz || Rz.hasExpired()) && (Kz ??= (0, Mz.fetchAnonymousUserContext)().then((zz => {
-          Rz = zz
+    let ZD = null,
+      oD = null;
+    async function vD() {
+      if ((null === ZD || ZD.hasExpired()) && (oD ??= (0, bD.fetchAnonymousUserContext)().then((DD => {
+          ZD = DD
         })).finally((() => {
-          Kz = null
-        })), await Kz), null === Rz) throw new Error("no guest context to post as");
-      return Rz.getMetricsCookies()
+          oD = null
+        })), await oD), null === ZD) throw new Error("no guest context to post as");
+      return ZD.getMetricsCookies()
     }
-    async function Xz() {
-      var zz;
-      await (null === (zz = Rz) || void 0 === zz ? void 0 : zz.invalidateTrafficCode())
+    async function ND() {
+      var DD;
+      await (null === (DD = ZD) || void 0 === DD ? void 0 : DD.invalidateTrafficCode())
     }
-    async function fz(zz, uz, bz) {
-      let iz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      pz();
-      const tz = null !== iz && void 0 !== iz ? iz : await (0, Mz.fetchAnonymousUserContext)();
-      if (Rz = tz, tz.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const Hz = await nz.c.matchmakePlayer(tz, uz, zz, (0, lz.b)()),
-        dz = performance.now();
-      if (!("gameServerHost" in Hz)) throw new Error(`matchmaking refused: ${Hz.failReason}`);
-      const Fz = Ez.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(Hz.gameServerHost);
-      if (Fz.isError()) throw new Error(`no socket URL for ${Hz.gameServerHost}: ${Fz.asError().message}`);
-      const Zz = {
-        endpoint: Fz.getValue(),
-        gameNameWithVariation: Hz.gameNameWithVariation,
-        lobbyName: Hz.lobbyName
+    async function gD(DD, CD, cD) {
+      let iD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      BD();
+      const QD = null !== iD && void 0 !== iD ? iD : await (0, bD.fetchAnonymousUserContext)();
+      if (ZD = QD, QD.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const wD = await pD.c.matchmakePlayer(QD, CD, DD, (0, fD.d)()),
+        yD = performance.now();
+      if (!("gameServerHost" in wD)) throw new Error(`matchmaking refused: ${wD.failReason}`);
+      const MD = ID.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(wD.gameServerHost);
+      if (MD.isError()) throw new Error(`no socket URL for ${wD.gameServerHost}: ${MD.asError().message}`);
+      const tD = {
+        endpoint: MD.getValue(),
+        gameNameWithVariation: wD.gameNameWithVariation,
+        lobbyName: wD.lobbyName
       };
       return {
         target: {
-          ...await (0, Oz.i)(tz, Zz, bz, !1),
-          postCookies: wz
+          ...await (0, SD.h)(QD, tD, cD, !1),
+          postCookies: vD
         },
-        matchedAt: dz,
-        freshMs: Oz.e
+        matchedAt: yD,
+        freshMs: SD.d
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

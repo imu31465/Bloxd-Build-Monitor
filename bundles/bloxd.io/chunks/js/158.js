@@ -1,11 +1,11 @@
 export const id = 158;
 export const ids = [158];
 export const modules = {
-  8602: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      pageBody: () => Ez
+  8626: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      pageBody: () => ID
     });
-    const Ez = {
+    const ID = {
       whatIs: ["In Bloxd Skywars, everyone starts on their own island in the sky. Only one player is still there at the end. Loot your chests for weapons, armour and blocks, bridge over to your rivals and knock them into the void. It's free-for-all PvP for up to 12 players, and the last one standing takes the win."],
       howToPlay: ["Each match starts with you in a glass cage on your own island. The cage opens after about 3 seconds, and you can't use items while you're stuck inside. Once you're out, loot your island's chests quickly, because your gear is split between them. Then build a bridge and go after everyone else.", "Chests refill every 2.5 minutes. When \"Chests replenished.\" pops up in chat, it's worth heading back for more loot. After 7 minutes, or as soon as only two players are left, everyone still alive gets a compass pointing at the nearest player. There's nowhere left to hide at that point. Fall into the void and you're out.", "You get Gold for every kill and 20 Gold for a win. Spend Gold and Gems in the shop on new Skywars kits and perks."],
       features: ["Free-for-All Matches for Up to 12 Players", "Around 30 Kits, from Archer and Builder to Ghost, Sniper, Catapult and Salmon", "Killstreak Perks You Can Buy and Upgrade, like Bridger, Leech and Inferno", "Chests That Refill Every 2.5 Minutes", "A Compass That Tracks the Nearest Player After 7 Minutes or When Two Remain", "Match Modifiers like Lucky Mode, Lifesteal, Explosives Frenzy and Knockback Knockout", "10 Maps: Jungle, Castle, Ice, Bricks, Street, Chess, Food, Aqueduct, Mushroom Land and Warehouse", "Leaderboards"],
@@ -40,4 +40,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,14 +1,14 @@
 export const id = 195;
 export const ids = [195];
 export const modules = {
-  9058: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Gz,
-      d: () => Pz,
-      h: () => Lz
+  9116: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => aD,
+      f: () => KD,
+      h: () => JD
     });
-    var Ez = bz(9063);
-    const nz = {
+    var ID = cD(9125);
+    const pD = {
         fileBytes: 4194304,
         vertices: 65535,
         indices: 196608,
@@ -20,7 +20,7 @@ export const modules = {
         images: 8,
         imageSide: 1024
       },
-      iz = {
+      iD = {
         items: 1024,
         perFile: 1024,
         surfaces: 256,
@@ -28,453 +28,453 @@ export const modules = {
         bounds: 16,
         attributeMembers: 32
       },
-      lz = 1048576,
-      Mz = "is not a binary glTF 2.0 file",
-      tz = "loads data from outside the file",
-      Hz = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
-      Oz = {
+      fD = 1048576,
+      bD = "is not a binary glTF 2.0 file",
+      QD = "loads data from outside the file",
+      wD = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
+      SD = {
         POSITION: "VEC3",
         NORMAL: "VEC3",
         TEXCOORD_0: "VEC2",
         COLOR_0: "VEC4"
       },
-      pz = {
+      BD = {
         type: "VEC2",
         componentTypes: [5126, 5121, 5123]
       },
-      dz = {
+      yD = {
         TANGENT: {
           type: "VEC4",
           componentTypes: [5126]
         },
-        TEXCOORD_1: pz,
-        TEXCOORD_2: pz,
-        TEXCOORD_3: pz,
-        TEXCOORD_4: pz,
-        TEXCOORD_5: pz
+        TEXCOORD_1: BD,
+        TEXCOORD_2: BD,
+        TEXCOORD_3: BD,
+        TEXCOORD_4: BD,
+        TEXCOORD_5: BD
       },
-      Fz = new Set(Ez.i.map((zz => {
-        let [uz] = zz;
-        return uz
+      MD = new Set(ID.i.map((DD => {
+        let [CD] = DD;
+        return CD
       }))),
-      Zz = {
+      tD = {
         1: "line",
         2: "line loop",
         3: "line strip",
         5: "triangle strip",
         6: "triangle fan"
       },
-      Rz = 5126;
+      ZD = 5126;
 
-    function Kz(zz) {
-      return zz.toLocaleString("en-US")
+    function oD(DD) {
+      return DD.toLocaleString("en-US")
     }
 
-    function wz(zz, uz, bz) {
-      return zz > uz ? `has ${Kz(zz)} ${bz} (the limit is ${Kz(uz)})` : null
+    function vD(DD, CD, cD) {
+      return DD > CD ? `has ${oD(DD)} ${cD} (the limit is ${oD(CD)})` : null
     }
 
-    function Xz(zz, uz) {
-      return Number.isInteger(zz) && zz >= 0 && zz < (null !== uz && void 0 !== uz ? uz : 0)
+    function ND(DD, CD) {
+      return Number.isInteger(DD) && DD >= 0 && DD < (null !== CD && void 0 !== CD ? CD : 0)
     }
 
-    function fz(zz) {
-      return Number.isInteger(zz) && zz >= 0
+    function gD(DD) {
+      return Number.isInteger(DD) && DD >= 0
     }
 
-    function sz(zz, uz) {
-      return void 0 !== zz && (!Array.isArray(zz) || zz.length > uz)
+    function XD(DD, CD) {
+      return void 0 !== DD && (!Array.isArray(DD) || DD.length > CD)
     }
 
-    function rz(zz, uz) {
-      return "object" === typeof zz && null !== zz && Object.keys(zz).length > uz
+    function mD(DD, CD) {
+      return "object" === typeof DD && null !== DD && Object.keys(DD).length > CD
     }
 
-    function oz(zz) {
-      var uz;
-      return `${zz.normalized?"normalized ":""}${null!==(uz=Ez.e[zz.componentType])&&void 0!==uz?uz:zz.componentType} ${zz.type}`
+    function nD(DD) {
+      var CD;
+      return `${DD.normalized?"normalized ":""}${null!==(CD=ID.f[DD.componentType])&&void 0!==CD?CD:DD.componentType} ${DD.type}`
     }
 
-    function Nz(zz) {
-      const uz = uz => {
-        var bz;
-        return null !== (bz = zz[uz]) && void 0 !== bz ? bz : -1
+    function OD(DD) {
+      const CD = CD => {
+        var cD;
+        return null !== (cD = DD[CD]) && void 0 !== cD ? cD : -1
       };
-      return 255 === uz(0) && 216 === uz(1) ? "JPEG" : 82 === uz(0) && 73 === uz(1) && 87 === uz(8) && 69 === uz(9) ? "WebP" : 171 === uz(0) && 75 === uz(1) && 84 === uz(2) && 88 === uz(3) ? "KTX2" : "non-PNG"
+      return 255 === CD(0) && 216 === CD(1) ? "JPEG" : 82 === CD(0) && 73 === CD(1) && 87 === CD(8) && 69 === CD(9) ? "WebP" : 171 === CD(0) && 75 === CD(1) && 84 === CD(2) && 88 === CD(3) ? "KTX2" : "non-PNG"
     }
 
-    function vz(zz) {
-      return zz.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((uz, bz) => zz[bz] === uz)) && 73 === zz[12] && 72 === zz[13] && 68 === zz[14] && 82 === zz[15]
+    function PD(DD) {
+      return DD.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((CD, cD) => DD[cD] === CD)) && 73 === DD[12] && 72 === DD[13] && 68 === DD[14] && 82 === DD[15]
     }
 
-    function xz(zz) {
-      return /^[aeiou]/i.test(zz) ? `an ${zz}` : `a ${zz}`
+    function HD(DD) {
+      return /^[aeiou]/i.test(DD) ? `an ${DD}` : `a ${DD}`
     }
 
-    function Jz(zz) {
-      const uz = zz.byteStride;
-      return void 0 === uz || Number.isInteger(uz) && uz >= 4 && uz <= 252 && uz % 4 === 0
+    function UD(DD) {
+      const CD = DD.byteStride;
+      return void 0 === CD || Number.isInteger(CD) && CD >= 4 && CD <= 252 && CD % 4 === 0
     }
 
-    function Az(zz, uz, bz) {
-      var Ez, nz;
-      const iz = null === (Ez = zz.bufferViews) || void 0 === Ez ? void 0 : Ez[bz];
-      if (!iz || !uz || 0 !== iz.buffer) return null;
-      const lz = null !== (nz = iz.byteOffset) && void 0 !== nz ? nz : 0;
-      return !fz(lz) || !fz(iz.byteLength) || lz + iz.byteLength > uz.byteLength ? null : uz.subarray(lz, lz + iz.byteLength)
+    function xD(DD, CD, cD) {
+      var ID, pD;
+      const iD = null === (ID = DD.bufferViews) || void 0 === ID ? void 0 : ID[cD];
+      if (!iD || !CD || 0 !== iD.buffer) return null;
+      const fD = null !== (pD = iD.byteOffset) && void 0 !== pD ? pD : 0;
+      return !gD(fD) || !gD(iD.byteLength) || fD + iD.byteLength > CD.byteLength ? null : CD.subarray(fD, fD + iD.byteLength)
     }
 
-    function Tz(zz, uz) {
-      var bz, nz, iz;
-      const lz = Ez.n[uz.type],
-        Mz = Ez.c[uz.componentType];
-      if (!lz || !Mz || !Number.isInteger(uz.count) || uz.count < 0) return !1;
-      if (void 0 === uz.bufferView) return !0;
-      const tz = null === (bz = zz.bufferViews) || void 0 === bz ? void 0 : bz[uz.bufferView],
-        Hz = null !== (nz = uz.byteOffset) && void 0 !== nz ? nz : 0;
-      if (!tz || !fz(Hz) || Hz % Mz !== 0) return !1;
-      const Oz = lz * Mz,
-        pz = null !== (iz = tz.byteStride) && void 0 !== iz ? iz : Oz;
-      if (pz < Oz) return !1;
-      return (0 === uz.count ? 0 : Hz + pz * (uz.count - 1) + Oz) <= tz.byteLength
+    function qD(DD, CD) {
+      var cD, pD, iD;
+      const fD = ID.r[CD.type],
+        bD = ID.b[CD.componentType];
+      if (!fD || !bD || !Number.isInteger(CD.count) || CD.count < 0) return !1;
+      if (void 0 === CD.bufferView) return !0;
+      const QD = null === (cD = DD.bufferViews) || void 0 === cD ? void 0 : cD[CD.bufferView],
+        wD = null !== (pD = CD.byteOffset) && void 0 !== pD ? pD : 0;
+      if (!QD || !gD(wD) || wD % bD !== 0) return !1;
+      const SD = fD * bD,
+        BD = null !== (iD = QD.byteStride) && void 0 !== iD ? iD : SD;
+      if (BD < SD) return !1;
+      return (0 === CD.count ? 0 : wD + BD * (CD.count - 1) + SD) <= QD.byteLength
     }
 
-    function Lz(zz) {
-      return zz > nz.fileBytes ? `is ${(zz/lz).toFixed(1)} MiB (the limit is ${nz.fileBytes/lz} MiB)` : null
+    function JD(DD) {
+      return DD > pD.fileBytes ? `is ${(DD/fD).toFixed(1)} MiB (the limit is ${pD.fileBytes/fD} MiB)` : null
     }
 
-    function Pz(zz, uz) {
+    function KD(DD, CD) {
       try {
-        return function(zz, uz) {
-          var bz, lz, pz, Kz, fz, Lz, Pz, Gz, az, Vz, mz, qz, hz, Uz, cz, gz, Sz;
-          const yz = Array.isArray(zz.extensionsUsed) && zz.extensionsUsed.includes("KHR_draco_mesh_compression");
-          if (function(zz, uz) {
-              var bz, Ez;
+        return function(DD, CD) {
+          var cD, fD, BD, oD, gD, JD, KD, aD, VD, zD, jD, lD, LD, TD, GD, RD, kD;
+          const dD = Array.isArray(DD.extensionsUsed) && DD.extensionsUsed.includes("KHR_draco_mesh_compression");
+          if (function(DD, CD) {
+              var cD, ID;
               const {
-                items: nz,
-                perFile: lz,
-                surfaces: Mz,
-                few: tz,
-                bounds: Hz,
-                attributeMembers: Oz
-              } = iz;
-              if (sz(zz.extensionsRequired, tz) || sz(zz.animations, 1 / 0) || sz(zz.skins, 1 / 0)) return !0;
-              if (null !== (bz = zz.animations) && void 0 !== bz && bz.length || null !== (Ez = zz.skins) && void 0 !== Ez && Ez.length) return !1;
+                items: pD,
+                perFile: fD,
+                surfaces: bD,
+                few: QD,
+                bounds: wD,
+                attributeMembers: SD
+              } = iD;
+              if (XD(DD.extensionsRequired, QD) || XD(DD.animations, 1 / 0) || XD(DD.skins, 1 / 0)) return !0;
+              if (null !== (cD = DD.animations) && void 0 !== cD && cD.length || null !== (ID = DD.skins) && void 0 !== ID && ID.length) return !1;
               if ([
-                  [zz.buffers, tz],
-                  [zz.scenes, tz],
-                  [zz.bufferViews, nz],
-                  [zz.accessors, nz],
-                  [zz.nodes, nz],
-                  [zz.meshes, nz],
-                  [zz.materials, Mz],
-                  [zz.textures, Mz],
-                  [zz.samplers, Mz],
-                  [zz.images, Mz]
-                ].some((zz => {
-                  let [uz, bz] = zz;
-                  return sz(uz, bz)
+                  [DD.buffers, QD],
+                  [DD.scenes, QD],
+                  [DD.bufferViews, pD],
+                  [DD.accessors, pD],
+                  [DD.nodes, pD],
+                  [DD.meshes, pD],
+                  [DD.materials, bD],
+                  [DD.textures, bD],
+                  [DD.samplers, bD],
+                  [DD.images, bD]
+                ].some((DD => {
+                  let [CD, cD] = DD;
+                  return XD(CD, cD)
                 }))) return !0;
-              for (const iz of null !== (pz = zz.accessors) && void 0 !== pz ? pz : []) {
-                var pz, dz, Fz;
-                if (Number.isInteger(iz.count) && (!Number.isSafeInteger(iz.count) || Object.is(iz.count, -0)) || sz(null !== (dz = iz.min) && void 0 !== dz ? dz : void 0, Hz) || sz(null !== (Fz = iz.max) && void 0 !== Fz ? Fz : void 0, Hz)) return !0
+              for (const iD of null !== (BD = DD.accessors) && void 0 !== BD ? BD : []) {
+                var BD, yD, MD;
+                if (Number.isInteger(iD.count) && (!Number.isSafeInteger(iD.count) || Object.is(iD.count, -0)) || XD(null !== (yD = iD.min) && void 0 !== yD ? yD : void 0, wD) || XD(null !== (MD = iD.max) && void 0 !== MD ? MD : void 0, wD)) return !0
               }
-              for (const iz of null !== (Zz = zz.scenes) && void 0 !== Zz ? Zz : []) {
-                var Zz;
-                if (sz(iz.nodes, nz)) return !0
+              for (const iD of null !== (tD = DD.scenes) && void 0 !== tD ? tD : []) {
+                var tD;
+                if (XD(iD.nodes, pD)) return !0
               }
-              let Rz = 0;
-              for (const iz of null !== (Kz = zz.nodes) && void 0 !== Kz ? Kz : []) {
-                var Kz, wz, Xz;
-                if (sz(iz.children, lz)) return !0;
-                Rz += null !== (wz = null === (Xz = iz.children) || void 0 === Xz ? void 0 : Xz.length) && void 0 !== wz ? wz : 0
+              let ZD = 0;
+              for (const iD of null !== (oD = DD.nodes) && void 0 !== oD ? oD : []) {
+                var oD, vD, ND;
+                if (XD(iD.children, fD)) return !0;
+                ZD += null !== (vD = null === (ND = iD.children) || void 0 === ND ? void 0 : ND.length) && void 0 !== vD ? vD : 0
               }
-              if (Rz > lz) return !0;
-              let fz = 0;
-              for (const iz of null !== (oz = zz.meshes) && void 0 !== oz ? oz : []) {
-                var oz;
-                if (!Array.isArray(iz.primitives)) return !0;
-                if (fz += iz.primitives.length, fz > lz) return !0;
-                for (const zz of iz.primitives) {
-                  var Nz;
-                  const bz = uz ? null === (Nz = zz.extensions) || void 0 === Nz ? void 0 : Nz.KHR_draco_mesh_compression : void 0;
-                  if (rz(zz.attributes, Oz) || rz(null === bz || void 0 === bz ? void 0 : bz.attributes, Oz)) return !0
+              if (ZD > fD) return !0;
+              let gD = 0;
+              for (const iD of null !== (nD = DD.meshes) && void 0 !== nD ? nD : []) {
+                var nD;
+                if (!Array.isArray(iD.primitives)) return !0;
+                if (gD += iD.primitives.length, gD > fD) return !0;
+                for (const DD of iD.primitives) {
+                  var OD;
+                  const cD = CD ? null === (OD = DD.extensions) || void 0 === OD ? void 0 : OD.KHR_draco_mesh_compression : void 0;
+                  if (mD(DD.attributes, SD) || mD(null === cD || void 0 === cD ? void 0 : cD.attributes, SD)) return !0
                 }
               }
               return !1
-            }(zz, yz)) return Mz;
-          const Dz = null === (bz = zz.asset) || void 0 === bz ? void 0 : bz.version;
-          if ("string" !== typeof Dz || !/^2\.\d+/.test(Dz)) return `uses glTF version ${null!==Dz&&void 0!==Dz?Dz:"(none)"}`;
-          const Qz = null === (lz = zz.asset) || void 0 === lz ? void 0 : lz.minVersion;
-          if (void 0 !== Qz && "2.0" !== Qz) return `uses glTF version ${Qz}`;
-          for (const Ez of null !== (Wz = zz.extensionsRequired) && void 0 !== Wz ? Wz : []) {
-            var Wz;
-            if (!Hz.has(Ez)) return `requires the glTF extension ${Ez}`
+            }(DD, dD)) return bD;
+          const YD = null === (cD = DD.asset) || void 0 === cD ? void 0 : cD.version;
+          if ("string" !== typeof YD || !/^2\.\d+/.test(YD)) return `uses glTF version ${null!==YD&&void 0!==YD?YD:"(none)"}`;
+          const WD = null === (fD = DD.asset) || void 0 === fD ? void 0 : fD.minVersion;
+          if (void 0 !== WD && "2.0" !== WD) return `uses glTF version ${WD}`;
+          for (const ID of null !== (sD = DD.extensionsRequired) && void 0 !== sD ? sD : []) {
+            var sD;
+            if (!wD.has(ID)) return `requires the glTF extension ${ID}`
           }
-          if (null !== (pz = zz.animations) && void 0 !== pz && pz.length) return "has animations";
-          if (null !== (Kz = zz.skins) && void 0 !== Kz && Kz.length) return "uses skins";
-          const ez = null !== (fz = zz.buffers) && void 0 !== fz ? fz : [];
-          for (const [Ez, nz] of ez.entries()) {
-            if (void 0 !== nz.uri) return tz;
-            if (Ez > 0 || !uz) return Mz
+          if (null !== (BD = DD.animations) && void 0 !== BD && BD.length) return "has animations";
+          if (null !== (oD = DD.skins) && void 0 !== oD && oD.length) return "uses skins";
+          const ED = null !== (gD = DD.buffers) && void 0 !== gD ? gD : [];
+          for (const [ID, pD] of ED.entries()) {
+            if (void 0 !== pD.uri) return QD;
+            if (ID > 0 || !CD) return bD
           }
-          for (const [Ez, nz] of(null !== (jz = zz.bufferViews) && void 0 !== jz ? jz : []).entries()) {
-            var jz;
-            if (!Az(zz, uz, Ez) || !Jz(nz)) return Mz
+          for (const [ID, pD] of(null !== (eD = DD.bufferViews) && void 0 !== eD ? eD : []).entries()) {
+            var eD;
+            if (!xD(DD, CD, ID) || !UD(pD)) return bD
           }
-          const Iz = null !== (Lz = zz.accessors) && void 0 !== Lz ? Lz : [];
-          for (const Ez of Iz) {
-            if (void 0 !== Ez.sparse) return "uses sparse accessors";
-            const uz = Number.isInteger(Ez.count) ? wz(Ez.count, nz.accessorElements, "elements in an accessor") : null;
-            if (uz) return uz;
-            if (!Tz(zz, Ez)) return Mz
+          const uD = null !== (JD = DD.accessors) && void 0 !== JD ? JD : [];
+          for (const ID of uD) {
+            if (void 0 !== ID.sparse) return "uses sparse accessors";
+            const CD = Number.isInteger(ID.count) ? vD(ID.count, pD.accessorElements, "elements in an accessor") : null;
+            if (CD) return CD;
+            if (!qD(DD, ID)) return bD
           }
-          const Bz = null !== (Pz = zz.scenes) && void 0 !== Pz ? Pz : [];
-          if (1 !== Bz.length) return `has ${Bz.length} scenes`;
-          const Cz = (0, Ez.w)(zz);
-          if (void 0 !== Cz && 0 !== Cz) return Mz;
-          const Yz = null !== (Gz = zz.nodes) && void 0 !== Gz ? Gz : [],
-            kz = null !== (az = zz.meshes) && void 0 !== az ? az : [],
-            zu = null !== (Vz = zz.materials) && void 0 !== Vz ? Vz : [],
-            uu = null !== (mz = zz.textures) && void 0 !== mz ? mz : [],
-            bu = null !== (qz = zz.images) && void 0 !== qz ? qz : [],
-            Eu = null !== (hz = null !== (Uz = null !== (cz = wz(Yz.length, nz.nodes, "nodes")) && void 0 !== cz ? cz : wz(kz.length, nz.meshes, "meshes")) && void 0 !== Uz ? Uz : wz(zu.length, nz.materials, "materials")) && void 0 !== hz ? hz : wz(bu.length, nz.images, "images");
-          if (Eu) return Eu;
-          const nu = new Set;
-          for (const Ez of Yz)
-            for (const zz of null !== (iu = Ez.children) && void 0 !== iu ? iu : []) {
-              var iu;
-              if (!Xz(zz, Yz.length) || nu.has(zz)) return Mz;
-              nu.add(zz)
+          const hD = null !== (KD = DD.scenes) && void 0 !== KD ? KD : [];
+          if (1 !== hD.length) return `has ${hD.length} scenes`;
+          const rD = (0, ID.v)(DD);
+          if (void 0 !== rD && 0 !== rD) return bD;
+          const AD = null !== (aD = DD.nodes) && void 0 !== aD ? aD : [],
+            FD = null !== (VD = DD.meshes) && void 0 !== VD ? VD : [],
+            DC = null !== (zD = DD.materials) && void 0 !== zD ? zD : [],
+            CC = null !== (jD = DD.textures) && void 0 !== jD ? jD : [],
+            cC = null !== (lD = DD.images) && void 0 !== lD ? lD : [],
+            IC = null !== (LD = null !== (TD = null !== (GD = vD(AD.length, pD.nodes, "nodes")) && void 0 !== GD ? GD : vD(FD.length, pD.meshes, "meshes")) && void 0 !== TD ? TD : vD(DC.length, pD.materials, "materials")) && void 0 !== LD ? LD : vD(cC.length, pD.images, "images");
+          if (IC) return IC;
+          const pC = new Set;
+          for (const ID of AD)
+            for (const DD of null !== (iC = ID.children) && void 0 !== iC ? iC : []) {
+              var iC;
+              if (!ND(DD, AD.length) || pC.has(DD)) return bD;
+              pC.add(DD)
             }
-          const lu = new Set,
-            Mu = zz => {
-              var uz;
-              return !lu.has(zz) && (lu.add(zz), (null !== (uz = Yz[zz].children) && void 0 !== uz ? uz : []).every(Mu))
+          const fC = new Set,
+            bC = DD => {
+              var CD;
+              return !fC.has(DD) && (fC.add(DD), (null !== (CD = AD[DD].children) && void 0 !== CD ? CD : []).every(bC))
             };
-          for (const Ez of null !== (tu = Bz[0].nodes) && void 0 !== tu ? tu : []) {
-            var tu;
-            if (!Xz(Ez, Yz.length) || nu.has(Ez) || !Mu(Ez)) return Mz
+          for (const ID of null !== (QC = hD[0].nodes) && void 0 !== QC ? QC : []) {
+            var QC;
+            if (!ND(ID, AD.length) || pC.has(ID) || !bC(ID)) return bD
           }
-          for (const Ez of Yz) {
-            if (void 0 !== Ez.matrix) return "uses node matrices";
-            if (void 0 !== Ez.skin) return "uses skins";
-            if (void 0 !== Ez.weights) return "uses morph targets";
-            if (void 0 !== Ez.mesh && !Xz(Ez.mesh, kz.length)) return Mz;
-            const zz = [
-              [Ez.translation, 3],
-              [Ez.rotation, 4],
-              [Ez.scale, 3]
+          for (const ID of AD) {
+            if (void 0 !== ID.matrix) return "uses node matrices";
+            if (void 0 !== ID.skin) return "uses skins";
+            if (void 0 !== ID.weights) return "uses morph targets";
+            if (void 0 !== ID.mesh && !ND(ID.mesh, FD.length)) return bD;
+            const DD = [
+              [ID.translation, 3],
+              [ID.rotation, 4],
+              [ID.scale, 3]
             ];
-            for (const [uz, bz] of zz)
-              if (void 0 !== uz && (!Array.isArray(uz) || uz.length !== bz || !uz.every((zz => Number.isFinite(zz))))) return Mz
+            for (const [CD, cD] of DD)
+              if (void 0 !== CD && (!Array.isArray(CD) || CD.length !== cD || !CD.every((DD => Number.isFinite(DD))))) return bD
           }
-          let Hu = -1,
-            Ou = 0,
-            pu = 0,
-            du = null;
-          for (const nz of kz) {
-            if (void 0 !== nz.weights) return "uses morph targets";
-            if (0 === nz.primitives.length) return Mz;
-            for (const bz of nz.primitives) {
-              var Fu, Zu;
-              const nz = null !== (Fu = bz.mode) && void 0 !== Fu ? Fu : 4;
-              var Ru;
-              if (4 !== nz && 0 !== nz) return `uses ${null!==(Ru=Zz[nz])&&void 0!==Ru?Ru:`mode ${nz}`} primitives`;
-              if (void 0 !== bz.targets) return "uses morph targets";
-              if (void 0 !== bz.material && !Xz(bz.material, zu.length)) return Mz;
-              const iz = yz ? null === (Zu = bz.extensions) || void 0 === Zu ? void 0 : Zu.KHR_draco_mesh_compression : void 0;
-              if (iz) {
-                if (4 !== nz) return "uses Draco-compressed points";
-                if (!Az(zz, uz, iz.bufferView) || "object" !== typeof iz.attributes) return Mz
+          let wC = -1,
+            SC = 0,
+            BC = 0,
+            yC = null;
+          for (const pD of FD) {
+            if (void 0 !== pD.weights) return "uses morph targets";
+            if (0 === pD.primitives.length) return bD;
+            for (const cD of pD.primitives) {
+              var MC, tC;
+              const pD = null !== (MC = cD.mode) && void 0 !== MC ? MC : 4;
+              var ZC;
+              if (4 !== pD && 0 !== pD) return `uses ${null!==(ZC=tD[pD])&&void 0!==ZC?ZC:`mode ${pD}`} primitives`;
+              if (void 0 !== cD.targets) return "uses morph targets";
+              if (void 0 !== cD.material && !ND(cD.material, DC.length)) return bD;
+              const iD = dD ? null === (tC = cD.extensions) || void 0 === tC ? void 0 : tC.KHR_draco_mesh_compression : void 0;
+              if (iD) {
+                if (4 !== pD) return "uses Draco-compressed points";
+                if (!xD(DD, CD, iD.bufferView) || "object" !== typeof iD.attributes) return bD
               }
-              const lz = bz.attributes;
-              if ("object" !== typeof lz || null === lz) return Mz;
-              if (void 0 === lz.POSITION) return "has a primitive with no positions";
-              if (!Xz(lz.POSITION, Iz.length)) return Mz;
-              const tz = Iz[lz.POSITION].count;
-              for (const [zz, uz] of Object.entries(lz)) {
-                if (!Xz(uz, Iz.length)) return Mz;
-                if (/^(JOINTS|WEIGHTS)_\d+$/.test(zz)) return "uses skins";
-                const bz = Iz[uz],
-                  Ez = Oz[zz];
-                if (Ez && (bz.componentType !== Rz || bz.normalized || bz.type !== Ez)) return `stores ${zz} as ${oz(bz)}`;
-                const nz = dz[zz];
-                if (nz && (bz.type !== nz.type || !nz.componentTypes.includes(bz.componentType) || bz.componentType === Rz === !!bz.normalized)) return `stores ${zz} as ${oz(bz)}`;
-                if (Fz.has(zz) && bz.count !== tz) return "has vertex attributes of different lengths"
+              const fD = cD.attributes;
+              if ("object" !== typeof fD || null === fD) return bD;
+              if (void 0 === fD.POSITION) return "has a primitive with no positions";
+              if (!ND(fD.POSITION, uD.length)) return bD;
+              const QD = uD[fD.POSITION].count;
+              for (const [DD, CD] of Object.entries(fD)) {
+                if (!ND(CD, uD.length)) return bD;
+                if (/^(JOINTS|WEIGHTS)_\d+$/.test(DD)) return "uses skins";
+                const cD = uD[CD],
+                  ID = SD[DD];
+                if (ID && (cD.componentType !== ZD || cD.normalized || cD.type !== ID)) return `stores ${DD} as ${nD(cD)}`;
+                const pD = yD[DD];
+                if (pD && (cD.type !== pD.type || !pD.componentTypes.includes(cD.componentType) || cD.componentType === ZD === !!cD.normalized)) return `stores ${DD} as ${nD(cD)}`;
+                if (MD.has(DD) && cD.count !== QD) return "has vertex attributes of different lengths"
               }
-              if (iz) {
-                if (void 0 === bz.indices) return Mz;
-                for (const uz in iz.attributes)
-                  if (Fz.has(uz) && void 0 === lz[uz]) return Mz;
-                if (void 0 === iz.attributes.POSITION) return Mz;
-                const zz = Xz(bz.indices, Iz.length) ? Iz[bz.indices].count : -1;
-                if (0 === zz) return Mz;
-                if (-1 === Hu) Hu = iz.bufferView, Ou = tz, pu = zz;
+              if (iD) {
+                if (void 0 === cD.indices) return bD;
+                for (const CD in iD.attributes)
+                  if (MD.has(CD) && void 0 === fD[CD]) return bD;
+                if (void 0 === iD.attributes.POSITION) return bD;
+                const DD = ND(cD.indices, uD.length) ? uD[cD.indices].count : -1;
+                if (0 === DD) return bD;
+                if (-1 === wC) wC = iD.bufferView, SC = QD, BC = DD;
                 else {
-                  du ??= new Map([
-                    [Hu, [Ou, pu]]
+                  yC ??= new Map([
+                    [wC, [SC, BC]]
                   ]);
-                  const uz = du.get(iz.bufferView);
-                  if (uz && (uz[0] !== tz || uz[1] !== zz)) return Mz;
-                  du.set(iz.bufferView, null !== uz && void 0 !== uz ? uz : [tz, zz])
+                  const CD = yC.get(iD.bufferView);
+                  if (CD && (CD[0] !== QD || CD[1] !== DD)) return bD;
+                  yC.set(iD.bufferView, null !== CD && void 0 !== CD ? CD : [QD, DD])
                 }
               }
-              let Hz = tz;
-              if (void 0 !== bz.indices) {
-                if (!Xz(bz.indices, Iz.length)) return Mz;
-                const zz = Iz[bz.indices];
-                if ("SCALAR" !== zz.type) return Mz;
-                if (5121 === zz.componentType) return "uses 8-bit indices";
-                var Ku;
-                if (5123 !== zz.componentType && 5125 !== zz.componentType) return `stores indices as ${null!==(Ku=Ez.e[zz.componentType])&&void 0!==Ku?Ku:zz.componentType}`;
-                if (!iz && void 0 === zz.bufferView) return Mz;
-                Hz = zz.count
+              let wD = QD;
+              if (void 0 !== cD.indices) {
+                if (!ND(cD.indices, uD.length)) return bD;
+                const DD = uD[cD.indices];
+                if ("SCALAR" !== DD.type) return bD;
+                if (5121 === DD.componentType) return "uses 8-bit indices";
+                var oC;
+                if (5123 !== DD.componentType && 5125 !== DD.componentType) return `stores indices as ${null!==(oC=ID.f[DD.componentType])&&void 0!==oC?oC:DD.componentType}`;
+                if (!iD && void 0 === DD.bufferView) return bD;
+                wD = DD.count
               }
-              if (4 === nz && Hz % 3 !== 0) return Mz
+              if (4 === pD && wD % 3 !== 0) return bD
             }
           }
-          let wu = 0,
-            Xu = 0,
-            fu = 0;
-          for (let Ez = 0; Ez < Yz.length; Ez++) {
-            const zz = Yz[Ez].mesh;
-            if (void 0 !== zz && lu.has(Ez))
-              for (const uz of kz[zz].primitives) fu++, wu += Iz[uz.attributes.POSITION].count, void 0 !== uz.indices && (Xu += Iz[uz.indices].count)
+          let vC = 0,
+            NC = 0,
+            gC = 0;
+          for (let ID = 0; ID < AD.length; ID++) {
+            const DD = AD[ID].mesh;
+            if (void 0 !== DD && fC.has(ID))
+              for (const CD of FD[DD].primitives) gC++, vC += uD[CD.attributes.POSITION].count, void 0 !== CD.indices && (NC += uD[CD.indices].count)
           }
-          const su = null !== (gz = null !== (Sz = wz(wu, nz.vertices, "vertices")) && void 0 !== Sz ? Sz : wz(Xu, nz.indices, "indices")) && void 0 !== gz ? gz : wz(fu, nz.primitives, "primitives");
-          if (su) return su;
-          for (const Ez of zu) {
-            var ru, ou;
-            if (void 0 !== Ez.emissiveTexture) return "uses an emissive texture";
-            const uz = null !== (ru = Ez.alphaMode) && void 0 !== ru ? ru : "OPAQUE";
-            if ("OPAQUE" !== uz && "MASK" !== uz && "BLEND" !== uz) return Mz;
-            const bz = null === (ou = Ez.pbrMetallicRoughness) || void 0 === ou ? void 0 : ou.baseColorTexture;
-            if (bz) {
-              var Nu, vu, xu, Ju, Au;
-              const uz = null !== (Nu = zz.extensionsUsed) && void 0 !== Nu && Nu.includes("KHR_texture_transform") ? null === (vu = bz.extensions) || void 0 === vu ? void 0 : vu.KHR_texture_transform : void 0;
-              if (0 !== (null !== (xu = bz.texCoord) && void 0 !== xu ? xu : 0) || 0 !== (null !== (Ju = null === uz || void 0 === uz ? void 0 : uz.texCoord) && void 0 !== Ju ? Ju : 0)) return "uses a second UV set";
-              const Ez = uu[bz.index];
-              if (!Ez || !Xz(Ez.source, bu.length) || void 0 !== Ez.sampler && !Xz(Ez.sampler, null === (Au = zz.samplers) || void 0 === Au ? void 0 : Au.length)) return Mz
+          const XC = null !== (RD = null !== (kD = vD(vC, pD.vertices, "vertices")) && void 0 !== kD ? kD : vD(NC, pD.indices, "indices")) && void 0 !== RD ? RD : vD(gC, pD.primitives, "primitives");
+          if (XC) return XC;
+          for (const ID of DC) {
+            var mC, nC;
+            if (void 0 !== ID.emissiveTexture) return "uses an emissive texture";
+            const CD = null !== (mC = ID.alphaMode) && void 0 !== mC ? mC : "OPAQUE";
+            if ("OPAQUE" !== CD && "MASK" !== CD && "BLEND" !== CD) return bD;
+            const cD = null === (nC = ID.pbrMetallicRoughness) || void 0 === nC ? void 0 : nC.baseColorTexture;
+            if (cD) {
+              var OC, PC, HC, UC, xC;
+              const CD = null !== (OC = DD.extensionsUsed) && void 0 !== OC && OC.includes("KHR_texture_transform") ? null === (PC = cD.extensions) || void 0 === PC ? void 0 : PC.KHR_texture_transform : void 0;
+              if (0 !== (null !== (HC = cD.texCoord) && void 0 !== HC ? HC : 0) || 0 !== (null !== (UC = null === CD || void 0 === CD ? void 0 : CD.texCoord) && void 0 !== UC ? UC : 0)) return "uses a second UV set";
+              const ID = CC[cD.index];
+              if (!ID || !ND(ID.source, cC.length) || void 0 !== ID.sampler && !ND(ID.sampler, null === (xC = DD.samplers) || void 0 === xC ? void 0 : xC.length)) return bD
             }
           }
-          for (const Ez of bu) {
-            if (void 0 !== Ez.uri) return tz;
-            if (void 0 === Ez.bufferView) return Mz;
-            const bz = Az(zz, uz, Ez.bufferView);
-            if (!bz) return Mz;
-            if ("image/png" !== Ez.mimeType) {
-              var Tu, Lu, Pu;
-              return `has ${xz(null!==(Tu=null!==(Lu={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(Pu=Ez.mimeType)&&void 0!==Pu?Pu:""])&&void 0!==Lu?Lu:Ez.mimeType)&&void 0!==Tu?Tu:"untyped")} image`
+          for (const ID of cC) {
+            if (void 0 !== ID.uri) return QD;
+            if (void 0 === ID.bufferView) return bD;
+            const cD = xD(DD, CD, ID.bufferView);
+            if (!cD) return bD;
+            if ("image/png" !== ID.mimeType) {
+              var qC, JC, KC;
+              return `has ${HD(null!==(qC=null!==(JC={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(KC=ID.mimeType)&&void 0!==KC?KC:""])&&void 0!==JC?JC:ID.mimeType)&&void 0!==qC?qC:"untyped")} image`
             }
-            if (!vz(bz)) return `has ${xz(Nz(bz))} image`;
-            const iz = new DataView(bz.buffer, bz.byteOffset, bz.byteLength),
-              lz = iz.getUint32(16),
-              Hz = iz.getUint32(20);
-            if (lz > nz.imageSide || Hz > nz.imageSide) return `has a ${lz} \xd7 ${Hz} image (the limit is ${nz.imageSide})`
+            if (!PD(cD)) return `has ${HD(OD(cD))} image`;
+            const iD = new DataView(cD.buffer, cD.byteOffset, cD.byteLength),
+              fD = iD.getUint32(16),
+              wD = iD.getUint32(20);
+            if (fD > pD.imageSide || wD > pD.imageSide) return `has a ${fD} \xd7 ${wD} image (the limit is ${pD.imageSide})`
           }
           return null
-        }(zz, uz)
+        }(DD, CD)
       } catch {
-        return Mz
+        return bD
       }
     }
 
-    function Gz(zz) {
-      const uz = Lz(zz.byteLength);
-      if (uz) return uz;
+    function aD(DD) {
+      const CD = JD(DD.byteLength);
+      if (CD) return CD;
       try {
         const {
-          json: uz,
-          bin: bz
-        } = (0, Ez.z)(zz);
-        return Pz(uz, bz)
-      } catch (bz) {
-        if (bz instanceof Ez.m) return bz.reason;
-        throw bz
+          json: CD,
+          bin: cD
+        } = (0, ID.x)(DD);
+        return KD(CD, cD)
+      } catch (cD) {
+        if (cD instanceof ID.q) return cD.reason;
+        throw cD
       }
     }
   },
-  9063: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Fz,
-      e: () => dz,
-      i: () => Rz,
-      j: () => iz,
-      m: () => nz,
-      n: () => Zz,
-      q: () => Oz,
-      t: () => pz,
-      w: () => lz,
-      z: () => Hz
+  9125: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => MD,
+      f: () => yD,
+      i: () => ZD,
+      m: () => iD,
+      q: () => pD,
+      r: () => tD,
+      t: () => SD,
+      u: () => BD,
+      v: () => fD,
+      x: () => wD
     });
-    var Ez = bz(9067);
-    class nz extends Error {
-      constructor(zz) {
-        super(`GLB refused: it ${zz}`), this.reason = zz, this.name = "GlbRefused"
+    var ID = cD(9132);
+    class pD extends Error {
+      constructor(DD) {
+        super(`GLB refused: it ${DD}`), this.reason = DD, this.name = "GlbRefused"
       }
     }
-    class iz extends Error {
-      constructor(zz) {
-        super(zz), this.name = "GlbError"
+    class iD extends Error {
+      constructor(DD) {
+        super(DD), this.name = "GlbError"
       }
     }
 
-    function lz(zz) {
-      return Reflect.get(zz, "scene")
+    function fD(DD) {
+      return Reflect.get(DD, "scene")
     }
-    const Mz = 5130562,
-      tz = "is not a binary glTF 2.0 file";
+    const bD = 5130562,
+      QD = "is not a binary glTF 2.0 file";
 
-    function Hz(zz) {
-      var uz;
-      const bz = zz instanceof Uint8Array ? zz : new Uint8Array(zz),
-        iz = (0, Ez.d)(bz);
-      if (null === iz) throw new nz(tz);
-      const lz = iz.json,
+    function wD(DD) {
+      var CD;
+      const cD = DD instanceof Uint8Array ? DD : new Uint8Array(DD),
+        iD = (0, ID.d)(cD);
+      if (null === iD) throw new pD(QD);
+      const fD = iD.json,
         {
-          jsonEnd: Hz,
-          length: Oz
-        } = iz,
-        pz = new DataView(bz.buffer, bz.byteOffset, bz.byteLength);
-      let dz = -1,
-        Fz = 0;
-      for (let Kz = Hz; Kz < Oz;) {
-        if (Kz + 8 > Oz) throw new nz(tz);
-        const zz = pz.getUint32(Kz, !0),
-          uz = pz.getUint32(Kz + 4, !0);
-        if (Kz + 8 + zz > Oz || uz === Ez.c || uz === Mz && -1 !== dz) throw new nz(tz);
-        uz === Mz && (dz = Kz + 8, Fz = zz), Kz += 8 + zz
+          jsonEnd: wD,
+          length: SD
+        } = iD,
+        BD = new DataView(cD.buffer, cD.byteOffset, cD.byteLength);
+      let yD = -1,
+        MD = 0;
+      for (let oD = wD; oD < SD;) {
+        if (oD + 8 > SD) throw new pD(QD);
+        const DD = BD.getUint32(oD, !0),
+          CD = BD.getUint32(oD + 4, !0);
+        if (oD + 8 + DD > SD || CD === ID.c || CD === bD && -1 !== yD) throw new pD(QD);
+        CD === bD && (yD = oD + 8, MD = DD), oD += 8 + DD
       }
-      let Zz = null;
-      const Rz = null === (uz = lz.buffers) || void 0 === uz ? void 0 : uz[0];
-      if (-1 !== dz && Rz && void 0 === Rz.uri) {
-        if (!(Rz.byteLength >= 0) || Rz.byteLength > Fz) throw new nz(tz);
-        Zz = new Uint8Array(bz.buffer, bz.byteOffset + dz, Rz.byteLength)
+      let tD = null;
+      const ZD = null === (CD = fD.buffers) || void 0 === CD ? void 0 : CD[0];
+      if (-1 !== yD && ZD && void 0 === ZD.uri) {
+        if (!(ZD.byteLength >= 0) || ZD.byteLength > MD) throw new pD(QD);
+        tD = new Uint8Array(cD.buffer, cD.byteOffset + yD, ZD.byteLength)
       }
       return {
-        json: lz,
-        bin: Zz,
-        fileBytes: bz.byteLength
+        json: fD,
+        bin: tD,
+        fileBytes: cD.byteLength
       }
     }
 
-    function Oz(zz) {
-      const uz = zz.slice(zz.indexOf(",") + 1),
-        bz = Uint8Array.fromBase64;
-      if (bz) return bz(uz).buffer;
-      const Ez = atob(uz),
-        nz = new Uint8Array(Ez.length);
-      for (let iz = 0; iz < Ez.length; iz++) nz[iz] = Ez.charCodeAt(iz);
-      return nz.buffer
+    function SD(DD) {
+      const CD = DD.slice(DD.indexOf(",") + 1),
+        cD = Uint8Array.fromBase64;
+      if (cD) return cD(CD).buffer;
+      const ID = atob(CD),
+        pD = new Uint8Array(ID.length);
+      for (let iD = 0; iD < ID.length; iD++) pD[iD] = ID.charCodeAt(iD);
+      return pD.buffer
     }
-    async function pz(zz) {
-      if (zz.startsWith("data:")) return Oz(zz);
-      const uz = await fetch(zz);
-      if (!uz.ok) throw new iz(`fetching ${zz} failed: ${uz.status} ${uz.statusText}`);
-      return await uz.arrayBuffer()
+    async function BD(DD) {
+      if (DD.startsWith("data:")) return SD(DD);
+      const CD = await fetch(DD);
+      if (!CD.ok) throw new iD(`fetching ${DD} failed: ${CD.status} ${CD.statusText}`);
+      return await CD.arrayBuffer()
     }
-    const dz = {
+    const yD = {
         5120: "i8",
         5121: "u8",
         5122: "i16",
@@ -482,7 +482,7 @@ export const modules = {
         5125: "u32",
         5126: "f32"
       },
-      Fz = {
+      MD = {
         5120: 1,
         5121: 1,
         5122: 2,
@@ -490,7 +490,7 @@ export const modules = {
         5125: 4,
         5126: 4
       },
-      Zz = {
+      tD = {
         SCALAR: 1,
         VEC2: 2,
         VEC3: 3,
@@ -499,7 +499,7 @@ export const modules = {
         MAT3: 9,
         MAT4: 16
       },
-      Rz = [
+      ZD = [
         ["POSITION", "position"],
         ["NORMAL", "normal"],
         ["TANGENT", "tangent"],
@@ -512,48 +512,48 @@ export const modules = {
         ["COLOR_0", "color"]
       ]
   },
-  9067: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => nz,
-      d: () => iz,
-      f: () => lz
+  9132: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => pD,
+      d: () => iD,
+      g: () => fD
     });
-    const Ez = 1179937895,
-      nz = 1313821514;
+    const ID = 1179937895,
+      pD = 1313821514;
 
-    function iz(zz) {
-      const uz = new DataView(zz.buffer, zz.byteOffset, zz.byteLength);
-      if (zz.byteLength < 20 || uz.getUint32(0, !0) !== Ez || 2 !== uz.getUint32(4, !0)) return null;
-      const bz = Math.min(uz.getUint32(8, !0), zz.byteLength),
-        iz = uz.getUint32(12, !0);
-      if (uz.getUint32(16, !0) !== nz || 20 + iz > bz) return null;
-      let lz;
+    function iD(DD) {
+      const CD = new DataView(DD.buffer, DD.byteOffset, DD.byteLength);
+      if (DD.byteLength < 20 || CD.getUint32(0, !0) !== ID || 2 !== CD.getUint32(4, !0)) return null;
+      const cD = Math.min(CD.getUint32(8, !0), DD.byteLength),
+        iD = CD.getUint32(12, !0);
+      if (CD.getUint32(16, !0) !== pD || 20 + iD > cD) return null;
+      let fD;
       try {
-        lz = JSON.parse((new TextDecoder).decode(zz.subarray(20, 20 + iz)))
+        fD = JSON.parse((new TextDecoder).decode(DD.subarray(20, 20 + iD)))
       } catch {
         return null
       }
-      return "object" === typeof lz && null !== lz ? {
-        json: lz,
-        jsonEnd: 20 + iz,
-        length: bz
+      return "object" === typeof fD && null !== fD ? {
+        json: fD,
+        jsonEnd: 20 + iD,
+        length: cD
       } : null
     }
 
-    function lz(zz) {
-      var uz;
-      const bz = null === (uz = iz(zz)) || void 0 === uz ? void 0 : uz.json;
-      if (void 0 === bz || !Array.isArray(bz.extensionsUsed) || !bz.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const Ez = bz.meshes;
-      return Array.isArray(Ez) && Ez.some((zz => {
-        const uz = null === zz || void 0 === zz ? void 0 : zz.primitives;
-        return Array.isArray(uz) && uz.some((zz => {
-          const uz = null === zz || void 0 === zz ? void 0 : zz.extensions;
-          return null != (null === uz || void 0 === uz ? void 0 : uz.KHR_draco_mesh_compression)
+    function fD(DD) {
+      var CD;
+      const cD = null === (CD = iD(DD)) || void 0 === CD ? void 0 : CD.json;
+      if (void 0 === cD || !Array.isArray(cD.extensionsUsed) || !cD.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
+      const ID = cD.meshes;
+      return Array.isArray(ID) && ID.some((DD => {
+        const CD = null === DD || void 0 === DD ? void 0 : DD.primitives;
+        return Array.isArray(CD) && CD.some((DD => {
+          const CD = null === DD || void 0 === DD ? void 0 : DD.extensions;
+          return null != (null === CD || void 0 === CD ? void 0 : CD.KHR_draco_mesh_compression)
         }))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

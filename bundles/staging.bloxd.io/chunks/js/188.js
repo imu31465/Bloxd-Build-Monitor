@@ -1,170 +1,170 @@
 export const id = 188;
 export const ids = [188];
 export const modules = {
-  38463: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Mz,
-      f: () => iz
+  38455: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => bD,
+      f: () => iD
     });
-    var Ez = bz(3874);
-    let nz = null;
+    var ID = cD(3942);
+    let pD = null;
 
-    function iz(zz) {
-      return null !== nz && zz === nz
+    function iD(DD) {
+      return null !== pD && DD === pD
     }
 
-    function lz() {
-      this.PU = !1, this.stopPropagation = !1, this.aU = !1, this.disabled = !1
+    function fD() {
+      this.lT = !1, this.stopPropagation = !1, this.eT = !1, this.disabled = !1
     }
-    class Mz {
-      constructor(zz, uz) {
+    class bD {
+      constructor(DD, CD) {
         this.version = "0.7.0";
-        var bz = Object.assign({}, new lz, uz || {});
-        this.element = zz || document, this.PU = !!bz.PU, this.stopPropagation = !!bz.stopPropagation, this.aU = !!bz.aU, this.disabled = !!bz.disabled, this.filterEvents = (zz, uz) => !0, this.down = new Ez.EventEmitter, this.up = new Ez.EventEmitter, this.state = {}, this.WU = {
+        var cD = Object.assign({}, new fD, CD || {});
+        this.element = DD || document, this.lT = !!cD.lT, this.stopPropagation = !!cD.stopPropagation, this.eT = !!cD.eT, this.disabled = !!cD.disabled, this.filterEvents = (DD, CD) => !0, this.down = new ID.EventEmitter, this.up = new ID.EventEmitter, this.state = {}, this.pG = {
           dx: 0,
           dy: 0,
-          dzz: 0,
-          Fzz: 0,
-          Rzz: 0
+          yDD: 0,
+          MDD: 0,
+          tDD: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? Hz(this) : document.addEventListener("DOMContentLoaded", (zz => {
-          Hz(this)
+        }, "loading" !== document.readyState ? wD(this) : document.addEventListener("DOMContentLoaded", (DD => {
+          wD(this)
         }), {
           once: !0
         })
       }
-      bind(zz) {
-        for (var uz = arguments.length, bz = new Array(uz > 1 ? uz - 1 : 0), Ez = 1; Ez < uz; Ez++) bz[Ez - 1] = arguments[Ez];
-        bz.forEach((uz => {
-          var bz = this._keyBindmap[uz] || [];
-          bz.includes(zz) || (bz.push(zz), this._keyBindmap[uz] = bz)
-        })), this.state[zz] = !!this.state[zz], this.pressCount[zz] = this.pressCount[zz] || 0, this.releaseCount[zz] = this.releaseCount[zz] || 0
+      bind(DD) {
+        for (var CD = arguments.length, cD = new Array(CD > 1 ? CD - 1 : 0), ID = 1; ID < CD; ID++) cD[ID - 1] = arguments[ID];
+        cD.forEach((CD => {
+          var cD = this._keyBindmap[CD] || [];
+          cD.includes(DD) || (cD.push(DD), this._keyBindmap[CD] = cD)
+        })), this.state[DD] = !!this.state[DD], this.pressCount[DD] = this.pressCount[DD] || 0, this.releaseCount[DD] = this.releaseCount[DD] || 0
       }
-      unbind(zz) {
-        for (var uz in this._keyBindmap) {
-          var bz = this._keyBindmap[uz],
-            Ez = bz.indexOf(zz);
-          Ez > -1 && bz.splice(Ez, 1)
+      unbind(DD) {
+        for (var CD in this._keyBindmap) {
+          var cD = this._keyBindmap[CD],
+            ID = cD.indexOf(DD);
+          ID > -1 && cD.splice(ID, 1)
         }
       }
       getBindings() {
-        var zz = {};
-        for (var uz in this._keyBindmap) {
-          this._keyBindmap[uz].forEach((bz => {
-            zz[bz] = zz[bz] || [], zz[bz].push(uz)
+        var DD = {};
+        for (var CD in this._keyBindmap) {
+          this._keyBindmap[CD].forEach((cD => {
+            DD[cD] = DD[cD] || [], DD[cD].push(CD)
           }))
         }
-        return zz
+        return DD
       }
-      sd() {
-        tz(this.WU), tz(this.pressCount), tz(this.releaseCount)
+      wy() {
+        QD(this.pG), QD(this.pressCount), QD(this.releaseCount)
       }
     }
 
-    function tz(zz) {
-      for (var uz in zz) zz[uz] = 0
+    function QD(DD) {
+      for (var CD in DD) DD[CD] = 0
     }
 
-    function Hz(zz) {
-      window.addEventListener("keydown", Kz.bind(null, zz, !0), !1), window.addEventListener("keyup", Kz.bind(null, zz, !1), !1);
-      var uz = {
+    function wD(DD) {
+      window.addEventListener("keydown", oD.bind(null, DD, !0), !1), window.addEventListener("keyup", oD.bind(null, DD, !1), !1);
+      var CD = {
         passive: !0
       };
-      zz.element.addEventListener("touchstart", Fz.bind(void 0, zz), {
+      DD.element.addEventListener("touchstart", MD.bind(void 0, DD), {
         passive: !1
-      }), zz.element.addEventListener("touchend", Rz.bind(void 0, zz), uz), zz.element.addEventListener("mousedown", wz.bind(null, zz, !0), uz), window.document.addEventListener("mouseup", wz.bind(null, zz, !1), uz), zz.element.addEventListener("touchmove", Xz.bind(null, zz), uz), zz.element.addEventListener("mousemove", Xz.bind(null, zz), uz), window.PointerEvent, zz.element.addEventListener("wheel", fz.bind(null, zz), uz), zz.element.addEventListener("contextmenu", sz.bind(null, zz), !1), window.addEventListener("blur", Nz.bind(null, zz), !1)
+      }), DD.element.addEventListener("touchend", ZD.bind(void 0, DD), CD), DD.element.addEventListener("mousedown", vD.bind(null, DD, !0), CD), window.document.addEventListener("mouseup", vD.bind(null, DD, !1), CD), DD.element.addEventListener("touchmove", ND.bind(null, DD), CD), DD.element.addEventListener("mousemove", ND.bind(null, DD), CD), window.PointerEvent, DD.element.addEventListener("wheel", gD.bind(null, DD), CD), DD.element.addEventListener("contextmenu", XD.bind(null, DD), !1), window.addEventListener("blur", OD.bind(null, DD), !1)
     }
-    var Oz = 0,
-      pz = 0,
-      dz = null;
+    var SD = 0,
+      BD = 0,
+      yD = null;
 
-    function Fz(zz, uz) {
-      uz.preventDefault(), Zz(uz)
+    function MD(DD, CD) {
+      CD.preventDefault(), tD(CD)
     }
 
-    function Zz(zz) {
-      let uz = !1;
-      for (let bz = 0; bz < zz.touches.length; ++bz)
-        if (zz.touches[bz].identifier === dz) {
-          uz = !0;
+    function tD(DD) {
+      let CD = !1;
+      for (let cD = 0; cD < DD.touches.length; ++cD)
+        if (DD.touches[cD].identifier === yD) {
+          CD = !0;
           break
-        } if (!uz) {
-        const uz = zz.changedTouches[0];
-        Oz = uz.clientX, pz = uz.clientY, dz = uz.identifier
+        } if (!CD) {
+        const CD = DD.changedTouches[0];
+        SD = CD.clientX, BD = CD.clientY, yD = CD.identifier
       }
     }
 
-    function Rz(zz, uz) {
-      for (var bz = uz.changedTouches, Ez = 0; Ez < bz.length; ++Ez) bz[Ez].identifier === dz && (dz = null)
+    function ZD(DD, CD) {
+      for (var cD = CD.changedTouches, ID = 0; ID < cD.length; ++ID) cD[ID].identifier === yD && (yD = null)
     }
 
-    function Kz(zz, uz, bz) {
+    function oD(DD, CD, cD) {
       try {
-        vz(zz, bz), uz && bz.isTrusted && !bz.repeat && zz._keyStates[bz.code] && xz(zz, bz.code)
+        PD(DD, cD), CD && cD.isTrusted && !cD.repeat && DD._keyStates[cD.code] && HD(DD, cD.code)
       } finally {
-        Jz(bz.code, uz, zz, bz)
+        UD(cD.code, CD, DD, cD)
       }
     }
 
-    function wz(zz, uz, bz) {
+    function vD(DD, CD, cD) {
       try {
-        vz(zz, bz)
+        PD(DD, cD)
       } finally {
-        ! function(zz, uz, bz) {
-          if ("pointerId" in bz)
-            if (uz) {
-              if (null !== zz._touches.currID) return;
-              zz._touches.currID = bz.pointerId
+        ! function(DD, CD, cD) {
+          if ("pointerId" in cD)
+            if (CD) {
+              if (null !== DD._touches.currID) return;
+              DD._touches.currID = cD.pointerId
             } else {
-              if (zz._touches.currID !== bz.pointerId) return;
-              zz._touches.currID = null
-            } var Ez = "button" in bz ? bz.button + 1 : 1;
-          Jz("Mouse" + Ez, uz, zz, bz)
-        }(zz, uz, bz)
+              if (DD._touches.currID !== cD.pointerId) return;
+              DD._touches.currID = null
+            } var ID = "button" in cD ? cD.button + 1 : 1;
+          UD("Mouse" + ID, CD, DD, cD)
+        }(DD, CD, cD)
       }
     }
 
-    function Xz(zz, uz) {
-      var bz = uz.movementX || uz.mozMovementX || 0,
-        Ez = uz.movementY || uz.mozMovementY || 0;
-      if (uz.touches && 0 === (bz | Ez)) {
-        var nz = function(zz) {
-          Zz(zz);
-          for (let uz = 0; uz < zz.changedTouches.length; ++uz)
-            if (zz.changedTouches[uz].identifier == dz) {
-              const bz = zz.changedTouches[uz],
-                Ez = [bz.clientX - Oz, bz.clientY - pz];
-              return Oz = bz.clientX, pz = bz.clientY, Ez
-            } return console.error(`Did not find touch id ${dz}`), [0, 0]
-        }(uz);
-        bz = nz[0], Ez = nz[1]
+    function ND(DD, CD) {
+      var cD = CD.movementX || CD.mozMovementX || 0,
+        ID = CD.movementY || CD.mozMovementY || 0;
+      if (CD.touches && 0 === (cD | ID)) {
+        var pD = function(DD) {
+          tD(DD);
+          for (let CD = 0; CD < DD.changedTouches.length; ++CD)
+            if (DD.changedTouches[CD].identifier == yD) {
+              const cD = DD.changedTouches[CD],
+                ID = [cD.clientX - SD, cD.clientY - BD];
+              return SD = cD.clientX, BD = cD.clientY, ID
+            } return console.error(`Did not find touch id ${yD}`), [0, 0]
+        }(CD);
+        cD = pD[0], ID = pD[1]
       }
-      zz.WU.dx += bz, zz.WU.dy += Ez
+      DD.pG.dx += cD, DD.pG.dy += ID
     }
 
-    function fz(zz, uz) {
-      vz(zz, uz);
-      var bz = 1;
-      switch (uz.deltaMode) {
+    function gD(DD, CD) {
+      PD(DD, CD);
+      var cD = 1;
+      switch (CD.deltaMode) {
         case 0:
-          bz = 1;
+          cD = 1;
           break;
         case 1:
-          bz = 12;
+          cD = 12;
           break;
         case 2:
-          bz = zz.element.clientHeight || window.innerHeight
+          cD = DD.element.clientHeight || window.innerHeight
       }
-      zz.WU.dzz += (uz.deltaX || 0) * bz, zz.WU.Fzz += (uz.deltaY || 0) * bz, zz.WU.Rzz += (uz.deltaZ || 0) * bz
+      DD.pG.yDD += (CD.deltaX || 0) * cD, DD.pG.MDD += (CD.deltaY || 0) * cD, DD.pG.tDD += (CD.deltaZ || 0) * cD
     }
 
-    function sz(zz, uz) {
-      if (!zz.aU) return uz.preventDefault(), !1
+    function XD(DD, CD) {
+      if (!DD.eT) return CD.preventDefault(), !1
     }
-    var rz = {
+    var mD = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -175,247 +175,247 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function oz(zz, uz) {
-      return !!zz[rz[uz]] || ("AltRight" === uz || "ControlLeft" === uz) && "function" === typeof zz.getModifierState && !0 === zz.getModifierState("AltGraph")
+    function nD(DD, CD) {
+      return !!DD[mD[CD]] || ("AltRight" === CD || "ControlLeft" === CD) && "function" === typeof DD.getModifierState && !0 === DD.getModifierState("AltGraph")
     }
 
-    function Nz(zz, uz) {
-      for (var bz in zz._modifiersHeldThroughBlur = {}, rz) zz._keyStates[bz] && (zz._modifiersHeldThroughBlur[bz] = !0);
-      uz && uz.isTrusted && function() {
+    function OD(DD, CD) {
+      for (var cD in DD._modifiersHeldThroughBlur = {}, mD) DD._keyStates[cD] && (DD._modifiersHeldThroughBlur[cD] = !0);
+      CD && CD.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (zz) {
+        } catch (DD) {
           return !0
         }
-      }() && (clearTimeout(zz._blurRelease), zz._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(DD._blurRelease), DD._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var uz in zz._modifiersHeldThroughBlur = {}, zz._keyStates) zz._keyStates[uz] && !/^Mouse\d/.test(uz) && xz(zz, uz)
+          for (var CD in DD._modifiersHeldThroughBlur = {}, DD._keyStates) DD._keyStates[CD] && !/^Mouse\d/.test(CD) && HD(DD, CD)
       }), 0))
     }
 
-    function vz(zz, uz) {
-      var bz = zz._modifiersHeldThroughBlur;
-      if (bz && uz.isTrusted && document.hasFocus())
-        for (var Ez in bz) delete bz[Ez], zz._keyStates[Ez] && Ez !== uz.code && (oz(uz, Ez) || xz(zz, Ez))
+    function PD(DD, CD) {
+      var cD = DD._modifiersHeldThroughBlur;
+      if (cD && CD.isTrusted && document.hasFocus())
+        for (var ID in cD) delete cD[ID], DD._keyStates[ID] && ID !== CD.code && (nD(CD, ID) || HD(DD, ID))
     }
 
-    function xz(zz, uz) {
-      const bz = {
-          code: uz,
+    function HD(DD, CD) {
+      const cD = {
+          code: CD,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        Ez = nz;
-      nz = bz;
+        ID = pD;
+      pD = cD;
       try {
-        Jz(uz, !1, zz, bz)
+        UD(CD, !1, DD, cD)
       } finally {
-        nz = Ez
+        pD = ID
       }
     }
 
-    function Jz(zz, uz, bz, Ez) {
-      var nz = bz._keyBindmap[zz];
-      nz && (Az(bz._keyStates[zz], uz) && (bz._keyStates[zz] = uz, nz.forEach((zz => {
-        (!bz.filterEvents || bz.filterEvents(Ez, zz)) && function(zz, uz, bz, Ez) {
-          var nz = uz ? bz.pressCount : bz.releaseCount;
-          nz[zz] = (nz[zz] || 0) + 1;
-          var iz = bz._bindPressCount[zz] || 0;
-          (iz += uz ? 1 : -1) < 0 && (iz = 0);
-          bz._bindPressCount[zz] = iz;
-          var lz = bz.state[zz];
-          if (Az(lz, iz)) {
-            bz.state[zz] = iz > 0;
-            var Mz = uz ? bz.down : bz.up;
-            bz.disabled || Mz.emit(zz, Ez)
+    function UD(DD, CD, cD, ID) {
+      var pD = cD._keyBindmap[DD];
+      pD && (xD(cD._keyStates[DD], CD) && (cD._keyStates[DD] = CD, pD.forEach((DD => {
+        (!cD.filterEvents || cD.filterEvents(ID, DD)) && function(DD, CD, cD, ID) {
+          var pD = CD ? cD.pressCount : cD.releaseCount;
+          pD[DD] = (pD[DD] || 0) + 1;
+          var iD = cD._bindPressCount[DD] || 0;
+          (iD += CD ? 1 : -1) < 0 && (iD = 0);
+          cD._bindPressCount[DD] = iD;
+          var fD = cD.state[DD];
+          if (xD(fD, iD)) {
+            cD.state[DD] = iD > 0;
+            var bD = CD ? cD.down : cD.up;
+            cD.disabled || bD.emit(DD, ID)
           }
-        }(zz, uz, bz, Ez)
-      }))), "button" in Ez || (bz.PU && !Ez.defaultPrevented && Ez.preventDefault(), bz.stopPropagation && Ez.stopPropagation()))
+        }(DD, CD, cD, ID)
+      }))), "button" in ID || (cD.lT && !ID.defaultPrevented && ID.preventDefault(), cD.stopPropagation && ID.stopPropagation()))
     }
 
-    function Az(zz, uz) {
-      return zz ? !uz : uz
+    function xD(DD, CD) {
+      return DD ? !CD : CD
     }
   },
-  36156: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Fz,
-      d: () => Zz
+  36075: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => MD,
+      e: () => tD
     });
-    var Ez = bz(56),
-      nz = bz(2756),
-      iz = bz(1417),
-      lz = bz(1912),
-      Mz = bz(36103),
-      tz = bz(588),
-      Hz = bz(1038),
-      Oz = bz.n(Hz),
-      pz = bz(1089);
-    const dz = {},
-      Fz = (0, Ez.memo)((function() {
-        const zz = (0, nz.c)();
-        return (0, iz.g)("damagedByOtherPlayer", (uz => {
+    var ID = cD(53),
+      pD = cD(2790),
+      iD = cD(1440),
+      fD = cD(1954),
+      bD = cD(36018),
+      QD = cD(624),
+      wD = cD(1049),
+      SD = cD.n(wD),
+      BD = cD(1093);
+    const yD = {},
+      MD = (0, ID.memo)((function() {
+        const DD = (0, pD.b)();
+        return (0, iD.f)("damagedByOtherPlayer", (CD => {
           let {
-            nE: bz,
-            direction: Ez
-          } = uz;
-          const nz = bz || "nonDirectional";
-          if (dz[nz]) {
-            const uz = dz[nz];
-            clearTimeout(uz.timeout), uz.direction = Ez, uz.timeout = setTimeout((() => {
-              delete dz[nz], zz()
+            Wc: cD,
+            direction: ID
+          } = CD;
+          const pD = cD || "nonDirectional";
+          if (yD[pD]) {
+            const CD = yD[pD];
+            clearTimeout(CD.timeout), CD.direction = ID, CD.timeout = setTimeout((() => {
+              delete yD[pD], DD()
             }), 800)
-          } else dz[nz] = {
-            direction: Ez,
-            KV: null,
+          } else yD[pD] = {
+            direction: ID,
+            wV: null,
             timeout: setTimeout((() => {
-              delete dz[nz], zz()
+              delete yD[pD], DD()
             }), 800)
           };
-          zz()
-        })), (0, lz.d)("kill", (uz => {
+          DD()
+        })), (0, fD.c)("kill", (CD => {
           let {
-            killer: bz,
-            victim: Ez
-          } = uz;
-          const nz = Ez.id;
-          bz.local && nz && nz in dz && (clearTimeout(dz[nz].timeout), delete dz[nz], zz())
-        })), (0, Ez.useEffect)((() => {
-          const zz = (0, Mz.g)("turnDamageIndicators", Zz);
+            killer: cD,
+            victim: ID
+          } = CD;
+          const pD = ID.id;
+          cD.local && pD && pD in yD && (clearTimeout(yD[pD].timeout), delete yD[pD], DD())
+        })), (0, ID.useEffect)((() => {
+          const DD = (0, bD.c)("turnDamageIndicators", tD);
           return () => {
-            zz();
-            for (const zz in dz) clearTimeout(dz[zz].timeout), delete dz[zz]
+            DD();
+            for (const DD in yD) clearTimeout(yD[DD].timeout), delete yD[DD]
           }
-        }), []), (0, pz.jsx)("div", {
+        }), []), (0, BD.jsx)("div", {
           className: "DirectionalDamage",
-          children: Object.entries(dz).map((zz => {
-            let [uz, bz] = zz;
-            const Ez = (0, tz.F)(bz.direction);
-            return (0, pz.jsx)("div", {
-              ref: zz => {
-                dz[uz] && (dz[uz].KV = zz)
+          children: Object.entries(yD).map((DD => {
+            let [CD, cD] = DD;
+            const ID = (0, QD.C)(cD.direction);
+            return (0, BD.jsx)("div", {
+              ref: DD => {
+                yD[CD] && (yD[CD].wV = DD)
               },
-              className: Oz()("DamageIndicator", {
-                DamageIndicatorFullCircle: Ez
+              className: SD()("DamageIndicator", {
+                DamageIndicatorFullCircle: ID
               })
-            }, uz)
+            }, CD)
           }))
         })
       }));
 
-    function Zz(zz) {
-      for (const uz in dz) {
+    function tD(DD) {
+      for (const CD in yD) {
         const {
-          direction: bz,
-          KV: Ez
-        } = dz[uz];
-        if ((0, tz.F)(bz)) continue;
-        const nz = bz - zz;
-        Ez.style.rotate = `${nz}rad`
+          direction: cD,
+          wV: ID
+        } = yD[CD];
+        if ((0, QD.C)(cD)) continue;
+        const pD = cD - DD;
+        ID.style.rotate = `${pD}rad`
       }
     }
   },
-  35970: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => nz,
-      e: () => iz
+  35908: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => pD,
+      f: () => iD
     });
-    let Ez = !1;
+    let ID = !1;
 
-    function nz() {
-      return Ez
+    function pD() {
+      return ID
     }
 
-    function iz(zz) {
-      return Ez !== zz && (Ez = zz, !0)
+    function iD(DD) {
+      return ID !== DD && (ID = DD, !0)
     }
   },
-  8920: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz,
-      g: () => nz
+  8986: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => iD,
+      g: () => pD
     });
-    var Ez = bz(20);
+    var ID = cD(16);
 
-    function nz(zz, uz) {
-      return zz && !uz
+    function pD(DD, CD) {
+      return DD && !CD
     }
 
-    function iz() {
-      return nz(Ez.e.get("isTouchScreen"), Ez.e.get("clientEscMenuOptions").touchActionButtons)
+    function iD() {
+      return pD(ID.d.get("isTouchScreen"), ID.d.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  39834: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      startPadGameplay: () => sz
+  39757: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      startPadGameplay: () => XD
     });
-    bz(39704);
-    var Ez = bz(39708),
-      nz = bz(3521),
-      iz = bz(20),
-      lz = bz(38436),
-      Mz = bz(3437),
-      tz = bz(38454),
-      Hz = bz(22),
-      Oz = bz(2623),
-      pz = bz(37824),
-      dz = bz(8530),
-      Fz = bz(39712);
-    const Zz = {
+    cD(39652);
+    var ID = cD(39661),
+      pD = cD(3583),
+      iD = cD(16),
+      fD = cD(38427),
+      bD = cD(3501),
+      QD = cD(38443),
+      wD = cD(20),
+      SD = cD(2642),
+      BD = cD(37807),
+      yD = cD(8555),
+      MD = cD(39668);
+    const tD = {
       yawRadPerSec: 0,
       pitchRadPerSec: 0
     };
-    var Rz = bz(39731),
-      Kz = bz(8507);
-    const wz = zz => zz.padSneakToggled || !!iz.e.get("clientEscMenuOptions").crouchIsToggle && zz.crouchToggled,
-      Xz = () => {
-        const zz = (() => {
-          const zz = (0, dz.e)();
-          let uz = Zz;
-          const bz = new Fz.e;
-          let Ez = !1,
-            nz = 0;
-          const iz = () => {
-            const bz = performance.now(),
-              iz = 0 === nz ? 0 : bz - nz;
-            if (nz = bz, !Ez) return zz.discardPending(), null;
-            const lz = (0, Fz.p)(uz, iz),
-              Mz = zz.drainLookDelta(),
-              tz = (0, pz.k)();
+    var ZD = cD(39678),
+      oD = cD(8534);
+    const vD = DD => DD.padSneakToggled || !!iD.d.get("clientEscMenuOptions").crouchIsToggle && DD.crouchToggled,
+      ND = () => {
+        const DD = (() => {
+          const DD = (0, yD.c)();
+          let CD = tD;
+          const cD = new MD.c;
+          let ID = !1,
+            pD = 0;
+          const iD = () => {
+            const cD = performance.now(),
+              iD = 0 === pD ? 0 : cD - pD;
+            if (pD = cD, !ID) return DD.discardPending(), null;
+            const fD = (0, MD.p)(CD, iD),
+              bD = DD.drainLookDelta(),
+              QD = (0, BD.f)();
             return {
-              QJ: (lz.QJ + Mz.QJ) * tz,
-              eJ: (lz.eJ + Mz.eJ) * tz
+              Qq: (fD.Qq + bD.Qq) * QD,
+              wq: (fD.wq + bD.wq) * QD
             }
           };
           return {
-            update: (zz, nz, lz, Mz) => {
-              zz.camera.mD !== iz && (zz.camera.mD = iz), Ez = !0, uz = (0, Fz.t)(bz, nz, lz, Mz, performance.now())
+            update: (DD, pD, fD, bD) => {
+              DD.camera.Vk !== iD && (DD.camera.Vk = iD), ID = !0, CD = (0, MD.t)(cD, pD, fD, bD, performance.now())
             },
             release: () => {
-              Ez = !1, uz = Zz, bz.reset()
+              ID = !1, CD = tD, cD.reset()
             },
-            uninstall: zz => {
-              zz.camera.mD === iz && (zz.camera.mD = null)
+            uninstall: DD => {
+              DD.camera.Vk === iD && (DD.camera.Vk = null)
             }
           }
         })();
         return {
-          update: (uz, bz, Ez) => {
-            zz.update((0, Oz.g)(), uz, bz, Ez)
+          update: (CD, cD, ID) => {
+            DD.update((0, SD.i)(), CD, cD, ID)
           },
-          release: zz.release,
+          release: DD.release,
           uninstall: () => {
-            const uz = (0, Oz.g)();
-            uz && zz.uninstall(uz)
+            const CD = (0, SD.i)();
+            CD && DD.uninstall(CD)
           }
         }
       };
-    var fz = bz(39724);
-    bz(37139), bz(8387);
-    bz(8407).b;
-    const sz = () => {
-      const zz = (0, fz.d)((() => {
-          const zz = {
+    var gD = cD(39674);
+    cD(37055), cD(8409);
+    cD(8428).e;
+    const XD = () => {
+      const DD = (0, gD.d)((() => {
+          const DD = {
             x: 0,
             y: 0,
             magnitude: 0,
@@ -427,25 +427,25 @@ export const modules = {
             sprintHeld: !1
           };
           return {
-            bodies: () => (0, lz.e)(),
-            look: Xz(),
-            move: (uz, bz) => {
-              const Ez = (0, Oz.g)(),
-                nz = Ez.zN.puz();
-              if (zz.x = uz.x, zz.y = uz.y, zz.magnitude = uz.magnitude, zz.headingOffset = uz.headingOffset, zz.jumpHeld = uz.jumpHeld, uz.jumpPressed && (zz.jumpPressedSinceTick = !0), zz.running = uz.running, zz.sprintHeld = uz.sprintHeld, bz) {
-                const uz = (0, Rz.i)({
-                  ...bz,
-                  descending: Ez.zN.tzz(Ez.iG).shouldIgnoreCrouchingSpeedReduction(),
-                  canCrouch: !!Ez.Vr.canCrouch,
-                  toggled: wz(nz)
+            bodies: () => (0, fD.b)(),
+            look: ND(),
+            move: (CD, cD) => {
+              const ID = (0, SD.i)(),
+                pD = ID.Km.fCD();
+              if (DD.x = CD.x, DD.y = CD.y, DD.magnitude = CD.magnitude, DD.headingOffset = CD.headingOffset, DD.jumpHeld = CD.jumpHeld, CD.jumpPressed && (DD.jumpPressedSinceTick = !0), DD.running = CD.running, DD.sprintHeld = CD.sprintHeld, cD) {
+                const CD = (0, ZD.d)({
+                  ...cD,
+                  descending: ID.Km.QDD(ID.aJ).shouldIgnoreCrouchingSpeedReduction(),
+                  canCrouch: !!ID.qm.canCrouch,
+                  toggled: vD(pD)
                 });
-                zz.crouchHeld = uz.crouchHeld, nz.padSneakToggled = uz.toggled, nz.crouchToggled = !1, (0, Kz.e)(uz.toggled)
+                DD.crouchHeld = CD.crouchHeld, pD.padSneakToggled = CD.toggled, pD.crouchToggled = !1, (0, oD.g)(CD.toggled)
               }
-              nz.gamepad = zz
+              pD.gamepad = DD
             },
             stopMoving: () => {
-              var uz;
-              Object.assign(zz, {
+              var CD;
+              Object.assign(DD, {
                 x: 0,
                 y: 0,
                 magnitude: 0,
@@ -456,616 +456,616 @@ export const modules = {
                 running: !1,
                 sprintHeld: !1
               });
-              const bz = null === (uz = (0, Oz.g)()) || void 0 === uz ? void 0 : uz.zN.puz();
-              (null === bz || void 0 === bz ? void 0 : bz.gamepad) === zz && (bz.gamepad = null)
+              const cD = null === (CD = (0, SD.i)()) || void 0 === CD ? void 0 : CD.Km.fCD();
+              (null === cD || void 0 === cD ? void 0 : cD.gamepad) === DD && (cD.gamepad = null)
             },
             uninstall: () => {},
-            deviceChanged: zz => {
-              const uz = (0, Oz.g)(),
-                bz = null === uz || void 0 === uz ? void 0 : uz.zN.puz();
-              "touch" === zz ? ((0, Kz.e)(!1), null !== bz && void 0 !== bz && bz.padSneakToggled && (bz.padSneakToggled = !1, bz.isTouchscreen && !bz.gamepad && uz.zN.Vzz(uz.iG).setCrouching(!!uz.Vr.canCrouch && bz.touchCrouch))) : "gamepad" === zz && bz && (0, Kz.e)(wz(bz))
+            deviceChanged: DD => {
+              const CD = (0, SD.i)(),
+                cD = null === CD || void 0 === CD ? void 0 : CD.Km.fCD();
+              "touch" === DD ? ((0, oD.g)(!1), null !== cD && void 0 !== cD && cD.padSneakToggled && (cD.padSneakToggled = !1, cD.isTouchscreen && !cD.gamepad && CD.Km.qDD(CD.aJ).setCrouching(!!CD.qm.canCrouch && cD.touchCrouch))) : "gamepad" === DD && cD && (0, oD.g)(vD(cD))
             },
             hasPlayer: () => {
-              var zz;
-              return !(null === (zz = (0, Oz.g)()) || void 0 === zz || !zz.iG)
+              var DD;
+              return !(null === (DD = (0, SD.i)()) || void 0 === DD || !DD.aJ)
             },
             isPlayerDead: () => {
-              var zz;
-              const uz = (0, Oz.g)();
-              return !1 === (null === (zz = uz.zN.nuz(uz.iG)) || void 0 === zz ? void 0 : zz.isAlive)
+              var DD;
+              const CD = (0, SD.i)();
+              return !1 === (null === (DD = CD.Km.hDD(CD.aJ)) || void 0 === DD ? void 0 : DD.isAlive)
             },
             isReplayMode: () => {
-              var zz, uz;
-              return !(null === (zz = (0, Oz.d)()) || void 0 === zz || null === (uz = zz.client) || void 0 === uz || !uz.isReplayMode())
+              var DD, CD;
+              return !(null === (DD = (0, SD.e)()) || void 0 === DD || null === (CD = DD.client) || void 0 === CD || !CD.isReplayMode())
             },
             isFreeCameraOn: () => {
-              var zz, uz, bz;
-              return !(null === (zz = (0, Oz.d)()) || void 0 === zz || null === (uz = zz.client) || void 0 === uz || null === (bz = uz.freeCameraController) || void 0 === bz || !bz.isEnabled())
+              var DD, CD, cD;
+              return !(null === (DD = (0, SD.e)()) || void 0 === DD || null === (CD = DD.client) || void 0 === CD || null === (cD = CD.freeCameraController) || void 0 === cD || !cD.isEnabled())
             },
-            targetsBlock: () => !!(0, Oz.g)().U3,
+            targetsBlock: () => !!(0, SD.i)().R_,
             selectedSlotEmpty: () => {
-              var zz;
-              const uz = (0, Oz.g)();
-              return !(null !== (zz = uz.zN.hzz(uz.iG)) && void 0 !== zz && zz.getItemAtSelectedSlot())
+              var DD;
+              const CD = (0, SD.i)();
+              return !(null !== (DD = CD.Km.KDD(CD.aJ)) && void 0 !== DD && DD.getItemAtSelectedSlot())
             },
             pickBlockAllowed: () => {
-              const zz = (0, Oz.g)().Vr;
-              return !!zz.creative && !!zz.canPickBlocks
+              const DD = (0, SD.i)().qm;
+              return !!DD.creative && !!DD.canPickBlocks
             },
-            scrollHotbar: zz => {
-              Hz.k.sK("ScrollInventorySlot", zz)
+            scrollHotbar: DD => {
+              wD.i.Uo("ScrollInventorySlot", DD)
             },
-            hasFullInventory: () => (0, tz.c)((0, Oz.g)()),
-            hasLobbyLeaderboard: () => !!(0, Oz.g)().Vr.lobbyLeaderboardInfo,
+            hasFullInventory: () => (0, QD.c)((0, SD.i)()),
+            hasLobbyLeaderboard: () => !!(0, SD.i)().qm.lobbyLeaderboardInfo,
             contextActionInputs: () => {
-              var zz, uz, bz, Ez;
-              const nz = (0, Oz.g)();
+              var DD, CD, cD, ID;
+              const pD = (0, SD.i)();
               return {
-                holdingGun: !(null === (zz = nz.zN.iuz(nz.iG)) || void 0 === zz || null === (uz = zz.Fv) || void 0 === uz || !uz.isGun()),
-                customButtons: null !== (bz = nz.Vr.customButtons) && void 0 !== bz ? bz : null,
-                touchscreenActionButton: null !== (Ez = nz.Vr.touchscreenActionButton) && void 0 !== Ez ? Ez : null
+                holdingGun: !(null === (DD = pD.Km.rDD(pD.aJ)) || void 0 === DD || null === (CD = DD.gH) || void 0 === CD || !CD.isGun()),
+                customButtons: null !== (cD = pD.qm.customButtons) && void 0 !== cD ? cD : null,
+                touchscreenActionButton: null !== (ID = pD.qm.touchscreenActionButton) && void 0 !== ID ? ID : null
               }
             },
-            pressTouchButton: zz => {
-              (0, Mz.sendColyMessage)(nz.Qj, zz)
+            pressTouchButton: DD => {
+              (0, bD.sendColyMessage)(pD.qj, DD)
             }
           }
         })()),
-        uz = (0, Ez.e)(),
-        bz = null,
-        iz = null;
+        CD = (0, ID.b)(),
+        cD = null,
+        iD = null;
       return () => {
-        zz(), uz(), null === bz || void 0 === bz || bz(), null === iz || void 0 === iz || iz()
+        DD(), CD(), null === cD || void 0 === cD || cD(), null === iD || void 0 === iD || iD()
       }
     }
   },
-  36080: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz,
-      d: () => Rz,
-      g: () => Kz,
-      h: () => Mz,
-      i: () => dz,
-      j: () => wz,
-      n: () => pz,
-      q: () => fz,
-      u: () => Zz,
-      x: () => Xz
+  36002: (DD, CD, cD) => {
+    cD.d(CD, {
+      B: () => tD,
+      C: () => ND,
+      b: () => iD,
+      e: () => ZD,
+      i: () => oD,
+      l: () => bD,
+      p: () => yD,
+      q: () => vD,
+      t: () => BD,
+      x: () => gD
     });
-    var Ez = bz(20),
-      nz = bz(22);
-    const iz = "clientGameInventoryButtonsChanged",
-      lz = new Map;
+    var ID = cD(16),
+      pD = cD(20);
+    const iD = "clientGameInventoryButtonsChanged",
+      fD = new Map;
 
-    function Mz() {
-      return [...lz.values()].sort(((zz, uz) => {
-        var bz, Ez;
-        return (null !== (bz = zz.order) && void 0 !== bz ? bz : 0) - (null !== (Ez = uz.order) && void 0 !== Ez ? Ez : 0)
+    function bD() {
+      return [...fD.values()].sort(((DD, CD) => {
+        var cD, ID;
+        return (null !== (cD = DD.order) && void 0 !== cD ? cD : 0) - (null !== (ID = CD.order) && void 0 !== ID ? ID : 0)
       }))
     }
-    let tz = null;
+    let QD = null;
 
-    function Hz(zz) {
-      tz = zz
+    function wD(DD) {
+      QD = DD
     }
-    let Oz = !1;
+    let SD = !1;
 
-    function pz(zz) {
-      Oz = !0;
+    function BD(DD) {
+      SD = !0;
       try {
-        zz.onClick()
+        DD.onClick()
       } finally {
-        Oz = !1
+        SD = !1
       }
-      zz.panel && "clientGame" === Ez.e.get("openInGameMenuName") && Hz(zz.id)
+      DD.panel && "clientGame" === ID.d.get("openInGameMenuName") && wD(DD.id)
     }
 
-    function dz() {
-      return Oz
+    function yD() {
+      return SD
     }
 
-    function Fz() {
-      return Mz().filter((zz => zz.panel && !zz.disabled))
+    function MD() {
+      return bD().filter((DD => DD.panel && !DD.disabled))
     }
 
-    function Zz(zz) {
-      const uz = Fz(),
-        bz = uz.findIndex((zz => zz.id === tz));
-      return !(bz < 0 || uz.length < 2) && (pz(uz[(bz + zz + uz.length) % uz.length]), !0)
+    function tD(DD) {
+      const CD = MD(),
+        cD = CD.findIndex((DD => DD.id === QD));
+      return !(cD < 0 || CD.length < 2) && (BD(CD[(cD + DD + CD.length) % CD.length]), !0)
     }
 
-    function Rz() {
-      return null !== tz && Fz().length > 1
+    function ZD() {
+      return null !== QD && MD().length > 1
     }
 
-    function Kz() {
-      Hz(null)
+    function oD() {
+      wD(null)
     }
 
-    function wz() {
-      "inventory" !== Ez.e.get("openInGameMenuName") && Hz(null)
+    function vD() {
+      "inventory" !== ID.d.get("openInGameMenuName") && wD(null)
     }
 
-    function Xz() {
-      const zz = tz;
-      return Hz(null), zz
+    function ND() {
+      const DD = QD;
+      return wD(null), DD
     }
 
-    function fz(zz) {
-      return lz.set(zz.id, zz), nz.k.sK(iz, Mz(), !0), () => {
-        lz.get(zz.id) === zz && (lz.delete(zz.id), nz.k.sK(iz, Mz()))
+    function gD(DD) {
+      return fD.set(DD.id, DD), pD.i.Uo(iD, bD(), !0), () => {
+        fD.get(DD.id) === DD && (fD.delete(DD.id), pD.i.Uo(iD, bD()))
       }
     }
   },
-  36071: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz,
-      i: () => Kz,
-      l: () => wz,
-      n: () => dz,
-      o: () => Hz,
-      p: () => Rz,
-      t: () => Fz,
-      x: () => Oz
+  35996: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => bD,
+      e: () => oD,
+      i: () => vD,
+      m: () => yD,
+      o: () => wD,
+      s: () => ZD,
+      u: () => MD,
+      v: () => SD
     });
-    var Ez = bz(20),
-      nz = bz(22),
-      iz = bz(1269),
-      lz = bz(36080);
-    const Mz = "clientGameUiChanged";
-    let tz = null;
+    var ID = cD(16),
+      pD = cD(20),
+      iD = cD(1284),
+      fD = cD(36002);
+    const bD = "clientGameUiChanged";
+    let QD = null;
 
-    function Hz() {
-      return tz
+    function wD() {
+      return QD
     }
 
-    function Oz(zz, uz) {
-      const bz = {
-        content: zz,
-        menu: uz
+    function SD(DD, CD) {
+      const cD = {
+        content: DD,
+        menu: CD
       };
-      return tz = bz, nz.k.sK(Mz, tz, !0), () => {
-        tz === bz && (tz = null, Zz = !1, Kz(), nz.k.sK(Mz, null))
+      return QD = cD, pD.i.Uo(bD, QD, !0), () => {
+        QD === cD && (QD = null, tD = !1, oD(), pD.i.Uo(bD, null))
       }
     }
-    let pz = null;
+    let BD = null;
 
-    function dz() {
-      return pz
+    function yD() {
+      return BD
     }
 
-    function Fz(zz) {
-      return pz = zz, () => {
-        pz === zz && (pz = null)
+    function MD(DD) {
+      return BD = DD, () => {
+        BD === DD && (BD = null)
       }
     }
-    let Zz = !1;
+    let tD = !1;
 
-    function Rz() {
-      const zz = Ez.e.get("openInGameMenuName");
-      "clientGame" !== zz && (Zz = "inventory" === zz), (0, lz.i)() || (0, lz.g)(), (0, iz.m)(iz.b), Ez.e.set({
+    function ZD() {
+      const DD = ID.d.get("openInGameMenuName");
+      "clientGame" !== DD && (tD = "inventory" === DD), (0, fD.p)() || (0, fD.i)(), (0, iD.p)(iD.e), ID.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Kz() {
-      Xz(!1)
+    function oD() {
+      ND(!1)
     }
 
-    function wz() {
-      Xz(Zz)
+    function vD() {
+      ND(tD)
     }
 
-    function Xz(zz) {
-      "clientGame" === Ez.e.get("openInGameMenuName") && Ez.e.set({
-        openInGameMenuName: zz ? "inventory" : null
-      }), zz || (0, lz.g)(), Zz = !1
+    function ND(DD) {
+      "clientGame" === ID.d.get("openInGameMenuName") && ID.d.set({
+        openInGameMenuName: DD ? "inventory" : null
+      }), DD || (0, fD.i)(), tD = !1
     }
   },
-  35965: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => tz
+  35906: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => QD
     });
-    var Ez = bz(316),
-      nz = bz(20),
-      iz = bz(35970),
-      lz = bz(1595),
-      Mz = bz(1923);
+    var ID = cD(312),
+      pD = cD(16),
+      iD = cD(35908),
+      fD = cD(1627),
+      bD = cD(1961);
 
-    function tz(zz, uz) {
-      var bz, tz, Hz;
-      if (!nz.e.get("isKeydownEnabled") || zz.repeat) return;
-      const Oz = zz.code;
-      "Escape" === zz.key ? (0, lz.d)(zz) : null !== (bz = Mz.s.OpenSettings) && void 0 !== bz && bz.includes(Oz) ? (0, lz.t)(zz, Ez.r.SETTINGS) : null !== (tz = Mz.s.OpenCharacterCustomization) && void 0 !== tz && tz.includes(Oz) ? (0, iz.d)() || (0, lz.t)(zz, Ez.r.CUSTOMISATION, uz()) : null !== (Hz = Mz.s.ShowDebugOverlay) && void 0 !== Hz && Hz.includes(Oz) && nz.e.set({
-        showDebugOverlay: !nz.e.get("showDebugOverlay")
+    function QD(DD, CD) {
+      var cD, QD, wD;
+      if (!pD.d.get("isKeydownEnabled") || DD.repeat) return;
+      const SD = DD.code;
+      "Escape" === DD.key ? (0, fD.k)(DD) : null !== (cD = bD.q.OpenSettings) && void 0 !== cD && cD.includes(SD) ? (0, fD.y)(DD, ID.q.SETTINGS) : null !== (QD = bD.q.OpenCharacterCustomization) && void 0 !== QD && QD.includes(SD) ? (0, iD.d)() || (0, fD.y)(DD, ID.q.CUSTOMISATION, CD()) : null !== (wD = bD.q.ShowDebugOverlay) && void 0 !== wD && wD.includes(SD) && pD.d.set({
+        showDebugOverlay: !pD.d.get("showDebugOverlay")
       })
     }
   },
-  35952: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => dz,
-      c: () => Oz,
-      g: () => Fz,
-      j: () => pz
+  35883: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => yD,
+      f: () => SD,
+      g: () => MD,
+      i: () => BD
     });
-    var Ez = bz(328),
-      nz = bz(621),
-      iz = bz(633),
-      lz = bz(33);
-    const Mz = {
+    var ID = cD(326),
+      pD = cD(656),
+      iD = cD(668),
+      fD = cD(36);
+    const bD = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      tz = "playSessionGameNameWithVariation",
-      Hz = "wasMatchmakePlayer";
+      QD = "playSessionGameNameWithVariation",
+      wD = "wasMatchmakePlayer";
 
-    function Oz() {
-      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lz.h;
-      (0, iz.j)(zz, Mz)
+    function SD() {
+      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : fD.j;
+      (0, iD.j)(DD, bD)
     }
 
-    function pz() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lz.h).setItem(Hz, !0)
+    function BD() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : fD.j).setItem(wD, !0)
     }
 
-    function dz() {
-      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lz.h;
-      return (0, iz.d)(zz, Mz)
+    function yD() {
+      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : fD.j;
+      return (0, iD.e)(DD, bD)
     }
 
-    function Fz(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lz.h;
-      const bz = (0, iz.d)(uz, Mz),
-        Oz = function(zz) {
-          const uz = zz.getItem(tz);
-          return "string" !== typeof uz ? null : uz
-        }(uz),
-        pz = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lz.h).getItem(Hz)
-        }(uz);
-      let dz;
-      return dz = null !== bz && null !== Oz && (0, iz.g)(uz, Mz) && function(zz, uz, bz) {
-          const nz = (0, Ez.Sb)(zz),
-            iz = (0, Ez.Sb)(uz),
-            lz = (0, Ez.Nb)(zz),
-            Mz = (0, Ez.Nb)(uz);
-          return !(nz !== iz || !bz) || nz === iz && lz === Mz
-        }(Oz, zz, pz) ? bz : (0, nz.d)(), (0, iz.n)(uz, Mz, dz), uz.setItem(tz, zz),
+    function MD(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fD.j;
+      const cD = (0, iD.e)(CD, bD),
+        SD = function(DD) {
+          const CD = DD.getItem(QD);
+          return "string" !== typeof CD ? null : CD
+        }(CD),
+        BD = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : fD.j).getItem(wD)
+        }(CD);
+      let yD;
+      return yD = null !== cD && null !== SD && (0, iD.f)(CD, bD) && function(DD, CD, cD) {
+          const pD = (0, ID.Vb)(DD),
+            iD = (0, ID.Vb)(CD),
+            fD = (0, ID.Qb)(DD),
+            bD = (0, ID.Qb)(CD);
+          return !(pD !== iD || !cD) || pD === iD && fD === bD
+        }(SD, DD, BD) ? cD : (0, pD.b)(), (0, iD.k)(CD, bD, yD), CD.setItem(QD, DD),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lz.h).removeItem(Hz)
-        }(uz), dz
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : fD.j).removeItem(wD)
+        }(CD), yD
     }
   },
-  35945: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Xz,
-      e: () => fz
+  35879: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => ND,
+      h: () => gD
     });
-    var Ez = bz(994),
-      nz = bz(597),
-      iz = bz(328),
-      lz = bz(1e3),
-      Mz = bz(606),
-      tz = bz(646),
-      Hz = bz(4286),
-      Oz = bz(96),
-      pz = bz(128),
-      dz = bz(1673),
-      Fz = bz(111),
-      Zz = bz(35952),
-      Rz = bz(33),
-      Kz = bz(627),
-      wz = bz(35954);
+    var ID = cD(1011),
+      pD = cD(630),
+      iD = cD(326),
+      fD = cD(1020),
+      bD = cD(646),
+      QD = cD(684),
+      wD = cD(4321),
+      SD = cD(90),
+      BD = cD(120),
+      yD = cD(1701),
+      MD = cD(107),
+      tD = cD(35883),
+      ZD = cD(36),
+      oD = cD(659),
+      vD = cD(35888);
 
-    function Xz() {
-      var zz, uz;
-      return [...null !== (zz = navigator.languages) && void 0 !== zz ? zz : [null !== (uz = navigator.language) && void 0 !== uz ? uz : "none"], "en-Gb"]
+    function ND() {
+      var DD, CD;
+      return [...null !== (DD = navigator.languages) && void 0 !== DD ? DD : [null !== (CD = navigator.language) && void 0 !== CD ? CD : "none"], "en-Gb"]
     }
 
-    function fz(zz, uz, bz, fz, sz) {
-      const rz = (0, Ez.k)(uz) ? (0, Ez.q)(uz) : null,
-        oz = {
-          cookies: (0, dz.getAllCookiesForGameNameWithVariation)(uz),
-          isMobile: (0, Oz.isMobile)(),
-          isUsingCustomGameTexturePack: null !== rz && sz(rz),
+    function gD(DD, CD, cD, gD, XD) {
+      const mD = (0, ID.m)(CD) ? (0, ID.t)(CD) : null,
+        nD = {
+          cookies: (0, yD.getAllCookiesForGameNameWithVariation)(CD),
+          isMobile: (0, SD.isMobile)(),
+          isUsingCustomGameTexturePack: null !== mD && XD(mD),
           generalCookies: {
-            joinDiscord: !!Rz.g.getItem("DiscordPressed"),
-            newGo: Hz.b,
-            ...zz.getMetricsCookies(),
-            trafficCode: fz,
-            compliance: Oz.compliance
+            joinDiscord: !!ZD.h.getItem("DiscordPressed"),
+            newGo: wD.e,
+            ...DD.getMetricsCookies(),
+            trafficCode: gD,
+            compliance: SD.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, Oz.getBrowserName)(),
-            version: (0, Oz.getBrowserVersion)(),
+            name: (0, SD.getBrowserName)(),
+            version: (0, SD.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, Oz.getPlatformType)(),
-            deviceType: (0, Fz.e)()
+            platformType: (0, SD.getPlatformType)(),
+            deviceType: (0, MD.d)()
           },
-          isLoggedIn: zz.isLoggedIn(),
-          lobbyName: bz,
-          languages: Xz(),
-          version: nz.c,
-          siteUsed: pz.x,
-          subsiteUsed: pz.E,
-          playSessionId: (0, Zz.g)(uz),
-          visitSessionId: (0, Kz.d)(),
-          clientReason: Mz.o.reason,
-          budgetBasis: (0, wz.f)(),
-          ...null !== tz.q && {
-            diagClaim: tz.q.claimId
+          isLoggedIn: DD.isLoggedIn(),
+          lobbyName: cD,
+          languages: ND(),
+          version: pD.c,
+          siteUsed: BD.p,
+          subsiteUsed: BD.v,
+          playSessionId: (0, tD.g)(CD),
+          visitSessionId: (0, oD.b)(),
+          clientReason: bD.g.reason,
+          budgetBasis: (0, vD.f)(),
+          ...null !== QD.q && {
+            diagClaim: QD.q.claimId
           }
         };
-      return null !== rz && (0, iz.Fc)(rz) ? (oz.lobbyName = (0, Ez.g)(rz, (0, Ez.m)(uz), bz), {
-        roomName: `classic_${lz.e}`,
-        joinOptions: oz
+      return null !== mD && (0, iD.Fc)(mD) ? (nD.lobbyName = (0, ID.j)(mD, (0, ID.q)(CD), cD), {
+        roomName: `classic_${fD.g}`,
+        joinOptions: nD
       }) : {
-        roomName: uz,
-        joinOptions: oz
+        roomName: CD,
+        joinOptions: nD
       }
     }
   },
-  35959: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Ez,
-      i: () => nz,
-      j: () => iz
+  35903: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => ID,
+      g: () => pD,
+      k: () => iD
     });
-    const Ez = 1024,
-      nz = 1024 * Ez;
+    const ID = 1024,
+      pD = 1024 * ID;
 
-    function iz(zz) {
-      return (zz / nz).toFixed(1)
+    function iD(DD) {
+      return (DD / pD).toFixed(1)
     }
   },
-  35956: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz,
-      g: () => Mz,
-      j: () => lz,
-      l: () => tz,
-      p: () => Hz
+  35895: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => iD,
+      g: () => bD,
+      k: () => fD,
+      m: () => QD,
+      p: () => wD
     });
-    var Ez = bz(195);
-    const nz = 32 * bz(35959).i,
-      iz = 6144,
-      lz = 4608,
-      Mz = 512;
+    var ID = cD(194);
+    const pD = 32 * cD(35903).g,
+      iD = 6144,
+      fD = 4608,
+      bD = 512;
 
-    function tz(zz) {
-      return Math.floor(nz * zz / iz)
+    function QD(DD) {
+      return Math.floor(pD * DD / iD)
     }
 
-    function Hz(zz) {
-      const uz = zz - Math.floor(zz / 6);
-      let bz = Ez.e.maxChunkHorizAddDistance,
-        nz = Ez.e.maxChunkVertAddDistance;
-      if (Oz(bz + 1, nz + 1) <= uz) return null;
-      for (; Oz(bz + 1, nz + 1) > uz && (bz > 0 || nz > 0);) bz > nz ? bz-- : nz--;
+    function wD(DD) {
+      const CD = DD - Math.floor(DD / 6);
+      let cD = ID.h.maxChunkHorizAddDistance,
+        pD = ID.h.maxChunkVertAddDistance;
+      if (SD(cD + 1, pD + 1) <= CD) return null;
+      for (; SD(cD + 1, pD + 1) > CD && (cD > 0 || pD > 0);) cD > pD ? cD-- : pD--;
       return {
-        horizontal: bz,
-        vertical: nz
+        horizontal: cD,
+        vertical: pD
       }
     }
 
-    function Oz(zz, uz) {
-      const bz = Math.max(zz, uz);
-      let Ez = 0;
-      for (let nz = -bz; nz <= bz; nz++)
-        for (let iz = -bz; iz <= bz; iz++)
-          for (let lz = -bz; lz <= bz; lz++) pz(zz, uz, nz, iz, lz) && Ez++;
-      return Ez
+    function SD(DD, CD) {
+      const cD = Math.max(DD, CD);
+      let ID = 0;
+      for (let pD = -cD; pD <= cD; pD++)
+        for (let iD = -cD; iD <= cD; iD++)
+          for (let fD = -cD; fD <= cD; fD++) BD(DD, CD, pD, iD, fD) && ID++;
+      return ID
     }
 
-    function pz(zz, uz, bz, Ez, nz) {
-      const iz = bz * bz + nz * nz;
-      return zz === uz ? iz + Ez * Ez <= zz * zz : zz > uz ? Math.abs(Ez) <= uz && iz + Ez * Ez <= zz * zz : iz <= zz * zz && iz + Ez * Ez <= uz * uz
+    function BD(DD, CD, cD, ID, pD) {
+      const iD = cD * cD + pD * pD;
+      return DD === CD ? iD + ID * ID <= DD * DD : DD > CD ? Math.abs(ID) <= CD && iD + ID * ID <= DD * DD : iD <= DD * DD && iD + ID * ID <= CD * CD
     }
   },
-  35954: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => oz,
-      f: () => rz,
-      h: () => sz
+  35888: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => nD,
+      f: () => mD,
+      i: () => XD
     });
-    var Ez = bz(195),
-      nz = bz(96),
-      iz = bz(2706),
-      lz = bz(4169),
-      Mz = bz(615),
-      tz = bz(35956);
-    const Hz = 1048576,
-      Oz = 1024 * Hz,
-      pz = 400 * Hz,
-      dz = 147456,
-      Fz = .5,
-      Zz = 1.5 * Oz,
-      Rz = 768 * Hz;
+    var ID = cD(194),
+      pD = cD(90),
+      iD = cD(2735),
+      fD = cD(4197),
+      bD = cD(651),
+      QD = cD(35895);
+    const wD = 1048576,
+      SD = 1024 * wD,
+      BD = 400 * wD,
+      yD = 147456,
+      MD = .5,
+      tD = 1.5 * SD,
+      ZD = 768 * wD;
 
-    function Kz(zz) {
-      return pz + zz * dz
+    function oD(DD) {
+      return BD + DD * yD
     }
 
-    function wz(zz, uz, bz) {
-      var nz, lz;
+    function vD(DD, CD, cD) {
+      var pD, fD;
       let {
-        footprintBytes: Mz,
-        basis: Hz,
-        namesLimit: wz
-      } = function(zz) {
+        footprintBytes: bD,
+        basis: wD,
+        namesLimit: vD
+      } = function(DD) {
         const {
-          os: uz,
-          deviceMemory: bz
-        } = zz;
-        if ("ios" === uz) switch ((0, iz.f)(zz)) {
+          os: CD,
+          deviceMemory: cD
+        } = DD;
+        if ("ios" === CD) switch ((0, iD.h)(DD)) {
           case "ipad_m":
             return {
-              footprintBytes: Kz(tz.c), basis: "ipad-m", namesLimit: !1
+              footprintBytes: oD(QD.e), basis: "ipad-m", namesLimit: !1
             };
           case "ipad":
             return {
-              footprintBytes: Rz, basis: "ipad", namesLimit: !0
+              footprintBytes: ZD, basis: "ipad", namesLimit: !0
             };
           case "iphone_6gb":
             return {
-              footprintBytes: Zz, basis: "iphone-6gb", namesLimit: !0
+              footprintBytes: tD, basis: "iphone-6gb", namesLimit: !0
             };
           case "iphone":
             return {
-              footprintBytes: Rz, basis: "iphone", namesLimit: !0
+              footprintBytes: ZD, basis: "iphone", namesLimit: !0
             }
         }
-        return "number" === typeof bz && Number.isFinite(bz) && bz > 0 ? {
-          footprintBytes: bz * Oz * Fz,
-          basis: `memory-${bz}`,
+        return "number" === typeof cD && Number.isFinite(cD) && cD > 0 ? {
+          footprintBytes: cD * SD * MD,
+          basis: `memory-${cD}`,
           namesLimit: !0
-        } : "android" === uz ? {
-          footprintBytes: Rz,
+        } : "android" === CD ? {
+          footprintBytes: ZD,
           basis: "android",
           namesLimit: !0
         } : {
-          footprintBytes: Kz(tz.j),
+          footprintBytes: oD(QD.k),
           basis: "unreported",
           namesLimit: !1
         }
-      }(zz);
-      if (bz) {
-        const zz = Math.min(Mz, Kz(tz.c));
-        Mz = pz + Math.max(0, zz - pz) / 2, Hz += "+killed", wz = !0
+      }(DD);
+      if (cD) {
+        const DD = Math.min(bD, oD(QD.e));
+        bD = BD + Math.max(0, DD - BD) / 2, wD += "+killed", vD = !0
       }
-      null !== uz && Kz(uz) < Mz && (Mz = Kz(uz), Hz += "+learned", wz = !0);
-      const Xz = function(zz) {
-          const uz = Math.floor((zz - pz) / dz);
-          return Math.min(tz.c, Math.max(tz.g, uz))
-        }(Mz),
-        fz = (0, tz.p)(Xz);
+      null !== CD && oD(CD) < bD && (bD = oD(CD), wD += "+learned", vD = !0);
+      const ND = function(DD) {
+          const CD = Math.floor((DD - BD) / yD);
+          return Math.min(QD.e, Math.max(QD.g, CD))
+        }(bD),
+        gD = (0, QD.p)(ND);
       return {
-        footprintBytes: Mz,
-        shedFootprintBytes: wz ? Math.max(Mz, Kz(Xz)) : null,
-        chunkCap: Xz,
-        maxHorizDistance: null !== (nz = null === fz || void 0 === fz ? void 0 : fz.horizontal) && void 0 !== nz ? nz : Ez.e.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (lz = null === fz || void 0 === fz ? void 0 : fz.vertical) && void 0 !== lz ? lz : Ez.e.maxChunkVertAddDistance,
-        basis: Hz
+        footprintBytes: bD,
+        shedFootprintBytes: vD ? Math.max(bD, oD(ND)) : null,
+        chunkCap: ND,
+        maxHorizDistance: null !== (pD = null === gD || void 0 === gD ? void 0 : gD.horizontal) && void 0 !== pD ? pD : ID.h.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (fD = null === gD || void 0 === gD ? void 0 : gD.vertical) && void 0 !== fD ? fD : ID.h.maxChunkVertAddDistance,
+        basis: wD
       }
     }
-    let Xz = null;
+    let ND = null;
 
-    function fz() {
-      return wz({
-        os: (0, nz.getOperatingSystem)(),
+    function gD() {
+      return vD({
+        os: (0, pD.getOperatingSystem)(),
         deviceMemory: navigator.deviceMemory,
-        ...(0, iz.i)()
-      }, (0, lz.i)(), (0, Mz.G)("wasm").length > 0)
+        ...(0, iD.i)()
+      }, (0, fD.e)(), (0, bD.J)("wasm").length > 0)
     }
 
-    function sz() {
-      return Xz ??= fz(), Xz
+    function XD() {
+      return ND ??= gD(), ND
     }
 
-    function rz() {
-      var zz;
-      return (null !== (zz = Xz) && void 0 !== zz ? zz : fz()).basis
+    function mD() {
+      var DD;
+      return (null !== (DD = ND) && void 0 !== DD ? DD : gD()).basis
     }
 
-    function oz(zz, uz) {
-      return zz.setChunkCap(uz.chunkCap)
+    function nD(DD, CD) {
+      return DD.setChunkCap(CD.chunkCap)
     }
   },
-  36297: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => nz,
-      h: () => iz,
-      l: () => dz,
-      m: () => Mz,
-      o: () => tz,
-      s: () => Hz,
-      t: () => pz,
-      v: () => Oz,
-      z: () => lz
+  36216: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => pD,
+      f: () => iD,
+      g: () => yD,
+      i: () => bD,
+      k: () => QD,
+      n: () => wD,
+      q: () => BD,
+      r: () => SD,
+      u: () => fD
     });
-    var Ez = bz(1226);
-    let nz = function(zz) {
-        return zz[zz.Join = 0] = "Join", zz[zz.Leave = 1] = "Leave", zz[zz.Push = 2] = "Push", zz[zz.Cursor = 3] = "Cursor", zz[zz.Submit = 4] = "Submit", zz[zz.ReloadAsVariation = 5] = "ReloadAsVariation", zz[zz.CreateFile = 6] = "CreateFile", zz[zz.RenameFile = 7] = "RenameFile", zz[zz.DeleteFile = 8] = "DeleteFile", zz[zz.SetEngine = 9] = "SetEngine", zz[zz.RenameFolder = 10] = "RenameFolder", zz
+    var ID = cD(1240);
+    let pD = function(DD) {
+        return DD[DD.Join = 0] = "Join", DD[DD.Leave = 1] = "Leave", DD[DD.Push = 2] = "Push", DD[DD.Cursor = 3] = "Cursor", DD[DD.Submit = 4] = "Submit", DD[DD.ReloadAsVariation = 5] = "ReloadAsVariation", DD[DD.CreateFile = 6] = "CreateFile", DD[DD.RenameFile = 7] = "RenameFile", DD[DD.DeleteFile = 8] = "DeleteFile", DD[DD.SetEngine = 9] = "SetEngine", DD[DD.RenameFolder = 10] = "RenameFolder", DD
       }({}),
-      iz = function(zz) {
-        return zz[zz.Joined = 0] = "Joined", zz[zz.Updates = 1] = "Updates", zz[zz.Presence = 2] = "Presence", zz[zz.RemoteCursor = 3] = "RemoteCursor", zz[zz.ForceClose = 4] = "ForceClose", zz[zz.LobbyFilesChanged = 5] = "LobbyFilesChanged", zz[zz.EngineSettings = 6] = "EngineSettings", zz
+      iD = function(DD) {
+        return DD[DD.Joined = 0] = "Joined", DD[DD.Updates = 1] = "Updates", DD[DD.Presence = 2] = "Presence", DD[DD.RemoteCursor = 3] = "RemoteCursor", DD[DD.ForceClose = 4] = "ForceClose", DD[DD.LobbyFilesChanged = 5] = "LobbyFilesChanged", DD[DD.EngineSettings = 6] = "EngineSettings", DD
       }({});
 
-    function lz(zz) {
-      return "lobby" === zz.kind ? `lobby:${zz.path}` : `codeBlock:${zz.pos[0]},${zz.pos[1]},${zz.pos[2]}`
+    function fD(DD) {
+      return "lobby" === DD.kind ? `lobby:${DD.path}` : `codeBlock:${DD.pos[0]},${DD.pos[1]},${DD.pos[2]}`
     }
 
-    function Mz(zz) {
-      if ("lobby" === zz) return {
+    function bD(DD) {
+      if ("lobby" === DD) return {
         kind: "lobby",
-        path: Ez.i
+        path: ID.g
       };
-      if (zz.startsWith("lobby:")) {
-        const uz = zz.slice(6);
-        return pz(uz) ? {
+      if (DD.startsWith("lobby:")) {
+        const CD = DD.slice(6);
+        return BD(CD) ? {
           kind: "lobby",
-          path: uz
+          path: CD
         } : null
       }
-      const uz = zz.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
-      return uz ? {
+      const CD = DD.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
+      return CD ? {
         kind: "codeBlock",
-        pos: [parseInt(uz[1]), parseInt(uz[2]), parseInt(uz[3])]
+        pos: [parseInt(CD[1]), parseInt(CD[2]), parseInt(CD[3])]
       } : null
     }
 
-    function tz(zz) {
-      return zz.endsWith(".d.ts")
+    function QD(DD) {
+      return DD.endsWith(".d.ts")
     }
 
-    function Hz(zz) {
-      return zz.endsWith(".ts") && !tz(zz)
+    function wD(DD) {
+      return DD.endsWith(".ts") && !QD(DD)
     }
-    const Oz = 64;
+    const SD = 64;
 
-    function pz(zz) {
-      if (!zz || zz !== zz.trim()) return !1;
-      if (zz.length > Oz) return !1;
-      if (zz.startsWith("/") || zz.includes("\\") || zz.includes("\0")) return !1;
-      if (!tz(zz) && !Hz(zz) && ! function(zz) {
-          return zz.endsWith(".js") && !zz.endsWith(".min.js") && !zz.endsWith(".bundle.js")
-        }(zz)) return !1;
-      const uz = zz.split("/");
-      for (const bz of uz)
-        if ("" === bz || "." === bz || ".." === bz) return !1;
+    function BD(DD) {
+      if (!DD || DD !== DD.trim()) return !1;
+      if (DD.length > SD) return !1;
+      if (DD.startsWith("/") || DD.includes("\\") || DD.includes("\0")) return !1;
+      if (!QD(DD) && !wD(DD) && ! function(DD) {
+          return DD.endsWith(".js") && !DD.endsWith(".min.js") && !DD.endsWith(".bundle.js")
+        }(DD)) return !1;
+      const CD = DD.split("/");
+      for (const cD of CD)
+        if ("" === cD || "." === cD || ".." === cD) return !1;
       return !0
     }
-    const dz = 14e3
+    const yD = 14e3
   },
-  38401: (zz, uz, bz) => {
-    function Ez(zz, uz, bz, Ez, nz) {
-      var iz = {};
-      return Object.keys(Ez).forEach((function(zz) {
-        iz[zz] = Ez[zz]
-      })), iz.enumerable = !!iz.enumerable, iz.configurable = !!iz.configurable, ("value" in iz || iz.initializer) && (iz.writable = !0), iz = bz.slice().reverse().reduce((function(bz, Ez) {
-        return Ez(zz, uz, bz) || bz
-      }), iz), nz && void 0 !== iz.initializer && (iz.value = iz.initializer ? iz.initializer.call(nz) : void 0, iz.initializer = void 0), void 0 === iz.initializer && (Object.defineProperty(zz, uz, iz), iz = null), iz
+  38384: (DD, CD, cD) => {
+    function ID(DD, CD, cD, ID, pD) {
+      var iD = {};
+      return Object.keys(ID).forEach((function(DD) {
+        iD[DD] = ID[DD]
+      })), iD.enumerable = !!iD.enumerable, iD.configurable = !!iD.configurable, ("value" in iD || iD.initializer) && (iD.writable = !0), iD = cD.slice().reverse().reduce((function(cD, ID) {
+        return ID(DD, CD, cD) || cD
+      }), iD), pD && void 0 !== iD.initializer && (iD.value = iD.initializer ? iD.initializer.call(pD) : void 0, iD.initializer = void 0), void 0 === iD.initializer && (Object.defineProperty(DD, CD, iD), iD = null), iD
     }
-    bz.d(uz, {
-      d: () => Ez
+    cD.d(CD, {
+      d: () => ID
     })
   },
-  38393: (zz, uz, bz) => {
-    function Ez(zz, uz, bz, Ez) {
-      bz && Object.defineProperty(zz, uz, {
-        enumerable: bz.enumerable,
-        configurable: bz.configurable,
-        writable: bz.writable,
-        value: bz.initializer ? bz.initializer.call(Ez) : void 0
+  38382: (DD, CD, cD) => {
+    function ID(DD, CD, cD, ID) {
+      cD && Object.defineProperty(DD, CD, {
+        enumerable: cD.enumerable,
+        configurable: cD.configurable,
+        writable: cD.writable,
+        value: cD.initializer ? cD.initializer.call(ID) : void 0
       })
     }
-    bz.d(uz, {
-      c: () => Ez
+    cD.d(CD, {
+      c: () => ID
     })
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,53 +1,53 @@
 export const id = 83;
 export const ids = [83];
 export const modules = {
-  4540: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => sz,
-      f: () => wz
+  4562: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => XD,
+      f: () => vD
     });
-    var Ez = bz(1279),
-      nz = bz(22);
-    var iz = bz(328);
-    var lz = bz(588);
-    var Mz = bz(2289),
-      tz = bz(4544),
-      Hz = bz(4567),
-      Oz = bz(4575);
-    class pz {
-      constructor(zz, uz, bz, Ez, nz, iz) {
-        this.id = zz, this.type = uz, this.parameters = bz, this.tearDownNotification = Ez, this.onDonePromise = nz, this.resolveRequest = iz
+    var ID = cD(1302),
+      pD = cD(20);
+    var iD = cD(326);
+    var fD = cD(624);
+    var bD = cD(2338),
+      QD = cD(4571),
+      wD = cD(4588),
+      SD = cD(4592);
+    class BD {
+      constructor(DD, CD, cD, ID, pD, iD) {
+        this.id = DD, this.type = CD, this.parameters = cD, this.tearDownNotification = ID, this.onDonePromise = pD, this.resolveRequest = iD
       }
     }
-    const dz = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
-    class Fz {
-      constructor(zz, uz, bz, Ez, nz, iz) {
-        this.id = zz, this.type = uz, this.parameters = bz, this.resolveRequest = Ez, this.onDonePromise = nz, this.tearDownNotification = iz, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
-        const lz = wz[uz];
-        if (!lz) throw console.error(`No QTE implementation registered for type: ${uz}`), new Error(`No QTE implementation registered for type: ${uz}`);
-        this.implementation = new lz(bz, (zz => {
-          this.isCompleted = !0, this.resolveRequest(zz)
+    const yD = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class MD {
+      constructor(DD, CD, cD, ID, pD, iD) {
+        this.id = DD, this.type = CD, this.parameters = cD, this.resolveRequest = ID, this.onDonePromise = pD, this.tearDownNotification = iD, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const fD = vD[CD];
+        if (!fD) throw console.error(`No QTE implementation registered for type: ${CD}`), new Error(`No QTE implementation registered for type: ${CD}`);
+        this.implementation = new fD(cD, (DD => {
+          this.isCompleted = !0, this.resolveRequest(DD)
         }), this.tearDownNotification), this.setupInputHandlers()
       }
       setupInputHandlers() {
-        this.mouseSub = nz.k.subscribe("QTEMouseState", (zz => {
+        this.mouseSub = pD.i.subscribe("QTEMouseState", (DD => {
           let {
-            isDown: uz
-          } = zz;
-          this.isCompleted || this.implementation.handleMouseInput(uz)
-        })), this.stopInputActions = (0, Hz.g)((zz => {
-          this.isCompleted || !dz.has(zz.action) && !(0, Hz.c)(zz) || this.implementation.handleMouseInput(zz.down)
-        })), this.tickSub = nz.k.subscribe("noaTick", (zz => {
+            isDown: CD
+          } = DD;
+          this.isCompleted || this.implementation.handleMouseInput(CD)
+        })), this.stopInputActions = (0, wD.k)((DD => {
+          this.isCompleted || !yD.has(DD.action) && !(0, wD.g)(DD) || this.implementation.handleMouseInput(DD.down)
+        })), this.tickSub = pD.i.subscribe("noaTick", (DD => {
           if (this.isCompleted) return;
-          const uz = zz / 1e3;
-          this.implementation.handleTick(uz)
-        })), this.stopShellTicks = (0, tz.A)((() => {
-          this.isCompleted || this.implementation.handleTick(Mz.s / 1e3)
+          const CD = DD / 1e3;
+          this.implementation.handleTick(CD)
+        })), this.stopShellTicks = (0, QD.w)((() => {
+          this.isCompleted || this.implementation.handleTick(bD.w / 1e3)
         }))
       }
       cleanup() {
-        var zz, uz;
-        this.mouseSub && (nz.k.unsubscribe(this.mouseSub), this.mouseSub = null), null === (zz = this.stopInputActions) || void 0 === zz || zz.call(this), this.stopInputActions = null, null === (uz = this.stopShellTicks) || void 0 === uz || uz.call(this), this.stopShellTicks = null, this.tickSub && (nz.k.unsubscribe(this.tickSub), this.tickSub = null)
+        var DD, CD;
+        this.mouseSub && (pD.i.unsubscribe(this.mouseSub), this.mouseSub = null), null === (DD = this.stopInputActions) || void 0 === DD || DD.call(this), this.stopInputActions = null, null === (CD = this.stopShellTicks) || void 0 === CD || CD.call(this), this.stopShellTicks = null, this.tickSub && (pD.i.unsubscribe(this.tickSub), this.tickSub = null)
       }
       async waitUntilDone() {
         await this.onDonePromise
@@ -59,28 +59,28 @@ export const modules = {
         this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
-    const Zz = new Ez.b,
-      Rz = new Map;
-    let Kz = null;
-    const wz = {
+    const tD = new ID.d,
+      ZD = new Map;
+    let oD = null;
+    const vD = {
       progressBar: class {
-        constructor(zz, uz, bz) {
-          var Ez, nz, iz, lz;
-          this.resolveRequest = uz, this.tearDownNotification = bz, this.progress = 0, this.mz = void 0, this.qz = void 0, this.hz = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
-          const Mz = zz;
-          this.mz = null !== (Ez = Mz.mz) && void 0 !== Ez ? Ez : .075, this.qz = null !== (nz = Mz.qz) && void 0 !== nz ? nz : 1, this.progress = null !== (iz = Mz.Vz) && void 0 !== iz ? iz : 30, this.hz = null !== (lz = Mz.hz) && void 0 !== lz && lz, this.parameters = Mz
+        constructor(DD, CD, cD) {
+          var ID, pD, iD, fD;
+          this.resolveRequest = CD, this.tearDownNotification = cD, this.progress = 0, this.aD = void 0, this.VD = void 0, this.zD = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const bD = DD;
+          this.aD = null !== (ID = bD.aD) && void 0 !== ID ? ID : .075, this.VD = null !== (pD = bD.VD) && void 0 !== pD ? pD : 1, this.progress = null !== (iD = bD.KD) && void 0 !== iD ? iD : 30, this.zD = null !== (fD = bD.zD) && void 0 !== fD && fD, this.parameters = bD
         }
-        handleMouseInput(zz) {
-          zz && !this.isCompleted && (this.clickCount++, this.progress += this.qz, this.progress >= 100 && this.complete(!0))
+        handleMouseInput(DD) {
+          DD && !this.isCompleted && (this.clickCount++, this.progress += this.VD, this.progress >= 100 && this.complete(!0))
         }
         handleTick() {
           if (!this.isCompleted)
-            if (this.progress -= this.mz, this.hz && this.progress <= 0) this.complete(!1);
+            if (this.progress -= this.aD, this.zD && this.progress <= 0) this.complete(!1);
             else if (this.progress <= 0) this.progress = 0;
           else if (this.progress >= 100) return void this.complete(!0)
         }
-        complete(zz) {
-          this.isCompleted = !0, this.resolveRequest(zz)
+        complete(DD) {
+          this.isCompleted = !0, this.resolveRequest(DD)
         }
         getState() {
           return {
@@ -98,30 +98,30 @@ export const modules = {
         }
       },
       timedClick: class {
-        constructor(zz, uz, bz) {
-          var Ez;
-          this.resolveRequest = uz, this.tearDownNotification = bz, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = zz, this.timeWindowMs = null !== (Ez = this.parameters.Dz) && void 0 !== Ez ? Ez : 3e3, this.startTime = Date.now()
+        constructor(DD, CD, cD) {
+          var ID;
+          this.resolveRequest = CD, this.tearDownNotification = cD, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = DD, this.timeWindowMs = null !== (ID = this.parameters.GD) && void 0 !== ID ? ID : 3e3, this.startTime = Date.now()
         }
-        handleMouseInput(zz) {
-          if (!zz || this.isCompleted) return;
+        handleMouseInput(DD) {
+          if (!DD || this.isCompleted) return;
           Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
         }
         handleTick() {
           if (this.isCompleted) return;
           Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
         }
-        complete(zz) {
-          this.isCompleted = !0, this.resolveRequest(zz)
+        complete(DD) {
+          this.isCompleted = !0, this.resolveRequest(DD)
         }
         getState() {
-          const zz = Date.now() - this.startTime,
-            uz = Math.max(0, this.timeWindowMs - zz);
+          const DD = Date.now() - this.startTime,
+            CD = Math.max(0, this.timeWindowMs - DD);
           return {
             type: this.type,
             parameters: this.parameters,
             state: {
-              timeRemaining: uz,
-              Dz: this.timeWindowMs
+              timeRemaining: CD,
+              GD: this.timeWindowMs
             },
             isActive: !0
           }
@@ -131,49 +131,49 @@ export const modules = {
         }
       },
       gravityBar: class {
-        constructor(zz, uz, bz) {
-          var Ez;
-          this.resolveRequest = uz, this.tearDownNotification = bz, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
-          const nz = zz;
+        constructor(DD, CD, cD) {
+          var ID;
+          this.resolveRequest = CD, this.tearDownNotification = cD, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const pD = DD;
           this.parameters = {
-            ...nz,
-            jz: iz.d.clamp(nz.jz, .05, 1)
-          }, this.progress = null !== (Ez = nz.Vz) && void 0 !== Ez ? Ez : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+            ...pD,
+            YD: iD.e.clamp(pD.YD, .05, 1)
+          }, this.progress = null !== (ID = pD.KD) && void 0 !== ID ? ID : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
-        handleMouseInput(zz) {
-          this.isMouseDown = zz
+        handleMouseInput(DD) {
+          this.isMouseDown = DD
         }
-        handleTick(zz) {
-          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(zz))
+        handleTick(DD) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(DD))
         }
         updateMover() {
           this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
-          const zz = Math.sign(this.moverTarget - this.moverPosition);
-          this.moverPosition += zz * this.parameters.Iz * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+          const DD = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += DD * this.parameters.WD * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
         }
         pickNewMoverTarget() {
           this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
         randomNumTicksUntilDirectionChange() {
-          const zz = iz.d.clamp(1 - .7 * this.parameters.Bz, 0, 1.4);
-          return Math.floor(60 * zz + 40 * Math.random())
+          const DD = iD.e.clamp(1 - .7 * this.parameters.sD, 0, 1.4);
+          return Math.floor(60 * DD + 40 * Math.random())
         }
         updateCatchZone() {
-          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.Cz : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = iz.d.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
-          const zz = this.parameters.jz / 2,
-            uz = zz,
-            bz = 1 - zz;
-          this.catchZonePosition <= uz ? (this.catchZonePosition = uz, this.catchZoneVelocity = 0) : this.catchZonePosition >= bz && (this.catchZonePosition = bz, this.catchZoneVelocity = 0)
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.ED : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = iD.e.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const DD = this.parameters.YD / 2,
+            CD = DD,
+            cD = 1 - DD;
+          this.catchZonePosition <= CD ? (this.catchZonePosition = CD, this.catchZoneVelocity = 0) : this.catchZonePosition >= cD && (this.catchZonePosition = cD, this.catchZoneVelocity = 0)
         }
         isMoverInCatchZone() {
-          const zz = this.parameters.jz / 2;
-          return this.moverPosition >= this.catchZonePosition - zz && this.moverPosition <= this.catchZonePosition + zz
+          const DD = this.parameters.YD / 2;
+          return this.moverPosition >= this.catchZonePosition - DD && this.moverPosition <= this.catchZonePosition + DD
         }
-        updateProgress(zz) {
-          this.isMoverInCatchZone() ? this.progress += this.parameters.Yz * zz : this.progress -= this.parameters.kz * zz, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.hz && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        updateProgress(DD) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.eD * DD : this.progress -= this.parameters.uD * DD, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.zD && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
         }
-        complete(zz) {
-          this.isCompleted = !0, this.resolveRequest(zz)
+        complete(DD) {
+          this.isCompleted = !0, this.resolveRequest(DD)
         }
         getState() {
           return {
@@ -181,7 +181,7 @@ export const modules = {
             parameters: this.parameters,
             state: {
               catchZonePosition: this.catchZonePosition,
-              jz: this.parameters.jz,
+              YD: this.parameters.YD,
               moverPosition: this.moverPosition,
               progress: this.progress,
               isCatching: this.isMoverInCatchZone()
@@ -194,38 +194,38 @@ export const modules = {
         }
       },
       precisionBar: class {
-        constructor(zz, uz, bz) {
-          var Ez, nz, lz, Mz, tz;
-          this.resolveRequest = uz, this.tearDownNotification = bz, this.startTime = void 0, this.speed = void 0, this.uu = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
-          const Hz = zz;
+        constructor(DD, CD, cD) {
+          var ID, pD, fD, bD, QD;
+          this.resolveRequest = CD, this.tearDownNotification = cD, this.startTime = void 0, this.speed = void 0, this.rD = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const wD = DD;
           this.parameters = {
-            ...Hz,
-            speed: null !== (Ez = Hz.speed) && void 0 !== Ez ? Ez : .5,
-            uu: iz.d.clamp(Hz.uu, .05, 1),
-            label: null !== (nz = Hz.label) && void 0 !== nz ? nz : [{
+            ...wD,
+            speed: null !== (ID = wD.speed) && void 0 !== ID ? ID : .5,
+            rD: iD.e.clamp(wD.rD, .05, 1),
+            label: null !== (pD = wD.label) && void 0 !== pD ? pD : [{
               str: "Click when the marker is within the green zone."
             }],
-            icon: null !== (lz = Hz.icon) && void 0 !== lz ? lz : null,
-            scale: null !== (Mz = Hz.scale) && void 0 !== Mz ? Mz : 1,
-            rotation: null !== (tz = Hz.rotation) && void 0 !== tz ? tz : 0
-          }, this.speed = this.parameters.speed, this.uu = this.parameters.uu, this.startTime = Date.now()
+            icon: null !== (fD = wD.icon) && void 0 !== fD ? fD : null,
+            scale: null !== (bD = wD.scale) && void 0 !== bD ? bD : 1,
+            rotation: null !== (QD = wD.rotation) && void 0 !== QD ? QD : 0
+          }, this.speed = this.parameters.speed, this.rD = this.parameters.rD, this.startTime = Date.now()
         }
-        handleMouseInput(zz) {
-          if (zz) {
+        handleMouseInput(DD) {
+          if (DD) {
             this.updateMarkerPosition();
-            const zz = Math.abs(this.markerPosition - .5) <= this.uu / 2;
-            this.complete(zz)
+            const DD = Math.abs(this.markerPosition - .5) <= this.rD / 2;
+            this.complete(DD)
           }
         }
         handleTick() {
           this.isCompleted || this.updateMarkerPosition()
         }
         updateMarkerPosition() {
-          const zz = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
-          this.markerPosition = zz <= .5 ? 2 * zz : 2 - 2 * zz
+          const DD = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = DD <= .5 ? 2 * DD : 2 - 2 * DD
         }
-        complete(zz) {
-          this.isCompleted = !0, this.resolveRequest(zz)
+        complete(DD) {
+          this.isCompleted = !0, this.resolveRequest(DD)
         }
         getState() {
           return this.updateMarkerPosition(), {
@@ -242,29 +242,29 @@ export const modules = {
         }
       },
       rhythmClick: class {
-        constructor(zz, uz, bz) {
-          this.resolveRequest = uz, this.tearDownNotification = bz, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = zz, this.shrinkStartTime = Date.now()
+        constructor(DD, CD, cD) {
+          this.resolveRequest = CD, this.tearDownNotification = cD, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = DD, this.shrinkStartTime = Date.now()
         }
-        handleMouseInput(zz) {
-          if (!zz || this.isCompleted) return;
-          const uz = this.getOuterCircleProgress();
-          if (uz <= this.parameters.lu && uz >= -this.parameters.lu) {
-            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.nu) return void this.complete(!0)
+        handleMouseInput(DD) {
+          if (!DD || this.isCompleted) return;
+          const CD = this.getOuterCircleProgress();
+          if (CD <= this.parameters.CC && CD >= -this.parameters.CC) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.FD) return void this.complete(!0)
           } else this.handleMiss();
           this.shrinkStartTime = Date.now()
         }
         handleMiss() {
-          this.misses++, this.lastClickResult = !1, !(0, lz.F)(this.parameters.Mu) && this.misses > this.parameters.Mu ? this.complete(!1) : this.shrinkStartTime = Date.now()
+          this.misses++, this.lastClickResult = !1, !(0, fD.C)(this.parameters.cC) && this.misses > this.parameters.cC ? this.complete(!1) : this.shrinkStartTime = Date.now()
         }
         handleTick() {
           if (this.isCompleted) return;
-          this.getOuterCircleProgress() < -this.parameters.lu && this.handleMiss()
+          this.getOuterCircleProgress() < -this.parameters.CC && this.handleMiss()
         }
         getOuterCircleProgress() {
-          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.iu
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.DC
         }
-        complete(zz) {
-          this.isCompleted = !0, this.resolveRequest(zz)
+        complete(DD) {
+          this.isCompleted = !0, this.resolveRequest(DD)
         }
         getState() {
           return {
@@ -273,7 +273,7 @@ export const modules = {
             state: {
               outerCircleProgress: this.getOuterCircleProgress(),
               successes: this.successes,
-              nu: this.parameters.nu,
+              FD: this.parameters.FD,
               misses: this.misses,
               lastClickResult: this.lastClickResult
             },
@@ -286,61 +286,61 @@ export const modules = {
       }
     };
 
-    function Xz() {
-      (0, Oz.i)(Mz.z.Qte, Kz ? Mz.z.Qte : 0), Kz ? nz.k.sK("qteStateUpdated", Kz.getState()) : nz.k.sK("qteStateUpdated", {
+    function ND() {
+      (0, SD.k)(bD.C.Qte, oD ? bD.C.Qte : 0), oD ? pD.i.Uo("qteStateUpdated", oD.getState()) : pD.i.Uo("qteStateUpdated", {
         type: null,
         typeSpecificParameters: null,
         isActive: !1
       })
     }
-    class fz {
-      constructor(zz, uz) {
-        this.resultPromise = zz, this.tearDownQTE = uz
+    class gD {
+      constructor(DD, CD) {
+        this.resultPromise = DD, this.tearDownQTE = CD
       }
-      static create(zz, uz, bz) {
-        const Ez = Promise.race([zz, uz]);
-        return new fz(Ez, bz)
+      static create(DD, CD, cD) {
+        const ID = Promise.race([DD, CD]);
+        return new gD(ID, cD)
       }
       async getResult() {
         return await this.resultPromise
       }
     }
-    class sz {
-      static queueQTE(zz, uz, bz) {
-        let Ez, nz;
-        const iz = new Promise((zz => {
-            Ez = zz
+    class XD {
+      static queueQTE(DD, CD, cD) {
+        let ID, pD;
+        const iD = new Promise((DD => {
+            ID = DD
           })),
-          lz = new Promise((zz => {
-            nz = () => {
-              zz("qteTornDown")
+          fD = new Promise((DD => {
+            pD = () => {
+              DD("qteTornDown")
             }
           })),
-          Mz = Promise.race([iz, lz]).then((() => {})),
-          tz = new pz(zz, uz, bz, nz, Mz, Ez);
-        return Rz.set(zz, tz), Zz.enqueue(tz), Kz || this.processNextQTE(), fz.create(iz, lz, nz)
+          bD = Promise.race([iD, fD]).then((() => {})),
+          QD = new BD(DD, CD, cD, pD, bD, ID);
+        return ZD.set(DD, QD), tD.enqueue(QD), oD || this.processNextQTE(), gD.create(iD, fD, pD)
       }
       static async processNextQTE() {
-        if (Kz || Zz.aZ()) return void(Zz.aZ() && Kz && (Kz = null, Xz()));
-        const zz = await Zz.dequeue();
-        if (!Rz.has(zz.id)) return void await this.processNextQTE();
-        Rz.delete(zz.id);
-        const uz = new Fz(zz.id, zz.type, zz.parameters, zz.resolveRequest, zz.onDonePromise, zz.tearDownNotification);
-        Kz = uz, Xz();
+        if (oD || tD.xt()) return void(tD.xt() && oD && (oD = null, ND()));
+        const DD = await tD.dequeue();
+        if (!ZD.has(DD.id)) return void await this.processNextQTE();
+        ZD.delete(DD.id);
+        const CD = new MD(DD.id, DD.type, DD.parameters, DD.resolveRequest, DD.onDonePromise, DD.tearDownNotification);
+        oD = CD, ND();
         try {
-          await uz.waitUntilDone()
-        } catch (bz) {
-          console.error("Error while waiting for QTE to resolve:", bz.stack)
+          await CD.waitUntilDone()
+        } catch (cD) {
+          console.error("Error while waiting for QTE to resolve:", cD.stack)
         }
-        Kz === uz && (Kz.cleanup(), Kz = null, Xz()), await this.processNextQTE()
+        oD === CD && (oD.cleanup(), oD = null, ND()), await this.processNextQTE()
       }
-      static cancelQTE(zz) {
-        if (Kz && Kz.id === zz) return Kz.tearDown(), Kz = null, Xz(), void this.processNextQTE();
-        const uz = Rz.get(zz);
-        uz && (Rz.delete(zz), uz.tearDownNotification())
+      static cancelQTE(DD) {
+        if (oD && oD.id === DD) return oD.tearDown(), oD = null, ND(), void this.processNextQTE();
+        const CD = ZD.get(DD);
+        CD && (ZD.delete(DD), CD.tearDownNotification())
       }
       static getCurrentState() {
-        return Kz ? Kz.getState() : {
+        return oD ? oD.getState() : {
           type: null,
           parameters: null,
           state: null,
@@ -348,60 +348,60 @@ export const modules = {
         }
       }
       static reset() {
-        Kz && (Kz.tearDown(), Kz = null), Rz.forEach(((zz, uz) => {
-          this.cancelQTE(uz)
-        })), Zz.emptyQueue(), Rz.clear(), Xz()
+        oD && (oD.tearDown(), oD = null), ZD.forEach(((DD, CD) => {
+          this.cancelQTE(CD)
+        })), tD.emptyQueue(), ZD.clear(), ND()
       }
     }
   },
-  4564: (zz, uz, bz) => {
-    bz.d(uz, {
-      $: () => Jz,
-      A: () => iz,
-      Ab: () => Pz,
-      Cb: () => Uz,
-      E: () => Zz,
-      Eb: () => az,
-      Gb: () => mz,
-      I: () => Wz,
-      Jb: () => qz,
-      M: () => Hz,
-      Mb: () => fz,
-      N: () => Rz,
-      Ob: () => sz,
-      P: () => tz,
-      Q: () => dz,
-      Qb: () => gz,
-      S: () => pz,
-      Tb: () => nz,
-      W: () => Nz,
-      Wb: () => Qz,
-      Z: () => xz,
-      ab: () => vz,
-      bb: () => Az,
-      c: () => Dz,
-      cb: () => cz,
-      fb: () => hz,
-      g: () => yz,
-      j: () => Oz,
-      jb: () => Vz,
-      m: () => Xz,
-      mb: () => Tz,
-      o: () => Sz,
-      pb: () => Gz,
-      q: () => wz,
-      qb: () => Lz,
-      s: () => Kz,
-      u: () => lz,
-      ub: () => Fz,
-      vb: () => oz,
-      wb: () => rz,
-      x: () => Mz,
-      y: () => Ez
+  4585: (DD, CD, cD) => {
+    cD.d(CD, {
+      $: () => HD,
+      A: () => iD,
+      Bb: () => nD,
+      E: () => tD,
+      Eb: () => mD,
+      F: () => sD,
+      Hb: () => KD,
+      I: () => wD,
+      Lb: () => TD,
+      M: () => ZD,
+      Ob: () => VD,
+      Q: () => QD,
+      Sb: () => jD,
+      T: () => yD,
+      Wb: () => lD,
+      X: () => BD,
+      Xb: () => gD,
+      Y: () => OD,
+      Zb: () => XD,
+      _b: () => RD,
+      cc: () => pD,
+      db: () => UD,
+      dc: () => WD,
+      e: () => YD,
+      eb: () => PD,
+      g: () => dD,
+      hb: () => xD,
+      j: () => SD,
+      k: () => ND,
+      kb: () => GD,
+      l: () => kD,
+      lb: () => LD,
+      o: () => vD,
+      pb: () => zD,
+      qb: () => qD,
+      r: () => oD,
+      rb: () => aD,
+      s: () => fD,
+      tb: () => JD,
+      v: () => bD,
+      xb: () => MD,
+      y: () => ID
     });
-    const Ez = 32,
-      nz = 33.333333333333336,
-      iz = {
+    const ID = 32,
+      pD = 33.333333333333336,
+      iD = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -435,18 +435,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      lz = {
+      fD = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      Mz = {
+      bD = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      tz = {
+      QD = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -454,20 +454,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      Hz = {
+      wD = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      Oz = {
+      SD = {
         Look: 0,
         Remesh: 1
       },
-      pz = 8,
-      dz = 1,
-      Fz = {
+      BD = 8,
+      yD = 1,
+      MD = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -476,7 +476,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      Zz = {
+      tD = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -504,12 +504,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      Rz = {
+      ZD = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      Kz = {
+      oD = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -561,7 +561,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      wz = {
+      vD = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -571,10 +571,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      Xz = 4,
-      fz = 4,
-      sz = 65535,
-      rz = {
+      ND = 4,
+      gD = 4,
+      XD = 65535,
+      mD = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -587,7 +587,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      oz = {
+      nD = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -595,12 +595,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      Nz = 88,
-      vz = 0,
-      xz = 24,
-      Jz = 48,
-      Az = 80,
-      Tz = {
+      OD = 88,
+      PD = 0,
+      HD = 24,
+      UD = 48,
+      xD = 80,
+      qD = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -611,18 +611,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Lz = {
+      JD = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Pz = {
+      KD = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Gz = {
+      aD = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -640,34 +640,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      az = {
+      VD = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      Vz = 65535,
-      mz = {
+      zD = 65535,
+      jD = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      qz = {
+      lD = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      hz = 2,
-      Uz = {
+      LD = 2,
+      TD = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      cz = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      gz = {
+      GD = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      RD = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -679,7 +679,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      Sz = {
+      kD = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -706,7 +706,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      yz = {
+      dD = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -864,8 +864,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      Dz = 8,
-      Qz = {
+      YD = 8,
+      WD = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -890,289 +890,289 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      Wz = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      sD = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4544: (zz, uz, bz) => {
-    bz.d(uz, {
-      A: () => Jz,
-      C: () => Az,
-      F: () => Tz,
-      H: () => Xz,
-      L: () => lz,
-      M: () => Mz,
-      O: () => xz,
-      b: () => vz,
-      c: () => sz,
-      g: () => Pz,
-      j: () => Lz,
-      l: () => wz,
-      o: () => oz,
-      s: () => fz,
-      w: () => rz
+  4571: (DD, CD, cD) => {
+    cD.d(CD, {
+      B: () => qD,
+      E: () => ND,
+      I: () => fD,
+      K: () => bD,
+      N: () => HD,
+      e: () => PD,
+      f: () => XD,
+      h: () => KD,
+      i: () => JD,
+      j: () => vD,
+      m: () => nD,
+      q: () => gD,
+      t: () => mD,
+      w: () => UD,
+      z: () => xD
     });
-    var Ez = bz(4552);
-    const nz = {
+    var ID = cD(4575);
+    const pD = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let iz = nz;
+    let iD = pD;
 
-    function lz(zz) {
-      iz = null !== zz && void 0 !== zz ? zz : nz
+    function fD(DD) {
+      iD = null !== DD && void 0 !== DD ? DD : pD
     }
 
-    function Mz() {
-      return iz
+    function bD() {
+      return iD
     }
-    const tz = new Set,
-      Hz = new Set;
-    let Oz = -1;
-    const pz = new Set,
-      dz = new Set;
-    let Fz = 0,
-      Zz = 0;
-    const Rz = new Set,
-      Kz = new Set;
+    const QD = new Set,
+      wD = new Set;
+    let SD = -1;
+    const BD = new Set,
+      yD = new Set;
+    let MD = 0,
+      tD = 0;
+    const ZD = new Set,
+      oD = new Set;
 
-    function wz(zz) {
-      return tz.add(zz), () => {
-        tz.delete(zz)
+    function vD(DD) {
+      return QD.add(DD), () => {
+        QD.delete(DD)
       }
     }
 
-    function Xz(zz, uz) {
-      for (const Ez of tz) try {
-        Ez(zz)
-      } catch (bz) {
-        uz(bz)
+    function ND(DD, CD) {
+      for (const ID of QD) try {
+        ID(DD)
+      } catch (cD) {
+        CD(cD)
       }
     }
 
-    function fz(zz) {
-      return Hz.add(zz), () => {
-        Hz.delete(zz)
+    function gD(DD) {
+      return wD.add(DD), () => {
+        wD.delete(DD)
       }
     }
 
-    function sz(zz, uz) {
-      const bz = Oz < 0 ? 0 : zz - Oz;
-      Oz = zz;
-      for (const nz of Hz) try {
-        nz(bz)
-      } catch (Ez) {
-        uz(Ez)
+    function XD(DD, CD) {
+      const cD = SD < 0 ? 0 : DD - SD;
+      SD = DD;
+      for (const pD of wD) try {
+        pD(cD)
+      } catch (ID) {
+        CD(ID)
       }
     }
 
-    function rz(zz) {
-      return pz.add(zz), () => {
-        pz.delete(zz)
+    function mD(DD) {
+      return BD.add(DD), () => {
+        BD.delete(DD)
       }
     }
 
-    function oz(zz) {
-      return dz.add(zz), () => {
-        dz.delete(zz)
+    function nD(DD) {
+      return yD.add(DD), () => {
+        yD.delete(DD)
       }
     }
-    let Nz = 0;
+    let OD = 0;
 
-    function vz(zz) {
-      Nz += zz
+    function PD(DD) {
+      OD += DD
     }
 
-    function xz() {
-      const zz = Nz;
-      return Nz = 0, zz
+    function HD() {
+      const DD = OD;
+      return OD = 0, DD
     }
 
-    function Jz(zz) {
-      return Rz.add(zz), () => {
-        Rz.delete(zz)
-      }
-    }
-
-    function Az(zz) {
-      return Kz.add(zz), () => {
-        Kz.delete(zz)
+    function UD(DD) {
+      return ZD.add(DD), () => {
+        ZD.delete(DD)
       }
     }
 
-    function Tz() {
-      Fz = 0, Zz = 0, Oz = -1
+    function xD(DD) {
+      return oD.add(DD), () => {
+        oD.delete(DD)
+      }
     }
 
-    function Lz(zz, uz) {
-      if ("paced" === zz) return Zz += uz, null;
-      if ("drawn" !== zz && "skipped" !== zz) return null;
-      const bz = uz + Zz;
-      return Zz = 0, bz
+    function qD() {
+      MD = 0, tD = 0, SD = -1
     }
 
-    function Pz(zz, uz, bz, nz) {
-      const iz = (0, Ez.l)(uz),
-        lz = zz > 0 ? performance.now() : 0;
-      for (let Ez = 0; Ez < zz; Ez++)
-        for (const zz of Rz) try {
-          zz()
-        } catch (Mz) {
-          nz(Mz)
+    function JD(DD, CD) {
+      if ("paced" === DD) return tD += CD, null;
+      if ("drawn" !== DD && "skipped" !== DD) return null;
+      const cD = CD + tD;
+      return tD = 0, cD
+    }
+
+    function KD(DD, CD, cD, pD) {
+      const iD = (0, ID.e)(CD),
+        fD = DD > 0 ? performance.now() : 0;
+      for (let ID = 0; ID < DD; ID++)
+        for (const DD of ZD) try {
+          DD()
+        } catch (bD) {
+          pD(bD)
         }
-      if (zz > 0 && vz(performance.now() - lz), null !== bz) {
-        for (const zz of pz) try {
-          zz(bz)
-        } catch (Mz) {
-          nz(Mz)
+      if (DD > 0 && PD(performance.now() - fD), null !== cD) {
+        for (const DD of BD) try {
+          DD(cD)
+        } catch (bD) {
+          pD(bD)
         }
-        Fz += bz
+        MD += cD
       }
-      if ("drawn" === uz) {
-        const zz = Fz;
-        Fz = 0;
-        for (const uz of dz) try {
-          uz(zz)
-        } catch (Mz) {
-          nz(Mz)
+      if ("drawn" === CD) {
+        const DD = MD;
+        MD = 0;
+        for (const CD of yD) try {
+          CD(DD)
+        } catch (bD) {
+          pD(bD)
         }
       }
-      for (const Ez of Kz) try {
-        Ez(zz, iz)
-      } catch (Mz) {
-        nz(Mz)
+      for (const ID of oD) try {
+        ID(DD, iD)
+      } catch (bD) {
+        pD(bD)
       }
     }
   },
-  4560: (zz, uz, bz) => {
-    bz.d(uz, {
-      $c: () => Ez.Gb,
-      Ab: () => uu,
-      B: () => du,
-      Bc: () => Fu,
-      Bd: () => Uz,
-      C: () => Cz,
-      Dd: () => Qz,
-      Eb: () => nz.e,
-      Fb: () => vz,
-      Fc: () => Hu,
-      G: () => Ez.g,
-      H: () => Hz,
-      Ic: () => Eu,
-      Id: () => yz,
-      Jb: () => hz,
-      L: () => Ez.j,
-      Lc: () => Ez.mb,
-      Ld: () => ez,
-      Mc: () => Ez.pb,
-      Nb: () => Lz,
-      Nd: () => Wz,
-      P: () => Ez.m,
-      Pb: () => Az,
-      Pc: () => Ez.qb,
-      Qb: () => Ez.N,
-      Qc: () => Yz,
-      Qd: () => lu,
-      S: () => Iz,
-      Tb: () => Pz,
-      Tc: () => Ez.vb,
-      Td: () => Zu,
-      V: () => Ez.s,
-      Vb: () => rz,
-      Vc: () => Ez.wb,
-      W: () => Ez.u,
-      Wd: () => sz,
-      Y: () => Ez.x,
-      Yb: () => iu,
-      Yc: () => Ez.Ab,
-      Z: () => pz,
-      Zc: () => Ez.Eb,
-      _b: () => fz,
-      _d: () => jz,
-      ab: () => Xz,
-      bc: () => Ou,
-      be: () => mz,
-      c: () => zu,
-      cb: () => Ez.y,
-      ce: () => Vz,
-      db: () => Ez.A,
-      dd: () => Ez.Jb,
-      de: () => az,
-      f: () => Rz,
-      fc: () => nz.i,
-      fd: () => Jz,
-      ge: () => tz,
-      h: () => Zz,
-      hb: () => gz,
-      i: () => tu,
-      ic: () => wz,
-      ie: () => qz,
-      jc: () => bu,
-      jd: () => Ez.Mb,
-      kb: () => nu,
-      l: () => xz,
-      mb: () => Oz,
-      me: () => Ru,
-      n: () => Nz,
-      nc: () => Ez.W,
-      nd: () => Ez.Ob,
-      od: () => Ez.Tb,
-      p: () => Ez.c,
-      pb: () => Ez.E,
-      pe: () => Fz,
-      qc: () => Ez.Z,
-      qd: () => iz,
-      rc: () => Ez.$,
-      s: () => pu,
-      sb: () => Dz,
-      sd: () => Kz,
-      tc: () => Ez.ab,
-      td: () => Mu,
-      u: () => Tz,
-      ub: () => Bz,
-      vd: () => cz,
-      w: () => lz,
-      wc: () => Ez.bb,
-      xd: () => Sz,
-      yb: () => kz,
-      yc: () => Ez.jb,
-      z: () => Gz
+  4581: (DD, CD, cD) => {
+    cD.d(CD, {
+      $d: () => jD,
+      A: () => qD,
+      Ac: () => ID.pb,
+      B: () => fD,
+      Bd: () => TD,
+      Cb: () => CC,
+      D: () => aD,
+      Dc: () => MC,
+      Dd: () => WD,
+      E: () => yC,
+      Fb: () => pD.g,
+      Fc: () => wC,
+      Gc: () => IC,
+      Gd: () => dD,
+      H: () => rD,
+      Hc: () => ID.qb,
+      Ib: () => PD,
+      Kc: () => ID.rb,
+      Kd: () => ED,
+      L: () => ID.g,
+      Lb: () => LD,
+      M: () => wD,
+      Nb: () => JD,
+      Nc: () => ID.tb,
+      Nd: () => sD,
+      O: () => ID.j,
+      Pc: () => AD,
+      Q: () => ID.k,
+      Qc: () => ID.Bb,
+      R: () => uD,
+      Rb: () => xD,
+      Rd: () => fC,
+      Sd: () => tC,
+      Tc: () => ID.Eb,
+      U: () => ID.r,
+      Ub: () => ID.M,
+      Uc: () => ID.Hb,
+      Wd: () => XD,
+      X: () => ID.s,
+      Xb: () => KD,
+      Xc: () => ID.Ob,
+      Y: () => ID.v,
+      Yc: () => ID.Sb,
+      Yd: () => eD,
+      Zb: () => mD,
+      ab: () => BD,
+      ad: () => ID.Wb,
+      bb: () => ND,
+      bc: () => iC,
+      db: () => ID.y,
+      de: () => zD,
+      e: () => DC,
+      ed: () => UD,
+      fc: () => gD,
+      h: () => ZD,
+      hb: () => ID.A,
+      hd: () => ID.Xb,
+      he: () => VD,
+      ic: () => SC,
+      id: () => ID.Zb,
+      ie: () => QD,
+      jc: () => pD.o,
+      je: () => lD,
+      k: () => tD,
+      kb: () => RD,
+      kc: () => vD,
+      kd: () => ID.cc,
+      lb: () => pC,
+      le: () => ZC,
+      n: () => QC,
+      nc: () => cC,
+      nd: () => iD,
+      oe: () => MD,
+      pb: () => SD,
+      pd: () => oD,
+      q: () => HD,
+      qc: () => ID.Y,
+      s: () => OD,
+      sc: () => ID.$,
+      tb: () => ID.E,
+      td: () => bC,
+      vb: () => YD,
+      vc: () => ID.db,
+      w: () => ID.e,
+      wc: () => ID.eb,
+      x: () => BC,
+      xb: () => hD,
+      xd: () => GD,
+      yc: () => ID.hb,
+      yd: () => kD,
+      zb: () => FD
     });
-    var Ez = bz(4564),
-      nz = bz(2289);
-    const iz = Math.round(1e3 / Ez.Tb),
-      lz = 4,
-      Mz = 2;
+    var ID = cD(4585),
+      pD = cD(2338);
+    const iD = Math.round(1e3 / ID.cc),
+      fD = 4,
+      bD = 2;
 
-    function tz() {
-      return crypto.getRandomValues(new Uint32Array(Mz))
+    function QD() {
+      return crypto.getRandomValues(new Uint32Array(bD))
     }
-    const Hz = {
+    const wD = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      Oz = 16,
-      pz = {
+      SD = 16,
+      BD = {
         Draws: 1,
         NetAll: 2
       },
-      dz = {
+      yD = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function Fz(zz) {
-      return (zz.nametagsHidden ? oz.NametagsHidden : 0) | (zz.crouchToggle ? oz.CrouchToggle : 0) | (zz.bhopDisabled ? oz.BhopDisabled : 0) | (zz.disableBobbing ? oz.DisableBobbing : 0) | (zz.ezTowering ? oz.EzTowering : 0) | (zz.ezBridging ? oz.EzBridging : 0) | (zz.showChunkBorders ? oz.ShowChunkBorders : 0)
+    function MD(DD) {
+      return (DD.nametagsHidden ? nD.NametagsHidden : 0) | (DD.crouchToggle ? nD.CrouchToggle : 0) | (DD.bhopDisabled ? nD.BhopDisabled : 0) | (DD.disableBobbing ? nD.DisableBobbing : 0) | (DD.ezTowering ? nD.EzTowering : 0) | (DD.ezBridging ? nD.EzBridging : 0) | (DD.showChunkBorders ? nD.ShowChunkBorders : 0)
     }
-    const Zz = {
+    const tD = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      Rz = {
+      ZD = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -1180,7 +1180,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      Kz = {
+      oD = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -1189,7 +1189,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      wz = {
+      vD = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -1198,20 +1198,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      Xz = 5,
-      fz = 4294967295;
+      ND = 5,
+      gD = 4294967295;
 
-    function sz(zz) {
-      return (zz.showFog ? dz.ShowFog : 0) | (zz.lighting ? dz.Lighting : 0) | (zz.chunkFade ? dz.ChunkFade : 0)
+    function XD(DD) {
+      return (DD.showFog ? yD.ShowFog : 0) | (DD.lighting ? yD.Lighting : 0) | (DD.chunkFade ? yD.ChunkFade : 0)
     }
-    const rz = {
+    const mD = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      oz = {
+      nD = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -1221,50 +1221,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      Nz = {
+      OD = {
         Release: 1,
         KeepTouches: 2
       },
-      vz = {
+      PD = {
         Point: 1,
         Stamped: 2
       },
-      xz = {
+      HD = {
         Add: 1,
         Clear: 2
       },
-      Jz = 1,
-      Az = 8,
-      Tz = 16777215,
-      Lz = 4,
-      Pz = {
+      UD = 1,
+      xD = 8,
+      qD = 16777215,
+      JD = 4,
+      KD = {
         Resume: 1
       },
-      Gz = {
+      aD = {
         Held: 1
       };
 
-    function az(zz, uz) {
-      return (zz | uz << 8) >>> 0
+    function VD(DD, CD) {
+      return (DD | CD << 8) >>> 0
     }
 
-    function Vz(zz) {
-      return 255 & zz
+    function zD(DD) {
+      return 255 & DD
     }
 
-    function mz(zz) {
-      return zz >>> 8
+    function jD(DD) {
+      return DD >>> 8
     }
 
-    function qz(zz) {
-      return zz + 3 & -4
+    function lD(DD) {
+      return DD + 3 & -4
     }
-    const hz = 16777216,
-      Uz = 20;
-    const cz = 8,
-      gz = 8,
-      Sz = 16777216,
-      yz = {
+    const LD = 16777216,
+      TD = 20;
+    const GD = 8,
+      RD = 8,
+      kD = 16777216,
+      dD = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1272,19 +1272,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      Dz = {
+      YD = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      Qz = 16,
-      Wz = {
+      WD = 16,
+      sD = {
         Lost: 0,
         Gone: 1
       },
-      ez = {
+      ED = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1292,18 +1292,18 @@ export const modules = {
         Retire: 5
       };
 
-    function jz(zz) {
-      return zz === ez.WorldgenSeed || zz === ez.Generate
+    function eD(DD) {
+      return DD === ED.WorldgenSeed || DD === ED.Generate
     }
-    const Iz = 4,
-      Bz = 99,
-      Cz = {
+    const uD = 4,
+      hD = 99,
+      rD = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      Yz = {
+      AD = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1311,40 +1311,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      kz = 12,
-      zu = 16,
-      uu = 4,
-      bu = 12,
-      Eu = {
+      FD = 12,
+      DC = 16,
+      CC = 4,
+      cC = 12,
+      IC = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      nu = 4,
-      iu = 8,
-      lu = 8,
-      Mu = {
+      pC = 4,
+      iC = 8,
+      fC = 8,
+      bC = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      tu = {
+      QC = {
         Crit: 1,
         HitSelf: 2
       },
-      Hu = {
+      wC = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      Ou = {
+      SC = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      pu = 12,
-      du = {
+      BC = 12,
+      yC = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1353,102 +1353,102 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      Fu = 67108864;
+      MC = 67108864;
 
-    function Zu(zz) {
-      for (const [uz, bz] of Object.entries(Ez.g))
-        if (bz === zz) return uz;
-      return `Unknown${zz}`
+    function tC(DD) {
+      for (const [CD, cD] of Object.entries(ID.g))
+        if (cD === DD) return CD;
+      return `Unknown${DD}`
     }
 
-    function Ru(zz) {
+    function ZC(DD) {
       return {
-        status: zz[Ez.A.Status],
-        lastError: zz[Ez.A.LastError],
-        lastErrorDetail: zz[Ez.A.LastErrorDetail],
-        errorCount: zz[Ez.A.ErrorCount],
-        frameIndex: zz[Ez.A.FrameIndex],
-        tickIndex: zz[Ez.A.TickIndex],
-        renderPending: zz[Ez.A.RenderPending],
-        firstView: zz[Ez.A.FirstView],
-        chunksCancelled: zz[Ez.A.ChunksCancelled]
+        status: DD[ID.A.Status],
+        lastError: DD[ID.A.LastError],
+        lastErrorDetail: DD[ID.A.LastErrorDetail],
+        errorCount: DD[ID.A.ErrorCount],
+        frameIndex: DD[ID.A.FrameIndex],
+        tickIndex: DD[ID.A.TickIndex],
+        renderPending: DD[ID.A.RenderPending],
+        firstView: DD[ID.A.FirstView],
+        chunksCancelled: DD[ID.A.ChunksCancelled]
       }
     }
   },
-  4552: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => lz,
-      h: () => iz,
-      l: () => nz
+  4575: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => fD,
+      c: () => iD,
+      e: () => pD
     });
-    var Ez = bz(4560);
+    var ID = cD(4581);
 
-    function nz(zz) {
-      return "none" !== zz
+    function pD(DD) {
+      return "none" !== DD
     }
 
-    function iz(zz, uz) {
-      if (!zz) return "none";
-      switch (uz) {
-        case Ez.Y.Drawn:
+    function iD(DD, CD) {
+      if (!DD) return "none";
+      switch (CD) {
+        case ID.Y.Drawn:
           return "drawn";
-        case Ez.Y.Paced:
+        case ID.Y.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function lz(zz) {
-      return "drawn" === zz
+    function fD(DD) {
+      return "drawn" === DD
     }
   },
-  4567: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => tz,
-      c: () => iz,
-      g: () => Mz
+  4588: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => QD,
+      g: () => iD,
+      k: () => bD
     });
-    var Ez = bz(2289),
-      nz = bz(4571);
+    var ID = cD(2338),
+      pD = cD(4590);
 
-    function iz(zz) {
+    function iD(DD) {
       let {
-        action: uz,
-        flags: bz
-      } = zz;
-      return "mid-fire" === uz && 0 !== (bz & Ez.b.AltLeftClick)
+        action: CD,
+        flags: cD
+      } = DD;
+      return "mid-fire" === CD && 0 !== (cD & ID.d.AltLeftClick)
     }
-    const lz = new Set;
+    const fD = new Set;
 
-    function Mz(zz) {
-      return lz.add(zz), () => {
-        lz.delete(zz)
+    function bD(DD) {
+      return fD.add(DD), () => {
+        fD.delete(DD)
       }
     }
 
-    function tz(zz) {
-      const uz = nz.d[255 & zz];
-      if (void 0 === uz) return;
-      const bz = zz >>> 8 & 255,
-        iz = {
-          action: uz,
-          down: 0 !== (bz & Ez.b.Down),
-          flags: bz,
-          press: zz >>> 16
+    function QD(DD) {
+      const CD = pD.c[255 & DD];
+      if (void 0 === CD) return;
+      const cD = DD >>> 8 & 255,
+        iD = {
+          action: CD,
+          down: 0 !== (cD & ID.d.Down),
+          flags: cD,
+          press: DD >>> 16
         };
-      for (const Ez of lz) Ez(iz)
+      for (const ID of fD) ID(iD)
     }
   },
-  4571: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => nz,
-      f: () => iz,
-      i: () => lz,
-      m: () => Ez,
-      n: () => Mz
+  4590: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => pD,
+      e: () => iD,
+      f: () => fD,
+      j: () => ID,
+      m: () => bD
     });
-    const Ez = {
+    const ID = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -1645,8 +1645,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      nz = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      iz = {
+      pD = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      iD = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -1709,63 +1709,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      lz = {
+      fD = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      Mz = [16]
+      bD = [16]
   },
-  4575: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Mz,
-      g: () => lz,
-      i: () => Hz
+  4592: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => bD,
+      g: () => fD,
+      k: () => wD
     });
-    var Ez = bz(2289),
-      nz = bz(2294);
-    const iz = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var ID = cD(2338),
+      pD = cD(2343);
+    const iD = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function lz(zz) {
-      return zz instanceof HTMLElement && (!!(zz.isContentEditable || zz instanceof HTMLTextAreaElement || zz instanceof HTMLSelectElement) || zz instanceof HTMLInputElement && !iz.has(zz.type))
+    function fD(DD) {
+      return DD instanceof HTMLElement && (!!(DD.isContentEditable || DD instanceof HTMLTextAreaElement || DD instanceof HTMLSelectElement) || DD instanceof HTMLInputElement && !iD.has(DD.type))
     }
 
-    function Mz(zz) {
-      let uz = null;
-      const bz = bz => {
-          const nz = lz(bz);
-          nz !== uz && (uz = nz, zz(Ez.f.UiCapture, Ez.z.Keyboard, 0, 0, nz ? Ez.z.Keyboard : 0))
+    function bD(DD) {
+      let CD = null;
+      const cD = cD => {
+          const pD = fD(cD);
+          pD !== CD && (CD = pD, DD(ID.k.UiCapture, ID.C.Keyboard, 0, 0, pD ? ID.C.Keyboard : 0))
         },
-        nz = zz => {
-          bz(zz.target)
+        pD = DD => {
+          cD(DD.target)
         },
-        iz = zz => {
-          bz(zz.relatedTarget)
+        iD = DD => {
+          cD(DD.relatedTarget)
         },
-        Mz = () => {
-          bz(document.activeElement)
+        bD = () => {
+          cD(document.activeElement)
         },
-        tz = {
+        QD = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", nz, tz), document.addEventListener("focusout", iz, tz), document.addEventListener("keydown", Mz, tz), bz(document.activeElement), () => {
-        document.removeEventListener("focusin", nz, tz), document.removeEventListener("focusout", iz, tz), document.removeEventListener("keydown", Mz, tz)
+      return document.addEventListener("focusin", pD, QD), document.addEventListener("focusout", iD, QD), document.addEventListener("keydown", bD, QD), cD(document.activeElement), () => {
+        document.removeEventListener("focusin", pD, QD), document.removeEventListener("focusout", iD, QD), document.removeEventListener("keydown", bD, QD)
       }
     }
-    const tz = new Map;
+    const QD = new Map;
 
-    function Hz(zz, uz) {
-      var bz;
-      let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      tz.set(Ez, (null !== (bz = tz.get(Ez)) && void 0 !== bz ? bz : 0) & ~zz | uz & zz);
-      let iz = 0;
-      for (const nz of tz.values()) iz |= nz;
-      return (0, nz.x)(zz, iz & zz)
+    function wD(DD, CD) {
+      var cD;
+      let ID = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      QD.set(ID, (null !== (cD = QD.get(ID)) && void 0 !== cD ? cD : 0) & ~DD | CD & DD);
+      let iD = 0;
+      for (const pD of QD.values()) iD |= pD;
+      return (0, pD.y)(DD, iD & DD)
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

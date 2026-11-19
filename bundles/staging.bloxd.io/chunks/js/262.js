@@ -1,255 +1,255 @@
 export const id = 262;
 export const ids = [262];
 export const modules = {
-  40187: (zz, uz, bz) => {
-    function Ez(zz, uz, bz) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(zz, uz).getContext("2d", bz);
-      const Ez = document.createElement("canvas");
-      return Ez.width = zz, Ez.height = uz, Ez.getContext("2d", bz)
+  40083: (DD, CD, cD) => {
+    function ID(DD, CD, cD) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(DD, CD).getContext("2d", cD);
+      const ID = document.createElement("canvas");
+      return ID.width = DD, ID.height = CD, ID.getContext("2d", cD)
     }
 
-    function nz(zz, uz) {
-      return zz.getContext("2d", uz)
+    function pD(DD, CD) {
+      return DD.getContext("2d", CD)
     }
-    bz.d(uz, {
-      b: () => nz,
-      e: () => Ez
+    cD.d(CD, {
+      e: () => pD,
+      h: () => ID
     })
   },
-  40116: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => fz,
-      f: () => Zz,
-      h: () => Qz,
-      j: () => Az,
-      n: () => Lz,
-      o: () => Pz,
-      q: () => Xz,
-      u: () => Kz,
-      v: () => wz,
-      z: () => Jz,
-      C: () => gz,
-      E: () => oz,
-      H: () => qz,
-      J: () => Dz,
-      K: () => Gz,
-      N: () => Vz
+  40003: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => gD,
+      e: () => tD,
+      g: () => WD,
+      k: () => xD,
+      o: () => JD,
+      p: () => KD,
+      s: () => ND,
+      w: () => oD,
+      y: () => vD,
+      A: () => UD,
+      B: () => RD,
+      C: () => nD,
+      G: () => lD,
+      H: () => YD,
+      I: () => aD,
+      M: () => zD
     });
-    var Ez = bz(4560),
-      nz = bz(39800),
-      iz = (bz(39987), bz(11));
-    class lz {
-      constructor(zz, uz) {
-        this.memory = zz, this.access = uz, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.Bp = 0, this.u32 = new iz.i(0), this.f32 = new iz.c(0), this.u8 = new iz.b(0), this.dataView = new iz.e(new ArrayBuffer(0)), this.refresh()
+    var ID = cD(4581),
+      pD = cD(39730),
+      iD = (cD(39875), cD(11));
+    class fD {
+      constructor(DD, CD) {
+        this.memory = DD, this.access = CD, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.LB = 0, this.u32 = new iD.n(0), this.f32 = new iD.h(0), this.u8 = new iD.e(0), this.dataView = new iD.j(new ArrayBuffer(0)), this.refresh()
       }
       refresh() {
-        this.ptr = this.access.ptr(), this.Bp = this.access.Bp(), this.buffer = (0, iz.F)(this.memory()), this.u32 = new iz.i(this.buffer, this.ptr, this.Bp >>> 2), this.f32 = new iz.c(this.buffer, this.ptr, this.Bp >>> 2), this.u8 = new iz.b(this.buffer, this.ptr, this.Bp), this.dataView = new iz.e(this.buffer, this.ptr, this.Bp)
+        this.ptr = this.access.ptr(), this.LB = this.access.LB(), this.buffer = (0, iD.I)(this.memory()), this.u32 = new iD.n(this.buffer, this.ptr, this.LB >>> 2), this.f32 = new iD.h(this.buffer, this.ptr, this.LB >>> 2), this.u8 = new iD.e(this.buffer, this.ptr, this.LB), this.dataView = new iD.j(this.buffer, this.ptr, this.LB)
       }
       ensureViews() {
-        (0, iz.F)(this.memory()) !== this.buffer && this.refresh()
+        (0, iD.I)(this.memory()) !== this.buffer && this.refresh()
       }
       get view() {
         return this.ensureViews(), this.dataView
       }
-      room(zz) {
-        return !!this.fits(zz) || (this.dropped++, !1)
+      room(DD) {
+        return !!this.fits(DD) || (this.dropped++, !1)
       }
-      fits(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
+      fits(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
         this.ensureViews();
-        const bz = uz + zz;
-        return bz <= this.Bp || bz <= Ez.Bc && 0 !== this.access.reserve(bz) && (this.refresh(), bz <= this.Bp)
+        const cD = CD + DD;
+        return cD <= this.LB || cD <= ID.Dc && 0 !== this.access.reserve(cD) && (this.refresh(), cD <= this.LB)
       }
-      consume(zz) {
-        const uz = this.cursor - zz;
-        uz > 0 && zz > 0 && (this.ensureViews(), this.u8.copyWithin(0, zz, this.cursor)), this.cursor = uz > 0 ? uz : 0
+      consume(DD) {
+        const CD = this.cursor - DD;
+        CD > 0 && DD > 0 && (this.ensureViews(), this.u8.copyWithin(0, DD, this.cursor)), this.cursor = CD > 0 ? CD : 0
       }
-      writeRecord(zz, uz, bz, nz, iz) {
-        if (!this.room(Ez.mb)) return !1;
-        const lz = this.cursor >>> 2;
-        return this.u32[lz] = 65535 & zz | (65535 & uz) << 16, this.f32[lz + 1] = bz, this.f32[lz + 2] = nz, this.u32[lz + 3] = iz >>> 0, this.cursor += Ez.mb, !0
+      writeRecord(DD, CD, cD, pD, iD) {
+        if (!this.room(ID.pb)) return !1;
+        const fD = this.cursor >>> 2;
+        return this.u32[fD] = 65535 & DD | (65535 & CD) << 16, this.f32[fD + 1] = cD, this.f32[fD + 2] = pD, this.u32[fD + 3] = iD >>> 0, this.cursor += ID.pb, !0
       }
-      writeOptions(zz, uz) {
-        const bz = uz.byteLength,
-          nz = Ez.mb + (0, Ez.ie)(bz);
-        if (!this.fits(nz)) return !1;
-        const iz = this.cursor,
-          lz = iz >>> 2;
-        this.u32[lz] = Ez.pb.Options, this.u32[lz + 1] = bz, this.u32[lz + 2] = 0, this.u32[lz + 3] = zz >>> 0;
-        const Mz = iz + Ez.mb;
-        return this.u8.set(uz, Mz), this.u8.fill(0, Mz + bz, iz + nz), this.cursor += nz, !0
+      writeOptions(DD, CD) {
+        const cD = CD.byteLength,
+          pD = ID.pb + (0, ID.je)(cD);
+        if (!this.fits(pD)) return !1;
+        const iD = this.cursor,
+          fD = iD >>> 2;
+        this.u32[fD] = ID.tb.Options, this.u32[fD + 1] = cD, this.u32[fD + 2] = 0, this.u32[fD + 3] = DD >>> 0;
+        const bD = iD + ID.pb;
+        return this.u8.set(CD, bD), this.u8.fill(0, bD + cD, iD + pD), this.cursor += pD, !0
       }
-      writeWorkerRecord(zz, uz, bz, nz, iz, lz) {
-        const Mz = lz.byteLength,
-          tz = Ez.Bd + (0, Ez.ie)(Mz);
-        if (Mz > Ez.xd) return this.dropped++, !1;
-        if (!this.room(tz)) return !1;
-        const Hz = this.cursor,
-          Oz = Hz >>> 2;
-        this.u32[Oz] = zz >>> 0, this.u32[Oz + 1] = 65535 & uz | (65535 & bz) << 16, this.u32[Oz + 2] = nz >>> 0, this.u32[Oz + 3] = iz >>> 0, this.u32[Oz + 4] = Mz;
-        const pz = Hz + Ez.Bd;
-        return this.u8.set(lz, pz), this.u8.fill(0, pz + Mz, Hz + tz), this.cursor += tz, !0
+      writeWorkerRecord(DD, CD, cD, pD, iD, fD) {
+        const bD = fD.byteLength,
+          QD = ID.Bd + (0, ID.je)(bD);
+        if (bD > ID.yd) return this.dropped++, !1;
+        if (!this.room(QD)) return !1;
+        const wD = this.cursor,
+          SD = wD >>> 2;
+        this.u32[SD] = DD >>> 0, this.u32[SD + 1] = 65535 & CD | (65535 & cD) << 16, this.u32[SD + 2] = pD >>> 0, this.u32[SD + 3] = iD >>> 0, this.u32[SD + 4] = bD;
+        const BD = wD + ID.Bd;
+        return this.u8.set(fD, BD), this.u8.fill(0, BD + bD, wD + QD), this.cursor += QD, !0
       }
       written() {
         return this.ensureViews(), this.u8.subarray(0, this.cursor)
       }
-      writeFrame(zz, uz) {
-        return this.writeNet(Ez.Qb.Frame, zz, uz)
+      writeFrame(DD, CD) {
+        return this.writeNet(ID.Ub.Frame, DD, CD)
       }
-      writeOpen(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(Ez.Qb.Open, zz, tz(uz))
+      writeOpen(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(ID.Ub.Open, DD, QD(CD))
       }
-      writeClose(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(Ez.Qb.Close, zz, tz(uz))
+      writeClose(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(ID.Ub.Close, DD, QD(CD))
       }
-      writeNet(zz, uz, bz) {
-        const nz = bz.byteLength,
-          iz = Ez.Pb + (0, Ez.ie)(nz);
-        if (nz > Ez.Jb) return this.dropped++, !1;
-        if (!this.room(iz)) return !1;
-        const lz = this.cursor;
-        this.u32[lz >>> 2] = nz, this.u32[1 + (lz >>> 2)] = (0, Ez.de)(zz, uz);
-        const Mz = lz + Ez.Pb;
-        return this.u8.set(bz, Mz), this.u8.fill(0, Mz + nz, lz + iz), this.cursor += iz, !0
+      writeNet(DD, CD, cD) {
+        const pD = cD.byteLength,
+          iD = ID.Rb + (0, ID.je)(pD);
+        if (pD > ID.Lb) return this.dropped++, !1;
+        if (!this.room(iD)) return !1;
+        const fD = this.cursor;
+        this.u32[fD >>> 2] = pD, this.u32[1 + (fD >>> 2)] = (0, ID.he)(DD, CD);
+        const bD = fD + ID.Rb;
+        return this.u8.set(cD, bD), this.u8.fill(0, bD + pD, fD + iD), this.cursor += iD, !0
       }
-      QF(zz, uz, bz) {
-        const nz = Ez.p + (0, Ez.ie)(bz);
-        if (!this.room(nz)) return -1;
-        const iz = this.cursor;
-        this.u32[iz >>> 2] = 65535 & zz | (65535 & uz) << 16, this.u32[1 + (iz >>> 2)] = bz;
-        const lz = iz + Ez.p;
-        return this.u8.fill(0, lz, iz + nz), this.cursor += nz, lz
+      VM(DD, CD, cD) {
+        const pD = ID.w + (0, ID.je)(cD);
+        if (!this.room(pD)) return -1;
+        const iD = this.cursor;
+        this.u32[iD >>> 2] = 65535 & DD | (65535 & CD) << 16, this.u32[1 + (iD >>> 2)] = cD;
+        const fD = iD + ID.w;
+        return this.u8.fill(0, fD, iD + pD), this.cursor += pD, fD
       }
-      growForCmd(zz) {
-        return this.fits(Ez.p + (0, Ez.ie)(zz), 0)
+      growForCmd(DD) {
+        return this.fits(ID.w + (0, ID.je)(DD), 0)
       }
-      writeCmd(zz, uz, bz) {
-        const Ez = this.QF(zz, uz, bz.byteLength);
-        return !(Ez < 0) && (this.u8.set(bz, Ez), !0)
+      writeCmd(DD, CD, cD) {
+        const ID = this.VM(DD, CD, cD.byteLength);
+        return !(ID < 0) && (this.u8.set(cD, ID), !0)
       }
-      copyWritten(zz, uz) {
-        return this.ensureViews(), this.u8.slice(zz, zz + uz)
+      copyWritten(DD, CD) {
+        return this.ensureViews(), this.u8.slice(DD, DD + CD)
       }
     }
-    const Mz = new iz.b(0);
+    const bD = new iD.e(0);
 
-    function tz(zz) {
-      if (0 === zz) return Mz;
-      const uz = new iz.b(Ez.Nb);
-      for (let bz = 0; bz < Ez.Nb; bz++) uz[bz] = zz >>> 8 * bz & 255;
-      return uz
+    function QD(DD) {
+      if (0 === DD) return bD;
+      const CD = new iD.e(ID.Nb);
+      for (let cD = 0; cD < ID.Nb; cD++) CD[cD] = DD >>> 8 * cD & 255;
+      return CD
     }
-    class Hz {
-      constructor(zz, uz) {
-        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new lz(uz, {
-          ptr: () => zz.pd(),
-          Bp: () => zz.Inz(),
-          reserve: uz => zz.tiz(uz)
-        }), this.net = new lz(uz, {
-          ptr: () => zz.Eiz(),
-          Bp: () => zz.biz(),
-          reserve: uz => zz.Hiz(uz)
-        }), this.worker = new lz(uz, {
-          ptr: () => zz.Piz(),
-          Bp: () => zz.Liz(),
-          reserve: uz => zz.Oiz(uz)
-        }), this.cmd = new lz(uz, {
-          ptr: () => zz.Unz(),
-          Bp: () => zz.qnz(),
-          reserve: uz => zz.hnz(uz)
+    class wD {
+      constructor(DD, CD) {
+        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new fD(CD, {
+          ptr: () => DD.rB(),
+          LB: () => DD.fiD(),
+          reserve: CD => DD.NiD(CD)
+        }), this.net = new fD(CD, {
+          ptr: () => DD.ZiD(),
+          LB: () => DD.tiD(),
+          reserve: CD => DD.giD(CD)
+        }), this.worker = new fD(CD, {
+          ptr: () => DD.YiD(),
+          LB: () => DD.diD(),
+          reserve: CD => DD.miD(CD)
+        }), this.cmd = new fD(CD, {
+          ptr: () => DD.rpD(),
+          LB: () => DD.upD(),
+          reserve: CD => DD.hpD(CD)
         })
       }
-      reset(zz) {
-        this.input.cursor = 0, this.worker.cursor = 0, this.cmd.consume(zz)
+      reset(DD) {
+        this.input.cursor = 0, this.worker.cursor = 0, this.cmd.consume(DD)
       }
     }
-    var Oz = bz(39979),
-      pz = bz(2294),
-      dz = bz(4552),
-      Fz = bz(40123);
-    const Zz = "coreFrame",
-      Rz = "fatalStatus",
-      Kz = "otherCall",
-      wz = "coreRings",
-      Xz = "netIn",
-      fz = "abi",
-      sz = "netOut",
-      rz = "workerOut",
-      oz = "worldgenHost",
-      Nz = "eventWalker",
-      vz = "netEvent",
-      xz = "envEvent",
-      Jz = "sharedTables",
-      Az = "inputAction",
-      Tz = new Set([Nz, vz, xz, Az, Jz]),
-      Lz = "wasmMemory",
-      Pz = "meshHost";
+    var SD = cD(39872),
+      BD = cD(2343),
+      yD = cD(4575),
+      MD = cD(40012);
+    const tD = "coreFrame",
+      ZD = "fatalStatus",
+      oD = "otherCall",
+      vD = "coreRings",
+      ND = "netIn",
+      gD = "abi",
+      XD = "netOut",
+      mD = "workerOut",
+      nD = "worldgenHost",
+      OD = "eventWalker",
+      PD = "netEvent",
+      HD = "envEvent",
+      UD = "sharedTables",
+      xD = "inputAction",
+      qD = new Set([OD, PD, HD, xD, UD]),
+      JD = "wasmMemory",
+      KD = "meshHost";
 
-    function Gz(zz, uz) {
-      zz.forEachWorkerOut(((bz, nz, iz) => {
-        if ((0, Ez._d)(bz)) try {
-          var lz;
-          null === (lz = uz.worldgen) || void 0 === lz || lz.take(bz, iz)
-        } catch (tz) {
-          zz.crash(oz, tz)
+    function aD(DD, CD) {
+      DD.forEachWorkerOut(((cD, pD, iD) => {
+        if ((0, ID.Yd)(cD)) try {
+          var fD;
+          null === (fD = CD.worldgen) || void 0 === fD || fD.take(cD, iD)
+        } catch (QD) {
+          DD.crash(nD, QD)
         } else try {
-          var Mz;
-          null === (Mz = uz.mesh) || void 0 === Mz || Mz.take(bz, nz, iz)
-        } catch (tz) {
-          zz.crash(Pz, tz)
+          var bD;
+          null === (bD = CD.mesh) || void 0 === bD || bD.take(cD, pD, iD)
+        } catch (QD) {
+          DD.crash(KD, QD)
         }
       }))
     }
-    const az = 1048576;
+    const VD = 1048576;
 
-    function Vz(zz, uz) {
-      let bz = !1;
-      const Ez = () => {
-        bz = !1, uz()
+    function zD(DD, CD) {
+      let cD = !1;
+      const ID = () => {
+        cD = !1, CD()
       };
       return () => {
-        !bz && zz.cursor >= az && (bz = !0, queueMicrotask(Ez))
+        !cD && DD.cursor >= VD && (cD = !0, queueMicrotask(ID))
       }
     }
-    const mz = new Set([Rz, Kz, oz, Pz]);
+    const jD = new Set([ZD, oD, nD, KD]);
 
-    function qz(zz) {
-      return Tz.has(zz.site) ? zz.error instanceof WebAssembly.RuntimeError || (0, nz.l)(zz.error) : !mz.has(zz.site) && zz.error instanceof Error
+    function lD(DD) {
+      return qD.has(DD.site) ? DD.error instanceof WebAssembly.RuntimeError || (0, pD.n)(DD.error) : !jD.has(DD.site) && DD.error instanceof Error
     }
-    const hz = "events",
-      Uz = [],
-      cz = "debugLog",
-      gz = "terrainTextures",
-      Sz = "sunShadowTextures",
-      yz = new TextDecoder;
+    const LD = "events",
+      TD = [],
+      GD = "debugLog",
+      RD = "terrainTextures",
+      kD = "sunShadowTextures",
+      dD = new TextDecoder;
 
-    function Dz(zz, uz) {
+    function YD(DD, CD) {
       const {
-        site: bz,
-        error: nz,
-        header: iz
-      } = zz, lz = iz ? (0, Ez.Td)(iz.lastError) : "noFrame", Mz = `CORE-${bz===Rz?lz:bz}`, tz = null === nz || void 0 === nz ? "" : ` ${(0,Oz.e)(nz)}`, Hz = {
-        site: bz,
-        wasmBuild: uz.wasm,
-        clientVersion: uz.client
+        site: cD,
+        error: pD,
+        header: iD
+      } = DD, fD = iD ? (0, ID.Sd)(iD.lastError) : "noFrame", bD = `CORE-${cD===ZD?fD:cD}`, QD = null === pD || void 0 === pD ? "" : ` ${(0,SD.h)(pD)}`, wD = {
+        site: cD,
+        wasmBuild: CD.wasm,
+        clientVersion: CD.client
       };
-      return iz && (Hz.status = String(iz.status), Hz.lastError = lz, Hz.lastErrorCode = String(iz.lastError), Hz.lastErrorDetail = String(iz.lastErrorDetail), Hz.errorCount = String(iz.errorCount), Hz.frameIndex = String(iz.frameIndex), Hz.tickIndex = String(iz.tickIndex)), {
-        code: Mz,
-        message: `core ${bz}, last error ${lz};${tz}`,
-        details: Hz
+      return iD && (wD.status = String(iD.status), wD.lastError = fD, wD.lastErrorCode = String(iD.lastError), wD.lastErrorDetail = String(iD.lastErrorDetail), wD.errorCount = String(iD.errorCount), wD.frameIndex = String(iD.frameIndex), wD.tickIndex = String(iD.tickIndex)), {
+        code: bD,
+        message: `core ${cD}, last error ${fD};${QD}`,
+        details: wD
       }
     }
-    class Qz {
-      constructor(zz, uz, bz) {
-        this.core = zz, this.memory = uz, this.handlers = bz, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
+    class WD {
+      constructor(DD, CD, cD) {
+        this.core = DD, this.memory = CD, this.handlers = cD, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
           ptr: 0,
           len: 0,
-          net: Uz,
+          net: TD,
           netOffsets: this.netOffsets,
           kind: "none"
-        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.rings = new Hz(zz, uz)
+        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.rings = new wD(DD, CD)
       }
       get netKeptFrames() {
         return this.keptFrames
@@ -260,448 +260,448 @@ export const modules = {
       hasPendingCommands() {
         return this.rings.cmd.cursor > 0
       }
-      framePaces(zz) {
+      framePaces(DD) {
         if (this.stopped || this.drawsHeld) return !1;
         try {
-          return this.core.Qnz(zz)
-        } catch (uz) {
-          return this.crash(Zz, uz), !1
+          return this.core.IiD(DD)
+        } catch (CD) {
+          return this.crash(tD, CD), !1
         }
       }
       get isStopped() {
         return this.stopped
       }
-      frame(zz, uz) {
-        var bz;
-        let iz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      frame(DD, CD) {
+        var cD;
+        let iD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (this.stopped) return !1;
         if (!this.writePendingInput()) return !1;
         const {
-          input: lz,
-          net: Mz,
-          worker: tz,
-          cmd: Hz
-        } = this.rings, Oz = Mz.cursor, pz = uz && !this.drawsHeld;
-        let Kz = Ez.H.Fatal;
-        const wz = Hz.cursor;
-        let fz = null;
+          input: fD,
+          net: bD,
+          worker: QD,
+          cmd: wD
+        } = this.rings, SD = bD.cursor, BD = CD && !this.drawsHeld;
+        let oD = ID.M.Fatal;
+        const vD = wD.cursor;
+        let gD = null;
         try {
-          const uz = (pz ? Ez.Z.Draws : 0) | (iz ? Ez.Z.NetAll : 0);
-          Kz = (0, Fz.d)((() => this.core.frame(zz, lz.cursor, Mz.cursor, tz.cursor, uz, wz)))
-        } catch (mz) {
-          fz = {
-            error: mz
+          const CD = (BD ? ID.ab.Draws : 0) | (iD ? ID.ab.NetAll : 0);
+          oD = (0, MD.g)((() => this.core.frame(DD, fD.cursor, bD.cursor, QD.cursor, CD, vD)))
+        } catch (jD) {
+          gD = {
+            error: jD
           }
         }
-        const sz = null === (bz = this.gameHost) || void 0 === bz ? void 0 : bz.takeFault();
-        this.rings.reset(this.stopped || null !== fz || void 0 !== sz ? Hz.cursor : wz);
-        const rz = null === fz && void 0 === sz ? this.headerView() : null,
-          oz = null === rz ? null : (0, Ez.me)(rz);
-        null !== oz && (this.lastHeader = oz);
-        const xz = null !== oz && Kz !== Ez.H.Fatal,
-          Jz = xz && null !== rz ? rz[Ez.db.NetInKept] : 0,
-          Az = xz && Jz <= Oz && Jz % 4 === 0 ? Jz : null;
-        var Tz, Lz;
-        null !== oz && null !== Az && Kz === Ez.H.Errors && (null === (Tz = (Lz = this.handlers).onErrors) || void 0 === Tz || Tz.call(Lz, oz));
-        const Pz = null === Az ? Uz : this.readEvents(Oz);
-        if (Mz.consume(Oz - (null !== Az && void 0 !== Az ? Az : 0)), this.netKept = null !== Az && void 0 !== Az ? Az : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== fz) return this.crash(Zz, void 0 === sz || sz instanceof nz.b ? fz.error : sz), !1;
-        if (void 0 !== sz || null === oz) return this.crashOn(Zz, sz), !1;
-        const Gz = this.headerView()[Ez.db.FrameDraw];
-        if (this.lastFrameKind = (0, dz.h)(pz, Gz), Kz === Ez.H.Fatal) return this.crash(Rz, null), !1;
-        if (null === Az) return this.crash(Xz, `the core kept ${Jz} of ${Oz} net-in bytes`), !1;
+        const XD = null === (cD = this.gameHost) || void 0 === cD ? void 0 : cD.takeFault();
+        this.rings.reset(this.stopped || null !== gD || void 0 !== XD ? wD.cursor : vD);
+        const mD = null === gD && void 0 === XD ? this.headerView() : null,
+          nD = null === mD ? null : (0, ID.le)(mD);
+        null !== nD && (this.lastHeader = nD);
+        const HD = null !== nD && oD !== ID.M.Fatal,
+          UD = HD && null !== mD ? mD[ID.hb.NetInKept] : 0,
+          xD = HD && UD <= SD && UD % 4 === 0 ? UD : null;
+        var qD, JD;
+        null !== nD && null !== xD && oD === ID.M.Errors && (null === (qD = (JD = this.handlers).onErrors) || void 0 === qD || qD.call(JD, nD));
+        const KD = null === xD ? TD : this.readEvents(SD);
+        if (bD.consume(SD - (null !== xD && void 0 !== xD ? xD : 0)), this.netKept = null !== xD && void 0 !== xD ? xD : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== gD) return this.crash(tD, void 0 === XD || XD instanceof pD.e ? gD.error : XD), !1;
+        if (void 0 !== XD || null === nD) return this.crashOn(tD, XD), !1;
+        const aD = this.headerView()[ID.hb.FrameDraw];
+        if (this.lastFrameKind = (0, yD.c)(BD, aD), oD === ID.M.Fatal) return this.crash(ZD, null), !1;
+        if (null === xD) return this.crash(ND, `the core kept ${UD} of ${SD} net-in bytes`), !1;
         if (this.eventWalker) {
           if (this.stopped) return !1;
-          const zz = this.frameEvents,
-            uz = this.headerView();
-          zz.ptr = uz[Ez.db.EventsPtr], zz.len = uz[Ez.db.EventsLen], zz.net = Pz, zz.kind = this.lastFrameKind;
+          const DD = this.frameEvents,
+            CD = this.headerView();
+          DD.ptr = CD[ID.hb.EventsPtr], DD.len = CD[ID.hb.EventsLen], DD.net = KD, DD.kind = this.lastFrameKind;
           try {
-            this.eventWalker(zz)
-          } catch (mz) {
-            return this.crashOn(Nz, mz), !1
+            this.eventWalker(DD)
+          } catch (jD) {
+            return this.crashOn(OD, jD), !1
           }
           return this.handEnvEvents()
         }
-        for (const Ez of Pz) {
+        for (const ID of KD) {
           if (this.stopped) return !1;
           try {
-            var az, Vz;
-            null === (az = (Vz = this.handlers).onNetEvent) || void 0 === az || az.call(Vz, Ez)
-          } catch (mz) {
-            return this.crashOn(vz, mz), !1
+            var VD, zD;
+            null === (VD = (zD = this.handlers).onNetEvent) || void 0 === VD || VD.call(zD, ID)
+          } catch (jD) {
+            return this.crashOn(PD, jD), !1
           }
         }
         return this.handEnvEvents()
       }
       handEnvEvents() {
-        for (const iz of this.graceEvents) {
+        for (const iD of this.graceEvents) {
           if (this.stopped) return !1;
           try {
-            var zz, uz;
-            null === (zz = (uz = this.handlers).onReconnectGrace) || void 0 === zz || zz.call(uz, iz)
-          } catch (nz) {
-            return this.crashOn(vz, nz), !1
+            var DD, CD;
+            null === (DD = (CD = this.handlers).onReconnectGrace) || void 0 === DD || DD.call(CD, iD)
+          } catch (pD) {
+            return this.crashOn(PD, pD), !1
           }
         }
-        for (const iz of this.envEvents) {
+        for (const iD of this.envEvents) {
           if (this.stopped) return !1;
           try {
-            var bz, Ez;
-            null === (bz = (Ez = this.handlers).onEnvEvent) || void 0 === bz || bz.call(Ez, iz)
-          } catch (nz) {
-            return this.crashOn(xz, nz), !1
+            var cD, ID;
+            null === (cD = (ID = this.handlers).onEnvEvent) || void 0 === cD || cD.call(ID, iD)
+          } catch (pD) {
+            return this.crashOn(HD, pD), !1
           }
         }
         return !this.stopped
       }
-      setEventWalker(zz) {
-        this.eventWalker = zz
+      setEventWalker(DD) {
+        this.eventWalker = DD
       }
       writePendingInput() {
         if (this.stopped) return !1;
         const {
-          input: zz
+          input: DD
         } = this.rings;
         try {
-          const uz = this.unsentUiPrefs;
-          uz && zz.writeRecord(Ez.pb.UiPrefs, 0, uz.nametagCutDistance, 0, (0, Ez.pe)(uz)) && (this.unsentUiPrefs = null);
-          const bz = this.unsentEnvPrefs;
-          bz && zz.writeRecord(Ez.pb.EnvPrefs, (0, Ez.Wd)(bz), bz.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
-          const nz = this.unsentLookPrefs;
-          nz && zz.writeRecord(Ez.pb.Sensitivity, 0, nz.mouse, nz.touch, (0, pz.i)(nz.fovPercent)) && (this.unsentLookPrefs = null);
-          let iz = 0;
+          const CD = this.unsentUiPrefs;
+          CD && DD.writeRecord(ID.tb.UiPrefs, 0, CD.nametagCutDistance, 0, (0, ID.oe)(CD)) && (this.unsentUiPrefs = null);
+          const cD = this.unsentEnvPrefs;
+          cD && DD.writeRecord(ID.tb.EnvPrefs, (0, ID.Wd)(cD), cD.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
+          const pD = this.unsentLookPrefs;
+          pD && DD.writeRecord(ID.tb.Sensitivity, 0, pD.mouse, pD.touch, (0, BD.k)(pD.fovPercent)) && (this.unsentLookPrefs = null);
+          let iD = 0;
           for (const {
-              aux: Ez,
-              payload: lz
+              aux: ID,
+              payload: fD
             }
             of this.unsentOptions) {
-            if (!zz.writeOptions(Ez, lz)) {
-              if (zz.cursor > 0) break;
+            if (!DD.writeOptions(ID, fD)) {
+              if (DD.cursor > 0) break;
               this.optionsDropped++
             }
-            iz++
+            iD++
           }
-          iz > 0 && this.unsentOptions.splice(0, iz)
-        } catch (uz) {
-          return this.crash(wz, uz), !1
+          iD > 0 && this.unsentOptions.splice(0, iD)
+        } catch (CD) {
+          return this.crash(vD, CD), !1
         }
         return !0
       }
-      setHoldDraws(zz) {
-        this.drawsHeld = zz
+      setHoldDraws(DD) {
+        this.drawsHeld = DD
       }
-      setUiPrefs(zz) {
+      setUiPrefs(DD) {
         this.unsentUiPrefs = {
-          ...zz
+          ...DD
         }
       }
-      setEnvPrefs(zz) {
+      setEnvPrefs(DD) {
         this.unsentEnvPrefs = {
-          ...zz
+          ...DD
         }
       }
-      setLookPrefs(zz) {
+      setLookPrefs(DD) {
         this.unsentLookPrefs = {
-          ...zz
+          ...DD
         }
       }
-      queueOptions(zz, uz) {
-        return !this.isStopped && (uz.byteLength > Ez.Vb.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
-          aux: zz,
-          payload: uz
+      queueOptions(DD, CD) {
+        return !this.isStopped && (CD.byteLength > ID.Zb.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
+          aux: DD,
+          payload: CD
         }), !0))
       }
-      setChunkCap(zz) {
-        return this.callCore("setChunkCap", null, (uz => uz.Kiz(zz)))
+      setChunkCap(DD) {
+        return this.callCore("setChunkCap", null, (CD => CD.qiD(DD)))
       }
-      shedMemory(zz) {
-        const uz = this.callCore("shedMemory", null, (uz => uz.Niz(zz)));
-        return 0 === uz ? null : uz
+      shedMemory(DD) {
+        const CD = this.callCore("shedMemory", null, (CD => CD.liD(DD)));
+        return 0 === CD ? null : CD
       }
       addDistanceInUse() {
-        const zz = this.callCore("addDistanceInUse", null, (zz => zz.Pnz()));
-        return 0 === zz ? null : zz
+        const DD = this.callCore("addDistanceInUse", null, (DD => DD.YpD()));
+        return 0 === DD ? null : DD
       }
-      setChunkAddDistance(zz, uz) {
-        return this.callCore("setChunkAddDistance", !1, (bz => bz.Riz(zz, uz)))
+      setChunkAddDistance(DD, CD) {
+        return this.callCore("setChunkAddDistance", !1, (cD => cD.xiD(DD, CD)))
       }
-      setGameHost(zz) {
-        return this.callCore("setGameHost", !1, (uz => (uz.Dnz(zz), this.gameHost = zz, !0)))
+      setGameHost(DD) {
+        return this.callCore("setGameHost", !1, (CD => (CD.ciD(DD), this.gameHost = DD, !0)))
       }
-      setAntiCheatProbes(zz) {
-        return this.callCore("setAntiCheatProbes", !1, (uz => uz.Fiz(zz)))
+      setAntiCheatProbes(DD) {
+        return this.callCore("setAntiCheatProbes", !1, (CD => CD.HiD(DD)))
       }
-      setAmbientOcclusion(zz) {
-        this.callCore("setAmbientOcclusion", void 0, (uz => {
-          uz.diz(zz)
+      setAmbientOcclusion(DD) {
+        this.callCore("setAmbientOcclusion", void 0, (CD => {
+          CD.OiD(DD)
         }))
       }
-      setPoseLod(zz) {
-        this.callCore("setPoseLod", void 0, (uz => {
-          uz.Xiz(zz)
+      setPoseLod(DD) {
+        this.callCore("setPoseLod", void 0, (CD => {
+          CD.KiD(DD)
         }))
       }
-      setDebugLog(zz, uz) {
-        this.callCore(cz, void 0, (bz => {
-          bz.NK(zz, uz)
+      setDebugLog(DD, CD) {
+        this.callCore(GD, void 0, (cD => {
+          cD.zo(DD, CD)
         }))
       }
-      takeDebugLog(zz) {
-        return this.callCore(cz, [], (uz => uz.vK(zz)))
+      takeDebugLog(DD) {
+        return this.callCore(GD, [], (CD => CD.jo(DD)))
       }
-      setTextureLayers(zz) {
-        return this.callCore("setTextureLayers", !1, (uz => uz.oiz(zz)))
+      setTextureLayers(DD) {
+        return this.callCore("setTextureLayers", !1, (CD => CD.jiD(DD)))
       }
-      setBlockColours(zz) {
+      setBlockColours(DD) {
         let {
-          blocks: uz,
-          counts: bz,
-          values: Ez
-        } = zz;
-        return this.callCore("setBlockColours", !1, (zz => zz.dbz(uz, bz, Ez)))
+          blocks: CD,
+          counts: cD,
+          values: ID
+        } = DD;
+        return this.callCore("setBlockColours", !1, (DD => DD.ScD(CD, cD, ID)))
       }
       terrainTextureNames() {
-        return this.callCore(gz, [], (zz => zz.Tiz()))
+        return this.callCore(RD, [], (DD => DD.kiD()))
       }
-      setTerrainTextures(zz, uz, bz, Ez) {
-        return this.callCore(gz, !1, (nz => nz.riz(zz, bz, uz, Ez)))
+      setTerrainTextures(DD, CD, cD, ID) {
+        return this.callCore(RD, !1, (pD => pD.ziD(DD, cD, CD, ID)))
       }
-      setShaderPack(zz, uz, bz, Ez, nz, iz) {
-        return this.callCore("setShaderPack", !1, (lz => {
-          var Mz, tz;
-          return null !== (Mz = null === (tz = lz.xbz) || void 0 === tz ? void 0 : tz.call(lz, zz, uz, bz, Ez, nz, iz)) && void 0 !== Mz && Mz
+      setShaderPack(DD, CD, cD, ID, pD, iD) {
+        return this.callCore("setShaderPack", !1, (fD => {
+          var bD, QD;
+          return null !== (bD = null === (QD = fD.UcD) || void 0 === QD ? void 0 : QD.call(fD, DD, CD, cD, ID, pD, iD)) && void 0 !== bD && bD
         }))
       }
       sunShadowWantedTextures() {
-        return this.callCore(Sz, null, (zz => {
-          var uz, bz;
-          return null !== (uz = null === (bz = zz.viz) || void 0 === bz ? void 0 : bz.call(zz)) && void 0 !== uz ? uz : null
+        return this.callCore(kD, null, (DD => {
+          var CD, cD;
+          return null !== (CD = null === (cD = DD.LiD) || void 0 === cD ? void 0 : cD.call(DD)) && void 0 !== CD ? CD : null
         }))
       }
-      setSunShadowTexture(zz, uz, bz, Ez, nz) {
-        this.callCore(Sz, void 0, (iz => {
-          var lz;
-          null === (lz = iz.siz) || void 0 === lz || lz.call(iz, zz, uz, bz, Ez, nz)
+      setSunShadowTexture(DD, CD, cD, ID, pD) {
+        this.callCore(kD, void 0, (iD => {
+          var fD;
+          null === (fD = iD.ViD) || void 0 === fD || fD.call(iD, DD, CD, cD, ID, pD)
         }))
       }
       takeSunShadowWarnings() {
-        return this.callCore(Sz, [], (zz => {
-          var uz, bz;
-          return null !== (uz = null === (bz = zz.Jiz) || void 0 === bz ? void 0 : bz.call(zz)) && void 0 !== uz ? uz : []
+        return this.callCore(kD, [], (DD => {
+          var CD, cD;
+          return null !== (CD = null === (cD = DD.GiD) || void 0 === cD ? void 0 : cD.call(DD)) && void 0 !== CD ? CD : []
         }))
       }
       sunShadowsHeld() {
-        return this.callCore(Sz, null, (zz => {
-          var uz, bz;
-          return null !== (uz = null === (bz = zz.xiz) || void 0 === bz ? void 0 : bz.call(zz)) && void 0 !== uz ? uz : null
+        return this.callCore(kD, null, (DD => {
+          var CD, cD;
+          return null !== (CD = null === (cD = DD.TiD) || void 0 === cD ? void 0 : cD.call(DD)) && void 0 !== CD ? CD : null
         }))
       }
-      callCore(zz, uz, bz) {
-        if (this.stopped) return uz;
+      callCore(DD, CD, cD) {
+        if (this.stopped) return CD;
         try {
-          return bz(this.core)
-        } catch (Ez) {
-          return this.crash(zz, Ez), uz
+          return cD(this.core)
+        } catch (ID) {
+          return this.crash(DD, ID), CD
         }
       }
-      readEvents(zz) {
+      readEvents(DD) {
         this.netOffsets.length = 0;
-        const uz = this.headerView(),
-          bz = uz[Ez.db.EventsPtr],
-          nz = uz[Ez.db.EventsLen];
-        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === nz) return Uz;
-        const iz = [],
-          lz = this.memory().buffer;
-        if (bz % 4 !== 0 || bz + nz > lz.byteLength) return this.crash(hz, `events of ${nz} bytes at ${bz} outside ${lz.byteLength} bytes of memory`), Uz;
-        const Mz = new DataView(lz, bz, nz),
-          tz = this.rings.net,
-          Hz = (uz, bz) => uz + bz <= zz ? tz.copyWritten(uz, bz) : null;
-        let Oz = 0;
-        for (; Oz < nz;) {
-          const zz = Oz + Ez.S,
-            uz = zz <= nz ? Mz.getUint32(Oz, !0) : -1,
-            tz = uz >>> 16;
-          if (uz < 0 || tz > nz - zz) return this.crash(hz, `event record at ${Oz} overruns its ${nz} bytes`), Uz;
-          const xz = 65535 & uz,
-            Jz = uz => Mz.getUint32(zz + 4 * uz, !0);
-          if (xz === Ez.V.RawMessage) {
-            const zz = tz >= Ez.Fc.BYTES ? 65535 & Jz(1) : -1,
-              uz = zz === Ez.Fc.STRING_TYPE,
-              bz = tz === (uz ? Ez.Fc.STRING_TYPE_BYTES : Ez.Fc.BYTES) ? Hz(Jz(2), Jz(3)) : null,
-              nz = uz && bz ? Hz(Jz(4), Jz(5)) : null;
-            if (!bz || uz && !nz) return this.crash(hz, `RawMessage at ${Oz} of ${tz} bytes names bytes outside net-in`), Uz;
-            this.netOffsets.push(Oz), iz.push({
+        const CD = this.headerView(),
+          cD = CD[ID.hb.EventsPtr],
+          pD = CD[ID.hb.EventsLen];
+        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === pD) return TD;
+        const iD = [],
+          fD = this.memory().buffer;
+        if (cD % 4 !== 0 || cD + pD > fD.byteLength) return this.crash(LD, `events of ${pD} bytes at ${cD} outside ${fD.byteLength} bytes of memory`), TD;
+        const bD = new DataView(fD, cD, pD),
+          QD = this.rings.net,
+          wD = (CD, cD) => CD + cD <= DD ? QD.copyWritten(CD, cD) : null;
+        let SD = 0;
+        for (; SD < pD;) {
+          const DD = SD + ID.R,
+            CD = DD <= pD ? bD.getUint32(SD, !0) : -1,
+            QD = CD >>> 16;
+          if (CD < 0 || QD > pD - DD) return this.crash(LD, `event record at ${SD} overruns its ${pD} bytes`), TD;
+          const HD = 65535 & CD,
+            UD = CD => bD.getUint32(DD + 4 * CD, !0);
+          if (HD === ID.U.RawMessage) {
+            const DD = QD >= ID.Fc.BYTES ? 65535 & UD(1) : -1,
+              CD = DD === ID.Fc.STRING_TYPE,
+              cD = QD === (CD ? ID.Fc.STRING_TYPE_BYTES : ID.Fc.BYTES) ? wD(UD(2), UD(3)) : null,
+              pD = CD && cD ? wD(UD(4), UD(5)) : null;
+            if (!cD || CD && !pD) return this.crash(LD, `RawMessage at ${SD} of ${QD} bytes names bytes outside net-in`), TD;
+            this.netOffsets.push(SD), iD.push({
               type: "message",
-              conn: Jz(0),
-              zM: zz,
-              payloadKind: Jz(1) >>> 16,
-              payload: bz,
-              stringType: nz ? yz.decode(nz) : null
+              conn: UD(0),
+              Rf: DD,
+              payloadKind: UD(1) >>> 16,
+              payload: cD,
+              stringType: pD ? dD.decode(pD) : null
             })
-          } else if (xz === Ez.V.CoreErrors) {
-            var pz, dz;
-            const zz = tz >= 4 ? Jz(0) : -1;
-            if (zz < 0 || zz > Ez.C.PAIRS_MAX || tz !== 4 * (Ez.C.FIXED_WORDS + Ez.C.PAIR_WORDS * zz)) return this.crash(hz, `CoreErrors at ${Oz} of ${tz} bytes`), Uz;
-            const uz = [];
-            for (let bz = 0; bz < zz; bz++) uz.push({
-              code: Jz(1 + 2 * bz),
-              detail: Jz(2 + 2 * bz)
+          } else if (HD === ID.U.CoreErrors) {
+            var BD, yD;
+            const DD = QD >= 4 ? UD(0) : -1;
+            if (DD < 0 || DD > ID.H.PAIRS_MAX || QD !== 4 * (ID.H.FIXED_WORDS + ID.H.PAIR_WORDS * DD)) return this.crash(LD, `CoreErrors at ${SD} of ${QD} bytes`), TD;
+            const CD = [];
+            for (let cD = 0; cD < DD; cD++) CD.push({
+              code: UD(1 + 2 * cD),
+              detail: UD(2 + 2 * cD)
             });
-            null === (pz = (dz = this.handlers).onCoreErrors) || void 0 === pz || pz.call(dz, uz, Jz(1 + 2 * zz))
-          } else if (xz === Ez.V.RenderReload) {
-            var Fz, Zz;
-            if (tz !== Ez.Qc.BYTES) return this.crash(hz, `RenderReload at ${Oz} of ${tz} bytes`), Uz;
-            null === (Fz = (Zz = this.handlers).onRenderReload) || void 0 === Fz || Fz.call(Zz, Jz(0), Jz(1), Jz(2))
-          } else if (xz === Ez.V.Images) {
-            var Rz, Kz;
-            null === (Rz = (Kz = this.handlers).onImages) || void 0 === Rz || Rz.call(Kz, new Uint8Array(lz.slice(bz + zz, bz + zz + tz)))
-          } else if (xz === Ez.V.ModelRequests)
-            for (let bz = 0; bz < tz >>> 2; bz++) {
-              var wz, Xz;
-              null === (wz = (Xz = this.handlers).onModelRequest) || void 0 === wz || wz.call(Xz, Jz(bz))
-            } else if (xz === Ez.V.ModelTaken) {
-              var fz, sz;
-              if (tz < 4) return this.crash(hz, `ModelTaken at ${Oz} of ${tz} bytes`), Uz;
-              const zz = new Uint32Array((tz >>> 2) - 1);
-              for (let uz = 0; uz < zz.length; uz++) zz[uz] = Jz(1 + uz);
-              null === (fz = (sz = this.handlers).onModelTaken) || void 0 === fz || fz.call(sz, Jz(0), zz)
-            } else if (xz === Ez.V.TerrainTexturesWanted) {
-            var rz, oz;
-            if (0 !== tz) return this.crash(hz, `TerrainTexturesWanted at ${Oz} of ${tz} bytes`), Uz;
-            null === (rz = (oz = this.handlers).onTerrainTexturesWanted) || void 0 === rz || rz.call(oz)
-          } else if (xz === Ez.V.KeepAliveDue) {
-            var Nz, vz;
-            if (tz > Ez.ub) return this.crash(hz, `KeepAliveDue at ${Oz} of ${tz} bytes`), Uz;
-            null === (Nz = (vz = this.handlers).onKeepAlive) || void 0 === Nz || Nz.call(vz, new Uint8Array(lz, bz + zz, tz).slice())
-          } else if (xz === Ez.V.ConnectionState) {
-            if (tz !== Ez.s) return this.crash(hz, `ConnectionState at ${Oz} of ${tz} bytes`), Uz;
-            this.netOffsets.push(Oz), iz.push({
+            null === (BD = (yD = this.handlers).onCoreErrors) || void 0 === BD || BD.call(yD, CD, UD(1 + 2 * DD))
+          } else if (HD === ID.U.RenderReload) {
+            var MD, tD;
+            if (QD !== ID.Pc.BYTES) return this.crash(LD, `RenderReload at ${SD} of ${QD} bytes`), TD;
+            null === (MD = (tD = this.handlers).onRenderReload) || void 0 === MD || MD.call(tD, UD(0), UD(1), UD(2))
+          } else if (HD === ID.U.Images) {
+            var ZD, oD;
+            null === (ZD = (oD = this.handlers).onImages) || void 0 === ZD || ZD.call(oD, new Uint8Array(fD.slice(cD + DD, cD + DD + QD)))
+          } else if (HD === ID.U.ModelRequests)
+            for (let cD = 0; cD < QD >>> 2; cD++) {
+              var vD, ND;
+              null === (vD = (ND = this.handlers).onModelRequest) || void 0 === vD || vD.call(ND, UD(cD))
+            } else if (HD === ID.U.ModelTaken) {
+              var gD, XD;
+              if (QD < 4) return this.crash(LD, `ModelTaken at ${SD} of ${QD} bytes`), TD;
+              const DD = new Uint32Array((QD >>> 2) - 1);
+              for (let CD = 0; CD < DD.length; CD++) DD[CD] = UD(1 + CD);
+              null === (gD = (XD = this.handlers).onModelTaken) || void 0 === gD || gD.call(XD, UD(0), DD)
+            } else if (HD === ID.U.TerrainTexturesWanted) {
+            var mD, nD;
+            if (0 !== QD) return this.crash(LD, `TerrainTexturesWanted at ${SD} of ${QD} bytes`), TD;
+            null === (mD = (nD = this.handlers).onTerrainTexturesWanted) || void 0 === mD || mD.call(nD)
+          } else if (HD === ID.U.KeepAliveDue) {
+            var OD, PD;
+            if (QD > ID.xb) return this.crash(LD, `KeepAliveDue at ${SD} of ${QD} bytes`), TD;
+            null === (OD = (PD = this.handlers).onKeepAlive) || void 0 === OD || OD.call(PD, new Uint8Array(fD, cD + DD, QD).slice())
+          } else if (HD === ID.U.ConnectionState) {
+            if (QD !== ID.x) return this.crash(LD, `ConnectionState at ${SD} of ${QD} bytes`), TD;
+            this.netOffsets.push(SD), iD.push({
               type: "connection",
-              conn: Jz(0),
-              phase: Jz(1),
-              code: 0 | Jz(2)
+              conn: UD(0),
+              phase: UD(1),
+              code: 0 | UD(2)
             })
-          } else if (xz === Ez.V.EnvLighting || xz === Ez.V.SkyImages) {
-            if (tz !== (xz === Ez.V.EnvLighting ? Ez.P : Ez.jd)) return this.crash(hz, `event ${xz} at ${Oz} of ${tz} bytes`), Uz;
+          } else if (HD === ID.U.EnvLighting || HD === ID.U.SkyImages) {
+            if (QD !== (HD === ID.U.EnvLighting ? ID.Q : ID.hd)) return this.crash(LD, `event ${HD} at ${SD} of ${QD} bytes`), TD;
             this.envEvents.push({
-              kind: xz,
-              payload: new Uint8Array(lz.slice(bz + zz, bz + zz + tz))
+              kind: HD,
+              payload: new Uint8Array(fD.slice(cD + DD, cD + DD + QD))
             })
-          } else if (xz === Ez.V.ReconnectGrace) {
-            if (tz !== Ez.jc) return this.crash(hz, `ReconnectGrace at ${Oz} of ${tz} bytes`), Uz;
-            const zz = Jz(2);
+          } else if (HD === ID.U.ReconnectGrace) {
+            if (QD !== ID.nc) return this.crash(LD, `ReconnectGrace at ${SD} of ${QD} bytes`), TD;
+            const DD = UD(2);
             this.graceEvents.push({
-              conn: Jz(0),
-              graceMs: Jz(1),
-              sessionBased: 0 !== (zz & Ez.Ic.SessionBased),
-              replayOffer: 0 !== (zz & Ez.Ic.ReplayOffer)
+              conn: UD(0),
+              graceMs: UD(1),
+              sessionBased: 0 !== (DD & ID.Gc.SessionBased),
+              replayOffer: 0 !== (DD & ID.Gc.ReplayOffer)
             })
           }
-          Oz = zz + (0, Ez.ie)(tz)
+          SD = DD + (0, ID.je)(QD)
         }
-        return iz
+        return iD
       }
-      forEachNetOut(zz) {
-        this.forEachOut(sz, "net-out", Ez.db.NetOutPtr, Ez.db.NetOutLen, Ez.Pb, 0, ((uz, bz, nz, iz) => {
-          const lz = (0, Ez.ce)(bz);
-          lz === Ez.Qb.Frame ? zz((0, Ez.be)(bz), nz) : this.crash(sz, `net-out record at ${iz} is kind ${lz}, not a frame`)
+      forEachNetOut(DD) {
+        this.forEachOut(XD, "net-out", ID.hb.NetOutPtr, ID.hb.NetOutLen, ID.Rb, 0, ((CD, cD, pD, iD) => {
+          const fD = (0, ID.de)(cD);
+          fD === ID.Ub.Frame ? DD((0, ID.$d)(cD), pD) : this.crash(XD, `net-out record at ${iD} is kind ${fD}, not a frame`)
         }))
       }
-      forEachWorkerOut(zz) {
-        this.forEachOut(rz, "worker-out", Ez.db.WorkerOutPtr, Ez.db.WorkerOutLen, Ez.vd, 4, ((uz, bz, nz, iz) => {
-          const lz = 255 & uz,
-            Mz = lz === Ez.Ld.Init ? this.initOf(nz, iz) : nz;
-          null !== Mz && zz(lz, uz >>> 8 & 16777215, Mz)
+      forEachWorkerOut(DD) {
+        this.forEachOut(mD, "worker-out", ID.hb.WorkerOutPtr, ID.hb.WorkerOutLen, ID.xd, 4, ((CD, cD, pD, iD) => {
+          const fD = 255 & CD,
+            bD = fD === ID.Kd.Init ? this.initOf(pD, iD) : pD;
+          null !== bD && DD(fD, CD >>> 8 & 16777215, bD)
         }))
       }
-      initOf(zz, uz) {
-        const bz = this.memory().buffer;
-        if (zz.byteLength !== Ez.hb) return this.crash(rz, `worker-out Init record at ${uz} is ${zz.byteLength} bytes, not a view`), null;
-        const nz = new DataView(zz.buffer, zz.byteOffset, Ez.hb),
-          iz = nz.getUint32(0, !0),
-          lz = nz.getUint32(4, !0);
-        return iz + lz > bz.byteLength ? (this.crash(rz, `worker-out Init record at ${uz} names ${lz} bytes at ${iz} outside ${bz.byteLength} bytes of memory`), null) : new Uint8Array(bz, iz, lz)
+      initOf(DD, CD) {
+        const cD = this.memory().buffer;
+        if (DD.byteLength !== ID.kb) return this.crash(mD, `worker-out Init record at ${CD} is ${DD.byteLength} bytes, not a view`), null;
+        const pD = new DataView(DD.buffer, DD.byteOffset, ID.kb),
+          iD = pD.getUint32(0, !0),
+          fD = pD.getUint32(4, !0);
+        return iD + fD > cD.byteLength ? (this.crash(mD, `worker-out Init record at ${CD} names ${fD} bytes at ${iD} outside ${cD.byteLength} bytes of memory`), null) : new Uint8Array(cD, iD, fD)
       }
-      forEachOut(zz, uz, bz, nz, iz, lz, Mz) {
+      forEachOut(DD, CD, cD, pD, iD, fD, bD) {
         if (this.stopped || null === this.lastHeader) return;
-        const tz = this.headerView(),
-          Hz = tz[bz],
-          Oz = tz[nz];
-        if (0 === Oz) return;
-        const pz = this.memory().buffer;
-        if (Hz % 4 !== 0 || Hz + Oz > pz.byteLength) return void this.crash(zz, `${uz} of ${Oz} bytes at ${Hz} outside ${pz.byteLength} bytes of memory`);
-        const dz = new DataView(pz, Hz, Oz);
-        let Fz = 0;
-        for (; Fz < Oz;) {
-          const bz = Fz + iz,
-            nz = bz <= Oz ? dz.getUint32(Fz + lz, !0) : -1;
-          if (nz < 0 || nz > Oz - bz) return void this.crash(zz, `${uz} record at ${Fz} overruns its ${Oz} bytes`);
-          if (Mz(dz.getUint32(Fz, !0), dz.getUint32(Fz + 4, !0), new Uint8Array(pz, Hz + bz, nz), Fz), this.stopped) return;
-          Fz = bz + (0, Ez.ie)(nz)
+        const QD = this.headerView(),
+          wD = QD[cD],
+          SD = QD[pD];
+        if (0 === SD) return;
+        const BD = this.memory().buffer;
+        if (wD % 4 !== 0 || wD + SD > BD.byteLength) return void this.crash(DD, `${CD} of ${SD} bytes at ${wD} outside ${BD.byteLength} bytes of memory`);
+        const yD = new DataView(BD, wD, SD);
+        let MD = 0;
+        for (; MD < SD;) {
+          const cD = MD + iD,
+            pD = cD <= SD ? yD.getUint32(MD + fD, !0) : -1;
+          if (pD < 0 || pD > SD - cD) return void this.crash(DD, `${CD} record at ${MD} overruns its ${SD} bytes`);
+          if (bD(yD.getUint32(MD, !0), yD.getUint32(MD + 4, !0), new Uint8Array(BD, wD + cD, pD), MD), this.stopped) return;
+          MD = cD + (0, ID.je)(pD)
         }
       }
-      forEachEvent(zz) {
+      forEachEvent(DD) {
         if (this.stopped || null === this.lastHeader) return;
-        const uz = this.headerView(),
-          bz = uz[Ez.db.EventsPtr],
-          nz = uz[Ez.db.EventsLen];
-        if (0 === nz) return;
-        const iz = this.memory().buffer;
-        if (bz % 4 !== 0 || bz + nz > iz.byteLength) return void this.crash(hz, `events of ${nz} bytes at ${bz} outside ${iz.byteLength} bytes of memory`);
-        const lz = new DataView(iz, bz, nz);
-        let Mz = 0;
-        for (; Mz < nz;) {
-          const uz = Mz + Ez.S,
-            bz = uz <= nz ? lz.getUint32(Mz, !0) : -1,
-            iz = bz >>> 16;
-          if (bz < 0 || iz > nz - uz) return void this.crash(hz, `event record at ${Mz} overruns its ${nz} bytes`);
-          zz(65535 & bz, lz, uz, iz), Mz = uz + (0, Ez.ie)(iz)
+        const CD = this.headerView(),
+          cD = CD[ID.hb.EventsPtr],
+          pD = CD[ID.hb.EventsLen];
+        if (0 === pD) return;
+        const iD = this.memory().buffer;
+        if (cD % 4 !== 0 || cD + pD > iD.byteLength) return void this.crash(LD, `events of ${pD} bytes at ${cD} outside ${iD.byteLength} bytes of memory`);
+        const fD = new DataView(iD, cD, pD);
+        let bD = 0;
+        for (; bD < pD;) {
+          const CD = bD + ID.R,
+            cD = CD <= pD ? fD.getUint32(bD, !0) : -1,
+            iD = cD >>> 16;
+          if (cD < 0 || iD > pD - CD) return void this.crash(LD, `event record at ${bD} overruns its ${pD} bytes`);
+          DD(65535 & cD, fD, CD, iD), bD = CD + (0, ID.je)(iD)
         }
       }
-      crashOn(zz, uz) {
-        uz instanceof nz.b ? this.crash(hz, uz.message) : this.crash(zz, uz)
+      crashOn(DD, CD) {
+        CD instanceof pD.e ? this.crash(LD, CD.message) : this.crash(DD, CD)
       }
-      crash(zz, uz) {
+      crash(DD, CD) {
         this.stopped || (this.stopped = !0, this.handlers.onCrash({
-          site: zz,
-          error: uz,
+          site: DD,
+          error: CD,
           header: this.lastHeader
         }))
       }
-      headerWord(zz) {
-        return this.stopped || null === this.lastHeader ? 0 : this.headerView()[zz]
+      headerWord(DD) {
+        return this.stopped || null === this.lastHeader ? 0 : this.headerView()[DD]
       }
       headerView() {
-        const zz = this.memory().buffer;
-        return zz !== this.headerBuffer && (this.headerBuffer = zz, this.header = new Uint32Array(zz, this.core.WF(), Ez.cb)), this.header
+        const DD = this.memory().buffer;
+        return DD !== this.headerBuffer && (this.headerBuffer = DD, this.header = new Uint32Array(DD, this.core.zM(), ID.db)), this.header
       }
     }
   },
-  40123: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => lz,
-      d: () => iz
+  40012: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => fD,
+      g: () => iD
     });
-    var Ez = bz(4448);
-    let nz = null;
+    var ID = cD(4495);
+    let pD = null;
 
-    function iz(zz) {
-      nz = {
+    function iD(DD) {
+      pD = {
         scanned: !1
       };
       try {
-        return zz()
+        return DD()
       } finally {
-        nz = null
+        pD = null
       }
     }
 
-    function lz() {
-      const zz = nz;
-      if (null === zz) return (0, Ez.f)();
-      const uz = (0, Ez.f)(!zz.scanned);
-      return zz.scanned = !0, uz
+    function fD() {
+      const DD = pD;
+      if (null === DD) return (0, ID.f)();
+      const CD = (0, ID.f)(!DD.scanned);
+      return DD.scanned = !0, CD
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

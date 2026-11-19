@@ -1,2445 +1,2445 @@
 export const id = 182;
 export const ids = [182];
 export const modules = {
-  8835: (zz, uz) => {
-    uz.discordURLBuilder = function(zz) {
-      var uz;
-      const bz = (null === (uz = null === window || void 0 === window ? void 0 : window.location) || void 0 === uz ? void 0 : uz.hostname) || "localhost",
-        Ez = zz.hostname.split("."),
-        nz = !zz.hostname.includes("trycloudflare.com") && !zz.hostname.includes("discordsays.com") && Ez.length > 2 ? `/${Ez[0]}` : "";
-      return zz.pathname.startsWith("/.proxy") ? `${zz.protocol}//${bz}${nz}${zz.pathname}${zz.search}` : `${zz.protocol}//${bz}/.proxy/colyseus${nz}${zz.pathname}${zz.search}`
+  8881: (DD, CD) => {
+    CD.discordURLBuilder = function(DD) {
+      var CD;
+      const cD = (null === (CD = null === window || void 0 === window ? void 0 : window.location) || void 0 === CD ? void 0 : CD.hostname) || "localhost",
+        ID = DD.hostname.split("."),
+        pD = !DD.hostname.includes("trycloudflare.com") && !DD.hostname.includes("discordsays.com") && ID.length > 2 ? `/${ID[0]}` : "";
+      return DD.pathname.startsWith("/.proxy") ? `${DD.protocol}//${cD}${pD}${DD.pathname}${DD.search}` : `${DD.protocol}//${cD}/.proxy/colyseus${pD}${DD.pathname}${DD.search}`
     }
   },
-  8819: (zz, uz, bz) => {
-    var Ez, nz, iz, lz, Mz = bz(8747),
-      tz = bz(8826),
-      Hz = bz(8793);
-    Ez = new WeakMap, nz = new WeakMap, iz = new WeakMap, lz = new WeakMap, uz.Auth = class {
-      constructor(zz) {
-        this.http = zz, this.settings = {
+  8865: (DD, CD, cD) => {
+    var ID, pD, iD, fD, bD = cD(8781),
+      QD = cD(8874),
+      wD = cD(8836);
+    ID = new WeakMap, pD = new WeakMap, iD = new WeakMap, fD = new WeakMap, CD.Auth = class {
+      constructor(DD) {
+        this.http = DD, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, Ez.set(this, !1), nz.set(this, void 0), iz.set(this, void 0), lz.set(this, Hz.createNanoEvents()), tz.getItem(this.settings.key, (zz => this.token = zz))
+        }, ID.set(this, !1), pD.set(this, void 0), iD.set(this, void 0), fD.set(this, wD.createNanoEvents()), QD.getItem(this.settings.key, (DD => this.token = DD))
       }
-      set token(zz) {
-        this.http.authToken = zz
+      set token(DD) {
+        this.http.authToken = DD
       }
       get token() {
         return this.http.authToken
       }
-      onChange(zz) {
-        const uz = Mz.__classPrivateFieldGet(this, lz, "f").on("change", zz);
-        return Mz.__classPrivateFieldGet(this, Ez, "f") || Mz.__classPrivateFieldSet(this, nz, new Promise(((zz, uz) => {
-          this.getUserData().then((zz => {
-            this.emitChange(Object.assign(Object.assign({}, zz), {
+      onChange(DD) {
+        const CD = bD.__classPrivateFieldGet(this, fD, "f").on("change", DD);
+        return bD.__classPrivateFieldGet(this, ID, "f") || bD.__classPrivateFieldSet(this, pD, new Promise(((DD, CD) => {
+          this.getUserData().then((DD => {
+            this.emitChange(Object.assign(Object.assign({}, DD), {
               token: this.token
             }))
-          })).catch((zz => {
+          })).catch((DD => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            zz()
+            DD()
           }))
-        })), "f"), Mz.__classPrivateFieldSet(this, Ez, !0, "f"), uz
+        })), "f"), bD.__classPrivateFieldSet(this, ID, !0, "f"), CD
       }
       getUserData() {
-        return Mz.__awaiter(this, void 0, void 0, (function*() {
+        return bD.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(zz, uz, bz) {
-        return Mz.__awaiter(this, void 0, void 0, (function*() {
-          const Ez = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(DD, CD, cD) {
+        return bD.__awaiter(this, void 0, void 0, (function*() {
+          const ID = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: zz,
-              password: uz,
-              options: bz
+              email: DD,
+              password: CD,
+              options: cD
             }
           })).data;
-          return this.emitChange(Ez), Ez
+          return this.emitChange(ID), ID
         }))
       }
-      signInWithEmailAndPassword(zz, uz) {
-        return Mz.__awaiter(this, void 0, void 0, (function*() {
-          const bz = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(DD, CD) {
+        return bD.__awaiter(this, void 0, void 0, (function*() {
+          const cD = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: zz,
-              password: uz
+              email: DD,
+              password: CD
             }
           })).data;
-          return this.emitChange(bz), bz
+          return this.emitChange(cD), cD
         }))
       }
-      signInAnonymously(zz) {
-        return Mz.__awaiter(this, void 0, void 0, (function*() {
-          const uz = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(DD) {
+        return bD.__awaiter(this, void 0, void 0, (function*() {
+          const CD = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: zz
+              options: DD
             }
           })).data;
-          return this.emitChange(uz), uz
+          return this.emitChange(CD), CD
         }))
       }
-      sendPasswordResetEmail(zz) {
-        return Mz.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(DD) {
+        return bD.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: zz
+              email: DD
             }
           })).data
         }))
       }
-      signInWithProvider(zz) {
-        return Mz.__awaiter(this, arguments, void 0, (function*(zz) {
-          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((bz, Ez) => {
-            const nz = uz.width || 480,
-              lz = uz.height || 768,
-              tz = this.token ? `?token=${this.token}` : "",
-              Hz = `Login with ${zz[0].toUpperCase()+zz.substring(1)}`,
-              Oz = this.http.client.getHttpEndpoint(`${uz.prefix||`${this.settings.path}/provider`}/${zz}${tz}`),
-              pz = screen.width / 2 - nz / 2,
-              dz = screen.height / 2 - lz / 2;
-            Mz.__classPrivateFieldSet(this, iz, window.open(Oz, Hz, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + nz + ", height=" + lz + ", top=" + dz + ", left=" + pz), "f");
-            const Fz = zz => {
-                void 0 === zz.data.user && void 0 === zz.data.token || (clearInterval(Zz), Mz.__classPrivateFieldGet(this, iz, "f").close(), Mz.__classPrivateFieldSet(this, iz, void 0, "f"), window.removeEventListener("message", Fz), void 0 !== zz.data.error ? Ez(zz.data.error) : (bz(zz.data), this.emitChange(zz.data)))
+      signInWithProvider(DD) {
+        return bD.__awaiter(this, arguments, void 0, (function*(DD) {
+          let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((cD, ID) => {
+            const pD = CD.width || 480,
+              fD = CD.height || 768,
+              QD = this.token ? `?token=${this.token}` : "",
+              wD = `Login with ${DD[0].toUpperCase()+DD.substring(1)}`,
+              SD = this.http.client.getHttpEndpoint(`${CD.prefix||`${this.settings.path}/provider`}/${DD}${QD}`),
+              BD = screen.width / 2 - pD / 2,
+              yD = screen.height / 2 - fD / 2;
+            bD.__classPrivateFieldSet(this, iD, window.open(SD, wD, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + pD + ", height=" + fD + ", top=" + yD + ", left=" + BD), "f");
+            const MD = DD => {
+                void 0 === DD.data.user && void 0 === DD.data.token || (clearInterval(tD), bD.__classPrivateFieldGet(this, iD, "f").close(), bD.__classPrivateFieldSet(this, iD, void 0, "f"), window.removeEventListener("message", MD), void 0 !== DD.data.error ? ID(DD.data.error) : (cD(DD.data), this.emitChange(DD.data)))
               },
-              Zz = setInterval((() => {
-                Mz.__classPrivateFieldGet(this, iz, "f") && !Mz.__classPrivateFieldGet(this, iz, "f").closed || (Mz.__classPrivateFieldSet(this, iz, void 0, "f"), Ez("ob"), window.removeEventListener("message", Fz))
+              tD = setInterval((() => {
+                bD.__classPrivateFieldGet(this, iD, "f") && !bD.__classPrivateFieldGet(this, iD, "f").closed || (bD.__classPrivateFieldSet(this, iD, void 0, "f"), ID("tc"), window.removeEventListener("message", MD))
               }), 200);
-            window.addEventListener("message", Fz)
+            window.addEventListener("message", MD)
           }))
         }))
       }
       signOut() {
-        return Mz.__awaiter(this, void 0, void 0, (function*() {
+        return bD.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(zz) {
-        void 0 !== zz.token && (this.token = zz.token, null === zz.token ? tz.removeItem(this.settings.key) : tz.setItem(this.settings.key, zz.token)), Mz.__classPrivateFieldGet(this, lz, "f").emit("change", zz)
+      emitChange(DD) {
+        void 0 !== DD.token && (this.token = DD.token, null === DD.token ? QD.removeItem(this.settings.key) : QD.setItem(this.settings.key, DD.token)), bD.__classPrivateFieldGet(this, fD, "f").emit("change", DD)
       }
     }
   },
-  8743: (zz, uz, bz) => {
-    var Ez, nz = bz(8747),
-      iz = bz(8754),
-      lz = bz(8756),
-      Mz = bz(8812),
-      tz = bz(8819),
-      Hz = bz(8835);
-    class Oz extends Error {
-      constructor(zz, uz) {
-        super(zz), this.code = uz, this.name = "MatchMakeError", Object.setPrototypeOf(this, Oz.prototype)
+  8774: (DD, CD, cD) => {
+    var ID, pD = cD(8781),
+      iD = cD(8786),
+      fD = cD(8793),
+      bD = cD(8855),
+      QD = cD(8865),
+      wD = cD(8881);
+    class SD extends Error {
+      constructor(DD, CD) {
+        super(DD), this.code = CD, this.name = "MatchMakeError", Object.setPrototypeOf(this, SD.prototype)
       }
     }
-    const pz = "undefined" !== typeof window && "undefined" !== typeof(null === (Ez = null === window || void 0 === window ? void 0 : window.location) || void 0 === Ez ? void 0 : Ez.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class dz {
+    const BD = "undefined" !== typeof window && "undefined" !== typeof(null === (ID = null === window || void 0 === window ? void 0 : window.location) || void 0 === ID ? void 0 : ID.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class yD {
       constructor() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : pz,
-          uz = arguments.length > 1 ? arguments[1] : void 0;
-        var bz, Ez;
-        if ("string" === typeof zz) {
-          const uz = zz.startsWith("/") ? new URL(zz, pz) : new URL(zz),
-            bz = "https:" === uz.protocol || "wss:" === uz.protocol,
-            Ez = Number(uz.port || (bz ? 443 : 80));
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : BD,
+          CD = arguments.length > 1 ? arguments[1] : void 0;
+        var cD, ID;
+        if ("string" === typeof DD) {
+          const CD = DD.startsWith("/") ? new URL(DD, BD) : new URL(DD),
+            cD = "https:" === CD.protocol || "wss:" === CD.protocol,
+            ID = Number(CD.port || (cD ? 443 : 80));
           this.settings = {
-            hostname: uz.hostname,
-            pathname: uz.pathname,
-            port: Ez,
-            secure: bz,
-            searchParams: uz.searchParams.toString() || void 0
+            hostname: CD.hostname,
+            pathname: CD.pathname,
+            port: ID,
+            secure: cD,
+            searchParams: CD.searchParams.toString() || void 0
           }
-        } else void 0 === zz.port && (zz.port = zz.secure ? 443 : 80), void 0 === zz.pathname && (zz.pathname = ""), this.settings = zz;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new Mz.HTTP(this, (null === uz || void 0 === uz ? void 0 : uz.headers) || {}), this.auth = new tz.Auth(this.http), this.urlBuilder = null === uz || void 0 === uz ? void 0 : uz.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Ez = null === (bz = null === window || void 0 === window ? void 0 : window.location) || void 0 === bz ? void 0 : bz.hostname) || void 0 === Ez ? void 0 : Ez.includes("discordsays.com")) && (this.urlBuilder = Hz.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === DD.port && (DD.port = DD.secure ? 443 : 80), void 0 === DD.pathname && (DD.pathname = ""), this.settings = DD;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new bD.HTTP(this, (null === CD || void 0 === CD ? void 0 : CD.headers) || {}), this.auth = new QD.Auth(this.http), this.urlBuilder = null === CD || void 0 === CD ? void 0 : CD.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (ID = null === (cD = null === window || void 0 === window ? void 0 : window.location) || void 0 === cD ? void 0 : cD.hostname) || void 0 === ID ? void 0 : ID.includes("discordsays.com")) && (this.urlBuilder = wD.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(zz) {
-        return nz.__awaiter(this, arguments, void 0, (function*(zz) {
-          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            bz = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", zz, uz, bz)
+      joinOrCreate(DD) {
+        return pD.__awaiter(this, arguments, void 0, (function*(DD) {
+          let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            cD = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", DD, CD, cD)
         }))
       }
-      create(zz) {
-        return nz.__awaiter(this, arguments, void 0, (function*(zz) {
-          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            bz = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", zz, uz, bz)
+      create(DD) {
+        return pD.__awaiter(this, arguments, void 0, (function*(DD) {
+          let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            cD = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", DD, CD, cD)
         }))
       }
-      join(zz) {
-        return nz.__awaiter(this, arguments, void 0, (function*(zz) {
-          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            bz = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", zz, uz, bz)
+      join(DD) {
+        return pD.__awaiter(this, arguments, void 0, (function*(DD) {
+          let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            cD = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", DD, CD, cD)
         }))
       }
-      joinById(zz) {
-        return nz.__awaiter(this, arguments, void 0, (function*(zz) {
-          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            bz = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", zz, uz, bz)
+      joinById(DD) {
+        return pD.__awaiter(this, arguments, void 0, (function*(DD) {
+          let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            cD = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", DD, CD, cD)
         }))
       }
-      reconnect(zz, uz) {
-        return nz.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof zz && "string" === typeof uz) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [bz, Ez] = zz.split(":");
-          if (!bz || !Ez) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", bz, {
-            reconnectionToken: Ez
-          }, uz)
+      reconnect(DD, CD) {
+        return pD.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof DD && "string" === typeof CD) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [cD, ID] = DD.split(":");
+          if (!cD || !ID) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", cD, {
+            reconnectionToken: ID
+          }, CD)
         }))
       }
-      consumeSeatReservation(zz, uz, bz) {
-        return nz.__awaiter(this, void 0, void 0, (function*() {
-          const Ez = this.createRoom(zz.room.name, uz);
-          Ez.roomId = zz.room.roomId, Ez.sessionId = zz.sessionId;
-          const lz = {
-            sessionId: Ez.sessionId
+      consumeSeatReservation(DD, CD, cD) {
+        return pD.__awaiter(this, void 0, void 0, (function*() {
+          const ID = this.createRoom(DD.room.name, CD);
+          ID.roomId = DD.room.roomId, ID.sessionId = DD.sessionId;
+          const fD = {
+            sessionId: ID.sessionId
           };
-          zz.reconnectionToken && (lz.reconnectionToken = zz.reconnectionToken);
-          const Mz = bz || Ez;
-          return Ez.connect(this.buildEndpoint(zz.room, lz, zz.protocol), zz.devMode && (() => nz.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Ez.roomId}'...`);
-            let bz = 0;
-            const iz = () => nz.__awaiter(this, void 0, void 0, (function*() {
-              bz++;
+          DD.reconnectionToken && (fD.reconnectionToken = DD.reconnectionToken);
+          const bD = cD || ID;
+          return ID.connect(this.buildEndpoint(DD.room, fD, DD.protocol), DD.devMode && (() => pD.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${ID.roomId}'...`);
+            let cD = 0;
+            const iD = () => pD.__awaiter(this, void 0, void 0, (function*() {
+              cD++;
               try {
-                yield this.consumeSeatReservation(zz, uz, Mz), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Ez.roomId}'`)
-              } catch (nz) {
-                bz < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${bz} out of 8)`), setTimeout(iz, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(DD, CD, bD), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${ID.roomId}'`)
+              } catch (pD) {
+                cD < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${cD} out of 8)`), setTimeout(iD, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(iz, 2e3)
-          }))), Mz, zz, this.http.headers), new Promise(((zz, uz) => {
-            const bz = (zz, bz) => uz(new iz.ServerError(zz, bz));
-            Mz.onError.once(bz), Mz.onJoin.once((() => {
-              Mz.onError.remove(bz), setTimeout((() => {
+            setTimeout(iD, 2e3)
+          }))), bD, DD, this.http.headers), new Promise(((DD, CD) => {
+            const cD = (DD, cD) => CD(new iD.ServerError(DD, cD));
+            bD.onError.once(cD), bD.onJoin.once((() => {
+              bD.onError.remove(cD), setTimeout((() => {
                 try {
-                  const zz = [141, 56, 86, 101, 253, 220, 201, 166, 141, 79, 179, 74, 197, 208, 102, 129, 163, 98, 16, 23];
-                  zz && Mz.MJ(128, new Uint8Array(zz))
+                  const DD = [141, 56, 86, 101, 253, 220, 201, 166, 141, 79, 179, 74, 197, 208, 102, 129, 163, 98, 16, 23];
+                  DD && bD.vU(128, new Uint8Array(DD))
                 } catch {}
-              }), 3e3), zz(Mz)
+              }), 3e3), DD(bD)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(zz, uz) {
-        return nz.__awaiter(this, arguments, void 0, (function*(zz, uz) {
-          let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            Ez = arguments.length > 3 ? arguments[3] : void 0,
-            nz = arguments.length > 4 ? arguments[4] : void 0;
-          const iz = (yield this.http.post(`matchmake/${zz}/${uz}`, {
+      createMatchMakeRequest(DD, CD) {
+        return pD.__awaiter(this, arguments, void 0, (function*(DD, CD) {
+          let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            ID = arguments.length > 3 ? arguments[3] : void 0,
+            pD = arguments.length > 4 ? arguments[4] : void 0;
+          const iD = (yield this.http.post(`matchmake/${DD}/${CD}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(bz)
+            body: JSON.stringify(cD)
           })).data;
-          if (iz.error) throw new Oz(iz.error, iz.code);
-          return "reconnect" === zz && (iz.reconnectionToken = bz.reconnectionToken), yield this.consumeSeatReservation(iz, Ez, nz)
+          if (iD.error) throw new SD(iD.error, iD.code);
+          return "reconnect" === DD && (iD.reconnectionToken = cD.reconnectionToken), yield this.consumeSeatReservation(iD, ID, pD)
         }))
       }
-      createRoom(zz, uz) {
-        return new lz.Rd(zz, uz)
+      createRoom(DD, CD) {
+        return new fD.Cy(DD, CD)
       }
-      buildEndpoint(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          Ez = this.settings.searchParams || "";
-        this.http.authToken && (uz._authToken = this.http.authToken);
-        for (const lz in uz) uz.hasOwnProperty(lz) && (Ez += (Ez ? "&" : "") + `${lz}=${uz[lz]}`);
-        "h3" === bz && (bz = "http");
-        let nz = this.settings.secure ? `${bz}s://` : `${bz}://`;
-        zz.publicAddress ? nz += `${zz.publicAddress}` : nz += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const iz = `${nz}/${zz.processId}/${zz.roomId}?${Ez}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(iz)) : iz
+      buildEndpoint(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          ID = this.settings.searchParams || "";
+        this.http.authToken && (CD._authToken = this.http.authToken);
+        for (const fD in CD) CD.hasOwnProperty(fD) && (ID += (ID ? "&" : "") + `${fD}=${CD[fD]}`);
+        "h3" === cD && (cD = "http");
+        let pD = this.settings.secure ? `${cD}s://` : `${cD}://`;
+        DD.publicAddress ? pD += `${DD.publicAddress}` : pD += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const iD = `${pD}/${DD.processId}/${DD.roomId}?${ID}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(iD)) : iD
       }
       getHttpEndpoint() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const uz = zz.startsWith("/") ? zz : `/${zz}`;
-        let bz = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${uz}`;
-        return this.settings.searchParams && (bz += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(bz)) : bz
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const CD = DD.startsWith("/") ? DD : `/${DD}`;
+        let cD = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${CD}`;
+        return this.settings.searchParams && (cD += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(cD)) : cD
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    dz.VERSION = "0.16.22", uz.Client = dz, uz.MatchMakeError = Oz
+    yD.VERSION = "0.16.22", CD.Client = yD, CD.MatchMakeError = SD
   },
-  8758: (zz, uz, bz) => {
-    var Ez = bz(8766),
-      nz = bz(8779);
-    uz.Connection = class {
-      constructor(zz) {
-        if (this.events = {}, "h3" === zz) this.transport = new Ez.H3TransportTransport(this.events);
-        else this.transport = new nz.WebSocketTransport(this.events)
+  8798: (DD, CD, cD) => {
+    var ID = cD(8804),
+      pD = cD(8818);
+    CD.Connection = class {
+      constructor(DD) {
+        if (this.events = {}, "h3" === DD) this.transport = new ID.H3TransportTransport(this.events);
+        else this.transport = new pD.WebSocketTransport(this.events)
       }
-      connect(zz, uz) {
-        this.transport.connect.call(this.transport, zz, uz)
+      connect(DD, CD) {
+        this.transport.connect.call(this.transport, DD, CD)
       }
-      send(zz) {
-        this.transport.send(zz)
+      send(DD) {
+        this.transport.send(DD)
       }
-      sendUnreliable(zz) {
-        this.transport.sendUnreliable(zz)
+      sendUnreliable(DD) {
+        this.transport.sendUnreliable(DD)
       }
-      close(zz, uz) {
-        this.transport.close(zz, uz)
+      close(DD, CD) {
+        this.transport.close(DD, CD)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  8812: (zz, uz, bz) => {
-    var Ez = bz(8754);
+  8855: (DD, CD, cD) => {
+    var ID = cD(8786);
 
-    function nz(zz) {
-      var uz = Object.create(null);
-      return zz && Object.keys(zz).forEach((function(bz) {
-        if ("default" !== bz) {
-          var Ez = Object.getOwnPropertyDescriptor(zz, bz);
-          Object.defineProperty(uz, bz, Ez.get ? Ez : {
+    function pD(DD) {
+      var CD = Object.create(null);
+      return DD && Object.keys(DD).forEach((function(cD) {
+        if ("default" !== cD) {
+          var ID = Object.getOwnPropertyDescriptor(DD, cD);
+          Object.defineProperty(CD, cD, ID.get ? ID : {
             enumerable: !0,
             get: function() {
-              return zz[bz]
+              return DD[cD]
             }
           })
         }
-      })), uz.default = zz, Object.freeze(uz)
+      })), CD.default = DD, Object.freeze(CD)
     }
-    var iz = nz(bz(8816));
-    uz.HTTP = class {
-      constructor(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = zz, this.headers = uz
+    var iD = pD(cD(8857));
+    CD.HTTP = class {
+      constructor(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = DD, this.headers = CD
       }
-      get(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", zz, uz)
+      get(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", DD, CD)
       }
-      post(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", zz, uz)
+      post(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", DD, CD)
       }
-      del(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", zz, uz)
+      del(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", DD, CD)
       }
-      put(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", zz, uz)
+      put(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", DD, CD)
       }
-      request(zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return iz[zz](this.client.getHttpEndpoint(uz), this.getOptions(bz)).catch((zz => {
-          var uz;
-          if (zz.aborted) throw new Ez.AbortError("Request aborted");
-          const bz = zz.statusCode,
-            nz = (null === (uz = zz.data) || void 0 === uz ? void 0 : uz.error) || zz.statusMessage || zz.message;
-          if (!bz && !nz) throw zz;
-          throw new Ez.ServerError(bz, nz)
+      request(DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return iD[DD](this.client.getHttpEndpoint(CD), this.getOptions(cD)).catch((DD => {
+          var CD;
+          if (DD.aborted) throw new ID.AbortError("Request aborted");
+          const cD = DD.statusCode,
+            pD = (null === (CD = DD.data) || void 0 === CD ? void 0 : CD.error) || DD.statusMessage || DD.message;
+          if (!cD && !pD) throw DD;
+          throw new ID.ServerError(cD, pD)
         }))
       }
-      getOptions(zz) {
-        return zz.headers = Object.assign({}, this.headers, zz.headers), this.authToken && (zz.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (zz.withCredentials = !0), zz
+      getOptions(DD) {
+        return DD.headers = Object.assign({}, this.headers, DD.headers), this.authToken && (DD.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (DD.withCredentials = !0), DD
       }
     }
   },
-  8786: (zz, uz) => {
-    var bz, Ez;
-    uz.Protocol = void 0, (bz = uz.Protocol || (uz.Protocol = {}))[bz.HANDSHAKE = 9] = "HANDSHAKE", bz[bz.JOIN_ROOM = 10] = "JOIN_ROOM", bz[bz.ERROR = 11] = "ERROR", bz[bz.LEAVE_ROOM = 12] = "LEAVE_ROOM", bz[bz.ROOM_DATA = 13] = "ROOM_DATA", bz[bz.ROOM_STATE = 14] = "ROOM_STATE", bz[bz.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", bz[bz.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", bz[bz.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", uz.ErrorCode = void 0, (Ez = uz.ErrorCode || (uz.ErrorCode = {}))[Ez.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Ez[Ez.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Ez[Ez.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Ez[Ez.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Ez[Ez.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Ez[Ez.AUTH_FAILED = 4215] = "AUTH_FAILED", Ez[Ez.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  8826: (DD, CD) => {
+    var cD, ID;
+    CD.Protocol = void 0, (cD = CD.Protocol || (CD.Protocol = {}))[cD.HANDSHAKE = 9] = "HANDSHAKE", cD[cD.JOIN_ROOM = 10] = "JOIN_ROOM", cD[cD.ERROR = 11] = "ERROR", cD[cD.LEAVE_ROOM = 12] = "LEAVE_ROOM", cD[cD.ROOM_DATA = 13] = "ROOM_DATA", cD[cD.ROOM_STATE = 14] = "ROOM_STATE", cD[cD.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", cD[cD.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", cD[cD.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", CD.ErrorCode = void 0, (ID = CD.ErrorCode || (CD.ErrorCode = {}))[ID.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", ID[ID.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", ID[ID.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", ID[ID.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", ID[ID.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", ID[ID.AUTH_FAILED = 4215] = "AUTH_FAILED", ID[ID.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  8756: (zz, uz, bz) => {
-    var Ez = bz(8758),
-      nz = bz(8786),
-      iz = bz(8791),
-      lz = bz(8793),
-      Mz = bz(8801),
-      tz = bz(8774),
-      Hz = bz(8806),
-      Oz = bz(8754),
-      pz = bz(8810);
-    class dz {
-      constructor(zz, uz) {
-        this.onStateChange = Mz.createSignal(), this.onError = Mz.createSignal(), this.Hr = Mz.createSignal(), this.onJoin = Mz.createSignal(), this.hasJoined = !1, this.onMessageHandlers = lz.createNanoEvents(), this.roomId = null, this.name = zz, this.packr = new pz.Packr, this.packr.encode(void 0), uz && (this.Kw = new(iz.getSerializer("schema")), this.rootSchema = uz, this.Kw.state = new uz), this.onError(((zz, uz) => {
-          var bz;
-          return null === (bz = console.warn) || void 0 === bz ? void 0 : bz.call(console, `colyseus.js - onError => (${zz}) ${uz}`)
-        })), this.Hr((() => this.pw()))
+  8793: (DD, CD, cD) => {
+    var ID = cD(8798),
+      pD = cD(8826),
+      iD = cD(8828),
+      fD = cD(8836),
+      bD = cD(8840),
+      QD = cD(8811),
+      wD = cD(8849),
+      SD = cD(8786),
+      BD = cD(8852);
+    class yD {
+      constructor(DD, CD) {
+        this.onStateChange = bD.createSignal(), this.onError = bD.createSignal(), this.Zm = bD.createSignal(), this.onJoin = bD.createSignal(), this.hasJoined = !1, this.onMessageHandlers = fD.createNanoEvents(), this.roomId = null, this.name = DD, this.packr = new BD.Packr, this.packr.encode(void 0), CD && (this.yN = new(iD.getSerializer("schema")), this.rootSchema = CD, this.yN.state = new CD), this.onError(((DD, CD) => {
+          var cD;
+          return null === (cD = console.warn) || void 0 === cD ? void 0 : cD.call(console, `colyseus.js - onError => (${DD}) ${CD}`)
+        })), this.Zm((() => this.iN()))
       }
-      connect(zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          nz = arguments.length > 3 ? arguments[3] : void 0,
-          iz = arguments.length > 4 ? arguments[4] : void 0;
-        const lz = new Ez.Connection(nz.protocol);
-        if (bz.connection = lz, lz.events.onmessage = dz.prototype.onMessageCallback.bind(bz), lz.events.onclose = function(zz) {
-            var Ez;
-            if (!bz.hasJoined) return null === (Ez = console.warn) || void 0 === Ez || Ez.call(console, `Room connection was closed unexpectedly (${zz.code}): ${zz.reason}`), void bz.onError.invoke(zz.code, zz.reason);
-            zz.code === Oz.CloseCode.DEVMODE_RESTART && uz ? uz() : (bz.Hr.invoke(zz.code, zz.reason), bz.destroy())
-          }, lz.events.onerror = function(zz) {
-            var uz;
-            null === (uz = console.warn) || void 0 === uz || uz.call(console, `Room, onError (${zz.code}): ${zz.reason}`), bz.onError.invoke(zz.code, zz.reason)
-          }, "h3" === nz.protocol) {
-          const uz = new URL(zz);
-          lz.connect(uz.origin, nz)
-        } else lz.connect(zz, iz)
+      connect(DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          pD = arguments.length > 3 ? arguments[3] : void 0,
+          iD = arguments.length > 4 ? arguments[4] : void 0;
+        const fD = new ID.Connection(pD.protocol);
+        if (cD.connection = fD, fD.events.onmessage = yD.prototype.onMessageCallback.bind(cD), fD.events.onclose = function(DD) {
+            var ID;
+            if (!cD.hasJoined) return null === (ID = console.warn) || void 0 === ID || ID.call(console, `Room connection was closed unexpectedly (${DD.code}): ${DD.reason}`), void cD.onError.invoke(DD.code, DD.reason);
+            DD.code === SD.CloseCode.DEVMODE_RESTART && CD ? CD() : (cD.Zm.invoke(DD.code, DD.reason), cD.destroy())
+          }, fD.events.onerror = function(DD) {
+            var CD;
+            null === (CD = console.warn) || void 0 === CD || CD.call(console, `Room, onError (${DD.code}): ${DD.reason}`), cD.onError.invoke(DD.code, DD.reason)
+          }, "h3" === pD.protocol) {
+          const CD = new URL(DD);
+          fD.connect(CD.origin, pD)
+        } else fD.connect(DD, iD)
       }
       leave() {
-        let zz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((uz => {
-          this.Hr((zz => uz(zz))), this.connection ? zz ? (this.packr.buffer[0] = nz.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.Hr.invoke(Oz.CloseCode.CONSENTED)
+        let DD = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((CD => {
+          this.Zm((DD => CD(DD))), this.connection ? DD ? (this.packr.buffer[0] = pD.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.Zm.invoke(SD.CloseCode.CONSENTED)
         }))
       }
-      Ws(zz, uz) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(zz), uz)
+      Qm(DD, CD) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(DD), CD)
       }
-      send(zz, uz) {
-        const bz = {
+      send(DD, CD) {
+        const cD = {
           offset: 1
         };
-        this.packr.buffer[0] = nz.Protocol.ROOM_DATA, "string" === typeof zz ? tz.encode.string(this.packr.buffer, zz, bz) : tz.encode.number(this.packr.buffer, zz, bz), this.packr.position = 0;
-        const Ez = void 0 !== uz ? this.packr.pack(uz, 2048 + bz.offset) : this.packr.buffer.subarray(0, bz.offset);
-        this.connection.send(Ez)
+        this.packr.buffer[0] = pD.Protocol.ROOM_DATA, "string" === typeof DD ? QD.encode.string(this.packr.buffer, DD, cD) : QD.encode.number(this.packr.buffer, DD, cD), this.packr.position = 0;
+        const ID = void 0 !== CD ? this.packr.pack(CD, 2048 + cD.offset) : this.packr.buffer.subarray(0, cD.offset);
+        this.connection.send(ID)
       }
-      sendUnreliable(zz, uz) {
-        const bz = {
+      sendUnreliable(DD, CD) {
+        const cD = {
           offset: 1
         };
-        this.packr.buffer[0] = nz.Protocol.ROOM_DATA, "string" === typeof zz ? tz.encode.string(this.packr.buffer, zz, bz) : tz.encode.number(this.packr.buffer, zz, bz), this.packr.position = 0;
-        const Ez = void 0 !== uz ? this.packr.pack(uz, 2048 + bz.offset) : this.packr.buffer.subarray(0, bz.offset);
-        this.connection.sendUnreliable(Ez)
+        this.packr.buffer[0] = pD.Protocol.ROOM_DATA, "string" === typeof DD ? QD.encode.string(this.packr.buffer, DD, cD) : QD.encode.number(this.packr.buffer, DD, cD), this.packr.position = 0;
+        const ID = void 0 !== CD ? this.packr.pack(CD, 2048 + cD.offset) : this.packr.buffer.subarray(0, cD.offset);
+        this.connection.sendUnreliable(ID)
       }
-      MJ(zz, uz) {
-        const bz = {
+      vU(DD, CD) {
+        const cD = {
           offset: 1
         };
-        if (this.packr.buffer[0] = nz.Protocol.ROOM_DATA_BYTES, "string" === typeof zz ? tz.encode.string(this.packr.buffer, zz, bz) : tz.encode.number(this.packr.buffer, zz, bz), uz.byteLength + bz.offset > this.packr.buffer.byteLength) {
-          const zz = new Uint8Array(bz.offset + uz.byteLength);
-          zz.set(this.packr.buffer), this.packr.useBuffer(zz)
+        if (this.packr.buffer[0] = pD.Protocol.ROOM_DATA_BYTES, "string" === typeof DD ? QD.encode.string(this.packr.buffer, DD, cD) : QD.encode.number(this.packr.buffer, DD, cD), CD.byteLength + cD.offset > this.packr.buffer.byteLength) {
+          const DD = new Uint8Array(cD.offset + CD.byteLength);
+          DD.set(this.packr.buffer), this.packr.useBuffer(DD)
         }
-        this.packr.buffer.set(uz, bz.offset), this.connection.send(this.packr.buffer.subarray(0, bz.offset + uz.byteLength))
+        this.packr.buffer.set(CD, cD.offset), this.connection.send(this.packr.buffer.subarray(0, cD.offset + CD.byteLength))
       }
       get state() {
-        return this.Kw.getState()
+        return this.yN.getState()
       }
-      pw() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.Hr.clear(), this.onMessageHandlers.events = {}, this.Kw instanceof Hz.sA && (this.Kw.LZ.root.callbacks = {})
+      iN() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.Zm.clear(), this.onMessageHandlers.events = {}, this.yN instanceof wD.oq && (this.yN.Pt.root.callbacks = {})
       }
-      onMessageCallback(zz) {
-        const uz = new Uint8Array(zz.data),
-          bz = {
+      onMessageCallback(DD) {
+        const CD = new Uint8Array(DD.data),
+          cD = {
             offset: 1
           },
-          Ez = uz[0];
-        if (Ez === nz.Protocol.JOIN_ROOM) {
-          const zz = tz.decode.utf8Read(uz, bz, uz[bz.offset++]);
-          if (this.serializerId = tz.decode.utf8Read(uz, bz, uz[bz.offset++]), !this.Kw) {
-            const zz = iz.getSerializer(this.serializerId);
-            this.Kw = new zz
+          ID = CD[0];
+        if (ID === pD.Protocol.JOIN_ROOM) {
+          const DD = QD.decode.utf8Read(CD, cD, CD[cD.offset++]);
+          if (this.serializerId = QD.decode.utf8Read(CD, cD, CD[cD.offset++]), !this.yN) {
+            const DD = iD.getSerializer(this.serializerId);
+            this.yN = new DD
           }
-          uz.byteLength > bz.offset && this.Kw.handshake && this.Kw.handshake(uz, bz), this.reconnectionToken = `${this.roomId}:${zz}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = nz.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (Ez === nz.Protocol.ERROR) {
-          const zz = tz.decode.number(uz, bz),
-            Ez = tz.decode.string(uz, bz);
-          this.onError.invoke(zz, Ez)
-        } else if (Ez === nz.Protocol.LEAVE_ROOM) this.leave();
-        else if (Ez === nz.Protocol.ROOM_STATE) this.Kw.setState(uz, bz), this.onStateChange.invoke(this.Kw.getState());
-        else if (Ez === nz.Protocol.ROOM_STATE_PATCH) this.Kw.patch(uz, bz), this.onStateChange.invoke(this.Kw.getState());
-        else if (Ez === nz.Protocol.ROOM_DATA) {
-          const zz = tz.decode.stringCheck(uz, bz) ? tz.decode.string(uz, bz) : tz.decode.number(uz, bz),
-            Ez = uz.byteLength > bz.offset ? pz.unpack(uz, {
-              start: bz.offset
+          CD.byteLength > cD.offset && this.yN.handshake && this.yN.handshake(CD, cD), this.reconnectionToken = `${this.roomId}:${DD}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = pD.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (ID === pD.Protocol.ERROR) {
+          const DD = QD.decode.number(CD, cD),
+            ID = QD.decode.string(CD, cD);
+          this.onError.invoke(DD, ID)
+        } else if (ID === pD.Protocol.LEAVE_ROOM) this.leave();
+        else if (ID === pD.Protocol.ROOM_STATE) this.yN.setState(CD, cD), this.onStateChange.invoke(this.yN.getState());
+        else if (ID === pD.Protocol.ROOM_STATE_PATCH) this.yN.patch(CD, cD), this.onStateChange.invoke(this.yN.getState());
+        else if (ID === pD.Protocol.ROOM_DATA) {
+          const DD = QD.decode.stringCheck(CD, cD) ? QD.decode.string(CD, cD) : QD.decode.number(CD, cD),
+            ID = CD.byteLength > cD.offset ? BD.unpack(CD, {
+              start: cD.offset
             }) : void 0;
-          this.dispatchMessage(zz, Ez)
-        } else if (Ez === nz.Protocol.ROOM_DATA_BYTES) {
-          const zz = tz.decode.stringCheck(uz, bz) ? tz.decode.string(uz, bz) : tz.decode.number(uz, bz);
-          this.dispatchMessage(zz, uz.subarray(bz.offset))
+          this.dispatchMessage(DD, ID)
+        } else if (ID === pD.Protocol.ROOM_DATA_BYTES) {
+          const DD = QD.decode.stringCheck(CD, cD) ? QD.decode.string(CD, cD) : QD.decode.number(CD, cD);
+          this.dispatchMessage(DD, CD.subarray(cD.offset))
         }
       }
-      dispatchMessage(zz, uz) {
-        var bz;
-        const Ez = this.getMessageHandlerKey(zz);
-        this.onMessageHandlers.events[Ez] ? this.onMessageHandlers.emit(Ez, uz) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", zz, uz) : null === (bz = console.warn) || void 0 === bz || bz.call(console, `colyseus.js: onMessage() not registered for type '${zz}'.`)
+      dispatchMessage(DD, CD) {
+        var cD;
+        const ID = this.getMessageHandlerKey(DD);
+        this.onMessageHandlers.events[ID] ? this.onMessageHandlers.emit(ID, CD) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", DD, CD) : null === (cD = console.warn) || void 0 === cD || cD.call(console, `colyseus.js: onMessage() not registered for type '${DD}'.`)
       }
       destroy() {
-        this.Kw && this.Kw.teardown()
+        this.yN && this.yN.teardown()
       }
-      getMessageHandlerKey(zz) {
-        switch (typeof zz) {
+      getMessageHandlerKey(DD) {
+        switch (typeof DD) {
           case "string":
-            return zz;
+            return DD;
           case "number":
-            return `i${zz}`;
+            return `i${DD}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    uz.Rd = dz
+    CD.Cy = yD
   },
-  8826: (zz, uz, bz) => {
-    var Ez = bz(8747);
-    let nz;
+  8874: (DD, CD, cD) => {
+    var ID = cD(8781);
+    let pD;
 
-    function iz() {
-      if (!nz) try {
-        nz = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (zz) {}
-      return nz || "undefined" === typeof globalThis.indexedDB || (nz = new lz), nz || (nz = {
+    function iD() {
+      if (!pD) try {
+        pD = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (DD) {}
+      return pD || "undefined" === typeof globalThis.indexedDB || (pD = new fD), pD || (pD = {
         cache: {},
-        setItem: function(zz, uz) {
-          this.cache[zz] = uz
+        setItem: function(DD, CD) {
+          this.cache[DD] = CD
         },
-        getItem: function(zz) {
-          this.cache[zz]
+        getItem: function(DD) {
+          this.cache[DD]
         },
-        removeItem: function(zz) {
-          delete this.cache[zz]
+        removeItem: function(DD) {
+          delete this.cache[DD]
         }
-      }), nz
+      }), pD
     }
-    class lz {
+    class fD {
       constructor() {
-        this.dbPromise = new Promise((zz => {
-          const uz = indexedDB.open("_colyseus_storage", 1);
-          uz.onupgradeneeded = () => uz.result.createObjectStore("store"), uz.onsuccess = () => zz(uz.result)
+        this.dbPromise = new Promise((DD => {
+          const CD = indexedDB.open("_colyseus_storage", 1);
+          CD.onupgradeneeded = () => CD.result.createObjectStore("store"), CD.onsuccess = () => DD(CD.result)
         }))
       }
-      tx(zz, uz) {
-        return Ez.__awaiter(this, void 0, void 0, (function*() {
-          const bz = (yield this.dbPromise).transaction("store", zz).objectStore("store");
-          return uz(bz)
+      tx(DD, CD) {
+        return ID.__awaiter(this, void 0, void 0, (function*() {
+          const cD = (yield this.dbPromise).transaction("store", DD).objectStore("store");
+          return CD(cD)
         }))
       }
-      setItem(zz, uz) {
-        return this.tx("readwrite", (bz => bz.put(uz, zz))).then()
+      setItem(DD, CD) {
+        return this.tx("readwrite", (cD => cD.put(CD, DD))).then()
       }
-      getItem(zz) {
-        return Ez.__awaiter(this, void 0, void 0, (function*() {
-          const uz = yield this.tx("readonly", (uz => uz.get(zz)));
-          return new Promise((zz => {
-            uz.onsuccess = () => zz(uz.result)
+      getItem(DD) {
+        return ID.__awaiter(this, void 0, void 0, (function*() {
+          const CD = yield this.tx("readonly", (CD => CD.get(DD)));
+          return new Promise((DD => {
+            CD.onsuccess = () => DD(CD.result)
           }))
         }))
       }
-      removeItem(zz) {
-        return this.tx("readwrite", (uz => uz.delete(zz))).then()
+      removeItem(DD) {
+        return this.tx("readwrite", (CD => CD.delete(DD))).then()
       }
     }
-    uz.getItem = function(zz, uz) {
-      const bz = iz().getItem(zz);
-      "undefined" !== typeof Promise && bz instanceof Promise ? bz.then((zz => uz(zz))) : uz(bz)
-    }, uz.removeItem = function(zz) {
-      iz().removeItem(zz)
-    }, uz.setItem = function(zz, uz) {
-      iz().setItem(zz, uz)
+    CD.getItem = function(DD, CD) {
+      const cD = iD().getItem(DD);
+      "undefined" !== typeof Promise && cD instanceof Promise ? cD.then((DD => CD(DD))) : CD(cD)
+    }, CD.removeItem = function(DD) {
+      iD().removeItem(DD)
+    }, CD.setItem = function(DD, CD) {
+      iD().setItem(DD, CD)
     }
   },
-  8793: (zz, uz) => {
-    uz.createNanoEvents = () => ({
-      emit(zz) {
-        let uz = this.events[zz] || [];
-        for (var bz = arguments.length, Ez = new Array(bz > 1 ? bz - 1 : 0), nz = 1; nz < bz; nz++) Ez[nz - 1] = arguments[nz];
-        for (let iz = 0, lz = uz.length; iz < lz; iz++) uz[iz](...Ez)
+  8836: (DD, CD) => {
+    CD.createNanoEvents = () => ({
+      emit(DD) {
+        let CD = this.events[DD] || [];
+        for (var cD = arguments.length, ID = new Array(cD > 1 ? cD - 1 : 0), pD = 1; pD < cD; pD++) ID[pD - 1] = arguments[pD];
+        for (let iD = 0, fD = CD.length; iD < fD; iD++) CD[iD](...ID)
       },
       events: {},
-      on(zz, uz) {
-        var bz;
-        return (null === (bz = this.events[zz]) || void 0 === bz ? void 0 : bz.push(uz)) || (this.events[zz] = [uz]), () => {
-          var bz;
-          this.events[zz] = null === (bz = this.events[zz]) || void 0 === bz ? void 0 : bz.filter((zz => uz !== zz))
+      on(DD, CD) {
+        var cD;
+        return (null === (cD = this.events[DD]) || void 0 === cD ? void 0 : cD.push(CD)) || (this.events[DD] = [CD]), () => {
+          var cD;
+          this.events[DD] = null === (cD = this.events[DD]) || void 0 === cD ? void 0 : cD.filter((DD => CD !== DD))
         }
       }
     })
   },
-  8801: (zz, uz) => {
-    class bz {
+  8840: (DD, CD) => {
+    class cD {
       constructor() {
         this.handlers = []
       }
-      register(zz) {
-        return this.handlers.push(zz), this
+      register(DD) {
+        return this.handlers.push(DD), this
       }
       invoke() {
-        for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
-        this.handlers.forEach((zz => zz.apply(this, uz)))
+        for (var DD = arguments.length, CD = new Array(DD), cD = 0; cD < DD; cD++) CD[cD] = arguments[cD];
+        this.handlers.forEach((DD => DD.apply(this, CD)))
       }
       invokeAsync() {
-        for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
-        return Promise.all(this.handlers.map((zz => zz.apply(this, uz))))
+        for (var DD = arguments.length, CD = new Array(DD), cD = 0; cD < DD; cD++) CD[cD] = arguments[cD];
+        return Promise.all(this.handlers.map((DD => DD.apply(this, CD))))
       }
-      remove(zz) {
-        const uz = this.handlers.indexOf(zz);
-        this.handlers[uz] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(DD) {
+        const CD = this.handlers.indexOf(DD);
+        this.handlers[CD] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    uz.EventEmitter = bz, uz.createSignal = function() {
-      const zz = new bz;
+    CD.EventEmitter = cD, CD.createSignal = function() {
+      const DD = new cD;
 
-      function uz(uz) {
-        return zz.register(uz, null === this)
+      function CD(CD) {
+        return DD.register(CD, null === this)
       }
-      return uz.once = uz => {
-        const bz = function() {
-          for (var Ez = arguments.length, nz = new Array(Ez), iz = 0; iz < Ez; iz++) nz[iz] = arguments[iz];
-          uz.apply(this, nz), zz.remove(bz)
+      return CD.once = CD => {
+        const cD = function() {
+          for (var ID = arguments.length, pD = new Array(ID), iD = 0; iD < ID; iD++) pD[iD] = arguments[iD];
+          CD.apply(this, pD), DD.remove(cD)
         };
-        zz.register(bz)
-      }, uz.remove = uz => zz.remove(uz), uz.invoke = function() {
-        return zz.invoke(...arguments)
-      }, uz.invokeAsync = function() {
-        return zz.invokeAsync(...arguments)
-      }, uz.clear = () => zz.clear(), uz
+        DD.register(cD)
+      }, CD.remove = CD => DD.remove(CD), CD.invoke = function() {
+        return DD.invoke(...arguments)
+      }, CD.invokeAsync = function() {
+        return DD.invokeAsync(...arguments)
+      }, CD.clear = () => DD.clear(), CD
     }
   },
-  8754: (zz, uz) => {
-    var bz;
-    uz.CloseCode = void 0, (bz = uz.CloseCode || (uz.CloseCode = {}))[bz.CONSENTED = 4e3] = "CONSENTED", bz[bz.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class Ez extends Error {
-      constructor(zz, uz) {
-        super(uz), this.name = "ServerError", this.code = zz
+  8786: (DD, CD) => {
+    var cD;
+    CD.CloseCode = void 0, (cD = CD.CloseCode || (CD.CloseCode = {}))[cD.CONSENTED = 4e3] = "CONSENTED", cD[cD.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class ID extends Error {
+      constructor(DD, CD) {
+        super(CD), this.name = "ServerError", this.code = DD
       }
     }
-    class nz extends Error {
-      constructor(zz) {
-        super(zz), this.name = "AbortError"
+    class pD extends Error {
+      constructor(DD) {
+        super(DD), this.name = "AbortError"
       }
     }
-    uz.AbortError = nz, uz.ServerError = Ez
+    CD.AbortError = pD, CD.ServerError = ID
   },
-  8731: (zz, uz, bz) => {
-    bz(8735);
-    var Ez = bz(8743),
-      nz = bz(8786),
-      iz = bz(8756),
-      lz = bz(8819),
-      Mz = bz(8754),
-      tz = bz(8806),
-      Hz = bz(8842),
-      Oz = bz(8791);
-    Oz.registerSerializer("schema", tz.sA), Oz.registerSerializer("none", Hz.NoneSerializer), uz.Client = Ez.Client, uz.MatchMakeError = Ez.MatchMakeError, Object.defineProperty(uz, "ErrorCode", {
+  8764: (DD, CD, cD) => {
+    cD(8771);
+    var ID = cD(8774),
+      pD = cD(8826),
+      iD = cD(8793),
+      fD = cD(8865),
+      bD = cD(8786),
+      QD = cD(8849),
+      wD = cD(8888),
+      SD = cD(8828);
+    SD.registerSerializer("schema", QD.oq), SD.registerSerializer("none", wD.NoneSerializer), CD.Client = ID.Client, CD.MatchMakeError = ID.MatchMakeError, Object.defineProperty(CD, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return nz.ErrorCode
+        return pD.ErrorCode
       }
-    }), Object.defineProperty(uz, "Protocol", {
+    }), Object.defineProperty(CD, "Protocol", {
       enumerable: !0,
       get: function() {
-        return nz.Protocol
+        return pD.Protocol
       }
-    }), uz.Rd = iz.Rd, uz.Auth = lz.Auth, uz.ServerError = Mz.ServerError, uz.sA = tz.sA, uz.getStateCallbacks = tz.getStateCallbacks, uz.registerSerializer = Oz.registerSerializer
+    }), CD.Cy = iD.Cy, CD.Auth = fD.Auth, CD.ServerError = bD.ServerError, CD.oq = QD.oq, CD.getStateCallbacks = QD.getStateCallbacks, CD.registerSerializer = SD.registerSerializer
   },
-  8735: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = zz => null !== zz && "object" === typeof zz && zz.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  8771: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = DD => null !== DD && "object" === typeof DD && DD.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  8842: (zz, uz) => {
-    uz.NoneSerializer = class {
-      setState(zz) {}
+  8888: (DD, CD) => {
+    CD.NoneSerializer = class {
+      setState(DD) {}
       getState() {
         return null
       }
-      patch(zz) {}
+      patch(DD) {}
       teardown() {}
-      handshake(zz) {}
+      handshake(DD) {}
     }
   },
-  8806: (zz, uz, bz) => {
-    var Ez = bz(8774);
-    uz.sA = class {
-      setState(zz, uz) {
-        this.LZ.decode(zz, uz)
+  8849: (DD, CD, cD) => {
+    var ID = cD(8811);
+    CD.oq = class {
+      setState(DD, CD) {
+        this.Pt.decode(DD, CD)
       }
       getState() {
         return this.state
       }
-      patch(zz, uz) {
-        return this.LZ.decode(zz, uz)
+      patch(DD, CD) {
+        return this.Pt.decode(DD, CD)
       }
       teardown() {
-        this.LZ.root.clearRefs()
+        this.Pt.root.clearRefs()
       }
-      handshake(zz, uz) {
-        this.state ? (Ez.Reflection.decode(zz, uz), this.LZ = new Ez.Decoder(this.state)) : (this.LZ = Ez.Reflection.decode(zz, uz), this.state = this.LZ.state)
+      handshake(DD, CD) {
+        this.state ? (ID.Reflection.decode(DD, CD), this.Pt = new ID.Decoder(this.state)) : (this.Pt = ID.Reflection.decode(DD, CD), this.state = this.Pt.state)
       }
-    }, uz.getStateCallbacks = function(zz) {
+    }, CD.getStateCallbacks = function(DD) {
       try {
-        return Ez.getDecoderStateCallbacks(zz.Kw.LZ)
-      } catch (uz) {
+        return ID.getDecoderStateCallbacks(DD.yN.Pt)
+      } catch (CD) {
         return
       }
     }
   },
-  8791: (zz, uz) => {
-    const bz = {};
-    uz.getSerializer = function(zz) {
-      const uz = bz[zz];
-      if (!uz) throw new Error("missing serializer: " + zz);
-      return uz
-    }, uz.registerSerializer = function(zz, uz) {
-      bz[zz] = uz
+  8828: (DD, CD) => {
+    const cD = {};
+    CD.getSerializer = function(DD) {
+      const CD = cD[DD];
+      if (!CD) throw new Error("missing serializer: " + DD);
+      return CD
+    }, CD.registerSerializer = function(DD, CD) {
+      cD[DD] = CD
     }
   },
-  8766: (zz, uz, bz) => {
-    var Ez = bz(8747),
-      nz = bz(8774);
-    uz.H3TransportTransport = class {
-      constructor(zz) {
-        this.events = zz, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  8804: (DD, CD, cD) => {
+    var ID = cD(8781),
+      pD = cD(8811);
+    CD.H3TransportTransport = class {
+      constructor(DD) {
+        this.events = DD, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const bz = uz.fingerprint && {
+      connect(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const cD = CD.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(uz.fingerprint).buffer
+            value: new Uint8Array(CD.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(zz, bz), this.wt.ready.then((zz => {
-          console.log("WebTransport ready!", zz), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((zz => {
-            this.reader = zz.value.readable.getReader(), this.writer = zz.value.writable.getWriter(), this.sendSeatReservation(uz.room.roomId, uz.sessionId, uz.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((zz => {
-            console.error("failed to read incoming stream", zz), console.error("TODO: close the connection")
+        this.wt = new WebTransport(DD, cD), this.wt.ready.then((DD => {
+          console.log("WebTransport ready!", DD), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((DD => {
+            this.reader = DD.value.readable.getReader(), this.writer = DD.value.writable.getWriter(), this.sendSeatReservation(CD.room.roomId, CD.sessionId, CD.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((DD => {
+            console.error("failed to read incoming stream", DD), console.error("TODO: close the connection")
           }))
-        })).catch((zz => {
-          console.log("WebTransport not ready!", zz), this._close()
-        })), this.wt.closed.then((zz => {
-          console.log("WebTransport closed w/ success", zz), this.events.onclose({
-            code: zz.closeCode,
-            reason: zz.reason
+        })).catch((DD => {
+          console.log("WebTransport not ready!", DD), this._close()
+        })), this.wt.closed.then((DD => {
+          console.log("WebTransport closed w/ success", DD), this.events.onclose({
+            code: DD.closeCode,
+            reason: DD.reason
           })
-        })).catch((zz => {
-          console.log("WebTransport closed w/ error", zz), this.events.onerror(zz), this.events.onclose({
-            code: zz.closeCode,
-            reason: zz.reason
+        })).catch((DD => {
+          console.log("WebTransport closed w/ error", DD), this.events.onerror(DD), this.events.onclose({
+            code: DD.closeCode,
+            reason: DD.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(zz) {
-        const uz = nz.encode.number(this.lengthPrefixBuffer, zz.length, {
+      send(DD) {
+        const CD = pD.encode.number(this.lengthPrefixBuffer, DD.length, {
             offset: 0
           }),
-          bz = new Uint8Array(uz + zz.length);
-        bz.set(this.lengthPrefixBuffer.subarray(0, uz), 0), bz.set(zz, uz), this.writer.write(bz)
+          cD = new Uint8Array(CD + DD.length);
+        cD.set(this.lengthPrefixBuffer.subarray(0, CD), 0), cD.set(DD, CD), this.writer.write(cD)
       }
-      sendUnreliable(zz) {
-        const uz = nz.encode.number(this.lengthPrefixBuffer, zz.length, {
+      sendUnreliable(DD) {
+        const CD = pD.encode.number(this.lengthPrefixBuffer, DD.length, {
             offset: 0
           }),
-          bz = new Uint8Array(uz + zz.length);
-        bz.set(this.lengthPrefixBuffer.subarray(0, uz), 0), bz.set(zz, uz), this.unreliableWriter.write(bz)
+          cD = new Uint8Array(CD + DD.length);
+        cD.set(this.lengthPrefixBuffer.subarray(0, CD), 0), cD.set(DD, CD), this.unreliableWriter.write(cD)
       }
-      close(zz, uz) {
+      close(DD, CD) {
         try {
           this.wt.close({
-            closeCode: zz,
-            reason: uz
+            closeCode: DD,
+            reason: CD
           })
-        } catch (bz) {
-          console.error(bz)
+        } catch (cD) {
+          console.error(cD)
         }
       }
       readIncomingData() {
-        return Ez.__awaiter(this, void 0, void 0, (function*() {
-          let zz;
+        return ID.__awaiter(this, void 0, void 0, (function*() {
+          let DD;
           for (; this.isOpen;) {
             try {
-              zz = yield this.reader.read();
-              const uz = zz.value,
-                bz = {
+              DD = yield this.reader.read();
+              const CD = DD.value,
+                cD = {
                   offset: 0
                 };
               do {
-                const zz = nz.decode.number(uz, bz);
+                const DD = pD.decode.number(CD, cD);
                 this.events.onmessage({
-                  data: uz.subarray(bz.offset, bz.offset + zz)
-                }), bz.offset += zz
-              } while (bz.offset < uz.length)
-            } catch (uz) {
-              -1 === uz.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", uz);
+                  data: CD.subarray(cD.offset, cD.offset + DD)
+                }), cD.offset += DD
+              } while (cD.offset < CD.length)
+            } catch (CD) {
+              -1 === CD.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", CD);
               break
             }
-            if (zz.done) break
+            if (DD.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return Ez.__awaiter(this, void 0, void 0, (function*() {
-          let zz;
+        return ID.__awaiter(this, void 0, void 0, (function*() {
+          let DD;
           for (; this.isOpen;) {
             try {
-              zz = yield this.unreliableReader.read();
-              const uz = zz.value,
-                bz = {
+              DD = yield this.unreliableReader.read();
+              const CD = DD.value,
+                cD = {
                   offset: 0
                 };
               do {
-                const zz = nz.decode.number(uz, bz);
+                const DD = pD.decode.number(CD, cD);
                 this.events.onmessage({
-                  data: uz.subarray(bz.offset, bz.offset + zz)
-                }), bz.offset += zz
-              } while (bz.offset < uz.length)
-            } catch (uz) {
-              -1 === uz.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", uz);
+                  data: CD.subarray(cD.offset, cD.offset + DD)
+                }), cD.offset += DD
+              } while (cD.offset < CD.length)
+            } catch (CD) {
+              -1 === CD.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", CD);
               break
             }
-            if (zz.done) break
+            if (DD.done) break
           }
         }))
       }
-      sendSeatReservation(zz, uz, bz) {
-        const Ez = {
+      sendSeatReservation(DD, CD, cD) {
+        const ID = {
             offset: 0
           },
-          iz = [];
-        nz.encode.string(iz, zz, Ez), nz.encode.string(iz, uz, Ez), bz && nz.encode.string(iz, bz, Ez), this.writer.write(new Uint8Array(iz).buffer)
+          iD = [];
+        pD.encode.string(iD, DD, ID), pD.encode.string(iD, CD, ID), cD && pD.encode.string(iD, cD, ID), this.writer.write(new Uint8Array(iD).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  8779: (zz, uz, bz) => {
-    var Ez = bz(8783);
-    const nz = globalThis.WebSocket || Ez;
-    uz.WebSocketTransport = class {
-      constructor(zz) {
-        this.events = zz
+  8818: (DD, CD, cD) => {
+    var ID = cD(8823);
+    const pD = globalThis.WebSocket || ID;
+    CD.WebSocketTransport = class {
+      constructor(DD) {
+        this.events = DD
       }
-      send(zz) {
-        this.ws.send(zz)
+      send(DD) {
+        this.ws.send(DD)
       }
-      sendUnreliable(zz) {
+      sendUnreliable(DD) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(zz, uz) {
+      connect(DD, CD) {
         try {
-          this.ws = new nz(zz, {
-            headers: uz,
+          this.ws = new pD(DD, {
+            headers: CD,
             protocols: this.protocols
           })
-        } catch (bz) {
-          this.ws = new nz(zz, this.protocols)
+        } catch (cD) {
+          this.ws = new pD(DD, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(zz, uz) {
-        this.ws.close(zz, uz)
+      close(DD, CD) {
+        this.ws.close(DD, CD)
       }
       get isOpen() {
-        return this.ws.readyState === nz.OPEN
+        return this.ws.readyState === pD.OPEN
       }
     }
   },
-  8783: zz => {
-    zz.exports = function() {
+  8823: DD => {
+    DD.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  8816: (zz, uz, bz) => {
-    function Ez(zz, uz) {
-      uz.headers = zz.headers || {}, uz.statusMessage = zz.statusText, uz.statusCode = zz.status, uz.data = zz.response
+  8857: (DD, CD, cD) => {
+    function ID(DD, CD) {
+      CD.headers = DD.headers || {}, CD.statusMessage = DD.statusText, CD.statusCode = DD.status, CD.data = DD.response
     }
 
-    function nz(zz, uz, bz) {
-      return new Promise((function(nz, iz) {
-        bz = bz || {};
-        var lz, Mz, tz, Hz = new XMLHttpRequest,
-          Oz = bz.body,
-          pz = bz.headers || {};
-        for (lz in bz.timeout && (Hz.timeout = bz.timeout), Hz.ontimeout = Hz.onerror = function(zz) {
-            zz.timeout = "timeout" == zz.type, iz(zz)
-          }, Hz.onabort = function(zz) {
-            zz.aborted = !0, iz(zz)
-          }, Hz.open(zz, uz.href || uz), Hz.onload = function() {
-            for (tz = Hz.getAllResponseHeaders().trim().split(/[\r\n]+/), Ez(Hz, Hz); Mz = tz.shift();) Mz = Mz.split(": "), Hz.headers[Mz.shift().toLowerCase()] = Mz.join(": ");
-            if ((Mz = Hz.headers["content-type"]) && ~Mz.indexOf("application/json")) try {
-              Hz.data = JSON.parse(Hz.data, bz.reviver)
-            } catch (zz) {
-              return Ez(Hz, zz), iz(zz)
-            }(Hz.status >= 400 ? iz : nz)(Hz)
-          }, typeof FormData < "u" && Oz instanceof FormData || Oz && "object" == typeof Oz && (pz["content-type"] = "application/json", Oz = JSON.stringify(Oz)), Hz.withCredentials = !!bz.withCredentials, pz) Hz.setRequestHeader(lz, pz[lz]);
-        Hz.send(Oz), bz.signal && bz.signal.addEventListener("abort", (function() {
-          Hz.abort()
+    function pD(DD, CD, cD) {
+      return new Promise((function(pD, iD) {
+        cD = cD || {};
+        var fD, bD, QD, wD = new XMLHttpRequest,
+          SD = cD.body,
+          BD = cD.headers || {};
+        for (fD in cD.timeout && (wD.timeout = cD.timeout), wD.ontimeout = wD.onerror = function(DD) {
+            DD.timeout = "timeout" == DD.type, iD(DD)
+          }, wD.onabort = function(DD) {
+            DD.aborted = !0, iD(DD)
+          }, wD.open(DD, CD.href || CD), wD.onload = function() {
+            for (QD = wD.getAllResponseHeaders().trim().split(/[\r\n]+/), ID(wD, wD); bD = QD.shift();) bD = bD.split(": "), wD.headers[bD.shift().toLowerCase()] = bD.join(": ");
+            if ((bD = wD.headers["content-type"]) && ~bD.indexOf("application/json")) try {
+              wD.data = JSON.parse(wD.data, cD.reviver)
+            } catch (DD) {
+              return ID(wD, DD), iD(DD)
+            }(wD.status >= 400 ? iD : pD)(wD)
+          }, typeof FormData < "u" && SD instanceof FormData || SD && "object" == typeof SD && (BD["content-type"] = "application/json", SD = JSON.stringify(SD)), wD.withCredentials = !!cD.withCredentials, BD) wD.setRequestHeader(fD, BD[fD]);
+        wD.send(SD), cD.signal && cD.signal.addEventListener("abort", (function() {
+          wD.abort()
         }))
       }))
     }
-    bz.r(uz), bz.d(uz, {
-      del: () => tz,
-      get: () => iz,
-      patch: () => Mz,
-      post: () => lz,
-      put: () => Hz,
-      send: () => nz
+    cD.r(CD), cD.d(CD, {
+      del: () => QD,
+      get: () => iD,
+      patch: () => bD,
+      post: () => fD,
+      put: () => wD,
+      send: () => pD
     });
-    var iz = nz.bind(nz, "GET"),
-      lz = nz.bind(nz, "POST"),
-      Mz = nz.bind(nz, "PATCH"),
-      tz = nz.bind(nz, "DELETE"),
-      Hz = nz.bind(nz, "PUT")
+    var iD = pD.bind(pD, "GET"),
+      fD = pD.bind(pD, "POST"),
+      bD = pD.bind(pD, "PATCH"),
+      QD = pD.bind(pD, "DELETE"),
+      wD = pD.bind(pD, "PUT")
   },
-  8810: (zz, uz, bz) => {
-    var Ez, nz, iz;
-    bz.r(uz), bz.d(uz, {
-      ALWAYS: () => eu,
-      C1: () => rz,
-      DECIMAL_FIT: () => Iu,
-      DECIMAL_ROUND: () => ju,
-      Decoder: () => tu,
-      Encoder: () => Qu,
-      FLOAT32_OPTIONS: () => Fu,
-      NEVER: () => Wu,
-      Packr: () => Vu,
-      RESERVE_START_SPACE: () => Yu,
-      RESET_BUFFER_MODE: () => Cu,
-      REUSE_BUFFER_MODE: () => Bu,
-      Unpackr: () => Az,
-      addExtension: () => cu,
-      clearSource: () => lu,
-      decode: () => du,
-      decodeIter: () => ku,
-      encode: () => Du,
-      encodeIter: () => zb,
-      isNativeAccelerationEnabled: () => gz,
-      mapsAsObjects: () => bb,
-      pack: () => yu,
-      roundFloat32: () => fu,
-      unpack: () => Ou,
-      unpackMultiple: () => pu,
-      useRecords: () => ub
+  8852: (DD, CD, cD) => {
+    var ID, pD, iD;
+    cD.r(CD), cD.d(CD, {
+      ALWAYS: () => EC,
+      C1: () => mD,
+      DECIMAL_FIT: () => uC,
+      DECIMAL_ROUND: () => eC,
+      Decoder: () => QC,
+      Encoder: () => WC,
+      FLOAT32_OPTIONS: () => MC,
+      NEVER: () => sC,
+      Packr: () => zC,
+      RESERVE_START_SPACE: () => AC,
+      RESET_BUFFER_MODE: () => rC,
+      REUSE_BUFFER_MODE: () => hC,
+      Unpackr: () => xD,
+      addExtension: () => GC,
+      clearSource: () => fC,
+      decode: () => yC,
+      decodeIter: () => FC,
+      encode: () => YC,
+      encodeIter: () => Dc,
+      isNativeAccelerationEnabled: () => RD,
+      mapsAsObjects: () => cc,
+      pack: () => dC,
+      roundFloat32: () => gC,
+      unpack: () => SC,
+      unpackMultiple: () => BC,
+      useRecords: () => Cc
     });
     try {
-      Ez = new TextDecoder
-    } catch (Eb) {}
-    var lz = 0;
-    const Mz = [];
-    var tz, Hz, Oz, pz, dz, Fz = Mz,
-      Zz = 0,
-      Rz = {},
-      Kz = 0,
-      wz = 0,
-      Xz = [],
-      fz = {
+      ID = new TextDecoder
+    } catch (Ic) {}
+    var fD = 0;
+    const bD = [];
+    var QD, wD, SD, BD, yD, MD = bD,
+      tD = 0,
+      ZD = {},
+      oD = 0,
+      vD = 0,
+      ND = [],
+      gD = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class sz {}
-    const rz = new sz;
-    rz.name = "MessagePack 0xC1";
-    var oz, Nz, vz, xz = !1,
-      Jz = 2;
+    class XD {}
+    const mD = new XD;
+    mD.name = "MessagePack 0xC1";
+    var nD, OD, PD, HD = !1,
+      UD = 2;
     try {
       new Function("")
-    } catch (Eb) {
-      Jz = 1 / 0
+    } catch (Ic) {
+      UD = 1 / 0
     }
-    class Az {
-      constructor(zz) {
-        zz && (!1 === zz.useRecords && void 0 === zz.mapsAsObjects && (zz.mapsAsObjects = !0), zz.sequential && !1 !== zz.trusted && (zz.trusted = !0, zz.structures || 0 == zz.useRecords || (zz.structures = [], zz.maxSharedStructures || (zz.maxSharedStructures = 0))), zz.structures ? zz.structures.sharedLength = zz.structures.length : zz.getStructures && ((zz.structures = []).uninitialized = !0, zz.structures.sharedLength = 0), zz.int64AsNumber && (zz.int64AsType = "number")), Object.assign(this, zz)
+    class xD {
+      constructor(DD) {
+        DD && (!1 === DD.useRecords && void 0 === DD.mapsAsObjects && (DD.mapsAsObjects = !0), DD.sequential && !1 !== DD.trusted && (DD.trusted = !0, DD.structures || 0 == DD.useRecords || (DD.structures = [], DD.maxSharedStructures || (DD.maxSharedStructures = 0))), DD.structures ? DD.structures.sharedLength = DD.structures.length : DD.getStructures && ((DD.structures = []).uninitialized = !0, DD.structures.sharedLength = 0), DD.int64AsNumber && (DD.int64AsType = "number")), Object.assign(this, DD)
       }
-      unpack(zz, uz) {
-        if (nz) return iu((() => (lu(), this ? this.unpack(zz, uz) : Az.prototype.unpack.call(fz, zz, uz))));
-        zz.buffer || zz.constructor !== ArrayBuffer || (zz = "undefined" !== typeof Buffer ? Buffer.from(zz) : new Uint8Array(zz)), "object" === typeof uz ? (iz = uz.end || zz.length, lz = uz.start || 0) : (lz = 0, iz = uz > -1 ? uz : zz.length), Zz = 0, wz = 0, Hz = null, Fz = Mz, Oz = null, nz = zz;
+      unpack(DD, CD) {
+        if (pD) return iC((() => (fC(), this ? this.unpack(DD, CD) : xD.prototype.unpack.call(gD, DD, CD))));
+        DD.buffer || DD.constructor !== ArrayBuffer || (DD = "undefined" !== typeof Buffer ? Buffer.from(DD) : new Uint8Array(DD)), "object" === typeof CD ? (iD = CD.end || DD.length, fD = CD.start || 0) : (fD = 0, iD = CD > -1 ? CD : DD.length), tD = 0, vD = 0, wD = null, MD = bD, SD = null, pD = DD;
         try {
-          dz = zz.dataView || (zz.dataView = new DataView(zz.buffer, zz.byteOffset, zz.byteLength))
-        } catch (Eb) {
-          if (nz = null, zz instanceof Uint8Array) throw Eb;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (zz && "object" == typeof zz ? zz.constructor.name : typeof zz))
+          yD = DD.dataView || (DD.dataView = new DataView(DD.buffer, DD.byteOffset, DD.byteLength))
+        } catch (Ic) {
+          if (pD = null, DD instanceof Uint8Array) throw Ic;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (DD && "object" == typeof DD ? DD.constructor.name : typeof DD))
         }
-        if (this instanceof Az) {
-          if (Rz = this, this.structures) return tz = this.structures, Tz(uz);
-          (!tz || tz.length > 0) && (tz = [])
-        } else Rz = fz, (!tz || tz.length > 0) && (tz = []);
-        return Tz(uz)
+        if (this instanceof xD) {
+          if (ZD = this, this.structures) return QD = this.structures, qD(CD);
+          (!QD || QD.length > 0) && (QD = [])
+        } else ZD = gD, (!QD || QD.length > 0) && (QD = []);
+        return qD(CD)
       }
-      unpackMultiple(zz, uz) {
-        let bz, Ez = 0;
+      unpackMultiple(DD, CD) {
+        let cD, ID = 0;
         try {
-          xz = !0;
-          let nz = zz.length,
-            iz = this ? this.unpack(zz, nz) : Hu.unpack(zz, nz);
-          if (!uz) {
-            for (bz = [iz]; lz < nz;) Ez = lz, bz.push(Tz());
-            return bz
+          HD = !0;
+          let pD = DD.length,
+            iD = this ? this.unpack(DD, pD) : wC.unpack(DD, pD);
+          if (!CD) {
+            for (cD = [iD]; fD < pD;) ID = fD, cD.push(qD());
+            return cD
           }
-          if (!1 === uz(iz, Ez, lz)) return;
-          for (; lz < nz;)
-            if (Ez = lz, !1 === uz(Tz(), Ez, lz)) return
-        } catch (Eb) {
-          throw Eb.lastPosition = Ez, Eb.values = bz, Eb
+          if (!1 === CD(iD, ID, fD)) return;
+          for (; fD < pD;)
+            if (ID = fD, !1 === CD(qD(), ID, fD)) return
+        } catch (Ic) {
+          throw Ic.lastPosition = ID, Ic.values = cD, Ic
         } finally {
-          xz = !1, lu()
+          HD = !1, fC()
         }
       }
-      _mergeStructures(zz, uz) {
-        Nz && (zz = Nz.call(this, zz)), zz = zz || [], Object.isFrozen(zz) && (zz = zz.map((zz => zz.slice(0))));
-        for (let bz = 0, Ez = zz.length; bz < Ez; bz++) {
-          let uz = zz[bz];
-          uz && (uz.isShared = !0, bz >= 32 && (uz.highByte = bz - 32 >> 5))
+      _mergeStructures(DD, CD) {
+        OD && (DD = OD.call(this, DD)), DD = DD || [], Object.isFrozen(DD) && (DD = DD.map((DD => DD.slice(0))));
+        for (let cD = 0, ID = DD.length; cD < ID; cD++) {
+          let CD = DD[cD];
+          CD && (CD.isShared = !0, cD >= 32 && (CD.highByte = cD - 32 >> 5))
         }
-        zz.sharedLength = zz.length;
-        for (let bz in uz || [])
-          if (bz >= 0) {
-            let Ez = zz[bz],
-              nz = uz[bz];
-            nz && (Ez && ((zz.restoreStructures || (zz.restoreStructures = []))[bz] = Ez), zz[bz] = nz)
-          } return this.structures = zz
+        DD.sharedLength = DD.length;
+        for (let cD in CD || [])
+          if (cD >= 0) {
+            let ID = DD[cD],
+              pD = CD[cD];
+            pD && (ID && ((DD.restoreStructures || (DD.restoreStructures = []))[cD] = ID), DD[cD] = pD)
+          } return this.structures = DD
       }
-      decode(zz, uz) {
-        return this.unpack(zz, uz)
+      decode(DD, CD) {
+        return this.unpack(DD, CD)
       }
     }
 
-    function Tz(zz) {
+    function qD(DD) {
       try {
-        if (!Rz.trusted && !xz) {
-          let zz = tz.sharedLength || 0;
-          zz < tz.length && (tz.length = zz)
+        if (!ZD.trusted && !HD) {
+          let DD = QD.sharedLength || 0;
+          DD < QD.length && (QD.length = DD)
         }
-        let uz;
-        if (Rz.randomAccessStructure && nz[lz] < 64 && nz[lz] >= 32 && oz ? (uz = oz(nz, lz, iz, Rz), nz = null, zz && zz.lazy || !uz || (uz = uz.toJSON()), lz = iz) : uz = Pz(), Oz && (lz = Oz.postBundlePosition, Oz = null), xz && (tz.restoreStructures = null), lz == iz) tz && tz.restoreStructures && Lz(), tz = null, nz = null, pz && (pz = null);
+        let CD;
+        if (ZD.randomAccessStructure && pD[fD] < 64 && pD[fD] >= 32 && nD ? (CD = nD(pD, fD, iD, ZD), pD = null, DD && DD.lazy || !CD || (CD = CD.toJSON()), fD = iD) : CD = KD(), SD && (fD = SD.postBundlePosition, SD = null), HD && (QD.restoreStructures = null), fD == iD) QD && QD.restoreStructures && JD(), QD = null, pD = null, BD && (BD = null);
         else {
-          if (lz > iz) throw new Error("Unexpected end of MessagePack data");
-          if (!xz) {
-            let zz;
+          if (fD > iD) throw new Error("Unexpected end of MessagePack data");
+          if (!HD) {
+            let DD;
             try {
-              zz = JSON.stringify(uz, ((zz, uz) => "bigint" === typeof uz ? `${uz}n` : uz)).slice(0, 100)
-            } catch (Eb) {
-              zz = "(JSON view not available " + Eb + ")"
+              DD = JSON.stringify(CD, ((DD, CD) => "bigint" === typeof CD ? `${CD}n` : CD)).slice(0, 100)
+            } catch (Ic) {
+              DD = "(JSON view not available " + Ic + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + zz)
+            throw new Error("Data read, but end of buffer not reached " + DD)
           }
         }
-        return uz
-      } catch (Eb) {
-        throw tz && tz.restoreStructures && Lz(), lu(), (Eb instanceof RangeError || Eb.message.startsWith("Unexpected end of buffer") || lz > iz) && (Eb.incomplete = !0), Eb
+        return CD
+      } catch (Ic) {
+        throw QD && QD.restoreStructures && JD(), fC(), (Ic instanceof RangeError || Ic.message.startsWith("Unexpected end of buffer") || fD > iD) && (Ic.incomplete = !0), Ic
       }
     }
 
-    function Lz() {
-      for (let zz in tz.restoreStructures) tz[zz] = tz.restoreStructures[zz];
-      tz.restoreStructures = null
+    function JD() {
+      for (let DD in QD.restoreStructures) QD[DD] = QD.restoreStructures[DD];
+      QD.restoreStructures = null
     }
 
-    function Pz() {
-      let zz = nz[lz++];
-      if (zz < 160) {
-        if (zz < 128) {
-          if (zz < 64) return zz;
+    function KD() {
+      let DD = pD[fD++];
+      if (DD < 160) {
+        if (DD < 128) {
+          if (DD < 64) return DD;
           {
-            let uz = tz[63 & zz] || Rz.getStructures && mz()[63 & zz];
-            return uz ? (uz.read || (uz.read = az(uz, 63 & zz)), uz.read()) : zz
+            let CD = QD[63 & DD] || ZD.getStructures && jD()[63 & DD];
+            return CD ? (CD.read || (CD.read = VD(CD, 63 & DD)), CD.read()) : DD
           }
         }
-        if (zz < 144) {
-          if (zz -= 128, Rz.mapsAsObjects) {
-            let uz = {};
-            for (let bz = 0; bz < zz; bz++) {
-              let zz = Yz();
-              "__proto__" === zz && (zz = "__proto_"), uz[zz] = Pz()
+        if (DD < 144) {
+          if (DD -= 128, ZD.mapsAsObjects) {
+            let CD = {};
+            for (let cD = 0; cD < DD; cD++) {
+              let DD = AD();
+              "__proto__" === DD && (DD = "__proto_"), CD[DD] = KD()
             }
-            return uz
+            return CD
           } {
-            let uz = new Map;
-            for (let bz = 0; bz < zz; bz++) uz.set(Pz(), Pz());
-            return uz
+            let CD = new Map;
+            for (let cD = 0; cD < DD; cD++) CD.set(KD(), KD());
+            return CD
           }
         } {
-          zz -= 144;
-          let uz = new Array(zz);
-          for (let bz = 0; bz < zz; bz++) uz[bz] = Pz();
-          return Rz.freezeData ? Object.freeze(uz) : uz
+          DD -= 144;
+          let CD = new Array(DD);
+          for (let cD = 0; cD < DD; cD++) CD[cD] = KD();
+          return ZD.freezeData ? Object.freeze(CD) : CD
         }
       }
-      if (zz < 192) {
-        let uz = zz - 160;
-        if (wz >= lz) return Hz.slice(lz - Kz, (lz += uz) - Kz);
-        if (0 == wz && iz < 140) {
-          let zz = uz < 16 ? ez(uz) : Wz(uz);
-          if (null != zz) return zz
+      if (DD < 192) {
+        let CD = DD - 160;
+        if (vD >= fD) return wD.slice(fD - oD, (fD += CD) - oD);
+        if (0 == vD && iD < 140) {
+          let DD = CD < 16 ? ED(CD) : sD(CD);
+          if (null != DD) return DD
         }
-        return qz(uz)
+        return lD(CD)
       } {
-        let uz;
-        switch (zz) {
+        let CD;
+        switch (DD) {
           case 192:
             return null;
           case 193:
-            return Oz ? (uz = Pz(), uz > 0 ? Oz[1].slice(Oz.position1, Oz.position1 += uz) : Oz[0].slice(Oz.position0, Oz.position0 -= uz)) : rz;
+            return SD ? (CD = KD(), CD > 0 ? SD[1].slice(SD.position1, SD.position1 += CD) : SD[0].slice(SD.position0, SD.position0 -= CD)) : mD;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (uz = nz[lz++], void 0 === uz) throw new Error("Unexpected end of buffer");
-            return Iz(uz);
+            if (CD = pD[fD++], void 0 === CD) throw new Error("Unexpected end of buffer");
+            return uD(CD);
           case 197:
-            return uz = dz.getUint16(lz), lz += 2, Iz(uz);
+            return CD = yD.getUint16(fD), fD += 2, uD(CD);
           case 198:
-            return uz = dz.getUint32(lz), lz += 4, Iz(uz);
+            return CD = yD.getUint32(fD), fD += 4, uD(CD);
           case 199:
-            return Bz(nz[lz++]);
+            return hD(pD[fD++]);
           case 200:
-            return uz = dz.getUint16(lz), lz += 2, Bz(uz);
+            return CD = yD.getUint16(fD), fD += 2, hD(CD);
           case 201:
-            return uz = dz.getUint32(lz), lz += 4, Bz(uz);
+            return CD = yD.getUint32(fD), fD += 4, hD(CD);
           case 202:
-            if (uz = dz.getFloat32(lz), Rz.useFloat32 > 2) {
-              let zz = Mu[(127 & nz[lz]) << 1 | nz[lz + 1] >> 7];
-              return lz += 4, (zz * uz + (uz > 0 ? .5 : -.5) | 0) / zz
+            if (CD = yD.getFloat32(fD), ZD.useFloat32 > 2) {
+              let DD = bC[(127 & pD[fD]) << 1 | pD[fD + 1] >> 7];
+              return fD += 4, (DD * CD + (CD > 0 ? .5 : -.5) | 0) / DD
             }
-            return lz += 4, uz;
+            return fD += 4, CD;
           case 203:
-            return uz = dz.getFloat64(lz), lz += 8, uz;
+            return CD = yD.getFloat64(fD), fD += 8, CD;
           case 204:
-            return nz[lz++];
+            return pD[fD++];
           case 205:
-            return uz = dz.getUint16(lz), lz += 2, uz;
+            return CD = yD.getUint16(fD), fD += 2, CD;
           case 206:
-            return uz = dz.getUint32(lz), lz += 4, uz;
+            return CD = yD.getUint32(fD), fD += 4, CD;
           case 207:
-            return "number" === Rz.int64AsType ? (uz = 4294967296 * dz.getUint32(lz), uz += dz.getUint32(lz + 4)) : "string" === Rz.int64AsType ? uz = dz.getBigUint64(lz).toString() : "auto" === Rz.int64AsType ? (uz = dz.getBigUint64(lz), uz <= BigInt(2) << BigInt(52) && (uz = Number(uz))) : uz = dz.getBigUint64(lz), lz += 8, uz;
+            return "number" === ZD.int64AsType ? (CD = 4294967296 * yD.getUint32(fD), CD += yD.getUint32(fD + 4)) : "string" === ZD.int64AsType ? CD = yD.getBigUint64(fD).toString() : "auto" === ZD.int64AsType ? (CD = yD.getBigUint64(fD), CD <= BigInt(2) << BigInt(52) && (CD = Number(CD))) : CD = yD.getBigUint64(fD), fD += 8, CD;
           case 208:
-            return dz.getInt8(lz++);
+            return yD.getInt8(fD++);
           case 209:
-            return uz = dz.getInt16(lz), lz += 2, uz;
+            return CD = yD.getInt16(fD), fD += 2, CD;
           case 210:
-            return uz = dz.getInt32(lz), lz += 4, uz;
+            return CD = yD.getInt32(fD), fD += 4, CD;
           case 211:
-            return "number" === Rz.int64AsType ? (uz = 4294967296 * dz.getInt32(lz), uz += dz.getUint32(lz + 4)) : "string" === Rz.int64AsType ? uz = dz.getBigInt64(lz).toString() : "auto" === Rz.int64AsType ? (uz = dz.getBigInt64(lz), uz >= BigInt(-2) << BigInt(52) && uz <= BigInt(2) << BigInt(52) && (uz = Number(uz))) : uz = dz.getBigInt64(lz), lz += 8, uz;
+            return "number" === ZD.int64AsType ? (CD = 4294967296 * yD.getInt32(fD), CD += yD.getUint32(fD + 4)) : "string" === ZD.int64AsType ? CD = yD.getBigInt64(fD).toString() : "auto" === ZD.int64AsType ? (CD = yD.getBigInt64(fD), CD >= BigInt(-2) << BigInt(52) && CD <= BigInt(2) << BigInt(52) && (CD = Number(CD))) : CD = yD.getBigInt64(fD), fD += 8, CD;
           case 212:
-            if (uz = nz[lz++], 114 == uz) return zu(63 & nz[lz++]);
+            if (CD = pD[fD++], 114 == CD) return DC(63 & pD[fD++]);
             {
-              let zz = Xz[uz];
-              if (zz) return zz.read ? (lz++, zz.read(Pz())) : zz.noBuffer ? (lz++, zz()) : zz(nz.subarray(lz, ++lz));
-              throw new Error("Unknown extension " + uz)
+              let DD = ND[CD];
+              if (DD) return DD.read ? (fD++, DD.read(KD())) : DD.noBuffer ? (fD++, DD()) : DD(pD.subarray(fD, ++fD));
+              throw new Error("Unknown extension " + CD)
             }
           case 213:
-            return uz = nz[lz], 114 == uz ? (lz++, zu(63 & nz[lz++], nz[lz++])) : Bz(2);
+            return CD = pD[fD], 114 == CD ? (fD++, DC(63 & pD[fD++], pD[fD++])) : hD(2);
           case 214:
-            return Bz(4);
+            return hD(4);
           case 215:
-            return Bz(8);
+            return hD(8);
           case 216:
-            return Bz(16);
+            return hD(16);
           case 217:
-            return uz = nz[lz++], wz >= lz ? Hz.slice(lz - Kz, (lz += uz) - Kz) : hz(uz);
+            return CD = pD[fD++], vD >= fD ? wD.slice(fD - oD, (fD += CD) - oD) : LD(CD);
           case 218:
-            return uz = dz.getUint16(lz), wz >= (lz += 2) ? Hz.slice(lz - Kz, (lz += uz) - Kz) : Uz(uz);
+            return CD = yD.getUint16(fD), vD >= (fD += 2) ? wD.slice(fD - oD, (fD += CD) - oD) : TD(CD);
           case 219:
-            return uz = dz.getUint32(lz), wz >= (lz += 4) ? Hz.slice(lz - Kz, (lz += uz) - Kz) : cz(uz);
+            return CD = yD.getUint32(fD), vD >= (fD += 4) ? wD.slice(fD - oD, (fD += CD) - oD) : GD(CD);
           case 220:
-            return uz = dz.getUint16(lz), lz += 2, yz(uz);
+            return CD = yD.getUint16(fD), fD += 2, dD(CD);
           case 221:
-            return uz = dz.getUint32(lz), lz += 4, yz(uz);
+            return CD = yD.getUint32(fD), fD += 4, dD(CD);
           case 222:
-            return uz = dz.getUint16(lz), lz += 2, Dz(uz);
+            return CD = yD.getUint16(fD), fD += 2, YD(CD);
           case 223:
-            return uz = dz.getUint32(lz), lz += 4, Dz(uz);
+            return CD = yD.getUint32(fD), fD += 4, YD(CD);
           default:
-            if (zz >= 224) return zz - 256;
-            if (void 0 === zz) {
-              let zz = new Error("Unexpected end of MessagePack data");
-              throw zz.incomplete = !0, zz
+            if (DD >= 224) return DD - 256;
+            if (void 0 === DD) {
+              let DD = new Error("Unexpected end of MessagePack data");
+              throw DD.incomplete = !0, DD
             }
-            throw new Error("Unknown MessagePack token " + zz)
+            throw new Error("Unknown MessagePack token " + DD)
         }
       }
     }
-    const Gz = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const aD = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function az(zz, uz) {
-      function bz() {
-        if (bz.count++ > Jz) {
-          let bz = zz.read = new Function("r", "return function(){return " + (Rz.freezeData ? "Object.freeze" : "") + "({" + zz.map((zz => "__proto__" === zz ? "__proto_:r()" : Gz.test(zz) ? zz + ":r()" : "[" + JSON.stringify(zz) + "]:r()")).join(",") + "})}")(Pz);
-          return 0 === zz.highByte && (zz.read = Vz(uz, zz.read)), bz()
+    function VD(DD, CD) {
+      function cD() {
+        if (cD.count++ > UD) {
+          let cD = DD.read = new Function("r", "return function(){return " + (ZD.freezeData ? "Object.freeze" : "") + "({" + DD.map((DD => "__proto__" === DD ? "__proto_:r()" : aD.test(DD) ? DD + ":r()" : "[" + JSON.stringify(DD) + "]:r()")).join(",") + "})}")(KD);
+          return 0 === DD.highByte && (DD.read = zD(CD, DD.read)), cD()
         }
-        let Ez = {};
-        for (let uz = 0, bz = zz.length; uz < bz; uz++) {
-          let bz = zz[uz];
-          "__proto__" === bz && (bz = "__proto_"), Ez[bz] = Pz()
+        let ID = {};
+        for (let CD = 0, cD = DD.length; CD < cD; CD++) {
+          let cD = DD[CD];
+          "__proto__" === cD && (cD = "__proto_"), ID[cD] = KD()
         }
-        return Rz.freezeData ? Object.freeze(Ez) : Ez
+        return ZD.freezeData ? Object.freeze(ID) : ID
       }
-      return bz.count = 0, 0 === zz.highByte ? Vz(uz, bz) : bz
+      return cD.count = 0, 0 === DD.highByte ? zD(CD, cD) : cD
     }
-    const Vz = (zz, uz) => function() {
-      let bz = nz[lz++];
-      if (0 === bz) return uz();
-      let Ez = zz < 32 ? -(zz + (bz << 5)) : zz + (bz << 5),
-        iz = tz[Ez] || mz()[Ez];
-      if (!iz) throw new Error("Record id is not defined for " + Ez);
-      return iz.read || (iz.read = az(iz, zz)), iz.read()
+    const zD = (DD, CD) => function() {
+      let cD = pD[fD++];
+      if (0 === cD) return CD();
+      let ID = DD < 32 ? -(DD + (cD << 5)) : DD + (cD << 5),
+        iD = QD[ID] || jD()[ID];
+      if (!iD) throw new Error("Record id is not defined for " + ID);
+      return iD.read || (iD.read = VD(iD, DD)), iD.read()
     };
 
-    function mz() {
-      let zz = iu((() => (nz = null, Rz.getStructures())));
-      return tz = Rz._mergeStructures(zz, tz)
+    function jD() {
+      let DD = iC((() => (pD = null, ZD.getStructures())));
+      return QD = ZD._mergeStructures(DD, QD)
     }
-    var qz = Sz,
-      hz = Sz,
-      Uz = Sz,
-      cz = Sz;
-    let gz = !1;
+    var lD = kD,
+      LD = kD,
+      TD = kD,
+      GD = kD;
+    let RD = !1;
 
-    function Sz(zz) {
-      let uz;
-      if (zz < 16 && (uz = ez(zz))) return uz;
-      if (zz > 64 && Ez) return Ez.decode(nz.subarray(lz, lz += zz));
-      const bz = lz + zz,
-        iz = [];
-      for (uz = ""; lz < bz;) {
-        const zz = nz[lz++];
-        if (0 === (128 & zz)) iz.push(zz);
-        else if (192 === (224 & zz)) {
-          const uz = 63 & nz[lz++];
-          iz.push((31 & zz) << 6 | uz)
-        } else if (224 === (240 & zz)) {
-          const uz = 63 & nz[lz++],
-            bz = 63 & nz[lz++];
-          iz.push((31 & zz) << 12 | uz << 6 | bz)
-        } else if (240 === (248 & zz)) {
-          let uz = (7 & zz) << 18 | (63 & nz[lz++]) << 12 | (63 & nz[lz++]) << 6 | 63 & nz[lz++];
-          uz > 65535 && (uz -= 65536, iz.push(uz >>> 10 & 1023 | 55296), uz = 56320 | 1023 & uz), iz.push(uz)
-        } else iz.push(zz);
-        iz.length >= 4096 && (uz += Qz.apply(String, iz), iz.length = 0)
+    function kD(DD) {
+      let CD;
+      if (DD < 16 && (CD = ED(DD))) return CD;
+      if (DD > 64 && ID) return ID.decode(pD.subarray(fD, fD += DD));
+      const cD = fD + DD,
+        iD = [];
+      for (CD = ""; fD < cD;) {
+        const DD = pD[fD++];
+        if (0 === (128 & DD)) iD.push(DD);
+        else if (192 === (224 & DD)) {
+          const CD = 63 & pD[fD++];
+          iD.push((31 & DD) << 6 | CD)
+        } else if (224 === (240 & DD)) {
+          const CD = 63 & pD[fD++],
+            cD = 63 & pD[fD++];
+          iD.push((31 & DD) << 12 | CD << 6 | cD)
+        } else if (240 === (248 & DD)) {
+          let CD = (7 & DD) << 18 | (63 & pD[fD++]) << 12 | (63 & pD[fD++]) << 6 | 63 & pD[fD++];
+          CD > 65535 && (CD -= 65536, iD.push(CD >>> 10 & 1023 | 55296), CD = 56320 | 1023 & CD), iD.push(CD)
+        } else iD.push(DD);
+        iD.length >= 4096 && (CD += WD.apply(String, iD), iD.length = 0)
       }
-      return iz.length > 0 && (uz += Qz.apply(String, iz)), uz
+      return iD.length > 0 && (CD += WD.apply(String, iD)), CD
     }
 
-    function yz(zz) {
-      let uz = new Array(zz);
-      for (let bz = 0; bz < zz; bz++) uz[bz] = Pz();
-      return Rz.freezeData ? Object.freeze(uz) : uz
+    function dD(DD) {
+      let CD = new Array(DD);
+      for (let cD = 0; cD < DD; cD++) CD[cD] = KD();
+      return ZD.freezeData ? Object.freeze(CD) : CD
     }
 
-    function Dz(zz) {
-      if (Rz.mapsAsObjects) {
-        let uz = {};
-        for (let bz = 0; bz < zz; bz++) {
-          let zz = Yz();
-          "__proto__" === zz && (zz = "__proto_"), uz[zz] = Pz()
+    function YD(DD) {
+      if (ZD.mapsAsObjects) {
+        let CD = {};
+        for (let cD = 0; cD < DD; cD++) {
+          let DD = AD();
+          "__proto__" === DD && (DD = "__proto_"), CD[DD] = KD()
         }
-        return uz
+        return CD
       } {
-        let uz = new Map;
-        for (let bz = 0; bz < zz; bz++) uz.set(Pz(), Pz());
-        return uz
+        let CD = new Map;
+        for (let cD = 0; cD < DD; cD++) CD.set(KD(), KD());
+        return CD
       }
     }
-    var Qz = String.fromCharCode;
+    var WD = String.fromCharCode;
 
-    function Wz(zz) {
-      let uz = lz,
-        bz = new Array(zz);
-      for (let Ez = 0; Ez < zz; Ez++) {
-        const zz = nz[lz++];
-        if ((128 & zz) > 0) return void(lz = uz);
-        bz[Ez] = zz
+    function sD(DD) {
+      let CD = fD,
+        cD = new Array(DD);
+      for (let ID = 0; ID < DD; ID++) {
+        const DD = pD[fD++];
+        if ((128 & DD) > 0) return void(fD = CD);
+        cD[ID] = DD
       }
-      return Qz.apply(String, bz)
+      return WD.apply(String, cD)
     }
 
-    function ez(zz) {
-      if (zz < 4) {
-        if (zz < 2) {
-          if (0 === zz) return "";
+    function ED(DD) {
+      if (DD < 4) {
+        if (DD < 2) {
+          if (0 === DD) return "";
           {
-            let zz = nz[lz++];
-            return (128 & zz) > 1 ? void(lz -= 1) : Qz(zz)
+            let DD = pD[fD++];
+            return (128 & DD) > 1 ? void(fD -= 1) : WD(DD)
           }
         } {
-          let uz = nz[lz++],
-            bz = nz[lz++];
-          if ((128 & uz) > 0 || (128 & bz) > 0) return void(lz -= 2);
-          if (zz < 3) return Qz(uz, bz);
-          let Ez = nz[lz++];
-          return (128 & Ez) > 0 ? void(lz -= 3) : Qz(uz, bz, Ez)
+          let CD = pD[fD++],
+            cD = pD[fD++];
+          if ((128 & CD) > 0 || (128 & cD) > 0) return void(fD -= 2);
+          if (DD < 3) return WD(CD, cD);
+          let ID = pD[fD++];
+          return (128 & ID) > 0 ? void(fD -= 3) : WD(CD, cD, ID)
         }
       } {
-        let uz = nz[lz++],
-          bz = nz[lz++],
-          Ez = nz[lz++],
-          iz = nz[lz++];
-        if ((128 & uz) > 0 || (128 & bz) > 0 || (128 & Ez) > 0 || (128 & iz) > 0) return void(lz -= 4);
-        if (zz < 6) {
-          if (4 === zz) return Qz(uz, bz, Ez, iz);
+        let CD = pD[fD++],
+          cD = pD[fD++],
+          ID = pD[fD++],
+          iD = pD[fD++];
+        if ((128 & CD) > 0 || (128 & cD) > 0 || (128 & ID) > 0 || (128 & iD) > 0) return void(fD -= 4);
+        if (DD < 6) {
+          if (4 === DD) return WD(CD, cD, ID, iD);
           {
-            let zz = nz[lz++];
-            return (128 & zz) > 0 ? void(lz -= 5) : Qz(uz, bz, Ez, iz, zz)
+            let DD = pD[fD++];
+            return (128 & DD) > 0 ? void(fD -= 5) : WD(CD, cD, ID, iD, DD)
           }
         }
-        if (zz < 8) {
-          let Mz = nz[lz++],
-            tz = nz[lz++];
-          if ((128 & Mz) > 0 || (128 & tz) > 0) return void(lz -= 6);
-          if (zz < 7) return Qz(uz, bz, Ez, iz, Mz, tz);
-          let Hz = nz[lz++];
-          return (128 & Hz) > 0 ? void(lz -= 7) : Qz(uz, bz, Ez, iz, Mz, tz, Hz)
+        if (DD < 8) {
+          let bD = pD[fD++],
+            QD = pD[fD++];
+          if ((128 & bD) > 0 || (128 & QD) > 0) return void(fD -= 6);
+          if (DD < 7) return WD(CD, cD, ID, iD, bD, QD);
+          let wD = pD[fD++];
+          return (128 & wD) > 0 ? void(fD -= 7) : WD(CD, cD, ID, iD, bD, QD, wD)
         } {
-          let Mz = nz[lz++],
-            tz = nz[lz++],
-            Hz = nz[lz++],
-            Oz = nz[lz++];
-          if ((128 & Mz) > 0 || (128 & tz) > 0 || (128 & Hz) > 0 || (128 & Oz) > 0) return void(lz -= 8);
-          if (zz < 10) {
-            if (8 === zz) return Qz(uz, bz, Ez, iz, Mz, tz, Hz, Oz);
+          let bD = pD[fD++],
+            QD = pD[fD++],
+            wD = pD[fD++],
+            SD = pD[fD++];
+          if ((128 & bD) > 0 || (128 & QD) > 0 || (128 & wD) > 0 || (128 & SD) > 0) return void(fD -= 8);
+          if (DD < 10) {
+            if (8 === DD) return WD(CD, cD, ID, iD, bD, QD, wD, SD);
             {
-              let zz = nz[lz++];
-              return (128 & zz) > 0 ? void(lz -= 9) : Qz(uz, bz, Ez, iz, Mz, tz, Hz, Oz, zz)
+              let DD = pD[fD++];
+              return (128 & DD) > 0 ? void(fD -= 9) : WD(CD, cD, ID, iD, bD, QD, wD, SD, DD)
             }
           }
-          if (zz < 12) {
-            let pz = nz[lz++],
-              dz = nz[lz++];
-            if ((128 & pz) > 0 || (128 & dz) > 0) return void(lz -= 10);
-            if (zz < 11) return Qz(uz, bz, Ez, iz, Mz, tz, Hz, Oz, pz, dz);
-            let Fz = nz[lz++];
-            return (128 & Fz) > 0 ? void(lz -= 11) : Qz(uz, bz, Ez, iz, Mz, tz, Hz, Oz, pz, dz, Fz)
+          if (DD < 12) {
+            let BD = pD[fD++],
+              yD = pD[fD++];
+            if ((128 & BD) > 0 || (128 & yD) > 0) return void(fD -= 10);
+            if (DD < 11) return WD(CD, cD, ID, iD, bD, QD, wD, SD, BD, yD);
+            let MD = pD[fD++];
+            return (128 & MD) > 0 ? void(fD -= 11) : WD(CD, cD, ID, iD, bD, QD, wD, SD, BD, yD, MD)
           } {
-            let pz = nz[lz++],
-              dz = nz[lz++],
-              Fz = nz[lz++],
-              Zz = nz[lz++];
-            if ((128 & pz) > 0 || (128 & dz) > 0 || (128 & Fz) > 0 || (128 & Zz) > 0) return void(lz -= 12);
-            if (zz < 14) {
-              if (12 === zz) return Qz(uz, bz, Ez, iz, Mz, tz, Hz, Oz, pz, dz, Fz, Zz);
+            let BD = pD[fD++],
+              yD = pD[fD++],
+              MD = pD[fD++],
+              tD = pD[fD++];
+            if ((128 & BD) > 0 || (128 & yD) > 0 || (128 & MD) > 0 || (128 & tD) > 0) return void(fD -= 12);
+            if (DD < 14) {
+              if (12 === DD) return WD(CD, cD, ID, iD, bD, QD, wD, SD, BD, yD, MD, tD);
               {
-                let zz = nz[lz++];
-                return (128 & zz) > 0 ? void(lz -= 13) : Qz(uz, bz, Ez, iz, Mz, tz, Hz, Oz, pz, dz, Fz, Zz, zz)
+                let DD = pD[fD++];
+                return (128 & DD) > 0 ? void(fD -= 13) : WD(CD, cD, ID, iD, bD, QD, wD, SD, BD, yD, MD, tD, DD)
               }
             } {
-              let Rz = nz[lz++],
-                Kz = nz[lz++];
-              if ((128 & Rz) > 0 || (128 & Kz) > 0) return void(lz -= 14);
-              if (zz < 15) return Qz(uz, bz, Ez, iz, Mz, tz, Hz, Oz, pz, dz, Fz, Zz, Rz, Kz);
-              let wz = nz[lz++];
-              return (128 & wz) > 0 ? void(lz -= 15) : Qz(uz, bz, Ez, iz, Mz, tz, Hz, Oz, pz, dz, Fz, Zz, Rz, Kz, wz)
+              let ZD = pD[fD++],
+                oD = pD[fD++];
+              if ((128 & ZD) > 0 || (128 & oD) > 0) return void(fD -= 14);
+              if (DD < 15) return WD(CD, cD, ID, iD, bD, QD, wD, SD, BD, yD, MD, tD, ZD, oD);
+              let vD = pD[fD++];
+              return (128 & vD) > 0 ? void(fD -= 15) : WD(CD, cD, ID, iD, bD, QD, wD, SD, BD, yD, MD, tD, ZD, oD, vD)
             }
           }
         }
       }
     }
 
-    function jz() {
-      let zz, uz = nz[lz++];
-      if (uz < 192) zz = uz - 160;
-      else switch (uz) {
+    function eD() {
+      let DD, CD = pD[fD++];
+      if (CD < 192) DD = CD - 160;
+      else switch (CD) {
         case 217:
-          zz = nz[lz++];
+          DD = pD[fD++];
           break;
         case 218:
-          zz = dz.getUint16(lz), lz += 2;
+          DD = yD.getUint16(fD), fD += 2;
           break;
         case 219:
-          zz = dz.getUint32(lz), lz += 4;
+          DD = yD.getUint32(fD), fD += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return Sz(zz)
+      return kD(DD)
     }
 
-    function Iz(zz) {
-      return Rz.copyBuffers ? Uint8Array.prototype.slice.call(nz, lz, lz += zz) : nz.subarray(lz, lz += zz)
+    function uD(DD) {
+      return ZD.copyBuffers ? Uint8Array.prototype.slice.call(pD, fD, fD += DD) : pD.subarray(fD, fD += DD)
     }
 
-    function Bz(zz) {
-      let uz = nz[lz++];
-      if (Xz[uz]) {
-        let bz;
-        return Xz[uz](nz.subarray(lz, bz = lz += zz), (zz => {
-          lz = zz;
+    function hD(DD) {
+      let CD = pD[fD++];
+      if (ND[CD]) {
+        let cD;
+        return ND[CD](pD.subarray(fD, cD = fD += DD), (DD => {
+          fD = DD;
           try {
-            return Pz()
+            return KD()
           } finally {
-            lz = bz
+            fD = cD
           }
         }))
       }
-      throw new Error("Unknown extension type " + uz)
+      throw new Error("Unknown extension type " + CD)
     }
-    var Cz = new Array(4096);
+    var rD = new Array(4096);
 
-    function Yz() {
-      let zz = nz[lz++];
-      if (!(zz >= 160 && zz < 192)) return lz--, kz(Pz());
-      if (zz -= 160, wz >= lz) return Hz.slice(lz - Kz, (lz += zz) - Kz);
-      if (!(0 == wz && iz < 180)) return qz(zz);
-      let uz, bz = 4095 & (zz << 5 ^ (zz > 1 ? dz.getUint16(lz) : zz > 0 ? nz[lz] : 0)),
-        Ez = Cz[bz],
-        Mz = lz,
-        tz = lz + zz - 3,
-        Oz = 0;
-      if (Ez && Ez.bytes == zz) {
-        for (; Mz < tz;) {
-          if (uz = dz.getUint32(Mz), uz != Ez[Oz++]) {
-            Mz = 1879048192;
+    function AD() {
+      let DD = pD[fD++];
+      if (!(DD >= 160 && DD < 192)) return fD--, FD(KD());
+      if (DD -= 160, vD >= fD) return wD.slice(fD - oD, (fD += DD) - oD);
+      if (!(0 == vD && iD < 180)) return lD(DD);
+      let CD, cD = 4095 & (DD << 5 ^ (DD > 1 ? yD.getUint16(fD) : DD > 0 ? pD[fD] : 0)),
+        ID = rD[cD],
+        bD = fD,
+        QD = fD + DD - 3,
+        SD = 0;
+      if (ID && ID.bytes == DD) {
+        for (; bD < QD;) {
+          if (CD = yD.getUint32(bD), CD != ID[SD++]) {
+            bD = 1879048192;
             break
           }
-          Mz += 4
+          bD += 4
         }
-        for (tz += 3; Mz < tz;)
-          if (uz = nz[Mz++], uz != Ez[Oz++]) {
-            Mz = 1879048192;
+        for (QD += 3; bD < QD;)
+          if (CD = pD[bD++], CD != ID[SD++]) {
+            bD = 1879048192;
             break
-          } if (Mz === tz) return lz = Mz, Ez.string;
-        tz -= 3, Mz = lz
+          } if (bD === QD) return fD = bD, ID.string;
+        QD -= 3, bD = fD
       }
-      for (Ez = [], Cz[bz] = Ez, Ez.bytes = zz; Mz < tz;) uz = dz.getUint32(Mz), Ez.push(uz), Mz += 4;
-      for (tz += 3; Mz < tz;) uz = nz[Mz++], Ez.push(uz);
-      let pz = zz < 16 ? ez(zz) : Wz(zz);
-      return Ez.string = null != pz ? pz : qz(zz)
+      for (ID = [], rD[cD] = ID, ID.bytes = DD; bD < QD;) CD = yD.getUint32(bD), ID.push(CD), bD += 4;
+      for (QD += 3; bD < QD;) CD = pD[bD++], ID.push(CD);
+      let BD = DD < 16 ? ED(DD) : sD(DD);
+      return ID.string = null != BD ? BD : lD(DD)
     }
 
-    function kz(zz) {
-      if ("string" === typeof zz) return zz;
-      if ("number" === typeof zz || "boolean" === typeof zz || "bigint" === typeof zz) return zz.toString();
-      if (null == zz) return zz + "";
-      if (Rz.allowArraysInMapKeys && Array.isArray(zz) && zz.flat().every((zz => ["string", "number", "boolean", "bigint"].includes(typeof zz)))) return zz.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof zz)
+    function FD(DD) {
+      if ("string" === typeof DD) return DD;
+      if ("number" === typeof DD || "boolean" === typeof DD || "bigint" === typeof DD) return DD.toString();
+      if (null == DD) return DD + "";
+      if (ZD.allowArraysInMapKeys && Array.isArray(DD) && DD.flat().every((DD => ["string", "number", "boolean", "bigint"].includes(typeof DD)))) return DD.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof DD)
     }
-    const zu = (zz, uz) => {
-      let bz = Pz().map(kz),
-        Ez = zz;
-      void 0 !== uz && (zz = zz < 32 ? -((uz << 5) + zz) : (uz << 5) + zz, bz.highByte = uz);
-      let nz = tz[zz];
-      return nz && (nz.isShared || xz) && ((tz.restoreStructures || (tz.restoreStructures = []))[zz] = nz), tz[zz] = bz, bz.read = az(bz, Ez), bz.read()
+    const DC = (DD, CD) => {
+      let cD = KD().map(FD),
+        ID = DD;
+      void 0 !== CD && (DD = DD < 32 ? -((CD << 5) + DD) : (CD << 5) + DD, cD.highByte = CD);
+      let pD = QD[DD];
+      return pD && (pD.isShared || HD) && ((QD.restoreStructures || (QD.restoreStructures = []))[DD] = pD), QD[DD] = cD, cD.read = VD(cD, ID), cD.read()
     };
-    Xz[0] = () => {}, Xz[0].noBuffer = !0, Xz[66] = zz => {
-      let uz = zz.length,
-        bz = BigInt(128 & zz[0] ? zz[0] - 256 : zz[0]);
-      for (let Ez = 1; Ez < uz; Ez++) bz <<= BigInt(8), bz += BigInt(zz[Ez]);
-      return bz
+    ND[0] = () => {}, ND[0].noBuffer = !0, ND[66] = DD => {
+      let CD = DD.length,
+        cD = BigInt(128 & DD[0] ? DD[0] - 256 : DD[0]);
+      for (let ID = 1; ID < CD; ID++) cD <<= BigInt(8), cD += BigInt(DD[ID]);
+      return cD
     };
-    let uu = {
+    let CC = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    Xz[101] = () => {
-      let zz = Pz();
-      return (uu[zz[0]] || Error)(zz[1], {
-        cause: zz[2]
+    ND[101] = () => {
+      let DD = KD();
+      return (CC[DD[0]] || Error)(DD[1], {
+        cause: DD[2]
       })
-    }, Xz[105] = zz => {
-      if (!1 === Rz.structuredClone) throw new Error("Structured clone extension is disabled");
-      let uz = dz.getUint32(lz - 4);
-      pz || (pz = new Map);
-      let bz, Ez = nz[lz];
-      bz = Ez >= 144 && Ez < 160 || 220 == Ez || 221 == Ez ? [] : {};
-      let iz = {
-        target: bz
+    }, ND[105] = DD => {
+      if (!1 === ZD.structuredClone) throw new Error("Structured clone extension is disabled");
+      let CD = yD.getUint32(fD - 4);
+      BD || (BD = new Map);
+      let cD, ID = pD[fD];
+      cD = ID >= 144 && ID < 160 || 220 == ID || 221 == ID ? [] : {};
+      let iD = {
+        target: cD
       };
-      pz.set(uz, iz);
-      let Mz = Pz();
-      return iz.used ? Object.assign(bz, Mz) : (iz.target = Mz, Mz)
-    }, Xz[112] = zz => {
-      if (!1 === Rz.structuredClone) throw new Error("Structured clone extension is disabled");
-      let uz = dz.getUint32(lz - 4),
-        bz = pz.get(uz);
-      return bz.used = !0, bz.target
-    }, Xz[115] = () => new Set(Pz());
-    const bu = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((zz => zz + "Array"));
-    let Eu = "object" === typeof globalThis ? globalThis : window;
-    Xz[116] = zz => {
-      let uz = zz[0],
-        bz = bu[uz];
-      if (!bz) {
-        if (16 === uz) {
-          let uz = new ArrayBuffer(zz.length - 1);
-          return new Uint8Array(uz).set(zz.subarray(1)), uz
+      BD.set(CD, iD);
+      let bD = KD();
+      return iD.used ? Object.assign(cD, bD) : (iD.target = bD, bD)
+    }, ND[112] = DD => {
+      if (!1 === ZD.structuredClone) throw new Error("Structured clone extension is disabled");
+      let CD = yD.getUint32(fD - 4),
+        cD = BD.get(CD);
+      return cD.used = !0, cD.target
+    }, ND[115] = () => new Set(KD());
+    const cC = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((DD => DD + "Array"));
+    let IC = "object" === typeof globalThis ? globalThis : window;
+    ND[116] = DD => {
+      let CD = DD[0],
+        cD = cC[CD];
+      if (!cD) {
+        if (16 === CD) {
+          let CD = new ArrayBuffer(DD.length - 1);
+          return new Uint8Array(CD).set(DD.subarray(1)), CD
         }
-        throw new Error("Could not find typed array for code " + uz)
+        throw new Error("Could not find typed array for code " + CD)
       }
-      return new Eu[bz](Uint8Array.prototype.slice.call(zz, 1).buffer)
-    }, Xz[120] = () => {
-      let zz = Pz();
-      return new RegExp(zz[0], zz[1])
+      return new IC[cD](Uint8Array.prototype.slice.call(DD, 1).buffer)
+    }, ND[120] = () => {
+      let DD = KD();
+      return new RegExp(DD[0], DD[1])
     };
-    const nu = [];
+    const pC = [];
 
-    function iu(zz) {
-      vz && vz();
-      let uz = iz,
-        bz = lz,
-        Ez = Zz,
-        Mz = Kz,
-        Xz = wz,
-        fz = Hz,
-        sz = Fz,
-        rz = pz,
-        oz = Oz,
-        Nz = new Uint8Array(nz.slice(0, iz)),
-        Jz = tz,
-        Az = tz.slice(0, tz.length),
-        Tz = Rz,
-        Lz = xz,
-        Pz = zz();
-      return iz = uz, lz = bz, Zz = Ez, Kz = Mz, wz = Xz, Hz = fz, Fz = sz, pz = rz, Oz = oz, nz = Nz, xz = Lz, (tz = Jz).splice(0, tz.length, ...Az), Rz = Tz, dz = new DataView(nz.buffer, nz.byteOffset, nz.byteLength), Pz
+    function iC(DD) {
+      PD && PD();
+      let CD = iD,
+        cD = fD,
+        ID = tD,
+        bD = oD,
+        ND = vD,
+        gD = wD,
+        XD = MD,
+        mD = BD,
+        nD = SD,
+        OD = new Uint8Array(pD.slice(0, iD)),
+        UD = QD,
+        xD = QD.slice(0, QD.length),
+        qD = ZD,
+        JD = HD,
+        KD = DD();
+      return iD = CD, fD = cD, tD = ID, oD = bD, vD = ND, wD = gD, MD = XD, BD = mD, SD = nD, pD = OD, HD = JD, (QD = UD).splice(0, QD.length, ...xD), ZD = qD, yD = new DataView(pD.buffer, pD.byteOffset, pD.byteLength), KD
     }
 
-    function lu() {
-      nz = null, pz = null, tz = null
+    function fC() {
+      pD = null, BD = null, QD = null
     }
-    Xz[98] = zz => {
-      let uz = (zz[0] << 24) + (zz[1] << 16) + (zz[2] << 8) + zz[3],
-        bz = lz;
-      return lz += uz - zz.length, Oz = nu, (Oz = [jz(), jz()]).position0 = 0, Oz.position1 = 0, Oz.postBundlePosition = lz, lz = bz, Pz()
-    }, Xz[255] = zz => 4 == zz.length ? new Date(1e3 * (16777216 * zz[0] + (zz[1] << 16) + (zz[2] << 8) + zz[3])) : 8 == zz.length ? new Date(((zz[0] << 22) + (zz[1] << 14) + (zz[2] << 6) + (zz[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & zz[3]) + 16777216 * zz[4] + (zz[5] << 16) + (zz[6] << 8) + zz[7])) : 12 == zz.length ? new Date(((zz[0] << 24) + (zz[1] << 16) + (zz[2] << 8) + zz[3]) / 1e6 + 1e3 * ((128 & zz[4] ? -281474976710656 : 0) + 1099511627776 * zz[6] + 4294967296 * zz[7] + 16777216 * zz[8] + (zz[9] << 16) + (zz[10] << 8) + zz[11])) : new Date("invalid");
-    const Mu = new Array(147);
-    for (let nb = 0; nb < 256; nb++) Mu[nb] = +("1e" + Math.floor(45.15 - .30103 * nb));
-    const tu = Az;
-    var Hu = new Az({
+    ND[98] = DD => {
+      let CD = (DD[0] << 24) + (DD[1] << 16) + (DD[2] << 8) + DD[3],
+        cD = fD;
+      return fD += CD - DD.length, SD = pC, (SD = [eD(), eD()]).position0 = 0, SD.position1 = 0, SD.postBundlePosition = fD, fD = cD, KD()
+    }, ND[255] = DD => 4 == DD.length ? new Date(1e3 * (16777216 * DD[0] + (DD[1] << 16) + (DD[2] << 8) + DD[3])) : 8 == DD.length ? new Date(((DD[0] << 22) + (DD[1] << 14) + (DD[2] << 6) + (DD[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & DD[3]) + 16777216 * DD[4] + (DD[5] << 16) + (DD[6] << 8) + DD[7])) : 12 == DD.length ? new Date(((DD[0] << 24) + (DD[1] << 16) + (DD[2] << 8) + DD[3]) / 1e6 + 1e3 * ((128 & DD[4] ? -281474976710656 : 0) + 1099511627776 * DD[6] + 4294967296 * DD[7] + 16777216 * DD[8] + (DD[9] << 16) + (DD[10] << 8) + DD[11])) : new Date("invalid");
+    const bC = new Array(147);
+    for (let pc = 0; pc < 256; pc++) bC[pc] = +("1e" + Math.floor(45.15 - .30103 * pc));
+    const QC = xD;
+    var wC = new xD({
       useRecords: !1
     });
-    const Ou = Hu.unpack,
-      pu = Hu.unpackMultiple,
-      du = Hu.unpack,
-      Fu = {
+    const SC = wC.unpack,
+      BC = wC.unpackMultiple,
+      yC = wC.unpack,
+      MC = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let Zu, Ru, Ku, wu = new Float32Array(1),
-      Xu = new Uint8Array(wu.buffer, 0, 4);
+    let tC, ZC, oC, vC = new Float32Array(1),
+      NC = new Uint8Array(vC.buffer, 0, 4);
 
-    function fu(zz) {
-      wu[0] = zz;
-      let uz = Mu[(127 & Xu[3]) << 1 | Xu[2] >> 7];
-      return (uz * zz + (zz > 0 ? .5 : -.5) | 0) / uz
+    function gC(DD) {
+      vC[0] = DD;
+      let CD = bC[(127 & NC[3]) << 1 | NC[2] >> 7];
+      return (CD * DD + (DD > 0 ? .5 : -.5) | 0) / CD
     }
     try {
-      Zu = new TextEncoder
-    } catch (Eb) {}
-    const su = "undefined" !== typeof Buffer,
-      ru = su ? function(zz) {
-        return Buffer.allocUnsafeSlow(zz)
+      tC = new TextEncoder
+    } catch (Ic) {}
+    const XC = "undefined" !== typeof Buffer,
+      mC = XC ? function(DD) {
+        return Buffer.allocUnsafeSlow(DD)
       } : Uint8Array,
-      ou = su ? Buffer : Uint8Array,
-      Nu = su ? 4294967296 : 2144337920;
-    let vu, xu, Ju, Au, Tu, Lu = 0,
-      Pu = null;
-    const Gu = /[\u0080-\uFFFF]/,
-      au = Symbol("record-id");
-    class Vu extends Az {
-      constructor(zz) {
-        let uz, bz, Ez, nz;
-        super(zz), this.offset = 0;
-        let iz = ou.prototype.utf8Write ? function(zz, uz) {
-            return vu.utf8Write(zz, uz, vu.byteLength - uz)
-          } : !(!Zu || !Zu.encodeInto) && function(zz, uz) {
-            return Zu.encodeInto(zz, vu.subarray(uz)).written
+      nC = XC ? Buffer : Uint8Array,
+      OC = XC ? 4294967296 : 2144337920;
+    let PC, HC, UC, xC, qC, JC = 0,
+      KC = null;
+    const aC = /[\u0080-\uFFFF]/,
+      VC = Symbol("record-id");
+    class zC extends xD {
+      constructor(DD) {
+        let CD, cD, ID, pD;
+        super(DD), this.offset = 0;
+        let iD = nC.prototype.utf8Write ? function(DD, CD) {
+            return PC.utf8Write(DD, CD, PC.byteLength - CD)
+          } : !(!tC || !tC.encodeInto) && function(DD, CD) {
+            return tC.encodeInto(DD, PC.subarray(CD)).written
           },
-          lz = this;
-        zz || (zz = {});
-        let Mz = zz && zz.sequential,
-          tz = zz.structures || zz.saveStructures,
-          Hz = zz.maxSharedStructures;
-        if (null == Hz && (Hz = tz ? 32 : 0), Hz > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        zz.structuredClone && void 0 == zz.moreTypes && (this.moreTypes = !0);
-        let Oz = zz.maxOwnStructures;
-        null == Oz && (Oz = tz ? 32 : 64), this.structures || 0 == zz.useRecords || (this.structures = []);
-        let pz = Hz > 32 || Oz + Hz > 64,
-          dz = Hz + 64,
-          Fz = Hz + Oz + 64;
-        if (Fz > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let Zz = [],
-          Rz = 0,
-          Kz = 0;
-        this.pack = this.encode = function(zz, iz) {
-          if (vu || (vu = new ru(8192), Ju = vu.dataView || (vu.dataView = new DataView(vu.buffer, 0, 8192)), Lu = 0), Au = vu.length - 10, Au - Lu < 2048 ? (vu = new ru(vu.length), Ju = vu.dataView || (vu.dataView = new DataView(vu.buffer, 0, vu.length)), Au = vu.length - 10, Lu = 0) : Lu = Lu + 7 & 2147483640, uz = Lu, iz & Yu && (Lu += 255 & iz), nz = lz.structuredClone ? new Map : null, lz.bundleStrings && "string" !== typeof zz ? (Pu = [], Pu.size = 1 / 0) : Pu = null, Ez = lz.structures, Ez) {
-            Ez.uninitialized && (Ez = lz._mergeStructures(lz.getStructures()));
-            let zz = Ez.sharedLength || 0;
-            if (zz > Hz) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Ez.sharedLength);
-            if (!Ez.transitions) {
-              Ez.transitions = Object.create(null);
-              for (let uz = 0; uz < zz; uz++) {
-                let zz = Ez[uz];
-                if (!zz) continue;
-                let bz, nz = Ez.transitions;
-                for (let uz = 0, Ez = zz.length; uz < Ez; uz++) {
-                  let Ez = zz[uz];
-                  bz = nz[Ez], bz || (bz = nz[Ez] = Object.create(null)), nz = bz
+          fD = this;
+        DD || (DD = {});
+        let bD = DD && DD.sequential,
+          QD = DD.structures || DD.saveStructures,
+          wD = DD.maxSharedStructures;
+        if (null == wD && (wD = QD ? 32 : 0), wD > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        DD.structuredClone && void 0 == DD.moreTypes && (this.moreTypes = !0);
+        let SD = DD.maxOwnStructures;
+        null == SD && (SD = QD ? 32 : 64), this.structures || 0 == DD.useRecords || (this.structures = []);
+        let BD = wD > 32 || SD + wD > 64,
+          yD = wD + 64,
+          MD = wD + SD + 64;
+        if (MD > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let tD = [],
+          ZD = 0,
+          oD = 0;
+        this.pack = this.encode = function(DD, iD) {
+          if (PC || (PC = new mC(8192), UC = PC.dataView || (PC.dataView = new DataView(PC.buffer, 0, 8192)), JC = 0), xC = PC.length - 10, xC - JC < 2048 ? (PC = new mC(PC.length), UC = PC.dataView || (PC.dataView = new DataView(PC.buffer, 0, PC.length)), xC = PC.length - 10, JC = 0) : JC = JC + 7 & 2147483640, CD = JC, iD & AC && (JC += 255 & iD), pD = fD.structuredClone ? new Map : null, fD.bundleStrings && "string" !== typeof DD ? (KC = [], KC.size = 1 / 0) : KC = null, ID = fD.structures, ID) {
+            ID.uninitialized && (ID = fD._mergeStructures(fD.getStructures()));
+            let DD = ID.sharedLength || 0;
+            if (DD > wD) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + ID.sharedLength);
+            if (!ID.transitions) {
+              ID.transitions = Object.create(null);
+              for (let CD = 0; CD < DD; CD++) {
+                let DD = ID[CD];
+                if (!DD) continue;
+                let cD, pD = ID.transitions;
+                for (let CD = 0, ID = DD.length; CD < ID; CD++) {
+                  let ID = DD[CD];
+                  cD = pD[ID], cD || (cD = pD[ID] = Object.create(null)), pD = cD
                 }
-                nz[au] = uz + 64
+                pD[VC] = CD + 64
               }
-              this.lastNamedStructuresLength = zz
+              this.lastNamedStructuresLength = DD
             }
-            Mz || (Ez.nextId = zz + 64)
+            bD || (ID.nextId = DD + 64)
           }
-          let tz;
-          bz && (bz = !1);
+          let QD;
+          cD && (cD = !1);
           try {
-            lz.randomAccessStructure && zz && zz.constructor && zz.constructor === Object ? Az(zz) : fz(zz);
-            let bz = Pu;
-            if (Pu && Uu(uz, fz, 0), nz && nz.idsToInsert) {
-              let zz = nz.idsToInsert.sort(((zz, uz) => zz.offset > uz.offset ? 1 : -1)),
-                Ez = zz.length,
-                iz = -1;
-              for (; bz && Ez > 0;) {
-                let nz = zz[--Ez].offset + uz;
-                nz < bz.stringsPosition + uz && -1 === iz && (iz = 0), nz > bz.position + uz ? iz >= 0 && (iz += 6) : (iz >= 0 && (Ju.setUint32(bz.position + uz, Ju.getUint32(bz.position + uz) + iz), iz = -1), bz = bz.previous, Ez++)
+            fD.randomAccessStructure && DD && DD.constructor && DD.constructor === Object ? xD(DD) : gD(DD);
+            let cD = KC;
+            if (KC && TC(CD, gD, 0), pD && pD.idsToInsert) {
+              let DD = pD.idsToInsert.sort(((DD, CD) => DD.offset > CD.offset ? 1 : -1)),
+                ID = DD.length,
+                iD = -1;
+              for (; cD && ID > 0;) {
+                let pD = DD[--ID].offset + CD;
+                pD < cD.stringsPosition + CD && -1 === iD && (iD = 0), pD > cD.position + CD ? iD >= 0 && (iD += 6) : (iD >= 0 && (UC.setUint32(cD.position + CD, UC.getUint32(cD.position + CD) + iD), iD = -1), cD = cD.previous, ID++)
               }
-              iz >= 0 && bz && Ju.setUint32(bz.position + uz, Ju.getUint32(bz.position + uz) + iz), Lu += 6 * zz.length, Lu > Au && vz(Lu), lz.offset = Lu;
-              let Mz = function(zz, uz) {
-                let bz, Ez = 6 * uz.length,
-                  nz = zz.length - Ez;
-                for (; bz = uz.pop();) {
-                  let uz = bz.offset,
-                    iz = bz.id;
-                  zz.copyWithin(uz + Ez, uz, nz), Ez -= 6;
-                  let lz = uz + Ez;
-                  zz[lz++] = 214, zz[lz++] = 105, zz[lz++] = iz >> 24, zz[lz++] = iz >> 16 & 255, zz[lz++] = iz >> 8 & 255, zz[lz++] = 255 & iz, nz = uz
+              iD >= 0 && cD && UC.setUint32(cD.position + CD, UC.getUint32(cD.position + CD) + iD), JC += 6 * DD.length, JC > xC && PD(JC), fD.offset = JC;
+              let bD = function(DD, CD) {
+                let cD, ID = 6 * CD.length,
+                  pD = DD.length - ID;
+                for (; cD = CD.pop();) {
+                  let CD = cD.offset,
+                    iD = cD.id;
+                  DD.copyWithin(CD + ID, CD, pD), ID -= 6;
+                  let fD = CD + ID;
+                  DD[fD++] = 214, DD[fD++] = 105, DD[fD++] = iD >> 24, DD[fD++] = iD >> 16 & 255, DD[fD++] = iD >> 8 & 255, DD[fD++] = 255 & iD, pD = CD
                 }
-                return zz
-              }(vu.subarray(uz, Lu), zz);
-              return nz = null, Mz
+                return DD
+              }(PC.subarray(CD, JC), DD);
+              return pD = null, bD
             }
-            return lz.offset = Lu, iz & Bu ? (vu.start = uz, vu.end = Lu, vu) : vu.subarray(uz, Lu)
-          } catch (Eb) {
-            throw tz = Eb, Eb
+            return fD.offset = JC, iD & hC ? (PC.start = CD, PC.end = JC, PC) : PC.subarray(CD, JC)
+          } catch (Ic) {
+            throw QD = Ic, Ic
           } finally {
-            if (Ez && (wz(), bz && lz.saveStructures)) {
-              let bz = Ez.sharedLength || 0,
-                nz = vu.subarray(uz, Lu),
-                Mz = gu(Ez, lz);
-              if (!tz) return !1 === lz.saveStructures(Mz, Mz.isCompatible) ? lz.pack(zz, iz) : (lz.lastNamedStructuresLength = bz, vu.length > 1073741824 && (vu = null), nz)
+            if (ID && (vD(), cD && fD.saveStructures)) {
+              let cD = ID.sharedLength || 0,
+                pD = PC.subarray(CD, JC),
+                bD = RC(ID, fD);
+              if (!QD) return !1 === fD.saveStructures(bD, bD.isCompatible) ? fD.pack(DD, iD) : (fD.lastNamedStructuresLength = cD, PC.length > 1073741824 && (PC = null), pD)
             }
-            vu.length > 1073741824 && (vu = null), iz & Cu && (Lu = uz)
+            PC.length > 1073741824 && (PC = null), iD & rC && (JC = CD)
           }
         };
-        const wz = () => {
-            Kz < 10 && Kz++;
-            let zz = Ez.sharedLength || 0;
-            if (Ez.length > zz && !Mz && (Ez.length = zz), Rz > 1e4) Ez.transitions = null, Kz = 0, Rz = 0, Zz.length > 0 && (Zz = []);
-            else if (Zz.length > 0 && !Mz) {
-              for (let zz = 0, uz = Zz.length; zz < uz; zz++) Zz[zz][au] = 0;
-              Zz = []
+        const vD = () => {
+            oD < 10 && oD++;
+            let DD = ID.sharedLength || 0;
+            if (ID.length > DD && !bD && (ID.length = DD), ZD > 1e4) ID.transitions = null, oD = 0, ZD = 0, tD.length > 0 && (tD = []);
+            else if (tD.length > 0 && !bD) {
+              for (let DD = 0, CD = tD.length; DD < CD; DD++) tD[DD][VC] = 0;
+              tD = []
             }
           },
-          Xz = zz => {
-            var uz = zz.length;
-            uz < 16 ? vu[Lu++] = 144 | uz : uz < 65536 ? (vu[Lu++] = 220, vu[Lu++] = uz >> 8, vu[Lu++] = 255 & uz) : (vu[Lu++] = 221, Ju.setUint32(Lu, uz), Lu += 4);
-            for (let bz = 0; bz < uz; bz++) fz(zz[bz])
+          ND = DD => {
+            var CD = DD.length;
+            CD < 16 ? PC[JC++] = 144 | CD : CD < 65536 ? (PC[JC++] = 220, PC[JC++] = CD >> 8, PC[JC++] = 255 & CD) : (PC[JC++] = 221, UC.setUint32(JC, CD), JC += 4);
+            for (let cD = 0; cD < CD; cD++) gD(DD[cD])
           },
-          fz = zz => {
-            Lu > Au && (vu = vz(Lu));
-            var bz, Ez = typeof zz;
-            if ("string" === Ez) {
-              let Ez, nz = zz.length;
-              if (Pu && nz >= 4 && nz < 4096) {
-                if ((Pu.size += nz) > 21760) {
-                  let zz, bz, Ez = (Pu[0] ? 3 * Pu[0].length + Pu[1].length : 0) + 10;
-                  Lu + Ez > Au && (vu = vz(Lu + Ez)), Pu.position ? (bz = Pu, vu[Lu] = 200, Lu += 3, vu[Lu++] = 98, zz = Lu - uz, Lu += 4, Uu(uz, fz, 0), Ju.setUint16(zz + uz - 3, Lu - uz - zz)) : (vu[Lu++] = 214, vu[Lu++] = 98, zz = Lu - uz, Lu += 4), Pu = ["", ""], Pu.previous = bz, Pu.size = 0, Pu.position = zz
+          gD = DD => {
+            JC > xC && (PC = PD(JC));
+            var cD, ID = typeof DD;
+            if ("string" === ID) {
+              let ID, pD = DD.length;
+              if (KC && pD >= 4 && pD < 4096) {
+                if ((KC.size += pD) > 21760) {
+                  let DD, cD, ID = (KC[0] ? 3 * KC[0].length + KC[1].length : 0) + 10;
+                  JC + ID > xC && (PC = PD(JC + ID)), KC.position ? (cD = KC, PC[JC] = 200, JC += 3, PC[JC++] = 98, DD = JC - CD, JC += 4, TC(CD, gD, 0), UC.setUint16(DD + CD - 3, JC - CD - DD)) : (PC[JC++] = 214, PC[JC++] = 98, DD = JC - CD, JC += 4), KC = ["", ""], KC.previous = cD, KC.size = 0, KC.position = DD
                 }
-                let bz = Gu.test(zz);
-                return Pu[bz ? 0 : 1] += zz, vu[Lu++] = 193, void fz(bz ? -nz : nz)
+                let cD = aC.test(DD);
+                return KC[cD ? 0 : 1] += DD, PC[JC++] = 193, void gD(cD ? -pD : pD)
               }
-              Ez = nz < 32 ? 1 : nz < 256 ? 2 : nz < 65536 ? 3 : 5;
-              let lz = 3 * nz;
-              if (Lu + lz > Au && (vu = vz(Lu + lz)), nz < 64 || !iz) {
-                let uz, iz, lz, Mz = Lu + Ez;
-                for (uz = 0; uz < nz; uz++) iz = zz.charCodeAt(uz), iz < 128 ? vu[Mz++] = iz : iz < 2048 ? (vu[Mz++] = iz >> 6 | 192, vu[Mz++] = 63 & iz | 128) : 55296 === (64512 & iz) && 56320 === (64512 & (lz = zz.charCodeAt(uz + 1))) ? (iz = 65536 + ((1023 & iz) << 10) + (1023 & lz), uz++, vu[Mz++] = iz >> 18 | 240, vu[Mz++] = iz >> 12 & 63 | 128, vu[Mz++] = iz >> 6 & 63 | 128, vu[Mz++] = 63 & iz | 128) : (vu[Mz++] = iz >> 12 | 224, vu[Mz++] = iz >> 6 & 63 | 128, vu[Mz++] = 63 & iz | 128);
-                bz = Mz - Lu - Ez
-              } else bz = iz(zz, Lu + Ez);
-              bz < 32 ? vu[Lu++] = 160 | bz : bz < 256 ? (Ez < 2 && vu.copyWithin(Lu + 2, Lu + 1, Lu + 1 + bz), vu[Lu++] = 217, vu[Lu++] = bz) : bz < 65536 ? (Ez < 3 && vu.copyWithin(Lu + 3, Lu + 2, Lu + 2 + bz), vu[Lu++] = 218, vu[Lu++] = bz >> 8, vu[Lu++] = 255 & bz) : (Ez < 5 && vu.copyWithin(Lu + 5, Lu + 3, Lu + 3 + bz), vu[Lu++] = 219, Ju.setUint32(Lu, bz), Lu += 4), Lu += bz
-            } else if ("number" === Ez)
-              if (zz >>> 0 === zz) zz < 32 || zz < 128 && !1 === this.useRecords || zz < 64 && !this.randomAccessStructure ? vu[Lu++] = zz : zz < 256 ? (vu[Lu++] = 204, vu[Lu++] = zz) : zz < 65536 ? (vu[Lu++] = 205, vu[Lu++] = zz >> 8, vu[Lu++] = 255 & zz) : (vu[Lu++] = 206, Ju.setUint32(Lu, zz), Lu += 4);
-              else if ((zz | 0) === zz) zz >= -32 ? vu[Lu++] = 256 + zz : zz >= -128 ? (vu[Lu++] = 208, vu[Lu++] = zz + 256) : zz >= -32768 ? (vu[Lu++] = 209, Ju.setInt16(Lu, zz), Lu += 2) : (vu[Lu++] = 210, Ju.setInt32(Lu, zz), Lu += 4);
+              ID = pD < 32 ? 1 : pD < 256 ? 2 : pD < 65536 ? 3 : 5;
+              let fD = 3 * pD;
+              if (JC + fD > xC && (PC = PD(JC + fD)), pD < 64 || !iD) {
+                let CD, iD, fD, bD = JC + ID;
+                for (CD = 0; CD < pD; CD++) iD = DD.charCodeAt(CD), iD < 128 ? PC[bD++] = iD : iD < 2048 ? (PC[bD++] = iD >> 6 | 192, PC[bD++] = 63 & iD | 128) : 55296 === (64512 & iD) && 56320 === (64512 & (fD = DD.charCodeAt(CD + 1))) ? (iD = 65536 + ((1023 & iD) << 10) + (1023 & fD), CD++, PC[bD++] = iD >> 18 | 240, PC[bD++] = iD >> 12 & 63 | 128, PC[bD++] = iD >> 6 & 63 | 128, PC[bD++] = 63 & iD | 128) : (PC[bD++] = iD >> 12 | 224, PC[bD++] = iD >> 6 & 63 | 128, PC[bD++] = 63 & iD | 128);
+                cD = bD - JC - ID
+              } else cD = iD(DD, JC + ID);
+              cD < 32 ? PC[JC++] = 160 | cD : cD < 256 ? (ID < 2 && PC.copyWithin(JC + 2, JC + 1, JC + 1 + cD), PC[JC++] = 217, PC[JC++] = cD) : cD < 65536 ? (ID < 3 && PC.copyWithin(JC + 3, JC + 2, JC + 2 + cD), PC[JC++] = 218, PC[JC++] = cD >> 8, PC[JC++] = 255 & cD) : (ID < 5 && PC.copyWithin(JC + 5, JC + 3, JC + 3 + cD), PC[JC++] = 219, UC.setUint32(JC, cD), JC += 4), JC += cD
+            } else if ("number" === ID)
+              if (DD >>> 0 === DD) DD < 32 || DD < 128 && !1 === this.useRecords || DD < 64 && !this.randomAccessStructure ? PC[JC++] = DD : DD < 256 ? (PC[JC++] = 204, PC[JC++] = DD) : DD < 65536 ? (PC[JC++] = 205, PC[JC++] = DD >> 8, PC[JC++] = 255 & DD) : (PC[JC++] = 206, UC.setUint32(JC, DD), JC += 4);
+              else if ((DD | 0) === DD) DD >= -32 ? PC[JC++] = 256 + DD : DD >= -128 ? (PC[JC++] = 208, PC[JC++] = DD + 256) : DD >= -32768 ? (PC[JC++] = 209, UC.setInt16(JC, DD), JC += 2) : (PC[JC++] = 210, UC.setInt32(JC, DD), JC += 4);
             else {
-              let uz;
-              if ((uz = this.useFloat32) > 0 && zz < 4294967296 && zz >= -2147483648) {
-                let bz;
-                if (vu[Lu++] = 202, Ju.setFloat32(Lu, zz), uz < 4 || ((bz = zz * Mu[(127 & vu[Lu]) << 1 | vu[Lu + 1] >> 7]) | 0) === bz) return void(Lu += 4);
-                Lu--
+              let CD;
+              if ((CD = this.useFloat32) > 0 && DD < 4294967296 && DD >= -2147483648) {
+                let cD;
+                if (PC[JC++] = 202, UC.setFloat32(JC, DD), CD < 4 || ((cD = DD * bC[(127 & PC[JC]) << 1 | PC[JC + 1] >> 7]) | 0) === cD) return void(JC += 4);
+                JC--
               }
-              vu[Lu++] = 203, Ju.setFloat64(Lu, zz), Lu += 8
-            } else if ("object" === Ez || "function" === Ez)
-              if (zz) {
-                if (nz) {
-                  let bz = nz.get(zz);
-                  if (bz) {
-                    if (!bz.id) {
-                      let zz = nz.idsToInsert || (nz.idsToInsert = []);
-                      bz.id = zz.push(bz)
+              PC[JC++] = 203, UC.setFloat64(JC, DD), JC += 8
+            } else if ("object" === ID || "function" === ID)
+              if (DD) {
+                if (pD) {
+                  let cD = pD.get(DD);
+                  if (cD) {
+                    if (!cD.id) {
+                      let DD = pD.idsToInsert || (pD.idsToInsert = []);
+                      cD.id = DD.push(cD)
                     }
-                    return vu[Lu++] = 214, vu[Lu++] = 112, Ju.setUint32(Lu, bz.id), void(Lu += 4)
+                    return PC[JC++] = 214, PC[JC++] = 112, UC.setUint32(JC, cD.id), void(JC += 4)
                   }
-                  nz.set(zz, {
-                    offset: Lu - uz
+                  pD.set(DD, {
+                    offset: JC - CD
                   })
                 }
-                let iz = zz.constructor;
-                if (iz === Object) Nz(zz);
-                else if (iz === Array) Xz(zz);
-                else if (iz === Map)
-                  if (this.mapAsEmptyObject) vu[Lu++] = 128;
+                let iD = DD.constructor;
+                if (iD === Object) OD(DD);
+                else if (iD === Array) ND(DD);
+                else if (iD === Map)
+                  if (this.mapAsEmptyObject) PC[JC++] = 128;
                   else {
-                    (bz = zz.size) < 16 ? vu[Lu++] = 128 | bz : bz < 65536 ? (vu[Lu++] = 222, vu[Lu++] = bz >> 8, vu[Lu++] = 255 & bz) : (vu[Lu++] = 223, Ju.setUint32(Lu, bz), Lu += 4);
-                    for (let [uz, bz] of zz) fz(uz), fz(bz)
+                    (cD = DD.size) < 16 ? PC[JC++] = 128 | cD : cD < 65536 ? (PC[JC++] = 222, PC[JC++] = cD >> 8, PC[JC++] = 255 & cD) : (PC[JC++] = 223, UC.setUint32(JC, cD), JC += 4);
+                    for (let [CD, cD] of DD) gD(CD), gD(cD)
                   }
                 else {
-                  for (let uz = 0, bz = Ru.length; uz < bz; uz++) {
-                    if (zz instanceof Ku[uz]) {
-                      let bz = Ru[uz];
-                      if (bz.write) {
-                        bz.type && (vu[Lu++] = 212, vu[Lu++] = bz.type, vu[Lu++] = 0);
-                        let uz = bz.write.call(this, zz);
-                        return void(uz === zz ? Array.isArray(zz) ? Xz(zz) : Nz(zz) : fz(uz))
+                  for (let CD = 0, cD = ZC.length; CD < cD; CD++) {
+                    if (DD instanceof oC[CD]) {
+                      let cD = ZC[CD];
+                      if (cD.write) {
+                        cD.type && (PC[JC++] = 212, PC[JC++] = cD.type, PC[JC++] = 0);
+                        let CD = cD.write.call(this, DD);
+                        return void(CD === DD ? Array.isArray(DD) ? ND(DD) : OD(DD) : gD(CD))
                       }
-                      let Ez, nz = vu,
-                        iz = Ju,
-                        lz = Lu;
-                      vu = null;
+                      let ID, pD = PC,
+                        iD = UC,
+                        fD = JC;
+                      PC = null;
                       try {
-                        Ez = bz.pack.call(this, zz, (zz => (vu = nz, nz = null, Lu += zz, Lu > Au && vz(Lu), {
-                          target: vu,
-                          targetView: Ju,
-                          position: Lu - zz
-                        })), fz)
+                        ID = cD.pack.call(this, DD, (DD => (PC = pD, pD = null, JC += DD, JC > xC && PD(JC), {
+                          target: PC,
+                          targetView: UC,
+                          position: JC - DD
+                        })), gD)
                       } finally {
-                        nz && (vu = nz, Ju = iz, Lu = lz, Au = vu.length - 10)
+                        pD && (PC = pD, UC = iD, JC = fD, xC = PC.length - 10)
                       }
-                      return void(Ez && (Ez.length + Lu > Au && vz(Ez.length + Lu), Lu = hu(Ez, vu, Lu, bz.type)))
+                      return void(ID && (ID.length + JC > xC && PD(ID.length + JC), JC = LC(ID, PC, JC, cD.type)))
                     }
                   }
-                  if (Array.isArray(zz)) Xz(zz);
+                  if (Array.isArray(DD)) ND(DD);
                   else {
-                    if (zz.toJSON) {
-                      const uz = zz.toJSON();
-                      if (uz !== zz) return fz(uz)
+                    if (DD.toJSON) {
+                      const CD = DD.toJSON();
+                      if (CD !== DD) return gD(CD)
                     }
-                    if ("function" === Ez) return fz(this.writeFunction && this.writeFunction(zz));
-                    Nz(zz)
+                    if ("function" === ID) return gD(this.writeFunction && this.writeFunction(DD));
+                    OD(DD)
                   }
                 }
-              } else vu[Lu++] = 192;
-            else if ("boolean" === Ez) vu[Lu++] = zz ? 195 : 194;
-            else if ("bigint" === Ez) {
-              if (zz < BigInt(1) << BigInt(63) && zz >= -(BigInt(1) << BigInt(63))) vu[Lu++] = 211, Ju.setBigInt64(Lu, zz);
-              else if (zz < BigInt(1) << BigInt(64) && zz > 0) vu[Lu++] = 207, Ju.setBigUint64(Lu, zz);
+              } else PC[JC++] = 192;
+            else if ("boolean" === ID) PC[JC++] = DD ? 195 : 194;
+            else if ("bigint" === ID) {
+              if (DD < BigInt(1) << BigInt(63) && DD >= -(BigInt(1) << BigInt(63))) PC[JC++] = 211, UC.setBigInt64(JC, DD);
+              else if (DD < BigInt(1) << BigInt(64) && DD > 0) PC[JC++] = 207, UC.setBigUint64(JC, DD);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return fz(zz.toString());
-                  if (this.useBigIntExtension && zz < BigInt(2) ** BigInt(1023) && zz > -(BigInt(2) ** BigInt(1023))) {
-                    vu[Lu++] = 199, Lu++, vu[Lu++] = 66;
-                    let uz, bz = [];
+                  if (this.largeBigIntToString) return gD(DD.toString());
+                  if (this.useBigIntExtension && DD < BigInt(2) ** BigInt(1023) && DD > -(BigInt(2) ** BigInt(1023))) {
+                    PC[JC++] = 199, JC++, PC[JC++] = 66;
+                    let CD, cD = [];
                     do {
-                      let Ez = zz & BigInt(255);
-                      uz = (Ez & BigInt(128)) === (zz < BigInt(0) ? BigInt(128) : BigInt(0)), bz.push(Ez), zz >>= BigInt(8)
-                    } while (zz !== BigInt(0) && zz !== BigInt(-1) || !uz);
-                    vu[Lu - 2] = bz.length;
-                    for (let zz = bz.length; zz > 0;) vu[Lu++] = Number(bz[--zz]);
+                      let ID = DD & BigInt(255);
+                      CD = (ID & BigInt(128)) === (DD < BigInt(0) ? BigInt(128) : BigInt(0)), cD.push(ID), DD >>= BigInt(8)
+                    } while (DD !== BigInt(0) && DD !== BigInt(-1) || !CD);
+                    PC[JC - 2] = cD.length;
+                    for (let DD = cD.length; DD > 0;) PC[JC++] = Number(cD[--DD]);
                     return
                   }
-                  throw new RangeError(zz + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(DD + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                vu[Lu++] = 203, Ju.setFloat64(Lu, Number(zz))
+                PC[JC++] = 203, UC.setFloat64(JC, Number(DD))
               }
-              Lu += 8
+              JC += 8
             } else {
-              if ("undefined" !== Ez) throw new Error("Unknown type: " + Ez);
-              this.encodeUndefinedAsNil ? vu[Lu++] = 192 : (vu[Lu++] = 212, vu[Lu++] = 0, vu[Lu++] = 0)
+              if ("undefined" !== ID) throw new Error("Unknown type: " + ID);
+              this.encodeUndefinedAsNil ? PC[JC++] = 192 : (PC[JC++] = 212, PC[JC++] = 0, PC[JC++] = 0)
             }
           },
-          sz = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? zz => {
-            let uz;
+          XD = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? DD => {
+            let CD;
             if (this.skipValues) {
-              uz = [];
-              for (let bz in zz) "function" === typeof zz.hasOwnProperty && !zz.hasOwnProperty(bz) || this.skipValues.includes(zz[bz]) || uz.push(bz)
-            } else uz = Object.keys(zz);
-            let bz, Ez = uz.length;
-            if (Ez < 16 ? vu[Lu++] = 128 | Ez : Ez < 65536 ? (vu[Lu++] = 222, vu[Lu++] = Ez >> 8, vu[Lu++] = 255 & Ez) : (vu[Lu++] = 223, Ju.setUint32(Lu, Ez), Lu += 4), this.coercibleKeyAsNumber)
-              for (let nz = 0; nz < Ez; nz++) {
-                bz = uz[nz];
-                let Ez = Number(bz);
-                fz(isNaN(Ez) ? bz : Ez), fz(zz[bz])
+              CD = [];
+              for (let cD in DD) "function" === typeof DD.hasOwnProperty && !DD.hasOwnProperty(cD) || this.skipValues.includes(DD[cD]) || CD.push(cD)
+            } else CD = Object.keys(DD);
+            let cD, ID = CD.length;
+            if (ID < 16 ? PC[JC++] = 128 | ID : ID < 65536 ? (PC[JC++] = 222, PC[JC++] = ID >> 8, PC[JC++] = 255 & ID) : (PC[JC++] = 223, UC.setUint32(JC, ID), JC += 4), this.coercibleKeyAsNumber)
+              for (let pD = 0; pD < ID; pD++) {
+                cD = CD[pD];
+                let ID = Number(cD);
+                gD(isNaN(ID) ? cD : ID), gD(DD[cD])
               } else
-                for (let nz = 0; nz < Ez; nz++) fz(bz = uz[nz]), fz(zz[bz])
-          } : zz => {
-            vu[Lu++] = 222;
-            let bz = Lu - uz;
-            Lu += 2;
-            let Ez = 0;
-            for (let uz in zz)("function" !== typeof zz.hasOwnProperty || zz.hasOwnProperty(uz)) && (fz(uz), fz(zz[uz]), Ez++);
-            if (Ez > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            vu[bz++ + uz] = Ez >> 8, vu[bz + uz] = 255 & Ez
+                for (let pD = 0; pD < ID; pD++) gD(cD = CD[pD]), gD(DD[cD])
+          } : DD => {
+            PC[JC++] = 222;
+            let cD = JC - CD;
+            JC += 2;
+            let ID = 0;
+            for (let CD in DD)("function" !== typeof DD.hasOwnProperty || DD.hasOwnProperty(CD)) && (gD(CD), gD(DD[CD]), ID++);
+            if (ID > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            PC[cD++ + CD] = ID >> 8, PC[cD + CD] = 255 & ID
           },
-          rz = !1 === this.useRecords ? sz : zz.progressiveRecords && !pz ? zz => {
-            let bz, nz, iz = Ez.transitions || (Ez.transitions = Object.create(null)),
-              lz = Lu++ - uz;
-            for (let Mz in zz)
-              if ("function" !== typeof zz.hasOwnProperty || zz.hasOwnProperty(Mz)) {
-                if (bz = iz[Mz], bz) iz = bz;
+          mD = !1 === this.useRecords ? XD : DD.progressiveRecords && !BD ? DD => {
+            let cD, pD, iD = ID.transitions || (ID.transitions = Object.create(null)),
+              fD = JC++ - CD;
+            for (let bD in DD)
+              if ("function" !== typeof DD.hasOwnProperty || DD.hasOwnProperty(bD)) {
+                if (cD = iD[bD], cD) iD = cD;
                 else {
-                  let tz = Object.keys(zz),
-                    Hz = iz;
-                  iz = Ez.transitions;
-                  let Oz = 0;
-                  for (let zz = 0, uz = tz.length; zz < uz; zz++) {
-                    let uz = tz[zz];
-                    bz = iz[uz], bz || (bz = iz[uz] = Object.create(null), Oz++), iz = bz
+                  let QD = Object.keys(DD),
+                    wD = iD;
+                  iD = ID.transitions;
+                  let SD = 0;
+                  for (let DD = 0, CD = QD.length; DD < CD; DD++) {
+                    let CD = QD[DD];
+                    cD = iD[CD], cD || (cD = iD[CD] = Object.create(null), SD++), iD = cD
                   }
-                  lz + uz + 1 == Lu ? (Lu--, xz(iz, tz, Oz)) : Jz(iz, tz, lz, Oz), nz = !0, iz = Hz[Mz]
+                  fD + CD + 1 == JC ? (JC--, HD(iD, QD, SD)) : UD(iD, QD, fD, SD), pD = !0, iD = wD[bD]
                 }
-                fz(zz[Mz])
-              } if (!nz) {
-              let bz = iz[au];
-              bz ? vu[lz + uz] = bz : Jz(iz, Object.keys(zz), lz, 0)
+                gD(DD[bD])
+              } if (!pD) {
+              let cD = iD[VC];
+              cD ? PC[fD + CD] = cD : UD(iD, Object.keys(DD), fD, 0)
             }
-          } : zz => {
-            let uz, bz = Ez.transitions || (Ez.transitions = Object.create(null)),
-              nz = 0;
-            for (let Ez in zz)("function" !== typeof zz.hasOwnProperty || zz.hasOwnProperty(Ez)) && (uz = bz[Ez], uz || (uz = bz[Ez] = Object.create(null), nz++), bz = uz);
-            let iz = bz[au];
-            iz ? iz >= 96 && pz ? (vu[Lu++] = 96 + (31 & (iz -= 96)), vu[Lu++] = iz >> 5) : vu[Lu++] = iz : xz(bz, bz.__keys__ || Object.keys(zz), nz);
-            for (let Ez in zz)("function" !== typeof zz.hasOwnProperty || zz.hasOwnProperty(Ez)) && fz(zz[Ez])
+          } : DD => {
+            let CD, cD = ID.transitions || (ID.transitions = Object.create(null)),
+              pD = 0;
+            for (let ID in DD)("function" !== typeof DD.hasOwnProperty || DD.hasOwnProperty(ID)) && (CD = cD[ID], CD || (CD = cD[ID] = Object.create(null), pD++), cD = CD);
+            let iD = cD[VC];
+            iD ? iD >= 96 && BD ? (PC[JC++] = 96 + (31 & (iD -= 96)), PC[JC++] = iD >> 5) : PC[JC++] = iD : HD(cD, cD.__keys__ || Object.keys(DD), pD);
+            for (let ID in DD)("function" !== typeof DD.hasOwnProperty || DD.hasOwnProperty(ID)) && gD(DD[ID])
           },
-          oz = "function" == typeof this.useRecords && this.useRecords,
-          Nz = oz ? zz => {
-            oz(zz) ? rz(zz) : sz(zz)
-          } : rz,
-          vz = zz => {
-            let bz;
-            if (zz > 16777216) {
-              if (zz - uz > Nu) throw new Error("Packed buffer would be larger than maximum buffer size");
-              bz = Math.min(Nu, 4096 * Math.round(Math.max((zz - uz) * (zz > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else bz = 1 + (Math.max(zz - uz << 2, vu.length - 1) >> 12) << 12;
-            let Ez = new ru(bz);
-            return Ju = Ez.dataView || (Ez.dataView = new DataView(Ez.buffer, 0, bz)), zz = Math.min(zz, vu.length), vu.copy ? vu.copy(Ez, 0, uz, zz) : Ez.set(vu.slice(uz, zz)), Lu -= uz, uz = 0, Au = Ez.length - 10, vu = Ez
+          nD = "function" == typeof this.useRecords && this.useRecords,
+          OD = nD ? DD => {
+            nD(DD) ? mD(DD) : XD(DD)
+          } : mD,
+          PD = DD => {
+            let cD;
+            if (DD > 16777216) {
+              if (DD - CD > OC) throw new Error("Packed buffer would be larger than maximum buffer size");
+              cD = Math.min(OC, 4096 * Math.round(Math.max((DD - CD) * (DD > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else cD = 1 + (Math.max(DD - CD << 2, PC.length - 1) >> 12) << 12;
+            let ID = new mC(cD);
+            return UC = ID.dataView || (ID.dataView = new DataView(ID.buffer, 0, cD)), DD = Math.min(DD, PC.length), PC.copy ? PC.copy(ID, 0, CD, DD) : ID.set(PC.slice(CD, DD)), JC -= CD, CD = 0, xC = ID.length - 10, PC = ID
           },
-          xz = (zz, uz, nz) => {
-            let iz = Ez.nextId;
-            iz || (iz = 64), iz < dz && this.shouldShareStructure && !this.shouldShareStructure(uz) ? (iz = Ez.nextOwnId, iz < Fz || (iz = dz), Ez.nextOwnId = iz + 1) : (iz >= Fz && (iz = dz), Ez.nextId = iz + 1);
-            let lz = uz.highByte = iz >= 96 && pz ? iz - 96 >> 5 : -1;
-            zz[au] = iz, zz.__keys__ = uz, Ez[iz - 64] = uz, iz < dz ? (uz.isShared = !0, Ez.sharedLength = iz - 63, bz = !0, lz >= 0 ? (vu[Lu++] = 96 + (31 & iz), vu[Lu++] = lz) : vu[Lu++] = iz) : (lz >= 0 ? (vu[Lu++] = 213, vu[Lu++] = 114, vu[Lu++] = 96 + (31 & iz), vu[Lu++] = lz) : (vu[Lu++] = 212, vu[Lu++] = 114, vu[Lu++] = iz), nz && (Rz += Kz * nz), Zz.length >= Oz && (Zz.shift()[au] = 0), Zz.push(zz), fz(uz))
+          HD = (DD, CD, pD) => {
+            let iD = ID.nextId;
+            iD || (iD = 64), iD < yD && this.shouldShareStructure && !this.shouldShareStructure(CD) ? (iD = ID.nextOwnId, iD < MD || (iD = yD), ID.nextOwnId = iD + 1) : (iD >= MD && (iD = yD), ID.nextId = iD + 1);
+            let fD = CD.highByte = iD >= 96 && BD ? iD - 96 >> 5 : -1;
+            DD[VC] = iD, DD.__keys__ = CD, ID[iD - 64] = CD, iD < yD ? (CD.isShared = !0, ID.sharedLength = iD - 63, cD = !0, fD >= 0 ? (PC[JC++] = 96 + (31 & iD), PC[JC++] = fD) : PC[JC++] = iD) : (fD >= 0 ? (PC[JC++] = 213, PC[JC++] = 114, PC[JC++] = 96 + (31 & iD), PC[JC++] = fD) : (PC[JC++] = 212, PC[JC++] = 114, PC[JC++] = iD), pD && (ZD += oD * pD), tD.length >= SD && (tD.shift()[VC] = 0), tD.push(DD), gD(CD))
           },
-          Jz = (zz, bz, Ez, nz) => {
-            let iz = vu,
-              lz = Lu,
-              Mz = Au,
-              tz = uz;
-            vu = xu, Lu = 0, uz = 0, vu || (xu = vu = new ru(8192)), Au = vu.length - 10, xz(zz, bz, nz), xu = vu;
-            let Hz = Lu;
-            if (vu = iz, Lu = lz, Au = Mz, uz = tz, Hz > 1) {
-              let zz = Lu + Hz - 1;
-              zz > Au && vz(zz);
-              let bz = Ez + uz;
-              vu.copyWithin(bz + Hz, bz + 1, Lu), vu.set(xu.slice(0, Hz), bz), Lu = zz
-            } else vu[Ez + uz] = xu[0]
+          UD = (DD, cD, ID, pD) => {
+            let iD = PC,
+              fD = JC,
+              bD = xC,
+              QD = CD;
+            PC = HC, JC = 0, CD = 0, PC || (HC = PC = new mC(8192)), xC = PC.length - 10, HD(DD, cD, pD), HC = PC;
+            let wD = JC;
+            if (PC = iD, JC = fD, xC = bD, CD = QD, wD > 1) {
+              let DD = JC + wD - 1;
+              DD > xC && PD(DD);
+              let cD = ID + CD;
+              PC.copyWithin(cD + wD, cD + 1, JC), PC.set(HC.slice(0, wD), cD), JC = DD
+            } else PC[ID + CD] = HC[0]
           },
-          Az = zz => {
-            let nz = Tu(zz, vu, uz, Lu, Ez, vz, ((zz, uz, Ez) => {
-              if (Ez) return bz = !0;
-              Lu = uz;
-              let nz = vu;
-              return fz(zz), wz(), nz !== vu ? {
-                position: Lu,
-                targetView: Ju,
-                target: vu
-              } : Lu
+          xD = DD => {
+            let pD = qC(DD, PC, CD, JC, ID, PD, ((DD, CD, ID) => {
+              if (ID) return cD = !0;
+              JC = CD;
+              let pD = PC;
+              return gD(DD), vD(), pD !== PC ? {
+                position: JC,
+                targetView: UC,
+                target: PC
+              } : JC
             }), this);
-            if (0 === nz) return Nz(zz);
-            Lu = nz
+            if (0 === pD) return OD(DD);
+            JC = pD
           }
       }
-      useBuffer(zz) {
-        vu = zz, Ju = vu.dataView || (vu.dataView = new DataView(vu.buffer, vu.byteOffset, vu.byteLength)), Lu = 0
+      useBuffer(DD) {
+        PC = DD, UC = PC.dataView || (PC.dataView = new DataView(PC.buffer, PC.byteOffset, PC.byteLength)), JC = 0
       }
-      set position(zz) {
-        Lu = zz
+      set position(DD) {
+        JC = DD
       }
       get position() {
-        return Lu
+        return JC
       }
-      set buffer(zz) {
-        vu = zz
+      set buffer(DD) {
+        PC = DD
       }
       get buffer() {
-        return vu
+        return PC
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function mu(zz, uz, bz, Ez) {
-      let nz = zz.byteLength;
-      if (nz + 1 < 256) {
+    function jC(DD, CD, cD, ID) {
+      let pD = DD.byteLength;
+      if (pD + 1 < 256) {
         var {
-          target: iz,
-          position: lz
-        } = bz(4 + nz);
-        iz[lz++] = 199, iz[lz++] = nz + 1
-      } else if (nz + 1 < 65536) {
+          target: iD,
+          position: fD
+        } = cD(4 + pD);
+        iD[fD++] = 199, iD[fD++] = pD + 1
+      } else if (pD + 1 < 65536) {
         var {
-          target: iz,
-          position: lz
-        } = bz(5 + nz);
-        iz[lz++] = 200, iz[lz++] = nz + 1 >> 8, iz[lz++] = nz + 1 & 255
+          target: iD,
+          position: fD
+        } = cD(5 + pD);
+        iD[fD++] = 200, iD[fD++] = pD + 1 >> 8, iD[fD++] = pD + 1 & 255
       } else {
         var {
-          target: iz,
-          position: lz,
-          targetView: Mz
-        } = bz(7 + nz);
-        iz[lz++] = 201, Mz.setUint32(lz, nz + 1), lz += 4
+          target: iD,
+          position: fD,
+          targetView: bD
+        } = cD(7 + pD);
+        iD[fD++] = 201, bD.setUint32(fD, pD + 1), fD += 4
       }
-      iz[lz++] = 116, iz[lz++] = uz, zz.buffer || (zz = new Uint8Array(zz)), iz.set(new Uint8Array(zz.buffer, zz.byteOffset, zz.byteLength), lz)
+      iD[fD++] = 116, iD[fD++] = CD, DD.buffer || (DD = new Uint8Array(DD)), iD.set(new Uint8Array(DD.buffer, DD.byteOffset, DD.byteLength), fD)
     }
 
-    function qu(zz, uz) {
-      let bz = zz.byteLength;
-      var Ez, nz;
-      if (bz < 256) {
+    function lC(DD, CD) {
+      let cD = DD.byteLength;
+      var ID, pD;
+      if (cD < 256) {
         var {
-          target: Ez,
-          position: nz
-        } = uz(bz + 2);
-        Ez[nz++] = 196, Ez[nz++] = bz
-      } else if (bz < 65536) {
+          target: ID,
+          position: pD
+        } = CD(cD + 2);
+        ID[pD++] = 196, ID[pD++] = cD
+      } else if (cD < 65536) {
         var {
-          target: Ez,
-          position: nz
-        } = uz(bz + 3);
-        Ez[nz++] = 197, Ez[nz++] = bz >> 8, Ez[nz++] = 255 & bz
+          target: ID,
+          position: pD
+        } = CD(cD + 3);
+        ID[pD++] = 197, ID[pD++] = cD >> 8, ID[pD++] = 255 & cD
       } else {
         var {
-          target: Ez,
-          position: nz,
-          targetView: iz
-        } = uz(bz + 5);
-        Ez[nz++] = 198, iz.setUint32(nz, bz), nz += 4
+          target: ID,
+          position: pD,
+          targetView: iD
+        } = CD(cD + 5);
+        ID[pD++] = 198, iD.setUint32(pD, cD), pD += 4
       }
-      Ez.set(zz, nz)
+      ID.set(DD, pD)
     }
 
-    function hu(zz, uz, bz, Ez) {
-      let nz = zz.length;
-      switch (nz) {
+    function LC(DD, CD, cD, ID) {
+      let pD = DD.length;
+      switch (pD) {
         case 1:
-          uz[bz++] = 212;
+          CD[cD++] = 212;
           break;
         case 2:
-          uz[bz++] = 213;
+          CD[cD++] = 213;
           break;
         case 4:
-          uz[bz++] = 214;
+          CD[cD++] = 214;
           break;
         case 8:
-          uz[bz++] = 215;
+          CD[cD++] = 215;
           break;
         case 16:
-          uz[bz++] = 216;
+          CD[cD++] = 216;
           break;
         default:
-          nz < 256 ? (uz[bz++] = 199, uz[bz++] = nz) : nz < 65536 ? (uz[bz++] = 200, uz[bz++] = nz >> 8, uz[bz++] = 255 & nz) : (uz[bz++] = 201, uz[bz++] = nz >> 24, uz[bz++] = nz >> 16 & 255, uz[bz++] = nz >> 8 & 255, uz[bz++] = 255 & nz)
+          pD < 256 ? (CD[cD++] = 199, CD[cD++] = pD) : pD < 65536 ? (CD[cD++] = 200, CD[cD++] = pD >> 8, CD[cD++] = 255 & pD) : (CD[cD++] = 201, CD[cD++] = pD >> 24, CD[cD++] = pD >> 16 & 255, CD[cD++] = pD >> 8 & 255, CD[cD++] = 255 & pD)
       }
-      return uz[bz++] = Ez, uz.set(zz, bz), bz += nz
+      return CD[cD++] = ID, CD.set(DD, cD), cD += pD
     }
 
-    function Uu(zz, uz, bz) {
-      if (Pu.length > 0) {
-        Ju.setUint32(Pu.position + zz, Lu + bz - Pu.position - zz), Pu.stringsPosition = Lu - zz;
-        let Ez = Pu;
-        Pu = null, uz(Ez[0]), uz(Ez[1])
+    function TC(DD, CD, cD) {
+      if (KC.length > 0) {
+        UC.setUint32(KC.position + DD, JC + cD - KC.position - DD), KC.stringsPosition = JC - DD;
+        let ID = KC;
+        KC = null, CD(ID[0]), CD(ID[1])
       }
     }
 
-    function cu(zz) {
-      if (zz.Class) {
-        if (!zz.pack && !zz.write) throw new Error("Extension has no pack or write function");
-        if (zz.pack && !zz.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        Ku.unshift(zz.Class), Ru.unshift(zz)
-      }! function(zz) {
-        zz.unpack ? Xz[zz.type] = zz.unpack : Xz[zz.type] = zz
-      }(zz)
+    function GC(DD) {
+      if (DD.Class) {
+        if (!DD.pack && !DD.write) throw new Error("Extension has no pack or write function");
+        if (DD.pack && !DD.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        oC.unshift(DD.Class), ZC.unshift(DD)
+      }! function(DD) {
+        DD.unpack ? ND[DD.type] = DD.unpack : ND[DD.type] = DD
+      }(DD)
     }
 
-    function gu(zz, uz) {
-      return zz.isCompatible = zz => {
-        let bz = !zz || (uz.lastNamedStructuresLength || 0) === zz.length;
-        return bz || uz._mergeStructures(zz), bz
-      }, zz
+    function RC(DD, CD) {
+      return DD.isCompatible = DD => {
+        let cD = !DD || (CD.lastNamedStructuresLength || 0) === DD.length;
+        return cD || CD._mergeStructures(DD), cD
+      }, DD
     }
-    Ku = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, sz], Ru = [{
-      pack(zz, uz, bz) {
-        let Ez = zz.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === zz.getMilliseconds()) && Ez >= 0 && Ez < 4294967296) {
+    oC = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, XD], ZC = [{
+      pack(DD, CD, cD) {
+        let ID = DD.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === DD.getMilliseconds()) && ID >= 0 && ID < 4294967296) {
           let {
-            target: zz,
-            targetView: bz,
-            position: nz
-          } = uz(6);
-          zz[nz++] = 214, zz[nz++] = 255, bz.setUint32(nz, Ez)
-        } else if (Ez > 0 && Ez < 4294967296) {
+            target: DD,
+            targetView: cD,
+            position: pD
+          } = CD(6);
+          DD[pD++] = 214, DD[pD++] = 255, cD.setUint32(pD, ID)
+        } else if (ID > 0 && ID < 4294967296) {
           let {
-            target: bz,
-            targetView: nz,
-            position: iz
-          } = uz(10);
-          bz[iz++] = 215, bz[iz++] = 255, nz.setUint32(iz, 4e6 * zz.getMilliseconds() + (Ez / 1e3 / 4294967296 | 0)), nz.setUint32(iz + 4, Ez)
-        } else if (isNaN(Ez)) {
-          if (this.onInvalidDate) return uz(0), bz(this.onInvalidDate());
+            target: cD,
+            targetView: pD,
+            position: iD
+          } = CD(10);
+          cD[iD++] = 215, cD[iD++] = 255, pD.setUint32(iD, 4e6 * DD.getMilliseconds() + (ID / 1e3 / 4294967296 | 0)), pD.setUint32(iD + 4, ID)
+        } else if (isNaN(ID)) {
+          if (this.onInvalidDate) return CD(0), cD(this.onInvalidDate());
           let {
-            target: zz,
-            targetView: Ez,
-            position: nz
-          } = uz(3);
-          zz[nz++] = 212, zz[nz++] = 255, zz[nz++] = 255
+            target: DD,
+            targetView: ID,
+            position: pD
+          } = CD(3);
+          DD[pD++] = 212, DD[pD++] = 255, DD[pD++] = 255
         } else {
           let {
-            target: bz,
-            targetView: nz,
-            position: iz
-          } = uz(15);
-          bz[iz++] = 199, bz[iz++] = 12, bz[iz++] = 255, nz.setUint32(iz, 1e6 * zz.getMilliseconds()), nz.setBigInt64(iz + 4, BigInt(Math.floor(Ez)))
+            target: cD,
+            targetView: pD,
+            position: iD
+          } = CD(15);
+          cD[iD++] = 199, cD[iD++] = 12, cD[iD++] = 255, pD.setUint32(iD, 1e6 * DD.getMilliseconds()), pD.setBigInt64(iD + 4, BigInt(Math.floor(ID)))
         }
       }
     }, {
-      pack(zz, uz, bz) {
-        if (this.setAsEmptyObject) return uz(0), bz({});
-        let Ez = Array.from(zz),
+      pack(DD, CD, cD) {
+        if (this.setAsEmptyObject) return CD(0), cD({});
+        let ID = Array.from(DD),
           {
-            target: nz,
-            position: iz
-          } = uz(this.moreTypes ? 3 : 0);
-        this.moreTypes && (nz[iz++] = 212, nz[iz++] = 115, nz[iz++] = 0), bz(Ez)
+            target: pD,
+            position: iD
+          } = CD(this.moreTypes ? 3 : 0);
+        this.moreTypes && (pD[iD++] = 212, pD[iD++] = 115, pD[iD++] = 0), cD(ID)
       }
     }, {
-      pack(zz, uz, bz) {
+      pack(DD, CD, cD) {
         let {
-          target: Ez,
-          position: nz
-        } = uz(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Ez[nz++] = 212, Ez[nz++] = 101, Ez[nz++] = 0), bz([zz.name, zz.message, zz.cause])
+          target: ID,
+          position: pD
+        } = CD(this.moreTypes ? 3 : 0);
+        this.moreTypes && (ID[pD++] = 212, ID[pD++] = 101, ID[pD++] = 0), cD([DD.name, DD.message, DD.cause])
       }
     }, {
-      pack(zz, uz, bz) {
+      pack(DD, CD, cD) {
         let {
-          target: Ez,
-          position: nz
-        } = uz(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Ez[nz++] = 212, Ez[nz++] = 120, Ez[nz++] = 0), bz([zz.source, zz.flags])
+          target: ID,
+          position: pD
+        } = CD(this.moreTypes ? 3 : 0);
+        this.moreTypes && (ID[pD++] = 212, ID[pD++] = 120, ID[pD++] = 0), cD([DD.source, DD.flags])
       }
     }, {
-      pack(zz, uz) {
-        this.moreTypes ? mu(zz, 16, uz) : qu(su ? Buffer.from(zz) : new Uint8Array(zz), uz)
+      pack(DD, CD) {
+        this.moreTypes ? jC(DD, 16, CD) : lC(XC ? Buffer.from(DD) : new Uint8Array(DD), CD)
       }
     }, {
-      pack(zz, uz) {
-        let bz = zz.constructor;
-        bz !== ou && this.moreTypes ? mu(zz, bu.indexOf(bz.name), uz) : qu(zz, uz)
+      pack(DD, CD) {
+        let cD = DD.constructor;
+        cD !== nC && this.moreTypes ? jC(DD, cC.indexOf(cD.name), CD) : lC(DD, CD)
       }
     }, {
-      pack(zz, uz) {
+      pack(DD, CD) {
         let {
-          target: bz,
-          position: Ez
-        } = uz(1);
-        bz[Ez] = 193
+          target: cD,
+          position: ID
+        } = CD(1);
+        cD[ID] = 193
       }
     }];
-    let Su = new Vu({
+    let kC = new zC({
       useRecords: !1
     });
-    const yu = Su.pack,
-      Du = Su.pack,
-      Qu = Vu,
+    const dC = kC.pack,
+      YC = kC.pack,
+      WC = zC,
       {
-        NEVER: Wu,
-        ALWAYS: eu,
-        DECIMAL_ROUND: ju,
-        DECIMAL_FIT: Iu
-      } = Fu,
-      Bu = 512,
-      Cu = 1024,
-      Yu = 2048;
-    const ku = function(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!zz || "object" !== typeof zz) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const bz = new Az(uz);
-        let Ez;
-        const nz = zz => {
-          let uz;
-          Ez && (zz = Buffer.concat([Ez, zz]), Ez = void 0);
+        NEVER: sC,
+        ALWAYS: EC,
+        DECIMAL_ROUND: eC,
+        DECIMAL_FIT: uC
+      } = MC,
+      hC = 512,
+      rC = 1024,
+      AC = 2048;
+    const FC = function(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!DD || "object" !== typeof DD) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const cD = new xD(CD);
+        let ID;
+        const pD = DD => {
+          let CD;
+          ID && (DD = Buffer.concat([ID, DD]), ID = void 0);
           try {
-            uz = bz.unpackMultiple(zz)
-          } catch (nz) {
-            if (!nz.incomplete) throw nz;
-            Ez = zz.slice(nz.lastPosition), uz = nz.values
+            CD = cD.unpackMultiple(DD)
+          } catch (pD) {
+            if (!pD.incomplete) throw pD;
+            ID = DD.slice(pD.lastPosition), CD = pD.values
           }
-          return uz
+          return CD
         };
-        return "function" === typeof zz[Symbol.iterator] ? function*() {
-          for (const uz of zz) yield* nz(uz)
-        }() : "function" === typeof zz[Symbol.asyncIterator] ? async function*() {
-          for await (const uz of zz) yield* nz(uz)
+        return "function" === typeof DD[Symbol.iterator] ? function*() {
+          for (const CD of DD) yield* pD(CD)
+        }() : "function" === typeof DD[Symbol.asyncIterator] ? async function*() {
+          for await (const CD of DD) yield* pD(CD)
         }(): void 0
       },
-      zb = function(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (zz && "object" === typeof zz) {
-          if ("function" === typeof zz[Symbol.iterator]) return function*(zz, uz) {
-            const bz = new Vu(uz);
-            for (const Ez of zz) yield bz.pack(Ez)
-          }(zz, uz);
-          if ("function" === typeof zz.then || "function" === typeof zz[Symbol.asyncIterator]) return async function*(zz, uz) {
-            const bz = new Vu(uz);
-            for await (const Ez of zz) yield bz.pack(Ez)
-          }(zz, uz);
+      Dc = function(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (DD && "object" === typeof DD) {
+          if ("function" === typeof DD[Symbol.iterator]) return function*(DD, CD) {
+            const cD = new zC(CD);
+            for (const ID of DD) yield cD.pack(ID)
+          }(DD, CD);
+          if ("function" === typeof DD.then || "function" === typeof DD[Symbol.asyncIterator]) return async function*(DD, CD) {
+            const cD = new zC(CD);
+            for await (const ID of DD) yield cD.pack(ID)
+          }(DD, CD);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      ub = !1,
-      bb = !0
+      Cc = !1,
+      cc = !0
   },
-  8774: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      $changes: () => Rz,
-      $childType: () => Kz,
-      $decoder: () => Oz,
-      $deleteByIndex: () => Fz,
-      $encoder: () => Hz,
-      $filter: () => pz,
-      $getByIndex: () => dz,
-      $numFields: () => Jz,
-      $refId: () => Mz,
-      $track: () => tz,
-      $values: () => rz,
-      ArraySchema: () => bE,
-      Callbacks: () => bn,
-      ChangeTree: () => Lb,
-      CollectionSchema: () => iE,
-      Decoder: () => jE,
-      Encoder: () => DE,
-      FieldBuilder: () => tE,
-      MapSchema: () => nE,
-      Metadata: () => ju,
-      OPERATION: () => nz,
-      Reflection: () => YE,
-      ReflectionField: () => BE,
-      ReflectionType: () => CE,
-      Root: () => PE,
-      Schema: () => TE,
-      SetSchema: () => lE,
-      StateCallbackStrategy: () => un,
-      StateView: () => qE,
-      StreamSchema: () => ME,
-      TypeContext: () => gu,
-      createPool: () => nn,
-      decode: () => fu,
-      decodeKeyValueOperation: () => Bb,
-      decodeSchemaOperation: () => Ib,
-      defineCustomTypes: () => Nu,
-      defineTypes: () => xE,
-      deprecated: () => NE,
-      dumpChanges: () => AE,
-      encode: () => uu,
-      encodeArray: () => Ub,
-      encodeIndexedEntry: () => qb,
-      encodeKeyValueOperation: () => hb,
-      encodeMapEntry: () => mb,
-      encodeSchemaOperation: () => Vb,
-      VZ: () => RE,
-      fullStateOnly: () => fE,
-      getDecoderStateCallbacks: () => kE,
-      getEncodeDescriptor: () => zb,
-      getRawChangesCallback: () => zn,
-      isBuilder: () => HE,
-      patchOnly: () => XE,
-      registerType: () => ou,
-      schema: () => JE,
-      t: () => FE,
-      type: () => sE,
-      unreliable: () => wE,
-      view: () => KE
+  8811: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      $changes: () => ZD,
+      $childType: () => oD,
+      $decoder: () => SD,
+      $deleteByIndex: () => MD,
+      $encoder: () => wD,
+      $filter: () => BD,
+      $getByIndex: () => yD,
+      $numFields: () => UD,
+      $refId: () => bD,
+      $track: () => QD,
+      $values: () => mD,
+      ArraySchema: () => cI,
+      Callbacks: () => cp,
+      ChangeTree: () => Jc,
+      CollectionSchema: () => iI,
+      Decoder: () => eI,
+      Encoder: () => YI,
+      FieldBuilder: () => QI,
+      MapSchema: () => pI,
+      Metadata: () => eC,
+      OPERATION: () => pD,
+      Reflection: () => AI,
+      ReflectionField: () => hI,
+      ReflectionType: () => rI,
+      Root: () => KI,
+      Schema: () => qI,
+      SetSchema: () => fI,
+      StateCallbackStrategy: () => Cp,
+      StateView: () => lI,
+      StreamSchema: () => bI,
+      TypeContext: () => RC,
+      createPool: () => pp,
+      decode: () => gC,
+      decodeKeyValueOperation: () => hc,
+      decodeSchemaOperation: () => uc,
+      defineCustomTypes: () => OC,
+      defineTypes: () => HI,
+      deprecated: () => OI,
+      dumpChanges: () => xI,
+      encode: () => CC,
+      encodeArray: () => Tc,
+      encodeIndexedEntry: () => lc,
+      encodeKeyValueOperation: () => Lc,
+      encodeMapEntry: () => jc,
+      encodeSchemaOperation: () => zc,
+      qt: () => ZI,
+      fullStateOnly: () => gI,
+      getDecoderStateCallbacks: () => FI,
+      getEncodeDescriptor: () => Dc,
+      getRawChangesCallback: () => Dp,
+      isBuilder: () => wI,
+      patchOnly: () => NI,
+      registerType: () => nC,
+      schema: () => UI,
+      t: () => MI,
+      type: () => XI,
+      unreliable: () => vI,
+      view: () => oI
     });
-    const Ez = 255;
-    var nz;
+    const ID = 255;
+    var pD;
 
-    function iz(zz) {
-      Object.defineProperty(zz, Symbol.metadata, {
+    function iD(DD) {
+      Object.defineProperty(DD, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(zz) {
-      zz[zz.ADD = 128] = "ADD", zz[zz.REPLACE = 0] = "REPLACE", zz[zz.DELETE = 64] = "DELETE", zz[zz.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", zz[zz.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", zz[zz.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", zz[zz.CLEAR = 10] = "CLEAR", zz[zz.REVERSE = 15] = "REVERSE", zz[zz.MOVE = 32] = "MOVE", zz[zz.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", zz[zz.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(nz || (nz = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const lz = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(DD) {
+      DD[DD.ADD = 128] = "ADD", DD[DD.REPLACE = 0] = "REPLACE", DD[DD.DELETE = 64] = "DELETE", DD[DD.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", DD[DD.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", DD[DD.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", DD[DD.CLEAR = 10] = "CLEAR", DD[DD.REVERSE = 15] = "REVERSE", DD[DD.MOVE = 32] = "MOVE", DD[DD.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", DD[DD.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(pD || (pD = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const fD = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const zz = "colyseus.symbolRegistry",
-        uz = lz[zz] || (lz[zz] = Object.create(null));
-      Symbol.for = function(zz) {
-        return uz[zz] || (uz[zz] = Symbol(zz))
-      }, Symbol.keyFor = function(zz) {
-        for (const bz in uz)
-          if (uz[bz] === zz) return bz
+      const DD = "colyseus.symbolRegistry",
+        CD = fD[DD] || (fD[DD] = Object.create(null));
+      Symbol.for = function(DD) {
+        return CD[DD] || (CD[DD] = Symbol(DD))
+      }, Symbol.keyFor = function(DD) {
+        for (const cD in CD)
+          if (CD[cD] === DD) return cD
       }
     }
-    const Mz = Symbol.for("$refId"),
-      tz = "~track",
-      Hz = "~encoder",
-      Oz = "~decoder",
-      pz = "~filter",
-      dz = "~getByIndex",
-      Fz = "~deleteByIndex",
-      Zz = "~resyncPrune",
-      Rz = Symbol.for("$changes"),
-      Kz = Symbol.for("$childType"),
-      wz = Symbol.for("$proxyTarget"),
-      Xz = "~onEncodeEnd",
-      fz = "~reset",
-      sz = "~onDecodeEnd",
-      rz = Symbol.for("$values"),
-      oz = "~builder",
-      Nz = "~descriptors",
-      vz = "~__encodeDescriptor",
-      xz = "~encoders",
-      Jz = "~__numFields",
-      Az = "~__refTypeFieldIndexes",
-      Tz = "~__viewFieldIndexes",
-      Lz = "$__fieldIndexesByViewTag",
-      Pz = "~__unreliableFieldIndexes",
-      Gz = "~__patchOnlyFieldIndexes",
-      az = "~__fullSyncSkipIndexes",
-      Vz = "~__fullStateOnlyFieldIndexes",
-      mz = "~__streamFieldIndexes",
-      qz = "~__streamPriorities";
-    let hz;
+    const bD = Symbol.for("$refId"),
+      QD = "~track",
+      wD = "~encoder",
+      SD = "~decoder",
+      BD = "~filter",
+      yD = "~getByIndex",
+      MD = "~deleteByIndex",
+      tD = "~resyncPrune",
+      ZD = Symbol.for("$changes"),
+      oD = Symbol.for("$childType"),
+      vD = Symbol.for("$proxyTarget"),
+      ND = "~onEncodeEnd",
+      gD = "~reset",
+      XD = "~onDecodeEnd",
+      mD = Symbol.for("$values"),
+      nD = "~builder",
+      OD = "~descriptors",
+      PD = "~__encodeDescriptor",
+      HD = "~encoders",
+      UD = "~__numFields",
+      xD = "~__refTypeFieldIndexes",
+      qD = "~__viewFieldIndexes",
+      JD = "$__fieldIndexesByViewTag",
+      KD = "~__unreliableFieldIndexes",
+      aD = "~__patchOnlyFieldIndexes",
+      VD = "~__fullSyncSkipIndexes",
+      zD = "~__fullStateOnlyFieldIndexes",
+      jD = "~__streamFieldIndexes",
+      lD = "~__streamPriorities";
+    let LD;
     try {
-      hz = new TextEncoder
-    } catch (Mn) {}
-    const Uz = new ArrayBuffer(8),
-      cz = new Int32Array(Uz),
-      gz = new Float32Array(Uz),
-      Sz = new Float64Array(Uz),
-      yz = new BigInt64Array(Uz),
-      Dz = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(zz, uz) {
-        for (var bz = 0, Ez = 0, nz = 0, iz = zz.length; nz < iz; nz++)(bz = zz.charCodeAt(nz)) < 128 ? Ez += 1 : bz < 2048 ? Ez += 2 : bz < 55296 || bz >= 57344 ? Ez += 3 : (nz++, Ez += 4);
-        return Ez
+      LD = new TextEncoder
+    } catch (ip) {}
+    const TD = new ArrayBuffer(8),
+      GD = new Int32Array(TD),
+      RD = new Float32Array(TD),
+      kD = new Float64Array(TD),
+      dD = new BigInt64Array(TD),
+      YD = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(DD, CD) {
+        for (var cD = 0, ID = 0, pD = 0, iD = DD.length; pD < iD; pD++)(cD = DD.charCodeAt(pD)) < 128 ? ID += 1 : cD < 2048 ? ID += 2 : cD < 55296 || cD >= 57344 ? ID += 3 : (pD++, ID += 4);
+        return ID
       };
 
-    function Qz(zz, uz, bz) {
-      for (var Ez = 0, nz = 0, iz = uz.length; nz < iz; nz++)(Ez = uz.charCodeAt(nz)) < 128 ? zz[bz.offset++] = Ez : Ez < 2048 ? (zz[bz.offset] = 192 | Ez >> 6, zz[bz.offset + 1] = 128 | 63 & Ez, bz.offset += 2) : Ez < 55296 || Ez >= 57344 ? (zz[bz.offset] = 224 | Ez >> 12, zz[bz.offset + 1] = 128 | Ez >> 6 & 63, zz[bz.offset + 2] = 128 | 63 & Ez, bz.offset += 3) : (nz++, Ez = 65536 + ((1023 & Ez) << 10 | 1023 & uz.charCodeAt(nz)), zz[bz.offset] = 240 | Ez >> 18, zz[bz.offset + 1] = 128 | Ez >> 12 & 63, zz[bz.offset + 2] = 128 | Ez >> 6 & 63, zz[bz.offset + 3] = 128 | 63 & Ez, bz.offset += 4)
+    function WD(DD, CD, cD) {
+      for (var ID = 0, pD = 0, iD = CD.length; pD < iD; pD++)(ID = CD.charCodeAt(pD)) < 128 ? DD[cD.offset++] = ID : ID < 2048 ? (DD[cD.offset] = 192 | ID >> 6, DD[cD.offset + 1] = 128 | 63 & ID, cD.offset += 2) : ID < 55296 || ID >= 57344 ? (DD[cD.offset] = 224 | ID >> 12, DD[cD.offset + 1] = 128 | ID >> 6 & 63, DD[cD.offset + 2] = 128 | 63 & ID, cD.offset += 3) : (pD++, ID = 65536 + ((1023 & ID) << 10 | 1023 & CD.charCodeAt(pD)), DD[cD.offset] = 240 | ID >> 18, DD[cD.offset + 1] = 128 | ID >> 12 & 63, DD[cD.offset + 2] = 128 | ID >> 6 & 63, DD[cD.offset + 3] = 128 | 63 & ID, cD.offset += 4)
     }
 
-    function Wz(zz, uz, bz) {
-      zz[bz.offset++] = 255 & uz
+    function sD(DD, CD, cD) {
+      DD[cD.offset++] = 255 & CD
     }
 
-    function ez(zz, uz, bz) {
-      zz[bz.offset++] = 255 & uz, zz[bz.offset++] = uz >> 8 & 255
+    function ED(DD, CD, cD) {
+      DD[cD.offset++] = 255 & CD, DD[cD.offset++] = CD >> 8 & 255
     }
 
-    function jz(zz, uz, bz) {
-      zz[bz.offset++] = 255 & uz, zz[bz.offset++] = uz >> 8 & 255
+    function eD(DD, CD, cD) {
+      DD[cD.offset++] = 255 & CD, DD[cD.offset++] = CD >> 8 & 255
     }
 
-    function Iz(zz, uz, bz) {
-      zz[bz.offset++] = 255 & uz, zz[bz.offset++] = uz >> 8 & 255, zz[bz.offset++] = uz >> 16 & 255, zz[bz.offset++] = uz >> 24 & 255
+    function uD(DD, CD, cD) {
+      DD[cD.offset++] = 255 & CD, DD[cD.offset++] = CD >> 8 & 255, DD[cD.offset++] = CD >> 16 & 255, DD[cD.offset++] = CD >> 24 & 255
     }
 
-    function Bz(zz, uz, bz) {
-      const Ez = uz >> 24,
-        nz = uz >> 16,
-        iz = uz >> 8,
-        lz = uz;
-      zz[bz.offset++] = 255 & lz, zz[bz.offset++] = 255 & iz, zz[bz.offset++] = 255 & nz, zz[bz.offset++] = 255 & Ez
+    function hD(DD, CD, cD) {
+      const ID = CD >> 24,
+        pD = CD >> 16,
+        iD = CD >> 8,
+        fD = CD;
+      DD[cD.offset++] = 255 & fD, DD[cD.offset++] = 255 & iD, DD[cD.offset++] = 255 & pD, DD[cD.offset++] = 255 & ID
     }
 
-    function Cz(zz, uz, bz) {
-      const Ez = Math.floor(uz / Math.pow(2, 32));
-      Bz(zz, uz >>> 0, bz), Bz(zz, Ez, bz)
+    function rD(DD, CD, cD) {
+      const ID = Math.floor(CD / Math.pow(2, 32));
+      hD(DD, CD >>> 0, cD), hD(DD, ID, cD)
     }
 
-    function Yz(zz, uz, bz) {
-      const Ez = uz / Math.pow(2, 32) | 0;
-      Bz(zz, uz >>> 0, bz), Bz(zz, Ez, bz)
+    function AD(DD, CD, cD) {
+      const ID = CD / Math.pow(2, 32) | 0;
+      hD(DD, CD >>> 0, cD), hD(DD, ID, cD)
     }
 
-    function kz(zz, uz, bz) {
-      gz[0] = uz, Iz(zz, cz[0], bz)
+    function FD(DD, CD, cD) {
+      RD[0] = CD, uD(DD, GD[0], cD)
     }
 
-    function zu(zz, uz, bz) {
-      Sz[0] = uz, Iz(zz, cz[0], bz), Iz(zz, cz[1], bz)
+    function DC(DD, CD, cD) {
+      kD[0] = CD, uD(DD, GD[0], cD), uD(DD, GD[1], cD)
     }
-    const uu = {
-        int8: Wz,
-        uint8: function(zz, uz, bz) {
-          zz[bz.offset++] = 255 & uz
+    const CC = {
+        int8: sD,
+        uint8: function(DD, CD, cD) {
+          DD[cD.offset++] = 255 & CD
         },
-        int16: ez,
-        uint16: jz,
-        int32: Iz,
-        uint32: Bz,
-        int64: Cz,
-        uint64: Yz,
-        bigint64: function(zz, uz, bz) {
-          yz[0] = BigInt.asIntN(64, uz), Iz(zz, cz[0], bz), Iz(zz, cz[1], bz)
+        int16: ED,
+        uint16: eD,
+        int32: uD,
+        uint32: hD,
+        int64: rD,
+        uint64: AD,
+        bigint64: function(DD, CD, cD) {
+          dD[0] = BigInt.asIntN(64, CD), uD(DD, GD[0], cD), uD(DD, GD[1], cD)
         },
-        biguint64: function(zz, uz, bz) {
-          yz[0] = BigInt.asIntN(64, uz), Iz(zz, cz[0], bz), Iz(zz, cz[1], bz)
+        biguint64: function(DD, CD, cD) {
+          dD[0] = BigInt.asIntN(64, CD), uD(DD, GD[0], cD), uD(DD, GD[1], cD)
         },
-        float32: kz,
-        float64: zu,
-        boolean: function(zz, uz, bz) {
-          zz[bz.offset++] = uz ? 1 : 0
+        float32: FD,
+        float64: DC,
+        boolean: function(DD, CD, cD) {
+          DD[cD.offset++] = CD ? 1 : 0
         },
-        string: function(zz, uz, bz) {
-          uz || (uz = "");
-          let Ez = Dz(uz, "utf8"),
-            nz = 0;
-          if (Ez < 32) zz[bz.offset++] = 160 | Ez, nz = 1;
-          else if (Ez < 256) zz[bz.offset++] = 217, zz[bz.offset++] = Ez, nz = 2;
-          else if (Ez < 65536) zz[bz.offset++] = 218, jz(zz, Ez, bz), nz = 3;
+        string: function(DD, CD, cD) {
+          CD || (CD = "");
+          let ID = YD(CD, "utf8"),
+            pD = 0;
+          if (ID < 32) DD[cD.offset++] = 160 | ID, pD = 1;
+          else if (ID < 256) DD[cD.offset++] = 217, DD[cD.offset++] = ID, pD = 2;
+          else if (ID < 65536) DD[cD.offset++] = 218, eD(DD, ID, cD), pD = 3;
           else {
-            if (!(Ez < 4294967296)) throw new Error("String too long");
-            zz[bz.offset++] = 219, Bz(zz, Ez, bz), nz = 5
+            if (!(ID < 4294967296)) throw new Error("String too long");
+            DD[cD.offset++] = 219, hD(DD, ID, cD), pD = 5
           }
-          return Qz(zz, uz, bz), nz + Ez
+          return WD(DD, CD, cD), pD + ID
         },
-        number: function zz(uz, bz, Ez) {
-          return isNaN(bz) ? zz(uz, 0, Ez) : isFinite(bz) ? bz !== (0 | bz) ? Math.abs(bz) <= 34028235e31 && (gz[0] = bz, Math.abs(Math.abs(gz[0]) - Math.abs(bz)) < 1e-4) ? (uz[Ez.offset++] = 202, kz(uz, bz, Ez), 5) : (uz[Ez.offset++] = 203, zu(uz, bz, Ez), 9) : bz >= 0 ? bz < 128 ? (uz[Ez.offset++] = 255 & bz, 1) : bz < 256 ? (uz[Ez.offset++] = 204, uz[Ez.offset++] = 255 & bz, 2) : bz < 65536 ? (uz[Ez.offset++] = 205, jz(uz, bz, Ez), 3) : bz < 4294967296 ? (uz[Ez.offset++] = 206, Bz(uz, bz, Ez), 5) : (uz[Ez.offset++] = 207, Yz(uz, bz, Ez), 9) : bz >= -32 ? (uz[Ez.offset++] = 224 | bz + 32, 1) : bz >= -128 ? (uz[Ez.offset++] = 208, Wz(uz, bz, Ez), 2) : bz >= -32768 ? (uz[Ez.offset++] = 209, ez(uz, bz, Ez), 3) : bz >= -2147483648 ? (uz[Ez.offset++] = 210, Iz(uz, bz, Ez), 5) : (uz[Ez.offset++] = 211, Cz(uz, bz, Ez), 9) : zz(uz, bz > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Ez)
+        number: function DD(CD, cD, ID) {
+          return isNaN(cD) ? DD(CD, 0, ID) : isFinite(cD) ? cD !== (0 | cD) ? Math.abs(cD) <= 34028235e31 && (RD[0] = cD, Math.abs(Math.abs(RD[0]) - Math.abs(cD)) < 1e-4) ? (CD[ID.offset++] = 202, FD(CD, cD, ID), 5) : (CD[ID.offset++] = 203, DC(CD, cD, ID), 9) : cD >= 0 ? cD < 128 ? (CD[ID.offset++] = 255 & cD, 1) : cD < 256 ? (CD[ID.offset++] = 204, CD[ID.offset++] = 255 & cD, 2) : cD < 65536 ? (CD[ID.offset++] = 205, eD(CD, cD, ID), 3) : cD < 4294967296 ? (CD[ID.offset++] = 206, hD(CD, cD, ID), 5) : (CD[ID.offset++] = 207, AD(CD, cD, ID), 9) : cD >= -32 ? (CD[ID.offset++] = 224 | cD + 32, 1) : cD >= -128 ? (CD[ID.offset++] = 208, sD(CD, cD, ID), 2) : cD >= -32768 ? (CD[ID.offset++] = 209, ED(CD, cD, ID), 3) : cD >= -2147483648 ? (CD[ID.offset++] = 210, uD(CD, cD, ID), 5) : (CD[ID.offset++] = 211, rD(CD, cD, ID), 9) : DD(CD, cD > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, ID)
         },
-        utf8Write: Qz,
-        utf8Length: Dz
+        utf8Write: WD,
+        utf8Length: YD
       },
-      bu = new ArrayBuffer(8),
-      Eu = new Int32Array(bu),
-      nu = new Float32Array(bu),
-      iu = new Float64Array(bu),
-      lu = new BigUint64Array(bu),
-      Mu = new BigInt64Array(bu);
+      cC = new ArrayBuffer(8),
+      IC = new Int32Array(cC),
+      pC = new Float32Array(cC),
+      iC = new Float64Array(cC),
+      fC = new BigUint64Array(cC),
+      bC = new BigInt64Array(cC);
 
-    function tu(zz, uz, bz) {
-      bz > zz.length - uz.offset && (bz = zz.length - uz.offset);
-      for (var Ez = "", nz = 0, iz = uz.offset, lz = uz.offset + bz; iz < lz; iz++) {
-        var Mz = zz[iz];
-        if (0 !== (128 & Mz))
-          if (192 !== (224 & Mz))
-            if (224 !== (240 & Mz)) {
-              if (240 !== (248 & Mz)) {
-                console.error("decode.utf8Read(): Invalid byte " + Mz + " at offset " + iz + ". Skip to end of string: " + (uz.offset + bz));
+    function QC(DD, CD, cD) {
+      cD > DD.length - CD.offset && (cD = DD.length - CD.offset);
+      for (var ID = "", pD = 0, iD = CD.offset, fD = CD.offset + cD; iD < fD; iD++) {
+        var bD = DD[iD];
+        if (0 !== (128 & bD))
+          if (192 !== (224 & bD))
+            if (224 !== (240 & bD)) {
+              if (240 !== (248 & bD)) {
+                console.error("decode.utf8Read(): Invalid byte " + bD + " at offset " + iD + ". Skip to end of string: " + (CD.offset + cD));
                 break
-              }(nz = (7 & Mz) << 18 | (63 & zz[++iz]) << 12 | (63 & zz[++iz]) << 6 | 63 & zz[++iz]) >= 65536 ? (nz -= 65536, Ez += String.fromCharCode(55296 + (nz >>> 10), 56320 + (1023 & nz))) : Ez += String.fromCharCode(nz)
-            } else Ez += String.fromCharCode((15 & Mz) << 12 | (63 & zz[++iz]) << 6 | 63 & zz[++iz]);
-        else Ez += String.fromCharCode((31 & Mz) << 6 | 63 & zz[++iz]);
-        else Ez += String.fromCharCode(Mz)
+              }(pD = (7 & bD) << 18 | (63 & DD[++iD]) << 12 | (63 & DD[++iD]) << 6 | 63 & DD[++iD]) >= 65536 ? (pD -= 65536, ID += String.fromCharCode(55296 + (pD >>> 10), 56320 + (1023 & pD))) : ID += String.fromCharCode(pD)
+            } else ID += String.fromCharCode((15 & bD) << 12 | (63 & DD[++iD]) << 6 | 63 & DD[++iD]);
+        else ID += String.fromCharCode((31 & bD) << 6 | 63 & DD[++iD]);
+        else ID += String.fromCharCode(bD)
       }
-      return uz.offset += bz, Ez
+      return CD.offset += cD, ID
     }
 
-    function Hu(zz, uz) {
-      return Ou(zz, uz) << 24 >> 24
+    function wC(DD, CD) {
+      return SC(DD, CD) << 24 >> 24
     }
 
-    function Ou(zz, uz) {
-      return zz[uz.offset++]
+    function SC(DD, CD) {
+      return DD[CD.offset++]
     }
 
-    function pu(zz, uz) {
-      return du(zz, uz) << 16 >> 16
+    function BC(DD, CD) {
+      return yC(DD, CD) << 16 >> 16
     }
 
-    function du(zz, uz) {
-      return zz[uz.offset++] | zz[uz.offset++] << 8
+    function yC(DD, CD) {
+      return DD[CD.offset++] | DD[CD.offset++] << 8
     }
 
-    function Fu(zz, uz) {
-      return zz[uz.offset++] | zz[uz.offset++] << 8 | zz[uz.offset++] << 16 | zz[uz.offset++] << 24
+    function MC(DD, CD) {
+      return DD[CD.offset++] | DD[CD.offset++] << 8 | DD[CD.offset++] << 16 | DD[CD.offset++] << 24
     }
 
-    function Zu(zz, uz) {
-      return Fu(zz, uz) >>> 0
+    function tC(DD, CD) {
+      return MC(DD, CD) >>> 0
     }
 
-    function Ru(zz, uz) {
-      return Eu[0] = Fu(zz, uz), nu[0]
+    function ZC(DD, CD) {
+      return IC[0] = MC(DD, CD), pC[0]
     }
 
-    function Ku(zz, uz) {
-      return Eu[0] = Fu(zz, uz), Eu[1] = Fu(zz, uz), iu[0]
+    function oC(DD, CD) {
+      return IC[0] = MC(DD, CD), IC[1] = MC(DD, CD), iC[0]
     }
 
-    function wu(zz, uz) {
-      const bz = Zu(zz, uz);
-      return Fu(zz, uz) * Math.pow(2, 32) + bz
+    function vC(DD, CD) {
+      const cD = tC(DD, CD);
+      return MC(DD, CD) * Math.pow(2, 32) + cD
     }
 
-    function Xu(zz, uz) {
-      const bz = Zu(zz, uz);
-      return Zu(zz, uz) * Math.pow(2, 32) + bz
+    function NC(DD, CD) {
+      const cD = tC(DD, CD);
+      return tC(DD, CD) * Math.pow(2, 32) + cD
     }
-    const fu = {
-        utf8Read: tu,
-        int8: Hu,
-        uint8: Ou,
-        int16: pu,
-        uint16: du,
-        int32: Fu,
-        uint32: Zu,
-        float32: Ru,
-        float64: Ku,
-        int64: wu,
-        uint64: Xu,
-        bigint64: function(zz, uz) {
-          return Eu[0] = Fu(zz, uz), Eu[1] = Fu(zz, uz), Mu[0]
+    const gC = {
+        utf8Read: QC,
+        int8: wC,
+        uint8: SC,
+        int16: BC,
+        uint16: yC,
+        int32: MC,
+        uint32: tC,
+        float32: ZC,
+        float64: oC,
+        int64: vC,
+        uint64: NC,
+        bigint64: function(DD, CD) {
+          return IC[0] = MC(DD, CD), IC[1] = MC(DD, CD), bC[0]
         },
-        biguint64: function(zz, uz) {
-          return Eu[0] = Fu(zz, uz), Eu[1] = Fu(zz, uz), lu[0]
+        biguint64: function(DD, CD) {
+          return IC[0] = MC(DD, CD), IC[1] = MC(DD, CD), fC[0]
         },
-        boolean: function(zz, uz) {
-          return Ou(zz, uz) > 0
+        boolean: function(DD, CD) {
+          return SC(DD, CD) > 0
         },
-        string: function(zz, uz) {
-          const bz = zz[uz.offset++];
-          let Ez;
-          return bz < 192 ? Ez = 31 & bz : 217 === bz ? Ez = Ou(zz, uz) : 218 === bz ? Ez = du(zz, uz) : 219 === bz && (Ez = Zu(zz, uz)), tu(zz, uz, Ez)
+        string: function(DD, CD) {
+          const cD = DD[CD.offset++];
+          let ID;
+          return cD < 192 ? ID = 31 & cD : 217 === cD ? ID = SC(DD, CD) : 218 === cD ? ID = yC(DD, CD) : 219 === cD && (ID = tC(DD, CD)), QC(DD, CD, ID)
         },
-        number: function(zz, uz) {
-          const bz = zz[uz.offset++];
-          return bz < 128 ? bz : 202 === bz ? Ru(zz, uz) : 203 === bz ? Ku(zz, uz) : 204 === bz ? Ou(zz, uz) : 205 === bz ? du(zz, uz) : 206 === bz ? Zu(zz, uz) : 207 === bz ? Xu(zz, uz) : 208 === bz ? Hu(zz, uz) : 209 === bz ? pu(zz, uz) : 210 === bz ? Fu(zz, uz) : 211 === bz ? wu(zz, uz) : bz > 223 ? -1 * (255 - bz + 1) : void 0
+        number: function(DD, CD) {
+          const cD = DD[CD.offset++];
+          return cD < 128 ? cD : 202 === cD ? ZC(DD, CD) : 203 === cD ? oC(DD, CD) : 204 === cD ? SC(DD, CD) : 205 === cD ? yC(DD, CD) : 206 === cD ? tC(DD, CD) : 207 === cD ? NC(DD, CD) : 208 === cD ? wC(DD, CD) : 209 === cD ? BC(DD, CD) : 210 === cD ? MC(DD, CD) : 211 === cD ? vC(DD, CD) : cD > 223 ? -1 * (255 - cD + 1) : void 0
         },
-        stringCheck: function(zz, uz) {
-          const bz = zz[uz.offset];
-          return bz < 192 && bz > 160 || 217 === bz || 218 === bz || 219 === bz
+        stringCheck: function(DD, CD) {
+          const cD = DD[CD.offset];
+          return cD < 192 && cD > 160 || 217 === cD || 218 === cD || 219 === cD
         }
       },
-      su = {},
-      ru = new Map;
+      XC = {},
+      mC = new Map;
 
-    function ou(zz, uz) {
-      uz.constructor && (Object.prototype.hasOwnProperty.call(uz, "constructor") && null == uz.constructor[Symbol.metadata] && iz(uz.constructor), ru.set(uz.constructor, zz), su[zz] = uz), uz.encode && (uu[zz] = uz.encode), uz.decode && (fu[zz] = uz.decode)
+    function nC(DD, CD) {
+      CD.constructor && (Object.prototype.hasOwnProperty.call(CD, "constructor") && null == CD.constructor[Symbol.metadata] && iD(CD.constructor), mC.set(CD.constructor, DD), XC[DD] = CD), CD.encode && (CC[DD] = CD.encode), CD.decode && (gC[DD] = CD.decode)
     }
 
-    function Nu(zz) {
-      for (const uz in zz) ou(uz, zz[uz]);
-      return zz => sE(zz)
+    function OC(DD) {
+      for (const CD in DD) nC(CD, DD[CD]);
+      return DD => XI(DD)
     }
-    const vu = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const PC = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function xu() {
+    function HC() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function Ju(zz) {
-      return zz._stream ??= xu()
+    function UC(DD) {
+      return DD._stream ??= HC()
     }
 
-    function Au(zz, uz, bz) {
-      0 === uz.activeViews.size && Ju(zz).broadcastPending.add(bz)
+    function xC(DD, CD, cD) {
+      0 === CD.activeViews.size && UC(DD).broadcastPending.add(cD)
     }
 
-    function Tu(zz, uz, bz, Ez) {
-      const iz = zz._stream;
-      if (void 0 === iz) return !0;
-      let lz = !1;
-      return iz.broadcastPending.delete(Ez) ? lz = !0 : iz.sentBroadcast.delete(Ez) && iz.broadcastDeletes.add(Ez), uz.forEachActiveView((zz => {
-        const uz = iz.pendingByView.get(zz.id);
-        if (uz?.has(Ez)) return uz.delete(Ez), void(lz = !0);
-        const Mz = iz.sentByView.get(zz.id);
-        if (Mz?.has(Ez)) {
-          Mz.delete(Ez);
-          let uz = zz.changes.get(bz);
-          void 0 === uz && (uz = new Map, zz.changes.set(bz, uz)), uz.set(Ez, nz.DELETE)
+    function qC(DD, CD, cD, ID) {
+      const iD = DD._stream;
+      if (void 0 === iD) return !0;
+      let fD = !1;
+      return iD.broadcastPending.delete(ID) ? fD = !0 : iD.sentBroadcast.delete(ID) && iD.broadcastDeletes.add(ID), CD.forEachActiveView((DD => {
+        const CD = iD.pendingByView.get(DD.id);
+        if (CD?.has(ID)) return CD.delete(ID), void(fD = !0);
+        const bD = iD.sentByView.get(DD.id);
+        if (bD?.has(ID)) {
+          bD.delete(ID);
+          let CD = DD.changes.get(cD);
+          void 0 === CD && (CD = new Map, DD.changes.set(cD, CD)), CD.set(ID, pD.DELETE)
         }
-      })), lz
+      })), fD
     }
 
-    function Lu(zz, uz) {
-      const bz = zz._stream?.pendingByView;
-      if (void 0 === bz) return !1;
-      for (const [Ez, nz] of bz)
-        if (nz.size > 0 && void 0 !== uz.activeViews.get(Ez)?.deref()) return !0;
+    function JC(DD, CD) {
+      const cD = DD._stream?.pendingByView;
+      if (void 0 === cD) return !1;
+      for (const [ID, pD] of cD)
+        if (pD.size > 0 && void 0 !== CD.activeViews.get(ID)?.deref()) return !0;
       return !1
     }
 
-    function Pu(zz) {
-      const uz = zz._stream;
-      return void 0 !== uz && (uz.broadcastPending.size > 0 || uz.broadcastDeletes.size > 0)
+    function KC(DD) {
+      const CD = DD._stream;
+      return void 0 !== CD && (CD.broadcastPending.size > 0 || CD.broadcastDeletes.size > 0)
     }
 
-    function Gu(zz, uz, bz) {
-      const Ez = Ju(zz);
-      let nz = Ez.pendingByView.get(uz);
-      void 0 === nz && (nz = new Set, Ez.pendingByView.set(uz, nz)), nz.add(bz)
+    function aC(DD, CD, cD) {
+      const ID = UC(DD);
+      let pD = ID.pendingByView.get(CD);
+      void 0 === pD && (pD = new Set, ID.pendingByView.set(CD, pD)), pD.add(cD)
     }
 
-    function au(zz, uz) {
-      const bz = zz._stream;
-      void 0 !== bz && (bz.pendingByView.delete(uz), bz.sentByView.delete(uz), bz.priorityByView?.delete(uz))
+    function VC(DD, CD) {
+      const cD = DD._stream;
+      void 0 !== cD && (cD.pendingByView.delete(CD), cD.sentByView.delete(CD), cD.priorityByView?.delete(CD))
     }
-    const Vu = {
+    const zC = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function mu(zz) {
-      if (null == zz || "object" !== typeof zz) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function jC(DD) {
+      if (null == DD || "object" !== typeof DD) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: uz,
-        max: bz
-      } = zz;
-      if ("number" !== typeof uz || "number" !== typeof bz || !(bz > uz) || !Number.isFinite(uz) || !Number.isFinite(bz)) throw new Error(`t.quantized(): require finite min < max (got min=${uz}, max=${bz}).`);
-      const Ez = zz.bits ?? 16;
-      if (8 !== Ez && 16 !== Ez && 32 !== Ez) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Ez}).`);
-      const nz = zz.mode ?? "clamp";
-      if ("clamp" !== nz && "wrap" !== nz) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(nz)}).`);
-      const iz = "wrap" === nz,
-        lz = Math.pow(2, Ez);
+        min: CD,
+        max: cD
+      } = DD;
+      if ("number" !== typeof CD || "number" !== typeof cD || !(cD > CD) || !Number.isFinite(CD) || !Number.isFinite(cD)) throw new Error(`t.quantized(): require finite min < max (got min=${CD}, max=${cD}).`);
+      const ID = DD.bits ?? 16;
+      if (8 !== ID && 16 !== ID && 32 !== ID) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${ID}).`);
+      const pD = DD.mode ?? "clamp";
+      if ("clamp" !== pD && "wrap" !== pD) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(pD)}).`);
+      const iD = "wrap" === pD,
+        fD = Math.pow(2, ID);
       return {
-        min: uz,
-        max: bz,
-        bits: Ez,
-        wrap: iz,
-        wire: Vu[Ez],
-        range: bz - uz,
-        span: iz ? lz : uz === -bz ? lz - 2 : lz - 1
+        min: CD,
+        max: cD,
+        bits: ID,
+        wrap: iD,
+        wire: zC[ID],
+        range: cD - CD,
+        span: iD ? fD : CD === -cD ? fD - 2 : fD - 1
       }
     }
 
-    function qu(zz) {
-      return null !== zz && "object" === typeof zz && void 0 !== zz.quantized
+    function lC(DD) {
+      return null !== DD && "object" === typeof DD && void 0 !== DD.quantized
     }
 
-    function hu(zz, uz) {
-      if (zz.wrap) {
-        if (!Number.isFinite(uz)) return 0;
-        const bz = zz.range;
-        let Ez = (uz - zz.min) % bz;
-        Ez < 0 && (Ez += bz);
-        const nz = zz.span;
-        return Math.floor(Ez / bz * nz + .5) % nz
+    function LC(DD, CD) {
+      if (DD.wrap) {
+        if (!Number.isFinite(CD)) return 0;
+        const cD = DD.range;
+        let ID = (CD - DD.min) % cD;
+        ID < 0 && (ID += cD);
+        const pD = DD.span;
+        return Math.floor(ID / cD * pD + .5) % pD
       }
-      if (uz !== uz) return 0;
-      const bz = uz < zz.min ? zz.min : uz > zz.max ? zz.max : uz;
-      return Math.floor((bz - zz.min) / zz.range * zz.span + .5)
+      if (CD !== CD) return 0;
+      const cD = CD < DD.min ? DD.min : CD > DD.max ? DD.max : CD;
+      return Math.floor((cD - DD.min) / DD.range * DD.span + .5)
     }
 
-    function Uu(zz, uz) {
-      return zz.min + uz / zz.span * zz.range
+    function TC(DD, CD) {
+      return DD.min + CD / DD.span * DD.range
     }
 
-    function cu(zz) {
-      const uz = uu[zz.wire];
-      return (bz, Ez, nz) => uz(bz, hu(zz, Ez), nz)
+    function GC(DD) {
+      const CD = CC[DD.wire];
+      return (cD, ID, pD) => CD(cD, LC(DD, ID), pD)
     }
-    class gu {
+    class RC {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(zz) {
-        const uz = Object.getPrototypeOf(zz);
-        if (uz !== TE) {
-          let bz = gu.inheritedTypes.get(uz);
-          bz || (bz = new Set, gu.inheritedTypes.set(uz, bz)), bz.add(zz)
+      static register(DD) {
+        const CD = Object.getPrototypeOf(DD);
+        if (CD !== qI) {
+          let cD = RC.inheritedTypes.get(CD);
+          cD || (cD = new Set, RC.inheritedTypes.set(CD, cD)), cD.add(DD)
         }
       }
-      static cache(zz) {
-        let uz = gu.cachedContexts.get(zz);
-        return uz || (uz = new gu(zz), gu.cachedContexts.set(zz, uz)), uz
+      static cache(DD) {
+        let CD = RC.cachedContexts.get(DD);
+        return CD || (CD = new RC(DD), RC.cachedContexts.set(DD, CD)), CD
       }
-      constructor(zz) {
-        zz && this.discoverTypes(zz)
+      constructor(DD) {
+        DD && this.discoverTypes(DD)
       }
-      has(zz) {
-        return this.schemas.has(zz)
+      has(DD) {
+        return this.schemas.has(DD)
       }
-      get(zz) {
-        return this.types[zz]
+      get(DD) {
+        return this.types[DD]
       }
-      add(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(zz) && (this.types[uz] = zz, null == zz[Symbol.metadata] && ju.initialize(zz), this.schemas.set(zz, uz), !0)
+      add(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(DD) && (this.types[CD] = DD, null == DD[Symbol.metadata] && eC.initialize(DD), this.schemas.set(DD, CD), !0)
       }
-      getTypeId(zz) {
-        return this.schemas.get(zz)
+      getTypeId(DD) {
+        return this.schemas.get(DD)
       }
-      discoverTypes(zz) {
-        if (!this.add(zz)) return;
-        gu.inheritedTypes.get(zz)?.forEach((zz => {
-          this.discoverTypes(zz)
+      discoverTypes(DD) {
+        if (!this.add(DD)) return;
+        RC.inheritedTypes.get(DD)?.forEach((DD => {
+          this.discoverTypes(DD)
         }));
-        let uz = zz;
+        let CD = DD;
         for (;
-          (uz = Object.getPrototypeOf(uz)) && uz !== TE && uz !== Function.prototype;) this.discoverTypes(uz);
-        const bz = zz[Symbol.metadata];
-        (bz[Tz] || bz[mz]) && (this.hasFilters = !0);
-        for (const Ez in bz) {
-          const zz = bz[Ez].type;
-          if ("string" !== typeof zz && !qu(zz))
-            if ("function" === typeof zz) this.discoverTypes(zz);
+          (CD = Object.getPrototypeOf(CD)) && CD !== qI && CD !== Function.prototype;) this.discoverTypes(CD);
+        const cD = DD[Symbol.metadata];
+        (cD[qD] || cD[jD]) && (this.hasFilters = !0);
+        for (const ID in cD) {
+          const DD = cD[ID].type;
+          if ("string" !== typeof DD && !lC(DD))
+            if ("function" === typeof DD) this.discoverTypes(DD);
             else {
-              const uz = Object.values(zz)[0];
-              if ("string" === typeof uz) continue;
-              this.discoverTypes(uz)
+              const CD = Object.values(DD)[0];
+              if ("string" === typeof CD) continue;
+              this.discoverTypes(CD)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function Su(zz) {
-      const uz = Du(zz);
-      return uz ? {
-        complexTypeKlass: su[uz],
-        childType: zz[uz]
+    function kC(DD) {
+      const CD = YC(DD);
+      return CD ? {
+        complexTypeKlass: XC[CD],
+        childType: DD[CD]
       } : {
         complexTypeKlass: !1,
-        childType: zz
+        childType: DD
       }
     }
 
-    function yu(zz, uz) {
-      const bz = Qu(zz),
-        Ez = Du(bz),
-        nz = Ez && Du(bz[Ez]);
-      if (nz) throw new Error(`${uz?`${uz}: `:""}@colyseus/schema: nested collections are not supported ("${Ez}" of "${nz}"). Collections can only hold primitive types or Schema classes, wrap the inner ${nz} in a Schema class.`);
-      return bz
+    function dC(DD, CD) {
+      const cD = WC(DD),
+        ID = YC(cD),
+        pD = ID && YC(cD[ID]);
+      if (pD) throw new Error(`${CD?`${CD}: `:""}@colyseus/schema: nested collections are not supported ("${ID}" of "${pD}"). Collections can only hold primitive types or Schema classes, wrap the inner ${pD} in a Schema class.`);
+      return cD
     }
 
-    function Du(zz) {
-      return "object" === typeof zz && null !== zz ? Object.keys(zz).find((zz => void 0 !== su[zz])) : void 0
+    function YC(DD) {
+      return "object" === typeof DD && null !== DD ? Object.keys(DD).find((DD => void 0 !== XC[DD])) : void 0
     }
 
-    function Qu(zz) {
-      if ("object" !== typeof zz || null === zz) return zz;
-      if (Array.isArray(zz)) return {
-        array: Qu(zz[0])
+    function WC(DD) {
+      if ("object" !== typeof DD || null === DD) return DD;
+      if (Array.isArray(DD)) return {
+        array: WC(DD[0])
       };
-      const uz = function(zz) {
-        const uz = Object.keys(zz),
-          bz = uz.filter((zz => /\d+/.test(zz)));
-        if (bz.length > 0 && bz.length === uz.length / 2 && zz[zz[bz[0]]] == bz[0]) return "number";
-        if (uz.length > 0 && uz.every((uz => zz[uz] === uz))) return "string"
-      }(zz);
-      if (uz) return uz;
-      if (qu(zz)) return "string" === typeof zz.quantized.wire ? zz : {
-        quantized: mu(zz.quantized)
+      const CD = function(DD) {
+        const CD = Object.keys(DD),
+          cD = CD.filter((DD => /\d+/.test(DD)));
+        if (cD.length > 0 && cD.length === CD.length / 2 && DD[DD[cD[0]]] == cD[0]) return "number";
+        if (CD.length > 0 && CD.every((CD => DD[CD] === CD))) return "string"
+      }(DD);
+      if (CD) return CD;
+      if (lC(DD)) return "string" === typeof DD.quantized.wire ? DD : {
+        quantized: jC(DD.quantized)
       };
-      if (void 0 !== zz.type) return Qu(zz.type);
-      const bz = Du(zz);
-      return bz && (zz[bz] = Qu(zz[bz])), zz
+      if (void 0 !== DD.type) return WC(DD.type);
+      const cD = YC(DD);
+      return cD && (DD[cD] = WC(DD[cD])), DD
     }
-    const Wu = [Az, Pz, Gz, az, Vz, mz, xz];
+    const sC = [xD, KD, aD, VD, zD, jD, HD];
 
-    function eu(zz, uz, bz) {
-      zz[uz] || Object.defineProperty(zz, uz, {
+    function EC(DD, CD, cD) {
+      DD[CD] || Object.defineProperty(DD, CD, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), zz[uz].push(bz)
+      }), DD[CD].push(cD)
     }
-    const ju = {
-        addField(zz, uz, bz, Ez, nz) {
-          if (uz >= 63) throw new Error(`Can't define field '${bz}'.\nSchema instances may only have up to 63 fields.`);
-          zz[uz] = Object.assign(zz[uz] || {}, {
-            type: Ez,
-            index: uz,
-            name: bz
-          }), Object.defineProperty(zz, Nz, {
-            value: zz[Nz] || {},
+    const eC = {
+        addField(DD, CD, cD, ID, pD) {
+          if (CD >= 63) throw new Error(`Can't define field '${cD}'.\nSchema instances may only have up to 63 fields.`);
+          DD[CD] = Object.assign(DD[CD] || {}, {
+            type: ID,
+            index: CD,
+            name: cD
+          }), Object.defineProperty(DD, OD, {
+            value: DD[OD] || {},
             enumerable: !1,
             configurable: !0
-          }), zz[Nz][bz] = nz || {
+          }), DD[OD][cD] = pD || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(zz, Jz, {
-            value: uz,
+          }, Object.defineProperty(DD, UD, {
+            value: CD,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(zz, bz, {
-            value: uz,
+          }), Object.defineProperty(DD, cD, {
+            value: CD,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof zz[uz].type || qu(zz[uz].type) || (void 0 === zz[Az] && Object.defineProperty(zz, Az, {
+          }), "string" === typeof DD[CD].type || lC(DD[CD].type) || (void 0 === DD[xD] && Object.defineProperty(DD, xD, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), zz[Az].push(uz));
-          const iz = zz[uz].type;
-          if (iz && "object" === typeof iz && void 0 !== iz.stream) {
-            if (void 0 !== iz.array) throw new Error(vu);
-            zz[uz].stream = !0, zz[mz] || Object.defineProperty(zz, mz, {
+          }), DD[xD].push(CD));
+          const iD = DD[CD].type;
+          if (iD && "object" === typeof iD && void 0 !== iD.stream) {
+            if (void 0 !== iD.array) throw new Error(PC);
+            DD[CD].stream = !0, DD[jD] || Object.defineProperty(DD, jD, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), zz[mz].includes(uz) || zz[mz].push(uz);
-            const nz = Ez?.priority;
-            "function" === typeof nz && ju.setStreamPriority(zz, bz, nz)
+            }), DD[jD].includes(CD) || DD[jD].push(CD);
+            const pD = ID?.priority;
+            "function" === typeof pD && eC.setStreamPriority(DD, cD, pD)
           }
         },
-        setTag(zz, uz, bz) {
-          const Ez = zz[uz];
-          if (zz[Ez].tag = bz, zz[Tz] || (Object.defineProperty(zz, Tz, {
+        setTag(DD, CD, cD) {
+          const ID = DD[CD];
+          if (DD[ID].tag = cD, DD[qD] || (Object.defineProperty(DD, qD, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(zz, Lz, {
+            }), Object.defineProperty(DD, JD, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), zz[Tz].push(Ez), bz < 0) zz[Lz][bz] || (zz[Lz][bz] = []), zz[Lz][bz].push(Ez);
+            })), DD[qD].push(ID), cD < 0) DD[JD][cD] || (DD[JD][cD] = []), DD[JD][cD].push(ID);
           else
-            for (let nz = bz; nz > 0; nz &= nz - 1) {
-              const uz = nz & -nz;
-              zz[Lz][uz] || (zz[Lz][uz] = []), zz[Lz][uz].push(Ez)
+            for (let pD = cD; pD > 0; pD &= pD - 1) {
+              const CD = pD & -pD;
+              DD[JD][CD] || (DD[JD][CD] = []), DD[JD][CD].push(ID)
             }
         },
-        setUnreliable(zz, uz) {
-          const bz = zz[uz];
-          if ("string" !== typeof zz[bz].type) throw new Error(`@unreliable cannot be applied to ref-type field "${uz}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          zz[bz].unreliable = !0, zz[Pz] || Object.defineProperty(zz, Pz, {
+        setUnreliable(DD, CD) {
+          const cD = DD[CD];
+          if ("string" !== typeof DD[cD].type) throw new Error(`@unreliable cannot be applied to ref-type field "${CD}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          DD[cD].unreliable = !0, DD[KD] || Object.defineProperty(DD, KD, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), zz[Pz].push(bz)
+          }), DD[KD].push(cD)
         },
-        setPatchOnly(zz, uz) {
-          const bz = zz[uz];
-          if (zz[bz].fullStateOnly) throw new Error(`field "${uz}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          zz[bz].patchOnly = !0, eu(zz, Gz, bz), eu(zz, az, bz)
+        setPatchOnly(DD, CD) {
+          const cD = DD[CD];
+          if (DD[cD].fullStateOnly) throw new Error(`field "${CD}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          DD[cD].patchOnly = !0, EC(DD, aD, cD), EC(DD, VD, cD)
         },
-        setDeprecated(zz, uz) {
-          const bz = zz[uz];
-          zz[bz].deprecated = !0, eu(zz, az, bz), Object.defineProperty(zz, bz, {
-            value: zz[bz],
+        setDeprecated(DD, CD) {
+          const cD = DD[CD];
+          DD[cD].deprecated = !0, EC(DD, VD, cD), Object.defineProperty(DD, cD, {
+            value: DD[cD],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(zz, uz) {
-          const bz = zz[uz];
-          if (zz[bz].patchOnly) throw new Error(`field "${uz}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          zz[bz].fullStateOnly = !0, eu(zz, Vz, bz)
+        setFullStateOnly(DD, CD) {
+          const cD = DD[CD];
+          if (DD[cD].patchOnly) throw new Error(`field "${CD}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          DD[cD].fullStateOnly = !0, EC(DD, zD, cD)
         },
-        setStream(zz, uz) {
-          const bz = zz[uz];
-          zz[bz].stream = !0, zz[mz] || Object.defineProperty(zz, mz, {
+        setStream(DD, CD) {
+          const cD = DD[CD];
+          DD[cD].stream = !0, DD[jD] || Object.defineProperty(DD, jD, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), zz[mz].push(bz)
+          }), DD[jD].push(cD)
         },
-        setStreamPriority(zz, uz, bz) {
-          const Ez = zz[uz];
-          zz[qz] || Object.defineProperty(zz, qz, {
+        setStreamPriority(DD, CD, cD) {
+          const ID = DD[CD];
+          DD[lD] || Object.defineProperty(DD, lD, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), zz[qz][Ez] = bz
+          }), DD[lD][ID] = cD
         },
-        getStreamPriority: (zz, uz) => zz?.[qz]?.[uz],
-        defineField(zz, uz, bz, Ez, nz) {
-          const iz = yu(nz, `${zz.name}.${Ez}`),
+        getStreamPriority: (DD, CD) => DD?.[lD]?.[CD],
+        defineField(DD, CD, cD, ID, pD) {
+          const iD = dC(pD, `${DD.name}.${ID}`),
             {
-              complexTypeKlass: lz,
-              childType: Mz
-            } = Su(iz);
-          ju.addField(uz, bz, Ez, iz, oE(Ez, bz, Mz, lz)), uz[Nz][Ez] && Object.defineProperty(zz.prototype, Ez, uz[Nz][Ez]), ("string" === typeof iz || qu(iz)) && (uz[xz] || Object.defineProperty(uz, xz, {
+              complexTypeKlass: fD,
+              childType: bD
+            } = kC(iD);
+          eC.addField(CD, cD, ID, iD, nI(ID, cD, bD, fD)), CD[OD][ID] && Object.defineProperty(DD.prototype, ID, CD[OD][ID]), ("string" === typeof iD || lC(iD)) && (CD[HD] || Object.defineProperty(CD, HD, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), uz[xz][bz] = "string" === typeof iz ? uu[iz] : cu(iz.quantized))
+          }), CD[HD][cD] = "string" === typeof iD ? CC[iD] : GC(iD.quantized))
         },
-        setFields(zz, uz) {
-          const bz = zz.prototype.constructor;
-          gu.register(bz);
-          const Ez = Object.getPrototypeOf(bz),
-            nz = Ez && Ez[Symbol.metadata],
-            iz = ju.initialize(bz);
-          bz[tz] || (bz[tz] = TE[tz]), bz[Hz] || (bz[Hz] = TE[Hz]), bz[Oz] || (bz[Oz] = TE[Oz]), bz.prototype.toJSON || (bz.prototype.toJSON = TE.prototype.toJSON);
-          let lz = iz[Jz] ?? (nz && nz[Jz]) ?? -1;
-          lz++, iz[xz] || Object.defineProperty(iz, xz, {
-            value: nz?.[xz] ? [...nz[xz]] : [],
+        setFields(DD, CD) {
+          const cD = DD.prototype.constructor;
+          RC.register(cD);
+          const ID = Object.getPrototypeOf(cD),
+            pD = ID && ID[Symbol.metadata],
+            iD = eC.initialize(cD);
+          cD[QD] || (cD[QD] = qI[QD]), cD[wD] || (cD[wD] = qI[wD]), cD[SD] || (cD[SD] = qI[SD]), cD.prototype.toJSON || (cD.prototype.toJSON = qI.prototype.toJSON);
+          let fD = iD[UD] ?? (pD && pD[UD]) ?? -1;
+          fD++, iD[HD] || Object.defineProperty(iD, HD, {
+            value: pD?.[HD] ? [...pD[HD]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const Mz in uz) {
-            if (void 0 !== iz[Mz]) throw new Error(`@colyseus/schema: Duplicate '${Mz}' definition on '${bz.name||"(anonymous)"}'.`);
-            ju.defineField(bz, iz, lz, Mz, uz[Mz]), lz++
+          for (const bD in CD) {
+            if (void 0 !== iD[bD]) throw new Error(`@colyseus/schema: Duplicate '${bD}' definition on '${cD.name||"(anonymous)"}'.`);
+            eC.defineField(cD, iD, fD, bD, CD[bD]), fD++
           }
-          return zz
+          return DD
         },
-        isDeprecated: (zz, uz) => !0 === zz[uz].deprecated,
-        initialize(zz) {
-          const uz = Object.getPrototypeOf(zz),
-            bz = uz[Symbol.metadata];
-          let Ez = zz[Symbol.metadata] ?? Object.create(null);
-          if (uz !== TE && Ez === bz && (Ez = Object.create(null), bz)) {
-            Object.setPrototypeOf(Ez, bz), Object.defineProperty(Ez, Jz, {
-              value: bz[Jz],
+        isDeprecated: (DD, CD) => !0 === DD[CD].deprecated,
+        initialize(DD) {
+          const CD = Object.getPrototypeOf(DD),
+            cD = CD[Symbol.metadata];
+          let ID = DD[Symbol.metadata] ?? Object.create(null);
+          if (CD !== qI && ID === cD && (ID = Object.create(null), cD)) {
+            Object.setPrototypeOf(ID, cD), Object.defineProperty(ID, UD, {
+              value: cD[UD],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== bz[Tz] && (Object.defineProperty(Ez, Tz, {
-              value: [...bz[Tz]],
+            }), void 0 !== cD[qD] && (Object.defineProperty(ID, qD, {
+              value: [...cD[qD]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(Ez, Lz, {
+            }), Object.defineProperty(ID, JD, {
               value: {
-                ...bz[Lz]
+                ...cD[JD]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const zz of Wu) {
-              const uz = bz[zz];
-              void 0 !== uz && Object.defineProperty(Ez, zz, {
-                value: [...uz],
+            for (const DD of sC) {
+              const CD = cD[DD];
+              void 0 !== CD && Object.defineProperty(ID, DD, {
+                value: [...CD],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(Ez, Nz, {
+            Object.defineProperty(ID, OD, {
               value: {
-                ...bz[Nz]
+                ...cD[OD]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(zz, Symbol.metadata, {
-            value: Ez,
+          return Object.defineProperty(DD, Symbol.metadata, {
+            value: ID,
             writable: !1,
             configurable: !0
-          }), Ez
+          }), ID
         },
-        isValidInstance: zz => zz.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(zz.constructor[Symbol.metadata], Jz),
-        getFields(zz) {
-          const uz = zz[Symbol.metadata],
-            bz = {};
-          for (let Ez = 0; Ez <= uz[Jz]; Ez++) bz[uz[Ez].name] = uz[Ez].type;
-          return bz
+        isValidInstance: DD => DD.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(DD.constructor[Symbol.metadata], UD),
+        getFields(DD) {
+          const CD = DD[Symbol.metadata],
+            cD = {};
+          for (let ID = 0; ID <= CD[UD]; ID++) cD[CD[ID].name] = CD[ID].type;
+          return cD
         },
-        hasViewTagAtIndex: (zz, uz) => zz?.[Tz]?.includes(uz),
-        hasUnreliableAtIndex: (zz, uz) => zz?.[Pz]?.includes(uz),
-        hasPatchOnlyAtIndex: (zz, uz) => zz?.[Gz]?.includes(uz),
-        hasFullStateOnlyAtIndex: (zz, uz) => zz?.[Vz]?.includes(uz),
-        hasStreamAtIndex: (zz, uz) => zz?.[mz]?.includes(uz)
+        hasViewTagAtIndex: (DD, CD) => DD?.[qD]?.includes(CD),
+        hasUnreliableAtIndex: (DD, CD) => DD?.[KD]?.includes(CD),
+        hasPatchOnlyAtIndex: (DD, CD) => DD?.[aD]?.includes(CD),
+        hasFullStateOnlyAtIndex: (DD, CD) => DD?.[zD]?.includes(CD),
+        hasStreamAtIndex: (DD, CD) => DD?.[jD]?.includes(CD)
       },
-      Iu = (zz, uz, bz) => zz(uz, bz);
-    class Bu {
+      uC = (DD, CD, cD) => DD(CD, cD);
+    class hC {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(zz) {
-        this.ops = new Uint8Array(Math.max(zz + 1, 1))
+      constructor(DD) {
+        this.ops = new Uint8Array(Math.max(DD + 1, 1))
       }
-      record(zz, uz) {
-        const bz = this.ops[zz];
-        0 === bz ? this.ops[zz] = uz : (bz === nz.DELETE || bz === nz.ADD && uz === nz.DELETE_AND_ADD) && (this.ops[zz] = nz.DELETE_AND_ADD), zz < 32 ? this.dirtyLow |= 1 << zz : this.dirtyHigh |= 1 << zz - 32
+      record(DD, CD) {
+        const cD = this.ops[DD];
+        0 === cD ? this.ops[DD] = CD : (cD === pD.DELETE || cD === pD.ADD && CD === pD.DELETE_AND_ADD) && (this.ops[DD] = pD.DELETE_AND_ADD), DD < 32 ? this.dirtyLow |= 1 << DD : this.dirtyHigh |= 1 << DD - 32
       }
-      recordDelete(zz, uz) {
-        this.ops[zz] = uz, zz < 32 ? this.dirtyLow |= 1 << zz : this.dirtyHigh |= 1 << zz - 32
+      recordDelete(DD, CD) {
+        this.ops[DD] = CD, DD < 32 ? this.dirtyLow |= 1 << DD : this.dirtyHigh |= 1 << DD - 32
       }
-      recordRaw(zz, uz) {
-        this.record(zz, uz)
+      recordRaw(DD, CD) {
+        this.record(DD, CD)
       }
-      operationAt(zz) {
-        const uz = this.ops[zz];
-        return 0 === uz ? void 0 : uz
+      operationAt(DD) {
+        const CD = this.ops[DD];
+        return 0 === CD ? void 0 : CD
       }
-      setOperationAt(zz, uz) {
-        this.ops[zz] = uz
+      setOperationAt(DD, CD) {
+        this.ops[DD] = CD
       }
-      forEach(zz) {
-        this.forEachWithCtx(zz, Iu)
+      forEach(DD) {
+        this.forEachWithCtx(DD, uC)
       }
-      forEachWithCtx(zz, uz) {
-        let bz = this.dirtyLow,
-          Ez = this.dirtyHigh;
-        const nz = this.ops;
-        for (; 0 !== bz;) {
-          const Ez = bz & -bz,
-            iz = 31 - Math.clz32(Ez);
-          bz ^= Ez, uz(zz, iz, nz[iz])
+      forEachWithCtx(DD, CD) {
+        let cD = this.dirtyLow,
+          ID = this.dirtyHigh;
+        const pD = this.ops;
+        for (; 0 !== cD;) {
+          const ID = cD & -cD,
+            iD = 31 - Math.clz32(ID);
+          cD ^= ID, CD(DD, iD, pD[iD])
         }
-        for (; 0 !== Ez;) {
-          const bz = Ez & -Ez,
-            iz = 31 - Math.clz32(bz) + 32;
-          Ez ^= bz, uz(zz, iz, nz[iz])
+        for (; 0 !== ID;) {
+          const cD = ID & -ID,
+            iD = 31 - Math.clz32(cD) + 32;
+          ID ^= cD, CD(DD, iD, pD[iD])
         }
       }
       size() {
-        return Yu(this.dirtyLow) + Yu(this.dirtyHigh)
+        return AC(this.dirtyLow) + AC(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class Cu {
-      tR = new Map;
+    class rC {
+      bZ = new Map;
       pureOps = [];
-      record(zz, uz) {
-        const bz = this.tR.get(zz);
-        void 0 === bz ? this.tR.set(zz, uz) : (bz === nz.DELETE || bz === nz.ADD && uz === nz.DELETE_AND_ADD) && this.tR.set(zz, nz.DELETE_AND_ADD)
+      record(DD, CD) {
+        const cD = this.bZ.get(DD);
+        void 0 === cD ? this.bZ.set(DD, CD) : (cD === pD.DELETE || cD === pD.ADD && CD === pD.DELETE_AND_ADD) && this.bZ.set(DD, pD.DELETE_AND_ADD)
       }
-      recordDelete(zz, uz) {
-        this.tR.set(zz, uz)
+      recordDelete(DD, CD) {
+        this.bZ.set(DD, CD)
       }
-      recordRaw(zz, uz) {
-        this.tR.set(zz, uz)
+      recordRaw(DD, CD) {
+        this.bZ.set(DD, CD)
       }
-      recordPure(zz) {
-        this.pureOps.push([this.tR.size, zz])
+      recordPure(DD) {
+        this.pureOps.push([this.bZ.size, DD])
       }
-      operationAt(zz) {
-        return this.tR.get(zz)
+      operationAt(DD) {
+        return this.bZ.get(DD)
       }
-      setOperationAt(zz, uz) {
-        this.tR.has(zz) && this.tR.set(zz, uz)
+      setOperationAt(DD, CD) {
+        this.bZ.has(DD) && this.bZ.set(DD, CD)
       }
-      forEach(zz) {
-        this.forEachWithCtx(zz, Iu)
+      forEach(DD) {
+        this.forEachWithCtx(DD, uC)
       }
-      forEachWithCtx(zz, uz) {
-        const bz = this.pureOps;
-        if (bz.length > 0) {
-          let Ez = 0,
-            nz = 0;
-          for (const [iz, lz] of this.tR) {
-            for (; Ez < bz.length && bz[Ez][0] <= nz;) {
-              const nz = bz[Ez++][1];
-              uz(zz, -nz, nz)
+      forEachWithCtx(DD, CD) {
+        const cD = this.pureOps;
+        if (cD.length > 0) {
+          let ID = 0,
+            pD = 0;
+          for (const [iD, fD] of this.bZ) {
+            for (; ID < cD.length && cD[ID][0] <= pD;) {
+              const pD = cD[ID++][1];
+              CD(DD, -pD, pD)
             }
-            uz(zz, iz, lz), nz++
+            CD(DD, iD, fD), pD++
           }
-          for (; Ez < bz.length;) {
-            const nz = bz[Ez++][1];
-            uz(zz, -nz, nz)
+          for (; ID < cD.length;) {
+            const pD = cD[ID++][1];
+            CD(DD, -pD, pD)
           }
         } else
-          for (const [Ez, nz] of this.tR) uz(zz, Ez, nz)
+          for (const [ID, pD] of this.bZ) CD(DD, ID, pD)
       }
       size() {
-        return this.tR.size + this.pureOps.length
+        return this.bZ.size + this.pureOps.length
       }
       has() {
-        return this.tR.size > 0 || this.pureOps.length > 0
+        return this.bZ.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.tR.clear(), this.pureOps.length = 0
+        this.bZ.clear(), this.pureOps.length = 0
       }
-      shift(zz) {
-        const uz = new Map;
-        for (const [bz, Ez] of this.tR) uz.set(bz + zz, Ez);
-        this.tR = uz
+      shift(DD) {
+        const CD = new Map;
+        for (const [cD, ID] of this.bZ) CD.set(cD + DD, ID);
+        this.bZ = CD
       }
     }
 
-    function Yu(zz) {
-      return 16843009 * ((zz = (858993459 & (zz -= zz >>> 1 & 1431655765)) + (zz >>> 2 & 858993459)) + (zz >>> 4) & 252645135) >>> 24
+    function AC(DD) {
+      return 16843009 * ((DD = (858993459 & (DD -= DD >>> 1 & 1431655765)) + (DD >>> 2 & 858993459)) + (DD >>> 4) & 252645135) >>> 24
     }
 
-    function ku(zz) {
-      if (void 0 === zz) return 0;
-      let uz = 0;
-      for (let bz = 0, Ez = zz.length; bz < Ez; bz++) {
-        const Ez = zz[bz];
-        Ez < 32 && (uz |= 1 << Ez)
+    function FC(DD) {
+      if (void 0 === DD) return 0;
+      let CD = 0;
+      for (let cD = 0, ID = DD.length; cD < ID; cD++) {
+        const ID = DD[cD];
+        ID < 32 && (CD |= 1 << ID)
       }
-      return uz
+      return CD
     }
 
-    function zb(zz) {
-      const uz = zz.constructor;
-      if (Object.prototype.hasOwnProperty.call(uz, vz)) return uz[vz];
-      const bz = uz[Symbol.metadata],
-        Ez = ju.isValidInstance(zz),
-        nz = (bz?.[Tz]?.length ?? 0) > 0,
-        iz = function(zz) {
-          const uz = [],
-            bz = [],
-            Ez = [],
-            nz = [],
-            iz = zz?.[Jz];
-          if (void 0 === iz) return {
-            names: uz,
-            types: bz,
-            tags: Ez,
-            encoders: nz
+    function Dc(DD) {
+      const CD = DD.constructor;
+      if (Object.prototype.hasOwnProperty.call(CD, PD)) return CD[PD];
+      const cD = CD[Symbol.metadata],
+        ID = eC.isValidInstance(DD),
+        pD = (cD?.[qD]?.length ?? 0) > 0,
+        iD = function(DD) {
+          const CD = [],
+            cD = [],
+            ID = [],
+            pD = [],
+            iD = DD?.[UD];
+          if (void 0 === iD) return {
+            names: CD,
+            types: cD,
+            tags: ID,
+            encoders: pD
           };
-          const lz = zz[xz];
-          for (let Mz = 0; Mz <= iz; Mz++) {
-            const iz = zz[Mz];
-            void 0 !== iz ? (uz[Mz] = iz.name, bz[Mz] = iz.type, Ez[Mz] = iz.tag, nz[Mz] = lz?.[Mz]) : (uz[Mz] = void 0, bz[Mz] = void 0, Ez[Mz] = void 0, nz[Mz] = void 0)
+          const fD = DD[HD];
+          for (let bD = 0; bD <= iD; bD++) {
+            const iD = DD[bD];
+            void 0 !== iD ? (CD[bD] = iD.name, cD[bD] = iD.type, ID[bD] = iD.tag, pD[bD] = fD?.[bD]) : (CD[bD] = void 0, cD[bD] = void 0, ID[bD] = void 0, pD[bD] = void 0)
           }
           return {
-            names: uz,
-            types: bz,
-            tags: Ez,
-            encoders: nz
+            names: CD,
+            types: cD,
+            tags: ID,
+            encoders: pD
           }
-        }(bz),
-        lz = Ez && !nz ? void 0 : uz[pz],
-        Mz = {
-          encoder: uz[Hz],
-          filter: lz,
-          metadata: bz,
-          isSchema: Ez,
-          filterBitmask: Ez ? ku(bz?.[Tz]) : 0,
-          hasAnyFullStateOnly: (bz?.[Vz]?.length ?? 0) > 0,
-          hasAnyUnreliable: (bz?.[Pz]?.length ?? 0) > 0,
-          hasAnyStream: (bz?.[mz]?.length ?? 0) > 0,
-          hasAnyView: nz,
-          fullStateOnlyBitmask: ku(bz?.[Vz]),
-          unreliableBitmask: ku(bz?.[Pz]),
-          streamBitmask: ku(bz?.[mz]),
-          names: iz.names,
-          types: iz.types,
-          tags: iz.tags,
-          encoders: iz.encoders
+        }(cD),
+        fD = ID && !pD ? void 0 : CD[BD],
+        bD = {
+          encoder: CD[wD],
+          filter: fD,
+          metadata: cD,
+          isSchema: ID,
+          filterBitmask: ID ? FC(cD?.[qD]) : 0,
+          hasAnyFullStateOnly: (cD?.[zD]?.length ?? 0) > 0,
+          hasAnyUnreliable: (cD?.[KD]?.length ?? 0) > 0,
+          hasAnyStream: (cD?.[jD]?.length ?? 0) > 0,
+          hasAnyView: pD,
+          fullStateOnlyBitmask: FC(cD?.[zD]),
+          unreliableBitmask: FC(cD?.[KD]),
+          streamBitmask: FC(cD?.[jD]),
+          names: iD.names,
+          types: iD.types,
+          tags: iD.tags,
+          encoders: iD.encoders
         };
-      return Object.defineProperty(uz, vz, {
-        value: Mz,
+      return Object.defineProperty(CD, PD, {
+        value: bD,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), Mz
+      }), bD
     }
 
-    function ub(zz, uz) {
-      if (void 0 !== zz.parentRef && uz(zz.parentRef, zz._parentIndex)) return !0;
-      for (let bz = zz.extraParents; void 0 !== bz; bz = bz.next)
-        if (uz(bz.ref, bz.index)) return !0;
+    function Cc(DD, CD) {
+      if (void 0 !== DD.parentRef && CD(DD.parentRef, DD._parentIndex)) return !0;
+      for (let cD = DD.extraParents; void 0 !== cD; cD = cD.next)
+        if (CD(cD.ref, cD.index)) return !0;
       return !1
     }
-    const bb = (zz, uz) => {
-        zz.isFieldUnreliable(uz) ? zz.ensureUnreliableRecorder().record(uz, nz.ADD) : zz.record(uz, nz.ADD)
+    const cc = (DD, CD) => {
+        DD.isFieldUnreliable(CD) ? DD.ensureUnreliableRecorder().record(CD, pD.ADD) : DD.record(CD, pD.ADD)
       },
-      Eb = (zz, uz) => zz(uz);
+      Ic = (DD, CD) => DD(CD);
 
-    function nb(zz, uz, bz) {
-      const Ez = zz.refTarget;
-      if (void 0 !== Ez[Kz]) {
-        if (zz.isPatchOnly) return;
-        if (Array.isArray(Ez.items)) {
-          const zz = Ez.items;
-          for (let Ez = 0, nz = zz.length; Ez < nz; Ez++) void 0 !== zz[Ez] && bz(uz, Ez)
-        } else if (void 0 !== Ez.journal)
-          for (const [zz, nz] of Ez.journal.keyByIndex) Ez.$items.has(nz) && bz(uz, zz);
-        else if (void 0 !== Ez.$items)
-          for (const zz of Ez.$items.keys()) bz(uz, zz)
+    function pc(DD, CD, cD) {
+      const ID = DD.refTarget;
+      if (void 0 !== ID[oD]) {
+        if (DD.isPatchOnly) return;
+        if (Array.isArray(ID.items)) {
+          const DD = ID.items;
+          for (let ID = 0, pD = DD.length; ID < pD; ID++) void 0 !== DD[ID] && cD(CD, ID)
+        } else if (void 0 !== ID.journal)
+          for (const [DD, pD] of ID.journal.keyByIndex) ID.$items.has(pD) && cD(CD, DD);
+        else if (void 0 !== ID.$items)
+          for (const DD of ID.$items.keys()) cD(CD, DD)
       } else {
-        const nz = zz.metadata;
-        if (!nz) return;
-        const iz = nz[Jz] ?? -1,
-          lz = nz[az],
-          Mz = zz.encDescriptor.names;
-        for (let zz = 0; zz <= iz; zz++) {
-          const nz = Mz[zz];
-          if (void 0 === nz) continue;
-          if (lz && lz.includes(zz)) continue;
-          const iz = Ez[nz];
-          void 0 !== iz && null !== iz && bz(uz, zz)
+        const pD = DD.metadata;
+        if (!pD) return;
+        const iD = pD[UD] ?? -1,
+          fD = pD[VD],
+          bD = DD.encDescriptor.names;
+        for (let DD = 0; DD <= iD; DD++) {
+          const pD = bD[DD];
+          if (void 0 === pD) continue;
+          if (fD && fD.includes(DD)) continue;
+          const iD = ID[pD];
+          void 0 !== iD && null !== iD && cD(CD, DD)
         }
       }
     }
 
-    function ib(zz, uz, bz, Ez) {
-      ! function(zz, uz, bz) {
-        if (!uz) return;
-        const Ez = uz[Rz],
-          nz = !Ez._isSchema;
-        let iz;
-        nz ? (uz = Ez.parent, bz = Ez.parentIndex, iz = uz?.[Rz].metadata) : iz = Ez.metadata;
-        const lz = (iz?.[Gz]?.includes(bz) ? vb : 0) | (iz?.[Vz]?.includes(bz) ? xb : 0),
-          Mz = Ez.flags & Tb | lz,
-          tz = zz.flags;
-        zz.flags = tz | Mz;
-        Mz & ~tz & xb && (zz.reset(), zz.unreliableRecorder?.reset());
-        const Hz = zz.root?.types;
-        if (!Hz?.hasFilters) return;
-        const Oz = iz?.[Tz]?.includes(bz) ?? !1,
-          pz = iz?.[mz]?.includes(bz) ?? !1,
-          dz = Ez.isFiltered || Oz || pz;
-        if (zz.isFiltered = dz, pz && !nz) {
-          zz.isStreamCollection = !0;
-          const uz = Ju(zz.ref);
-          if (void 0 === uz.priority) {
-            const zz = ju.getStreamPriority(iz, bz);
-            void 0 !== zz && (uz.priority = zz)
+    function ic(DD, CD, cD, ID) {
+      ! function(DD, CD, cD) {
+        if (!CD) return;
+        const ID = CD[ZD],
+          pD = !ID._isSchema;
+        let iD;
+        pD ? (CD = ID.parent, cD = ID.parentIndex, iD = CD?.[ZD].metadata) : iD = ID.metadata;
+        const fD = (iD?.[aD]?.includes(cD) ? Pc : 0) | (iD?.[zD]?.includes(cD) ? Hc : 0),
+          bD = ID.flags & qc | fD,
+          QD = DD.flags;
+        DD.flags = QD | bD;
+        bD & ~QD & Hc && (DD.reset(), DD.unreliableRecorder?.reset());
+        const wD = DD.root?.types;
+        if (!wD?.hasFilters) return;
+        const SD = iD?.[qD]?.includes(cD) ?? !1,
+          BD = iD?.[jD]?.includes(cD) ?? !1,
+          yD = ID.isFiltered || SD || BD;
+        if (DD.isFiltered = yD, BD && !pD) {
+          DD.isStreamCollection = !0;
+          const CD = UC(DD.ref);
+          if (void 0 === CD.priority) {
+            const DD = eC.getStreamPriority(iD, cD);
+            void 0 !== DD && (CD.priority = DD)
           }
-          zz.root?.registerStream(zz.ref)
+          DD.root?.registerStream(DD.ref)
         }
-        if (dz) {
-          const uz = Mb(zz);
-          zz.isVisibilitySharedWithParent = Ez.isFiltered && uz && !pz && (!Oz || nz && iz[bz].tag !== ZE)
+        if (yD) {
+          const CD = bc(DD);
+          DD.isVisibilitySharedWithParent = ID.isFiltered && CD && !BD && (!SD || pD && iD[cD].tag !== tI)
         }
-      }(zz, uz, bz), zz.isFullStateOnly || (zz.has() && zz.root?.enqueueChangeTree(zz), zz.unreliableRecorder?.has() && zz.root?.enqueueUnreliable(zz), zz.has() || zz.unreliableRecorder?.has() || zz.root?.enqueueChangeTree(zz))
+      }(DD, CD, cD), DD.isFullStateOnly || (DD.has() && DD.root?.enqueueChangeTree(DD), DD.unreliableRecorder?.has() && DD.root?.enqueueUnreliable(DD), DD.has() || DD.unreliableRecorder?.has() || DD.root?.enqueueChangeTree(DD))
     }
 
-    function lb(zz) {
-      const uz = zz.pendingFilterRefresh;
-      for (let bz = 0; bz < uz.length; bz++) {
-        const zz = uz[bz];
-        0 !== (zz.flags & Ab) && tb(zz)
+    function fc(DD) {
+      const CD = DD.pendingFilterRefresh;
+      for (let cD = 0; cD < CD.length; cD++) {
+        const DD = CD[cD];
+        0 !== (DD.flags & xc) && Qc(DD)
       }
-      uz.length = 0
+      CD.length = 0
     }
 
-    function Mb(zz) {
-      return zz._isSchema || "string" !== typeof zz.refTarget[Kz]
+    function bc(DD) {
+      return DD._isSchema || "string" !== typeof DD.refTarget[oD]
     }
 
-    function tb(zz) {
-      zz.flags &= ~Ab;
-      const uz = zz.root;
-      if (void 0 === uz || void 0 === zz.parentRef) return;
-      const bz = Mb(zz);
-      let Ez = Fb(zz, zz.parentRef, zz._parentIndex, bz);
-      for (let iz = zz.extraParents; void 0 !== iz && Ez !== db; iz = iz.next) Ez |= Fb(zz, iz.ref, iz.index, bz);
-      if (0 === Ez) return;
-      zz.isVisibilitySharedWithParent = 0 !== (Ez & pb);
-      const nz = 0 === (Ez & Ob);
-      nz !== zz.isFiltered && (zz.isFiltered = nz, nz || zz.isFullStateOnly || (zz.forEachLiveWithCtx(zz, bb), zz.has() && uz.enqueueChangeTree(zz), zz.unreliableRecorder?.has() && uz.enqueueUnreliable(zz)), zz.forEachChildWithCtx(zz, Zb))
+    function Qc(DD) {
+      DD.flags &= ~xc;
+      const CD = DD.root;
+      if (void 0 === CD || void 0 === DD.parentRef) return;
+      const cD = bc(DD);
+      let ID = Mc(DD, DD.parentRef, DD._parentIndex, cD);
+      for (let iD = DD.extraParents; void 0 !== iD && ID !== yc; iD = iD.next) ID |= Mc(DD, iD.ref, iD.index, cD);
+      if (0 === ID) return;
+      DD.isVisibilitySharedWithParent = 0 !== (ID & Bc);
+      const pD = 0 === (ID & Sc);
+      pD !== DD.isFiltered && (DD.isFiltered = pD, pD || DD.isFullStateOnly || (DD.forEachLiveWithCtx(DD, cc), DD.has() && CD.enqueueChangeTree(DD), DD.unreliableRecorder?.has() && CD.enqueueUnreliable(DD)), DD.forEachChildWithCtx(DD, tc))
     }
-    const Hb = 1,
-      Ob = 2,
-      pb = 4,
-      db = Hb | Ob | pb;
+    const wc = 1,
+      Sc = 2,
+      Bc = 4,
+      yc = wc | Sc | Bc;
 
-    function Fb(zz, uz, bz, Ez) {
-      const nz = uz[Rz];
-      if (nz.root !== zz.root || ! function(zz, uz, bz) {
-          const Ez = uz.refTarget;
-          if (uz.isArray) {
-            const uz = Ez.items,
-              nz = uz[bz];
-            if (void 0 !== nz && nz[Rz] === zz) return !0;
-            for (let bz = 0, Ez = uz.length; bz < Ez; bz++) {
-              const Ez = uz[bz];
-              if (void 0 !== Ez && Ez[Rz] === zz) return !0
+    function Mc(DD, CD, cD, ID) {
+      const pD = CD[ZD];
+      if (pD.root !== DD.root || ! function(DD, CD, cD) {
+          const ID = CD.refTarget;
+          if (CD.isArray) {
+            const CD = ID.items,
+              pD = CD[cD];
+            if (void 0 !== pD && pD[ZD] === DD) return !0;
+            for (let cD = 0, ID = CD.length; cD < ID; cD++) {
+              const ID = CD[cD];
+              if (void 0 !== ID && ID[ZD] === DD) return !0
             }
             return !1
           }
-          const nz = uz.getValue(bz);
-          return void 0 !== nz && nz[Rz] === zz
-        }(zz, nz, bz)) return 0;
-      nz.flags & Ab && tb(nz);
-      let iz = Hb;
-      if (nz._isSchema) {
-        void 0 !== nz.encDescriptor.tags[bz] || nz.isFieldStream(bz) || (nz.isFiltered ? Ez && (iz |= pb) : iz |= Ob)
-      } else if (nz.isFiltered) {
-        if (Ez && !nz.isStreamCollection) {
-          const zz = nz.parent?.[Rz];
-          (zz?._isSchema ? zz.encDescriptor.tags[nz.parentIndex] : void 0) !== ZE && (iz |= pb)
+          const pD = CD.getValue(cD);
+          return void 0 !== pD && pD[ZD] === DD
+        }(DD, pD, cD)) return 0;
+      pD.flags & xc && Qc(pD);
+      let iD = wc;
+      if (pD._isSchema) {
+        void 0 !== pD.encDescriptor.tags[cD] || pD.isFieldStream(cD) || (pD.isFiltered ? ID && (iD |= Bc) : iD |= Sc)
+      } else if (pD.isFiltered) {
+        if (ID && !pD.isStreamCollection) {
+          const DD = pD.parent?.[ZD];
+          (DD?._isSchema ? DD.encDescriptor.tags[pD.parentIndex] : void 0) !== tI && (iD |= Bc)
         }
-      } else iz |= Ob;
-      return iz
+      } else iD |= Sc;
+      return iD
     }
-    const Zb = (zz, uz, bz) => {
-      tb(uz)
+    const tc = (DD, CD, cD) => {
+      Qc(CD)
     };
 
-    function Rb(zz, uz, bz, Ez) {
-      if (zz.addParent(uz, Ez), !bz) return;
-      const nz = bz.add(zz);
-      bz !== zz.root && (zz.root = bz, ib(zz, uz, Ez));
-      const iz = uz?.[Rz];
-      if (void 0 !== iz && void 0 !== iz.subscribedViews && void 0 !== uz[Kz] && function(zz, uz, bz, Ez) {
-          const nz = zz.subscribedViews;
-          if (void 0 === nz) return;
-          const iz = zz.isStreamCollection,
-            lz = iz ? zz.ref : void 0,
-            Mz = iz ? void 0 : bz[Rz];
-          for (let tz = 0, Hz = nz.length; tz < Hz; tz++) {
-            let zz = nz[tz];
-            for (; 0 !== zz;) {
-              const bz = zz & -zz;
-              zz ^= bz;
-              const Hz = 32 * tz + (31 - Math.clz32(bz)),
-                Oz = Ez.activeViews.get(Hz),
-                pz = Oz?.deref();
-              void 0 !== pz ? iz ? Gu(lz, Hz, uz) : void 0 !== Mz && pz.markVisible(Mz) : nz[tz] &= ~bz
+    function Zc(DD, CD, cD, ID) {
+      if (DD.addParent(CD, ID), !cD) return;
+      const pD = cD.add(DD);
+      cD !== DD.root && (DD.root = cD, ic(DD, CD, ID));
+      const iD = CD?.[ZD];
+      if (void 0 !== iD && void 0 !== iD.subscribedViews && void 0 !== CD[oD] && function(DD, CD, cD, ID) {
+          const pD = DD.subscribedViews;
+          if (void 0 === pD) return;
+          const iD = DD.isStreamCollection,
+            fD = iD ? DD.ref : void 0,
+            bD = iD ? void 0 : cD[ZD];
+          for (let QD = 0, wD = pD.length; QD < wD; QD++) {
+            let DD = pD[QD];
+            for (; 0 !== DD;) {
+              const cD = DD & -DD;
+              DD ^= cD;
+              const wD = 32 * QD + (31 - Math.clz32(cD)),
+                SD = ID.activeViews.get(wD),
+                BD = SD?.deref();
+              void 0 !== BD ? iD ? aC(fD, wD, CD) : void 0 !== bD && BD.markVisible(bD) : pD[QD] &= ~cD
             }
           }
-        }(iz, Ez, zz.ref, bz), nz) {
-        let uz = fb[sb];
-        void 0 === uz && (uz = {
+        }(iD, ID, DD.ref, cD), pD) {
+        let CD = gc[Xc];
+        void 0 === CD && (CD = {
           parentRef: void 0,
           root: void 0
-        }, fb[sb] = uz), uz.parentRef = zz.ref, uz.root = bz, sb++, wb(zz, uz, rb), sb--
+        }, gc[Xc] = CD), CD.parentRef = DD.ref, CD.root = cD, Xc++, vc(DD, CD, mc), Xc--
       }
     }
 
-    function Kb(zz, uz, bz) {
-      zz(uz, bz)
+    function oc(DD, CD, cD) {
+      DD(CD, cD)
     }
 
-    function wb(zz, uz, bz) {
-      const Ez = zz.refTarget;
-      if (Ez[Kz]) {
-        if ("string" !== typeof Ez[Kz]) {
-          const zz = Ez.items;
-          if (void 0 !== zz)
-            for (let Ez = 0, nz = zz.length; Ez < nz; Ez++) {
-              const nz = zz[Ez];
-              nz && bz(uz, nz[Rz], Ez)
+    function vc(DD, CD, cD) {
+      const ID = DD.refTarget;
+      if (ID[oD]) {
+        if ("string" !== typeof ID[oD]) {
+          const DD = ID.items;
+          if (void 0 !== DD)
+            for (let ID = 0, pD = DD.length; ID < pD; ID++) {
+              const pD = DD[ID];
+              pD && cD(CD, pD[ZD], ID)
             } else {
-              const zz = Ez.$items,
-                nz = Ez._collectionIndexes;
-              for (const Ez of zz.keys()) {
-                const iz = zz.get(Ez);
-                iz && bz(uz, iz[Rz], nz?.[Ez] ?? Ez)
+              const DD = ID.$items,
+                pD = ID._collectionIndexes;
+              for (const ID of DD.keys()) {
+                const iD = DD.get(ID);
+                iD && cD(CD, iD[ZD], pD?.[ID] ?? ID)
               }
             }
         }
       } else {
-        const nz = zz.metadata,
-          iz = nz?.[Az];
-        if (!iz) return;
-        const lz = zz.encDescriptor.names;
-        for (let zz = 0, Mz = iz.length; zz < Mz; zz++) {
-          const nz = iz[zz],
-            Mz = Ez[lz[nz]];
-          Mz && bz(uz, Mz[Rz], nz)
+        const pD = DD.metadata,
+          iD = pD?.[xD];
+        if (!iD) return;
+        const fD = DD.encDescriptor.names;
+        for (let DD = 0, bD = iD.length; DD < bD; DD++) {
+          const pD = iD[DD],
+            bD = ID[fD[pD]];
+          bD && cD(CD, bD[ZD], pD)
         }
       }
     }
 
-    function Xb(zz, uz, bz) {
-      uz.root !== zz ? uz.setRoot(zz) : zz.add(uz)
+    function Nc(DD, CD, cD) {
+      CD.root !== DD ? CD.setRoot(DD) : DD.add(CD)
     }
-    const fb = [];
-    let sb = 0;
+    const gc = [];
+    let Xc = 0;
 
-    function rb(zz, uz, bz) {
-      if (uz.root === zz.root) return zz.root.add(uz), void zz.root.moveNextToParent(uz);
-      uz.setParent(zz.parentRef, zz.root, bz)
+    function mc(DD, CD, cD) {
+      if (CD.root === DD.root) return DD.root.add(CD), void DD.root.moveNextToParent(CD);
+      CD.setParent(DD.parentRef, DD.root, cD)
     }
 
-    function ob(zz, uz, bz) {
-      const Ez = (3 & bz) << 3;
-      return bz < 4 ? zz >>> Ez & 255 : uz >>> Ez & 255
+    function nc(DD, CD, cD) {
+      const ID = (3 & cD) << 3;
+      return cD < 4 ? DD >>> ID & 255 : CD >>> ID & 255
     }
-    const Nb = (zz, uz, bz) => zz(uz, bz);
-    const vb = 16,
-      xb = 32,
-      Jb = 128,
-      Ab = 256,
-      Tb = vb | xb;
-    class Lb {
+    const Oc = (DD, CD, cD) => DD(CD, cD);
+    const Pc = 16,
+      Hc = 32,
+      Uc = 128,
+      xc = 256,
+      qc = Pc | Hc;
+    class Jc {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(zz) {
-        this.flags = zz ? 1 | this.flags : -2 & this.flags
+      set isFiltered(DD) {
+        this.flags = DD ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(zz) {
-        this.flags = zz ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(DD) {
+        this.flags = DD ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(zz) {
-        this.flags = zz ? 4 | this.flags : -5 & this.flags
+      set isNew(DD) {
+        this.flags = DD ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(zz) {
-        this.flags = zz ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(DD) {
+        this.flags = DD ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & vb)
+        return 0 !== (this.flags & Pc)
       }
-      set isPatchOnly(zz) {
-        this.flags = zz ? this.flags | vb : this.flags & ~vb
+      set isPatchOnly(DD) {
+        this.flags = DD ? this.flags | Pc : this.flags & ~Pc
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & xb)
+        return 0 !== (this.flags & Hc)
       }
-      set isFullStateOnly(zz) {
-        this.flags = zz ? this.flags | xb : this.flags & ~xb
+      set isFullStateOnly(DD) {
+        this.flags = DD ? this.flags | Hc : this.flags & ~Hc
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(zz) {
-        this.flags = zz ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(DD) {
+        this.flags = DD ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & Jb)
+        return 0 !== (this.flags & Uc)
       }
-      set needsRestage(zz) {
-        this.flags = zz ? this.flags | Jb : -129 & this.flags
+      set needsRestage(DD) {
+        this.flags = DD ? this.flags | Uc : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new Bu(this.metadata?.[Jz] ?? 0) : new Cu), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new hC(this.metadata?.[UD] ?? 0) : new rC), this.unreliableRecorder
       }
-      isFieldUnreliable(zz) {
-        const uz = this.encDescriptor;
-        return !!uz.hasAnyUnreliable && (zz < 32 ? 0 !== (uz.unreliableBitmask & 1 << zz) : ju.hasUnreliableAtIndex(this.metadata, zz))
+      isFieldUnreliable(DD) {
+        const CD = this.encDescriptor;
+        return !!CD.hasAnyUnreliable && (DD < 32 ? 0 !== (CD.unreliableBitmask & 1 << DD) : eC.hasUnreliableAtIndex(this.metadata, DD))
       }
-      isFieldFullStateOnly(zz) {
+      isFieldFullStateOnly(DD) {
         if (this.isFullStateOnly) return !0;
-        const uz = this.encDescriptor;
-        return !!uz.hasAnyFullStateOnly && (zz < 32 ? 0 !== (uz.fullStateOnlyBitmask & 1 << zz) : ju.hasFullStateOnlyAtIndex(this.metadata, zz))
+        const CD = this.encDescriptor;
+        return !!CD.hasAnyFullStateOnly && (DD < 32 ? 0 !== (CD.fullStateOnlyBitmask & 1 << DD) : eC.hasFullStateOnlyAtIndex(this.metadata, DD))
       }
-      isFieldStream(zz) {
-        const uz = this.encDescriptor;
-        return !!uz.hasAnyStream && (zz < 32 ? 0 !== (uz.streamBitmask & 1 << zz) : ju.hasStreamAtIndex(this.metadata, zz))
+      isFieldStream(DD) {
+        const CD = this.encDescriptor;
+        return !!CD.hasAnyStream && (DD < 32 ? 0 !== (CD.streamBitmask & 1 << DD) : eC.hasStreamAtIndex(this.metadata, DD))
       }
-      constructor(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz;
-        this.ref = zz, this.refTarget = uz;
-        const bz = zb(zz);
-        this.encDescriptor = bz, this.metadata = bz.metadata;
-        const Ez = bz.isSchema;
-        if (this._isSchema = Ez, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Ez) {
-          const zz = this.metadata?.[Jz] ?? 0;
-          zz > 7 && (this.ops = new Uint8Array(zz + 1))
+      constructor(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD;
+        this.ref = DD, this.refTarget = CD;
+        const cD = Dc(DD);
+        this.encDescriptor = cD, this.metadata = cD.metadata;
+        const ID = cD.isSchema;
+        if (this._isSchema = ID, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, ID) {
+          const DD = this.metadata?.[UD] ?? 0;
+          DD > 7 && (this.ops = new Uint8Array(DD + 1))
         } else this.collDirty = new Map
       }
-      _opAt(zz) {
-        const uz = this.ops;
-        if (void 0 !== uz) return uz[zz];
-        const bz = (3 & zz) << 3;
-        return zz < 4 ? this.opsLow >>> bz & 255 : this.opsHigh >>> bz & 255
+      _opAt(DD) {
+        const CD = this.ops;
+        if (void 0 !== CD) return CD[DD];
+        const cD = (3 & DD) << 3;
+        return DD < 4 ? this.opsLow >>> cD & 255 : this.opsHigh >>> cD & 255
       }
-      _opPut(zz, uz) {
-        const bz = this.ops;
-        if (void 0 !== bz) return void(bz[zz] = uz);
-        const Ez = (3 & zz) << 3,
-          nz = ~(255 << Ez);
-        zz < 4 ? this.opsLow = this.opsLow & nz | uz << Ez : this.opsHigh = this.opsHigh & nz | uz << Ez
+      _opPut(DD, CD) {
+        const cD = this.ops;
+        if (void 0 !== cD) return void(cD[DD] = CD);
+        const ID = (3 & DD) << 3,
+          pD = ~(255 << ID);
+        DD < 4 ? this.opsLow = this.opsLow & pD | CD << ID : this.opsHigh = this.opsHigh & pD | CD << ID
       }
-      _markDirty(zz) {
-        zz < 32 ? this.dirtyLow |= 1 << zz : this.dirtyHigh |= 1 << zz - 32
+      _markDirty(DD) {
+        DD < 32 ? this.dirtyLow |= 1 << DD : this.dirtyHigh |= 1 << DD - 32
       }
-      record(zz, uz) {
+      record(DD, CD) {
         if (this._isSchema) {
-          const bz = this._opAt(zz);
-          0 === bz ? this._opPut(zz, uz) : (bz === nz.DELETE || bz === nz.ADD && uz === nz.DELETE_AND_ADD) && this._opPut(zz, nz.DELETE_AND_ADD), this._markDirty(zz)
+          const cD = this._opAt(DD);
+          0 === cD ? this._opPut(DD, CD) : (cD === pD.DELETE || cD === pD.ADD && CD === pD.DELETE_AND_ADD) && this._opPut(DD, pD.DELETE_AND_ADD), this._markDirty(DD)
         } else {
-          const bz = this.collDirty,
-            Ez = bz.get(zz);
-          let iz;
-          iz = void 0 === Ez ? uz : Ez === nz.DELETE || Ez === nz.ADD && uz === nz.DELETE_AND_ADD ? nz.DELETE_AND_ADD : Ez, bz.set(zz, iz)
+          const cD = this.collDirty,
+            ID = cD.get(DD);
+          let iD;
+          iD = void 0 === ID ? CD : ID === pD.DELETE || ID === pD.ADD && CD === pD.DELETE_AND_ADD ? pD.DELETE_AND_ADD : ID, cD.set(DD, iD)
         }
       }
-      recordDelete(zz, uz) {
-        this._isSchema ? (this._opPut(zz, uz), this._markDirty(zz)) : this.collDirty.set(zz, uz)
+      recordDelete(DD, CD) {
+        this._isSchema ? (this._opPut(DD, CD), this._markDirty(DD)) : this.collDirty.set(DD, CD)
       }
-      recordRaw(zz, uz) {
-        this._isSchema ? (this._opPut(zz, uz), this._markDirty(zz)) : this.collDirty.set(zz, uz)
+      recordRaw(DD, CD) {
+        this._isSchema ? (this._opPut(DD, CD), this._markDirty(DD)) : this.collDirty.set(DD, CD)
       }
-      recordPure(zz) {
+      recordPure(DD) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, zz])
+        (this.collPureOps ??= []).push([this.collDirty.size, DD])
       }
-      operationAt(zz) {
+      operationAt(DD) {
         if (this._isSchema) {
-          const uz = this._opAt(zz);
-          return 0 === uz ? void 0 : uz
+          const CD = this._opAt(DD);
+          return 0 === CD ? void 0 : CD
         }
-        return this.collDirty.get(zz)
+        return this.collDirty.get(DD)
       }
-      setOperationAt(zz, uz) {
-        if (this._isSchema) this._opPut(zz, uz);
+      setOperationAt(DD, CD) {
+        if (this._isSchema) this._opPut(DD, CD);
         else {
-          const bz = this.collDirty;
-          bz.has(zz) && bz.set(zz, uz)
+          const cD = this.collDirty;
+          cD.has(DD) && cD.set(DD, CD)
         }
       }
-      forEach(zz) {
-        this.forEachWithCtx(zz, Nb)
+      forEach(DD) {
+        this.forEachWithCtx(DD, Oc)
       }
-      forEachWithCtx(zz, uz) {
+      forEachWithCtx(DD, CD) {
         if (this._isSchema) {
-          let bz = this.dirtyLow,
-            Ez = this.dirtyHigh;
-          const nz = this.ops;
-          if (void 0 !== nz) {
-            for (; 0 !== bz;) {
-              const Ez = bz & -bz,
-                iz = 31 - Math.clz32(Ez);
-              bz ^= Ez, uz(zz, iz, nz[iz])
+          let cD = this.dirtyLow,
+            ID = this.dirtyHigh;
+          const pD = this.ops;
+          if (void 0 !== pD) {
+            for (; 0 !== cD;) {
+              const ID = cD & -cD,
+                iD = 31 - Math.clz32(ID);
+              cD ^= ID, CD(DD, iD, pD[iD])
             }
-            for (; 0 !== Ez;) {
-              const bz = Ez & -Ez,
-                iz = 31 - Math.clz32(bz) + 32;
-              Ez ^= bz, uz(zz, iz, nz[iz])
+            for (; 0 !== ID;) {
+              const cD = ID & -ID,
+                iD = 31 - Math.clz32(cD) + 32;
+              ID ^= cD, CD(DD, iD, pD[iD])
             }
           } else {
-            const Ez = this.opsLow,
-              nz = this.opsHigh;
-            for (; 0 !== bz;) {
-              const iz = bz & -bz,
-                lz = 31 - Math.clz32(iz);
-              bz ^= iz, uz(zz, lz, ob(Ez, nz, lz))
+            const ID = this.opsLow,
+              pD = this.opsHigh;
+            for (; 0 !== cD;) {
+              const iD = cD & -cD,
+                fD = 31 - Math.clz32(iD);
+              cD ^= iD, CD(DD, fD, nc(ID, pD, fD))
             }
           }
           return
         }
-        const bz = this.collDirty,
-          Ez = this.collPureOps;
-        if (void 0 !== Ez && Ez.length > 0) {
-          let nz = 0,
-            iz = 0;
-          for (const [lz, Mz] of bz) {
-            for (; nz < Ez.length && Ez[nz][0] <= iz;) {
-              const bz = Ez[nz++][1];
-              uz(zz, -bz, bz)
+        const cD = this.collDirty,
+          ID = this.collPureOps;
+        if (void 0 !== ID && ID.length > 0) {
+          let pD = 0,
+            iD = 0;
+          for (const [fD, bD] of cD) {
+            for (; pD < ID.length && ID[pD][0] <= iD;) {
+              const cD = ID[pD++][1];
+              CD(DD, -cD, cD)
             }
-            uz(zz, lz, Mz), iz++
+            CD(DD, fD, bD), iD++
           }
-          for (; nz < Ez.length;) {
-            const bz = Ez[nz++][1];
-            uz(zz, -bz, bz)
+          for (; pD < ID.length;) {
+            const cD = ID[pD++][1];
+            CD(DD, -cD, cD)
           }
         } else
-          for (const [nz, iz] of bz) uz(zz, nz, iz)
+          for (const [pD, iD] of cD) CD(DD, pD, iD)
       }
       size() {
-        return this._isSchema ? Yu(this.dirtyLow) + Yu(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? AC(this.dirtyLow) + AC(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(zz, uz) {
+      insertAt(DD, CD) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const bz = this.collDirty,
-          Ez = new Map,
-          iz = !this.paused && !this.isFullStateOnly;
-        if (zz > 0)
-          for (const [nz, lz] of bz) nz < zz && Ez.set(nz, lz);
-        if (iz)
-          for (let lz = 0; lz < uz; lz++) Ez.set(zz + lz, nz.ADD);
-        for (const [nz, lz] of bz) nz >= zz && Ez.set(nz + uz, lz);
-        this.collDirty = Ez, iz && this.root?.enqueueChangeTree(this)
+        const cD = this.collDirty,
+          ID = new Map,
+          iD = !this.paused && !this.isFullStateOnly;
+        if (DD > 0)
+          for (const [pD, fD] of cD) pD < DD && ID.set(pD, fD);
+        if (iD)
+          for (let fD = 0; fD < CD; fD++) ID.set(DD + fD, pD.ADD);
+        for (const [pD, fD] of cD) pD >= DD && ID.set(pD + CD, fD);
+        this.collDirty = ID, iD && this.root?.enqueueChangeTree(this)
       }
-      removeAt(zz, uz) {
+      removeAt(DD, CD) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const bz = this.collDirty,
-          Ez = zz + uz;
-        let nz = !1;
-        for (const lz of bz.keys())
-          if (lz >= Ez) {
-            nz = !0;
+        const cD = this.collDirty,
+          ID = DD + CD;
+        let pD = !1;
+        for (const fD of cD.keys())
+          if (fD >= ID) {
+            pD = !0;
             break
-          } if (!nz) {
-          for (let uz = zz; uz < Ez; uz++) bz.delete(uz);
+          } if (!pD) {
+          for (let CD = DD; CD < ID; CD++) cD.delete(CD);
           return
         }
-        const iz = new Map;
-        for (const [lz, Mz] of bz) lz < zz ? iz.set(lz, Mz) : lz >= Ez && iz.set(lz - uz, Mz);
-        this.collDirty = iz
+        const iD = new Map;
+        for (const [fD, bD] of cD) fD < DD ? iD.set(fD, bD) : fD >= ID && iD.set(fD - CD, bD);
+        this.collDirty = iD
       }
-      unshift(zz) {
-        this.insertAt(0, zz)
+      unshift(DD) {
+        this.insertAt(0, DD)
       }
-      setRoot(zz) {
-        ! function(zz, uz) {
-          zz.root = uz;
-          const bz = uz.add(zz);
-          ib(zz, zz.parent, zz.parentIndex), bz && wb(zz, uz, Xb)
-        }(this, zz)
+      setRoot(DD) {
+        ! function(DD, CD) {
+          DD.root = CD;
+          const cD = CD.add(DD);
+          ic(DD, DD.parent, DD.parentIndex), cD && vc(DD, CD, Nc)
+        }(this, DD)
       }
-      setParent(zz, uz, bz) {
-        Rb(this, zz, uz, bz)
+      setParent(DD, CD, cD) {
+        Zc(this, DD, CD, cD)
       }
-      forEachChild(zz) {
-        wb(this, zz, Kb)
+      forEachChild(DD) {
+        vc(this, DD, oc)
       }
-      forEachChildWithCtx(zz, uz) {
-        wb(this, zz, uz)
+      forEachChildWithCtx(DD, CD) {
+        vc(this, DD, CD)
       }
-      forEachLive(zz) {
-        nb(this, zz, Eb)
+      forEachLive(DD) {
+        pc(this, DD, Ic)
       }
-      forEachLiveWithCtx(zz, uz) {
-        nb(this, zz, uz)
+      forEachLiveWithCtx(DD, CD) {
+        pc(this, DD, CD)
       }
-      operation(zz) {
-        this.paused || this.isFullStateOnly || (this.recordPure(zz), this.root?.enqueueChangeTree(this))
+      operation(DD) {
+        this.paused || this.isFullStateOnly || (this.recordPure(DD), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(zz, uz, bz) {
-        if (!this.paused && !this.isFieldFullStateOnly(zz)) {
-          if (this.isFieldUnreliable(zz) && !this.isNew) {
-            const Ez = this.ensureUnreliableRecorder();
-            return bz ? Ez.recordRaw(zz, uz) : Ez.record(zz, uz), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(DD, CD, cD) {
+        if (!this.paused && !this.isFieldFullStateOnly(DD)) {
+          if (this.isFieldUnreliable(DD) && !this.isNew) {
+            const ID = this.ensureUnreliableRecorder();
+            return cD ? ID.recordRaw(DD, CD) : ID.record(DD, CD), void this.root?.enqueueUnreliable(this)
           }
-          bz ? this.recordRaw(zz, uz) : this.record(zz, uz), this.root?.enqueueChangeTree(this)
+          cD ? this.recordRaw(DD, CD) : this.record(DD, CD), this.root?.enqueueChangeTree(this)
         }
       }
-      change(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nz.ADD;
-        this._routeAndRecord(zz, uz, !1)
+      change(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pD.ADD;
+        this._routeAndRecord(DD, CD, !1)
       }
-      indexedOperation(zz, uz) {
-        this._routeAndRecord(zz, uz, !0)
+      indexedOperation(DD, CD) {
+        this._routeAndRecord(DD, CD, !0)
       }
-      getChange(zz) {
-        return this.operationAt(zz)
+      getChange(DD) {
+        return this.operationAt(DD)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(zz) {
-        const uz = this.paused;
+      untracked(DD) {
+        const CD = this.paused;
         this.paused = !0;
         try {
-          return zz()
+          return DD()
         } finally {
-          this.paused = uz
+          this.paused = CD
         }
       }
-      markDirty(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nz.ADD;
-        const bz = this.paused;
+      markDirty(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pD.ADD;
+        const cD = this.paused;
         this.paused = !1;
         try {
-          this.change(zz, uz)
+          this.change(DD, CD)
         } finally {
-          this.paused = bz
+          this.paused = cD
         }
       }
-      getValue(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[dz](zz, uz)
+      getValue(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[yD](DD, CD)
       }
-      delete(zz, uz) {
-        if (void 0 === zz) {
+      delete(DD, CD) {
+        if (void 0 === DD) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${zz}'`)
-          } catch (Mn) {
-            console.warn(Mn)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${DD}'`)
+          } catch (ip) {
+            console.warn(ip)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(zz)) return this.getValue(zz);
-        const bz = this.isFieldUnreliable(zz) && !this.isNew;
-        bz ? this.ensureUnreliableRecorder().recordDelete(zz, uz ?? nz.DELETE) : this.recordDelete(zz, uz ?? nz.DELETE);
-        const Ez = this.getValue(zz);
-        return Ez && Ez[Rz] && this.root?.remove(Ez[Rz]), bz ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Ez
+        if (this.paused || this.isFieldFullStateOnly(DD)) return this.getValue(DD);
+        const cD = this.isFieldUnreliable(DD) && !this.isNew;
+        cD ? this.ensureUnreliableRecorder().recordDelete(DD, CD ?? pD.DELETE) : this.recordDelete(DD, CD ?? pD.DELETE);
+        const ID = this.getValue(DD);
+        return ID && ID[ZD] && this.root?.remove(ID[ZD]), cD ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), ID
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[Xz]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[ND]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[Xz]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[ND]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[Xz]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[ND]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const zz = zz => {
-          if (zz < 0) return;
-          const uz = this.getValue(zz);
-          uz && uz[Rz] && uz[Rz].discardAll()
+        const DD = DD => {
+          if (DD < 0) return;
+          const CD = this.getValue(DD);
+          CD && CD[ZD] && CD[ZD].discardAll()
         };
-        this.forEach(zz), this.unreliableRecorder?.forEach(zz), this.discard()
+        this.forEach(DD), this.unreliableRecorder?.forEach(DD), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(zz, uz) {
-        ! function(zz, uz, bz) {
-          if (zz.parentRef) {
-            if (zz.parentRef[Rz] === uz[Rz]) return void(zz._parentIndex = bz);
-            if (ub(zz, ((zz, bz) => zz[Rz] === uz[Rz]))) return void(zz._parentIndex = bz)
+      addParent(DD, CD) {
+        ! function(DD, CD, cD) {
+          if (DD.parentRef) {
+            if (DD.parentRef[ZD] === CD[ZD]) return void(DD._parentIndex = cD);
+            if (Cc(DD, ((DD, cD) => DD[ZD] === CD[ZD]))) return void(DD._parentIndex = cD)
           }
-          void 0 === zz.parentRef ? (zz.parentRef = uz, zz._parentIndex = bz) : (zz.extraParents = {
-            ref: zz.parentRef,
-            index: zz._parentIndex,
-            next: zz.extraParents
-          }, zz.parentRef = uz, zz._parentIndex = bz)
-        }(this, zz, uz)
+          void 0 === DD.parentRef ? (DD.parentRef = CD, DD._parentIndex = cD) : (DD.extraParents = {
+            ref: DD.parentRef,
+            index: DD._parentIndex,
+            next: DD.extraParents
+          }, DD.parentRef = CD, DD._parentIndex = cD)
+        }(this, DD, CD)
       }
-      setParentIndex(zz, uz) {
-        ! function(zz, uz, bz) {
-          if (void 0 !== zz.extraParents)
-            if (zz.parentRef[Rz] !== uz[Rz]) {
-              for (let Ez = zz.extraParents; void 0 !== Ez; Ez = Ez.next)
-                if (Ez.ref[Rz] === uz[Rz]) return void(Ez.index = bz)
-            } else zz._parentIndex = bz;
-          else zz._parentIndex = bz
-        }(this, zz, uz)
+      setParentIndex(DD, CD) {
+        ! function(DD, CD, cD) {
+          if (void 0 !== DD.extraParents)
+            if (DD.parentRef[ZD] !== CD[ZD]) {
+              for (let ID = DD.extraParents; void 0 !== ID; ID = ID.next)
+                if (ID.ref[ZD] === CD[ZD]) return void(ID.index = cD)
+            } else DD._parentIndex = cD;
+          else DD._parentIndex = cD
+        }(this, DD, CD)
       }
       removeParent() {
-        return function(zz, uz) {
-          if (zz.parentRef && zz.parentRef[Rz] === uz[Rz]) return zz.extraParents ? (zz.parentRef = zz.extraParents.ref, zz._parentIndex = zz.extraParents.index, zz.extraParents = zz.extraParents.next) : (zz.parentRef = void 0, zz._parentIndex = void 0), !0;
-          let bz = zz.extraParents,
-            Ez = null;
-          for (; bz;) {
-            if (bz.ref[Rz] === uz[Rz]) return Ez ? Ez.next = bz.next : zz.extraParents = bz.next, !0;
-            Ez = bz, bz = bz.next
+        return function(DD, CD) {
+          if (DD.parentRef && DD.parentRef[ZD] === CD[ZD]) return DD.extraParents ? (DD.parentRef = DD.extraParents.ref, DD._parentIndex = DD.extraParents.index, DD.extraParents = DD.extraParents.next) : (DD.parentRef = void 0, DD._parentIndex = void 0), !0;
+          let cD = DD.extraParents,
+            ID = null;
+          for (; cD;) {
+            if (cD.ref[ZD] === CD[ZD]) return ID ? ID.next = cD.next : DD.extraParents = cD.next, !0;
+            ID = cD, cD = cD.next
           }
-          return void 0 === zz.parentRef
+          return void 0 === DD.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(zz) {
-        return function(zz, uz) {
-          if (void 0 !== zz.parentRef && uz(zz.parentRef, zz._parentIndex)) return {
-            ref: zz.parentRef,
-            index: zz._parentIndex
+      findParent(DD) {
+        return function(DD, CD) {
+          if (void 0 !== DD.parentRef && CD(DD.parentRef, DD._parentIndex)) return {
+            ref: DD.parentRef,
+            index: DD._parentIndex
           };
-          for (let bz = zz.extraParents; void 0 !== bz; bz = bz.next)
-            if (uz(bz.ref, bz.index)) return {
-              ref: bz.ref,
-              index: bz.index
+          for (let cD = DD.extraParents; void 0 !== cD; cD = cD.next)
+            if (CD(cD.ref, cD.index)) return {
+              ref: cD.ref,
+              index: cD.index
             }
-        }(this, zz)
+        }(this, DD)
       }
-      hasParent(zz) {
-        return ub(this, zz)
+      hasParent(DD) {
+        return Cc(this, DD)
       }
-      indexInParent(zz) {
-        return function(zz, uz) {
-          if (zz.parentRef && zz.parentRef[Rz] === uz[Rz]) return zz._parentIndex;
-          for (let bz = zz.extraParents; void 0 !== bz; bz = bz.next)
-            if (bz.ref[Rz] === uz[Rz]) return bz.index
-        }(this, zz)
+      indexInParent(DD) {
+        return function(DD, CD) {
+          if (DD.parentRef && DD.parentRef[ZD] === CD[ZD]) return DD._parentIndex;
+          for (let cD = DD.extraParents; void 0 !== cD; cD = cD.next)
+            if (cD.ref[ZD] === CD[ZD]) return cD.index
+        }(this, DD)
       }
       getAllParents() {
-        return function(zz) {
-          const uz = [];
-          zz.parentRef && uz.push({
-            ref: zz.parentRef,
-            index: zz._parentIndex
+        return function(DD) {
+          const CD = [];
+          DD.parentRef && CD.push({
+            ref: DD.parentRef,
+            index: DD._parentIndex
           });
-          let bz = zz.extraParents;
-          for (; bz;) uz.push({
-            ref: bz.ref,
-            index: bz.index
-          }), bz = bz.next;
-          return uz
+          let cD = DD.extraParents;
+          for (; cD;) CD.push({
+            ref: cD.ref,
+            index: cD.index
+          }), cD = cD.next;
+          return CD
         }(this)
       }
     }
-    class Pb {
+    class Kc {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(zz) {
-        this.ref = zz
+      constructor(DD) {
+        this.ref = DD
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(zz) {
-        return zz()
+      untracked(DD) {
+        return DD()
       }
       markDirty() {}
-      forEachChild(zz) {
-        const uz = this.ref;
-        if (uz[Kz]) {
-          if ("string" !== typeof uz[Kz])
-            for (const [bz, Ez] of uz.entries()) Ez && zz(Ez[Rz], uz._collectionIndexes?.[bz] ?? bz);
+      forEachChild(DD) {
+        const CD = this.ref;
+        if (CD[oD]) {
+          if ("string" !== typeof CD[oD])
+            for (const [cD, ID] of CD.entries()) ID && DD(ID[ZD], CD._collectionIndexes?.[cD] ?? cD);
           return
         }
-        const bz = uz.constructor,
-          Ez = bz?.[Symbol.metadata];
-        if (!Ez) return;
-        const nz = Ez[Az] ?? [];
-        for (let iz = 0; iz < nz.length; iz++) {
-          const bz = nz[iz],
-            lz = uz[Ez[bz].name];
-          lz && zz(lz[Rz], bz)
+        const cD = CD.constructor,
+          ID = cD?.[Symbol.metadata];
+        if (!ID) return;
+        const pD = ID[xD] ?? [];
+        for (let iD = 0; iD < pD.length; iD++) {
+          const cD = pD[iD],
+            fD = CD[ID[cD].name];
+          fD && DD(fD[ZD], cD)
         }
       }
-      forEachChildWithCtx(zz, uz) {
-        this.forEachChild(((bz, Ez) => uz(zz, bz, Ez)))
+      forEachChildWithCtx(DD, CD) {
+        this.forEachChild(((cD, ID) => CD(DD, cD, ID)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function Gb(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz;
-      var bz;
-      Object.defineProperty(zz, Rz, {
-        value: (bz = uz, new Pb(bz)),
+    function ac(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD;
+      var cD;
+      Object.defineProperty(DD, ZD, {
+        value: (cD = CD, new Kc(cD)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function ab(zz, uz, bz, Ez, iz, lz, tz) {
-      void 0 !== tz ? tz(uz, Ez, lz) : "string" === typeof bz ? uu[bz]?.(uz, Ez, lz) : null != bz[Symbol.metadata] ? (uu.number(uz, Ez[Mz], lz), (iz & nz.ADD) === nz.ADD && zz.tryEncodeTypeId(uz, bz, Ez.constructor, lz)) : uu.number(uz, Ez[Mz], lz)
+    function Vc(DD, CD, cD, ID, iD, fD, QD) {
+      void 0 !== QD ? QD(CD, ID, fD) : "string" === typeof cD ? CC[cD]?.(CD, ID, fD) : null != cD[Symbol.metadata] ? (CC.number(CD, ID[bD], fD), (iD & pD.ADD) === pD.ADD && DD.tryEncodeTypeId(CD, cD, ID.constructor, fD)) : CC.number(CD, ID[bD], fD)
     }
-    const Vb = function(zz, uz, bz, Ez, iz, lz, Mz, tz) {
-        if (uz[lz.offset++] = 255 & (Ez | iz), iz === nz.DELETE) return;
-        const Hz = bz.encDescriptor,
-          Oz = bz.ref,
-          pz = Oz[rz][Ez] ?? Oz[Hz.names[Ez]];
-        ab(zz, uz, Hz.types[Ez], pz, iz, lz, Hz.encoders[Ez])
+    const zc = function(DD, CD, cD, ID, iD, fD, bD, QD) {
+        if (CD[fD.offset++] = 255 & (ID | iD), iD === pD.DELETE) return;
+        const wD = cD.encDescriptor,
+          SD = cD.ref,
+          BD = SD[mD][ID] ?? SD[wD.names[ID]];
+        Vc(DD, CD, wD.types[ID], BD, iD, fD, wD.encoders[ID])
       },
-      mb = function(zz, uz, bz, Ez, iz, lz) {
-        if (uz[lz.offset++] = 255 & iz, uu.number(uz, Ez, lz), iz === nz.DELETE) return;
-        const Mz = bz.ref;
-        if ((iz & nz.ADD) === nz.ADD) {
-          const zz = Mz.$indexes.get(Ez);
-          uu.string(uz, zz, lz)
+      jc = function(DD, CD, cD, ID, iD, fD) {
+        if (CD[fD.offset++] = 255 & iD, CC.number(CD, ID, fD), iD === pD.DELETE) return;
+        const bD = cD.ref;
+        if ((iD & pD.ADD) === pD.ADD) {
+          const DD = bD.$indexes.get(ID);
+          CC.string(CD, DD, fD)
         }
-        ab(zz, uz, Mz[Kz], Mz[dz](Ez), iz, lz)
+        Vc(DD, CD, bD[oD], bD[yD](ID), iD, fD)
       },
-      qb = function(zz, uz, bz, Ez, iz, lz) {
-        if (uz[lz.offset++] = 255 & iz, uu.number(uz, Ez, lz), iz === nz.DELETE) return;
-        const Mz = bz.ref;
-        ab(zz, uz, Mz[Kz], Mz[dz](Ez), iz, lz)
+      lc = function(DD, CD, cD, ID, iD, fD) {
+        if (CD[fD.offset++] = 255 & iD, CC.number(CD, ID, fD), iD === pD.DELETE) return;
+        const bD = cD.ref;
+        Vc(DD, CD, bD[oD], bD[yD](ID), iD, fD)
       },
-      hb = function(zz, uz, bz, Ez, iz, lz) {
-        const Mz = bz.ref;
-        (iz & nz.ADD) === nz.ADD && "function" === typeof Mz.set ? mb(zz, uz, bz, Ez, iz, lz) : qb(zz, uz, bz, Ez, iz, lz)
+      Lc = function(DD, CD, cD, ID, iD, fD) {
+        const bD = cD.ref;
+        (iD & pD.ADD) === pD.ADD && "function" === typeof bD.set ? jc(DD, CD, cD, ID, iD, fD) : lc(DD, CD, cD, ID, iD, fD)
       },
-      Ub = function(zz, uz, bz, Ez, iz, lz, tz, Hz) {
-        const Oz = bz.refTarget,
-          pz = Oz[Kz],
-          Fz = "string" !== typeof pz;
-        let Zz;
-        if (Hz && bz.isFiltered && Fz) {
-          const zz = Oz.tmpItems[Ez];
-          if (!zz) return;
-          if (Zz = zz[Mz], iz === nz.DELETE) iz = nz.DELETE_BY_REFID;
-          else if ((iz & nz.ADD) === nz.ADD) iz = nz.ADD_BY_REFID;
-          else if ((iz & nz.MOVE) === nz.MOVE) return
-        } else if (iz === nz.DELETE && Fz) {
-          const zz = Oz.tmpItems[Ez];
-          if (!zz) return;
-          Zz = zz[Mz], iz = nz.DELETE_BY_REFID
-        } else Zz = Ez;
-        if (uz[lz.offset++] = 255 & iz, uu.number(uz, Zz, lz), iz === nz.DELETE || iz === nz.DELETE_BY_REFID) return;
-        ab(zz, uz, pz, Oz[dz](Ez, tz), iz, lz)
+      Tc = function(DD, CD, cD, ID, iD, fD, QD, wD) {
+        const SD = cD.refTarget,
+          BD = SD[oD],
+          MD = "string" !== typeof BD;
+        let tD;
+        if (wD && cD.isFiltered && MD) {
+          const DD = SD.tmpItems[ID];
+          if (!DD) return;
+          if (tD = DD[bD], iD === pD.DELETE) iD = pD.DELETE_BY_REFID;
+          else if ((iD & pD.ADD) === pD.ADD) iD = pD.ADD_BY_REFID;
+          else if ((iD & pD.MOVE) === pD.MOVE) return
+        } else if (iD === pD.DELETE && MD) {
+          const DD = SD.tmpItems[ID];
+          if (!DD) return;
+          tD = DD[bD], iD = pD.DELETE_BY_REFID
+        } else tD = ID;
+        if (CD[fD.offset++] = 255 & iD, CC.number(CD, tD, fD), iD === pD.DELETE || iD === pD.DELETE_BY_REFID) return;
+        Vc(DD, CD, BD, SD[yD](ID, QD), iD, fD)
       };
 
-    function cb(zz, uz, bz, Ez, iz, lz, tz) {
-      const Hz = zz.resyncVisited;
-      let Oz = Hz.get(zz.currentRefId);
-      if (void 0 === Oz && Hz.set(zz.currentRefId, Oz = new Set), Oz.add(Ez), void 0 !== iz && bz === nz.ADD && iz !== lz) {
-        const bz = iz[Mz];
-        void 0 !== bz && (zz.root.removeRef(bz), tz?.push({
-          ref: uz,
-          refId: zz.currentRefId,
-          op: nz.DELETE,
-          dynamicIndex: Ez,
+    function Gc(DD, CD, cD, ID, iD, fD, QD) {
+      const wD = DD.resyncVisited;
+      let SD = wD.get(DD.currentRefId);
+      if (void 0 === SD && wD.set(DD.currentRefId, SD = new Set), SD.add(ID), void 0 !== iD && cD === pD.ADD && iD !== fD) {
+        const cD = iD[bD];
+        void 0 !== cD && (DD.root.removeRef(cD), QD?.push({
+          ref: CD,
+          refId: DD.currentRefId,
+          op: pD.DELETE,
+          dynamicIndex: ID,
           value: void 0,
-          previousValue: iz
+          previousValue: iD
         }))
       }
     }
 
-    function gb(zz, uz, bz, Ez) {
-      const nz = uz[Mz];
-      if (void 0 === nz || bz.has(nz)) return;
-      bz.add(nz);
-      const iz = uz.constructor[Symbol.metadata],
-        lz = iz?.[Az];
-      if (void 0 === lz) return;
-      const tz = iz[Gz];
-      for (let Mz = 0; Mz < lz.length; Mz++) {
-        const nz = lz[Mz];
-        if (void 0 !== tz && tz.includes(nz)) continue;
-        const Hz = iz[nz],
-          Oz = uz[Hz.name];
-        Oz && (TE.is(Hz.type) ? gb(zz, Oz, bz, Ez) : Sb(zz, Oz, bz, Ez))
+    function Rc(DD, CD, cD, ID) {
+      const pD = CD[bD];
+      if (void 0 === pD || cD.has(pD)) return;
+      cD.add(pD);
+      const iD = CD.constructor[Symbol.metadata],
+        fD = iD?.[xD];
+      if (void 0 === fD) return;
+      const QD = iD[aD];
+      for (let bD = 0; bD < fD.length; bD++) {
+        const pD = fD[bD];
+        if (void 0 !== QD && QD.includes(pD)) continue;
+        const wD = iD[pD],
+          SD = CD[wD.name];
+        SD && (qI.is(wD.type) ? Rc(DD, SD, cD, ID) : kc(DD, SD, cD, ID))
       }
     }
 
-    function Sb(zz, uz, bz, Ez) {
-      const iz = uz[wz] ?? uz,
-        lz = iz[Mz];
-      if (void 0 === lz || bz.has(lz)) return;
-      bz.add(lz);
-      const tz = zz.resyncVisited.get(lz);
-      if (void 0 === tz) return;
-      const Hz = zz.root;
-      iz[Zz](tz, ((zz, bz) => {
-        Ez?.push({
-          ref: uz,
-          refId: lz,
-          op: nz.DELETE,
-          dynamicIndex: bz,
+    function kc(DD, CD, cD, ID) {
+      const iD = CD[vD] ?? CD,
+        fD = iD[bD];
+      if (void 0 === fD || cD.has(fD)) return;
+      cD.add(fD);
+      const QD = DD.resyncVisited.get(fD);
+      if (void 0 === QD) return;
+      const wD = DD.root;
+      iD[tD](QD, ((DD, cD) => {
+        ID?.push({
+          ref: CD,
+          refId: fD,
+          op: pD.DELETE,
+          dynamicIndex: cD,
           value: void 0,
-          previousValue: zz
+          previousValue: DD
         });
-        const iz = zz?.[Mz];
-        void 0 !== iz && Hz.removeRef(iz)
-      }), (uz => {
-        TE.isSchema(uz) && gb(zz, uz, bz, Ez)
+        const iD = DD?.[bD];
+        void 0 !== iD && wD.removeRef(iD)
+      }), (CD => {
+        qI.isSchema(CD) && Rc(DD, CD, cD, ID)
       }))
     }
-    const yb = 1,
-      Db = 2,
-      Qb = 3,
-      Wb = 4,
-      eb = 5;
+    const dc = 1,
+      Yc = 2,
+      Wc = 3,
+      sc = 4,
+      Ec = 5;
 
-    function jb(zz, uz, bz, Ez, iz, lz, tz, Hz, Oz) {
-      const pz = zz.root;
-      let dz;
-      if ((uz & nz.DELETE) === nz.DELETE) {
-        const zz = iz?.[Mz];
-        void 0 !== zz && pz.removeRef(zz), uz !== nz.DELETE_AND_ADD && bz[Fz](Ez), dz = void 0
+    function ec(DD, CD, cD, ID, iD, fD, QD, wD, SD) {
+      const BD = DD.root;
+      let yD;
+      if ((CD & pD.DELETE) === pD.DELETE) {
+        const DD = iD?.[bD];
+        void 0 !== DD && BD.removeRef(DD), CD !== pD.DELETE_AND_ADD && cD[MD](ID), yD = void 0
       }
-      if (uz === nz.DELETE);
-      else if ("string" === typeof lz) dz = fu[lz](tz, Hz);
-      else if (qu(lz)) dz = function(zz, uz, bz) {
-        return Uu(zz, (0, fu[zz.wire])(uz, bz))
-      }(lz.quantized, tz, Hz);
-      else if (TE.is(lz)) {
-        const bz = fu.number(tz, Hz);
-        if (dz = pz.refs.get(bz), (uz & nz.ADD) === nz.ADD) {
-          const Ez = zz.getInstanceType(tz, Hz, lz);
-          dz || (dz = zz.createInstanceOfType(Ez)), pz.addRef(bz, dz, dz !== iz || uz === nz.DELETE_AND_ADD && dz === iz)
+      if (CD === pD.DELETE);
+      else if ("string" === typeof fD) yD = gC[fD](QD, wD);
+      else if (lC(fD)) yD = function(DD, CD, cD) {
+        return TC(DD, (0, gC[DD.wire])(CD, cD))
+      }(fD.quantized, QD, wD);
+      else if (qI.is(fD)) {
+        const cD = gC.number(QD, wD);
+        if (yD = BD.refs.get(cD), (CD & pD.ADD) === pD.ADD) {
+          const ID = DD.getInstanceType(QD, wD, fD);
+          yD || (yD = DD.createInstanceOfType(ID)), BD.addRef(cD, yD, yD !== iD || CD === pD.DELETE_AND_ADD && yD === iD)
         }
       } else {
-        const bz = (Zz = Object.keys(lz)[0], su[Zz]),
-          Ez = fu.number(tz, Hz);
-        null !== zz.resyncVisited && function(zz, uz) {
-          const bz = zz.resyncVisited;
-          bz.has(uz) || bz.set(uz, new Set)
-        }(zz, Ez);
-        const Fz = pz.refs.has(Ez) ? iz || pz.refs.get(Ez) : bz.constructor.initializeForDecoder();
-        if (dz = Fz.clone(!0), dz[Kz] = Object.values(lz)[0], iz) {
-          let zz = iz[Mz];
-          if (void 0 !== zz && Ez !== zz) {
-            (uz & nz.DELETE) !== nz.DELETE && pz.removeRef(zz);
-            const bz = iz.entries();
-            let Ez;
+        const cD = (tD = Object.keys(fD)[0], XC[tD]),
+          ID = gC.number(QD, wD);
+        null !== DD.resyncVisited && function(DD, CD) {
+          const cD = DD.resyncVisited;
+          cD.has(CD) || cD.set(CD, new Set)
+        }(DD, ID);
+        const MD = BD.refs.has(ID) ? iD || BD.refs.get(ID) : cD.constructor.initializeForDecoder();
+        if (yD = MD.clone(!0), yD[oD] = Object.values(fD)[0], iD) {
+          let DD = iD[bD];
+          if (void 0 !== DD && ID !== DD) {
+            (CD & pD.DELETE) !== pD.DELETE && BD.removeRef(DD);
+            const cD = iD.entries();
+            let ID;
             for (;
-              (Ez = bz.next()) && !Ez.done;) {
-              const [uz, bz] = Ez.value;
-              "object" === typeof bz && (zz = bz[Mz]), Oz?.push({
-                ref: iz,
-                refId: zz,
-                op: nz.DELETE,
-                field: uz,
+              (ID = cD.next()) && !ID.done;) {
+              const [CD, cD] = ID.value;
+              "object" === typeof cD && (DD = cD[bD]), SD?.push({
+                ref: iD,
+                refId: DD,
+                op: pD.DELETE,
+                field: CD,
                 value: void 0,
-                previousValue: bz
+                previousValue: cD
               })
             }
           }
         }
-        pz.addRef(Ez, dz, Fz !== iz || uz === nz.DELETE_AND_ADD && Fz === iz)
+        BD.addRef(ID, yD, MD !== iD || CD === pD.DELETE_AND_ADD && MD === iD)
       }
-      var Zz;
-      return dz
+      var tD;
+      return yD
     }
-    const Ib = function(zz, uz, bz, Ez, nz) {
-        const iz = uz[bz.offset++],
-          lz = Ez.constructor[Symbol.metadata],
-          Mz = iz >> 6 << 6,
-          tz = iz % (Mz || 255),
-          Hz = lz[tz];
-        if (void 0 === Hz) return console.warn("@colyseus/schema: field not defined at", {
-          index: tz,
-          ref: Ez.constructor.name,
-          metadata: lz
+    const uc = function(DD, CD, cD, ID, pD) {
+        const iD = CD[cD.offset++],
+          fD = ID.constructor[Symbol.metadata],
+          bD = iD >> 6 << 6,
+          QD = iD % (bD || 255),
+          wD = fD[QD];
+        if (void 0 === wD) return console.warn("@colyseus/schema: field not defined at", {
+          index: QD,
+          ref: ID.constructor.name,
+          metadata: fD
         }), -1;
-        const Oz = !0 === Hz.deprecated,
-          pz = Oz ? void 0 : Ez[dz](tz),
-          Fz = jb(zz, Mz, Ez, tz, pz, Hz.type, uz, bz, nz);
-        Oz || (null !== Fz && void 0 !== Fz && (Ez[Hz.name] = Fz), pz !== Fz && nz?.push({
-          ref: Ez,
-          refId: zz.currentRefId,
-          op: Mz,
-          field: Hz.name,
-          value: Fz,
-          previousValue: pz
+        const SD = !0 === wD.deprecated,
+          BD = SD ? void 0 : ID[yD](QD),
+          MD = ec(DD, bD, ID, QD, BD, wD.type, CD, cD, pD);
+        SD || (null !== MD && void 0 !== MD && (ID[wD.name] = MD), BD !== MD && pD?.push({
+          ref: ID,
+          refId: DD.currentRefId,
+          op: bD,
+          field: wD.name,
+          value: MD,
+          previousValue: BD
         }))
       },
-      Bb = function(zz, uz, bz, Ez, iz) {
-        const lz = Ez[wz] ?? Ez,
-          Mz = uz[bz.offset++];
-        if (Mz === nz.CLEAR) return zz.removeChildRefs(lz, iz), void lz.clear();
-        const tz = fu.number(uz, bz),
-          Hz = lz[Kz],
-          Oz = lz.constructor.COLLECTION_KIND;
-        let pz;
-        (Mz & nz.ADD) === nz.ADD ? Oz === yb ? (pz = fu.string(uz, bz), lz.setIndex(tz, pz)) : pz = tz : pz = lz.getIndex(tz);
-        const Fz = lz[dz](tz),
-          Zz = jb(zz, Mz, Ez, tz, Fz, Hz, uz, bz, iz);
-        if (null !== zz.resyncVisited && cb(zz, Ez, Mz, pz, Fz, Zz, iz), null !== Zz && void 0 !== Zz) switch (Oz) {
-          case yb:
-            lz.$items.set(pz, Zz);
+      hc = function(DD, CD, cD, ID, iD) {
+        const fD = ID[vD] ?? ID,
+          bD = CD[cD.offset++];
+        if (bD === pD.CLEAR) return DD.removeChildRefs(fD, iD), void fD.clear();
+        const QD = gC.number(CD, cD),
+          wD = fD[oD],
+          SD = fD.constructor.COLLECTION_KIND;
+        let BD;
+        (bD & pD.ADD) === pD.ADD ? SD === dc ? (BD = gC.string(CD, cD), fD.setIndex(QD, BD)) : BD = QD : BD = fD.getIndex(QD);
+        const MD = fD[yD](QD),
+          tD = ec(DD, bD, ID, QD, MD, wD, CD, cD, iD);
+        if (null !== DD.resyncVisited && Gc(DD, ID, bD, BD, MD, tD, iD), null !== tD && void 0 !== tD) switch (SD) {
+          case dc:
+            fD.$items.set(BD, tD);
             break;
-          case Db:
-            lz.$setAt(tz, Zz, null !== zz.resyncVisited && Mz === nz.ADD ? nz.REPLACE : Mz);
+          case Yc:
+            fD.$setAt(QD, tD, null !== DD.resyncVisited && bD === pD.ADD ? pD.REPLACE : bD);
             break;
-          case Qb:
-          case Wb:
-          case eb:
-            lz.$items.has(tz) || (lz.$items.set(tz, Zz), "number" === typeof lz.$refId && tz >= lz.$refId && (lz.$refId = tz + 1));
+          case Wc:
+          case sc:
+          case Ec:
+            fD.$items.has(QD) || (fD.$items.set(QD, tD), "number" === typeof fD.$refId && QD >= fD.$refId && (fD.$refId = QD + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${lz.constructor?.name} \u2014 item at index ${tz} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${fD.constructor?.name} \u2014 item at index ${QD} was not stored.`)
         }
-        Fz !== Zz && iz?.push({
-          ref: Ez,
-          refId: zz.currentRefId,
-          op: Mz,
-          dynamicIndex: pz,
-          value: Zz,
-          previousValue: Fz
+        MD !== tD && iD?.push({
+          ref: ID,
+          refId: DD.currentRefId,
+          op: bD,
+          dynamicIndex: BD,
+          value: tD,
+          previousValue: MD
         })
       },
-      Cb = function(zz, uz, bz, Ez, iz) {
-        const lz = Ez[wz] ?? Ez;
-        let Mz, tz = uz[bz.offset++];
-        if (tz === nz.CLEAR) return zz.removeChildRefs(lz, iz), void lz.clear();
-        if (tz === nz.REVERSE) return void lz.items.reverse();
-        if (tz === nz.DELETE_BY_REFID) {
-          const tz = fu.number(uz, bz),
-            Hz = zz.root.refs.get(tz);
-          if (void 0 === Hz) return;
-          if (zz.root.removeRef(tz), Mz = lz.findIndex((zz => zz === Hz)), -1 === Mz) return;
-          return lz[Fz](Mz), void iz?.push({
-            ref: Ez,
-            refId: zz.currentRefId,
-            op: nz.DELETE,
-            dynamicIndex: Mz,
+      rc = function(DD, CD, cD, ID, iD) {
+        const fD = ID[vD] ?? ID;
+        let bD, QD = CD[cD.offset++];
+        if (QD === pD.CLEAR) return DD.removeChildRefs(fD, iD), void fD.clear();
+        if (QD === pD.REVERSE) return void fD.items.reverse();
+        if (QD === pD.DELETE_BY_REFID) {
+          const QD = gC.number(CD, cD),
+            wD = DD.root.refs.get(QD);
+          if (void 0 === wD) return;
+          if (DD.root.removeRef(QD), bD = fD.findIndex((DD => DD === wD)), -1 === bD) return;
+          return fD[MD](bD), void iD?.push({
+            ref: ID,
+            refId: DD.currentRefId,
+            op: pD.DELETE,
+            dynamicIndex: bD,
             value: void 0,
-            previousValue: Hz
+            previousValue: wD
           })
         }
-        if (tz === nz.ADD_BY_REFID) {
-          const Ez = fu.number(uz, bz),
-            nz = zz.root.refs.get(Ez);
-          nz && (Mz = lz.findIndex((zz => zz === nz))), -1 !== Mz && void 0 !== Mz || (Mz = lz.length)
-        } else Mz = fu.number(uz, bz);
-        const Hz = lz[Kz];
-        let Oz = Mz;
-        const pz = lz.items[Mz],
-          dz = jb(zz, tz, Ez, Mz, pz, Hz, uz, bz, iz);
-        null !== zz.resyncVisited && cb(zz, Ez, tz, Mz, pz, dz, iz), null !== dz && void 0 !== dz && dz !== pz && lz.$setAt(Mz, dz, null !== zz.resyncVisited && tz === nz.ADD ? nz.REPLACE : tz), pz !== dz && iz?.push({
-          ref: Ez,
-          refId: zz.currentRefId,
-          op: tz,
-          dynamicIndex: Oz,
-          value: dz,
-          previousValue: pz
+        if (QD === pD.ADD_BY_REFID) {
+          const ID = gC.number(CD, cD),
+            pD = DD.root.refs.get(ID);
+          pD && (bD = fD.findIndex((DD => DD === pD))), -1 !== bD && void 0 !== bD || (bD = fD.length)
+        } else bD = gC.number(CD, cD);
+        const wD = fD[oD];
+        let SD = bD;
+        const BD = fD.items[bD],
+          yD = ec(DD, QD, ID, bD, BD, wD, CD, cD, iD);
+        null !== DD.resyncVisited && Gc(DD, ID, QD, bD, BD, yD, iD), null !== yD && void 0 !== yD && yD !== BD && fD.$setAt(bD, yD, null !== DD.resyncVisited && QD === pD.ADD ? pD.REPLACE : QD), BD !== yD && iD?.push({
+          ref: ID,
+          refId: DD.currentRefId,
+          op: QD,
+          dynamicIndex: SD,
+          value: yD,
+          previousValue: BD
         })
       };
-    class Yb extends Error {}
+    class Ac extends Error {}
 
-    function kb(zz, uz, bz, Ez) {
-      if (!(zz instanceof uz)) throw new Yb(`a '${uz.name}' was expected, but '${zz&&zz.constructor.name}' was provided in ${bz.constructor.name}#${Ez}`)
+    function Fc(DD, CD, cD, ID) {
+      if (!(DD instanceof CD)) throw new Ac(`a '${CD.name}' was expected, but '${DD&&DD.constructor.name}' was provided in ${cD.constructor.name}#${ID}`)
     }
-    const zE = (zz, uz) => {
-        const bz = zz.toString(),
-          Ez = uz.toString();
-        return bz < Ez ? -1 : bz > Ez ? 1 : 0
+    const DI = (DD, CD) => {
+        const cD = DD.toString(),
+          ID = CD.toString();
+        return cD < ID ? -1 : cD > ID ? 1 : 0
       },
-      uE = {
-        get: (zz, uz) => "symbol" === typeof uz || isNaN(uz) ? Reflect.get(zz, uz) : zz.items[uz],
-        set: (zz, uz, bz) => {
-          if ("symbol" !== typeof uz && !isNaN(uz)) {
-            if (void 0 === bz || null === bz) zz.$deleteAt(uz);
+      CI = {
+        get: (DD, CD) => "symbol" === typeof CD || isNaN(CD) ? Reflect.get(DD, CD) : DD.items[CD],
+        set: (DD, CD, cD) => {
+          if ("symbol" !== typeof CD && !isNaN(CD)) {
+            if (void 0 === cD || null === cD) DD.$deleteAt(CD);
             else {
-              let Ez;
-              if (bz[Rz]) {
-                kb(bz, zz[Kz], zz, uz);
-                const iz = zz.items[uz];
-                zz.isMovingItems ? (Ez = zz.$wireIndex(Number(uz)), void 0 !== iz ? bz[Rz].isNew ? zz[Rz].indexedOperation(Ez, nz.MOVE_AND_ADD) : (zz[Rz].getChange(Ez) & nz.DELETE) === nz.DELETE ? zz[Rz].indexedOperation(Ez, nz.DELETE_AND_MOVE) : zz[Rz].indexedOperation(Ez, nz.MOVE) : bz[Rz].isNew && zz[Rz].indexedOperation(Ez, nz.ADD), bz[Rz].setParent(zz, zz[Rz].root, Ez)) : Ez = zz.$changeAt(Number(uz), bz), void 0 !== iz && iz[Rz].root?.remove(iz[Rz])
-              } else Ez = zz.$changeAt(Number(uz), bz);
-              zz.items[uz] = bz, void 0 !== Ez && (zz.tmpItems[Ez] = bz)
+              let ID;
+              if (cD[ZD]) {
+                Fc(cD, DD[oD], DD, CD);
+                const iD = DD.items[CD];
+                DD.isMovingItems ? (ID = DD.$wireIndex(Number(CD)), void 0 !== iD ? cD[ZD].isNew ? DD[ZD].indexedOperation(ID, pD.MOVE_AND_ADD) : (DD[ZD].getChange(ID) & pD.DELETE) === pD.DELETE ? DD[ZD].indexedOperation(ID, pD.DELETE_AND_MOVE) : DD[ZD].indexedOperation(ID, pD.MOVE) : cD[ZD].isNew && DD[ZD].indexedOperation(ID, pD.ADD), cD[ZD].setParent(DD, DD[ZD].root, ID)) : ID = DD.$changeAt(Number(CD), cD), void 0 !== iD && iD[ZD].root?.remove(iD[ZD])
+              } else ID = DD.$changeAt(Number(CD), cD);
+              DD.items[CD] = cD, void 0 !== ID && (DD.tmpItems[ID] = cD)
             }
             return !0
           }
-          return Reflect.set(zz, uz, bz)
+          return Reflect.set(DD, CD, cD)
         },
-        deleteProperty: (zz, uz) => ("number" === typeof uz ? zz.$deleteAt(uz) : delete zz[uz], !0),
-        has: (zz, uz) => "symbol" === typeof uz || isNaN(Number(uz)) ? Reflect.has(zz, uz) : Reflect.has(zz.items, uz)
+        deleteProperty: (DD, CD) => ("number" === typeof CD ? DD.$deleteAt(CD) : delete DD[CD], !0),
+        has: (DD, CD) => "symbol" === typeof CD || isNaN(Number(CD)) ? Reflect.has(DD, CD) : Reflect.has(DD.items, CD)
       };
-    class bE {
-      [Rz];
-      [Mz];
-      [wz];
-      [Kz];
+    class cI {
+      [ZD];
+      [bD];
+      [vD];
+      [oD];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[Hz] = Ub;
-      static[Oz] = Cb;
-      static COLLECTION_KIND = Db;
-      static[pz](zz, uz, bz) {
-        if (!bz) return !0;
-        const Ez = zz[wz] ?? zz;
-        return "string" === typeof Ez[Kz] || bz.isChangeTreeVisible(Ez.tmpItems[uz]?.[Rz])
+      static[wD] = Tc;
+      static[SD] = rc;
+      static COLLECTION_KIND = Yc;
+      static[BD](DD, CD, cD) {
+        if (!cD) return !0;
+        const ID = DD[vD] ?? DD;
+        return "string" === typeof ID[oD] || cD.isChangeTreeVisible(ID.tmpItems[CD]?.[ZD])
       }
-      static is(zz) {
-        return Array.isArray(zz) || void 0 !== zz.array
+      static is(DD) {
+        return Array.isArray(DD) || void 0 !== DD.array
       }
-      static from(zz) {
-        return new bE(...Array.from(zz))
+      static from(DD) {
+        return new cI(...Array.from(DD))
       }
       constructor() {
-        this[Kz] = void 0, this[wz] = this;
-        const zz = new Proxy(this, uE);
-        return Object.defineProperty(this, Rz, {
-          value: new Lb(zz, this),
+        this[oD] = void 0, this[vD] = this;
+        const DD = new Proxy(this, CI);
+        return Object.defineProperty(this, ZD, {
+          value: new Jc(DD, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), zz
+        }), arguments.length > 0 && this.push(...arguments), DD
       }
       static initializeForDecoder() {
-        const zz = Object.create(bE.prototype);
-        zz.items = [], zz.isMovingItems = !1, zz._needsCompaction = !1, zz[Kz] = void 0, zz[wz] = zz;
-        const uz = new Proxy(zz, uE);
-        return Gb(zz, uz), uz
+        const DD = Object.create(cI.prototype);
+        DD.items = [], DD.isMovingItems = !1, DD._needsCompaction = !1, DD[oD] = void 0, DD[vD] = DD;
+        const CD = new Proxy(DD, CI);
+        return ac(DD, CD), CD
       }
-      set length(zz) {
-        0 === zz ? this.clear() : zz < this.items.length ? this.splice(zz, this.length - zz) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(DD) {
+        0 === DD ? this.clear() : DD < this.items.length ? this.splice(DD, this.length - DD) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[Rz].pause()
+        this[ZD].pause()
       }
       resumeTracking() {
-        this[Rz].resume()
+        this[ZD].resume()
       }
-      untracked(zz) {
-        return this[Rz].untracked(zz)
+      untracked(DD) {
+        return this[ZD].untracked(DD)
       }
       get isTrackingPaused() {
-        return this[Rz].paused
+        return this[ZD].paused
       }
       push() {
-        const zz = this[wz],
-          uz = zz.items,
-          bz = zz.tmpItems,
-          Ez = zz[Rz],
-          iz = zz[Kz];
-        let lz = bz.length;
-        for (let Mz = 0, tz = arguments.length; Mz < tz; Mz++, lz++) {
-          const tz = Mz < 0 || arguments.length <= Mz ? void 0 : arguments[Mz];
-          if (void 0 === tz || null === tz) return;
-          "object" === typeof tz && iz && kb(tz, iz, zz, Mz), Ez.indexedOperation(lz, nz.ADD), uz.push(tz), bz.push(tz), tz[Rz]?.setParent(this, Ez.root, lz)
+        const DD = this[vD],
+          CD = DD.items,
+          cD = DD.tmpItems,
+          ID = DD[ZD],
+          iD = DD[oD];
+        let fD = cD.length;
+        for (let bD = 0, QD = arguments.length; bD < QD; bD++, fD++) {
+          const QD = bD < 0 || arguments.length <= bD ? void 0 : arguments[bD];
+          if (void 0 === QD || null === QD) return;
+          "object" === typeof QD && iD && Fc(QD, iD, DD, bD), ID.indexedOperation(fD, pD.ADD), CD.push(QD), cD.push(QD), QD[ZD]?.setParent(this, ID.root, fD)
         }
-        return lz
+        return fD
       }
       pop() {
-        const zz = this[wz],
-          uz = zz.tmpItems,
-          bz = zz.deletedIndexes;
-        let Ez = -1;
-        for (let iz = uz.length - 1; iz >= 0; iz--)
-          if (!0 !== bz[iz]) {
-            Ez = iz;
+        const DD = this[vD],
+          CD = DD.tmpItems,
+          cD = DD.deletedIndexes;
+        let ID = -1;
+        for (let iD = CD.length - 1; iD >= 0; iD--)
+          if (!0 !== cD[iD]) {
+            ID = iD;
             break
-          } if (Ez < 0) return;
-        const nz = zz.$isUnsentAdd(Ez);
-        return zz[Rz].delete(Ez), nz ? zz.$cancelAdd(Ez) : bz[Ez] = !0, zz.items.pop()
+          } if (ID < 0) return;
+        const pD = DD.$isUnsentAdd(ID);
+        return DD[ZD].delete(ID), pD ? DD.$cancelAdd(ID) : cD[ID] = !0, DD.items.pop()
       }
-      at(zz) {
-        return zz < 0 && (zz += this.length), this.items[zz]
+      at(DD) {
+        return DD < 0 && (DD += this.length), this.items[DD]
       }
-      $wireIndex(zz) {
-        const uz = this.deletedIndexes;
-        if (0 === uz.length) return zz;
-        const bz = this.tmpItems;
-        let Ez = 0;
-        for (let nz = 0; nz < bz.length; nz++)
-          if (!0 !== uz[nz]) {
-            if (Ez === zz) return nz;
-            Ez++
-          } return bz.length + (zz - Ez)
+      $wireIndex(DD) {
+        const CD = this.deletedIndexes;
+        if (0 === CD.length) return DD;
+        const cD = this.tmpItems;
+        let ID = 0;
+        for (let pD = 0; pD < cD.length; pD++)
+          if (!0 !== CD[pD]) {
+            if (ID === DD) return pD;
+            ID++
+          } return cD.length + (DD - ID)
       }
-      $isUnsentAdd(zz) {
-        const uz = this[Rz];
-        return 0 === (576 & uz.flags) && !uz.paused && "string" !== typeof this[Kz] && uz.operationAt(zz) === nz.ADD
+      $isUnsentAdd(DD) {
+        const CD = this[ZD];
+        return 0 === (576 & CD.flags) && !CD.paused && "string" !== typeof this[oD] && CD.operationAt(DD) === pD.ADD
       }
-      $cancelAdd(zz) {
-        let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const bz = this[Rz],
-          Ez = this.tmpItems[zz];
-        this.tmpItems.splice(zz, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(zz, 1), bz.removeAt(zz, 1);
-        const nz = Ez?.[Rz];
-        void 0 !== nz && void 0 === nz.root && nz.removeParent(this), uz && this.$reindexChildren(zz)
+      $cancelAdd(DD) {
+        let CD = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const cD = this[ZD],
+          ID = this.tmpItems[DD];
+        this.tmpItems.splice(DD, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(DD, 1), cD.removeAt(DD, 1);
+        const pD = ID?.[ZD];
+        void 0 !== pD && void 0 === pD.root && pD.removeParent(this), CD && this.$reindexChildren(DD)
       }
-      $reindexChildren(zz, uz) {
-        if (!this[Rz].hasFilteredFields) return;
-        if ("string" === typeof this[Kz]) return;
-        const bz = this.tmpItems,
-          Ez = bz.length;
-        if (void 0 !== uz)
-          for (; zz < Ez && bz[zz] === uz[zz];) zz++;
-        for (let nz = zz; nz < Ez; nz++) bz[nz]?.[Rz]?.setParentIndex(this, nz)
+      $reindexChildren(DD, CD) {
+        if (!this[ZD].hasFilteredFields) return;
+        if ("string" === typeof this[oD]) return;
+        const cD = this.tmpItems,
+          ID = cD.length;
+        if (void 0 !== CD)
+          for (; DD < ID && cD[DD] === CD[DD];) DD++;
+        for (let pD = DD; pD < ID; pD++) cD[pD]?.[ZD]?.setParentIndex(this, pD)
       }
-      $changeAt(zz, uz) {
-        if (void 0 === uz || null === uz) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[zz] === uz) return;
-        const bz = void 0 !== this.items[zz] ? "object" === typeof uz ? nz.DELETE_AND_ADD : nz.REPLACE : nz.ADD,
-          Ez = this.$wireIndex(zz),
-          iz = this[Rz];
-        return iz.change(Ez, bz), uz[Rz]?.setParent(this, iz.root, Ez), Ez
+      $changeAt(DD, CD) {
+        if (void 0 === CD || null === CD) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[DD] === CD) return;
+        const cD = void 0 !== this.items[DD] ? "object" === typeof CD ? pD.DELETE_AND_ADD : pD.REPLACE : pD.ADD,
+          ID = this.$wireIndex(DD),
+          iD = this[ZD];
+        return iD.change(ID, cD), CD[ZD]?.setParent(this, iD.root, ID), ID
       }
-      $deleteAt(zz, uz) {
-        this[Rz].delete(this.$wireIndex(zz), uz)
+      $deleteAt(DD, CD) {
+        this[ZD].delete(this.$wireIndex(DD), CD)
       }
-      $setAt(zz, uz, bz) {
-        bz === nz.ADD && void 0 !== this.items[zz] ? this.items.splice(zz, 0, uz) : bz === nz.DELETE_AND_MOVE ? (this.items.splice(zz, 1), this.items[zz] = uz) : (zz > this.items.length && (this._needsCompaction = !0), this.items[zz] = uz)
+      $setAt(DD, CD, cD) {
+        cD === pD.ADD && void 0 !== this.items[DD] ? this.items.splice(DD, 0, CD) : cD === pD.DELETE_AND_MOVE ? (this.items.splice(DD, 1), this.items[DD] = CD) : (DD > this.items.length && (this._needsCompaction = !0), this.items[DD] = CD)
       }
       clear() {
-        const zz = this[wz];
-        if (0 === zz.items.length) return;
-        const uz = zz[Rz];
-        uz.forEachChild(((zz, bz) => {
-          uz.root?.remove(zz)
-        })), uz.discard(), uz.operation(nz.CLEAR), zz.items.length = 0, zz.tmpItems.length = 0
-      } [fz]() {
-        const zz = this[wz] ?? this,
-          uz = zz[Rz];
-        if (uz.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const bz = zz.items;
-        for (let Ez = 0; Ez < bz.length; Ez++) bz[Ez]?.[fz]?.();
-        zz.items.length = 0, zz.tmpItems.length = 0, zz.deletedIndexes.length = 0, uz.recycle(), zz[Mz] = void 0
+        const DD = this[vD];
+        if (0 === DD.items.length) return;
+        const CD = DD[ZD];
+        CD.forEachChild(((DD, cD) => {
+          CD.root?.remove(DD)
+        })), CD.discard(), CD.operation(pD.CLEAR), DD.items.length = 0, DD.tmpItems.length = 0
+      } [gD]() {
+        const DD = this[vD] ?? this,
+          CD = DD[ZD];
+        if (CD.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const cD = DD.items;
+        for (let ID = 0; ID < cD.length; ID++) cD[ID]?.[gD]?.();
+        DD.items.length = 0, DD.tmpItems.length = 0, DD.deletedIndexes.length = 0, CD.recycle(), DD[bD] = void 0
       }
       concat() {
-        return new bE(...this.items.concat(...arguments))
+        return new cI(...this.items.concat(...arguments))
       }
-      join(zz) {
-        return this.items.join(zz)
+      join(DD) {
+        return this.items.join(DD)
       }
       reverse() {
-        const zz = this[wz],
-          uz = zz[Rz];
-        if (uz.has() || zz.deletedIndexes.length > 0) {
-          const uz = zz.items.slice().reverse();
-          return this.clear(), this.push(...uz), this
+        const DD = this[vD],
+          CD = DD[ZD];
+        if (CD.has() || DD.deletedIndexes.length > 0) {
+          const CD = DD.items.slice().reverse();
+          return this.clear(), this.push(...CD), this
         }
-        return uz.operation(nz.REVERSE), zz.items.reverse(), zz.tmpItems.reverse(), zz.$reindexChildren(0), this
+        return CD.operation(pD.REVERSE), DD.items.reverse(), DD.tmpItems.reverse(), DD.$reindexChildren(0), this
       }
       shift() {
-        const zz = this[wz],
-          uz = zz.items;
-        if (0 === uz.length) return;
-        const bz = zz[Rz],
-          Ez = zz.deletedIndexes;
-        let iz = 0;
-        for (; !0 === Ez[iz];) iz++;
-        const lz = zz.$isUnsentAdd(iz);
-        return bz.delete(iz, nz.DELETE), lz ? zz.$cancelAdd(iz) : Ez[iz] = !0, uz.shift()
+        const DD = this[vD],
+          CD = DD.items;
+        if (0 === CD.length) return;
+        const cD = DD[ZD],
+          ID = DD.deletedIndexes;
+        let iD = 0;
+        for (; !0 === ID[iD];) iD++;
+        const fD = DD.$isUnsentAdd(iD);
+        return cD.delete(iD, pD.DELETE), fD ? DD.$cancelAdd(iD) : ID[iD] = !0, CD.shift()
       }
-      slice(zz, uz) {
-        const bz = new bE;
-        return bz.push(...this.items.slice(zz, uz)), bz
+      slice(DD, CD) {
+        const cD = new cI;
+        return cD.push(...this.items.slice(DD, CD)), cD
       }
       sort() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zE;
-        const uz = this[wz];
-        uz.isMovingItems = !0;
-        const bz = uz[Rz];
-        return uz.items.sort(zz).forEach(((zz, uz) => bz.change(uz, nz.REPLACE))), uz.tmpItems.sort(zz), uz.$reindexChildren(0), uz.isMovingItems = !1, this
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : DI;
+        const CD = this[vD];
+        CD.isMovingItems = !0;
+        const cD = CD[ZD];
+        return CD.items.sort(DD).forEach(((DD, CD) => cD.change(CD, pD.REPLACE))), CD.tmpItems.sort(DD), CD.$reindexChildren(0), CD.isMovingItems = !1, this
       }
-      splice(zz, uz) {
-        const bz = this[wz],
-          Ez = bz[Rz],
-          iz = bz.items,
-          lz = bz.tmpItems,
-          Mz = bz.deletedIndexes,
-          tz = iz.length,
-          Hz = lz.length;
-        for (var Oz = arguments.length, pz = new Array(Oz > 2 ? Oz - 2 : 0), dz = 2; dz < Oz; dz++) pz[dz - 2] = arguments[dz];
-        const Fz = pz.length,
-          Zz = [];
-        for (let nz = 0; nz < Hz; nz++) !0 !== Mz[nz] && Zz.push(nz);
-        let Kz;
-        if (tz > zz) {
-          void 0 === uz && (uz = tz - zz);
-          for (let iz = zz; iz < zz + uz; iz++) {
-            const zz = Zz[iz],
-              uz = bz.$isUnsentAdd(zz);
-            Ez.delete(zz, nz.DELETE), uz ? (Kz ??= []).push(zz) : Mz[zz] = !0
+      splice(DD, CD) {
+        const cD = this[vD],
+          ID = cD[ZD],
+          iD = cD.items,
+          fD = cD.tmpItems,
+          bD = cD.deletedIndexes,
+          QD = iD.length,
+          wD = fD.length;
+        for (var SD = arguments.length, BD = new Array(SD > 2 ? SD - 2 : 0), yD = 2; yD < SD; yD++) BD[yD - 2] = arguments[yD];
+        const MD = BD.length,
+          tD = [];
+        for (let pD = 0; pD < wD; pD++) !0 !== bD[pD] && tD.push(pD);
+        let oD;
+        if (QD > DD) {
+          void 0 === CD && (CD = QD - DD);
+          for (let iD = DD; iD < DD + CD; iD++) {
+            const DD = tD[iD],
+              CD = cD.$isUnsentAdd(DD);
+            ID.delete(DD, pD.DELETE), CD ? (oD ??= []).push(DD) : bD[DD] = !0
           }
-        } else uz = 0;
-        if (Fz > 0) {
-          const iz = Zz[zz] ?? tz,
-            Hz = Math.min(Fz, uz);
-          for (let zz = 0; zz < Hz; zz++) {
-            const uz = iz + zz;
-            let bz;
-            const tz = void 0 !== Kz ? Kz.indexOf(uz) : -1; - 1 !== tz ? (Kz.splice(tz, 1), bz = nz.ADD) : bz = Mz[uz] ? nz.DELETE_AND_ADD : nz.ADD, Ez.indexedOperation(uz, bz), lz[uz] = pz[zz], Mz[uz] = !1, pz[zz][Rz]?.setParent(this, Ez.root, uz)
+        } else CD = 0;
+        if (MD > 0) {
+          const iD = tD[DD] ?? QD,
+            wD = Math.min(MD, CD);
+          for (let DD = 0; DD < wD; DD++) {
+            const CD = iD + DD;
+            let cD;
+            const QD = void 0 !== oD ? oD.indexOf(CD) : -1; - 1 !== QD ? (oD.splice(QD, 1), cD = pD.ADD) : cD = bD[CD] ? pD.DELETE_AND_ADD : pD.ADD, ID.indexedOperation(CD, cD), fD[CD] = BD[DD], bD[CD] = !1, BD[DD][ZD]?.setParent(this, ID.root, CD)
           }
-          const Oz = Fz - Hz;
-          if (Oz > 0) {
-            const zz = iz + Hz;
-            Ez.insertAt(zz, Oz);
-            for (let uz = 0; uz < Oz; uz++) pz[Hz + uz][Rz]?.setParent(this, Ez.root, zz + uz);
-            Mz.length > 0 && Mz.splice(zz, 0, ...new Array(Oz).fill(!1)), lz.splice(zz, 0, ...pz.slice(Hz)), bz.$reindexChildren(zz + Oz)
+          const SD = MD - wD;
+          if (SD > 0) {
+            const DD = iD + wD;
+            ID.insertAt(DD, SD);
+            for (let CD = 0; CD < SD; CD++) BD[wD + CD][ZD]?.setParent(this, ID.root, DD + CD);
+            bD.length > 0 && bD.splice(DD, 0, ...new Array(SD).fill(!1)), fD.splice(DD, 0, ...BD.slice(wD)), cD.$reindexChildren(DD + SD)
           }
         }
-        if (void 0 !== Kz && Kz.length > 0) {
-          for (let zz = Kz.length - 1; zz >= 0; zz--) bz.$cancelAdd(Kz[zz], !1);
-          bz.$reindexChildren(Kz[0])
+        if (void 0 !== oD && oD.length > 0) {
+          for (let DD = oD.length - 1; DD >= 0; DD--) cD.$cancelAdd(oD[DD], !1);
+          cD.$reindexChildren(oD[0])
         }
-        return Ez.root?.enqueueChangeTree(Ez), iz.splice(zz, uz, ...pz)
+        return ID.root?.enqueueChangeTree(ID), iD.splice(DD, CD, ...BD)
       }
       unshift() {
-        const zz = this[wz],
-          uz = zz[Rz];
-        uz.unshift(arguments.length);
-        for (let Ez = 0; Ez < arguments.length; Ez++)(Ez < 0 || arguments.length <= Ez ? void 0 : arguments[Ez])?.[Rz]?.setParent(this, uz.root, Ez);
-        const bz = zz.deletedIndexes;
-        return bz.length > 0 && bz.unshift(...new Array(arguments.length).fill(!1)), zz.tmpItems.unshift(...arguments), zz.$reindexChildren(arguments.length), zz.items.unshift(...arguments)
+        const DD = this[vD],
+          CD = DD[ZD];
+        CD.unshift(arguments.length);
+        for (let ID = 0; ID < arguments.length; ID++)(ID < 0 || arguments.length <= ID ? void 0 : arguments[ID])?.[ZD]?.setParent(this, CD.root, ID);
+        const cD = DD.deletedIndexes;
+        return cD.length > 0 && cD.unshift(...new Array(arguments.length).fill(!1)), DD.tmpItems.unshift(...arguments), DD.$reindexChildren(arguments.length), DD.items.unshift(...arguments)
       }
-      indexOf(zz, uz) {
-        return this.items.indexOf(zz, uz)
+      indexOf(DD, CD) {
+        return this.items.indexOf(DD, CD)
       }
-      lastIndexOf(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(zz, uz)
+      lastIndexOf(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(DD, CD)
       }
-      every(zz, uz) {
-        return this.items.every(zz, uz)
+      every(DD, CD) {
+        return this.items.every(DD, CD)
       }
-      some(zz, uz) {
-        return this.items.some(zz, uz)
+      some(DD, CD) {
+        return this.items.some(DD, CD)
       }
-      forEach(zz, uz) {
-        return this.items.forEach(zz, uz)
+      forEach(DD, CD) {
+        return this.items.forEach(DD, CD)
       }
-      map(zz, uz) {
-        return this.items.map(zz, uz)
+      map(DD, CD) {
+        return this.items.map(DD, CD)
       }
-      filter(zz, uz) {
-        return this.items.filter(zz, uz)
+      filter(DD, CD) {
+        return this.items.filter(DD, CD)
       }
-      reduce(zz, uz) {
+      reduce(DD, CD) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(zz, uz) {
+      reduceRight(DD, CD) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(zz, uz) {
-        return this.items.find(zz, uz)
+      find(DD, CD) {
+        return this.items.find(DD, CD)
       }
-      findIndex(zz, uz) {
-        return this.items.findIndex(zz, uz)
+      findIndex(DD, CD) {
+        return this.items.findIndex(DD, CD)
       }
-      fill(zz, uz, bz) {
+      fill(DD, CD, cD) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(zz, uz, bz) {
+      copyWithin(DD, CD, cD) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return bE
+        return cI
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(zz, uz) {
-        return this.items.includes(zz, uz)
+      includes(DD, CD) {
+        return this.items.includes(DD, CD)
       }
-      flatMap(zz, uz) {
+      flatMap(DD, CD) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(zz) {
+      flat(DD) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
+        for (var DD = arguments.length, CD = new Array(DD), cD = 0; cD < DD; cD++) CD[cD] = arguments[cD];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(zz, uz) {
-        const bz = this.items.slice();
-        return zz < 0 && (zz += this.length), bz[zz] = uz, new bE(...bz)
+      with(DD, CD) {
+        const cD = this.items.slice();
+        return DD < 0 && (DD += this.length), cD[DD] = CD, new cI(...cD)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(zz) {
-        return this.items.slice().sort(zz)
+      toSorted(DD) {
+        return this.items.slice().sort(DD)
       }
-      toSpliced(zz, uz) {
-        for (var bz = arguments.length, Ez = new Array(bz > 2 ? bz - 2 : 0), nz = 2; nz < bz; nz++) Ez[nz - 2] = arguments[nz];
-        const iz = this.items.slice();
-        return iz.splice.apply(iz, arguments), iz
+      toSpliced(DD, CD) {
+        for (var cD = arguments.length, ID = new Array(cD > 2 ? cD - 2 : 0), pD = 2; pD < cD; pD++) ID[pD - 2] = arguments[pD];
+        const iD = this.items.slice();
+        return iD.splice.apply(iD, arguments), iD
       }
       shuffle() {
-        return this.move((zz => {
-          let uz = this.items.length;
-          for (; 0 != uz;) {
-            let zz = Math.floor(Math.random() * uz);
-            uz--, [this[uz], this[zz]] = [this[zz], this[uz]]
+        return this.move((DD => {
+          let CD = this.items.length;
+          for (; 0 != CD;) {
+            let DD = Math.floor(Math.random() * CD);
+            CD--, [this[CD], this[DD]] = [this[DD], this[CD]]
           }
         }))
       }
-      move(zz) {
-        return this.isMovingItems = !0, zz(this), this.isMovingItems = !1, this
-      } [dz](zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const bz = this[wz] ?? this;
-        return uz || bz.deletedIndexes[zz] ? bz.items[zz] : bz.tmpItems[zz] || bz.items[zz]
-      } [Fz](zz) {
-        const uz = this[wz] ?? this;
-        uz.items[zz] = void 0, uz._needsCompaction = !0
-      } [Xz]() {
-        const zz = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, zz), this.deletedIndexes.length = 0)
-      } [sz]() {
-        const zz = this[wz] ?? this;
-        zz._needsCompaction && (zz._needsCompaction = !1, zz.items = zz.items.filter((zz => void 0 !== zz)))
-      } [Zz](zz, uz, bz) {
-        const Ez = this[wz] ?? this,
-          nz = Ez.items;
-        let iz = !1;
-        for (let lz = 0; lz < nz.length; lz++) {
-          const Mz = nz[lz];
-          zz.has(lz) ? bz(Mz) : (iz = !0, uz(Mz, lz), Ez[Fz](lz))
+      move(DD) {
+        return this.isMovingItems = !0, DD(this), this.isMovingItems = !1, this
+      } [yD](DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const cD = this[vD] ?? this;
+        return CD || cD.deletedIndexes[DD] ? cD.items[DD] : cD.tmpItems[DD] || cD.items[DD]
+      } [MD](DD) {
+        const CD = this[vD] ?? this;
+        CD.items[DD] = void 0, CD._needsCompaction = !0
+      } [ND]() {
+        const DD = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, DD), this.deletedIndexes.length = 0)
+      } [XD]() {
+        const DD = this[vD] ?? this;
+        DD._needsCompaction && (DD._needsCompaction = !1, DD.items = DD.items.filter((DD => void 0 !== DD)))
+      } [tD](DD, CD, cD) {
+        const ID = this[vD] ?? this,
+          pD = ID.items;
+        let iD = !1;
+        for (let fD = 0; fD < pD.length; fD++) {
+          const bD = pD[fD];
+          DD.has(fD) ? cD(bD) : (iD = !0, CD(bD, fD), ID[MD](fD))
         }
-        iz && Ez[sz]()
+        iD && ID[XD]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((zz => "function" === typeof zz.toJSON ? zz.toJSON() : zz))
+        return this.toArray().map((DD => "function" === typeof DD.toJSON ? DD.toJSON() : DD))
       }
-      clone(zz) {
-        let uz;
-        return zz ? (uz = new bE, uz.push(...this.items)) : uz = new bE(...this.map((zz => zz[Rz] ? zz.clone() : zz))), uz
+      clone(DD) {
+        let CD;
+        return DD ? (CD = new cI, CD.push(...this.items)) : CD = new cI(...this.map((DD => DD[ZD] ? DD.clone() : DD))), CD
       }
     }
-    ou("array", {
-      constructor: bE
+    nC("array", {
+      constructor: cI
     });
-    class EE {
+    class II {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(zz) {
-        const uz = this.indexByKey[zz];
-        return void 0 === uz ? void 0 : uz
+      indexOf(DD) {
+        const CD = this.indexByKey[DD];
+        return void 0 === CD ? void 0 : CD
       }
-      assign(zz) {
-        const uz = this.nextIndex++;
-        return this.indexByKey[zz] = uz, this.keyByIndex.set(uz, zz), uz
+      assign(DD) {
+        const CD = this.nextIndex++;
+        return this.indexByKey[DD] = CD, this.keyByIndex.set(CD, DD), CD
       }
-      snapshot(zz, uz) {
-        (this.snapshots ??= new Map).set(zz, uz)
+      snapshot(DD, CD) {
+        (this.snapshots ??= new Map).set(DD, CD)
       }
-      forgetSnapshot(zz) {
-        this.snapshots?.delete(zz)
+      forgetSnapshot(DD) {
+        this.snapshots?.delete(DD)
       }
-      snapshotAt(zz) {
-        return this.snapshots?.get(zz)
+      snapshotAt(DD) {
+        return this.snapshots?.get(DD)
       }
-      setIndex(zz, uz) {
-        this.keyByIndex.set(zz, uz), this.indexByKey[uz] = zz
+      setIndex(DD, CD) {
+        this.keyByIndex.set(DD, CD), this.indexByKey[CD] = DD
       }
-      keyOf(zz) {
-        return this.keyByIndex.get(zz)
+      keyOf(DD) {
+        return this.keyByIndex.get(DD)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [zz] of this.snapshots) {
-            const uz = this.keyByIndex.get(zz);
-            void 0 !== uz && (delete this.indexByKey[uz], this.keyByIndex.delete(zz))
+          for (const [DD] of this.snapshots) {
+            const CD = this.keyByIndex.get(DD);
+            void 0 !== CD && (delete this.indexByKey[CD], this.keyByIndex.delete(DD))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class nE {
-      [Rz];
-      [Mz];
+    class pI {
+      [ZD];
+      [bD];
       childType;
-      [Kz];
+      [oD];
       $items = new Map;
-      journal = new EE;
+      journal = new II;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(zz) {
-        (this._stream ??= xu()).maxPerTick = zz
+      set maxPerTick(DD) {
+        (this._stream ??= HC()).maxPerTick = DD
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(zz) {
-        (this._stream ??= xu()).priority = zz
+      set priority(DD) {
+        (this._stream ??= HC()).priority = DD
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[Hz] = mb;
-      static[Oz] = Bb;
-      static COLLECTION_KIND = yb;
-      static[pz](zz, uz, bz) {
-        if (!bz || "string" === typeof zz[Kz]) return !0;
-        const Ez = zz[dz](uz) ?? zz.journal.snapshotAt(uz);
-        return bz.isChangeTreeVisible(Ez[Rz])
+      static[wD] = jc;
+      static[SD] = hc;
+      static COLLECTION_KIND = dc;
+      static[BD](DD, CD, cD) {
+        if (!cD || "string" === typeof DD[oD]) return !0;
+        const ID = DD[yD](CD) ?? DD.journal.snapshotAt(CD);
+        return cD.isChangeTreeVisible(ID[ZD])
       }
-      static is(zz) {
-        return void 0 !== zz.map
+      static is(DD) {
+        return void 0 !== DD.map
       }
-      constructor(zz) {
-        if (Object.defineProperty(this, Rz, {
-            value: new Lb(this),
+      constructor(DD) {
+        if (Object.defineProperty(this, ZD, {
+            value: new Jc(this),
             enumerable: !1,
             writable: !0
-          }), this[Kz] = void 0, zz)
-          if (zz instanceof Map || zz instanceof nE) zz.forEach(((zz, uz) => this.set(uz, zz)));
+          }), this[oD] = void 0, DD)
+          if (DD instanceof Map || DD instanceof pI) DD.forEach(((DD, CD) => this.set(CD, DD)));
           else
-            for (const uz in zz) this.set(uz, zz[uz])
+            for (const CD in DD) this.set(CD, DD[CD])
       }
       static initializeForDecoder() {
-        const zz = Object.create(nE.prototype);
-        return zz.$items = new Map, zz.journal = new EE, zz[Kz] = void 0, Gb(zz), zz
+        const DD = Object.create(pI.prototype);
+        return DD.$items = new Map, DD.journal = new II, DD[oD] = void 0, ac(DD), DD
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return nE
+        return pI
       }
-      set(zz, uz) {
-        if (void 0 === uz || null === uz) throw new Error(`MapSchema#set('${zz}', ${uz}): trying to set ${uz} value on '${zz}'.`);
-        "object" === typeof uz && this[Kz] && kb(uz, this[Kz], this, zz), zz = zz.toString();
-        const bz = this[Rz],
-          Ez = void 0 !== uz[Rz],
-          iz = this.journal;
-        let lz, Mz = iz.indexOf(zz);
-        if (void 0 !== Mz) {
-          lz = nz.REPLACE;
-          const bz = this.$items.get(zz);
-          if (bz === uz) return;
-          Ez && (lz = nz.DELETE_AND_ADD, void 0 !== bz && bz[Rz].root?.remove(bz[Rz])), void 0 !== iz.snapshotAt(Mz) && iz.forgetSnapshot(Mz)
-        } else Mz = iz.assign(zz), lz = nz.ADD;
-        return this.$items.set(zz, uz), lz === nz.ADD && bz.isStreamCollection ? void 0 !== bz.root && Au(this, bz.root, Mz) : bz.change(Mz, lz), Ez && uz[Rz].setParent(this, bz.root, Mz), this
+      set(DD, CD) {
+        if (void 0 === CD || null === CD) throw new Error(`MapSchema#set('${DD}', ${CD}): trying to set ${CD} value on '${DD}'.`);
+        "object" === typeof CD && this[oD] && Fc(CD, this[oD], this, DD), DD = DD.toString();
+        const cD = this[ZD],
+          ID = void 0 !== CD[ZD],
+          iD = this.journal;
+        let fD, bD = iD.indexOf(DD);
+        if (void 0 !== bD) {
+          fD = pD.REPLACE;
+          const cD = this.$items.get(DD);
+          if (cD === CD) return;
+          ID && (fD = pD.DELETE_AND_ADD, void 0 !== cD && cD[ZD].root?.remove(cD[ZD])), void 0 !== iD.snapshotAt(bD) && iD.forgetSnapshot(bD)
+        } else bD = iD.assign(DD), fD = pD.ADD;
+        return this.$items.set(DD, CD), fD === pD.ADD && cD.isStreamCollection ? void 0 !== cD.root && xC(this, cD.root, bD) : cD.change(bD, fD), ID && CD[ZD].setParent(this, cD.root, bD), this
       }
-      get(zz) {
-        return this.$items.get(zz)
+      get(DD) {
+        return this.$items.get(DD)
       }
-      getOrInsert(zz, uz) {
-        return this.$items.has(zz) ? this.$items.get(zz) : (this.set(zz, uz), uz)
+      getOrInsert(DD, CD) {
+        return this.$items.has(DD) ? this.$items.get(DD) : (this.set(DD, CD), CD)
       }
-      getOrInsertComputed(zz, uz) {
-        if (this.$items.has(zz)) return this.$items.get(zz);
-        const bz = uz(zz);
-        return this.set(zz, bz), bz
+      getOrInsertComputed(DD, CD) {
+        if (this.$items.has(DD)) return this.$items.get(DD);
+        const cD = CD(DD);
+        return this.set(DD, cD), cD
       }
-      delete(zz) {
-        if (!this.$items.has(zz)) return !1;
-        const uz = this.journal.indexOf(zz),
-          bz = this.$items.get(zz),
-          Ez = this[Rz];
-        if (Ez.isStreamCollection) {
-          const nz = Ez.root;
-          let iz = !1;
-          return void 0 !== nz && (iz = Tu(this, nz, this[Mz], uz)), void 0 !== bz?.[Rz] && nz?.remove(bz[Rz]), this.$items.delete(zz), iz || this.journal.snapshot(uz, bz), !0
+      delete(DD) {
+        if (!this.$items.has(DD)) return !1;
+        const CD = this.journal.indexOf(DD),
+          cD = this.$items.get(DD),
+          ID = this[ZD];
+        if (ID.isStreamCollection) {
+          const pD = ID.root;
+          let iD = !1;
+          return void 0 !== pD && (iD = qC(this, pD, this[bD], CD)), void 0 !== cD?.[ZD] && pD?.remove(cD[ZD]), this.$items.delete(DD), iD || this.journal.snapshot(CD, cD), !0
         }
-        return this.journal.snapshot(uz, bz), Ez.delete(uz), this.$items.delete(zz)
+        return this.journal.snapshot(CD, cD), ID.delete(CD), this.$items.delete(DD)
       }
       clear() {
-        const zz = this[Rz];
-        zz.discard(), zz.forEachChild(((uz, bz) => {
-          zz.root?.remove(uz)
-        })), this.journal.reset(), this.$items.clear(), zz.operation(nz.CLEAR)
-      } [fz]() {
-        const zz = this[Rz];
-        if (zz.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((zz => zz?.[fz]?.())), this.$items.clear(), this.journal.reset(), zz.recycle(), this[Mz] = void 0
+        const DD = this[ZD];
+        DD.discard(), DD.forEachChild(((CD, cD) => {
+          DD.root?.remove(CD)
+        })), this.journal.reset(), this.$items.clear(), DD.operation(pD.CLEAR)
+      } [gD]() {
+        const DD = this[ZD];
+        if (DD.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((DD => DD?.[gD]?.())), this.$items.clear(), this.journal.reset(), DD.recycle(), this[bD] = void 0
       }
-      has(zz) {
-        return this.$items.has(zz)
+      has(DD) {
+        return this.$items.has(DD)
       }
-      forEach(zz) {
-        this.$items.forEach(zz)
+      forEach(DD) {
+        this.$items.forEach(DD)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Rz].pause()
+        this[ZD].pause()
       }
       resumeTracking() {
-        this[Rz].resume()
+        this[ZD].resume()
       }
-      untracked(zz) {
-        return this[Rz].untracked(zz)
+      untracked(DD) {
+        return this[ZD].untracked(DD)
       }
       get isTrackingPaused() {
-        return this[Rz].paused
+        return this[ZD].paused
       }
-      setIndex(zz, uz) {
-        this.journal.setIndex(zz, uz)
+      setIndex(DD, CD) {
+        this.journal.setIndex(DD, CD)
       }
-      getIndex(zz) {
-        return this.journal.keyOf(zz)
-      } [dz](zz) {
-        const uz = this.journal.keyOf(zz);
-        return void 0 !== uz ? this.$items.get(uz) : void 0
-      } [Fz](zz) {
-        const uz = this.journal.keyOf(zz);
-        void 0 !== uz && (this.$items.delete(uz), this.journal.keyByIndex.delete(zz))
-      } [Zz](zz, uz, bz) {
-        let Ez = null;
-        if (this.$items.forEach(((nz, iz) => {
-            zz.has(iz) ? bz(nz) : ((Ez ??= new Set).add(iz), uz(nz, iz))
-          })), null !== Ez) {
-          Ez.forEach((zz => {
-            this.$items.delete(zz), delete this.journal.indexByKey[zz]
+      getIndex(DD) {
+        return this.journal.keyOf(DD)
+      } [yD](DD) {
+        const CD = this.journal.keyOf(DD);
+        return void 0 !== CD ? this.$items.get(CD) : void 0
+      } [MD](DD) {
+        const CD = this.journal.keyOf(DD);
+        void 0 !== CD && (this.$items.delete(CD), this.journal.keyByIndex.delete(DD))
+      } [tD](DD, CD, cD) {
+        let ID = null;
+        if (this.$items.forEach(((pD, iD) => {
+            DD.has(iD) ? cD(pD) : ((ID ??= new Set).add(iD), CD(pD, iD))
+          })), null !== ID) {
+          ID.forEach((DD => {
+            this.$items.delete(DD), delete this.journal.indexByKey[DD]
           }));
-          const zz = [];
-          this.journal.keyByIndex.forEach(((uz, bz) => {
-            Ez.has(uz) && zz.push(bz)
+          const DD = [];
+          this.journal.keyByIndex.forEach(((CD, cD) => {
+            ID.has(CD) && DD.push(cD)
           }));
-          for (let uz = 0; uz < zz.length; uz++) this.journal.keyByIndex.delete(zz[uz])
+          for (let CD = 0; CD < DD.length; CD++) this.journal.keyByIndex.delete(DD[CD])
         }
-      } [Xz]() {
+      } [ND]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(zz) {
-        au(this, zz)
+      _dropView(DD) {
+        VC(this, DD)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (zz => {
-          let [uz, bz] = zz;
-          return [uz, "function" === typeof bz.toJSON ? bz.toJSON() : bz]
+        return Object.fromEntries(Array.from(this, (DD => {
+          let [CD, cD] = DD;
+          return [CD, "function" === typeof cD.toJSON ? cD.toJSON() : cD]
         })))
       }
-      clone(zz) {
-        let uz;
-        return zz ? uz = Object.assign(new nE, this) : (uz = new nE, this.forEach(((zz, bz) => {
-          zz[Rz] ? uz.set(bz, zz.clone()) : uz.set(bz, zz)
-        }))), uz
+      clone(DD) {
+        let CD;
+        return DD ? CD = Object.assign(new pI, this) : (CD = new pI, this.forEach(((DD, cD) => {
+          DD[ZD] ? CD.set(cD, DD.clone()) : CD.set(cD, DD)
+        }))), CD
       }
     }
-    ou("map", {
-      constructor: nE
+    nC("map", {
+      constructor: pI
     });
-    class iE {
-      [Rz];
-      [Mz];
-      [Kz];
+    class iI {
+      [ZD];
+      [bD];
+      [oD];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(zz) {
-        (this._stream ??= xu()).maxPerTick = zz
+      set maxPerTick(DD) {
+        (this._stream ??= HC()).maxPerTick = DD
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(zz) {
-        (this._stream ??= xu()).priority = zz
+      set priority(DD) {
+        (this._stream ??= HC()).priority = DD
       }
-      static[Hz] = qb;
-      static[Oz] = Bb;
-      static COLLECTION_KIND = Wb;
-      static[pz](zz, uz, bz) {
-        return !bz || "string" === typeof zz[Kz] || bz.isChangeTreeVisible((zz[dz](uz) ?? zz.deletedItems[uz])[Rz])
+      static[wD] = lc;
+      static[SD] = hc;
+      static COLLECTION_KIND = sc;
+      static[BD](DD, CD, cD) {
+        return !cD || "string" === typeof DD[oD] || cD.isChangeTreeVisible((DD[yD](CD) ?? DD.deletedItems[CD])[ZD])
       }
-      static is(zz) {
-        return void 0 !== zz.collection
+      static is(DD) {
+        return void 0 !== DD.collection
       }
-      constructor(zz) {
-        Object.defineProperty(this, Rz, {
-          value: new Lb(this),
+      constructor(DD) {
+        Object.defineProperty(this, ZD, {
+          value: new Jc(this),
           enumerable: !1,
           writable: !0
-        }), this[Kz] = void 0, zz && zz.forEach((zz => this.add(zz)))
+        }), this[oD] = void 0, DD && DD.forEach((DD => this.add(DD)))
       }
       static initializeForDecoder() {
-        const zz = Object.create(iE.prototype);
-        return zz.$items = new Map, zz.deletedItems = {}, zz.$refId = 0, zz[Kz] = void 0, Gb(zz), zz
+        const DD = Object.create(iI.prototype);
+        return DD.$items = new Map, DD.deletedItems = {}, DD.$refId = 0, DD[oD] = void 0, ac(DD), DD
       }
-      add(zz) {
-        const uz = this.$refId++,
-          bz = this[Rz];
-        return this.$items.set(uz, zz), bz.isStreamCollection ? void 0 !== bz.root && Au(this, bz.root, uz) : bz.change(uz), void 0 !== zz[Rz] && zz[Rz].setParent(this, bz.root, uz), uz
+      add(DD) {
+        const CD = this.$refId++,
+          cD = this[ZD];
+        return this.$items.set(CD, DD), cD.isStreamCollection ? void 0 !== cD.root && xC(this, cD.root, CD) : cD.change(CD), void 0 !== DD[ZD] && DD[ZD].setParent(this, cD.root, CD), CD
       }
-      at(zz) {
-        const uz = Array.from(this.$items.keys())[zz];
-        return this.$items.get(uz)
+      at(DD) {
+        const CD = Array.from(this.$items.keys())[DD];
+        return this.$items.get(CD)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(zz) {
-        const uz = this.$items.entries();
-        let bz, Ez;
+      delete(DD) {
+        const CD = this.$items.entries();
+        let cD, ID;
         for (;
-          (Ez = uz.next()) && !Ez.done;)
-          if (zz === Ez.value[1]) {
-            bz = Ez.value[0];
+          (ID = CD.next()) && !ID.done;)
+          if (DD === ID.value[1]) {
+            cD = ID.value[0];
             break
-          } if (void 0 === bz) return !1;
-        const nz = this[Rz];
-        if (nz.isStreamCollection) {
-          const zz = nz.root,
-            uz = this.$items.get(bz);
-          return void 0 !== zz && Tu(this, zz, this[Mz], bz), void 0 !== uz?.[Rz] && zz?.remove(uz[Rz]), this.deletedItems[bz] = uz, this.$items.delete(bz)
+          } if (void 0 === cD) return !1;
+        const pD = this[ZD];
+        if (pD.isStreamCollection) {
+          const DD = pD.root,
+            CD = this.$items.get(cD);
+          return void 0 !== DD && qC(this, DD, this[bD], cD), void 0 !== CD?.[ZD] && DD?.remove(CD[ZD]), this.deletedItems[cD] = CD, this.$items.delete(cD)
         }
-        return this.deletedItems[bz] = nz.delete(bz), this.$items.delete(bz)
+        return this.deletedItems[cD] = pD.delete(cD), this.$items.delete(cD)
       }
       clear() {
-        const zz = this[Rz];
-        zz.discard(), zz.forEachChild(((uz, bz) => {
-          zz.root?.remove(uz)
-        })), this.$items.clear(), zz.operation(nz.CLEAR)
-      } [fz]() {
-        const zz = this[Rz];
-        if (zz.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((zz => zz?.[fz]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, zz.recycle(), this[Mz] = void 0
+        const DD = this[ZD];
+        DD.discard(), DD.forEachChild(((CD, cD) => {
+          DD.root?.remove(CD)
+        })), this.$items.clear(), DD.operation(pD.CLEAR)
+      } [gD]() {
+        const DD = this[ZD];
+        if (DD.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((DD => DD?.[gD]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, DD.recycle(), this[bD] = void 0
       }
-      has(zz) {
-        return Array.from(this.$items.values()).some((uz => uz === zz))
+      has(DD) {
+        return Array.from(this.$items.values()).some((CD => CD === DD))
       }
-      forEach(zz) {
-        this.$items.forEach(((uz, bz, Ez) => zz(uz, bz, this)))
+      forEach(DD) {
+        this.$items.forEach(((CD, cD, ID) => DD(CD, cD, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Rz].pause()
+        this[ZD].pause()
       }
       resumeTracking() {
-        this[Rz].resume()
+        this[ZD].resume()
       }
-      untracked(zz) {
-        return this[Rz].untracked(zz)
+      untracked(DD) {
+        return this[ZD].untracked(DD)
       }
       get isTrackingPaused() {
-        return this[Rz].paused
+        return this[ZD].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(zz, uz) {}
-      getIndex(zz) {
-        return zz
-      } [dz](zz) {
-        return this.$items.get(zz)
-      } [Fz](zz) {
-        this.$items.delete(zz)
-      } [Zz](zz, uz, bz) {
-        let Ez = null;
-        if (this.$items.forEach(((nz, iz) => {
-            zz.has(iz) ? bz(nz) : ((Ez ??= []).push(iz), uz(nz, iz))
-          })), null !== Ez)
-          for (let nz = 0; nz < Ez.length; nz++) this[Fz](Ez[nz])
-      } [Xz]() {
-        for (const zz in this.deletedItems) delete this.deletedItems[zz]
+      setIndex(DD, CD) {}
+      getIndex(DD) {
+        return DD
+      } [yD](DD) {
+        return this.$items.get(DD)
+      } [MD](DD) {
+        this.$items.delete(DD)
+      } [tD](DD, CD, cD) {
+        let ID = null;
+        if (this.$items.forEach(((pD, iD) => {
+            DD.has(iD) ? cD(pD) : ((ID ??= []).push(iD), CD(pD, iD))
+          })), null !== ID)
+          for (let pD = 0; pD < ID.length; pD++) this[MD](ID[pD])
+      } [ND]() {
+        for (const DD in this.deletedItems) delete this.deletedItems[DD]
       }
-      _dropView(zz) {
-        au(this, zz)
+      _dropView(DD) {
+        VC(this, DD)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const zz = [];
-        return this.forEach(((uz, bz) => {
-          zz.push("function" === typeof uz.toJSON ? uz.toJSON() : uz)
-        })), zz
+        const DD = [];
+        return this.forEach(((CD, cD) => {
+          DD.push("function" === typeof CD.toJSON ? CD.toJSON() : CD)
+        })), DD
       }
-      clone(zz) {
-        let uz;
-        return zz ? uz = Object.assign(new iE, this) : (uz = new iE, this.forEach((zz => {
-          zz[Rz] ? uz.add(zz.clone()) : uz.add(zz)
-        }))), uz
+      clone(DD) {
+        let CD;
+        return DD ? CD = Object.assign(new iI, this) : (CD = new iI, this.forEach((DD => {
+          DD[ZD] ? CD.add(DD.clone()) : CD.add(DD)
+        }))), CD
       }
     }
-    ou("collection", {
-      constructor: iE
+    nC("collection", {
+      constructor: iI
     });
-    class lE {
-      [Rz];
-      [Mz];
-      [Kz];
+    class fI {
+      [ZD];
+      [bD];
+      [oD];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(zz) {
-        (this._stream ??= xu()).maxPerTick = zz
+      set maxPerTick(DD) {
+        (this._stream ??= HC()).maxPerTick = DD
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(zz) {
-        (this._stream ??= xu()).priority = zz
+      set priority(DD) {
+        (this._stream ??= HC()).priority = DD
       }
-      static[Hz] = qb;
-      static[Oz] = Bb;
-      static COLLECTION_KIND = Qb;
-      static[pz](zz, uz, bz) {
-        return !bz || "string" === typeof zz[Kz] || bz.isVisible((zz[dz](uz) ?? zz.deletedItems[uz])[Rz])
+      static[wD] = lc;
+      static[SD] = hc;
+      static COLLECTION_KIND = Wc;
+      static[BD](DD, CD, cD) {
+        return !cD || "string" === typeof DD[oD] || cD.isVisible((DD[yD](CD) ?? DD.deletedItems[CD])[ZD])
       }
-      static is(zz) {
-        return void 0 !== zz.set
+      static is(DD) {
+        return void 0 !== DD.set
       }
-      constructor(zz) {
-        Object.defineProperty(this, Rz, {
-          value: new Lb(this),
+      constructor(DD) {
+        Object.defineProperty(this, ZD, {
+          value: new Jc(this),
           enumerable: !1,
           writable: !0
-        }), this[Kz] = void 0, zz && zz.forEach((zz => this.add(zz)))
+        }), this[oD] = void 0, DD && DD.forEach((DD => this.add(DD)))
       }
       static initializeForDecoder() {
-        const zz = Object.create(lE.prototype);
-        return zz.$items = new Map, zz.deletedItems = {}, zz.$refId = 0, zz[Kz] = void 0, Gb(zz), zz
+        const DD = Object.create(fI.prototype);
+        return DD.$items = new Map, DD.deletedItems = {}, DD.$refId = 0, DD[oD] = void 0, ac(DD), DD
       }
-      add(zz) {
-        if (this.has(zz)) return !1;
-        const uz = this.$refId++,
-          bz = this[Rz];
-        return this.$items.set(uz, zz), bz.isStreamCollection ? void 0 !== bz.root && Au(this, bz.root, uz) : bz.change(uz, nz.ADD), void 0 !== zz[Rz] && zz[Rz].setParent(this, bz.root, uz), uz
+      add(DD) {
+        if (this.has(DD)) return !1;
+        const CD = this.$refId++,
+          cD = this[ZD];
+        return this.$items.set(CD, DD), cD.isStreamCollection ? void 0 !== cD.root && xC(this, cD.root, CD) : cD.change(CD, pD.ADD), void 0 !== DD[ZD] && DD[ZD].setParent(this, cD.root, CD), CD
       }
       entries() {
         return this.$items.entries()
       }
-      delete(zz) {
-        const uz = this.$items.entries();
-        let bz, Ez;
+      delete(DD) {
+        const CD = this.$items.entries();
+        let cD, ID;
         for (;
-          (Ez = uz.next()) && !Ez.done;)
-          if (zz === Ez.value[1]) {
-            bz = Ez.value[0];
+          (ID = CD.next()) && !ID.done;)
+          if (DD === ID.value[1]) {
+            cD = ID.value[0];
             break
-          } if (void 0 === bz) return !1;
-        const nz = this[Rz];
-        if (nz.isStreamCollection) {
-          const zz = nz.root,
-            uz = this.$items.get(bz);
-          return void 0 !== zz && Tu(this, zz, this[Mz], bz), void 0 !== uz?.[Rz] && zz?.remove(uz[Rz]), this.deletedItems[bz] = uz, this.$items.delete(bz)
+          } if (void 0 === cD) return !1;
+        const pD = this[ZD];
+        if (pD.isStreamCollection) {
+          const DD = pD.root,
+            CD = this.$items.get(cD);
+          return void 0 !== DD && qC(this, DD, this[bD], cD), void 0 !== CD?.[ZD] && DD?.remove(CD[ZD]), this.deletedItems[cD] = CD, this.$items.delete(cD)
         }
-        return this.deletedItems[bz] = nz.delete(bz), this.$items.delete(bz)
+        return this.deletedItems[cD] = pD.delete(cD), this.$items.delete(cD)
       }
       clear() {
-        const zz = this[Rz];
-        zz.discard(), this.$items.clear(), zz.operation(nz.CLEAR)
-      } [fz]() {
-        const zz = this[Rz];
-        if (zz.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((zz => zz?.[fz]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, zz.recycle(), this[Mz] = void 0
+        const DD = this[ZD];
+        DD.discard(), this.$items.clear(), DD.operation(pD.CLEAR)
+      } [gD]() {
+        const DD = this[ZD];
+        if (DD.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((DD => DD?.[gD]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, DD.recycle(), this[bD] = void 0
       }
-      has(zz) {
-        const uz = this.$items.values();
-        let bz, Ez = !1;
+      has(DD) {
+        const CD = this.$items.values();
+        let cD, ID = !1;
         for (;
-          (bz = uz.next()) && !bz.done;)
-          if (zz === bz.value) {
-            Ez = !0;
+          (cD = CD.next()) && !cD.done;)
+          if (DD === cD.value) {
+            ID = !0;
             break
-          } return Ez
+          } return ID
       }
-      forEach(zz) {
-        this.$items.forEach(((uz, bz, Ez) => zz(uz, bz, this)))
+      forEach(DD) {
+        this.$items.forEach(((CD, cD, ID) => DD(CD, cD, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Rz].pause()
+        this[ZD].pause()
       }
       resumeTracking() {
-        this[Rz].resume()
+        this[ZD].resume()
       }
-      untracked(zz) {
-        return this[Rz].untracked(zz)
+      untracked(DD) {
+        return this[ZD].untracked(DD)
       }
       get isTrackingPaused() {
-        return this[Rz].paused
+        return this[ZD].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(zz, uz) {}
-      getIndex(zz) {
-        return zz
-      } [dz](zz) {
-        return this.$items.get(zz)
-      } [Fz](zz) {
-        this.$items.delete(zz)
-      } [Zz](zz, uz, bz) {
-        let Ez = null;
-        if (this.$items.forEach(((nz, iz) => {
-            zz.has(iz) ? bz(nz) : ((Ez ??= []).push(iz), uz(nz, iz))
-          })), null !== Ez)
-          for (let nz = 0; nz < Ez.length; nz++) this[Fz](Ez[nz])
-      } [Xz]() {
-        for (const zz in this.deletedItems) delete this.deletedItems[zz]
+      setIndex(DD, CD) {}
+      getIndex(DD) {
+        return DD
+      } [yD](DD) {
+        return this.$items.get(DD)
+      } [MD](DD) {
+        this.$items.delete(DD)
+      } [tD](DD, CD, cD) {
+        let ID = null;
+        if (this.$items.forEach(((pD, iD) => {
+            DD.has(iD) ? cD(pD) : ((ID ??= []).push(iD), CD(pD, iD))
+          })), null !== ID)
+          for (let pD = 0; pD < ID.length; pD++) this[MD](ID[pD])
+      } [ND]() {
+        for (const DD in this.deletedItems) delete this.deletedItems[DD]
       }
-      _dropView(zz) {
-        au(this, zz)
+      _dropView(DD) {
+        VC(this, DD)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const zz = [];
-        return this.forEach(((uz, bz) => {
-          zz.push("function" === typeof uz.toJSON ? uz.toJSON() : uz)
-        })), zz
+        const DD = [];
+        return this.forEach(((CD, cD) => {
+          DD.push("function" === typeof CD.toJSON ? CD.toJSON() : CD)
+        })), DD
       }
-      clone(zz) {
-        let uz;
-        return zz ? uz = Object.assign(new lE, this) : (uz = new lE, this.forEach((zz => {
-          zz[Rz] ? uz.add(zz.clone()) : uz.add(zz)
-        }))), uz
+      clone(DD) {
+        let CD;
+        return DD ? CD = Object.assign(new fI, this) : (CD = new fI, this.forEach((DD => {
+          DD[ZD] ? CD.add(DD.clone()) : CD.add(DD)
+        }))), CD
       }
     }
-    ou("set", {
-      constructor: lE
+    nC("set", {
+      constructor: fI
     });
-    class ME {
-      [Rz];
-      [Mz];
-      [Kz];
+    class bI {
+      [ZD];
+      [bD];
+      [oD];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(zz) {
-        (this._stream ??= xu()).maxPerTick = zz
+      set maxPerTick(DD) {
+        (this._stream ??= HC()).maxPerTick = DD
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(zz) {
-        (this._stream ??= xu()).priority = zz
+      set priority(DD) {
+        (this._stream ??= HC()).priority = DD
       }
       static $isStream = !0;
-      static[Hz] = qb;
-      static[Oz] = Bb;
-      static COLLECTION_KIND = eb;
-      static[pz](zz, uz, bz) {
-        if (!bz) return !0;
-        const Ez = zz[dz](uz);
-        return void 0 !== Ez && bz.isVisible(Ez[Rz])
+      static[wD] = lc;
+      static[SD] = hc;
+      static COLLECTION_KIND = Ec;
+      static[BD](DD, CD, cD) {
+        if (!cD) return !0;
+        const ID = DD[yD](CD);
+        return void 0 !== ID && cD.isVisible(ID[ZD])
       }
-      static is(zz) {
-        return zz && void 0 !== zz.stream
+      static is(DD) {
+        return DD && void 0 !== DD.stream
       }
       constructor() {
-        Object.defineProperty(this, Rz, {
-          value: new Lb(this),
+        Object.defineProperty(this, ZD, {
+          value: new Jc(this),
           enumerable: !1,
           writable: !0
-        }), this[Kz] = void 0
+        }), this[oD] = void 0
       }
       static initializeForDecoder() {
-        const zz = Object.create(ME.prototype);
-        return zz.$items = new Map, zz.$nextPosition = 0, zz._itemIndex = new Map, zz[Kz] = void 0, Gb(zz), zz
+        const DD = Object.create(bI.prototype);
+        return DD.$items = new Map, DD.$nextPosition = 0, DD._itemIndex = new Map, DD[oD] = void 0, ac(DD), DD
       }
-      add(zz) {
-        if (this._itemIndex.has(zz)) return -1;
-        const uz = this.$nextPosition++;
-        this.$items.set(uz, zz), this._itemIndex.set(zz, uz);
-        const bz = this[Rz].root;
-        return void 0 !== zz[Rz] && zz[Rz].setParent(this, bz, uz), void 0 !== bz && Au(this, bz, uz), uz
+      add(DD) {
+        if (this._itemIndex.has(DD)) return -1;
+        const CD = this.$nextPosition++;
+        this.$items.set(CD, DD), this._itemIndex.set(DD, CD);
+        const cD = this[ZD].root;
+        return void 0 !== DD[ZD] && DD[ZD].setParent(this, cD, CD), void 0 !== cD && xC(this, cD, CD), CD
       }
-      remove(zz) {
-        const uz = this._itemIndex.get(zz);
-        if (void 0 === uz) return !1;
-        this._itemIndex.delete(zz), this.$items.delete(uz);
-        const bz = this[Rz].root;
-        return void 0 !== bz && (Tu(this, bz, this[Mz], uz), void 0 !== zz[Rz] && bz.remove(zz[Rz])), !0
+      remove(DD) {
+        const CD = this._itemIndex.get(DD);
+        if (void 0 === CD) return !1;
+        this._itemIndex.delete(DD), this.$items.delete(CD);
+        const cD = this[ZD].root;
+        return void 0 !== cD && (qC(this, cD, this[bD], CD), void 0 !== DD[ZD] && cD.remove(DD[ZD])), !0
       }
-      has(zz) {
-        return this._itemIndex.has(zz)
+      has(DD) {
+        return this._itemIndex.has(DD)
       }
       clear() {
-        const zz = this[Rz].root;
-        if (void 0 !== zz) {
-          ! function(zz, uz, bz) {
-            const Ez = zz._stream;
-            if (void 0 !== Ez) {
-              Ez.broadcastPending.clear();
-              for (const zz of Ez.sentBroadcast) Ez.broadcastDeletes.add(zz);
-              Ez.sentBroadcast.clear(), uz.forEachActiveView((zz => {
-                Ez.pendingByView.get(zz.id)?.clear();
-                const uz = Ez.sentByView.get(zz.id);
-                if (void 0 !== uz && uz.size > 0) {
-                  let Ez = zz.changes.get(bz);
-                  void 0 === Ez && (Ez = new Map, zz.changes.set(bz, Ez));
-                  for (const zz of uz) Ez.set(zz, nz.DELETE);
-                  uz.clear()
+        const DD = this[ZD].root;
+        if (void 0 !== DD) {
+          ! function(DD, CD, cD) {
+            const ID = DD._stream;
+            if (void 0 !== ID) {
+              ID.broadcastPending.clear();
+              for (const DD of ID.sentBroadcast) ID.broadcastDeletes.add(DD);
+              ID.sentBroadcast.clear(), CD.forEachActiveView((DD => {
+                ID.pendingByView.get(DD.id)?.clear();
+                const CD = ID.sentByView.get(DD.id);
+                if (void 0 !== CD && CD.size > 0) {
+                  let ID = DD.changes.get(cD);
+                  void 0 === ID && (ID = new Map, DD.changes.set(cD, ID));
+                  for (const DD of CD) ID.set(DD, pD.DELETE);
+                  CD.clear()
                 }
               }))
             }
-          }(this, zz, this[Mz]);
-          for (const uz of this.$items.values()) void 0 !== uz[Rz] && zz.remove(uz[Rz])
+          }(this, DD, this[bD]);
+          for (const CD of this.$items.values()) void 0 !== CD[ZD] && DD.remove(CD[ZD])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(zz) {
-        for (const [uz, bz] of this.$items) zz(bz, uz, this)
+      forEach(DD) {
+        for (const [CD, cD] of this.$items) DD(cD, CD, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(zz, uz) {}
-      getIndex(zz) {
-        return zz
-      } [dz](zz) {
-        return this.$items.get(zz)
-      } [Fz](zz) {
-        const uz = this.$items.get(zz);
-        void 0 !== uz && (this._itemIndex.delete(uz), this.$items.delete(zz))
-      } [Zz]() {} [Xz]() {}
+      setIndex(DD, CD) {}
+      getIndex(DD) {
+        return DD
+      } [yD](DD) {
+        return this.$items.get(DD)
+      } [MD](DD) {
+        const CD = this.$items.get(DD);
+        void 0 !== CD && (this._itemIndex.delete(CD), this.$items.delete(DD))
+      } [tD]() {} [ND]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const zz = [];
-        return this.forEach((uz => {
-          zz.push("function" === typeof uz?.toJSON ? uz.toJSON() : uz)
-        })), zz
+        const DD = [];
+        return this.forEach((CD => {
+          DD.push("function" === typeof CD?.toJSON ? CD.toJSON() : CD)
+        })), DD
       }
-      clone(zz) {
-        if (zz) {
-          return Object.assign(new ME, this)
+      clone(DD) {
+        if (DD) {
+          return Object.assign(new bI, this)
         }
-        const uz = new ME;
-        return uz.maxPerTick = this.maxPerTick, this.forEach((zz => {
-          uz.add("function" === typeof zz?.clone ? zz.clone() : zz)
-        })), uz
+        const CD = new bI;
+        return CD.maxPerTick = this.maxPerTick, this.forEach((DD => {
+          CD.add("function" === typeof DD?.clone ? DD.clone() : DD)
+        })), CD
       }
-      _dropView(zz) {
-        au(this, zz)
+      _dropView(DD) {
+        VC(this, DD)
       }
       _unregister() {}
     }
-    ou("stream", {
-      constructor: ME
+    nC("stream", {
+      constructor: bI
     });
-    class tE {
-      [oz] = !0;
+    class QI {
+      [nD] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(zz) {
-        this._type = zz
+      constructor(DD) {
+        this._type = DD
       }
-      default (zz) {
-        return this._default = zz, this._hasDefault = !0, this
+      default (DD) {
+        return this._default = DD, this._hasDefault = !0, this
       }
-      view(zz) {
-        return this._view = zz ?? -1, this
+      view(DD) {
+        return this._view = DD ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const zz = this._type;
-        if (zz && "object" === typeof zz && void 0 !== zz.array) throw new Error(vu);
+        const DD = this._type;
+        if (DD && "object" === typeof DD && void 0 !== DD.array) throw new Error(PC);
         return this._stream = !0, this
       }
-      priority(zz) {
-        return this._streamPriority = zz, this
+      priority(DD) {
+        return this._streamPriority = DD, this
       }
       deprecated() {
-        let zz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = zz, this
+        let DD = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = DD, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function HE(zz) {
-      return null != zz && !0 === zz[oz]
+    function wI(DD) {
+      return null != DD && !0 === DD[nD]
     }
 
-    function OE(zz) {
-      return () => new tE(zz)
+    function SI(DD) {
+      return () => new QI(DD)
     }
 
-    function pE(zz) {
-      if (HE(zz)) {
-        const uz = zz._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof uz?`use the type name instead: t.array("${uz}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function BI(DD) {
+      if (wI(DD)) {
+        const CD = DD._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof CD?`use the type name instead: t.array("${CD}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return zz
+      return DD
     }
 
-    function dE(zz) {
-      return new tE({
-        quantized: mu(zz)
+    function yI(DD) {
+      return new QI({
+        quantized: jC(DD)
       })
     }
-    const FE = Object.freeze({
-        string: OE("string"),
-        number: OE("number"),
-        boolean: OE("boolean"),
-        int8: OE("int8"),
-        uint8: OE("uint8"),
-        int16: OE("int16"),
-        uint16: OE("uint16"),
-        int32: OE("int32"),
-        uint32: OE("uint32"),
-        int64: OE("int64"),
-        uint64: OE("uint64"),
-        float32: OE("float32"),
-        float64: OE("float64"),
-        bigint64: OE("bigint64"),
-        biguint64: OE("biguint64"),
-        ref: zz => new tE(zz),
-        array: zz => new tE({
-          array: pE(zz)
+    const MI = Object.freeze({
+        string: SI("string"),
+        number: SI("number"),
+        boolean: SI("boolean"),
+        int8: SI("int8"),
+        uint8: SI("uint8"),
+        int16: SI("int16"),
+        uint16: SI("uint16"),
+        int32: SI("int32"),
+        uint32: SI("uint32"),
+        int64: SI("int64"),
+        uint64: SI("uint64"),
+        float32: SI("float32"),
+        float64: SI("float64"),
+        bigint64: SI("bigint64"),
+        biguint64: SI("biguint64"),
+        ref: DD => new QI(DD),
+        array: DD => new QI({
+          array: BI(DD)
         }),
-        map: zz => new tE({
-          map: pE(zz)
+        map: DD => new QI({
+          map: BI(DD)
         }),
-        set: zz => new tE({
-          set: pE(zz)
+        set: DD => new QI({
+          set: BI(DD)
         }),
-        collection: zz => new tE({
-          collection: pE(zz)
+        collection: DD => new QI({
+          collection: BI(DD)
         }),
-        stream: zz => {
-          const uz = new tE({
-            stream: pE(zz)
+        stream: DD => {
+          const CD = new QI({
+            stream: BI(DD)
           });
-          return uz._stream = !0, uz
+          return CD._stream = !0, CD
         },
-        quantized: dE,
-        angle: zz => dE({
+        quantized: yI,
+        angle: DD => yI({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: zz?.bits ?? 16
+          bits: DD?.bits ?? 16
         })
       }),
-      ZE = -1;
+      tI = -1;
 
-    function RE(zz) {
-      return gu.register(zz), zz
+    function ZI(DD) {
+      return RC.register(DD), DD
     }
 
-    function KE() {
-      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ZE;
-      return function(uz, bz) {
-        const Ez = ju.initialize(uz.constructor);
-        ju.setTag(Ez, bz, zz)
+    function oI() {
+      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tI;
+      return function(CD, cD) {
+        const ID = eC.initialize(CD.constructor);
+        eC.setTag(ID, cD, DD)
       }
     }
 
-    function wE(zz, uz) {
-      const bz = ju.initialize(zz.constructor);
-      ju.setUnreliable(bz, uz)
+    function vI(DD, CD) {
+      const cD = eC.initialize(DD.constructor);
+      eC.setUnreliable(cD, CD)
     }
 
-    function XE(zz, uz) {
-      const bz = ju.initialize(zz.constructor);
-      ju.setPatchOnly(bz, uz)
+    function NI(DD, CD) {
+      const cD = eC.initialize(DD.constructor);
+      eC.setPatchOnly(cD, CD)
     }
 
-    function fE(zz, uz) {
-      const bz = ju.initialize(zz.constructor);
-      ju.setFullStateOnly(bz, uz)
+    function gI(DD, CD) {
+      const cD = eC.initialize(DD.constructor);
+      eC.setFullStateOnly(cD, CD)
     }
 
-    function sE(zz, uz) {
-      return function(bz, Ez) {
-        const nz = bz.constructor;
-        if (!zz) throw new Error(`${nz.name}: @type() reference provided for "${Ez}" is undefined. Make sure you don't have any circular dependencies.`);
-        zz = yu(zz, `${nz.name}.${Ez}`), gu.register(nz);
-        const iz = Object.getPrototypeOf(nz)[Symbol.metadata],
-          lz = ju.initialize(nz);
-        let Mz = lz[Ez];
-        if (void 0 !== lz[Mz]) {
-          if (lz[Mz].deprecated) return;
-          if (void 0 !== lz[Mz].type) {
-            const zz = new Error(`@colyseus/schema: Duplicate '${Ez}' definition on '${nz.name}'.\nCheck @type() annotation`);
-            throw new Error(`${zz.message} ${zz.stack.split("\n")[4].trim()}`)
+    function XI(DD, CD) {
+      return function(cD, ID) {
+        const pD = cD.constructor;
+        if (!DD) throw new Error(`${pD.name}: @type() reference provided for "${ID}" is undefined. Make sure you don't have any circular dependencies.`);
+        DD = dC(DD, `${pD.name}.${ID}`), RC.register(pD);
+        const iD = Object.getPrototypeOf(pD)[Symbol.metadata],
+          fD = eC.initialize(pD);
+        let bD = fD[ID];
+        if (void 0 !== fD[bD]) {
+          if (fD[bD].deprecated) return;
+          if (void 0 !== fD[bD].type) {
+            const DD = new Error(`@colyseus/schema: Duplicate '${ID}' definition on '${pD.name}'.\nCheck @type() annotation`);
+            throw new Error(`${DD.message} ${DD.stack.split("\n")[4].trim()}`)
           }
-        } else Mz = lz[Jz] ?? (iz && iz[Jz]) ?? -1, Mz++;
-        if (uz && uz.manual) ju.addField(lz, Mz, Ez, zz, {
+        } else bD = fD[UD] ?? (iD && iD[UD]) ?? -1, bD++;
+        if (CD && CD.manual) eC.addField(fD, bD, ID, DD, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: uz,
-            childType: bz
-          } = Su(zz);
-          ju.addField(lz, Mz, Ez, zz, oE(Ez, Mz, bz, uz))
+            complexTypeKlass: CD,
+            childType: cD
+          } = kC(DD);
+          eC.addField(fD, bD, ID, DD, nI(ID, bD, cD, CD))
         }
-        lz[Nz][Ez] && Object.defineProperty(bz, Ez, lz[Nz][Ez]), ("string" === typeof zz || qu(zz)) && (lz[xz] || Object.defineProperty(lz, xz, {
+        fD[OD][ID] && Object.defineProperty(cD, ID, fD[OD][ID]), ("string" === typeof DD || lC(DD)) && (fD[HD] || Object.defineProperty(fD, HD, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), lz[xz][Mz] = "string" === typeof zz ? uu[zz] : cu(zz.quantized))
+        }), fD[HD][bD] = "string" === typeof DD ? CC[DD] : GC(DD.quantized))
       }
     }
-    const rE = {
+    const mI = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function oE(zz, uz, bz, Ez) {
-      let iz;
-      return iz = Ez ? function(zz, uz, bz, Ez) {
-        const iz = Ez.constructor === bE,
-          lz = Ez.constructor === nE;
-        return function(zz) {
-          const Ez = this[rz],
-            Mz = Ez[uz];
-          if (zz !== Mz) {
-            if (void 0 !== zz && null !== zz) {
-              if (!iz || zz instanceof bE)
-                if (!lz || zz instanceof nE) zz[Kz] = bz;
+    function nI(DD, CD, cD, ID) {
+      let iD;
+      return iD = ID ? function(DD, CD, cD, ID) {
+        const iD = ID.constructor === cI,
+          fD = ID.constructor === pI;
+        return function(DD) {
+          const ID = this[mD],
+            bD = ID[CD];
+          if (DD !== bD) {
+            if (void 0 !== DD && null !== DD) {
+              if (!iD || DD instanceof cI)
+                if (!fD || DD instanceof pI) DD[oD] = cD;
                 else {
-                  const uz = new nE;
-                  if (uz[Kz] = bz, zz instanceof Map) zz.forEach(((zz, bz) => uz.set(bz, zz)));
+                  const CD = new pI;
+                  if (CD[oD] = cD, DD instanceof Map) DD.forEach(((DD, cD) => CD.set(cD, DD)));
                   else
-                    for (const bz in zz) uz.set(bz, zz[bz]);
-                  zz = uz
+                    for (const cD in DD) CD.set(cD, DD[cD]);
+                  DD = CD
                 }
               else {
-                const uz = new bE;
-                uz[Kz] = bz, uz.push(...zz), zz = uz
+                const CD = new cI;
+                CD[oD] = cD, CD.push(...DD), DD = CD
               }
-              const Ez = this[Rz],
-                Hz = this.constructor;
-              void 0 !== Mz && null !== Mz && Mz[Rz] ? (Ez.root?.remove(Mz[Rz]), Hz[tz](Ez, uz, nz.DELETE_AND_ADD)) : Hz[tz](Ez, uz, nz.ADD), zz[Rz]?.setParent(this, Ez.root, uz)
-            } else void 0 !== Mz && null !== Mz && this[Rz].delete(uz);
-            Ez[uz] = zz
+              const ID = this[ZD],
+                wD = this.constructor;
+              void 0 !== bD && null !== bD && bD[ZD] ? (ID.root?.remove(bD[ZD]), wD[QD](ID, CD, pD.DELETE_AND_ADD)) : wD[QD](ID, CD, pD.ADD), DD[ZD]?.setParent(this, ID.root, CD)
+            } else void 0 !== bD && null !== bD && this[ZD].delete(CD);
+            ID[CD] = DD
           }
         }
-      }(0, uz, bz, Ez) : "string" === typeof bz ? function(zz, uz, bz) {
-        const Ez = rE[bz],
-          iz = "string" === bz,
-          lz = "boolean" === bz;
-        return function(bz) {
-          const Mz = this[rz],
-            Hz = Mz[uz];
-          if (bz !== Hz) {
-            if (void 0 !== bz && null !== bz) {
-              if (!lz && void 0 !== Ez && typeof bz !== Ez && (!iz || null !== bz)) {
-                const uz = bz && bz.constructor ? ` (${bz.constructor.name})` : "";
-                throw new Yb(`a '${Ez}' was expected, but '${JSON.stringify(bz)}'${uz} was provided in ${this.constructor.name}#${zz}`)
+      }(0, CD, cD, ID) : "string" === typeof cD ? function(DD, CD, cD) {
+        const ID = mI[cD],
+          iD = "string" === cD,
+          fD = "boolean" === cD;
+        return function(cD) {
+          const bD = this[mD],
+            wD = bD[CD];
+          if (cD !== wD) {
+            if (void 0 !== cD && null !== cD) {
+              if (!fD && void 0 !== ID && typeof cD !== ID && (!iD || null !== cD)) {
+                const CD = cD && cD.constructor ? ` (${cD.constructor.name})` : "";
+                throw new Ac(`a '${ID}' was expected, but '${JSON.stringify(cD)}'${CD} was provided in ${this.constructor.name}#${DD}`)
               }
-              this.constructor[tz](this[Rz], uz, nz.ADD)
-            } else void 0 !== Hz && null !== Hz && this[Rz].delete(uz);
-            Mz[uz] = bz
+              this.constructor[QD](this[ZD], CD, pD.ADD)
+            } else void 0 !== wD && null !== wD && this[ZD].delete(CD);
+            bD[CD] = cD
           }
         }
-      }(zz, uz, bz) : qu(bz) ? function(zz, uz, bz) {
-        return function(Ez) {
-          const iz = this[rz],
-            lz = iz[uz];
-          if (void 0 !== Ez && null !== Ez) {
-            if ("number" !== typeof Ez) throw new Yb(`a 'number' was expected, but '${JSON.stringify(Ez)}' was provided in ${this.constructor.name}#${zz}`);
-            if ((Ez = Uu(bz, hu(bz, Ez))) === lz) return;
-            this.constructor[tz](this[Rz], uz, nz.ADD)
+      }(DD, CD, cD) : lC(cD) ? function(DD, CD, cD) {
+        return function(ID) {
+          const iD = this[mD],
+            fD = iD[CD];
+          if (void 0 !== ID && null !== ID) {
+            if ("number" !== typeof ID) throw new Ac(`a 'number' was expected, but '${JSON.stringify(ID)}' was provided in ${this.constructor.name}#${DD}`);
+            if ((ID = TC(cD, LC(cD, ID))) === fD) return;
+            this.constructor[QD](this[ZD], CD, pD.ADD)
           } else {
-            if (Ez === lz) return;
-            void 0 !== lz && null !== lz && this[Rz].delete(uz)
+            if (ID === fD) return;
+            void 0 !== fD && null !== fD && this[ZD].delete(CD)
           }
-          iz[uz] = Ez
+          iD[CD] = ID
         }
-      }(zz, uz, bz.quantized) : function(zz, uz, bz) {
-        return function(Ez) {
-          const iz = this[rz],
-            lz = iz[uz];
-          if (Ez !== lz) {
-            if (void 0 !== Ez && null !== Ez) {
-              kb(Ez, bz, this, zz);
-              const iz = this[Rz],
-                Mz = this.constructor;
-              void 0 !== lz && null !== lz && lz[Rz] ? (iz.root?.remove(lz[Rz]), Mz[tz](iz, uz, nz.DELETE_AND_ADD)) : Mz[tz](iz, uz, nz.ADD), Ez[Rz]?.setParent(this, iz.root, uz)
-            } else void 0 !== lz && null !== lz && this[Rz].delete(uz);
-            iz[uz] = Ez
+      }(DD, CD, cD.quantized) : function(DD, CD, cD) {
+        return function(ID) {
+          const iD = this[mD],
+            fD = iD[CD];
+          if (ID !== fD) {
+            if (void 0 !== ID && null !== ID) {
+              Fc(ID, cD, this, DD);
+              const iD = this[ZD],
+                bD = this.constructor;
+              void 0 !== fD && null !== fD && fD[ZD] ? (iD.root?.remove(fD[ZD]), bD[QD](iD, CD, pD.DELETE_AND_ADD)) : bD[QD](iD, CD, pD.ADD), ID[ZD]?.setParent(this, iD.root, CD)
+            } else void 0 !== fD && null !== fD && this[ZD].delete(CD);
+            iD[CD] = ID
           }
         }
-      }(zz, uz, bz), {
+      }(DD, CD, cD), {
         get: function() {
-          return this[rz][uz]
+          return this[mD][CD]
         },
-        set: iz,
+        set: iD,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function NE() {
-      let zz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(uz, bz) {
-        const Ez = ju.initialize(uz.constructor);
-        ju.setDeprecated(Ez, bz), zz && (Ez[Nz] ??= {}, Ez[Nz][bz] = {
+    function OI() {
+      let DD = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(CD, cD) {
+        const ID = eC.initialize(CD.constructor);
+        eC.setDeprecated(ID, cD), DD && (ID[OD] ??= {}, ID[OD][cD] = {
           get: function() {
-            throw new Error(`${bz} is deprecated.`)
+            throw new Error(`${cD} is deprecated.`)
           },
-          set: function(zz) {},
+          set: function(DD) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(uz, bz, Ez[Nz][bz]))
+        }, Object.defineProperty(CD, cD, ID[OD][cD]))
       }
     }
-    let vE = !1;
+    let PI = !1;
 
-    function xE(zz, uz, bz) {
-      vE || (vE = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let Ez in uz) sE(uz[Ez], bz)(zz.prototype, Ez);
-      return zz
+    function HI(DD, CD, cD) {
+      PI || (PI = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let ID in CD) XI(CD[ID], cD)(DD.prototype, ID);
+      return DD
     }
 
-    function JE(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : TE;
-      if (null == zz || "object" !== typeof zz) throw new Error(`schema(): first argument must be a fields object (got ${typeof zz}).`);
-      const Ez = {},
-        nz = {},
-        iz = {},
-        lz = {},
-        Mz = (zz, uz) => {
-          if (uz.hasDefault)((zz, uz) => {
-            "function" === typeof uz ? lz[zz] = uz : uz && "function" === typeof uz.clone ? lz[zz] = () => uz.clone() : iz[zz] = uz
-          })(zz, uz.default);
-          else if (!uz.optional) {
-            const bz = function(zz) {
-              if (zz && "object" === typeof zz) {
-                if (void 0 !== zz.array) return () => new bE;
-                if (void 0 !== zz.map) return () => new nE;
-                if (void 0 !== zz.set) return () => new lE;
-                if (void 0 !== zz.collection) return () => new iE;
-                if (void 0 !== zz.stream) return () => new ME
-              } else if ("function" === typeof zz && TE.is(zz) && (!zz.prototype.initialize || 0 === zz.prototype.initialize.length)) return () => new zz
-            }(uz.type);
-            bz && (lz[zz] = bz)
+    function UI(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qI;
+      if (null == DD || "object" !== typeof DD) throw new Error(`schema(): first argument must be a fields object (got ${typeof DD}).`);
+      const ID = {},
+        pD = {},
+        iD = {},
+        fD = {},
+        bD = (DD, CD) => {
+          if (CD.hasDefault)((DD, CD) => {
+            "function" === typeof CD ? fD[DD] = CD : CD && "function" === typeof CD.clone ? fD[DD] = () => CD.clone() : iD[DD] = CD
+          })(DD, CD.default);
+          else if (!CD.optional) {
+            const cD = function(DD) {
+              if (DD && "object" === typeof DD) {
+                if (void 0 !== DD.array) return () => new cI;
+                if (void 0 !== DD.map) return () => new pI;
+                if (void 0 !== DD.set) return () => new fI;
+                if (void 0 !== DD.collection) return () => new iI;
+                if (void 0 !== DD.stream) return () => new bI
+              } else if ("function" === typeof DD && qI.is(DD) && (!DD.prototype.initialize || 0 === DD.prototype.initialize.length)) return () => new DD
+            }(CD.type);
+            cD && (fD[DD] = cD)
           }
         },
-        tz = {},
-        Hz = [],
-        Oz = [],
-        pz = {},
-        dz = [],
-        Fz = [],
-        Zz = {},
-        Rz = [];
-      for (const rz in zz) {
-        const bz = zz[rz],
-          iz = `schema(${uz?`'${uz}'`:""}): field '${rz}'`;
-        if (HE(bz)) {
-          const zz = bz.toDefinition();
-          if (zz.noSync) {
-            if (void 0 !== zz.view || zz.unreliable || zz.patchOnly || zz.fullStateOnly || zz.stream) throw new Error(`${iz} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            Mz(rz, zz);
+        QD = {},
+        wD = [],
+        SD = [],
+        BD = {},
+        yD = [],
+        MD = [],
+        tD = {},
+        ZD = [];
+      for (const mD in DD) {
+        const cD = DD[mD],
+          iD = `schema(${CD?`'${CD}'`:""}): field '${mD}'`;
+        if (wI(cD)) {
+          const DD = cD.toDefinition();
+          if (DD.noSync) {
+            if (void 0 !== DD.view || DD.unreliable || DD.patchOnly || DD.fullStateOnly || DD.stream) throw new Error(`${iD} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            bD(mD, DD);
             continue
           }
-          if (zz.patchOnly && zz.fullStateOnly) throw new Error(`${iz} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const uz = yu(zz.type, iz);
-          if ("function" === typeof uz && !TE.is(uz)) throw new Error(`${iz} is a synced ref to non-Schema class '${uz.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          Ez[rz] = uz, void 0 !== zz.view && (tz[rz] = zz.view), zz.unreliable && Hz.push(rz), zz.patchOnly && Oz.push(rz), zz.deprecated && (pz[rz] = zz.deprecatedThrows), zz.fullStateOnly && dz.push(rz), zz.stream && Fz.push(rz), void 0 !== zz.streamPriority && (Zz[rz] = zz.streamPriority), zz.optional && Rz.push(rz), Mz(rz, zz)
+          if (DD.patchOnly && DD.fullStateOnly) throw new Error(`${iD} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const CD = dC(DD.type, iD);
+          if ("function" === typeof CD && !qI.is(CD)) throw new Error(`${iD} is a synced ref to non-Schema class '${CD.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          ID[mD] = CD, void 0 !== DD.view && (QD[mD] = DD.view), DD.unreliable && wD.push(mD), DD.patchOnly && SD.push(mD), DD.deprecated && (BD[mD] = DD.deprecatedThrows), DD.fullStateOnly && yD.push(mD), DD.stream && MD.push(mD), void 0 !== DD.streamPriority && (tD[mD] = DD.streamPriority), DD.optional && ZD.push(mD), bD(mD, DD)
         } else {
-          if ("function" !== typeof bz) throw new Error(`${iz} must be a t.* builder, Schema subclass, or method (got ${typeof bz}).`);
-          TE.is(bz) ? (Ez[rz] = bz, bz.prototype.initialize && 0 !== bz.prototype.initialize.length || (lz[rz] = () => new bz)) : nz[rz] = bz
+          if ("function" !== typeof cD) throw new Error(`${iD} must be a t.* builder, Schema subclass, or method (got ${typeof cD}).`);
+          qI.is(cD) ? (ID[mD] = cD, cD.prototype.initialize && 0 !== cD.prototype.initialize.length || (fD[mD] = () => new cD)) : pD[mD] = cD
         }
       }
-      const Kz = zz => {
-          for (const uz in iz) zz[uz] = iz[uz];
-          for (const uz in lz) zz[uz] = lz[uz]()
+      const oD = DD => {
+          for (const CD in iD) DD[CD] = iD[CD];
+          for (const CD in fD) DD[CD] = fD[CD]()
         },
-        wz = () => {
-          const zz = {};
-          return Kz(zz), zz
+        vD = () => {
+          const DD = {};
+          return oD(DD), DD
         },
-        Xz = "function" === typeof nz.initialize,
-        fz = nz.initialize ?? bz._initialize,
-        sz = class extends bz {
+        ND = "function" === typeof pD.initialize,
+        gD = pD.initialize ?? cD._initialize,
+        XD = class extends cD {
           constructor() {
-            for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
-            const nz = uz[0];
-            void 0 === nz ? (super(), Kz(this)) : super(Object.assign(wz(), Xz ? (zz => {
-              const uz = Object.keys(Ez),
-                bz = {};
-              for (const Ez in zz) uz.includes(Ez) || (bz[Ez] = zz[Ez]);
-              return bz
-            })(nz) : nz)), fz && new.target === sz && fz.apply(this, uz)
+            for (var DD = arguments.length, CD = new Array(DD), cD = 0; cD < DD; cD++) CD[cD] = arguments[cD];
+            const pD = CD[0];
+            void 0 === pD ? (super(), oD(this)) : super(Object.assign(vD(), ND ? (DD => {
+              const CD = Object.keys(ID),
+                cD = {};
+              for (const ID in DD) CD.includes(ID) || (cD[ID] = DD[ID]);
+              return cD
+            })(pD) : pD)), gD && new.target === XD && gD.apply(this, CD)
           }
         };
-      uz && Object.defineProperty(sz, "name", {
-        value: uz
-      }), ju.setFields(sz, Ez), sz._getDefaultValues = wz, sz._initialize = fz, Object.assign(sz.prototype, nz);
-      for (const rz in tz) KE(tz[rz])(sz.prototype, rz);
-      for (const rz of Hz) wE(sz.prototype, rz);
-      for (const rz of Oz) XE(sz.prototype, rz);
-      for (const rz in pz) NE(pz[rz])(sz.prototype, rz);
-      if (dz.length > 0 || Fz.length > 0) {
-        const zz = sz[Symbol.metadata];
-        for (const uz of dz) ju.setFullStateOnly(zz, uz);
-        for (const uz of Fz) ju.setStream(zz, uz);
-        for (const uz in Zz) ju.setStreamPriority(zz, uz, Zz[uz])
+      CD && Object.defineProperty(XD, "name", {
+        value: CD
+      }), eC.setFields(XD, ID), XD._getDefaultValues = vD, XD._initialize = gD, Object.assign(XD.prototype, pD);
+      for (const mD in QD) oI(QD[mD])(XD.prototype, mD);
+      for (const mD of wD) vI(XD.prototype, mD);
+      for (const mD of SD) NI(XD.prototype, mD);
+      for (const mD in BD) OI(BD[mD])(XD.prototype, mD);
+      if (yD.length > 0 || MD.length > 0) {
+        const DD = XD[Symbol.metadata];
+        for (const CD of yD) eC.setFullStateOnly(DD, CD);
+        for (const CD of MD) eC.setStream(DD, CD);
+        for (const CD in tD) eC.setStreamPriority(DD, CD, tD[CD])
       }
-      if (Rz.length > 0) {
-        const zz = sz[Symbol.metadata];
-        for (const uz of Rz) zz[zz[uz]].optional = !0
+      if (ZD.length > 0) {
+        const DD = XD[Symbol.metadata];
+        for (const CD of ZD) DD[DD[CD]].optional = !0
       }
-      return sz.extend = (zz, uz) => JE(zz, uz, sz), sz
+      return XD.extend = (DD, CD) => UI(DD, CD, XD), XD
     }
 
-    function AE(zz) {
-      const uz = zz[Rz].root,
-        bz = {
+    function xI(DD) {
+      const CD = DD[ZD].root,
+        cD = {
           ops: {},
           refs: []
         };
-      let Ez = uz.changes.next;
-      for (; Ez;) {
-        const zz = Ez.changeTree;
-        void 0 !== zz ? (bz.refs.push(`refId#${zz.ref[Mz]}`), zz.forEach(((zz, uz) => {
-          if (zz < 0 || !uz) return;
-          const Ez = nz[uz];
-          bz.ops[Ez] || (bz.ops[Ez] = 0), bz.ops[Ez]++
-        })), Ez = Ez.next) : Ez = Ez.next
+      let ID = CD.changes.next;
+      for (; ID;) {
+        const DD = ID.changeTree;
+        void 0 !== DD ? (cD.refs.push(`refId#${DD.ref[bD]}`), DD.forEach(((DD, CD) => {
+          if (DD < 0 || !CD) return;
+          const ID = pD[CD];
+          cD.ops[ID] || (cD.ops[ID] = 0), cD.ops[ID]++
+        })), ID = ID.next) : ID = ID.next
       }
-      return bz
+      return cD
     }
-    class TE {
-      static[Hz] = Vb;
-      static[Oz] = Ib;
-      [Mz];
-      [rz];
-      static initialize(zz) {
-        Object.defineProperty(zz, Rz, {
-          value: new Lb(zz),
+    class qI {
+      static[wD] = zc;
+      static[SD] = uc;
+      [bD];
+      [mD];
+      static initialize(DD) {
+        Object.defineProperty(DD, ZD, {
+          value: new Jc(DD),
           enumerable: !1,
           writable: !0
-        }), zz[rz] = []
+        }), DD[mD] = []
       }
       static initializeForDecoder() {
-        const zz = Object.create(this.prototype);
-        return Gb(zz), zz[rz] = [], zz
+        const DD = Object.create(this.prototype);
+        return ac(DD), DD[mD] = [], DD
       }
-      static reset(zz) {
-        const uz = zz?.[Rz];
-        if (void 0 === uz || "function" !== typeof uz.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== uz.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${zz.constructor.name}) with multiple parents.`);
-        zz[fz]()
-      } [fz]() {
-        const zz = this.constructor[Symbol.metadata],
-          uz = zz?.[Az] ?? [],
-          bz = this[rz];
-        for (let Ez = 0; Ez < uz.length; Ez++) {
-          const zz = bz[uz[Ez]];
-          zz?.[fz]?.()
+      static reset(DD) {
+        const CD = DD?.[ZD];
+        if (void 0 === CD || "function" !== typeof CD.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== CD.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${DD.constructor.name}) with multiple parents.`);
+        DD[gD]()
+      } [gD]() {
+        const DD = this.constructor[Symbol.metadata],
+          CD = DD?.[xD] ?? [],
+          cD = this[mD];
+        for (let ID = 0; ID < CD.length; ID++) {
+          const DD = cD[CD[ID]];
+          DD?.[gD]?.()
         }
-        this[Rz].recycle(), this[Mz] = void 0
+        this[ZD].recycle(), this[bD] = void 0
       }
-      static is(zz) {
-        const uz = zz[Symbol.metadata];
-        return "object" === typeof uz && null !== uz
+      static is(DD) {
+        const CD = DD[Symbol.metadata];
+        return "object" === typeof CD && null !== CD
       }
-      static isSchema(zz) {
-        return "function" === typeof zz?.assign
+      static isSchema(DD) {
+        return "function" === typeof DD?.assign
       }
-      static[tz](zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : nz.ADD;
-        zz.change(uz, bz)
+      static[QD](DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pD.ADD;
+        DD.change(CD, cD)
       }
-      static[pz](zz, uz, bz) {
-        const Ez = zz.constructor[Symbol.metadata],
-          nz = Ez[uz]?.tag;
-        return void 0 === bz ? void 0 === nz : void 0 === nz || (nz === ZE ? bz.isChangeTreeVisible(zz[Rz]) : bz.hasTagOnTree(zz[Rz], nz))
+      static[BD](DD, CD, cD) {
+        const ID = DD.constructor[Symbol.metadata],
+          pD = ID[CD]?.tag;
+        return void 0 === cD ? void 0 === pD : void 0 === pD || (pD === tI ? cD.isChangeTreeVisible(DD[ZD]) : cD.hasTagOnTree(DD[ZD], pD))
       }
-      constructor(zz) {
-        TE.initialize(this), zz && TE.assignProps(this, zz)
+      constructor(DD) {
+        qI.initialize(this), DD && qI.assignProps(this, DD)
       }
-      assign(zz) {
-        return TE.assignProps(this, zz), this
+      assign(DD) {
+        return qI.assignProps(this, DD), this
       }
-      static assignProps(zz, uz) {
-        const bz = zz.constructor[Symbol.metadata];
-        if (bz && void 0 !== bz[Jz])
-          for (let nz = 0; nz <= bz[Jz]; nz++) {
-            const Ez = bz[nz];
-            if (!Ez) continue;
-            const iz = uz[Ez.name];
-            void 0 !== iz && (zz[Ez.name] = iz)
+      static assignProps(DD, CD) {
+        const cD = DD.constructor[Symbol.metadata];
+        if (cD && void 0 !== cD[UD])
+          for (let pD = 0; pD <= cD[UD]; pD++) {
+            const ID = cD[pD];
+            if (!ID) continue;
+            const iD = CD[ID.name];
+            void 0 !== iD && (DD[ID.name] = iD)
           }
-        const Ez = Object.keys(uz);
-        for (let nz = 0; nz < Ez.length; nz++) {
-          const iz = Ez[nz];
-          bz && void 0 !== bz[iz] || (zz[iz] = uz[iz])
+        const ID = Object.keys(CD);
+        for (let pD = 0; pD < ID.length; pD++) {
+          const iD = ID[pD];
+          cD && void 0 !== cD[iD] || (DD[iD] = CD[iD])
         }
       }
-      restore(zz) {
-        const uz = this.constructor[Symbol.metadata];
-        for (const bz in uz) {
-          const Ez = uz[bz],
-            nz = Ez.name,
-            iz = Ez.type,
-            lz = zz[nz];
-          if (void 0 !== lz && null !== lz)
-            if ("string" === typeof iz) this[nz] = lz;
-            else if (TE.is(iz)) {
-            const zz = new iz;
-            zz.restore(lz), this[nz] = zz
-          } else if ("object" === typeof iz) {
-            const zz = Object.keys(iz)[0],
-              uz = iz[zz];
-            if ("map" === zz) {
-              const zz = this[nz];
-              for (const bz in lz)
-                if (TE.is(uz)) {
-                  const Ez = new uz;
-                  Ez.restore(lz[bz]), zz.set(bz, Ez)
-                } else zz.set(bz, lz[bz])
-            } else if ("array" === zz) {
-              const zz = this[nz];
-              for (let bz = 0; bz < lz.length; bz++)
-                if (TE.is(uz)) {
-                  const Ez = new uz;
-                  Ez.restore(lz[bz]), zz.push(Ez)
-                } else zz.push(lz[bz])
+      restore(DD) {
+        const CD = this.constructor[Symbol.metadata];
+        for (const cD in CD) {
+          const ID = CD[cD],
+            pD = ID.name,
+            iD = ID.type,
+            fD = DD[pD];
+          if (void 0 !== fD && null !== fD)
+            if ("string" === typeof iD) this[pD] = fD;
+            else if (qI.is(iD)) {
+            const DD = new iD;
+            DD.restore(fD), this[pD] = DD
+          } else if ("object" === typeof iD) {
+            const DD = Object.keys(iD)[0],
+              CD = iD[DD];
+            if ("map" === DD) {
+              const DD = this[pD];
+              for (const cD in fD)
+                if (qI.is(CD)) {
+                  const ID = new CD;
+                  ID.restore(fD[cD]), DD.set(cD, ID)
+                } else DD.set(cD, fD[cD])
+            } else if ("array" === DD) {
+              const DD = this[pD];
+              for (let cD = 0; cD < fD.length; cD++)
+                if (qI.is(CD)) {
+                  const ID = new CD;
+                  ID.restore(fD[cD]), DD.push(ID)
+                } else DD.push(fD[cD])
             }
           }
         }
         return this
       }
-      setDirty(zz, uz) {
-        const bz = this.constructor[Symbol.metadata];
-        this[Rz].change(bz[bz[zz]].index, uz)
+      setDirty(DD, CD) {
+        const cD = this.constructor[Symbol.metadata];
+        this[ZD].change(cD[cD[DD]].index, CD)
       }
       pauseTracking() {
-        this[Rz].pause()
+        this[ZD].pause()
       }
       resumeTracking() {
-        this[Rz].resume()
+        this[ZD].resume()
       }
-      untracked(zz) {
-        return this[Rz].untracked(zz)
+      untracked(DD) {
+        return this[ZD].untracked(DD)
       }
       get isTrackingPaused() {
-        return this[Rz].paused
+        return this[ZD].paused
       }
       clone() {
-        const zz = Object.create(this.constructor.prototype);
-        TE.initialize(zz);
-        const uz = this.constructor[Symbol.metadata];
-        for (const bz in uz) {
-          const Ez = uz[bz].name;
-          "object" === typeof this[Ez] && "function" === typeof this[Ez]?.clone ? zz[Ez] = this[Ez].clone() : zz[Ez] = this[Ez]
+        const DD = Object.create(this.constructor.prototype);
+        qI.initialize(DD);
+        const CD = this.constructor[Symbol.metadata];
+        for (const cD in CD) {
+          const ID = CD[cD].name;
+          "object" === typeof this[ID] && "function" === typeof this[ID]?.clone ? DD[ID] = this[ID].clone() : DD[ID] = this[ID]
         }
-        return zz
+        return DD
       }
       toJSON() {
-        const zz = {},
-          uz = this.constructor[Symbol.metadata];
-        for (const bz in uz) {
-          const Ez = uz[bz],
-            nz = Ez.name;
-          Ez.deprecated || null === this[nz] || "undefined" === typeof this[nz] || (zz[nz] = "function" === typeof this[nz].toJSON ? this[nz].toJSON() : this[nz])
+        const DD = {},
+          CD = this.constructor[Symbol.metadata];
+        for (const cD in CD) {
+          const ID = CD[cD],
+            pD = ID.name;
+          ID.deprecated || null === this[pD] || "undefined" === typeof this[pD] || (DD[pD] = "function" === typeof this[pD].toJSON ? this[pD].toJSON() : this[pD])
         }
-        return zz
+        return DD
       }
       discardAllChanges() {
-        this[Rz].discardAll()
-      } [dz](zz) {
-        return this[this.constructor[Symbol.metadata][zz].name]
-      } [Fz](zz) {
-        this[this.constructor[Symbol.metadata][zz].name] = void 0
+        this[ZD].discardAll()
+      } [yD](DD) {
+        return this[this.constructor[Symbol.metadata][DD].name]
+      } [MD](DD) {
+        this[this.constructor[Symbol.metadata][DD].name] = void 0
       }
-      static debugRefIds(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Ez = arguments.length > 3 ? arguments[3] : void 0,
-          nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const iz = uz ? ` - ${JSON.stringify(zz.toJSON())}` : "",
-          lz = zz[Rz],
-          tz = zz[Mz],
-          Hz = Ez ? Ez.root.refCount[tz] : lz.refCount,
-          Oz = Hz > 1 ? ` [\xd7${Hz}]` : "";
-        let pz = `${function(zz){return new Array(zz).fill(0).map(((uz,bz)=>bz===zz-1?"\u2514\u2500 ":"   ")).join("")}(bz)}${nz}${zz.constructor.name} (refId: ${tz})${Oz}${iz}\n`;
-        return lz.forEachChild(((nz, iz) => {
-          let lz = iz;
-          "number" === typeof iz && zz.$indexes && (lz = zz.$indexes.get(iz) ?? iz);
-          const Mz = void 0 !== zz.forEach && void 0 !== lz ? `["${lz}"]: ` : "";
-          pz += this.debugRefIds(nz.ref, uz, bz + 1, Ez, Mz)
-        })), pz
+      static debugRefIds(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          ID = arguments.length > 3 ? arguments[3] : void 0,
+          pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const iD = CD ? ` - ${JSON.stringify(DD.toJSON())}` : "",
+          fD = DD[ZD],
+          QD = DD[bD],
+          wD = ID ? ID.root.refCount[QD] : fD.refCount,
+          SD = wD > 1 ? ` [\xd7${wD}]` : "";
+        let BD = `${function(DD){return new Array(DD).fill(0).map(((CD,cD)=>cD===DD-1?"\u2514\u2500 ":"   ")).join("")}(cD)}${pD}${DD.constructor.name} (refId: ${QD})${SD}${iD}\n`;
+        return fD.forEachChild(((pD, iD) => {
+          let fD = iD;
+          "number" === typeof iD && DD.$indexes && (fD = DD.$indexes.get(iD) ?? iD);
+          const bD = void 0 !== DD.forEach && void 0 !== fD ? `["${fD}"]: ` : "";
+          BD += this.debugRefIds(pD.ref, CD, cD + 1, ID, bD)
+        })), BD
       }
-      static debugRefIdEncodingOrder(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const bz = [],
-          Ez = zz[Rz];
-        if ("changes" === uz) {
-          let zz = Ez.root.changes?.next;
-          for (; zz;) zz.changeTree && bz.push(zz.changeTree.ref[Mz]), zz = zz.next;
-          return bz
+      static debugRefIdEncodingOrder(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const cD = [],
+          ID = DD[ZD];
+        if ("changes" === CD) {
+          let DD = ID.root.changes?.next;
+          for (; DD;) DD.changeTree && cD.push(DD.changeTree.ref[bD]), DD = DD.next;
+          return cD
         }
-        const nz = "allFilteredChanges" === uz,
-          iz = new Set,
-          lz = zz => {
-            iz.has(zz) || (iz.add(zz), zz.isFiltered === nz && bz.push(zz.ref[Mz]), zz.forEachChild(((zz, uz) => lz(zz))))
+        const pD = "allFilteredChanges" === CD,
+          iD = new Set,
+          fD = DD => {
+            iD.has(DD) || (iD.add(DD), DD.isFiltered === pD && cD.push(DD.ref[bD]), DD.forEachChild(((DD, CD) => fD(DD))))
           };
-        return lz(Ez), bz
+        return fD(ID), cD
       }
-      static debugRefIdsFromDecoder(zz) {
-        return this.debugRefIds(zz.state, !1, 0, zz)
+      static debugRefIdsFromDecoder(DD) {
+        return this.debugRefIds(DD.state, !1, 0, DD)
       }
-      static debugChanges(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const bz = zz[Rz],
-          Ez = uz ? "allChanges" : "changes";
-        let iz = `${zz.constructor.name} (${zz[Mz]}) -> .${Ez}:\n`;
-        return uz ? bz.forEachLive((zz => {
-          iz += `- [${zz}]: ADD (${JSON.stringify(bz.getValue(Number(zz),!0))})\n`
-        })) : bz.forEach(((zz, uz) => {
-          zz < 0 || !uz || (iz += `- [${zz}]: ${nz[uz]} (${JSON.stringify(bz.getValue(Number(zz),!1))})\n`)
-        })), iz
+      static debugChanges(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const cD = DD[ZD],
+          ID = CD ? "allChanges" : "changes";
+        let iD = `${DD.constructor.name} (${DD[bD]}) -> .${ID}:\n`;
+        return CD ? cD.forEachLive((DD => {
+          iD += `- [${DD}]: ADD (${JSON.stringify(cD.getValue(Number(DD),!0))})\n`
+        })) : cD.forEach(((DD, CD) => {
+          DD < 0 || !CD || (iD += `- [${DD}]: ${pD[CD]} (${JSON.stringify(cD.getValue(Number(DD),!1))})\n`)
+        })), iD
       }
     }
-    iz(TE);
-    const LE = {
+    iD(qI);
+    const JI = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class PE {
+    class KI {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const zz = {};
-        for (const uz in this.changeTrees) zz[uz] = this.changeTrees[uz].refCount;
-        return zz
+        const DD = {};
+        for (const CD in this.changeTrees) DD[CD] = this.changeTrees[CD].refCount;
+        return DD
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(zz) {
-        this.types.hasFilters && (zz.flags & Ab || (zz.flags |= Ab, this.pendingFilterRefresh.push(zz)))
+      enqueueFilterRefresh(DD) {
+        this.types.hasFilters && (DD.flags & xc || (DD.flags |= xc, this.pendingFilterRefresh.push(DD)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(zz) {
-        this._freeViewIds.push(zz)
+      releaseViewId(DD) {
+        this._freeViewIds.push(DD)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(zz) {
-        this.activeViews.set(zz.id, new WeakRef(zz))
+      registerView(DD) {
+        this.activeViews.set(DD.id, new WeakRef(DD))
       }
-      unregisterView(zz) {
-        this.activeViews.delete(zz.id);
-        const uz = zz.id;
-        for (const bz of this.streamTrees) bz._dropView(uz)
+      unregisterView(DD) {
+        this.activeViews.delete(DD.id);
+        const CD = DD.id;
+        for (const cD of this.streamTrees) cD._dropView(CD)
       }
-      forEachActiveView(zz) {
-        for (const [uz, bz] of this.activeViews) {
-          const Ez = bz.deref();
-          if (void 0 !== Ez) zz(Ez);
+      forEachActiveView(DD) {
+        for (const [CD, cD] of this.activeViews) {
+          const ID = cD.deref();
+          if (void 0 !== ID) DD(ID);
           else {
-            this.activeViews.delete(uz);
-            for (const zz of this.streamTrees) zz._dropView(uz)
+            this.activeViews.delete(CD);
+            for (const DD of this.streamTrees) DD._dropView(CD)
           }
         }
       }
-      registerStream(zz) {
-        this.streamTrees.add(zz)
+      registerStream(DD) {
+        this.streamTrees.add(DD)
       }
-      unregisterStream(zz) {
-        this.streamTrees.delete(zz)
+      unregisterStream(DD) {
+        this.streamTrees.delete(DD)
       }
-      constructor(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = zz, this.nextUniqueId = uz
+      constructor(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = DD, this.nextUniqueId = CD
       }
-      add(zz) {
-        const uz = zz.ref;
-        void 0 === uz[Mz] && (LE.value = this.nextUniqueId++, Object.defineProperty(uz, Mz, LE));
-        const bz = uz[Mz],
-          Ez = void 0 === this.changeTrees[bz];
-        Ez && (this.changeTrees[bz] = zz), zz.needsRestage && (zz.needsRestage = !1, zz.forEachLiveWithCtx(zz, bb));
-        const nz = Ez ? 0 : zz.refCount;
-        return zz.refCount = nz + 1, nz > 0 && this.enqueueFilterRefresh(zz), Ez
+      add(DD) {
+        const CD = DD.ref;
+        void 0 === CD[bD] && (JI.value = this.nextUniqueId++, Object.defineProperty(CD, bD, JI));
+        const cD = CD[bD],
+          ID = void 0 === this.changeTrees[cD];
+        ID && (this.changeTrees[cD] = DD), DD.needsRestage && (DD.needsRestage = !1, DD.forEachLiveWithCtx(DD, cc));
+        const pD = ID ? 0 : DD.refCount;
+        return DD.refCount = pD + 1, pD > 0 && this.enqueueFilterRefresh(DD), ID
       }
-      remove(zz) {
-        const uz = zz.refCount - 1;
-        if (uz <= 0) {
-          if (zz.root = void 0, delete this.changeTrees[zz.ref[Mz]], zz.isStreamCollection) {
-            const uz = zz.ref;
-            uz._unregister?.(), this.unregisterStream(uz)
+      remove(DD) {
+        const CD = DD.refCount - 1;
+        if (CD <= 0) {
+          if (DD.root = void 0, delete this.changeTrees[DD.ref[bD]], DD.isStreamCollection) {
+            const CD = DD.ref;
+            CD._unregister?.(), this.unregisterStream(CD)
           }
-          this.removeFromQueue(zz), this.removeFromUnreliableQueue(zz), zz.refCount = 0, zz.needsRestage = !0, zz.forEachChild(((uz, bz) => {
-            uz.removeParent(zz.ref) && (void 0 === uz.parentRef || uz.refCount > 0 ? this.remove(uz) : this.moveNextToParent(uz))
+          this.removeFromQueue(DD), this.removeFromUnreliableQueue(DD), DD.refCount = 0, DD.needsRestage = !0, DD.forEachChild(((CD, cD) => {
+            CD.removeParent(DD.ref) && (void 0 === CD.parentRef || CD.refCount > 0 ? this.remove(CD) : this.moveNextToParent(CD))
           }))
-        } else zz.refCount = uz, this.enqueueFilterRefresh(zz), this.recursivelyMoveNextToParent(zz);
-        return uz
+        } else DD.refCount = CD, this.enqueueFilterRefresh(DD), this.recursivelyMoveNextToParent(DD);
+        return CD
       }
-      recursivelyMoveNextToParent(zz) {
-        this.moveNextToParent(zz), zz.forEachChild(((zz, uz) => this.recursivelyMoveNextToParent(zz)))
+      recursivelyMoveNextToParent(DD) {
+        this.moveNextToParent(DD), DD.forEachChild(((DD, CD) => this.recursivelyMoveNextToParent(DD)))
       }
-      moveNextToParent(zz) {
-        zz.changesNode && this._moveNextToParentInList(this.changes, zz, zz.changesNode, "changesNode"), zz.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, zz, zz.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(DD) {
+        DD.changesNode && this._moveNextToParentInList(this.changes, DD, DD.changesNode, "changesNode"), DD.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, DD, DD.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(zz, uz, bz, Ez) {
-        const nz = uz.parent;
-        if (!nz || !nz[Rz]) return;
-        const iz = nz[Rz][Ez];
-        iz && iz !== bz && (bz.position > iz.position || (bz.prev ? bz.prev.next = bz.next : zz.next = bz.next, bz.next ? bz.next.prev = bz.prev : zz.tail = bz.prev, bz.prev = zz.tail, bz.next = void 0, zz.tail.next = bz, zz.tail = bz, bz.position = zz.nextPosition++))
+      _moveNextToParentInList(DD, CD, cD, ID) {
+        const pD = CD.parent;
+        if (!pD || !pD[ZD]) return;
+        const iD = pD[ZD][ID];
+        iD && iD !== cD && (cD.position > iD.position || (cD.prev ? cD.prev.next = cD.next : DD.next = cD.next, cD.next ? cD.next.prev = cD.prev : DD.tail = cD.prev, cD.prev = DD.tail, cD.next = void 0, DD.tail.next = cD, DD.tail = cD, cD.position = DD.nextPosition++))
       }
-      enqueueChangeTree(zz) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz.changesNode) || (zz.changesNode = this._appendToList(this.changes, zz))
+      enqueueChangeTree(DD) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD.changesNode) || (DD.changesNode = this._appendToList(this.changes, DD))
       }
-      enqueueUnreliable(zz) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz.unreliableChangesNode) || (zz.unreliableChangesNode = this._appendToList(this.unreliableChanges, zz))
+      enqueueUnreliable(DD) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD.unreliableChangesNode) || (DD.unreliableChangesNode = this._appendToList(this.unreliableChanges, DD))
       }
-      _appendToList(zz, uz) {
-        const bz = this._nodePool;
-        let Ez;
-        return bz.length > 0 ? (Ez = bz.pop(), Ez.changeTree = uz, Ez.next = void 0, Ez.prev = void 0) : Ez = {
-          changeTree: uz,
+      _appendToList(DD, CD) {
+        const cD = this._nodePool;
+        let ID;
+        return cD.length > 0 ? (ID = cD.pop(), ID.changeTree = CD, ID.next = void 0, ID.prev = void 0) : ID = {
+          changeTree: CD,
           next: void 0,
           prev: void 0,
           position: 0
-        }, zz.next ? (Ez.prev = zz.tail, zz.tail.next = Ez, zz.tail = Ez) : (zz.nextPosition = 0, zz.next = Ez, zz.tail = Ez), Ez.position = zz.nextPosition++, Ez
+        }, DD.next ? (ID.prev = DD.tail, DD.tail.next = ID, DD.tail = ID) : (DD.nextPosition = 0, DD.next = ID, DD.tail = ID), ID.position = DD.nextPosition++, ID
       }
-      releaseNode(zz) {
-        zz.changeTree = void 0, zz.prev = void 0, zz.next = void 0, this._nodePool.push(zz)
+      releaseNode(DD) {
+        DD.changeTree = void 0, DD.prev = void 0, DD.next = void 0, this._nodePool.push(DD)
       }
-      removeFromQueue(zz) {
-        return this._removeNode(this.changes, zz, zz.changesNode, "changesNode")
+      removeFromQueue(DD) {
+        return this._removeNode(this.changes, DD, DD.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(zz) {
-        return this._removeNode(this.unreliableChanges, zz, zz.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(DD) {
+        return this._removeNode(this.unreliableChanges, DD, DD.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(zz, uz, bz, Ez) {
-        return !(!bz || bz.changeTree !== uz) && (bz.prev ? bz.prev.next = bz.next : zz.next = bz.next, bz.next ? bz.next.prev = bz.prev : zz.tail = bz.prev, uz[Ez] = void 0, this.releaseNode(bz), !0)
+      _removeNode(DD, CD, cD, ID) {
+        return !(!cD || cD.changeTree !== CD) && (cD.prev ? cD.prev.next = cD.next : DD.next = cD.next, cD.next ? cD.next.prev = cD.prev : DD.tail = cD.prev, CD[ID] = void 0, this.releaseNode(cD), !0)
       }
     }
 
-    function GE(zz, uz) {
-      if (-1 === uz || uz >= zz.length) return !1;
-      const bz = zz.length - 1;
-      for (let Ez = uz; Ez < bz; Ez++) zz[Ez] = zz[Ez + 1];
-      return zz.length = bz, !0
+    function aI(DD, CD) {
+      if (-1 === CD || CD >= DD.length) return !1;
+      const cD = DD.length - 1;
+      for (let ID = CD; ID < cD; ID++) DD[ID] = DD[ID + 1];
+      return DD.length = cD, !0
     }
 
-    function aE(zz, uz, bz) {
-      const Ez = ~bz,
-        nz = zz.changeTrees;
-      for (const iz in nz) {
-        const zz = nz[iz],
-          bz = zz.visibleViews;
-        void 0 !== bz && uz < bz.length && (bz[uz] &= Ez);
-        const lz = zz.subscribedViews;
-        void 0 !== lz && uz < lz.length && (lz[uz] &= Ez);
-        const Mz = zz.tagViews;
-        void 0 !== Mz && Mz.forEach((zz => {
-          uz < zz.length && (zz[uz] &= Ez)
+    function VI(DD, CD, cD) {
+      const ID = ~cD,
+        pD = DD.changeTrees;
+      for (const iD in pD) {
+        const DD = pD[iD],
+          cD = DD.visibleViews;
+        void 0 !== cD && CD < cD.length && (cD[CD] &= ID);
+        const fD = DD.subscribedViews;
+        void 0 !== fD && CD < fD.length && (fD[CD] &= ID);
+        const bD = DD.tagViews;
+        void 0 !== bD && bD.forEach((DD => {
+          CD < DD.length && (DD[CD] &= ID)
         }))
       }
     }
-    const VE = new FinalizationRegistry((zz => {
+    const zI = new FinalizationRegistry((DD => {
       let {
-        root: uz,
-        id: bz,
-        slot: Ez,
-        bit: nz
-      } = zz;
-      aE(uz, Ez, nz), uz.activeViews.delete(bz);
-      for (const iz of uz.streamTrees) iz._dropView(bz);
-      uz.releaseViewId(bz)
+        root: CD,
+        id: cD,
+        slot: ID,
+        bit: pD
+      } = DD;
+      VI(CD, ID, pD), CD.activeViews.delete(cD);
+      for (const iD of CD.streamTrees) iD._dropView(cD);
+      CD.releaseViewId(cD)
     }));
 
-    function mE(zz) {
-      if (void 0 === zz) return "undefined";
-      if (null === zz) return "null";
-      const uz = typeof zz;
-      return "string" === uz ? JSON.stringify(zz.length > 30 ? `${zz.slice(0,30)}\u2026` : zz) : "object" !== uz && "function" !== uz ? `${uz} ${String(zz)}` : Array.isArray(zz) ? `Array(${zz.length})` : zz.constructor?.name ?? "Object"
+    function jI(DD) {
+      if (void 0 === DD) return "undefined";
+      if (null === DD) return "null";
+      const CD = typeof DD;
+      return "string" === CD ? JSON.stringify(DD.length > 30 ? `${DD.slice(0,30)}\u2026` : DD) : "object" !== CD && "function" !== CD ? `${CD} ${String(DD)}` : Array.isArray(DD) ? `Array(${DD.length})` : DD.constructor?.name ?? "Object"
     }
-    class qE {
+    class lI {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = zz, zz && (this.items = [])
+        let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = DD, DD && (this.items = [])
       }
-      _bindRoot(zz) {
-        void 0 === this._root && (this._root = zz, this.id = zz.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), zz.registerView(this), VE.register(this, {
-          root: zz,
+      _bindRoot(DD) {
+        void 0 === this._root && (this._root = DD, this.id = DD.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), DD.registerView(this), zI.register(this, {
+          root: DD,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), aE(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), VE.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), VI(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), zI.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(zz) {
-        const uz = zz.visibleViews,
-          bz = this._slot;
-        return void 0 !== uz && bz < uz.length && 0 !== (uz[bz] & this._bit)
+      isVisible(DD) {
+        const CD = DD.visibleViews,
+          cD = this._slot;
+        return void 0 !== CD && cD < CD.length && 0 !== (CD[cD] & this._bit)
       }
-      markVisible(zz) {
-        const uz = this._slot;
-        let bz = zz.visibleViews;
-        for (void 0 === bz && (bz = zz.visibleViews = []); bz.length <= uz;) bz.push(0);
-        bz[uz] |= this._bit
+      markVisible(DD) {
+        const CD = this._slot;
+        let cD = DD.visibleViews;
+        for (void 0 === cD && (cD = DD.visibleViews = []); cD.length <= CD;) cD.push(0);
+        cD[CD] |= this._bit
       }
-      unmarkVisible(zz) {
-        const uz = zz.visibleViews;
-        if (void 0 === uz) return;
-        const bz = this._slot;
-        bz < uz.length && (uz[bz] &= ~this._bit)
+      unmarkVisible(DD) {
+        const CD = DD.visibleViews;
+        if (void 0 === CD) return;
+        const cD = this._slot;
+        cD < CD.length && (CD[cD] &= ~this._bit)
       }
-      isSubscribed(zz) {
-        const uz = zz.subscribedViews,
-          bz = this._slot;
-        return void 0 !== uz && bz < uz.length && 0 !== (uz[bz] & this._bit)
+      isSubscribed(DD) {
+        const CD = DD.subscribedViews,
+          cD = this._slot;
+        return void 0 !== CD && cD < CD.length && 0 !== (CD[cD] & this._bit)
       }
-      _setSubscribed(zz) {
-        const uz = this._slot;
-        let bz = zz.subscribedViews;
-        for (void 0 === bz && (bz = zz.subscribedViews = []); bz.length <= uz;) bz.push(0);
-        bz[uz] |= this._bit
+      _setSubscribed(DD) {
+        const CD = this._slot;
+        let cD = DD.subscribedViews;
+        for (void 0 === cD && (cD = DD.subscribedViews = []); cD.length <= CD;) cD.push(0);
+        cD[CD] |= this._bit
       }
-      _clearSubscribed(zz) {
-        const uz = zz.subscribedViews;
-        if (void 0 === uz) return;
-        const bz = this._slot;
-        bz < uz.length && (uz[bz] &= ~this._bit)
+      _clearSubscribed(DD) {
+        const CD = DD.subscribedViews;
+        if (void 0 === CD) return;
+        const cD = this._slot;
+        cD < CD.length && (CD[cD] &= ~this._bit)
       }
-      hasTagOnTree(zz, uz) {
-        const bz = zz.tagViews;
-        if (void 0 === bz) return !1;
-        const Ez = this._slot,
-          nz = this._bit;
-        for (let iz = uz; 0 !== iz; iz &= iz - 1) {
-          const zz = bz.get(iz & -iz);
-          if (void 0 !== zz && Ez < zz.length && 0 !== (zz[Ez] & nz)) return !0
+      hasTagOnTree(DD, CD) {
+        const cD = DD.tagViews;
+        if (void 0 === cD) return !1;
+        const ID = this._slot,
+          pD = this._bit;
+        for (let iD = CD; 0 !== iD; iD &= iD - 1) {
+          const DD = cD.get(iD & -iD);
+          if (void 0 !== DD && ID < DD.length && 0 !== (DD[ID] & pD)) return !0
         }
         return !1
       }
-      addTag(zz, uz) {
-        if (uz === ZE) return;
-        let bz = zz.tagViews;
-        void 0 === bz && (bz = zz.tagViews = new Map);
-        const Ez = this._slot,
-          nz = this._bit;
-        for (let iz = uz; iz > 0; iz &= iz - 1) {
-          const zz = iz & -iz;
-          let uz = bz.get(zz);
-          for (void 0 === uz && (uz = [], bz.set(zz, uz)); uz.length <= Ez;) uz.push(0);
-          uz[Ez] |= nz
+      addTag(DD, CD) {
+        if (CD === tI) return;
+        let cD = DD.tagViews;
+        void 0 === cD && (cD = DD.tagViews = new Map);
+        const ID = this._slot,
+          pD = this._bit;
+        for (let iD = CD; iD > 0; iD &= iD - 1) {
+          const DD = iD & -iD;
+          let CD = cD.get(DD);
+          for (void 0 === CD && (CD = [], cD.set(DD, CD)); CD.length <= ID;) CD.push(0);
+          CD[ID] |= pD
         }
       }
-      removeTag(zz, uz) {
-        if (uz === ZE) return;
-        const bz = zz.tagViews;
-        if (void 0 === bz) return;
-        const Ez = this._slot,
-          nz = ~this._bit;
-        for (let iz = uz; iz > 0; iz &= iz - 1) {
-          const zz = bz.get(iz & -iz);
-          void 0 !== zz && Ez < zz.length && (zz[Ez] &= nz)
+      removeTag(DD, CD) {
+        if (CD === tI) return;
+        const cD = DD.tagViews;
+        if (void 0 === cD) return;
+        const ID = this._slot,
+          pD = ~this._bit;
+        for (let iD = CD; iD > 0; iD &= iD - 1) {
+          const DD = cD.get(iD & -iD);
+          void 0 !== DD && ID < DD.length && (DD[ID] &= pD)
         }
       }
-      removeAllTagsOnTree(zz) {
-        const uz = zz.tagViews;
-        if (void 0 === uz) return;
-        const bz = this._slot,
-          Ez = ~this._bit;
-        uz.forEach((zz => {
-          bz < zz.length && (zz[bz] &= Ez)
+      removeAllTagsOnTree(DD) {
+        const CD = DD.tagViews;
+        if (void 0 === CD) return;
+        const cD = this._slot,
+          ID = ~this._bit;
+        CD.forEach((DD => {
+          cD < DD.length && (DD[cD] &= ID)
         }))
       }
-      add(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZE,
-          bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(zz, uz, bz, !1)
+      add(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tI,
+          cD = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(DD, CD, cD, !1)
       }
-      _addImmediate(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZE;
-        this._add(zz, uz, !0, !0)
+      _addImmediate(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tI;
+        this._add(DD, CD, !0, !0)
       }
-      _add(zz, uz, bz, Ez) {
-        const iz = zz?.[Rz];
-        if (!iz) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${mE(zz)}`), !1;
-        const lz = iz.parent;
-        if (!lz && 0 !== zz[Mz]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${iz.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== iz.root && this._bindRoot(iz.root);
-        const tz = lz?.[Rz];
-        if (!Ez && tz?.isStreamCollection) return Gu(lz, this.id, iz.parentIndex), !0;
-        const Hz = zz.constructor[Symbol.metadata],
-          Oz = this.isVisible(iz);
-        if (!this.iterable || !bz || Oz && -1 !== this.items.indexOf(zz) || this.items.push(zz), this.markVisible(iz), bz && lz && this.addParentOf(iz, uz), !Ez && iz.isStreamCollection) return !0;
-        if (uz === ZE && iz.isNew) return this._markSubtreeVisible(iz, uz), !1;
-        let pz = this.changes.get(zz[Mz]);
-        void 0 === pz && (pz = new Map, this.changes.set(zz[Mz], pz));
-        let dz = !1;
-        const Fz = iz.encDescriptor.tags;
-        if (iz.forEachChild(((zz, bz) => {
-            const Ez = Fz[bz];
-            if (void 0 !== Ez) {
-              if (!(Ez === ZE || uz !== ZE && 0 !== (Ez & uz))) return
+      _add(DD, CD, cD, ID) {
+        const iD = DD?.[ZD];
+        if (!iD) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${jI(DD)}`), !1;
+        const fD = iD.parent;
+        if (!fD && 0 !== DD[bD]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${iD.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== iD.root && this._bindRoot(iD.root);
+        const QD = fD?.[ZD];
+        if (!ID && QD?.isStreamCollection) return aC(fD, this.id, iD.parentIndex), !0;
+        const wD = DD.constructor[Symbol.metadata],
+          SD = this.isVisible(iD);
+        if (!this.iterable || !cD || SD && -1 !== this.items.indexOf(DD) || this.items.push(DD), this.markVisible(iD), cD && fD && this.addParentOf(iD, CD), !ID && iD.isStreamCollection) return !0;
+        if (CD === tI && iD.isNew) return this._markSubtreeVisible(iD, CD), !1;
+        let BD = this.changes.get(DD[bD]);
+        void 0 === BD && (BD = new Map, this.changes.set(DD[bD], BD));
+        let yD = !1;
+        const MD = iD.encDescriptor.tags;
+        if (iD.forEachChild(((DD, cD) => {
+            const ID = MD[cD];
+            if (void 0 !== ID) {
+              if (!(ID === tI || CD !== tI && 0 !== (ID & CD))) return
             }
-            this.add(zz.ref, uz, !1) && (dz = !0)
-          })), uz !== ZE) {
-          this.addTag(iz, uz);
-          const zz = Hz?.[Lz];
-          if (void 0 !== zz)
-            for (let bz = uz; bz > 0; bz &= bz - 1) zz[bz & -bz]?.forEach((zz => {
-              iz.getChange(zz) !== nz.DELETE && pz.set(zz, nz.ADD)
+            this.add(DD.ref, CD, !1) && (yD = !0)
+          })), CD !== tI) {
+          this.addTag(iD, CD);
+          const DD = wD?.[JD];
+          if (void 0 !== DD)
+            for (let cD = CD; cD > 0; cD &= cD - 1) DD[cD & -cD]?.forEach((DD => {
+              iD.getChange(DD) !== pD.DELETE && BD.set(DD, pD.ADD)
             }))
         }
-        if ((uz === ZE || !Oz) && (!iz.isNew || dz))
-          if (iz.isArray && "string" !== typeof iz.refTarget[Kz]) iz.refTarget.items.length > 0 && (pz.set(-1, nz.ADD), dz = !0);
+        if ((CD === tI || !SD) && (!iD.isNew || yD))
+          if (iD.isArray && "string" !== typeof iD.refTarget[oD]) iD.refTarget.items.length > 0 && (BD.set(-1, pD.ADD), yD = !0);
           else {
-            const zz = iz.encDescriptor.tags;
-            iz.forEachLive((bz => {
-              const Ez = zz[bz];
-              (void 0 === Ez || Ez === ZE || uz !== ZE && 0 !== (Ez & uz)) && (pz.set(bz, nz.ADD), dz = !0)
+            const DD = iD.encDescriptor.tags;
+            iD.forEachLive((cD => {
+              const ID = DD[cD];
+              (void 0 === ID || ID === tI || CD !== tI && 0 !== (ID & CD)) && (BD.set(cD, pD.ADD), yD = !0)
             }))
-          } return dz
+          } return yD
       }
-      _markSubtreeVisible(zz, uz) {
-        const bz = zz.encDescriptor.tags;
-        zz.forEachChild(((zz, Ez) => {
-          const nz = bz[Ez];
-          if (void 0 !== nz) {
-            if (!(nz === ZE || uz !== ZE && 0 !== (nz & uz))) return
+      _markSubtreeVisible(DD, CD) {
+        const cD = DD.encDescriptor.tags;
+        DD.forEachChild(((DD, ID) => {
+          const pD = cD[ID];
+          if (void 0 !== pD) {
+            if (!(pD === tI || CD !== tI && 0 !== (pD & CD))) return
           }
-          zz.isNew ? (this.markVisible(zz), this._markSubtreeVisible(zz, uz)) : this._add(zz.ref, uz, !1, !1)
+          DD.isNew ? (this.markVisible(DD), this._markSubtreeVisible(DD, CD)) : this._add(DD.ref, CD, !1, !1)
         }))
       }
-      addParentOf(zz, uz) {
-        const bz = zz.parent[Rz],
-          Ez = zz.parentIndex;
-        this.isVisible(bz) || this.markVisible(bz);
-        const iz = bz.parent?.[Rz];
-        if (iz && this.addParentOf(bz, uz), bz.hasFilteredFields && bz.getChange(Ez) !== nz.DELETE) {
-          let iz = this.changes.get(bz.ref[Mz]);
-          void 0 === iz && (iz = new Map, this.changes.set(bz.ref[Mz], iz));
-          const lz = bz.encDescriptor.tags[Ez];
-          void 0 !== lz && lz !== ZE && 0 !== (lz & uz) && this.addTag(bz, uz), iz.set(bz.isArray ? zz : Ez, nz.ADD)
+      addParentOf(DD, CD) {
+        const cD = DD.parent[ZD],
+          ID = DD.parentIndex;
+        this.isVisible(cD) || this.markVisible(cD);
+        const iD = cD.parent?.[ZD];
+        if (iD && this.addParentOf(cD, CD), cD.hasFilteredFields && cD.getChange(ID) !== pD.DELETE) {
+          let iD = this.changes.get(cD.ref[bD]);
+          void 0 === iD && (iD = new Map, this.changes.set(cD.ref[bD], iD));
+          const fD = cD.encDescriptor.tags[ID];
+          void 0 !== fD && fD !== tI && 0 !== (fD & CD) && this.addTag(cD, CD), iD.set(cD.isArray ? DD : ID, pD.ADD)
         }
       }
-      _touchAncestorsOf(zz) {
-        let uz = zz.parent?.[Rz];
-        if (void 0 === uz) return;
-        const bz = [];
-        for (; void 0 !== uz;) {
-          if (uz.hasFilteredFields) {
-            const zz = uz.ref[Mz];
-            if (this.changes.has(zz)) break;
-            bz.push(uz)
+      _touchAncestorsOf(DD) {
+        let CD = DD.parent?.[ZD];
+        if (void 0 === CD) return;
+        const cD = [];
+        for (; void 0 !== CD;) {
+          if (CD.hasFilteredFields) {
+            const DD = CD.ref[bD];
+            if (this.changes.has(DD)) break;
+            cD.push(CD)
           }
-          uz = uz.parent?.[Rz]
+          CD = CD.parent?.[ZD]
         }
-        for (let Ez = bz.length - 1; Ez >= 0; Ez--) this.changes.set(bz[Ez].ref[Mz], new Map)
+        for (let ID = cD.length - 1; ID >= 0; ID--) this.changes.set(cD[ID].ref[bD], new Map)
       }
-      remove(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZE,
-          bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Ez = zz?.[Rz];
-        if (!Ez) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${mE(zz)}`), this;
-        const iz = Ez.parent?.[Rz];
-        if (iz?.isStreamCollection) return this.unmarkVisible(Ez), this.iterable && !bz && GE(this.items, this.items.indexOf(zz)),
-          function(zz, uz, bz, Ez, iz) {
-            const lz = zz._stream;
-            if (void 0 === lz) return !1;
-            const Mz = lz.pendingByView.get(uz);
-            if (Mz?.has(Ez)) return Mz.delete(Ez), !1;
-            const tz = lz.sentByView.get(uz);
-            if (tz?.has(Ez)) {
-              tz.delete(Ez);
-              let zz = iz.get(bz);
-              return void 0 === zz && (zz = new Map, iz.set(bz, zz)), zz.set(Ez, nz.DELETE), !0
+      remove(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tI,
+          cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const ID = DD?.[ZD];
+        if (!ID) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${jI(DD)}`), this;
+        const iD = ID.parent?.[ZD];
+        if (iD?.isStreamCollection) return this.unmarkVisible(ID), this.iterable && !cD && aI(this.items, this.items.indexOf(DD)),
+          function(DD, CD, cD, ID, iD) {
+            const fD = DD._stream;
+            if (void 0 === fD) return !1;
+            const bD = fD.pendingByView.get(CD);
+            if (bD?.has(ID)) return bD.delete(ID), !1;
+            const QD = fD.sentByView.get(CD);
+            if (QD?.has(ID)) {
+              QD.delete(ID);
+              let DD = iD.get(cD);
+              return void 0 === DD && (DD = new Map, iD.set(cD, DD)), DD.set(ID, pD.DELETE), !0
             }
-          }(Ez.parent, this.id, Ez.parent[Mz], Ez.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Ez), this;
-        if (Ez.isStreamCollection) {
-          this.unmarkVisible(Ez), this.iterable && !bz && GE(this.items, this.items.indexOf(zz));
-          const uz = Ez.ref,
-            iz = uz._stream;
-          if (void 0 !== iz) {
-            iz.pendingByView.get(this.id)?.clear();
-            const zz = iz.sentByView.get(this.id);
-            if (void 0 !== zz && zz.size > 0) {
-              const bz = uz[Mz];
-              let Ez = this.changes.get(bz);
-              void 0 === Ez && (Ez = new Map, this.changes.set(bz, Ez));
-              for (const uz of zz) Ez.set(uz, nz.DELETE);
-              zz.clear()
+          }(ID.parent, this.id, ID.parent[bD], ID.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(ID), this;
+        if (ID.isStreamCollection) {
+          this.unmarkVisible(ID), this.iterable && !cD && aI(this.items, this.items.indexOf(DD));
+          const CD = ID.ref,
+            iD = CD._stream;
+          if (void 0 !== iD) {
+            iD.pendingByView.get(this.id)?.clear();
+            const DD = iD.sentByView.get(this.id);
+            if (void 0 !== DD && DD.size > 0) {
+              const cD = CD[bD];
+              let ID = this.changes.get(cD);
+              void 0 === ID && (ID = new Map, this.changes.set(cD, ID));
+              for (const CD of DD) ID.set(CD, pD.DELETE);
+              DD.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(Ez), this.iterable && !bz && GE(this.items, this.items.indexOf(zz));
-        const lz = Ez.ref,
-          tz = lz.constructor[Symbol.metadata],
-          Hz = lz[Mz];
-        this._touchAncestorsOf(Ez);
-        let Oz = this.changes.get(Hz);
-        if (void 0 === Oz && (Oz = new Map, this.changes.set(Hz, Oz)), uz === ZE) {
-          const zz = Ez.parent;
-          if (zz && !ju.isValidInstance(zz) && Ez.isFiltered) {
-            const uz = iz.isArray ? Ez : Ez.parentIndex,
-              bz = zz[Mz];
-            let lz = this.changes.get(bz);
-            void 0 === lz ? (lz = new Map, this.changes.set(bz, lz)) : lz.get(uz) === nz.ADD && this._dropPendingEntries(Ez), lz.set(uz, nz.DELETE), this._recursiveDeleteVisibleChangeTree(Ez)
-          } else tz?.[Tz]?.forEach((zz => this._removeViewField(Ez, Oz, zz)))
+        this.unmarkVisible(ID), this.iterable && !cD && aI(this.items, this.items.indexOf(DD));
+        const fD = ID.ref,
+          QD = fD.constructor[Symbol.metadata],
+          wD = fD[bD];
+        this._touchAncestorsOf(ID);
+        let SD = this.changes.get(wD);
+        if (void 0 === SD && (SD = new Map, this.changes.set(wD, SD)), CD === tI) {
+          const DD = ID.parent;
+          if (DD && !eC.isValidInstance(DD) && ID.isFiltered) {
+            const CD = iD.isArray ? ID : ID.parentIndex,
+              cD = DD[bD];
+            let fD = this.changes.get(cD);
+            void 0 === fD ? (fD = new Map, this.changes.set(cD, fD)) : fD.get(CD) === pD.ADD && this._dropPendingEntries(ID), fD.set(CD, pD.DELETE), this._recursiveDeleteVisibleChangeTree(ID)
+          } else QD?.[qD]?.forEach((DD => this._removeViewField(ID, SD, DD)))
         } else {
-          const zz = tz?.[Lz];
-          if (void 0 !== zz)
-            for (let bz = uz; bz > 0; bz &= bz - 1) zz[bz & -bz]?.forEach((zz => this._removeViewField(Ez, Oz, zz)))
+          const DD = QD?.[JD];
+          if (void 0 !== DD)
+            for (let cD = CD; cD > 0; cD &= cD - 1) DD[cD & -cD]?.forEach((DD => this._removeViewField(ID, SD, DD)))
         }
-        return void 0 === uz ? this.removeAllTagsOnTree(Ez) : this.removeTag(Ez, uz), this
+        return void 0 === CD ? this.removeAllTagsOnTree(ID) : this.removeTag(ID, CD), this
       }
-      has(zz) {
-        return this.isVisible(zz[Rz])
+      has(DD) {
+        return this.isVisible(DD[ZD])
       }
-      hasTag(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZE;
-        return this.hasTagOnTree(zz[Rz], uz)
+      hasTag(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tI;
+        return this.hasTagOnTree(DD[ZD], CD)
       }
-      subscribe(zz, uz) {
-        const bz = zz?.[Rz];
-        if (!bz) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${mE(zz)}`), this;
-        if (void 0 === this._root && void 0 !== bz.root && this._bindRoot(bz.root), void 0 !== uz)
-          if (bz.isStreamCollection) {
-            const bz = Ju(zz);
-            null === uz ? bz.priorityByView?.delete(this.id) : (bz.priorityByView ??= new Map).set(this.id, uz)
+      subscribe(DD, CD) {
+        const cD = DD?.[ZD];
+        if (!cD) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${jI(DD)}`), this;
+        if (void 0 === this._root && void 0 !== cD.root && this._bindRoot(cD.root), void 0 !== CD)
+          if (cD.isStreamCollection) {
+            const cD = UC(DD);
+            null === CD ? cD.priorityByView?.delete(this.id) : (cD.priorityByView ??= new Map).set(this.id, CD)
           } else {
-            const uz = zz?.constructor?.name ?? "collection",
-              Ez = bz.parent;
-            if (void 0 === Ez) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${uz} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const CD = DD?.constructor?.name ?? "collection",
+              ID = cD.parent;
+            if (void 0 === ID) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${CD} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const zz = Ez?.constructor?.[Symbol.metadata]?.[bz.parentIndex]?.name,
-                nz = zz ? `${Ez.constructor.name}#${zz}` : uz;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${nz} is a ${uz}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const DD = ID?.constructor?.[Symbol.metadata]?.[cD.parentIndex]?.name,
+                pD = DD ? `${ID.constructor.name}#${DD}` : CD;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${pD} is a ${CD}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(bz)) return this;
-        const Ez = void 0 !== bz.parent && !this.isVisible(bz);
-        if (Ez ? (this.addParentOf(bz, ZE), this._add(zz, ZE, !1, !1)) : this.markVisible(bz), this._setSubscribed(bz), bz.isStreamCollection) {
-          const uz = zz;
-          bz.forEachChild(((zz, bz) => {
-            Gu(uz, this.id, bz)
+          } if (this.isSubscribed(cD)) return this;
+        const ID = void 0 !== cD.parent && !this.isVisible(cD);
+        if (ID ? (this.addParentOf(cD, tI), this._add(DD, tI, !1, !1)) : this.markVisible(cD), this._setSubscribed(cD), cD.isStreamCollection) {
+          const CD = DD;
+          cD.forEachChild(((DD, cD) => {
+            aC(CD, this.id, cD)
           }))
-        } else Ez || bz.forEachChild((zz => {
-          this.markVisible(zz)
+        } else ID || cD.forEachChild((DD => {
+          this.markVisible(DD)
         }));
         return this
       }
-      unsubscribe(zz) {
-        const uz = zz?.[Rz];
-        if (!uz) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${mE(zz)}`), this;
-        if (!this.isSubscribed(uz)) return this;
-        this._clearSubscribed(uz);
-        const bz = uz.ref[Mz];
-        if (uz.isStreamCollection) {
-          const uz = zz._stream;
-          if (void 0 !== uz) {
-            uz.pendingByView.get(this.id)?.clear();
-            const zz = uz.sentByView.get(this.id);
-            if (void 0 !== zz && zz.size > 0) {
-              let uz = this.changes.get(bz);
-              void 0 === uz && (uz = new Map, this.changes.set(bz, uz));
-              for (const bz of zz) uz.set(bz, nz.DELETE);
-              zz.clear()
+      unsubscribe(DD) {
+        const CD = DD?.[ZD];
+        if (!CD) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${jI(DD)}`), this;
+        if (!this.isSubscribed(CD)) return this;
+        this._clearSubscribed(CD);
+        const cD = CD.ref[bD];
+        if (CD.isStreamCollection) {
+          const CD = DD._stream;
+          if (void 0 !== CD) {
+            CD.pendingByView.get(this.id)?.clear();
+            const DD = CD.sentByView.get(this.id);
+            if (void 0 !== DD && DD.size > 0) {
+              let CD = this.changes.get(cD);
+              void 0 === CD && (CD = new Map, this.changes.set(cD, CD));
+              for (const cD of DD) CD.set(cD, pD.DELETE);
+              DD.clear()
             }
           }
         } else {
-          const zz = uz.isArray;
-          let Ez = this.changes.get(bz);
-          uz.forEachChild(((uz, iz) => {
-            void 0 === Ez && (Ez = new Map, this.changes.set(bz, Ez)), Ez.set(zz ? uz : iz, nz.DELETE), this.unmarkVisible(uz)
+          const DD = CD.isArray;
+          let ID = this.changes.get(cD);
+          CD.forEachChild(((CD, iD) => {
+            void 0 === ID && (ID = new Map, this.changes.set(cD, ID)), ID.set(DD ? CD : iD, pD.DELETE), this.unmarkVisible(CD)
           }))
         }
-        return this.unmarkVisible(uz), this
+        return this.unmarkVisible(CD), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let zz = 0, uz = this.items.length; zz < uz; zz++) this.remove(this.items[zz], ZE, !0);
+        for (let DD = 0, CD = this.items.length; DD < CD; DD++) this.remove(this.items[DD], tI, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(zz) {
-        let uz = this.isVisible(zz);
-        if (!uz && zz.isVisibilitySharedWithParent)
-          if (this.isVisible(zz.parent[Rz])) this.markVisible(zz), uz = !0;
+      isChangeTreeVisible(DD) {
+        let CD = this.isVisible(DD);
+        if (!CD && DD.isVisibilitySharedWithParent)
+          if (this.isVisible(DD.parent[ZD])) this.markVisible(DD), CD = !0;
           else
-            for (let bz = zz.extraParents; void 0 !== bz; bz = bz.next) {
-              const Ez = bz.ref[Rz];
-              if (Ez.isFiltered && this.isVisible(Ez)) {
-                this.markVisible(zz), uz = !0;
+            for (let cD = DD.extraParents; void 0 !== cD; cD = cD.next) {
+              const ID = cD.ref[ZD];
+              if (ID.isFiltered && this.isVisible(ID)) {
+                this.markVisible(DD), CD = !0;
                 break
               }
             }
-        return uz
+        return CD
       }
-      _recursiveDeleteVisibleChangeTree(zz) {
-        zz.forEachChild((zz => {
-          this.unmarkVisible(zz), this._recursiveDeleteVisibleChangeTree(zz)
+      _recursiveDeleteVisibleChangeTree(DD) {
+        DD.forEachChild((DD => {
+          this.unmarkVisible(DD), this._recursiveDeleteVisibleChangeTree(DD)
         }))
       }
-      _dropPendingEntries(zz) {
-        this.changes.delete(zz.ref[Mz]), zz.forEachChild((zz => this._dropPendingEntries(zz)))
+      _dropPendingEntries(DD) {
+        this.changes.delete(DD.ref[bD]), DD.forEachChild((DD => this._dropPendingEntries(DD)))
       }
-      _removeViewField(zz, uz, bz) {
-        const Ez = uz.get(bz) === nz.ADD;
-        uz.set(bz, nz.DELETE);
-        const iz = zz.ref[zz.encDescriptor.names[bz]],
-          lz = iz?.[Rz];
-        lz && (this.unmarkVisible(lz), this._recursiveDeleteVisibleChangeTree(lz), Ez && this._dropPendingEntries(lz))
+      _removeViewField(DD, CD, cD) {
+        const ID = CD.get(cD) === pD.ADD;
+        CD.set(cD, pD.DELETE);
+        const iD = DD.ref[DD.encDescriptor.names[cD]],
+          fD = iD?.[ZD];
+        fD && (this.unmarkVisible(fD), this._recursiveDeleteVisibleChangeTree(fD), ID && this._dropPendingEntries(fD))
       }
     }
 
-    function hE(zz) {
-      zz.structSwitchEmitted || (zz.shouldEmitSwitch && (zz.buffer[zz.it.offset++] = 255, uu.number(zz.buffer, zz.ref[Mz], zz.it)), zz.structSwitchEmitted = !0)
+    function LI(DD) {
+      DD.structSwitchEmitted || (DD.shouldEmitSwitch && (DD.buffer[DD.it.offset++] = 255, CC.number(DD.buffer, DD.ref[bD], DD.it)), DD.structSwitchEmitted = !0)
     }
 
-    function UE(zz, uz) {
-      SE(zz, uz, nz.ADD)
+    function TI(DD, CD) {
+      kI(DD, CD, pD.ADD)
     }
 
-    function cE(zz, uz) {
-      if (uz._fullSyncGen === zz.gen) return;
-      uz._fullSyncGen = zz.gen;
-      if (!zz.hasView || zz.view.isChangeTreeVisible(uz)) {
-        const bz = uz.encDescriptor;
-        zz.changeTree = uz, zz.ref = uz.ref, zz.encoder = bz.encoder, zz.filter = bz.filter, zz.metadata = bz.metadata, zz.treeIsFiltered = uz.isFiltered, zz.isSchema = bz.isSchema, zz.filterBitmask = bz.filterBitmask, zz.tags = bz.tags, zz.structSwitchEmitted = !1, zz.shouldEmitSwitch = zz.hasView || zz.it.offset > zz.initialOffset || uz !== zz.rootChangeTree, uz.isArray && uz.collDirty.size > 0 && (uz.flags |= 512), nb(uz, zz, UE)
+    function GI(DD, CD) {
+      if (CD._fullSyncGen === DD.gen) return;
+      CD._fullSyncGen = DD.gen;
+      if (!DD.hasView || DD.view.isChangeTreeVisible(CD)) {
+        const cD = CD.encDescriptor;
+        DD.changeTree = CD, DD.ref = CD.ref, DD.encoder = cD.encoder, DD.filter = cD.filter, DD.metadata = cD.metadata, DD.treeIsFiltered = CD.isFiltered, DD.isSchema = cD.isSchema, DD.filterBitmask = cD.filterBitmask, DD.tags = cD.tags, DD.structSwitchEmitted = !1, DD.shouldEmitSwitch = DD.hasView || DD.it.offset > DD.initialOffset || CD !== DD.rootChangeTree, CD.isArray && CD.collDirty.size > 0 && (CD.flags |= 512), pc(CD, DD, TI)
       }
-      wb(uz, zz, gE)
+      vc(CD, DD, RI)
     }
 
-    function gE(zz, uz, bz) {
-      cE(zz, uz)
+    function RI(DD, CD, cD) {
+      GI(DD, CD)
     }
 
-    function SE(zz, uz, bz) {
-      if (uz < 0) {
-        if (zz.treeIsFiltered !== zz.emitFiltered) return;
-        return hE(zz), void(zz.buffer[zz.it.offset++] = 255 & Math.abs(uz))
+    function kI(DD, CD, cD) {
+      if (CD < 0) {
+        if (DD.treeIsFiltered !== DD.emitFiltered) return;
+        return LI(DD), void(DD.buffer[DD.it.offset++] = 255 & Math.abs(CD))
       }
-      if ((zz.isSchema ? zz.treeIsFiltered || (uz < 32 ? 0 !== (zz.filterBitmask & 1 << uz) : void 0 !== zz.tags[uz]) : zz.treeIsFiltered) !== zz.emitFiltered) return;
-      const Ez = zz.isEncodeAll ? nz.ADD : bz;
-      void 0 !== Ez && (void 0 === zz.filter || zz.filter(zz.ref, uz, zz.view)) && (hE(zz), zz.encoder(zz.self, zz.buffer, zz.changeTree, uz, Ez, zz.it, zz.isEncodeAll, zz.hasView, zz.metadata))
+      if ((DD.isSchema ? DD.treeIsFiltered || (CD < 32 ? 0 !== (DD.filterBitmask & 1 << CD) : void 0 !== DD.tags[CD]) : DD.treeIsFiltered) !== DD.emitFiltered) return;
+      const ID = DD.isEncodeAll ? pD.ADD : cD;
+      void 0 !== ID && (void 0 === DD.filter || DD.filter(DD.ref, CD, DD.view)) && (LI(DD), DD.encoder(DD.self, DD.buffer, DD.changeTree, CD, ID, DD.it, DD.isEncodeAll, DD.hasView, DD.metadata))
     }
 
-    function yE(zz, uz) {
-      const bz = new Uint8Array(zz.length + uz.length);
-      return bz.set(zz, 0), bz.set(uz, zz.length), bz
+    function dI(DD, CD) {
+      const cD = new Uint8Array(DD.length + CD.length);
+      return cD.set(DD, 0), cD.set(CD, DD.length), cD
     }
-    class DE {
+    class YI {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(DE.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(YI.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(zz, uz) {
-        this.context = gu.cache(zz.constructor), this.root = uz ?? new PE(this.context), this.setState(zz)
+      constructor(DD, CD) {
+        this.context = RC.cache(DD.constructor), this.root = CD ?? new KI(this.context), this.setState(DD)
       }
-      setState(zz) {
-        this.state = zz, this.state[Rz].setRoot(this.root)
+      setState(DD) {
+        this.state = DD, this.state[ZD].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          uz = arguments.length > 1 ? arguments[1] : void 0,
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zz.offset;
-        return this._encodeChannel(zz, uz, bz, Ez, !1)
+          CD = arguments.length > 1 ? arguments[1] : void 0,
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : DD.offset;
+        return this._encodeChannel(DD, CD, cD, ID, !1)
       }
       encodeUnreliable() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          uz = arguments.length > 1 ? arguments[1] : void 0,
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zz.offset;
-        return this._encodeChannel(zz, uz, bz, Ez, !0)
+          CD = arguments.length > 1 ? arguments[1] : void 0,
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : DD.offset;
+        return this._encodeChannel(DD, CD, cD, ID, !0)
       }
-      _encodeChannel(zz, uz, bz, Ez, nz) {
-        this.root.pendingFilterRefresh.length > 0 && lb(this.root);
-        const iz = void 0 !== uz,
-          lz = this.state[Rz],
-          Mz = this._encodeCtx;
-        Mz.self = this, Mz.buffer = bz, Mz.it = zz, Mz.view = uz, Mz.isEncodeAll = !1, Mz.hasView = iz, Mz.emitFiltered = iz;
-        let tz = nz ? this.root.unreliableChanges : this.root.changes;
-        for (; tz = tz.next;) {
-          const bz = tz.changeTree;
-          if (iz && !uz.isChangeTreeVisible(bz)) continue;
-          const Hz = nz ? bz.unreliableRecorder : bz;
-          if (!Hz || !Hz.has()) continue;
-          const Oz = bz.encDescriptor;
-          Mz.changeTree = bz, Mz.ref = bz.ref, Mz.encoder = Oz.encoder, Mz.filter = Oz.filter, Mz.metadata = Oz.metadata, Mz.treeIsFiltered = bz.isFiltered, Mz.isSchema = Oz.isSchema, Mz.filterBitmask = Oz.filterBitmask, Mz.tags = Oz.tags, Mz.structSwitchEmitted = !1, Mz.isRootTree = bz === lz, Mz.shouldEmitSwitch = iz || zz.offset > Ez || !Mz.isRootTree, Hz.forEachWithCtx(Mz, SE)
+      _encodeChannel(DD, CD, cD, ID, pD) {
+        this.root.pendingFilterRefresh.length > 0 && fc(this.root);
+        const iD = void 0 !== CD,
+          fD = this.state[ZD],
+          bD = this._encodeCtx;
+        bD.self = this, bD.buffer = cD, bD.it = DD, bD.view = CD, bD.isEncodeAll = !1, bD.hasView = iD, bD.emitFiltered = iD;
+        let QD = pD ? this.root.unreliableChanges : this.root.changes;
+        for (; QD = QD.next;) {
+          const cD = QD.changeTree;
+          if (iD && !CD.isChangeTreeVisible(cD)) continue;
+          const wD = pD ? cD.unreliableRecorder : cD;
+          if (!wD || !wD.has()) continue;
+          const SD = cD.encDescriptor;
+          bD.changeTree = cD, bD.ref = cD.ref, bD.encoder = SD.encoder, bD.filter = SD.filter, bD.metadata = SD.metadata, bD.treeIsFiltered = cD.isFiltered, bD.isSchema = SD.isSchema, bD.filterBitmask = SD.filterBitmask, bD.tags = SD.tags, bD.structSwitchEmitted = !1, bD.isRootTree = cD === fD, bD.shouldEmitSwitch = iD || DD.offset > ID || !bD.isRootTree, wD.forEachWithCtx(bD, kI)
         }
-        return nz || iz || !this._isStreamBroadcastMode || this._emitStreamBroadcast(bz, zz), zz.offset > bz.byteLength ? (bz = this._resizeBuffer(bz, zz.offset), zz.offset = Ez, this._encodeChannel(zz, uz, bz, Ez, nz)) : bz.subarray(0, zz.offset)
+        return pD || iD || !this._isStreamBroadcastMode || this._emitStreamBroadcast(cD, DD), DD.offset > cD.byteLength ? (cD = this._resizeBuffer(cD, DD.offset), DD.offset = ID, this._encodeChannel(DD, CD, cD, ID, pD)) : cD.subarray(0, DD.offset)
       }
-      encodeFullSync(zz, uz, bz, Ez) {
-        let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : zz.offset;
-        this.root.pendingFilterRefresh.length > 0 && lb(this.root);
-        const iz = void 0 !== Ez,
-          lz = this.state[Rz],
-          Mz = this._encodeCtx;
-        return Mz.self = this, Mz.buffer = uz, Mz.it = zz, Mz.view = Ez, Mz.isEncodeAll = !0, Mz.hasView = iz, Mz.emitFiltered = bz, Mz.gen = ++this._fullSyncGen, Mz.initialOffset = nz, Mz.rootChangeTree = lz, cE(Mz, lz), zz.offset > uz.byteLength ? (uz = this._resizeBuffer(uz, zz.offset), zz.offset = nz, this.encodeFullSync(zz, uz, bz, Ez, nz)) : uz.subarray(0, zz.offset)
+      encodeFullSync(DD, CD, cD, ID) {
+        let pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : DD.offset;
+        this.root.pendingFilterRefresh.length > 0 && fc(this.root);
+        const iD = void 0 !== ID,
+          fD = this.state[ZD],
+          bD = this._encodeCtx;
+        return bD.self = this, bD.buffer = CD, bD.it = DD, bD.view = ID, bD.isEncodeAll = !0, bD.hasView = iD, bD.emitFiltered = cD, bD.gen = ++this._fullSyncGen, bD.initialOffset = pD, bD.rootChangeTree = fD, GI(bD, fD), DD.offset > CD.byteLength ? (CD = this._resizeBuffer(CD, DD.offset), DD.offset = pD, this.encodeFullSync(DD, CD, cD, ID, pD)) : CD.subarray(0, DD.offset)
       }
-      _resizeBuffer(zz, uz) {
-        const bz = Math.ceil(uz / DE.BUFFER_SIZE) * DE.BUFFER_SIZE,
-          Ez = new Uint8Array(bz);
-        return Ez.set(zz), zz === this.sharedBuffer && (this.sharedBuffer = Ez), Ez
+      _resizeBuffer(DD, CD) {
+        const cD = Math.ceil(CD / YI.BUFFER_SIZE) * YI.BUFFER_SIZE,
+          ID = new Uint8Array(cD);
+        return ID.set(DD), DD === this.sharedBuffer && (this.sharedBuffer = ID), ID
       }
       encodeAll() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(zz, uz, !1)
+          CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(DD, CD, !1)
       }
-      encodeAllView(zz, uz, bz) {
-        let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const nz = bz.offset;
-        return Ez = this.encodeFullSync(bz, Ez, !0, zz, nz), yE(Ez.subarray(0, uz), Ez.subarray(nz, bz.offset))
+      encodeAllView(DD, CD, cD) {
+        let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const pD = cD.offset;
+        return ID = this.encodeFullSync(cD, ID, !0, DD, pD), dI(ID.subarray(0, CD), ID.subarray(pD, cD.offset))
       }
-      ensureCapacity(zz, uz) {
-        if (uz + DE.BUFFER_SIZE <= zz.byteLength) return zz;
-        const bz = Math.ceil((uz + DE.BUFFER_SIZE) / DE.BUFFER_SIZE) * DE.BUFFER_SIZE,
-          Ez = new Uint8Array(bz);
-        return Ez.set(zz.subarray(0, uz)), zz === this.sharedBuffer && (this.sharedBuffer = Ez), Ez
+      ensureCapacity(DD, CD) {
+        if (CD + YI.BUFFER_SIZE <= DD.byteLength) return DD;
+        const cD = Math.ceil((CD + YI.BUFFER_SIZE) / YI.BUFFER_SIZE) * YI.BUFFER_SIZE,
+          ID = new Uint8Array(cD);
+        return ID.set(DD.subarray(0, CD)), DD === this.sharedBuffer && (this.sharedBuffer = ID), ID
       }
-      encodeView(zz, uz, bz) {
-        let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          iz = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const lz = bz.offset;
-        this._emitStreamPriority(zz);
-        for (const tz of zz.changes.keys()) {
-          const uz = zz.changes.get(tz),
-            iz = this.root.changeTrees[tz];
-          if (void 0 === iz) {
-            zz.changes.delete(tz);
+      encodeView(DD, CD, cD) {
+        let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          iD = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const fD = cD.offset;
+        this._emitStreamPriority(DD);
+        for (const QD of DD.changes.keys()) {
+          const CD = DD.changes.get(QD),
+            iD = this.root.changeTrees[QD];
+          if (void 0 === iD) {
+            DD.changes.delete(QD);
             continue
           }
-          if (0 === uz.size) continue;
-          const lz = iz.encDescriptor,
-            Hz = lz.encoder,
-            Oz = lz.metadata,
-            pz = iz.ref,
-            Fz = iz.refTarget;
-          Ez = this.ensureCapacity(Ez, bz.offset), Ez[bz.offset++] = 255, uu.number(Ez, pz[Mz], bz);
-          for (const [tz, Zz] of uz) {
-            let uz;
-            if (-1 === tz) {
-              const zz = Fz.tmpItems,
-                uz = Fz.deletedIndexes;
-              for (let lz = 0; lz < zz.length; lz++) void 0 !== zz[lz] && !0 !== uz[lz] && Hz(this, Ez, iz, lz, nz.ADD, bz, !1, !0, Oz);
+          if (0 === CD.size) continue;
+          const fD = iD.encDescriptor,
+            wD = fD.encoder,
+            SD = fD.metadata,
+            BD = iD.ref,
+            MD = iD.refTarget;
+          ID = this.ensureCapacity(ID, cD.offset), ID[cD.offset++] = 255, CC.number(ID, BD[bD], cD);
+          for (const [QD, tD] of CD) {
+            let CD;
+            if (-1 === QD) {
+              const DD = MD.tmpItems,
+                CD = MD.deletedIndexes;
+              for (let fD = 0; fD < DD.length; fD++) void 0 !== DD[fD] && !0 !== CD[fD] && wD(this, ID, iD, fD, pD.ADD, cD, !1, !0, SD);
               continue
             }
-            if ("number" === typeof tz) uz = tz;
+            if ("number" === typeof QD) CD = QD;
             else {
-              const bz = tz.indexInParent(pz);
-              if (void 0 === bz) continue;
-              if (uz = bz, Zz === nz.ADD && iz.getChange(uz) === nz.DELETE) {
-                zz.changes.delete(tz.ref[Mz]);
+              const cD = QD.indexInParent(BD);
+              if (void 0 === cD) continue;
+              if (CD = cD, tD === pD.ADD && iD.getChange(CD) === pD.DELETE) {
+                DD.changes.delete(QD.ref[bD]);
                 continue
               }
             }
-            Hz(this, Ez, iz, uz, void 0 !== Fz[dz](uz) && Zz || nz.DELETE, bz, !1, !0, Oz)
+            wD(this, ID, iD, CD, void 0 !== MD[yD](CD) && tD || pD.DELETE, cD, !1, !0, SD)
           }
         }
-        return zz.changes.clear(), Ez = this.encode(bz, zz, Ez), iz ? yE(Ez.subarray(0, uz), Ez.subarray(lz, bz.offset)) : Ez.subarray(lz, bz.offset)
+        return DD.changes.clear(), ID = this.encode(cD, DD, ID), iD ? dI(ID.subarray(0, CD), ID.subarray(fD, cD.offset)) : ID.subarray(fD, cD.offset)
       }
-      encodeUnreliableView(zz, uz, bz) {
-        let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const nz = bz.offset;
-        return Ez = this.encodeUnreliable(bz, zz, Ez, nz), yE(Ez.subarray(0, uz), Ez.subarray(nz, bz.offset))
+      encodeUnreliableView(DD, CD, cD) {
+        let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const pD = cD.offset;
+        return ID = this.encodeUnreliable(cD, DD, ID, pD), dI(ID.subarray(0, CD), ID.subarray(pD, cD.offset))
       }
-      _emitStreamBroadcast(zz, uz) {
-        const bz = this.root.streamTrees;
-        for (const Ez of bz) {
-          const bz = Ez,
-            iz = bz[Rz],
-            lz = bz[Mz];
-          if (void 0 === lz) continue;
-          const tz = bz._stream,
-            Hz = tz.broadcastDeletes,
-            Oz = tz.broadcastPending,
-            pz = tz.sentBroadcast,
-            Fz = Hz.size > 0,
-            Zz = Oz.size > 0,
-            Kz = iz.encDescriptor,
-            wz = Kz.encoder,
-            Xz = Kz.metadata;
-          if (Fz || Zz) {
-            if (zz[uz.offset++] = 255, uu.number(zz, lz, uz), Fz) {
-              for (const bz of Hz) wz(this, zz, iz, bz, nz.DELETE, uz, !1, !1, Xz);
-              Hz.clear()
+      _emitStreamBroadcast(DD, CD) {
+        const cD = this.root.streamTrees;
+        for (const ID of cD) {
+          const cD = ID,
+            iD = cD[ZD],
+            fD = cD[bD];
+          if (void 0 === fD) continue;
+          const QD = cD._stream,
+            wD = QD.broadcastDeletes,
+            SD = QD.broadcastPending,
+            BD = QD.sentBroadcast,
+            MD = wD.size > 0,
+            tD = SD.size > 0,
+            oD = iD.encDescriptor,
+            vD = oD.encoder,
+            ND = oD.metadata;
+          if (MD || tD) {
+            if (DD[CD.offset++] = 255, CC.number(DD, fD, CD), MD) {
+              for (const cD of wD) vD(this, DD, iD, cD, pD.DELETE, CD, !1, !1, ND);
+              wD.clear()
             }
-            const Ez = tz.maxPerTick,
-              Zz = [];
-            let Kz = 0;
-            const fz = [];
-            for (const lz of Oz) {
-              if (Kz >= Ez) break;
-              const Mz = bz[dz](lz);
-              void 0 !== Mz ? (wz(this, zz, iz, lz, nz.ADD, uz, !1, !1, Xz), pz.add(lz), Zz.push(Mz), fz.push(lz), Kz++) : fz.push(lz)
+            const ID = QD.maxPerTick,
+              tD = [];
+            let oD = 0;
+            const gD = [];
+            for (const fD of SD) {
+              if (oD >= ID) break;
+              const bD = cD[yD](fD);
+              void 0 !== bD ? (vD(this, DD, iD, fD, pD.ADD, CD, !1, !1, ND), BD.add(fD), tD.push(bD), gD.push(fD), oD++) : gD.push(fD)
             }
-            for (const zz of fz) Oz.delete(zz);
-            for (const bz of Zz) {
-              const Ez = bz[Rz];
-              if (void 0 === Ez) continue;
-              const iz = bz[Mz];
-              if (void 0 === iz) continue;
-              zz[uz.offset++] = 255, uu.number(zz, iz, uz);
-              const lz = Ez.encDescriptor,
-                tz = lz.encoder,
-                Hz = lz.metadata;
-              Ez.forEachLive((bz => {
-                ju.hasUnreliableAtIndex(Hz, bz) || tz(this, zz, Ez, bz, nz.ADD, uz, !1, !1, Hz)
+            for (const DD of gD) SD.delete(DD);
+            for (const cD of tD) {
+              const ID = cD[ZD];
+              if (void 0 === ID) continue;
+              const iD = cD[bD];
+              if (void 0 === iD) continue;
+              DD[CD.offset++] = 255, CC.number(DD, iD, CD);
+              const fD = ID.encDescriptor,
+                QD = fD.encoder,
+                wD = fD.metadata;
+              ID.forEachLive((cD => {
+                eC.hasUnreliableAtIndex(wD, cD) || QD(this, DD, ID, cD, pD.ADD, CD, !1, !1, wD)
               }))
             }
           }
-          for (const Ez of pz) {
-            const nz = bz[dz](Ez);
-            if (void 0 === nz) continue;
-            const iz = nz[Rz];
-            if (void 0 === iz || !iz.has()) continue;
-            const lz = nz[Mz];
-            if (void 0 === lz) continue;
-            zz[uz.offset++] = 255, uu.number(zz, lz, uz);
-            const tz = iz.encDescriptor,
-              Hz = tz.encoder,
-              Oz = tz.metadata;
-            iz.forEach(((bz, Ez) => {
-              bz < 0 || ju.hasUnreliableAtIndex(Oz, bz) || Hz(this, zz, iz, bz, Ez, uz, !1, !1, Oz)
+          for (const ID of BD) {
+            const pD = cD[yD](ID);
+            if (void 0 === pD) continue;
+            const iD = pD[ZD];
+            if (void 0 === iD || !iD.has()) continue;
+            const fD = pD[bD];
+            if (void 0 === fD) continue;
+            DD[CD.offset++] = 255, CC.number(DD, fD, CD);
+            const QD = iD.encDescriptor,
+              wD = QD.encoder,
+              SD = QD.metadata;
+            iD.forEach(((cD, ID) => {
+              cD < 0 || eC.hasUnreliableAtIndex(SD, cD) || wD(this, DD, iD, cD, ID, CD, !1, !1, SD)
             }))
           }
         }
       }
-      _emitStreamPriority(zz) {
-        const uz = this.root.streamTrees;
-        if (0 === uz.size) return;
-        const bz = zz.id;
-        for (const Ez of uz) {
-          const uz = Ez,
-            iz = uz._stream,
-            lz = iz.pendingByView.get(bz);
-          if (void 0 === lz || 0 === lz.size) continue;
-          const tz = iz.priorityByView?.get(bz),
-            Hz = void 0 !== tz,
-            Oz = iz.priority,
-            pz = iz.maxPerTick,
-            Fz = [],
-            Zz = [];
-          if (Hz || void 0 !== Oz) {
-            const bz = [],
-              Ez = [];
-            let nz = 0;
-            for (const iz of lz) {
-              const lz = uz[dz](iz);
-              if (void 0 === lz) {
-                Zz.push(iz);
+      _emitStreamPriority(DD) {
+        const CD = this.root.streamTrees;
+        if (0 === CD.size) return;
+        const cD = DD.id;
+        for (const ID of CD) {
+          const CD = ID,
+            iD = CD._stream,
+            fD = iD.pendingByView.get(cD);
+          if (void 0 === fD || 0 === fD.size) continue;
+          const QD = iD.priorityByView?.get(cD),
+            wD = void 0 !== QD,
+            SD = iD.priority,
+            BD = iD.maxPerTick,
+            MD = [],
+            tD = [];
+          if (wD || void 0 !== SD) {
+            const cD = [],
+              ID = [];
+            let pD = 0;
+            for (const iD of fD) {
+              const fD = CD[yD](iD);
+              if (void 0 === fD) {
+                tD.push(iD);
                 continue
               }
-              const Mz = Hz ? tz(lz) : Oz(zz, lz);
-              if (nz < pz) {
-                let zz = nz++;
-                for (; zz > 0 && Ez[zz - 1] < Mz;) Ez[zz] = Ez[zz - 1], bz[zz] = bz[zz - 1], zz--;
-                Ez[zz] = Mz, bz[zz] = iz
-              } else if (Mz > Ez[pz - 1]) {
-                let zz = pz - 1;
-                for (; zz > 0 && Ez[zz - 1] < Mz;) Ez[zz] = Ez[zz - 1], bz[zz] = bz[zz - 1], zz--;
-                Ez[zz] = Mz, bz[zz] = iz
+              const bD = wD ? QD(fD) : SD(DD, fD);
+              if (pD < BD) {
+                let DD = pD++;
+                for (; DD > 0 && ID[DD - 1] < bD;) ID[DD] = ID[DD - 1], cD[DD] = cD[DD - 1], DD--;
+                ID[DD] = bD, cD[DD] = iD
+              } else if (bD > ID[BD - 1]) {
+                let DD = BD - 1;
+                for (; DD > 0 && ID[DD - 1] < bD;) ID[DD] = ID[DD - 1], cD[DD] = cD[DD - 1], DD--;
+                ID[DD] = bD, cD[DD] = iD
               }
             }
-            for (let zz = 0; zz < nz; zz++) Fz.push(bz[zz])
+            for (let DD = 0; DD < pD; DD++) MD.push(cD[DD])
           } else
-            for (const zz of lz) {
-              if (Fz.length >= pz) break;
-              Fz.push(zz)
+            for (const DD of fD) {
+              if (MD.length >= BD) break;
+              MD.push(DD)
             }
-          for (const zz of Zz) lz.delete(zz);
-          const Kz = Fz.length;
-          let wz = iz.sentByView.get(bz);
-          void 0 === wz && (wz = new Set, iz.sentByView.set(bz, wz));
-          for (let bz = 0; bz < Kz; bz++) {
-            const Ez = Fz[bz],
-              iz = uz[dz](Ez);
-            if (void 0 === iz) {
-              lz.delete(Ez);
+          for (const DD of tD) fD.delete(DD);
+          const oD = MD.length;
+          let vD = iD.sentByView.get(cD);
+          void 0 === vD && (vD = new Set, iD.sentByView.set(cD, vD));
+          for (let cD = 0; cD < oD; cD++) {
+            const ID = MD[cD],
+              iD = CD[yD](ID);
+            if (void 0 === iD) {
+              fD.delete(ID);
               continue
             }
-            zz._addImmediate(iz);
-            const tz = iz[Rz];
-            if (void 0 !== tz) {
-              const uz = iz[Mz];
-              let bz = zz.changes.get(uz);
-              void 0 === bz && (bz = new Map, zz.changes.set(uz, bz));
-              const Ez = tz.metadata;
-              tz.forEachLive((zz => {
-                ju.hasUnreliableAtIndex(Ez, zz) || bz.set(zz, nz.ADD)
+            DD._addImmediate(iD);
+            const QD = iD[ZD];
+            if (void 0 !== QD) {
+              const CD = iD[bD];
+              let cD = DD.changes.get(CD);
+              void 0 === cD && (cD = new Map, DD.changes.set(CD, cD));
+              const ID = QD.metadata;
+              QD.forEachLive((DD => {
+                eC.hasUnreliableAtIndex(ID, DD) || cD.set(DD, pD.ADD)
               }))
             }
-            lz.delete(Ez), wz.add(Ez)
+            fD.delete(ID), vD.add(ID)
           }
         }
       }
       discardChanges() {
-        const zz = this.root.changes;
-        let uz = zz.next;
-        const bz = this.root;
-        for (; uz;) {
-          const zz = uz.next;
-          uz.changeTree.endEncode(), bz.releaseNode(uz), uz = zz
+        const DD = this.root.changes;
+        let CD = DD.next;
+        const cD = this.root;
+        for (; CD;) {
+          const DD = CD.next;
+          CD.changeTree.endEncode(), cD.releaseNode(CD), CD = DD
         }
-        zz.next = void 0, zz.tail = void 0
+        DD.next = void 0, DD.tail = void 0
       }
       discardUnreliableChanges() {
-        const zz = this.root.unreliableChanges;
-        let uz = zz.next;
-        const bz = this.root;
-        for (; uz;) {
-          const zz = uz.next;
-          uz.changeTree.endEncodeUnreliable(), bz.releaseNode(uz), uz = zz
+        const DD = this.root.unreliableChanges;
+        let CD = DD.next;
+        const cD = this.root;
+        for (; CD;) {
+          const DD = CD.next;
+          CD.changeTree.endEncodeUnreliable(), cD.releaseNode(CD), CD = DD
         }
-        zz.next = void 0, zz.tail = void 0
+        DD.next = void 0, DD.tail = void 0
       }
-      tryEncodeTypeId(zz, uz, bz, Ez) {
-        const nz = this.context.getTypeId(uz),
-          iz = this.context.getTypeId(bz);
-        void 0 !== iz ? nz !== iz && (zz[Ez.offset++] = 213, uu.number(zz, iz, Ez)) : console.warn(`@colyseus/schema WARNING: Class "${bz.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(DD, CD, cD, ID) {
+        const pD = this.context.getTypeId(CD),
+          iD = this.context.getTypeId(cD);
+        void 0 !== iD ? pD !== iD && (DD[ID.offset++] = 213, CC.number(DD, iD, ID)) : console.warn(`@colyseus/schema WARNING: Class "${cD.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const zz = this.root;
-        if (0 === zz.streamTrees.size) return !1;
-        const uz = 0 === zz.activeViews.size;
-        for (const bz of zz.streamTrees)
-          if (uz ? Pu(bz) : Lu(bz, zz)) return !0;
+        const DD = this.root;
+        if (0 === DD.streamTrees.size) return !1;
+        const CD = 0 === DD.activeViews.size;
+        for (const cD of DD.streamTrees)
+          if (CD ? KC(cD) : JC(cD, DD)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class QE extends Error {
-      constructor(zz) {
-        super(zz), this.name = "DecodingWarning"
+    class WI extends Error {
+      constructor(DD) {
+        super(DD), this.name = "DecodingWarning"
       }
     }
-    const WE = {
+    const sI = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class eE {
+    class EI {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(zz, uz) {
-        let bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(zz, uz), void 0 === uz[Mz] ? (WE.value = zz, Object.defineProperty(uz, Mz, WE)) : uz[Mz] !== zz && (uz[Mz] = zz), bz && (this.refCount[zz] = (this.refCount[zz] || 0) + 1), this.deletedRefs.has(zz) && this.deletedRefs.delete(zz)
+      addRef(DD, CD) {
+        let cD = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(DD, CD), void 0 === CD[bD] ? (sI.value = DD, Object.defineProperty(CD, bD, sI)) : CD[bD] !== DD && (CD[bD] = DD), cD && (this.refCount[DD] = (this.refCount[DD] || 0) + 1), this.deletedRefs.has(DD) && this.deletedRefs.delete(DD)
       }
-      removeRef(zz) {
-        const uz = this.refCount[zz];
-        if (void 0 !== uz)
-          if (0 !== uz)(this.refCount[zz] = uz - 1) <= 0 && this.deletedRefs.add(zz);
+      removeRef(DD) {
+        const CD = this.refCount[DD];
+        if (void 0 !== CD)
+          if (0 !== CD)(this.refCount[DD] = CD - 1) <= 0 && this.deletedRefs.add(DD);
           else try {
-            const uz = this.refs.get(zz);
-            throw new QE(`trying to remove refId '${zz}' with 0 refCount (${uz.constructor.name}: ${JSON.stringify(uz)})`)
-          } catch (Mn) {
-            console.warn(Mn)
+            const CD = this.refs.get(DD);
+            throw new WI(`trying to remove refId '${DD}' with 0 refCount (${CD.constructor.name}: ${JSON.stringify(CD)})`)
+          } catch (ip) {
+            console.warn(ip)
           } else try {
-            throw new QE("trying to remove refId that doesn't exist: " + zz)
-          } catch (Mn) {
-            console.warn(Mn)
+            throw new WI("trying to remove refId that doesn't exist: " + DD)
+          } catch (ip) {
+            console.warn(ip)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((zz => {
-          if (this.refCount[zz] > 0) return;
-          const uz = this.refs.get(zz),
-            bz = uz.constructor[Symbol.metadata];
-          if (null != bz)
-            for (const Ez in bz) {
-              const zz = uz[bz[Ez].name];
-              if ("object" === typeof zz && zz) {
-                const uz = zz[Mz];
-                void 0 === uz || this.deletedRefs.has(uz) || this.removeRef(uz)
+        this.deletedRefs.forEach((DD => {
+          if (this.refCount[DD] > 0) return;
+          const CD = this.refs.get(DD),
+            cD = CD.constructor[Symbol.metadata];
+          if (null != cD)
+            for (const ID in cD) {
+              const DD = CD[cD[ID].name];
+              if ("object" === typeof DD && DD) {
+                const CD = DD[bD];
+                void 0 === CD || this.deletedRefs.has(CD) || this.removeRef(CD)
               }
-            } else "function" === typeof uz[Kz] && Array.from(uz.values()).forEach((zz => {
-              const uz = zz[Mz];
-              void 0 === uz || this.deletedRefs.has(uz) || this.removeRef(uz)
+            } else "function" === typeof CD[oD] && Array.from(CD.values()).forEach((DD => {
+              const CD = DD[bD];
+              void 0 === CD || this.deletedRefs.has(CD) || this.removeRef(CD)
             }));
-          this.refs.delete(zz), delete this.refCount[zz], delete this.callbacks[zz]
+          this.refs.delete(DD), delete this.refCount[DD], delete this.callbacks[DD]
         })), this.deletedRefs.clear()
       }
-      addCallback(zz, uz, bz) {
-        if (void 0 === zz) {
-          const zz = "number" === typeof uz ? nz[uz] : uz;
-          throw new Error(`Can't addCallback on '${zz}' (refId is undefined)`)
+      addCallback(DD, CD, cD) {
+        if (void 0 === DD) {
+          const DD = "number" === typeof CD ? pD[CD] : CD;
+          throw new Error(`Can't addCallback on '${DD}' (refId is undefined)`)
         }
-        return this.callbacks[zz] || (this.callbacks[zz] = {}), this.callbacks[zz][uz] || (this.callbacks[zz][uz] = []), this.callbacks[zz][uz].push(bz), () => this.removeCallback(zz, uz, bz)
+        return this.callbacks[DD] || (this.callbacks[DD] = {}), this.callbacks[DD][CD] || (this.callbacks[DD][CD] = []), this.callbacks[DD][CD].push(cD), () => this.removeCallback(DD, CD, cD)
       }
-      removeCallback(zz, uz, bz) {
-        const Ez = this.callbacks?.[zz]?.[uz]?.indexOf(bz);
-        void 0 !== Ez && -1 !== Ez && GE(this.callbacks[zz][uz], Ez)
+      removeCallback(DD, CD, cD) {
+        const ID = this.callbacks?.[DD]?.[CD]?.indexOf(cD);
+        void 0 !== ID && -1 !== ID && aI(this.callbacks[DD][CD], ID)
       }
     }
-    class jE {
+    class eI {
       context;
       state;
       root;
       currentRefId = 0;
-      rA;
+      mq;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(zz, uz) {
-        this.setState(zz), this.context = uz || new gu(zz.constructor)
+      constructor(DD, CD) {
+        this.setState(DD), this.context = CD || new RC(DD.constructor)
       }
-      setState(zz) {
-        this.state = zz, this.root = new eE, this.root.addRef(0, zz)
+      setState(DD) {
+        this.state = DD, this.root = new EI, this.root.addRef(0, DD)
       }
-      decode(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const nz = void 0 !== this.rA ? [] : null,
-          iz = this.root,
-          lz = zz.byteLength;
-        let Mz = bz.constructor[Oz];
-        for (this.currentRefId = 0; uz.offset < lz;) {
-          if (zz[uz.offset] == Ez) {
-            uz.offset++, bz[sz]?.();
-            const Ez = fu.number(zz, uz),
-              nz = iz.refs.get(Ez);
-            nz ? (bz = nz, Mz = bz.constructor[Oz], this.currentRefId = Ez) : (console.error(`"refId" not found: ${Ez}`, {
-              previousRef: bz,
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const pD = void 0 !== this.mq ? [] : null,
+          iD = this.root,
+          fD = DD.byteLength;
+        let bD = cD.constructor[SD];
+        for (this.currentRefId = 0; CD.offset < fD;) {
+          if (DD[CD.offset] == ID) {
+            CD.offset++, cD[XD]?.();
+            const ID = gC.number(DD, CD),
+              pD = iD.refs.get(ID);
+            pD ? (cD = pD, bD = cD.constructor[SD], this.currentRefId = ID) : (console.error(`"refId" not found: ${ID}`, {
+              previousRef: cD,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(zz, uz, lz));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(DD, CD, fD));
             continue
-          } - 1 !== Mz(this, zz, uz, bz, nz) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(zz, uz, lz))
+          } - 1 !== bD(this, DD, CD, cD, pD) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(DD, CD, fD))
         }
-        return bz[sz]?.(), null !== this.resyncVisited && function(zz, uz) {
-          zz.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : gb(zz, zz.state, new Set, uz)
-        }(this, nz), null !== nz && this.rA?.(nz), iz.garbageCollectDeletedRefs(), nz
+        return cD[XD]?.(), null !== this.resyncVisited && function(DD, CD) {
+          DD.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : Rc(DD, DD.state, new Set, CD)
+        }(this, pD), null !== pD && this.mq?.(pD), iD.garbageCollectDeletedRefs(), pD
       }
-      decodeResync(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(zz, uz)
+          return this.decode(DD, CD)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(zz, uz, bz) {
+      skipCurrentStructure(DD, CD, cD) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const nz = {
-          offset: uz.offset
+        const pD = {
+          offset: CD.offset
         };
-        for (; uz.offset < bz && (zz[uz.offset] !== Ez || (nz.offset = uz.offset + 1, !this.root.refs.has(fu.number(zz, nz))));) uz.offset++
+        for (; CD.offset < cD && (DD[CD.offset] !== ID || (pD.offset = CD.offset + 1, !this.root.refs.has(gC.number(DD, pD))));) CD.offset++
       }
-      getInstanceType(zz, uz, bz) {
-        let Ez;
-        if (213 === zz[uz.offset]) {
-          uz.offset++;
-          const bz = fu.number(zz, uz);
-          Ez = this.context.get(bz)
+      getInstanceType(DD, CD, cD) {
+        let ID;
+        if (213 === DD[CD.offset]) {
+          CD.offset++;
+          const cD = gC.number(DD, CD);
+          ID = this.context.get(cD)
         }
-        return Ez || bz
+        return ID || cD
       }
-      createInstanceOfType(zz) {
-        return zz.initializeForDecoder()
+      createInstanceOfType(DD) {
+        return DD.initializeForDecoder()
       }
-      removeChildRefs(zz, uz) {
-        const bz = "string" !== typeof zz[Kz],
-          Ez = zz[Mz];
-        zz.forEach(((iz, lz) => {
-          uz?.push({
-            ref: zz,
-            refId: Ez,
-            op: nz.DELETE,
-            field: lz,
+      removeChildRefs(DD, CD) {
+        const cD = "string" !== typeof DD[oD],
+          ID = DD[bD];
+        DD.forEach(((iD, fD) => {
+          CD?.push({
+            ref: DD,
+            refId: ID,
+            op: pD.DELETE,
+            field: fD,
             value: void 0,
-            previousValue: iz
-          }), bz && this.root.removeRef(iz[Mz])
+            previousValue: iD
+          }), cD && this.root.removeRef(iD[bD])
         }))
       }
     }
-    const IE = JE({
-        min: FE.float64(),
-        max: FE.float64(),
-        bits: FE.uint8(),
-        mode: FE.uint8()
+    const uI = UI({
+        min: MI.float64(),
+        max: MI.float64(),
+        bits: MI.uint8(),
+        mode: MI.uint8()
       }, "QuantizedDescriptor"),
-      BE = JE({
-        name: FE.string(),
-        type: FE.string(),
-        referencedType: FE.number(),
-        childPrimitive: FE.string(),
-        quantized: FE.ref(IE).optional()
+      hI = UI({
+        name: MI.string(),
+        type: MI.string(),
+        referencedType: MI.number(),
+        childPrimitive: MI.string(),
+        quantized: MI.ref(uI).optional()
       }, "ReflectionField"),
-      CE = JE({
-        id: FE.number(),
-        extendsId: FE.number(),
-        fields: FE.array(BE)
+      rI = UI({
+        id: MI.number(),
+        extendsId: MI.number(),
+        fields: MI.array(hI)
       }, "ReflectionType"),
-      YE = JE({
-        types: FE.array(CE),
-        rootType: FE.number()
+      AI = UI({
+        types: MI.array(rI),
+        rootType: MI.number()
       }, "Reflection");
 
-    function kE(zz) {
-      const uz = zz.root,
-        bz = uz.callbacks,
-        Ez = new WeakMap;
-      let iz;
+    function FI(DD) {
+      const CD = DD.root,
+        cD = CD.callbacks,
+        ID = new WeakMap;
+      let iD;
 
-      function lz(zz, bz) {
-        let Hz = bz.instance?.constructor[Symbol.metadata] || zz,
-          Oz = bz.instance && "function" === typeof bz.instance.forEach || zz && !TE.is(zz);
-        if (Hz && !Oz) {
-          const zz = function(zz, nz, lz, tz) {
-            return tz && void 0 !== bz.instance[nz] && !Ez.has(iz) && lz(bz.instance[nz], void 0), uz.addCallback(zz[Mz], nz, lz)
+      function fD(DD, cD) {
+        let wD = cD.instance?.constructor[Symbol.metadata] || DD,
+          SD = cD.instance && "function" === typeof cD.instance.forEach || DD && !qI.is(DD);
+        if (wD && !SD) {
+          const DD = function(DD, pD, fD, QD) {
+            return QD && void 0 !== cD.instance[pD] && !ID.has(iD) && fD(cD.instance[pD], void 0), CD.addCallback(DD[bD], pD, fD)
           };
           return new Proxy({
-            listen: function(uz, nz) {
-              let lz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (bz.instance) return zz(bz.instance, uz, nz, lz);
+            listen: function(CD, pD) {
+              let fD = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (cD.instance) return DD(cD.instance, CD, pD, fD);
               {
-                let Mz = () => {};
-                return bz.onInstanceAvailable(((bz, tz) => {
-                  Mz = zz(bz, uz, nz, lz && tz && !Ez.has(iz))
-                })), () => Mz()
+                let bD = () => {};
+                return cD.onInstanceAvailable(((cD, QD) => {
+                  bD = DD(cD, CD, pD, fD && QD && !ID.has(iD))
+                })), () => bD()
               }
             },
-            onChange: function(zz) {
-              return uz.addCallback(bz.instance[Mz], nz.REPLACE, zz)
+            onChange: function(DD) {
+              return CD.addCallback(cD.instance[bD], pD.REPLACE, DD)
             },
-            bindTo: function(zz, Ez) {
-              return Ez || (Ez = Object.keys(Hz).map((zz => Hz[zz].name))), uz.addCallback(bz.instance[Mz], nz.REPLACE, (() => {
-                Ez.forEach((uz => zz[uz] = bz.instance[uz]))
+            bindTo: function(DD, ID) {
+              return ID || (ID = Object.keys(wD).map((DD => wD[DD].name))), CD.addCallback(cD.instance[bD], pD.REPLACE, (() => {
+                ID.forEach((CD => DD[CD] = cD.instance[CD]))
               }))
             }
           }, {
-            get(zz, uz) {
-              const Ez = Hz[Hz[uz]];
-              if (Ez) {
-                const zz = bz.instance?.[uz],
-                  nz = Ez => {
-                    const nz = tz(bz.instance).listen(uz, ((zz, uz) => {
-                      Ez(zz, !1), nz?.()
+            get(DD, CD) {
+              const ID = wD[wD[CD]];
+              if (ID) {
+                const DD = cD.instance?.[CD],
+                  pD = ID => {
+                    const pD = QD(cD.instance).listen(CD, ((DD, CD) => {
+                      ID(DD, !1), pD?.()
                     }), !1);
-                    void 0 !== zz?.[Mz] && Ez(zz, !0)
+                    void 0 !== DD?.[bD] && ID(DD, !0)
                   };
-                return lz(Ez.type, {
-                  instance: void 0 !== zz?.[Mz] && zz,
-                  parentInstance: bz.instance,
-                  onInstanceAvailable: nz
+                return fD(ID.type, {
+                  instance: void 0 !== DD?.[bD] && DD,
+                  parentInstance: cD.instance,
+                  onInstanceAvailable: pD
                 })
               }
-              return zz[uz]
+              return DD[CD]
             },
-            has: (zz, uz) => void 0 !== Hz[uz],
-            set(zz, uz, bz) {
+            has: (DD, CD) => void 0 !== wD[CD],
+            set(DD, CD, cD) {
               throw new Error("not allowed")
             },
-            deleteProperty(zz, uz) {
+            deleteProperty(DD, CD) {
               throw new Error("not allowed")
             }
           })
         } {
-          const zz = function(zz, bz, lz) {
-              return lz && zz.forEach(((zz, uz) => bz(zz, uz))), uz.addCallback(zz[Mz], nz.ADD, ((zz, uz) => {
-                Ez.set(bz, !0), iz = bz, bz(zz, uz), Ez.delete(bz), iz = void 0
+          const DD = function(DD, cD, fD) {
+              return fD && DD.forEach(((DD, CD) => cD(DD, CD))), CD.addCallback(DD[bD], pD.ADD, ((DD, CD) => {
+                ID.set(cD, !0), iD = cD, cD(DD, CD), ID.delete(cD), iD = void 0
               }))
             },
-            lz = function(zz, bz) {
-              return uz.addCallback(zz[Mz], nz.DELETE, bz)
+            fD = function(DD, cD) {
+              return CD.addCallback(DD[bD], pD.DELETE, cD)
             },
-            tz = function(zz, bz) {
-              return uz.addCallback(zz[Mz], nz.REPLACE, bz)
+            QD = function(DD, cD) {
+              return CD.addCallback(DD[bD], pD.REPLACE, cD)
             };
           return new Proxy({
-            Qr: function(uz) {
-              let nz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (bz.instance) return zz(bz.instance, uz, nz && !Ez.has(iz));
-              if (bz.onInstanceAvailable) {
-                let lz = () => {};
-                return bz.onInstanceAvailable(((bz, Mz) => {
-                  lz = zz(bz, uz, nz && Mz && !Ez.has(iz))
-                })), () => lz()
+            Jm: function(CD) {
+              let pD = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (cD.instance) return DD(cD.instance, CD, pD && !ID.has(iD));
+              if (cD.onInstanceAvailable) {
+                let fD = () => {};
+                return cD.onInstanceAvailable(((cD, bD) => {
+                  fD = DD(cD, CD, pD && bD && !ID.has(iD))
+                })), () => fD()
               }
             },
-            aJ: function(zz) {
-              if (bz.instance) return lz(bz.instance, zz);
-              if (bz.onInstanceAvailable) {
-                let uz = () => {};
-                return bz.onInstanceAvailable((bz => {
-                  uz = lz(bz, zz)
-                })), () => uz()
+            Zx: function(DD) {
+              if (cD.instance) return fD(cD.instance, DD);
+              if (cD.onInstanceAvailable) {
+                let CD = () => {};
+                return cD.onInstanceAvailable((cD => {
+                  CD = fD(cD, DD)
+                })), () => CD()
               }
             },
-            onChange: function(zz) {
-              if (bz.instance) return tz(bz.instance, zz);
-              if (bz.onInstanceAvailable) {
-                let uz = () => {};
-                return bz.onInstanceAvailable((bz => {
-                  uz = tz(bz, zz)
-                })), () => uz()
+            onChange: function(DD) {
+              if (cD.instance) return QD(cD.instance, DD);
+              if (cD.onInstanceAvailable) {
+                let CD = () => {};
+                return cD.onInstanceAvailable((cD => {
+                  CD = QD(cD, DD)
+                })), () => CD()
               }
             }
           }, {
-            get(zz, uz) {
-              if (!zz[uz]) throw new Error(`Can't access '${uz}' through callback proxy. access the instance directly.`);
-              return zz[uz]
+            get(DD, CD) {
+              if (!DD[CD]) throw new Error(`Can't access '${CD}' through callback proxy. access the instance directly.`);
+              return DD[CD]
             },
-            has: (zz, uz) => void 0 !== zz[uz],
-            set(zz, uz, bz) {
+            has: (DD, CD) => void 0 !== DD[CD],
+            set(DD, CD, cD) {
               throw new Error("not allowed")
             },
-            deleteProperty(zz, uz) {
+            deleteProperty(DD, CD) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function tz(zz) {
-        return lz(void 0, {
-          instance: zz
+      function QD(DD) {
+        return fD(void 0, {
+          instance: DD
         })
       }
-      return zz.rA = function(zz) {
-        const uz = new Set;
-        for (let Ez = 0, iz = zz.length; Ez < iz; Ez++) {
-          const iz = zz[Ez],
-            lz = iz.refId,
-            tz = iz.ref,
-            Hz = bz[lz];
-          if (Hz) {
-            if ((iz.op & nz.DELETE) === nz.DELETE && TE.isSchema(iz.previousValue)) {
-              const zz = bz[iz.previousValue[Mz]]?.[nz.DELETE];
-              for (let uz = zz?.length - 1; uz >= 0; uz--) zz[uz]()
+      return DD.mq = function(DD) {
+        const CD = new Set;
+        for (let ID = 0, iD = DD.length; ID < iD; ID++) {
+          const iD = DD[ID],
+            fD = iD.refId,
+            QD = iD.ref,
+            wD = cD[fD];
+          if (wD) {
+            if ((iD.op & pD.DELETE) === pD.DELETE && qI.isSchema(iD.previousValue)) {
+              const DD = cD[iD.previousValue[bD]]?.[pD.DELETE];
+              for (let CD = DD?.length - 1; CD >= 0; CD--) DD[CD]()
             }
-            if (TE.isSchema(tz)) {
-              if (!uz.has(lz)) {
-                const zz = Hz?.[nz.REPLACE];
-                for (let uz = zz?.length - 1; uz >= 0; uz--) zz[uz]()
+            if (qI.isSchema(QD)) {
+              if (!CD.has(fD)) {
+                const DD = wD?.[pD.REPLACE];
+                for (let CD = DD?.length - 1; CD >= 0; CD--) DD[CD]()
               }
-              if (Hz.hasOwnProperty(iz.field)) {
-                const zz = Hz[iz.field];
-                for (let uz = zz?.length - 1; uz >= 0; uz--) zz[uz](iz.value, iz.previousValue)
+              if (wD.hasOwnProperty(iD.field)) {
+                const DD = wD[iD.field];
+                for (let CD = DD?.length - 1; CD >= 0; CD--) DD[CD](iD.value, iD.previousValue)
               }
             } else {
-              if ((iz.op & nz.DELETE) === nz.DELETE) {
-                if (void 0 !== iz.previousValue) {
-                  const zz = Hz[nz.DELETE];
-                  for (let uz = zz?.length - 1; uz >= 0; uz--) zz[uz](iz.previousValue, iz.dynamicIndex ?? iz.field)
+              if ((iD.op & pD.DELETE) === pD.DELETE) {
+                if (void 0 !== iD.previousValue) {
+                  const DD = wD[pD.DELETE];
+                  for (let CD = DD?.length - 1; CD >= 0; CD--) DD[CD](iD.previousValue, iD.dynamicIndex ?? iD.field)
                 }
-                if ((iz.op & nz.ADD) === nz.ADD) {
-                  const zz = Hz[nz.ADD];
-                  for (let uz = zz?.length - 1; uz >= 0; uz--) zz[uz](iz.value, iz.dynamicIndex ?? iz.field)
+                if ((iD.op & pD.ADD) === pD.ADD) {
+                  const DD = wD[pD.ADD];
+                  for (let CD = DD?.length - 1; CD >= 0; CD--) DD[CD](iD.value, iD.dynamicIndex ?? iD.field)
                 }
-              } else if ((iz.op & nz.ADD) === nz.ADD && iz.previousValue !== iz.value) {
-                const zz = Hz[nz.ADD];
-                for (let uz = zz?.length - 1; uz >= 0; uz--) zz[uz](iz.value, iz.dynamicIndex ?? iz.field)
+              } else if ((iD.op & pD.ADD) === pD.ADD && iD.previousValue !== iD.value) {
+                const DD = wD[pD.ADD];
+                for (let CD = DD?.length - 1; CD >= 0; CD--) DD[CD](iD.value, iD.dynamicIndex ?? iD.field)
               }
-              if (iz.value !== iz.previousValue && (void 0 !== iz.value || void 0 !== iz.previousValue)) {
-                const zz = Hz[nz.REPLACE];
-                for (let uz = zz?.length - 1; uz >= 0; uz--) zz[uz](iz.value, iz.dynamicIndex ?? iz.field)
+              if (iD.value !== iD.previousValue && (void 0 !== iD.value || void 0 !== iD.previousValue)) {
+                const DD = wD[pD.REPLACE];
+                for (let CD = DD?.length - 1; CD >= 0; CD--) DD[CD](iD.value, iD.dynamicIndex ?? iD.field)
               }
             }
-            uz.add(lz)
+            CD.add(fD)
           }
         }
-      }, tz
+      }, QD
     }
 
-    function zn(zz, uz) {
-      zz.rA = uz
+    function Dp(DD, CD) {
+      DD.mq = CD
     }
-    YE.encode = function(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    AI.encode = function(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const bz = zz.context,
-        Ez = new YE,
-        nz = new DE(Ez),
-        iz = bz.schemas.get(zz.state.constructor);
-      iz > 0 && (Ez.rootType = iz);
-      const lz = new Set,
-        Mz = {},
-        tz = zz => {
-          if (void 0 === zz.extendsId || lz.has(zz.extendsId)) {
-            lz.add(zz.id), Ez.types.push(zz);
-            const uz = Mz[zz.id];
-            void 0 !== uz && (delete Mz[zz.id], uz.forEach((zz => tz(zz))))
-          } else void 0 === Mz[zz.extendsId] && (Mz[zz.extendsId] = []), Mz[zz.extendsId].push(zz)
+      const cD = DD.context,
+        ID = new AI,
+        pD = new YI(ID),
+        iD = cD.schemas.get(DD.state.constructor);
+      iD > 0 && (ID.rootType = iD);
+      const fD = new Set,
+        bD = {},
+        QD = DD => {
+          if (void 0 === DD.extendsId || fD.has(DD.extendsId)) {
+            fD.add(DD.id), ID.types.push(DD);
+            const CD = bD[DD.id];
+            void 0 !== CD && (delete bD[DD.id], CD.forEach((DD => QD(DD))))
+          } else void 0 === bD[DD.extendsId] && (bD[DD.extendsId] = []), bD[DD.extendsId].push(DD)
         };
-      bz.schemas.forEach(((zz, uz) => {
-        const Ez = new CE;
-        Ez.id = Number(zz);
-        const nz = Object.getPrototypeOf(uz);
-        nz !== TE && (Ez.extendsId = bz.schemas.get(nz));
-        const iz = uz[Symbol.metadata];
-        if (iz !== nz[Symbol.metadata]) {
-          const zz = iz[Jz] ?? -1;
-          for (let uz = 0; uz <= zz; uz++) {
-            const zz = iz[uz];
-            if (void 0 === zz) continue;
-            const nz = zz.name;
-            if (!Object.prototype.hasOwnProperty.call(iz, nz)) continue;
-            const lz = new BE;
-            let Mz;
-            if (lz.name = nz, "string" === typeof zz.type) Mz = zz.type;
-            else if (qu(zz.type)) {
-              const uz = zz.type.quantized;
-              Mz = "quantized";
-              const bz = new IE;
-              bz.min = uz.min, bz.max = uz.max, bz.bits = uz.bits, bz.mode = uz.wrap ? 1 : 0, lz.quantized = bz
+      cD.schemas.forEach(((DD, CD) => {
+        const ID = new rI;
+        ID.id = Number(DD);
+        const pD = Object.getPrototypeOf(CD);
+        pD !== qI && (ID.extendsId = cD.schemas.get(pD));
+        const iD = CD[Symbol.metadata];
+        if (iD !== pD[Symbol.metadata]) {
+          const DD = iD[UD] ?? -1;
+          for (let CD = 0; CD <= DD; CD++) {
+            const DD = iD[CD];
+            if (void 0 === DD) continue;
+            const pD = DD.name;
+            if (!Object.prototype.hasOwnProperty.call(iD, pD)) continue;
+            const fD = new hI;
+            let bD;
+            if (fD.name = pD, "string" === typeof DD.type) bD = DD.type;
+            else if (lC(DD.type)) {
+              const CD = DD.type.quantized;
+              bD = "quantized";
+              const cD = new uI;
+              cD.min = CD.min, cD.max = CD.max, cD.bits = CD.bits, cD.mode = CD.wrap ? 1 : 0, fD.quantized = cD
             } else {
-              let uz;
-              TE.is(zz.type) ? (Mz = "ref", uz = zz.type) : (Mz = Object.keys(zz.type)[0], "string" === typeof zz.type[Mz] ? lz.childPrimitive = zz.type[Mz] : uz = zz.type[Mz]), lz.referencedType = uz ? bz.getTypeId(uz) : -1
+              let CD;
+              qI.is(DD.type) ? (bD = "ref", CD = DD.type) : (bD = Object.keys(DD.type)[0], "string" === typeof DD.type[bD] ? fD.childPrimitive = DD.type[bD] : CD = DD.type[bD]), fD.referencedType = CD ? cD.getTypeId(CD) : -1
             }
-            lz.type = Mz, Ez.fields.push(lz)
+            fD.type = bD, ID.fields.push(fD)
           }
         }
-        tz(Ez)
+        QD(ID)
       }));
-      for (const Hz in Mz) Mz[Hz].forEach((zz => Ez.types.push(zz)));
-      return nz.encodeAll(uz).slice(0, uz.offset)
-    }, YE.decode = function(zz, uz) {
-      const bz = new YE;
-      new jE(bz).decode(zz, uz);
-      const Ez = new gu;
-      bz.types.forEach((zz => {
-        const uz = Ez.get(zz.extendsId) ?? TE,
-          bz = class extends uz {};
-        gu.register(bz), Ez.add(bz, zz.id)
+      for (const wD in bD) bD[wD].forEach((DD => ID.types.push(DD)));
+      return pD.encodeAll(CD).slice(0, CD.offset)
+    }, AI.decode = function(DD, CD) {
+      const cD = new AI;
+      new eI(cD).decode(DD, CD);
+      const ID = new RC;
+      cD.types.forEach((DD => {
+        const CD = ID.get(DD.extendsId) ?? qI,
+          cD = class extends CD {};
+        RC.register(cD), ID.add(cD, DD.id)
       }), {});
-      bz.types.forEach((zz => {
-        const uz = Ez.get(zz.id),
-          nz = ju.initialize(uz),
-          iz = [];
-        let lz = zz;
+      cD.types.forEach((DD => {
+        const CD = ID.get(DD.id),
+          pD = eC.initialize(CD),
+          iD = [];
+        let fD = DD;
         do {
-          iz.push(lz), lz = bz.types.find((zz => zz.id === lz.extendsId))
-        } while (lz);
-        let Mz = 0;
-        iz.reverse().forEach((zz => {
-          ((zz, uz, bz) => {
-            uz.fields.forEach(((uz, nz) => {
-              const iz = bz + nz;
-              if (void 0 !== uz.quantized) {
-                const bz = uz.quantized;
-                ju.addField(zz, iz, uz.name, {
-                  quantized: mu({
-                    min: bz.min,
-                    max: bz.max,
-                    bits: bz.bits,
-                    mode: 1 === bz.mode ? "wrap" : "clamp"
+          iD.push(fD), fD = cD.types.find((DD => DD.id === fD.extendsId))
+        } while (fD);
+        let bD = 0;
+        iD.reverse().forEach((DD => {
+          ((DD, CD, cD) => {
+            CD.fields.forEach(((CD, pD) => {
+              const iD = cD + pD;
+              if (void 0 !== CD.quantized) {
+                const cD = CD.quantized;
+                eC.addField(DD, iD, CD.name, {
+                  quantized: jC({
+                    min: cD.min,
+                    max: cD.max,
+                    bits: cD.bits,
+                    mode: 1 === cD.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== uz.referencedType) {
-                const bz = uz.type,
-                  nz = Ez.get(uz.referencedType) ?? uz.childPrimitive;
-                "ref" === bz ? ju.addField(zz, iz, uz.name, nz) : ju.addField(zz, iz, uz.name, {
-                  [bz]: nz
+              } else if (void 0 !== CD.referencedType) {
+                const cD = CD.type,
+                  pD = ID.get(CD.referencedType) ?? CD.childPrimitive;
+                "ref" === cD ? eC.addField(DD, iD, CD.name, pD) : eC.addField(DD, iD, CD.name, {
+                  [cD]: pD
                 })
-              } else ju.addField(zz, iz, uz.name, uz.type)
+              } else eC.addField(DD, iD, CD.name, CD.type)
             }))
-          })(nz, zz, Mz), Mz += zz.fields.length
+          })(pD, DD, bD), bD += DD.fields.length
         }))
       }));
-      const nz = new(Ez.get(bz.rootType || 0));
-      return new jE(nz, Ez)
-    }, YE.makeEncodable = function(zz) {
-      const uz = zz[Symbol.metadata];
-      if (!uz) return zz;
-      const bz = uz[Jz];
-      if (void 0 === bz) return zz;
-      for (let Ez = 0; Ez <= bz; Ez++) {
-        const bz = uz[Ez];
-        bz && ju.defineField(zz, uz, Ez, bz.name, bz.type)
+      const pD = new(ID.get(cD.rootType || 0));
+      return new eI(pD, ID)
+    }, AI.makeEncodable = function(DD) {
+      const CD = DD[Symbol.metadata];
+      if (!CD) return DD;
+      const cD = CD[UD];
+      if (void 0 === cD) return DD;
+      for (let ID = 0; ID <= cD; ID++) {
+        const cD = CD[ID];
+        cD && eC.defineField(DD, CD, ID, cD.name, cD.type)
       }
-      return Object.prototype.hasOwnProperty.call(zz, vz) && delete zz[vz], zz
+      return Object.prototype.hasOwnProperty.call(DD, PD) && delete DD[PD], DD
     };
-    class un {
-      LZ;
+    class Cp {
+      Pt;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(zz) {
-        this.LZ = zz, this.LZ.rA = this.rA.bind(this)
+      constructor(DD) {
+        this.Pt = DD, this.Pt.mq = this.mq.bind(this)
       }
       get callbacks() {
-        return this.LZ.root.callbacks
+        return this.Pt.root.callbacks
       }
       get state() {
-        return this.LZ.state
+        return this.Pt.state
       }
-      addCallback(zz, uz, bz) {
-        return this.LZ.root.addCallback(zz, uz, bz)
+      addCallback(DD, CD, cD) {
+        return this.Pt.root.addCallback(DD, CD, cD)
       }
-      addCallbackOrWaitCollectionAvailable(zz, uz, bz, Ez) {
-        let iz = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          lz = () => {};
-        const tz = () => lz(),
-          Hz = zz[uz];
-        if (Hz && void 0 !== Hz[Mz]) return iz = iz && !1 === this.isTriggering, bz === nz.ADD && iz && Hz.forEach(((zz, uz) => {
-          Ez(zz, uz)
-        })), this.addCallback(Hz[Mz], bz, Ez);
+      addCallbackOrWaitCollectionAvailable(DD, CD, cD, ID) {
+        let iD = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          fD = () => {};
+        const QD = () => fD(),
+          wD = DD[CD];
+        if (wD && void 0 !== wD[bD]) return iD = iD && !1 === this.isTriggering, cD === pD.ADD && iD && wD.forEach(((DD, CD) => {
+          ID(DD, CD)
+        })), this.addCallback(wD[bD], cD, ID);
         {
-          let nz;
-          return nz = this.addCallback(zz[Mz], uz, ((zz, uz) => {
-            null !== zz && void 0 !== zz && (nz(), lz = this.addCallback(zz[Mz], bz, Ez))
-          })), lz = nz, tz
+          let pD;
+          return pD = this.addCallback(DD[bD], CD, ((DD, CD) => {
+            null !== DD && void 0 !== DD && (pD(), fD = this.addCallback(DD[bD], cD, ID))
+          })), fD = pD, QD
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(zz, uz, bz) {
-        let Ez = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        Ez = Ez && !1 === this.isTriggering;
-        const nz = zz[uz];
-        return Ez && null !== nz && void 0 !== nz && bz(nz, void 0), this.addCallback(zz[Mz], uz, bz)
+      listenInstance(DD, CD, cD) {
+        let ID = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        ID = ID && !1 === this.isTriggering;
+        const pD = DD[CD];
+        return ID && null !== pD && void 0 !== pD && cD(pD, void 0), this.addCallback(DD[bD], CD, cD)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const zz = arguments.length <= 0 ? void 0 : arguments[0],
-            uz = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(zz[Mz], nz.REPLACE, uz)
+          const DD = arguments.length <= 0 ? void 0 : arguments[0],
+            CD = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(DD[bD], pD.REPLACE, CD)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], nz.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], nz.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], pD.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], pD.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      Qr() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], nz.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], nz.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      Jm() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], pD.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], pD.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      aJ() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], nz.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], nz.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      Zx() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], pD.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], pD.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(zz, uz, bz) {
-        let Ez = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const iz = zz.constructor[Symbol.metadata];
-        bz || (bz = Object.keys(iz).filter((zz => !isNaN(Number(zz)))).map((zz => iz[zz].name)));
-        const lz = () => {
-          for (const Ez of bz) {
-            const bz = zz[Ez];
-            void 0 !== bz && (uz[Ez] = bz)
+      bindTo(DD, CD, cD) {
+        let ID = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const iD = DD.constructor[Symbol.metadata];
+        cD || (cD = Object.keys(iD).filter((DD => !isNaN(Number(DD)))).map((DD => iD[DD].name)));
+        const fD = () => {
+          for (const ID of cD) {
+            const cD = DD[ID];
+            void 0 !== cD && (CD[ID] = cD)
           }
         };
-        return Ez && lz(), this.addCallback(zz[Mz], nz.REPLACE, lz)
+        return ID && fD(), this.addCallback(DD[bD], pD.REPLACE, fD)
       }
-      rA(zz) {
+      mq(DD) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let uz = 0, bz = zz.length; uz < bz; uz++) {
-          const bz = zz[uz],
-            Ez = bz.refId,
-            iz = bz.ref,
-            lz = this.callbacks[Ez];
-          if (lz) {
-            if ((bz.op & nz.DELETE) === nz.DELETE && TE.isSchema(bz.previousValue)) {
-              const zz = bz.previousValue[Mz],
-                uz = this.callbacks[zz]?.[nz.DELETE];
-              if (uz)
-                for (let bz = uz.length - 1; bz >= 0; bz--) try {
-                  uz[bz]()
-                } catch (Mn) {
-                  console.error(Mn)
+        for (let CD = 0, cD = DD.length; CD < cD; CD++) {
+          const cD = DD[CD],
+            ID = cD.refId,
+            iD = cD.ref,
+            fD = this.callbacks[ID];
+          if (fD) {
+            if ((cD.op & pD.DELETE) === pD.DELETE && qI.isSchema(cD.previousValue)) {
+              const DD = cD.previousValue[bD],
+                CD = this.callbacks[DD]?.[pD.DELETE];
+              if (CD)
+                for (let cD = CD.length - 1; cD >= 0; cD--) try {
+                  CD[cD]()
+                } catch (ip) {
+                  console.error(ip)
                 }
             }
-            if (TE.isSchema(iz)) {
-              if (!this.uniqueRefIds.has(Ez)) {
-                const zz = lz[nz.REPLACE];
-                if (zz)
-                  for (let uz = zz.length - 1; uz >= 0; uz--) try {
-                    zz[uz]()
-                  } catch (Mn) {
-                    console.error(Mn)
+            if (qI.isSchema(iD)) {
+              if (!this.uniqueRefIds.has(ID)) {
+                const DD = fD[pD.REPLACE];
+                if (DD)
+                  for (let CD = DD.length - 1; CD >= 0; CD--) try {
+                    DD[CD]()
+                  } catch (ip) {
+                    console.error(ip)
                   }
               }
-              const zz = lz[bz.field];
-              if (zz)
-                for (let uz = zz.length - 1; uz >= 0; uz--) try {
-                  zz[uz](bz.value, bz.previousValue)
-                } catch (Mn) {
-                  console.error(Mn)
+              const DD = fD[cD.field];
+              if (DD)
+                for (let CD = DD.length - 1; CD >= 0; CD--) try {
+                  DD[CD](cD.value, cD.previousValue)
+                } catch (ip) {
+                  console.error(ip)
                 }
             } else {
-              const zz = bz.dynamicIndex ?? bz.field;
-              if ((bz.op & nz.DELETE) === nz.DELETE) {
-                if (void 0 !== bz.previousValue) {
-                  const uz = lz[nz.DELETE];
-                  if (uz)
-                    for (let Ez = uz.length - 1; Ez >= 0; Ez--) try {
-                      uz[Ez](bz.previousValue, zz)
-                    } catch (Mn) {
-                      console.error(Mn)
+              const DD = cD.dynamicIndex ?? cD.field;
+              if ((cD.op & pD.DELETE) === pD.DELETE) {
+                if (void 0 !== cD.previousValue) {
+                  const CD = fD[pD.DELETE];
+                  if (CD)
+                    for (let ID = CD.length - 1; ID >= 0; ID--) try {
+                      CD[ID](cD.previousValue, DD)
+                    } catch (ip) {
+                      console.error(ip)
                     }
                 }
-                if ((bz.op & nz.ADD) === nz.ADD) {
-                  const uz = lz[nz.ADD];
-                  if (uz)
-                    for (let Ez = uz.length - 1; Ez >= 0; Ez--) try {
-                      uz[Ez](bz.value, zz)
-                    } catch (Mn) {
-                      console.error(Mn)
+                if ((cD.op & pD.ADD) === pD.ADD) {
+                  const CD = fD[pD.ADD];
+                  if (CD)
+                    for (let ID = CD.length - 1; ID >= 0; ID--) try {
+                      CD[ID](cD.value, DD)
+                    } catch (ip) {
+                      console.error(ip)
                     }
                 }
-              } else if ((bz.op & nz.ADD) === nz.ADD && bz.previousValue !== bz.value) {
-                const uz = lz[nz.ADD];
-                if (uz)
-                  for (let Ez = uz.length - 1; Ez >= 0; Ez--) try {
-                    uz[Ez](bz.value, zz)
-                  } catch (Mn) {
-                    console.error(Mn)
+              } else if ((cD.op & pD.ADD) === pD.ADD && cD.previousValue !== cD.value) {
+                const CD = fD[pD.ADD];
+                if (CD)
+                  for (let ID = CD.length - 1; ID >= 0; ID--) try {
+                    CD[ID](cD.value, DD)
+                  } catch (ip) {
+                    console.error(ip)
                   }
               }
-              if (bz.value !== bz.previousValue) {
-                const uz = lz[nz.REPLACE];
-                if (uz)
-                  for (let Ez = uz.length - 1; Ez >= 0; Ez--) try {
-                    uz[Ez](zz, bz.value)
-                  } catch (Mn) {
-                    console.error(Mn)
+              if (cD.value !== cD.previousValue) {
+                const CD = fD[pD.REPLACE];
+                if (CD)
+                  for (let ID = CD.length - 1; ID >= 0; ID--) try {
+                    CD[ID](DD, cD.value)
+                  } catch (ip) {
+                    console.error(ip)
                   }
               }
             }
-            this.uniqueRefIds.add(Ez)
+            this.uniqueRefIds.add(ID)
           }
         }
         this.isTriggering = !1
       }
     }
-    const bn = {
-      get(zz) {
-        if (zz instanceof jE) return new un(zz);
-        if ("LZ" in zz.Kw) return new un(zz.Kw.LZ);
+    const cp = {
+      get(DD) {
+        if (DD instanceof eI) return new Cp(DD);
+        if ("Pt" in DD.yN) return new Cp(DD.yN.Pt);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(zz) {
-        if (zz instanceof jE) return kE(zz);
-        if ("LZ" in zz.Kw) return kE(zz.Kw.LZ);
+      getLegacy(DD) {
+        if (DD instanceof eI) return FI(DD);
+        if ("Pt" in DD.yN) return FI(DD.yN.Pt);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (zz, uz) => zn(zz, uz)
+      getRawChanges: (DD, CD) => Dp(DD, CD)
     };
-    class En {
+    class Ip {
       _free = [];
       _factory;
       _maxSize;
-      constructor(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = zz, this._maxSize = uz.maxSize ?? 1 / 0;
-        const bz = uz.preallocate ?? 0;
-        for (let Ez = 0; Ez < bz; Ez++) this._free.push(zz())
+      constructor(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = DD, this._maxSize = CD.maxSize ?? 1 / 0;
+        const cD = CD.preallocate ?? 0;
+        for (let ID = 0; ID < cD; ID++) this._free.push(DD())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(zz) {
-        TE.reset(zz), this._free.length < this._maxSize && this._free.push(zz)
+      release(DD) {
+        qI.reset(DD), this._free.length < this._maxSize && this._free.push(DD)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function nn(zz) {
-      return new En((() => new zz), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function pp(DD) {
+      return new Ip((() => new DD), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    ou("map", {
-      constructor: nE
-    }), ou("array", {
-      constructor: bE
-    }), ou("set", {
-      constructor: lE
-    }), ou("collection", {
-      constructor: iE
+    nC("map", {
+      constructor: pI
+    }), nC("array", {
+      constructor: cI
+    }), nC("set", {
+      constructor: fI
+    }), nC("collection", {
+      constructor: iI
     })
   },
-  8747: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      __addDisposableResource: () => qz,
-      __assign: () => iz,
-      __asyncDelegator: () => xz,
-      __asyncGenerator: () => vz,
-      __asyncValues: () => Jz,
-      __await: () => Nz,
-      __awaiter: () => Zz,
-      __classPrivateFieldGet: () => az,
-      __classPrivateFieldIn: () => mz,
-      __classPrivateFieldSet: () => Vz,
-      __createBinding: () => Kz,
-      __decorate: () => Mz,
-      __disposeResources: () => Uz,
-      __esDecorate: () => Hz,
-      __exportStar: () => wz,
-      __extends: () => nz,
-      __generator: () => Rz,
-      __importDefault: () => Gz,
-      __importStar: () => Pz,
-      __makeTemplateObject: () => Az,
-      __metadata: () => Fz,
-      __param: () => tz,
-      __propKey: () => pz,
-      __read: () => fz,
-      __rest: () => lz,
-      __rewriteRelativeImportExtension: () => cz,
-      __runInitializers: () => Oz,
-      __setFunctionName: () => dz,
-      __spread: () => sz,
-      __spreadArray: () => oz,
-      __spreadArrays: () => rz,
-      __values: () => Xz,
-      default: () => gz
+  8781: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      __addDisposableResource: () => lD,
+      __assign: () => iD,
+      __asyncDelegator: () => HD,
+      __asyncGenerator: () => PD,
+      __asyncValues: () => UD,
+      __await: () => OD,
+      __awaiter: () => tD,
+      __classPrivateFieldGet: () => VD,
+      __classPrivateFieldIn: () => jD,
+      __classPrivateFieldSet: () => zD,
+      __createBinding: () => oD,
+      __decorate: () => bD,
+      __disposeResources: () => TD,
+      __esDecorate: () => wD,
+      __exportStar: () => vD,
+      __extends: () => pD,
+      __generator: () => ZD,
+      __importDefault: () => aD,
+      __importStar: () => KD,
+      __makeTemplateObject: () => xD,
+      __metadata: () => MD,
+      __param: () => QD,
+      __propKey: () => BD,
+      __read: () => gD,
+      __rest: () => fD,
+      __rewriteRelativeImportExtension: () => GD,
+      __runInitializers: () => SD,
+      __setFunctionName: () => yD,
+      __spread: () => XD,
+      __spreadArray: () => nD,
+      __spreadArrays: () => mD,
+      __values: () => ND,
+      default: () => RD
     });
-    var Ez = function(zz, uz) {
-      return Ez = Object.setPrototypeOf || {
+    var ID = function(DD, CD) {
+      return ID = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(zz, uz) {
-        zz.__proto__ = uz
-      } || function(zz, uz) {
-        for (var bz in uz) Object.prototype.hasOwnProperty.call(uz, bz) && (zz[bz] = uz[bz])
-      }, Ez(zz, uz)
+      instanceof Array && function(DD, CD) {
+        DD.__proto__ = CD
+      } || function(DD, CD) {
+        for (var cD in CD) Object.prototype.hasOwnProperty.call(CD, cD) && (DD[cD] = CD[cD])
+      }, ID(DD, CD)
     };
 
-    function nz(zz, uz) {
-      if ("function" !== typeof uz && null !== uz) throw new TypeError("Class extends value " + String(uz) + " is not a constructor or null");
+    function pD(DD, CD) {
+      if ("function" !== typeof CD && null !== CD) throw new TypeError("Class extends value " + String(CD) + " is not a constructor or null");
 
-      function bz() {
-        this.constructor = zz
+      function cD() {
+        this.constructor = DD
       }
-      Ez(zz, uz), zz.prototype = null === uz ? Object.create(uz) : (bz.prototype = uz.prototype, new bz)
+      ID(DD, CD), DD.prototype = null === CD ? Object.create(CD) : (cD.prototype = CD.prototype, new cD)
     }
-    var iz = function() {
-      return iz = Object.assign || function(zz) {
-        for (var uz, bz = 1, Ez = arguments.length; bz < Ez; bz++)
-          for (var nz in uz = arguments[bz]) Object.prototype.hasOwnProperty.call(uz, nz) && (zz[nz] = uz[nz]);
-        return zz
-      }, iz.apply(this, arguments)
+    var iD = function() {
+      return iD = Object.assign || function(DD) {
+        for (var CD, cD = 1, ID = arguments.length; cD < ID; cD++)
+          for (var pD in CD = arguments[cD]) Object.prototype.hasOwnProperty.call(CD, pD) && (DD[pD] = CD[pD]);
+        return DD
+      }, iD.apply(this, arguments)
     };
 
-    function lz(zz, uz) {
-      var bz = {};
-      for (var Ez in zz) Object.prototype.hasOwnProperty.call(zz, Ez) && uz.indexOf(Ez) < 0 && (bz[Ez] = zz[Ez]);
-      if (null != zz && "function" === typeof Object.getOwnPropertySymbols) {
-        var nz = 0;
-        for (Ez = Object.getOwnPropertySymbols(zz); nz < Ez.length; nz++) uz.indexOf(Ez[nz]) < 0 && Object.prototype.propertyIsEnumerable.call(zz, Ez[nz]) && (bz[Ez[nz]] = zz[Ez[nz]])
+    function fD(DD, CD) {
+      var cD = {};
+      for (var ID in DD) Object.prototype.hasOwnProperty.call(DD, ID) && CD.indexOf(ID) < 0 && (cD[ID] = DD[ID]);
+      if (null != DD && "function" === typeof Object.getOwnPropertySymbols) {
+        var pD = 0;
+        for (ID = Object.getOwnPropertySymbols(DD); pD < ID.length; pD++) CD.indexOf(ID[pD]) < 0 && Object.prototype.propertyIsEnumerable.call(DD, ID[pD]) && (cD[ID[pD]] = DD[ID[pD]])
       }
-      return bz
+      return cD
     }
 
-    function Mz(zz, uz, bz, Ez) {
-      var nz, iz = arguments.length,
-        lz = iz < 3 ? uz : null === Ez ? Ez = Object.getOwnPropertyDescriptor(uz, bz) : Ez;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) lz = Reflect.decorate(zz, uz, bz, Ez);
+    function bD(DD, CD, cD, ID) {
+      var pD, iD = arguments.length,
+        fD = iD < 3 ? CD : null === ID ? ID = Object.getOwnPropertyDescriptor(CD, cD) : ID;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) fD = Reflect.decorate(DD, CD, cD, ID);
       else
-        for (var Mz = zz.length - 1; Mz >= 0; Mz--)(nz = zz[Mz]) && (lz = (iz < 3 ? nz(lz) : iz > 3 ? nz(uz, bz, lz) : nz(uz, bz)) || lz);
-      return iz > 3 && lz && Object.defineProperty(uz, bz, lz), lz
+        for (var bD = DD.length - 1; bD >= 0; bD--)(pD = DD[bD]) && (fD = (iD < 3 ? pD(fD) : iD > 3 ? pD(CD, cD, fD) : pD(CD, cD)) || fD);
+      return iD > 3 && fD && Object.defineProperty(CD, cD, fD), fD
     }
 
-    function tz(zz, uz) {
-      return function(bz, Ez) {
-        uz(bz, Ez, zz)
+    function QD(DD, CD) {
+      return function(cD, ID) {
+        CD(cD, ID, DD)
       }
     }
 
-    function Hz(zz, uz, bz, Ez, nz, iz) {
-      function lz(zz) {
-        if (void 0 !== zz && "function" !== typeof zz) throw new TypeError("Function expected");
-        return zz
+    function wD(DD, CD, cD, ID, pD, iD) {
+      function fD(DD) {
+        if (void 0 !== DD && "function" !== typeof DD) throw new TypeError("Function expected");
+        return DD
       }
-      for (var Mz, tz = Ez.kind, Hz = "getter" === tz ? "get" : "setter" === tz ? "set" : "value", Oz = !uz && zz ? Ez.static ? zz : zz.prototype : null, pz = uz || (Oz ? Object.getOwnPropertyDescriptor(Oz, Ez.name) : {}), dz = !1, Fz = bz.length - 1; Fz >= 0; Fz--) {
-        var Zz = {};
-        for (var Rz in Ez) Zz[Rz] = "access" === Rz ? {} : Ez[Rz];
-        for (var Rz in Ez.access) Zz.access[Rz] = Ez.access[Rz];
-        Zz.addInitializer = function(zz) {
-          if (dz) throw new TypeError("Cannot add initializers after decoration has completed");
-          iz.push(lz(zz || null))
+      for (var bD, QD = ID.kind, wD = "getter" === QD ? "get" : "setter" === QD ? "set" : "value", SD = !CD && DD ? ID.static ? DD : DD.prototype : null, BD = CD || (SD ? Object.getOwnPropertyDescriptor(SD, ID.name) : {}), yD = !1, MD = cD.length - 1; MD >= 0; MD--) {
+        var tD = {};
+        for (var ZD in ID) tD[ZD] = "access" === ZD ? {} : ID[ZD];
+        for (var ZD in ID.access) tD.access[ZD] = ID.access[ZD];
+        tD.addInitializer = function(DD) {
+          if (yD) throw new TypeError("Cannot add initializers after decoration has completed");
+          iD.push(fD(DD || null))
         };
-        var Kz = (0, bz[Fz])("accessor" === tz ? {
-          get: pz.get,
-          set: pz.set
-        } : pz[Hz], Zz);
-        if ("accessor" === tz) {
-          if (void 0 === Kz) continue;
-          if (null === Kz || "object" !== typeof Kz) throw new TypeError("Object expected");
-          (Mz = lz(Kz.get)) && (pz.get = Mz), (Mz = lz(Kz.set)) && (pz.set = Mz), (Mz = lz(Kz.init)) && nz.unshift(Mz)
-        } else(Mz = lz(Kz)) && ("field" === tz ? nz.unshift(Mz) : pz[Hz] = Mz)
+        var oD = (0, cD[MD])("accessor" === QD ? {
+          get: BD.get,
+          set: BD.set
+        } : BD[wD], tD);
+        if ("accessor" === QD) {
+          if (void 0 === oD) continue;
+          if (null === oD || "object" !== typeof oD) throw new TypeError("Object expected");
+          (bD = fD(oD.get)) && (BD.get = bD), (bD = fD(oD.set)) && (BD.set = bD), (bD = fD(oD.init)) && pD.unshift(bD)
+        } else(bD = fD(oD)) && ("field" === QD ? pD.unshift(bD) : BD[wD] = bD)
       }
-      Oz && Object.defineProperty(Oz, Ez.name, pz), dz = !0
+      SD && Object.defineProperty(SD, ID.name, BD), yD = !0
     }
 
-    function Oz(zz, uz, bz) {
-      for (var Ez = arguments.length > 2, nz = 0; nz < uz.length; nz++) bz = Ez ? uz[nz].call(zz, bz) : uz[nz].call(zz);
-      return Ez ? bz : void 0
+    function SD(DD, CD, cD) {
+      for (var ID = arguments.length > 2, pD = 0; pD < CD.length; pD++) cD = ID ? CD[pD].call(DD, cD) : CD[pD].call(DD);
+      return ID ? cD : void 0
     }
 
-    function pz(zz) {
-      return "symbol" === typeof zz ? zz : "".concat(zz)
+    function BD(DD) {
+      return "symbol" === typeof DD ? DD : "".concat(DD)
     }
 
-    function dz(zz, uz, bz) {
-      return "symbol" === typeof uz && (uz = uz.description ? "[".concat(uz.description, "]") : ""), Object.defineProperty(zz, "name", {
+    function yD(DD, CD, cD) {
+      return "symbol" === typeof CD && (CD = CD.description ? "[".concat(CD.description, "]") : ""), Object.defineProperty(DD, "name", {
         configurable: !0,
-        value: bz ? "".concat(bz, " ", uz) : uz
+        value: cD ? "".concat(cD, " ", CD) : CD
       })
     }
 
-    function Fz(zz, uz) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(zz, uz)
+    function MD(DD, CD) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(DD, CD)
     }
 
-    function Zz(zz, uz, bz, Ez) {
-      return new(bz || (bz = Promise))((function(nz, iz) {
-        function lz(zz) {
+    function tD(DD, CD, cD, ID) {
+      return new(cD || (cD = Promise))((function(pD, iD) {
+        function fD(DD) {
           try {
-            tz(Ez.next(zz))
-          } catch (uz) {
-            iz(uz)
+            QD(ID.next(DD))
+          } catch (CD) {
+            iD(CD)
           }
         }
 
-        function Mz(zz) {
+        function bD(DD) {
           try {
-            tz(Ez.throw(zz))
-          } catch (uz) {
-            iz(uz)
+            QD(ID.throw(DD))
+          } catch (CD) {
+            iD(CD)
           }
         }
 
-        function tz(zz) {
-          var uz;
-          zz.done ? nz(zz.value) : (uz = zz.value, uz instanceof bz ? uz : new bz((function(zz) {
-            zz(uz)
-          }))).then(lz, Mz)
+        function QD(DD) {
+          var CD;
+          DD.done ? pD(DD.value) : (CD = DD.value, CD instanceof cD ? CD : new cD((function(DD) {
+            DD(CD)
+          }))).then(fD, bD)
         }
-        tz((Ez = Ez.apply(zz, uz || [])).next())
+        QD((ID = ID.apply(DD, CD || [])).next())
       }))
     }
 
-    function Rz(zz, uz) {
-      var bz, Ez, nz, iz = {
+    function ZD(DD, CD) {
+      var cD, ID, pD, iD = {
           label: 0,
           sent: function() {
-            if (1 & nz[0]) throw nz[1];
-            return nz[1]
+            if (1 & pD[0]) throw pD[1];
+            return pD[1]
           },
           trys: [],
           ops: []
         },
-        lz = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return lz.next = Mz(0), lz.throw = Mz(1), lz.return = Mz(2), "function" === typeof Symbol && (lz[Symbol.iterator] = function() {
+        fD = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return fD.next = bD(0), fD.throw = bD(1), fD.return = bD(2), "function" === typeof Symbol && (fD[Symbol.iterator] = function() {
         return this
-      }), lz;
+      }), fD;
 
-      function Mz(Mz) {
-        return function(tz) {
-          return function(Mz) {
-            if (bz) throw new TypeError("Generator is already executing.");
-            for (; lz && (lz = 0, Mz[0] && (iz = 0)), iz;) try {
-              if (bz = 1, Ez && (nz = 2 & Mz[0] ? Ez.return : Mz[0] ? Ez.throw || ((nz = Ez.return) && nz.call(Ez), 0) : Ez.next) && !(nz = nz.call(Ez, Mz[1])).done) return nz;
-              switch (Ez = 0, nz && (Mz = [2 & Mz[0], nz.value]), Mz[0]) {
+      function bD(bD) {
+        return function(QD) {
+          return function(bD) {
+            if (cD) throw new TypeError("Generator is already executing.");
+            for (; fD && (fD = 0, bD[0] && (iD = 0)), iD;) try {
+              if (cD = 1, ID && (pD = 2 & bD[0] ? ID.return : bD[0] ? ID.throw || ((pD = ID.return) && pD.call(ID), 0) : ID.next) && !(pD = pD.call(ID, bD[1])).done) return pD;
+              switch (ID = 0, pD && (bD = [2 & bD[0], pD.value]), bD[0]) {
                 case 0:
                 case 1:
-                  nz = Mz;
+                  pD = bD;
                   break;
                 case 4:
-                  return iz.label++, {
-                    value: Mz[1],
+                  return iD.label++, {
+                    value: bD[1],
                     done: !1
                   };
                 case 5:
-                  iz.label++, Ez = Mz[1], Mz = [0];
+                  iD.label++, ID = bD[1], bD = [0];
                   continue;
                 case 7:
-                  Mz = iz.ops.pop(), iz.trys.pop();
+                  bD = iD.ops.pop(), iD.trys.pop();
                   continue;
                 default:
-                  if (!(nz = (nz = iz.trys).length > 0 && nz[nz.length - 1]) && (6 === Mz[0] || 2 === Mz[0])) {
-                    iz = 0;
+                  if (!(pD = (pD = iD.trys).length > 0 && pD[pD.length - 1]) && (6 === bD[0] || 2 === bD[0])) {
+                    iD = 0;
                     continue
                   }
-                  if (3 === Mz[0] && (!nz || Mz[1] > nz[0] && Mz[1] < nz[3])) {
-                    iz.label = Mz[1];
+                  if (3 === bD[0] && (!pD || bD[1] > pD[0] && bD[1] < pD[3])) {
+                    iD.label = bD[1];
                     break
                   }
-                  if (6 === Mz[0] && iz.label < nz[1]) {
-                    iz.label = nz[1], nz = Mz;
+                  if (6 === bD[0] && iD.label < pD[1]) {
+                    iD.label = pD[1], pD = bD;
                     break
                   }
-                  if (nz && iz.label < nz[2]) {
-                    iz.label = nz[2], iz.ops.push(Mz);
+                  if (pD && iD.label < pD[2]) {
+                    iD.label = pD[2], iD.ops.push(bD);
                     break
                   }
-                  nz[2] && iz.ops.pop(), iz.trys.pop();
+                  pD[2] && iD.ops.pop(), iD.trys.pop();
                   continue
               }
-              Mz = uz.call(zz, iz)
-            } catch (tz) {
-              Mz = [6, tz], Ez = 0
+              bD = CD.call(DD, iD)
+            } catch (QD) {
+              bD = [6, QD], ID = 0
             } finally {
-              bz = nz = 0
+              cD = pD = 0
             }
-            if (5 & Mz[0]) throw Mz[1];
+            if (5 & bD[0]) throw bD[1];
             return {
-              value: Mz[0] ? Mz[1] : void 0,
+              value: bD[0] ? bD[1] : void 0,
               done: !0
             }
-          }([Mz, tz])
+          }([bD, QD])
         }
       }
     }
-    var Kz = Object.create ? function(zz, uz, bz, Ez) {
-      void 0 === Ez && (Ez = bz);
-      var nz = Object.getOwnPropertyDescriptor(uz, bz);
-      nz && !("get" in nz ? !uz.__esModule : nz.writable || nz.configurable) || (nz = {
+    var oD = Object.create ? function(DD, CD, cD, ID) {
+      void 0 === ID && (ID = cD);
+      var pD = Object.getOwnPropertyDescriptor(CD, cD);
+      pD && !("get" in pD ? !CD.__esModule : pD.writable || pD.configurable) || (pD = {
         enumerable: !0,
         get: function() {
-          return uz[bz]
+          return CD[cD]
         }
-      }), Object.defineProperty(zz, Ez, nz)
-    } : function(zz, uz, bz, Ez) {
-      void 0 === Ez && (Ez = bz), zz[Ez] = uz[bz]
+      }), Object.defineProperty(DD, ID, pD)
+    } : function(DD, CD, cD, ID) {
+      void 0 === ID && (ID = cD), DD[ID] = CD[cD]
     };
 
-    function wz(zz, uz) {
-      for (var bz in zz) "default" === bz || Object.prototype.hasOwnProperty.call(uz, bz) || Kz(uz, zz, bz)
+    function vD(DD, CD) {
+      for (var cD in DD) "default" === cD || Object.prototype.hasOwnProperty.call(CD, cD) || oD(CD, DD, cD)
     }
 
-    function Xz(zz) {
-      var uz = "function" === typeof Symbol && Symbol.iterator,
-        bz = uz && zz[uz],
-        Ez = 0;
-      if (bz) return bz.call(zz);
-      if (zz && "number" === typeof zz.length) return {
+    function ND(DD) {
+      var CD = "function" === typeof Symbol && Symbol.iterator,
+        cD = CD && DD[CD],
+        ID = 0;
+      if (cD) return cD.call(DD);
+      if (DD && "number" === typeof DD.length) return {
         next: function() {
-          return zz && Ez >= zz.length && (zz = void 0), {
-            value: zz && zz[Ez++],
-            done: !zz
+          return DD && ID >= DD.length && (DD = void 0), {
+            value: DD && DD[ID++],
+            done: !DD
           }
         }
       };
-      throw new TypeError(uz ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(CD ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function fz(zz, uz) {
-      var bz = "function" === typeof Symbol && zz[Symbol.iterator];
-      if (!bz) return zz;
-      var Ez, nz, iz = bz.call(zz),
-        lz = [];
+    function gD(DD, CD) {
+      var cD = "function" === typeof Symbol && DD[Symbol.iterator];
+      if (!cD) return DD;
+      var ID, pD, iD = cD.call(DD),
+        fD = [];
       try {
         for (;
-          (void 0 === uz || uz-- > 0) && !(Ez = iz.next()).done;) lz.push(Ez.value)
-      } catch (Mz) {
-        nz = {
-          error: Mz
+          (void 0 === CD || CD-- > 0) && !(ID = iD.next()).done;) fD.push(ID.value)
+      } catch (bD) {
+        pD = {
+          error: bD
         }
       } finally {
         try {
-          Ez && !Ez.done && (bz = iz.return) && bz.call(iz)
+          ID && !ID.done && (cD = iD.return) && cD.call(iD)
         } finally {
-          if (nz) throw nz.error
+          if (pD) throw pD.error
         }
       }
-      return lz
+      return fD
     }
 
-    function sz() {
-      for (var zz = [], uz = 0; uz < arguments.length; uz++) zz = zz.concat(fz(arguments[uz]));
-      return zz
+    function XD() {
+      for (var DD = [], CD = 0; CD < arguments.length; CD++) DD = DD.concat(gD(arguments[CD]));
+      return DD
     }
 
-    function rz() {
-      for (var zz = 0, uz = 0, bz = arguments.length; uz < bz; uz++) zz += arguments[uz].length;
-      var Ez = Array(zz),
-        nz = 0;
-      for (uz = 0; uz < bz; uz++)
-        for (var iz = arguments[uz], lz = 0, Mz = iz.length; lz < Mz; lz++, nz++) Ez[nz] = iz[lz];
-      return Ez
+    function mD() {
+      for (var DD = 0, CD = 0, cD = arguments.length; CD < cD; CD++) DD += arguments[CD].length;
+      var ID = Array(DD),
+        pD = 0;
+      for (CD = 0; CD < cD; CD++)
+        for (var iD = arguments[CD], fD = 0, bD = iD.length; fD < bD; fD++, pD++) ID[pD] = iD[fD];
+      return ID
     }
 
-    function oz(zz, uz, bz) {
-      if (bz || 2 === arguments.length)
-        for (var Ez, nz = 0, iz = uz.length; nz < iz; nz++) !Ez && nz in uz || (Ez || (Ez = Array.prototype.slice.call(uz, 0, nz)), Ez[nz] = uz[nz]);
-      return zz.concat(Ez || Array.prototype.slice.call(uz))
+    function nD(DD, CD, cD) {
+      if (cD || 2 === arguments.length)
+        for (var ID, pD = 0, iD = CD.length; pD < iD; pD++) !ID && pD in CD || (ID || (ID = Array.prototype.slice.call(CD, 0, pD)), ID[pD] = CD[pD]);
+      return DD.concat(ID || Array.prototype.slice.call(CD))
     }
 
-    function Nz(zz) {
-      return this instanceof Nz ? (this.v = zz, this) : new Nz(zz)
+    function OD(DD) {
+      return this instanceof OD ? (this.v = DD, this) : new OD(DD)
     }
 
-    function vz(zz, uz, bz) {
+    function PD(DD, CD, cD) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var Ez, nz = bz.apply(zz, uz || []),
-        iz = [];
-      return Ez = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), lz("next"), lz("throw"), lz("return", (function(zz) {
-        return function(uz) {
-          return Promise.resolve(uz).then(zz, Hz)
+      var ID, pD = cD.apply(DD, CD || []),
+        iD = [];
+      return ID = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), fD("next"), fD("throw"), fD("return", (function(DD) {
+        return function(CD) {
+          return Promise.resolve(CD).then(DD, wD)
         }
-      })), Ez[Symbol.asyncIterator] = function() {
+      })), ID[Symbol.asyncIterator] = function() {
         return this
-      }, Ez;
+      }, ID;
 
-      function lz(zz, uz) {
-        nz[zz] && (Ez[zz] = function(uz) {
-          return new Promise((function(bz, Ez) {
-            iz.push([zz, uz, bz, Ez]) > 1 || Mz(zz, uz)
+      function fD(DD, CD) {
+        pD[DD] && (ID[DD] = function(CD) {
+          return new Promise((function(cD, ID) {
+            iD.push([DD, CD, cD, ID]) > 1 || bD(DD, CD)
           }))
-        }, uz && (Ez[zz] = uz(Ez[zz])))
+        }, CD && (ID[DD] = CD(ID[DD])))
       }
 
-      function Mz(zz, uz) {
+      function bD(DD, CD) {
         try {
-          (bz = nz[zz](uz)).value instanceof Nz ? Promise.resolve(bz.value.v).then(tz, Hz) : Oz(iz[0][2], bz)
-        } catch (Ez) {
-          Oz(iz[0][3], Ez)
+          (cD = pD[DD](CD)).value instanceof OD ? Promise.resolve(cD.value.v).then(QD, wD) : SD(iD[0][2], cD)
+        } catch (ID) {
+          SD(iD[0][3], ID)
         }
-        var bz
+        var cD
       }
 
-      function tz(zz) {
-        Mz("next", zz)
+      function QD(DD) {
+        bD("next", DD)
       }
 
-      function Hz(zz) {
-        Mz("throw", zz)
+      function wD(DD) {
+        bD("throw", DD)
       }
 
-      function Oz(zz, uz) {
-        zz(uz), iz.shift(), iz.length && Mz(iz[0][0], iz[0][1])
+      function SD(DD, CD) {
+        DD(CD), iD.shift(), iD.length && bD(iD[0][0], iD[0][1])
       }
     }
 
-    function xz(zz) {
-      var uz, bz;
-      return uz = {}, Ez("next"), Ez("throw", (function(zz) {
-        throw zz
-      })), Ez("return"), uz[Symbol.iterator] = function() {
+    function HD(DD) {
+      var CD, cD;
+      return CD = {}, ID("next"), ID("throw", (function(DD) {
+        throw DD
+      })), ID("return"), CD[Symbol.iterator] = function() {
         return this
-      }, uz;
+      }, CD;
 
-      function Ez(Ez, nz) {
-        uz[Ez] = zz[Ez] ? function(uz) {
-          return (bz = !bz) ? {
-            value: Nz(zz[Ez](uz)),
+      function ID(ID, pD) {
+        CD[ID] = DD[ID] ? function(CD) {
+          return (cD = !cD) ? {
+            value: OD(DD[ID](CD)),
             done: !1
-          } : nz ? nz(uz) : uz
-        } : nz
+          } : pD ? pD(CD) : CD
+        } : pD
       }
     }
 
-    function Jz(zz) {
+    function UD(DD) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var uz, bz = zz[Symbol.asyncIterator];
-      return bz ? bz.call(zz) : (zz = Xz(zz), uz = {}, Ez("next"), Ez("throw"), Ez("return"), uz[Symbol.asyncIterator] = function() {
+      var CD, cD = DD[Symbol.asyncIterator];
+      return cD ? cD.call(DD) : (DD = ND(DD), CD = {}, ID("next"), ID("throw"), ID("return"), CD[Symbol.asyncIterator] = function() {
         return this
-      }, uz);
+      }, CD);
 
-      function Ez(bz) {
-        uz[bz] = zz[bz] && function(uz) {
-          return new Promise((function(Ez, nz) {
-            (function(zz, uz, bz, Ez) {
-              Promise.resolve(Ez).then((function(uz) {
-                zz({
-                  value: uz,
-                  done: bz
+      function ID(cD) {
+        CD[cD] = DD[cD] && function(CD) {
+          return new Promise((function(ID, pD) {
+            (function(DD, CD, cD, ID) {
+              Promise.resolve(ID).then((function(CD) {
+                DD({
+                  value: CD,
+                  done: cD
                 })
-              }), uz)
-            })(Ez, nz, (uz = zz[bz](uz)).done, uz.value)
+              }), CD)
+            })(ID, pD, (CD = DD[cD](CD)).done, CD.value)
           }))
         }
       }
     }
 
-    function Az(zz, uz) {
-      return Object.defineProperty ? Object.defineProperty(zz, "raw", {
-        value: uz
-      }) : zz.raw = uz, zz
+    function xD(DD, CD) {
+      return Object.defineProperty ? Object.defineProperty(DD, "raw", {
+        value: CD
+      }) : DD.raw = CD, DD
     }
-    var Tz = Object.create ? function(zz, uz) {
-        Object.defineProperty(zz, "default", {
+    var qD = Object.create ? function(DD, CD) {
+        Object.defineProperty(DD, "default", {
           enumerable: !0,
-          value: uz
+          value: CD
         })
-      } : function(zz, uz) {
-        zz.default = uz
+      } : function(DD, CD) {
+        DD.default = CD
       },
-      Lz = function(zz) {
-        return Lz = Object.getOwnPropertyNames || function(zz) {
-          var uz = [];
-          for (var bz in zz) Object.prototype.hasOwnProperty.call(zz, bz) && (uz[uz.length] = bz);
-          return uz
-        }, Lz(zz)
+      JD = function(DD) {
+        return JD = Object.getOwnPropertyNames || function(DD) {
+          var CD = [];
+          for (var cD in DD) Object.prototype.hasOwnProperty.call(DD, cD) && (CD[CD.length] = cD);
+          return CD
+        }, JD(DD)
       };
 
-    function Pz(zz) {
-      if (zz && zz.__esModule) return zz;
-      var uz = {};
-      if (null != zz)
-        for (var bz = Lz(zz), Ez = 0; Ez < bz.length; Ez++) "default" !== bz[Ez] && Kz(uz, zz, bz[Ez]);
-      return Tz(uz, zz), uz
+    function KD(DD) {
+      if (DD && DD.__esModule) return DD;
+      var CD = {};
+      if (null != DD)
+        for (var cD = JD(DD), ID = 0; ID < cD.length; ID++) "default" !== cD[ID] && oD(CD, DD, cD[ID]);
+      return qD(CD, DD), CD
     }
 
-    function Gz(zz) {
-      return zz && zz.__esModule ? zz : {
-        default: zz
+    function aD(DD) {
+      return DD && DD.__esModule ? DD : {
+        default: DD
       }
     }
 
-    function az(zz, uz, bz, Ez) {
-      if ("a" === bz && !Ez) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof uz ? zz !== uz || !Ez : !uz.has(zz)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === bz ? Ez : "a" === bz ? Ez.call(zz) : Ez ? Ez.value : uz.get(zz)
+    function VD(DD, CD, cD, ID) {
+      if ("a" === cD && !ID) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof CD ? DD !== CD || !ID : !CD.has(DD)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === cD ? ID : "a" === cD ? ID.call(DD) : ID ? ID.value : CD.get(DD)
     }
 
-    function Vz(zz, uz, bz, Ez, nz) {
-      if ("m" === Ez) throw new TypeError("Private method is not writable");
-      if ("a" === Ez && !nz) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof uz ? zz !== uz || !nz : !uz.has(zz)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === Ez ? nz.call(zz, bz) : nz ? nz.value = bz : uz.set(zz, bz), bz
+    function zD(DD, CD, cD, ID, pD) {
+      if ("m" === ID) throw new TypeError("Private method is not writable");
+      if ("a" === ID && !pD) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof CD ? DD !== CD || !pD : !CD.has(DD)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === ID ? pD.call(DD, cD) : pD ? pD.value = cD : CD.set(DD, cD), cD
     }
 
-    function mz(zz, uz) {
-      if (null === uz || "object" !== typeof uz && "function" !== typeof uz) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof zz ? uz === zz : zz.has(uz)
+    function jD(DD, CD) {
+      if (null === CD || "object" !== typeof CD && "function" !== typeof CD) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof DD ? CD === DD : DD.has(CD)
     }
 
-    function qz(zz, uz, bz) {
-      if (null !== uz && void 0 !== uz) {
-        if ("object" !== typeof uz && "function" !== typeof uz) throw new TypeError("Object expected.");
-        var Ez, nz;
-        if (bz) {
+    function lD(DD, CD, cD) {
+      if (null !== CD && void 0 !== CD) {
+        if ("object" !== typeof CD && "function" !== typeof CD) throw new TypeError("Object expected.");
+        var ID, pD;
+        if (cD) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          Ez = uz[Symbol.asyncDispose]
+          ID = CD[Symbol.asyncDispose]
         }
-        if (void 0 === Ez) {
+        if (void 0 === ID) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          Ez = uz[Symbol.dispose], bz && (nz = Ez)
+          ID = CD[Symbol.dispose], cD && (pD = ID)
         }
-        if ("function" !== typeof Ez) throw new TypeError("Object not disposable.");
-        nz && (Ez = function() {
+        if ("function" !== typeof ID) throw new TypeError("Object not disposable.");
+        pD && (ID = function() {
           try {
-            nz.call(this)
-          } catch (zz) {
-            return Promise.reject(zz)
+            pD.call(this)
+          } catch (DD) {
+            return Promise.reject(DD)
           }
-        }), zz.stack.push({
-          value: uz,
-          dispose: Ez,
-          async: bz
+        }), DD.stack.push({
+          value: CD,
+          dispose: ID,
+          async: cD
         })
-      } else bz && zz.stack.push({
+      } else cD && DD.stack.push({
         async: !0
       });
-      return uz
+      return CD
     }
-    var hz = "function" === typeof SuppressedError ? SuppressedError : function(zz, uz, bz) {
-      var Ez = new Error(bz);
-      return Ez.name = "SuppressedError", Ez.error = zz, Ez.suppressed = uz, Ez
+    var LD = "function" === typeof SuppressedError ? SuppressedError : function(DD, CD, cD) {
+      var ID = new Error(cD);
+      return ID.name = "SuppressedError", ID.error = DD, ID.suppressed = CD, ID
     };
 
-    function Uz(zz) {
-      function uz(uz) {
-        zz.error = zz.hasError ? new hz(uz, zz.error, "An error was suppressed during disposal.") : uz, zz.hasError = !0
+    function TD(DD) {
+      function CD(CD) {
+        DD.error = DD.hasError ? new LD(CD, DD.error, "An error was suppressed during disposal.") : CD, DD.hasError = !0
       }
-      var bz, Ez = 0;
-      return function nz() {
-        for (; bz = zz.stack.pop();) try {
-          if (!bz.async && 1 === Ez) return Ez = 0, zz.stack.push(bz), Promise.resolve().then(nz);
-          if (bz.dispose) {
-            var iz = bz.dispose.call(bz.value);
-            if (bz.async) return Ez |= 2, Promise.resolve(iz).then(nz, (function(zz) {
-              return uz(zz), nz()
+      var cD, ID = 0;
+      return function pD() {
+        for (; cD = DD.stack.pop();) try {
+          if (!cD.async && 1 === ID) return ID = 0, DD.stack.push(cD), Promise.resolve().then(pD);
+          if (cD.dispose) {
+            var iD = cD.dispose.call(cD.value);
+            if (cD.async) return ID |= 2, Promise.resolve(iD).then(pD, (function(DD) {
+              return CD(DD), pD()
             }))
-          } else Ez |= 1
-        } catch (lz) {
-          uz(lz)
+          } else ID |= 1
+        } catch (fD) {
+          CD(fD)
         }
-        if (1 === Ez) return zz.hasError ? Promise.reject(zz.error) : Promise.resolve();
-        if (zz.hasError) throw zz.error
+        if (1 === ID) return DD.hasError ? Promise.reject(DD.error) : Promise.resolve();
+        if (DD.hasError) throw DD.error
       }()
     }
 
-    function cz(zz, uz) {
-      return "string" === typeof zz && /^\.\.?\//.test(zz) ? zz.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(zz, bz, Ez, nz, iz) {
-        return bz ? uz ? ".jsx" : ".js" : !Ez || nz && iz ? Ez + nz + "." + iz.toLowerCase() + "js" : zz
-      })) : zz
+    function GD(DD, CD) {
+      return "string" === typeof DD && /^\.\.?\//.test(DD) ? DD.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(DD, cD, ID, pD, iD) {
+        return cD ? CD ? ".jsx" : ".js" : !ID || pD && iD ? ID + pD + "." + iD.toLowerCase() + "js" : DD
+      })) : DD
     }
-    const gz = {
-      __extends: nz,
-      __assign: iz,
-      __rest: lz,
-      __decorate: Mz,
-      __param: tz,
-      __esDecorate: Hz,
-      __runInitializers: Oz,
-      __propKey: pz,
-      __setFunctionName: dz,
-      __metadata: Fz,
-      __awaiter: Zz,
-      __generator: Rz,
-      __createBinding: Kz,
-      __exportStar: wz,
-      __values: Xz,
-      __read: fz,
-      __spread: sz,
-      __spreadArrays: rz,
-      __spreadArray: oz,
-      __await: Nz,
-      __asyncGenerator: vz,
-      __asyncDelegator: xz,
-      __asyncValues: Jz,
-      __makeTemplateObject: Az,
-      __importStar: Pz,
-      __importDefault: Gz,
-      __classPrivateFieldGet: az,
-      __classPrivateFieldSet: Vz,
-      __classPrivateFieldIn: mz,
-      __addDisposableResource: qz,
-      __disposeResources: Uz,
-      __rewriteRelativeImportExtension: cz
+    const RD = {
+      __extends: pD,
+      __assign: iD,
+      __rest: fD,
+      __decorate: bD,
+      __param: QD,
+      __esDecorate: wD,
+      __runInitializers: SD,
+      __propKey: BD,
+      __setFunctionName: yD,
+      __metadata: MD,
+      __awaiter: tD,
+      __generator: ZD,
+      __createBinding: oD,
+      __exportStar: vD,
+      __values: ND,
+      __read: gD,
+      __spread: XD,
+      __spreadArrays: mD,
+      __spreadArray: nD,
+      __await: OD,
+      __asyncGenerator: PD,
+      __asyncDelegator: HD,
+      __asyncValues: UD,
+      __makeTemplateObject: xD,
+      __importStar: KD,
+      __importDefault: aD,
+      __classPrivateFieldGet: VD,
+      __classPrivateFieldSet: zD,
+      __classPrivateFieldIn: jD,
+      __addDisposableResource: lD,
+      __disposeResources: TD,
+      __rewriteRelativeImportExtension: GD
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

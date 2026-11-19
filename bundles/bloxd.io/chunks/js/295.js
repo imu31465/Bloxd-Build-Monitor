@@ -1,261 +1,261 @@
 export const id = 295;
 export const ids = [295];
 export const modules = {
-  40924: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => dz,
-      c: () => wz,
-      d: () => Fz,
-      g: () => Zz,
-      k: () => fz,
-      m: () => Xz
+  40790: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => yD,
+      g: () => vD,
+      k: () => MD,
+      o: () => tD,
+      p: () => gD,
+      s: () => ND
     });
-    var Ez = bz(40874);
-    var nz = "Babylon Lite v1.32.0",
-      iz = bz(40928);
+    var ID = cD(40737);
+    var pD = "Babylon Lite v1.32.0",
+      iD = cD(40798);
 
-    function lz(zz) {
-      return "clientWidth" in zz
+    function fD(DD) {
+      return "clientWidth" in DD
     }
-    var Mz = 1;
+    var bD = 1;
 
-    function tz(zz, uz, bz) {
-      const tz = uz.getContext("webgpu");
-      tz || (0, Ez.c)(54), lz(uz) && uz.setAttribute("data-engine", nz);
-      const Hz = bz?.format ?? navigator.gpu.getPreferredCanvasFormat(),
-        Oz = bz?.srgb ? (pz = Hz).endsWith("-srgb") ? pz : `${pz}-srgb` : Hz;
-      var pz;
-      const dz = bz?.alphaMode ?? "opaque";
-      tz.configure({
-        device: zz._device,
-        format: Hz,
-        alphaMode: dz,
-        viewFormats: [Oz]
+    function QD(DD, CD, cD) {
+      const QD = CD.getContext("webgpu");
+      QD || (0, ID.d)(54), fD(CD) && CD.setAttribute("data-engine", pD);
+      const wD = cD?.format ?? navigator.gpu.getPreferredCanvasFormat(),
+        SD = cD?.srgb ? (BD = wD).endsWith("-srgb") ? BD : `${BD}-srgb` : wD;
+      var BD;
+      const yD = cD?.alphaMode ?? "opaque";
+      QD.configure({
+        device: DD._device,
+        format: wD,
+        alphaMode: yD,
+        viewFormats: [SD]
       });
-      const Fz = 1 === bz?.msaaSamples ? 1 : 4,
-        Zz = (0, iz.d)({
+      const MD = 1 === cD?.msaaSamples ? 1 : 4,
+        tD = (0, iD.e)({
           lbl: "swapchain",
-          format: Oz,
+          format: SD,
           samples: 1,
           size: {
             width: 0,
             height: 0
           }
         });
-      return Zz._eager = !0, {
-        engine: zz,
-        canvas: uz,
-        format: Oz,
-        msaaSamples: Fz,
-        scRT: Zz,
-        maxDevicePixelRatio: bz?.maxDevicePixelRatio ?? 1 / 0,
-        _uniqueId: Mz++,
-        _context: tz,
-        _configureFormat: Hz,
-        _alphaMode: dz,
+      return tD._eager = !0, {
+        engine: DD,
+        canvas: CD,
+        format: SD,
+        msaaSamples: MD,
+        scRT: tD,
+        maxDevicePixelRatio: cD?.maxDevicePixelRatio ?? 1 / 0,
+        _uniqueId: bD++,
+        _context: QD,
+        _configureFormat: wD,
+        _alphaMode: yD,
         _renderingContexts: []
       }
     }
 
-    function Hz(zz) {
-      const uz = zz._context.getCurrentTexture(),
-        bz = zz.scRT;
-      bz._colorTexture = uz, bz._colorView = uz.createView({
-        format: zz.format
-      }), bz._width = uz.width, bz._height = uz.height
+    function wD(DD) {
+      const CD = DD._context.getCurrentTexture(),
+        cD = DD.scRT;
+      cD._colorTexture = CD, cD._colorView = CD.createView({
+        format: DD.format
+      }), cD._width = CD.width, cD._height = CD.height
     }
 
-    function Oz(zz) {
-      const uz = zz.canvas;
-      if (!lz(uz)) return;
-      const bz = zz._w ?? uz.clientWidth,
-        Ez = zz._h ?? uz.clientHeight;
-      if (!(bz > 0 && Ez > 0)) return;
-      const nz = Math.min(globalThis.devicePixelRatio || 1, zz.maxDevicePixelRatio);
-      pz(zz, bz * nz | 0, Ez * nz | 0)
+    function SD(DD) {
+      const CD = DD.canvas;
+      if (!fD(CD)) return;
+      const cD = DD._w ?? CD.clientWidth,
+        ID = DD._h ?? CD.clientHeight;
+      if (!(cD > 0 && ID > 0)) return;
+      const pD = Math.min(globalThis.devicePixelRatio || 1, DD.maxDevicePixelRatio);
+      BD(DD, cD * pD | 0, ID * pD | 0)
     }
 
-    function pz(zz, uz, bz) {
-      const Ez = zz.canvas,
-        nz = 0 | uz,
-        iz = 0 | bz;
-      if (nz > 0 && iz > 0 && (nz !== Ez.width || iz !== Ez.height)) {
-        Ez.width = nz, Ez.height = iz, zz.scRT._width = nz, zz.scRT._height = iz;
-        for (const uz of zz._renderingContexts) uz._resize?.()
+    function BD(DD, CD, cD) {
+      const ID = DD.canvas,
+        pD = 0 | CD,
+        iD = 0 | cD;
+      if (pD > 0 && iD > 0 && (pD !== ID.width || iD !== ID.height)) {
+        ID.width = pD, ID.height = iD, DD.scRT._width = pD, DD.scRT._height = iD;
+        for (const CD of DD._renderingContexts) CD._resize?.()
       }
     }
-    var dz = 0;
+    var yD = 0;
 
-    function Fz(zz, uz) {
-      return -1 !== zz._renderingContexts.indexOf(uz)
+    function MD(DD, CD) {
+      return -1 !== DD._renderingContexts.indexOf(CD)
     }
 
-    function Zz(zz, uz) {
-      return -1 === zz._renderingContexts.indexOf(uz) && (zz._renderingContexts.push(uz), !0)
+    function tD(DD, CD) {
+      return -1 === DD._renderingContexts.indexOf(CD) && (DD._renderingContexts.push(CD), !0)
     }
-    var Rz = null;
-    var Kz = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
-    async function wz(zz, uz) {
-      const iz = await navigator.gpu.requestAdapter({
+    var ZD = null;
+    var oD = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
+    async function vD(DD, CD) {
+      const iD = await navigator.gpu.requestAdapter({
         powerPreference: "high-performance",
-        ...Rz ? Rz() : {}
+        ...ZD ? ZD() : {}
       });
-      iz || (0, Ez.c)(47);
-      const lz = Rz?.deviceFeatures?.(iz, uz) ?? function(zz) {
-          return Kz.filter((uz => zz.features.has(uz)))
-        }(iz),
-        Mz = await iz.requestDevice({
-          requiredFeatures: lz,
-          requiredLimits: uz?.requiredLimits
+      iD || (0, ID.d)(47);
+      const fD = ZD?.deviceFeatures?.(iD, CD) ?? function(DD) {
+          return oD.filter((CD => DD.features.has(CD)))
+        }(iD),
+        bD = await iD.requestDevice({
+          requiredFeatures: fD,
+          requiredLimits: CD?.requiredLimits
         });
-      console.log(`${nz} - WebGPU engine`);
-      const pz = !!uz?.useHighPrecisionMatrix,
-        dz = !!uz?.useFloatingOrigin;
-      if (dz && !pz && (0, Ez.c)(48), pz) {
+      console.log(`${pD} - WebGPU engine`);
+      const BD = !!CD?.useHighPrecisionMatrix,
+        yD = !!CD?.useFloatingOrigin;
+      if (yD && !BD && (0, ID.d)(48), BD) {
         const {
-          allocateF64Mat4: zz
-        } = await bz.e(349).then((() => bz(60391)));
+          allocateF64Mat4: DD
+        } = await cD.e(349).then((() => cD(60476)));
         0
       }
-      let Fz, Zz, wz, Xz;
-      if (dz) {
+      let MD, tD, vD, ND;
+      if (yD) {
         const [{
-          wrapRenderableForFO: zz,
-          lightFoVersion: uz,
-          applyLightFoOffset: Ez
+          wrapRenderableForFO: DD,
+          lightFoVersion: CD,
+          applyLightFoOffset: ID
         }, {
-          makePackMeshWorld: nz
-        }] = await Promise.all([bz.e(350).then((() => bz(60400))), bz.e(351).then((() => bz(60409)))]);
-        Fz = zz, Zz = nz, wz = uz, Xz = Ez
+          makePackMeshWorld: pD
+        }] = await Promise.all([cD.e(350).then((() => cD(60483))), cD.e(351).then((() => cD(60490)))]);
+        MD = DD, tD = pD, vD = CD, ND = ID
       }
-      const fz = {
-          _device: Mz
+      const gD = {
+          _device: bD
         },
-        sz = [fz];
-      return Object.assign(fz, {
-        engine: fz,
-        surfaces: sz,
-        _surfaces: sz,
-        _device: Mz,
-        _options: uz,
+        XD = [gD];
+      return Object.assign(gD, {
+        engine: gD,
+        surfaces: XD,
+        _surfaces: XD,
+        _device: bD,
+        _options: CD,
         drawCallCount: 0,
         gpuFrameTimeMs: 0,
-        useHighPrecisionMatrix: pz,
-        useFloatingOrigin: dz,
+        useHighPrecisionMatrix: BD,
+        useFloatingOrigin: yD,
         _animFrameId: 0,
         _renderFn: null,
         _currentEncoder: void 0,
         _currentDelta: 0,
         _cbs: [],
-        _wrapRenderableForFO: Fz,
-        _makePackMeshWorld: Zz,
-        _lightFoVersion: wz,
-        _applyLightFoOffset: Xz
-      }, tz(fz, zz, uz)), Oz(fz), Hz(fz), fz
+        _wrapRenderableForFO: MD,
+        _makePackMeshWorld: tD,
+        _lightFoVersion: vD,
+        _applyLightFoOffset: ND
+      }, QD(gD, DD, CD)), SD(gD), wD(gD), gD
     }
 
-    function Xz(zz, uz, bz) {
-      pz(zz, uz, bz)
+    function ND(DD, CD, cD) {
+      BD(DD, CD, cD)
     }
 
-    function fz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zz.surfaces;
-      if (bz !== zz.surfaces)
-        for (let nz = bz.length; nz--;) bz[nz].engine !== zz && (0, Ez.c)(49);
-      sz(zz, uz, bz)
+    function gD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DD.surfaces;
+      if (cD !== DD.surfaces)
+        for (let pD = cD.length; pD--;) cD[pD].engine !== DD && (0, ID.d)(49);
+      XD(DD, CD, cD)
     }
 
-    function sz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zz._surfaces,
-        Ez = 0;
-      for (let iz = bz.length; iz--;) Ez += bz[iz]._renderingContexts.length;
-      if (!Ez) return zz.drawCallCount = 0, zz._flushGpuRetirements?.(zz);
-      const nz = zz._device.createCommandEncoder({
+    function XD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DD._surfaces,
+        ID = 0;
+      for (let iD = cD.length; iD--;) ID += cD[iD]._renderingContexts.length;
+      if (!ID) return DD.drawCallCount = 0, DD._flushGpuRetirements?.(DD);
+      const pD = DD._device.createCommandEncoder({
         label: "frame"
       });
-      zz._currentEncoder = nz, zz._currentDelta = uz;
+      DD._currentEncoder = pD, DD._currentDelta = CD;
       try {
-        zz._gpuTimerBegin?.(nz), Ez = 0;
-        for (let zz = 0; zz < bz.length; zz++) {
-          const uz = bz[zz];
-          uz._capturePreFrame?.(uz), Hz(uz);
-          const nz = uz._renderingContexts;
-          for (let zz = 0; zz < nz.length; zz++) {
-            const uz = nz[zz];
-            uz._update(), Ez += uz._drawCallsPre + uz._record()
+        DD._gpuTimerBegin?.(pD), ID = 0;
+        for (let DD = 0; DD < cD.length; DD++) {
+          const CD = cD[DD];
+          CD._capturePreFrame?.(CD), wD(CD);
+          const pD = CD._renderingContexts;
+          for (let DD = 0; DD < pD.length; DD++) {
+            const CD = pD[DD];
+            CD._update(), ID += CD._drawCallsPre + CD._record()
           }
         }
-        const uz = zz._currentEncoder;
-        for (let zz = 0; zz < bz.length; zz++) {
-          const Ez = bz[zz];
-          Ez._captureService?.(Ez, uz)
+        const CD = DD._currentEncoder;
+        for (let DD = 0; DD < cD.length; DD++) {
+          const ID = cD[DD];
+          ID._captureService?.(ID, CD)
         }
-        zz._gpuTimerEnd?.(uz), zz._cbs[0] = uz.finish(), zz._device.queue.submit(zz._cbs), zz._flushGpuRetirements?.(zz), zz.drawCallCount = Ez, zz._gpuTimerResolve?.()
+        DD._gpuTimerEnd?.(CD), DD._cbs[0] = CD.finish(), DD._device.queue.submit(DD._cbs), DD._flushGpuRetirements?.(DD), DD.drawCallCount = ID, DD._gpuTimerResolve?.()
       } finally {
-        zz._currentEncoder = void 0
+        DD._currentEncoder = void 0
       }
     }
   },
-  40878: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => nz,
-      g: () => iz,
-      k: () => Ez
+  40745: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => pD,
+      h: () => iD,
+      i: () => ID
     });
-    var Ez = globalThis.GPUTextureUsage,
-      nz = globalThis.GPUBufferUsage,
-      iz = globalThis.GPUShaderStage;
+    var ID = globalThis.GPUTextureUsage,
+      pD = globalThis.GPUBufferUsage,
+      iD = globalThis.GPUShaderStage;
     globalThis.GPUColorWrite
   },
-  40944: (zz, uz, bz) => {
-    function Ez(zz) {
-      nz(zz.splice(0))
+  40823: (DD, CD, cD) => {
+    function ID(DD) {
+      pD(DD.splice(0))
     }
 
-    function nz(zz) {
-      for (const bz of zz) try {
-        bz()
-      } catch (uz) {
-        console.error("GPU resource retirement failed.", uz)
+    function pD(DD) {
+      for (const cD of DD) try {
+        cD()
+      } catch (CD) {
+        console.error("GPU resource retirement failed.", CD)
       }
     }
 
-    function iz(zz, uz) {
-      zz._flushGpuRetirements ??= lz, (zz._retirements ??= []).push(uz)
+    function iD(DD, CD) {
+      DD._flushGpuRetirements ??= fD, (DD._retirements ??= []).push(CD)
     }
 
-    function lz(zz) {
-      const uz = zz._retirements;
-      if (!uz) return;
-      zz._retirements = null;
-      const bz = zz._retiring ??= new Set;
-      bz.add(uz), queueMicrotask((() => {
-        zz._device.queue.onSubmittedWorkDone().then((() => {
-          bz.delete(uz), Ez(uz)
+    function fD(DD) {
+      const CD = DD._retirements;
+      if (!CD) return;
+      DD._retirements = null;
+      const cD = DD._retiring ??= new Set;
+      cD.add(CD), queueMicrotask((() => {
+        DD._device.queue.onSubmittedWorkDone().then((() => {
+          cD.delete(CD), ID(CD)
         })).catch((() => {}))
       }))
     }
-    bz.d(uz, {
-      c: () => iz
+    cD.d(CD, {
+      e: () => iD
     })
   },
-  40928: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz,
-      e: () => lz,
-      g: () => Mz
+  40798: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => iD,
+      h: () => fD,
+      i: () => bD
     });
-    var Ez = bz(40878);
+    var ID = cD(40745);
 
-    function nz(zz) {
-      const uz = zz.size;
-      return "canvas" in uz ? uz.canvas : uz
+    function pD(DD) {
+      const CD = DD.size;
+      return "canvas" in CD ? CD.canvas : CD
     }
 
-    function iz(zz) {
+    function iD(DD) {
       return {
-        _descriptor: zz,
-        _resolveSize: nz,
+        _descriptor: DD,
+        _resolveSize: pD,
         _colorTexture: null,
         _colorView: null,
         _depthTexture: null,
@@ -265,609 +265,609 @@ export const modules = {
       }
     }
 
-    function lz(zz, uz) {
-      if (zz._eager) return void zz._syncEager?.(uz);
-      Mz(zz);
-      const bz = zz._descriptor,
+    function fD(DD, CD) {
+      if (DD._eager) return void DD._syncEager?.(CD);
+      bD(DD);
+      const cD = DD._descriptor,
         {
-          width: iz,
-          height: lz
-        } = (zz._resolveSize ?? nz)(bz);
-      zz._width = iz, zz._height = lz;
-      const tz = uz._device;
-      bz.format && (zz._colorTexture = tz.createTexture({
-        label: bz.lbl,
+          width: iD,
+          height: fD
+        } = (DD._resolveSize ?? pD)(cD);
+      DD._width = iD, DD._height = fD;
+      const QD = CD._device;
+      cD.format && (DD._colorTexture = QD.createTexture({
+        label: cD.lbl,
         size: {
-          width: iz,
-          height: lz
+          width: iD,
+          height: fD
         },
-        format: bz.format,
-        sampleCount: bz.samples,
-        usage: Ez.k.RENDER_ATTACHMENT | Ez.k.TEXTURE_BINDING | Ez.k.COPY_SRC | Ez.k.COPY_DST
-      }), zz._colorView = zz._colorTexture.createView()), bz.dFormat && (zz._depthTexture = tz.createTexture({
-        label: bz.lbl,
+        format: cD.format,
+        sampleCount: cD.samples,
+        usage: ID.i.RENDER_ATTACHMENT | ID.i.TEXTURE_BINDING | ID.i.COPY_SRC | ID.i.COPY_DST
+      }), DD._colorView = DD._colorTexture.createView()), cD.dFormat && (DD._depthTexture = QD.createTexture({
+        label: cD.lbl,
         size: {
-          width: iz,
-          height: lz
+          width: iD,
+          height: fD
         },
-        format: bz.dFormat,
-        sampleCount: bz.samples,
-        usage: Ez.k.RENDER_ATTACHMENT | Ez.k.TEXTURE_BINDING
-      }), zz._depthView = zz._depthTexture.createView())
+        format: cD.dFormat,
+        sampleCount: cD.samples,
+        usage: ID.i.RENDER_ATTACHMENT | ID.i.TEXTURE_BINDING
+      }), DD._depthView = DD._depthTexture.createView())
     }
 
-    function Mz(zz) {
-      if (!zz || zz._eager && !zz._disposeAttachments) return;
-      const uz = zz._colorTexture,
-        bz = zz._depthTexture;
-      if (zz._colorTexture = zz._depthTexture = null, zz._colorView = zz._depthView = null, zz._width = zz._height = 0, zz._disposeAttachments) zz._disposeAttachments(uz, bz);
+    function bD(DD) {
+      if (!DD || DD._eager && !DD._disposeAttachments) return;
+      const CD = DD._colorTexture,
+        cD = DD._depthTexture;
+      if (DD._colorTexture = DD._depthTexture = null, DD._colorView = DD._depthView = null, DD._width = DD._height = 0, DD._disposeAttachments) DD._disposeAttachments(CD, cD);
       else try {
-        uz?.destroy()
+        CD?.destroy()
       } finally {
-        !1 !== zz._ownsDepthTexture && bz?.destroy()
+        !1 !== DD._ownsDepthTexture && cD?.destroy()
       }
     }
   },
-  40939: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez,
-      e: () => nz,
-      f: () => iz
+  40814: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => ID,
+      f: () => pD,
+      h: () => iD
     });
-    var Ez = Float32Array,
-      nz = Float64Array,
-      iz = Uint32Array
+    var ID = Float32Array,
+      pD = Float64Array,
+      iD = Uint32Array
   },
-  40946: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez
+  40830: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => ID
     });
-    var Ez = 16
+    var ID = 16
   },
-  40874: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => nz
+  40737: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => pD
     });
-    var Ez = null;
+    var ID = null;
 
-    function nz(zz) {
-      for (var uz = arguments.length, bz = new Array(uz > 1 ? uz - 1 : 0), nz = 1; nz < uz; nz++) bz[nz - 1] = arguments[nz];
-      const iz = new Error(Ez?.(zz, bz) ?? `#${zz}`);
-      throw iz.lite = bz, iz
+    function pD(DD) {
+      for (var CD = arguments.length, cD = new Array(CD > 1 ? CD - 1 : 0), pD = 1; pD < CD; pD++) cD[pD - 1] = arguments[pD];
+      const iD = new Error(ID?.(DD, cD) ?? `#${DD}`);
+      throw iD.lite = cD, iD
     }
   },
-  40906: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => nz
+  40774: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => pD
     });
-    var Ez = bz(40890);
+    var ID = cD(40755);
 
-    function nz(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const bz = uz.compare,
-        nz = uz.lodMinClamp ?? 0,
-        iz = uz.lodMaxClamp ?? 32,
-        lz = void 0 !== bz || 0 !== nz || 32 !== iz ? `${bz??""}:${nz}:${iz}` : "";
-      return (0, Ez.c)(zz, uz, lz)
+    function pD(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const cD = CD.compare,
+        pD = CD.lodMinClamp ?? 0,
+        iD = CD.lodMaxClamp ?? 32,
+        fD = void 0 !== cD || 0 !== pD || 32 !== iD ? `${cD??""}:${pD}:${iD}` : "";
+      return (0, ID.c)(DD, CD, fD)
     }
   },
-  40886: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
+  40753: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => iD
     });
-    var Ez = null;
+    var ID = null;
 
-    function nz(zz) {
-      const uz = Ez ??= new WeakMap;
-      uz.set(zz, (uz.get(zz) ?? 0) + 1)
+    function pD(DD) {
+      const CD = ID ??= new WeakMap;
+      CD.set(DD, (CD.get(DD) ?? 0) + 1)
     }
 
-    function iz(zz) {
-      nz(zz.texture)
+    function iD(DD) {
+      pD(DD.texture)
     }
   },
-  40890: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Mz
+  40755: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => bD
     });
-    var Ez = null,
-      nz = "nearest",
-      iz = "clamp-to-edge",
-      lz = {
-        minFilter: nz,
-        magFilter: nz,
-        mipmapFilter: nz,
-        addressModeU: iz,
-        addressModeV: iz,
-        addressModeW: iz,
+    var ID = null,
+      pD = "nearest",
+      iD = "clamp-to-edge",
+      fD = {
+        minFilter: pD,
+        magFilter: pD,
+        mipmapFilter: pD,
+        addressModeU: iD,
+        addressModeV: iD,
+        addressModeW: iD,
         maxAnisotropy: 1
       };
 
-    function Mz(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const nz = zz._device,
-        iz = Ez ??= new WeakMap;
-      let Mz = iz.get(nz);
-      Mz || iz.set(nz, Mz = new Map);
-      let tz = bz;
-      for (const Ez in lz) {
-        const zz = Ez;
-        tz += `:${uz[zz]??lz[zz]}`
+    function bD(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const pD = DD._device,
+        iD = ID ??= new WeakMap;
+      let bD = iD.get(pD);
+      bD || iD.set(pD, bD = new Map);
+      let QD = cD;
+      for (const ID in fD) {
+        const DD = ID;
+        QD += `:${CD[DD]??fD[DD]}`
       }
-      let Hz = Mz.get(tz);
-      return Hz || Mz.set(tz, Hz = nz.createSampler(uz)), Hz
+      let wD = bD.get(QD);
+      return wD || bD.set(QD, wD = pD.createSampler(CD)), wD
     }
   },
-  40936: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => hz,
-      f: () => gz
+  40806: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => LD,
+      g: () => RD
     });
-    var Ez = bz(40928),
-      nz = bz(40924);
+    var ID = cD(40798),
+      pD = cD(40790);
 
-    function iz(zz, uz) {
-      uz._passes.length = 0, zz._currentProcessedTask = uz;
+    function iD(DD, CD) {
+      CD._passes.length = 0, DD._currentProcessedTask = CD;
       try {
-        uz.record()
+        CD.record()
       } finally {
-        zz._currentProcessedTask = null
+        DD._currentProcessedTask = null
       }
     }
-    var lz = bz(40939);
+    var fD = cD(40814);
 
-    function Mz(zz) {
-      const uz = zz.worldMatrixVersion;
-      if (zz._viewVer === uz) return zz._viewCache;
-      const bz = zz._viewCache,
-        Ez = zz.worldMatrix,
-        nz = zz._useFloatingOrigin,
-        iz = nz ? 0 : Ez[12],
-        lz = nz ? 0 : Ez[13],
-        Mz = nz ? 0 : Ez[14];
-      return bz[0] = Ez[0], bz[1] = Ez[4], bz[2] = Ez[8], bz[3] = 0, bz[4] = Ez[1], bz[5] = Ez[5], bz[6] = Ez[9], bz[7] = 0, bz[8] = Ez[2], bz[9] = Ez[6], bz[10] = Ez[10], bz[11] = 0, bz[12] = -(Ez[0] * iz + Ez[1] * lz + Ez[2] * Mz), bz[13] = -(Ez[4] * iz + Ez[5] * lz + Ez[6] * Mz), bz[14] = -(Ez[8] * iz + Ez[9] * lz + Ez[10] * Mz), bz[15] = 1, zz._viewVer = uz, bz
+    function bD(DD) {
+      const CD = DD.worldMatrixVersion;
+      if (DD._viewVer === CD) return DD._viewCache;
+      const cD = DD._viewCache,
+        ID = DD.worldMatrix,
+        pD = DD._useFloatingOrigin,
+        iD = pD ? 0 : ID[12],
+        fD = pD ? 0 : ID[13],
+        bD = pD ? 0 : ID[14];
+      return cD[0] = ID[0], cD[1] = ID[4], cD[2] = ID[8], cD[3] = 0, cD[4] = ID[1], cD[5] = ID[5], cD[6] = ID[9], cD[7] = 0, cD[8] = ID[2], cD[9] = ID[6], cD[10] = ID[10], cD[11] = 0, cD[12] = -(ID[0] * iD + ID[1] * fD + ID[2] * bD), cD[13] = -(ID[4] * iD + ID[5] * fD + ID[6] * bD), cD[14] = -(ID[8] * iD + ID[9] * fD + ID[10] * bD), cD[15] = 1, DD._viewVer = CD, cD
     }
-    var tz = null;
+    var QD = null;
 
-    function Hz(zz) {
-      return zz._projFov === zz.fov && zz._projNear === zz.nearPlane && zz._projFar === zz.farPlane || (zz._projFov = zz.fov, zz._projNear = zz.nearPlane, zz._projFar = zz.farPlane, zz._projRev = (zz._projRev ?? 0) + 1), zz.worldMatrixVersion + (zz._projRev ?? 0)
+    function wD(DD) {
+      return DD._projFov === DD.fov && DD._projNear === DD.nearPlane && DD._projFar === DD.farPlane || (DD._projFov = DD.fov, DD._projNear = DD.nearPlane, DD._projFar = DD.farPlane, DD._projRev = (DD._projRev ?? 0) + 1), DD.worldMatrixVersion + (DD._projRev ?? 0)
     }
 
-    function Oz(zz, uz) {
-      const bz = Hz(zz);
-      if (zz._projVer === bz && zz._projAspect === uz) return zz._projCache;
-      const Ez = zz._projCache;
-      return null !== tz && zz.ortho ? tz(zz, uz, Ez) : function(zz, uz, bz, Ez, nz) {
-        const iz = 1 / Math.tan(.5 * uz),
-          lz = nz - Ez;
-        zz[0] = iz / bz, zz[5] = iz, zz[10] = -Ez / lz, zz[11] = 1, zz[14] = nz * Ez / lz
-      }(Ez, zz.fov, uz, zz.nearPlane, zz.farPlane), zz._projVer = bz, zz._projAspect = uz, Ez
+    function SD(DD, CD) {
+      const cD = wD(DD);
+      if (DD._projVer === cD && DD._projAspect === CD) return DD._projCache;
+      const ID = DD._projCache;
+      return null !== QD && DD.ortho ? QD(DD, CD, ID) : function(DD, CD, cD, ID, pD) {
+        const iD = 1 / Math.tan(.5 * CD),
+          fD = pD - ID;
+        DD[0] = iD / cD, DD[5] = iD, DD[10] = -ID / fD, DD[11] = 1, DD[14] = pD * ID / fD
+      }(ID, DD.fov, CD, DD.nearPlane, DD.farPlane), DD._projVer = cD, DD._projAspect = CD, ID
     }
-    var pz = bz(40878);
+    var BD = cD(40745);
 
-    function dz(zz, uz, bz) {
-      return zz._device.createBuffer({
-        label: bz,
-        size: (Ez = uz, nz = 16, Math.ceil(Ez / nz) * nz),
-        usage: pz.d.UNIFORM | pz.d.COPY_DST
+    function yD(DD, CD, cD) {
+      return DD._device.createBuffer({
+        label: cD,
+        size: (ID = CD, pD = 16, Math.ceil(ID / pD) * pD),
+        usage: BD.e.UNIFORM | BD.e.COPY_DST
       });
-      var Ez, nz
+      var ID, pD
     }
-    var Fz = bz(40944),
-      Zz = null;
+    var MD = cD(40823),
+      tD = null;
 
-    function Rz(zz) {
-      const uz = zz._device,
-        bz = Zz ??= new WeakMap;
-      let Ez = bz.get(uz);
-      return Ez || (Ez = uz.createBindGroupLayout({
-        label: "tK",
+    function ZD(DD) {
+      const CD = DD._device,
+        cD = tD ??= new WeakMap;
+      let ID = cD.get(CD);
+      return ID || (ID = CD.createBindGroupLayout({
+        label: "wo",
         entries: [{
           binding: 0,
-          visibility: pz.g.VERTEX | pz.g.FRAGMENT,
+          visibility: BD.h.VERTEX | BD.h.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }, {
           binding: 1,
-          visibility: pz.g.FRAGMENT,
+          visibility: BD.h.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }]
-      }), bz.set(uz, Ez)), Ez
+      }), cD.set(CD, ID)), ID
     }
 
-    function Kz(zz, uz, bz) {
-      const Ez = zz._device,
-        nz = dz(zz, uz.byteLength, bz);
+    function oD(DD, CD, cD) {
+      const ID = DD._device,
+        pD = yD(DD, CD.byteLength, cD);
       try {
-        Ez.queue.writeBuffer(nz, 0, uz.buffer, uz.byteOffset, uz.byteLength)
-      } catch (iz) {
-        throw nz.destroy(), iz
+        ID.queue.writeBuffer(pD, 0, CD.buffer, CD.byteOffset, CD.byteLength)
+      } catch (iD) {
+        throw pD.destroy(), iD
       }
-      return nz
+      return pD
     }
-    var wz = bz(40946),
-      Xz = new lz.f(1),
-      fz = new lz.b(Xz.buffer);
+    var vD = cD(40830),
+      ND = new fD.h(1),
+      gD = new fD.e(ND.buffer);
 
-    function sz(zz) {
-      let uz = 0;
-      for (const bz of zz) uz += bz._lightVersion ?? 0;
-      return uz
+    function XD(DD) {
+      let CD = 0;
+      for (const cD of DD) CD += cD._lightVersion ?? 0;
+      return CD
     }
 
-    function rz(zz, uz) {
-      zz.fill(0);
-      let bz = 0;
-      for (const Ez of uz) {
-        if (bz >= wz.b) break;
-        Ez._writeLightUbo && (Ez._writeLightUbo(zz, 4 + 16 * bz), bz++)
+    function mD(DD, CD) {
+      DD.fill(0);
+      let cD = 0;
+      for (const ID of CD) {
+        if (cD >= vD.b) break;
+        ID._writeLightUbo && (ID._writeLightUbo(DD, 4 + 16 * cD), cD++)
       }
-      Xz[0] = bz, zz[0] = fz[0]
+      ND[0] = cD, DD[0] = gD[0]
     }
 
-    function oz(zz, uz) {
-      let bz = uz._lightGpuState;
-      const Ez = 16 + 16 * wz.b * 4;
-      if (bz && bz._byteSize === Ez) return bz;
-      const nz = !bz;
-      bz?._buffer.destroy();
-      const iz = new lz.b(Ez / 4);
-      return rz(iz, uz.lights), zz._applyLightFoOffset?.(iz, uz), bz = {
-        _buffer: Kz(zz, iz),
-        _scratch: iz,
-        hV: sz(uz.lights) + (zz._lightFoVersion?.(uz) ?? 0),
-        _listVersion: uz._lightListVersion ?? 0,
-        _lightCount: uz.lights.length,
-        _byteSize: Ez
-      }, uz._lightGpuState = bz, nz && uz._disposables.push((() => {
-        uz._lightGpuState?._buffer.destroy(), uz._lightGpuState = void 0
-      })), bz
+    function nD(DD, CD) {
+      let cD = CD._lightGpuState;
+      const ID = 16 + 16 * vD.b * 4;
+      if (cD && cD._byteSize === ID) return cD;
+      const pD = !cD;
+      cD?._buffer.destroy();
+      const iD = new fD.e(ID / 4);
+      return mD(iD, CD.lights), DD._applyLightFoOffset?.(iD, CD), cD = {
+        _buffer: oD(DD, iD),
+        _scratch: iD,
+        lV: XD(CD.lights) + (DD._lightFoVersion?.(CD) ?? 0),
+        _listVersion: CD._lightListVersion ?? 0,
+        _lightCount: CD.lights.length,
+        _byteSize: ID
+      }, CD._lightGpuState = cD, pD && CD._disposables.push((() => {
+        CD._lightGpuState?._buffer.destroy(), CD._lightGpuState = void 0
+      })), cD
     }
 
-    function Nz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const nz = uz;
-      if (0 === Ez && 16 === nz.length) return void zz.set(nz, bz);
-      const iz = Ez,
-        lz = bz;
-      zz[lz + 0] = nz[iz + 0], zz[lz + 1] = nz[iz + 1], zz[lz + 2] = nz[iz + 2], zz[lz + 3] = nz[iz + 3], zz[lz + 4] = nz[iz + 4], zz[lz + 5] = nz[iz + 5], zz[lz + 6] = nz[iz + 6], zz[lz + 7] = nz[iz + 7], zz[lz + 8] = nz[iz + 8], zz[lz + 9] = nz[iz + 9], zz[lz + 10] = nz[iz + 10], zz[lz + 11] = nz[iz + 11], zz[lz + 12] = nz[iz + 12], zz[lz + 13] = nz[iz + 13], zz[lz + 14] = nz[iz + 14], zz[lz + 15] = nz[iz + 15]
+    function OD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const pD = CD;
+      if (0 === ID && 16 === pD.length) return void DD.set(pD, cD);
+      const iD = ID,
+        fD = cD;
+      DD[fD + 0] = pD[iD + 0], DD[fD + 1] = pD[iD + 1], DD[fD + 2] = pD[iD + 2], DD[fD + 3] = pD[iD + 3], DD[fD + 4] = pD[iD + 4], DD[fD + 5] = pD[iD + 5], DD[fD + 6] = pD[iD + 6], DD[fD + 7] = pD[iD + 7], DD[fD + 8] = pD[iD + 8], DD[fD + 9] = pD[iD + 9], DD[fD + 10] = pD[iD + 10], DD[fD + 11] = pD[iD + 11], DD[fD + 12] = pD[iD + 12], DD[fD + 13] = pD[iD + 13], DD[fD + 14] = pD[iD + 14], DD[fD + 15] = pD[iD + 15]
     }
 
-    function vz(zz, uz, bz, Ez, nz) {
-      zz.fill(0);
-      const iz = function(zz, uz) {
-          const bz = Hz(zz);
-          if (zz._vpVer === bz && zz._vpAspect === uz) return zz._vpCache;
-          const Ez = zz._vpCache;
-          return function(zz, uz, bz, Ez, nz, iz) {
-            const lz = bz[Ez],
-              Mz = bz[Ez + 1],
-              tz = bz[Ez + 2],
-              Hz = bz[Ez + 3],
-              Oz = bz[Ez + 4],
-              pz = bz[Ez + 5],
-              dz = bz[Ez + 6],
-              Fz = bz[Ez + 7],
-              Zz = bz[Ez + 8],
-              Rz = bz[Ez + 9],
-              Kz = bz[Ez + 10],
-              wz = bz[Ez + 11],
-              Xz = bz[Ez + 12],
-              fz = bz[Ez + 13],
-              sz = bz[Ez + 14],
-              rz = bz[Ez + 15];
-            let oz = nz[iz],
-              Nz = nz[iz + 1],
-              vz = nz[iz + 2],
-              xz = nz[iz + 3];
-            zz[uz] = lz * oz + Oz * Nz + Zz * vz + Xz * xz, zz[uz + 1] = Mz * oz + pz * Nz + Rz * vz + fz * xz, zz[uz + 2] = tz * oz + dz * Nz + Kz * vz + sz * xz, zz[uz + 3] = Hz * oz + Fz * Nz + wz * vz + rz * xz, oz = nz[iz + 4], Nz = nz[iz + 5], vz = nz[iz + 6], xz = nz[iz + 7], zz[uz + 4] = lz * oz + Oz * Nz + Zz * vz + Xz * xz, zz[uz + 5] = Mz * oz + pz * Nz + Rz * vz + fz * xz, zz[uz + 6] = tz * oz + dz * Nz + Kz * vz + sz * xz, zz[uz + 7] = Hz * oz + Fz * Nz + wz * vz + rz * xz, oz = nz[iz + 8], Nz = nz[iz + 9], vz = nz[iz + 10], xz = nz[iz + 11], zz[uz + 8] = lz * oz + Oz * Nz + Zz * vz + Xz * xz, zz[uz + 9] = Mz * oz + pz * Nz + Rz * vz + fz * xz, zz[uz + 10] = tz * oz + dz * Nz + Kz * vz + sz * xz, zz[uz + 11] = Hz * oz + Fz * Nz + wz * vz + rz * xz, oz = nz[iz + 12], Nz = nz[iz + 13], vz = nz[iz + 14], xz = nz[iz + 15], zz[uz + 12] = lz * oz + Oz * Nz + Zz * vz + Xz * xz, zz[uz + 13] = Mz * oz + pz * Nz + Rz * vz + fz * xz, zz[uz + 14] = tz * oz + dz * Nz + Kz * vz + sz * xz, zz[uz + 15] = Hz * oz + Fz * Nz + wz * vz + rz * xz
-          }(Ez, 0, Oz(zz, uz), 0, Mz(zz), 0), zz._vpVer = bz, zz._vpAspect = uz, Ez
-        }(Ez, nz),
-        lz = Mz(Ez),
-        tz = Ez.worldMatrix;
-      Nz(zz, iz, 0), Nz(zz, lz, 16), uz.useFloatingOrigin ? (zz[32] = 0, zz[33] = 0, zz[34] = 0) : (zz[32] = tz[12], zz[33] = tz[13], zz[34] = tz[14]), zz[87] = uz.canvas.width;
-      const pz = bz.imageProcessing;
-      zz[76] = pz.exposure, zz[77] = pz.contrast, zz[78] = bz._envTextures?.lodGenerationScale ?? .8, zz[79] = +pz.toneMappingEnabled, zz[37] = uz.canvas.height
+    function PD(DD, CD, cD, ID, pD) {
+      DD.fill(0);
+      const iD = function(DD, CD) {
+          const cD = wD(DD);
+          if (DD._vpVer === cD && DD._vpAspect === CD) return DD._vpCache;
+          const ID = DD._vpCache;
+          return function(DD, CD, cD, ID, pD, iD) {
+            const fD = cD[ID],
+              bD = cD[ID + 1],
+              QD = cD[ID + 2],
+              wD = cD[ID + 3],
+              SD = cD[ID + 4],
+              BD = cD[ID + 5],
+              yD = cD[ID + 6],
+              MD = cD[ID + 7],
+              tD = cD[ID + 8],
+              ZD = cD[ID + 9],
+              oD = cD[ID + 10],
+              vD = cD[ID + 11],
+              ND = cD[ID + 12],
+              gD = cD[ID + 13],
+              XD = cD[ID + 14],
+              mD = cD[ID + 15];
+            let nD = pD[iD],
+              OD = pD[iD + 1],
+              PD = pD[iD + 2],
+              HD = pD[iD + 3];
+            DD[CD] = fD * nD + SD * OD + tD * PD + ND * HD, DD[CD + 1] = bD * nD + BD * OD + ZD * PD + gD * HD, DD[CD + 2] = QD * nD + yD * OD + oD * PD + XD * HD, DD[CD + 3] = wD * nD + MD * OD + vD * PD + mD * HD, nD = pD[iD + 4], OD = pD[iD + 5], PD = pD[iD + 6], HD = pD[iD + 7], DD[CD + 4] = fD * nD + SD * OD + tD * PD + ND * HD, DD[CD + 5] = bD * nD + BD * OD + ZD * PD + gD * HD, DD[CD + 6] = QD * nD + yD * OD + oD * PD + XD * HD, DD[CD + 7] = wD * nD + MD * OD + vD * PD + mD * HD, nD = pD[iD + 8], OD = pD[iD + 9], PD = pD[iD + 10], HD = pD[iD + 11], DD[CD + 8] = fD * nD + SD * OD + tD * PD + ND * HD, DD[CD + 9] = bD * nD + BD * OD + ZD * PD + gD * HD, DD[CD + 10] = QD * nD + yD * OD + oD * PD + XD * HD, DD[CD + 11] = wD * nD + MD * OD + vD * PD + mD * HD, nD = pD[iD + 12], OD = pD[iD + 13], PD = pD[iD + 14], HD = pD[iD + 15], DD[CD + 12] = fD * nD + SD * OD + tD * PD + ND * HD, DD[CD + 13] = bD * nD + BD * OD + ZD * PD + gD * HD, DD[CD + 14] = QD * nD + yD * OD + oD * PD + XD * HD, DD[CD + 15] = wD * nD + MD * OD + vD * PD + mD * HD
+          }(ID, 0, SD(DD, CD), 0, bD(DD), 0), DD._vpVer = cD, DD._vpAspect = CD, ID
+        }(ID, pD),
+        fD = bD(ID),
+        QD = ID.worldMatrix;
+      OD(DD, iD, 0), OD(DD, fD, 16), CD.useFloatingOrigin ? (DD[32] = 0, DD[33] = 0, DD[34] = 0) : (DD[32] = QD[12], DD[33] = QD[13], DD[34] = QD[14]), DD[87] = CD.canvas.width;
+      const BD = cD.imageProcessing;
+      DD[76] = BD.exposure, DD[77] = BD.contrast, DD[78] = cD._envTextures?.lodGenerationScale ?? .8, DD[79] = +BD.toneMappingEnabled, DD[37] = CD.canvas.height
     }
 
-    function xz(zz, uz) {
+    function HD(DD, CD) {
       return {
-        _renderables: zz,
+        _renderables: DD,
         _opaqueBindings: [],
         _directBindings: [],
         _transparentBindings: [],
         _ob: [],
-        _lastVersion: uz
+        _lastVersion: CD
       }
     }
 
-    function Jz(zz, uz, bz) {
-      zz.clr ??= !0;
-      const nz = zz.rt._descriptor,
-        iz = zz.depth?._descriptor,
-        tz = {
-          _colorFormat: nz.format,
-          _depthStencilFormat: iz?.dFormat ?? nz.dFormat,
-          _depthCompare: nz.depthCompare ?? iz?.depthCompare,
-          _sampleCount: nz.samples
+    function UD(DD, CD, cD) {
+      DD.clr ??= !0;
+      const pD = DD.rt._descriptor,
+        iD = DD.depth?._descriptor,
+        QD = {
+          _colorFormat: pD.format,
+          _depthStencilFormat: iD?.dFormat ?? pD.dFormat,
+          _depthCompare: pD.depthCompare ?? iD?.depthCompare,
+          _sampleCount: pD.samples
         },
-        Oz = {
+        SD = {
           loadOp: "clear",
           storeOp: "store"
         },
-        pz = {
-          ...xz([], -1),
-          name: zz.name,
-          _config: zz,
-          _ownsTargets: !zz.sharedRt,
-          engine: uz,
-          tK: bz,
+        BD = {
+          ...HD([], -1),
+          name: DD.name,
+          _config: DD,
+          _ownsTargets: !DD.sharedRt,
+          engine: CD,
+          wo: cD,
           _passes: [],
           _renderPassDescriptor: {
-            colorAttachments: [Oz]
+            colorAttachments: [SD]
           },
-          _colorAttachment: Oz,
-          _sceneUBO: dz(uz, 368),
-          _suData: new lz.b(92),
+          _colorAttachment: SD,
+          _sceneUBO: yD(CD, 368),
+          _suData: new fD.e(92),
           _sceneUboCacheKey: [],
-          _targetSignature: tz,
+          _targetSignature: QD,
           _updateContext: {
             targetWidth: 0,
             targetHeight: 0
           },
           record() {
-            if (pz._disposed) throw new Error("RenderTask has been disposed.");
-            pz._recordExplicit ? pz._recordExplicit(pz, !0) : Lz(pz, !1 !== zz.autoMirror ? bz._renderables.slice() : pz._renderables, !0)
+            if (BD._disposed) throw new Error("RenderTask has been disposed.");
+            BD._recordExplicit ? BD._recordExplicit(BD, !0) : JD(BD, !1 !== DD.autoMirror ? cD._renderables.slice() : BD._renderables, !0)
           },
-          execute: () => function(zz, uz, bz) {
-            if (!1 === zz.enabled) return 0;
-            const Ez = zz.tK;
-            ! function(zz, uz, bz) {
-              const Ez = zz.tK;
-              !1 !== zz._config.autoMirror && zz._lastVersion !== Ez._renderableVersion && Lz(zz, Ez._renderables.slice());
-              Gz(zz, uz);
-              const nz = zz._updateContext,
-                iz = zz._config.cam ?? Ez.camera;
-              bz._colorFormat && (zz._config._skipClusteredLights || Ez._clusteredLightUpdater?.(iz, nz.targetWidth, nz.targetHeight), function(zz, uz) {
-                const bz = oz(zz, uz),
-                  Ez = sz(uz.lights) + (zz._lightFoVersion?.(uz) ?? 0),
-                  nz = uz._lightListVersion ?? 0;
-                Ez === bz.hV && nz === bz._listVersion && uz.lights.length === bz._lightCount || (bz.hV = Ez, bz._listVersion = nz, bz._lightCount = uz.lights.length, rz(bz._scratch, uz.lights), zz._applyLightFoOffset?.(bz._scratch, uz), zz._device.queue.writeBuffer(bz._buffer, 0, bz._scratch)), bz._buffer
-              }(uz, Ez));
-              (function(zz, uz, bz, Ez) {
-                if (!Ez) return;
-                const nz = Ez.viewport,
-                  iz = zz._config.rt,
-                  lz = (zz._config.cs ? uz.canvas.width / uz.canvas.height : iz._width / iz._height) * (nz ? nz.width / nz.height : 1),
-                  Mz = bz.fog,
-                  tz = bz.imageProcessing,
-                  Oz = Hz(Ez),
-                  pz = bz._envTextures,
-                  dz = zz._sceneUboCacheKey;
-                if (dz[0] === Ez && dz[1] === Mz && dz[2] === Oz && dz[3] === lz && dz[4] === tz.exposure && dz[5] === tz.contrast && dz[6] === pz) return;
-                dz[0] = Ez, dz[1] = Mz, dz[2] = Oz, dz[3] = lz, dz[4] = tz.exposure, dz[5] = tz.contrast, dz[6] = pz;
-                const Fz = zz._suData;
-                vz(Fz, uz, bz, Ez, lz);
-                const Zz = bz._sceneUboContributors;
-                if (Zz)
-                  for (const Hz of Zz) Hz(Fz, bz);
-                uz._device.queue.writeBuffer(zz._sceneUBO, 0, Fz)
-              })(zz, uz, Ez, iz), nz.HI = iz, zz._batchState?._reset(), az(zz._opaqueBindings, nz), az(zz._directBindings, nz), az(zz._transparentBindings, nz), zz._batchState?._flush(uz),
-                function(zz, uz) {
-                  const bz = zz._transparentBindings;
-                  if (bz.length <= 1 || !uz) return;
-                  const Ez = Mz(uz);
-                  for (const nz of bz) {
-                    const zz = nz.renderable._worldCenter;
-                    nz._sortDistance = zz ? zz[0] * Ez[2] + zz[1] * Ez[6] + zz[2] * Ez[10] + Ez[14] : 0
+          execute: () => function(DD, CD, cD) {
+            if (!1 === DD.enabled) return 0;
+            const ID = DD.wo;
+            ! function(DD, CD, cD) {
+              const ID = DD.wo;
+              !1 !== DD._config.autoMirror && DD._lastVersion !== ID._renderableVersion && JD(DD, ID._renderables.slice());
+              aD(DD, CD);
+              const pD = DD._updateContext,
+                iD = DD._config.cam ?? ID.camera;
+              cD._colorFormat && (DD._config._skipClusteredLights || ID._clusteredLightUpdater?.(iD, pD.targetWidth, pD.targetHeight), function(DD, CD) {
+                const cD = nD(DD, CD),
+                  ID = XD(CD.lights) + (DD._lightFoVersion?.(CD) ?? 0),
+                  pD = CD._lightListVersion ?? 0;
+                ID === cD.lV && pD === cD._listVersion && CD.lights.length === cD._lightCount || (cD.lV = ID, cD._listVersion = pD, cD._lightCount = CD.lights.length, mD(cD._scratch, CD.lights), DD._applyLightFoOffset?.(cD._scratch, CD), DD._device.queue.writeBuffer(cD._buffer, 0, cD._scratch)), cD._buffer
+              }(CD, ID));
+              (function(DD, CD, cD, ID) {
+                if (!ID) return;
+                const pD = ID.viewport,
+                  iD = DD._config.rt,
+                  fD = (DD._config.cs ? CD.canvas.width / CD.canvas.height : iD._width / iD._height) * (pD ? pD.width / pD.height : 1),
+                  bD = cD.fog,
+                  QD = cD.imageProcessing,
+                  SD = wD(ID),
+                  BD = cD._envTextures,
+                  yD = DD._sceneUboCacheKey;
+                if (yD[0] === ID && yD[1] === bD && yD[2] === SD && yD[3] === fD && yD[4] === QD.exposure && yD[5] === QD.contrast && yD[6] === BD) return;
+                yD[0] = ID, yD[1] = bD, yD[2] = SD, yD[3] = fD, yD[4] = QD.exposure, yD[5] = QD.contrast, yD[6] = BD;
+                const MD = DD._suData;
+                PD(MD, CD, cD, ID, fD);
+                const tD = cD._sceneUboContributors;
+                if (tD)
+                  for (const wD of tD) wD(MD, cD);
+                CD._device.queue.writeBuffer(DD._sceneUBO, 0, MD)
+              })(DD, CD, ID, iD), pD.FY = iD, DD._batchState?._reset(), VD(DD._opaqueBindings, pD), VD(DD._directBindings, pD), VD(DD._transparentBindings, pD), DD._batchState?._flush(CD),
+                function(DD, CD) {
+                  const cD = DD._transparentBindings;
+                  if (cD.length <= 1 || !CD) return;
+                  const ID = bD(CD);
+                  for (const pD of cD) {
+                    const DD = pD.renderable._worldCenter;
+                    pD._sortDistance = DD ? DD[0] * ID[2] + DD[1] * ID[6] + DD[2] * ID[10] + ID[14] : 0
                   }
-                  bz.sort(Az)
-                }(zz, iz)
-            }(zz, uz, bz);
-            const nz = zz._colorAttachment,
-              iz = zz._config;
-            iz.rt._colorView && (iz.rt === Ez.surface.scRT && (nz.view = iz.rt._colorView), nz.resolveTarget = iz.rst?._colorView ?? void 0, nz.clearValue = iz.clrColor ?? Ez.clearColor, nz.loadOp = iz.clr ? "clear" : "load");
-            if (zz._executeWithTransmission) return zz._executeWithTransmission(bz._sampleCount);
-            const lz = uz._currentEncoder.beginRenderPass(zz._renderPassDescriptor),
-              tz = Pz(zz, lz);
-            return lz.end(), tz
-          }(pz, uz, tz),
+                  cD.sort(xD)
+                }(DD, iD)
+            }(DD, CD, cD);
+            const pD = DD._colorAttachment,
+              iD = DD._config;
+            iD.rt._colorView && (iD.rt === ID.surface.scRT && (pD.view = iD.rt._colorView), pD.resolveTarget = iD.rst?._colorView ?? void 0, pD.clearValue = iD.clrColor ?? ID.clearColor, pD.loadOp = iD.clr ? "clear" : "load");
+            if (DD._executeWithTransmission) return DD._executeWithTransmission(cD._sampleCount);
+            const fD = CD._currentEncoder.beginRenderPass(DD._renderPassDescriptor),
+              QD = KD(DD, fD);
+            return fD.end(), QD
+          }(BD, CD, QD),
           dispose() {
-            if (pz._disposed) return;
-            pz._disposed = !0;
-            const uz = pz._pendingMeshes;
-            uz && (uz.length = 0);
-            for (const zz of pz._renderables) pz._retireRenderable?.(pz.engine, zz);
-            pz._passes.length = pz._opaqueBindings.length = pz._directBindings.length = 0, pz._transparentBindings.length = pz._renderables.length = pz._ob.length = 0, pz._ownsTargets && ((0, Ez.g)(zz.rt), (0, Ez.g)(zz.rst)), zz.depth?._eager || (0, Ez.g)(zz.depth);
-            const bz = pz._sceneUBO;
-            (0, Fz.c)(pz.engine, (() => bz.destroy())), pz._batchState?._release(pz.engine), pz._batchState = void 0
+            if (BD._disposed) return;
+            BD._disposed = !0;
+            const CD = BD._pendingMeshes;
+            CD && (CD.length = 0);
+            for (const DD of BD._renderables) BD._retireRenderable?.(BD.engine, DD);
+            BD._passes.length = BD._opaqueBindings.length = BD._directBindings.length = 0, BD._transparentBindings.length = BD._renderables.length = BD._ob.length = 0, BD._ownsTargets && ((0, ID.i)(DD.rt), (0, ID.i)(DD.rst)), DD.depth?._eager || (0, ID.i)(DD.depth);
+            const cD = BD._sceneUBO;
+            (0, MD.e)(BD.engine, (() => cD.destroy())), BD._batchState?._release(BD.engine), BD._batchState = void 0
           }
         };
-      return pz
+      return BD
     }
 
-    function Az(zz, uz) {
-      return uz._sortDistance - zz._sortDistance || zz.renderable.order - uz.renderable.order
+    function xD(DD, CD) {
+      return CD._sortDistance - DD._sortDistance || DD.renderable.order - CD.renderable.order
     }
 
-    function Tz(zz, uz) {
-      return zz.renderable.order - uz.renderable.order
+    function qD(DD, CD) {
+      return DD.renderable.order - CD.renderable.order
     }
 
-    function Lz(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz._renderables,
-        bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        nz = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-        iz = arguments.length > 4 ? arguments[4] : void 0;
-      const lz = zz._config,
-        Mz = lz.rt,
-        tz = zz._batchState,
-        Hz = xz(uz, zz.tK._renderableVersion);
-      if (bz) {
-        const uz = (uz, bz) => {
-          uz && (bz || zz._ownsTargets || uz._eager) && (0, Ez.e)(uz, zz.engine)
+    function JD(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD._renderables,
+        cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        pD = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+        iD = arguments.length > 4 ? arguments[4] : void 0;
+      const fD = DD._config,
+        bD = fD.rt,
+        QD = DD._batchState,
+        wD = HD(CD, DD.wo._renderableVersion);
+      if (cD) {
+        const CD = (CD, cD) => {
+          CD && (cD || DD._ownsTargets || CD._eager) && (0, ID.h)(CD, DD.engine)
         };
-        uz(Mz), Mz._descriptor.samples > 1 && uz(lz.rst), uz(lz.depth, !0)
+        CD(bD), bD._descriptor.samples > 1 && CD(fD.rst), CD(fD.depth, !0)
       }
       const {
-        _opaqueBindings: Oz,
-        _directBindings: pz,
-        _transparentBindings: dz
-      } = Hz;
+        _opaqueBindings: SD,
+        _directBindings: BD,
+        _transparentBindings: yD
+      } = wD;
       try {
-        for (const bz of uz) {
-          const uz = bz.bind(zz.engine, zz._targetSignature);
-          Hz._batchState = zz._targetSignature._collectBatches?.(Hz._batchState, uz), bz.isTransparent || bz._transmissive ? dz.push(uz) : bz._direct ? pz.push(uz) : Oz.push(uz)
+        for (const cD of CD) {
+          const CD = cD.bind(DD.engine, DD._targetSignature);
+          wD._batchState = DD._targetSignature._collectBatches?.(wD._batchState, CD), cD.isTransparent || cD._transmissive ? yD.push(CD) : cD._direct ? BD.push(CD) : SD.push(CD)
         }
-        Oz.sort(Tz), pz.sort(Tz), bz && Gz(zz, zz.engine, !1)
-      } catch (Fz) {
-        throw Hz._batchState?._release(void 0, iz ?? [tz]), Fz
+        SD.sort(qD), BD.sort(qD), cD && aD(DD, DD.engine, !1)
+      } catch (MD) {
+        throw wD._batchState?._release(void 0, iD ?? [QD]), MD
       }
-      return bz && (! function(zz, uz) {
-        const bz = zz._config,
-          Ez = zz._colorAttachment;
-        Ez.view = uz._colorView, zz._renderPassDescriptor.colorAttachments = uz._colorView ? [Ez] : [];
-        const nz = bz.depth ?? uz,
-          iz = nz._depthView;
-        let lz;
-        if (iz) {
-          const zz = nz._descriptor,
-            uz = (bz.depth ? nz._eager : !1 === bz.depthClear) ? "load" : "clear";
-          lz = {
-            view: iz,
-            depthClearValue: zz.depthClearValue ?? 0,
-            depthLoadOp: uz,
+      return cD && (! function(DD, CD) {
+        const cD = DD._config,
+          ID = DD._colorAttachment;
+        ID.view = CD._colorView, DD._renderPassDescriptor.colorAttachments = CD._colorView ? [ID] : [];
+        const pD = cD.depth ?? CD,
+          iD = pD._depthView;
+        let fD;
+        if (iD) {
+          const DD = pD._descriptor,
+            CD = (cD.depth ? pD._eager : !1 === cD.depthClear) ? "load" : "clear";
+          fD = {
+            view: iD,
+            depthClearValue: DD.depthClearValue ?? 0,
+            depthLoadOp: CD,
             depthStoreOp: "store"
-          }, zz.dFormat?.includes("stencil") && (lz.stencilClearValue = 0, lz.stencilLoadOp = uz, lz.stencilStoreOp = "store")
+          }, DD.dFormat?.includes("stencil") && (fD.stencilClearValue = 0, fD.stencilLoadOp = CD, fD.stencilStoreOp = "store")
         }
-        zz._renderPassDescriptor.depthStencilAttachment = lz
-      }(zz, Mz), zz._updateContext.targetWidth = Mz._width, zz._updateContext.targetHeight = Mz._height), nz && (Object.assign(zz, Hz), tz?._release(zz.engine, [Hz._batchState])), Hz
+        DD._renderPassDescriptor.depthStencilAttachment = fD
+      }(DD, bD), DD._updateContext.targetWidth = bD._width, DD._updateContext.targetHeight = bD._height), pD && (Object.assign(DD, wD), QD?._release(DD.engine, [wD._batchState])), wD
     }
 
-    function Pz(zz, uz) {
-      const bz = zz.engine,
-        Ez = zz._config,
-        iz = Ez.rt,
-        lz = zz.tK,
-        Mz = zz._opaqueBindings,
-        tz = zz._ob,
-        Hz = zz._sceneBG;
-      if (function(zz, uz, bz, Ez) {
-          const nz = uz?.viewport;
-          if (!nz) return;
-          const iz = Math.floor(nz.x * bz),
-            lz = Math.floor((1 - nz.y - nz.height) * Ez),
-            Mz = Math.ceil((nz.x + nz.width) * bz) - iz,
-            tz = Math.ceil((1 - nz.y) * Ez) - lz;
-          zz.setViewport(iz, lz, Mz, tz, 0, 1), zz.setScissorRect(iz, lz, Mz, tz)
-        }(uz, Ez.cam ?? lz.camera, iz._width, iz._height), uz.setBindGroup(0, Hz), zz._lastVis !== nz.b || !tz.length) {
-        const uz = iz._descriptor,
-          Ez = bz._device.createRenderBundleEncoder({
-            colorFormats: uz.format ? [uz.format] : [],
-            depthStencilFormat: zz._targetSignature._depthStencilFormat,
-            sampleCount: uz.samples
+    function KD(DD, CD) {
+      const cD = DD.engine,
+        ID = DD._config,
+        iD = ID.rt,
+        fD = DD.wo,
+        bD = DD._opaqueBindings,
+        QD = DD._ob,
+        wD = DD._sceneBG;
+      if (function(DD, CD, cD, ID) {
+          const pD = CD?.viewport;
+          if (!pD) return;
+          const iD = Math.floor(pD.x * cD),
+            fD = Math.floor((1 - pD.y - pD.height) * ID),
+            bD = Math.ceil((pD.x + pD.width) * cD) - iD,
+            QD = Math.ceil((1 - pD.y) * ID) - fD;
+          DD.setViewport(iD, fD, bD, QD, 0, 1), DD.setScissorRect(iD, fD, bD, QD)
+        }(CD, ID.cam ?? fD.camera, iD._width, iD._height), CD.setBindGroup(0, wD), DD._lastVis !== pD.d || !QD.length) {
+        const CD = iD._descriptor,
+          ID = cD._device.createRenderBundleEncoder({
+            colorFormats: CD.format ? [CD.format] : [],
+            depthStencilFormat: DD._targetSignature._depthStencilFormat,
+            sampleCount: CD.samples
           });
-        Ez.setBindGroup(0, Hz), Vz(Ez, Mz, bz), tz[0] = Ez.finish(), zz._lastVis = nz.b
+        ID.setBindGroup(0, wD), zD(ID, bD, cD), QD[0] = ID.finish(), DD._lastVis = pD.d
       }
-      let Oz = Mz.length;
-      return uz.executeBundles(tz), uz.setBindGroup(0, Hz), Oz += Vz(uz, zz._directBindings, bz), Oz += Vz(uz, zz._transparentBindings, bz), Oz
+      let SD = bD.length;
+      return CD.executeBundles(QD), CD.setBindGroup(0, wD), SD += zD(CD, DD._directBindings, cD), SD += zD(CD, DD._transparentBindings, cD), SD
     }
 
-    function Gz(zz, uz) {
-      let bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      const Ez = oz(uz, zz.tK)._buffer;
-      if (Ez === zz._lightsUBO) return;
-      const nz = uz._device.createBindGroup({
-        layout: Rz(uz),
+    function aD(DD, CD) {
+      let cD = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      const ID = nD(CD, DD.wo)._buffer;
+      if (ID === DD._lightsUBO) return;
+      const pD = CD._device.createBindGroup({
+        layout: ZD(CD),
         entries: [{
           binding: 0,
           resource: {
-            buffer: zz._sceneUBO
+            buffer: DD._sceneUBO
           }
         }, {
           binding: 1,
           resource: {
-            buffer: Ez
+            buffer: ID
           }
         }]
       });
-      zz._lightsUBO = Ez, zz._sceneBG = nz, bz && (zz._ob = [])
+      DD._lightsUBO = ID, DD._sceneBG = pD, cD && (DD._ob = [])
     }
 
-    function az(zz, uz) {
-      for (const bz of zz) bz.update?.(uz)
+    function VD(DD, CD) {
+      for (const cD of DD) cD.update?.(CD)
     }
 
-    function Vz(zz, uz, bz) {
-      let Ez = null,
-        nz = 0;
-      for (const iz of uz) {
-        const uz = iz.renderable.mesh;
-        uz && !1 === uz.visible || (iz.pipeline !== Ez && (zz.setPipeline(iz.pipeline), Ez = iz.pipeline), nz += iz.draw(zz, bz))
+    function zD(DD, CD, cD) {
+      let ID = null,
+        pD = 0;
+      for (const iD of CD) {
+        const CD = iD.renderable.mesh;
+        CD && !1 === CD.visible || (iD.pipeline !== ID && (DD.setPipeline(iD.pipeline), ID = iD.pipeline), pD += iD.draw(DD, cD))
       }
-      return nz
+      return pD
     }
 
-    function mz(zz) {
-      const uz = zz._materialSwapQueue;
-      if (!uz[0] || zz._runtimeBuilds?.w) return;
-      let Ez, nz, iz;
-      const lz = zz._renderables;
-      for (const bz of uz) {
-        const uz = bz.material;
-        if (!uz) continue;
-        const Mz = bz._runtimeThinBuild;
-        if (Mz) {
-          nz = Mz(zz, bz, nz);
+    function jD(DD) {
+      const CD = DD._materialSwapQueue;
+      if (!CD[0] || DD._runtimeBuilds?.w) return;
+      let ID, pD, iD;
+      const fD = DD._renderables;
+      for (const cD of CD) {
+        const CD = cD.material;
+        if (!CD) continue;
+        const bD = cD._runtimeThinBuild;
+        if (bD) {
+          pD = bD(DD, cD, pD);
           continue
         }
-        const tz = zz._groups.get(uz._buildGroup),
-          Hz = tz?.r;
-        if (!Hz) {
-          (iz ??= []).push(bz);
+        const QD = DD._groups.get(CD._buildGroup),
+          wD = QD?.r;
+        if (!wD) {
+          (iD ??= []).push(cD);
           continue
         }
-        if (tz._w?.(bz)) {
-          (iz ??= []).push([bz, uz]);
+        if (QD._w?.(cD)) {
+          (iD ??= []).push([cD, CD]);
           continue
         }
-        const Oz = zz._meshDisposables.get(bz);
-        Oz && (zz._meshDisposables.delete(bz), (0, Fz.c)(zz.surface.engine, (() => Oz.forEach((zz => zz())))));
-        const pz = tz.o;
-        let dz;
-        for (let zz = lz.length; zz--;) lz[zz].mesh === bz && (dz = lz.splice(zz, 1)[0]);
-        uz._csmGen = -~uz._csmGen;
-        const Zz = Hz(zz, bz);
-        if (pz) {
-          const zz = pz.indexOf(dz);
-          zz < 0 ? pz.push(Zz) : pz[zz] = Zz
+        const SD = DD._meshDisposables.get(cD);
+        SD && (DD._meshDisposables.delete(cD), (0, MD.e)(DD.surface.engine, (() => SD.forEach((DD => DD())))));
+        const BD = QD.o;
+        let yD;
+        for (let DD = fD.length; DD--;) fD[DD].mesh === cD && (yD = fD.splice(DD, 1)[0]);
+        CD._csmGen = -~CD._csmGen;
+        const tD = wD(DD, cD);
+        if (BD) {
+          const DD = BD.indexOf(yD);
+          DD < 0 ? BD.push(tD) : BD[DD] = tD
         }
-        Ez = lz.push(Zz)
+        ID = fD.push(tD)
       }
-      if (Ez && (lz.sort(((zz, uz) => zz.order - uz.order)), zz._renderableVersion++, zz._materialEpoch++), uz.length = 0, !iz) return nz;
-      const Mz = iz;
-      return bz.e(355).then((() => bz(60425))).then((uz => {
+      if (ID && (fD.sort(((DD, CD) => DD.order - CD.order)), DD._renderableVersion++, DD._materialEpoch++), CD.length = 0, !iD) return pD;
+      const bD = iD;
+      return cD.e(355).then((() => cD(60508))).then((CD => {
         let {
-          C: bz
-        } = uz;
-        return bz(zz, Mz, nz)
-      }), (uz => {
-        const bz = zz._runtimeBuilds;
-        bz ? bz._x(uz) : console.error(uz)
+          C: cD
+        } = CD;
+        return cD(DD, bD, pD)
+      }), (CD => {
+        const cD = DD._runtimeBuilds;
+        cD ? cD._x(CD) : console.error(CD)
       }))
     }
-    var qz = null;
+    var lD = null;
 
-    function hz(zz, uz) {
-      const bz = zz.engine,
-        nz = {
-          _kind: "tK",
-          surface: zz,
+    function LD(DD, CD) {
+      const cD = DD.engine,
+        pD = {
+          _kind: "wo",
+          surface: DD,
           clearColor: {
             r: .2,
             g: .2,
@@ -902,365 +902,365 @@ export const modules = {
           _built: !1,
           _drawCallsPre: 0,
           _update() {
-            bz.useFloatingOrigin && nz.camera && !nz.camera._useFloatingOrigin && (nz.camera._useFloatingOrigin = !0, nz.camera._viewVer = -1, nz.camera._vpVer = -1);
-            const zz = nz.fixedDeltaMs > 0 ? nz.fixedDeltaMs : bz._currentDelta,
-              uz = bz._currentEncoder;
-            let Ez = 0;
-            for (const bz of nz._beforeRender) bz(zz);
-            nz._materialSwapQueue.length && mz(nz);
-            for (const iz of nz._prePasses) Ez += iz.execute(uz, bz);
-            for (const iz of nz._uniformUpdaters) iz.update(bz);
-            nz._drawCallsPre = Ez
+            cD.useFloatingOrigin && pD.camera && !pD.camera._useFloatingOrigin && (pD.camera._useFloatingOrigin = !0, pD.camera._viewVer = -1, pD.camera._vpVer = -1);
+            const DD = pD.fixedDeltaMs > 0 ? pD.fixedDeltaMs : cD._currentDelta,
+              CD = cD._currentEncoder;
+            let ID = 0;
+            for (const cD of pD._beforeRender) cD(DD);
+            pD._materialSwapQueue.length && jD(pD);
+            for (const iD of pD._prePasses) ID += iD.execute(CD, cD);
+            for (const iD of pD._uniformUpdaters) iD.update(cD);
+            pD._drawCallsPre = ID
           },
-          _record: () => nz._frameGraph.execute(),
+          _record: () => pD._frameGraph.execute(),
           _resize() {
-            nz._frameGraph.build()
+            pD._frameGraph.build()
           }
         },
-        lz = function() {
-          const zz = {
+        fD = function() {
+          const DD = {
             _tasks: [],
             _currentProcessedTask: null,
             build() {
-              for (let uz = 0; uz < zz._tasks.length; uz++) iz(zz, zz._tasks[uz]);
-              for (const uz of zz._tasks)
-                for (const zz of uz._passes) zz._initialize()
+              for (let CD = 0; CD < DD._tasks.length; CD++) iD(DD, DD._tasks[CD]);
+              for (const CD of DD._tasks)
+                for (const DD of CD._passes) DD._initialize()
             },
             execute() {
-              let uz = 0;
-              for (const bz of zz._tasks)
-                if (!1 !== bz.executionEnabled)
-                  if (bz.execute) uz += bz.execute();
+              let CD = 0;
+              for (const cD of DD._tasks)
+                if (!1 !== cD.executionEnabled)
+                  if (cD.execute) CD += cD.execute();
                   else
-                    for (const zz of bz._passes) uz += zz._execute();
-              return uz
+                    for (const DD of cD._passes) CD += DD._execute();
+              return CD
             },
             dispose() {
-              for (const uz of zz._tasks) uz.dispose();
-              zz._tasks.length = 0, zz._currentProcessedTask = null
+              for (const CD of DD._tasks) CD.dispose();
+              DD._tasks.length = 0, DD._currentProcessedTask = null
             }
           };
-          return zz
+          return DD
         }();
-      if (nz._frameGraph = lz, !1 !== uz?.defaultRenderTask) {
-        const uz = zz.msaaSamples > 1,
-          iz = uz ? (0, Ez.d)({
+      if (pD._frameGraph = fD, !1 !== CD?.defaultRenderTask) {
+        const CD = DD.msaaSamples > 1,
+          iD = CD ? (0, ID.e)({
             lbl: "scene-color",
-            format: zz.format,
+            format: DD.format,
             dFormat: "depth24plus-stencil8",
-            samples: zz.msaaSamples,
-            size: zz
-          }) : zz.scRT,
-          Mz = uz ? void 0 : (0, Ez.d)({
+            samples: DD.msaaSamples,
+            size: DD
+          }) : DD.scRT,
+          bD = CD ? void 0 : (0, ID.e)({
             lbl: "scene-depth",
             dFormat: "depth24plus-stencil8",
             samples: 1,
-            size: zz
+            size: DD
           });
-        ! function(zz, uz) {
-          zz._tasks.push(uz)
-        }(lz, Jz({
-          name: "tK",
-          rt: iz,
-          rst: uz ? zz.scRT : void 0,
-          depth: Mz
-        }, bz, nz))
+        ! function(DD, CD) {
+          DD._tasks.push(CD)
+        }(fD, UD({
+          name: "wo",
+          rt: iD,
+          rst: CD ? DD.scRT : void 0,
+          depth: bD
+        }, cD, pD))
       }
-      return nz._disposables.push((() => lz.dispose())), nz
+      return pD._disposables.push((() => fD.dispose())), pD
     }
-    async function Uz(zz) {
-      const uz = zz;
-      for (uz._built || (uz._materialSwapQueue.length = 0); uz._deferredBuilders.length;) {
-        const zz = uz._deferredBuilders.splice(0);
-        await Promise.all(zz.map((zz => zz())))
+    async function TD(DD) {
+      const CD = DD;
+      for (CD._built || (CD._materialSwapQueue.length = 0); CD._deferredBuilders.length;) {
+        const DD = CD._deferredBuilders.splice(0);
+        await Promise.all(DD.map((DD => DD())))
       }
-      await mz(uz), qz?.get(uz)?.() || (uz._runtimeBuilds?._e(), uz._renderableVersion++, uz._built = !0), await (uz._rebuildHook?.(uz))
+      await jD(CD), lD?.get(CD)?.() || (CD._runtimeBuilds?._e(), CD._renderableVersion++, CD._built = !0), await (CD._rebuildHook?.(CD))
     }
-    var cz = null;
-    async function gz(zz) {
-      const uz = zz,
-        Ez = uz.surface;
-      (0, nz.d)(Ez, uz) || (await Uz(zz), uz._renderables.sort(Sz), await Promise.all(uz._frameGraph._tasks.map((zz => zz._preload?.()))), cz && await cz(uz), uz._frameGraph.build(), Ez._renderingContexts[0] && (await bz.e(353).then((() => bz(60420)))).configureSwapchainOverlayScene(Ez, uz), qz?.get(uz)?.() || (0, nz.g)(Ez, uz))
+    var GD = null;
+    async function RD(DD) {
+      const CD = DD,
+        ID = CD.surface;
+      (0, pD.k)(ID, CD) || (await TD(DD), CD._renderables.sort(kD), await Promise.all(CD._frameGraph._tasks.map((DD => DD._preload?.()))), GD && await GD(CD), CD._frameGraph.build(), ID._renderingContexts[0] && (await cD.e(353).then((() => cD(60498)))).configureSwapchainOverlayScene(ID, CD), lD?.get(CD)?.() || (0, pD.o)(ID, CD))
     }
-    var Sz = (zz, uz) => zz.order - uz.order
+    var kD = (DD, CD) => DD.order - CD.order
   },
-  40915: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Hz,
-      d: () => Oz
+  40788: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => wD,
+      g: () => SD
     });
-    var Ez = bz(40874),
-      nz = bz(40878),
-      iz = bz(40886),
-      lz = bz(40890),
-      Mz = bz(40893),
-      tz = bz(40898);
+    var ID = cD(40737),
+      pD = cD(40745),
+      iD = cD(40753),
+      fD = cD(40755),
+      bD = cD(40764),
+      QD = cD(40767);
 
-    function Hz(zz, uz, bz) {
-      let Mz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      (uz < 1 || bz < 1) && (0, Ez.c)(676, uz, bz);
-      const Hz = zz._device,
-        Oz = Mz.mipMaps ?? !1,
-        pz = Mz.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        dz = Oz ? (0, tz.d)(uz, bz) : 1,
-        Fz = Hz.createTexture({
+    function wD(DD, CD, cD) {
+      let bD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      (CD < 1 || cD < 1) && (0, ID.d)(676, CD, cD);
+      const wD = DD._device,
+        SD = bD.mipMaps ?? !1,
+        BD = bD.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        yD = SD ? (0, QD.d)(CD, cD) : 1,
+        MD = wD.createTexture({
           size: {
-            width: uz,
-            height: bz
+            width: CD,
+            height: cD
           },
-          format: pz,
-          mipLevelCount: dz,
-          usage: nz.k.TEXTURE_BINDING | nz.k.COPY_DST | nz.k.RENDER_ATTACHMENT
+          format: BD,
+          mipLevelCount: yD,
+          usage: pD.i.TEXTURE_BINDING | pD.i.COPY_DST | pD.i.RENDER_ATTACHMENT
         }),
-        Zz = {
-          addressModeU: Mz.addressModeU ?? "clamp-to-edge",
-          addressModeV: Mz.addressModeV ?? "clamp-to-edge",
-          minFilter: Mz.minFilter ?? "linear",
-          magFilter: Mz.magFilter ?? "linear",
-          mipmapFilter: Oz ? "linear" : "nearest"
+        tD = {
+          addressModeU: bD.addressModeU ?? "clamp-to-edge",
+          addressModeV: bD.addressModeV ?? "clamp-to-edge",
+          minFilter: bD.minFilter ?? "linear",
+          magFilter: bD.magFilter ?? "linear",
+          mipmapFilter: SD ? "linear" : "nearest"
         },
-        Rz = (0, lz.c)(zz, Zz),
-        Kz = {
-          texture: Fz,
-          view: Fz.createView(),
-          sampler: Rz,
-          width: uz,
-          height: bz
+        ZD = (0, fD.c)(DD, tD),
+        oD = {
+          texture: MD,
+          view: MD.createView(),
+          sampler: ZD,
+          width: CD,
+          height: cD
         };
-      return (0, iz.d)(Kz), zz._dlr && zz._dlr.t(Kz, {
+      return (0, iD.e)(oD), DD._dlr && DD._dlr.t(oD, {
         kind: "dynamic",
-        width: uz,
-        height: bz,
-        format: pz,
-        levels: dz,
-        samplerDesc: Zz,
+        width: CD,
+        height: cD,
+        format: BD,
+        levels: yD,
+        samplerDesc: tD,
         source: null,
         flipY: !0,
         premultipliedAlpha: !1
-      }), Kz
+      }), oD
     }
 
-    function Oz(zz, uz, bz) {
-      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const nz = Ez.invertY ?? !0,
-        iz = Ez.premultiplyAlpha ?? !1;
-      zz._device.queue.copyExternalImageToTexture({
-        source: bz,
-        flipY: nz
+    function SD(DD, CD, cD) {
+      let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const pD = ID.invertY ?? !0,
+        iD = ID.premultiplyAlpha ?? !1;
+      DD._device.queue.copyExternalImageToTexture({
+        source: cD,
+        flipY: pD
       }, {
-        texture: uz.texture,
-        premultipliedAlpha: iz
-      }, [uz.width, uz.height]);
-      const lz = uz._recoverySource;
-      lz && "dynamic" === lz.kind && (lz.source = bz, lz.flipY = nz, lz.premultipliedAlpha = iz), uz.texture.mipLevelCount > 1 && (0, Mz.generateMipmaps)(zz, uz.texture)
+        texture: CD.texture,
+        premultipliedAlpha: iD
+      }, [CD.width, CD.height]);
+      const fD = CD._recoverySource;
+      fD && "dynamic" === fD.kind && (fD.source = cD, fD.flipY = pD, fD.premultipliedAlpha = iD), CD.texture.mipLevelCount > 1 && (0, bD.generateMipmaps)(DD, CD.texture)
     }
   },
-  40911: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => tz
+  40779: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => QD
     });
-    var Ez = bz(40874),
-      nz = bz(40878),
-      iz = bz(40886),
-      lz = bz(40890),
-      Mz = bz(40898);
-    async function tz(zz, uz) {
-      let tz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const [Hz, Oz] = function(zz) {
-        const uz = zz,
-          bz = [
-            [uz.displayWidth, uz.displayHeight],
-            [uz.videoWidth, uz.videoHeight],
-            [uz.naturalWidth, uz.naturalHeight],
-            [uz.width, uz.height]
+    var ID = cD(40737),
+      pD = cD(40745),
+      iD = cD(40753),
+      fD = cD(40755),
+      bD = cD(40767);
+    async function QD(DD, CD) {
+      let QD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const [wD, SD] = function(DD) {
+        const CD = DD,
+          cD = [
+            [CD.displayWidth, CD.displayHeight],
+            [CD.videoWidth, CD.videoHeight],
+            [CD.naturalWidth, CD.naturalHeight],
+            [CD.width, CD.height]
           ];
-        for (const [Ez, nz] of bz)
-          if (void 0 !== Ez && void 0 !== nz && Number.isInteger(Ez) && Number.isInteger(nz) && Ez > 0 && nz > 0) return [Ez, nz];
+        for (const [ID, pD] of cD)
+          if (void 0 !== ID && void 0 !== pD && Number.isInteger(ID) && Number.isInteger(pD) && ID > 0 && pD > 0) return [ID, pD];
         throw new TypeError("createTexture2DFromExternalImage: source has no supported positive intrinsic dimensions")
-      }(uz), [pz, dz] = function(zz, uz, bz) {
-        if (void 0 === bz) return [zz, uz];
-        if (!Number.isInteger(bz) || bz < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${bz})`);
-        if (Math.max(zz, uz) <= bz) return [zz, uz];
-        const Ez = bz / Math.max(zz, uz);
-        return zz >= uz ? [bz, Math.max(1, Math.round(uz * Ez))] : [Math.max(1, Math.round(zz * Ez)), bz]
-      }(Hz, Oz, tz.maxDimension), Fz = tz.mipMaps ?? !0, Zz = tz.premultiplyAlpha ?? !1;
-      let Rz = uz,
-        Kz = null;
-      const wz = {
+      }(CD), [BD, yD] = function(DD, CD, cD) {
+        if (void 0 === cD) return [DD, CD];
+        if (!Number.isInteger(cD) || cD < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${cD})`);
+        if (Math.max(DD, CD) <= cD) return [DD, CD];
+        const ID = cD / Math.max(DD, CD);
+        return DD >= CD ? [cD, Math.max(1, Math.round(CD * ID))] : [Math.max(1, Math.round(DD * ID)), cD]
+      }(wD, SD, QD.maxDimension), MD = QD.mipMaps ?? !0, tD = QD.premultiplyAlpha ?? !1;
+      let ZD = CD,
+        oD = null;
+      const vD = {
         texture: null
       };
       try {
-        pz === Hz && dz === Oz || (Kz = await createImageBitmap(uz, {
-          resizeWidth: pz,
-          resizeHeight: dz,
+        BD === wD && yD === SD || (oD = await createImageBitmap(CD, {
+          resizeWidth: BD,
+          resizeHeight: yD,
           resizeQuality: "high",
-          premultiplyAlpha: Zz ? "premultiply" : "none",
+          premultiplyAlpha: tD ? "premultiply" : "none",
           colorSpaceConversion: "none"
-        }), Rz = Kz);
-        const Xz = zz._device,
-          fz = tz.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-          sz = Fz ? (0, Mz.d)(pz, dz) : 1,
-          rz = sz > 1 ? (await Promise.resolve().then((() => bz(40893)))).generateMipmaps : null,
-          oz = {
-            addressModeU: tz.addressModeU ?? "repeat",
-            addressModeV: tz.addressModeV ?? "repeat",
-            minFilter: tz.minFilter ?? "linear",
-            magFilter: tz.magFilter ?? "linear",
-            mipmapFilter: Fz ? "linear" : "nearest"
+        }), ZD = oD);
+        const ND = DD._device,
+          gD = QD.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+          XD = MD ? (0, bD.d)(BD, yD) : 1,
+          mD = XD > 1 ? (await Promise.resolve().then((() => cD(40764)))).generateMipmaps : null,
+          nD = {
+            addressModeU: QD.addressModeU ?? "repeat",
+            addressModeV: QD.addressModeV ?? "repeat",
+            minFilter: QD.minFilter ?? "linear",
+            magFilter: QD.magFilter ?? "linear",
+            mipmapFilter: MD ? "linear" : "nearest"
           };
-        oz.maxAnisotropy = "linear" === oz.minFilter && "linear" === oz.magFilter && "linear" === oz.mipmapFilter ? 4 : 1;
-        const Nz = tz.invertY ?? !0,
-          vz = async uz => {
-            let bz;
-            Xz.pushErrorScope("validation"), Xz.pushErrorScope("out-of-memory");
-            let iz = null;
+        nD.maxAnisotropy = "linear" === nD.minFilter && "linear" === nD.magFilter && "linear" === nD.mipmapFilter ? 4 : 1;
+        const OD = QD.invertY ?? !0,
+          PD = async CD => {
+            let cD;
+            ND.pushErrorScope("validation"), ND.pushErrorScope("out-of-memory");
+            let iD = null;
             try {
-              const bz = wz.texture = Xz.createTexture({
+              const cD = vD.texture = ND.createTexture({
                 size: {
-                  width: pz,
-                  height: dz
+                  width: BD,
+                  height: yD
                 },
-                format: fz,
-                mipLevelCount: sz,
-                usage: nz.k.TEXTURE_BINDING | nz.k.COPY_DST | nz.k.RENDER_ATTACHMENT
+                format: gD,
+                mipLevelCount: XD,
+                usage: pD.i.TEXTURE_BINDING | pD.i.COPY_DST | pD.i.RENDER_ATTACHMENT
               });
-              Xz.queue.copyExternalImageToTexture({
-                source: uz,
-                flipY: Nz
+              ND.queue.copyExternalImageToTexture({
+                source: CD,
+                flipY: OD
               }, {
-                texture: bz,
-                premultipliedAlpha: Zz
+                texture: cD,
+                premultipliedAlpha: tD
               }, {
-                width: pz,
-                height: dz
-              }), rz && rz(zz, bz), iz = (0, lz.c)(zz, oz)
-            } catch (Fz) {
-              bz = Fz
+                width: BD,
+                height: yD
+              }), mD && mD(DD, cD), iD = (0, fD.c)(DD, nD)
+            } catch (MD) {
+              cD = MD
             }
-            const [Mz, tz] = await Promise.all([Xz.popErrorScope(), Xz.popErrorScope()]);
-            if (bz) throw bz;
-            const Hz = tz ?? Mz;
-            if (Hz) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${Hz.message}`, {
-              cause: Hz
+            const [bD, QD] = await Promise.all([ND.popErrorScope(), ND.popErrorScope()]);
+            if (cD) throw cD;
+            const wD = QD ?? bD;
+            if (wD) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${wD.message}`, {
+              cause: wD
             });
-            const Oz = wz.texture;
-            return Oz && iz || (0, Ez.c)(677), {
-              texture: Oz,
-              view: Oz.createView(),
-              sampler: iz,
-              width: pz,
-              height: dz
+            const SD = vD.texture;
+            return SD && iD || (0, ID.d)(677), {
+              texture: SD,
+              view: SD.createView(),
+              sampler: iD,
+              width: BD,
+              height: yD
             }
-          }, xz = await (zz._dlr?.x(Rz, pz, dz, fz, sz, oz, Nz, Zz, vz)) ?? await vz(Rz);
-        return (0, iz.d)(xz), xz
-      } catch (Xz) {
-        throw wz.texture?.destroy(), Xz
+          }, HD = await (DD._dlr?.x(ZD, BD, yD, gD, XD, nD, OD, tD, PD)) ?? await PD(ZD);
+        return (0, iD.e)(HD), HD
+      } catch (ND) {
+        throw vD.texture?.destroy(), ND
       } finally {
-        Kz?.close()
+        oD?.close()
       }
     }
   },
-  40893: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      generateMipmaps: () => Fz,
-      recordMipmaps: () => Zz
+  40764: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      generateMipmaps: () => MD,
+      recordMipmaps: () => tD
     });
-    var Ez = bz(40878),
-      nz = bz(40890),
-      iz = {
+    var ID = cD(40745),
+      pD = cD(40755),
+      iD = {
         magFilter: "linear",
         minFilter: "linear"
       };
-    var lz = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
-      Mz = null,
-      tz = null,
-      Hz = null,
-      Oz = null,
-      pz = null;
+    var fD = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
+      bD = null,
+      QD = null,
+      wD = null,
+      SD = null,
+      BD = null;
 
-    function dz(zz) {
-      const uz = zz._device;
-      uz !== pz && (Mz?.clear(), Mz = null, tz = null, Hz = null, Oz = null, pz = null, pz = uz), tz ??= uz.createShaderModule({
-        code: lz
-      }), Hz ??= function(zz) {
-        return (0, nz.c)(zz, iz)
-      }(zz), Oz ??= uz.createBindGroupLayout({
+    function yD(DD) {
+      const CD = DD._device;
+      CD !== BD && (bD?.clear(), bD = null, QD = null, wD = null, SD = null, BD = null, BD = CD), QD ??= CD.createShaderModule({
+        code: fD
+      }), wD ??= function(DD) {
+        return (0, pD.c)(DD, iD)
+      }(DD), SD ??= CD.createBindGroupLayout({
         entries: [{
           binding: 0,
-          visibility: Ez.g.FRAGMENT,
+          visibility: ID.h.FRAGMENT,
           texture: {
             sampleType: "float"
           }
         }, {
           binding: 1,
-          visibility: Ez.g.FRAGMENT,
+          visibility: ID.h.FRAGMENT,
           sampler: {}
         }]
       })
     }
 
-    function Fz(zz, uz, bz) {
-      const Ez = zz._device,
-        nz = Ez.createCommandEncoder();
-      Zz(zz, uz, nz, bz), Ez.queue.submit([nz.finish()])
+    function MD(DD, CD, cD) {
+      const ID = DD._device,
+        pD = ID.createCommandEncoder();
+      tD(DD, CD, pD, cD), ID.queue.submit([pD.finish()])
     }
 
-    function Zz(zz, uz, bz, Ez) {
-      if (uz.mipLevelCount <= 1) return;
-      const nz = zz._device,
-        iz = function(zz, uz) {
-          const bz = zz._device;
-          dz(zz), Mz ??= new Map;
-          let Ez = Mz.get(uz);
-          return Ez || (Ez = bz.createRenderPipeline({
-            layout: bz.createPipelineLayout({
-              bindGroupLayouts: [Oz]
+    function tD(DD, CD, cD, ID) {
+      if (CD.mipLevelCount <= 1) return;
+      const pD = DD._device,
+        iD = function(DD, CD) {
+          const cD = DD._device;
+          yD(DD), bD ??= new Map;
+          let ID = bD.get(CD);
+          return ID || (ID = cD.createRenderPipeline({
+            layout: cD.createPipelineLayout({
+              bindGroupLayouts: [SD]
             }),
             vertex: {
-              module: tz,
+              module: QD,
               entryPoint: "vs"
             },
             fragment: {
-              module: tz,
+              module: QD,
               entryPoint: "fs",
               targets: [{
-                format: uz
+                format: CD
               }]
             },
             primitive: {
               topology: "triangle-list"
             }
-          }), Mz.set(uz, Ez)), Ez
-        }(zz, uz.format),
-        lz = null != Ez ? {
+          }), bD.set(CD, ID)), ID
+        }(DD, CD.format),
+        fD = null != ID ? {
           dimension: "2d",
-          baseArrayLayer: Ez,
+          baseArrayLayer: ID,
           arrayLayerCount: 1
         } : {};
-      for (let Mz = 1; Mz < uz.mipLevelCount; Mz++) {
-        const zz = uz.createView({
-            baseMipLevel: Mz - 1,
+      for (let bD = 1; bD < CD.mipLevelCount; bD++) {
+        const DD = CD.createView({
+            baseMipLevel: bD - 1,
             mipLevelCount: 1,
-            ...lz
+            ...fD
           }),
-          Ez = uz.createView({
-            baseMipLevel: Mz,
+          ID = CD.createView({
+            baseMipLevel: bD,
             mipLevelCount: 1,
-            ...lz
+            ...fD
           }),
-          tz = nz.createBindGroup({
-            layout: Oz,
+          QD = pD.createBindGroup({
+            layout: SD,
             entries: [{
               binding: 0,
-              resource: zz
+              resource: DD
             }, {
               binding: 1,
-              resource: Hz
+              resource: wD
             }]
           }),
-          pz = bz.beginRenderPass({
+          BD = cD.beginRenderPass({
             colorAttachments: [{
-              view: Ez,
+              view: ID,
               loadOp: "clear",
               storeOp: "store",
               clearValue: {
@@ -1271,82 +1271,82 @@ export const modules = {
               }
             }]
           });
-        pz.setPipeline(iz), pz.setBindGroup(0, tz), pz.draw(3), pz.end()
+        BD.setPipeline(iD), BD.setBindGroup(0, QD), BD.draw(3), BD.end()
       }
     }
   },
-  40898: (zz, uz, bz) => {
-    function Ez(zz, uz) {
-      return Math.floor(Math.log2(Math.max(zz, uz))) + 1
+  40767: (DD, CD, cD) => {
+    function ID(DD, CD) {
+      return Math.floor(Math.log2(Math.max(DD, CD))) + 1
     }
-    bz.d(uz, {
-      d: () => Ez
+    cD.d(CD, {
+      d: () => ID
     })
   },
-  40866: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Hz,
-      f: () => Oz
+  40730: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => wD,
+      g: () => SD
     });
-    var Ez = bz(40874),
-      nz = bz(40878),
-      iz = bz(40886),
-      lz = bz(40890),
-      Mz = bz(40893),
-      tz = bz(40898);
+    var ID = cD(40737),
+      pD = cD(40745),
+      iD = cD(40753),
+      fD = cD(40755),
+      bD = cD(40764),
+      QD = cD(40767);
 
-    function Hz(zz, uz, bz, Mz) {
-      let Hz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (uz < 1 || bz < 1 || Mz < 1) && (0, Ez.c)(722, uz, bz, Mz);
-      const Oz = zz._device,
-        pz = Hz.mipMaps ?? !0,
-        dz = Hz.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        Fz = Oz.createTexture({
+    function wD(DD, CD, cD, bD) {
+      let wD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (CD < 1 || cD < 1 || bD < 1) && (0, ID.d)(722, CD, cD, bD);
+      const SD = DD._device,
+        BD = wD.mipMaps ?? !0,
+        yD = wD.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        MD = SD.createTexture({
           size: {
-            width: uz,
-            height: bz,
-            depthOrArrayLayers: Mz
+            width: CD,
+            height: cD,
+            depthOrArrayLayers: bD
           },
           dimension: "2d",
-          format: dz,
-          mipLevelCount: pz ? (0, tz.d)(uz, bz) : 1,
-          usage: nz.k.TEXTURE_BINDING | nz.k.COPY_DST | nz.k.RENDER_ATTACHMENT
+          format: yD,
+          mipLevelCount: BD ? (0, QD.d)(CD, cD) : 1,
+          usage: pD.i.TEXTURE_BINDING | pD.i.COPY_DST | pD.i.RENDER_ATTACHMENT
         }),
-        Zz = (0, lz.c)(zz, {
-          addressModeU: Hz.addressModeU ?? "repeat",
-          addressModeV: Hz.addressModeV ?? "repeat",
-          minFilter: Hz.minFilter ?? "linear",
-          magFilter: Hz.magFilter ?? "linear",
-          mipmapFilter: pz ? "linear" : "nearest"
+        tD = (0, fD.c)(DD, {
+          addressModeU: wD.addressModeU ?? "repeat",
+          addressModeV: wD.addressModeV ?? "repeat",
+          minFilter: wD.minFilter ?? "linear",
+          magFilter: wD.magFilter ?? "linear",
+          mipmapFilter: BD ? "linear" : "nearest"
         }),
-        Rz = {
-          texture: Fz,
-          view: Fz.createView({
+        ZD = {
+          texture: MD,
+          view: MD.createView({
             dimension: "2d-array"
           }),
-          sampler: Zz,
-          width: uz,
-          height: bz,
-          layers: Mz
+          sampler: tD,
+          width: CD,
+          height: cD,
+          layers: bD
         };
-      return (0, iz.d)(Rz), Rz
+      return (0, iD.e)(ZD), ZD
     }
 
-    function Oz(zz, uz, bz, nz) {
-      let iz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (bz < 0 || bz >= uz.layers || (0 | bz) !== bz) && (0, Ez.c)(723, uz.layers, bz);
-      const lz = iz.invertY ?? !0,
-        tz = iz.premultiplyAlpha ?? !1;
-      zz._device.queue.copyExternalImageToTexture({
-        source: nz,
-        flipY: lz
+    function SD(DD, CD, cD, pD) {
+      let iD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (cD < 0 || cD >= CD.layers || (0 | cD) !== cD) && (0, ID.d)(723, CD.layers, cD);
+      const fD = iD.invertY ?? !0,
+        QD = iD.premultiplyAlpha ?? !1;
+      DD._device.queue.copyExternalImageToTexture({
+        source: pD,
+        flipY: fD
       }, {
-        texture: uz.texture,
-        origin: [0, 0, bz],
-        premultipliedAlpha: tz
-      }, [uz.width, uz.height, 1]), uz.texture.mipLevelCount > 1 && (0, Mz.generateMipmaps)(zz, uz.texture, bz)
+        texture: CD.texture,
+        origin: [0, 0, cD],
+        premultipliedAlpha: QD
+      }, [CD.width, CD.height, 1]), CD.texture.mipLevelCount > 1 && (0, bD.generateMipmaps)(DD, CD.texture, cD)
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

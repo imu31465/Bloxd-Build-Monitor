@@ -1,203 +1,203 @@
 export const id = 121;
 export const ids = [121];
 export const modules = {
-  6286: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Mz
+  6303: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => bD
     });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(1181),
-      lz = bz(1089);
+    var ID = cD(1049),
+      pD = cD.n(ID),
+      iD = cD(1192),
+      fD = cD(1093);
 
-    function Mz(zz) {
+    function bD(DD) {
       let {
-        item: uz,
-        className: bz
-      } = zz;
+        item: CD,
+        className: cD
+      } = DD;
       const {
-        t: Ez
-      } = (0, iz.F)();
-      return null === uz.renderId || uz.previewsOutdated ? (0, lz.jsx)("div", {
-        className: nz()("ShaderPackPreviewsNotice", bz),
-        children: (0, lz.jsx)("span", {
-          children: Ez(null === uz.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        t: ID
+      } = (0, iD.F)();
+      return null === CD.renderId || CD.previewsOutdated ? (0, fD.jsx)("div", {
+        className: pD()("ShaderPackPreviewsNotice", cD),
+        children: (0, fD.jsx)("span", {
+          children: ID(null === CD.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
         })
       }) : null
     }
   },
-  6296: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Hz
+  6325: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => wD
     });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(6283),
-      lz = bz(1181),
-      Mz = bz(6274),
-      tz = bz(1089);
+    var ID = cD(1049),
+      pD = cD.n(ID),
+      iD = cD(6298),
+      fD = cD(1192),
+      bD = cD(6291),
+      QD = cD(1093);
 
-    function Hz(zz) {
+    function wD(DD) {
       let {
-        selected: uz,
-        onSelect: bz,
-        imageUrl: Ez
-      } = zz;
+        selected: CD,
+        onSelect: cD,
+        imageUrl: ID
+      } = DD;
       const {
-        t: Hz
-      } = (0, lz.F)();
-      return (0, tz.jsx)("div", {
+        t: wD
+      } = (0, fD.F)();
+      return (0, QD.jsx)("div", {
         className: "ShaderPackViewPicker",
-        children: iz.B.map((zz => {
-          const iz = Ez(zz);
-          return (0, tz.jsxs)("button", {
+        children: iD.H.map((DD => {
+          const iD = ID(DD);
+          return (0, QD.jsxs)("button", {
             type: "button",
-            "aria-pressed": zz === uz,
-            className: nz()("ShaderPackViewOption", {
-              Selected: zz === uz
+            "aria-pressed": DD === CD,
+            className: pD()("ShaderPackViewOption", {
+              Selected: DD === CD
             }),
             onClick: () => {
-              bz(zz)
+              cD(DD)
             },
-            children: [null !== iz && (0, tz.jsx)("img", {
-              src: iz,
+            children: [null !== iD && (0, QD.jsx)("img", {
+              src: iD,
               alt: "",
               loading: "lazy",
               draggable: !1
-            }), (0, tz.jsx)("span", {
+            }), (0, QD.jsx)("span", {
               className: "SmallTextBold",
-              children: Hz(Mz.db[zz])
+              children: wD(bD.db[DD])
             })]
-          }, zz)
+          }, DD)
         }))
       })
     }
   },
-  6289: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => dz,
-      g: () => Fz,
-      k: () => pz,
-      m: () => Zz
+  6312: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => yD,
+      f: () => MD,
+      g: () => BD,
+      i: () => tD
     });
-    var Ez = bz(56),
-      nz = bz(6283),
-      iz = bz(1473),
-      lz = bz(6274),
-      Mz = bz(6291),
-      tz = bz(1114);
-    const Hz = "shaderPackListingView",
-      Oz = "shaderPackListingFilterOpen";
+    var ID = cD(53),
+      pD = cD(6298),
+      iD = cD(1497),
+      fD = cD(6291),
+      bD = cD(6320),
+      QD = cD(1120);
+    const wD = "shaderPackListingView",
+      SD = "shaderPackListingFilterOpen";
 
-    function pz() {
-      var zz;
-      const [uz, bz] = (0, Mz.d)(Hz, nz.B[0]);
-      return [null !== (zz = nz.B.find((zz => zz === uz))) && void 0 !== zz ? zz : nz.B[0], bz]
+    function BD() {
+      var DD;
+      const [CD, cD] = (0, bD.c)(wD, pD.H[0]);
+      return [null !== (DD = pD.H.find((DD => DD === CD))) && void 0 !== DD ? DD : pD.H[0], cD]
     }
 
-    function dz() {
-      (0, Ez.useEffect)((() => () => {
-        window.location.pathname.startsWith(lz.P) || (0, lz.j)()
+    function yD() {
+      (0, ID.useEffect)((() => () => {
+        window.location.pathname.startsWith(fD.W) || (0, fD.n)()
       }), [])
     }
 
-    function Fz() {
-      return (0, Mz.d)(Oz, !1)
+    function MD() {
+      return (0, bD.c)(SD, !1)
     }
 
-    function Zz() {
+    function tD() {
       const {
-        userContext: zz,
-        isUserContextUpdating: uz
-      } = (0, tz.c)(), [bz, nz] = (0, Ez.useState)(null), lz = (0, Ez.useRef)(new Set);
+        userContext: DD,
+        isUserContextUpdating: CD
+      } = (0, QD.c)(), [cD, pD] = (0, ID.useState)(null), fD = (0, ID.useRef)(new Set);
 
-      function Mz(zz, uz) {
-        nz((bz => {
-          const Ez = new Set(bz);
-          return uz ? Ez.add(zz) : Ez.delete(zz), Ez
+      function bD(DD, CD) {
+        pD((cD => {
+          const ID = new Set(cD);
+          return CD ? ID.add(DD) : ID.delete(DD), ID
         }))
       }
-      return (0, Ez.useEffect)((() => {
-        if (uz) return;
-        let bz = !1;
-        return iz.c.getFavouriteShaderPacks(zz).then((zz => {
-          bz || nz(new Set(zz))
-        })).catch((zz => {
-          console.error("Failed to get favourite shader packs", zz), bz || nz(new Set)
+      return (0, ID.useEffect)((() => {
+        if (CD) return;
+        let cD = !1;
+        return iD.c.getFavouriteShaderPacks(DD).then((DD => {
+          cD || pD(new Set(DD))
+        })).catch((DD => {
+          console.error("Failed to get favourite shader packs", DD), cD || pD(new Set)
         })), () => {
-          bz = !0
+          cD = !0
         }
-      }), [zz, uz]), {
-        isFavourite: zz => null === bz ? null : bz.has(zz),
-        toggle: function(uz) {
-          if (null === bz || lz.current.has(uz)) return;
-          lz.current.add(uz);
-          const Ez = !bz.has(uz);
-          Mz(uz, Ez), (Ez ? iz.c.favouriteShaderPack(zz, uz) : iz.c.unfavouriteShaderPack(zz, uz)).catch((zz => {
-            console.error("Failed to change a favourite shader pack", zz), Mz(uz, !Ez)
+      }), [DD, CD]), {
+        isFavourite: DD => null === cD ? null : cD.has(DD),
+        toggle: function(CD) {
+          if (null === cD || fD.current.has(CD)) return;
+          fD.current.add(CD);
+          const ID = !cD.has(CD);
+          bD(CD, ID), (ID ? iD.c.favouriteShaderPack(DD, CD) : iD.c.unfavouriteShaderPack(DD, CD)).catch((DD => {
+            console.error("Failed to change a favourite shader pack", DD), bD(CD, !ID)
           })).finally((() => {
-            lz.current.delete(uz)
+            fD.current.delete(CD)
           }))
         }
       }
     }
   },
-  6274: (zz, uz, bz) => {
-    bz.d(uz, {
-      D: () => wz,
-      F: () => Az,
-      G: () => Oz,
-      J: () => Lz,
-      M: () => Rz,
-      N: () => Uz,
-      O: () => qz,
-      P: () => lz,
-      T: () => hz,
-      W: () => tz,
-      _: () => Mz,
-      bb: () => Vz,
-      db: () => mz,
-      e: () => Xz,
-      eb: () => fz,
-      f: () => xz,
-      gb: () => Tz,
-      h: () => Kz,
-      j: () => dz,
-      m: () => pz,
-      p: () => Pz,
-      q: () => Fz,
-      u: () => Gz,
-      v: () => cz,
-      z: () => Zz
+  6291: (DD, CD, cD) => {
+    cD.d(CD, {
+      $: () => QD,
+      A: () => vD,
+      E: () => xD,
+      G: () => SD,
+      I: () => JD,
+      M: () => ZD,
+      P: () => TD,
+      S: () => lD,
+      W: () => fD,
+      Y: () => LD,
+      ab: () => bD,
+      bb: () => zD,
+      c: () => ND,
+      db: () => jD,
+      eb: () => gD,
+      fb: () => qD,
+      g: () => HD,
+      k: () => oD,
+      n: () => yD,
+      p: () => BD,
+      q: () => KD,
+      r: () => MD,
+      s: () => aD,
+      w: () => GD,
+      x: () => tD
     });
-    var Ez = bz(6283),
-      nz = bz(158),
-      iz = bz(4313);
-    const lz = "/shader-packs",
-      Mz = `${lz}/publish`;
+    var ID = cD(6298),
+      pD = cD(162),
+      iD = cD(4353);
+    const fD = "/shader-packs",
+      bD = `${fD}/publish`;
 
-    function tz(zz) {
-      return `${lz}/${encodeURIComponent(zz)}`
+    function QD(DD) {
+      return `${fD}/${encodeURIComponent(DD)}`
     }
-    let Hz = null;
+    let wD = null;
 
-    function Oz(zz) {
-      Hz = zz
-    }
-
-    function pz() {
-      return Hz
+    function SD(DD) {
+      wD = DD
     }
 
-    function dz() {
-      Hz = null
+    function BD() {
+      return wD
     }
 
-    function Fz(zz) {
-      return zz.playerHasRank("developer") || zz.playerHasRank("admin")
+    function yD() {
+      wD = null
     }
-    const Zz = ["terrain", "water", "models", "sunShadows", "strict"],
-      Rz = {
+
+    function MD(DD) {
+      return DD.playerHasRank("developer") || DD.playerHasRank("admin")
+    }
+    const tD = ["terrain", "water", "models", "sunShadows", "strict"],
+      ZD = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -205,89 +205,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function Kz(zz, uz) {
-      return zz.withFeatures.includes(uz) ? "with" : zz.withoutFeatures.includes(uz) ? "without" : null
+    function oD(DD, CD) {
+      return DD.withFeatures.includes(CD) ? "with" : DD.withoutFeatures.includes(CD) ? "without" : null
     }
 
-    function wz(zz) {
-      return null === zz ? "with" : "with" === zz ? "without" : null
+    function vD(DD) {
+      return null === DD ? "with" : "with" === DD ? "without" : null
     }
 
-    function Xz(zz) {
-      return "with" === zz ? "only" : null === zz ? "include" : void 0
+    function ND(DD) {
+      return "with" === DD ? "only" : null === DD ? "include" : void 0
     }
 
-    function fz(zz, uz) {
-      const bz = Kz(zz, uz),
-        Ez = zz => zz.filter((zz => zz !== uz));
+    function gD(DD, CD) {
+      const cD = oD(DD, CD),
+        ID = DD => DD.filter((DD => DD !== CD));
       return {
-        withFeatures: null === bz ? [...zz.withFeatures, uz] : Ez(zz.withFeatures),
-        withoutFeatures: "with" === bz ? [...zz.withoutFeatures, uz] : Ez(zz.withoutFeatures)
+        withFeatures: null === cD ? [...DD.withFeatures, CD] : ID(DD.withFeatures),
+        withoutFeatures: "with" === cD ? [...DD.withoutFeatures, CD] : ID(DD.withoutFeatures)
       }
     }
-    const sz = "section",
-      rz = "sort",
-      oz = "filters",
-      Nz = "q",
-      vz = "banned",
-      xz = "popular",
-      Jz = "strict";
+    const XD = "section",
+      mD = "sort",
+      nD = "filters",
+      OD = "q",
+      PD = "banned",
+      HD = "popular",
+      UD = "strict";
 
-    function Az(zz) {
-      var uz, bz, nz;
-      const lz = zz.get(sz),
-        Mz = (null !== (uz = zz.get(oz)) && void 0 !== uz ? uz : Jz).split(","),
-        tz = zz.get(vz);
+    function xD(DD) {
+      var CD, cD, pD;
+      const fD = DD.get(XD),
+        bD = (null !== (CD = DD.get(nD)) && void 0 !== CD ? CD : UD).split(","),
+        QD = DD.get(PD);
       return {
-        section: "favourites" === lz || "mine" === lz ? lz : "explore",
-        sort: null !== (bz = Ez.u.find((uz => uz === zz.get(rz)))) && void 0 !== bz ? bz : xz,
-        withFeatures: Zz.filter((zz => Mz.includes(zz) && !Mz.includes(`-${zz}`))),
-        withoutFeatures: Zz.filter((zz => Mz.includes(`-${zz}`))),
-        searchQuery: (null === (nz = zz.get(Nz)) || void 0 === nz ? void 0 : nz.slice(0, Ez.G)) || null,
-        pageNumber: (0, iz.h)(zz.get(iz.e)),
-        banned: "only" === tz ? "with" : "include" === tz ? null : "without"
+        section: "favourites" === fD || "mine" === fD ? fD : "explore",
+        sort: null !== (cD = ID.z.find((CD => CD === DD.get(mD)))) && void 0 !== cD ? cD : HD,
+        withFeatures: tD.filter((DD => bD.includes(DD) && !bD.includes(`-${DD}`))),
+        withoutFeatures: tD.filter((DD => bD.includes(`-${DD}`))),
+        searchQuery: (null === (pD = DD.get(OD)) || void 0 === pD ? void 0 : pD.slice(0, ID.N)) || null,
+        pageNumber: (0, iD.e)(DD.get(iD.b)),
+        banned: "only" === QD ? "with" : "include" === QD ? null : "without"
       }
     }
 
-    function Tz(zz, uz) {
-      var bz;
-      const Ez = az(uz);
-      (0, iz.k)(zz, sz, "explore" === uz.section ? null : uz.section), (0, iz.k)(zz, rz, uz.sort === xz ? null : uz.sort), (0, iz.k)(zz, oz, Ez === Jz ? null : Ez), (0, iz.k)(zz, Nz, uz.searchQuery), (0, iz.k)(zz, vz, null !== (bz = Xz(uz.banned)) && void 0 !== bz ? bz : null), (0, iz.m)(zz, uz.pageNumber)
+    function qD(DD, CD) {
+      var cD;
+      const ID = VD(CD);
+      (0, iD.f)(DD, XD, "explore" === CD.section ? null : CD.section), (0, iD.f)(DD, mD, CD.sort === HD ? null : CD.sort), (0, iD.f)(DD, nD, ID === UD ? null : ID), (0, iD.f)(DD, OD, CD.searchQuery), (0, iD.f)(DD, PD, null !== (cD = ND(CD.banned)) && void 0 !== cD ? cD : null), (0, iD.h)(DD, CD.pageNumber)
     }
 
-    function Lz(zz) {
-      const uz = new URLSearchParams;
-      return Tz(uz, {
+    function JD(DD) {
+      const CD = new URLSearchParams;
+      return qD(CD, {
         section: "explore",
-        sort: xz,
-        withFeatures: "strict" === zz ? [zz] : [zz, "strict"],
+        sort: HD,
+        withFeatures: "strict" === DD ? [DD] : [DD, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${lz}?${uz.toString()}`
+      }), `${fD}?${CD.toString()}`
     }
 
-    function Pz(zz) {
-      return az(zz) === Jz
+    function KD(DD) {
+      return VD(DD) === UD
     }
 
-    function Gz(zz) {
-      return null !== zz.searchQuery || "with" === zz.banned || az(zz) !== Jz
+    function aD(DD) {
+      return null !== DD.searchQuery || "with" === DD.banned || VD(DD) !== UD
     }
 
-    function az(zz) {
-      return Zz.flatMap((uz => {
-        const bz = Kz(zz, uz);
-        return "with" === bz ? [uz] : "without" === bz ? [`-${uz}`] : []
+    function VD(DD) {
+      return tD.flatMap((CD => {
+        const cD = oD(DD, CD);
+        return "with" === cD ? [CD] : "without" === cD ? [`-${CD}`] : []
       })).join(",")
     }
-    const Vz = {
+    const zD = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      mz = {
+      jD = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -295,93 +295,93 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function qz(zz) {
-      return Math.round(100 * Math.max(0, 1 - 1 / zz))
+    function lD(DD) {
+      return Math.round(100 * Math.max(0, 1 - 1 / DD))
     }
 
-    function hz(zz, uz, bz, nz) {
-      const iz = [];
-      zz.isBanned && iz.push({
+    function LD(DD, CD, cD, pD) {
+      const iD = [];
+      DD.isBanned && iD.push({
         tone: "warning",
-        text: nz("shaderPackListing:ownerBanned"),
+        text: pD("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: lz
-      } = zz;
-      if (null === zz.brokenError || lz && !lz.error || iz.push({
+        pending: fD
+      } = DD;
+      if (null === DD.brokenError || fD && !fD.error || iD.push({
           tone: "warning",
-          text: nz("shaderPackListing:ownerBroken"),
-          detail: zz.brokenError
-        }), null !== lz && void 0 !== lz && lz.error) iz.push({
+          text: pD("shaderPackListing:ownerBroken"),
+          detail: DD.brokenError
+        }), null !== fD && void 0 !== fD && fD.error) iD.push({
         tone: "warning",
-        text: nz(uz ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Ez.g)(lz.error) ? null : lz.error
+        text: pD(CD ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, ID.n)(fD.error) ? null : fD.error
       });
-      else if (lz) {
-        const zz = null === lz.renderNotBefore ? 0 : lz.renderNotBefore - bz,
-          Ez = String(Math.ceil(zz / 6e4)),
-          Mz = nz(uz ? zz > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : zz > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Ez
+      else if (fD) {
+        const DD = null === fD.renderNotBefore ? 0 : fD.renderNotBefore - cD,
+          ID = String(Math.ceil(DD / 6e4)),
+          bD = pD(CD ? DD > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : DD > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: ID
           });
-        iz.push({
+        iD.push({
           tone: "info",
-          text: Mz,
+          text: bD,
           detail: null
         })
       }
-      return zz.listed || iz.push({
+      return DD.listed || iD.push({
         tone: "info",
-        text: nz("shaderPackListing:ownerUnlisted"),
+        text: pD("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), iz
+      }), iD
     }
 
-    function Uz(zz) {
-      return Math.max(1, Math.round(zz / 1024))
+    function TD(DD) {
+      return Math.max(1, Math.round(DD / 1024))
     }
 
-    function cz(zz, uz, bz) {
-      return zz instanceof nz.c && zz.errorMessageForUser ? zz.errorMessageForUser : uz(bz)
+    function GD(DD, CD, cD) {
+      return DD instanceof pD.d && DD.errorMessageForUser ? DD.errorMessageForUser : CD(cD)
     }
   },
-  6291: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
+  6320: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => iD
     });
-    var Ez = bz(56),
-      nz = bz(33);
+    var ID = cD(53),
+      pD = cD(36);
 
-    function iz(zz, uz) {
-      var bz;
-      const [iz, lz] = (0, Ez.useState)(null !== (bz = nz.g.getItem(zz)) && void 0 !== bz ? bz : uz);
-      return [iz, uz => {
-        nz.g.setItem(zz, uz), lz(uz)
+    function iD(DD, CD) {
+      var cD;
+      const [iD, fD] = (0, ID.useState)(null !== (cD = pD.h.getItem(DD)) && void 0 !== cD ? cD : CD);
+      return [iD, CD => {
+        pD.h.setItem(DD, CD), fD(CD)
       }]
     }
   },
-  6283: (zz, uz, bz) => {
-    bz.d(uz, {
-      B: () => Ez,
-      D: () => dz,
-      G: () => Oz,
-      K: () => fz,
-      M: () => pz,
-      O: () => Hz,
-      b: () => Fz,
-      e: () => Rz,
-      f: () => Zz,
-      g: () => Xz,
-      i: () => rz,
-      l: () => tz,
-      m: () => nz,
-      q: () => sz,
-      u: () => iz,
-      y: () => Mz,
-      z: () => lz
+  6298: (DD, CD, cD) => {
+    cD.d(CD, {
+      C: () => bD,
+      E: () => fD,
+      H: () => ID,
+      L: () => yD,
+      N: () => SD,
+      Q: () => gD,
+      T: () => BD,
+      U: () => wD,
+      e: () => MD,
+      h: () => ZD,
+      k: () => tD,
+      n: () => ND,
+      p: () => mD,
+      t: () => QD,
+      u: () => pD,
+      w: () => XD,
+      z: () => iD
     });
-    const Ez = ["forest", "desert", "water", "night", "cave"];
-    const nz = {
+    const ID = ["forest", "desert", "water", "night", "cave"];
+    const pD = {
         full: {
           width: 3840,
           height: 2160
@@ -395,43 +395,43 @@ export const modules = {
           height: 360
         }
       },
-      iz = ["popular", "updated", "newest"],
-      lz = 3,
-      Mz = 32,
-      tz = 300;
+      iD = ["popular", "updated", "newest"],
+      fD = 3,
+      bD = 32,
+      QD = 300;
 
-    function Hz(zz, uz) {
-      return zz.slice(0, uz).replace(/[\uD800-\uDBFF]$/, "")
+    function wD(DD, CD) {
+      return DD.slice(0, CD).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const Oz = 64,
-      pz = 512,
-      dz = 18e5;
-    const Fz = "Bloxdhub",
-      Zz = "https://bloxdhub.com/shaders";
+    const SD = 64,
+      BD = 512,
+      yD = 18e5;
+    const MD = "Bloxdhub",
+      tD = "https://bloxdhub.com/shaders";
 
-    function Rz(zz) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(zz)}`
+    function ZD(DD) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(DD)}`
     }
-    const Kz = "Screenshot generation failed.",
-      wz = "Its screenshots couldn't be generated:";
+    const oD = "Screenshot generation failed.",
+      vD = "Its screenshots couldn't be generated:";
 
-    function Xz(zz) {
-      var uz;
-      return zz === Kz || null !== (uz = null === zz || void 0 === zz ? void 0 : zz.startsWith(wz)) && void 0 !== uz && uz
-    }
-
-    function fz(zz, uz) {
-      return `shaderPacks/${zz}/${uz}.json`
+    function ND(DD) {
+      var CD;
+      return DD === oD || null !== (CD = null === DD || void 0 === DD ? void 0 : DD.startsWith(vD)) && void 0 !== CD && CD
     }
 
-    function sz(zz, uz, bz, Ez) {
-      return null === uz.renderId ? rz(zz, uz.baselineVersion, bz, Ez) : `${zz}/${function(zz,uz,bz,Ez){return`shaderPacks/${zz}/${uz}/${bz}-${Ez}.webp`}(uz.packId,uz.renderId,bz,Ez)}`
+    function gD(DD, CD) {
+      return `shaderPacks/${DD}/${CD}.json`
     }
 
-    function rz(zz, uz, bz, Ez) {
-      return `${zz}/${function(zz,uz,bz){return`shaderPacks/baseline/${zz}/${uz}-${bz}.webp`}(uz,bz,Ez)}`
+    function XD(DD, CD, cD, ID) {
+      return null === CD.renderId ? mD(DD, CD.baselineVersion, cD, ID) : `${DD}/${function(DD,CD,cD,ID){return`shaderPacks/${DD}/${CD}/${cD}-${ID}.webp`}(CD.packId,CD.renderId,cD,ID)}`
+    }
+
+    function mD(DD, CD, cD, ID) {
+      return `${DD}/${function(DD,CD,cD){return`shaderPacks/baseline/${DD}/${CD}-${cD}.webp`}(CD,cD,ID)}`
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

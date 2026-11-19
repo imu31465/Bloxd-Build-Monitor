@@ -1,377 +1,377 @@
 export const id = 77;
 export const ids = [77];
 export const modules = {
-  4489: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez,
-      c: () => lz,
-      e: () => Kz,
-      f: () => Rz,
-      g: () => Mz,
-      h: () => nz,
-      k: () => iz,
-      n: () => Zz,
-      q: () => Fz,
-      t: () => dz
+  4534: (DD, CD, cD) => {
+    cD.d(CD, {
+      B: () => MD,
+      C: () => yD,
+      e: () => ID,
+      i: () => fD,
+      j: () => oD,
+      l: () => ZD,
+      o: () => bD,
+      s: () => pD,
+      u: () => iD,
+      y: () => tD
     });
-    const Ez = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const ID = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function nz(zz) {
+    function pD(DD) {
       try {
-        return decodeURIComponent(zz.slice(1))
+        return decodeURIComponent(DD.slice(1))
       } catch {
-        return zz.slice(1)
+        return DD.slice(1)
       }
     }
 
-    function iz(zz) {
-      return zz.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function iD(DD) {
+      return DD.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const lz = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Ez.source}`, "g");
+    const fD = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${ID.source}`, "g");
 
-    function Mz(zz, uz) {
-      return 2 === zz.length ? uz.replace(/^ (.*) $/, "$1") : uz
-    }
-
-    function tz(zz) {
-      return "" === zz.trim()
+    function bD(DD, CD) {
+      return 2 === DD.length ? CD.replace(/^ (.*) $/, "$1") : CD
     }
 
-    function Hz(zz) {
-      const uz = [];
-      for (const bz of zz.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) uz.length > 0 && uz[uz.length - 1].endsWith("\\") ? uz[uz.length - 1] += `|${bz}` : uz.push(bz);
-      return uz.map((zz => zz.trim().replaceAll("\\|", "|")))
+    function QD(DD) {
+      return "" === DD.trim()
     }
-    const Oz = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function pz(zz) {
-      const uz = [],
-        bz = [{
+    function wD(DD) {
+      const CD = [];
+      for (const cD of DD.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) CD.length > 0 && CD[CD.length - 1].endsWith("\\") ? CD[CD.length - 1] += `|${cD}` : CD.push(cD);
+      return CD.map((DD => DD.trim().replaceAll("\\|", "|")))
+    }
+    const SD = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function BD(DD) {
+      const CD = [],
+        cD = [{
           indent: -1,
-          items: uz
+          items: CD
         }];
-      let Ez = null;
-      for (const nz of zz) {
-        const zz = nz.match(Oz);
-        if (!zz) {
-          Ez && (Ez.text += ` ${nz.trim()}`);
+      let ID = null;
+      for (const pD of DD) {
+        const DD = pD.match(SD);
+        if (!DD) {
+          ID && (ID.text += ` ${pD.trim()}`);
           continue
         }
-        const uz = zz[1].replace(/\t/g, "  ").length;
-        for (; uz <= bz[bz.length - 1].indent;) bz.pop();
-        Ez = {
-          text: zz[3].trim(),
+        const CD = DD[1].replace(/\t/g, "  ").length;
+        for (; CD <= cD[cD.length - 1].indent;) cD.pop();
+        ID = {
+          text: DD[3].trim(),
           children: []
-        }, bz[bz.length - 1].items.push(Ez), bz.push({
-          indent: uz,
-          items: Ez.children
+        }, cD[cD.length - 1].items.push(ID), cD.push({
+          indent: CD,
+          items: ID.children
         })
       }
-      return uz
+      return CD
     }
 
-    function dz(zz) {
-      const uz = zz.replace(/\r\n/g, "\n").split("\n"),
-        bz = [];
-      let Ez = 0;
-      for (; Ez < uz.length;) {
-        const zz = uz[Ez];
-        if (tz(zz)) {
-          Ez++;
+    function yD(DD) {
+      const CD = DD.replace(/\r\n/g, "\n").split("\n"),
+        cD = [];
+      let ID = 0;
+      for (; ID < CD.length;) {
+        const DD = CD[ID];
+        if (QD(DD)) {
+          ID++;
           continue
         }
-        const nz = zz.match(/^\s*```\s*(\w*)\s*$/);
-        if (nz) {
-          const zz = [];
-          for (Ez++; Ez < uz.length && !/^\s*```\s*$/.test(uz[Ez]);) zz.push(uz[Ez]), Ez++;
-          Ez++, bz.push({
+        const pD = DD.match(/^\s*```\s*(\w*)\s*$/);
+        if (pD) {
+          const DD = [];
+          for (ID++; ID < CD.length && !/^\s*```\s*$/.test(CD[ID]);) DD.push(CD[ID]), ID++;
+          ID++, cD.push({
             kind: "code",
-            lang: nz[1] || "text",
-            code: zz.join("\n").replace(/\s+$/, "")
+            lang: pD[1] || "text",
+            code: DD.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const lz = zz.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (lz) {
-          const zz = lz[2].trim();
-          bz.push({
+        const fD = DD.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (fD) {
+          const DD = fD[2].trim();
+          cD.push({
             kind: "heading",
-            level: lz[1].length,
-            text: zz,
-            anchor: iz(zz)
-          }), Ez++;
+            level: fD[1].length,
+            text: DD,
+            anchor: iD(DD)
+          }), ID++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(zz)) {
-          bz.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(DD)) {
+          cD.push({
             kind: "rule"
-          }), Ez++;
+          }), ID++;
           continue
         }
-        if (zz.trim().startsWith("|") && Ez + 1 < uz.length && /^\s*\|[\s:|-]+\|\s*$/.test(uz[Ez + 1])) {
-          const nz = Hz(zz),
-            iz = [];
-          for (Ez += 2; Ez < uz.length && uz[Ez].trim().startsWith("|");) iz.push(Hz(uz[Ez])), Ez++;
-          bz.push({
+        if (DD.trim().startsWith("|") && ID + 1 < CD.length && /^\s*\|[\s:|-]+\|\s*$/.test(CD[ID + 1])) {
+          const pD = wD(DD),
+            iD = [];
+          for (ID += 2; ID < CD.length && CD[ID].trim().startsWith("|");) iD.push(wD(CD[ID])), ID++;
+          cD.push({
             kind: "table",
-            header: nz,
-            rows: iz
+            header: pD,
+            rows: iD
           });
           continue
         }
-        if (zz.startsWith(">")) {
-          const zz = [];
-          for (; Ez < uz.length && uz[Ez].startsWith(">");) zz.push(uz[Ez].replace(/^>\s?/, "")), Ez++;
-          bz.push({
+        if (DD.startsWith(">")) {
+          const DD = [];
+          for (; ID < CD.length && CD[ID].startsWith(">");) DD.push(CD[ID].replace(/^>\s?/, "")), ID++;
+          cD.push({
             kind: "quote",
-            blocks: dz(zz.join("\n"))
+            blocks: yD(DD.join("\n"))
           });
           continue
         }
-        if (Oz.test(zz)) {
-          const nz = [],
-            iz = /^\s*\d+\./.test(zz);
-          for (; Ez < uz.length && !tz(uz[Ez]) && (Oz.test(uz[Ez]) || /^\s+\S/.test(uz[Ez]));) nz.push(uz[Ez]), Ez++;
-          bz.push({
+        if (SD.test(DD)) {
+          const pD = [],
+            iD = /^\s*\d+\./.test(DD);
+          for (; ID < CD.length && !QD(CD[ID]) && (SD.test(CD[ID]) || /^\s+\S/.test(CD[ID]));) pD.push(CD[ID]), ID++;
+          cD.push({
             kind: "list",
-            ordered: iz,
-            items: pz(nz)
+            ordered: iD,
+            items: BD(pD)
           });
           continue
         }
-        const Mz = [];
-        for (; Ez < uz.length && !tz(uz[Ez]) && !/^\s*```/.test(uz[Ez]) && !/^#{1,6}\s/.test(uz[Ez]) && !uz[Ez].startsWith(">") && !Oz.test(uz[Ez]) && (!uz[Ez].trim().startsWith("|") || 0 !== Mz.length);) Mz.push(uz[Ez].trim()), Ez++;
-        0 === Mz.length && (Mz.push(uz[Ez].trim()), Ez++), bz.push({
+        const bD = [];
+        for (; ID < CD.length && !QD(CD[ID]) && !/^\s*```/.test(CD[ID]) && !/^#{1,6}\s/.test(CD[ID]) && !CD[ID].startsWith(">") && !SD.test(CD[ID]) && (!CD[ID].trim().startsWith("|") || 0 !== bD.length);) bD.push(CD[ID].trim()), ID++;
+        0 === bD.length && (bD.push(CD[ID].trim()), ID++), cD.push({
           kind: "paragraph",
-          text: Mz.join(" ")
+          text: bD.join(" ")
         })
       }
-      return bz
+      return cD
     }
 
-    function Fz(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const bz = dz(zz);
-      let Ez = "";
-      const nz = [],
-        iz = [],
-        lz = new Map;
-      for (const Hz of bz) {
-        if ("heading" === Hz.kind) {
-          var Mz;
-          const zz = (null !== (Mz = lz.get(Hz.anchor)) && void 0 !== Mz ? Mz : 0) + 1;
-          lz.set(Hz.anchor, zz), zz > 1 && (Hz.anchor = `${Hz.anchor}-${zz}`)
+    function MD(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const cD = yD(DD);
+      let ID = "";
+      const pD = [],
+        iD = [],
+        fD = new Map;
+      for (const wD of cD) {
+        if ("heading" === wD.kind) {
+          var bD;
+          const DD = (null !== (bD = fD.get(wD.anchor)) && void 0 !== bD ? bD : 0) + 1;
+          fD.set(wD.anchor, DD), DD > 1 && (wD.anchor = `${wD.anchor}-${DD}`)
         }
-        if ("heading" === Hz.kind && 1 === Hz.level && !Ez) {
-          Ez = Hz.text;
+        if ("heading" === wD.kind && 1 === wD.level && !ID) {
+          ID = wD.text;
           continue
         }
-        if ("heading" === Hz.kind && Hz.level <= uz) {
-          iz.push({
-            heading: Hz,
+        if ("heading" === wD.kind && wD.level <= CD) {
+          iD.push({
+            heading: wD,
             blocks: []
           });
           continue
         }
-        const zz = iz.at(-1);
-        zz ? zz.blocks.push(Hz) : nz.push(Hz)
+        const DD = iD.at(-1);
+        DD ? DD.blocks.push(wD) : pD.push(wD)
       }
-      const tz = zz => {
+      const QD = DD => {
         for (;
-          "rule" === (null === (uz = zz.at(-1)) || void 0 === uz ? void 0 : uz.kind);) {
-          var uz;
-          zz.pop()
+          "rule" === (null === (CD = DD.at(-1)) || void 0 === CD ? void 0 : CD.kind);) {
+          var CD;
+          DD.pop()
         }
       };
-      tz(nz);
-      for (const Hz of iz) tz(Hz.blocks);
+      QD(pD);
+      for (const wD of iD) QD(wD.blocks);
       return {
-        title: Ez,
-        intro: nz,
-        sections: iz
+        title: ID,
+        intro: pD,
+        sections: iD
       }
     }
 
-    function Zz(zz) {
+    function tD(DD) {
       return [{
         heading: null,
-        blocks: zz.intro
-      }, ...zz.sections.map((zz => ({
-        heading: zz.heading,
-        blocks: zz.blocks
+        blocks: DD.intro
+      }, ...DD.sections.map((DD => ({
+        heading: DD.heading,
+        blocks: DD.blocks
       })))]
     }
 
-    function Rz(zz) {
-      return zz.flatMap((zz => "code" === zz.kind ? [zz] : "quote" === zz.kind ? Rz(zz.blocks) : []))
+    function ZD(DD) {
+      return DD.flatMap((DD => "code" === DD.kind ? [DD] : "quote" === DD.kind ? ZD(DD.blocks) : []))
     }
 
-    function Kz(zz) {
-      switch (zz.kind) {
+    function oD(DD) {
+      switch (DD.kind) {
         case "heading":
         case "paragraph":
-          return zz.text;
+          return DD.text;
         case "code":
-          return zz.code;
+          return DD.code;
         case "table":
-          return [zz.header, ...zz.rows].map((zz => zz.join(" "))).join(" ");
+          return [DD.header, ...DD.rows].map((DD => DD.join(" "))).join(" ");
         case "list": {
-          const uz = zz => zz.map((zz => `${zz.text} ${uz(zz.children)}`)).join(" ");
-          return uz(zz.items)
+          const CD = DD => DD.map((DD => `${DD.text} ${CD(DD.children)}`)).join(" ");
+          return CD(DD.items)
         }
         case "quote":
-          return zz.blocks.map(Kz).join(" ");
+          return DD.blocks.map(oD).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  6226: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => pz,
-      h: () => lz,
-      l: () => Mz
+  6235: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => BD,
+      g: () => fD,
+      h: () => bD
     });
-    bz(6220);
-    var Ez = bz(56),
-      nz = bz(4489),
-      iz = bz(1089);
-    const lz = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    cD(6233);
+    var ID = cD(53),
+      pD = cD(4534),
+      iD = cD(1093);
+    const fD = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function Mz(zz, uz) {
-      return zz === uz ? zz : `${zz} (${uz})`
+    function bD(DD, CD) {
+      return DD === CD ? DD : `${DD} (${CD})`
     }
 
-    function tz(zz) {
-      const uz = [];
-      let bz = 0;
-      for (const Ez of zz.matchAll(lz)) {
-        Ez.index > bz && uz.push(zz.slice(bz, Ez.index));
-        const [, nz, lz, tz, Hz, Oz, pz] = Ez;
-        void 0 !== nz ? uz.push(Mz(nz, lz)) : void 0 !== tz || void 0 !== Hz ? uz.push((0, iz.jsx)("strong", {
-          children: null !== tz && void 0 !== tz ? tz : Hz
-        }, Ez.index)) : void 0 !== Oz ? uz.push((0, iz.jsx)("em", {
-          children: Oz
-        }, Ez.index)) : uz.push((0, iz.jsx)("code", {
-          children: pz
-        }, Ez.index)), bz = Ez.index + Ez[0].length
+    function QD(DD) {
+      const CD = [];
+      let cD = 0;
+      for (const ID of DD.matchAll(fD)) {
+        ID.index > cD && CD.push(DD.slice(cD, ID.index));
+        const [, pD, fD, QD, wD, SD, BD] = ID;
+        void 0 !== pD ? CD.push(bD(pD, fD)) : void 0 !== QD || void 0 !== wD ? CD.push((0, iD.jsx)("strong", {
+          children: null !== QD && void 0 !== QD ? QD : wD
+        }, ID.index)) : void 0 !== SD ? CD.push((0, iD.jsx)("em", {
+          children: SD
+        }, ID.index)) : CD.push((0, iD.jsx)("code", {
+          children: BD
+        }, ID.index)), cD = ID.index + ID[0].length
       }
-      return bz < zz.length && uz.push(zz.slice(bz)), uz
+      return cD < DD.length && CD.push(DD.slice(cD)), CD
     }
 
-    function Hz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const Ez = zz.map(((zz, uz) => (0, iz.jsxs)("li", {
-        children: [tz(zz.text), zz.children.length > 0 && Hz(zz.children, !1)]
-      }, uz)));
-      return uz ? (0, iz.jsx)("ol", {
-        start: bz,
-        children: Ez
-      }) : (0, iz.jsx)("ul", {
-        children: Ez
+    function wD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const ID = DD.map(((DD, CD) => (0, iD.jsxs)("li", {
+        children: [QD(DD.text), DD.children.length > 0 && wD(DD.children, !1)]
+      }, CD)));
+      return CD ? (0, iD.jsx)("ol", {
+        start: cD,
+        children: ID
+      }) : (0, iD.jsx)("ul", {
+        children: ID
       })
     }
 
-    function Oz(zz, uz) {
-      switch (zz.kind) {
+    function SD(DD, CD) {
+      switch (DD.kind) {
         case "heading":
-          return zz.level <= 2 ? (0, iz.jsx)("h3", {
-            children: tz(zz.text)
-          }, uz) : (0, iz.jsx)("h4", {
-            children: tz(zz.text)
-          }, uz);
+          return DD.level <= 2 ? (0, iD.jsx)("h3", {
+            children: QD(DD.text)
+          }, CD) : (0, iD.jsx)("h4", {
+            children: QD(DD.text)
+          }, CD);
         case "paragraph":
-          return (0, iz.jsx)("p", {
-            children: tz(zz.text)
-          }, uz);
+          return (0, iD.jsx)("p", {
+            children: QD(DD.text)
+          }, CD);
         case "list":
-          return (0, iz.jsx)(Ez.Fragment, {
-            children: Hz(zz.items, zz.ordered)
-          }, uz);
+          return (0, iD.jsx)(ID.Fragment, {
+            children: wD(DD.items, DD.ordered)
+          }, CD);
         case "quote":
-          return (0, iz.jsx)("blockquote", {
-            children: zz.blocks.map(((zz, uz) => Oz(zz, uz)))
-          }, uz);
+          return (0, iD.jsx)("blockquote", {
+            children: DD.blocks.map(((DD, CD) => SD(DD, CD)))
+          }, CD);
         case "code":
-          return (0, iz.jsx)("pre", {
-            children: (0, iz.jsx)("code", {
-              children: zz.code
+          return (0, iD.jsx)("pre", {
+            children: (0, iD.jsx)("code", {
+              children: DD.code
             })
-          }, uz);
+          }, CD);
         case "table":
-          return (0, iz.jsxs)("table", {
-            children: [(0, iz.jsx)("thead", {
-              children: (0, iz.jsx)("tr", {
-                children: zz.header.map(((zz, uz) => (0, iz.jsx)("th", {
-                  children: tz(zz)
-                }, uz)))
+          return (0, iD.jsxs)("table", {
+            children: [(0, iD.jsx)("thead", {
+              children: (0, iD.jsx)("tr", {
+                children: DD.header.map(((DD, CD) => (0, iD.jsx)("th", {
+                  children: QD(DD)
+                }, CD)))
               })
-            }), (0, iz.jsx)("tbody", {
-              children: zz.rows.map(((zz, uz) => (0, iz.jsx)("tr", {
-                children: zz.map(((zz, uz) => (0, iz.jsx)("td", {
-                  children: tz(zz)
-                }, uz)))
-              }, uz)))
+            }), (0, iD.jsx)("tbody", {
+              children: DD.rows.map(((DD, CD) => (0, iD.jsx)("tr", {
+                children: DD.map(((DD, CD) => (0, iD.jsx)("td", {
+                  children: QD(DD)
+                }, CD)))
+              }, CD)))
             })]
-          }, uz);
+          }, CD);
         case "rule":
-          return (0, iz.jsx)("hr", {}, uz)
+          return (0, iD.jsx)("hr", {}, CD)
       }
     }
 
-    function pz(zz) {
+    function BD(DD) {
       let {
-        markdown: uz
-      } = zz, bz = 0;
-      return (0, iz.jsx)("div", {
+        markdown: CD
+      } = DD, cD = 0;
+      return (0, iD.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, nz.t)(uz).map(((zz, uz) => {
-          if ("list" !== zz.kind || !zz.ordered) return bz = 0, Oz(zz, uz);
-          const nz = bz + 1;
-          return bz += zz.items.length, (0, iz.jsx)(Ez.Fragment, {
-            children: Hz(zz.items, !0, nz)
-          }, uz)
+        children: (0, pD.C)(CD).map(((DD, CD) => {
+          if ("list" !== DD.kind || !DD.ordered) return cD = 0, SD(DD, CD);
+          const pD = cD + 1;
+          return cD += DD.items.length, (0, iD.jsx)(ID.Fragment, {
+            children: wD(DD.items, !0, pD)
+          }, CD)
         }))
       })
     }
   },
-  6214: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Xz,
-      k: () => fz,
-      g: () => rz,
-      l: () => Zz
+  6224: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => ND,
+      j: () => gD,
+      h: () => mD,
+      l: () => tD
     });
-    var Ez = bz(1768),
-      nz = bz(6176),
-      iz = bz(4629);
-    const lz = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var ID = cD(1796),
+      pD = cD(6184),
+      iD = cD(4630);
+    const fD = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function Mz(zz) {
-      return (0, iz.e)(zz, lz, (uz => !/^my/i.test(uz[0]) || !/follow $/i.test(zz.slice(0, uz.index)))).length > 0
+    function bD(DD) {
+      return (0, iD.f)(DD, fD, (CD => !/^my/i.test(CD[0]) || !/follow $/i.test(DD.slice(0, CD.index)))).length > 0
     }
-    const tz = /\byou(?:r|'re|'ll)?\b/i,
-      Hz = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      Oz = 2;
+    const QD = /\byou(?:r|'re|'ll)?\b/i,
+      wD = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      SD = 2;
 
-    function pz(zz) {
-      return function(zz) {
-        const uz = [];
-        let bz = !1;
-        for (const Ez of zz.split("\n")) {
-          if (/^\s*(```|~~~)/.test(Ez)) {
-            bz = !bz;
+    function BD(DD) {
+      return function(DD) {
+        const CD = [];
+        let cD = !1;
+        for (const ID of DD.split("\n")) {
+          if (/^\s*(```|~~~)/.test(ID)) {
+            cD = !cD;
             continue
           }
-          if (bz || /^\s*>/.test(Ez)) continue;
-          const zz = Ez.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          uz.push(...(0, nz.l)(zz))
+          if (cD || /^\s*>/.test(ID)) continue;
+          const DD = ID.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          CD.push(...(0, pD.n)(DD))
         }
-        return uz
-      }(zz).filter((zz => Mz(zz) || Hz.test(zz) && !tz.test(zz)))
+        return CD
+      }(DD).filter((DD => bD(DD) || wD.test(DD) && !QD.test(DD)))
     }
-    const dz = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      Fz = [{
+    const yD = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      MD = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function Zz(zz) {
-      const uz = Fz.findIndex((uz => uz.name === zz));
-      return -1 === uz ? Fz.length : uz
+    function tD(DD) {
+      const CD = MD.findIndex((CD => CD.name === DD));
+      return -1 === CD ? MD.length : CD
     }
-    const Rz = 2500,
-      Kz = 12e4;
-    class wz extends Error {
-      constructor(zz) {
-        super(`Studio AI chat ${zz}`), this.reason = zz
+    const ZD = 2500,
+      oD = 12e4;
+    class vD extends Error {
+      constructor(DD) {
+        super(`Studio AI chat ${DD}`), this.reason = DD
       }
     }
 
-    function Xz(zz, uz) {
-      const bz = new AbortController,
-        Ez = () => {
-          bz.abort()
+    function ND(DD, CD) {
+      const cD = new AbortController,
+        ID = () => {
+          cD.abort()
         },
-        nz = setTimeout(Ez, zz);
-      return null !== uz && void 0 !== uz && uz.aborted && Ez(), null === uz || void 0 === uz || uz.addEventListener("abort", Ez, {
+        pD = setTimeout(ID, DD);
+      return null !== CD && void 0 !== CD && CD.aborted && ID(), null === CD || void 0 === CD || CD.addEventListener("abort", ID, {
         once: !0
       }), {
-        signal: bz.signal,
+        signal: cD.signal,
         clear: () => {
-          clearTimeout(nz), null === uz || void 0 === uz || uz.removeEventListener("abort", Ez)
+          clearTimeout(pD), null === CD || void 0 === CD || CD.removeEventListener("abort", ID)
         }
       }
     }
 
-    function fz(zz, uz, bz) {
-      return new Promise(((nz, iz) => {
-        const lz = new AbortController,
-          Mz = () => {
-            lz.abort(), iz((0, Ez.g)(bz))
+    function gD(DD, CD, cD) {
+      return new Promise(((pD, iD) => {
+        const fD = new AbortController,
+          bD = () => {
+            fD.abort(), iD((0, ID.g)(cD))
           };
-        if (null !== bz && void 0 !== bz && bz.aborted) return void Mz();
-        null === bz || void 0 === bz || bz.addEventListener("abort", Mz, {
+        if (null !== cD && void 0 !== cD && cD.aborted) return void bD();
+        null === cD || void 0 === cD || cD.addEventListener("abort", bD, {
           once: !0
         });
-        const tz = Fz.map((() => !1));
-        let Hz = null;
-        const Oz = Fz.map((() => !1)),
-          pz = Fz.map((() => !1));
-        Fz.forEach(((Ez, dz) => {
-          const Zz = Xz(Kz, lz.signal);
-          oz(Ez, [{
+        const QD = MD.map((() => !1));
+        let wD = null;
+        const SD = MD.map((() => !1)),
+          BD = MD.map((() => !1));
+        MD.forEach(((ID, yD) => {
+          const tD = ND(oD, fD.signal);
+          nD(ID, [{
             role: "user",
-            content: zz
-          }], Zz.signal).then((zz => {
-            lz.signal.aborted || ("busy" === zz || "failed" === zz ? (Oz[dz] = "busy" === zz, pz[dz] = !0) : null !== zz && (null === Hz || dz < Hz.rank) && (Hz = {
-              rank: dz,
+            content: DD
+          }], tD.signal).then((DD => {
+            fD.signal.aborted || ("busy" === DD || "failed" === DD ? (SD[yD] = "busy" === DD, BD[yD] = !0) : null !== DD && (null === wD || yD < wD.rank) && (wD = {
+              rank: yD,
               answer: {
-                text: zz.text,
-                model: Ez.name
+                text: DD.text,
+                model: ID.name
               }
-            }, uz(Hz.answer)))
-          }), (zz => {
-            lz.signal.aborted || (pz[dz] = !0, console.warn(`Studio AI: ${Ez.name} couldn't be reached`, zz))
+            }, CD(wD.answer)))
+          }), (DD => {
+            fD.signal.aborted || (BD[yD] = !0, console.warn(`Studio AI: ${ID.name} couldn't be reached`, DD))
           })).finally((() => {
-            Zz.clear(), tz[dz] = !0, lz.signal.aborted || (() => {
-              var zz, uz;
-              const Ez = null !== (zz = null === (uz = Hz) || void 0 === uz ? void 0 : uz.rank) && void 0 !== zz ? zz : Fz.length;
-              tz.slice(0, Ez).includes(!1) || (null === bz || void 0 === bz || bz.removeEventListener("abort", Mz), lz.abort(), null !== Hz ? nz({
-                ...Hz.answer,
-                isFinal: !pz.slice(0, Hz.rank).includes(!0)
-              }) : iz(new wz(Oz.includes(!0) ? "busy" : "failed")))
+            tD.clear(), QD[yD] = !0, fD.signal.aborted || (() => {
+              var DD, CD;
+              const ID = null !== (DD = null === (CD = wD) || void 0 === CD ? void 0 : CD.rank) && void 0 !== DD ? DD : MD.length;
+              QD.slice(0, ID).includes(!1) || (null === cD || void 0 === cD || cD.removeEventListener("abort", bD), fD.abort(), null !== wD ? pD({
+                ...wD.answer,
+                isFinal: !BD.slice(0, wD.rank).includes(!0)
+              }) : iD(new vD(SD.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((zz => {
-            console.error("Studio AI: showing an answer failed", zz)
+          })).catch((DD => {
+            console.error("Studio AI: showing an answer failed", DD)
           }))
         }))
       }))
     }
 
-    function sz(zz) {
-      var uz, bz;
-      return "length" === (null === zz || void 0 === zz || null === (uz = zz.choices) || void 0 === uz || null === (bz = uz[0]) || void 0 === bz ? void 0 : bz.finish_reason)
+    function XD(DD) {
+      var CD, cD;
+      return "length" === (null === DD || void 0 === DD || null === (CD = DD.choices) || void 0 === CD || null === (cD = CD[0]) || void 0 === cD ? void 0 : cD.finish_reason)
     }
-    async function rz(zz, uz, bz) {
-      const Ez = Fz.find((uz => uz.name === zz));
-      if (void 0 === Ez) return "failed";
-      const nz = Xz(Kz, bz);
+    async function mD(DD, CD, cD) {
+      const ID = MD.find((CD => CD.name === DD));
+      if (void 0 === ID) return "failed";
+      const pD = ND(oD, cD);
       try {
-        const zz = await oz(Ez, uz, nz.signal);
-        return null !== zz && "object" === typeof zz ? zz.isCutOff ? (console.warn(`Studio AI: ${Ez.name}'s answer was cut off at the token limit`), null) : {
-          text: zz.text
-        } : zz
+        const DD = await nD(ID, CD, pD.signal);
+        return null !== DD && "object" === typeof DD ? DD.isCutOff ? (console.warn(`Studio AI: ${ID.name}'s answer was cut off at the token limit`), null) : {
+          text: DD.text
+        } : DD
       } finally {
-        nz.clear()
+        pD.clear()
       }
     }
-    async function oz(zz, uz, bz) {
-      const Ez = await fetch(dz, {
+    async function nD(DD, CD, cD) {
+      const ID = await fetch(yD, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: zz.name,
-          messages: uz,
-          max_tokens: Rz,
-          temperature: zz.temperature,
-          reasoning_effort: zz.reasoningEffort
+          model: DD.name,
+          messages: CD,
+          max_tokens: ZD,
+          temperature: DD.temperature,
+          reasoning_effort: DD.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: bz
+        signal: cD
       });
-      if (429 === Ez.status) return "busy";
-      if (!Ez.ok) return console.warn(`Studio AI: ${zz.name} answered ${Ez.status}`), "failed";
-      const nz = await Ez.json().catch((() => null)),
-        iz = function(zz) {
-          var uz, bz, Ez;
-          const nz = null === zz || void 0 === zz || null === (uz = zz.choices) || void 0 === uz || null === (bz = uz[0]) || void 0 === bz || null === (Ez = bz.message) || void 0 === Ez ? void 0 : Ez.content;
-          if ("string" !== typeof nz) return null;
-          const iz = nz.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === iz ? null : iz
-        }(nz);
-      return null !== iz && function(zz) {
-        const uz = pz(zz);
-        return uz.length >= Oz || uz.some((zz => Mz(zz)))
-      }(iz) ? (console.warn(`Studio AI: ${zz.name} thought out loud instead of answering`), "failed") : null === iz ? null : {
-        text: iz,
-        isCutOff: sz(nz)
+      if (429 === ID.status) return "busy";
+      if (!ID.ok) return console.warn(`Studio AI: ${DD.name} answered ${ID.status}`), "failed";
+      const pD = await ID.json().catch((() => null)),
+        iD = function(DD) {
+          var CD, cD, ID;
+          const pD = null === DD || void 0 === DD || null === (CD = DD.choices) || void 0 === CD || null === (cD = CD[0]) || void 0 === cD || null === (ID = cD.message) || void 0 === ID ? void 0 : ID.content;
+          if ("string" !== typeof pD) return null;
+          const iD = pD.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === iD ? null : iD
+        }(pD);
+      return null !== iD && function(DD) {
+        const CD = BD(DD);
+        return CD.length >= SD || CD.some((DD => bD(DD)))
+      }(iD) ? (console.warn(`Studio AI: ${DD.name} thought out loud instead of answering`), "failed") : null === iD ? null : {
+        text: iD,
+        isCutOff: XD(pD)
       }
     }
   },
-  6176: (zz, uz, bz) => {
-    bz.d(uz, {
-      A: () => fz,
-      B: () => rz,
-      D: () => Xz,
-      F: () => pz,
-      I: () => Hz,
-      K: () => Fz,
-      b: () => Zz,
-      c: () => Mz,
-      d: () => lz,
-      g: () => Rz,
-      k: () => dz,
-      l: () => Oz,
-      m: () => iz,
-      q: () => nz,
-      t: () => sz,
-      v: () => oz,
-      x: () => Kz
+  6184: (DD, CD, cD) => {
+    cD.d(CD, {
+      A: () => ND,
+      E: () => BD,
+      I: () => wD,
+      M: () => MD,
+      b: () => tD,
+      f: () => bD,
+      h: () => fD,
+      j: () => ZD,
+      l: () => yD,
+      n: () => SD,
+      o: () => iD,
+      q: () => pD,
+      r: () => XD,
+      t: () => nD,
+      u: () => oD,
+      y: () => gD,
+      z: () => mD
     });
-    var Ez = bz(4629);
-    const nz = 2e3,
-      iz = 2e4;
+    var ID = cD(4630);
+    const pD = 2e3,
+      iD = 2e4;
 
-    function lz(zz) {
-      return zz.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function fD(DD) {
+      return DD.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function Mz(zz) {
-      return zz.replace(/\$/g, "\\$")
+    function bD(DD) {
+      return DD.replace(/\$/g, "\\$")
     }
-    const tz = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const QD = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function Hz(zz, uz) {
-      tz.lastIndex = uz;
-      const bz = tz.exec(zz);
-      return bz.index + bz[0].length
-    }
-
-    function Oz(zz) {
-      return (0, Ez.u)(zz, /\s+/g, (0, Ez.q)(".!?")).flatMap((zz => zz.split("\n")))
+    function wD(DD, CD) {
+      QD.lastIndex = CD;
+      const cD = QD.exec(DD);
+      return cD.index + cD[0].length
     }
 
-    function pz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uz;
-      const Ez = [...zz.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((zz => zz.index)),
-        nz = Ez.filter((zz => zz < uz)),
-        iz = Ez.find((zz => zz >= bz));
-      return [0 === nz.length ? 0 : nz.at(-1) + 1, void 0 === iz ? zz.length : iz + 1]
+    function SD(DD) {
+      return (0, ID.F)(DD, /\s+/g, (0, ID.y)(".!?")).flatMap((DD => DD.split("\n")))
     }
 
-    function dz(zz, uz) {
-      const bz = zz.charCodeAt(uz - 1);
-      return zz.slice(0, uz > 0 && uz < zz.length && bz >= 55296 && bz <= 56319 ? uz - 1 : uz)
+    function BD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : CD;
+      const ID = [...DD.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((DD => DD.index)),
+        pD = ID.filter((DD => DD < CD)),
+        iD = ID.find((DD => DD >= cD));
+      return [0 === pD.length ? 0 : pD.at(-1) + 1, void 0 === iD ? DD.length : iD + 1]
     }
 
-    function Fz(zz, uz) {
-      return `${uz}${zz.replace(/\\/g,"\\\\").split(uz).join(`\\${uz}`)}${uz}`
+    function yD(DD, CD) {
+      const cD = DD.charCodeAt(CD - 1);
+      return DD.slice(0, CD > 0 && CD < DD.length && cD >= 55296 && cD <= 56319 ? CD - 1 : CD)
     }
 
-    function Zz(zz) {
-      return zz.charAt(0).toUpperCase() + zz.slice(1)
+    function MD(DD, CD) {
+      return `${CD}${DD.replace(/\\/g,"\\\\").split(CD).join(`\\${CD}`)}${CD}`
     }
 
-    function Rz(zz) {
-      return Math.round(zz).toLocaleString("en-US")
+    function tD(DD) {
+      return DD.charAt(0).toUpperCase() + DD.slice(1)
     }
 
-    function Kz(zz) {
-      return zz.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((zz => "" !== zz))
-    }
-    const wz = 3;
-
-    function Xz(zz, uz) {
-      return Kz(zz).filter((zz => zz.length >= wz && !/\d/.test(zz))).map((zz => `${zz} ${uz}`))
+    function ZD(DD) {
+      return Math.round(DD).toLocaleString("en-US")
     }
 
-    function fz(zz) {
-      return zz.split(/[\s:_]+/).filter((zz => "" !== zz)).map(lz).join("[`:_\\s]+")
+    function oD(DD) {
+      return DD.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((DD => "" !== DD))
+    }
+    const vD = 3;
+
+    function ND(DD, CD) {
+      return oD(DD).filter((DD => DD.length >= vD && !/\d/.test(DD))).map((DD => `${DD} ${CD}`))
     }
 
-    function sz(zz) {
-      return Kz(zz.split(".").pop())
+    function gD(DD) {
+      return DD.split(/[\s:_]+/).filter((DD => "" !== DD)).map(fD).join("[`:_\\s]+")
     }
 
-    function rz(zz) {
-      return zz.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function XD(DD) {
+      return oD(DD.split(".").pop())
     }
 
-    function oz(zz) {
-      let uz = null;
+    function mD(DD) {
+      return DD.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function nD(DD) {
+      let CD = null;
       return () => {
-        const bz = uz ??= zz();
-        return bz.catch((() => {
-          uz === bz && (uz = null)
-        })), bz
+        const cD = CD ??= DD();
+        return cD.catch((() => {
+          CD === cD && (CD = null)
+        })), cD
       }
     }
   },
-  4629: (zz, uz, bz) => {
-    function Ez(zz) {
+  4630: (DD, CD, cD) => {
+    function ID(DD) {
       return {
-        notAfter: zz
+        notAfter: DD
       }
     }
-    bz.d(uz, {
-      c: () => tz,
-      e: () => Hz,
-      i: () => Mz,
-      j: () => Ez,
-      l: () => nz,
-      m: () => iz,
-      q: () => lz,
-      t: () => Oz,
-      u: () => pz
+    cD.d(CD, {
+      C: () => SD,
+      F: () => BD,
+      e: () => QD,
+      f: () => wD,
+      j: () => bD,
+      n: () => ID,
+      q: () => pD,
+      u: () => iD,
+      y: () => fD
     });
-    const nz = Ez("\\w$."),
-      iz = Ez("\\w.,");
+    const pD = ID("\\w$."),
+      iD = ID("\\w.,");
 
-    function lz(zz) {
-      return uz => tz(uz, zz)
+    function fD(DD) {
+      return CD => QD(CD, DD)
     }
 
-    function Mz(zz) {
-      return uz => !zz.test(uz.input.slice(0, uz.index))
+    function bD(DD) {
+      return CD => !DD.test(CD.input.slice(0, CD.index))
     }
 
-    function tz(zz, uz) {
-      return zz.index > 0 && new RegExp(`[${uz}]`).test(zz.input[zz.index - 1])
+    function QD(DD, CD) {
+      return DD.index > 0 && new RegExp(`[${CD}]`).test(DD.input[DD.index - 1])
     }
 
-    function Hz(zz, uz, bz) {
-      return function(zz) {
-        return void 0 !== zz && "function" !== typeof zz
-      }(bz) ? function(zz, uz, bz) {
-        const Ez = uz.flags.replace(/[gy]/g, ""),
-          nz = new RegExp(`[^${bz}](?:${uz.source})`, `${Ez}g`),
-          iz = [],
-          lz = bz => {
-            const Ez = bz.index + bz[0].length;
-            return ("" === bz[0] ? dz(zz, uz, Ez) : Ez) - 1
+    function wD(DD, CD, cD) {
+      return function(DD) {
+        return void 0 !== DD && "function" !== typeof DD
+      }(cD) ? function(DD, CD, cD) {
+        const ID = CD.flags.replace(/[gy]/g, ""),
+          pD = new RegExp(`[^${cD}](?:${CD.source})`, `${ID}g`),
+          iD = [],
+          fD = cD => {
+            const ID = cD.index + cD[0].length;
+            return ("" === cD[0] ? yD(DD, CD, ID) : ID) - 1
           },
-          Mz = new RegExp(`(?:${uz.source})`, `${Ez}y`).exec(zz);
-        if (Mz) {
-          if (iz.push(Mz), !uz.global) return iz;
-          nz.lastIndex = lz(Mz)
+          bD = new RegExp(`(?:${CD.source})`, `${ID}y`).exec(DD);
+        if (bD) {
+          if (iD.push(bD), !CD.global) return iD;
+          pD.lastIndex = fD(bD)
         }
-        for (let tz = nz.exec(zz); tz; tz = nz.exec(zz)) {
-          const bz = dz(zz, uz, tz.index) - tz.index;
-          if (tz[0] = tz[0].slice(bz), tz.index += bz, iz.push(tz), !uz.global) break;
-          nz.lastIndex = lz(tz)
+        for (let QD = pD.exec(DD); QD; QD = pD.exec(DD)) {
+          const cD = yD(DD, CD, QD.index) - QD.index;
+          if (QD[0] = QD[0].slice(cD), QD.index += cD, iD.push(QD), !CD.global) break;
+          pD.lastIndex = fD(QD)
         }
-        return iz
-      }(zz, uz, bz.notAfter) : function(zz, uz, bz) {
-        const Ez = new RegExp(uz.source, `${uz.flags.replace(/[gy]/g,"")}g`),
-          nz = [];
-        for (let iz = Ez.exec(zz); iz; iz = Ez.exec(zz))
-          if (!bz || bz(iz)) {
-            if (nz.push(iz), !uz.global) break;
-            "" === iz[0] && (Ez.lastIndex = dz(zz, uz, Ez.lastIndex))
-          } else Ez.lastIndex = dz(zz, uz, iz.index);
-        return nz
-      }(zz, uz, bz)
+        return iD
+      }(DD, CD, cD.notAfter) : function(DD, CD, cD) {
+        const ID = new RegExp(CD.source, `${CD.flags.replace(/[gy]/g,"")}g`),
+          pD = [];
+        for (let iD = ID.exec(DD); iD; iD = ID.exec(DD))
+          if (!cD || cD(iD)) {
+            if (pD.push(iD), !CD.global) break;
+            "" === iD[0] && (ID.lastIndex = yD(DD, CD, ID.lastIndex))
+          } else ID.lastIndex = yD(DD, CD, iD.index);
+        return pD
+      }(DD, CD, cD)
     }
 
-    function Oz(zz, uz, bz, Ez) {
-      let nz = "",
-        iz = 0;
-      for (const lz of Hz(zz, uz, bz)) nz += zz.slice(iz, lz.index) + Ez(lz), iz = lz.index + lz[0].length;
-      return nz + zz.slice(iz)
+    function SD(DD, CD, cD, ID) {
+      let pD = "",
+        iD = 0;
+      for (const fD of wD(DD, CD, cD)) pD += DD.slice(iD, fD.index) + ID(fD), iD = fD.index + fD[0].length;
+      return pD + DD.slice(iD)
     }
 
-    function pz(zz, uz, bz) {
-      const Ez = [];
-      let nz = 0;
-      for (const iz of Hz(zz, uz, bz)) Ez.push(zz.slice(nz, iz.index)), nz = iz.index + iz[0].length;
-      return [...Ez, zz.slice(nz)]
+    function BD(DD, CD, cD) {
+      const ID = [];
+      let pD = 0;
+      for (const iD of wD(DD, CD, cD)) ID.push(DD.slice(pD, iD.index)), pD = iD.index + iD[0].length;
+      return [...ID, DD.slice(pD)]
     }
 
-    function dz(zz, uz, bz) {
-      var Ez;
-      return bz + (uz.unicode && (null !== (Ez = zz.codePointAt(bz)) && void 0 !== Ez ? Ez : 0) > 65535 ? 2 : 1)
+    function yD(DD, CD, cD) {
+      var ID;
+      return cD + (CD.unicode && (null !== (ID = DD.codePointAt(cD)) && void 0 !== ID ? ID : 0) > 65535 ? 2 : 1)
     }
   },
-  6220: () => {}
+  6233: () => {}
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

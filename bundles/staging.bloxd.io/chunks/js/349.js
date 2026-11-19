@@ -1,17 +1,17 @@
 export const id = 349;
 export const ids = [349];
 export const modules = {
-  60391: (zz, uz, bz) => {
-    bz.d(uz, {
-      allocateF64Mat4: () => nz
+  60476: (DD, CD, cD) => {
+    cD.d(CD, {
+      allocateF64Mat4: () => pD
     });
-    var Ez = bz(40939);
+    var ID = cD(40814);
 
-    function nz() {
-      return new Ez.e(16)
+    function pD() {
+      return new ID.f(16)
     }
-    nz["@@MAT4_STORAGE_F64@@"] = !0
+    pD["@@MAT4_STORAGE_F64@@"] = !0
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

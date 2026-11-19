@@ -1,47 +1,47 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  40281: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => gz
+  40160: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => RD
     });
-    var Ez = bz(39170),
-      nz = bz(39172),
-      iz = bz(36547),
-      lz = bz(36519),
-      Mz = bz(36553),
-      tz = bz(39384),
-      Hz = bz(39584),
-      Oz = bz(39331),
-      pz = bz(39085),
-      dz = bz(36526);
-    class Fz {
+    var ID = cD(39154),
+      pD = cD(39156),
+      iD = cD(36473),
+      fD = cD(36446),
+      bD = cD(36479),
+      QD = cD(39356),
+      wD = cD(39531),
+      SD = cD(39319),
+      BD = cD(39054),
+      yD = cD(36449);
+    class MD {
       constructor() {
         this._zoomStopsAnimation = !1, this._idleRotationSpeed = .05, this._idleRotationWaitTime = 2e3, this._idleRotationSpinupTime = 2e3, this.targetAlpha = null, this._attachedCamera = null, this._isPointerDown = !1, this._lastFrameTime = null, this._lastInteractionTime = -1 / 0, this._cameraRotationSpeed = 0, this._lastFrameRadius = 0
       }
       get name() {
         return "AutoRotation"
       }
-      set zoomStopsAnimation(zz) {
-        this._zoomStopsAnimation = zz
+      set zoomStopsAnimation(DD) {
+        this._zoomStopsAnimation = DD
       }
       get zoomStopsAnimation() {
         return this._zoomStopsAnimation
       }
-      set idleRotationSpeed(zz) {
-        this._idleRotationSpeed = zz
+      set idleRotationSpeed(DD) {
+        this._idleRotationSpeed = DD
       }
       get idleRotationSpeed() {
         return this._idleRotationSpeed
       }
-      set idleRotationWaitTime(zz) {
-        this._idleRotationWaitTime = zz
+      set idleRotationWaitTime(DD) {
+        this._idleRotationWaitTime = DD
       }
       get idleRotationWaitTime() {
         return this._idleRotationWaitTime
       }
-      set idleRotationSpinupTime(zz) {
-        this._idleRotationSpinupTime = zz
+      set idleRotationSpinupTime(DD) {
+        this._idleRotationSpinupTime = DD
       }
       get idleRotationSpinupTime() {
         return this._idleRotationSpinupTime
@@ -53,75 +53,75 @@ export const modules = {
         return this._attachedCamera
       }
       init() {}
-      attach(zz) {
-        this._attachedCamera = zz;
-        const uz = this._attachedCamera.XT();
-        this._onPrePointerObservableObserver = uz.onPrePointerObservable.add((zz => {
-          zz.type !== Oz.c.POINTERDOWN ? zz.type === Oz.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onAfterCheckInputsObserver = zz.onAfterCheckInputsObservable.add((() => {
+      attach(DD) {
+        this._attachedCamera = DD;
+        const CD = this._attachedCamera.hq();
+        this._onPrePointerObservableObserver = CD.onPrePointerObservable.add((DD => {
+          DD.type !== SD.c.POINTERDOWN ? DD.type === SD.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
+        })), this._onAfterCheckInputsObserver = DD.onAfterCheckInputsObservable.add((() => {
           if (this._reachTargetAlpha()) return;
-          const zz = pz.b.Now;
-          let uz = 0;
-          null != this._lastFrameTime && (uz = zz - this._lastFrameTime), this._lastFrameTime = zz, this._applyUserInteraction();
-          const bz = zz - this._lastInteractionTime - this._idleRotationWaitTime,
-            Ez = Math.max(Math.min(bz / this._idleRotationSpinupTime, 1), 0);
-          this._cameraRotationSpeed = this._idleRotationSpeed * Ez, this._attachedCamera && (this._attachedCamera.alpha -= this._cameraRotationSpeed * (uz / 1e3))
+          const DD = BD.b.Now;
+          let CD = 0;
+          null != this._lastFrameTime && (CD = DD - this._lastFrameTime), this._lastFrameTime = DD, this._applyUserInteraction();
+          const cD = DD - this._lastInteractionTime - this._idleRotationWaitTime,
+            ID = Math.max(Math.min(cD / this._idleRotationSpinupTime, 1), 0);
+          this._cameraRotationSpeed = this._idleRotationSpeed * ID, this._attachedCamera && (this._attachedCamera.alpha -= this._cameraRotationSpeed * (CD / 1e3))
         }))
       }
       detach() {
         if (!this._attachedCamera) return;
-        const zz = this._attachedCamera.XT();
-        this._onPrePointerObservableObserver && zz.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._attachedCamera = null, this._lastFrameTime = null
+        const DD = this._attachedCamera.hq();
+        this._onPrePointerObservableObserver && DD.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._attachedCamera = null, this._lastFrameTime = null
       }
-      resetLastInteractionTime(zz) {
-        this._lastInteractionTime = zz ?? pz.b.Now
+      resetLastInteractionTime(DD) {
+        this._lastInteractionTime = DD ?? BD.b.Now
       }
       _reachTargetAlpha() {
-        return !(!this._attachedCamera || null === this.targetAlpha) && Math.abs(this._attachedCamera.alpha - this.targetAlpha) < dz.b
+        return !(!this._attachedCamera || null === this.targetAlpha) && Math.abs(this._attachedCamera.alpha - this.targetAlpha) < yD.c
       }
       _userIsZooming() {
         return !!this._attachedCamera && 0 !== this._attachedCamera.inertialRadiusOffset
       }
       _shouldAnimationStopForInteraction() {
         if (!this._attachedCamera) return !1;
-        let zz = !1;
-        return this._lastFrameRadius === this._attachedCamera.radius && 0 !== this._attachedCamera.inertialRadiusOffset && (zz = !0), this._lastFrameRadius = this._attachedCamera.radius, this._zoomStopsAnimation ? zz : this._userIsZooming()
+        let DD = !1;
+        return this._lastFrameRadius === this._attachedCamera.radius && 0 !== this._attachedCamera.inertialRadiusOffset && (DD = !0), this._lastFrameRadius = this._attachedCamera.radius, this._zoomStopsAnimation ? DD : this._userIsZooming()
       }
       _applyUserInteraction() {
-        this._userIsMoving() && !this._shouldAnimationStopForInteraction() && (this._lastInteractionTime = pz.b.Now)
+        this._userIsMoving() && !this._shouldAnimationStopForInteraction() && (this._lastInteractionTime = BD.b.Now)
       }
       _userIsMoving() {
         return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
       }
     }
-    bz(40289);
-    class Zz {
+    cD(40166);
+    class tD {
       constructor() {
-        this._easingMode = Zz.EASINGMODE_EASEIN
+        this._easingMode = tD.EASINGMODE_EASEIN
       }
-      setEasingMode(zz) {
-        const uz = Math.min(Math.max(zz, 0), 2);
-        this._easingMode = uz
+      setEasingMode(DD) {
+        const CD = Math.min(Math.max(DD, 0), 2);
+        this._easingMode = CD
       }
       getEasingMode() {
         return this._easingMode
       }
-      easeInCore(zz) {
+      easeInCore(DD) {
         throw new Error("You must implement this method")
       }
-      ease(zz) {
+      ease(DD) {
         switch (this._easingMode) {
-          case Zz.EASINGMODE_EASEIN:
-            return this.easeInCore(zz);
-          case Zz.EASINGMODE_EASEOUT:
-            return 1 - this.easeInCore(1 - zz)
+          case tD.EASINGMODE_EASEIN:
+            return this.easeInCore(DD);
+          case tD.EASINGMODE_EASEOUT:
+            return 1 - this.easeInCore(1 - DD)
         }
-        return zz >= .5 ? .5 * (1 - this.easeInCore(2 * (1 - zz))) + .5 : .5 * this.easeInCore(2 * zz)
+        return DD >= .5 ? .5 * (1 - this.easeInCore(2 * (1 - DD))) + .5 : .5 * this.easeInCore(2 * DD)
       }
     }
-    Zz.EASINGMODE_EASEIN = 0, Zz.EASINGMODE_EASEOUT = 1, Zz.EASINGMODE_EASEINOUT = 2;
-    var Rz = bz(40298);
-    class Kz {
+    tD.EASINGMODE_EASEIN = 0, tD.EASINGMODE_EASEOUT = 1, tD.EASINGMODE_EASEINOUT = 2;
+    var ZD = cD(40171);
+    class oD {
       constructor() {
         this.transitionDuration = 450, this.lowerRadiusTransitionRange = 2, this.upperRadiusTransitionRange = -2, this._autoTransitionRange = !1, this._attachedCamera = null, this._radiusIsAnimating = !1, this._radiusBounceTransition = null, this._animatables = new Array
       }
@@ -131,37 +131,37 @@ export const modules = {
       get autoTransitionRange() {
         return this._autoTransitionRange
       }
-      set autoTransitionRange(zz) {
-        if (this._autoTransitionRange === zz) return;
-        this._autoTransitionRange = zz;
-        const uz = this._attachedCamera;
-        uz && (zz ? this._onMeshTargetChangedObserver = uz.onMeshTargetChangedObservable.add((zz => {
-          if (zz && (zz.computeWorldMatrix(!0), zz.lG)) {
-            const uz = zz.lG().diagonalLength;
-            this.lowerRadiusTransitionRange = .05 * uz, this.upperRadiusTransitionRange = .05 * uz
+      set autoTransitionRange(DD) {
+        if (this._autoTransitionRange === DD) return;
+        this._autoTransitionRange = DD;
+        const CD = this._attachedCamera;
+        CD && (DD ? this._onMeshTargetChangedObserver = CD.onMeshTargetChangedObservable.add((DD => {
+          if (DD && (DD.computeWorldMatrix(!0), DD.VJ)) {
+            const CD = DD.VJ().diagonalLength;
+            this.lowerRadiusTransitionRange = .05 * CD, this.upperRadiusTransitionRange = .05 * CD
           }
-        })) : this._onMeshTargetChangedObserver && uz.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver))
+        })) : this._onMeshTargetChangedObserver && CD.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver))
       }
       get attachedNode() {
         return this._attachedCamera
       }
       init() {}
-      attach(zz) {
-        this._attachedCamera = zz, this._onAfterCheckInputsObserver = zz.onAfterCheckInputsObservable.add((() => {
+      attach(DD) {
+        this._attachedCamera = DD, this._onAfterCheckInputsObserver = DD.onAfterCheckInputsObservable.add((() => {
           this._attachedCamera && (this._isRadiusAtLimit(this._attachedCamera.lowerRadiusLimit) && this._applyBoundRadiusAnimation(this.lowerRadiusTransitionRange), this._isRadiusAtLimit(this._attachedCamera.upperRadiusLimit) && this._applyBoundRadiusAnimation(this.upperRadiusTransitionRange))
         }))
       }
       detach() {
         this._attachedCamera && (this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null)
       }
-      _isRadiusAtLimit(zz) {
-        return !!this._attachedCamera && (this._attachedCamera.radius === zz && !this._radiusIsAnimating)
+      _isRadiusAtLimit(DD) {
+        return !!this._attachedCamera && (this._attachedCamera.radius === DD && !this._radiusIsAnimating)
       }
-      _applyBoundRadiusAnimation(zz) {
+      _applyBoundRadiusAnimation(DD) {
         if (!this._attachedCamera) return;
-        this._radiusBounceTransition || (Kz.EasingFunction.setEasingMode(Kz.EasingMode), this._radiusBounceTransition = Rz.c.CreateAnimation("radius", Rz.c.ANIMATIONTYPE_FLOAT, 60, Kz.EasingFunction)), this._cachedWheelPrecision = this._attachedCamera.wheelPrecision, this._attachedCamera.wheelPrecision = 1 / 0, this._attachedCamera.inertialRadiusOffset = 0, this.stopAllAnimations(), this._radiusIsAnimating = !0;
-        const uz = Rz.c.TransitionTo("radius", this._attachedCamera.radius + zz, this._attachedCamera, this._attachedCamera.XT(), 60, this._radiusBounceTransition, this.transitionDuration, (() => this._clearAnimationLocks()));
-        uz && this._animatables.push(uz)
+        this._radiusBounceTransition || (oD.EasingFunction.setEasingMode(oD.EasingMode), this._radiusBounceTransition = ZD.d.CreateAnimation("radius", ZD.d.ANIMATIONTYPE_FLOAT, 60, oD.EasingFunction)), this._cachedWheelPrecision = this._attachedCamera.wheelPrecision, this._attachedCamera.wheelPrecision = 1 / 0, this._attachedCamera.inertialRadiusOffset = 0, this.stopAllAnimations(), this._radiusIsAnimating = !0;
+        const CD = ZD.d.TransitionTo("radius", this._attachedCamera.radius + DD, this._attachedCamera, this._attachedCamera.hq(), 60, this._radiusBounceTransition, this.transitionDuration, (() => this._clearAnimationLocks()));
+        CD && this._animatables.push(CD)
       }
       _clearAnimationLocks() {
         this._radiusIsAnimating = !1, this._attachedCamera && (this._attachedCamera.wheelPrecision = this._cachedWheelPrecision)
@@ -170,67 +170,67 @@ export const modules = {
         for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0].onAnimationEnd = null, this._animatables[0].stop(), this._animatables.shift()
       }
     }
-    Kz.EasingFunction = new class extends Zz {
+    oD.EasingFunction = new class extends tD {
       constructor() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        super(), this.amplitude = zz
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        super(), this.amplitude = DD
       }
-      easeInCore(zz) {
-        const uz = Math.max(0, this.amplitude);
-        return Math.pow(zz, 3) - zz * uz * Math.sin(3.141592653589793 * zz)
+      easeInCore(DD) {
+        const CD = Math.max(0, this.amplitude);
+        return Math.pow(DD, 3) - DD * CD * Math.sin(3.141592653589793 * DD)
       }
-    }(.3), Kz.EasingMode = Zz.EASINGMODE_EASEOUT;
-    class wz {
+    }(.3), oD.EasingMode = tD.EASINGMODE_EASEOUT;
+    class vD {
       constructor() {
-        this.onTargetFramingAnimationEndObservable = new iz.b, this._mode = wz.FitFrustumSidesMode, this._radiusScale = 1, this._positionScale = .5, this._defaultElevation = .3, this._elevationReturnTime = 1500, this._elevationReturnWaitTime = 1e3, this._zoomStopsAnimation = !1, this._framingTime = 1500, this.autoCorrectCameraLimitsAndSensibility = !0, this._attachedCamera = null, this._isPointerDown = !1, this._lastInteractionTime = -1 / 0, this._animatables = new Array, this._betaIsAnimating = !1
+        this.onTargetFramingAnimationEndObservable = new iD.c, this._mode = vD.FitFrustumSidesMode, this._radiusScale = 1, this._positionScale = .5, this._defaultElevation = .3, this._elevationReturnTime = 1500, this._elevationReturnWaitTime = 1e3, this._zoomStopsAnimation = !1, this._framingTime = 1500, this.autoCorrectCameraLimitsAndSensibility = !0, this._attachedCamera = null, this._isPointerDown = !1, this._lastInteractionTime = -1 / 0, this._animatables = new Array, this._betaIsAnimating = !1
       }
       get name() {
         return "Framing"
       }
-      set mode(zz) {
-        this._mode = zz
+      set mode(DD) {
+        this._mode = DD
       }
       get mode() {
         return this._mode
       }
-      set radiusScale(zz) {
-        this._radiusScale = zz
+      set radiusScale(DD) {
+        this._radiusScale = DD
       }
       get radiusScale() {
         return this._radiusScale
       }
-      set positionScale(zz) {
-        this._positionScale = zz
+      set positionScale(DD) {
+        this._positionScale = DD
       }
       get positionScale() {
         return this._positionScale
       }
-      set defaultElevation(zz) {
-        this._defaultElevation = zz
+      set defaultElevation(DD) {
+        this._defaultElevation = DD
       }
       get defaultElevation() {
         return this._defaultElevation
       }
-      set elevationReturnTime(zz) {
-        this._elevationReturnTime = zz
+      set elevationReturnTime(DD) {
+        this._elevationReturnTime = DD
       }
       get elevationReturnTime() {
         return this._elevationReturnTime
       }
-      set elevationReturnWaitTime(zz) {
-        this._elevationReturnWaitTime = zz
+      set elevationReturnWaitTime(DD) {
+        this._elevationReturnWaitTime = DD
       }
       get elevationReturnWaitTime() {
         return this._elevationReturnWaitTime
       }
-      set zoomStopsAnimation(zz) {
-        this._zoomStopsAnimation = zz
+      set zoomStopsAnimation(DD) {
+        this._zoomStopsAnimation = DD
       }
       get zoomStopsAnimation() {
         return this._zoomStopsAnimation
       }
-      set framingTime(zz) {
-        this._framingTime = zz
+      set framingTime(DD) {
+        this._framingTime = DD
       }
       get framingTime() {
         return this._framingTime
@@ -239,102 +239,102 @@ export const modules = {
         return this._attachedCamera
       }
       init() {}
-      attach(zz) {
-        this._attachedCamera = zz;
-        const uz = this._attachedCamera.XT();
-        wz.EasingFunction.setEasingMode(wz.EasingMode), this._onPrePointerObservableObserver = uz.onPrePointerObservable.add((zz => {
-          zz.type !== Oz.c.POINTERDOWN ? zz.type === Oz.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onMeshTargetChangedObserver = zz.onMeshTargetChangedObservable.add((zz => {
-          zz && zz.lG && this.zoomOnMesh(zz, void 0, (() => {
+      attach(DD) {
+        this._attachedCamera = DD;
+        const CD = this._attachedCamera.hq();
+        vD.EasingFunction.setEasingMode(vD.EasingMode), this._onPrePointerObservableObserver = CD.onPrePointerObservable.add((DD => {
+          DD.type !== SD.c.POINTERDOWN ? DD.type === SD.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
+        })), this._onMeshTargetChangedObserver = DD.onMeshTargetChangedObservable.add((DD => {
+          DD && DD.VJ && this.zoomOnMesh(DD, void 0, (() => {
             this.onTargetFramingAnimationEndObservable.notifyObservers()
           }))
-        })), this._onAfterCheckInputsObserver = zz.onAfterCheckInputsObservable.add((() => {
+        })), this._onAfterCheckInputsObserver = DD.onAfterCheckInputsObservable.add((() => {
           this._applyUserInteraction(), this._maintainCameraAboveGround()
         }))
       }
       detach() {
         if (!this._attachedCamera) return;
-        const zz = this._attachedCamera.XT();
-        this._onPrePointerObservableObserver && zz.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null
+        const DD = this._attachedCamera.hq();
+        this._onPrePointerObservableObserver && DD.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null
       }
-      zoomOnMesh(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        zz.computeWorldMatrix(!0);
-        const Ez = zz.lG().boundingBox;
-        this.zoomOnBoundingInfo(Ez.minimumWorld, Ez.maximumWorld, uz, bz)
+      zoomOnMesh(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        DD.computeWorldMatrix(!0);
+        const ID = DD.VJ().boundingBox;
+        this.zoomOnBoundingInfo(ID.minimumWorld, ID.maximumWorld, CD, cD)
       }
-      zoomOnMeshHierarchy(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        zz.computeWorldMatrix(!0);
-        const Ez = zz.getHierarchyBoundingVectors(!0);
-        this.zoomOnBoundingInfo(Ez.min, Ez.max, uz, bz)
+      zoomOnMeshHierarchy(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        DD.computeWorldMatrix(!0);
+        const ID = DD.getHierarchyBoundingVectors(!0);
+        this.zoomOnBoundingInfo(ID.min, ID.max, CD, cD)
       }
-      zoomOnMeshesHierarchy(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const Ez = new lz.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-          nz = new lz.n(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-        for (let iz = 0; iz < zz.length; iz++) {
-          const uz = zz[iz].getHierarchyBoundingVectors(!0);
-          lz.n.CheckExtends(uz.min, Ez, nz), lz.n.CheckExtends(uz.max, Ez, nz)
+      zoomOnMeshesHierarchy(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const ID = new fD.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
+          pD = new fD.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+        for (let iD = 0; iD < DD.length; iD++) {
+          const CD = DD[iD].getHierarchyBoundingVectors(!0);
+          fD.p.CheckExtends(CD.min, ID, pD), fD.p.CheckExtends(CD.max, ID, pD)
         }
-        this.zoomOnBoundingInfo(Ez, nz, uz, bz)
+        this.zoomOnBoundingInfo(ID, pD, CD, cD)
       }
-      zoomOnBoundingInfo(zz, uz) {
-        let bz, Ez = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          nz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      zoomOnBoundingInfo(DD, CD) {
+        let cD, ID = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
         if (!this._attachedCamera) return !1;
-        const iz = zz.y,
-          Mz = iz + (uz.y - iz) * this._positionScale,
-          tz = uz.subtract(zz).scale(.5);
-        if (!isFinite(Mz)) return !1;
-        if (Ez) bz = new lz.n(0, Mz, 0);
+        const iD = DD.y,
+          bD = iD + (CD.y - iD) * this._positionScale,
+          QD = CD.subtract(DD).scale(.5);
+        if (!isFinite(bD)) return !1;
+        if (ID) cD = new fD.p(0, bD, 0);
         else {
-          const uz = zz.add(tz);
-          bz = new lz.n(uz.x, Mz, uz.z)
+          const CD = DD.add(QD);
+          cD = new fD.p(CD.x, bD, CD.z)
         }
-        this._vectorTransition || (this._vectorTransition = Rz.c.CreateAnimation("target", Rz.c.ANIMATIONTYPE_VECTOR3, 60, wz.EasingFunction)), this._betaIsAnimating = !0;
-        let Hz = Rz.c.TransitionTo("target", bz, this._attachedCamera, this._attachedCamera.XT(), 60, this._vectorTransition, this._framingTime);
-        Hz && this._animatables.push(Hz);
-        let Oz = 0;
-        if (this._mode === wz.FitFrustumSidesMode) {
-          const bz = this._calculateLowerRadiusFromModelBoundingSphere(zz, uz);
-          this.autoCorrectCameraLimitsAndSensibility && (this._attachedCamera.lowerRadiusLimit = tz.length() + this._attachedCamera.minZ), Oz = bz
-        } else this._mode === wz.IgnoreBoundsSizeMode && (Oz = this._calculateLowerRadiusFromModelBoundingSphere(zz, uz), this.autoCorrectCameraLimitsAndSensibility && null === this._attachedCamera.lowerRadiusLimit && (this._attachedCamera.lowerRadiusLimit = this._attachedCamera.minZ));
+        this._vectorTransition || (this._vectorTransition = ZD.d.CreateAnimation("target", ZD.d.ANIMATIONTYPE_VECTOR3, 60, vD.EasingFunction)), this._betaIsAnimating = !0;
+        let wD = ZD.d.TransitionTo("target", cD, this._attachedCamera, this._attachedCamera.hq(), 60, this._vectorTransition, this._framingTime);
+        wD && this._animatables.push(wD);
+        let SD = 0;
+        if (this._mode === vD.FitFrustumSidesMode) {
+          const cD = this._calculateLowerRadiusFromModelBoundingSphere(DD, CD);
+          this.autoCorrectCameraLimitsAndSensibility && (this._attachedCamera.lowerRadiusLimit = QD.length() + this._attachedCamera.minZ), SD = cD
+        } else this._mode === vD.IgnoreBoundsSizeMode && (SD = this._calculateLowerRadiusFromModelBoundingSphere(DD, CD), this.autoCorrectCameraLimitsAndSensibility && null === this._attachedCamera.lowerRadiusLimit && (this._attachedCamera.lowerRadiusLimit = this._attachedCamera.minZ));
         if (this.autoCorrectCameraLimitsAndSensibility) {
-          const bz = uz.subtract(zz).length();
-          this._attachedCamera.panningSensibility = 5e3 / bz, this._attachedCamera.wheelPrecision = 100 / Oz
+          const cD = CD.subtract(DD).length();
+          this._attachedCamera.panningSensibility = 5e3 / cD, this._attachedCamera.wheelPrecision = 100 / SD
         }
-        return this._radiusTransition || (this._radiusTransition = Rz.c.CreateAnimation("radius", Rz.c.ANIMATIONTYPE_FLOAT, 60, wz.EasingFunction)), Hz = Rz.c.TransitionTo("radius", Oz, this._attachedCamera, this._attachedCamera.XT(), 60, this._radiusTransition, this._framingTime, (() => {
-          this.stopAllAnimations(), nz && nz(), this._attachedCamera && this._attachedCamera.useInputToRestoreState && this._attachedCamera.storeState()
-        })), Hz && this._animatables.push(Hz), !0
+        return this._radiusTransition || (this._radiusTransition = ZD.d.CreateAnimation("radius", ZD.d.ANIMATIONTYPE_FLOAT, 60, vD.EasingFunction)), wD = ZD.d.TransitionTo("radius", SD, this._attachedCamera, this._attachedCamera.hq(), 60, this._radiusTransition, this._framingTime, (() => {
+          this.stopAllAnimations(), pD && pD(), this._attachedCamera && this._attachedCamera.useInputToRestoreState && this._attachedCamera.storeState()
+        })), wD && this._animatables.push(wD), !0
       }
-      _calculateLowerRadiusFromModelBoundingSphere(zz, uz) {
-        const bz = this._attachedCamera;
-        if (!bz) return 0;
-        let Ez = bz._calculateLowerRadiusFromModelBoundingSphere(zz, uz, this._radiusScale);
-        return bz.lowerRadiusLimit && this._mode === wz.IgnoreBoundsSizeMode && (Ez = Ez < bz.lowerRadiusLimit ? bz.lowerRadiusLimit : Ez), bz.upperRadiusLimit && (Ez = Ez > bz.upperRadiusLimit ? bz.upperRadiusLimit : Ez), Ez
+      _calculateLowerRadiusFromModelBoundingSphere(DD, CD) {
+        const cD = this._attachedCamera;
+        if (!cD) return 0;
+        let ID = cD._calculateLowerRadiusFromModelBoundingSphere(DD, CD, this._radiusScale);
+        return cD.lowerRadiusLimit && this._mode === vD.IgnoreBoundsSizeMode && (ID = ID < cD.lowerRadiusLimit ? cD.lowerRadiusLimit : ID), cD.upperRadiusLimit && (ID = ID > cD.upperRadiusLimit ? cD.upperRadiusLimit : ID), ID
       }
       _maintainCameraAboveGround() {
         if (this._elevationReturnTime < 0) return;
-        const zz = pz.b.Now - this._lastInteractionTime,
-          uz = .5 * Math.PI - this._defaultElevation,
-          bz = .5 * Math.PI;
-        if (this._attachedCamera && !this._betaIsAnimating && this._attachedCamera.beta > bz && zz >= this._elevationReturnWaitTime) {
-          this._betaIsAnimating = !0, this.stopAllAnimations(), this._betaTransition || (this._betaTransition = Rz.c.CreateAnimation("beta", Rz.c.ANIMATIONTYPE_FLOAT, 60, wz.EasingFunction));
-          const zz = Rz.c.TransitionTo("beta", uz, this._attachedCamera, this._attachedCamera.XT(), 60, this._betaTransition, this._elevationReturnTime, (() => {
+        const DD = BD.b.Now - this._lastInteractionTime,
+          CD = .5 * Math.PI - this._defaultElevation,
+          cD = .5 * Math.PI;
+        if (this._attachedCamera && !this._betaIsAnimating && this._attachedCamera.beta > cD && DD >= this._elevationReturnWaitTime) {
+          this._betaIsAnimating = !0, this.stopAllAnimations(), this._betaTransition || (this._betaTransition = ZD.d.CreateAnimation("beta", ZD.d.ANIMATIONTYPE_FLOAT, 60, vD.EasingFunction));
+          const DD = ZD.d.TransitionTo("beta", CD, this._attachedCamera, this._attachedCamera.hq(), 60, this._betaTransition, this._elevationReturnTime, (() => {
             this._clearAnimationLocks(), this.stopAllAnimations()
           }));
-          zz && this._animatables.push(zz)
+          DD && this._animatables.push(DD)
         }
       }
       _clearAnimationLocks() {
         this._betaIsAnimating = !1
       }
       _applyUserInteraction() {
-        this.isUserIsMoving && (this._lastInteractionTime = pz.b.Now, this.stopAllAnimations(), this._clearAnimationLocks())
+        this.isUserIsMoving && (this._lastInteractionTime = BD.b.Now, this.stopAllAnimations(), this._clearAnimationLocks())
       }
       stopAllAnimations() {
         for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0] && (this._animatables[0].onAnimationEnd = null, this._animatables[0].stop()), this._animatables.shift()
@@ -343,115 +343,115 @@ export const modules = {
         return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
       }
     }
-    wz.EasingFunction = new class extends Zz {
+    vD.EasingFunction = new class extends tD {
       constructor() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-        super(), this.exponent = zz
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
+        super(), this.exponent = DD
       }
-      easeInCore(zz) {
-        return this.exponent <= 0 ? zz : (Math.exp(this.exponent * zz) - 1) / (Math.exp(this.exponent) - 1)
+      easeInCore(DD) {
+        return this.exponent <= 0 ? DD : (Math.exp(this.exponent * DD) - 1) / (Math.exp(this.exponent) - 1)
       }
-    }, wz.EasingMode = Zz.EASINGMODE_EASEINOUT, wz.IgnoreBoundsSizeMode = 0, wz.FitFrustumSidesMode = 1;
-    var Xz = bz(39376),
-      fz = bz(39372),
-      sz = bz(39402),
-      rz = bz(39258);
-    let oz = (() => {
-        var zz;
-        let uz, bz = [],
-          iz = [];
-        return zz = class {
+    }, vD.EasingMode = tD.EASINGMODE_EASEINOUT, vD.IgnoreBoundsSizeMode = 0, vD.FitFrustumSidesMode = 1;
+    var ND = cD(39351),
+      gD = cD(39349),
+      XD = cD(39380),
+      mD = cD(39245);
+    let nD = (() => {
+        var DD;
+        let CD, cD = [],
+          iD = [];
+        return DD = class {
           constructor() {
-            this._currentMousePointerIdDown = -1, this.buttons = (0, Ez.j)(this, bz, [0, 1, 2]), this._pointerInput = (0, Ez.j)(this, iz)
+            this._currentMousePointerIdDown = -1, this.buttons = (0, ID.m)(this, cD, [0, 1, 2]), this._pointerInput = (0, ID.m)(this, iD)
           }
-          attachControl(zz) {
-            zz = rz.h.BackCompatCameraNoPreventDefault(arguments);
-            const uz = this.camera.uR(),
-              bz = uz.getInputElement();
-            let Ez = 0,
-              nz = null;
-            this._pointA = null, this._pointB = null, this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._pointerInput = iz => {
-              const lz = iz.event,
-                Mz = "touch" === lz.pointerType;
-              if (iz.type !== Oz.c.POINTERMOVE && -1 === this.buttons.indexOf(lz.button)) return;
-              const tz = lz.target;
-              if (this._altKey = lz.altKey, this._ctrlKey = lz.ctrlKey, this._metaKey = lz.metaKey, this._shiftKey = lz.shiftKey, this._buttonsPressed = lz.buttons, uz.isPointerLock) {
-                const zz = lz.movementX,
-                  uz = lz.movementY;
-                this.onTouch(null, zz, uz), this._pointA = null, this._pointB = null
+          attachControl(DD) {
+            DD = mD.g.BackCompatCameraNoPreventDefault(arguments);
+            const CD = this.camera.DZ(),
+              cD = CD.getInputElement();
+            let ID = 0,
+              pD = null;
+            this._pointA = null, this._pointB = null, this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._pointerInput = iD => {
+              const fD = iD.event,
+                bD = "touch" === fD.pointerType;
+              if (iD.type !== SD.c.POINTERMOVE && -1 === this.buttons.indexOf(fD.button)) return;
+              const QD = fD.target;
+              if (this._altKey = fD.altKey, this._ctrlKey = fD.ctrlKey, this._metaKey = fD.metaKey, this._shiftKey = fD.shiftKey, this._buttonsPressed = fD.buttons, CD.isPointerLock) {
+                const DD = fD.movementX,
+                  CD = fD.movementY;
+                this.onTouch(null, DD, CD), this._pointA = null, this._pointB = null
               } else {
-                if (iz.type !== Oz.c.POINTERDOWN && iz.type !== Oz.c.POINTERDOUBLETAP && Mz && this._pointA?.pointerId !== lz.pointerId && this._pointB?.pointerId !== lz.pointerId) return;
-                if (iz.type !== Oz.c.POINTERDOWN || -1 !== this._currentMousePointerIdDown && !Mz)
-                  if (iz.type === Oz.c.POINTERDOUBLETAP) this.onDoubleTap(lz.pointerType, lz);
-                  else if (iz.type !== Oz.c.POINTERUP || this._currentMousePointerIdDown !== lz.pointerId && !Mz) {
-                  if (iz.type === Oz.c.POINTERMOVE)
-                    if (zz || lz.preventDefault(), this._pointA && null === this._pointB) {
-                      const zz = lz.clientX - this._pointA.x,
-                        uz = lz.clientY - this._pointA.y;
-                      this._pointA.x = lz.clientX, this._pointA.y = lz.clientY, this.onTouch(this._pointA, zz, uz)
+                if (iD.type !== SD.c.POINTERDOWN && iD.type !== SD.c.POINTERDOUBLETAP && bD && this._pointA?.pointerId !== fD.pointerId && this._pointB?.pointerId !== fD.pointerId) return;
+                if (iD.type !== SD.c.POINTERDOWN || -1 !== this._currentMousePointerIdDown && !bD)
+                  if (iD.type === SD.c.POINTERDOUBLETAP) this.onDoubleTap(fD.pointerType, fD);
+                  else if (iD.type !== SD.c.POINTERUP || this._currentMousePointerIdDown !== fD.pointerId && !bD) {
+                  if (iD.type === SD.c.POINTERMOVE)
+                    if (DD || fD.preventDefault(), this._pointA && null === this._pointB) {
+                      const DD = fD.clientX - this._pointA.x,
+                        CD = fD.clientY - this._pointA.y;
+                      this._pointA.x = fD.clientX, this._pointA.y = fD.clientY, this.onTouch(this._pointA, DD, CD)
                     } else if (this._pointA && this._pointB) {
-                    const zz = this._pointA.pointerId === lz.pointerId ? this._pointA : this._pointB;
-                    zz.x = lz.clientX, zz.y = lz.clientY;
-                    const uz = this._pointA.x - this._pointB.x,
-                      bz = this._pointA.y - this._pointB.y,
-                      Mz = uz * uz + bz * bz,
-                      tz = {
+                    const DD = this._pointA.pointerId === fD.pointerId ? this._pointA : this._pointB;
+                    DD.x = fD.clientX, DD.y = fD.clientY;
+                    const CD = this._pointA.x - this._pointB.x,
+                      cD = this._pointA.y - this._pointB.y,
+                      bD = CD * CD + cD * cD,
+                      QD = {
                         x: (this._pointA.x + this._pointB.x) / 2,
                         y: (this._pointA.y + this._pointB.y) / 2,
-                        pointerId: lz.pointerId,
-                        type: iz.type
+                        pointerId: fD.pointerId,
+                        type: iD.type
                       };
-                    this.onMultiTouch(this._pointA, this._pointB, Ez, Mz, nz, tz), nz = tz, Ez = Mz
+                    this.onMultiTouch(this._pointA, this._pointB, ID, bD, pD, QD), pD = QD, ID = bD
                   }
                 } else {
                   try {
-                    tz?.releasePointerCapture(lz.pointerId)
-                  } catch (Hz) {}
-                  Mz || (this._pointB = null), uz._badOS ? this._pointA = this._pointB = null : this._pointB && this._pointA && this._pointA.pointerId == lz.pointerId ? (this._pointA = this._pointB, this._pointB = null) : this._pointA && this._pointB && this._pointB.pointerId == lz.pointerId ? this._pointB = null : this._pointA = this._pointB = null, (0 !== Ez || nz) && (this.onMultiTouch(this._pointA, this._pointB, Ez, 0, nz, null), Ez = 0, nz = null), this._currentMousePointerIdDown = -1, this.onButtonUp(lz), zz || lz.preventDefault()
+                    QD?.releasePointerCapture(fD.pointerId)
+                  } catch (wD) {}
+                  bD || (this._pointB = null), CD._badOS ? this._pointA = this._pointB = null : this._pointB && this._pointA && this._pointA.pointerId == fD.pointerId ? (this._pointA = this._pointB, this._pointB = null) : this._pointA && this._pointB && this._pointB.pointerId == fD.pointerId ? this._pointB = null : this._pointA = this._pointB = null, (0 !== ID || pD) && (this.onMultiTouch(this._pointA, this._pointB, ID, 0, pD, null), ID = 0, pD = null), this._currentMousePointerIdDown = -1, this.onButtonUp(fD), DD || fD.preventDefault()
                 } else {
                   try {
-                    tz?.setPointerCapture(lz.pointerId)
-                  } catch (Hz) {}
+                    QD?.setPointerCapture(fD.pointerId)
+                  } catch (wD) {}
                   if (null === this._pointA) this._pointA = {
-                    x: lz.clientX,
-                    y: lz.clientY,
-                    pointerId: lz.pointerId,
-                    type: lz.pointerType,
-                    button: lz.button
+                    x: fD.clientX,
+                    y: fD.clientY,
+                    pointerId: fD.pointerId,
+                    type: fD.pointerType,
+                    button: fD.button
                   };
                   else {
                     if (null !== this._pointB) return;
                     this._pointB = {
-                      x: lz.clientX,
-                      y: lz.clientY,
-                      pointerId: lz.pointerId,
-                      type: lz.pointerType,
-                      button: lz.button
+                      x: fD.clientX,
+                      y: fD.clientY,
+                      pointerId: fD.pointerId,
+                      type: fD.pointerType,
+                      button: fD.button
                     }
-                  } - 1 !== this._currentMousePointerIdDown || Mz || (this._currentMousePointerIdDown = lz.pointerId), this.onButtonDown(lz), zz || (lz.preventDefault(), bz && bz.focus())
+                  } - 1 !== this._currentMousePointerIdDown || bD || (this._currentMousePointerIdDown = fD.pointerId), this.onButtonDown(fD), DD || (fD.preventDefault(), cD && cD.focus())
                 }
               }
-            }, this._observer = this.camera.XT()._inputManager._addCameraPointerObserver(this._pointerInput, Oz.c.POINTERDOWN | Oz.c.POINTERUP | Oz.c.POINTERMOVE | Oz.c.POINTERDOUBLETAP), this._onLostFocus = () => {
-              this._pointA = this._pointB = null, Ez = 0, nz = null, this.onLostFocus()
-            }, this._contextMenuBind = zz => this.onContextMenu(zz), bz && bz.addEventListener("contextmenu", this._contextMenuBind, !1);
-            const iz = this.camera.XT().uR().getHostWindow();
-            iz && rz.h.RegisterTopRootEvents(iz, [{
+            }, this._observer = this.camera.hq()._inputManager._addCameraPointerObserver(this._pointerInput, SD.c.POINTERDOWN | SD.c.POINTERUP | SD.c.POINTERMOVE | SD.c.POINTERDOUBLETAP), this._onLostFocus = () => {
+              this._pointA = this._pointB = null, ID = 0, pD = null, this.onLostFocus()
+            }, this._contextMenuBind = DD => this.onContextMenu(DD), cD && cD.addEventListener("contextmenu", this._contextMenuBind, !1);
+            const iD = this.camera.hq().DZ().getHostWindow();
+            iD && mD.g.RegisterTopRootEvents(iD, [{
               name: "blur",
               handler: this._onLostFocus
             }])
           }
           detachControl() {
             if (this._onLostFocus) {
-              const zz = this.camera.XT().uR().getHostWindow();
-              zz && rz.h.UnregisterTopRootEvents(zz, [{
+              const DD = this.camera.hq().DZ().getHostWindow();
+              DD && mD.g.UnregisterTopRootEvents(DD, [{
                 name: "blur",
                 handler: this._onLostFocus
               }])
             }
             if (this._observer) {
-              if (this.camera.XT()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._contextMenuBind) {
-                const zz = this.camera.XT().uR().getInputElement();
-                zz && zz.removeEventListener("contextmenu", this._contextMenuBind)
+              if (this.camera.hq()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._contextMenuBind) {
+                const DD = this.camera.hq().DZ().getInputElement();
+                DD && DD.removeEventListener("contextmenu", this._contextMenuBind)
               }
               this._onLostFocus = null
             }
@@ -463,131 +463,131 @@ export const modules = {
           getSimpleName() {
             return "pointers"
           }
-          onDoubleTap(zz, uz) {}
-          onTouch(zz, uz, bz) {}
-          onMultiTouch(zz, uz, bz, Ez, nz, iz) {}
-          onContextMenu(zz) {
-            zz.preventDefault()
+          onDoubleTap(DD, CD) {}
+          onTouch(DD, CD, cD) {}
+          onMultiTouch(DD, CD, cD, ID, pD, iD) {}
+          onContextMenu(DD) {
+            DD.preventDefault()
           }
-          onButtonDown(zz) {}
-          onButtonUp(zz) {}
+          onButtonDown(DD) {}
+          onButtonUp(DD) {}
           onLostFocus() {}
         }, (() => {
-          const lz = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          uz = [(0, nz.G)()], (0, Ez.h)(null, null, uz, {
+          const fD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          CD = [(0, pD.G)()], (0, ID.k)(null, null, CD, {
             kind: "field",
             name: "buttons",
             static: !1,
             private: !1,
             access: {
-              has: zz => "buttons" in zz,
-              get: zz => zz.buttons,
-              set: (zz, uz) => {
-                zz.buttons = uz
+              has: DD => "buttons" in DD,
+              get: DD => DD.buttons,
+              set: (DD, CD) => {
+                DD.buttons = CD
               }
             },
-            metadata: lz
-          }, bz, iz), lz && Object.defineProperty(zz, Symbol.metadata, {
+            metadata: fD
+          }, cD, iD), fD && Object.defineProperty(DD, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: lz
+            value: fD
           })
-        })(), zz
+        })(), DD
       })(),
-      Nz = (() => {
-        var zz;
-        let uz, bz, iz, lz = oz,
-          Mz = [],
-          tz = [],
-          Hz = [],
-          Oz = [],
-          pz = [],
-          dz = [];
-        return zz = class extends lz {
+      OD = (() => {
+        var DD;
+        let CD, cD, iD, fD = nD,
+          bD = [],
+          QD = [],
+          wD = [],
+          SD = [],
+          BD = [],
+          yD = [];
+        return DD = class extends fD {
           constructor() {
-            super(...arguments), this.pinchZoom = (0, Ez.j)(this, Mz, !0), this.multiTouchPanning = ((0, Ez.j)(this, tz), (0, Ez.j)(this, Hz, !0)), this.multiTouchPanAndZoom = ((0, Ez.j)(this, Oz), (0, Ez.j)(this, pz, !0)), this._isPinching = ((0, Ez.j)(this, dz), !1), this._twoFingerActivityCount = 0, this._shouldStartPinchZoom = !1
+            super(...arguments), this.pinchZoom = (0, ID.m)(this, bD, !0), this.multiTouchPanning = ((0, ID.m)(this, QD), (0, ID.m)(this, wD, !0)), this.multiTouchPanAndZoom = ((0, ID.m)(this, SD), (0, ID.m)(this, BD, !0)), this._isPinching = ((0, ID.m)(this, yD), !1), this._twoFingerActivityCount = 0, this._shouldStartPinchZoom = !1
           }
-          _computePinchZoom(zz, uz) {}
-          _computeMultiTouchPanning(zz, uz) {}
-          onMultiTouch(zz, uz, bz, Ez, nz, iz) {
-            0 === bz && null === nz || 0 === Ez && null === iz || (this.multiTouchPanAndZoom ? (this._computePinchZoom(bz, Ez), this._computeMultiTouchPanning(nz, iz)) : this.multiTouchPanning && this.pinchZoom ? (this._twoFingerActivityCount++, this._isPinching || this._shouldStartPinchZoom ? (this._computePinchZoom(bz, Ez), this._isPinching = !0) : this._computeMultiTouchPanning(nz, iz)) : this.multiTouchPanning ? this._computeMultiTouchPanning(nz, iz) : this.pinchZoom && this._computePinchZoom(bz, Ez))
+          _computePinchZoom(DD, CD) {}
+          _computeMultiTouchPanning(DD, CD) {}
+          onMultiTouch(DD, CD, cD, ID, pD, iD) {
+            0 === cD && null === pD || 0 === ID && null === iD || (this.multiTouchPanAndZoom ? (this._computePinchZoom(cD, ID), this._computeMultiTouchPanning(pD, iD)) : this.multiTouchPanning && this.pinchZoom ? (this._twoFingerActivityCount++, this._isPinching || this._shouldStartPinchZoom ? (this._computePinchZoom(cD, ID), this._isPinching = !0) : this._computeMultiTouchPanning(pD, iD)) : this.multiTouchPanning ? this._computeMultiTouchPanning(pD, iD) : this.pinchZoom && this._computePinchZoom(cD, ID))
           }
-          onButtonUp(zz) {
+          onButtonUp(DD) {
             this._twoFingerActivityCount = 0, this._isPinching = !1
           }
           onLostFocus() {
             this._twoFingerActivityCount = 0, this._isPinching = !1
           }
         }, (() => {
-          const Fz = "function" === typeof Symbol && Symbol.metadata ? Object.create(lz[Symbol.metadata] ?? null) : void 0;
-          uz = [(0, nz.G)()], bz = [(0, nz.G)()], iz = [(0, nz.G)()], (0, Ez.h)(null, null, uz, {
+          const MD = "function" === typeof Symbol && Symbol.metadata ? Object.create(fD[Symbol.metadata] ?? null) : void 0;
+          CD = [(0, pD.G)()], cD = [(0, pD.G)()], iD = [(0, pD.G)()], (0, ID.k)(null, null, CD, {
             kind: "field",
             name: "pinchZoom",
             static: !1,
             private: !1,
             access: {
-              has: zz => "pinchZoom" in zz,
-              get: zz => zz.pinchZoom,
-              set: (zz, uz) => {
-                zz.pinchZoom = uz
+              has: DD => "pinchZoom" in DD,
+              get: DD => DD.pinchZoom,
+              set: (DD, CD) => {
+                DD.pinchZoom = CD
               }
             },
-            metadata: Fz
-          }, Mz, tz), (0, Ez.h)(null, null, bz, {
+            metadata: MD
+          }, bD, QD), (0, ID.k)(null, null, cD, {
             kind: "field",
             name: "multiTouchPanning",
             static: !1,
             private: !1,
             access: {
-              has: zz => "multiTouchPanning" in zz,
-              get: zz => zz.multiTouchPanning,
-              set: (zz, uz) => {
-                zz.multiTouchPanning = uz
+              has: DD => "multiTouchPanning" in DD,
+              get: DD => DD.multiTouchPanning,
+              set: (DD, CD) => {
+                DD.multiTouchPanning = CD
               }
             },
-            metadata: Fz
-          }, Hz, Oz), (0, Ez.h)(null, null, iz, {
+            metadata: MD
+          }, wD, SD), (0, ID.k)(null, null, iD, {
             kind: "field",
             name: "multiTouchPanAndZoom",
             static: !1,
             private: !1,
             access: {
-              has: zz => "multiTouchPanAndZoom" in zz,
-              get: zz => zz.multiTouchPanAndZoom,
-              set: (zz, uz) => {
-                zz.multiTouchPanAndZoom = uz
+              has: DD => "multiTouchPanAndZoom" in DD,
+              get: DD => DD.multiTouchPanAndZoom,
+              set: (DD, CD) => {
+                DD.multiTouchPanAndZoom = CD
               }
             },
-            metadata: Fz
-          }, pz, dz), Fz && Object.defineProperty(zz, Symbol.metadata, {
+            metadata: MD
+          }, BD, yD), MD && Object.defineProperty(DD, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Fz
+            value: MD
           })
-        })(), zz
+        })(), DD
       })(),
-      vz = (() => {
-        var zz;
-        let uz, bz, iz, lz, Mz, tz, Hz, Oz = Nz,
-          pz = [],
-          dz = [],
-          Fz = [],
-          Zz = [],
-          Rz = [],
-          Kz = [],
-          wz = [],
-          Xz = [],
-          fz = [],
-          sz = [],
-          rz = [],
-          oz = [],
-          vz = [],
-          xz = [];
-        return zz = class extends Oz {
+      PD = (() => {
+        var DD;
+        let CD, cD, iD, fD, bD, QD, wD, SD = OD,
+          BD = [],
+          yD = [],
+          MD = [],
+          tD = [],
+          ZD = [],
+          oD = [],
+          vD = [],
+          ND = [],
+          gD = [],
+          XD = [],
+          mD = [],
+          nD = [],
+          PD = [],
+          HD = [];
+        return DD = class extends SD {
           constructor() {
-            super(...arguments), this.buttons = (0, Ez.j)(this, pz, [0, 1, 2]), this.angularSensibilityX = ((0, Ez.j)(this, dz), (0, Ez.j)(this, Fz, 1e3)), this.angularSensibilityY = ((0, Ez.j)(this, Zz), (0, Ez.j)(this, Rz, 1e3)), this.pinchPrecision = ((0, Ez.j)(this, Kz), (0, Ez.j)(this, wz, 12)), this.pinchDeltaPercentage = ((0, Ez.j)(this, Xz), (0, Ez.j)(this, fz, 0)), this.useNaturalPinchZoom = ((0, Ez.j)(this, sz), (0, Ez.j)(this, rz, !1)), this.panningSensibility = ((0, Ez.j)(this, oz), (0, Ez.j)(this, vz, 1e3)), this.pinchInwards = ((0, Ez.j)(this, xz), !0), this._activeEntry = null, this._pointerLockConditions = {
+            super(...arguments), this.buttons = (0, ID.m)(this, BD, [0, 1, 2]), this.angularSensibilityX = ((0, ID.m)(this, yD), (0, ID.m)(this, MD, 1e3)), this.angularSensibilityY = ((0, ID.m)(this, tD), (0, ID.m)(this, ZD, 1e3)), this.pinchPrecision = ((0, ID.m)(this, oD), (0, ID.m)(this, vD, 12)), this.pinchDeltaPercentage = ((0, ID.m)(this, ND), (0, ID.m)(this, gD, 0)), this.useNaturalPinchZoom = ((0, ID.m)(this, XD), (0, ID.m)(this, mD, !1)), this.panningSensibility = ((0, ID.m)(this, nD), (0, ID.m)(this, PD, 1e3)), this.pinchInwards = ((0, ID.m)(this, HD), !0), this._activeEntry = null, this._pointerLockConditions = {
               button: 0,
               modifiers: {}
             }, this._pointerModifiers = {
@@ -601,203 +601,203 @@ export const modules = {
           getClassName() {
             return "ArcRotateCameraPointersInput"
           }
-          _computeMultiTouchPanning(zz, uz) {
-            if (zz && uz) {
-              const bz = uz.x - zz.x,
-                Ez = uz.y - zz.y,
-                nz = this.camera.movement.input.getEntry("pointer", "pan"),
-                iz = nz?.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-              0 !== iz && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -bz * iz, this.camera.movement.panAccumulatedPixels.y += Ez * iz)
+          _computeMultiTouchPanning(DD, CD) {
+            if (DD && CD) {
+              const cD = CD.x - DD.x,
+                ID = CD.y - DD.y,
+                pD = this.camera.movement.input.getEntry("pointer", "pan"),
+                iD = pD?.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
+              0 !== iD && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -cD * iD, this.camera.movement.panAccumulatedPixels.y += ID * iD)
             }
           }
-          _computePinchZoom(uz, bz) {
-            const Ez = this.camera.radius || zz.MinimumRadiusForPinch;
-            if (this.useNaturalPinchZoom) this.camera.radius = Ez * Math.sqrt(uz) / Math.sqrt(bz);
+          _computePinchZoom(CD, cD) {
+            const ID = this.camera.radius || DD.MinimumRadiusForPinch;
+            if (this.useNaturalPinchZoom) this.camera.radius = ID * Math.sqrt(CD) / Math.sqrt(cD);
             else if (this.pinchDeltaPercentage) {
-              const zz = .001 * (bz - uz) * Ez * this.pinchDeltaPercentage;
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += zz
+              const DD = .001 * (cD - CD) * ID * this.pinchDeltaPercentage;
+              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += DD
             } else {
-              const zz = (bz - uz) / (this.pinchPrecision * (this.pinchInwards ? 1 : -1) * (this.angularSensibilityX + this.angularSensibilityY) / 2);
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += zz
+              const DD = (cD - CD) / (this.pinchPrecision * (this.pinchInwards ? 1 : -1) * (this.angularSensibilityX + this.angularSensibilityY) / 2);
+              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += DD
             }
           }
-          onTouch(zz, uz, bz) {
-            const Ez = this._activeEntry ?? (this.camera.uR().isPointerLock ? this.camera.movement.input.resolveInteraction("pointer", this._pointerLockConditions) : null);
-            if (Ez)
-              if ("pan" === Ez.interaction) {
-                const zz = Ez.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-                0 !== zz && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -uz * zz, this.camera.movement.panAccumulatedPixels.y += bz * zz)
-              } else if ("rotate" === Ez.interaction) {
-              const zz = Ez.Gy ?? Ez.sensitivity ?? 1 / this.angularSensibilityX,
-                nz = Ez.Uy ?? Ez.sensitivity ?? 1 / this.angularSensibilityY;
-              this.camera.movement.activeInput = !0, this.camera.movement.rotationAccumulatedPixels.x += -uz * zz, this.camera.movement.rotationAccumulatedPixels.y += -bz * nz
+          onTouch(DD, CD, cD) {
+            const ID = this._activeEntry ?? (this.camera.DZ().isPointerLock ? this.camera.movement.input.resolveInteraction("pointer", this._pointerLockConditions) : null);
+            if (ID)
+              if ("pan" === ID.interaction) {
+                const DD = ID.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
+                0 !== DD && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -CD * DD, this.camera.movement.panAccumulatedPixels.y += cD * DD)
+              } else if ("rotate" === ID.interaction) {
+              const DD = ID.YG ?? ID.sensitivity ?? 1 / this.angularSensibilityX,
+                pD = ID.WG ?? ID.sensitivity ?? 1 / this.angularSensibilityY;
+              this.camera.movement.activeInput = !0, this.camera.movement.rotationAccumulatedPixels.x += -CD * DD, this.camera.movement.rotationAccumulatedPixels.y += -cD * pD
             }
           }
           onDoubleTap() {
             this.camera.useInputToRestoreState && this.camera.restoreState()
           }
-          onMultiTouch(zz, uz, bz, Ez, nz, iz) {
-            this._shouldStartPinchZoom = this._twoFingerActivityCount < 20 && Math.abs(Math.sqrt(Ez) - Math.sqrt(bz)) > this.camera.pinchToPanMaxDistance, super.onMultiTouch(zz, uz, bz, Ez, nz, iz)
+          onMultiTouch(DD, CD, cD, ID, pD, iD) {
+            this._shouldStartPinchZoom = this._twoFingerActivityCount < 20 && Math.abs(Math.sqrt(ID) - Math.sqrt(cD)) > this.camera.pinchToPanMaxDistance, super.onMultiTouch(DD, CD, cD, ID, pD, iD)
           }
-          onButtonDown(zz) {
-            this._pointerConditions.button = zz.button, this._pointerModifiers.ctrl = zz.ctrlKey, this._pointerModifiers.alt = zz.altKey, this._pointerModifiers.shift = zz.shiftKey, this._activeEntry = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions), super.onButtonDown(zz)
+          onButtonDown(DD) {
+            this._pointerConditions.button = DD.button, this._pointerModifiers.ctrl = DD.ctrlKey, this._pointerModifiers.alt = DD.altKey, this._pointerModifiers.shift = DD.shiftKey, this._activeEntry = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions), super.onButtonDown(DD)
           }
-          onButtonUp(zz) {
-            this._activeEntry = null, super.onButtonUp(zz)
+          onButtonUp(DD) {
+            this._activeEntry = null, super.onButtonUp(DD)
           }
           onLostFocus() {
             this._activeEntry = null, super.onLostFocus()
           }
         }, (() => {
-          const Nz = "function" === typeof Symbol && Symbol.metadata ? Object.create(Oz[Symbol.metadata] ?? null) : void 0;
-          uz = [(0, nz.G)()], bz = [(0, nz.G)()], iz = [(0, nz.G)()], lz = [(0, nz.G)()], Mz = [(0, nz.G)()], tz = [(0, nz.G)()], Hz = [(0, nz.G)()], (0, Ez.h)(null, null, uz, {
+          const OD = "function" === typeof Symbol && Symbol.metadata ? Object.create(SD[Symbol.metadata] ?? null) : void 0;
+          CD = [(0, pD.G)()], cD = [(0, pD.G)()], iD = [(0, pD.G)()], fD = [(0, pD.G)()], bD = [(0, pD.G)()], QD = [(0, pD.G)()], wD = [(0, pD.G)()], (0, ID.k)(null, null, CD, {
             kind: "field",
             name: "buttons",
             static: !1,
             private: !1,
             access: {
-              has: zz => "buttons" in zz,
-              get: zz => zz.buttons,
-              set: (zz, uz) => {
-                zz.buttons = uz
+              has: DD => "buttons" in DD,
+              get: DD => DD.buttons,
+              set: (DD, CD) => {
+                DD.buttons = CD
               }
             },
-            metadata: Nz
-          }, pz, dz), (0, Ez.h)(null, null, bz, {
+            metadata: OD
+          }, BD, yD), (0, ID.k)(null, null, cD, {
             kind: "field",
             name: "angularSensibilityX",
             static: !1,
             private: !1,
             access: {
-              has: zz => "angularSensibilityX" in zz,
-              get: zz => zz.angularSensibilityX,
-              set: (zz, uz) => {
-                zz.angularSensibilityX = uz
+              has: DD => "angularSensibilityX" in DD,
+              get: DD => DD.angularSensibilityX,
+              set: (DD, CD) => {
+                DD.angularSensibilityX = CD
               }
             },
-            metadata: Nz
-          }, Fz, Zz), (0, Ez.h)(null, null, iz, {
+            metadata: OD
+          }, MD, tD), (0, ID.k)(null, null, iD, {
             kind: "field",
             name: "angularSensibilityY",
             static: !1,
             private: !1,
             access: {
-              has: zz => "angularSensibilityY" in zz,
-              get: zz => zz.angularSensibilityY,
-              set: (zz, uz) => {
-                zz.angularSensibilityY = uz
+              has: DD => "angularSensibilityY" in DD,
+              get: DD => DD.angularSensibilityY,
+              set: (DD, CD) => {
+                DD.angularSensibilityY = CD
               }
             },
-            metadata: Nz
-          }, Rz, Kz), (0, Ez.h)(null, null, lz, {
+            metadata: OD
+          }, ZD, oD), (0, ID.k)(null, null, fD, {
             kind: "field",
             name: "pinchPrecision",
             static: !1,
             private: !1,
             access: {
-              has: zz => "pinchPrecision" in zz,
-              get: zz => zz.pinchPrecision,
-              set: (zz, uz) => {
-                zz.pinchPrecision = uz
+              has: DD => "pinchPrecision" in DD,
+              get: DD => DD.pinchPrecision,
+              set: (DD, CD) => {
+                DD.pinchPrecision = CD
               }
             },
-            metadata: Nz
-          }, wz, Xz), (0, Ez.h)(null, null, Mz, {
+            metadata: OD
+          }, vD, ND), (0, ID.k)(null, null, bD, {
             kind: "field",
             name: "pinchDeltaPercentage",
             static: !1,
             private: !1,
             access: {
-              has: zz => "pinchDeltaPercentage" in zz,
-              get: zz => zz.pinchDeltaPercentage,
-              set: (zz, uz) => {
-                zz.pinchDeltaPercentage = uz
+              has: DD => "pinchDeltaPercentage" in DD,
+              get: DD => DD.pinchDeltaPercentage,
+              set: (DD, CD) => {
+                DD.pinchDeltaPercentage = CD
               }
             },
-            metadata: Nz
-          }, fz, sz), (0, Ez.h)(null, null, tz, {
+            metadata: OD
+          }, gD, XD), (0, ID.k)(null, null, QD, {
             kind: "field",
             name: "useNaturalPinchZoom",
             static: !1,
             private: !1,
             access: {
-              has: zz => "useNaturalPinchZoom" in zz,
-              get: zz => zz.useNaturalPinchZoom,
-              set: (zz, uz) => {
-                zz.useNaturalPinchZoom = uz
+              has: DD => "useNaturalPinchZoom" in DD,
+              get: DD => DD.useNaturalPinchZoom,
+              set: (DD, CD) => {
+                DD.useNaturalPinchZoom = CD
               }
             },
-            metadata: Nz
-          }, rz, oz), (0, Ez.h)(null, null, Hz, {
+            metadata: OD
+          }, mD, nD), (0, ID.k)(null, null, wD, {
             kind: "field",
             name: "panningSensibility",
             static: !1,
             private: !1,
             access: {
-              has: zz => "panningSensibility" in zz,
-              get: zz => zz.panningSensibility,
-              set: (zz, uz) => {
-                zz.panningSensibility = uz
+              has: DD => "panningSensibility" in DD,
+              get: DD => DD.panningSensibility,
+              set: (DD, CD) => {
+                DD.panningSensibility = CD
               }
             },
-            metadata: Nz
-          }, vz, xz), Nz && Object.defineProperty(zz, Symbol.metadata, {
+            metadata: OD
+          }, PD, HD), OD && Object.defineProperty(DD, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Nz
+            value: OD
           })
-        })(), zz.MinimumRadiusForPinch = .001, zz
+        })(), DD.MinimumRadiusForPinch = .001, DD
       })();
-    sz.e.ArcRotateCameraPointersInput = vz;
-    var xz = bz(39337);
-    let Jz = (() => {
-      var zz;
-      let uz, bz, iz, Mz, tz, Hz, Oz, pz, dz, Fz, Zz, Rz = [],
-        Kz = [],
-        wz = [],
-        Xz = [],
-        fz = [],
-        sz = [],
-        oz = [],
-        Nz = [],
-        vz = [],
-        Jz = [],
-        Az = [],
-        Tz = [],
-        Lz = [],
-        Pz = [],
-        Gz = [],
-        az = [],
-        Vz = [],
-        mz = [],
-        qz = [],
-        hz = [],
-        Uz = [];
-      return zz = class {
+    XD.c.ArcRotateCameraPointersInput = PD;
+    var HD = cD(39328);
+    let UD = (() => {
+      var DD;
+      let CD, cD, iD, bD, QD, wD, SD, BD, yD, MD, tD, ZD = [],
+        oD = [],
+        vD = [],
+        ND = [],
+        gD = [],
+        XD = [],
+        nD = [],
+        OD = [],
+        PD = [],
+        UD = [],
+        xD = [],
+        qD = [],
+        JD = [],
+        KD = [],
+        aD = [],
+        VD = [],
+        zD = [],
+        jD = [],
+        lD = [],
+        LD = [],
+        TD = [];
+      return DD = class {
         constructor() {
-          this.camera = (0, Ez.j)(this, Rz), this.keysUp = (0, Ez.j)(this, Kz, [38]), this.keysDown = ((0, Ez.j)(this, wz), (0, Ez.j)(this, Xz, [40])), this.keysLeft = ((0, Ez.j)(this, fz), (0, Ez.j)(this, sz, [37])), this.keysRight = ((0, Ez.j)(this, oz), (0, Ez.j)(this, Nz, [39])), this.keysReset = ((0, Ez.j)(this, vz), (0, Ez.j)(this, Jz, [220])), this.keysZoomIn = ((0, Ez.j)(this, Az), (0, Ez.j)(this, Tz, [187, 107])), this.keysZoomOut = ((0, Ez.j)(this, Lz), (0, Ez.j)(this, Pz, [189, 109])), this.panningSensibility = ((0, Ez.j)(this, Gz), (0, Ez.j)(this, az, 50)), this.zoomingSensibility = ((0, Ez.j)(this, Vz), (0, Ez.j)(this, mz, 25)), this.angularSpeed = ((0, Ez.j)(this, qz), (0, Ez.j)(this, hz, .01)), this._useAltToZoom = ((0, Ez.j)(this, Uz), !0), this._keys = new Array, this._keyboardModifiers = {
+          this.camera = (0, ID.m)(this, ZD), this.keysUp = (0, ID.m)(this, oD, [38]), this.keysDown = ((0, ID.m)(this, vD), (0, ID.m)(this, ND, [40])), this.keysLeft = ((0, ID.m)(this, gD), (0, ID.m)(this, XD, [37])), this.keysRight = ((0, ID.m)(this, nD), (0, ID.m)(this, OD, [39])), this.keysReset = ((0, ID.m)(this, PD), (0, ID.m)(this, UD, [220])), this.keysZoomIn = ((0, ID.m)(this, xD), (0, ID.m)(this, qD, [187, 107])), this.keysZoomOut = ((0, ID.m)(this, JD), (0, ID.m)(this, KD, [189, 109])), this.panningSensibility = ((0, ID.m)(this, aD), (0, ID.m)(this, VD, 50)), this.zoomingSensibility = ((0, ID.m)(this, zD), (0, ID.m)(this, jD, 25)), this.angularSpeed = ((0, ID.m)(this, lD), (0, ID.m)(this, LD, .01)), this._useAltToZoom = ((0, ID.m)(this, TD), !0), this._keys = new Array, this._keyboardModifiers = {
             ctrl: !1,
             alt: !1
           }, this._keyboardConditions = {
             modifiers: this._keyboardModifiers
-          }, this._rotateDirection = new lz.m, this._panDirection = new lz.m
+          }, this._rotateDirection = new fD.n, this._panDirection = new fD.n
         }
         get useAltToZoom() {
           return this._useAltToZoom
         }
-        set useAltToZoom(zz) {
-          this._useAltToZoom = zz, this._applyUseAltToZoomToInputMap()
+        set useAltToZoom(DD) {
+          this._useAltToZoom = DD, this._applyUseAltToZoomToInputMap()
         }
         _applyUseAltToZoomToInputMap() {
           if (!this.camera?.movement) return;
-          const zz = this.camera.movement.input,
-            uz = zz.getEntry("keyboard", "zoom", {
+          const DD = this.camera.movement.input,
+            CD = DD.getEntry("keyboard", "zoom", {
               modifiers: {
                 alt: !0
               }
             });
-          !this._useAltToZoom && uz ? zz.inputMap.splice(zz.inputMap.indexOf(uz), 1) : this._useAltToZoom && !uz && zz.addEntry({
+          !this._useAltToZoom && CD ? DD.inputMap.splice(DD.inputMap.indexOf(CD), 1) : this._useAltToZoom && !CD && DD.addEntry({
             source: "keyboard",
             modifiers: {
               alt: !0
@@ -805,19 +805,19 @@ export const modules = {
             interaction: "zoom"
           })
         }
-        attachControl(zz) {
-          zz = rz.h.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.XT(), this._engine = this._scene.uR(), this._applyUseAltToZoomToInputMap(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
+        attachControl(DD) {
+          DD = mD.g.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.hq(), this._engine = this._scene.DZ(), this._applyUseAltToZoomToInputMap(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
             this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((uz => {
-            const bz = uz.event;
-            if (!bz.metaKey)
-              if (uz.type === xz.b.KEYDOWN) {
-                if (this._ctrlPressed = bz.ctrlKey, this._altPressed = bz.altKey, -1 !== this.keysUp.indexOf(bz.keyCode) || -1 !== this.keysDown.indexOf(bz.keyCode) || -1 !== this.keysLeft.indexOf(bz.keyCode) || -1 !== this.keysRight.indexOf(bz.keyCode) || -1 !== this.keysReset.indexOf(bz.keyCode) || -1 !== this.keysZoomIn.indexOf(bz.keyCode) || -1 !== this.keysZoomOut.indexOf(bz.keyCode)) {
-                  -1 === this._keys.indexOf(bz.keyCode) && this._keys.push(bz.keyCode), bz.preventDefault && (zz || bz.preventDefault())
+          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((CD => {
+            const cD = CD.event;
+            if (!cD.metaKey)
+              if (CD.type === HD.c.KEYDOWN) {
+                if (this._ctrlPressed = cD.ctrlKey, this._altPressed = cD.altKey, -1 !== this.keysUp.indexOf(cD.keyCode) || -1 !== this.keysDown.indexOf(cD.keyCode) || -1 !== this.keysLeft.indexOf(cD.keyCode) || -1 !== this.keysRight.indexOf(cD.keyCode) || -1 !== this.keysReset.indexOf(cD.keyCode) || -1 !== this.keysZoomIn.indexOf(cD.keyCode) || -1 !== this.keysZoomOut.indexOf(cD.keyCode)) {
+                  -1 === this._keys.indexOf(cD.keyCode) && this._keys.push(cD.keyCode), cD.preventDefault && (DD || cD.preventDefault())
                 }
-              } else if (-1 !== this.keysUp.indexOf(bz.keyCode) || -1 !== this.keysDown.indexOf(bz.keyCode) || -1 !== this.keysLeft.indexOf(bz.keyCode) || -1 !== this.keysRight.indexOf(bz.keyCode) || -1 !== this.keysReset.indexOf(bz.keyCode) || -1 !== this.keysZoomIn.indexOf(bz.keyCode) || -1 !== this.keysZoomOut.indexOf(bz.keyCode)) {
-              const uz = this._keys.indexOf(bz.keyCode);
-              uz >= 0 && this._keys.splice(uz, 1), bz.preventDefault && (zz || bz.preventDefault())
+              } else if (-1 !== this.keysUp.indexOf(cD.keyCode) || -1 !== this.keysDown.indexOf(cD.keyCode) || -1 !== this.keysLeft.indexOf(cD.keyCode) || -1 !== this.keysRight.indexOf(cD.keyCode) || -1 !== this.keysReset.indexOf(cD.keyCode) || -1 !== this.keysZoomIn.indexOf(cD.keyCode) || -1 !== this.keysZoomOut.indexOf(cD.keyCode)) {
+              const CD = this._keys.indexOf(cD.keyCode);
+              CD >= 0 && this._keys.splice(CD, 1), cD.preventDefault && (DD || cD.preventDefault())
             }
           })))
         }
@@ -826,25 +826,25 @@ export const modules = {
         }
         checkInputs() {
           if (this._onKeyboardObserver) {
-            const zz = this.camera,
-              uz = zz.movement.input;
+            const DD = this.camera,
+              CD = DD.movement.input;
             this._keyboardModifiers.ctrl = this._ctrlPressed, this._keyboardModifiers.alt = this._altPressed;
-            const bz = this._rotateDirection.set(0, 0),
-              Ez = this._panDirection.set(0, 0);
-            let nz = 0,
-              iz = 0;
-            for (let lz = 0; lz < this._keys.length; lz++) {
-              const Mz = this._keys[lz];
-              if (this._keyboardConditions.key = Mz, -1 === this.keysReset.indexOf(Mz)) {
-                const zz = uz.resolveInteraction("keyboard", this._keyboardConditions);
-                if (zz)
-                  if ("pan" === zz.interaction) iz = Math.max(iz, zz.sensitivity ?? 1 / this.panningSensibility), -1 !== this.keysLeft.indexOf(Mz) ? Ez.x -= 1 : -1 !== this.keysRight.indexOf(Mz) ? Ez.x += 1 : -1 !== this.keysUp.indexOf(Mz) ? Ez.y += 1 : -1 !== this.keysDown.indexOf(Mz) && (Ez.y -= 1);
-                  else if ("zoom" === zz.interaction) {
-                  const bz = zz.sensitivity ?? 1 / this.zoomingSensibility; - 1 !== this.keysUp.indexOf(Mz) || -1 !== this.keysZoomIn.indexOf(Mz) ? uz.handlers.zoom(bz) : -1 === this.keysDown.indexOf(Mz) && -1 === this.keysZoomOut.indexOf(Mz) || uz.handlers.zoom(-bz)
-                } else "rotate" === zz.interaction && (nz = Math.max(nz, zz.sensitivity ?? this.angularSpeed), -1 !== this.keysLeft.indexOf(Mz) ? bz.x -= 1 : -1 !== this.keysRight.indexOf(Mz) ? bz.x += 1 : -1 !== this.keysUp.indexOf(Mz) ? bz.y -= 1 : -1 !== this.keysDown.indexOf(Mz) && (bz.y += 1))
-              } - 1 !== this.keysReset.indexOf(Mz) && zz.useInputToRestoreState && zz.restoreState()
+            const cD = this._rotateDirection.set(0, 0),
+              ID = this._panDirection.set(0, 0);
+            let pD = 0,
+              iD = 0;
+            for (let fD = 0; fD < this._keys.length; fD++) {
+              const bD = this._keys[fD];
+              if (this._keyboardConditions.key = bD, -1 === this.keysReset.indexOf(bD)) {
+                const DD = CD.resolveInteraction("keyboard", this._keyboardConditions);
+                if (DD)
+                  if ("pan" === DD.interaction) iD = Math.max(iD, DD.sensitivity ?? 1 / this.panningSensibility), -1 !== this.keysLeft.indexOf(bD) ? ID.x -= 1 : -1 !== this.keysRight.indexOf(bD) ? ID.x += 1 : -1 !== this.keysUp.indexOf(bD) ? ID.y += 1 : -1 !== this.keysDown.indexOf(bD) && (ID.y -= 1);
+                  else if ("zoom" === DD.interaction) {
+                  const cD = DD.sensitivity ?? 1 / this.zoomingSensibility; - 1 !== this.keysUp.indexOf(bD) || -1 !== this.keysZoomIn.indexOf(bD) ? CD.handlers.zoom(cD) : -1 === this.keysDown.indexOf(bD) && -1 === this.keysZoomOut.indexOf(bD) || CD.handlers.zoom(-cD)
+                } else "rotate" === DD.interaction && (pD = Math.max(pD, DD.sensitivity ?? this.angularSpeed), -1 !== this.keysLeft.indexOf(bD) ? cD.x -= 1 : -1 !== this.keysRight.indexOf(bD) ? cD.x += 1 : -1 !== this.keysUp.indexOf(bD) ? cD.y -= 1 : -1 !== this.keysDown.indexOf(bD) && (cD.y += 1))
+              } - 1 !== this.keysReset.indexOf(bD) && DD.useInputToRestoreState && DD.restoreState()
             }
-            0 === bz.x && 0 === bz.y || (bz.normalize().scaleInPlace(nz), uz.handlers.rotate(bz.x, bz.y)), 0 === Ez.x && 0 === Ez.y || (Ez.normalize().scaleInPlace(iz), uz.handlers.pan(Ez.x, Ez.y))
+            0 === cD.x && 0 === cD.y || (cD.normalize().scaleInPlace(pD), CD.handlers.rotate(cD.x, cD.y)), 0 === ID.x && 0 === ID.y || (ID.normalize().scaleInPlace(iD), CD.handlers.pan(ID.x, ID.y))
           }
         }
         getClassName() {
@@ -854,208 +854,208 @@ export const modules = {
           return "keyboard"
         }
       }, (() => {
-        const lz = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        uz = [(0, nz.G)()], bz = [(0, nz.G)()], iz = [(0, nz.G)()], Mz = [(0, nz.G)()], tz = [(0, nz.G)()], Hz = [(0, nz.G)()], Oz = [(0, nz.G)()], pz = [(0, nz.G)()], dz = [(0, nz.G)()], Fz = [(0, nz.G)()], Zz = [(0, nz.G)()], (0, Ez.h)(zz, null, Zz, {
+        const fD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        CD = [(0, pD.G)()], cD = [(0, pD.G)()], iD = [(0, pD.G)()], bD = [(0, pD.G)()], QD = [(0, pD.G)()], wD = [(0, pD.G)()], SD = [(0, pD.G)()], BD = [(0, pD.G)()], yD = [(0, pD.G)()], MD = [(0, pD.G)()], tD = [(0, pD.G)()], (0, ID.k)(DD, null, tD, {
           kind: "getter",
           name: "useAltToZoom",
           static: !1,
           private: !1,
           access: {
-            has: zz => "useAltToZoom" in zz,
-            get: zz => zz.useAltToZoom
+            has: DD => "useAltToZoom" in DD,
+            get: DD => DD.useAltToZoom
           },
-          metadata: lz
-        }, null, Rz), (0, Ez.h)(null, null, uz, {
+          metadata: fD
+        }, null, ZD), (0, ID.k)(null, null, CD, {
           kind: "field",
           name: "keysUp",
           static: !1,
           private: !1,
           access: {
-            has: zz => "keysUp" in zz,
-            get: zz => zz.keysUp,
-            set: (zz, uz) => {
-              zz.keysUp = uz
+            has: DD => "keysUp" in DD,
+            get: DD => DD.keysUp,
+            set: (DD, CD) => {
+              DD.keysUp = CD
             }
           },
-          metadata: lz
-        }, Kz, wz), (0, Ez.h)(null, null, bz, {
+          metadata: fD
+        }, oD, vD), (0, ID.k)(null, null, cD, {
           kind: "field",
           name: "keysDown",
           static: !1,
           private: !1,
           access: {
-            has: zz => "keysDown" in zz,
-            get: zz => zz.keysDown,
-            set: (zz, uz) => {
-              zz.keysDown = uz
+            has: DD => "keysDown" in DD,
+            get: DD => DD.keysDown,
+            set: (DD, CD) => {
+              DD.keysDown = CD
             }
           },
-          metadata: lz
-        }, Xz, fz), (0, Ez.h)(null, null, iz, {
+          metadata: fD
+        }, ND, gD), (0, ID.k)(null, null, iD, {
           kind: "field",
           name: "keysLeft",
           static: !1,
           private: !1,
           access: {
-            has: zz => "keysLeft" in zz,
-            get: zz => zz.keysLeft,
-            set: (zz, uz) => {
-              zz.keysLeft = uz
+            has: DD => "keysLeft" in DD,
+            get: DD => DD.keysLeft,
+            set: (DD, CD) => {
+              DD.keysLeft = CD
             }
           },
-          metadata: lz
-        }, sz, oz), (0, Ez.h)(null, null, Mz, {
+          metadata: fD
+        }, XD, nD), (0, ID.k)(null, null, bD, {
           kind: "field",
           name: "keysRight",
           static: !1,
           private: !1,
           access: {
-            has: zz => "keysRight" in zz,
-            get: zz => zz.keysRight,
-            set: (zz, uz) => {
-              zz.keysRight = uz
+            has: DD => "keysRight" in DD,
+            get: DD => DD.keysRight,
+            set: (DD, CD) => {
+              DD.keysRight = CD
             }
           },
-          metadata: lz
-        }, Nz, vz), (0, Ez.h)(null, null, tz, {
+          metadata: fD
+        }, OD, PD), (0, ID.k)(null, null, QD, {
           kind: "field",
           name: "keysReset",
           static: !1,
           private: !1,
           access: {
-            has: zz => "keysReset" in zz,
-            get: zz => zz.keysReset,
-            set: (zz, uz) => {
-              zz.keysReset = uz
+            has: DD => "keysReset" in DD,
+            get: DD => DD.keysReset,
+            set: (DD, CD) => {
+              DD.keysReset = CD
             }
           },
-          metadata: lz
-        }, Jz, Az), (0, Ez.h)(null, null, Hz, {
+          metadata: fD
+        }, UD, xD), (0, ID.k)(null, null, wD, {
           kind: "field",
           name: "keysZoomIn",
           static: !1,
           private: !1,
           access: {
-            has: zz => "keysZoomIn" in zz,
-            get: zz => zz.keysZoomIn,
-            set: (zz, uz) => {
-              zz.keysZoomIn = uz
+            has: DD => "keysZoomIn" in DD,
+            get: DD => DD.keysZoomIn,
+            set: (DD, CD) => {
+              DD.keysZoomIn = CD
             }
           },
-          metadata: lz
-        }, Tz, Lz), (0, Ez.h)(null, null, Oz, {
+          metadata: fD
+        }, qD, JD), (0, ID.k)(null, null, SD, {
           kind: "field",
           name: "keysZoomOut",
           static: !1,
           private: !1,
           access: {
-            has: zz => "keysZoomOut" in zz,
-            get: zz => zz.keysZoomOut,
-            set: (zz, uz) => {
-              zz.keysZoomOut = uz
+            has: DD => "keysZoomOut" in DD,
+            get: DD => DD.keysZoomOut,
+            set: (DD, CD) => {
+              DD.keysZoomOut = CD
             }
           },
-          metadata: lz
-        }, Pz, Gz), (0, Ez.h)(null, null, pz, {
+          metadata: fD
+        }, KD, aD), (0, ID.k)(null, null, BD, {
           kind: "field",
           name: "panningSensibility",
           static: !1,
           private: !1,
           access: {
-            has: zz => "panningSensibility" in zz,
-            get: zz => zz.panningSensibility,
-            set: (zz, uz) => {
-              zz.panningSensibility = uz
+            has: DD => "panningSensibility" in DD,
+            get: DD => DD.panningSensibility,
+            set: (DD, CD) => {
+              DD.panningSensibility = CD
             }
           },
-          metadata: lz
-        }, az, Vz), (0, Ez.h)(null, null, dz, {
+          metadata: fD
+        }, VD, zD), (0, ID.k)(null, null, yD, {
           kind: "field",
           name: "zoomingSensibility",
           static: !1,
           private: !1,
           access: {
-            has: zz => "zoomingSensibility" in zz,
-            get: zz => zz.zoomingSensibility,
-            set: (zz, uz) => {
-              zz.zoomingSensibility = uz
+            has: DD => "zoomingSensibility" in DD,
+            get: DD => DD.zoomingSensibility,
+            set: (DD, CD) => {
+              DD.zoomingSensibility = CD
             }
           },
-          metadata: lz
-        }, mz, qz), (0, Ez.h)(null, null, Fz, {
+          metadata: fD
+        }, jD, lD), (0, ID.k)(null, null, MD, {
           kind: "field",
           name: "angularSpeed",
           static: !1,
           private: !1,
           access: {
-            has: zz => "angularSpeed" in zz,
-            get: zz => zz.angularSpeed,
-            set: (zz, uz) => {
-              zz.angularSpeed = uz
+            has: DD => "angularSpeed" in DD,
+            get: DD => DD.angularSpeed,
+            set: (DD, CD) => {
+              DD.angularSpeed = CD
             }
           },
-          metadata: lz
-        }, hz, Uz), lz && Object.defineProperty(zz, Symbol.metadata, {
+          metadata: fD
+        }, LD, TD), fD && Object.defineProperty(DD, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: lz
+          value: fD
         })
-      })(), zz
+      })(), DD
     })();
-    sz.e.ArcRotateCameraKeyboardMoveInput = Jz;
-    var Az = bz(37239),
-      Tz = bz(39341);
-    let Lz = (() => {
-      var zz;
-      let uz, bz, iz, tz = [],
-        Hz = [],
-        pz = [],
-        Fz = [],
-        Zz = [],
-        Rz = [];
-      return zz = class {
+    XD.c.ArcRotateCameraKeyboardMoveInput = UD;
+    var xD = cD(37167),
+      qD = cD(39334);
+    let JD = (() => {
+      var DD;
+      let CD, cD, iD, QD = [],
+        wD = [],
+        BD = [],
+        MD = [],
+        tD = [],
+        ZD = [];
+      return DD = class {
         constructor() {
-          this.wheelPrecision = (0, Ez.j)(this, tz, 3), this.zoomToMouseLocation = ((0, Ez.j)(this, Hz), (0, Ez.j)(this, pz, !1)), this.wheelDeltaPercentage = ((0, Ez.j)(this, Fz), (0, Ez.j)(this, Zz, 0)), this.customComputeDeltaFromMouseWheel = ((0, Ez.j)(this, Rz), null), this._viewOffset = new lz.n(0, 0, 0), this._globalOffset = new lz.n(0, 0, 0), this._inertialPanning = lz.n.Zero(), this._zoomToMouseRadiusOffset = 0
+          this.wheelPrecision = (0, ID.m)(this, QD, 3), this.zoomToMouseLocation = ((0, ID.m)(this, wD), (0, ID.m)(this, BD, !1)), this.wheelDeltaPercentage = ((0, ID.m)(this, MD), (0, ID.m)(this, tD, 0)), this.customComputeDeltaFromMouseWheel = ((0, ID.m)(this, ZD), null), this._viewOffset = new fD.p(0, 0, 0), this._globalOffset = new fD.p(0, 0, 0), this._inertialPanning = fD.p.Zero(), this._zoomToMouseRadiusOffset = 0
         }
-        _computeDeltaFromMouseWheelLegacyEvent(zz, uz) {
-          let bz;
-          const Ez = .01 * zz * this.wheelDeltaPercentage * uz;
-          return bz = zz > 0 ? Ez / (1 + this.wheelDeltaPercentage) : Ez * (1 + this.wheelDeltaPercentage), bz
+        _computeDeltaFromMouseWheelLegacyEvent(DD, CD) {
+          let cD;
+          const ID = .01 * DD * this.wheelDeltaPercentage * CD;
+          return cD = DD > 0 ? ID / (1 + this.wheelDeltaPercentage) : ID * (1 + this.wheelDeltaPercentage), cD
         }
-        attachControl(zz) {
-          zz = rz.h.BackCompatCameraNoPreventDefault(arguments), this._wheel = uz => {
-            if (uz.type !== Oz.c.POINTERWHEEL) return;
-            const bz = uz.event;
-            let Ez;
-            const nz = bz.deltaMode === Tz.e.DOM_DELTA_LINE ? 40 : 1,
-              iz = -bz.deltaY * nz;
-            if (this.customComputeDeltaFromMouseWheel) Ez = this.customComputeDeltaFromMouseWheel(iz, this, bz);
+        attachControl(DD) {
+          DD = mD.g.BackCompatCameraNoPreventDefault(arguments), this._wheel = CD => {
+            if (CD.type !== SD.c.POINTERWHEEL) return;
+            const cD = CD.event;
+            let ID;
+            const pD = cD.deltaMode === qD.c.DOM_DELTA_LINE ? 40 : 1,
+              iD = -cD.deltaY * pD;
+            if (this.customComputeDeltaFromMouseWheel) ID = this.customComputeDeltaFromMouseWheel(iD, this, cD);
             else if (this.wheelDeltaPercentage) {
-              if (Ez = this._computeDeltaFromMouseWheelLegacyEvent(iz, this.camera.radius), Ez > 0) {
-                const zz = this.zoomToMouseLocation ? this._zoomToMouseRadiusOffset : this.camera.inertialRadiusOffset;
-                let uz = this.camera.radius,
-                  bz = zz + Ez;
-                for (let Ez = 0; Ez < 20 && !(uz <= bz) && !(Math.abs(bz * this.camera.inertia) < .001); Ez++) uz -= bz, bz *= this.camera.inertia;
-                uz = (0, Mz.Clamp)(uz, 0, Number.MAX_VALUE), Ez = this._computeDeltaFromMouseWheelLegacyEvent(iz, uz)
+              if (ID = this._computeDeltaFromMouseWheelLegacyEvent(iD, this.camera.radius), ID > 0) {
+                const DD = this.zoomToMouseLocation ? this._zoomToMouseRadiusOffset : this.camera.inertialRadiusOffset;
+                let CD = this.camera.radius,
+                  cD = DD + ID;
+                for (let ID = 0; ID < 20 && !(CD <= cD) && !(Math.abs(cD * this.camera.inertia) < .001); ID++) CD -= cD, cD *= this.camera.inertia;
+                CD = (0, bD.Clamp)(CD, 0, Number.MAX_VALUE), ID = this._computeDeltaFromMouseWheelLegacyEvent(iD, CD)
               }
             } else {
-              const zz = this.camera.movement.input.getEntry("wheel", "zoom");
-              Ez = iz * (zz?.sensitivity ?? 1 / (40 * this.wheelPrecision))
+              const DD = this.camera.movement.input.getEntry("wheel", "zoom");
+              ID = iD * (DD?.sensitivity ?? 1 / (40 * this.wheelPrecision))
             }
-            Ez && (this.zoomToMouseLocation ? (this._hitPlane || this._updateHitPlane(), this._zoomToMouse(Ez)) : this.camera.movement.zoomAccumulatedPixels += Ez), bz.preventDefault && (zz || bz.preventDefault())
-          }, this._observer = this.camera.XT()._inputManager._addCameraPointerObserver(this._wheel, Oz.c.POINTERWHEEL), this.zoomToMouseLocation && this._inertialPanning.Vk(0)
+            ID && (this.zoomToMouseLocation ? (this._hitPlane || this._updateHitPlane(), this._zoomToMouse(ID)) : this.camera.movement.zoomAccumulatedPixels += ID), cD.preventDefault && (DD || cD.preventDefault())
+          }, this._observer = this.camera.hq()._inputManager._addCameraPointerObserver(this._wheel, SD.c.POINTERWHEEL), this.zoomToMouseLocation && this._inertialPanning.YF(0)
         }
         detachControl() {
-          this._observer && (this.camera.XT()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null)
+          this._observer && (this.camera.hq()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null)
         }
         checkInputs() {
           if (!this.zoomToMouseLocation) return;
-          const zz = this.camera;
-          if (Math.abs(this._zoomToMouseRadiusOffset) + this._inertialPanning.lengthSquared() + Math.abs(zz.inertialAlphaOffset) + Math.abs(zz.inertialBetaOffset) + Math.abs(zz.inertialRadiusOffset)) {
-            this._updateHitPlane(), zz.target.addInPlace(this._inertialPanning), zz.radius -= this._zoomToMouseRadiusOffset;
-            const uz = zz.movement.getFrameIndependentDecay(zz.inertia);
-            this._inertialPanning.scaleInPlace(uz), this._zoomToMouseRadiusOffset *= uz, this._zeroIfClose(this._inertialPanning), Math.abs(this._zoomToMouseRadiusOffset) < dz.b && (this._zoomToMouseRadiusOffset = 0)
+          const DD = this.camera;
+          if (Math.abs(this._zoomToMouseRadiusOffset) + this._inertialPanning.lengthSquared() + Math.abs(DD.inertialAlphaOffset) + Math.abs(DD.inertialBetaOffset) + Math.abs(DD.inertialRadiusOffset)) {
+            this._updateHitPlane(), DD.target.addInPlace(this._inertialPanning), DD.radius -= this._zoomToMouseRadiusOffset;
+            const CD = DD.movement.getFrameIndependentDecay(DD.inertia);
+            this._inertialPanning.scaleInPlace(CD), this._zoomToMouseRadiusOffset *= CD, this._zeroIfClose(this._inertialPanning), Math.abs(this._zoomToMouseRadiusOffset) < yD.c && (this._zoomToMouseRadiusOffset = 0)
           }
         }
         getClassName() {
@@ -1065,117 +1065,117 @@ export const modules = {
           return "mousewheel"
         }
         _updateHitPlane() {
-          const zz = this.camera,
-            uz = zz.target.subtract(zz.position);
-          this._hitPlane = Az.b.FromPositionAndNormal(zz.target, uz)
+          const DD = this.camera,
+            CD = DD.target.subtract(DD.position);
+          this._hitPlane = xD.c.FromPositionAndNormal(DD.target, CD)
         }
         _getPosition() {
-          const zz = this.camera,
-            uz = zz.XT(),
-            bz = uz.createPickingRay(uz.pointerX, uz.pointerY, lz.d.Identity(), zz, !1);
-          0 === zz.targetScreenOffset.x && 0 === zz.targetScreenOffset.y || (this._viewOffset.set(zz.targetScreenOffset.x, zz.targetScreenOffset.y, 0), zz.getViewMatrix().invertToRef(zz._cameraTransformMatrix), this._globalOffset = lz.n.TransformNormal(this._viewOffset, zz._cameraTransformMatrix), bz.origin.addInPlace(this._globalOffset));
-          let Ez = 0;
-          return this._hitPlane && (Ez = bz.intersectsPlane(this._hitPlane) ?? 0), bz.origin.addInPlace(bz.direction.scaleInPlace(Ez))
+          const DD = this.camera,
+            CD = DD.hq(),
+            cD = CD.createPickingRay(CD.pointerX, CD.pointerY, fD.d.Identity(), DD, !1);
+          0 === DD.targetScreenOffset.x && 0 === DD.targetScreenOffset.y || (this._viewOffset.set(DD.targetScreenOffset.x, DD.targetScreenOffset.y, 0), DD.getViewMatrix().invertToRef(DD._cameraTransformMatrix), this._globalOffset = fD.p.TransformNormal(this._viewOffset, DD._cameraTransformMatrix), cD.origin.addInPlace(this._globalOffset));
+          let ID = 0;
+          return this._hitPlane && (ID = cD.intersectsPlane(this._hitPlane) ?? 0), cD.origin.addInPlace(cD.direction.scaleInPlace(ID))
         }
-        _zoomToMouse(zz) {
-          const uz = this.camera,
-            bz = 1 - uz.inertia,
-            Ez = uz.movement.getFrameIndependentInputScale(uz.inertia);
-          if (uz.lowerRadiusLimit) {
-            const nz = uz.lowerRadiusLimit ?? 0;
-            uz.radius - (this._zoomToMouseRadiusOffset + zz * Ez) / bz < nz && (zz = ((uz.radius - nz) * bz - this._zoomToMouseRadiusOffset) / Ez)
+        _zoomToMouse(DD) {
+          const CD = this.camera,
+            cD = 1 - CD.inertia,
+            ID = CD.movement.getFrameIndependentInputScale(CD.inertia);
+          if (CD.lowerRadiusLimit) {
+            const pD = CD.lowerRadiusLimit ?? 0;
+            CD.radius - (this._zoomToMouseRadiusOffset + DD * ID) / cD < pD && (DD = ((CD.radius - pD) * cD - this._zoomToMouseRadiusOffset) / ID)
           }
-          if (uz.upperRadiusLimit) {
-            const nz = uz.upperRadiusLimit ?? 0;
-            uz.radius - (this._zoomToMouseRadiusOffset + zz * Ez) / bz > nz && (zz = ((uz.radius - nz) * bz - this._zoomToMouseRadiusOffset) / Ez)
+          if (CD.upperRadiusLimit) {
+            const pD = CD.upperRadiusLimit ?? 0;
+            CD.radius - (this._zoomToMouseRadiusOffset + DD * ID) / cD > pD && (DD = ((CD.radius - pD) * cD - this._zoomToMouseRadiusOffset) / ID)
           }
-          const nz = zz / bz / uz.radius,
-            iz = this._getPosition(),
-            Mz = lz.l.ER[6];
-          iz.subtractToRef(uz.target, Mz), Mz.scaleInPlace(nz), Mz.scaleInPlace(bz), Mz.scaleInPlace(Ez), this._inertialPanning.addInPlace(Mz), this._zoomToMouseRadiusOffset += zz * Ez
+          const pD = DD / cD / CD.radius,
+            iD = this._getPosition(),
+            bD = fD.l.cZ[6];
+          iD.subtractToRef(CD.target, bD), bD.scaleInPlace(pD), bD.scaleInPlace(cD), bD.scaleInPlace(ID), this._inertialPanning.addInPlace(bD), this._zoomToMouseRadiusOffset += DD * ID
         }
-        _zeroIfClose(zz) {
-          Math.abs(zz.x) < dz.b && (zz.x = 0), Math.abs(zz.y) < dz.b && (zz.y = 0), Math.abs(zz.z) < dz.b && (zz.z = 0)
+        _zeroIfClose(DD) {
+          Math.abs(DD.x) < yD.c && (DD.x = 0), Math.abs(DD.y) < yD.c && (DD.y = 0), Math.abs(DD.z) < yD.c && (DD.z = 0)
         }
       }, (() => {
-        const lz = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        uz = [(0, nz.G)()], bz = [(0, nz.G)()], iz = [(0, nz.G)()], (0, Ez.h)(null, null, uz, {
+        const fD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        CD = [(0, pD.G)()], cD = [(0, pD.G)()], iD = [(0, pD.G)()], (0, ID.k)(null, null, CD, {
           kind: "field",
           name: "wheelPrecision",
           static: !1,
           private: !1,
           access: {
-            has: zz => "wheelPrecision" in zz,
-            get: zz => zz.wheelPrecision,
-            set: (zz, uz) => {
-              zz.wheelPrecision = uz
+            has: DD => "wheelPrecision" in DD,
+            get: DD => DD.wheelPrecision,
+            set: (DD, CD) => {
+              DD.wheelPrecision = CD
             }
           },
-          metadata: lz
-        }, tz, Hz), (0, Ez.h)(null, null, bz, {
+          metadata: fD
+        }, QD, wD), (0, ID.k)(null, null, cD, {
           kind: "field",
           name: "zoomToMouseLocation",
           static: !1,
           private: !1,
           access: {
-            has: zz => "zoomToMouseLocation" in zz,
-            get: zz => zz.zoomToMouseLocation,
-            set: (zz, uz) => {
-              zz.zoomToMouseLocation = uz
+            has: DD => "zoomToMouseLocation" in DD,
+            get: DD => DD.zoomToMouseLocation,
+            set: (DD, CD) => {
+              DD.zoomToMouseLocation = CD
             }
           },
-          metadata: lz
-        }, pz, Fz), (0, Ez.h)(null, null, iz, {
+          metadata: fD
+        }, BD, MD), (0, ID.k)(null, null, iD, {
           kind: "field",
           name: "wheelDeltaPercentage",
           static: !1,
           private: !1,
           access: {
-            has: zz => "wheelDeltaPercentage" in zz,
-            get: zz => zz.wheelDeltaPercentage,
-            set: (zz, uz) => {
-              zz.wheelDeltaPercentage = uz
+            has: DD => "wheelDeltaPercentage" in DD,
+            get: DD => DD.wheelDeltaPercentage,
+            set: (DD, CD) => {
+              DD.wheelDeltaPercentage = CD
             }
           },
-          metadata: lz
-        }, Zz, Rz), lz && Object.defineProperty(zz, Symbol.metadata, {
+          metadata: fD
+        }, tD, ZD), fD && Object.defineProperty(DD, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: lz
+          value: fD
         })
-      })(), zz
+      })(), DD
     })();
-    sz.e.ArcRotateCameraMouseWheelInput = Lz;
-    var Pz, Gz, az = bz(39061);
-    class Vz extends sz.i {
-      constructor(zz) {
-        super(zz)
+    XD.c.ArcRotateCameraMouseWheelInput = JD;
+    var KD, aD, VD = cD(39027);
+    class zD extends XD.g {
+      constructor(DD) {
+        super(DD)
       }
       addMouseWheel() {
-        return this.add(new Lz), this
+        return this.add(new JD), this
       }
       addPointers() {
-        return this.add(new vz), this
+        return this.add(new PD), this
       }
       addKeyboard() {
-        return this.add(new Jz), this
+        return this.add(new UD), this
       }
-    }(Pz = Vz.prototype).addVRDeviceOrientation ?? (Pz.addVRDeviceOrientation = (0, az.h)("ArcRotateCameraInputsManager", "addVRDeviceOrientation")), (Gz = Vz.prototype).addGamepad ?? (Gz.addGamepad = (0, az.h)("ArcRotateCameraInputsManager", "addGamepad"));
-    var mz = bz(36564),
-      qz = bz(39393),
-      hz = bz(39397);
-    class Uz extends qz.c {
-      constructor(zz, uz, bz) {
-        super(zz, uz, bz), this.input = new hz.d({
-          pan: (zz, uz) => {
-            this.panAccumulatedPixels.x += zz, this.panAccumulatedPixels.y += uz
+    }(KD = zD.prototype).addVRDeviceOrientation ?? (KD.addVRDeviceOrientation = (0, VD.j)("ArcRotateCameraInputsManager", "addVRDeviceOrientation")), (aD = zD.prototype).addGamepad ?? (aD.addGamepad = (0, VD.j)("ArcRotateCameraInputsManager", "addGamepad"));
+    var jD = cD(36488),
+      lD = cD(39368),
+      LD = cD(39373);
+    class TD extends lD.c {
+      constructor(DD, CD, cD) {
+        super(DD, CD, cD), this.input = new LD.b({
+          pan: (DD, CD) => {
+            this.panAccumulatedPixels.x += DD, this.panAccumulatedPixels.y += CD
           },
-          rotate: (zz, uz) => {
-            this.rotationAccumulatedPixels.x += zz, this.rotationAccumulatedPixels.y += uz
+          rotate: (DD, CD) => {
+            this.rotationAccumulatedPixels.x += DD, this.rotationAccumulatedPixels.y += CD
           },
-          zoom: zz => {
-            this.zoomAccumulatedPixels += zz
+          zoom: DD => {
+            this.zoomAccumulatedPixels += DD
           }
         }, (() => this._createDefaultInputMap()))
       }
@@ -1221,71 +1221,71 @@ export const modules = {
       }
     }
 
-    function cz(zz, uz) {
-      return isNaN(zz) ? uz : zz
+    function GD(DD, CD) {
+      return isNaN(DD) ? CD : DD
     }
-    let gz = (() => {
-        var zz;
-        let uz, bz, tz, Oz, pz, Zz, Rz, sz, oz, Nz, vz, xz, Jz, Az, Tz, Lz, Pz, Gz, az, mz, qz, hz, gz, Sz, yz, Dz, Qz, Wz, ez = fz.i,
-          jz = [],
-          Iz = [],
-          Bz = [],
-          Cz = [],
-          Yz = [],
-          kz = [],
-          zu = [],
-          uu = [],
-          bu = [],
-          Eu = [],
-          nu = [],
-          iu = [],
-          lu = [],
-          Mu = [],
-          tu = [],
-          Hu = [],
-          Ou = [],
-          pu = [],
-          du = [],
-          Fu = [],
-          Zu = [],
-          Ru = [],
-          Ku = [],
-          wu = [],
-          Xu = [],
-          fu = [],
-          su = [],
-          ru = [],
-          ou = [],
-          Nu = [],
-          vu = [],
-          xu = [],
-          Ju = [],
-          Au = [],
-          Tu = [],
-          Lu = [],
-          Pu = [],
-          Gu = [],
-          au = [],
-          Vu = [],
-          mu = [],
-          qu = [],
-          hu = [],
-          Uu = [],
-          cu = [],
-          gu = [],
-          Su = [];
-        return zz = class extends ez {
+    let RD = (() => {
+        var DD;
+        let CD, cD, QD, SD, BD, tD, ZD, XD, nD, OD, PD, HD, UD, xD, qD, JD, KD, aD, VD, jD, lD, LD, RD, kD, dD, YD, WD, sD, ED = gD.e,
+          eD = [],
+          uD = [],
+          hD = [],
+          rD = [],
+          AD = [],
+          FD = [],
+          DC = [],
+          CC = [],
+          cC = [],
+          IC = [],
+          pC = [],
+          iC = [],
+          fC = [],
+          bC = [],
+          QC = [],
+          wC = [],
+          SC = [],
+          BC = [],
+          yC = [],
+          MC = [],
+          tC = [],
+          ZC = [],
+          oC = [],
+          vC = [],
+          NC = [],
+          gC = [],
+          XC = [],
+          mC = [],
+          nC = [],
+          OC = [],
+          PC = [],
+          HC = [],
+          UC = [],
+          xC = [],
+          qC = [],
+          JC = [],
+          KC = [],
+          aC = [],
+          VC = [],
+          zC = [],
+          jC = [],
+          lC = [],
+          LC = [],
+          TC = [],
+          GC = [],
+          RC = [],
+          kC = [];
+        return DD = class extends ED {
           get target() {
-            return this.pI
+            return this.DW
           }
-          set target(zz) {
-            this.setTarget(zz)
+          set target(DD) {
+            this.setTarget(DD)
           }
           get targetHost() {
             return this._targetHost
           }
-          set targetHost(zz) {
-            zz && this.setTarget(zz)
+          set targetHost(DD) {
+            DD && this.setTarget(DD)
           }
           getTarget() {
             return this.target
@@ -1293,185 +1293,185 @@ export const modules = {
           get position() {
             return this._position
           }
-          set position(zz) {
-            this.setPosition(zz)
+          set position(DD) {
+            this.setPosition(DD)
           }
-          set upVector(zz) {
-            this._upToYMatrix || (this._yToUpMatrix = new lz.d, this._upToYMatrix = new lz.d, this._upVector = lz.n.Zero()), zz.normalize(), this._upVector.euz(zz), this.setMatUp()
+          set upVector(DD) {
+            this._upToYMatrix || (this._yToUpMatrix = new fD.d, this._upToYMatrix = new fD.d, this._upVector = fD.p.Zero()), DD.normalize(), this._upVector.YCD(DD), this.setMatUp()
           }
           get upVector() {
             return this._upVector
           }
           setMatUp() {
-            lz.d.RotationAlignToRef(lz.n.UpReadOnly, this._upVector, this._yToUpMatrix), lz.d.RotationAlignToRef(this._upVector, lz.n.UpReadOnly, this._upToYMatrix)
+            fD.d.RotationAlignToRef(fD.p.UpReadOnly, this._upVector, this._yToUpMatrix), fD.d.RotationAlignToRef(this._upVector, fD.p.UpReadOnly, this._upToYMatrix)
           }
           get inertialAlphaOffset() {
             if (0 !== this._inertialAlphaOffset) return this._inertialAlphaOffset;
             if (0 !== this.movement.rotationAccumulatedPixels.x) return this.movement.rotationAccumulatedPixels.x;
-            const zz = this.movement.rotationDeltaCurrentFrame.x;
-            return Math.abs(zz) < this._rotationEpsilon ? 0 : zz
+            const DD = this.movement.rotationDeltaCurrentFrame.x;
+            return Math.abs(DD) < this._rotationEpsilon ? 0 : DD
           }
-          set inertialAlphaOffset(zz) {
-            this._inertialAlphaOffset = zz, 0 === zz && this.movement.resetRotationVelocity()
+          set inertialAlphaOffset(DD) {
+            this._inertialAlphaOffset = DD, 0 === DD && this.movement.resetRotationVelocity()
           }
           get inertialBetaOffset() {
             if (0 !== this._inertialBetaOffset) return this._inertialBetaOffset;
             if (0 !== this.movement.rotationAccumulatedPixels.y) return this.movement.rotationAccumulatedPixels.y;
-            const zz = this.movement.rotationDeltaCurrentFrame.y;
-            return Math.abs(zz) < this._rotationEpsilon ? 0 : zz
+            const DD = this.movement.rotationDeltaCurrentFrame.y;
+            return Math.abs(DD) < this._rotationEpsilon ? 0 : DD
           }
-          set inertialBetaOffset(zz) {
-            this._inertialBetaOffset = zz, 0 === zz && this.movement.resetRotationVelocity()
+          set inertialBetaOffset(DD) {
+            this._inertialBetaOffset = DD, 0 === DD && this.movement.resetRotationVelocity()
           }
           get inertialRadiusOffset() {
             if (0 !== this._inertialRadiusOffset) return this._inertialRadiusOffset;
             if (0 !== this.movement.zoomAccumulatedPixels) return this.movement.zoomAccumulatedPixels;
-            const zz = this.movement.zoomDeltaCurrentFrame;
-            return Math.abs(zz) < this._rotationEpsilon ? 0 : zz
+            const DD = this.movement.zoomDeltaCurrentFrame;
+            return Math.abs(DD) < this._rotationEpsilon ? 0 : DD
           }
-          set inertialRadiusOffset(zz) {
-            this._inertialRadiusOffset = zz, 0 === zz && this.movement.resetZoomVelocity()
+          set inertialRadiusOffset(DD) {
+            this._inertialRadiusOffset = DD, 0 === DD && this.movement.resetZoomVelocity()
           }
           get panningInertia() {
             return this._panningInertia
           }
-          set panningInertia(zz) {
-            this._panningInertia = zz, this.movement && (this.movement.panInertia = zz)
+          set panningInertia(DD) {
+            this._panningInertia = DD, this.movement && (this.movement.panInertia = DD)
           }
           get inertia() {
             return this._inertia
           }
-          set inertia(zz) {
-            this._inertia = zz, this.movement && (this.movement.rotationInertia = zz, this.movement.zoomInertia = zz)
+          set inertia(DD) {
+            this._inertia = DD, this.movement && (this.movement.rotationInertia = DD, this.movement.zoomInertia = DD)
           }
           get angularSensibilityX() {
-            const zz = this.inputs.attached.pointers;
-            return zz ? zz.angularSensibilityX : 0
+            const DD = this.inputs.attached.pointers;
+            return DD ? DD.angularSensibilityX : 0
           }
-          set angularSensibilityX(zz) {
-            const uz = this.inputs.attached.pointers;
-            uz && (uz.angularSensibilityX = zz)
+          set angularSensibilityX(DD) {
+            const CD = this.inputs.attached.pointers;
+            CD && (CD.angularSensibilityX = DD)
           }
           get angularSensibilityY() {
-            const zz = this.inputs.attached.pointers;
-            return zz ? zz.angularSensibilityY : 0
+            const DD = this.inputs.attached.pointers;
+            return DD ? DD.angularSensibilityY : 0
           }
-          set angularSensibilityY(zz) {
-            const uz = this.inputs.attached.pointers;
-            uz && (uz.angularSensibilityY = zz)
+          set angularSensibilityY(DD) {
+            const CD = this.inputs.attached.pointers;
+            CD && (CD.angularSensibilityY = DD)
           }
           get pinchPrecision() {
-            const zz = this.inputs.attached.pointers;
-            return zz ? zz.pinchPrecision : 0
+            const DD = this.inputs.attached.pointers;
+            return DD ? DD.pinchPrecision : 0
           }
-          set pinchPrecision(zz) {
-            const uz = this.inputs.attached.pointers;
-            uz && (uz.pinchPrecision = zz)
+          set pinchPrecision(DD) {
+            const CD = this.inputs.attached.pointers;
+            CD && (CD.pinchPrecision = DD)
           }
           get pinchDeltaPercentage() {
-            const zz = this.inputs.attached.pointers;
-            return zz ? zz.pinchDeltaPercentage : 0
+            const DD = this.inputs.attached.pointers;
+            return DD ? DD.pinchDeltaPercentage : 0
           }
-          set pinchDeltaPercentage(zz) {
-            const uz = this.inputs.attached.pointers;
-            uz && (uz.pinchDeltaPercentage = zz)
+          set pinchDeltaPercentage(DD) {
+            const CD = this.inputs.attached.pointers;
+            CD && (CD.pinchDeltaPercentage = DD)
           }
           get useNaturalPinchZoom() {
-            const zz = this.inputs.attached.pointers;
-            return !!zz && zz.useNaturalPinchZoom
+            const DD = this.inputs.attached.pointers;
+            return !!DD && DD.useNaturalPinchZoom
           }
-          set useNaturalPinchZoom(zz) {
-            const uz = this.inputs.attached.pointers;
-            uz && (uz.useNaturalPinchZoom = zz)
+          set useNaturalPinchZoom(DD) {
+            const CD = this.inputs.attached.pointers;
+            CD && (CD.useNaturalPinchZoom = DD)
           }
           get panningSensibility() {
-            const zz = this.inputs.attached.pointers;
-            return zz ? zz.panningSensibility : 0
+            const DD = this.inputs.attached.pointers;
+            return DD ? DD.panningSensibility : 0
           }
-          set panningSensibility(zz) {
-            const uz = this.inputs.attached.pointers;
-            uz && (uz.panningSensibility = zz)
+          set panningSensibility(DD) {
+            const CD = this.inputs.attached.pointers;
+            CD && (CD.panningSensibility = DD)
           }
           get keysUp() {
-            const zz = this.inputs.attached.keyboard;
-            return zz ? zz.keysUp : []
+            const DD = this.inputs.attached.keyboard;
+            return DD ? DD.keysUp : []
           }
-          set keysUp(zz) {
-            const uz = this.inputs.attached.keyboard;
-            uz && (uz.keysUp = zz)
+          set keysUp(DD) {
+            const CD = this.inputs.attached.keyboard;
+            CD && (CD.keysUp = DD)
           }
           get keysDown() {
-            const zz = this.inputs.attached.keyboard;
-            return zz ? zz.keysDown : []
+            const DD = this.inputs.attached.keyboard;
+            return DD ? DD.keysDown : []
           }
-          set keysDown(zz) {
-            const uz = this.inputs.attached.keyboard;
-            uz && (uz.keysDown = zz)
+          set keysDown(DD) {
+            const CD = this.inputs.attached.keyboard;
+            CD && (CD.keysDown = DD)
           }
           get keysLeft() {
-            const zz = this.inputs.attached.keyboard;
-            return zz ? zz.keysLeft : []
+            const DD = this.inputs.attached.keyboard;
+            return DD ? DD.keysLeft : []
           }
-          set keysLeft(zz) {
-            const uz = this.inputs.attached.keyboard;
-            uz && (uz.keysLeft = zz)
+          set keysLeft(DD) {
+            const CD = this.inputs.attached.keyboard;
+            CD && (CD.keysLeft = DD)
           }
           get keysRight() {
-            const zz = this.inputs.attached.keyboard;
-            return zz ? zz.keysRight : []
+            const DD = this.inputs.attached.keyboard;
+            return DD ? DD.keysRight : []
           }
-          set keysRight(zz) {
-            const uz = this.inputs.attached.keyboard;
-            uz && (uz.keysRight = zz)
+          set keysRight(DD) {
+            const CD = this.inputs.attached.keyboard;
+            CD && (CD.keysRight = DD)
           }
           get wheelPrecision() {
-            const zz = this.inputs.attached.mousewheel;
-            return zz ? zz.wheelPrecision : 0
+            const DD = this.inputs.attached.mousewheel;
+            return DD ? DD.wheelPrecision : 0
           }
-          set wheelPrecision(zz) {
-            const uz = this.inputs.attached.mousewheel;
-            uz && (uz.wheelPrecision = zz)
+          set wheelPrecision(DD) {
+            const CD = this.inputs.attached.mousewheel;
+            CD && (CD.wheelPrecision = DD)
           }
           get zoomToMouseLocation() {
-            const zz = this.inputs.attached.mousewheel;
-            return !!zz && zz.zoomToMouseLocation
+            const DD = this.inputs.attached.mousewheel;
+            return !!DD && DD.zoomToMouseLocation
           }
-          set zoomToMouseLocation(zz) {
-            const uz = this.inputs.attached.mousewheel;
-            uz && (uz.zoomToMouseLocation = zz)
+          set zoomToMouseLocation(DD) {
+            const CD = this.inputs.attached.mousewheel;
+            CD && (CD.zoomToMouseLocation = DD)
           }
           get wheelDeltaPercentage() {
-            const zz = this.inputs.attached.mousewheel;
-            return zz ? zz.wheelDeltaPercentage : 0
+            const DD = this.inputs.attached.mousewheel;
+            return DD ? DD.wheelDeltaPercentage : 0
           }
-          set wheelDeltaPercentage(zz) {
-            const uz = this.inputs.attached.mousewheel;
-            uz && (uz.wheelDeltaPercentage = zz)
+          set wheelDeltaPercentage(DD) {
+            const CD = this.inputs.attached.mousewheel;
+            CD && (CD.wheelDeltaPercentage = DD)
           }
           get _useCtrlForPanning() {
             return this._useCtrlForPanningInternal
           }
-          set _useCtrlForPanning(zz) {
-            this._useCtrlForPanningInternal = zz;
-            const uz = this.movement.input,
-              bz = uz.getEntry("keyboard", "pan", {
+          set _useCtrlForPanning(DD) {
+            this._useCtrlForPanningInternal = DD;
+            const CD = this.movement.input,
+              cD = CD.getEntry("keyboard", "pan", {
                 modifiers: {
                   ctrl: !0
                 }
               });
-            !zz && bz ? uz.inputMap.splice(uz.inputMap.indexOf(bz), 1) : zz && !bz && uz.addEntry({
+            !DD && cD ? CD.inputMap.splice(CD.inputMap.indexOf(cD), 1) : DD && !cD && CD.addEntry({
               source: "keyboard",
               modifiers: {
                 ctrl: !0
               },
               interaction: "pan"
             });
-            const Ez = uz.getEntry("pointer", "pan", {
+            const ID = CD.getEntry("pointer", "pan", {
               modifiers: {
                 ctrl: !0
               }
             });
-            !zz && Ez ? uz.inputMap.splice(uz.inputMap.indexOf(Ez), 1) : zz && !Ez && uz.addEntry({
+            !DD && ID ? CD.inputMap.splice(CD.inputMap.indexOf(ID), 1) : DD && !ID && CD.addEntry({
               source: "pointer",
               button: 0,
               modifiers: {
@@ -1483,12 +1483,12 @@ export const modules = {
           get _panningMouseButton() {
             return this._panningMouseButtonInternal
           }
-          set _panningMouseButton(zz) {
-            this._panningMouseButtonInternal = zz;
-            const uz = this.movement.input.getEntry("pointer", "pan", {
+          set _panningMouseButton(DD) {
+            this._panningMouseButtonInternal = DD;
+            const CD = this.movement.input.getEntry("pointer", "pan", {
               modifiers: {}
             });
-            uz && (uz.button = zz)
+            CD && (CD.button = DD)
           }
           get isInterpolating() {
             return this._isInterpolating
@@ -1499,8 +1499,8 @@ export const modules = {
           get useBouncingBehavior() {
             return null != this._bouncingBehavior
           }
-          set useBouncingBehavior(zz) {
-            zz !== this.useBouncingBehavior && (zz ? (this._bouncingBehavior = new Kz, this.addBehavior(this._bouncingBehavior)) : this._bouncingBehavior && (this.removeBehavior(this._bouncingBehavior), this._bouncingBehavior = null))
+          set useBouncingBehavior(DD) {
+            DD !== this.useBouncingBehavior && (DD ? (this._bouncingBehavior = new oD, this.addBehavior(this._bouncingBehavior)) : this._bouncingBehavior && (this.removeBehavior(this._bouncingBehavior), this._bouncingBehavior = null))
           }
           get framingBehavior() {
             return this._framingBehavior
@@ -1508,8 +1508,8 @@ export const modules = {
           get useFramingBehavior() {
             return null != this._framingBehavior
           }
-          set useFramingBehavior(zz) {
-            zz !== this.useFramingBehavior && (zz ? (this._framingBehavior = new wz, this.addBehavior(this._framingBehavior)) : this._framingBehavior && (this.removeBehavior(this._framingBehavior), this._framingBehavior = null))
+          set useFramingBehavior(DD) {
+            DD !== this.useFramingBehavior && (DD ? (this._framingBehavior = new vD, this.addBehavior(this._framingBehavior)) : this._framingBehavior && (this.removeBehavior(this._framingBehavior), this._framingBehavior = null))
           }
           get autoRotationBehavior() {
             return this._autoRotationBehavior
@@ -1517,136 +1517,136 @@ export const modules = {
           get useAutoRotationBehavior() {
             return null != this._autoRotationBehavior
           }
-          set useAutoRotationBehavior(zz) {
-            zz !== this.useAutoRotationBehavior && (zz ? (this._autoRotationBehavior = new Fz, this.addBehavior(this._autoRotationBehavior)) : this._autoRotationBehavior && (this.removeBehavior(this._autoRotationBehavior), this._autoRotationBehavior = null))
+          set useAutoRotationBehavior(DD) {
+            DD !== this.useAutoRotationBehavior && (DD ? (this._autoRotationBehavior = new MD, this.addBehavior(this._autoRotationBehavior)) : this._autoRotationBehavior && (this.removeBehavior(this._autoRotationBehavior), this._autoRotationBehavior = null))
           }
-          constructor(zz, uz, bz, nz, Mz, tz) {
-            var Hz;
-            let Oz = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-            super(zz, lz.n.Zero(), tz, Oz), Hz = this, this.alpha = ((0, Ez.j)(this, jz), (0, Ez.j)(this, Iz, void 0)), this.beta = ((0, Ez.j)(this, Bz), (0, Ez.j)(this, Cz, void 0)), this.radius = ((0, Ez.j)(this, Yz), (0, Ez.j)(this, kz, void 0)), this.overrideCloneAlphaBetaRadius = ((0, Ez.j)(this, zu), (0, Ez.j)(this, uu, void 0)), this.pI = ((0, Ez.j)(this, bu), (0, Ez.j)(this, Eu, void 0)), this._targetHost = ((0, Ez.j)(this, nu), (0, Ez.j)(this, iu, void 0)), this._upToYMatrix = (0, Ez.j)(this, lu), this._inertialAlphaOffset = 0, this._inertialBetaOffset = 0, this._inertialRadiusOffset = 0, this.lowerAlphaLimit = (0, Ez.j)(this, Mu, null), this.upperAlphaLimit = ((0, Ez.j)(this, tu), (0, Ez.j)(this, Hu, null)), this.lowerBetaLimit = ((0, Ez.j)(this, Ou), (0, Ez.j)(this, pu, .01)), this.upperBetaLimit = ((0, Ez.j)(this, du), (0, Ez.j)(this, Fu, Math.PI - .01)), this.lowerRadiusLimit = ((0, Ez.j)(this, Zu), (0, Ez.j)(this, Ru, null)), this.upperRadiusLimit = ((0, Ez.j)(this, Ku), (0, Ez.j)(this, wu, null)), this.lowerTargetYLimit = ((0, Ez.j)(this, Xu), (0, Ez.j)(this, fu, -1 / 0)), this.inertialPanningX = ((0, Ez.j)(this, su), (0, Ez.j)(this, ru, 0)), this.inertialPanningY = ((0, Ez.j)(this, ou), (0, Ez.j)(this, Nu, 0)), this.pinchToPanMaxDistance = ((0, Ez.j)(this, vu), (0, Ez.j)(this, xu, 20)), this.panningDistanceLimit = ((0, Ez.j)(this, Ju), (0, Ez.j)(this, Au, null)), this.panningOriginTarget = ((0, Ez.j)(this, Tu), (0, Ez.j)(this, Lu, lz.n.Zero())), this._panningInertia = ((0, Ez.j)(this, Pu), .9), this._inertia = .9, this.zoomOnFactor = (0, Ez.j)(this, Gu, 1), this.targetScreenOffset = ((0, Ez.j)(this, au), (0, Ez.j)(this, Vu, lz.m.Zero())), this.allowUpsideDown = ((0, Ez.j)(this, mu), (0, Ez.j)(this, qu, !0)), this.useInputToRestoreState = ((0, Ez.j)(this, hu), (0, Ez.j)(this, Uu, !0)), this.restoreStateInterpolationFactor = ((0, Ez.j)(this, cu), (0, Ez.j)(this, gu, 0)), this._currentInterpolationFactor = ((0, Ez.j)(this, Su), 0), this._viewMatrix = new lz.d, this._useCtrlForPanningInternal = !0, this._panningMouseButtonInternal = 2, this.panningAxis = new lz.n(1, 1, 0), this._transformedDirection = new lz.n, this.mapPanning = !1, this._isInterpolating = !1, this.onMeshTargetChangedObservable = new iz.b, this.checkCollisions = !1, this.collisionRadius = new lz.n(.5, .5, .5), this._previousPosition = lz.n.Zero(), this._collisionVelocity = lz.n.Zero(), this._newPosition = lz.n.Zero(), this._computationVector = lz.n.Zero(), this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget = new lz.n(NaN, NaN, NaN), this._goalTargetScreenOffset = new lz.m(NaN, NaN), this._onCollisionPositionChange = function(zz, uz) {
-              let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              bz ? (Hz.setPosition(uz), Hz.Ud && Hz.Ud(bz)) : Hz._previousPosition.euz(Hz._position);
-              const Ez = Math.cos(Hz.alpha),
-                nz = Math.sin(Hz.alpha),
-                iz = Math.cos(Hz.beta);
-              let lz = Math.sin(Hz.beta);
-              0 === lz && (lz = 1e-4);
-              const Mz = Hz._getTargetPosition();
-              Hz._computationVector.P_(Hz.radius * Ez * lz, Hz.radius * iz, Hz.radius * nz * lz), Mz.addToRef(Hz._computationVector, Hz._newPosition), Hz._position.euz(Hz._newPosition);
-              let tz = Hz.upVector;
-              Hz.allowUpsideDown && Hz.beta < 0 && (tz = tz.clone(), tz = tz.nb()), Hz._computeViewMatrix(Hz._position, Mz, tz), Hz._viewMatrix.addAtIndex(12, Hz.targetScreenOffset.x), Hz._viewMatrix.addAtIndex(13, Hz.targetScreenOffset.y), Hz._collisionTriggered = !1
-            }, this.pI = lz.n.Zero(), Mz && this.setTarget(Mz), this.alpha = uz, this.beta = bz, this.radius = nz, this.getViewMatrix(), this.inputs = new Vz(this), this.inputs.addKeyboard().addMouseWheel().addPointers(), this.movement = new Uz(this.XT(), this._position), this.movement.rotationInertia = this._inertia, this.movement.zoomInertia = this._inertia, this.movement.panInertia = this._panningInertia
+          constructor(DD, CD, cD, pD, bD, QD) {
+            var wD;
+            let SD = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+            super(DD, fD.p.Zero(), QD, SD), wD = this, this.alpha = ((0, ID.m)(this, eD), (0, ID.m)(this, uD, void 0)), this.beta = ((0, ID.m)(this, hD), (0, ID.m)(this, rD, void 0)), this.radius = ((0, ID.m)(this, AD), (0, ID.m)(this, FD, void 0)), this.overrideCloneAlphaBetaRadius = ((0, ID.m)(this, DC), (0, ID.m)(this, CC, void 0)), this.DW = ((0, ID.m)(this, cC), (0, ID.m)(this, IC, void 0)), this._targetHost = ((0, ID.m)(this, pC), (0, ID.m)(this, iC, void 0)), this._upToYMatrix = (0, ID.m)(this, fC), this._inertialAlphaOffset = 0, this._inertialBetaOffset = 0, this._inertialRadiusOffset = 0, this.lowerAlphaLimit = (0, ID.m)(this, bC, null), this.upperAlphaLimit = ((0, ID.m)(this, QC), (0, ID.m)(this, wC, null)), this.lowerBetaLimit = ((0, ID.m)(this, SC), (0, ID.m)(this, BC, .01)), this.upperBetaLimit = ((0, ID.m)(this, yC), (0, ID.m)(this, MC, Math.PI - .01)), this.lowerRadiusLimit = ((0, ID.m)(this, tC), (0, ID.m)(this, ZC, null)), this.upperRadiusLimit = ((0, ID.m)(this, oC), (0, ID.m)(this, vC, null)), this.lowerTargetYLimit = ((0, ID.m)(this, NC), (0, ID.m)(this, gC, -1 / 0)), this.inertialPanningX = ((0, ID.m)(this, XC), (0, ID.m)(this, mC, 0)), this.inertialPanningY = ((0, ID.m)(this, nC), (0, ID.m)(this, OC, 0)), this.pinchToPanMaxDistance = ((0, ID.m)(this, PC), (0, ID.m)(this, HC, 20)), this.panningDistanceLimit = ((0, ID.m)(this, UC), (0, ID.m)(this, xC, null)), this.panningOriginTarget = ((0, ID.m)(this, qC), (0, ID.m)(this, JC, fD.p.Zero())), this._panningInertia = ((0, ID.m)(this, KC), .9), this._inertia = .9, this.zoomOnFactor = (0, ID.m)(this, aC, 1), this.targetScreenOffset = ((0, ID.m)(this, VC), (0, ID.m)(this, zC, fD.n.Zero())), this.allowUpsideDown = ((0, ID.m)(this, jC), (0, ID.m)(this, lC, !0)), this.useInputToRestoreState = ((0, ID.m)(this, LC), (0, ID.m)(this, TC, !0)), this.restoreStateInterpolationFactor = ((0, ID.m)(this, GC), (0, ID.m)(this, RC, 0)), this._currentInterpolationFactor = ((0, ID.m)(this, kC), 0), this._viewMatrix = new fD.d, this._useCtrlForPanningInternal = !0, this._panningMouseButtonInternal = 2, this.panningAxis = new fD.p(1, 1, 0), this._transformedDirection = new fD.p, this.mapPanning = !1, this._isInterpolating = !1, this.onMeshTargetChangedObservable = new iD.c, this.checkCollisions = !1, this.collisionRadius = new fD.p(.5, .5, .5), this._previousPosition = fD.p.Zero(), this._collisionVelocity = fD.p.Zero(), this._newPosition = fD.p.Zero(), this._computationVector = fD.p.Zero(), this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget = new fD.p(NaN, NaN, NaN), this._goalTargetScreenOffset = new fD.n(NaN, NaN), this._onCollisionPositionChange = function(DD, CD) {
+              let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+              cD ? (wD.setPosition(CD), wD.xy && wD.xy(cD)) : wD._previousPosition.YCD(wD._position);
+              const ID = Math.cos(wD.alpha),
+                pD = Math.sin(wD.alpha),
+                iD = Math.cos(wD.beta);
+              let fD = Math.sin(wD.beta);
+              0 === fD && (fD = 1e-4);
+              const bD = wD._getTargetPosition();
+              wD._computationVector.K4(wD.radius * ID * fD, wD.radius * iD, wD.radius * pD * fD), bD.addToRef(wD._computationVector, wD._newPosition), wD._position.YCD(wD._newPosition);
+              let QD = wD.upVector;
+              wD.allowUpsideDown && wD.beta < 0 && (QD = QD.clone(), QD = QD.pp()), wD._computeViewMatrix(wD._position, bD, QD), wD._viewMatrix.addAtIndex(12, wD.targetScreenOffset.x), wD._viewMatrix.addAtIndex(13, wD.targetScreenOffset.y), wD._collisionTriggered = !1
+            }, this.DW = fD.p.Zero(), bD && this.setTarget(bD), this.alpha = CD, this.beta = cD, this.radius = pD, this.getViewMatrix(), this.inputs = new zD(this), this.inputs.addKeyboard().addMouseWheel().addPointers(), this.movement = new TD(this.hq(), this._position), this.movement.rotationInertia = this._inertia, this.movement.zoomInertia = this._inertia, this.movement.panInertia = this._panningInertia
           }
           _initCache() {
-            super._initCache(), this._cache.pI = new lz.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.alpha = void 0, this._cache.beta = void 0, this._cache.radius = void 0, this._cache.targetScreenOffset = lz.m.Zero()
+            super._initCache(), this._cache.DW = new fD.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.alpha = void 0, this._cache.beta = void 0, this._cache.radius = void 0, this._cache.targetScreenOffset = fD.n.Zero()
           }
-          _updateCache(zz) {
-            zz || super._updateCache(), this._cache.pI.euz(this._getTargetPosition()), this._cache.alpha = this.alpha, this._cache.beta = this.beta, this._cache.radius = this.radius, this._cache.targetScreenOffset.euz(this.targetScreenOffset)
+          _updateCache(DD) {
+            DD || super._updateCache(), this._cache.DW.YCD(this._getTargetPosition()), this._cache.alpha = this.alpha, this._cache.beta = this.beta, this._cache.radius = this.radius, this._cache.targetScreenOffset.YCD(this.targetScreenOffset)
           }
           _getTargetPosition() {
             if (this._targetHost && this._targetHost.getAbsolutePosition) {
-              const zz = this._targetHost.getAbsolutePosition();
-              this._targetBoundingCenter ? zz.addToRef(this._targetBoundingCenter, this.pI) : this.pI.euz(zz)
+              const DD = this._targetHost.getAbsolutePosition();
+              this._targetBoundingCenter ? DD.addToRef(this._targetBoundingCenter, this.DW) : this.DW.YCD(DD)
             }
-            const zz = this._getLockedTargetPosition();
-            return zz || this.pI
+            const DD = this._getLockedTargetPosition();
+            return DD || this.DW
           }
           storeState() {
             return this._storedAlpha = this.alpha, this._storedBeta = this.beta, this._storedRadius = this.radius, this._storedTarget = this._getTargetPosition().clone(), this._storedTargetScreenOffset = this.targetScreenOffset.clone(), super.storeState()
           }
           _restoreStateValues() {
-            return this.hasStateStored() && this.restoreStateInterpolationFactor > dz.b && this.restoreStateInterpolationFactor < 1 ? (this.interpolateTo(this._storedAlpha, this._storedBeta, this._storedRadius, this._storedTarget, this._storedTargetScreenOffset, this.restoreStateInterpolationFactor), !0) : !!super._restoreStateValues() && (this.setTarget(this._storedTarget.clone()), this.alpha = this._storedAlpha, this.beta = this._storedBeta, this.radius = this._storedRadius, this.targetScreenOffset = this._storedTargetScreenOffset.clone(), this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, !0)
+            return this.hasStateStored() && this.restoreStateInterpolationFactor > yD.c && this.restoreStateInterpolationFactor < 1 ? (this.interpolateTo(this._storedAlpha, this._storedBeta, this._storedRadius, this._storedTarget, this._storedTargetScreenOffset, this.restoreStateInterpolationFactor), !0) : !!super._restoreStateValues() && (this.setTarget(this._storedTarget.clone()), this.alpha = this._storedAlpha, this.beta = this._storedBeta, this.radius = this._storedRadius, this.targetScreenOffset = this._storedTargetScreenOffset.clone(), this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, !0)
           }
           stopInterpolation() {
             this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget.set(NaN, NaN, NaN), this._goalTargetScreenOffset.set(NaN, NaN)
           }
           interpolateTo() {
-            let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.alpha,
-              uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.beta,
-              bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.radius,
-              Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.target,
-              nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.targetScreenOffset,
-              iz = arguments.length > 5 ? arguments[5] : void 0;
-            this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, null != iz ? this._currentInterpolationFactor = iz : 0 !== this.restoreStateInterpolationFactor ? this._currentInterpolationFactor = this.restoreStateInterpolationFactor : this._currentInterpolationFactor = .1, this._goalAlpha = cz(zz, this._goalAlpha), this._goalBeta = cz(uz, this._goalBeta), this._goalRadius = cz(bz, this._goalRadius), this._goalTarget.set(cz(Ez.x, this._goalTarget.x), cz(Ez.y, this._goalTarget.y), cz(Ez.z, this._goalTarget.z)), this._goalTargetScreenOffset.set(cz(nz.x, this._goalTargetScreenOffset.x), cz(nz.y, this._goalTargetScreenOffset.y)), this._goalAlpha = (0, Mz.Clamp)(this._goalAlpha, this.lowerAlphaLimit ?? -1 / 0, this.upperAlphaLimit ?? 1 / 0), this._goalBeta = (0, Mz.Clamp)(this._goalBeta, this.lowerBetaLimit ?? -1 / 0, this.upperBetaLimit ?? 1 / 0), this._goalRadius = (0, Mz.Clamp)(this._goalRadius, this.lowerRadiusLimit ?? -1 / 0, this.upperRadiusLimit ?? 1 / 0), this._goalTarget.y = (0, Mz.Clamp)(this._goalTarget.y, this.lowerTargetYLimit ?? -1 / 0, 1 / 0), this._isInterpolating = !0
+            let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.alpha,
+              CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.beta,
+              cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.radius,
+              ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.target,
+              pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.targetScreenOffset,
+              iD = arguments.length > 5 ? arguments[5] : void 0;
+            this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, null != iD ? this._currentInterpolationFactor = iD : 0 !== this.restoreStateInterpolationFactor ? this._currentInterpolationFactor = this.restoreStateInterpolationFactor : this._currentInterpolationFactor = .1, this._goalAlpha = GD(DD, this._goalAlpha), this._goalBeta = GD(CD, this._goalBeta), this._goalRadius = GD(cD, this._goalRadius), this._goalTarget.set(GD(ID.x, this._goalTarget.x), GD(ID.y, this._goalTarget.y), GD(ID.z, this._goalTarget.z)), this._goalTargetScreenOffset.set(GD(pD.x, this._goalTargetScreenOffset.x), GD(pD.y, this._goalTargetScreenOffset.y)), this._goalAlpha = (0, bD.Clamp)(this._goalAlpha, this.lowerAlphaLimit ?? -1 / 0, this.upperAlphaLimit ?? 1 / 0), this._goalBeta = (0, bD.Clamp)(this._goalBeta, this.lowerBetaLimit ?? -1 / 0, this.upperBetaLimit ?? 1 / 0), this._goalRadius = (0, bD.Clamp)(this._goalRadius, this.lowerRadiusLimit ?? -1 / 0, this.upperRadiusLimit ?? 1 / 0), this._goalTarget.y = (0, bD.Clamp)(this._goalTarget.y, this.lowerTargetYLimit ?? -1 / 0, 1 / 0), this._isInterpolating = !0
           }
           _isSynchronizedViewMatrix() {
-            return !!super._isSynchronizedViewMatrix() && (this._cache.pI.equals(this._getTargetPosition()) && this._cache.alpha === this.alpha && this._cache.beta === this.beta && this._cache.radius === this.radius && this._cache.targetScreenOffset.equals(this.targetScreenOffset))
+            return !!super._isSynchronizedViewMatrix() && (this._cache.DW.equals(this._getTargetPosition()) && this._cache.alpha === this.alpha && this._cache.beta === this.beta && this._cache.radius === this.radius && this._cache.targetScreenOffset.equals(this.targetScreenOffset))
           }
-          attachControl(zz, uz) {
-            let bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-              Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-            const nz = arguments;
-            uz = rz.h.BackCompatCameraNoPreventDefault(nz), this._useCtrlForPanning = bz, this._panningMouseButton = Ez, "boolean" === typeof nz[0] && (nz.length > 1 && (this._useCtrlForPanning = nz[1]), nz.length > 2 && (this._panningMouseButton = nz[2])), this.inputs.attachElement(uz), this._reset = () => {
+          attachControl(DD, CD) {
+            let cD = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+              ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
+            const pD = arguments;
+            CD = mD.g.BackCompatCameraNoPreventDefault(pD), this._useCtrlForPanning = cD, this._panningMouseButton = ID, "boolean" === typeof pD[0] && (pD.length > 1 && (this._useCtrlForPanning = pD[1]), pD.length > 2 && (this._panningMouseButton = pD[2])), this.inputs.attachElement(CD), this._reset = () => {
               this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0
             }
           }
           detachControl() {
             this.inputs.detachElement(), this._reset && this._reset()
           }
-          _applyRotationAndZoomDelta(zz, uz, bz) {
-            const Ez = this.invertRotation ? -1 : 1;
-            let nz = zz * this._calculateHandednessMultiplier();
-            this.beta < 0 && (nz *= -1), this.alpha += nz * Ez, this.beta += uz * Ez, this.radius -= bz
+          _applyRotationAndZoomDelta(DD, CD, cD) {
+            const ID = this.invertRotation ? -1 : 1;
+            let pD = DD * this._calculateHandednessMultiplier();
+            this.beta < 0 && (pD *= -1), this.alpha += pD * ID, this.beta += CD * ID, this.radius -= cD
           }
-          _applyPanDelta(zz, uz) {
-            const bz = lz.l.ER[0].P_(zz, uz, uz);
-            if (this._viewMatrix.invertToRef(this._cameraTransformMatrix), bz.multiplyInPlace(this.panningAxis), lz.n.TransformNormalToRef(bz, this._cameraTransformMatrix, this._transformedDirection), this.mapPanning) {
-              const zz = this.upVector,
-                uz = lz.n.CrossToRef(this._transformedDirection, zz, this._transformedDirection);
-              lz.n.CrossToRef(zz, uz, this._transformedDirection)
+          _applyPanDelta(DD, CD) {
+            const cD = fD.l.cZ[0].K4(DD, CD, CD);
+            if (this._viewMatrix.invertToRef(this._cameraTransformMatrix), cD.multiplyInPlace(this.panningAxis), fD.p.TransformNormalToRef(cD, this._cameraTransformMatrix, this._transformedDirection), this.mapPanning) {
+              const DD = this.upVector,
+                CD = fD.p.CrossToRef(this._transformedDirection, DD, this._transformedDirection);
+              fD.p.CrossToRef(DD, CD, this._transformedDirection)
             } else this.panningAxis.y || (this._transformedDirection.y = 0);
             if (!this._targetHost)
               if (null !== this.panningDistanceLimit) {
-                this._transformedDirection.addInPlace(this.pI);
-                lz.n.DistanceSquared(this._transformedDirection, this.panningOriginTarget) <= this.panningDistanceLimit * this.panningDistanceLimit && this.pI.euz(this._transformedDirection)
+                this._transformedDirection.addInPlace(this.DW);
+                fD.p.DistanceSquared(this._transformedDirection, this.panningOriginTarget) <= this.panningDistanceLimit * this.panningDistanceLimit && this.DW.YCD(this._transformedDirection)
               } else {
                 if (this.parent) {
-                  const zz = lz.l.Matrix[0];
-                  this.parent.getWorldMatrix().getRotationMatrixToRef(zz), zz.transposeToRef(zz), lz.n.TransformCoordinatesToRef(this._transformedDirection, zz, this._transformedDirection)
+                  const DD = fD.l.Matrix[0];
+                  this.parent.getWorldMatrix().getRotationMatrixToRef(DD), DD.transposeToRef(DD), fD.p.TransformCoordinatesToRef(this._transformedDirection, DD, this._transformedDirection)
                 }
-                this.pI.addInPlace(this._transformedDirection)
+                this.DW.addInPlace(this._transformedDirection)
               }
           }
           _checkInputs() {
             if (this._collisionTriggered) return;
             this.inputs.checkInputs();
-            let zz = !1;
+            let DD = !1;
             this.movement.computeCurrentFrameDeltas();
-            const uz = this.movement.rotationDeltaCurrentFrame,
-              bz = this.movement.zoomDeltaCurrentFrame,
-              Ez = this.movement.panDeltaCurrentFrame;
-            if (0 === uz.x && 0 === uz.y && 0 === bz && 0 === Ez.x && 0 === Ez.y || (zz = !0, 0 === uz.x && 0 === uz.y && 0 === bz || this._applyRotationAndZoomDelta(uz.x, uz.y, bz), 0 === Ez.x && 0 === Ez.y || this._applyPanDelta(Ez.x, Ez.y)), 0 === this._inertialAlphaOffset && 0 === this._inertialBetaOffset && 0 === this._inertialRadiusOffset || (this._applyRotationAndZoomDelta(this._inertialAlphaOffset, this._inertialBetaOffset, this._inertialRadiusOffset), this._inertialAlphaOffset *= this.inertia, this._inertialBetaOffset *= this.inertia, this._inertialRadiusOffset *= this.inertia, Math.abs(this._inertialAlphaOffset) < this._rotationEpsilon && (this._inertialAlphaOffset = 0), Math.abs(this._inertialBetaOffset) < this._rotationEpsilon && (this._inertialBetaOffset = 0), Math.abs(this._inertialRadiusOffset) < this._rotationEpsilon && (this._inertialRadiusOffset = 0), zz = !0), 0 !== this.inertialPanningX || 0 !== this.inertialPanningY) {
+            const CD = this.movement.rotationDeltaCurrentFrame,
+              cD = this.movement.zoomDeltaCurrentFrame,
+              ID = this.movement.panDeltaCurrentFrame;
+            if (0 === CD.x && 0 === CD.y && 0 === cD && 0 === ID.x && 0 === ID.y || (DD = !0, 0 === CD.x && 0 === CD.y && 0 === cD || this._applyRotationAndZoomDelta(CD.x, CD.y, cD), 0 === ID.x && 0 === ID.y || this._applyPanDelta(ID.x, ID.y)), 0 === this._inertialAlphaOffset && 0 === this._inertialBetaOffset && 0 === this._inertialRadiusOffset || (this._applyRotationAndZoomDelta(this._inertialAlphaOffset, this._inertialBetaOffset, this._inertialRadiusOffset), this._inertialAlphaOffset *= this.inertia, this._inertialBetaOffset *= this.inertia, this._inertialRadiusOffset *= this.inertia, Math.abs(this._inertialAlphaOffset) < this._rotationEpsilon && (this._inertialAlphaOffset = 0), Math.abs(this._inertialBetaOffset) < this._rotationEpsilon && (this._inertialBetaOffset = 0), Math.abs(this._inertialRadiusOffset) < this._rotationEpsilon && (this._inertialRadiusOffset = 0), DD = !0), 0 !== this.inertialPanningX || 0 !== this.inertialPanningY) {
               this._applyPanDelta(this.inertialPanningX, this.inertialPanningY), this.inertialPanningX *= this.panningInertia, this.inertialPanningY *= this.panningInertia;
-              const uz = this._panningEpsilon;
-              Math.abs(this.inertialPanningX) < uz && (this.inertialPanningX = 0), Math.abs(this.inertialPanningY) < uz && (this.inertialPanningY = 0), zz = !0
+              const CD = this._panningEpsilon;
+              Math.abs(this.inertialPanningX) < CD && (this.inertialPanningX = 0), Math.abs(this.inertialPanningY) < CD && (this.inertialPanningY = 0), DD = !0
             }
-            if (zz) this.stopInterpolation();
+            if (DD) this.stopInterpolation();
             else if (this._isInterpolating) {
-              let zz = !1;
-              const uz = this._scene.uR().getDeltaTime() / 1e3,
-                bz = 1 - Math.pow(2, -uz / this._currentInterpolationFactor),
-                Ez = cz(this._goalRadius, this.radius);
+              let DD = !1;
+              const CD = this._scene.DZ().getDeltaTime() / 1e3,
+                cD = 1 - Math.pow(2, -CD / this._currentInterpolationFactor),
+                ID = GD(this._goalRadius, this.radius);
               if (!isNaN(this._goalTarget.x) || !isNaN(this._goalTarget.y) || !isNaN(this._goalTarget.z)) {
-                const uz = lz.l.ER[0].set(cz(this._goalTarget.x, this.pI.x), cz(this._goalTarget.y, this.pI.y), cz(this._goalTarget.z, this.pI.z));
-                lz.n.LerpToRef(this.target, uz, bz, this.pI), 10 * lz.n.Distance(this.target, uz) / Ez < dz.b ? (this._goalTarget.set(NaN, NaN, NaN), this.target.euz(uz), this.setTarget(this.target, !1, !0, !0)) : zz = !0
+                const CD = fD.l.cZ[0].set(GD(this._goalTarget.x, this.DW.x), GD(this._goalTarget.y, this.DW.y), GD(this._goalTarget.z, this.DW.z));
+                fD.p.LerpToRef(this.target, CD, cD, this.DW), 10 * fD.p.Distance(this.target, CD) / ID < yD.c ? (this._goalTarget.set(NaN, NaN, NaN), this.target.YCD(CD), this.setTarget(this.target, !1, !0, !0)) : DD = !0
               }
               if (!isNaN(this._goalAlpha) || !isNaN(this._goalBeta)) {
-                const uz = lz.h.RotationAlphaBetaGammaToRef(cz(this._goalAlpha, this.alpha), cz(this._goalBeta, this.beta), 0, lz.l.Quaternion[0]),
-                  Ez = lz.h.RotationAlphaBetaGammaToRef(this.alpha, this.beta, 0, lz.l.Quaternion[1]),
-                  nz = lz.h.SlerpToRef(Ez, uz, bz, lz.l.Quaternion[2]);
-                nz.normalize();
-                const iz = nz.toAlphaBetaGammaToRef(lz.l.ER[0]);
-                if (this.alpha = iz.x, this.beta = iz.y, nz.isApprox(uz, dz.b / 5)) {
+                const CD = fD.h.RotationAlphaBetaGammaToRef(GD(this._goalAlpha, this.alpha), GD(this._goalBeta, this.beta), 0, fD.l.Quaternion[0]),
+                  ID = fD.h.RotationAlphaBetaGammaToRef(this.alpha, this.beta, 0, fD.l.Quaternion[1]),
+                  pD = fD.h.SlerpToRef(ID, CD, cD, fD.l.Quaternion[2]);
+                pD.normalize();
+                const iD = pD.toAlphaBetaGammaToRef(fD.l.cZ[0]);
+                if (this.alpha = iD.x, this.beta = iD.y, pD.isApprox(CD, yD.c / 5)) {
                   this._goalAlpha = NaN, this._goalBeta = NaN;
-                  const zz = uz.toAlphaBetaGammaToRef(lz.l.ER[0]);
-                  this.alpha = zz.x, this.beta = zz.y
-                } else zz = !0
+                  const DD = CD.toAlphaBetaGammaToRef(fD.l.cZ[0]);
+                  this.alpha = DD.x, this.beta = DD.y
+                } else DD = !0
               }
-              if (isNaN(this._goalRadius) || (this.radius += (Ez - this.radius) * bz, Math.abs(Ez / this.radius - 1) < dz.b ? (this._goalRadius = NaN, this.radius = Ez) : zz = !0), !isNaN(this._goalTargetScreenOffset.x) || !isNaN(this._goalTargetScreenOffset.y)) {
-                const uz = lz.l.Vector2[0].set(cz(this._goalTargetScreenOffset.x, this.targetScreenOffset.x), cz(this._goalTargetScreenOffset.y, this.targetScreenOffset.y));
-                lz.m.LerpToRef(this.targetScreenOffset, uz, bz, this.targetScreenOffset), lz.m.Distance(this.targetScreenOffset, uz) < dz.b ? (this._goalTargetScreenOffset.set(NaN, NaN), this.targetScreenOffset.euz(uz)) : zz = !0
+              if (isNaN(this._goalRadius) || (this.radius += (ID - this.radius) * cD, Math.abs(ID / this.radius - 1) < yD.c ? (this._goalRadius = NaN, this.radius = ID) : DD = !0), !isNaN(this._goalTargetScreenOffset.x) || !isNaN(this._goalTargetScreenOffset.y)) {
+                const CD = fD.l.Vector2[0].set(GD(this._goalTargetScreenOffset.x, this.targetScreenOffset.x), GD(this._goalTargetScreenOffset.y, this.targetScreenOffset.y));
+                fD.n.LerpToRef(this.targetScreenOffset, CD, cD, this.targetScreenOffset), fD.n.Distance(this.targetScreenOffset, CD) < yD.c ? (this._goalTargetScreenOffset.set(NaN, NaN), this.targetScreenOffset.YCD(CD)) : DD = !0
               }
-              this._isInterpolating = zz
+              this._isInterpolating = DD
             }
             this._checkLimits(), super._checkInputs()
           }
@@ -1654,117 +1654,117 @@ export const modules = {
             null === this.lowerBetaLimit || void 0 === this.lowerBetaLimit ? this.allowUpsideDown && this.beta > Math.PI && (this.beta = this.beta - 2 * Math.PI) : this.beta < this.lowerBetaLimit && (this.beta = this.lowerBetaLimit), null === this.upperBetaLimit || void 0 === this.upperBetaLimit ? this.allowUpsideDown && this.beta < -Math.PI && (this.beta = this.beta + 2 * Math.PI) : this.beta > this.upperBetaLimit && (this.beta = this.upperBetaLimit), null !== this.lowerAlphaLimit && this.alpha < this.lowerAlphaLimit && (this.alpha = this.lowerAlphaLimit), null !== this.upperAlphaLimit && this.alpha > this.upperAlphaLimit && (this.alpha = this.upperAlphaLimit), null !== this.lowerRadiusLimit && this.radius < this.lowerRadiusLimit && (this.radius = this.lowerRadiusLimit, this.inertialRadiusOffset = 0), null !== this.upperRadiusLimit && this.radius > this.upperRadiusLimit && (this.radius = this.upperRadiusLimit, this.inertialRadiusOffset = 0), this.target.y = Math.max(this.target.y, this.lowerTargetYLimit)
           }
           rebuildAnglesAndRadius() {
-            this._position.subtractToRef(this._getTargetPosition(), this._computationVector), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || lz.n.TransformCoordinatesToRef(this._computationVector, this._upToYMatrix, this._computationVector), this.radius = this._computationVector.length(), 0 === this.radius && (this.radius = 1e-4);
-            const zz = this.alpha;
-            var uz, bz;
-            this.alpha = function(zz) {
-              let uz = Math.PI / 2;
-              return 0 === zz.x && 0 === zz.z || (uz = Math.acos(zz.x / Math.sqrt(Math.pow(zz.x, 2) + Math.pow(zz.z, 2)))), zz.z < 0 && (uz = 2 * Math.PI - uz), uz
-            }(this._computationVector), this.beta = (uz = this._computationVector.y, bz = this.radius, Math.acos(uz / bz));
-            const Ez = Math.round((zz - this.alpha) / (2 * Math.PI));
-            this.alpha += 2 * Ez * Math.PI, this._checkLimits()
+            this._position.subtractToRef(this._getTargetPosition(), this._computationVector), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || fD.p.TransformCoordinatesToRef(this._computationVector, this._upToYMatrix, this._computationVector), this.radius = this._computationVector.length(), 0 === this.radius && (this.radius = 1e-4);
+            const DD = this.alpha;
+            var CD, cD;
+            this.alpha = function(DD) {
+              let CD = Math.PI / 2;
+              return 0 === DD.x && 0 === DD.z || (CD = Math.acos(DD.x / Math.sqrt(Math.pow(DD.x, 2) + Math.pow(DD.z, 2)))), DD.z < 0 && (CD = 2 * Math.PI - CD), CD
+            }(this._computationVector), this.beta = (CD = this._computationVector.y, cD = this.radius, Math.acos(CD / cD));
+            const ID = Math.round((DD - this.alpha) / (2 * Math.PI));
+            this.alpha += 2 * ID * Math.PI, this._checkLimits()
           }
-          setPosition(zz) {
-            this._position.equals(zz) || (this._position.euz(zz), this.rebuildAnglesAndRadius())
+          setPosition(DD) {
+            this._position.equals(DD) || (this._position.YCD(DD), this.rebuildAnglesAndRadius())
           }
-          setTarget(zz) {
-            let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-              Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            if (Ez = this.overrideCloneAlphaBetaRadius ?? Ez, zz.computeWorldMatrix) uz && zz.lG ? this._targetBoundingCenter = zz.lG().boundingBox.centerWorld.clone() : this._targetBoundingCenter = null, zz.computeWorldMatrix(), this._targetHost = zz, this.pI = this._getTargetPosition(), this.onMeshTargetChangedObservable.notifyObservers(this._targetHost);
+          setTarget(DD) {
+            let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+              ID = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            if (ID = this.overrideCloneAlphaBetaRadius ?? ID, DD.computeWorldMatrix) CD && DD.VJ ? this._targetBoundingCenter = DD.VJ().boundingBox.centerWorld.clone() : this._targetBoundingCenter = null, DD.computeWorldMatrix(), this._targetHost = DD, this.DW = this._getTargetPosition(), this.onMeshTargetChangedObservable.notifyObservers(this._targetHost);
             else {
-              const uz = zz,
-                Ez = this._getTargetPosition();
-              if (Ez && !bz && Ez.equals(uz)) return;
-              this._targetHost = null, this.pI = uz, this._targetBoundingCenter = null, this.onMeshTargetChangedObservable.notifyObservers(null)
+              const CD = DD,
+                ID = this._getTargetPosition();
+              if (ID && !cD && ID.equals(CD)) return;
+              this._targetHost = null, this.DW = CD, this._targetBoundingCenter = null, this.onMeshTargetChangedObservable.notifyObservers(null)
             }
-            Ez || this.rebuildAnglesAndRadius()
+            ID || this.rebuildAnglesAndRadius()
           }
           _getViewMatrix() {
-            const zz = Math.cos(this.alpha),
-              uz = Math.sin(this.alpha),
-              bz = Math.cos(this.beta);
-            let Ez = Math.sin(this.beta);
-            0 === Ez && (Ez = 1e-4), 0 === this.radius && (this.radius = 1e-4);
-            const nz = this._getTargetPosition();
-            if (this._computationVector.P_(this.radius * zz * Ez, this.radius * bz, this.radius * uz * Ez), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || lz.n.TransformCoordinatesToRef(this._computationVector, this._yToUpMatrix, this._computationVector), nz.addToRef(this._computationVector, this._newPosition), this.XT().collisionsEnabled && this.checkCollisions) {
-              const zz = this.XT().collisionCoordinator;
-              this._collider || (this._collider = zz.createCollider()), this._collider._radius = this.collisionRadius, this._newPosition.subtractToRef(this._position, this._collisionVelocity), this._collisionTriggered = !0, zz.getNewPosition(this._position, this._collisionVelocity, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
+            const DD = Math.cos(this.alpha),
+              CD = Math.sin(this.alpha),
+              cD = Math.cos(this.beta);
+            let ID = Math.sin(this.beta);
+            0 === ID && (ID = 1e-4), 0 === this.radius && (this.radius = 1e-4);
+            const pD = this._getTargetPosition();
+            if (this._computationVector.K4(this.radius * DD * ID, this.radius * cD, this.radius * CD * ID), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || fD.p.TransformCoordinatesToRef(this._computationVector, this._yToUpMatrix, this._computationVector), pD.addToRef(this._computationVector, this._newPosition), this.hq().collisionsEnabled && this.checkCollisions) {
+              const DD = this.hq().collisionCoordinator;
+              this._collider || (this._collider = DD.createCollider()), this._collider._radius = this.collisionRadius, this._newPosition.subtractToRef(this._position, this._collisionVelocity), this._collisionTriggered = !0, DD.getNewPosition(this._position, this._collisionVelocity, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
             } else {
-              this._position.euz(this._newPosition);
-              let zz = this.upVector;
-              this.allowUpsideDown && Ez < 0 && (zz = zz.nb()), this._computeViewMatrix(this._position, nz, zz), this._viewMatrix.addAtIndex(12, this.targetScreenOffset.x), this._viewMatrix.addAtIndex(13, this.targetScreenOffset.y)
+              this._position.YCD(this._newPosition);
+              let DD = this.upVector;
+              this.allowUpsideDown && ID < 0 && (DD = DD.pp()), this._computeViewMatrix(this._position, pD, DD), this._viewMatrix.addAtIndex(12, this.targetScreenOffset.x), this._viewMatrix.addAtIndex(13, this.targetScreenOffset.y)
             }
-            return this._currentTarget.euz(nz), this._viewMatrix
+            return this._currentTarget.YCD(pD), this._viewMatrix
           }
-          zoomOn(zz) {
-            let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            zz = zz || this.XT().meshes;
-            const bz = Hz.c.MinMax(zz);
-            let Ez = this._calculateLowerRadiusFromModelBoundingSphere(bz.min, bz.max);
-            if (Ez = Math.max(Math.min(Ez, this.upperRadiusLimit || Number.MAX_VALUE), this.lowerRadiusLimit || 0), this.radius = Ez * this.zoomOnFactor, this.mode === Xz.d.ORTHOGRAPHIC_CAMERA) {
-              const zz = this.XT().uR().getAspectRatio(this),
-                uz = Ez * this.zoomOnFactor / 2;
-              this.orthoLeft = -uz * zz, this.orthoRight = uz * zz, this.orthoBottom = -uz, this.orthoTop = uz
+          zoomOn(DD) {
+            let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            DD = DD || this.hq().meshes;
+            const cD = wD.d.MinMax(DD);
+            let ID = this._calculateLowerRadiusFromModelBoundingSphere(cD.min, cD.max);
+            if (ID = Math.max(Math.min(ID, this.upperRadiusLimit || Number.MAX_VALUE), this.lowerRadiusLimit || 0), this.radius = ID * this.zoomOnFactor, this.mode === ND.c.ORTHOGRAPHIC_CAMERA) {
+              const DD = this.hq().DZ().getAspectRatio(this),
+                CD = ID * this.zoomOnFactor / 2;
+              this.orthoLeft = -CD * DD, this.orthoRight = CD * DD, this.orthoBottom = -CD, this.orthoTop = CD
             }
             this.focusOn({
-              min: bz.min,
-              max: bz.max,
-              distance: Ez
-            }, uz)
+              min: cD.min,
+              max: cD.max,
+              distance: ID
+            }, CD)
           }
-          focusOn(zz) {
-            let uz, bz, Ez = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (void 0 === zz.min) {
-              const Ez = zz || this.XT().meshes;
-              uz = Hz.c.MinMax(Ez), bz = lz.n.Distance(uz.min, uz.max)
+          focusOn(DD) {
+            let CD, cD, ID = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (void 0 === DD.min) {
+              const ID = DD || this.hq().meshes;
+              CD = wD.d.MinMax(ID), cD = fD.p.Distance(CD.min, CD.max)
             } else {
-              uz = zz, bz = zz.distance
+              CD = DD, cD = DD.distance
             }
-            this.pI = Hz.c.Center(uz), Ez || (this.maxZ = 2 * bz)
+            this.DW = wD.d.Center(CD), ID || (this.maxZ = 2 * cD)
           }
-          createRigCamera(uz, bz) {
-            let Ez = 0;
+          createRigCamera(CD, cD) {
+            let ID = 0;
             switch (this.cameraRigMode) {
-              case Xz.d.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case Xz.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case Xz.d.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case Xz.d.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case Xz.d.RIG_MODE_VR:
-                Ez = this._cameraRigParams.stereoHalfAngle * (0 === bz ? 1 : -1);
+              case ND.c.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
+              case ND.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
+              case ND.c.RIG_MODE_STEREOSCOPIC_OVERUNDER:
+              case ND.c.RIG_MODE_STEREOSCOPIC_INTERLACED:
+              case ND.c.RIG_MODE_VR:
+                ID = this._cameraRigParams.stereoHalfAngle * (0 === cD ? 1 : -1);
                 break;
-              case Xz.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                Ez = this._cameraRigParams.stereoHalfAngle * (0 === bz ? -1 : 1)
+              case ND.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
+                ID = this._cameraRigParams.stereoHalfAngle * (0 === cD ? -1 : 1)
             }
-            const nz = new zz(uz, this.alpha + Ez, this.beta, this.radius, this.pI, this.XT());
-            return nz._cameraRigParams = {}, nz.isRigCamera = !0, nz.rigParent = this, nz.upVector = this.upVector, nz.mode = this.mode, nz.orthoLeft = this.orthoLeft, nz.orthoRight = this.orthoRight, nz.orthoBottom = this.orthoBottom, nz.orthoTop = this.orthoTop, nz
+            const pD = new DD(CD, this.alpha + ID, this.beta, this.radius, this.DW, this.hq());
+            return pD._cameraRigParams = {}, pD.isRigCamera = !0, pD.rigParent = this, pD.upVector = this.upVector, pD.mode = this.mode, pD.orthoLeft = this.orthoLeft, pD.orthoRight = this.orthoRight, pD.orthoBottom = this.orthoBottom, pD.orthoTop = this.orthoTop, pD
           }
           _updateRigCameras() {
-            const zz = this._rigCameras[0],
-              uz = this._rigCameras[1];
-            switch (zz.beta = uz.beta = this.beta, this.cameraRigMode) {
-              case Xz.d.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case Xz.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case Xz.d.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case Xz.d.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case Xz.d.RIG_MODE_VR:
-                zz.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle, uz.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle;
+            const DD = this._rigCameras[0],
+              CD = this._rigCameras[1];
+            switch (DD.beta = CD.beta = this.beta, this.cameraRigMode) {
+              case ND.c.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
+              case ND.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
+              case ND.c.RIG_MODE_STEREOSCOPIC_OVERUNDER:
+              case ND.c.RIG_MODE_STEREOSCOPIC_INTERLACED:
+              case ND.c.RIG_MODE_VR:
+                DD.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle, CD.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle;
                 break;
-              case Xz.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                zz.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle, uz.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle
+              case ND.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
+                DD.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle, CD.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle
             }
             super._updateRigCameras()
           }
-          _calculateLowerRadiusFromModelBoundingSphere(zz, uz) {
-            let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-            const Ez = lz.n.Distance(zz, uz),
-              nz = this.XT().uR().getAspectRatio(this),
-              iz = Math.tan(this.fov / 2),
-              Mz = iz * nz,
-              tz = .5 * Ez * bz,
-              Hz = tz * Math.sqrt(1 + 1 / (Mz * Mz)),
-              Oz = tz * Math.sqrt(1 + 1 / (iz * iz));
-            return Math.max(Hz, Oz)
+          _calculateLowerRadiusFromModelBoundingSphere(DD, CD) {
+            let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+            const ID = fD.p.Distance(DD, CD),
+              pD = this.hq().DZ().getAspectRatio(this),
+              iD = Math.tan(this.fov / 2),
+              bD = iD * pD,
+              QD = .5 * ID * cD,
+              wD = QD * Math.sqrt(1 + 1 / (bD * bD)),
+              SD = QD * Math.sqrt(1 + 1 / (iD * iD));
+            return Math.max(wD, SD)
           }
           dispose() {
             this.inputs.clear(), super.dispose()
@@ -1773,396 +1773,396 @@ export const modules = {
             return "ArcRotateCamera"
           }
         }, (() => {
-          const iz = "function" === typeof Symbol && Symbol.metadata ? Object.create(ez[Symbol.metadata] ?? null) : void 0;
-          uz = [(0, nz.G)()], bz = [(0, nz.G)()], tz = [(0, nz.G)()], Oz = [(0, nz.G)()], pz = [(0, nz.D)("target")], Zz = [(0, nz.y)("targetHost")], Rz = [(0, nz.G)()], sz = [(0, nz.G)()], oz = [(0, nz.G)()], Nz = [(0, nz.G)()], vz = [(0, nz.G)()], xz = [(0, nz.G)()], Jz = [(0, nz.G)()], Az = [(0, nz.G)()], Tz = [(0, nz.G)()], Lz = [(0, nz.G)()], Pz = [(0, nz.G)()], Gz = [(0, nz.G)()], az = [(0, nz.G)()], mz = [(0, nz.G)()], qz = [(0, nz.D)()], hz = [(0, nz.G)()], gz = [(0, nz.G)()], Sz = [(0, nz.G)()], yz = [(0, nz.C)()], Dz = [(0, nz.G)()], Qz = [(0, nz.G)()], Wz = [(0, nz.G)()], (0, Ez.h)(zz, null, Rz, {
+          const iD = "function" === typeof Symbol && Symbol.metadata ? Object.create(ED[Symbol.metadata] ?? null) : void 0;
+          CD = [(0, pD.G)()], cD = [(0, pD.G)()], QD = [(0, pD.G)()], SD = [(0, pD.G)()], BD = [(0, pD.C)("target")], tD = [(0, pD.s)("targetHost")], ZD = [(0, pD.G)()], XD = [(0, pD.G)()], nD = [(0, pD.G)()], OD = [(0, pD.G)()], PD = [(0, pD.G)()], HD = [(0, pD.G)()], UD = [(0, pD.G)()], xD = [(0, pD.G)()], qD = [(0, pD.G)()], JD = [(0, pD.G)()], KD = [(0, pD.G)()], aD = [(0, pD.G)()], VD = [(0, pD.G)()], jD = [(0, pD.G)()], lD = [(0, pD.C)()], LD = [(0, pD.G)()], RD = [(0, pD.G)()], kD = [(0, pD.G)()], dD = [(0, pD.y)()], YD = [(0, pD.G)()], WD = [(0, pD.G)()], sD = [(0, pD.G)()], (0, ID.k)(DD, null, ZD, {
             kind: "getter",
             name: "inertialAlphaOffset",
             static: !1,
             private: !1,
             access: {
-              has: zz => "inertialAlphaOffset" in zz,
-              get: zz => zz.inertialAlphaOffset
+              has: DD => "inertialAlphaOffset" in DD,
+              get: DD => DD.inertialAlphaOffset
             },
-            metadata: iz
-          }, null, jz), (0, Ez.h)(zz, null, sz, {
+            metadata: iD
+          }, null, eD), (0, ID.k)(DD, null, XD, {
             kind: "getter",
             name: "inertialBetaOffset",
             static: !1,
             private: !1,
             access: {
-              has: zz => "inertialBetaOffset" in zz,
-              get: zz => zz.inertialBetaOffset
+              has: DD => "inertialBetaOffset" in DD,
+              get: DD => DD.inertialBetaOffset
             },
-            metadata: iz
-          }, null, jz), (0, Ez.h)(zz, null, oz, {
+            metadata: iD
+          }, null, eD), (0, ID.k)(DD, null, nD, {
             kind: "getter",
             name: "inertialRadiusOffset",
             static: !1,
             private: !1,
             access: {
-              has: zz => "inertialRadiusOffset" in zz,
-              get: zz => zz.inertialRadiusOffset
+              has: DD => "inertialRadiusOffset" in DD,
+              get: DD => DD.inertialRadiusOffset
             },
-            metadata: iz
-          }, null, jz), (0, Ez.h)(zz, null, hz, {
+            metadata: iD
+          }, null, eD), (0, ID.k)(DD, null, LD, {
             kind: "getter",
             name: "panningInertia",
             static: !1,
             private: !1,
             access: {
-              has: zz => "panningInertia" in zz,
-              get: zz => zz.panningInertia
+              has: DD => "panningInertia" in DD,
+              get: DD => DD.panningInertia
             },
-            metadata: iz
-          }, null, jz), (0, Ez.h)(zz, null, gz, {
+            metadata: iD
+          }, null, eD), (0, ID.k)(DD, null, RD, {
             kind: "getter",
             name: "zoomToMouseLocation",
             static: !1,
             private: !1,
             access: {
-              has: zz => "zoomToMouseLocation" in zz,
-              get: zz => zz.zoomToMouseLocation
+              has: DD => "zoomToMouseLocation" in DD,
+              get: DD => DD.zoomToMouseLocation
             },
-            metadata: iz
-          }, null, jz), (0, Ez.h)(null, null, uz, {
+            metadata: iD
+          }, null, eD), (0, ID.k)(null, null, CD, {
             kind: "field",
             name: "alpha",
             static: !1,
             private: !1,
             access: {
-              has: zz => "alpha" in zz,
-              get: zz => zz.alpha,
-              set: (zz, uz) => {
-                zz.alpha = uz
+              has: DD => "alpha" in DD,
+              get: DD => DD.alpha,
+              set: (DD, CD) => {
+                DD.alpha = CD
               }
             },
-            metadata: iz
-          }, Iz, Bz), (0, Ez.h)(null, null, bz, {
+            metadata: iD
+          }, uD, hD), (0, ID.k)(null, null, cD, {
             kind: "field",
             name: "beta",
             static: !1,
             private: !1,
             access: {
-              has: zz => "beta" in zz,
-              get: zz => zz.beta,
-              set: (zz, uz) => {
-                zz.beta = uz
+              has: DD => "beta" in DD,
+              get: DD => DD.beta,
+              set: (DD, CD) => {
+                DD.beta = CD
               }
             },
-            metadata: iz
-          }, Cz, Yz), (0, Ez.h)(null, null, tz, {
+            metadata: iD
+          }, rD, AD), (0, ID.k)(null, null, QD, {
             kind: "field",
             name: "radius",
             static: !1,
             private: !1,
             access: {
-              has: zz => "radius" in zz,
-              get: zz => zz.radius,
-              set: (zz, uz) => {
-                zz.radius = uz
+              has: DD => "radius" in DD,
+              get: DD => DD.radius,
+              set: (DD, CD) => {
+                DD.radius = CD
               }
             },
-            metadata: iz
-          }, kz, zu), (0, Ez.h)(null, null, Oz, {
+            metadata: iD
+          }, FD, DC), (0, ID.k)(null, null, SD, {
             kind: "field",
             name: "overrideCloneAlphaBetaRadius",
             static: !1,
             private: !1,
             access: {
-              has: zz => "overrideCloneAlphaBetaRadius" in zz,
-              get: zz => zz.overrideCloneAlphaBetaRadius,
-              set: (zz, uz) => {
-                zz.overrideCloneAlphaBetaRadius = uz
+              has: DD => "overrideCloneAlphaBetaRadius" in DD,
+              get: DD => DD.overrideCloneAlphaBetaRadius,
+              set: (DD, CD) => {
+                DD.overrideCloneAlphaBetaRadius = CD
               }
             },
-            metadata: iz
-          }, uu, bu), (0, Ez.h)(null, null, pz, {
+            metadata: iD
+          }, CC, cC), (0, ID.k)(null, null, BD, {
             kind: "field",
-            name: "pI",
+            name: "DW",
             static: !1,
             private: !1,
             access: {
-              has: zz => "pI" in zz,
-              get: zz => zz.pI,
-              set: (zz, uz) => {
-                zz.pI = uz
+              has: DD => "DW" in DD,
+              get: DD => DD.DW,
+              set: (DD, CD) => {
+                DD.DW = CD
               }
             },
-            metadata: iz
-          }, Eu, nu), (0, Ez.h)(null, null, Zz, {
+            metadata: iD
+          }, IC, pC), (0, ID.k)(null, null, tD, {
             kind: "field",
             name: "_targetHost",
             static: !1,
             private: !1,
             access: {
-              has: zz => "_targetHost" in zz,
-              get: zz => zz._targetHost,
-              set: (zz, uz) => {
-                zz._targetHost = uz
+              has: DD => "_targetHost" in DD,
+              get: DD => DD._targetHost,
+              set: (DD, CD) => {
+                DD._targetHost = CD
               }
             },
-            metadata: iz
-          }, iu, lu), (0, Ez.h)(null, null, Nz, {
+            metadata: iD
+          }, iC, fC), (0, ID.k)(null, null, OD, {
             kind: "field",
             name: "lowerAlphaLimit",
             static: !1,
             private: !1,
             access: {
-              has: zz => "lowerAlphaLimit" in zz,
-              get: zz => zz.lowerAlphaLimit,
-              set: (zz, uz) => {
-                zz.lowerAlphaLimit = uz
+              has: DD => "lowerAlphaLimit" in DD,
+              get: DD => DD.lowerAlphaLimit,
+              set: (DD, CD) => {
+                DD.lowerAlphaLimit = CD
               }
             },
-            metadata: iz
-          }, Mu, tu), (0, Ez.h)(null, null, vz, {
+            metadata: iD
+          }, bC, QC), (0, ID.k)(null, null, PD, {
             kind: "field",
             name: "upperAlphaLimit",
             static: !1,
             private: !1,
             access: {
-              has: zz => "upperAlphaLimit" in zz,
-              get: zz => zz.upperAlphaLimit,
-              set: (zz, uz) => {
-                zz.upperAlphaLimit = uz
+              has: DD => "upperAlphaLimit" in DD,
+              get: DD => DD.upperAlphaLimit,
+              set: (DD, CD) => {
+                DD.upperAlphaLimit = CD
               }
             },
-            metadata: iz
-          }, Hu, Ou), (0, Ez.h)(null, null, xz, {
+            metadata: iD
+          }, wC, SC), (0, ID.k)(null, null, HD, {
             kind: "field",
             name: "lowerBetaLimit",
             static: !1,
             private: !1,
             access: {
-              has: zz => "lowerBetaLimit" in zz,
-              get: zz => zz.lowerBetaLimit,
-              set: (zz, uz) => {
-                zz.lowerBetaLimit = uz
+              has: DD => "lowerBetaLimit" in DD,
+              get: DD => DD.lowerBetaLimit,
+              set: (DD, CD) => {
+                DD.lowerBetaLimit = CD
               }
             },
-            metadata: iz
-          }, pu, du), (0, Ez.h)(null, null, Jz, {
+            metadata: iD
+          }, BC, yC), (0, ID.k)(null, null, UD, {
             kind: "field",
             name: "upperBetaLimit",
             static: !1,
             private: !1,
             access: {
-              has: zz => "upperBetaLimit" in zz,
-              get: zz => zz.upperBetaLimit,
-              set: (zz, uz) => {
-                zz.upperBetaLimit = uz
+              has: DD => "upperBetaLimit" in DD,
+              get: DD => DD.upperBetaLimit,
+              set: (DD, CD) => {
+                DD.upperBetaLimit = CD
               }
             },
-            metadata: iz
-          }, Fu, Zu), (0, Ez.h)(null, null, Az, {
+            metadata: iD
+          }, MC, tC), (0, ID.k)(null, null, xD, {
             kind: "field",
             name: "lowerRadiusLimit",
             static: !1,
             private: !1,
             access: {
-              has: zz => "lowerRadiusLimit" in zz,
-              get: zz => zz.lowerRadiusLimit,
-              set: (zz, uz) => {
-                zz.lowerRadiusLimit = uz
+              has: DD => "lowerRadiusLimit" in DD,
+              get: DD => DD.lowerRadiusLimit,
+              set: (DD, CD) => {
+                DD.lowerRadiusLimit = CD
               }
             },
-            metadata: iz
-          }, Ru, Ku), (0, Ez.h)(null, null, Tz, {
+            metadata: iD
+          }, ZC, oC), (0, ID.k)(null, null, qD, {
             kind: "field",
             name: "upperRadiusLimit",
             static: !1,
             private: !1,
             access: {
-              has: zz => "upperRadiusLimit" in zz,
-              get: zz => zz.upperRadiusLimit,
-              set: (zz, uz) => {
-                zz.upperRadiusLimit = uz
+              has: DD => "upperRadiusLimit" in DD,
+              get: DD => DD.upperRadiusLimit,
+              set: (DD, CD) => {
+                DD.upperRadiusLimit = CD
               }
             },
-            metadata: iz
-          }, wu, Xu), (0, Ez.h)(null, null, Lz, {
+            metadata: iD
+          }, vC, NC), (0, ID.k)(null, null, JD, {
             kind: "field",
             name: "lowerTargetYLimit",
             static: !1,
             private: !1,
             access: {
-              has: zz => "lowerTargetYLimit" in zz,
-              get: zz => zz.lowerTargetYLimit,
-              set: (zz, uz) => {
-                zz.lowerTargetYLimit = uz
+              has: DD => "lowerTargetYLimit" in DD,
+              get: DD => DD.lowerTargetYLimit,
+              set: (DD, CD) => {
+                DD.lowerTargetYLimit = CD
               }
             },
-            metadata: iz
-          }, fu, su), (0, Ez.h)(null, null, Pz, {
+            metadata: iD
+          }, gC, XC), (0, ID.k)(null, null, KD, {
             kind: "field",
             name: "inertialPanningX",
             static: !1,
             private: !1,
             access: {
-              has: zz => "inertialPanningX" in zz,
-              get: zz => zz.inertialPanningX,
-              set: (zz, uz) => {
-                zz.inertialPanningX = uz
+              has: DD => "inertialPanningX" in DD,
+              get: DD => DD.inertialPanningX,
+              set: (DD, CD) => {
+                DD.inertialPanningX = CD
               }
             },
-            metadata: iz
-          }, ru, ou), (0, Ez.h)(null, null, Gz, {
+            metadata: iD
+          }, mC, nC), (0, ID.k)(null, null, aD, {
             kind: "field",
             name: "inertialPanningY",
             static: !1,
             private: !1,
             access: {
-              has: zz => "inertialPanningY" in zz,
-              get: zz => zz.inertialPanningY,
-              set: (zz, uz) => {
-                zz.inertialPanningY = uz
+              has: DD => "inertialPanningY" in DD,
+              get: DD => DD.inertialPanningY,
+              set: (DD, CD) => {
+                DD.inertialPanningY = CD
               }
             },
-            metadata: iz
-          }, Nu, vu), (0, Ez.h)(null, null, az, {
+            metadata: iD
+          }, OC, PC), (0, ID.k)(null, null, VD, {
             kind: "field",
             name: "pinchToPanMaxDistance",
             static: !1,
             private: !1,
             access: {
-              has: zz => "pinchToPanMaxDistance" in zz,
-              get: zz => zz.pinchToPanMaxDistance,
-              set: (zz, uz) => {
-                zz.pinchToPanMaxDistance = uz
+              has: DD => "pinchToPanMaxDistance" in DD,
+              get: DD => DD.pinchToPanMaxDistance,
+              set: (DD, CD) => {
+                DD.pinchToPanMaxDistance = CD
               }
             },
-            metadata: iz
-          }, xu, Ju), (0, Ez.h)(null, null, mz, {
+            metadata: iD
+          }, HC, UC), (0, ID.k)(null, null, jD, {
             kind: "field",
             name: "panningDistanceLimit",
             static: !1,
             private: !1,
             access: {
-              has: zz => "panningDistanceLimit" in zz,
-              get: zz => zz.panningDistanceLimit,
-              set: (zz, uz) => {
-                zz.panningDistanceLimit = uz
+              has: DD => "panningDistanceLimit" in DD,
+              get: DD => DD.panningDistanceLimit,
+              set: (DD, CD) => {
+                DD.panningDistanceLimit = CD
               }
             },
-            metadata: iz
-          }, Au, Tu), (0, Ez.h)(null, null, qz, {
+            metadata: iD
+          }, xC, qC), (0, ID.k)(null, null, lD, {
             kind: "field",
             name: "panningOriginTarget",
             static: !1,
             private: !1,
             access: {
-              has: zz => "panningOriginTarget" in zz,
-              get: zz => zz.panningOriginTarget,
-              set: (zz, uz) => {
-                zz.panningOriginTarget = uz
+              has: DD => "panningOriginTarget" in DD,
+              get: DD => DD.panningOriginTarget,
+              set: (DD, CD) => {
+                DD.panningOriginTarget = CD
               }
             },
-            metadata: iz
-          }, Lu, Pu), (0, Ez.h)(null, null, Sz, {
+            metadata: iD
+          }, JC, KC), (0, ID.k)(null, null, kD, {
             kind: "field",
             name: "zoomOnFactor",
             static: !1,
             private: !1,
             access: {
-              has: zz => "zoomOnFactor" in zz,
-              get: zz => zz.zoomOnFactor,
-              set: (zz, uz) => {
-                zz.zoomOnFactor = uz
+              has: DD => "zoomOnFactor" in DD,
+              get: DD => DD.zoomOnFactor,
+              set: (DD, CD) => {
+                DD.zoomOnFactor = CD
               }
             },
-            metadata: iz
-          }, Gu, au), (0, Ez.h)(null, null, yz, {
+            metadata: iD
+          }, aC, VC), (0, ID.k)(null, null, dD, {
             kind: "field",
             name: "targetScreenOffset",
             static: !1,
             private: !1,
             access: {
-              has: zz => "targetScreenOffset" in zz,
-              get: zz => zz.targetScreenOffset,
-              set: (zz, uz) => {
-                zz.targetScreenOffset = uz
+              has: DD => "targetScreenOffset" in DD,
+              get: DD => DD.targetScreenOffset,
+              set: (DD, CD) => {
+                DD.targetScreenOffset = CD
               }
             },
-            metadata: iz
-          }, Vu, mu), (0, Ez.h)(null, null, Dz, {
+            metadata: iD
+          }, zC, jC), (0, ID.k)(null, null, YD, {
             kind: "field",
             name: "allowUpsideDown",
             static: !1,
             private: !1,
             access: {
-              has: zz => "allowUpsideDown" in zz,
-              get: zz => zz.allowUpsideDown,
-              set: (zz, uz) => {
-                zz.allowUpsideDown = uz
+              has: DD => "allowUpsideDown" in DD,
+              get: DD => DD.allowUpsideDown,
+              set: (DD, CD) => {
+                DD.allowUpsideDown = CD
               }
             },
-            metadata: iz
-          }, qu, hu), (0, Ez.h)(null, null, Qz, {
+            metadata: iD
+          }, lC, LC), (0, ID.k)(null, null, WD, {
             kind: "field",
             name: "useInputToRestoreState",
             static: !1,
             private: !1,
             access: {
-              has: zz => "useInputToRestoreState" in zz,
-              get: zz => zz.useInputToRestoreState,
-              set: (zz, uz) => {
-                zz.useInputToRestoreState = uz
+              has: DD => "useInputToRestoreState" in DD,
+              get: DD => DD.useInputToRestoreState,
+              set: (DD, CD) => {
+                DD.useInputToRestoreState = CD
               }
             },
-            metadata: iz
-          }, Uu, cu), (0, Ez.h)(null, null, Wz, {
+            metadata: iD
+          }, TC, GC), (0, ID.k)(null, null, sD, {
             kind: "field",
             name: "restoreStateInterpolationFactor",
             static: !1,
             private: !1,
             access: {
-              has: zz => "restoreStateInterpolationFactor" in zz,
-              get: zz => zz.restoreStateInterpolationFactor,
-              set: (zz, uz) => {
-                zz.restoreStateInterpolationFactor = uz
+              has: DD => "restoreStateInterpolationFactor" in DD,
+              get: DD => DD.restoreStateInterpolationFactor,
+              set: (DD, CD) => {
+                DD.restoreStateInterpolationFactor = CD
               }
             },
-            metadata: iz
-          }, gu, Su), iz && Object.defineProperty(zz, Symbol.metadata, {
+            metadata: iD
+          }, RC, kC), iD && Object.defineProperty(DD, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: iz
+            value: iD
           })
-        })(), zz
+        })(), DD
       })(),
-      Sz = !1;
-    Sz || (Sz = !0, tz.c.AddNodeConstructor("ArcRotateCamera", ((zz, uz) => () => new gz(zz, 0, 0, 1, lz.n.Zero(), uz))), (0, mz.c)("BABYLON.ArcRotateCamera", gz))
+      kD = !1;
+    kD || (kD = !0, QD.b.AddNodeConstructor("ArcRotateCamera", ((DD, CD) => () => new RD(DD, 0, 0, 1, fD.p.Zero(), CD))), (0, jD.d)("BABYLON.ArcRotateCamera", RD))
   },
-  39406: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Ez.c
+  39382: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => ID.b
     });
-    var Ez = bz(39412);
-    (0, Ez.e)()
+    var ID = cD(39388);
+    (0, ID.c)()
   },
-  39412: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Oz,
-      e: () => dz
+  39388: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => SD,
+      c: () => yD
     });
-    var Ez = bz(39170),
-      nz = bz(39172),
-      iz = bz(36519),
-      lz = bz(36715),
-      Mz = bz(39421),
-      tz = bz(39384),
-      Hz = bz(36564);
-    let Oz = (() => {
-        var zz;
-        let uz, bz, tz = Mz.b,
-          Hz = [],
-          Oz = [],
-          pz = [],
-          dz = [];
-        return zz = class extends tz {
-          constructor(zz, uz, bz, nz) {
-            super(zz, bz, nz), this.groundColor = (0, Ez.j)(this, Hz, new lz.c(0, 0, 0)), this.direction = ((0, Ez.j)(this, Oz), (0, Ez.j)(this, pz, void 0)), (0, Ez.j)(this, dz), this.direction = uz || iz.n.Up()
+    var ID = cD(39154),
+      pD = cD(39156),
+      iD = cD(36446),
+      fD = cD(36622),
+      bD = cD(39392),
+      QD = cD(39356),
+      wD = cD(36488);
+    let SD = (() => {
+        var DD;
+        let CD, cD, QD = bD.b,
+          wD = [],
+          SD = [],
+          BD = [],
+          yD = [];
+        return DD = class extends QD {
+          constructor(DD, CD, cD, pD) {
+            super(DD, cD, pD), this.groundColor = (0, ID.m)(this, wD, new fD.d(0, 0, 0)), this.direction = ((0, ID.m)(this, SD), (0, ID.m)(this, BD, void 0)), (0, ID.m)(this, yD), this.direction = CD || iD.p.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -2170,71 +2170,71 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(zz) {
-            return this.direction = iz.n.Normalize(zz.subtract(iz.n.Zero())), this.direction
+          setDirectionToTarget(DD) {
+            return this.direction = iD.p.Normalize(DD.subtract(iD.p.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(zz, uz) {
-            const bz = iz.n.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", bz.x, bz.y, bz.z, 0, uz), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), uz), this
+          transferToEffect(DD, CD) {
+            const cD = iD.p.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", cD.x, cD.y, cD.z, 0, CD), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), CD), this
           }
-          transferToNodeMaterialEffect(zz, uz) {
-            const bz = iz.n.Normalize(this.direction);
-            return zz.setFloat3(uz, bz.x, bz.y, bz.z), this
+          transferToNodeMaterialEffect(DD, CD) {
+            const cD = iD.p.Normalize(this.direction);
+            return DD.setFloat3(CD, cD.x, cD.y, cD.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = iz.d.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = iD.d.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return Mz.b.LIGHTTYPEID_HEMISPHERICLIGHT
+            return bD.b.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(zz, uz) {
-            zz["HEMILIGHT" + uz] = !0
+          prepareLightSpecificDefines(DD, CD) {
+            DD["HEMILIGHT" + CD] = !0
           }
         }, (() => {
-          const iz = "function" === typeof Symbol && Symbol.metadata ? Object.create(tz[Symbol.metadata] ?? null) : void 0;
-          uz = [(0, nz.q)()], bz = [(0, nz.D)()], (0, Ez.h)(null, null, uz, {
+          const iD = "function" === typeof Symbol && Symbol.metadata ? Object.create(QD[Symbol.metadata] ?? null) : void 0;
+          CD = [(0, pD.l)()], cD = [(0, pD.C)()], (0, ID.k)(null, null, CD, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: zz => "groundColor" in zz,
-              get: zz => zz.groundColor,
-              set: (zz, uz) => {
-                zz.groundColor = uz
+              has: DD => "groundColor" in DD,
+              get: DD => DD.groundColor,
+              set: (DD, CD) => {
+                DD.groundColor = CD
               }
             },
-            metadata: iz
-          }, Hz, Oz), (0, Ez.h)(null, null, bz, {
+            metadata: iD
+          }, wD, SD), (0, ID.k)(null, null, cD, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: zz => "direction" in zz,
-              get: zz => zz.direction,
-              set: (zz, uz) => {
-                zz.direction = uz
+              has: DD => "direction" in DD,
+              get: DD => DD.direction,
+              set: (DD, CD) => {
+                DD.direction = CD
               }
             },
-            metadata: iz
-          }, pz, dz), iz && Object.defineProperty(zz, Symbol.metadata, {
+            metadata: iD
+          }, BD, yD), iD && Object.defineProperty(DD, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: iz
+            value: iD
           })
-        })(), zz
+        })(), DD
       })(),
-      pz = !1;
+      BD = !1;
 
-    function dz() {
-      pz || (pz = !0, tz.c.AddNodeConstructor("Light_Type_3", ((zz, uz) => () => new Oz(zz, iz.n.Zero(), uz))), (0, Hz.c)("BABYLON.HemisphericLight", Oz))
+    function yD() {
+      BD || (BD = !0, QD.b.AddNodeConstructor("Light_Type_3", ((DD, CD) => () => new SD(DD, iD.p.Zero(), CD))), (0, wD.d)("BABYLON.HemisphericLight", SD))
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

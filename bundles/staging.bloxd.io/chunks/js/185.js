@@ -1,43 +1,43 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  8886: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      ALL_DEV_TOOLS: () => lz,
-      coreDevTools: () => Hz,
-      devTools: () => tz
+  8925: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      ALL_DEV_TOOLS: () => fD,
+      coreDevTools: () => wD,
+      devTools: () => QD
     });
-    var Ez = bz(606),
-      nz = bz(1273),
-      iz = bz(8889);
-    const lz = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function Mz() {
+    var ID = cD(646),
+      pD = cD(1294),
+      iD = cD(8934);
+    const fD = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function bD() {
       const {
-        noaDevTools: zz
-      } = await bz.e(230).then((() => bz(40259)));
-      return zz
+        noaDevTools: DD
+      } = await cD.e(230).then((() => cD(40148)));
+      return DD
     }
-    const tz = new class {
+    const QD = new class {
         constructor() {
-          this.loadHost = Mz, this.tools = lz
+          this.loadHost = bD, this.tools = fD
         }
-        setHost(zz) {
-          this.tools = null === zz ? lz : zz.tools, this.loadHost = null === zz ? Mz : async () => zz
+        setHost(DD) {
+          this.tools = null === DD ? fD : DD.tools, this.loadHost = null === DD ? bD : async () => DD
         }
-        supports(zz) {
-          return this.tools.has(zz)
+        supports(DD) {
+          return this.tools.has(DD)
         }
-        async downloadScene(zz, uz) {
-          const bz = await this.loadHost();
-          await bz.downloadScene(zz, uz)
+        async downloadScene(DD, CD) {
+          const cD = await this.loadHost();
+          await cD.downloadScene(DD, CD)
         }
-        async setAmbientLightIntensity(zz) {
-          const uz = await this.loadHost();
-          await uz.setAmbientLightIntensity(zz)
+        async setAmbientLightIntensity(DD) {
+          const CD = await this.loadHost();
+          await CD.setAmbientLightIntensity(DD)
         }
       },
-      Hz = {
-        tools: iz.d,
+      wD = {
+        tools: iD.d,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -45,10 +45,10 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    Ez.x && tz.setHost(Hz), (0, nz.s)((() => {
-      tz.setHost(Hz)
+    ID.q && QD.setHost(wD), (0, pD.s)((() => {
+      QD.setHost(wD)
     }))
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

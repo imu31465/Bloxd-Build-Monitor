@@ -1,181 +1,181 @@
 export const id = 285;
 export const ids = [285];
 export const modules = {
-  40531: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Xu,
-      d: () => Gz,
-      ChangeSet: () => az,
-      h: () => Lu,
-      l: () => Sz,
-      n: () => Vu,
-      r: () => Qz,
-      s: () => Pz,
-      t: () => nu,
-      x: () => Su,
-      u: () => yu,
-      z: () => qu,
-      B: () => ru,
-      E: () => Yz,
-      I: () => Rz,
-      J: () => ou,
-      K: () => Jz,
-      N: () => Tz,
-      Q: () => mu,
-      R: () => zb,
-      U: () => xz,
-      V: () => ub,
-      W: () => Az
+  40379: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => NC,
+      e: () => aD,
+      ChangeSet: () => VD,
+      f: () => JC,
+      i: () => kD,
+      j: () => zC,
+      l: () => WD,
+      o: () => KD,
+      s: () => pC,
+      x: () => kC,
+      u: () => dC,
+      B: () => lC,
+      D: () => mC,
+      F: () => AD,
+      J: () => ZD,
+      L: () => nC,
+      O: () => UD,
+      S: () => qD,
+      U: () => jC,
+      Y: () => Dc,
+      _: () => HD,
+      ab: () => Cc,
+      bb: () => xD
     });
-    let Ez = [],
-      nz = [];
+    let ID = [],
+      pD = [];
 
-    function iz(zz) {
-      if (zz < 768) return !1;
-      for (let uz = 0, bz = Ez.length;;) {
-        let iz = uz + bz >> 1;
-        if (zz < Ez[iz]) bz = iz;
+    function iD(DD) {
+      if (DD < 768) return !1;
+      for (let CD = 0, cD = ID.length;;) {
+        let iD = CD + cD >> 1;
+        if (DD < ID[iD]) cD = iD;
         else {
-          if (!(zz >= nz[iz])) return !0;
-          uz = iz + 1
+          if (!(DD >= pD[iD])) return !0;
+          CD = iD + 1
         }
-        if (uz == bz) return !1
+        if (CD == cD) return !1
       }
     }
 
-    function lz(zz) {
-      return zz >= 127462 && zz <= 127487
+    function fD(DD) {
+      return DD >= 127462 && DD <= 127487
     }(() => {
-      let zz = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((zz => zz ? parseInt(zz, 36) : 1));
-      for (let uz = 0, bz = 0; uz < zz.length; uz++)(uz % 2 ? nz : Ez).push(bz += zz[uz])
+      let DD = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((DD => DD ? parseInt(DD, 36) : 1));
+      for (let CD = 0, cD = 0; CD < DD.length; CD++)(CD % 2 ? pD : ID).push(cD += DD[CD])
     })();
-    const Mz = 8205;
+    const bD = 8205;
 
-    function tz(zz, uz) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Hz : Oz)(zz, uz, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function QD(DD, CD) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? wD : SD)(DD, CD, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function Hz(zz, uz, bz) {
-      if (uz == zz.length) return uz;
-      uz && dz(zz.charCodeAt(uz)) && Fz(zz.charCodeAt(uz - 1)) && uz--;
-      let Ez = pz(zz, uz);
-      for (uz += Zz(Ez); uz < zz.length;) {
-        let nz = pz(zz, uz);
-        if (Ez == Mz || nz == Mz || bz && iz(nz)) uz += Zz(nz), Ez = nz;
+    function wD(DD, CD, cD) {
+      if (CD == DD.length) return CD;
+      CD && yD(DD.charCodeAt(CD)) && MD(DD.charCodeAt(CD - 1)) && CD--;
+      let ID = BD(DD, CD);
+      for (CD += tD(ID); CD < DD.length;) {
+        let pD = BD(DD, CD);
+        if (ID == bD || pD == bD || cD && iD(pD)) CD += tD(pD), ID = pD;
         else {
-          if (!lz(nz)) break;
+          if (!fD(pD)) break;
           {
-            let bz = 0,
-              Ez = uz - 2;
-            for (; Ez >= 0 && lz(pz(zz, Ez));) bz++, Ez -= 2;
-            if (bz % 2 == 0) break;
-            uz += 2
+            let cD = 0,
+              ID = CD - 2;
+            for (; ID >= 0 && fD(BD(DD, ID));) cD++, ID -= 2;
+            if (cD % 2 == 0) break;
+            CD += 2
           }
         }
       }
-      return uz
+      return CD
     }
 
-    function Oz(zz, uz, bz) {
-      for (; uz > 0;) {
-        let Ez = Hz(zz, uz - 2, bz);
-        if (Ez < uz) return Ez;
-        uz--
+    function SD(DD, CD, cD) {
+      for (; CD > 0;) {
+        let ID = wD(DD, CD - 2, cD);
+        if (ID < CD) return ID;
+        CD--
       }
       return 0
     }
 
-    function pz(zz, uz) {
-      let bz = zz.charCodeAt(uz);
-      if (!Fz(bz) || uz + 1 == zz.length) return bz;
-      let Ez = zz.charCodeAt(uz + 1);
-      return dz(Ez) ? Ez - 56320 + (bz - 55296 << 10) + 65536 : bz
+    function BD(DD, CD) {
+      let cD = DD.charCodeAt(CD);
+      if (!MD(cD) || CD + 1 == DD.length) return cD;
+      let ID = DD.charCodeAt(CD + 1);
+      return yD(ID) ? ID - 56320 + (cD - 55296 << 10) + 65536 : cD
     }
 
-    function dz(zz) {
-      return zz >= 56320 && zz < 57344
+    function yD(DD) {
+      return DD >= 56320 && DD < 57344
     }
 
-    function Fz(zz) {
-      return zz >= 55296 && zz < 56320
+    function MD(DD) {
+      return DD >= 55296 && DD < 56320
     }
 
-    function Zz(zz) {
-      return zz < 65536 ? 1 : 2
+    function tD(DD) {
+      return DD < 65536 ? 1 : 2
     }
-    class Rz {
-      lineAt(zz) {
-        if (zz < 0 || zz > this.length) throw new RangeError(`Invalid position ${zz} in document of length ${this.length}`);
-        return this.lineInner(zz, !1, 1, 0)
+    class ZD {
+      lineAt(DD) {
+        if (DD < 0 || DD > this.length) throw new RangeError(`Invalid position ${DD} in document of length ${this.length}`);
+        return this.lineInner(DD, !1, 1, 0)
       }
-      line(zz) {
-        if (zz < 1 || zz > this.lines) throw new RangeError(`Invalid line number ${zz} in ${this.lines}-line document`);
-        return this.lineInner(zz, !0, 1, 0)
+      line(DD) {
+        if (DD < 1 || DD > this.lines) throw new RangeError(`Invalid line number ${DD} in ${this.lines}-line document`);
+        return this.lineInner(DD, !0, 1, 0)
       }
-      replace(zz, uz, bz) {
-        [zz, uz] = vz(this, zz, uz);
-        let Ez = [];
-        return this.decompose(0, zz, Ez, 2), bz.length && bz.decompose(0, bz.length, Ez, 3), this.decompose(uz, this.length, Ez, 1), wz.from(Ez, this.length - (uz - zz) + bz.length)
+      replace(DD, CD, cD) {
+        [DD, CD] = PD(this, DD, CD);
+        let ID = [];
+        return this.decompose(0, DD, ID, 2), cD.length && cD.decompose(0, cD.length, ID, 3), this.decompose(CD, this.length, ID, 1), vD.from(ID, this.length - (CD - DD) + cD.length)
       }
-      append(zz) {
-        return this.replace(this.length, this.length, zz)
+      append(DD) {
+        return this.replace(this.length, this.length, DD)
       }
-      slice(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [zz, uz] = vz(this, zz, uz);
-        let bz = [];
-        return this.decompose(zz, uz, bz, 0), wz.from(bz, uz - zz)
+      slice(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [DD, CD] = PD(this, DD, CD);
+        let cD = [];
+        return this.decompose(DD, CD, cD, 0), vD.from(cD, CD - DD)
       }
-      eq(zz) {
-        if (zz == this) return !0;
-        if (zz.length != this.length || zz.lines != this.lines) return !1;
-        let uz = this.scanIdentical(zz, 1),
-          bz = this.length - this.scanIdentical(zz, -1),
-          Ez = new sz(this),
-          nz = new sz(zz);
-        for (let iz = uz, lz = uz;;) {
-          if (Ez.next(iz), nz.next(iz), iz = 0, Ez.lineBreak != nz.lineBreak || Ez.done != nz.done || Ez.value != nz.value) return !1;
-          if (lz += Ez.value.length, Ez.done || lz >= bz) return !0
+      eq(DD) {
+        if (DD == this) return !0;
+        if (DD.length != this.length || DD.lines != this.lines) return !1;
+        let CD = this.scanIdentical(DD, 1),
+          cD = this.length - this.scanIdentical(DD, -1),
+          ID = new XD(this),
+          pD = new XD(DD);
+        for (let iD = CD, fD = CD;;) {
+          if (ID.next(iD), pD.next(iD), iD = 0, ID.lineBreak != pD.lineBreak || ID.done != pD.done || ID.value != pD.value) return !1;
+          if (fD += ID.value.length, ID.done || fD >= cD) return !0
         }
       }
       iter() {
-        return new sz(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new XD(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new rz(this, zz, uz)
+      iterRange(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new mD(this, DD, CD)
       }
-      iterLines(zz, uz) {
-        let bz;
-        if (null == zz) bz = this.iter();
+      iterLines(DD, CD) {
+        let cD;
+        if (null == DD) cD = this.iter();
         else {
-          null == uz && (uz = this.lines + 1);
-          let Ez = this.line(zz).from;
-          bz = this.iterRange(Ez, Math.max(Ez, uz == this.lines + 1 ? this.length : uz <= 1 ? 0 : this.line(uz - 1).to))
+          null == CD && (CD = this.lines + 1);
+          let ID = this.line(DD).from;
+          cD = this.iterRange(ID, Math.max(ID, CD == this.lines + 1 ? this.length : CD <= 1 ? 0 : this.line(CD - 1).to))
         }
-        return new oz(bz)
+        return new nD(cD)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let zz = [];
-        return this.flatten(zz), zz
+        let DD = [];
+        return this.flatten(DD), DD
       }
       constructor() {}
-      static of (zz) {
-        if (0 == zz.length) throw new RangeError("A document must have at least one line");
-        return 1 != zz.length || zz[0] ? zz.length <= 32 ? new Kz(zz) : wz.from(Kz.split(zz, [])) : Rz.empty
+      static of (DD) {
+        if (0 == DD.length) throw new RangeError("A document must have at least one line");
+        return 1 != DD.length || DD[0] ? DD.length <= 32 ? new oD(DD) : vD.from(oD.split(DD, [])) : ZD.empty
       }
     }
-    class Kz extends Rz {
-      constructor(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(zz) {
-          let uz = -1;
-          for (let bz of zz) uz += bz.length + 1;
-          return uz
-        }(zz);
-        super(), this.text = zz, this.length = uz
+    class oD extends ZD {
+      constructor(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(DD) {
+          let CD = -1;
+          for (let cD of DD) CD += cD.length + 1;
+          return CD
+        }(DD);
+        super(), this.text = DD, this.length = CD
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(zz, uz, bz, Ez) {
-        for (let nz = 0;; nz++) {
-          let iz = this.text[nz],
-            lz = Ez + iz.length;
-          if ((uz ? bz : lz) >= zz) return new Nz(Ez, lz, bz, iz);
-          Ez = lz + 1, bz++
+      lineInner(DD, CD, cD, ID) {
+        for (let pD = 0;; pD++) {
+          let iD = this.text[pD],
+            fD = ID + iD.length;
+          if ((CD ? cD : fD) >= DD) return new OD(ID, fD, cD, iD);
+          ID = fD + 1, cD++
         }
       }
-      decompose(zz, uz, bz, Ez) {
-        let nz = zz <= 0 && uz >= this.length ? this : new Kz(fz(this.text, zz, uz), Math.min(uz, this.length) - Math.max(0, zz));
-        if (1 & Ez) {
-          let zz = bz.pop(),
-            uz = Xz(nz.text, zz.text.slice(), 0, nz.length);
-          if (uz.length <= 32) bz.push(new Kz(uz, zz.length + nz.length));
+      decompose(DD, CD, cD, ID) {
+        let pD = DD <= 0 && CD >= this.length ? this : new oD(gD(this.text, DD, CD), Math.min(CD, this.length) - Math.max(0, DD));
+        if (1 & ID) {
+          let DD = cD.pop(),
+            CD = ND(pD.text, DD.text.slice(), 0, pD.length);
+          if (CD.length <= 32) cD.push(new oD(CD, DD.length + pD.length));
           else {
-            let zz = uz.length >> 1;
-            bz.push(new Kz(uz.slice(0, zz)), new Kz(uz.slice(zz)))
+            let DD = CD.length >> 1;
+            cD.push(new oD(CD.slice(0, DD)), new oD(CD.slice(DD)))
           }
-        } else bz.push(nz)
+        } else cD.push(pD)
       }
-      replace(zz, uz, bz) {
-        if (!(bz instanceof Kz)) return super.replace(zz, uz, bz);
-        [zz, uz] = vz(this, zz, uz);
-        let Ez = Xz(this.text, Xz(bz.text, fz(this.text, 0, zz)), uz),
-          nz = this.length + bz.length - (uz - zz);
-        return Ez.length <= 32 ? new Kz(Ez, nz) : wz.from(Kz.split(Ez, []), nz)
+      replace(DD, CD, cD) {
+        if (!(cD instanceof oD)) return super.replace(DD, CD, cD);
+        [DD, CD] = PD(this, DD, CD);
+        let ID = ND(this.text, ND(cD.text, gD(this.text, 0, DD)), CD),
+          pD = this.length + cD.length - (CD - DD);
+        return ID.length <= 32 ? new oD(ID, pD) : vD.from(oD.split(ID, []), pD)
       }
-      sliceString(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [zz, uz] = vz(this, zz, uz);
-        let Ez = "";
-        for (let nz = 0, iz = 0; nz <= uz && iz < this.text.length; iz++) {
-          let lz = this.text[iz],
-            Mz = nz + lz.length;
-          nz > zz && iz && (Ez += bz), zz < Mz && uz > nz && (Ez += lz.slice(Math.max(0, zz - nz), uz - nz)), nz = Mz + 1
+      sliceString(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [DD, CD] = PD(this, DD, CD);
+        let ID = "";
+        for (let pD = 0, iD = 0; pD <= CD && iD < this.text.length; iD++) {
+          let fD = this.text[iD],
+            bD = pD + fD.length;
+          pD > DD && iD && (ID += cD), DD < bD && CD > pD && (ID += fD.slice(Math.max(0, DD - pD), CD - pD)), pD = bD + 1
         }
-        return Ez
+        return ID
       }
-      flatten(zz) {
-        for (let uz of this.text) zz.push(uz)
+      flatten(DD) {
+        for (let CD of this.text) DD.push(CD)
       }
       scanIdentical() {
         return 0
       }
-      static split(zz, uz) {
-        let bz = [],
-          Ez = -1;
-        for (let nz of zz) bz.push(nz), Ez += nz.length + 1, 32 == bz.length && (uz.push(new Kz(bz, Ez)), bz = [], Ez = -1);
-        return Ez > -1 && uz.push(new Kz(bz, Ez)), uz
+      static split(DD, CD) {
+        let cD = [],
+          ID = -1;
+        for (let pD of DD) cD.push(pD), ID += pD.length + 1, 32 == cD.length && (CD.push(new oD(cD, ID)), cD = [], ID = -1);
+        return ID > -1 && CD.push(new oD(cD, ID)), CD
       }
     }
-    class wz extends Rz {
-      constructor(zz, uz) {
-        super(), this.children = zz, this.length = uz, this.lines = 0;
-        for (let bz of zz) this.lines += bz.lines
+    class vD extends ZD {
+      constructor(DD, CD) {
+        super(), this.children = DD, this.length = CD, this.lines = 0;
+        for (let cD of DD) this.lines += cD.lines
       }
-      lineInner(zz, uz, bz, Ez) {
-        for (let nz = 0;; nz++) {
-          let iz = this.children[nz],
-            lz = Ez + iz.length,
-            Mz = bz + iz.lines - 1;
-          if ((uz ? Mz : lz) >= zz) return iz.lineInner(zz, uz, bz, Ez);
-          Ez = lz + 1, bz = Mz + 1
+      lineInner(DD, CD, cD, ID) {
+        for (let pD = 0;; pD++) {
+          let iD = this.children[pD],
+            fD = ID + iD.length,
+            bD = cD + iD.lines - 1;
+          if ((CD ? bD : fD) >= DD) return iD.lineInner(DD, CD, cD, ID);
+          ID = fD + 1, cD = bD + 1
         }
       }
-      decompose(zz, uz, bz, Ez) {
-        for (let nz = 0, iz = 0; iz <= uz && nz < this.children.length; nz++) {
-          let lz = this.children[nz],
-            Mz = iz + lz.length;
-          if (zz <= Mz && uz >= iz) {
-            let nz = Ez & ((iz <= zz ? 1 : 0) | (Mz >= uz ? 2 : 0));
-            iz >= zz && Mz <= uz && !nz ? bz.push(lz) : lz.decompose(zz - iz, uz - iz, bz, nz)
+      decompose(DD, CD, cD, ID) {
+        for (let pD = 0, iD = 0; iD <= CD && pD < this.children.length; pD++) {
+          let fD = this.children[pD],
+            bD = iD + fD.length;
+          if (DD <= bD && CD >= iD) {
+            let pD = ID & ((iD <= DD ? 1 : 0) | (bD >= CD ? 2 : 0));
+            iD >= DD && bD <= CD && !pD ? cD.push(fD) : fD.decompose(DD - iD, CD - iD, cD, pD)
           }
-          iz = Mz + 1
+          iD = bD + 1
         }
       }
-      replace(zz, uz, bz) {
-        if ([zz, uz] = vz(this, zz, uz), bz.lines < this.lines)
-          for (let Ez = 0, nz = 0; Ez < this.children.length; Ez++) {
-            let iz = this.children[Ez],
-              lz = nz + iz.length;
-            if (zz >= nz && uz <= lz) {
-              let Mz = iz.replace(zz - nz, uz - nz, bz),
-                tz = this.lines - iz.lines + Mz.lines;
-              if (Mz.lines < tz >> 4 && Mz.lines > tz >> 6) {
-                let nz = this.children.slice();
-                return nz[Ez] = Mz, new wz(nz, this.length - (uz - zz) + bz.length)
+      replace(DD, CD, cD) {
+        if ([DD, CD] = PD(this, DD, CD), cD.lines < this.lines)
+          for (let ID = 0, pD = 0; ID < this.children.length; ID++) {
+            let iD = this.children[ID],
+              fD = pD + iD.length;
+            if (DD >= pD && CD <= fD) {
+              let bD = iD.replace(DD - pD, CD - pD, cD),
+                QD = this.lines - iD.lines + bD.lines;
+              if (bD.lines < QD >> 4 && bD.lines > QD >> 6) {
+                let pD = this.children.slice();
+                return pD[ID] = bD, new vD(pD, this.length - (CD - DD) + cD.length)
               }
-              return super.replace(nz, lz, Mz)
+              return super.replace(pD, fD, bD)
             }
-            nz = lz + 1
+            pD = fD + 1
           }
-        return super.replace(zz, uz, bz)
+        return super.replace(DD, CD, cD)
       }
-      sliceString(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [zz, uz] = vz(this, zz, uz);
-        let Ez = "";
-        for (let nz = 0, iz = 0; nz < this.children.length && iz <= uz; nz++) {
-          let lz = this.children[nz],
-            Mz = iz + lz.length;
-          iz > zz && nz && (Ez += bz), zz < Mz && uz > iz && (Ez += lz.sliceString(zz - iz, uz - iz, bz)), iz = Mz + 1
+      sliceString(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [DD, CD] = PD(this, DD, CD);
+        let ID = "";
+        for (let pD = 0, iD = 0; pD < this.children.length && iD <= CD; pD++) {
+          let fD = this.children[pD],
+            bD = iD + fD.length;
+          iD > DD && pD && (ID += cD), DD < bD && CD > iD && (ID += fD.sliceString(DD - iD, CD - iD, cD)), iD = bD + 1
         }
-        return Ez
+        return ID
       }
-      flatten(zz) {
-        for (let uz of this.children) uz.flatten(zz)
+      flatten(DD) {
+        for (let CD of this.children) CD.flatten(DD)
       }
-      scanIdentical(zz, uz) {
-        if (!(zz instanceof wz)) return 0;
-        let bz = 0,
-          [Ez, nz, iz, lz] = uz > 0 ? [0, 0, this.children.length, zz.children.length] : [this.children.length - 1, zz.children.length - 1, -1, -1];
-        for (;; Ez += uz, nz += uz) {
-          if (Ez == iz || nz == lz) return bz;
-          let Mz = this.children[Ez],
-            tz = zz.children[nz];
-          if (Mz != tz) return bz + Mz.scanIdentical(tz, uz);
-          bz += Mz.length + 1
+      scanIdentical(DD, CD) {
+        if (!(DD instanceof vD)) return 0;
+        let cD = 0,
+          [ID, pD, iD, fD] = CD > 0 ? [0, 0, this.children.length, DD.children.length] : [this.children.length - 1, DD.children.length - 1, -1, -1];
+        for (;; ID += CD, pD += CD) {
+          if (ID == iD || pD == fD) return cD;
+          let bD = this.children[ID],
+            QD = DD.children[pD];
+          if (bD != QD) return cD + bD.scanIdentical(QD, CD);
+          cD += bD.length + 1
         }
       }
-      static from(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz.reduce(((zz, uz) => zz + uz.length + 1), -1),
-          bz = 0;
-        for (let dz of zz) bz += dz.lines;
-        if (bz < 32) {
-          let bz = [];
-          for (let uz of zz) uz.flatten(bz);
-          return new Kz(bz, uz)
+      static from(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD.reduce(((DD, CD) => DD + CD.length + 1), -1),
+          cD = 0;
+        for (let yD of DD) cD += yD.lines;
+        if (cD < 32) {
+          let cD = [];
+          for (let CD of DD) CD.flatten(cD);
+          return new oD(cD, CD)
         }
-        let Ez = Math.max(32, bz >> 5),
-          nz = Ez << 1,
-          iz = Ez >> 1,
-          lz = [],
-          Mz = 0,
-          tz = -1,
-          Hz = [];
+        let ID = Math.max(32, cD >> 5),
+          pD = ID << 1,
+          iD = ID >> 1,
+          fD = [],
+          bD = 0,
+          QD = -1,
+          wD = [];
 
-        function Oz(zz) {
-          let uz;
-          if (zz.lines > nz && zz instanceof wz)
-            for (let bz of zz.children) Oz(bz);
-          else zz.lines > iz && (Mz > iz || !Mz) ? (pz(), lz.push(zz)) : zz instanceof Kz && Mz && (uz = Hz[Hz.length - 1]) instanceof Kz && zz.lines + uz.lines <= 32 ? (Mz += zz.lines, tz += zz.length + 1, Hz[Hz.length - 1] = new Kz(uz.text.concat(zz.text), uz.length + 1 + zz.length)) : (Mz + zz.lines > Ez && pz(), Mz += zz.lines, tz += zz.length + 1, Hz.push(zz))
+        function SD(DD) {
+          let CD;
+          if (DD.lines > pD && DD instanceof vD)
+            for (let cD of DD.children) SD(cD);
+          else DD.lines > iD && (bD > iD || !bD) ? (BD(), fD.push(DD)) : DD instanceof oD && bD && (CD = wD[wD.length - 1]) instanceof oD && DD.lines + CD.lines <= 32 ? (bD += DD.lines, QD += DD.length + 1, wD[wD.length - 1] = new oD(CD.text.concat(DD.text), CD.length + 1 + DD.length)) : (bD + DD.lines > ID && BD(), bD += DD.lines, QD += DD.length + 1, wD.push(DD))
         }
 
-        function pz() {
-          0 != Mz && (lz.push(1 == Hz.length ? Hz[0] : wz.from(Hz, tz)), tz = -1, Mz = Hz.length = 0)
+        function BD() {
+          0 != bD && (fD.push(1 == wD.length ? wD[0] : vD.from(wD, QD)), QD = -1, bD = wD.length = 0)
         }
-        for (let dz of zz) Oz(dz);
-        return pz(), 1 == lz.length ? lz[0] : new wz(lz, uz)
+        for (let yD of DD) SD(yD);
+        return BD(), 1 == fD.length ? fD[0] : new vD(fD, CD)
       }
     }
 
-    function Xz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let nz = 0, iz = 0, lz = !0; iz < zz.length && nz <= Ez; iz++) {
-        let Mz = zz[iz],
-          tz = nz + Mz.length;
-        tz >= bz && (tz > Ez && (Mz = Mz.slice(0, Ez - nz)), nz < bz && (Mz = Mz.slice(bz - nz)), lz ? (uz[uz.length - 1] += Mz, lz = !1) : uz.push(Mz)), nz = tz + 1
+    function ND(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let pD = 0, iD = 0, fD = !0; iD < DD.length && pD <= ID; iD++) {
+        let bD = DD[iD],
+          QD = pD + bD.length;
+        QD >= cD && (QD > ID && (bD = bD.slice(0, ID - pD)), pD < cD && (bD = bD.slice(cD - pD)), fD ? (CD[CD.length - 1] += bD, fD = !1) : CD.push(bD)), pD = QD + 1
       }
-      return uz
+      return CD
     }
 
-    function fz(zz, uz, bz) {
-      return Xz(zz, [""], uz, bz)
+    function gD(DD, CD, cD) {
+      return ND(DD, [""], CD, cD)
     }
-    Rz.empty = new Kz([""], 0);
-    class sz {
-      constructor(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = uz, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [zz], this.offsets = [uz > 0 ? 1 : (zz instanceof Kz ? zz.text.length : zz.children.length) << 1]
+    ZD.empty = new oD([""], 0);
+    class XD {
+      constructor(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = CD, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [DD], this.offsets = [CD > 0 ? 1 : (DD instanceof oD ? DD.text.length : DD.children.length) << 1]
       }
-      nextInner(zz, uz) {
+      nextInner(DD, CD) {
         for (this.done = this.lineBreak = !1;;) {
-          let bz = this.nodes.length - 1,
-            Ez = this.nodes[bz],
-            nz = this.offsets[bz],
-            iz = nz >> 1,
-            lz = Ez instanceof Kz ? Ez.text.length : Ez.children.length;
-          if (iz == (uz > 0 ? lz : 0)) {
-            if (0 == bz) return this.done = !0, this.value = "", this;
-            uz > 0 && this.offsets[bz - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & nz) == (uz > 0 ? 0 : 1)) {
-            if (this.offsets[bz] += uz, 0 == zz) return this.lineBreak = !0, this.value = "\n", this;
-            zz--
-          } else if (Ez instanceof Kz) {
-            let nz = Ez.text[iz + (uz < 0 ? -1 : 0)];
-            if (this.offsets[bz] += uz, nz.length > Math.max(0, zz)) return this.value = 0 == zz ? nz : uz > 0 ? nz.slice(zz) : nz.slice(0, nz.length - zz), this;
-            zz -= nz.length
+          let cD = this.nodes.length - 1,
+            ID = this.nodes[cD],
+            pD = this.offsets[cD],
+            iD = pD >> 1,
+            fD = ID instanceof oD ? ID.text.length : ID.children.length;
+          if (iD == (CD > 0 ? fD : 0)) {
+            if (0 == cD) return this.done = !0, this.value = "", this;
+            CD > 0 && this.offsets[cD - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & pD) == (CD > 0 ? 0 : 1)) {
+            if (this.offsets[cD] += CD, 0 == DD) return this.lineBreak = !0, this.value = "\n", this;
+            DD--
+          } else if (ID instanceof oD) {
+            let pD = ID.text[iD + (CD < 0 ? -1 : 0)];
+            if (this.offsets[cD] += CD, pD.length > Math.max(0, DD)) return this.value = 0 == DD ? pD : CD > 0 ? pD.slice(DD) : pD.slice(0, pD.length - DD), this;
+            DD -= pD.length
           } else {
-            let nz = Ez.children[iz + (uz < 0 ? -1 : 0)];
-            zz > nz.length ? (zz -= nz.length, this.offsets[bz] += uz) : (uz < 0 && this.offsets[bz]--, this.nodes.push(nz), this.offsets.push(uz > 0 ? 1 : (nz instanceof Kz ? nz.text.length : nz.children.length) << 1))
+            let pD = ID.children[iD + (CD < 0 ? -1 : 0)];
+            DD > pD.length ? (DD -= pD.length, this.offsets[cD] += CD) : (CD < 0 && this.offsets[cD]--, this.nodes.push(pD), this.offsets.push(CD > 0 ? 1 : (pD instanceof oD ? pD.text.length : pD.children.length) << 1))
           }
         }
       }
       next() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return zz < 0 && (this.nextInner(-zz, -this.dir), zz = this.value.length), this.nextInner(zz, this.dir)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return DD < 0 && (this.nextInner(-DD, -this.dir), DD = this.value.length), this.nextInner(DD, this.dir)
       }
     }
-    class rz {
-      constructor(zz, uz, bz) {
-        this.value = "", this.done = !1, this.cursor = new sz(zz, uz > bz ? -1 : 1), this.pos = uz > bz ? zz.length : 0, this.from = Math.min(uz, bz), this.to = Math.max(uz, bz)
+    class mD {
+      constructor(DD, CD, cD) {
+        this.value = "", this.done = !1, this.cursor = new XD(DD, CD > cD ? -1 : 1), this.pos = CD > cD ? DD.length : 0, this.from = Math.min(CD, cD), this.to = Math.max(CD, cD)
       }
-      nextInner(zz, uz) {
-        if (uz < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        zz += Math.max(0, uz < 0 ? this.pos - this.to : this.from - this.pos);
-        let bz = uz < 0 ? this.pos - this.from : this.to - this.pos;
-        zz > bz && (zz = bz), bz -= zz;
+      nextInner(DD, CD) {
+        if (CD < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        DD += Math.max(0, CD < 0 ? this.pos - this.to : this.from - this.pos);
+        let cD = CD < 0 ? this.pos - this.from : this.to - this.pos;
+        DD > cD && (DD = cD), cD -= DD;
         let {
-          value: Ez
-        } = this.cursor.next(zz);
-        return this.pos += (Ez.length + zz) * uz, this.value = Ez.length <= bz ? Ez : uz < 0 ? Ez.slice(Ez.length - bz) : Ez.slice(0, bz), this.done = !this.value, this
+          value: ID
+        } = this.cursor.next(DD);
+        return this.pos += (ID.length + DD) * CD, this.value = ID.length <= cD ? ID : CD < 0 ? ID.slice(ID.length - cD) : ID.slice(0, cD), this.done = !this.value, this
       }
       next() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return zz < 0 ? zz = Math.max(zz, this.from - this.pos) : zz > 0 && (zz = Math.min(zz, this.to - this.pos)), this.nextInner(zz, this.cursor.dir)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return DD < 0 ? DD = Math.max(DD, this.from - this.pos) : DD > 0 && (DD = Math.min(DD, this.to - this.pos)), this.nextInner(DD, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class oz {
-      constructor(zz) {
-        this.inner = zz, this.afterBreak = !0, this.value = "", this.done = !1
+    class nD {
+      constructor(DD) {
+        this.inner = DD, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: uz,
-            lineBreak: bz,
-            value: Ez
-          } = this.inner.next(zz);
-        return uz && this.afterBreak ? (this.value = "", this.afterBreak = !1) : uz ? (this.done = !0, this.value = "") : bz ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = Ez, this.afterBreak = !1), this
+            done: CD,
+            lineBreak: cD,
+            value: ID
+          } = this.inner.next(DD);
+        return CD && this.afterBreak ? (this.value = "", this.afterBreak = !1) : CD ? (this.done = !0, this.value = "") : cD ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = ID, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (Rz.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (ZD.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, sz.prototype[Symbol.iterator] = rz.prototype[Symbol.iterator] = oz.prototype[Symbol.iterator] = function() {
+    }, XD.prototype[Symbol.iterator] = mD.prototype[Symbol.iterator] = nD.prototype[Symbol.iterator] = function() {
       return this
     });
-    class Nz {
-      constructor(zz, uz, bz, Ez) {
-        this.from = zz, this.to = uz, this.number = bz, this.text = Ez
+    class OD {
+      constructor(DD, CD, cD, ID) {
+        this.from = DD, this.to = CD, this.number = cD, this.text = ID
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function vz(zz, uz, bz) {
-      return [uz = Math.max(0, Math.min(zz.length, uz)), Math.max(uz, Math.min(zz.length, bz))]
+    function PD(DD, CD, cD) {
+      return [CD = Math.max(0, Math.min(DD.length, CD)), Math.max(CD, Math.min(DD.length, cD))]
     }
 
-    function xz(zz, uz) {
-      return tz(zz, uz, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function HD(DD, CD) {
+      return QD(DD, CD, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function Jz(zz, uz) {
-      let bz = zz.charCodeAt(uz);
-      if (!((Ez = bz) >= 55296 && Ez < 56320) || uz + 1 == zz.length) return bz;
-      var Ez;
-      let nz = zz.charCodeAt(uz + 1);
-      return function(zz) {
-        return zz >= 56320 && zz < 57344
-      }(nz) ? nz - 56320 + (bz - 55296 << 10) + 65536 : bz
+    function UD(DD, CD) {
+      let cD = DD.charCodeAt(CD);
+      if (!((ID = cD) >= 55296 && ID < 56320) || CD + 1 == DD.length) return cD;
+      var ID;
+      let pD = DD.charCodeAt(CD + 1);
+      return function(DD) {
+        return DD >= 56320 && DD < 57344
+      }(pD) ? pD - 56320 + (cD - 55296 << 10) + 65536 : cD
     }
 
-    function Az(zz) {
-      return zz <= 65535 ? String.fromCharCode(zz) : (zz -= 65536, String.fromCharCode(55296 + (zz >> 10), 56320 + (1023 & zz)))
+    function xD(DD) {
+      return DD <= 65535 ? String.fromCharCode(DD) : (DD -= 65536, String.fromCharCode(55296 + (DD >> 10), 56320 + (1023 & DD)))
     }
 
-    function Tz(zz) {
-      return zz < 65536 ? 1 : 2
+    function qD(DD) {
+      return DD < 65536 ? 1 : 2
     }
-    const Lz = /\r\n?|\n/;
-    var Pz = function(zz) {
-      return zz[zz.Simple = 0] = "Simple", zz[zz.TrackDel = 1] = "TrackDel", zz[zz.TrackBefore = 2] = "TrackBefore", zz[zz.TrackAfter = 3] = "TrackAfter", zz
-    }(Pz || (Pz = {}));
-    class Gz {
-      constructor(zz) {
-        this.sections = zz
+    const JD = /\r\n?|\n/;
+    var KD = function(DD) {
+      return DD[DD.Simple = 0] = "Simple", DD[DD.TrackDel = 1] = "TrackDel", DD[DD.TrackBefore = 2] = "TrackBefore", DD[DD.TrackAfter = 3] = "TrackAfter", DD
+    }(KD || (KD = {}));
+    class aD {
+      constructor(DD) {
+        this.sections = DD
       }
       get length() {
-        let zz = 0;
-        for (let uz = 0; uz < this.sections.length; uz += 2) zz += this.sections[uz];
-        return zz
+        let DD = 0;
+        for (let CD = 0; CD < this.sections.length; CD += 2) DD += this.sections[CD];
+        return DD
       }
       get newLength() {
-        let zz = 0;
-        for (let uz = 0; uz < this.sections.length; uz += 2) {
-          let bz = this.sections[uz + 1];
-          zz += bz < 0 ? this.sections[uz] : bz
+        let DD = 0;
+        for (let CD = 0; CD < this.sections.length; CD += 2) {
+          let cD = this.sections[CD + 1];
+          DD += cD < 0 ? this.sections[CD] : cD
         }
-        return zz
+        return DD
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(zz) {
-        for (let uz = 0, bz = 0, Ez = 0; uz < this.sections.length;) {
-          let nz = this.sections[uz++],
-            iz = this.sections[uz++];
-          iz < 0 ? (zz(bz, Ez, nz), Ez += nz) : Ez += iz, bz += nz
+      iterGaps(DD) {
+        for (let CD = 0, cD = 0, ID = 0; CD < this.sections.length;) {
+          let pD = this.sections[CD++],
+            iD = this.sections[CD++];
+          iD < 0 ? (DD(cD, ID, pD), ID += pD) : ID += iD, cD += pD
         }
       }
-      iterChangedRanges(zz) {
-        qz(this, zz, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(DD) {
+        lD(this, DD, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let zz = [];
-        for (let uz = 0; uz < this.sections.length;) {
-          let bz = this.sections[uz++],
-            Ez = this.sections[uz++];
-          Ez < 0 ? zz.push(bz, Ez) : zz.push(Ez, bz)
+        let DD = [];
+        for (let CD = 0; CD < this.sections.length;) {
+          let cD = this.sections[CD++],
+            ID = this.sections[CD++];
+          ID < 0 ? DD.push(cD, ID) : DD.push(ID, cD)
         }
-        return new Gz(zz)
+        return new aD(DD)
       }
-      composeDesc(zz) {
-        return this.empty ? zz : zz.empty ? this : Uz(this, zz)
+      composeDesc(DD) {
+        return this.empty ? DD : DD.empty ? this : TD(this, DD)
       }
-      mapDesc(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return zz.empty ? this : hz(this, zz, uz)
+      mapDesc(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return DD.empty ? this : LD(this, DD, CD)
       }
-      mapPos(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Pz.Simple,
-          Ez = 0,
-          nz = 0;
-        for (let iz = 0; iz < this.sections.length;) {
-          let lz = this.sections[iz++],
-            Mz = this.sections[iz++],
-            tz = Ez + lz;
-          if (Mz < 0) {
-            if (tz > zz) return nz + (zz - Ez);
-            nz += lz
+      mapPos(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : KD.Simple,
+          ID = 0,
+          pD = 0;
+        for (let iD = 0; iD < this.sections.length;) {
+          let fD = this.sections[iD++],
+            bD = this.sections[iD++],
+            QD = ID + fD;
+          if (bD < 0) {
+            if (QD > DD) return pD + (DD - ID);
+            pD += fD
           } else {
-            if (bz != Pz.Simple && tz >= zz && (bz == Pz.TrackDel && Ez < zz && tz > zz || bz == Pz.TrackBefore && Ez < zz || bz == Pz.TrackAfter && tz > zz)) return null;
-            if (tz > zz || tz == zz && uz < 0 && !lz) return zz == Ez || uz < 0 ? nz : nz + Mz;
-            nz += Mz
+            if (cD != KD.Simple && QD >= DD && (cD == KD.TrackDel && ID < DD && QD > DD || cD == KD.TrackBefore && ID < DD || cD == KD.TrackAfter && QD > DD)) return null;
+            if (QD > DD || QD == DD && CD < 0 && !fD) return DD == ID || CD < 0 ? pD : pD + bD;
+            pD += bD
           }
-          Ez = tz
+          ID = QD
         }
-        if (zz > Ez) throw new RangeError(`Position ${zz} is out of range for changeset of length ${Ez}`);
-        return nz
+        if (DD > ID) throw new RangeError(`Position ${DD} is out of range for changeset of length ${ID}`);
+        return pD
       }
-      touchesRange(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz;
-        for (let bz = 0, Ez = 0; bz < this.sections.length && Ez <= uz;) {
-          let nz = Ez + this.sections[bz++];
-          if (this.sections[bz++] >= 0 && Ez <= uz && nz >= zz) return !(Ez < zz && nz > uz) || "cover";
-          Ez = nz
+      touchesRange(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD;
+        for (let cD = 0, ID = 0; cD < this.sections.length && ID <= CD;) {
+          let pD = ID + this.sections[cD++];
+          if (this.sections[cD++] >= 0 && ID <= CD && pD >= DD) return !(ID < DD && pD > CD) || "cover";
+          ID = pD
         }
         return !1
       }
       toString() {
-        let zz = "";
-        for (let uz = 0; uz < this.sections.length;) {
-          let bz = this.sections[uz++],
-            Ez = this.sections[uz++];
-          zz += (zz ? " " : "") + bz + (Ez >= 0 ? ":" + Ez : "")
+        let DD = "";
+        for (let CD = 0; CD < this.sections.length;) {
+          let cD = this.sections[CD++],
+            ID = this.sections[CD++];
+          DD += (DD ? " " : "") + cD + (ID >= 0 ? ":" + ID : "")
         }
-        return zz
+        return DD
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(zz) {
-        if (!Array.isArray(zz) || zz.length % 2 || zz.some((zz => "number" != typeof zz))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new Gz(zz)
+      static fromJSON(DD) {
+        if (!Array.isArray(DD) || DD.length % 2 || DD.some((DD => "number" != typeof DD))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new aD(DD)
       }
-      static create(zz) {
-        return new Gz(zz)
+      static create(DD) {
+        return new aD(DD)
       }
     }
-    class az extends Gz {
-      constructor(zz, uz) {
-        super(zz), this.inserted = uz
+    class VD extends aD {
+      constructor(DD, CD) {
+        super(DD), this.inserted = CD
       }
-      apply(zz) {
-        if (this.length != zz.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return qz(this, ((uz, bz, Ez, nz, iz) => zz = zz.replace(Ez, Ez + (bz - uz), iz)), !1), zz
+      apply(DD) {
+        if (this.length != DD.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return lD(this, ((CD, cD, ID, pD, iD) => DD = DD.replace(ID, ID + (cD - CD), iD)), !1), DD
       }
-      mapDesc(zz) {
-        return hz(this, zz, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(DD) {
+        return LD(this, DD, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(zz) {
-        let uz = this.sections.slice(),
-          bz = [];
-        for (let Ez = 0, nz = 0; Ez < uz.length; Ez += 2) {
-          let iz = uz[Ez],
-            lz = uz[Ez + 1];
-          if (lz >= 0) {
-            uz[Ez] = lz, uz[Ez + 1] = iz;
-            let Mz = Ez >> 1;
-            for (; bz.length < Mz;) bz.push(Rz.empty);
-            bz.push(iz ? zz.slice(nz, nz + iz) : Rz.empty)
+      invert(DD) {
+        let CD = this.sections.slice(),
+          cD = [];
+        for (let ID = 0, pD = 0; ID < CD.length; ID += 2) {
+          let iD = CD[ID],
+            fD = CD[ID + 1];
+          if (fD >= 0) {
+            CD[ID] = fD, CD[ID + 1] = iD;
+            let bD = ID >> 1;
+            for (; cD.length < bD;) cD.push(ZD.empty);
+            cD.push(iD ? DD.slice(pD, pD + iD) : ZD.empty)
           }
-          nz += iz
+          pD += iD
         }
-        return new az(uz, bz)
+        return new VD(CD, cD)
       }
-      compose(zz) {
-        return this.empty ? zz : zz.empty ? this : Uz(this, zz, !0)
+      compose(DD) {
+        return this.empty ? DD : DD.empty ? this : TD(this, DD, !0)
       }
-      map(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return zz.empty ? this : hz(this, zz, uz, !0)
+      map(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return DD.empty ? this : LD(this, DD, CD, !0)
       }
-      iterChanges(zz) {
-        qz(this, zz, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(DD) {
+        lD(this, DD, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return Gz.create(this.sections)
+        return aD.create(this.sections)
       }
-      filter(zz) {
-        let uz = [],
-          bz = [],
-          Ez = [],
-          nz = new cz(this);
-        zz: for (let iz = 0, lz = 0;;) {
-          let Mz = iz == zz.length ? 1e9 : zz[iz++];
-          for (; lz < Mz || lz == Mz && 0 == nz.len;) {
-            if (nz.done) break zz;
-            let zz = Math.min(nz.len, Mz - lz);
-            Vz(Ez, zz, -1);
-            let iz = -1 == nz.ins ? -1 : 0 == nz.off ? nz.ins : 0;
-            Vz(uz, zz, iz), iz > 0 && mz(bz, uz, nz.text), nz.forward(zz), lz += zz
+      filter(DD) {
+        let CD = [],
+          cD = [],
+          ID = [],
+          pD = new GD(this);
+        DD: for (let iD = 0, fD = 0;;) {
+          let bD = iD == DD.length ? 1e9 : DD[iD++];
+          for (; fD < bD || fD == bD && 0 == pD.len;) {
+            if (pD.done) break DD;
+            let DD = Math.min(pD.len, bD - fD);
+            zD(ID, DD, -1);
+            let iD = -1 == pD.ins ? -1 : 0 == pD.off ? pD.ins : 0;
+            zD(CD, DD, iD), iD > 0 && jD(cD, CD, pD.text), pD.forward(DD), fD += DD
           }
-          let tz = zz[iz++];
-          for (; lz < tz;) {
-            if (nz.done) break zz;
-            let zz = Math.min(nz.len, tz - lz);
-            Vz(uz, zz, -1), Vz(Ez, zz, -1 == nz.ins ? -1 : 0 == nz.off ? nz.ins : 0), nz.forward(zz), lz += zz
+          let QD = DD[iD++];
+          for (; fD < QD;) {
+            if (pD.done) break DD;
+            let DD = Math.min(pD.len, QD - fD);
+            zD(CD, DD, -1), zD(ID, DD, -1 == pD.ins ? -1 : 0 == pD.off ? pD.ins : 0), pD.forward(DD), fD += DD
           }
         }
         return {
-          changes: new az(uz, bz),
-          filtered: Gz.create(Ez)
+          changes: new VD(CD, cD),
+          filtered: aD.create(ID)
         }
       }
       toJSON() {
-        let zz = [];
-        for (let uz = 0; uz < this.sections.length; uz += 2) {
-          let bz = this.sections[uz],
-            Ez = this.sections[uz + 1];
-          Ez < 0 ? zz.push(bz) : 0 == Ez ? zz.push([bz]) : zz.push([bz].concat(this.inserted[uz >> 1].toJSON()))
+        let DD = [];
+        for (let CD = 0; CD < this.sections.length; CD += 2) {
+          let cD = this.sections[CD],
+            ID = this.sections[CD + 1];
+          ID < 0 ? DD.push(cD) : 0 == ID ? DD.push([cD]) : DD.push([cD].concat(this.inserted[CD >> 1].toJSON()))
         }
-        return zz
+        return DD
       }
-      static of (zz, uz, bz) {
-        let Ez = [],
-          nz = [],
-          iz = 0,
-          lz = null;
+      static of (DD, CD, cD) {
+        let ID = [],
+          pD = [],
+          iD = 0,
+          fD = null;
 
-        function Mz() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !Ez.length) return;
-          iz < uz && Vz(Ez, uz - iz, -1);
-          let zz = new az(Ez, nz);
-          lz = lz ? lz.compose(zz.map(lz)) : zz, Ez = [], nz = [], iz = 0
+        function bD() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !ID.length) return;
+          iD < CD && zD(ID, CD - iD, -1);
+          let DD = new VD(ID, pD);
+          fD = fD ? fD.compose(DD.map(fD)) : DD, ID = [], pD = [], iD = 0
         }
-        return function zz(tz) {
-          if (Array.isArray(tz))
-            for (let uz of tz) zz(uz);
-          else if (tz instanceof az) {
-            if (tz.length != uz) throw new RangeError(`Mismatched change set length (got ${tz.length}, expected ${uz})`);
-            Mz(), lz = lz ? lz.compose(tz.map(lz)) : tz
+        return function DD(QD) {
+          if (Array.isArray(QD))
+            for (let CD of QD) DD(CD);
+          else if (QD instanceof VD) {
+            if (QD.length != CD) throw new RangeError(`Mismatched change set length (got ${QD.length}, expected ${CD})`);
+            bD(), fD = fD ? fD.compose(QD.map(fD)) : QD
           } else {
             let {
-              from: zz,
-              to: lz = zz,
-              insert: Hz
-            } = tz;
-            if (zz > lz || zz < 0 || lz > uz) throw new RangeError(`Invalid change range ${zz} to ${lz} (in doc of length ${uz})`);
-            let Oz = Hz ? "string" == typeof Hz ? Rz.of(Hz.split(bz || Lz)) : Hz : Rz.empty,
-              pz = Oz.length;
-            if (zz == lz && 0 == pz) return;
-            zz < iz && Mz(), zz > iz && Vz(Ez, zz - iz, -1), Vz(Ez, lz - zz, pz), mz(nz, Ez, Oz), iz = lz
+              from: DD,
+              to: fD = DD,
+              insert: wD
+            } = QD;
+            if (DD > fD || DD < 0 || fD > CD) throw new RangeError(`Invalid change range ${DD} to ${fD} (in doc of length ${CD})`);
+            let SD = wD ? "string" == typeof wD ? ZD.of(wD.split(cD || JD)) : wD : ZD.empty,
+              BD = SD.length;
+            if (DD == fD && 0 == BD) return;
+            DD < iD && bD(), DD > iD && zD(ID, DD - iD, -1), zD(ID, fD - DD, BD), jD(pD, ID, SD), iD = fD
           }
-        }(zz), Mz(!lz), lz
+        }(DD), bD(!fD), fD
       }
-      static empty(zz) {
-        return new az(zz ? [zz, -1] : [], [])
+      static empty(DD) {
+        return new VD(DD ? [DD, -1] : [], [])
       }
-      static fromJSON(zz) {
-        if (!Array.isArray(zz)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let uz = [],
-          bz = [];
-        for (let Ez = 0; Ez < zz.length; Ez++) {
-          let nz = zz[Ez];
-          if ("number" == typeof nz) uz.push(nz, -1);
+      static fromJSON(DD) {
+        if (!Array.isArray(DD)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let CD = [],
+          cD = [];
+        for (let ID = 0; ID < DD.length; ID++) {
+          let pD = DD[ID];
+          if ("number" == typeof pD) CD.push(pD, -1);
           else {
-            if (!Array.isArray(nz) || "number" != typeof nz[0] || nz.some(((zz, uz) => uz && "string" != typeof zz))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == nz.length) uz.push(nz[0], 0);
+            if (!Array.isArray(pD) || "number" != typeof pD[0] || pD.some(((DD, CD) => CD && "string" != typeof DD))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == pD.length) CD.push(pD[0], 0);
             else {
-              for (; bz.length < Ez;) bz.push(Rz.empty);
-              bz[Ez] = Rz.of(nz.slice(1)), uz.push(nz[0], bz[Ez].length)
+              for (; cD.length < ID;) cD.push(ZD.empty);
+              cD[ID] = ZD.of(pD.slice(1)), CD.push(pD[0], cD[ID].length)
             }
           }
         }
-        return new az(uz, bz)
+        return new VD(CD, cD)
       }
-      static createSet(zz, uz) {
-        return new az(zz, uz)
+      static createSet(DD, CD) {
+        return new VD(DD, CD)
       }
     }
 
-    function Vz(zz, uz, bz) {
-      let Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == uz && bz <= 0) return;
-      let nz = zz.length - 2;
-      nz >= 0 && bz <= 0 && bz == zz[nz + 1] ? zz[nz] += uz : nz >= 0 && 0 == uz && 0 == zz[nz] ? zz[nz + 1] += bz : Ez ? (zz[nz] += uz, zz[nz + 1] += bz) : zz.push(uz, bz)
+    function zD(DD, CD, cD) {
+      let ID = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == CD && cD <= 0) return;
+      let pD = DD.length - 2;
+      pD >= 0 && cD <= 0 && cD == DD[pD + 1] ? DD[pD] += CD : pD >= 0 && 0 == CD && 0 == DD[pD] ? DD[pD + 1] += cD : ID ? (DD[pD] += CD, DD[pD + 1] += cD) : DD.push(CD, cD)
     }
 
-    function mz(zz, uz, bz) {
-      if (0 == bz.length) return;
-      let Ez = uz.length - 2 >> 1;
-      if (Ez < zz.length) zz[zz.length - 1] = zz[zz.length - 1].append(bz);
+    function jD(DD, CD, cD) {
+      if (0 == cD.length) return;
+      let ID = CD.length - 2 >> 1;
+      if (ID < DD.length) DD[DD.length - 1] = DD[DD.length - 1].append(cD);
       else {
-        for (; zz.length < Ez;) zz.push(Rz.empty);
-        zz.push(bz)
+        for (; DD.length < ID;) DD.push(ZD.empty);
+        DD.push(cD)
       }
     }
 
-    function qz(zz, uz, bz) {
-      let Ez = zz.inserted;
-      for (let nz = 0, iz = 0, lz = 0; lz < zz.sections.length;) {
-        let Mz = zz.sections[lz++],
-          tz = zz.sections[lz++];
-        if (tz < 0) nz += Mz, iz += Mz;
+    function lD(DD, CD, cD) {
+      let ID = DD.inserted;
+      for (let pD = 0, iD = 0, fD = 0; fD < DD.sections.length;) {
+        let bD = DD.sections[fD++],
+          QD = DD.sections[fD++];
+        if (QD < 0) pD += bD, iD += bD;
         else {
-          let Hz = nz,
-            Oz = iz,
-            pz = Rz.empty;
-          for (; Hz += Mz, Oz += tz, tz && Ez && (pz = pz.append(Ez[lz - 2 >> 1])), !(bz || lz == zz.sections.length || zz.sections[lz + 1] < 0);) Mz = zz.sections[lz++], tz = zz.sections[lz++];
-          uz(nz, Hz, iz, Oz, pz), nz = Hz, iz = Oz
+          let wD = pD,
+            SD = iD,
+            BD = ZD.empty;
+          for (; wD += bD, SD += QD, QD && ID && (BD = BD.append(ID[fD - 2 >> 1])), !(cD || fD == DD.sections.length || DD.sections[fD + 1] < 0);) bD = DD.sections[fD++], QD = DD.sections[fD++];
+          CD(pD, wD, iD, SD, BD), pD = wD, iD = SD
         }
       }
     }
 
-    function hz(zz, uz, bz) {
-      let Ez = [],
-        nz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        iz = new cz(zz),
-        lz = new cz(uz),
-        Mz = 0;
-      for (let tz = -1;;) {
-        if (++Mz > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (iz.done && lz.len || lz.done && iz.len) throw new Error("Mismatched change set lengths");
-        if (-1 == iz.ins && -1 == lz.ins) {
-          let zz = Math.min(iz.len, lz.len);
-          Vz(Ez, zz, -1), iz.forward(zz), lz.forward(zz)
-        } else if (lz.ins >= 0 && (iz.ins < 0 || tz == iz.i || 0 == iz.off && (lz.len < iz.len || lz.len == iz.len && !bz))) {
-          let zz = lz.len;
-          for (Vz(Ez, lz.ins, -1); zz;) {
-            if (++Mz > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let uz = Math.min(iz.len, zz);
-            iz.ins >= 0 && tz < iz.i && iz.len <= uz && (Vz(Ez, 0, iz.ins), nz && mz(nz, Ez, iz.text), tz = iz.i), iz.forward(uz), zz -= uz
+    function LD(DD, CD, cD) {
+      let ID = [],
+        pD = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        iD = new GD(DD),
+        fD = new GD(CD),
+        bD = 0;
+      for (let QD = -1;;) {
+        if (++bD > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (iD.done && fD.len || fD.done && iD.len) throw new Error("Mismatched change set lengths");
+        if (-1 == iD.ins && -1 == fD.ins) {
+          let DD = Math.min(iD.len, fD.len);
+          zD(ID, DD, -1), iD.forward(DD), fD.forward(DD)
+        } else if (fD.ins >= 0 && (iD.ins < 0 || QD == iD.i || 0 == iD.off && (fD.len < iD.len || fD.len == iD.len && !cD))) {
+          let DD = fD.len;
+          for (zD(ID, fD.ins, -1); DD;) {
+            if (++bD > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let CD = Math.min(iD.len, DD);
+            iD.ins >= 0 && QD < iD.i && iD.len <= CD && (zD(ID, 0, iD.ins), pD && jD(pD, ID, iD.text), QD = iD.i), iD.forward(CD), DD -= CD
           }
-          lz.next()
+          fD.next()
         } else {
-          if (!(iz.ins >= 0)) {
-            if (iz.done && lz.done) return nz ? az.createSet(Ez, nz) : Gz.create(Ez);
+          if (!(iD.ins >= 0)) {
+            if (iD.done && fD.done) return pD ? VD.createSet(ID, pD) : aD.create(ID);
             throw new Error("Mismatched change set lengths")
           } {
-            let zz = 0,
-              uz = iz.len;
-            for (; uz;) {
-              if (++Mz > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == lz.ins) {
-                let bz = Math.min(uz, lz.len);
-                zz += bz, uz -= bz, lz.forward(bz)
+            let DD = 0,
+              CD = iD.len;
+            for (; CD;) {
+              if (++bD > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == fD.ins) {
+                let cD = Math.min(CD, fD.len);
+                DD += cD, CD -= cD, fD.forward(cD)
               } else {
-                if (!(0 == lz.ins && lz.len < uz)) break;
-                uz -= lz.len, lz.next()
+                if (!(0 == fD.ins && fD.len < CD)) break;
+                CD -= fD.len, fD.next()
               }
             }
-            Vz(Ez, zz, tz < iz.i ? iz.ins : 0), nz && tz < iz.i && mz(nz, Ez, iz.text), tz = iz.i, iz.forward(iz.len - uz)
+            zD(ID, DD, QD < iD.i ? iD.ins : 0), pD && QD < iD.i && jD(pD, ID, iD.text), QD = iD.i, iD.forward(iD.len - CD)
           }
         }
       }
     }
 
-    function Uz(zz, uz) {
-      let bz = [],
-        Ez = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        nz = new cz(zz),
-        iz = new cz(uz),
-        lz = 0;
-      for (let Mz = !1;;) {
-        if (++lz > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (nz.done && iz.done) return Ez ? az.createSet(bz, Ez) : Gz.create(bz);
-        if (0 == nz.ins) Vz(bz, nz.len, 0, Mz), nz.next();
-        else if (0 != iz.len || iz.done) {
-          if (nz.done || iz.done) throw new Error("Mismatched change set lengths");
+    function TD(DD, CD) {
+      let cD = [],
+        ID = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        pD = new GD(DD),
+        iD = new GD(CD),
+        fD = 0;
+      for (let bD = !1;;) {
+        if (++fD > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (pD.done && iD.done) return ID ? VD.createSet(cD, ID) : aD.create(cD);
+        if (0 == pD.ins) zD(cD, pD.len, 0, bD), pD.next();
+        else if (0 != iD.len || iD.done) {
+          if (pD.done || iD.done) throw new Error("Mismatched change set lengths");
           {
-            let zz = Math.min(nz.len2, iz.len),
-              uz = bz.length;
-            if (-1 == nz.ins) {
-              let uz = -1 == iz.ins ? -1 : iz.off ? 0 : iz.ins;
-              Vz(bz, zz, uz, Mz), Ez && uz && mz(Ez, bz, iz.text)
-            } else - 1 == iz.ins ? (Vz(bz, nz.off ? 0 : nz.len, zz, Mz), Ez && mz(Ez, bz, nz.textBit(zz))) : (Vz(bz, nz.off ? 0 : nz.len, iz.off ? 0 : iz.ins, Mz), Ez && !iz.off && mz(Ez, bz, iz.text));
-            Mz = (nz.ins > zz || iz.ins >= 0 && iz.len > zz) && (Mz || bz.length > uz), nz.forward2(zz), iz.forward(zz)
+            let DD = Math.min(pD.len2, iD.len),
+              CD = cD.length;
+            if (-1 == pD.ins) {
+              let CD = -1 == iD.ins ? -1 : iD.off ? 0 : iD.ins;
+              zD(cD, DD, CD, bD), ID && CD && jD(ID, cD, iD.text)
+            } else - 1 == iD.ins ? (zD(cD, pD.off ? 0 : pD.len, DD, bD), ID && jD(ID, cD, pD.textBit(DD))) : (zD(cD, pD.off ? 0 : pD.len, iD.off ? 0 : iD.ins, bD), ID && !iD.off && jD(ID, cD, iD.text));
+            bD = (pD.ins > DD || iD.ins >= 0 && iD.len > DD) && (bD || cD.length > CD), pD.forward2(DD), iD.forward(DD)
           }
-        } else Vz(bz, 0, iz.ins, Mz), Ez && mz(Ez, bz, iz.text), iz.next()
+        } else zD(cD, 0, iD.ins, bD), ID && jD(ID, cD, iD.text), iD.next()
       }
     }
-    class cz {
-      constructor(zz) {
-        this.set = zz, this.i = 0, this.next()
+    class GD {
+      constructor(DD) {
+        this.set = DD, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: zz
+          sections: DD
         } = this.set;
-        this.i < zz.length ? (this.len = zz[this.i++], this.ins = zz[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < DD.length ? (this.len = DD[this.i++], this.ins = DD[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: zz
-        } = this.set, uz = this.i - 2 >> 1;
-        return uz >= zz.length ? Rz.empty : zz[uz]
+          inserted: DD
+        } = this.set, CD = this.i - 2 >> 1;
+        return CD >= DD.length ? ZD.empty : DD[CD]
       }
-      textBit(zz) {
+      textBit(DD) {
         let {
-          inserted: uz
-        } = this.set, bz = this.i - 2 >> 1;
-        return bz >= uz.length && !zz ? Rz.empty : uz[bz].slice(this.off, null == zz ? void 0 : this.off + zz)
+          inserted: CD
+        } = this.set, cD = this.i - 2 >> 1;
+        return cD >= CD.length && !DD ? ZD.empty : CD[cD].slice(this.off, null == DD ? void 0 : this.off + DD)
       }
-      forward(zz) {
-        zz == this.len ? this.next() : (this.len -= zz, this.off += zz)
+      forward(DD) {
+        DD == this.len ? this.next() : (this.len -= DD, this.off += DD)
       }
-      forward2(zz) {
-        -1 == this.ins ? this.forward(zz) : zz == this.ins ? this.next() : (this.ins -= zz, this.off += zz)
+      forward2(DD) {
+        -1 == this.ins ? this.forward(DD) : DD == this.ins ? this.next() : (this.ins -= DD, this.off += DD)
       }
     }
-    class gz {
-      constructor(zz, uz, bz) {
-        this.from = zz, this.to = uz, this.flags = bz
+    class RD {
+      constructor(DD, CD, cD) {
+        this.from = DD, this.to = CD, this.flags = cD
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let zz = 7 & this.flags;
-        return 7 == zz ? null : zz
+        let DD = 7 & this.flags;
+        return 7 == DD ? null : DD
       }
       get goalColumn() {
-        let zz = this.flags >> 6;
-        return 16777215 == zz ? void 0 : zz
+        let DD = this.flags >> 6;
+        return 16777215 == DD ? void 0 : DD
       }
-      map(zz) {
-        let uz, bz, Ez = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? uz = bz = zz.mapPos(this.from, Ez) : (uz = zz.mapPos(this.from, 1), bz = zz.mapPos(this.to, -1)), uz == this.from && bz == this.to ? this : new gz(uz, bz, this.flags)
+      map(DD) {
+        let CD, cD, ID = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? CD = cD = DD.mapPos(this.from, ID) : (CD = DD.mapPos(this.from, 1), cD = DD.mapPos(this.to, -1)), CD == this.from && cD == this.to ? this : new RD(CD, cD, this.flags)
       }
-      extend(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz,
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (zz <= this.anchor && uz >= this.anchor) return Sz.range(zz, uz, void 0, void 0, bz);
-        let Ez = Math.abs(zz - this.anchor) > Math.abs(uz - this.anchor) ? zz : uz;
-        return Sz.range(this.anchor, Ez, void 0, void 0, bz)
+      extend(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD,
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (DD <= this.anchor && CD >= this.anchor) return kD.range(DD, CD, void 0, void 0, cD);
+        let ID = Math.abs(DD - this.anchor) > Math.abs(CD - this.anchor) ? DD : CD;
+        return kD.range(this.anchor, ID, void 0, void 0, cD)
       }
-      eq(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == zz.anchor && this.head == zz.head && this.goalColumn == zz.goalColumn && (!uz || !this.empty || this.assoc == zz.assoc)
+      eq(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == DD.anchor && this.head == DD.head && this.goalColumn == DD.goalColumn && (!CD || !this.empty || this.assoc == DD.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(zz) {
-        if (!zz || "number" != typeof zz.anchor || "number" != typeof zz.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return Sz.range(zz.anchor, zz.head)
+      static fromJSON(DD) {
+        if (!DD || "number" != typeof DD.anchor || "number" != typeof DD.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return kD.range(DD.anchor, DD.head)
       }
-      static create(zz, uz, bz) {
-        return new gz(zz, uz, bz)
+      static create(DD, CD, cD) {
+        return new RD(DD, CD, cD)
       }
     }
-    class Sz {
-      constructor(zz, uz) {
-        this.al = zz, this.mainIndex = uz
+    class kD {
+      constructor(DD, CD) {
+        this.df = DD, this.mainIndex = CD
       }
-      map(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return zz.empty ? this : Sz.create(this.al.map((bz => bz.map(zz, uz))), this.mainIndex)
+      map(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return DD.empty ? this : kD.create(this.df.map((cD => cD.map(DD, CD))), this.mainIndex)
       }
-      eq(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.al.length != zz.al.length || this.mainIndex != zz.mainIndex) return !1;
-        for (let bz = 0; bz < this.al.length; bz++)
-          if (!this.al[bz].eq(zz.al[bz], uz)) return !1;
+      eq(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.df.length != DD.df.length || this.mainIndex != DD.mainIndex) return !1;
+        for (let cD = 0; cD < this.df.length; cD++)
+          if (!this.df[cD].eq(DD.df[cD], CD)) return !1;
         return !0
       }
       get main() {
-        return this.al[this.mainIndex]
+        return this.df[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.al.length ? this : new Sz([this.main], 0)
+        return 1 == this.df.length ? this : new kD([this.main], 0)
       }
-      addRange(zz) {
-        let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return Sz.create([zz].concat(this.al), uz ? 0 : this.mainIndex + 1)
+      addRange(DD) {
+        let CD = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return kD.create([DD].concat(this.df), CD ? 0 : this.mainIndex + 1)
       }
-      replaceRange(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          bz = this.al.slice();
-        return bz[uz] = zz, Sz.create(bz, this.mainIndex)
+      replaceRange(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          cD = this.df.slice();
+        return cD[CD] = DD, kD.create(cD, this.mainIndex)
       }
       toJSON() {
         return {
-          al: this.al.map((zz => zz.toJSON())),
+          df: this.df.map((DD => DD.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(zz) {
-        if (!zz || !Array.isArray(zz.al) || "number" != typeof zz.main || zz.main >= zz.al.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new Sz(zz.al.map((zz => gz.fromJSON(zz))), zz.main)
+      static fromJSON(DD) {
+        if (!DD || !Array.isArray(DD.df) || "number" != typeof DD.main || DD.main >= DD.df.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new kD(DD.df.map((DD => RD.fromJSON(DD))), DD.main)
       }
-      static single(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz;
-        return new Sz([Sz.range(zz, uz)], 0)
+      static single(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD;
+        return new kD([kD.range(DD, CD)], 0)
       }
-      static create(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == zz.length) throw new RangeError("A selection needs at least one range");
-        for (let bz = 0, Ez = 0; Ez < zz.length; Ez++) {
-          let nz = zz[Ez];
-          if (nz.empty ? nz.from <= bz : nz.from < bz) return Sz.normalized(zz.slice(), uz);
-          bz = nz.to
+      static create(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == DD.length) throw new RangeError("A selection needs at least one range");
+        for (let cD = 0, ID = 0; ID < DD.length; ID++) {
+          let pD = DD[ID];
+          if (pD.empty ? pD.from <= cD : pD.from < cD) return kD.normalized(DD.slice(), CD);
+          cD = pD.to
         }
-        return new Sz(zz, uz)
+        return new kD(DD, CD)
       }
-      static cursor(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          bz = arguments.length > 2 ? arguments[2] : void 0,
-          Ez = arguments.length > 3 ? arguments[3] : void 0;
-        return gz.create(zz, zz, (0 == uz ? 0 : uz < 0 ? 8 : 16) | (null == bz ? 7 : Math.min(6, bz)) | (null !== Ez && void 0 !== Ez ? Ez : 16777215) << 6)
+      static cursor(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          cD = arguments.length > 2 ? arguments[2] : void 0,
+          ID = arguments.length > 3 ? arguments[3] : void 0;
+        return RD.create(DD, DD, (0 == CD ? 0 : CD < 0 ? 8 : 16) | (null == cD ? 7 : Math.min(6, cD)) | (null !== ID && void 0 !== ID ? ID : 16777215) << 6)
       }
-      static range(zz, uz, bz, Ez, nz) {
-        let iz = (null !== bz && void 0 !== bz ? bz : 16777215) << 6 | (null == Ez ? 7 : Math.min(6, Ez));
-        return nz || zz == uz || (nz = uz < zz ? 1 : -1), uz < zz ? gz.create(uz, zz, 48 | iz) : gz.create(zz, uz, (nz ? nz < 0 ? 8 : 16 : 0) | iz)
+      static range(DD, CD, cD, ID, pD) {
+        let iD = (null !== cD && void 0 !== cD ? cD : 16777215) << 6 | (null == ID ? 7 : Math.min(6, ID));
+        return pD || DD == CD || (pD = CD < DD ? 1 : -1), CD < DD ? RD.create(CD, DD, 48 | iD) : RD.create(DD, CD, (pD ? pD < 0 ? 8 : 16 : 0) | iD)
       }
-      static normalized(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          bz = zz[uz];
-        zz.sort(((zz, uz) => zz.from - uz.from)), uz = zz.indexOf(bz);
-        for (let Ez = 1; Ez < zz.length; Ez++) {
-          let bz = zz[Ez],
-            nz = zz[Ez - 1];
-          if (bz.empty ? bz.from <= nz.to : bz.from < nz.to) {
-            let iz = nz.from,
-              lz = Math.max(bz.to, nz.to);
-            Ez <= uz && uz--, zz.splice(--Ez, 2, bz.anchor > bz.head ? Sz.range(lz, iz) : Sz.range(iz, lz))
+      static normalized(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          cD = DD[CD];
+        DD.sort(((DD, CD) => DD.from - CD.from)), CD = DD.indexOf(cD);
+        for (let ID = 1; ID < DD.length; ID++) {
+          let cD = DD[ID],
+            pD = DD[ID - 1];
+          if (cD.empty ? cD.from <= pD.to : cD.from < pD.to) {
+            let iD = pD.from,
+              fD = Math.max(cD.to, pD.to);
+            ID <= CD && CD--, DD.splice(--ID, 2, cD.anchor > cD.head ? kD.range(fD, iD) : kD.range(iD, fD))
           }
         }
-        return new Sz(zz, uz)
+        return new kD(DD, CD)
       }
     }
 
-    function yz(zz, uz) {
-      for (let bz of zz.al)
-        if (bz.to > uz) throw new RangeError("Selection points outside of document")
+    function dD(DD, CD) {
+      for (let cD of DD.df)
+        if (cD.to > CD) throw new RangeError("Selection points outside of document")
     }
-    let Dz = 0;
-    class Qz {
-      constructor(zz, uz, bz, Ez, nz) {
-        this.combine = zz, this.compareInput = uz, this.compare = bz, this.isStatic = Ez, this.id = Dz++, this.default = zz([]), this.extensions = "function" == typeof nz ? nz(this) : nz
+    let YD = 0;
+    class WD {
+      constructor(DD, CD, cD, ID, pD) {
+        this.combine = DD, this.compareInput = CD, this.compare = cD, this.isStatic = ID, this.id = YD++, this.default = DD([]), this.extensions = "function" == typeof pD ? pD(this) : pD
       }
       get reader() {
         return this
       }
       static define() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new Qz(zz.combine || (zz => zz), zz.compareInput || ((zz, uz) => zz === uz), zz.compare || (zz.combine ? (zz, uz) => zz === uz : Wz), !!zz.static, zz.enables)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new WD(DD.combine || (DD => DD), DD.compareInput || ((DD, CD) => DD === CD), DD.compare || (DD.combine ? (DD, CD) => DD === CD : sD), !!DD.static, DD.enables)
       }
-      of(zz) {
-        return new ez([], this, 0, zz)
+      of(DD) {
+        return new ED([], this, 0, DD)
       }
-      compute(zz, uz) {
+      compute(DD, CD) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new ez(zz, this, 1, uz)
+        return new ED(DD, this, 1, CD)
       }
-      computeN(zz, uz) {
+      computeN(DD, CD) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new ez(zz, this, 2, uz)
+        return new ED(DD, this, 2, CD)
       }
-      from(zz, uz) {
-        return uz || (uz = zz => zz), this.compute([zz], (bz => uz(bz.field(zz))))
+      from(DD, CD) {
+        return CD || (CD = DD => DD), this.compute([DD], (cD => CD(cD.field(DD))))
       }
     }
 
-    function Wz(zz, uz) {
-      return zz == uz || zz.length == uz.length && zz.every(((zz, bz) => zz === uz[bz]))
+    function sD(DD, CD) {
+      return DD == CD || DD.length == CD.length && DD.every(((DD, cD) => DD === CD[cD]))
     }
-    class ez {
-      constructor(zz, uz, bz, Ez) {
-        this.dependencies = zz, this.facet = uz, this.type = bz, this.value = Ez, this.id = Dz++
+    class ED {
+      constructor(DD, CD, cD, ID) {
+        this.dependencies = DD, this.facet = CD, this.type = cD, this.value = ID, this.id = YD++
       }
-      dynamicSlot(zz) {
-        var uz;
-        let bz = this.value,
-          Ez = this.facet.compareInput,
-          nz = this.id,
-          iz = zz[nz] >> 1,
-          lz = 2 == this.type,
-          Mz = !1,
-          tz = !1,
-          Hz = [];
-        for (let Oz of this.dependencies) "doc" == Oz ? Mz = !0 : "selection" == Oz ? tz = !0 : 0 == (1 & (null !== (uz = zz[Oz.id]) && void 0 !== uz ? uz : 1)) && Hz.push(zz[Oz.id]);
+      dynamicSlot(DD) {
+        var CD;
+        let cD = this.value,
+          ID = this.facet.compareInput,
+          pD = this.id,
+          iD = DD[pD] >> 1,
+          fD = 2 == this.type,
+          bD = !1,
+          QD = !1,
+          wD = [];
+        for (let SD of this.dependencies) "doc" == SD ? bD = !0 : "selection" == SD ? QD = !0 : 0 == (1 & (null !== (CD = DD[SD.id]) && void 0 !== CD ? CD : 1)) && wD.push(DD[SD.id]);
         return {
-          create: zz => (zz.values[iz] = bz(zz), 1),
-          update(zz, uz) {
-            if (Mz && uz.docChanged || tz && (uz.docChanged || uz.selection) || Iz(zz, Hz)) {
-              let uz = bz(zz);
-              if (lz ? !jz(uz, zz.values[iz], Ez) : !Ez(uz, zz.values[iz])) return zz.values[iz] = uz, 1
+          create: DD => (DD.values[iD] = cD(DD), 1),
+          update(DD, CD) {
+            if (bD && CD.docChanged || QD && (CD.docChanged || CD.selection) || uD(DD, wD)) {
+              let CD = cD(DD);
+              if (fD ? !eD(CD, DD.values[iD], ID) : !ID(CD, DD.values[iD])) return DD.values[iD] = CD, 1
             }
             return 0
           },
-          reconfigure: (zz, uz) => {
-            let Mz, tz = uz.config.address[nz];
-            if (null != tz) {
-              let nz = Ou(uz, tz);
-              if (this.dependencies.every((bz => bz instanceof Qz ? uz.facet(bz) === zz.facet(bz) : !(bz instanceof Yz) || uz.field(bz, !1) == zz.field(bz, !1))) || (lz ? jz(Mz = bz(zz), nz, Ez) : Ez(Mz = bz(zz), nz))) return zz.values[iz] = nz, 0
-            } else Mz = bz(zz);
-            return zz.values[iz] = Mz, 1
+          reconfigure: (DD, CD) => {
+            let bD, QD = CD.config.address[pD];
+            if (null != QD) {
+              let pD = SC(CD, QD);
+              if (this.dependencies.every((cD => cD instanceof WD ? CD.facet(cD) === DD.facet(cD) : !(cD instanceof AD) || CD.field(cD, !1) == DD.field(cD, !1))) || (fD ? eD(bD = cD(DD), pD, ID) : ID(bD = cD(DD), pD))) return DD.values[iD] = pD, 0
+            } else bD = cD(DD);
+            return DD.values[iD] = bD, 1
           }
         }
       }
     }
 
-    function jz(zz, uz, bz) {
-      if (zz.length != uz.length) return !1;
-      for (let Ez = 0; Ez < zz.length; Ez++)
-        if (!bz(zz[Ez], uz[Ez])) return !1;
+    function eD(DD, CD, cD) {
+      if (DD.length != CD.length) return !1;
+      for (let ID = 0; ID < DD.length; ID++)
+        if (!cD(DD[ID], CD[ID])) return !1;
       return !0
     }
 
-    function Iz(zz, uz) {
-      let bz = !1;
-      for (let Ez of uz) 1 & Hu(zz, Ez) && (bz = !0);
-      return bz
+    function uD(DD, CD) {
+      let cD = !1;
+      for (let ID of CD) 1 & wC(DD, ID) && (cD = !0);
+      return cD
     }
 
-    function Bz(zz, uz, bz) {
-      let Ez = bz.map((uz => zz[uz.id])),
-        nz = bz.map((zz => zz.type)),
-        iz = Ez.filter((zz => !(1 & zz))),
-        lz = zz[uz.id] >> 1;
+    function hD(DD, CD, cD) {
+      let ID = cD.map((CD => DD[CD.id])),
+        pD = cD.map((DD => DD.type)),
+        iD = ID.filter((DD => !(1 & DD))),
+        fD = DD[CD.id] >> 1;
 
-      function Mz(zz) {
-        let bz = [];
-        for (let uz = 0; uz < Ez.length; uz++) {
-          let iz = Ou(zz, Ez[uz]);
-          if (2 == nz[uz])
-            for (let zz of iz) bz.push(zz);
-          else bz.push(iz)
+      function bD(DD) {
+        let cD = [];
+        for (let CD = 0; CD < ID.length; CD++) {
+          let iD = SC(DD, ID[CD]);
+          if (2 == pD[CD])
+            for (let DD of iD) cD.push(DD);
+          else cD.push(iD)
         }
-        return uz.combine(bz)
+        return CD.combine(cD)
       }
       return {
-        create(zz) {
-          for (let uz of Ez) Hu(zz, uz);
-          return zz.values[lz] = Mz(zz), 1
+        create(DD) {
+          for (let CD of ID) wC(DD, CD);
+          return DD.values[fD] = bD(DD), 1
         },
-        update(zz, bz) {
-          if (!Iz(zz, iz)) return 0;
-          let Ez = Mz(zz);
-          return uz.compare(Ez, zz.values[lz]) ? 0 : (zz.values[lz] = Ez, 1)
+        update(DD, cD) {
+          if (!uD(DD, iD)) return 0;
+          let ID = bD(DD);
+          return CD.compare(ID, DD.values[fD]) ? 0 : (DD.values[fD] = ID, 1)
         },
-        reconfigure(zz, nz) {
-          let iz = Iz(zz, Ez),
-            tz = nz.config.facets[uz.id],
-            Hz = nz.facet(uz);
-          if (tz && !iz && Wz(bz, tz)) return zz.values[lz] = Hz, 0;
-          let Oz = Mz(zz);
-          return uz.compare(Oz, Hz) ? (zz.values[lz] = Hz, 0) : (zz.values[lz] = Oz, 1)
+        reconfigure(DD, pD) {
+          let iD = uD(DD, ID),
+            QD = pD.config.facets[CD.id],
+            wD = pD.facet(CD);
+          if (QD && !iD && sD(cD, QD)) return DD.values[fD] = wD, 0;
+          let SD = bD(DD);
+          return CD.compare(SD, wD) ? (DD.values[fD] = wD, 0) : (DD.values[fD] = SD, 1)
         }
       }
     }
-    const Cz = Qz.define({
+    const rD = WD.define({
       static: !0
     });
-    class Yz {
-      constructor(zz, uz, bz, Ez, nz) {
-        this.id = zz, this.createF = uz, this.updateF = bz, this.compareF = Ez, this.spec = nz, this.provides = void 0
+    class AD {
+      constructor(DD, CD, cD, ID, pD) {
+        this.id = DD, this.createF = CD, this.updateF = cD, this.compareF = ID, this.spec = pD, this.provides = void 0
       }
-      static define(zz) {
-        let uz = new Yz(Dz++, zz.create, zz.update, zz.compare || ((zz, uz) => zz === uz), zz);
-        return zz.provide && (uz.provides = zz.provide(uz)), uz
+      static define(DD) {
+        let CD = new AD(YD++, DD.create, DD.update, DD.compare || ((DD, CD) => DD === CD), DD);
+        return DD.provide && (CD.provides = DD.provide(CD)), CD
       }
-      create(zz) {
-        let uz = zz.facet(Cz).find((zz => zz.field == this));
-        return ((null === uz || void 0 === uz ? void 0 : uz.create) || this.createF)(zz)
+      create(DD) {
+        let CD = DD.facet(rD).find((DD => DD.field == this));
+        return ((null === CD || void 0 === CD ? void 0 : CD.create) || this.createF)(DD)
       }
-      slot(zz) {
-        let uz = zz[this.id] >> 1;
+      slot(DD) {
+        let CD = DD[this.id] >> 1;
         return {
-          create: zz => (zz.values[uz] = this.create(zz), 1),
-          update: (zz, bz) => {
-            let Ez = zz.values[uz],
-              nz = this.updateF(Ez, bz);
-            return this.compareF(Ez, nz) ? 0 : (zz.values[uz] = nz, 1)
+          create: DD => (DD.values[CD] = this.create(DD), 1),
+          update: (DD, cD) => {
+            let ID = DD.values[CD],
+              pD = this.updateF(ID, cD);
+            return this.compareF(ID, pD) ? 0 : (DD.values[CD] = pD, 1)
           },
-          reconfigure: (zz, bz) => {
-            let Ez, nz = zz.facet(Cz),
-              iz = bz.facet(Cz);
-            return (Ez = nz.find((zz => zz.field == this))) && Ez != iz.find((zz => zz.field == this)) ? (zz.values[uz] = Ez.create(zz), 1) : null != bz.config.address[this.id] ? (zz.values[uz] = bz.field(this), 0) : (zz.values[uz] = this.create(zz), 1)
+          reconfigure: (DD, cD) => {
+            let ID, pD = DD.facet(rD),
+              iD = cD.facet(rD);
+            return (ID = pD.find((DD => DD.field == this))) && ID != iD.find((DD => DD.field == this)) ? (DD.values[CD] = ID.create(DD), 1) : null != cD.config.address[this.id] ? (DD.values[CD] = cD.field(this), 0) : (DD.values[CD] = this.create(DD), 1)
           }
         }
       }
-      init(zz) {
-        return [this, Cz.of({
+      init(DD) {
+        return [this, rD.of({
           field: this,
-          create: zz
+          create: DD
         })]
       }
       get extension() {
         return this
       }
     }
-    const kz = 4,
-      zu = 3,
-      uu = 2,
-      bu = 1;
+    const FD = 4,
+      DC = 3,
+      CC = 2,
+      cC = 1;
 
-    function Eu(zz) {
-      return uz => new iu(uz, zz)
+    function IC(DD) {
+      return CD => new iC(CD, DD)
     }
-    const nu = {
-      highest: Eu(0),
-      high: Eu(bu),
-      default: Eu(uu),
-      low: Eu(zu),
-      lowest: Eu(kz)
+    const pC = {
+      highest: IC(0),
+      high: IC(cC),
+      default: IC(CC),
+      low: IC(DC),
+      lowest: IC(FD)
     };
-    class iu {
-      constructor(zz, uz) {
-        this.inner = zz, this.prec = uz
+    class iC {
+      constructor(DD, CD) {
+        this.inner = DD, this.prec = CD
       }
     }
-    class lu {
-      of(zz) {
-        return new Mu(this, zz)
+    class fC {
+      of(DD) {
+        return new bC(this, DD)
       }
-      reconfigure(zz) {
-        return lu.reconfigure.of({
+      reconfigure(DD) {
+        return fC.reconfigure.of({
           compartment: this,
-          extension: zz
+          extension: DD
         })
       }
-      get(zz) {
-        return zz.config.compartments.get(this)
+      get(DD) {
+        return DD.config.compartments.get(this)
       }
     }
-    class Mu {
-      constructor(zz, uz) {
-        this.compartment = zz, this.inner = uz
+    class bC {
+      constructor(DD, CD) {
+        this.compartment = DD, this.inner = CD
       }
     }
-    class tu {
-      constructor(zz, uz, bz, Ez, nz, iz) {
-        for (this.base = zz, this.compartments = uz, this.dynamicSlots = bz, this.address = Ez, this.staticValues = nz, this.facets = iz, this.statusTemplate = []; this.statusTemplate.length < bz.length;) this.statusTemplate.push(0)
+    class QC {
+      constructor(DD, CD, cD, ID, pD, iD) {
+        for (this.base = DD, this.compartments = CD, this.dynamicSlots = cD, this.address = ID, this.staticValues = pD, this.facets = iD, this.statusTemplate = []; this.statusTemplate.length < cD.length;) this.statusTemplate.push(0)
       }
-      staticFacet(zz) {
-        let uz = this.address[zz.id];
-        return null == uz ? zz.default : this.staticValues[uz >> 1]
+      staticFacet(DD) {
+        let CD = this.address[DD.id];
+        return null == CD ? DD.default : this.staticValues[CD >> 1]
       }
-      static resolve(zz, uz, bz) {
-        let Ez = [],
-          nz = Object.create(null),
-          iz = new Map;
-        for (let pz of function(zz, uz, bz) {
-            let Ez = [
+      static resolve(DD, CD, cD) {
+        let ID = [],
+          pD = Object.create(null),
+          iD = new Map;
+        for (let BD of function(DD, CD, cD) {
+            let ID = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              nz = new Map;
+              pD = new Map;
 
-            function iz(zz, lz) {
-              let Mz = nz.get(zz);
-              if (null != Mz) {
-                if (Mz <= lz) return;
-                let uz = Ez[Mz].indexOf(zz);
-                uz > -1 && Ez[Mz].splice(uz, 1), zz instanceof Mu && bz.delete(zz.compartment)
+            function iD(DD, fD) {
+              let bD = pD.get(DD);
+              if (null != bD) {
+                if (bD <= fD) return;
+                let CD = ID[bD].indexOf(DD);
+                CD > -1 && ID[bD].splice(CD, 1), DD instanceof bC && cD.delete(DD.compartment)
               }
-              if (nz.set(zz, lz), Array.isArray(zz))
-                for (let uz of zz) iz(uz, lz);
-              else if (zz instanceof Mu) {
-                if (bz.has(zz.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let Ez = uz.get(zz.compartment) || zz.inner;
-                bz.set(zz.compartment, Ez), iz(Ez, lz)
-              } else if (zz instanceof iu) iz(zz.inner, zz.prec);
-              else if (zz instanceof Yz) Ez[lz].push(zz), zz.provides && iz(zz.provides, lz);
-              else if (zz instanceof ez) Ez[lz].push(zz), zz.facet.extensions && iz(zz.facet.extensions, uu);
+              if (pD.set(DD, fD), Array.isArray(DD))
+                for (let CD of DD) iD(CD, fD);
+              else if (DD instanceof bC) {
+                if (cD.has(DD.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let ID = CD.get(DD.compartment) || DD.inner;
+                cD.set(DD.compartment, ID), iD(ID, fD)
+              } else if (DD instanceof iC) iD(DD.inner, DD.prec);
+              else if (DD instanceof AD) ID[fD].push(DD), DD.provides && iD(DD.provides, fD);
+              else if (DD instanceof ED) ID[fD].push(DD), DD.facet.extensions && iD(DD.facet.extensions, CC);
               else {
-                let uz = zz.extension;
-                if (!uz) throw new Error(`Unrecognized extension value in extension set (${zz}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                iz(uz, lz)
+                let CD = DD.extension;
+                if (!CD) throw new Error(`Unrecognized extension value in extension set (${DD}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                iD(CD, fD)
               }
             }
-            return iz(zz, uu), Ez.reduce(((zz, uz) => zz.concat(uz)))
-          }(zz, uz, iz)) pz instanceof Yz ? Ez.push(pz) : (nz[pz.facet.id] || (nz[pz.facet.id] = [])).push(pz);
-        let lz = Object.create(null),
-          Mz = [],
-          tz = [];
-        for (let pz of Ez) lz[pz.id] = tz.length << 1, tz.push((zz => pz.slot(zz)));
-        let Hz = null === bz || void 0 === bz ? void 0 : bz.config.facets;
-        for (let pz in nz) {
-          let zz = nz[pz],
-            uz = zz[0].facet,
-            Ez = Hz && Hz[pz] || [];
-          if (zz.every((zz => 0 == zz.type)))
-            if (lz[uz.id] = Mz.length << 1 | 1, Wz(Ez, zz)) Mz.push(bz.facet(uz));
+            return iD(DD, CC), ID.reduce(((DD, CD) => DD.concat(CD)))
+          }(DD, CD, iD)) BD instanceof AD ? ID.push(BD) : (pD[BD.facet.id] || (pD[BD.facet.id] = [])).push(BD);
+        let fD = Object.create(null),
+          bD = [],
+          QD = [];
+        for (let BD of ID) fD[BD.id] = QD.length << 1, QD.push((DD => BD.slot(DD)));
+        let wD = null === cD || void 0 === cD ? void 0 : cD.config.facets;
+        for (let BD in pD) {
+          let DD = pD[BD],
+            CD = DD[0].facet,
+            ID = wD && wD[BD] || [];
+          if (DD.every((DD => 0 == DD.type)))
+            if (fD[CD.id] = bD.length << 1 | 1, sD(ID, DD)) bD.push(cD.facet(CD));
             else {
-              let Ez = uz.combine(zz.map((zz => zz.value)));
-              Mz.push(bz && uz.compare(Ez, bz.facet(uz)) ? bz.facet(uz) : Ez)
+              let ID = CD.combine(DD.map((DD => DD.value)));
+              bD.push(cD && CD.compare(ID, cD.facet(CD)) ? cD.facet(CD) : ID)
             }
           else {
-            for (let uz of zz) 0 == uz.type ? (lz[uz.id] = Mz.length << 1 | 1, Mz.push(uz.value)) : (lz[uz.id] = tz.length << 1, tz.push((zz => uz.dynamicSlot(zz))));
-            lz[uz.id] = tz.length << 1, tz.push((bz => Bz(bz, uz, zz)))
+            for (let CD of DD) 0 == CD.type ? (fD[CD.id] = bD.length << 1 | 1, bD.push(CD.value)) : (fD[CD.id] = QD.length << 1, QD.push((DD => CD.dynamicSlot(DD))));
+            fD[CD.id] = QD.length << 1, QD.push((cD => hD(cD, CD, DD)))
           }
         }
-        let Oz = tz.map((zz => zz(lz)));
-        return new tu(zz, iz, Oz, lz, Mz, nz)
+        let SD = QD.map((DD => DD(fD)));
+        return new QC(DD, iD, SD, fD, bD, pD)
       }
     }
 
-    function Hu(zz, uz) {
-      if (1 & uz) return 2;
-      let bz = uz >> 1,
-        Ez = zz.status[bz];
-      if (4 == Ez) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & Ez) return Ez;
-      zz.status[bz] = 4;
-      let nz = zz.computeSlot(zz, zz.config.dynamicSlots[bz]);
-      return zz.status[bz] = 2 | nz
+    function wC(DD, CD) {
+      if (1 & CD) return 2;
+      let cD = CD >> 1,
+        ID = DD.status[cD];
+      if (4 == ID) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & ID) return ID;
+      DD.status[cD] = 4;
+      let pD = DD.computeSlot(DD, DD.config.dynamicSlots[cD]);
+      return DD.status[cD] = 2 | pD
     }
 
-    function Ou(zz, uz) {
-      return 1 & uz ? zz.config.staticValues[uz >> 1] : zz.values[uz >> 1]
+    function SC(DD, CD) {
+      return 1 & CD ? DD.config.staticValues[CD >> 1] : DD.values[CD >> 1]
     }
-    const pu = Qz.define(),
-      du = Qz.define({
-        combine: zz => zz.some((zz => zz)),
+    const BC = WD.define(),
+      yC = WD.define({
+        combine: DD => DD.some((DD => DD)),
         static: !0
       }),
-      Fu = Qz.define({
-        combine: zz => zz.length ? zz[0] : void 0,
+      MC = WD.define({
+        combine: DD => DD.length ? DD[0] : void 0,
         static: !0
       }),
-      Zu = Qz.define(),
-      Ru = Qz.define(),
-      Ku = Qz.define(),
-      wu = Qz.define({
-        combine: zz => !!zz.length && zz[0]
+      tC = WD.define(),
+      ZC = WD.define(),
+      oC = WD.define(),
+      vC = WD.define({
+        combine: DD => !!DD.length && DD[0]
       });
-    class Xu {
-      constructor(zz, uz) {
-        this.type = zz, this.value = uz
+    class NC {
+      constructor(DD, CD) {
+        this.type = DD, this.value = CD
       }
       static define() {
-        return new fu
+        return new gC
       }
     }
-    class fu {
-      of(zz) {
-        return new Xu(this, zz)
+    class gC {
+      of(DD) {
+        return new NC(this, DD)
       }
     }
-    class su {
-      constructor(zz) {
-        this.map = zz
+    class XC {
+      constructor(DD) {
+        this.map = DD
       }
-      of(zz) {
-        return new ru(this, zz)
+      of(DD) {
+        return new mC(this, DD)
       }
     }
-    class ru {
-      constructor(zz, uz) {
-        this.type = zz, this.value = uz
+    class mC {
+      constructor(DD, CD) {
+        this.type = DD, this.value = CD
       }
-      map(zz) {
-        let uz = this.type.map(this.value, zz);
-        return void 0 === uz ? void 0 : uz == this.value ? this : new ru(this.type, uz)
+      map(DD) {
+        let CD = this.type.map(this.value, DD);
+        return void 0 === CD ? void 0 : CD == this.value ? this : new mC(this.type, CD)
       }
-      is(zz) {
-        return this.type == zz
+      is(DD) {
+        return this.type == DD
       }
       static define() {
-        return new su((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (zz => zz))
+        return new XC((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (DD => DD))
       }
-      static mapEffects(zz, uz) {
-        if (!zz.length) return zz;
-        let bz = [];
-        for (let Ez of zz) {
-          let zz = Ez.map(uz);
-          zz && bz.push(zz)
+      static mapEffects(DD, CD) {
+        if (!DD.length) return DD;
+        let cD = [];
+        for (let ID of DD) {
+          let DD = ID.map(CD);
+          DD && cD.push(DD)
         }
-        return bz
+        return cD
       }
     }
-    ru.reconfigure = ru.define(), ru.appendConfig = ru.define();
-    class ou {
-      constructor(zz, uz, bz, Ez, nz, iz) {
-        this.startState = zz, this.changes = uz, this.selection = bz, this.effects = Ez, this.annotations = nz, this.scrollIntoView = iz, this._doc = null, this._state = null, bz && yz(bz, uz.newLength), nz.some((zz => zz.type == ou.time)) || (this.annotations = nz.concat(ou.time.of(Date.now())))
+    mC.reconfigure = mC.define(), mC.appendConfig = mC.define();
+    class nC {
+      constructor(DD, CD, cD, ID, pD, iD) {
+        this.startState = DD, this.changes = CD, this.selection = cD, this.effects = ID, this.annotations = pD, this.scrollIntoView = iD, this._doc = null, this._state = null, cD && dD(cD, CD.newLength), pD.some((DD => DD.type == nC.time)) || (this.annotations = pD.concat(nC.time.of(Date.now())))
       }
-      static create(zz, uz, bz, Ez, nz, iz) {
-        return new ou(zz, uz, bz, Ez, nz, iz)
+      static create(DD, CD, cD, ID, pD, iD) {
+        return new nC(DD, CD, cD, ID, pD, iD)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(zz) {
-        for (let uz of this.annotations)
-          if (uz.type == zz) return uz.value
+      annotation(DD) {
+        for (let CD of this.annotations)
+          if (CD.type == DD) return CD.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(zz) {
-        let uz = this.annotation(ou.userEvent);
-        return !(!uz || !(uz == zz || uz.length > zz.length && uz.slice(0, zz.length) == zz && "." == uz[zz.length]))
+      isUserEvent(DD) {
+        let CD = this.annotation(nC.userEvent);
+        return !(!CD || !(CD == DD || CD.length > DD.length && CD.slice(0, DD.length) == DD && "." == CD[DD.length]))
       }
     }
 
-    function Nu(zz, uz) {
-      let bz = [];
-      for (let Ez = 0, nz = 0;;) {
-        let iz, lz;
-        if (Ez < zz.length && (nz == uz.length || uz[nz] >= zz[Ez])) iz = zz[Ez++], lz = zz[Ez++];
+    function OC(DD, CD) {
+      let cD = [];
+      for (let ID = 0, pD = 0;;) {
+        let iD, fD;
+        if (ID < DD.length && (pD == CD.length || CD[pD] >= DD[ID])) iD = DD[ID++], fD = DD[ID++];
         else {
-          if (!(nz < uz.length)) return bz;
-          iz = uz[nz++], lz = uz[nz++]
-        }!bz.length || bz[bz.length - 1] < iz ? bz.push(iz, lz) : bz[bz.length - 1] < lz && (bz[bz.length - 1] = lz)
+          if (!(pD < CD.length)) return cD;
+          iD = CD[pD++], fD = CD[pD++]
+        }!cD.length || cD[cD.length - 1] < iD ? cD.push(iD, fD) : cD[cD.length - 1] < fD && (cD[cD.length - 1] = fD)
       }
     }
 
-    function vu(zz, uz, bz) {
-      var Ez;
-      let nz, iz, lz;
-      return bz ? (nz = uz.changes, iz = az.empty(uz.changes.length), lz = zz.changes.compose(uz.changes)) : (nz = uz.changes.map(zz.changes), iz = zz.changes.mapDesc(uz.changes, !0), lz = zz.changes.compose(nz)), {
-        changes: lz,
-        selection: uz.selection ? uz.selection.map(iz) : null === (Ez = zz.selection) || void 0 === Ez ? void 0 : Ez.map(nz),
-        effects: ru.mapEffects(zz.effects, nz).concat(ru.mapEffects(uz.effects, iz)),
-        annotations: zz.annotations.length ? zz.annotations.concat(uz.annotations) : uz.annotations,
-        scrollIntoView: zz.scrollIntoView || uz.scrollIntoView
+    function PC(DD, CD, cD) {
+      var ID;
+      let pD, iD, fD;
+      return cD ? (pD = CD.changes, iD = VD.empty(CD.changes.length), fD = DD.changes.compose(CD.changes)) : (pD = CD.changes.map(DD.changes), iD = DD.changes.mapDesc(CD.changes, !0), fD = DD.changes.compose(pD)), {
+        changes: fD,
+        selection: CD.selection ? CD.selection.map(iD) : null === (ID = DD.selection) || void 0 === ID ? void 0 : ID.map(pD),
+        effects: mC.mapEffects(DD.effects, pD).concat(mC.mapEffects(CD.effects, iD)),
+        annotations: DD.annotations.length ? DD.annotations.concat(CD.annotations) : CD.annotations,
+        scrollIntoView: DD.scrollIntoView || CD.scrollIntoView
       }
     }
 
-    function xu(zz, uz, bz) {
-      let Ez = uz.selection,
-        nz = Tu(uz.annotations);
-      return uz.userEvent && (nz = nz.concat(ou.userEvent.of(uz.userEvent))), {
-        changes: uz.changes instanceof az ? uz.changes : az.of(uz.changes || [], bz, zz.facet(Fu)),
-        selection: Ez && (Ez instanceof Sz ? Ez : Sz.single(Ez.anchor, Ez.head)),
-        effects: Tu(uz.effects),
-        annotations: nz,
-        scrollIntoView: !!uz.scrollIntoView
+    function HC(DD, CD, cD) {
+      let ID = CD.selection,
+        pD = qC(CD.annotations);
+      return CD.userEvent && (pD = pD.concat(nC.userEvent.of(CD.userEvent))), {
+        changes: CD.changes instanceof VD ? CD.changes : VD.of(CD.changes || [], cD, DD.facet(MC)),
+        selection: ID && (ID instanceof kD ? ID : kD.single(ID.anchor, ID.head)),
+        effects: qC(CD.effects),
+        annotations: pD,
+        scrollIntoView: !!CD.scrollIntoView
       }
     }
 
-    function Ju(zz, uz, bz) {
-      let Ez = xu(zz, uz.length ? uz[0] : {}, zz.doc.length);
-      uz.length && !1 === uz[0].filter && (bz = !1);
-      for (let iz = 1; iz < uz.length; iz++) {
-        !1 === uz[iz].filter && (bz = !1);
-        let nz = !!uz[iz].sequential;
-        Ez = vu(Ez, xu(zz, uz[iz], nz ? Ez.changes.newLength : zz.doc.length), nz)
+    function UC(DD, CD, cD) {
+      let ID = HC(DD, CD.length ? CD[0] : {}, DD.doc.length);
+      CD.length && !1 === CD[0].filter && (cD = !1);
+      for (let iD = 1; iD < CD.length; iD++) {
+        !1 === CD[iD].filter && (cD = !1);
+        let pD = !!CD[iD].sequential;
+        ID = PC(ID, HC(DD, CD[iD], pD ? ID.changes.newLength : DD.doc.length), pD)
       }
-      let nz = ou.create(zz, Ez.changes, Ez.selection, Ez.effects, Ez.annotations, Ez.scrollIntoView);
-      return function(zz) {
-        let uz = zz.startState,
-          bz = uz.facet(Ku),
-          Ez = zz;
-        for (let nz = bz.length - 1; nz >= 0; nz--) {
-          let iz = bz[nz](zz);
-          iz && Object.keys(iz).length && (Ez = vu(Ez, xu(uz, iz, zz.changes.newLength), !0))
+      let pD = nC.create(DD, ID.changes, ID.selection, ID.effects, ID.annotations, ID.scrollIntoView);
+      return function(DD) {
+        let CD = DD.startState,
+          cD = CD.facet(oC),
+          ID = DD;
+        for (let pD = cD.length - 1; pD >= 0; pD--) {
+          let iD = cD[pD](DD);
+          iD && Object.keys(iD).length && (ID = PC(ID, HC(CD, iD, DD.changes.newLength), !0))
         }
-        return Ez == zz ? zz : ou.create(uz, zz.changes, zz.selection, Ez.effects, Ez.annotations, Ez.scrollIntoView)
-      }(bz ? function(zz) {
-        let uz = zz.startState,
-          bz = !0;
-        for (let nz of uz.facet(Zu)) {
-          let uz = nz(zz);
-          if (!1 === uz) {
-            bz = !1;
+        return ID == DD ? DD : nC.create(CD, DD.changes, DD.selection, ID.effects, ID.annotations, ID.scrollIntoView)
+      }(cD ? function(DD) {
+        let CD = DD.startState,
+          cD = !0;
+        for (let pD of CD.facet(tC)) {
+          let CD = pD(DD);
+          if (!1 === CD) {
+            cD = !1;
             break
           }
-          Array.isArray(uz) && (bz = !0 === bz ? uz : Nu(bz, uz))
+          Array.isArray(CD) && (cD = !0 === cD ? CD : OC(cD, CD))
         }
-        if (!0 !== bz) {
-          let Ez, nz;
-          if (!1 === bz) nz = zz.changes.invertedDesc, Ez = az.empty(uz.doc.length);
+        if (!0 !== cD) {
+          let ID, pD;
+          if (!1 === cD) pD = DD.changes.invertedDesc, ID = VD.empty(CD.doc.length);
           else {
-            let uz = zz.changes.filter(bz);
-            Ez = uz.changes, nz = uz.filtered.mapDesc(uz.changes).invertedDesc
+            let CD = DD.changes.filter(cD);
+            ID = CD.changes, pD = CD.filtered.mapDesc(CD.changes).invertedDesc
           }
-          zz = ou.create(uz, Ez, zz.selection && zz.selection.map(nz), ru.mapEffects(zz.effects, nz), zz.annotations, zz.scrollIntoView)
+          DD = nC.create(CD, ID, DD.selection && DD.selection.map(pD), mC.mapEffects(DD.effects, pD), DD.annotations, DD.scrollIntoView)
         }
-        let Ez = uz.facet(Ru);
-        for (let nz = Ez.length - 1; nz >= 0; nz--) {
-          let bz = Ez[nz](zz);
-          zz = bz instanceof ou ? bz : Array.isArray(bz) && 1 == bz.length && bz[0] instanceof ou ? bz[0] : Ju(uz, Tu(bz), !1)
+        let ID = CD.facet(ZC);
+        for (let pD = ID.length - 1; pD >= 0; pD--) {
+          let cD = ID[pD](DD);
+          DD = cD instanceof nC ? cD : Array.isArray(cD) && 1 == cD.length && cD[0] instanceof nC ? cD[0] : UC(CD, qC(cD), !1)
         }
-        return zz
-      }(nz) : nz)
+        return DD
+      }(pD) : pD)
     }
-    ou.time = Xu.define(), ou.userEvent = Xu.define(), ou.addToHistory = Xu.define(), ou.remote = Xu.define();
-    const Au = [];
+    nC.time = NC.define(), nC.userEvent = NC.define(), nC.addToHistory = NC.define(), nC.remote = NC.define();
+    const xC = [];
 
-    function Tu(zz) {
-      return null == zz ? Au : Array.isArray(zz) ? zz : [zz]
+    function qC(DD) {
+      return null == DD ? xC : Array.isArray(DD) ? DD : [DD]
     }
-    var Lu = function(zz) {
-      return zz[zz.Word = 0] = "Word", zz[zz.Space = 1] = "Space", zz[zz.Other = 2] = "Other", zz
-    }(Lu || (Lu = {}));
-    const Pu = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let Gu;
+    var JC = function(DD) {
+      return DD[DD.Word = 0] = "Word", DD[DD.Space = 1] = "Space", DD[DD.Other = 2] = "Other", DD
+    }(JC || (JC = {}));
+    const KC = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let aC;
     try {
-      Gu = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (bb) {}
+      aC = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (cc) {}
 
-    function au(zz) {
-      return uz => {
-        if (!/\S/.test(uz)) return Lu.Space;
-        if (function(zz) {
-            if (Gu) return Gu.test(zz);
-            for (let uz = 0; uz < zz.length; uz++) {
-              let bz = zz[uz];
-              if (/\w/.test(bz) || bz > "\x80" && (bz.toUpperCase() != bz.toLowerCase() || Pu.test(bz))) return !0
+    function VC(DD) {
+      return CD => {
+        if (!/\S/.test(CD)) return JC.Space;
+        if (function(DD) {
+            if (aC) return aC.test(DD);
+            for (let CD = 0; CD < DD.length; CD++) {
+              let cD = DD[CD];
+              if (/\w/.test(cD) || cD > "\x80" && (cD.toUpperCase() != cD.toLowerCase() || KC.test(cD))) return !0
             }
             return !1
-          }(uz)) return Lu.Word;
-        for (let bz = 0; bz < zz.length; bz++)
-          if (uz.indexOf(zz[bz]) > -1) return Lu.Word;
-        return Lu.Other
+          }(CD)) return JC.Word;
+        for (let cD = 0; cD < DD.length; cD++)
+          if (CD.indexOf(DD[cD]) > -1) return JC.Word;
+        return JC.Other
       }
     }
-    class Vu {
-      constructor(zz, uz, bz, Ez, nz, iz) {
-        this.config = zz, this.doc = uz, this.selection = bz, this.values = Ez, this.status = zz.statusTemplate.slice(), this.computeSlot = nz, iz && (iz._state = this);
-        for (let lz = 0; lz < this.config.dynamicSlots.length; lz++) Hu(this, lz << 1);
+    class zC {
+      constructor(DD, CD, cD, ID, pD, iD) {
+        this.config = DD, this.doc = CD, this.selection = cD, this.values = ID, this.status = DD.statusTemplate.slice(), this.computeSlot = pD, iD && (iD._state = this);
+        for (let fD = 0; fD < this.config.dynamicSlots.length; fD++) wC(this, fD << 1);
         this.computeSlot = null
       }
-      field(zz) {
-        let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          bz = this.config.address[zz.id];
-        if (null != bz) return Hu(this, bz), Ou(this, bz);
-        if (uz) throw new RangeError("Field is not present in this state")
+      field(DD) {
+        let CD = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          cD = this.config.address[DD.id];
+        if (null != cD) return wC(this, cD), SC(this, cD);
+        if (CD) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
-        return Ju(this, uz, !0)
+        for (var DD = arguments.length, CD = new Array(DD), cD = 0; cD < DD; cD++) CD[cD] = arguments[cD];
+        return UC(this, CD, !0)
       }
-      applyTransaction(zz) {
-        let uz, bz = this.config,
+      applyTransaction(DD) {
+        let CD, cD = this.config,
           {
-            base: Ez,
-            compartments: nz
-          } = bz;
-        for (let lz of zz.effects) lz.is(lu.reconfigure) ? (bz && (nz = new Map, bz.compartments.forEach(((zz, uz) => nz.set(uz, zz))), bz = null), nz.set(lz.value.compartment, lz.value.extension)) : lz.is(ru.reconfigure) ? (bz = null, Ez = lz.value) : lz.is(ru.appendConfig) && (bz = null, Ez = Tu(Ez).concat(lz.value));
-        if (bz) uz = zz.startState.values.slice();
+            base: ID,
+            compartments: pD
+          } = cD;
+        for (let fD of DD.effects) fD.is(fC.reconfigure) ? (cD && (pD = new Map, cD.compartments.forEach(((DD, CD) => pD.set(CD, DD))), cD = null), pD.set(fD.value.compartment, fD.value.extension)) : fD.is(mC.reconfigure) ? (cD = null, ID = fD.value) : fD.is(mC.appendConfig) && (cD = null, ID = qC(ID).concat(fD.value));
+        if (cD) CD = DD.startState.values.slice();
         else {
-          bz = tu.resolve(Ez, nz, this), uz = new Vu(bz, this.doc, this.selection, bz.dynamicSlots.map((() => null)), ((zz, uz) => uz.reconfigure(zz, this)), null).values
+          cD = QC.resolve(ID, pD, this), CD = new zC(cD, this.doc, this.selection, cD.dynamicSlots.map((() => null)), ((DD, CD) => CD.reconfigure(DD, this)), null).values
         }
-        let iz = zz.startState.facet(du) ? zz.newSelection : zz.newSelection.asSingle();
-        new Vu(bz, zz.newDoc, iz, uz, ((uz, bz) => bz.update(uz, zz)), zz)
+        let iD = DD.startState.facet(yC) ? DD.newSelection : DD.newSelection.asSingle();
+        new zC(cD, DD.newDoc, iD, CD, ((CD, cD) => cD.update(CD, DD)), DD)
       }
-      replaceSelection(zz) {
-        return "string" == typeof zz && (zz = this.toText(zz)), this.changeByRange((uz => ({
+      replaceSelection(DD) {
+        return "string" == typeof DD && (DD = this.toText(DD)), this.changeByRange((CD => ({
           changes: {
-            from: uz.from,
-            to: uz.to,
-            insert: zz
+            from: CD.from,
+            to: CD.to,
+            insert: DD
           },
-          range: Sz.cursor(uz.from + zz.length)
+          range: kD.cursor(CD.from + DD.length)
         })))
       }
-      changeByRange(zz) {
-        let uz = this.selection,
-          bz = zz(uz.al[0]),
-          Ez = this.changes(bz.changes),
-          nz = [bz.range],
-          iz = Tu(bz.effects);
-        for (let lz = 1; lz < uz.al.length; lz++) {
-          let bz = zz(uz.al[lz]),
-            Mz = this.changes(bz.changes),
-            tz = Mz.map(Ez);
-          for (let zz = 0; zz < lz; zz++) nz[zz] = nz[zz].map(tz);
-          let Hz = Ez.mapDesc(Mz, !0);
-          nz.push(bz.range.map(Hz)), Ez = Ez.compose(tz), iz = ru.mapEffects(iz, tz).concat(ru.mapEffects(Tu(bz.effects), Hz))
+      changeByRange(DD) {
+        let CD = this.selection,
+          cD = DD(CD.df[0]),
+          ID = this.changes(cD.changes),
+          pD = [cD.range],
+          iD = qC(cD.effects);
+        for (let fD = 1; fD < CD.df.length; fD++) {
+          let cD = DD(CD.df[fD]),
+            bD = this.changes(cD.changes),
+            QD = bD.map(ID);
+          for (let DD = 0; DD < fD; DD++) pD[DD] = pD[DD].map(QD);
+          let wD = ID.mapDesc(bD, !0);
+          pD.push(cD.range.map(wD)), ID = ID.compose(QD), iD = mC.mapEffects(iD, QD).concat(mC.mapEffects(qC(cD.effects), wD))
         }
         return {
-          changes: Ez,
-          selection: Sz.create(nz, uz.mainIndex),
-          effects: iz
+          changes: ID,
+          selection: kD.create(pD, CD.mainIndex),
+          effects: iD
         }
       }
       changes() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return zz instanceof az ? zz : az.of(zz, this.doc.length, this.facet(Vu.lineSeparator))
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return DD instanceof VD ? DD : VD.of(DD, this.doc.length, this.facet(zC.lineSeparator))
       }
-      toText(zz) {
-        return Rz.of(zz.split(this.facet(Vu.lineSeparator) || Lz))
+      toText(DD) {
+        return ZD.of(DD.split(this.facet(zC.lineSeparator) || JD))
       }
       sliceDoc() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(zz, uz, this.lineBreak)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(DD, CD, this.lineBreak)
       }
-      facet(zz) {
-        let uz = this.config.address[zz.id];
-        return null == uz ? zz.default : (Hu(this, uz), Ou(this, uz))
+      facet(DD) {
+        let CD = this.config.address[DD.id];
+        return null == CD ? DD.default : (wC(this, CD), SC(this, CD))
       }
-      toJSON(zz) {
-        let uz = {
+      toJSON(DD) {
+        let CD = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (zz)
-          for (let bz in zz) {
-            let Ez = zz[bz];
-            Ez instanceof Yz && null != this.config.address[Ez.id] && (uz[bz] = Ez.spec.toJSON(this.field(zz[bz]), this))
+        if (DD)
+          for (let cD in DD) {
+            let ID = DD[cD];
+            ID instanceof AD && null != this.config.address[ID.id] && (CD[cD] = ID.spec.toJSON(this.field(DD[cD]), this))
           }
-        return uz
+        return CD
       }
-      static fromJSON(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          bz = arguments.length > 2 ? arguments[2] : void 0;
-        if (!zz || "string" != typeof zz.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let Ez = [];
-        if (bz)
-          for (let nz in bz)
-            if (Object.prototype.hasOwnProperty.call(zz, nz)) {
-              let uz = bz[nz],
-                iz = zz[nz];
-              Ez.push(uz.init((zz => uz.spec.fromJSON(iz, zz))))
-            } return Vu.create({
-          doc: zz.doc,
-          selection: Sz.fromJSON(zz.selection),
-          extensions: uz.extensions ? Ez.concat([uz.extensions]) : Ez
+      static fromJSON(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          cD = arguments.length > 2 ? arguments[2] : void 0;
+        if (!DD || "string" != typeof DD.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let ID = [];
+        if (cD)
+          for (let pD in cD)
+            if (Object.prototype.hasOwnProperty.call(DD, pD)) {
+              let CD = cD[pD],
+                iD = DD[pD];
+              ID.push(CD.init((DD => CD.spec.fromJSON(iD, DD))))
+            } return zC.create({
+          doc: DD.doc,
+          selection: kD.fromJSON(DD.selection),
+          extensions: CD.extensions ? ID.concat([CD.extensions]) : ID
         })
       }
       static create() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          uz = tu.resolve(zz.extensions || [], new Map),
-          bz = zz.doc instanceof Rz ? zz.doc : Rz.of((zz.doc || "").split(uz.staticFacet(Vu.lineSeparator) || Lz)),
-          Ez = zz.selection ? zz.selection instanceof Sz ? zz.selection : Sz.single(zz.selection.anchor, zz.selection.head) : Sz.single(0);
-        return yz(Ez, bz.length), uz.staticFacet(du) || (Ez = Ez.asSingle()), new Vu(uz, bz, Ez, uz.dynamicSlots.map((() => null)), ((zz, uz) => uz.create(zz)), null)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          CD = QC.resolve(DD.extensions || [], new Map),
+          cD = DD.doc instanceof ZD ? DD.doc : ZD.of((DD.doc || "").split(CD.staticFacet(zC.lineSeparator) || JD)),
+          ID = DD.selection ? DD.selection instanceof kD ? DD.selection : kD.single(DD.selection.anchor, DD.selection.head) : kD.single(0);
+        return dD(ID, cD.length), CD.staticFacet(yC) || (ID = ID.asSingle()), new zC(CD, cD, ID, CD.dynamicSlots.map((() => null)), ((DD, CD) => CD.create(DD)), null)
       }
       get tabSize() {
-        return this.facet(Vu.tabSize)
+        return this.facet(zC.tabSize)
       }
       get lineBreak() {
-        return this.facet(Vu.lineSeparator) || "\n"
+        return this.facet(zC.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(wu)
+        return this.facet(vC)
       }
-      phrase(zz) {
-        for (var uz = arguments.length, bz = new Array(uz > 1 ? uz - 1 : 0), Ez = 1; Ez < uz; Ez++) bz[Ez - 1] = arguments[Ez];
-        for (let nz of this.facet(Vu.phrases))
-          if (Object.prototype.hasOwnProperty.call(nz, zz)) {
-            zz = nz[zz];
+      phrase(DD) {
+        for (var CD = arguments.length, cD = new Array(CD > 1 ? CD - 1 : 0), ID = 1; ID < CD; ID++) cD[ID - 1] = arguments[ID];
+        for (let pD of this.facet(zC.phrases))
+          if (Object.prototype.hasOwnProperty.call(pD, DD)) {
+            DD = pD[DD];
             break
-          } return bz.length && (zz = zz.replace(/\$(\$|\d*)/g, ((zz, uz) => {
-          if ("$" == uz) return "$";
-          let Ez = +(uz || 1);
-          return !Ez || Ez > bz.length ? zz : bz[Ez - 1]
-        }))), zz
+          } return cD.length && (DD = DD.replace(/\$(\$|\d*)/g, ((DD, CD) => {
+          if ("$" == CD) return "$";
+          let ID = +(CD || 1);
+          return !ID || ID > cD.length ? DD : cD[ID - 1]
+        }))), DD
       }
-      languageDataAt(zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          Ez = [];
-        for (let nz of this.facet(pu))
-          for (let iz of nz(this, uz, bz)) Object.prototype.hasOwnProperty.call(iz, zz) && Ez.push(iz[zz]);
-        return Ez
+      languageDataAt(DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          ID = [];
+        for (let pD of this.facet(BC))
+          for (let iD of pD(this, CD, cD)) Object.prototype.hasOwnProperty.call(iD, DD) && ID.push(iD[DD]);
+        return ID
       }
-      charCategorizer(zz) {
-        let uz = this.languageDataAt("wordChars", zz);
-        return au(uz.length ? uz[0] : "")
+      charCategorizer(DD) {
+        let CD = this.languageDataAt("wordChars", DD);
+        return VC(CD.length ? CD[0] : "")
       }
-      wordAt(zz) {
+      wordAt(DD) {
         let {
-          text: uz,
-          from: bz,
-          length: Ez
-        } = this.doc.lineAt(zz), nz = this.charCategorizer(zz), iz = zz - bz, lz = zz - bz;
-        for (; iz > 0;) {
-          let zz = xz(uz, iz, !1);
-          if (nz(uz.slice(zz, iz)) != Lu.Word) break;
-          iz = zz
+          text: CD,
+          from: cD,
+          length: ID
+        } = this.doc.lineAt(DD), pD = this.charCategorizer(DD), iD = DD - cD, fD = DD - cD;
+        for (; iD > 0;) {
+          let DD = HD(CD, iD, !1);
+          if (pD(CD.slice(DD, iD)) != JC.Word) break;
+          iD = DD
         }
-        for (; lz < Ez;) {
-          let zz = xz(uz, lz);
-          if (nz(uz.slice(lz, zz)) != Lu.Word) break;
-          lz = zz
+        for (; fD < ID;) {
+          let DD = HD(CD, fD);
+          if (pD(CD.slice(fD, DD)) != JC.Word) break;
+          fD = DD
         }
-        return iz == lz ? null : Sz.range(iz + bz, lz + bz)
+        return iD == fD ? null : kD.range(iD + cD, fD + cD)
       }
     }
 
-    function mu(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        Ez = {};
-      for (let nz of zz)
-        for (let zz of Object.keys(nz)) {
-          let uz = nz[zz],
-            iz = Ez[zz];
-          if (void 0 === iz) Ez[zz] = uz;
-          else if (iz === uz || void 0 === uz);
+    function jC(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        ID = {};
+      for (let pD of DD)
+        for (let DD of Object.keys(pD)) {
+          let CD = pD[DD],
+            iD = ID[DD];
+          if (void 0 === iD) ID[DD] = CD;
+          else if (iD === CD || void 0 === CD);
           else {
-            if (!Object.hasOwnProperty.call(bz, zz)) throw new Error("Config merge conflict for field " + zz);
-            Ez[zz] = bz[zz](iz, uz)
+            if (!Object.hasOwnProperty.call(cD, DD)) throw new Error("Config merge conflict for field " + DD);
+            ID[DD] = cD[DD](iD, CD)
           }
         }
-      for (let nz in uz) void 0 === Ez[nz] && (Ez[nz] = uz[nz]);
-      return Ez
+      for (let pD in CD) void 0 === ID[pD] && (ID[pD] = CD[pD]);
+      return ID
     }
-    Vu.allowMultipleSelections = du, Vu.tabSize = Qz.define({
-      combine: zz => zz.length ? zz[0] : 4
-    }), Vu.lineSeparator = Fu, Vu.readOnly = wu, Vu.phrases = Qz.define({
-      compare(zz, uz) {
-        let bz = Object.keys(zz),
-          Ez = Object.keys(uz);
-        return bz.length == Ez.length && bz.every((bz => zz[bz] == uz[bz]))
+    zC.allowMultipleSelections = yC, zC.tabSize = WD.define({
+      combine: DD => DD.length ? DD[0] : 4
+    }), zC.lineSeparator = MC, zC.readOnly = vC, zC.phrases = WD.define({
+      compare(DD, CD) {
+        let cD = Object.keys(DD),
+          ID = Object.keys(CD);
+        return cD.length == ID.length && cD.every((cD => DD[cD] == CD[cD]))
       }
-    }), Vu.languageData = pu, Vu.changeFilter = Zu, Vu.transactionFilter = Ru, Vu.transactionExtender = Ku, lu.reconfigure = ru.define();
-    class qu {
-      eq(zz) {
-        return this == zz
+    }), zC.languageData = BC, zC.changeFilter = tC, zC.transactionFilter = ZC, zC.transactionExtender = oC, fC.reconfigure = mC.define();
+    class lC {
+      eq(DD) {
+        return this == DD
       }
-      range(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz;
-        return Uu.create(zz, uz, this)
-      }
-    }
-
-    function hu(zz, uz) {
-      return zz == uz || zz.constructor == uz.constructor && zz.eq(uz)
-    }
-    qu.prototype.startSide = qu.prototype.endSide = 0, qu.prototype.point = !1, qu.prototype.mapMode = Pz.TrackDel;
-    class Uu {
-      constructor(zz, uz, bz) {
-        this.from = zz, this.to = uz, this.value = bz
-      }
-      static create(zz, uz, bz) {
-        return new Uu(zz, uz, bz)
+      range(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD;
+        return TC.create(DD, CD, this)
       }
     }
 
-    function cu(zz, uz) {
-      return zz.from - uz.from || zz.value.startSide - uz.value.startSide
+    function LC(DD, CD) {
+      return DD == CD || DD.constructor == CD.constructor && DD.eq(CD)
     }
-    class gu {
-      constructor(zz, uz, bz, Ez) {
-        this.from = zz, this.to = uz, this.value = bz, this.Tbz = Ez
+    lC.prototype.startSide = lC.prototype.endSide = 0, lC.prototype.point = !1, lC.prototype.mapMode = KD.TrackDel;
+    class TC {
+      constructor(DD, CD, cD) {
+        this.from = DD, this.to = CD, this.value = cD
+      }
+      static create(DD, CD, cD) {
+        return new TC(DD, CD, cD)
+      }
+    }
+
+    function GC(DD, CD) {
+      return DD.from - CD.from || DD.value.startSide - CD.value.startSide
+    }
+    class RC {
+      constructor(DD, CD, cD, ID) {
+        this.from = DD, this.to = CD, this.value = cD, this.JcD = ID
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(zz, uz, bz) {
-        let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          nz = bz ? this.to : this.from;
-        for (let iz = Ez, lz = nz.length;;) {
-          if (iz == lz) return iz;
-          let Ez = iz + lz >> 1,
-            Mz = nz[Ez] - zz || (bz ? this.value[Ez].endSide : this.value[Ez].startSide) - uz;
-          if (Ez == iz) return Mz >= 0 ? iz : lz;
-          Mz >= 0 ? lz = Ez : iz = Ez + 1
+      findIndex(DD, CD, cD) {
+        let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          pD = cD ? this.to : this.from;
+        for (let iD = ID, fD = pD.length;;) {
+          if (iD == fD) return iD;
+          let ID = iD + fD >> 1,
+            bD = pD[ID] - DD || (cD ? this.value[ID].endSide : this.value[ID].startSide) - CD;
+          if (ID == iD) return bD >= 0 ? iD : fD;
+          bD >= 0 ? fD = ID : iD = ID + 1
         }
       }
-      between(zz, uz, bz, Ez) {
-        for (let nz = this.findIndex(uz, -1e9, !0), iz = this.findIndex(bz, 1e9, !1, nz); nz < iz; nz++)
-          if (!1 === Ez(this.from[nz] + zz, this.to[nz] + zz, this.value[nz])) return !1
+      between(DD, CD, cD, ID) {
+        for (let pD = this.findIndex(CD, -1e9, !0), iD = this.findIndex(cD, 1e9, !1, pD); pD < iD; pD++)
+          if (!1 === ID(this.from[pD] + DD, this.to[pD] + DD, this.value[pD])) return !1
       }
-      map(zz, uz) {
-        let bz = [],
-          Ez = [],
-          nz = [],
-          iz = -1,
-          lz = -1;
-        for (let Mz = 0; Mz < this.value.length; Mz++) {
-          let tz, Hz, Oz = this.value[Mz],
-            pz = this.from[Mz] + zz,
-            dz = this.to[Mz] + zz;
-          if (pz == dz) {
-            let zz = uz.mapPos(pz, Oz.startSide, Oz.mapMode);
-            if (null == zz) continue;
-            if (tz = Hz = zz, Oz.startSide != Oz.endSide && (Hz = uz.mapPos(pz, Oz.endSide), Hz < tz)) continue
-          } else if (tz = uz.mapPos(pz, Oz.startSide), Hz = uz.mapPos(dz, Oz.endSide), tz > Hz || tz == Hz && Oz.startSide > 0 && Oz.endSide <= 0) continue;
-          (Hz - tz || Oz.endSide - Oz.startSide) < 0 || (iz < 0 && (iz = tz), Oz.point && (lz = Math.max(lz, Hz - tz)), bz.push(Oz), Ez.push(tz - iz), nz.push(Hz - iz))
+      map(DD, CD) {
+        let cD = [],
+          ID = [],
+          pD = [],
+          iD = -1,
+          fD = -1;
+        for (let bD = 0; bD < this.value.length; bD++) {
+          let QD, wD, SD = this.value[bD],
+            BD = this.from[bD] + DD,
+            yD = this.to[bD] + DD;
+          if (BD == yD) {
+            let DD = CD.mapPos(BD, SD.startSide, SD.mapMode);
+            if (null == DD) continue;
+            if (QD = wD = DD, SD.startSide != SD.endSide && (wD = CD.mapPos(BD, SD.endSide), wD < QD)) continue
+          } else if (QD = CD.mapPos(BD, SD.startSide), wD = CD.mapPos(yD, SD.endSide), QD > wD || QD == wD && SD.startSide > 0 && SD.endSide <= 0) continue;
+          (wD - QD || SD.endSide - SD.startSide) < 0 || (iD < 0 && (iD = QD), SD.point && (fD = Math.max(fD, wD - QD)), cD.push(SD), ID.push(QD - iD), pD.push(wD - iD))
         }
         return {
-          mapped: bz.length ? new gu(Ez, nz, bz, lz) : null,
-          pos: iz
+          mapped: cD.length ? new RC(ID, pD, cD, fD) : null,
+          pos: iD
         }
       }
     }
-    class Su {
-      constructor(zz, uz, bz, Ez) {
-        this.chunkPos = zz, this.chunk = uz, this.nextLayer = bz, this.Tbz = Ez
+    class kC {
+      constructor(DD, CD, cD, ID) {
+        this.chunkPos = DD, this.chunk = CD, this.nextLayer = cD, this.JcD = ID
       }
-      static create(zz, uz, bz, Ez) {
-        return new Su(zz, uz, bz, Ez)
+      static create(DD, CD, cD, ID) {
+        return new kC(DD, CD, cD, ID)
       }
       get length() {
-        let zz = this.chunk.length - 1;
-        return zz < 0 ? 0 : Math.max(this.chunkEnd(zz), this.nextLayer.length)
+        let DD = this.chunk.length - 1;
+        return DD < 0 ? 0 : Math.max(this.chunkEnd(DD), this.nextLayer.length)
       }
       get size() {
-        if (this.aZ) return 0;
-        let zz = this.nextLayer.size;
-        for (let uz of this.chunk) zz += uz.value.length;
-        return zz
+        if (this.xt) return 0;
+        let DD = this.nextLayer.size;
+        for (let CD of this.chunk) DD += CD.value.length;
+        return DD
       }
-      chunkEnd(zz) {
-        return this.chunkPos[zz] + this.chunk[zz].length
+      chunkEnd(DD) {
+        return this.chunkPos[DD] + this.chunk[DD].length
       }
-      update(zz) {
+      update(DD) {
         let {
-          add: uz = [],
-          sort: bz = !1,
-          filterFrom: Ez = 0,
-          filterTo: nz = this.length
-        } = zz, iz = zz.filter;
-        if (0 == uz.length && !iz) return this;
-        if (bz && (uz = uz.slice().sort(cu)), this.aZ) return uz.length ? Su.of(uz) : this;
-        let lz = new Qu(this, null, -1).goto(0),
-          Mz = 0,
-          tz = [],
-          Hz = new yu;
-        for (; lz.value || Mz < uz.length;)
-          if (Mz < uz.length && (lz.from - uz[Mz].from || lz.startSide - uz[Mz].value.startSide) >= 0) {
-            let zz = uz[Mz++];
-            Hz.addInner(zz.from, zz.to, zz.value) || tz.push(zz)
-          } else 1 == lz.rangeIndex && lz.chunkIndex < this.chunk.length && (Mz == uz.length || this.chunkEnd(lz.chunkIndex) < uz[Mz].from) && (!iz || Ez > this.chunkEnd(lz.chunkIndex) || nz < this.chunkPos[lz.chunkIndex]) && Hz.addChunk(this.chunkPos[lz.chunkIndex], this.chunk[lz.chunkIndex]) ? lz.nextChunk() : ((!iz || Ez > lz.to || nz < lz.from || iz(lz.from, lz.to, lz.value)) && (Hz.addInner(lz.from, lz.to, lz.value) || tz.push(Uu.create(lz.from, lz.to, lz.value))), lz.next());
-        return Hz.finishInner(this.nextLayer.aZ && !tz.length ? Su.empty : this.nextLayer.update({
-          add: tz,
-          filter: iz,
-          filterFrom: Ez,
-          filterTo: nz
+          add: CD = [],
+          sort: cD = !1,
+          filterFrom: ID = 0,
+          filterTo: pD = this.length
+        } = DD, iD = DD.filter;
+        if (0 == CD.length && !iD) return this;
+        if (cD && (CD = CD.slice().sort(GC)), this.xt) return CD.length ? kC.of(CD) : this;
+        let fD = new WC(this, null, -1).goto(0),
+          bD = 0,
+          QD = [],
+          wD = new dC;
+        for (; fD.value || bD < CD.length;)
+          if (bD < CD.length && (fD.from - CD[bD].from || fD.startSide - CD[bD].value.startSide) >= 0) {
+            let DD = CD[bD++];
+            wD.addInner(DD.from, DD.to, DD.value) || QD.push(DD)
+          } else 1 == fD.rangeIndex && fD.chunkIndex < this.chunk.length && (bD == CD.length || this.chunkEnd(fD.chunkIndex) < CD[bD].from) && (!iD || ID > this.chunkEnd(fD.chunkIndex) || pD < this.chunkPos[fD.chunkIndex]) && wD.addChunk(this.chunkPos[fD.chunkIndex], this.chunk[fD.chunkIndex]) ? fD.nextChunk() : ((!iD || ID > fD.to || pD < fD.from || iD(fD.from, fD.to, fD.value)) && (wD.addInner(fD.from, fD.to, fD.value) || QD.push(TC.create(fD.from, fD.to, fD.value))), fD.next());
+        return wD.finishInner(this.nextLayer.xt && !QD.length ? kC.empty : this.nextLayer.update({
+          add: QD,
+          filter: iD,
+          filterFrom: ID,
+          filterTo: pD
         }))
       }
-      map(zz) {
-        if (zz.empty || this.aZ) return this;
-        let uz = [],
-          bz = [],
-          Ez = -1;
-        for (let iz = 0; iz < this.chunk.length; iz++) {
-          let nz = this.chunkPos[iz],
-            lz = this.chunk[iz],
-            Mz = zz.touchesRange(nz, nz + lz.length);
-          if (!1 === Mz) Ez = Math.max(Ez, lz.Tbz), uz.push(lz), bz.push(zz.mapPos(nz));
-          else if (!0 === Mz) {
+      map(DD) {
+        if (DD.empty || this.xt) return this;
+        let CD = [],
+          cD = [],
+          ID = -1;
+        for (let iD = 0; iD < this.chunk.length; iD++) {
+          let pD = this.chunkPos[iD],
+            fD = this.chunk[iD],
+            bD = DD.touchesRange(pD, pD + fD.length);
+          if (!1 === bD) ID = Math.max(ID, fD.JcD), CD.push(fD), cD.push(DD.mapPos(pD));
+          else if (!0 === bD) {
             let {
-              mapped: iz,
-              pos: Mz
-            } = lz.map(nz, zz);
-            iz && (Ez = Math.max(Ez, iz.Tbz), uz.push(iz), bz.push(Mz))
+              mapped: iD,
+              pos: bD
+            } = fD.map(pD, DD);
+            iD && (ID = Math.max(ID, iD.JcD), CD.push(iD), cD.push(bD))
           }
         }
-        let nz = this.nextLayer.map(zz);
-        return 0 == uz.length ? nz : new Su(bz, uz, nz || Su.empty, Ez)
+        let pD = this.nextLayer.map(DD);
+        return 0 == CD.length ? pD : new kC(cD, CD, pD || kC.empty, ID)
       }
-      between(zz, uz, bz) {
-        if (!this.aZ) {
-          for (let Ez = 0; Ez < this.chunk.length; Ez++) {
-            let nz = this.chunkPos[Ez],
-              iz = this.chunk[Ez];
-            if (uz >= nz && zz <= nz + iz.length && !1 === iz.between(nz, zz - nz, uz - nz, bz)) return
+      between(DD, CD, cD) {
+        if (!this.xt) {
+          for (let ID = 0; ID < this.chunk.length; ID++) {
+            let pD = this.chunkPos[ID],
+              iD = this.chunk[ID];
+            if (CD >= pD && DD <= pD + iD.length && !1 === iD.between(pD, DD - pD, CD - pD, cD)) return
           }
-          this.nextLayer.between(zz, uz, bz)
+          this.nextLayer.between(DD, CD, cD)
         }
       }
       iter() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return Wu.from([this]).goto(zz)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return sC.from([this]).goto(DD)
       }
-      get aZ() {
+      get xt() {
         return this.nextLayer == this
       }
-      static iter(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Wu.from(zz).goto(uz)
+      static iter(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return sC.from(DD).goto(CD)
       }
-      static compare(zz, uz, bz, Ez) {
-        let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          iz = zz.filter((zz => zz.Tbz > 0 || !zz.aZ && zz.Tbz >= nz)),
-          lz = uz.filter((zz => zz.Tbz > 0 || !zz.aZ && zz.Tbz >= nz)),
-          Mz = Du(iz, lz, bz),
-          tz = new ju(iz, Mz, nz),
-          Hz = new ju(lz, Mz, nz);
-        bz.iterGaps(((zz, uz, bz) => Iu(tz, zz, Hz, uz, bz, Ez))), bz.empty && 0 == bz.length && Iu(tz, 0, Hz, 0, 0, Ez)
+      static compare(DD, CD, cD, ID) {
+        let pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          iD = DD.filter((DD => DD.JcD > 0 || !DD.xt && DD.JcD >= pD)),
+          fD = CD.filter((DD => DD.JcD > 0 || !DD.xt && DD.JcD >= pD)),
+          bD = YC(iD, fD, cD),
+          QD = new eC(iD, bD, pD),
+          wD = new eC(fD, bD, pD);
+        cD.iterGaps(((DD, CD, cD) => uC(QD, DD, wD, CD, cD, ID))), cD.empty && 0 == cD.length && uC(QD, 0, wD, 0, 0, ID)
       }
-      static eq(zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Ez = arguments.length > 3 ? arguments[3] : void 0;
-        null == Ez && (Ez = 999999999);
-        let nz = zz.filter((zz => !zz.aZ && uz.indexOf(zz) < 0)),
-          iz = uz.filter((uz => !uz.aZ && zz.indexOf(uz) < 0));
-        if (nz.length != iz.length) return !1;
-        if (!nz.length) return !0;
-        let lz = Du(nz, iz),
-          Mz = new ju(nz, lz, 0).goto(bz),
-          tz = new ju(iz, lz, 0).goto(bz);
+      static eq(DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          ID = arguments.length > 3 ? arguments[3] : void 0;
+        null == ID && (ID = 999999999);
+        let pD = DD.filter((DD => !DD.xt && CD.indexOf(DD) < 0)),
+          iD = CD.filter((CD => !CD.xt && DD.indexOf(CD) < 0));
+        if (pD.length != iD.length) return !1;
+        if (!pD.length) return !0;
+        let fD = YC(pD, iD),
+          bD = new eC(pD, fD, 0).goto(cD),
+          QD = new eC(iD, fD, 0).goto(cD);
         for (;;) {
-          if (Mz.to != tz.to || !Bu(Mz.active, tz.active) || Mz.point && (!tz.point || !hu(Mz.point, tz.point))) return !1;
-          if (Mz.to > Ez) return !0;
-          Mz.next(), tz.next()
+          if (bD.to != QD.to || !hC(bD.active, QD.active) || bD.point && (!QD.point || !LC(bD.point, QD.point))) return !1;
+          if (bD.to > ID) return !0;
+          bD.next(), QD.next()
         }
       }
-      static spans(zz, uz, bz, Ez) {
-        let nz = new ju(zz, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(uz),
-          iz = uz,
-          lz = nz.openStart;
+      static spans(DD, CD, cD, ID) {
+        let pD = new eC(DD, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(CD),
+          iD = CD,
+          fD = pD.openStart;
         for (;;) {
-          let zz = Math.min(nz.to, bz);
-          if (nz.point) {
-            let bz = nz.activeForPoint(nz.to),
-              Mz = nz.pointFrom < uz ? bz.length + 1 : nz.point.startSide < 0 ? bz.length : Math.min(bz.length, lz);
-            Ez.point(iz, zz, nz.point, bz, Mz, nz.pointRank), lz = Math.min(nz.openEnd(zz), bz.length)
-          } else zz > iz && (Ez.span(iz, zz, nz.active, lz), lz = nz.openEnd(zz));
-          if (nz.to > bz) return lz + (nz.point && nz.to > bz ? 1 : 0);
-          iz = nz.to, nz.next()
+          let DD = Math.min(pD.to, cD);
+          if (pD.point) {
+            let cD = pD.activeForPoint(pD.to),
+              bD = pD.pointFrom < CD ? cD.length + 1 : pD.point.startSide < 0 ? cD.length : Math.min(cD.length, fD);
+            ID.point(iD, DD, pD.point, cD, bD, pD.pointRank), fD = Math.min(pD.openEnd(DD), cD.length)
+          } else DD > iD && (ID.span(iD, DD, pD.active, fD), fD = pD.openEnd(DD));
+          if (pD.to > cD) return fD + (pD.point && pD.to > cD ? 1 : 0);
+          iD = pD.to, pD.next()
         }
       }
-      static of (zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          bz = new yu;
-        for (let Ez of zz instanceof Uu ? [zz] : uz ? function(zz) {
-            if (zz.length > 1)
-              for (let uz = zz[0], bz = 1; bz < zz.length; bz++) {
-                let Ez = zz[bz];
-                if (cu(uz, Ez) > 0) return zz.slice().sort(cu);
-                uz = Ez
+      static of (DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cD = new dC;
+        for (let ID of DD instanceof TC ? [DD] : CD ? function(DD) {
+            if (DD.length > 1)
+              for (let CD = DD[0], cD = 1; cD < DD.length; cD++) {
+                let ID = DD[cD];
+                if (GC(CD, ID) > 0) return DD.slice().sort(GC);
+                CD = ID
               }
-            return zz
-          }(zz) : zz) bz.add(Ez.from, Ez.to, Ez.value);
-        return bz.finish()
+            return DD
+          }(DD) : DD) cD.add(ID.from, ID.to, ID.value);
+        return cD.finish()
       }
-      static join(zz) {
-        if (!zz.length) return Su.empty;
-        let uz = zz[zz.length - 1];
-        for (let bz = zz.length - 2; bz >= 0; bz--)
-          for (let Ez = zz[bz]; Ez != Su.empty; Ez = Ez.nextLayer) uz = new Su(Ez.chunkPos, Ez.chunk, uz, Math.max(Ez.Tbz, uz.Tbz));
-        return uz
+      static join(DD) {
+        if (!DD.length) return kC.empty;
+        let CD = DD[DD.length - 1];
+        for (let cD = DD.length - 2; cD >= 0; cD--)
+          for (let ID = DD[cD]; ID != kC.empty; ID = ID.nextLayer) CD = new kC(ID.chunkPos, ID.chunk, CD, Math.max(ID.JcD, CD.JcD));
+        return CD
       }
     }
-    Su.empty = new Su([], [], null, -1), Su.empty.nextLayer = Su.empty;
-    class yu {
-      finishChunk(zz) {
-        this.chunks.push(new gu(this.from, this.to, this.value, this.Tbz)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.Tbz), this.Tbz = -1, zz && (this.from = [], this.to = [], this.value = [])
+    kC.empty = new kC([], [], null, -1), kC.empty.nextLayer = kC.empty;
+    class dC {
+      finishChunk(DD) {
+        this.chunks.push(new RC(this.from, this.to, this.value, this.JcD)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.JcD), this.JcD = -1, DD && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.Tbz = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.JcD = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(zz, uz, bz) {
-        this.addInner(zz, uz, bz) || (this.nextLayer || (this.nextLayer = new yu)).add(zz, uz, bz)
+      add(DD, CD, cD) {
+        this.addInner(DD, CD, cD) || (this.nextLayer || (this.nextLayer = new dC)).add(DD, CD, cD)
       }
-      addInner(zz, uz, bz) {
-        let Ez = zz - this.lastTo || bz.startSide - this.last.endSide;
-        if (Ez <= 0 && (zz - this.lastFrom || bz.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(Ez < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = zz), this.from.push(zz - this.chunkStart), this.to.push(uz - this.chunkStart), this.last = bz, this.lastFrom = zz, this.lastTo = uz, this.value.push(bz), bz.point && (this.Tbz = Math.max(this.Tbz, uz - zz)), !0)
+      addInner(DD, CD, cD) {
+        let ID = DD - this.lastTo || cD.startSide - this.last.endSide;
+        if (ID <= 0 && (DD - this.lastFrom || cD.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(ID < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = DD), this.from.push(DD - this.chunkStart), this.to.push(CD - this.chunkStart), this.last = cD, this.lastFrom = DD, this.lastTo = CD, this.value.push(cD), cD.point && (this.JcD = Math.max(this.JcD, CD - DD)), !0)
       }
-      addChunk(zz, uz) {
-        if ((zz - this.lastTo || uz.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, uz.Tbz), this.chunks.push(uz), this.chunkPos.push(zz);
-        let bz = uz.value.length - 1;
-        return this.last = uz.value[bz], this.lastFrom = uz.from[bz] + zz, this.lastTo = uz.to[bz] + zz, !0
+      addChunk(DD, CD) {
+        if ((DD - this.lastTo || CD.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, CD.JcD), this.chunks.push(CD), this.chunkPos.push(DD);
+        let cD = CD.value.length - 1;
+        return this.last = CD.value[cD], this.lastFrom = CD.from[cD] + DD, this.lastTo = CD.to[cD] + DD, !0
       }
       finish() {
-        return this.finishInner(Su.empty)
+        return this.finishInner(kC.empty)
       }
-      finishInner(zz) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return zz;
-        let uz = Su.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(zz) : zz, this.setMaxPoint);
-        return this.from = null, uz
+      finishInner(DD) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return DD;
+        let CD = kC.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(DD) : DD, this.setMaxPoint);
+        return this.from = null, CD
       }
     }
 
-    function Du(zz, uz, bz) {
-      let Ez = new Map;
-      for (let iz of zz)
-        for (let zz = 0; zz < iz.chunk.length; zz++) iz.chunk[zz].Tbz <= 0 && Ez.set(iz.chunk[zz], iz.chunkPos[zz]);
-      let nz = new Set;
-      for (let iz of uz)
-        for (let zz = 0; zz < iz.chunk.length; zz++) {
-          let uz = Ez.get(iz.chunk[zz]);
-          null == uz || (bz ? bz.mapPos(uz) : uz) != iz.chunkPos[zz] || (null === bz || void 0 === bz ? void 0 : bz.touchesRange(uz, uz + iz.chunk[zz].length)) || nz.add(iz.chunk[zz])
+    function YC(DD, CD, cD) {
+      let ID = new Map;
+      for (let iD of DD)
+        for (let DD = 0; DD < iD.chunk.length; DD++) iD.chunk[DD].JcD <= 0 && ID.set(iD.chunk[DD], iD.chunkPos[DD]);
+      let pD = new Set;
+      for (let iD of CD)
+        for (let DD = 0; DD < iD.chunk.length; DD++) {
+          let CD = ID.get(iD.chunk[DD]);
+          null == CD || (cD ? cD.mapPos(CD) : CD) != iD.chunkPos[DD] || (null === cD || void 0 === cD ? void 0 : cD.touchesRange(CD, CD + iD.chunk[DD].length)) || pD.add(iD.chunk[DD])
         }
-      return nz
+      return pD
     }
-    class Qu {
-      constructor(zz, uz, bz) {
-        let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = zz, this.skip = uz, this.Lbz = bz, this.rank = Ez
+    class WC {
+      constructor(DD, CD, cD) {
+        let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = DD, this.skip = CD, this.KcD = cD, this.rank = ID
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(zz, uz, !1), this
+      goto(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(DD, CD, !1), this
       }
-      gotoInner(zz, uz, bz) {
+      gotoInner(DD, CD, cD) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let uz = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(uz) || this.layer.chunkEnd(this.chunkIndex) < zz || uz.Tbz < this.Lbz)) break;
-          this.chunkIndex++, bz = !1
+          let CD = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(CD) || this.layer.chunkEnd(this.chunkIndex) < DD || CD.JcD < this.KcD)) break;
+          this.chunkIndex++, cD = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let Ez = this.layer.chunk[this.chunkIndex].findIndex(zz - this.layer.chunkPos[this.chunkIndex], uz, !0);
-          (!bz || this.rangeIndex < Ez) && this.setRangeIndex(Ez)
+          let ID = this.layer.chunk[this.chunkIndex].findIndex(DD - this.layer.chunkPos[this.chunkIndex], CD, !0);
+          (!cD || this.rangeIndex < ID) && this.setRangeIndex(ID)
         }
         this.next()
       }
-      forward(zz, uz) {
-        (this.to - zz || this.endSide - uz) < 0 && this.gotoInner(zz, uz, !0)
+      forward(DD, CD) {
+        (this.to - DD || this.endSide - CD) < 0 && this.gotoInner(DD, CD, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let zz = this.layer.chunkPos[this.chunkIndex],
-              uz = this.layer.chunk[this.chunkIndex],
-              bz = zz + uz.from[this.rangeIndex];
-            if (this.from = bz, this.to = zz + uz.to[this.rangeIndex], this.value = uz.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.Lbz < 0 || this.value.point && this.to - this.from >= this.Lbz) break
+            let DD = this.layer.chunkPos[this.chunkIndex],
+              CD = this.layer.chunk[this.chunkIndex],
+              cD = DD + CD.from[this.rangeIndex];
+            if (this.from = cD, this.to = DD + CD.to[this.rangeIndex], this.value = CD.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.KcD < 0 || this.value.point && this.to - this.from >= this.KcD) break
           }
         }
       }
-      setRangeIndex(zz) {
-        if (zz == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(DD) {
+        if (DD == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = zz
+        } else this.rangeIndex = DD
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(zz) {
-        return this.from - zz.from || this.startSide - zz.startSide || this.rank - zz.rank || this.to - zz.to || this.endSide - zz.endSide
+      compare(DD) {
+        return this.from - DD.from || this.startSide - DD.startSide || this.rank - DD.rank || this.to - DD.to || this.endSide - DD.endSide
       }
     }
-    class Wu {
-      constructor(zz) {
-        this.heap = zz
+    class sC {
+      constructor(DD) {
+        this.heap = DD
       }
-      static from(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          Ez = [];
-        for (let nz = 0; nz < zz.length; nz++)
-          for (let iz = zz[nz]; !iz.aZ; iz = iz.nextLayer) iz.Tbz >= bz && Ez.push(new Qu(iz, uz, bz, nz));
-        return 1 == Ez.length ? Ez[0] : new Wu(Ez)
+      static from(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          ID = [];
+        for (let pD = 0; pD < DD.length; pD++)
+          for (let iD = DD[pD]; !iD.xt; iD = iD.nextLayer) iD.JcD >= cD && ID.push(new WC(iD, CD, cD, pD));
+        return 1 == ID.length ? ID[0] : new sC(ID)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let bz of this.heap) bz.goto(zz, uz);
-        for (let bz = this.heap.length >> 1; bz >= 0; bz--) eu(this.heap, bz);
+      goto(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let cD of this.heap) cD.goto(DD, CD);
+        for (let cD = this.heap.length >> 1; cD >= 0; cD--) EC(this.heap, cD);
         return this.next(), this
       }
-      forward(zz, uz) {
-        for (let bz of this.heap) bz.forward(zz, uz);
-        for (let bz = this.heap.length >> 1; bz >= 0; bz--) eu(this.heap, bz);
-        (this.to - zz || this.value.endSide - uz) < 0 && this.next()
+      forward(DD, CD) {
+        for (let cD of this.heap) cD.forward(DD, CD);
+        for (let cD = this.heap.length >> 1; cD >= 0; cD--) EC(this.heap, cD);
+        (this.to - DD || this.value.endSide - CD) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let zz = this.heap[0];
-          this.from = zz.from, this.to = zz.to, this.value = zz.value, this.rank = zz.rank, zz.value && zz.next(), eu(this.heap, 0)
+          let DD = this.heap[0];
+          this.from = DD.from, this.to = DD.to, this.value = DD.value, this.rank = DD.rank, DD.value && DD.next(), EC(this.heap, 0)
         }
       }
     }
 
-    function eu(zz, uz) {
-      for (let bz = zz[uz];;) {
-        let Ez = 1 + (uz << 1);
-        if (Ez >= zz.length) break;
-        let nz = zz[Ez];
-        if (Ez + 1 < zz.length && nz.compare(zz[Ez + 1]) >= 0 && (nz = zz[Ez + 1], Ez++), bz.compare(nz) < 0) break;
-        zz[Ez] = bz, zz[uz] = nz, uz = Ez
+    function EC(DD, CD) {
+      for (let cD = DD[CD];;) {
+        let ID = 1 + (CD << 1);
+        if (ID >= DD.length) break;
+        let pD = DD[ID];
+        if (ID + 1 < DD.length && pD.compare(DD[ID + 1]) >= 0 && (pD = DD[ID + 1], ID++), cD.compare(pD) < 0) break;
+        DD[ID] = cD, DD[CD] = pD, CD = ID
       }
     }
-    class ju {
-      constructor(zz, uz, bz) {
-        this.Lbz = bz, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = Wu.from(zz, uz, bz)
+    class eC {
+      constructor(DD, CD, cD) {
+        this.KcD = cD, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = sC.from(DD, CD, cD)
       }
-      goto(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(zz, uz), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = zz, this.endSide = uz, this.openStart = -1, this.next(), this
+      goto(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(DD, CD), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = DD, this.endSide = CD, this.openStart = -1, this.next(), this
       }
-      forward(zz, uz) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - zz || this.active[this.minActive].endSide - uz) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(zz, uz)
+      forward(DD, CD) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - DD || this.active[this.minActive].endSide - CD) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(DD, CD)
       }
-      removeActive(zz) {
-        Cu(this.active, zz), Cu(this.activeTo, zz), Cu(this.activeRank, zz), this.minActive = ku(this.active, this.activeTo)
+      removeActive(DD) {
+        rC(this.active, DD), rC(this.activeTo, DD), rC(this.activeRank, DD), this.minActive = FC(this.active, this.activeTo)
       }
-      addActive(zz) {
-        let uz = 0,
+      addActive(DD) {
+        let CD = 0,
           {
-            value: bz,
-            to: Ez,
-            rank: nz
+            value: cD,
+            to: ID,
+            rank: pD
           } = this.cursor;
-        for (; uz < this.activeRank.length && (nz - this.activeRank[uz] || Ez - this.activeTo[uz]) > 0;) uz++;
-        Yu(this.active, uz, bz), Yu(this.activeTo, uz, Ez), Yu(this.activeRank, uz, nz), zz && Yu(zz, uz, this.cursor.from), this.minActive = ku(this.active, this.activeTo)
+        for (; CD < this.activeRank.length && (pD - this.activeRank[CD] || ID - this.activeTo[CD]) > 0;) CD++;
+        AC(this.active, CD, cD), AC(this.activeTo, CD, ID), AC(this.activeRank, CD, pD), DD && AC(DD, CD, this.cursor.from), this.minActive = FC(this.active, this.activeTo)
       }
       next() {
-        let zz = this.to,
-          uz = this.point;
+        let DD = this.to,
+          CD = this.point;
         this.point = null;
-        let bz = this.openStart < 0 ? [] : null;
+        let cD = this.openStart < 0 ? [] : null;
         for (;;) {
-          let Ez = this.minActive;
-          if (Ez > -1 && (this.activeTo[Ez] - this.cursor.from || this.active[Ez].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[Ez] > zz) {
-              this.to = this.activeTo[Ez], this.endSide = this.active[Ez].endSide;
+          let ID = this.minActive;
+          if (ID > -1 && (this.activeTo[ID] - this.cursor.from || this.active[ID].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[ID] > DD) {
+              this.to = this.activeTo[ID], this.endSide = this.active[ID].endSide;
               break
             }
-            this.removeActive(Ez), bz && Cu(bz, Ez)
+            this.removeActive(ID), cD && rC(cD, ID)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > zz) {
+            if (this.cursor.from > DD) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let zz = this.cursor.value;
-              if (zz.point) {
-                if (!(uz && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = zz, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = zz.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let DD = this.cursor.value;
+              if (DD.point) {
+                if (!(CD && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = DD, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = DD.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(bz), this.cursor.next()
+              } else this.addActive(cD), this.cursor.next()
             }
           }
         }
-        if (bz) {
+        if (cD) {
           this.openStart = 0;
-          for (let uz = bz.length - 1; uz >= 0 && bz[uz] < zz; uz--) this.openStart++
+          for (let CD = cD.length - 1; CD >= 0 && cD[CD] < DD; CD--) this.openStart++
         }
       }
-      activeForPoint(zz) {
+      activeForPoint(DD) {
         if (!this.active.length) return this.active;
-        let uz = [];
-        for (let bz = this.active.length - 1; bz >= 0 && !(this.activeRank[bz] < this.pointRank); bz--)(this.activeTo[bz] > zz || this.activeTo[bz] == zz && this.active[bz].endSide >= this.point.endSide) && uz.push(this.active[bz]);
-        return uz.reverse()
+        let CD = [];
+        for (let cD = this.active.length - 1; cD >= 0 && !(this.activeRank[cD] < this.pointRank); cD--)(this.activeTo[cD] > DD || this.activeTo[cD] == DD && this.active[cD].endSide >= this.point.endSide) && CD.push(this.active[cD]);
+        return CD.reverse()
       }
-      openEnd(zz) {
-        let uz = 0;
-        for (let bz = this.activeTo.length - 1; bz >= 0 && this.activeTo[bz] > zz; bz--) uz++;
-        return uz
-      }
-    }
-
-    function Iu(zz, uz, bz, Ez, nz, iz) {
-      zz.goto(uz), bz.goto(Ez);
-      let lz = Ez + nz,
-        Mz = Ez,
-        tz = Ez - uz,
-        Hz = !!iz.boundChange;
-      for (let Oz = !1;;) {
-        let uz = zz.to + tz - bz.to,
-          Ez = uz || zz.endSide - bz.endSide,
-          nz = Ez < 0 ? zz.to + tz : bz.to,
-          pz = Math.min(nz, lz);
-        if (zz.point || bz.point ? (zz.point && bz.point && hu(zz.point, bz.point) && Bu(zz.activeForPoint(zz.to), bz.activeForPoint(bz.to)) || iz.comparePoint(Mz, pz, zz.point, bz.point), Oz = !1) : (Oz && iz.boundChange(Mz), pz > Mz && !Bu(zz.active, bz.active) && iz.compareRange(Mz, pz, zz.active, bz.active), Hz && pz < lz && (uz || zz.openEnd(nz) != bz.openEnd(nz)) && (Oz = !0)), nz > lz) break;
-        Mz = nz, Ez <= 0 && zz.next(), Ez >= 0 && bz.next()
+      openEnd(DD) {
+        let CD = 0;
+        for (let cD = this.activeTo.length - 1; cD >= 0 && this.activeTo[cD] > DD; cD--) CD++;
+        return CD
       }
     }
 
-    function Bu(zz, uz) {
-      if (zz.length != uz.length) return !1;
-      for (let bz = 0; bz < zz.length; bz++)
-        if (zz[bz] != uz[bz] && !hu(zz[bz], uz[bz])) return !1;
+    function uC(DD, CD, cD, ID, pD, iD) {
+      DD.goto(CD), cD.goto(ID);
+      let fD = ID + pD,
+        bD = ID,
+        QD = ID - CD,
+        wD = !!iD.boundChange;
+      for (let SD = !1;;) {
+        let CD = DD.to + QD - cD.to,
+          ID = CD || DD.endSide - cD.endSide,
+          pD = ID < 0 ? DD.to + QD : cD.to,
+          BD = Math.min(pD, fD);
+        if (DD.point || cD.point ? (DD.point && cD.point && LC(DD.point, cD.point) && hC(DD.activeForPoint(DD.to), cD.activeForPoint(cD.to)) || iD.comparePoint(bD, BD, DD.point, cD.point), SD = !1) : (SD && iD.boundChange(bD), BD > bD && !hC(DD.active, cD.active) && iD.compareRange(bD, BD, DD.active, cD.active), wD && BD < fD && (CD || DD.openEnd(pD) != cD.openEnd(pD)) && (SD = !0)), pD > fD) break;
+        bD = pD, ID <= 0 && DD.next(), ID >= 0 && cD.next()
+      }
+    }
+
+    function hC(DD, CD) {
+      if (DD.length != CD.length) return !1;
+      for (let cD = 0; cD < DD.length; cD++)
+        if (DD[cD] != CD[cD] && !LC(DD[cD], CD[cD])) return !1;
       return !0
     }
 
-    function Cu(zz, uz) {
-      for (let bz = uz, Ez = zz.length - 1; bz < Ez; bz++) zz[bz] = zz[bz + 1];
-      zz.pop()
+    function rC(DD, CD) {
+      for (let cD = CD, ID = DD.length - 1; cD < ID; cD++) DD[cD] = DD[cD + 1];
+      DD.pop()
     }
 
-    function Yu(zz, uz, bz) {
-      for (let Ez = zz.length - 1; Ez >= uz; Ez--) zz[Ez + 1] = zz[Ez];
-      zz[uz] = bz
+    function AC(DD, CD, cD) {
+      for (let ID = DD.length - 1; ID >= CD; ID--) DD[ID + 1] = DD[ID];
+      DD[CD] = cD
     }
 
-    function ku(zz, uz) {
-      let bz = -1,
-        Ez = 1e9;
-      for (let nz = 0; nz < uz.length; nz++)(uz[nz] - Ez || zz[nz].endSide - zz[bz].endSide) < 0 && (bz = nz, Ez = uz[nz]);
-      return bz
+    function FC(DD, CD) {
+      let cD = -1,
+        ID = 1e9;
+      for (let pD = 0; pD < CD.length; pD++)(CD[pD] - ID || DD[pD].endSide - DD[cD].endSide) < 0 && (cD = pD, ID = CD[pD]);
+      return cD
     }
 
-    function zb(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zz.length,
-        Ez = 0;
-      for (let nz = 0; nz < bz && nz < zz.length;) 9 == zz.charCodeAt(nz) ? (Ez += uz - Ez % uz, nz++) : (Ez++, nz = xz(zz, nz));
-      return Ez
+    function Dc(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DD.length,
+        ID = 0;
+      for (let pD = 0; pD < cD && pD < DD.length;) 9 == DD.charCodeAt(pD) ? (ID += CD - ID % CD, pD++) : (ID++, pD = HD(DD, pD));
+      return ID
     }
 
-    function ub(zz, uz, bz, Ez) {
-      for (let nz = 0, iz = 0;;) {
-        if (iz >= uz) return nz;
-        if (nz == zz.length) break;
-        iz += 9 == zz.charCodeAt(nz) ? bz - iz % bz : 1, nz = xz(zz, nz)
+    function Cc(DD, CD, cD, ID) {
+      for (let pD = 0, iD = 0;;) {
+        if (iD >= CD) return pD;
+        if (pD == DD.length) break;
+        iD += 9 == DD.charCodeAt(pD) ? cD - iD % cD : 1, pD = HD(DD, pD)
       }
-      return !0 === Ez ? -1 : zz.length
+      return !0 === ID ? -1 : DD.length
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,162 +1,162 @@
 export const id = 101;
 export const ids = [101];
 export const modules = {
-  4670: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => dz
+  4677: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => yD
     });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(1047),
-      lz = bz(1305),
-      Mz = bz(3248),
-      tz = bz(128),
-      Hz = bz(3298),
-      Oz = bz(3286),
-      pz = bz(1089);
+    var ID = cD(1049),
+      pD = cD.n(ID),
+      iD = cD(1064),
+      fD = cD(1328),
+      bD = cD(3314),
+      QD = cD(120),
+      wD = cD(3346),
+      SD = cD(3342),
+      BD = cD(1093);
 
-    function dz(zz) {
+    function yD(DD) {
       let {
-        game: uz
-      } = zz;
-      const bz = (0, tz.o)() ? "large" : "small",
-        Ez = (0, Hz.e)(uz, bz),
-        dz = (0, Mz.f)(Ez),
-        Fz = void 0 !== dz.blurhash;
-      return (0, pz.jsxs)("div", {
+        game: CD
+      } = DD;
+      const cD = (0, QD.i)() ? "large" : "small",
+        ID = (0, wD.f)(CD, cD),
+        yD = (0, bD.f)(ID),
+        MD = void 0 !== yD.blurhash;
+      return (0, BD.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [dz.isLoading && !Fz && (0, pz.jsx)(lz.c, {
+        children: [yD.isLoading && !MD && (0, BD.jsx)(fD.e, {
           loaderType: "Secondary"
-        }), !dz.failed && (null !== dz.src || Fz) && (0, pz.jsx)("div", {
-          className: nz()("SchematicImage", Oz.i, {
-            SchematicImageFadeIn: dz.fadeIn && !Fz
+        }), !yD.failed && (null !== yD.src || MD) && (0, BD.jsx)("div", {
+          className: pD()("SchematicImage", SD.h, {
+            SchematicImageFadeIn: yD.fadeIn && !MD
           }),
-          style: (0, Oz.f)(dz),
-          children: (0, pz.jsx)(Oz.d, {
-            image: dz
+          style: (0, SD.d)(yD),
+          children: (0, BD.jsx)(SD.b, {
+            image: yD
           })
-        }), dz.failed && (0, pz.jsx)("div", {
+        }), yD.failed && (0, BD.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, pz.jsx)(iz.c, {
+          children: (0, BD.jsx)(iD.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4780: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Fz
+  4808: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => MD
     });
-    var Ez = bz(56),
-      nz = bz(1038),
-      iz = bz.n(nz),
-      lz = bz(4706),
-      Mz = bz(1305),
-      tz = bz(1181),
-      Hz = bz(2907),
-      Oz = bz(3059),
-      pz = bz(1047),
-      dz = bz(1089);
+    var ID = cD(53),
+      pD = cD(1049),
+      iD = cD.n(pD),
+      fD = cD(4734),
+      bD = cD(1328),
+      QD = cD(1192),
+      wD = cD(2948),
+      SD = cD(3095),
+      BD = cD(1064),
+      yD = cD(1093);
 
-    function Fz(zz) {
+    function MD(DD) {
       let {
-        folderName: uz,
-        onTexturePackUpdated: nz,
-        disabled: Fz = !1,
-        maxFileSizeMb: Zz,
-        packOwner: Rz
-      } = zz;
+        folderName: CD,
+        onTexturePackUpdated: pD,
+        disabled: MD = !1,
+        maxFileSizeMb: tD,
+        packOwner: ZD
+      } = DD;
       const {
-        t: Kz
-      } = (0, tz.F)(), [wz, Xz] = (0, Ez.useState)(!1), [fz, sz] = (0, Ez.useState)(null), [rz, oz] = (0, Ez.useState)(null), Nz = (0, Ez.useRef)(null);
+        t: oD
+      } = (0, QD.F)(), [vD, ND] = (0, ID.useState)(!1), [gD, XD] = (0, ID.useState)(null), [mD, nD] = (0, ID.useState)(null), OD = (0, ID.useRef)(null);
       const {
-        getRootProps: vz,
-        getInputProps: xz,
-        isDragActive: Jz
-      } = (0, lz.b)({
-        onDrop: async function(zz) {
-          Xz(!0);
+        getRootProps: PD,
+        getInputProps: HD,
+        isDragActive: UD
+      } = (0, fD.b)({
+        onDrop: async function(DD) {
+          ND(!0);
           try {
-            const uz = await (0, Hz.u)(zz);
-            if ("customGame" === Rz && (0, Oz.p)(uz)) return void sz(Kz(Oz.e));
-            if (void 0 !== Zz) {
-              const zz = JSON.stringify(uz).length / 1048576;
-              if (zz > Zz) return void sz(`File size is too large. Max size is ${Zz}MB. Current size is ${zz}MB.`)
+            const CD = await (0, wD.w)(DD);
+            if ("customGame" === ZD && (0, SD.n)(CD)) return void XD(oD(SD.c));
+            if (void 0 !== tD) {
+              const DD = JSON.stringify(CD).length / 1048576;
+              if (DD > tD) return void XD(`File size is too large. Max size is ${tD}MB. Current size is ${DD}MB.`)
             }
-            sz(null), oz(null), nz(uz), Nz.current = uz,
-              function(zz, uz) {
-                const Ez = zz.modelOverrides;
-                Ez && Promise.all([bz.e(195), bz.e(194)]).then((() => bz(9052))).then((bz => {
+            XD(null), nD(null), pD(CD), OD.current = CD,
+              function(DD, CD) {
+                const ID = DD.modelOverrides;
+                ID && Promise.all([cD.e(195), cD.e(194)]).then((() => cD(9113))).then((cD => {
                   let {
-                    packDisplayName: nz,
-                    refusedPackModels: iz,
-                    packModelSummary: lz
-                  } = bz;
-                  const Mz = nz(zz.metaData);
-                  uz(lz(Mz, iz(Mz, Ez, !1)))
-                })).catch((zz => {
-                  console.error("Checking the texture pack's models failed:", zz)
+                    packDisplayName: pD,
+                    refusedPackModels: iD,
+                    packModelSummary: fD
+                  } = cD;
+                  const bD = pD(DD.metaData);
+                  CD(fD(bD, iD(bD, ID, !1)))
+                })).catch((DD => {
+                  console.error("Checking the texture pack's models failed:", DD)
                 }))
-              }(uz, (zz => {
-                Nz.current === uz && oz(zz)
+              }(CD, (DD => {
+                OD.current === CD && nD(DD)
               }))
           } catch {
-            sz("Invalid Texture Pack Folder")
+            XD("Invalid Texture Pack Folder")
           } finally {
-            Xz(!1)
+            ND(!1)
           }
         },
         useFsAccessApi: !1,
-        disabled: Fz
+        disabled: MD
       });
-      return (0, dz.jsxs)("div", {
+      return (0, yD.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, dz.jsxs)("div", {
+        children: [(0, yD.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [Kz("settingsMenu:customTextureWarning"), ".", (0, dz.jsx)("br", {}), Kz("settingsMenu:viewDocumentation"), ":", " ", (0, dz.jsx)("a", {
+          children: [oD("settingsMenu:customTextureWarning"), ".", (0, yD.jsx)("br", {}), oD("settingsMenu:viewDocumentation"), ":", " ", (0, yD.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), fz && (0, dz.jsxs)("div", {
+        }), gD && (0, yD.jsxs)("div", {
           className: "CustomTextureError",
-          children: [Kz("general:error"), ": ", fz]
-        }), rz && (0, dz.jsx)("div", {
+          children: [oD("general:error"), ": ", gD]
+        }), mD && (0, yD.jsx)("div", {
           className: "CustomTextureError",
-          children: rz
-        }), (0, dz.jsxs)("div", {
-          ...vz({
-            className: iz()("CustomTextureFolderUpload", {
-              ActiveDrag: Jz,
-              Disabled: Fz
+          children: mD
+        }), (0, yD.jsxs)("div", {
+          ...PD({
+            className: iD()("CustomTextureFolderUpload", {
+              ActiveDrag: UD,
+              Disabled: MD
             })
           }),
-          children: [(0, dz.jsx)("input", {
-            ...xz({
+          children: [(0, yD.jsx)("input", {
+            ...HD({
               webkitdirectory: "true"
             })
-          }), wz && (0, dz.jsx)("div", {
+          }), vD && (0, yD.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, dz.jsx)(Mz.c, {})
-          }), !wz && !Jz && uz && (0, dz.jsxs)(dz.Fragment, {
-            children: [(0, dz.jsx)("div", {
+            children: (0, yD.jsx)(bD.e, {})
+          }), !vD && !UD && CD && (0, yD.jsxs)(yD.Fragment, {
+            children: [(0, yD.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, dz.jsx)(pz.c, {
+              children: (0, yD.jsx)(BD.c, {
                 name: "folder-image"
               })
-            }), (0, dz.jsx)("div", {
+            }), (0, yD.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: uz
+              children: CD
             })]
-          }), !wz && (Jz || !uz) && (0, dz.jsxs)(dz.Fragment, {
-            children: [(0, dz.jsx)("div", {
+          }), !vD && (UD || !CD) && (0, yD.jsxs)(yD.Fragment, {
+            children: [(0, yD.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, dz.jsx)(pz.c, {
+              children: (0, yD.jsx)(BD.c, {
                 name: "up-from-bracket"
               })
-            }), (0, dz.jsx)("div", {
+            }), (0, yD.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
               children: "Drag and drop a Texture Pack folder here"
             })]
@@ -165,310 +165,310 @@ export const modules = {
       })
     }
   },
-  4746: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Zz,
-      e: () => fz,
-      f: () => Rz,
-      j: () => Xz
+  4770: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => tD,
+      g: () => gD,
+      i: () => ZD,
+      j: () => ND
     });
-    var Ez = bz(56),
-      nz = bz(4753),
-      iz = bz(4144),
-      lz = bz(1332),
-      Mz = bz(4770),
-      tz = bz(1038),
-      Hz = bz.n(tz),
-      Oz = bz(1322),
-      pz = bz(1673),
-      dz = bz(4776),
-      Fz = bz(1089);
+    var ID = cD(53),
+      pD = cD(4774),
+      iD = cD(4182),
+      fD = cD(1356),
+      bD = cD(4799),
+      QD = cD(1049),
+      wD = cD.n(QD),
+      SD = cD(1340),
+      BD = cD(1701),
+      yD = cD(4806),
+      MD = cD(1093);
 
-    function Zz(zz) {
+    function tD(DD) {
       let {
-        label: uz,
-        onClick: bz,
-        checked: Ez,
-        circleInfoText: nz,
-        className: Mz,
-        disabled: tz,
-        note: Oz
-      } = zz;
-      return (0, Fz.jsxs)("div", {
-        "aria-disabled": tz || void 0,
+        label: CD,
+        onClick: cD,
+        checked: ID,
+        circleInfoText: pD,
+        className: bD,
+        disabled: QD,
+        note: SD
+      } = DD;
+      return (0, MD.jsxs)("div", {
+        "aria-disabled": QD || void 0,
         "data-pad-focusable": !0,
-        className: Hz()("SettingBox CheckboxContainer", {
-          [Mz]: Mz,
-          SettingBoxDisabled: tz
+        className: wD()("SettingBox CheckboxContainer", {
+          [bD]: bD,
+          SettingBoxDisabled: QD
         }),
         onClick: () => {
-          tz || bz(!Ez)
+          QD || cD(!ID)
         },
-        children: [(0, Fz.jsxs)("div", {
+        children: [(0, MD.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Fz.jsx)("label", {
+          children: [(0, MD.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Fz.jsx)(iz.b, {
+            children: (0, MD.jsx)(iD.e, {
               className: "SettingsCheckbox",
-              checked: Ez,
-              disabled: tz,
+              checked: ID,
+              disabled: QD,
               onChange: () => {}
             })
-          }), (0, Fz.jsxs)("div", {
+          }), (0, MD.jsxs)("div", {
             className: "CheckboxText",
-            children: [uz, nz && (0, Fz.jsx)("span", {
-              onClick: zz => zz.stopPropagation(),
-              children: (0, Fz.jsx)(lz.b, {
+            children: [CD, pD && (0, MD.jsx)("span", {
+              onClick: DD => DD.stopPropagation(),
+              children: (0, MD.jsx)(fD.d, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: nz
+                hoverInfo: pD
               })
             })]
           })]
-        }), Oz && (0, Fz.jsx)("div", {
+        }), SD && (0, MD.jsx)("div", {
           className: "SettingNote",
-          children: Oz
+          children: SD
         })]
       })
     }
 
-    function Rz(zz) {
+    function ZD(DD) {
       let {
-        name: uz,
-        onChange: bz,
-        min: nz,
-        max: iz,
-        step: Mz,
-        initValue: tz,
-        circleInfoText: Oz,
-        format: pz,
-        className: dz,
-        padStep: Zz,
-        disabled: Rz = !1,
-        selectableMax: Kz,
-        cappedNote: Xz,
-        onChangeComplete: fz
-      } = zz;
-      const [sz, rz] = (0, Ez.useState)(tz), oz = (0, Ez.useRef)(tz);
-      (0, Ez.useEffect)((() => {
-        oz.current = tz, rz(tz)
-      }), [tz]);
-      const Nz = void 0 !== Kz && Kz < iz,
-        vz = Nz ? {
-          "--slider-selectable": (Kz - nz) / (iz - nz)
+        name: CD,
+        onChange: cD,
+        min: pD,
+        max: iD,
+        step: bD,
+        initValue: QD,
+        circleInfoText: SD,
+        format: BD,
+        className: yD,
+        padStep: tD,
+        disabled: ZD = !1,
+        selectableMax: oD,
+        cappedNote: ND,
+        onChangeComplete: gD
+      } = DD;
+      const [XD, mD] = (0, ID.useState)(QD), nD = (0, ID.useRef)(QD);
+      (0, ID.useEffect)((() => {
+        nD.current = QD, mD(QD)
+      }), [QD]);
+      const OD = void 0 !== oD && oD < iD,
+        PD = OD ? {
+          "--slider-selectable": (oD - pD) / (iD - pD)
         } : void 0;
-      return (0, Fz.jsxs)("div", {
-        className: Hz()("SettingBox SettingsSliderDiv", {
-          [dz]: dz,
-          SettingBoxDisabled: Rz,
-          SliderCapped: Nz
+      return (0, MD.jsxs)("div", {
+        className: wD()("SettingBox SettingsSliderDiv", {
+          [yD]: yD,
+          SettingBoxDisabled: ZD,
+          SliderCapped: OD
         }),
-        style: vz,
-        children: [(0, Fz.jsxs)("div", {
+        style: PD,
+        children: [(0, MD.jsxs)("div", {
           className: "SliderText",
-          children: [`${uz}: ${pz?pz(sz):sz}`, Oz && (0, Fz.jsx)(lz.b, {
+          children: [`${CD}: ${BD?BD(XD):XD}`, SD && (0, MD.jsx)(fD.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Oz
+            hoverInfo: SD
           })]
-        }), (0, Fz.jsx)("div", {
+        }), (0, MD.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Fz.jsx)(wz, {
-            value: sz,
-            min: nz,
-            max: iz,
-            step: Mz,
-            onChange: zz => {
-              if (Nz && zz >= Kz && sz === Kz) return;
-              const uz = Nz ? Math.min(zz, Kz) : zz;
-              oz.current = uz, rz(uz), bz(uz)
+          children: (0, MD.jsx)(vD, {
+            value: XD,
+            min: pD,
+            max: iD,
+            step: bD,
+            onChange: DD => {
+              if (OD && DD >= oD && XD === oD) return;
+              const CD = OD ? Math.min(DD, oD) : DD;
+              nD.current = CD, mD(CD), cD(CD)
             },
-            onChangeComplete: fz && (() => {
-              fz(oz.current)
+            onChangeComplete: gD && (() => {
+              gD(nD.current)
             }),
-            format: pz,
-            padStep: Zz,
-            disabled: Rz
+            format: BD,
+            padStep: tD,
+            disabled: ZD
           })
-        }), Nz && Xz && (0, Fz.jsx)("div", {
+        }), OD && ND && (0, MD.jsx)("div", {
           className: "SettingNote",
-          children: Xz
+          children: ND
         })]
       })
     }
-    const Kz = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const oD = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function wz(zz) {
-      var uz;
+    function vD(DD) {
+      var CD;
       let {
-        value: bz,
-        min: iz,
-        max: lz,
-        step: Mz,
-        onChange: tz,
-        orientation: Hz,
-        reverse: Oz,
-        setIsChanging: pz,
-        tooltip: Zz,
-        labels: Rz,
-        handleLabel: wz,
-        format: Xz,
-        onChangeStart: fz,
-        onChangeComplete: sz,
-        padStep: rz,
-        disabled: oz = !1
-      } = zz;
-      const Nz = (0, Ez.useRef)(null),
-        vz = (0, Ez.useRef)(null);
-      (0, Ez.useLayoutEffect)((() => {
-        var zz, uz, bz;
-        const Ez = null !== (zz = null === (uz = Nz.current) || void 0 === uz ? void 0 : uz.querySelector(".rangeslider")) && void 0 !== zz ? zz : null;
-        null === Ez || void 0 === Ez || Ez.setAttribute("data-pad-slider", ""), null === Ez || void 0 === Ez || Ez.setAttribute("data-pad-focusable", ""), null === Ez || void 0 === Ez || null === (bz = Ez.querySelector(".rangeslider__handle")) || void 0 === bz || bz.setAttribute("data-pad-slider-handle", ""), vz.current = Ez
-      }), []), (0, Ez.useLayoutEffect)((() => {
-        var zz, uz;
-        oz ? null === (zz = vz.current) || void 0 === zz || zz.setAttribute("aria-disabled", "true") : null === (uz = vz.current) || void 0 === uz || uz.removeAttribute("aria-disabled")
-      }), [oz]);
-      const xz = (null !== (uz = String(Mz).split(".")[1]) && void 0 !== uz ? uz : "").length,
-        Jz = zz => {
-          const uz = Number((Math.round((zz - iz) / Mz) * Mz + iz).toFixed(xz));
-          return Math.min(lz, Math.max(iz, uz))
+        value: cD,
+        min: iD,
+        max: fD,
+        step: bD,
+        onChange: QD,
+        orientation: wD,
+        reverse: SD,
+        setIsChanging: BD,
+        tooltip: tD,
+        labels: ZD,
+        handleLabel: vD,
+        format: ND,
+        onChangeStart: gD,
+        onChangeComplete: XD,
+        padStep: mD,
+        disabled: nD = !1
+      } = DD;
+      const OD = (0, ID.useRef)(null),
+        PD = (0, ID.useRef)(null);
+      (0, ID.useLayoutEffect)((() => {
+        var DD, CD, cD;
+        const ID = null !== (DD = null === (CD = OD.current) || void 0 === CD ? void 0 : CD.querySelector(".rangeslider")) && void 0 !== DD ? DD : null;
+        null === ID || void 0 === ID || ID.setAttribute("data-pad-slider", ""), null === ID || void 0 === ID || ID.setAttribute("data-pad-focusable", ""), null === ID || void 0 === ID || null === (cD = ID.querySelector(".rangeslider__handle")) || void 0 === cD || cD.setAttribute("data-pad-slider-handle", ""), PD.current = ID
+      }), []), (0, ID.useLayoutEffect)((() => {
+        var DD, CD;
+        nD ? null === (DD = PD.current) || void 0 === DD || DD.setAttribute("aria-disabled", "true") : null === (CD = PD.current) || void 0 === CD || CD.removeAttribute("aria-disabled")
+      }), [nD]);
+      const HD = (null !== (CD = String(bD).split(".")[1]) && void 0 !== CD ? CD : "").length,
+        UD = DD => {
+          const CD = Number((Math.round((DD - iD) / bD) * bD + iD).toFixed(HD));
+          return Math.min(fD, Math.max(iD, CD))
         },
-        Az = (0, Ez.useRef)(sz);
-      Az.current = sz, (0, Ez.useEffect)((() => {
-        const zz = Nz.current;
-        if (!zz) return;
-        const uz = zz => {
-          var uz;
-          Kz.has(zz.key) && (null === (uz = Az.current) || void 0 === uz || uz.call(Az))
+        xD = (0, ID.useRef)(XD);
+      xD.current = XD, (0, ID.useEffect)((() => {
+        const DD = OD.current;
+        if (!DD) return;
+        const CD = DD => {
+          var CD;
+          oD.has(DD.key) && (null === (CD = xD.current) || void 0 === CD || CD.call(xD))
         };
-        return zz.addEventListener("keyup", uz), () => {
-          zz.removeEventListener("keyup", uz)
+        return DD.addEventListener("keyup", CD), () => {
+          DD.removeEventListener("keyup", CD)
         }
       }), []);
-      const Tz = (0, Ez.useRef)(!1);
-      return (0, dz.f)(vz, {
-        adjust: zz => {
-          if (oz) return;
-          const uz = null !== rz && void 0 !== rz ? rz : Math.max(Mz, Math.round((lz - iz) / 20 / Mz) * Mz),
-            Ez = Jz(bz + zz * uz * (Oz ? -1 : 1));
-          Ez !== bz && (null === fz || void 0 === fz || fz(), tz(Ez), null === sz || void 0 === sz || sz())
+      const qD = (0, ID.useRef)(!1);
+      return (0, yD.g)(PD, {
+        adjust: DD => {
+          if (nD) return;
+          const CD = null !== mD && void 0 !== mD ? mD : Math.max(bD, Math.round((fD - iD) / 20 / bD) * bD),
+            ID = UD(cD + DD * CD * (SD ? -1 : 1));
+          ID !== cD && (null === gD || void 0 === gD || gD(), QD(ID), null === XD || void 0 === XD || XD())
         },
-        setFraction: zz => {
-          if (oz) return;
-          const uz = Jz(iz + (Oz ? 1 - zz : zz) * (lz - iz));
-          uz !== bz && (Tz.current || (Tz.current = !0, null === fz || void 0 === fz || fz()), tz(uz))
+        setFraction: DD => {
+          if (nD) return;
+          const CD = UD(iD + (SD ? 1 - DD : DD) * (fD - iD));
+          CD !== cD && (qD.current || (qD.current = !0, null === gD || void 0 === gD || gD()), QD(CD))
         },
         endDrag: () => {
-          Tz.current && (Tz.current = !1, null === sz || void 0 === sz || sz())
+          qD.current && (qD.current = !1, null === XD || void 0 === XD || XD())
         }
-      }), (0, Fz.jsx)("div", {
-        ref: Nz,
+      }), (0, MD.jsx)("div", {
+        ref: OD,
         style: {
           display: "contents"
         },
-        children: (0, Fz.jsx)(nz.c, {
-          value: bz,
-          min: iz,
-          max: lz,
-          step: Mz,
-          onChange: tz,
-          orientation: Hz,
-          reverse: Oz,
-          tooltip: Zz,
-          labels: Rz,
-          handleLabel: wz,
-          format: Xz,
+        children: (0, MD.jsx)(pD.e, {
+          value: cD,
+          min: iD,
+          max: fD,
+          step: bD,
+          onChange: QD,
+          orientation: wD,
+          reverse: SD,
+          tooltip: tD,
+          labels: ZD,
+          handleLabel: vD,
+          format: ND,
           onChangeStart: () => {
-            null === fz || void 0 === fz || fz(), null === pz || void 0 === pz || pz(!0)
+            null === gD || void 0 === gD || gD(), null === BD || void 0 === BD || BD(!0)
           },
           onChangeComplete: () => {
-            null === pz || void 0 === pz || pz(!1), null === sz || void 0 === sz || sz()
+            null === BD || void 0 === BD || BD(!1), null === XD || void 0 === XD || XD()
           }
         })
       })
     }
-    async function Xz() {
-      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const uz = Oz.NotificationProvider.showPromptPopup({
+    async function ND() {
+      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const CD = SD.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: zz
+        unlockPointerKey: DD
       });
-      !0 === await uz.getResult() && (0, pz.reloadBloxd)()
+      !0 === await CD.getResult() && (0, BD.reloadBloxd)()
     }
 
-    function fz(zz) {
+    function gD(DD) {
       let {
-        label: uz,
-        options: bz,
-        value: Ez,
-        onChange: nz,
-        circleInfoText: iz
-      } = zz;
-      return (0, Fz.jsxs)("div", {
+        label: CD,
+        options: cD,
+        value: ID,
+        onChange: pD,
+        circleInfoText: iD
+      } = DD;
+      return (0, MD.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Fz.jsxs)("div", {
+        children: [(0, MD.jsxs)("div", {
           className: "SliderText",
-          children: [uz, iz && (0, Fz.jsx)(lz.b, {
+          children: [CD, iD && (0, MD.jsx)(fD.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: iz
+            hoverInfo: iD
           })]
-        }), (0, Fz.jsx)(Mz.d, {
-          ariaLabel: uz,
-          options: bz,
-          value: Ez,
-          onChange: nz
+        }), (0, MD.jsx)(bD.b, {
+          ariaLabel: CD,
+          options: cD,
+          value: ID,
+          onChange: pD
         })]
       })
     }
   },
-  4744: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => wz,
-      e: () => Xz
+  4767: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => vD,
+      f: () => ND
     });
-    var Ez = bz(2907),
-      nz = bz(2916),
-      iz = bz(56),
-      lz = bz(1038),
-      Mz = bz.n(lz),
-      tz = bz(1305),
-      Hz = bz(2899),
-      Oz = bz(1322),
-      pz = bz(4746),
-      dz = bz(4780),
-      Fz = bz(606),
-      Zz = bz(4783),
-      Rz = bz(1089);
+    var ID = cD(2948),
+      pD = cD(2952),
+      iD = cD(53),
+      fD = cD(1049),
+      bD = cD.n(fD),
+      QD = cD(1328),
+      wD = cD(2946),
+      SD = cD(1340),
+      BD = cD(4770),
+      yD = cD(4808),
+      MD = cD(646),
+      tD = cD(4811),
+      ZD = cD(1093);
 
-    function Kz() {
-      (0, pz.j)("texturePackPickReload")
+    function oD() {
+      (0, BD.j)("texturePackPickReload")
     }
 
-    function wz(zz) {
-      var uz;
+    function vD(DD) {
+      var CD;
       let {
-        setApplySettingsCallback: bz
-      } = zz;
-      const [, lz] = (0, iz.useReducer)((zz => zz + 1), 0), Mz = (0, iz.useRef)(!1), tz = (0, iz.useRef)(null);
+        setApplySettingsCallback: cD
+      } = DD;
+      const [, fD] = (0, iD.useReducer)((DD => DD + 1), 0), bD = (0, iD.useRef)(!1), QD = (0, iD.useRef)(null);
 
-      function wz(zz, uz) {
-        Hz.e.setFromJson(zz, "player");
-        const Ez = Hz.e.saveTexturePack();
-        if (Fz.x) {
-          const zz = Hz.e.toJson();
-          Ez.then((uz => {
-            uz && (0, Zz.i)(zz, Kz)
+      function vD(DD, CD) {
+        wD.e.setFromJson(DD, "player");
+        const ID = wD.e.saveTexturePack();
+        if (MD.q) {
+          const DD = wD.e.toJson();
+          ID.then((CD => {
+            CD && (0, tD.e)(DD, oD)
           }))
-        } else Mz.current ||= uz, tz.current !== Hz.e.getId() || Hz.e.getId() === nz.r.CUSTOM && Mz.current ? bz((() => pz.j)) : bz(null);
-        lz()
+        } else bD.current ||= CD, QD.current !== wD.e.getId() || wD.e.getId() === pD.r.CUSTOM && bD.current ? cD((() => BD.j)) : cD(null);
+        fD()
       }
-      async function fz(zz) {
-        if (Hz.e.getId() !== zz.metaData.id) {
-          if (Hz.e.getId() === nz.r.CUSTOM && Hz.e.getFromFolderName()) {
-            const zz = Oz.NotificationProvider.showPromptPopup({
+      async function gD(DD) {
+        if (wD.e.getId() !== DD.metaData.id) {
+          if (wD.e.getId() === pD.r.CUSTOM && wD.e.getFromFolderName()) {
+            const DD = SD.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -477,29 +477,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await zz.getResult()) return
+            if (!0 !== await DD.getResult()) return
           }
-          wz(zz, !1)
+          vD(DD, !1)
         }
-      }(0, iz.useEffect)((() => {
-        tz.current = Hz.e.getId()
+      }(0, iD.useEffect)((() => {
+        QD.current = wD.e.getId()
       }), []);
-      const sz = Ez.e,
-        rz = [sz, ...Object.values(nz.r).filter((zz => zz !== sz))];
-      return (0, Rz.jsx)(Rz.Fragment, {
-        children: (0, Rz.jsxs)("div", {
+      const XD = ID.e,
+        mD = [XD, ...Object.values(pD.r).filter((DD => DD !== XD))];
+      return (0, ZD.jsx)(ZD.Fragment, {
+        children: (0, ZD.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, Rz.jsx)("div", {
+          children: [(0, ZD.jsx)("div", {
             className: "TexturePackList",
-            children: rz.map((zz => (0, Rz.jsx)(Xz, {
-              id: zz,
-              isSelected: zz === Hz.e.getId(),
-              setSelected: fz
-            }, zz)))
-          }), Hz.e.getId() === nz.r.CUSTOM && (0, Rz.jsx)(dz.c, {
-            folderName: null !== (uz = Hz.e.getFromFolderName()) && void 0 !== uz ? uz : null,
-            onTexturePackUpdated: function(zz) {
-              wz(zz, !0)
+            children: mD.map((DD => (0, ZD.jsx)(ND, {
+              id: DD,
+              isSelected: DD === wD.e.getId(),
+              setSelected: gD
+            }, DD)))
+          }), wD.e.getId() === pD.r.CUSTOM && (0, ZD.jsx)(yD.d, {
+            folderName: null !== (CD = wD.e.getFromFolderName()) && void 0 !== CD ? CD : null,
+            onTexturePackUpdated: function(DD) {
+              vD(DD, !0)
             },
             packOwner: "player"
           })]
@@ -507,163 +507,163 @@ export const modules = {
       })
     }
 
-    function Xz(zz) {
+    function ND(DD) {
       let {
-        id: uz,
-        isSelected: bz,
-        setSelected: lz,
-        disabled: Hz = !1
-      } = zz;
-      const [Oz, pz] = (0, iz.useState)(!0), [dz, Fz] = (0, iz.useState)(""), [Zz, Kz] = (0, iz.useState)(""), [wz, Xz] = (0, iz.useState)(""), fz = (0, iz.useRef)({});
-      return (0, iz.useEffect)((() => {
-        (0, Ez.s)(uz).then((zz => {
-          var uz;
-          zz && (fz.current = zz, pz(!1), Fz(fz.current.metaData.name), Kz(fz.current.metaData.author), Xz(null !== (uz = fz.current.metaData.previewImage) && void 0 !== uz ? uz : ""))
-        })).catch((zz => {
-          console.warn(`Failed to fetch texture pack ${uz}`, zz)
+        id: CD,
+        isSelected: cD,
+        setSelected: fD,
+        disabled: wD = !1
+      } = DD;
+      const [SD, BD] = (0, iD.useState)(!0), [yD, MD] = (0, iD.useState)(""), [tD, oD] = (0, iD.useState)(""), [vD, ND] = (0, iD.useState)(""), gD = (0, iD.useRef)({});
+      return (0, iD.useEffect)((() => {
+        (0, ID.t)(CD).then((DD => {
+          var CD;
+          DD && (gD.current = DD, BD(!1), MD(gD.current.metaData.name), oD(gD.current.metaData.author), ND(null !== (CD = gD.current.metaData.previewImage) && void 0 !== CD ? CD : ""))
+        })).catch((DD => {
+          console.warn(`Failed to fetch texture pack ${CD}`, DD)
         }))
-      }), [uz]), (0, Rz.jsxs)("div", {
+      }), [CD]), (0, ZD.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": Hz || void 0,
-        className: Mz()("TexturePack", {
-          Selected: bz,
-          Custom: uz === nz.r.CUSTOM,
-          Disabled: Hz
+        "aria-disabled": wD || void 0,
+        className: bD()("TexturePack", {
+          Selected: cD,
+          Custom: CD === pD.r.CUSTOM,
+          Disabled: wD
         }),
         onClick: () => {
-          Oz || Hz || lz(fz.current)
+          SD || wD || fD(gD.current)
         },
-        children: [(0, Rz.jsx)("div", {
+        children: [(0, ZD.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: wz ? `url(${wz})` : void 0
+            backgroundImage: vD ? `url(${vD})` : void 0
           }
-        }), Oz && (0, Rz.jsx)("div", {
+        }), SD && (0, ZD.jsx)("div", {
           className: "TexturePackName",
-          children: (0, Rz.jsx)(tz.c, {})
-        }), !Oz && dz && (0, Rz.jsx)("div", {
+          children: (0, ZD.jsx)(QD.e, {})
+        }), !SD && yD && (0, ZD.jsx)("div", {
           className: "TexturePackName",
-          children: dz
-        }), !Oz && Zz && (0, Rz.jsx)("div", {
+          children: yD
+        }), !SD && tD && (0, ZD.jsx)("div", {
           className: "TexturePackAuthor",
-          children: Zz
+          children: tD
         })]
       })
     }
   },
-  4770: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => lz
+  4799: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => fD
     });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(1089);
+    var ID = cD(1049),
+      pD = cD.n(ID),
+      iD = cD(1093);
 
-    function lz(zz) {
+    function fD(DD) {
       let {
-        options: uz,
-        value: bz,
-        onChange: Ez,
-        ariaLabel: lz,
-        className: Mz,
-        reselectable: tz = !1,
-        keepsFocus: Hz = !1
-      } = zz;
-      return (0, iz.jsx)("div", {
-        className: nz()("SegmentedToggle", Mz),
+        options: CD,
+        value: cD,
+        onChange: ID,
+        ariaLabel: fD,
+        className: bD,
+        reselectable: QD = !1,
+        keepsFocus: wD = !1
+      } = DD;
+      return (0, iD.jsx)("div", {
+        className: pD()("SegmentedToggle", bD),
         role: "group",
-        "aria-label": lz,
-        children: uz.map((zz => {
-          const uz = zz.value === bz;
-          return (0, iz.jsx)("button", {
+        "aria-label": fD,
+        children: CD.map((DD => {
+          const CD = DD.value === cD;
+          return (0, iD.jsx)("button", {
             type: "button",
-            "aria-pressed": uz,
-            "aria-label": zz.ariaLabel,
-            title: zz.ariaLabel,
-            className: nz()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: uz
+            "aria-pressed": CD,
+            "aria-label": DD.ariaLabel,
+            title: DD.ariaLabel,
+            className: pD()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: CD
             }),
-            onMouseDown: Hz ? zz => {
-              zz.preventDefault()
+            onMouseDown: wD ? DD => {
+              DD.preventDefault()
             } : void 0,
             onClick: () => {
-              uz && !tz || Ez(zz.value)
+              CD && !QD || ID(DD.value)
             },
-            children: zz.label
-          }, zz.value)
+            children: DD.label
+          }, DD.value)
         }))
       })
     }
   },
-  4776: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz,
-      f: () => lz
+  4806: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => iD,
+      g: () => fD
     });
-    var Ez = bz(56);
-    const nz = new WeakMap,
-      iz = zz => {
-        var uz;
-        const bz = zz.closest("[data-pad-slider]");
-        return bz && null !== (uz = nz.get(bz)) && void 0 !== uz ? uz : null
+    var ID = cD(53);
+    const pD = new WeakMap,
+      iD = DD => {
+        var CD;
+        const cD = DD.closest("[data-pad-slider]");
+        return cD && null !== (CD = pD.get(cD)) && void 0 !== CD ? CD : null
       },
-      lz = (zz, uz) => {
-        const bz = (0, Ez.useRef)(uz);
-        bz.current = uz, (0, Ez.useEffect)((() => {
-          if (zz.current) return ((zz, uz) => (nz.set(zz, uz), () => {
-            nz.get(zz) === uz && nz.delete(zz)
-          }))(zz.current, {
-            adjust: zz => {
-              bz.current.adjust(zz)
+      fD = (DD, CD) => {
+        const cD = (0, ID.useRef)(CD);
+        cD.current = CD, (0, ID.useEffect)((() => {
+          if (DD.current) return ((DD, CD) => (pD.set(DD, CD), () => {
+            pD.get(DD) === CD && pD.delete(DD)
+          }))(DD.current, {
+            adjust: DD => {
+              cD.current.adjust(DD)
             },
-            setFraction: zz => {
-              bz.current.setFraction(zz)
+            setFraction: DD => {
+              cD.current.setFraction(DD)
             },
             endDrag: () => {
-              bz.current.endDrag()
+              cD.current.endDrag()
             }
           })
-        }), [zz])
+        }), [DD])
       }
   },
-  4783: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz,
-      i: () => lz
+  4811: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => bD,
+      e: () => fD
     });
-    var Ez = bz(2916),
-      nz = bz(4789);
-    let iz = null;
+    var ID = cD(2952),
+      pD = cD(4819);
+    let iD = null;
 
-    function lz(zz, uz) {
-      iz = {
-        pack: zz.metaData.id === Ez.c ? null : zz,
-        prompt: uz
+    function fD(DD, CD) {
+      iD = {
+        pack: DD.metaData.id === ID.e ? null : DD,
+        prompt: CD
       }
     }
 
-    function Mz(zz, uz) {
-      const bz = iz;
-      null !== bz && (0, nz.c)(bz.pack, zz) && (iz = null, uz && bz.prompt())
+    function bD(DD, CD) {
+      const cD = iD;
+      null !== cD && (0, pD.c)(cD.pack, DD) && (iD = null, CD && cD.prompt())
     }
   },
-  4789: (zz, uz, bz) => {
-    function Ez(zz, uz) {
-      return nz(zz, uz)
+  4819: (DD, CD, cD) => {
+    function ID(DD, CD) {
+      return pD(DD, CD)
     }
 
-    function nz(zz, uz) {
-      if (zz === uz) return !0;
-      if ("object" !== typeof zz || "object" !== typeof uz || null === zz || null === uz || Array.isArray(zz) !== Array.isArray(uz)) return !1;
-      const bz = zz,
-        Ez = uz,
-        iz = Object.keys(bz);
-      return iz.length === Object.keys(Ez).length && iz.every((zz => Object.prototype.hasOwnProperty.call(Ez, zz) && nz(bz[zz], Ez[zz])))
+    function pD(DD, CD) {
+      if (DD === CD) return !0;
+      if ("object" !== typeof DD || "object" !== typeof CD || null === DD || null === CD || Array.isArray(DD) !== Array.isArray(CD)) return !1;
+      const cD = DD,
+        ID = CD,
+        iD = Object.keys(cD);
+      return iD.length === Object.keys(ID).length && iD.every((DD => Object.prototype.hasOwnProperty.call(ID, DD) && pD(cD[DD], ID[DD])))
     }
-    bz.d(uz, {
-      c: () => Ez
+    cD.d(CD, {
+      c: () => ID
     })
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

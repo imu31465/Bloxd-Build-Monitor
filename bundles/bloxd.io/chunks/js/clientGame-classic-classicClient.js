@@ -1,35 +1,35 @@
 export const id = 12;
 export const ids = [12];
 export const modules = {
-  37884: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => lz
+  37872: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => fD
     });
-    var Ez = bz(37890);
-    const nz = [0, 0, 0];
-    class iz {
-      constructor(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nz;
-        this.pool = zz, this.origin = uz, this.count = 0, this.free = []
+    var ID = cD(37879);
+    const pD = [0, 0, 0];
+    class iD {
+      constructor(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pD;
+        this.pool = DD, this.origin = CD, this.count = 0, this.free = []
       }
       take() {
-        var zz;
-        const uz = null !== (zz = this.free.pop()) && void 0 !== zz ? zz : this.count++;
-        return uz >= this.pool.Bp && this.pool.grow(Math.max(2 * this.pool.Bp, uz + 1)), this.hide(uz), uz
+        var DD;
+        const CD = null !== (DD = this.free.pop()) && void 0 !== DD ? DD : this.count++;
+        return CD >= this.pool.LB && this.pool.grow(Math.max(2 * this.pool.LB, CD + 1)), this.hide(CD), CD
       }
-      release(zz) {
-        this.hide(zz), this.free.push(zz)
+      release(DD) {
+        this.hide(DD), this.free.push(DD)
       }
-      write(zz, uz, bz, nz) {
+      write(DD, CD, cD, pD) {
         const {
-          records: iz
+          records: iD
         } = this.pool, {
-          origin: lz
-        } = this, Mz = zz * Ez.d;
-        iz[Mz] = uz - lz[0], iz[Mz + 1] = bz - lz[1], iz[Mz + 2] = nz - lz[2], iz[Mz + Ez.h] = 0, this.pool.markDirty(zz)
+          origin: fD
+        } = this, bD = DD * ID.b;
+        iD[bD] = CD - fD[0], iD[bD + 1] = cD - fD[1], iD[bD + 2] = pD - fD[2], iD[bD + ID.f] = 0, this.pool.markDirty(DD)
       }
-      hide(zz) {
-        this.pool.records[zz * Ez.d + Ez.h] = 1, this.pool.markDirty(zz)
+      hide(DD) {
+        this.pool.records[DD * ID.b + ID.f] = 1, this.pool.markDirty(DD)
       }
       commit() {
         this.pool.commit(this.count)
@@ -38,159 +38,159 @@ export const modules = {
         this.pool.dispose()
       }
     }
-    class lz {
-      constructor(zz, uz, bz) {
-        this.api = zz, this.model = uz, this.initialCapacity = bz, this.kinds = new Map, this.origin = [0, 0, 0]
+    class fD {
+      constructor(DD, CD, cD) {
+        this.api = DD, this.model = CD, this.initialCapacity = cD, this.kinds = new Map, this.origin = [0, 0, 0]
       }
-      kindOf(zz) {
-        let uz = this.kinds.get(zz);
-        if (void 0 === uz) {
-          const bz = this.api.createInstancePool({
+      kindOf(DD) {
+        let CD = this.kinds.get(DD);
+        if (void 0 === CD) {
+          const cD = this.api.createInstancePool({
             ...this.model,
-            item: zz
+            item: DD
           }, this.initialCapacity);
-          null === bz || void 0 === bz || bz.setOrigin(this.origin[0], this.origin[1], this.origin[2]), uz = bz && new iz(bz, this.origin), this.kinds.set(zz, uz)
+          null === cD || void 0 === cD || cD.setOrigin(this.origin[0], this.origin[1], this.origin[2]), CD = cD && new iD(cD, this.origin), this.kinds.set(DD, CD)
         }
-        return uz
+        return CD
       }
-      follow(zz) {
+      follow(DD) {
         const {
-          origin: uz
+          origin: CD
         } = this;
-        if (Math.abs(zz[0] - uz[0]) <= 512 && Math.abs(zz[1] - uz[1]) <= 512 && Math.abs(zz[2] - uz[2]) <= 512) return !1;
-        uz[0] = Math.floor(zz[0]), uz[1] = Math.floor(zz[1]), uz[2] = Math.floor(zz[2]);
-        for (const bz of this.kinds.values()) null === bz || void 0 === bz || bz.pool.setOrigin(uz[0], uz[1], uz[2]);
+        if (Math.abs(DD[0] - CD[0]) <= 512 && Math.abs(DD[1] - CD[1]) <= 512 && Math.abs(DD[2] - CD[2]) <= 512) return !1;
+        CD[0] = Math.floor(DD[0]), CD[1] = Math.floor(DD[1]), CD[2] = Math.floor(DD[2]);
+        for (const cD of this.kinds.values()) null === cD || void 0 === cD || cD.pool.setOrigin(CD[0], CD[1], CD[2]);
         return !0
       }
       commit() {
-        for (const zz of this.kinds.values()) null === zz || void 0 === zz || zz.commit()
+        for (const DD of this.kinds.values()) null === DD || void 0 === DD || DD.commit()
       }
       dispose() {
-        for (const zz of this.kinds.values()) null === zz || void 0 === zz || zz.dispose();
+        for (const DD of this.kinds.values()) null === DD || void 0 === DD || DD.dispose();
         this.kinds.clear()
       }
     }
   },
-  38624: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      default: () => pz
+  38586: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      default: () => BD
     });
-    const Ez = "Pipe",
-      nz = "Extractor Pipe",
-      iz = (new Set([Ez, nz]), new Set([Ez, nz, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
-    var lz = bz(37884);
-    class Mz {
-      constructor(zz) {
-        this.api = zz, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new lz.c(zz, {
+    const ID = "Pipe",
+      pD = "Extractor Pipe",
+      iD = (new Set([ID, pD]), new Set([ID, pD, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
+    var fD = cD(37872);
+    class bD {
+      constructor(DD) {
+        this.api = DD, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new fD.e(DD, {
           scale: .3,
           yaw: 0
         }, 16)
       }
-      onSpawn(zz) {
-        if (zz.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${zz.id} with < 2 waypoints`);
-        const uz = this.kinds.kindOf(zz.itemName);
-        if (!uz) return void(this.unshown.has(zz.itemName) || (this.unshown.add(zz.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${zz.itemName}"`)));
-        this.remove(zz.id);
-        const bz = function(zz) {
-          return (zz.waypoints.length - 1) / 2 * 1e3
-        }(zz);
-        if (Date.now() - zz.startTimeMs > bz + 2e3) return;
-        const Ez = uz.take();
-        this.items.set(zz.id, {
-          kind: uz,
-          slot: Ez,
-          waypoints: zz.waypoints,
-          startTimeMs: zz.startTimeMs,
-          durationMs: bz
+      onSpawn(DD) {
+        if (DD.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${DD.id} with < 2 waypoints`);
+        const CD = this.kinds.kindOf(DD.itemName);
+        if (!CD) return void(this.unshown.has(DD.itemName) || (this.unshown.add(DD.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${DD.itemName}"`)));
+        this.remove(DD.id);
+        const cD = function(DD) {
+          return (DD.waypoints.length - 1) / 2 * 1e3
+        }(DD);
+        if (Date.now() - DD.startTimeMs > cD + 2e3) return;
+        const ID = CD.take();
+        this.items.set(DD.id, {
+          kind: CD,
+          slot: ID,
+          waypoints: DD.waypoints,
+          startTimeMs: DD.startTimeMs,
+          durationMs: cD
         })
       }
-      onEnd(zz) {
-        this.remove(zz.id)
+      onEnd(DD) {
+        this.remove(DD.id)
       }
-      Hs() {
+      BX() {
         if (0 === this.items.size) return void this.kinds.commit();
-        const zz = Date.now();
+        const DD = Date.now();
         this.kinds.follow(this.api.getCameraPosition());
-        for (const [uz, bz] of this.items) zz - bz.startTimeMs > bz.durationMs + 2e3 ? this.remove(uz) : this.write(bz, zz);
+        for (const [CD, cD] of this.items) DD - cD.startTimeMs > cD.durationMs + 2e3 ? this.remove(CD) : this.write(cD, DD);
         this.kinds.commit()
       }
       dispose() {
         this.kinds.dispose(), this.items.clear()
       }
-      remove(zz) {
-        const uz = this.items.get(zz);
-        uz && (uz.kind.release(uz.slot), this.items.delete(zz))
+      remove(DD) {
+        const CD = this.items.get(DD);
+        CD && (CD.kind.release(CD.slot), this.items.delete(DD))
       }
-      write(zz, uz) {
-        const bz = zz.waypoints.length - 1;
-        let Ez = (uz - zz.startTimeMs) / zz.durationMs;
-        Ez < 0 ? Ez = 0 : Ez > 1 && (Ez = 1);
-        const nz = Ez * bz;
-        let iz = Math.floor(nz);
-        iz >= bz && (iz = bz - 1);
-        const lz = nz - iz,
-          [Mz, tz, Hz] = zz.waypoints[iz],
-          [Oz, pz, dz] = zz.waypoints[iz + 1];
-        zz.kind.write(zz.slot, Mz + (Oz - Mz) * lz + .5, tz + (pz - tz) * lz + .5, Hz + (dz - Hz) * lz + .5)
+      write(DD, CD) {
+        const cD = DD.waypoints.length - 1;
+        let ID = (CD - DD.startTimeMs) / DD.durationMs;
+        ID < 0 ? ID = 0 : ID > 1 && (ID = 1);
+        const pD = ID * cD;
+        let iD = Math.floor(pD);
+        iD >= cD && (iD = cD - 1);
+        const fD = pD - iD,
+          [bD, QD, wD] = DD.waypoints[iD],
+          [SD, BD, yD] = DD.waypoints[iD + 1];
+        DD.kind.write(DD.slot, bD + (SD - bD) * fD + .5, QD + (BD - QD) * fD + .5, wD + (yD - wD) * fD + .5)
       }
     }
-    const tz = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
-      Hz = new Set(tz);
-    class Oz {
+    const QD = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
+      wD = new Set(QD);
+    class SD {
       constructor() {
         this.pipeVisualizer = null, this.api = void 0
       }
-      onCreate(zz) {
-        this.api = zz, this.pipeVisualizer = new Mz(zz)
+      onCreate(DD) {
+        this.api = DD, this.pipeVisualizer = new bD(DD)
       }
       onClose() {
-        var zz;
-        null === (zz = this.pipeVisualizer) || void 0 === zz || zz.dispose(), this.pipeVisualizer = null
+        var DD;
+        null === (DD = this.pipeVisualizer) || void 0 === DD || DD.dispose(), this.pipeVisualizer = null
       }
-      onReceivedMessageFromServer(zz, uz) {
+      onReceivedMessageFromServer(DD, CD) {
         const {
-          pipeVisualizer: bz
+          pipeVisualizer: cD
         } = this;
-        if (bz)
-          if ("pipeItemSpawnBatch" === zz)
-            for (const Ez of uz.items) bz.onSpawn(Ez);
-          else if ("pipeItemEndBatch" === zz)
-          for (const Ez of uz.items) bz.onEnd(Ez)
+        if (cD)
+          if ("pipeItemSpawnBatch" === DD)
+            for (const ID of CD.items) cD.onSpawn(ID);
+          else if ("pipeItemEndBatch" === DD)
+          for (const ID of CD.items) cD.onEnd(ID)
       }
-      Hs() {
-        var zz;
-        null === (zz = this.pipeVisualizer) || void 0 === zz || zz.Hs()
+      BX() {
+        var DD;
+        null === (DD = this.pipeVisualizer) || void 0 === DD || DD.BX()
       }
-      onPlayerAttemptAltAction(zz, uz, bz, Ez, nz, lz) {
-        var Mz;
-        if (!Hz.has(this.api.getMetaInfo(nz).rootName)) return;
-        const tz = null === (Mz = this.api.luz(zz)) || void 0 === Mz ? void 0 : Mz.name;
-        return void 0 !== tz && iz.has(tz) ? "preventAction" : void 0
+      onPlayerAttemptAltAction(DD, CD, cD, ID, pD, fD) {
+        var bD;
+        if (!wD.has(this.api.getMetaInfo(pD).rootName)) return;
+        const QD = null === (bD = this.api.FDD(DD)) || void 0 === bD ? void 0 : bD.name;
+        return void 0 !== QD && iD.has(QD) ? "preventAction" : void 0
       }
     }
-    const pz = function(zz, uz, bz) {
-      if ("survivalFactory" !== bz && "survivalFactoryPersistent" !== bz) {
+    const BD = function(DD, CD, cD) {
+      if ("survivalFactory" !== cD && "survivalFactoryPersistent" !== cD) {
         return {}
       }
-      const Ez = new Oz;
+      const ID = new SD;
       return {
-        onCreate: zz => {
-          Ez.onCreate(zz)
+        onCreate: DD => {
+          ID.onCreate(DD)
         },
         onClose: () => {
-          Ez.onClose()
+          ID.onClose()
         },
-        onReceivedMessageFromServer: (zz, uz) => {
-          Ez.onReceivedMessageFromServer(zz, uz)
+        onReceivedMessageFromServer: (DD, CD) => {
+          ID.onReceivedMessageFromServer(DD, CD)
         },
-        sd: () => {
-          Ez.Hs()
+        wy: () => {
+          ID.BX()
         },
-        altVetoBlocks: tz,
-        onPlayerAttemptAltAction: (zz, uz, bz, nz, iz, lz) => Ez.onPlayerAttemptAltAction(zz, uz, bz, nz, iz, lz)
+        altVetoBlocks: QD,
+        onPlayerAttemptAltAction: (DD, CD, cD, pD, iD, fD) => ID.onPlayerAttemptAltAction(DD, CD, cD, pD, iD, fD)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

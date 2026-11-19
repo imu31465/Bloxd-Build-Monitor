@@ -1,271 +1,271 @@
 export const id = 5;
 export const ids = [5];
 export const modules = {
-  42546: (zz, uz, bz) => {
-    zz.exports = bz.p + "static/media/bloxd_wasm_anim_bg.6e7574f5e49c4350d3ce.wasm"
+  42431: (DD, CD, cD) => {
+    DD.exports = cD.p + "static/media/bloxd_wasm_anim_bg.e53b529390d5e67a1dd3.wasm"
   },
-  42538: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      BloxdAnimWasmError: () => mz,
-      compileAnimationPackInWasm: () => cz
+  42427: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      BloxdAnimWasmError: () => jD,
+      compileAnimationPackInWasm: () => GD
     });
-    var Ez = {};
+    var ID = {};
 
-    function nz(zz, uz, bz, Ez, nz, iz) {
-      const lz = Xz(zz, Az.ct03),
-        Mz = Tz,
-        tz = Xz(uz, Az.ct03),
-        Hz = Tz,
-        Oz = Xz(bz, Az.ct03),
-        pz = Tz,
-        dz = Xz(Ez, Az.ct03),
-        Zz = Tz,
-        Rz = Xz(nz, Az.ct03),
-        Kz = Tz;
-      var fz = wz(iz) ? 0 : function(zz, uz) {
-          const bz = uz(1 * zz.length, 1) >>> 0;
-          return Fz().set(zz, bz / 1), Tz = zz.length, bz
-        }(iz, Az.ct03),
-        rz = Tz;
-      const oz = Az.puZn(lz, Mz, tz, Hz, Oz, pz, dz, Zz, Rz, Kz, fz, rz);
-      if (oz[3]) throw sz(oz[2]);
-      var Nz, vz, xz = (Nz = oz[0], vz = oz[1], Nz >>>= 0, Fz().subarray(Nz / 1, Nz / 1 + vz)).slice();
-      return Az.GdaH(oz[0], 1 * oz[1], 1), xz
+    function pD(DD, CD, cD, ID, pD, iD) {
+      const fD = ND(DD, xD.pVL0),
+        bD = qD,
+        QD = ND(CD, xD.pVL0),
+        wD = qD,
+        SD = ND(cD, xD.pVL0),
+        BD = qD,
+        yD = ND(ID, xD.pVL0),
+        tD = qD,
+        ZD = ND(pD, xD.pVL0),
+        oD = qD;
+      var gD = vD(iD) ? 0 : function(DD, CD) {
+          const cD = CD(1 * DD.length, 1) >>> 0;
+          return MD().set(DD, cD / 1), qD = DD.length, cD
+        }(iD, xD.pVL0),
+        mD = qD;
+      const nD = xD.ecNx(fD, bD, QD, wD, SD, BD, yD, tD, ZD, oD, gD, mD);
+      if (nD[3]) throw XD(nD[2]);
+      var OD, PD, HD = (OD = nD[0], PD = nD[1], OD >>>= 0, MD().subarray(OD / 1, OD / 1 + PD)).slice();
+      return xD.g1XR(nD[0], 1 * nD[1], 1), HD
     }
 
-    function iz(zz, uz) {
-      const bz = fz(zz, Az.ct03, Az.XPsb),
-        Ez = Tz,
-        nz = Az.TilN(bz, Ez, uz);
-      if (nz[1]) throw sz(nz[0])
+    function iD(DD, CD) {
+      const cD = gD(DD, xD.pVL0, xD.s7MM),
+        ID = qD,
+        pD = xD.KQ8H(cD, ID, CD);
+      if (pD[1]) throw XD(pD[0])
     }
 
-    function lz() {
-      Az.A4wo()
+    function fD() {
+      xD.n24Y()
     }
 
-    function Mz() {
+    function bD() {
       return {
         __proto__: null,
-        CM74: {
+        NCmx: {
           __proto__: null,
-          HVtX: function(zz, uz) {
-            return tz(Error(pz(zz, uz)))
+          iWNc: function(DD, CD) {
+            return QD(Error(BD(DD, CD)))
           },
-          dVbJ: function(zz, uz) {
-            const bz = Zz(uz),
-              Ez = "string" === typeof bz ? bz : void 0;
-            var nz = wz(Ez) ? 0 : fz(Ez, Az.ct03, Az.XPsb),
-              iz = Tz;
-            Oz().setInt32(zz + 4, iz, !0), Oz().setInt32(zz + 0, nz, !0)
+          C98P: function(DD, CD) {
+            const cD = tD(CD),
+              ID = "string" === typeof cD ? cD : void 0;
+            var pD = vD(ID) ? 0 : gD(ID, xD.pVL0, xD.s7MM),
+              iD = qD;
+            SD().setInt32(DD + 4, iD, !0), SD().setInt32(DD + 0, pD, !0)
           },
-          Nngb: function(zz, uz) {
-            throw new Error(pz(zz, uz))
+          s4Xo: function(DD, CD) {
+            throw new Error(BD(DD, CD))
           },
-          hHAg: function(zz, uz) {
-            console.error(pz(zz, uz))
+          JxOI: function(DD, CD) {
+            console.error(BD(DD, CD))
           },
-          l5p2: function(zz) {
-            sz(zz)
+          J5ZE: function(DD) {
+            XD(DD)
           }
         }
       }
     }
 
-    function tz(zz) {
-      Kz === Rz.length && Rz.push(Rz.length + 1);
-      const uz = Kz;
-      return Kz = Rz[uz], Rz[uz] = zz, uz
+    function QD(DD) {
+      oD === ZD.length && ZD.push(ZD.length + 1);
+      const CD = oD;
+      return oD = ZD[CD], ZD[CD] = DD, CD
     }
-    bz.r(Ez), bz.d(Ez, {
-      Ciz: () => nz,
-      Lp: () => iz,
-      default: () => Gz,
-      initSync: () => Pz,
-      Pp: () => lz
+    cD.r(ID), cD.d(ID, {
+      ffD: () => pD,
+      NB: () => iD,
+      default: () => aD,
+      initSync: () => KD,
+      gB: () => fD
     });
-    let Hz = null;
+    let wD = null;
 
-    function Oz() {
-      return (null === Hz || !0 === Hz.buffer.detached || void 0 === Hz.buffer.detached && Hz.buffer !== Az.memory.buffer) && (Hz = new DataView(Az.memory.buffer)), Hz
+    function SD() {
+      return (null === wD || !0 === wD.buffer.detached || void 0 === wD.buffer.detached && wD.buffer !== xD.memory.buffer) && (wD = new DataView(xD.memory.buffer)), wD
     }
 
-    function pz(zz, uz) {
-      return function(zz, uz) {
-        Nz += uz, Nz >= oz && (rz = new TextDecoder("utf-8", {
+    function BD(DD, CD) {
+      return function(DD, CD) {
+        OD += CD, OD >= nD && (mD = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), rz.decode(), Nz = uz);
-        return rz.decode(Fz().subarray(zz, zz + uz))
-      }(zz >>> 0, uz)
+        }), mD.decode(), OD = CD);
+        return mD.decode(MD().subarray(DD, DD + CD))
+      }(DD >>> 0, CD)
     }
-    let dz = null;
+    let yD = null;
 
-    function Fz() {
-      return null !== dz && 0 !== dz.byteLength || (dz = new Uint8Array(Az.memory.buffer)), dz
-    }
-
-    function Zz(zz) {
-      return Rz[zz]
-    }
-    let Rz = new Array(1024).fill(void 0);
-    Rz.push(void 0, null, !0, !1);
-    let Kz = Rz.length;
-
-    function wz(zz) {
-      return void 0 === zz || null === zz
+    function MD() {
+      return null !== yD && 0 !== yD.byteLength || (yD = new Uint8Array(xD.memory.buffer)), yD
     }
 
-    function Xz(zz, uz) {
-      const bz = uz(4 * zz.length, 4) >>> 0,
-        Ez = Oz();
-      for (let nz = 0; nz < zz.length; nz++) Ez.setUint32(bz + 4 * nz, tz(zz[nz]), !0);
-      return Tz = zz.length, bz
+    function tD(DD) {
+      return ZD[DD]
+    }
+    let ZD = new Array(1024).fill(void 0);
+    ZD.push(void 0, null, !0, !1);
+    let oD = ZD.length;
+
+    function vD(DD) {
+      return void 0 === DD || null === DD
     }
 
-    function fz(zz, uz, bz) {
-      if (void 0 === bz) {
-        const bz = vz.encode(zz),
-          Ez = uz(bz.length, 1) >>> 0;
-        return Fz().subarray(Ez, Ez + bz.length).set(bz), Tz = bz.length, Ez
+    function ND(DD, CD) {
+      const cD = CD(4 * DD.length, 4) >>> 0,
+        ID = SD();
+      for (let pD = 0; pD < DD.length; pD++) ID.setUint32(cD + 4 * pD, QD(DD[pD]), !0);
+      return qD = DD.length, cD
+    }
+
+    function gD(DD, CD, cD) {
+      if (void 0 === cD) {
+        const cD = PD.encode(DD),
+          ID = CD(cD.length, 1) >>> 0;
+        return MD().subarray(ID, ID + cD.length).set(cD), qD = cD.length, ID
       }
-      let Ez = zz.length,
-        nz = uz(Ez, 1) >>> 0;
-      const iz = Fz();
-      let lz = 0;
-      for (; lz < Ez; lz++) {
-        const uz = zz.charCodeAt(lz);
-        if (uz > 127) break;
-        iz[nz + lz] = uz
+      let ID = DD.length,
+        pD = CD(ID, 1) >>> 0;
+      const iD = MD();
+      let fD = 0;
+      for (; fD < ID; fD++) {
+        const CD = DD.charCodeAt(fD);
+        if (CD > 127) break;
+        iD[pD + fD] = CD
       }
-      if (lz !== Ez) {
-        0 !== lz && (zz = zz.slice(lz)), nz = bz(nz, Ez, Ez = lz + 3 * zz.length, 1) >>> 0;
-        const uz = Fz().subarray(nz + lz, nz + Ez);
-        lz += vz.encodeInto(zz, uz).written, nz = bz(nz, Ez, lz, 1) >>> 0
+      if (fD !== ID) {
+        0 !== fD && (DD = DD.slice(fD)), pD = cD(pD, ID, ID = fD + 3 * DD.length, 1) >>> 0;
+        const CD = MD().subarray(pD + fD, pD + ID);
+        fD += PD.encodeInto(DD, CD).written, pD = cD(pD, ID, fD, 1) >>> 0
       }
-      return Tz = lz, nz
+      return qD = fD, pD
     }
 
-    function sz(zz) {
-      const uz = Zz(zz);
-      return function(zz) {
-        zz < 1028 || (Rz[zz] = Kz, Kz = zz)
-      }(zz), uz
+    function XD(DD) {
+      const CD = tD(DD);
+      return function(DD) {
+        DD < 1028 || (ZD[DD] = oD, oD = DD)
+      }(DD), CD
     }
-    let rz = new TextDecoder("utf-8", {
+    let mD = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    rz.decode();
-    const oz = 2146435072;
-    let Nz = 0;
-    const vz = new TextEncoder;
-    "encodeInto" in vz || (vz.encodeInto = function(zz, uz) {
-      const bz = vz.encode(zz);
-      return uz.set(bz), {
-        read: zz.length,
-        written: bz.length
+    mD.decode();
+    const nD = 2146435072;
+    let OD = 0;
+    const PD = new TextEncoder;
+    "encodeInto" in PD || (PD.encodeInto = function(DD, CD) {
+      const cD = PD.encode(DD);
+      return CD.set(cD), {
+        read: DD.length,
+        written: cD.length
       }
     });
-    let xz, Jz, Az, Tz = 0;
+    let HD, UD, xD, qD = 0;
 
-    function Lz(zz, uz) {
-      return Jz = zz, Az = zz.exports, xz = uz, Hz = null, dz = null, Az.GMWq(), Az
+    function JD(DD, CD) {
+      return UD = DD, xD = DD.exports, HD = CD, wD = null, yD = null, xD.iXOA(), xD
     }
 
-    function Pz(zz) {
-      if (void 0 !== Az) return Az;
-      void 0 !== zz && (Object.getPrototypeOf(zz) === Object.prototype ? ({
-        module: zz
-      } = zz) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const uz = Mz();
-      zz instanceof WebAssembly.Module || (zz = new WebAssembly.Module(zz));
-      return Lz(new WebAssembly.Instance(zz, uz), zz)
+    function KD(DD) {
+      if (void 0 !== xD) return xD;
+      void 0 !== DD && (Object.getPrototypeOf(DD) === Object.prototype ? ({
+        module: DD
+      } = DD) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const CD = bD();
+      DD instanceof WebAssembly.Module || (DD = new WebAssembly.Module(DD));
+      return JD(new WebAssembly.Instance(DD, CD), DD)
     }
-    async function Gz(zz) {
-      if (void 0 !== Az) return Az;
-      void 0 !== zz && (Object.getPrototypeOf(zz) === Object.prototype ? ({
-        module_or_path: zz
-      } = zz) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const uz = Mz();
-      ("string" === typeof zz || "function" === typeof Request && zz instanceof Request || "function" === typeof URL && zz instanceof URL) && (zz = fetch(zz));
+    async function aD(DD) {
+      if (void 0 !== xD) return xD;
+      void 0 !== DD && (Object.getPrototypeOf(DD) === Object.prototype ? ({
+        module_or_path: DD
+      } = DD) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const CD = bD();
+      ("string" === typeof DD || "function" === typeof Request && DD instanceof Request || "function" === typeof URL && DD instanceof URL) && (DD = fetch(DD));
       const {
-        instance: bz,
-        module: Ez
-      } = await async function(zz, uz) {
-        if ("function" === typeof Response && zz instanceof Response) {
-          if (!zz.ok) throw new Error(`failed to fetch Wasm: ${zz.status} ${zz.statusText} fetching '${zz.url}'`);
+        instance: cD,
+        module: ID
+      } = await async function(DD, CD) {
+        if ("function" === typeof Response && DD instanceof Response) {
+          if (!DD.ok) throw new Error(`failed to fetch Wasm: ${DD.status} ${DD.statusText} fetching '${DD.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(zz, uz)
-          } catch (bz) {
-            if (! function(zz) {
-                switch (zz) {
+            return await WebAssembly.instantiateStreaming(DD, CD)
+          } catch (cD) {
+            if (! function(DD) {
+                switch (DD) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(zz.type) || "application/wasm" === zz.headers.get("Content-Type")) throw bz;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", bz)
+              }(DD.type) || "application/wasm" === DD.headers.get("Content-Type")) throw cD;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", cD)
           }
-          const Ez = await zz.arrayBuffer();
-          return await WebAssembly.instantiate(Ez, uz)
+          const ID = await DD.arrayBuffer();
+          return await WebAssembly.instantiate(ID, CD)
         } {
-          const bz = await WebAssembly.instantiate(zz, uz);
-          return bz instanceof WebAssembly.Instance ? {
-            instance: bz,
-            module: zz
-          } : bz
+          const cD = await WebAssembly.instantiate(DD, CD);
+          return cD instanceof WebAssembly.Instance ? {
+            instance: cD,
+            module: DD
+          } : cD
         }
-      }(await zz, uz);
-      return Lz(bz, Ez)
+      }(await DD, CD);
+      return JD(cD, ID)
     }
-    var az = bz(3475),
-      Vz = bz(6346);
-    class mz extends Error {
+    var VD = cD(3529),
+      zD = cD(6372);
+    class jD extends Error {
       stage;
-      constructor(zz, uz) {
-        super((0, az.w)(zz, uz), {
-          cause: uz
-        }), this.name = "BloxdAnimWasmError", this.stage = zz
+      constructor(DD, CD) {
+        super((0, VD.D)(DD, CD), {
+          cause: CD
+        }), this.name = "BloxdAnimWasmError", this.stage = DD
       }
     }
-    let qz = null,
-      hz = null;
+    let lD = null,
+      LD = null;
 
-    function Uz() {
-      if (hz) throw hz
+    function TD() {
+      if (LD) throw LD
     }
-    async function cz(zz, uz, nz) {
-      Uz();
-      const iz = await (qz ??= (async () => {
-        let zz;
+    async function GD(DD, CD, pD) {
+      TD();
+      const iD = await (lD ??= (async () => {
+        let DD;
         try {
-          zz = await (0, az.x)(new bz.U(bz(42546)), (0, Vz.d)("bloxd_wasm_anim"))
-        } catch (uz) {
-          throw new mz((0, az.C)(uz), uz)
+          DD = await (0, VD.H)(new cD.U(cD(42431)), (0, zD.e)("bloxd_wasm_anim"))
+        } catch (CD) {
+          throw new jD((0, VD.L)(CD), CD)
         }
         try {
-          await Gz({
-            module_or_path: zz
+          await aD({
+            module_or_path: DD
           })
-        } catch (uz) {
-          throw new mz("instantiate", uz)
+        } catch (CD) {
+          throw new jD("instantiate", CD)
         }
-        return Ez
-      })(), qz.catch((() => {
-        qz = null
-      })), qz);
-      Uz();
+        return ID
+      })(), lD.catch((() => {
+        lD = null
+      })), lD);
+      TD();
       try {
-        return iz.Ciz(Object.entries(zz).flat(), [...uz.mobTypes], [...uz.vehicleTypes], [...uz.mobAiStates], [...uz.playerPoses], "builtIns" in nz ? nz.builtIns : void 0)
-      } catch (lz) {
-        const zz = new mz("call", lz);
-        throw lz instanceof WebAssembly.RuntimeError && (hz = zz), zz
+        return iD.ffD(Object.entries(DD).flat(), [...CD.mobTypes], [...CD.vehicleTypes], [...CD.mobAiStates], [...CD.playerPoses], "builtIns" in pD ? pD.builtIns : void 0)
+      } catch (fD) {
+        const DD = new jD("call", fD);
+        throw fD instanceof WebAssembly.RuntimeError && (LD = DD), DD
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

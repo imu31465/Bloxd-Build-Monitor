@@ -1,80 +1,80 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  4616: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      Howl: () => nz.Howl,
-      Howler: () => nz.Howler,
-      iosAudio: () => tz,
-      musicOutput: () => Kz,
-      readyAudioContext: () => wz
+  4621: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      Howl: () => pD.Howl,
+      Howler: () => pD.Howler,
+      iosAudio: () => QD,
+      musicOutput: () => oD,
+      readyAudioContext: () => vD
     });
-    var Ez, nz = bz(4625),
-      iz = bz(96);
-    const lz = nz.Howler;
-    let Mz;
+    var ID, pD = cD(4626),
+      iD = cD(90);
+    const fD = pD.Howler;
+    let bD;
 
-    function tz() {
-      return Mz ??= "ios" === (0, iz.getOperatingSystem)(), Mz
+    function QD() {
+      return bD ??= "ios" === (0, iD.getOperatingSystem)(), bD
     }
 
-    function Hz() {
-      var zz, uz;
-      if (lz.ctx || !lz.usingWebAudio || "undefined" === typeof AudioContext || !tz()) return;
-      const bz = navigator.audioSession;
-      let Ez;
-      "auto" === (null === bz || void 0 === bz ? void 0 : bz.type) && (bz.type = "ambient");
+    function wD() {
+      var DD, CD;
+      if (fD.ctx || !fD.usingWebAudio || "undefined" === typeof AudioContext || !QD()) return;
+      const cD = navigator.audioSession;
+      let ID;
+      "auto" === (null === cD || void 0 === cD ? void 0 : cD.type) && (cD.type = "ambient");
       try {
-        Ez = new AudioContext({
+        ID = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const nz = Ez.createGain();
-      nz.gain.setValueAtTime(lz._muted ? 0 : null !== (zz = lz._volume) && void 0 !== zz ? zz : 1, Ez.currentTime), nz.connect(Ez.destination), lz.ctx = Ez, lz.masterGain = nz, null === (uz = lz._setup) || void 0 === uz || uz.call(lz)
+      const pD = ID.createGain();
+      pD.gain.setValueAtTime(fD._muted ? 0 : null !== (DD = fD._volume) && void 0 !== DD ? DD : 1, ID.currentTime), pD.connect(ID.destination), fD.ctx = ID, fD.masterGain = pD, null === (CD = fD._setup) || void 0 === CD || CD.call(fD)
     }
-    lz._mobileUnloaded = !0;
-    const Oz = lz.volume.bind(nz.Howler);
-    lz.volume = function() {
-      return Hz(), Oz(...arguments)
+    fD._mobileUnloaded = !0;
+    const SD = fD.volume.bind(pD.Howler);
+    fD.volume = function() {
+      return wD(), SD(...arguments)
     };
-    const pz = lz.mute.bind(nz.Howler);
-    lz.mute = zz => (Hz(), pz(zz));
-    const dz = nz.Howl.prototype,
-      Fz = dz.init;
-    dz.init = function(zz) {
-      return Hz(), Fz.call(this, zz)
+    const BD = fD.mute.bind(pD.Howler);
+    fD.mute = DD => (wD(), BD(DD));
+    const yD = pD.Howl.prototype,
+      MD = yD.init;
+    yD.init = function(DD) {
+      return wD(), MD.call(this, DD)
     };
-    let Zz = 0;
-    const Rz = null === (Ez = lz._autoSuspend) || void 0 === Ez ? void 0 : Ez.bind(nz.Howler);
+    let tD = 0;
+    const ZD = null === (ID = fD._autoSuspend) || void 0 === ID ? void 0 : ID.bind(pD.Howler);
 
-    function Kz() {
-      wz();
+    function oD() {
+      vD();
       const {
-        ctx: zz,
-        masterGain: uz
-      } = lz;
-      return zz && uz ? {
-        ctx: zz,
-        destination: uz,
-        holdAwake: zz => {
-          var uz, bz;
-          (Zz += zz ? 1 : -1, zz) ? null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz): null === (bz = lz._autoSuspend) || void 0 === bz || bz.call(lz)
+        ctx: DD,
+        masterGain: CD
+      } = fD;
+      return DD && CD ? {
+        ctx: DD,
+        destination: CD,
+        holdAwake: DD => {
+          var CD, cD;
+          (tD += DD ? 1 : -1, DD) ? null === (CD = fD._autoResume) || void 0 === CD || CD.call(fD): null === (cD = fD._autoSuspend) || void 0 === cD || cD.call(fD)
         },
         wake: () => {
-          var uz;
-          "running" !== zz.state && (null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz), zz.resume().catch((() => {})))
+          var CD;
+          "running" !== DD.state && (null === (CD = fD._autoResume) || void 0 === CD || CD.call(fD), DD.resume().catch((() => {})))
         }
       } : null
     }
 
-    function wz() {
-      var zz;
-      (lz.volume(), lz.ctx && lz.autoUnlock) && (null === (zz = lz._unlockAudio) || void 0 === zz || zz.call(lz))
+    function vD() {
+      var DD;
+      (fD.volume(), fD.ctx && fD.autoUnlock) && (null === (DD = fD._unlockAudio) || void 0 === DD || DD.call(fD))
     }
-    Rz && (lz._autoSuspend = () => Zz > 0 ? nz.Howler : Rz())
+    ZD && (fD._autoSuspend = () => tD > 0 ? pD.Howler : ZD())
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

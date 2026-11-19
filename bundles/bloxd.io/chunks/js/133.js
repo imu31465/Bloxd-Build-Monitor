@@ -1,132 +1,132 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  6359: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => sz,
-      e: () => rz,
-      i: () => Xz,
-      m: () => wz
+  6384: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => XD,
+      g: () => mD,
+      i: () => ND,
+      k: () => vD
     });
-    var Ez = bz(6362);
-    const nz = 6,
-      iz = 3,
-      lz = 1,
-      Mz = 2,
-      tz = 4,
-      Hz = 8,
-      Oz = 16,
-      pz = 32,
-      dz = 64,
-      Fz = 128,
-      Zz = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var ID = cD(6393);
+    const pD = 6,
+      iD = 3,
+      fD = 1,
+      bD = 2,
+      QD = 4,
+      wD = 8,
+      SD = 16,
+      BD = 32,
+      yD = 64,
+      MD = 128,
+      tD = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Rz(zz) {
-      if (!zz) return 0;
-      const uz = Zz.indexOf(zz);
-      if (uz <= 0) throw new Error(`"${zz}" is not a shader pack hook function`);
-      return uz
+    function ZD(DD) {
+      if (!DD) return 0;
+      const CD = tD.indexOf(DD);
+      if (CD <= 0) throw new Error(`"${DD}" is not a shader pack hook function`);
+      return CD
     }
 
-    function Kz(zz) {
-      if (0 === zz) return null;
-      const uz = Zz[zz];
-      if (void 0 === uz) throw new Error(`${zz} is not a shader pack hook function id`);
-      return uz
+    function oD(DD) {
+      if (0 === DD) return null;
+      const CD = tD[DD];
+      if (void 0 === CD) throw new Error(`${DD} is not a shader pack hook function id`);
+      return CD
     }
 
-    function wz(zz) {
-      const uz = Ez.e.length;
+    function vD(DD) {
+      const CD = ID.c.length;
       return {
-        strict: zz >= uz,
-        program: Ez.e[zz % uz]
+        strict: DD >= CD,
+        program: ID.c[DD % CD]
       }
     }
 
-    function Xz(zz) {
-      return Number(zz.strict) * Ez.e.length + Ez.e.indexOf(zz.program)
+    function ND(DD) {
+      return Number(DD.strict) * ID.c.length + ID.c.indexOf(DD.program)
     }
 
-    function fz(zz) {
-      return "" === zz ? [] : zz.split(" ")
+    function gD(DD) {
+      return "" === DD ? [] : DD.split(" ")
     }
 
-    function sz(zz) {
-      const uz = {
-        variantFlags: new Uint8Array(nz),
-        hooks: new Uint8Array(nz * iz),
-        moduleCodes: Array(nz).fill(""),
-        reads: Array(2 * nz).fill("")
+    function XD(DD) {
+      const CD = {
+        variantFlags: new Uint8Array(pD),
+        hooks: new Uint8Array(pD * iD),
+        moduleCodes: Array(pD).fill(""),
+        reads: Array(2 * pD).fill("")
       };
-      for (const bz of zz) {
-        const zz = Xz(bz.key),
-          Ez = (zz, uz) => null === bz.hooks.surface || bz.reads.fragment.includes(zz) ? 0 : uz;
-        uz.variantFlags[zz] = (bz.sceneDepth ? lz : 0) | (bz.movesVertices ? Mz : 0) | (bz.sunShadow ? tz : 0) | (bz.airShadow ? Hz : 0) | (bz.discards ? Oz : 0) | Ez("localPosition", pz) | Ez("enchantSpeed", dz) | Ez("enchantTier", Fz), uz.hooks[zz * iz] = Rz(bz.hooks.vertex), uz.hooks[zz * iz + 1] = Rz(bz.hooks.surface), uz.hooks[zz * iz + 2] = Rz(bz.hooks.light), uz.moduleCodes[zz] = bz.moduleCode, uz.reads[2 * zz] = bz.reads.vertex.join(" "), uz.reads[2 * zz + 1] = bz.reads.fragment.join(" ")
+      for (const cD of DD) {
+        const DD = ND(cD.key),
+          ID = (DD, CD) => null === cD.hooks.surface || cD.reads.fragment.includes(DD) ? 0 : CD;
+        CD.variantFlags[DD] = (cD.sceneDepth ? fD : 0) | (cD.movesVertices ? bD : 0) | (cD.sunShadow ? QD : 0) | (cD.airShadow ? wD : 0) | (cD.discards ? SD : 0) | ID("localPosition", BD) | ID("enchantSpeed", yD) | ID("enchantTier", MD), CD.hooks[DD * iD] = ZD(cD.hooks.vertex), CD.hooks[DD * iD + 1] = ZD(cD.hooks.surface), CD.hooks[DD * iD + 2] = ZD(cD.hooks.light), CD.moduleCodes[DD] = cD.moduleCode, CD.reads[2 * DD] = cD.reads.vertex.join(" "), CD.reads[2 * DD + 1] = cD.reads.fragment.join(" ")
       }
-      return uz
+      return CD
     }
 
-    function rz(zz) {
+    function mD(DD) {
       const {
-        hooks: uz,
-        moduleCodes: bz,
-        reads: Ez
-      } = zz;
-      return Array.from(zz.variantFlags, ((zz, nz) => {
-        const pz = nz * iz;
+        hooks: CD,
+        moduleCodes: cD,
+        reads: ID
+      } = DD;
+      return Array.from(DD.variantFlags, ((DD, pD) => {
+        const BD = pD * iD;
         return {
-          key: wz(nz),
+          key: vD(pD),
           hooks: {
-            vertex: Kz(uz[pz]),
-            surface: Kz(uz[pz + 1]),
-            light: Kz(uz[pz + 2])
+            vertex: oD(CD[BD]),
+            surface: oD(CD[BD + 1]),
+            light: oD(CD[BD + 2])
           },
-          moduleCode: bz[nz],
-          sceneDepth: 0 !== (zz & lz),
-          sunShadow: 0 !== (zz & tz),
-          airShadow: 0 !== (zz & Hz),
-          movesVertices: 0 !== (zz & Mz),
-          discards: 0 !== (zz & Oz),
+          moduleCode: cD[pD],
+          sceneDepth: 0 !== (DD & fD),
+          sunShadow: 0 !== (DD & QD),
+          airShadow: 0 !== (DD & wD),
+          movesVertices: 0 !== (DD & bD),
+          discards: 0 !== (DD & SD),
           reads: {
-            vertex: fz(Ez[2 * nz]),
-            fragment: fz(Ez[2 * nz + 1])
+            vertex: gD(ID[2 * pD]),
+            fragment: gD(ID[2 * pD + 1])
           }
         }
       }))
     }
   },
-  40071: (zz, uz, bz) => {
-    bz.d(uz, {
-      A: () => Fz,
-      B: () => Zz,
-      c: () => nz,
-      g: () => Ez,
-      h: () => dz,
-      j: () => Oz,
-      m: () => Kz,
-      o: () => iz,
-      q: () => Mz,
-      t: () => tz,
-      w: () => lz,
-      y: () => Rz
+  39961: (DD, CD, cD) => {
+    cD.d(CD, {
+      C: () => fD,
+      F: () => ZD,
+      G: () => MD,
+      J: () => tD,
+      e: () => pD,
+      h: () => ID,
+      l: () => yD,
+      p: () => SD,
+      r: () => oD,
+      u: () => iD,
+      v: () => bD,
+      z: () => QD
     });
-    const Ez = 3,
-      nz = 0,
-      iz = 1,
-      lz = 2,
-      Mz = {
+    const ID = 3,
+      pD = 0,
+      iD = 1,
+      fD = 2,
+      bD = {
         uniform: 3,
-        nF: 4,
+        Ey: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      tz = 10,
-      Hz = "BloxdPackInputs",
-      Oz = "bloxdPackInputs",
-      pz = [{
+      QD = 10,
+      wD = "BloxdPackInputs",
+      SD = "bloxdPackInputs",
+      BD = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      dz = 80;
+      yD = 80;
 
-    function Fz() {
-      const zz = pz.map((zz => {
+    function MD() {
+      const DD = BD.map((DD => {
         let {
-          name: uz,
-          type: bz
-        } = zz;
-        return `    ${uz}: ${bz},\n`
+          name: CD,
+          type: cD
+        } = DD;
+        return `    ${CD}: ${cD},\n`
       })).join("");
-      return `struct ${Hz} {\n${zz}}\n@group(${Ez}) @binding(${nz}) var<uniform> ${Oz}: ${Hz};\n`
+      return `struct ${wD} {\n${DD}}\n@group(${ID}) @binding(${pD}) var<uniform> ${SD}: ${wD};\n`
     }
 
-    function Zz(zz, uz) {
-      const bz = new DataView(zz, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, dz),
-        [Ez, nz, iz, lz, Mz, tz] = pz;
-      bz.setFloat32(Ez.offset, uz.seconds, !0), bz.setUint32(nz.offset, uz.lit ? 1 : 0, !0);
-      for (let Hz = 0; Hz < 3; Hz++) bz.setInt32(iz.offset + 4 * Hz, uz.renderOffset[Hz], !0), bz.setFloat32(lz.offset + 4 * Hz, uz.k_[Hz], !0), bz.setFloat32(Mz.offset + 4 * Hz, uz.eyePosition[Hz], !0), bz.setFloat32(tz.offset + 4 * Hz, uz.shadowDirection[Hz], !0)
+    function tD(DD, CD) {
+      const cD = new DataView(DD, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, yD),
+        [ID, pD, iD, fD, bD, QD] = BD;
+      cD.setFloat32(ID.offset, CD.seconds, !0), cD.setUint32(pD.offset, CD.lit ? 1 : 0, !0);
+      for (let wD = 0; wD < 3; wD++) cD.setInt32(iD.offset + 4 * wD, CD.renderOffset[wD], !0), cD.setFloat32(fD.offset + 4 * wD, CD.i_[wD], !0), cD.setFloat32(bD.offset + 4 * wD, CD.eyePosition[wD], !0), cD.setFloat32(QD.offset + 4 * wD, CD.shadowDirection[wD], !0)
     }
 
-    function Rz(zz) {
-      const uz = new Uint32Array(Math.max(1, zz.length));
-      return zz.forEach(((zz, bz) => {
+    function ZD(DD) {
+      const CD = new Uint32Array(Math.max(1, DD.length));
+      return DD.forEach(((DD, cD) => {
         let {
-          id: Ez,
-          rotation: nz
-        } = zz;
-        uz[bz] = 65535 & Ez | (3 & nz) << 16
-      })), uz
+          id: ID,
+          rotation: pD
+        } = DD;
+        CD[cD] = 65535 & ID | (3 & pD) << 16
+      })), CD
     }
-    const Kz = {
+    const oD = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6362: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Ez,
-      i: () => lz,
-      j: () => Mz,
-      m: () => nz,
-      p: () => iz
+  6393: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => ID,
+      f: () => fD,
+      h: () => bD,
+      i: () => pD,
+      k: () => iD
     });
-    const Ez = ["terrain", "liquid", "model"];
+    const ID = ["terrain", "liquid", "model"];
 
-    function nz() {
-      const zz = [];
-      for (const uz of [!1, !0])
-        for (const bz of Ez) zz.push({
-          strict: uz,
-          program: bz
+    function pD() {
+      const DD = [];
+      for (const CD of [!1, !0])
+        for (const cD of ID) DD.push({
+          strict: CD,
+          program: cD
         });
-      return zz
+      return DD
     }
 
-    function iz(zz) {
-      return `${zz.strict?"strict":"allow"}.${zz.program}`
+    function iD(DD) {
+      return `${DD.strict?"strict":"allow"}.${DD.program}`
     }
 
-    function lz(zz) {
-      return !zz.hooks.vertex && !zz.hooks.surface && !zz.hooks.light
+    function fD(DD) {
+      return !DD.hooks.vertex && !DD.hooks.surface && !DD.hooks.light
     }
 
-    function Mz(zz, uz) {
-      return "off" !== uz && (null === zz || zz.some((zz => zz.key.strict === ("strict" === uz) && !lz(zz))))
+    function bD(DD, CD) {
+      return "off" !== CD && (null === DD || DD.some((DD => DD.key.strict === ("strict" === CD) && !fD(DD))))
     }
   },
-  40487: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      SHADER_PACK_INPUTS_BINDING: () => iz.c,
-      SHADER_PACK_INPUTS_GROUP: () => iz.g,
-      SHADER_PACK_INPUTS_SIZE: () => iz.h,
-      SHADER_PACK_INPUTS_VAR: () => iz.j,
-      SHADER_PACK_MODES: () => iz.m,
-      SHADER_PACK_PROGRAMS: () => Ez.e,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => iz.o,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => iz.q,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => iz.t,
-      SHADER_PACK_TEXTURES_BINDING: () => iz.w,
-      encodeTextureLayers: () => iz.y,
-      flattenVariants: () => nz.c,
-      isVariantOff: () => Ez.i,
-      packRunsIn: () => Ez.j,
-      shaderPackInputsWgsl: () => iz.A,
-      shaderPackVariantKeys: () => Ez.m,
-      variantKeyId: () => Ez.p,
-      writeShaderPackInputs: () => iz.B
+  40338: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      SHADER_PACK_INPUTS_BINDING: () => iD.e,
+      SHADER_PACK_INPUTS_GROUP: () => iD.h,
+      SHADER_PACK_INPUTS_SIZE: () => iD.l,
+      SHADER_PACK_INPUTS_VAR: () => iD.p,
+      SHADER_PACK_MODES: () => iD.r,
+      SHADER_PACK_PROGRAMS: () => ID.c,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => iD.u,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => iD.v,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => iD.z,
+      SHADER_PACK_TEXTURES_BINDING: () => iD.C,
+      encodeTextureLayers: () => iD.F,
+      flattenVariants: () => pD.d,
+      isVariantOff: () => ID.f,
+      packRunsIn: () => ID.h,
+      shaderPackInputsWgsl: () => iD.G,
+      shaderPackVariantKeys: () => ID.i,
+      variantKeyId: () => ID.k,
+      writeShaderPackInputs: () => iD.J
     });
-    var Ez = bz(6362),
-      nz = bz(6359),
-      iz = bz(40071)
+    var ID = cD(6393),
+      pD = cD(6384),
+      iD = cD(39961)
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

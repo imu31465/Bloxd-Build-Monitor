@@ -1,308 +1,308 @@
 export const id = 86;
 export const ids = [86];
 export const modules = {
-  38136: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz,
-      d: () => tz,
-      e: () => Hz,
-      g: () => Mz,
-      j: () => lz
+  38136: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => iD,
+      g: () => QD,
+      k: () => wD,
+      o: () => bD,
+      s: () => fD
     });
-    const Ez = "A valid external Instance reference no longer exists.",
-      nz = [
+    const ID = "A valid external Instance reference no longer exists.",
+      pD = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ];
-    const iz = {
+    const iD = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function lz(zz, uz) {
-      return zz ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(zz) {
-        var uz;
-        const bz = null !== (uz = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(zz)) && void 0 !== uz ? uz : /failed with ([A-Z][A-Z0-9_]+)/.exec(zz);
-        return bz ? bz[1] : zz.includes(Ez) ? "gpu_process_lost" : "other"
-      }(uz)
+    function fD(DD, CD) {
+      return DD ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(DD) {
+        var CD;
+        const cD = null !== (CD = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(DD)) && void 0 !== CD ? CD : /failed with ([A-Z][A-Z0-9_]+)/.exec(DD);
+        return cD ? cD[1] : DD.includes(ID) ? "gpu_process_lost" : "other"
+      }(CD)
     }
 
-    function Mz(zz) {
-      return `${(null===zz||void 0===zz?void 0:zz.vendor)||"unknown vendor"} ${(null===zz||void 0===zz?void 0:zz.architecture)||"unknown architecture"}`
+    function bD(DD) {
+      return `${(null===DD||void 0===DD?void 0:DD.vendor)||"unknown vendor"} ${(null===DD||void 0===DD?void 0:DD.architecture)||"unknown architecture"}`
     }
 
-    function tz(zz) {
-      return Oz(zz)[1]
+    function QD(DD) {
+      return SD(DD)[1]
     }
 
-    function Hz(zz) {
-      return Oz(zz)[2]
+    function wD(DD) {
+      return SD(DD)[2]
     }
 
-    function Oz(zz) {
-      var uz;
-      return null !== (uz = nz.find((uz => {
-        let [bz] = uz;
-        return zz < bz
-      }))) && void 0 !== uz ? uz : nz[nz.length - 1]
+    function SD(DD) {
+      var CD;
+      return null !== (CD = pD.find((CD => {
+        let [cD] = CD;
+        return DD < cD
+      }))) && void 0 !== CD ? CD : pD[pD.length - 1]
     }
   },
-  38429: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Ez,
-      d: () => nz
+  38423: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => ID,
+      g: () => pD
     });
-    const Ez = 45e3;
-    class nz extends Error {
+    const ID = 45e3;
+    class pD extends Error {
       constructor() {
         super("The game server didn't answer in time"), this.name = "SeatRequestTimedOut"
       }
     }
   },
-  35959: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Ez,
-      i: () => nz,
-      j: () => iz
+  35903: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => ID,
+      g: () => pD,
+      k: () => iD
     });
-    const Ez = 1024,
-      nz = 1024 * Ez;
+    const ID = 1024,
+      pD = 1024 * ID;
 
-    function iz(zz) {
-      return (zz / nz).toFixed(1)
+    function iD(DD) {
+      return (DD / pD).toFixed(1)
     }
   },
-  35956: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz,
-      g: () => Mz,
-      j: () => lz,
-      l: () => tz,
-      p: () => Hz
+  35895: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => iD,
+      g: () => bD,
+      k: () => fD,
+      m: () => QD,
+      p: () => wD
     });
-    var Ez = bz(195);
-    const nz = 32 * bz(35959).i,
-      iz = 6144,
-      lz = 4608,
-      Mz = 512;
+    var ID = cD(194);
+    const pD = 32 * cD(35903).g,
+      iD = 6144,
+      fD = 4608,
+      bD = 512;
 
-    function tz(zz) {
-      return Math.floor(nz * zz / iz)
+    function QD(DD) {
+      return Math.floor(pD * DD / iD)
     }
 
-    function Hz(zz) {
-      const uz = zz - Math.floor(zz / 6);
-      let bz = Ez.e.maxChunkHorizAddDistance,
-        nz = Ez.e.maxChunkVertAddDistance;
-      if (Oz(bz + 1, nz + 1) <= uz) return null;
-      for (; Oz(bz + 1, nz + 1) > uz && (bz > 0 || nz > 0);) bz > nz ? bz-- : nz--;
+    function wD(DD) {
+      const CD = DD - Math.floor(DD / 6);
+      let cD = ID.h.maxChunkHorizAddDistance,
+        pD = ID.h.maxChunkVertAddDistance;
+      if (SD(cD + 1, pD + 1) <= CD) return null;
+      for (; SD(cD + 1, pD + 1) > CD && (cD > 0 || pD > 0);) cD > pD ? cD-- : pD--;
       return {
-        horizontal: bz,
-        vertical: nz
+        horizontal: cD,
+        vertical: pD
       }
     }
 
-    function Oz(zz, uz) {
-      const bz = Math.max(zz, uz);
-      let Ez = 0;
-      for (let nz = -bz; nz <= bz; nz++)
-        for (let iz = -bz; iz <= bz; iz++)
-          for (let lz = -bz; lz <= bz; lz++) pz(zz, uz, nz, iz, lz) && Ez++;
-      return Ez
+    function SD(DD, CD) {
+      const cD = Math.max(DD, CD);
+      let ID = 0;
+      for (let pD = -cD; pD <= cD; pD++)
+        for (let iD = -cD; iD <= cD; iD++)
+          for (let fD = -cD; fD <= cD; fD++) BD(DD, CD, pD, iD, fD) && ID++;
+      return ID
     }
 
-    function pz(zz, uz, bz, Ez, nz) {
-      const iz = bz * bz + nz * nz;
-      return zz === uz ? iz + Ez * Ez <= zz * zz : zz > uz ? Math.abs(Ez) <= uz && iz + Ez * Ez <= zz * zz : iz <= zz * zz && iz + Ez * Ez <= uz * uz
+    function BD(DD, CD, cD, ID, pD) {
+      const iD = cD * cD + pD * pD;
+      return DD === CD ? iD + ID * ID <= DD * DD : DD > CD ? Math.abs(ID) <= CD && iD + ID * ID <= DD * DD : iD <= DD * DD && iD + ID * ID <= CD * CD
     }
   },
-  40049: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => nz,
-      h: () => iz,
-      k: () => Mz,
-      m: () => Oz,
-      q: () => tz,
-      r: () => lz
+  39942: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => pD,
+      c: () => iD,
+      g: () => bD,
+      h: () => SD,
+      i: () => QD,
+      k: () => fD
     });
-    var Ez = bz(195);
-    const nz = 3e3,
-      iz = 15e3;
+    var ID = cD(194);
+    const pD = 3e3,
+      iD = 15e3;
 
-    function lz(zz) {
-      const uz = zz.endsWith(Ez.k);
+    function fD(DD) {
+      const CD = DD.endsWith(ID.o);
       return {
-        text: (uz ? zz.slice(0, -Ez.k.length) : zz) || null,
-        dropsCache: uz
+        text: (CD ? DD.slice(0, -ID.o.length) : DD) || null,
+        dropsCache: CD
       }
     }
-    const Mz = "Either your internet isn't working or this is a bug.";
+    const bD = "Either your internet isn't working or this is a bug.";
 
-    function tz(zz, uz) {
-      const bz = Oz(zz);
-      return null !== bz.name && "" === Ez.b[bz.name].text && null !== uz ? uz : bz.reason
+    function QD(DD, CD) {
+      const cD = SD(DD);
+      return null !== cD.name && "" === ID.e[cD.name].text && null !== CD ? CD : cD.reason
     }
-    const Hz = "You were removed from the game.";
+    const wD = "You were removed from the game.";
 
-    function Oz(zz) {
-      var uz;
-      let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const nz = null !== (uz = Object.keys(Ez.b).find((uz => Ez.b[uz].code === zz))) && void 0 !== uz ? uz : null;
-      if (null === nz) return {
-        code: zz,
-        name: nz,
-        reason: null !== bz && void 0 !== bz ? bz : `${Mz}\nCode: ${zz}`,
+    function SD(DD) {
+      var CD;
+      let cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const pD = null !== (CD = Object.keys(ID.e).find((CD => ID.e[CD].code === DD))) && void 0 !== CD ? CD : null;
+      if (null === pD) return {
+        code: DD,
+        name: pD,
+        reason: null !== cD && void 0 !== cD ? cD : `${bD}\nCode: ${DD}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: iz,
-        canReconnect: lz = !1
-      } = Ez.b[nz], tz = zz === Ez.b.outdatedVersion.code || zz === Ez.b.loadRecaptchaError.code;
+        text: iD,
+        canReconnect: fD = !1
+      } = ID.e[pD], QD = DD === ID.e.outdatedVersion.code || DD === ID.e.loadRecaptchaError.code;
       return {
-        code: zz,
-        name: nz,
-        reason: "" !== iz ? iz : null !== bz && void 0 !== bz ? bz : zz === Ez.b.gameOrPluginKick.code ? Hz : `Code: ${zz}`,
-        canReconnect: lz,
-        automaticallyReconnect: zz === Ez.b.customGameUpdated.code || zz === Ez.b.duplicateLobbyNameError.code,
-        requiresRefresh: tz
+        code: DD,
+        name: pD,
+        reason: "" !== iD ? iD : null !== cD && void 0 !== cD ? cD : DD === ID.e.gameOrPluginKick.code ? wD : `Code: ${DD}`,
+        canReconnect: fD,
+        automaticallyReconnect: DD === ID.e.customGameUpdated.code || DD === ID.e.duplicateLobbyNameError.code,
+        requiresRefresh: QD
       }
     }
   },
-  4560: (zz, uz, bz) => {
-    bz.d(uz, {
-      $c: () => Ez.Gb,
-      Ab: () => uu,
-      B: () => du,
-      Bc: () => Fu,
-      Bd: () => Uz,
-      C: () => Cz,
-      Dd: () => Qz,
-      Eb: () => nz.e,
-      Fb: () => vz,
-      Fc: () => Hu,
-      G: () => Ez.g,
-      H: () => Hz,
-      Ic: () => Eu,
-      Id: () => yz,
-      Jb: () => hz,
-      L: () => Ez.j,
-      Lc: () => Ez.mb,
-      Ld: () => ez,
-      Mc: () => Ez.pb,
-      Nb: () => Lz,
-      Nd: () => Wz,
-      P: () => Ez.m,
-      Pb: () => Az,
-      Pc: () => Ez.qb,
-      Qb: () => Ez.N,
-      Qc: () => Yz,
-      Qd: () => lu,
-      S: () => Iz,
-      Tb: () => Pz,
-      Tc: () => Ez.vb,
-      Td: () => Zu,
-      V: () => Ez.s,
-      Vb: () => rz,
-      Vc: () => Ez.wb,
-      W: () => Ez.u,
-      Wd: () => sz,
-      Y: () => Ez.x,
-      Yb: () => iu,
-      Yc: () => Ez.Ab,
-      Z: () => pz,
-      Zc: () => Ez.Eb,
-      _b: () => fz,
-      _d: () => jz,
-      ab: () => Xz,
-      bc: () => Ou,
-      be: () => mz,
-      c: () => zu,
-      cb: () => Ez.y,
-      ce: () => Vz,
-      db: () => Ez.A,
-      dd: () => Ez.Jb,
-      de: () => az,
-      f: () => Rz,
-      fc: () => nz.i,
-      fd: () => Jz,
-      ge: () => tz,
-      h: () => Zz,
-      hb: () => gz,
-      i: () => tu,
-      ic: () => wz,
-      ie: () => qz,
-      jc: () => bu,
-      jd: () => Ez.Mb,
-      kb: () => nu,
-      l: () => xz,
-      mb: () => Oz,
-      me: () => Ru,
-      n: () => Nz,
-      nc: () => Ez.W,
-      nd: () => Ez.Ob,
-      od: () => Ez.Tb,
-      p: () => Ez.c,
-      pb: () => Ez.E,
-      pe: () => Fz,
-      qc: () => Ez.Z,
-      qd: () => iz,
-      rc: () => Ez.$,
-      s: () => pu,
-      sb: () => Dz,
-      sd: () => Kz,
-      tc: () => Ez.ab,
-      td: () => Mu,
-      u: () => Tz,
-      ub: () => Bz,
-      vd: () => cz,
-      w: () => lz,
-      wc: () => Ez.bb,
-      xd: () => Sz,
-      yb: () => kz,
-      yc: () => Ez.jb,
-      z: () => Gz
+  4581: (DD, CD, cD) => {
+    cD.d(CD, {
+      $d: () => jD,
+      A: () => qD,
+      Ac: () => ID.pb,
+      B: () => fD,
+      Bd: () => TD,
+      Cb: () => CC,
+      D: () => aD,
+      Dc: () => MC,
+      Dd: () => WD,
+      E: () => yC,
+      Fb: () => pD.g,
+      Fc: () => wC,
+      Gc: () => IC,
+      Gd: () => dD,
+      H: () => rD,
+      Hc: () => ID.qb,
+      Ib: () => PD,
+      Kc: () => ID.rb,
+      Kd: () => ED,
+      L: () => ID.g,
+      Lb: () => LD,
+      M: () => wD,
+      Nb: () => JD,
+      Nc: () => ID.tb,
+      Nd: () => sD,
+      O: () => ID.j,
+      Pc: () => AD,
+      Q: () => ID.k,
+      Qc: () => ID.Bb,
+      R: () => uD,
+      Rb: () => xD,
+      Rd: () => fC,
+      Sd: () => tC,
+      Tc: () => ID.Eb,
+      U: () => ID.r,
+      Ub: () => ID.M,
+      Uc: () => ID.Hb,
+      Wd: () => XD,
+      X: () => ID.s,
+      Xb: () => KD,
+      Xc: () => ID.Ob,
+      Y: () => ID.v,
+      Yc: () => ID.Sb,
+      Yd: () => eD,
+      Zb: () => mD,
+      ab: () => BD,
+      ad: () => ID.Wb,
+      bb: () => ND,
+      bc: () => iC,
+      db: () => ID.y,
+      de: () => zD,
+      e: () => DC,
+      ed: () => UD,
+      fc: () => gD,
+      h: () => ZD,
+      hb: () => ID.A,
+      hd: () => ID.Xb,
+      he: () => VD,
+      ic: () => SC,
+      id: () => ID.Zb,
+      ie: () => QD,
+      jc: () => pD.o,
+      je: () => lD,
+      k: () => tD,
+      kb: () => RD,
+      kc: () => vD,
+      kd: () => ID.cc,
+      lb: () => pC,
+      le: () => ZC,
+      n: () => QC,
+      nc: () => cC,
+      nd: () => iD,
+      oe: () => MD,
+      pb: () => SD,
+      pd: () => oD,
+      q: () => HD,
+      qc: () => ID.Y,
+      s: () => OD,
+      sc: () => ID.$,
+      tb: () => ID.E,
+      td: () => bC,
+      vb: () => YD,
+      vc: () => ID.db,
+      w: () => ID.e,
+      wc: () => ID.eb,
+      x: () => BC,
+      xb: () => hD,
+      xd: () => GD,
+      yc: () => ID.hb,
+      yd: () => kD,
+      zb: () => FD
     });
-    var Ez = bz(4564),
-      nz = bz(2289);
-    const iz = Math.round(1e3 / Ez.Tb),
-      lz = 4,
-      Mz = 2;
+    var ID = cD(4585),
+      pD = cD(2338);
+    const iD = Math.round(1e3 / ID.cc),
+      fD = 4,
+      bD = 2;
 
-    function tz() {
-      return crypto.getRandomValues(new Uint32Array(Mz))
+    function QD() {
+      return crypto.getRandomValues(new Uint32Array(bD))
     }
-    const Hz = {
+    const wD = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      Oz = 16,
-      pz = {
+      SD = 16,
+      BD = {
         Draws: 1,
         NetAll: 2
       },
-      dz = {
+      yD = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function Fz(zz) {
-      return (zz.nametagsHidden ? oz.NametagsHidden : 0) | (zz.crouchToggle ? oz.CrouchToggle : 0) | (zz.bhopDisabled ? oz.BhopDisabled : 0) | (zz.disableBobbing ? oz.DisableBobbing : 0) | (zz.ezTowering ? oz.EzTowering : 0) | (zz.ezBridging ? oz.EzBridging : 0) | (zz.showChunkBorders ? oz.ShowChunkBorders : 0)
+    function MD(DD) {
+      return (DD.nametagsHidden ? nD.NametagsHidden : 0) | (DD.crouchToggle ? nD.CrouchToggle : 0) | (DD.bhopDisabled ? nD.BhopDisabled : 0) | (DD.disableBobbing ? nD.DisableBobbing : 0) | (DD.ezTowering ? nD.EzTowering : 0) | (DD.ezBridging ? nD.EzBridging : 0) | (DD.showChunkBorders ? nD.ShowChunkBorders : 0)
     }
-    const Zz = {
+    const tD = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      Rz = {
+      ZD = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -310,7 +310,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      Kz = {
+      oD = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -319,7 +319,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      wz = {
+      vD = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -328,20 +328,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      Xz = 5,
-      fz = 4294967295;
+      ND = 5,
+      gD = 4294967295;
 
-    function sz(zz) {
-      return (zz.showFog ? dz.ShowFog : 0) | (zz.lighting ? dz.Lighting : 0) | (zz.chunkFade ? dz.ChunkFade : 0)
+    function XD(DD) {
+      return (DD.showFog ? yD.ShowFog : 0) | (DD.lighting ? yD.Lighting : 0) | (DD.chunkFade ? yD.ChunkFade : 0)
     }
-    const rz = {
+    const mD = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      oz = {
+      nD = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -351,50 +351,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      Nz = {
+      OD = {
         Release: 1,
         KeepTouches: 2
       },
-      vz = {
+      PD = {
         Point: 1,
         Stamped: 2
       },
-      xz = {
+      HD = {
         Add: 1,
         Clear: 2
       },
-      Jz = 1,
-      Az = 8,
-      Tz = 16777215,
-      Lz = 4,
-      Pz = {
+      UD = 1,
+      xD = 8,
+      qD = 16777215,
+      JD = 4,
+      KD = {
         Resume: 1
       },
-      Gz = {
+      aD = {
         Held: 1
       };
 
-    function az(zz, uz) {
-      return (zz | uz << 8) >>> 0
+    function VD(DD, CD) {
+      return (DD | CD << 8) >>> 0
     }
 
-    function Vz(zz) {
-      return 255 & zz
+    function zD(DD) {
+      return 255 & DD
     }
 
-    function mz(zz) {
-      return zz >>> 8
+    function jD(DD) {
+      return DD >>> 8
     }
 
-    function qz(zz) {
-      return zz + 3 & -4
+    function lD(DD) {
+      return DD + 3 & -4
     }
-    const hz = 16777216,
-      Uz = 20;
-    const cz = 8,
-      gz = 8,
-      Sz = 16777216,
-      yz = {
+    const LD = 16777216,
+      TD = 20;
+    const GD = 8,
+      RD = 8,
+      kD = 16777216,
+      dD = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -402,19 +402,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      Dz = {
+      YD = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      Qz = 16,
-      Wz = {
+      WD = 16,
+      sD = {
         Lost: 0,
         Gone: 1
       },
-      ez = {
+      ED = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -422,18 +422,18 @@ export const modules = {
         Retire: 5
       };
 
-    function jz(zz) {
-      return zz === ez.WorldgenSeed || zz === ez.Generate
+    function eD(DD) {
+      return DD === ED.WorldgenSeed || DD === ED.Generate
     }
-    const Iz = 4,
-      Bz = 99,
-      Cz = {
+    const uD = 4,
+      hD = 99,
+      rD = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      Yz = {
+      AD = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -441,40 +441,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      kz = 12,
-      zu = 16,
-      uu = 4,
-      bu = 12,
-      Eu = {
+      FD = 12,
+      DC = 16,
+      CC = 4,
+      cC = 12,
+      IC = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      nu = 4,
-      iu = 8,
-      lu = 8,
-      Mu = {
+      pC = 4,
+      iC = 8,
+      fC = 8,
+      bC = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      tu = {
+      QC = {
         Crit: 1,
         HitSelf: 2
       },
-      Hu = {
+      wC = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      Ou = {
+      SC = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      pu = 12,
-      du = {
+      BC = 12,
+      yC = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -483,80 +483,80 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      Fu = 67108864;
+      MC = 67108864;
 
-    function Zu(zz) {
-      for (const [uz, bz] of Object.entries(Ez.g))
-        if (bz === zz) return uz;
-      return `Unknown${zz}`
+    function tC(DD) {
+      for (const [CD, cD] of Object.entries(ID.g))
+        if (cD === DD) return CD;
+      return `Unknown${DD}`
     }
 
-    function Ru(zz) {
+    function ZC(DD) {
       return {
-        status: zz[Ez.A.Status],
-        lastError: zz[Ez.A.LastError],
-        lastErrorDetail: zz[Ez.A.LastErrorDetail],
-        errorCount: zz[Ez.A.ErrorCount],
-        frameIndex: zz[Ez.A.FrameIndex],
-        tickIndex: zz[Ez.A.TickIndex],
-        renderPending: zz[Ez.A.RenderPending],
-        firstView: zz[Ez.A.FirstView],
-        chunksCancelled: zz[Ez.A.ChunksCancelled]
+        status: DD[ID.A.Status],
+        lastError: DD[ID.A.LastError],
+        lastErrorDetail: DD[ID.A.LastErrorDetail],
+        errorCount: DD[ID.A.ErrorCount],
+        frameIndex: DD[ID.A.FrameIndex],
+        tickIndex: DD[ID.A.TickIndex],
+        renderPending: DD[ID.A.RenderPending],
+        firstView: DD[ID.A.FirstView],
+        chunksCancelled: DD[ID.A.ChunksCancelled]
       }
     }
   },
-  39800: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez,
-      f: () => pz,
-      h: () => Mz,
-      j: () => iz,
-      l: () => nz,
-      p: () => tz,
-      q: () => Oz
+  39730: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => ID,
+      h: () => BD,
+      j: () => bD,
+      k: () => iD,
+      n: () => pD,
+      o: () => QD,
+      r: () => SD
     });
-    class Ez extends Error {
+    class ID extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function nz(zz) {
-      return zz instanceof RangeError && /call stack/i.test(zz.message) || zz instanceof Error && "InternalError" === zz.name && /recursion/i.test(zz.message)
+    function pD(DD) {
+      return DD instanceof RangeError && /call stack/i.test(DD.message) || DD instanceof Error && "InternalError" === DD.name && /recursion/i.test(DD.message)
     }
 
-    function iz(zz) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(zz))
+    function iD(DD) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(DD))
     }
-    const lz = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const fD = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function Mz(zz) {
-      var uz;
-      return zz instanceof WebAssembly.RuntimeError || zz instanceof Ez || nz(zz) && lz.test(null !== (uz = zz.stack) && void 0 !== uz ? uz : "")
-    }
-
-    function tz(zz, uz) {
-      if (Mz(zz)) throw zz;
-      console.error(uz, zz)
+    function bD(DD) {
+      var CD;
+      return DD instanceof WebAssembly.RuntimeError || DD instanceof ID || pD(DD) && fD.test(null !== (CD = DD.stack) && void 0 !== CD ? CD : "")
     }
 
-    function Hz(zz, uz, bz, nz, iz) {
-      if (uz % nz !== 0 || uz + bz > zz.byteLength) throw new Ez(`${iz}: ${bz} bytes at ${uz}, ${nz}-aligned, outside ${zz.byteLength} bytes of memory`)
+    function QD(DD, CD) {
+      if (bD(DD)) throw DD;
+      console.error(CD, DD)
     }
 
-    function Oz(zz, uz, bz, Ez, nz) {
-      return 0 === bz ? null : (Hz(uz, bz, Ez * zz.BYTES_PER_ELEMENT, zz.BYTES_PER_ELEMENT, nz), new zz(uz, bz, Ez))
+    function wD(DD, CD, cD, pD, iD) {
+      if (CD % pD !== 0 || CD + cD > DD.byteLength) throw new ID(`${iD}: ${cD} bytes at ${CD}, ${pD}-aligned, outside ${DD.byteLength} bytes of memory`)
     }
 
-    function pz(zz, uz, bz, Ez, nz) {
-      return 0 === uz ? null : (Hz(zz, uz, bz, Ez, nz), new DataView(zz, uz, bz))
+    function SD(DD, CD, cD, ID, pD) {
+      return 0 === cD ? null : (wD(CD, cD, ID * DD.BYTES_PER_ELEMENT, DD.BYTES_PER_ELEMENT, pD), new DD(CD, cD, ID))
+    }
+
+    function BD(DD, CD, cD, ID, pD) {
+      return 0 === CD ? null : (wD(DD, CD, cD, ID, pD), new DataView(DD, CD, cD))
     }
   },
-  40189: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Ez
+  40088: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => ID
     });
-    const Ez = {
+    const ID = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -569,251 +569,251 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  40147: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Zz,
-      f: () => Rz,
-      g: () => dz,
-      j: () => pz
+  40041: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => tD,
+      d: () => ZD,
+      f: () => yD,
+      j: () => BD
     });
-    const Ez = 2e3,
-      nz = "unavailable";
-    let iz = () => Promise.resolve().then((() => bz(2990))),
-      lz = null,
-      Mz = null,
-      tz = Hz();
+    const ID = 2e3,
+      pD = "unavailable";
+    let iD = () => Promise.resolve().then((() => cD(3035))),
+      fD = null,
+      bD = null,
+      QD = wD();
 
-    function Hz() {
-      let zz = () => {};
+    function wD() {
+      let DD = () => {};
       return {
-        promise: new Promise((uz => {
-          zz = () => {
-            uz(null)
+        promise: new Promise((CD => {
+          DD = () => {
+            CD(null)
           }
         })),
-        resolve: zz
+        resolve: DD
       }
     }
 
-    function Oz() {
-      if (null === lz) {
-        const zz = iz();
-        lz = zz, zz.then((uz => {
-          lz === zz && (Mz = uz)
+    function SD() {
+      if (null === fD) {
+        const DD = iD();
+        fD = DD, DD.then((CD => {
+          fD === DD && (bD = CD)
         }), (() => {
-          lz === zz && (lz = null)
+          fD === DD && (fD = null)
         }))
       }
-      return lz
+      return fD
     }
 
-    function pz() {
-      Oz().catch((() => {}))
+    function BD() {
+      SD().catch((() => {}))
     }
 
-    function dz() {
-      tz.resolve()
+    function yD() {
+      QD.resolve()
     }
 
-    function Fz(zz, uz, bz, Ez) {
-      if (null === zz) return {
-        errorKind: uz,
-        fingerprint: nz,
-        dedupe: `${uz}|${Ez}`
+    function MD(DD, CD, cD, ID) {
+      if (null === DD) return {
+        errorKind: CD,
+        fingerprint: pD,
+        dedupe: `${CD}|${ID}`
       };
       const {
-        fingerprint: iz
-      } = zz.clientErrorKey(uz, bz, Ez);
+        fingerprint: iD
+      } = DD.clientErrorKey(CD, cD, ID);
       return {
-        errorKind: uz,
-        fingerprint: iz,
-        dedupe: iz
+        errorKind: CD,
+        fingerprint: iD,
+        dedupe: iD
       }
     }
 
-    function Zz(zz, uz, bz, Ez) {
-      return null === Mz ? Ez ? (pz(), Fz(null, zz, uz, bz)) : null : Fz(Mz, zz, uz, bz)
+    function tD(DD, CD, cD, ID) {
+      return null === bD ? ID ? (BD(), MD(null, DD, CD, cD)) : null : MD(bD, DD, CD, cD)
     }
-    async function Rz(zz, uz, bz) {
-      let nz;
-      const iz = new Promise((zz => {
-        nz = setTimeout((() => {
-          zz(null)
-        }), Ez)
+    async function ZD(DD, CD, cD) {
+      let pD;
+      const iD = new Promise((DD => {
+        pD = setTimeout((() => {
+          DD(null)
+        }), ID)
       }));
       try {
-        return Fz(await Promise.race([Oz(), iz, tz.promise]), zz, uz, bz)
+        return MD(await Promise.race([SD(), iD, QD.promise]), DD, CD, cD)
       } catch {
-        return Fz(null, zz, uz, bz)
+        return MD(null, DD, CD, cD)
       } finally {
-        clearTimeout(nz)
+        clearTimeout(pD)
       }
     }
   },
-  40140: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      BUILT_IN_ANIMATIONS_SITE: () => Qz,
-      CORE_ERRORS_SITE: () => Vz,
-      EVENT_OVERFLOW_SITE: () => Dz,
-      FIRST_VIEW_SITE: () => ez,
-      JOIN_SITE: () => qz,
-      LEAVE_SITE: () => hz,
-      MODEL_FEED_SITE: () => Uz,
-      MODEL_POOL_SITE: () => cz,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => Iz,
-      NON_FATAL_REPORTS_PER_SESSION: () => Ou,
-      PREVIEW_ANIMATIONS_SITE: () => yz,
-      RENDER_RELOAD_SITE: () => Sz,
-      TEXTURE_NAMES_SITE: () => gz,
-      TEXTURE_PACK_FEED_SITE: () => Wz,
-      TurnstilePageError: () => Uu,
-      WASM_LOAD_SITE: () => mz,
-      crashError: () => Ru,
-      crashReportsSettled: () => ru,
-      flushCrashReports: () => fu,
-      joinFailureCode: () => cu,
-      lokiTransport: () => Yz,
-      modelFailureCode: () => eu,
-      readTrap: () => vu,
-      renderLossDetail: () => pb,
-      renderReloadMessage: () => Hb,
-      reportCoreErrors: () => Nu,
-      reportCountedLoadFallback: () => qu,
-      reportCrash: () => Ku,
-      reportDataLoadFailure: () => Kb,
-      reportDisconnect: () => Qu,
-      reportDracoDecoderFailure: () => Cu,
-      reportEventOverflow: () => zb,
-      reportFirstViewNoTerrain: () => ib,
-      reportGpuFallback: () => Vu,
-      reportGpuWasmPopulation: () => mu,
-      reportLightFault: () => bb,
-      reportMemoryShed: () => nb,
-      reportModelFailure: () => ju,
-      reportModelPoolFailure: () => Iu,
-      reportModelsModuleRetry: () => Bu,
-      reportPageJoinFailure: () => Su,
-      reportReconnectGaveUp: () => Wu,
-      reportRenderReload: () => Fb,
-      reportReplayFault: () => Mb,
-      reportStaleBuildReload: () => Xb,
-      reportStoppedCore: () => Tu,
-      reportTerrainTextureFailure: () => Zb,
-      reportTexturePackFeedLoadFailure: () => ku,
-      reportUnstreamedCoreLoad: () => hu,
-      reportUnsupportedFallback: () => Gu,
-      reportUnusedSeat: () => Du,
-      reportWorkerLost: () => ub,
-      reportWorkerStartTimeout: () => lb,
-      reportWorldgenGaveUp: () => Eb,
-      reportWorldgenLoadFailure: () => Yu,
-      resetCrashReports: () => ou,
-      setCrashBackend: () => iu,
-      setCrashScreen: () => Eu,
-      setCrashTransport: () => uu,
-      showCrash: () => Au,
-      showJoinFailure: () => gu,
-      showUnsupported: () => Pu
+  40032: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      BUILT_IN_ANIMATIONS_SITE: () => WD,
+      CORE_ERRORS_SITE: () => zD,
+      EVENT_OVERFLOW_SITE: () => YD,
+      FIRST_VIEW_SITE: () => ED,
+      JOIN_SITE: () => lD,
+      LEAVE_SITE: () => LD,
+      MODEL_FEED_SITE: () => TD,
+      MODEL_POOL_SITE: () => GD,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => uD,
+      NON_FATAL_REPORTS_PER_SESSION: () => SC,
+      PREVIEW_ANIMATIONS_SITE: () => dD,
+      RENDER_RELOAD_SITE: () => kD,
+      TEXTURE_NAMES_SITE: () => RD,
+      TEXTURE_PACK_FEED_SITE: () => sD,
+      TurnstilePageError: () => TC,
+      WASM_LOAD_SITE: () => jD,
+      crashError: () => ZC,
+      crashReportsSettled: () => mC,
+      flushCrashReports: () => gC,
+      joinFailureCode: () => GC,
+      lokiTransport: () => AD,
+      modelFailureCode: () => EC,
+      readTrap: () => PC,
+      renderLossDetail: () => Bc,
+      renderReloadMessage: () => wc,
+      reportCoreErrors: () => OC,
+      reportCountedLoadFallback: () => lC,
+      reportCrash: () => oC,
+      reportDataLoadFailure: () => oc,
+      reportDisconnect: () => WC,
+      reportDracoDecoderFailure: () => rC,
+      reportEventOverflow: () => Dc,
+      reportFirstViewNoTerrain: () => ic,
+      reportGpuFallback: () => zC,
+      reportGpuWasmPopulation: () => jC,
+      reportLightFault: () => cc,
+      reportMemoryShed: () => pc,
+      reportModelFailure: () => eC,
+      reportModelPoolFailure: () => uC,
+      reportModelsModuleRetry: () => hC,
+      reportPageJoinFailure: () => kC,
+      reportReconnectGaveUp: () => sC,
+      reportRenderReload: () => Mc,
+      reportReplayFault: () => bc,
+      reportStaleBuildReload: () => Nc,
+      reportStoppedCore: () => qC,
+      reportTerrainTextureFailure: () => tc,
+      reportTexturePackFeedLoadFailure: () => FC,
+      reportUnstreamedCoreLoad: () => LC,
+      reportUnsupportedFallback: () => aC,
+      reportUnusedSeat: () => YC,
+      reportWorkerLost: () => Cc,
+      reportWorkerStartTimeout: () => fc,
+      reportWorldgenGaveUp: () => Ic,
+      reportWorldgenLoadFailure: () => AC,
+      resetCrashReports: () => nC,
+      setCrashBackend: () => iC,
+      setCrashScreen: () => IC,
+      setCrashTransport: () => CC,
+      showCrash: () => xC,
+      showJoinFailure: () => RC,
+      showUnsupported: () => KC
     });
-    var Ez = bz(1068),
-      nz = bz(284),
-      iz = bz(2995),
-      lz = bz(40147),
-      Mz = bz(4560),
-      tz = bz(40153),
-      Hz = bz(3216),
-      Oz = bz(38136),
-      pz = bz(128),
-      dz = bz(668),
-      Fz = bz(125),
-      Zz = bz(3218),
-      Rz = bz(38429),
-      Kz = bz(1732),
-      wz = bz(40116),
-      Xz = bz(39750),
-      fz = bz(40052),
-      sz = bz(40059),
-      rz = bz(40155),
-      oz = bz(3468),
-      Nz = bz(3475),
-      vz = bz(40163),
-      xz = bz(40177),
-      Jz = bz(40181),
-      Az = bz(36282),
-      Tz = bz(3004),
-      Lz = bz(40111),
-      Pz = bz(39976),
-      Gz = bz(39979);
-    const az = "[bloxd-wasm-client]",
-      Vz = "coreErrors",
-      mz = "wasmLoad",
-      qz = "join",
-      hz = "leave",
-      Uz = "modelFeed",
-      cz = "modelWorkerPool",
-      gz = "textureNames",
-      Sz = "renderReload",
-      yz = "previewAnimations",
-      Dz = "eventOverflow",
-      Qz = "builtInAnimations",
-      Wz = "texturePackFeed",
-      ez = "firstView",
-      jz = 300,
-      Iz = 8;
-    let Bz = 0;
-    const Cz = new Set,
-      Yz = (zz, uz) => {
-        const bz = lu[zz.kind];
-        if (null === bz) return void kz(zz, uz, nu, null);
-        const Ez = (0, lz.c)(bz, zz.message, zz.code, zz.fatal);
-        if (null !== Ez) return void kz(zz, uz, nu, Ez);
-        const nz = nu;
-        Xu("Loki", (async () => {
-          kz(zz, uz, nz, await (0, lz.f)(bz, zz.message, zz.code))
+    var ID = cD(1077),
+      pD = cD(288),
+      iD = cD(3039),
+      fD = cD(40041),
+      bD = cD(4581),
+      QD = cD(40048),
+      wD = cD(3275),
+      SD = cD(38136),
+      BD = cD(120),
+      yD = cD(710),
+      MD = cD(116),
+      tD = cD(3280),
+      ZD = cD(38423),
+      oD = cD(1763),
+      vD = cD(40003),
+      ND = cD(39692),
+      gD = cD(39951),
+      XD = cD(39953),
+      mD = cD(40052),
+      nD = cD(3525),
+      OD = cD(3529),
+      PD = cD(40056),
+      HD = cD(40073),
+      UD = cD(40079),
+      xD = cD(36202),
+      qD = cD(3041),
+      JD = cD(39995),
+      KD = cD(39866),
+      aD = cD(39872);
+    const VD = "[bloxd-wasm-client]",
+      zD = "coreErrors",
+      jD = "wasmLoad",
+      lD = "join",
+      LD = "leave",
+      TD = "modelFeed",
+      GD = "modelWorkerPool",
+      RD = "textureNames",
+      kD = "renderReload",
+      dD = "previewAnimations",
+      YD = "eventOverflow",
+      WD = "builtInAnimations",
+      sD = "texturePackFeed",
+      ED = "firstView",
+      eD = 300,
+      uD = 8;
+    let hD = 0;
+    const rD = new Set,
+      AD = (DD, CD) => {
+        const cD = fC[DD.kind];
+        if (null === cD) return void FD(DD, CD, pC, null);
+        const ID = (0, fD.c)(cD, DD.message, DD.code, DD.fatal);
+        if (null !== ID) return void FD(DD, CD, pC, ID);
+        const pD = pC;
+        NC("Loki", (async () => {
+          FD(DD, CD, pD, await (0, fD.d)(cD, DD.message, DD.code))
         }))
       };
 
-    function kz(zz, uz, bz, nz) {
+    function FD(DD, CD, cD, pD) {
       const {
-        kind: lz,
-        code: Mz,
-        site: tz,
-        fatal: Hz,
-        details: Oz
-      } = zz;
-      if (!Hz)
-        if (null === nz || (0, iz.c)(nz.errorKind) || Cz.has(nz.dedupe)) {
-          if (Bz >= Iz) return;
-          Bz++
-        } else Cz.add(nz.dedupe);
-      const pz = {
-        ...Oz,
-        kind: lz,
-        code: Mz,
-        site: tz,
-        fatal: String(Hz),
-        backend: bz
+        kind: fD,
+        code: bD,
+        site: QD,
+        fatal: wD,
+        details: SD
+      } = DD;
+      if (!wD)
+        if (null === pD || (0, iD.e)(pD.errorKind) || rD.has(pD.dedupe)) {
+          if (hD >= uD) return;
+          hD++
+        } else rD.add(pD.dedupe);
+      const BD = {
+        ...SD,
+        kind: fD,
+        code: bD,
+        site: QD,
+        fatal: String(wD),
+        backend: cD
       };
-      null !== nz && (pz.errorKind = nz.errorKind, pz.fingerprint = nz.fingerprint), uz instanceof Error && "string" === typeof uz.stack && (pz.causeStack = uz.stack.slice(0, 2e3)), (0, Ez.WR)(Ru(zz, uz), pz)
+      null !== pD && (BD.errorKind = pD.errorKind, BD.fingerprint = pD.fingerprint), CD instanceof Error && "string" === typeof CD.stack && (BD.causeStack = CD.stack.slice(0, 2e3)), (0, ID.WZ)(ZC(DD, CD), BD)
     }
-    let zu = Yz;
+    let DC = AD;
 
-    function uu(zz) {
-      const uz = zu;
-      return zu = zz, uz
+    function CC(DD) {
+      const CD = DC;
+      return DC = DD, CD
     }
-    let bu = () => {};
+    let cC = () => {};
 
-    function Eu(zz) {
-      const uz = bu;
-      return bu = zz, uz
+    function IC(DD) {
+      const CD = cC;
+      return cC = DD, CD
     }
-    let nu = "unpicked";
+    let pC = "unpicked";
 
-    function iu(zz) {
-      nu = zz
+    function iC(DD) {
+      pC = DD
     }
-    const lu = {
+    const fC = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -836,187 +836,187 @@ export const modules = {
         staleBuild: "wasm_load",
         disconnect: "disconnect"
       },
-      Mu = {
+      bC = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
         noTerrain: "wasm_load",
         gpuFallback: "wasm_load"
       },
-      tu = new Set(["unstreamedLoad"]);
-    let Hu = !1;
-    const Ou = 20,
-      pu = new Map;
-    let du = 0,
-      Fu = 0;
-    const Zu = new Set;
+      QC = new Set(["unstreamedLoad"]);
+    let wC = !1;
+    const SC = 20,
+      BC = new Map;
+    let yC = 0,
+      MC = 0;
+    const tC = new Set;
 
-    function Ru(zz, uz) {
-      const bz = Object.assign(new Error(`${zz.code}: ${zz.message}`), {
+    function ZC(DD, CD) {
+      const cD = Object.assign(new Error(`${DD.code}: ${DD.message}`), {
         name: "WasmClientCrash",
-        cause: null !== uz && void 0 !== uz ? uz : void 0
+        cause: null !== CD && void 0 !== CD ? CD : void 0
       });
-      return uz instanceof Error && uz.stack && (bz.stack = uz.stack), bz
+      return CD instanceof Error && CD.stack && (cD.stack = CD.stack), cD
     }
 
-    function Ku(zz) {
-      var uz, Ez;
+    function oC(DD) {
+      var CD, ID;
       const {
-        kind: nz,
-        code: iz,
-        site: lz,
-        fatal: Mz,
-        message: tz,
-        error: Hz
-      } = zz, Oz = !1 !== zz.toTransport && !tu.has(nz), pz = !Mz && Oz, dz = {
-        kind: nz,
-        code: iz,
-        site: lz,
-        fatal: Mz,
-        message: tz,
-        details: null !== (uz = zz.details) && void 0 !== uz ? uz : {}
-      }, Fz = `${iz}@${lz}${void 0===zz.instance?"":`#${zz.instance}`}${Mz?"!":""}`, Zz = (null !== (Ez = pu.get(Fz)) && void 0 !== Ez ? Ez : 0) + 1;
-      if (pu.set(Fz, Zz), Zz > 1 ? 0 === (Zz & Zz - 1) && wu((() => {
-          console.warn(`${az} ${iz} at ${lz} reported ${Zz} times`)
-        })) : pz && du >= Ou ? wu((() => {
-          console.warn(`${az} ${nz} ${iz} at ${lz}: ${tz} (not sent: the session's ${Ou} went)`, dz.details, null !== Hz && void 0 !== Hz ? Hz : "")
-        })) : (pz && du++, function(zz, uz, Ez) {
-          var nz, iz;
+        kind: pD,
+        code: iD,
+        site: fD,
+        fatal: bD,
+        message: QD,
+        error: wD
+      } = DD, SD = !1 !== DD.toTransport && !QC.has(pD), BD = !bD && SD, yD = {
+        kind: pD,
+        code: iD,
+        site: fD,
+        fatal: bD,
+        message: QD,
+        details: null !== (CD = DD.details) && void 0 !== CD ? CD : {}
+      }, MD = `${iD}@${fD}${void 0===DD.instance?"":`#${DD.instance}`}${bD?"!":""}`, tD = (null !== (ID = BC.get(MD)) && void 0 !== ID ? ID : 0) + 1;
+      if (BC.set(MD, tD), tD > 1 ? 0 === (tD & tD - 1) && vC((() => {
+          console.warn(`${VD} ${iD} at ${fD} reported ${tD} times`)
+        })) : BD && yC >= SC ? vC((() => {
+          console.warn(`${VD} ${pD} ${iD} at ${fD}: ${QD} (not sent: the session's ${SC} went)`, yD.details, null !== wD && void 0 !== wD ? wD : "")
+        })) : (BD && yC++, function(DD, CD, ID) {
+          var pD, iD;
           const {
-            kind: lz,
-            code: Mz,
-            site: tz,
-            fatal: Hz,
-            message: Oz,
-            details: pz
-          } = zz;
-          wu((() => {
-            (Hz ? console.error : console.warn)(`${az} ${lz} ${Mz} at ${tz}: ${Oz}`, pz, null !== uz && void 0 !== uz ? uz : "")
+            kind: fD,
+            code: bD,
+            site: QD,
+            fatal: wD,
+            message: SD,
+            details: BD
+          } = DD;
+          vC((() => {
+            (wD ? console.error : console.warn)(`${VD} ${fD} ${bD} at ${QD}: ${SD}`, BD, null !== CD && void 0 !== CD ? CD : "")
           }));
-          const dz = Mu[lz],
-            Fz = null !== (nz = null !== (iz = lu[lz]) && void 0 !== iz ? iz : dz) && void 0 !== nz ? nz : null;
-          null !== Fz && Xu("counts", (async () => {
+          const yD = bC[fD],
+            MD = null !== (pD = null !== (iD = fC[fD]) && void 0 !== iD ? iD : yD) && void 0 !== pD ? pD : null;
+          null !== MD && NC("counts", (async () => {
             const {
-              peekVisitSessionId: zz
-            } = await Promise.resolve().then((() => bz(627)));
-            if (null !== zz()) {
+              peekVisitSessionId: DD
+            } = await Promise.resolve().then((() => cD(659)));
+            if (null !== DD()) {
               const {
-                reportCappedWasmFailure: zz,
-                reportWasmFailure: uz
-              } = await bz.e(207).then((() => bz(35777)));
-              (void 0 === dz ? uz : zz)(Fz, Oz, Mz), Hu = !0
+                reportCappedWasmFailure: DD,
+                reportWasmFailure: CD
+              } = await cD.e(207).then((() => cD(35712)));
+              (void 0 === yD ? CD : DD)(MD, SD, bD), wC = !0
             }
           }));
-          Ez && wu((() => {
-            zu(zz, uz)
+          ID && vC((() => {
+            DC(DD, CD)
           }))
-        }(dz, Hz, Oz)), Mz) {
-        var Rz;
-        const uz = null !== (Rz = zz.screen) && void 0 !== Rz ? Rz : {
-          text: (0, Az.i)(dz, !0),
+        }(yD, wD, SD)), bD) {
+        var ZD;
+        const CD = null !== (ZD = DD.screen) && void 0 !== ZD ? ZD : {
+          text: (0, xD.d)(yD, !0),
           reload: !0
         };
-        wu((() => {
-          bu(uz)
+        vC((() => {
+          cC(CD)
         }))
       }
-      return dz
+      return yD
     }
 
-    function wu(zz) {
+    function vC(DD) {
       try {
-        zz()
-      } catch (uz) {
+        DD()
+      } catch (CD) {
         try {
-          console.warn(`${az} could not send a report`, uz)
+          console.warn(`${VD} could not send a report`, CD)
         } catch {}
       }
     }
 
-    function Xu(zz, uz) {
+    function NC(DD, CD) {
       try {
-        const bz = uz().catch((uz => {
-          console.warn(`${az} could not send the report to ${zz}`, uz)
+        const cD = CD().catch((CD => {
+          console.warn(`${VD} could not send the report to ${DD}`, CD)
         })).finally((() => {
-          Zu.delete(bz)
+          tC.delete(cD)
         }));
-        Zu.add(bz)
-      } catch (bz) {
-        console.warn(`${az} could not send the report to ${zz}`, bz)
+        tC.add(cD)
+      } catch (cD) {
+        console.warn(`${VD} could not send the report to ${DD}`, cD)
       }
     }
-    async function fu(zz) {
-      let uz;
-      (0, lz.g)();
-      const bz = new Promise((bz => {
-        uz = setTimeout(bz, zz)
+    async function gC(DD) {
+      let CD;
+      (0, fD.f)();
+      const cD = new Promise((cD => {
+        CD = setTimeout(cD, DD)
       }));
-      await Promise.race([su(), bz]), clearTimeout(uz)
+      await Promise.race([XC(), cD]), clearTimeout(CD)
     }
-    async function su() {
-      if (await Promise.allSettled([...Zu]), Hu) try {
+    async function XC() {
+      if (await Promise.allSettled([...tC]), wC) try {
         const {
-          flushClientAnalyticsEvents: zz
-        } = await Promise.resolve().then((() => bz(1468)));
-        await zz()
-      } catch (zz) {
-        console.warn(`${az} could not send the counts`, zz)
+          flushClientAnalyticsEvents: DD
+        } = await Promise.resolve().then((() => cD(1488)));
+        await DD()
+      } catch (DD) {
+        console.warn(`${VD} could not send the counts`, DD)
       }
     }
-    async function ru() {
-      for (; Zu.size > 0;) await Promise.allSettled([...Zu])
+    async function mC() {
+      for (; tC.size > 0;) await Promise.allSettled([...tC])
     }
 
-    function ou() {
-      pu.clear(), du = 0, Hu = !1, Bz = 0, Cz.clear(), Fu = 0, (0, tz.j)()
+    function nC() {
+      BC.clear(), yC = 0, wC = !1, hD = 0, rD.clear(), MC = 0, (0, QD.p)()
     }
 
-    function Nu(zz, uz, bz, Ez) {
-      Fu += uz;
+    function OC(DD, CD, cD, ID) {
+      MC += CD;
       for (const {
-          code: lz,
-          detail: Hz
+          code: fD,
+          detail: wD
         }
-        of zz) {
-        var nz, iz;
-        const zz = (0, Mz.Td)(lz),
-          uz = (0, tz.b)(lz, Hz),
-          Oz = null === Ez || void 0 === Ez ? void 0 : Ez(lz, Hz),
-          pz = void 0 !== (null === uz || void 0 === uz ? void 0 : uz.gpuDetails),
-          dz = pz ? null === (nz = (0, Fz.m)()) || void 0 === nz ? void 0 : nz.renderer : void 0,
-          Zz = pz ? ` ${(0,tz.e)()}` : "",
-          Rz = Array.from([dz && `gpu ${(0,tz.m)(dz)}`, Oz].filter(Boolean).join("; ")).slice(0, jz).join(""),
-          Kz = `core error ${zz}${null!==(iz=null===uz||void 0===uz?void 0:uz.words)&&void 0!==iz?iz:""}${Zz}${Rz?`: ${Rz}`:""}`,
-          wz = {
-            errorCode: String(lz),
-            detail: String(Hz),
-            droppedBefore: String(Fu),
-            wasmBuild: bz.wasm,
-            clientVersion: bz.client,
-            ...null === uz || void 0 === uz ? void 0 : uz.gpuDetails
+        of DD) {
+        var pD, iD;
+        const DD = (0, bD.Sd)(fD),
+          CD = (0, QD.e)(fD, wD),
+          SD = null === ID || void 0 === ID ? void 0 : ID(fD, wD),
+          BD = void 0 !== (null === CD || void 0 === CD ? void 0 : CD.gpuDetails),
+          yD = BD ? null === (pD = (0, MD.l)()) || void 0 === pD ? void 0 : pD.renderer : void 0,
+          tD = BD ? ` ${(0,QD.i)()}` : "",
+          ZD = Array.from([yD && `gpu ${(0,QD.t)(yD)}`, SD].filter(Boolean).join("; ")).slice(0, eD).join(""),
+          oD = `core error ${DD}${null!==(iD=null===CD||void 0===CD?void 0:CD.words)&&void 0!==iD?iD:""}${tD}${ZD?`: ${ZD}`:""}`,
+          vD = {
+            errorCode: String(fD),
+            detail: String(wD),
+            droppedBefore: String(MC),
+            wasmBuild: cD.wasm,
+            clientVersion: cD.client,
+            ...null === CD || void 0 === CD ? void 0 : CD.gpuDetails
           };
-        null !== uz && (0, tz.g)(uz) ? wu((() => {
-          console.warn(`${az} coreError CORE-${zz}: ${Kz} (not sent: the session's render warnings of its kind went)`, wz)
-        })) : Ku({
-          kind: lz === Mz.G.JobsHeapGaveUp ? "meshHeap" : "coreError",
-          code: `CORE-${zz}`,
-          site: Vz,
+        null !== CD && (0, QD.n)(CD) ? vC((() => {
+          console.warn(`${VD} coreError CORE-${DD}: ${oD} (not sent: the session's render warnings of its kind went)`, vD)
+        })) : oC({
+          kind: fD === bD.L.JobsHeapGaveUp ? "meshHeap" : "coreError",
+          code: `CORE-${DD}`,
+          site: zD,
           fatal: !1,
-          message: Kz,
-          details: wz,
-          instance: null === uz || void 0 === uz ? void 0 : uz.instance
+          message: oD,
+          details: vD,
+          instance: null === CD || void 0 === CD ? void 0 : CD.instance
         })
       }
     }
 
-    function vu(zz) {
-      return (0, Lz.l)(zz instanceof Pz.e ? zz.trap : zz, oz.I, oz.bb)
+    function PC(DD) {
+      return (0, JD.m)(DD instanceof KD.d ? DD.trap : DD, nD.A, nD.P)
     }
-    const xu = "declined=js";
+    const HC = "declined=js";
 
-    function Ju(zz) {
-      return zz ? {
-        labels: [xu],
+    function UC(DD) {
+      return DD ? {
+        labels: [HC],
         details: {
           declined: "js"
         }
@@ -1026,189 +1026,189 @@ export const modules = {
       }
     }
 
-    function Au(zz, uz, bz) {
-      return Lu(zz, uz, bz, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function xC(DD, CD, cD) {
+      return JC(DD, CD, cD, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function Tu(zz, uz, bz) {
-      return Lu(zz, uz, bz, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function qC(DD, CD, cD) {
+      return JC(DD, CD, cD, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function Lu(zz, uz, bz, Ez, nz) {
+    function JC(DD, CD, cD, ID, pD) {
       let {
-        memoryDetails: iz = {},
-        declined: lz = !1
-      } = Ez;
+        memoryDetails: iD = {},
+        declined: fD = !1
+      } = ID;
       const {
-        code: Mz,
-        details: tz,
-        message: Hz
-      } = (0, wz.J)(zz, uz), Oz = [];
-      null !== bz && (tz.trapKind = bz.kind, null !== bz.panic && (tz.panic = (0, Lz.i)(bz.panic)), bz.refusedBytes > 0 && (tz.refusedAllocation = String(bz.refusedBytes)), Oz.push((0, Lz.o)(bz.kind, bz.refusedBytes)));
-      const pz = Ju(lz);
-      return Ku({
+        code: bD,
+        details: QD,
+        message: wD
+      } = (0, vD.H)(DD, CD), SD = [];
+      null !== cD && (QD.trapKind = cD.kind, null !== cD.panic && (QD.panic = (0, JD.i)(cD.panic)), cD.refusedBytes > 0 && (QD.refusedAllocation = String(cD.refusedBytes)), SD.push((0, JD.n)(cD.kind, cD.refusedBytes)));
+      const BD = UC(fD);
+      return oC({
         kind: "crash",
-        code: Mz,
-        site: zz.site,
-        fatal: nz,
-        message: [...Oz, ...pz.labels, Hz].join("; "),
+        code: bD,
+        site: DD.site,
+        fatal: pD,
+        message: [...SD, ...BD.labels, wD].join("; "),
         details: {
-          ...tz,
-          ...pz.details,
-          ...iz
+          ...QD,
+          ...BD.details,
+          ...iD
         },
-        error: zz.error
+        error: DD.error
       })
     }
 
-    function Pu(zz, uz, bz) {
-      return Ku({
+    function KC(DD, CD, cD) {
+      return oC({
         kind: "unsupported",
-        code: uz,
-        site: mz,
+        code: CD,
+        site: jD,
         fatal: !0,
-        message: bz,
+        message: cD,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: zz,
-          status: uz
+          cause: DD,
+          status: CD
         },
         screen: {
-          text: (0, Az.s)(zz),
-          reload: "download" === zz
+          text: (0, xD.r)(DD),
+          reload: "download" === DD
         }
       })
     }
 
-    function Gu(zz, uz, bz) {
-      return Ku({
+    function aC(DD, CD, cD) {
+      return oC({
         kind: "unsupportedFallback",
-        code: "blockedAfterLoss" === uz ? "blocked_after_loss" : "unsupported_js_fallback",
-        site: mz,
+        code: "blockedAfterLoss" === CD ? "blocked_after_loss" : "unsupported_js_fallback",
+        site: jD,
         fatal: !1,
-        message: bz,
+        message: cD,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: zz,
+          cause: DD,
           status: "unsupported",
-          decline: uz,
+          decline: CD,
           fallback: "js"
         }
       })
     }
-    const au = "misdrawn_gpu_js_fallback";
+    const VC = "misdrawn_gpu_js_fallback";
 
-    function Vu(zz, uz) {
-      return Ku({
+    function zC(DD, CD) {
+      return oC({
         kind: "gpuFallback",
-        code: au,
-        site: mz,
+        code: VC,
+        site: jD,
         fatal: !1,
-        message: `the renderer plays ${zz} on ${uz} worse than the JS client`,
+        message: `the renderer plays ${DD} on ${CD} worse than the JS client`,
         details: {
-          gpuFamily: zz,
-          backend: uz,
+          gpuFamily: DD,
+          backend: CD,
           fallback: "js"
         }
       })
     }
 
-    function mu(zz) {
-      Xu("counts", (async () => {
-        await (0, dz.b)(zz), Hu = !0
+    function jC(DD) {
+      NC("counts", (async () => {
+        await (0, yD.b)(DD), wC = !0
       }))
     }
 
-    function qu(zz, uz, bz, Ez) {
-      const nz = Ju(Ez);
-      return Ku({
+    function lC(DD, CD, cD, ID) {
+      const pD = UC(ID);
+      return oC({
         kind: "unsupported",
-        code: uz,
-        site: mz,
+        code: CD,
+        site: jD,
         fatal: !1,
-        message: [...nz.labels, bz].join("; "),
+        message: [...pD.labels, cD].join("; "),
         details: {
-          cause: zz,
-          status: uz,
+          cause: DD,
+          status: CD,
           fallback: "js",
-          ...nz.details
+          ...pD.details
         }
       })
     }
 
-    function hu() {
+    function LC() {
       const {
-        code: zz,
-        message: uz
-      } = Tz.b;
-      return Ku({
+        code: DD,
+        message: CD
+      } = qD.d;
+      return oC({
         kind: "unstreamedLoad",
-        code: zz,
-        site: mz,
+        code: DD,
+        site: jD,
         fatal: !1,
-        message: uz
+        message: CD
       })
     }
-    class Uu extends Error {
+    class TC extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function cu(zz) {
-      return zz instanceof fz.p ? 0 === zz.code ? "JOIN-matchmake" : `JOIN-${zz.code}` : zz instanceof fz.d ? 0 === zz.code ? `JOIN-${zz.stage}` : `JOIN-${zz.stage}-${zz.code}` : zz instanceof Xz.b ? "JOIN-gameCode" : zz instanceof Uu ? "JOIN-turnstilePage" : zz instanceof fz.C ? "JOIN-trafficCheck" : zz instanceof Rz.d ? "JOIN-timeout" : "JOIN-network"
+    function GC(DD) {
+      return DD instanceof gD.m ? 0 === DD.code ? "JOIN-matchmake" : `JOIN-${DD.code}` : DD instanceof gD.d ? 0 === DD.code ? `JOIN-${DD.stage}` : `JOIN-${DD.stage}-${DD.code}` : DD instanceof ND.c ? "JOIN-gameCode" : DD instanceof TC ? "JOIN-turnstilePage" : DD instanceof gD.x ? "JOIN-trafficCheck" : DD instanceof ZD.g ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function gu(zz, uz) {
-      const bz = (0, Gz.e)(zz),
-        Ez = {
-          wasmBuild: uz.wasm,
-          clientVersion: uz.client
+    function RC(DD, CD) {
+      const cD = (0, aD.h)(DD),
+        ID = {
+          wasmBuild: CD.wasm,
+          clientVersion: CD.client
         },
-        nz = zz instanceof Uu ? {
-          text: (0, Az.m)(),
+        pD = DD instanceof TC ? {
+          text: (0, xD.l)(),
           reload: !1
         } : void 0,
-        iz = (0, sz.g)(zz),
-        lz = "expected" !== iz;
-      return Ku({
+        iD = (0, XD.g)(DD),
+        fD = "expected" !== iD;
+      return oC({
         kind: "join",
-        code: cu(zz),
-        site: qz,
+        code: GC(DD),
+        site: lD,
         fatal: !0,
-        message: bz,
-        details: Ez,
-        error: zz,
-        screen: nz,
-        toTransport: lz,
-        instance: iz
+        message: cD,
+        details: ID,
+        error: DD,
+        screen: pD,
+        toTransport: fD,
+        instance: iD
       })
     }
 
-    function Su(zz, uz, bz) {
-      var Ez;
-      const nz = (0, sz.g)(zz),
-        iz = {
-          cause: (zz instanceof fz.d || zz instanceof fz.p) && null !== (Ez = zz.serverText) && void 0 !== Ez ? Ez : "",
-          sinceJoinStart: (0, Zz.b)(bz.sinceJoinStartMs),
-          game: bz.game,
-          ...(0, Zz.k)(),
-          wasmBuild: uz.wasm,
-          clientVersion: uz.client
+    function kC(DD, CD, cD) {
+      var ID;
+      const pD = (0, XD.g)(DD),
+        iD = {
+          cause: (DD instanceof gD.d || DD instanceof gD.m) && null !== (ID = DD.serverText) && void 0 !== ID ? ID : "",
+          sinceJoinStart: (0, tD.d)(cD.sinceJoinStartMs),
+          game: cD.game,
+          ...(0, tD.j)(),
+          wasmBuild: CD.wasm,
+          clientVersion: CD.client
         };
-      return Ku({
+      return oC({
         kind: "pageJoin",
-        code: cu(zz),
-        site: qz,
+        code: GC(DD),
+        site: lD,
         fatal: !1,
-        message: (0, Gz.e)(zz),
-        details: iz,
-        error: zz,
-        toTransport: "unrecognised" === nz,
-        instance: nz
+        message: (0, aD.h)(DD),
+        details: iD,
+        error: DD,
+        toTransport: "unrecognised" === pD,
+        instance: pD
       })
     }
-    const yu = {
+    const dC = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1227,956 +1227,956 @@ export const modules = {
       }
     };
 
-    function Du(zz, uz) {
+    function YC(DD, CD) {
       let {
-        unused: bz,
-        answered: Ez,
-        heldMs: nz
-      } = zz;
+        unused: cD,
+        answered: ID,
+        heldMs: pD
+      } = DD;
       const {
-        code: iz,
-        message: lz
-      } = yu[bz], Mz = {
-        unused: bz,
-        answered: String(Ez),
-        heldMs: String(nz),
-        wasmBuild: uz.wasm,
-        clientVersion: uz.client
+        code: iD,
+        message: fD
+      } = dC[cD], bD = {
+        unused: cD,
+        answered: String(ID),
+        heldMs: String(pD),
+        wasmBuild: CD.wasm,
+        clientVersion: CD.client
       };
-      return Ku({
+      return oC({
         kind: "seat",
-        code: iz,
-        site: qz,
+        code: iD,
+        site: lD,
         fatal: !1,
-        message: lz,
-        details: Mz
+        message: fD,
+        details: bD
       })
     }
 
-    function Qu(zz, uz, bz) {
-      var Ez;
-      let nz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (Ez = zz.name) && void 0 !== Ez ? Ez : String(zz.code);
-      const iz = {
-          closeCode: String(zz.code),
-          recognised: String(null !== zz.name),
-          closeReason: bz.closeReason,
-          sinceJoined: (0, Zz.b)(bz.sinceJoinedMs),
-          game: bz.game,
-          ...(0, Zz.k)(),
-          wasmBuild: uz.wasm,
-          clientVersion: uz.client
+    function WC(DD, CD, cD) {
+      var ID;
+      let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (ID = DD.name) && void 0 !== ID ? ID : String(DD.code);
+      const iD = {
+          closeCode: String(DD.code),
+          recognised: String(null !== DD.name),
+          closeReason: cD.closeReason,
+          sinceJoined: (0, tD.d)(cD.sinceJoinedMs),
+          game: cD.game,
+          ...(0, tD.j)(),
+          wasmBuild: CD.wasm,
+          clientVersion: CD.client
         },
-        lz = null === zz.name && !(0, Zz.d)(zz.code);
-      return Ku({
+        fD = null === DD.name && !(0, tD.e)(DD.code);
+      return oC({
         kind: "disconnect",
-        code: nz,
-        site: hz,
+        code: pD,
+        site: LD,
         fatal: !1,
         message: "Left room",
-        details: iz,
-        toTransport: lz
+        details: iD,
+        toTransport: fD
       })
     }
 
-    function Wu(zz, uz) {
-      const bz = {
-        ...(0, Hz.k)(zz),
-        wasmBuild: uz.wasm,
-        clientVersion: uz.client
+    function sC(DD, CD) {
+      const cD = {
+        ...(0, wD.j)(DD),
+        wasmBuild: CD.wasm,
+        clientVersion: CD.client
       };
-      return Ku({
+      return oC({
         kind: "disconnect",
-        code: `reconnect-${zz.reason}`,
-        site: qz,
+        code: `reconnect-${DD.reason}`,
+        site: lD,
         fatal: !1,
         message: "Reconnect failed",
-        details: bz
+        details: cD
       })
     }
 
-    function eu(zz) {
-      return zz.error instanceof Nz.e ? `MODEL-${zz.error.status}` : zz.error instanceof vz.p ? "MODEL-ring" : "MODEL-network"
+    function EC(DD) {
+      return DD.error instanceof OD.g ? `MODEL-${DD.error.status}` : DD.error instanceof PD.l ? "MODEL-ring" : "MODEL-network"
     }
 
-    function ju(zz, uz) {
-      const bz = eu(zz),
-        Ez = `model file ${zz.file} ${zz.startup?"(startup) ":""}could not load`,
-        nz = {
-          file: String(zz.file),
-          url: zz.url,
-          wasmBuild: uz.wasm,
-          clientVersion: uz.client
+    function eC(DD, CD) {
+      const cD = EC(DD),
+        ID = `model file ${DD.file} ${DD.startup?"(startup) ":""}could not load`,
+        pD = {
+          file: String(DD.file),
+          url: DD.url,
+          wasmBuild: CD.wasm,
+          clientVersion: CD.client
         };
-      return Ku({
-        kind: zz.startup ? "model" : "modelLate",
-        code: bz,
-        site: Uz,
-        fatal: zz.startup,
-        message: Ez,
-        details: nz,
-        error: zz.error
+      return oC({
+        kind: DD.startup ? "model" : "modelLate",
+        code: cD,
+        site: TD,
+        fatal: DD.startup,
+        message: ID,
+        details: pD,
+        error: DD.error
       })
     }
 
-    function Iu(zz, uz) {
-      const bz = {
-        wasmBuild: uz.wasm,
-        clientVersion: uz.client
+    function uC(DD, CD) {
+      const cD = {
+        wasmBuild: CD.wasm,
+        clientVersion: CD.client
       };
-      return Ku({
+      return oC({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: cz,
+        site: GD,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: bz,
-        error: zz
+        details: cD,
+        error: DD
       })
     }
 
-    function Bu(zz, uz, bz) {
-      const Ez = {
-        delayMs: String(uz),
-        wasmBuild: bz.wasm,
-        clientVersion: bz.client
+    function hC(DD, CD, cD) {
+      const ID = {
+        delayMs: String(CD),
+        wasmBuild: cD.wasm,
+        clientVersion: cD.client
       };
-      zz instanceof Nz.e && (Ez.status = String(zz.status));
-      return Ku({
+      DD instanceof OD.g && (ID.status = String(DD.status));
+      return oC({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: cz,
+        site: GD,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: Ez,
-        error: zz
+        details: ID,
+        error: DD
       })
     }
 
-    function Cu(zz, uz) {
-      const bz = {
-        wasmBuild: uz.wasm,
-        clientVersion: uz.client
+    function rC(DD, CD) {
+      const cD = {
+        wasmBuild: CD.wasm,
+        clientVersion: CD.client
       };
-      return Ku({
+      return oC({
         kind: "recovered",
         code: "CORE-dracoDecoder",
-        site: cz,
+        site: GD,
         fatal: !1,
         message: "the Draco decoder did not load: the Draco files waiting on it failed",
-        details: bz,
-        error: zz
+        details: cD,
+        error: DD
       })
     }
 
-    function Yu(zz, uz) {
-      const bz = {
-        wasmBuild: uz.wasm,
-        clientVersion: uz.client
+    function AC(DD, CD) {
+      const cD = {
+        wasmBuild: CD.wasm,
+        clientVersion: CD.client
       };
-      return Ku({
+      return oC({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: wz.E,
+        site: vD.C,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: bz,
-        error: zz
+        details: cD,
+        error: DD
       })
     }
 
-    function ku(zz, uz) {
-      const bz = {
-        wasmBuild: uz.wasm,
-        clientVersion: uz.client
+    function FC(DD, CD) {
+      const cD = {
+        wasmBuild: CD.wasm,
+        clientVersion: CD.client
       };
-      return Ku({
+      return oC({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: Wz,
+        site: sD,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: bz,
-        error: zz
+        details: cD,
+        error: DD
       })
     }
 
-    function zb(zz, uz) {
+    function Dc(DD, CD) {
       const {
-        frames: bz,
-        acks: Ez,
-        mask: nz,
-        outcome: iz
-      } = zz, lz = {
-        frames: String(bz),
-        acks: String(Ez),
-        mask: String(nz),
-        outcome: null !== iz && void 0 !== iz ? iz : "resynced",
-        wasmBuild: uz.wasm,
-        clientVersion: uz.client
+        frames: cD,
+        acks: ID,
+        mask: pD,
+        outcome: iD
+      } = DD, fD = {
+        frames: String(cD),
+        acks: String(ID),
+        mask: String(pD),
+        outcome: null !== iD && void 0 !== iD ? iD : "resynced",
+        wasmBuild: CD.wasm,
+        clientVersion: CD.client
       };
-      return Ku({
+      return oC({
         kind: "recovered",
-        code: "rejoined" === iz ? "CORE-eventOverflowRejoin" : "failed" === iz ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: Dz,
+        code: "rejoined" === iD ? "CORE-eventOverflowRejoin" : "failed" === iD ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: YD,
         fatal: !1,
-        message: `the event buffer refused records in ${bz} frames`,
-        details: lz
+        message: `the event buffer refused records in ${cD} frames`,
+        details: fD
       })
     }
 
-    function ub(zz, uz, bz) {
-      return Ku({
+    function Cc(DD, CD, cD) {
+      return oC({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: zz,
+        site: DD,
         fatal: !1,
-        message: `a ${zz} worker was lost`,
+        message: `a ${DD} worker was lost`,
         details: {
-          reason: uz,
-          wasmBuild: bz.wasm,
-          clientVersion: bz.client
+          reason: CD,
+          wasmBuild: cD.wasm,
+          clientVersion: cD.client
         }
       })
     }
 
-    function bb(zz, uz, bz) {
-      const Ez = {
-        wasmBuild: bz.wasm,
-        clientVersion: bz.client
+    function cc(DD, CD, cD) {
+      const ID = {
+        wasmBuild: cD.wasm,
+        clientVersion: cD.client
       };
-      return Ku({
+      return oC({
         kind: "recovered",
-        code: zz,
-        site: wz.o,
+        code: DD,
+        site: vD.p,
         fatal: !1,
-        message: uz,
-        details: Ez
+        message: CD,
+        details: ID
       })
     }
 
-    function Eb(zz, uz) {
-      const bz = {
-        lastReason: zz,
-        wasmBuild: uz.wasm,
-        clientVersion: uz.client
+    function Ic(DD, CD) {
+      const cD = {
+        lastReason: DD,
+        wasmBuild: CD.wasm,
+        clientVersion: CD.client
       };
-      return Ku({
+      return oC({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: wz.E,
+        site: vD.C,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: bz
+        details: cD
       })
     }
 
-    function nb(zz, uz, bz) {
-      return Ku({
+    function pc(DD, CD, cD) {
+      return oC({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: wz.n,
+        site: vD.o,
         fatal: !1,
-        message: (0, rz.j)(zz) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
+        message: (0, mD.g)(DD) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
         details: {
-          cause: zz,
-          ...uz,
-          wasmBuild: bz.wasm,
-          clientVersion: bz.client
+          cause: DD,
+          ...CD,
+          wasmBuild: cD.wasm,
+          clientVersion: cD.client
         }
       })
     }
 
-    function ib(zz, uz) {
-      const bz = (0, tz.f)(),
-        Ez = {
-          game: zz,
-          renderWarned: String(bz),
-          browser: (0, tz.e)(),
-          wasmBuild: uz.wasm,
-          clientVersion: uz.client
+    function ic(DD, CD) {
+      const cD = (0, QD.l)(),
+        ID = {
+          game: DD,
+          renderWarned: String(cD),
+          browser: (0, QD.i)(),
+          wasmBuild: CD.wasm,
+          clientVersion: CD.client
         },
-        nz = `first view drew no whole terrain in ${xz.h/1e3} s${bz?", render warned":""}`;
-      return Ku({
+        pD = `first view drew no whole terrain in ${HD.d/1e3} s${cD?", render warned":""}`;
+      return oC({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: ez,
+        site: ED,
         fatal: !1,
-        message: nz,
-        details: Ez
+        message: pD,
+        details: ID
       })
     }
 
-    function lb(zz, uz, bz) {
-      return Ku({
+    function fc(DD, CD, cD) {
+      return oC({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: zz,
+        site: DD,
         fatal: !1,
-        message: `a ${zz} worker did not start`,
+        message: `a ${DD} worker did not start`,
         details: {
-          waitedMs: String(Math.round(uz)),
-          wasmBuild: bz.wasm,
-          clientVersion: bz.client
+          waitedMs: String(Math.round(CD)),
+          wasmBuild: cD.wasm,
+          clientVersion: cD.client
         }
       })
     }
 
-    function Mb(zz, uz, bz) {
-      return Ku({
+    function bc(DD, CD, cD) {
+      return oC({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: zz,
+        site: DD,
         fatal: !1,
-        message: `the replay's ${zz} failed`,
+        message: `the replay's ${DD} failed`,
         details: {
-          wasmBuild: bz.wasm,
-          clientVersion: bz.client
+          wasmBuild: cD.wasm,
+          clientVersion: cD.client
         },
-        error: uz
+        error: CD
       })
     }
-    const tb = {
+    const Qc = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function Hb(zz, uz, bz) {
-      const Ez = "lost" === uz && void 0 !== bz ? ` (${bz})` : "";
-      return `the ${zz} ${tb[uz]}${Ez}`
+    function wc(DD, CD, cD) {
+      const ID = "lost" === CD && void 0 !== cD ? ` (${cD})` : "";
+      return `the ${DD} ${Qc[CD]}${ID}`
     }
-    const Ob = {
+    const Sc = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null
     };
 
-    function pb(zz, uz, bz) {
-      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
-      const nz = null === bz.boundAtMs ? "unbound" : `up${(0,Oz.d)(Ez-bz.boundAtMs)}`,
-        iz = null === bz.adapter ? "no adapter" : (0, Oz.g)(bz.adapter),
-        lz = `${(0,Kz.h)()?"hidden":"visible"} ${nz} ${iz}${!0===bz.indirectHangs?" ih":""}`;
-      if ("pipeline_failed" === zz) return `${zz} ${lz}`;
-      const Mz = null === uz || void 0 === uz ? void 0 : uz.message;
-      return `${uz instanceof Kz.e?"timeout":(0,Oz.j)("frames_refused"===zz,"string"===typeof Mz?Mz:"")} ${lz}`
+    function Bc(DD, CD, cD) {
+      let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
+      const pD = null === cD.boundAtMs ? "unbound" : `up${(0,SD.g)(ID-cD.boundAtMs)}`,
+        iD = null === cD.adapter ? "no adapter" : (0, SD.o)(cD.adapter),
+        fD = `${(0,oD.h)()?"hidden":"visible"} ${pD} ${iD}${!0===cD.indirectHangs?" ih":""}`;
+      if ("pipeline_failed" === DD) return `${DD} ${fD}`;
+      const bD = null === CD || void 0 === CD ? void 0 : CD.message;
+      return `${CD instanceof oD.e?"timeout":(0,SD.s)("frames_refused"===DD,"string"===typeof bD?bD:"")} ${fD}`
     }
-    const db = {
+    const yc = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function Fb(zz, uz, Ez) {
-      var iz, lz, Mz, Hz, dz;
+    function Mc(DD, CD, ID) {
+      var iD, fD, bD, wD, yD;
       let {
-        cause: Fz = "lost",
-        error: Zz,
-        context: Rz = Ob,
-        session: Kz = db
+        cause: MD = "lost",
+        error: tD,
+        context: ZD = Sc,
+        session: oD = yc
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const wz = pb(Fz, Zz, Rz),
-        Xz = {
-          losses: String(uz),
-          cause: Fz,
-          detail: wz,
-          vendor: null !== (iz = null === (lz = Rz.adapter) || void 0 === lz ? void 0 : lz.vendor) && void 0 !== iz ? iz : "",
-          architecture: null !== (Mz = null === (Hz = Rz.adapter) || void 0 === Hz ? void 0 : Hz.architecture) && void 0 !== Mz ? Mz : "",
-          indirectHangs: String(Rz.indirectHangs),
-          samples: String(Kz.samples),
-          sunShadows: String(Kz.sunShadows),
-          renderDistance: String(Kz.renderDistance),
-          gpuFamily: null !== (dz = (0, nz.c)()) && void 0 !== dz ? dz : "",
-          browser: (0, tz.e)(),
-          siteUsed: pz.x,
-          wasmBuild: Ez.wasm,
-          clientVersion: Ez.client
+      const vD = Bc(MD, tD, ZD),
+        ND = {
+          losses: String(CD),
+          cause: MD,
+          detail: vD,
+          vendor: null !== (iD = null === (fD = ZD.adapter) || void 0 === fD ? void 0 : fD.vendor) && void 0 !== iD ? iD : "",
+          architecture: null !== (bD = null === (wD = ZD.adapter) || void 0 === wD ? void 0 : wD.architecture) && void 0 !== bD ? bD : "",
+          indirectHangs: String(ZD.indirectHangs),
+          samples: String(oD.samples),
+          sunShadows: String(oD.sunShadows),
+          renderDistance: String(oD.renderDistance),
+          gpuFamily: null !== (yD = (0, pD.e)()) && void 0 !== yD ? yD : "",
+          browser: (0, QD.i)(),
+          siteUsed: BD.p,
+          wasmBuild: ID.wasm,
+          clientVersion: ID.client
         },
-        fz = Hb(zz, Fz),
-        sz = Ku({
+        gD = wc(DD, MD),
+        XD = oC({
           kind: "recovered",
           code: "CORE-renderLost",
-          site: Sz,
+          site: kD,
           fatal: !1,
-          message: fz,
-          details: Xz,
-          error: Zz
+          message: gD,
+          details: ND,
+          error: tD
         });
-      return Xu("ga", (async () => {
+      return NC("ga", (async () => {
         const {
-          logError: uz
-        } = await Promise.resolve().then((() => bz(2709))), Ez = `${Oz.c["webgpu"===zz?"WebGPU":"WebGL2"]}\n Error: ${wz}`;
-        uz("warning", Ez), uz("error", Ez)
-      })), sz
+          logError: CD
+        } = await Promise.resolve().then((() => cD(2737))), ID = `${SD.e["webgpu"===DD?"WebGPU":"WebGL2"]}\n Error: ${vD}`;
+        CD("warning", ID), CD("error", ID)
+      })), XD
     }
 
-    function Zb(zz, uz) {
-      var bz, Ez;
-      const nz = null === zz.name ? "TEXTURE-sources" : null === zz.url ? "TEXTURE-nourl" : zz.error instanceof Jz.b ? `TEXTURE-${zz.error.status}` : "TEXTURE-network",
-        iz = null === zz.name ? "terrain textures could not load" : `terrain texture ${zz.name} could not load`,
-        lz = {
-          texture: null !== (bz = zz.name) && void 0 !== bz ? bz : "",
-          url: null !== (Ez = zz.url) && void 0 !== Ez ? Ez : "",
-          wasmBuild: uz.wasm,
-          clientVersion: uz.client
+    function tc(DD, CD) {
+      var cD, ID;
+      const pD = null === DD.name ? "TEXTURE-sources" : null === DD.url ? "TEXTURE-nourl" : DD.error instanceof UD.b ? `TEXTURE-${DD.error.status}` : "TEXTURE-network",
+        iD = null === DD.name ? "terrain textures could not load" : `terrain texture ${DD.name} could not load`,
+        fD = {
+          texture: null !== (cD = DD.name) && void 0 !== cD ? cD : "",
+          url: null !== (ID = DD.url) && void 0 !== ID ? ID : "",
+          wasmBuild: CD.wasm,
+          clientVersion: CD.client
         };
-      return Ku({
+      return oC({
         kind: "terrainTexture",
-        code: nz,
-        site: wz.C,
+        code: pD,
+        site: vD.B,
         fatal: !1,
-        message: iz,
-        details: lz,
-        error: zz.error
+        message: iD,
+        details: fD,
+        error: DD.error
       })
     }
-    const Rb = {
+    const Zc = {
       previewAnimations: {
-        site: yz,
+        site: dD,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: Qz,
+        site: WD,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function Kb(zz, uz, bz, Ez) {
+    function oc(DD, CD, cD, ID) {
       const {
-        site: nz,
-        prefix: iz,
-        name: lz
-      } = Rb[zz], {
-        stage: Mz,
-        error: tz
-      } = bz;
-      return Ku({
-        kind: zz,
-        code: "decode" === Mz ? null === tz ? `${iz}-decode` : `${iz}-trap` : tz instanceof Nz.e ? `${iz}-${tz.status}` : `${iz}-network`,
-        site: nz,
+        site: pD,
+        prefix: iD,
+        name: fD
+      } = Zc[DD], {
+        stage: bD,
+        error: QD
+      } = cD;
+      return oC({
+        kind: DD,
+        code: "decode" === bD ? null === QD ? `${iD}-decode` : `${iD}-trap` : QD instanceof OD.g ? `${iD}-${QD.status}` : `${iD}-network`,
+        site: pD,
         fatal: !1,
-        message: "decode" === Mz ? `${lz} did not decode` : `${lz} could not load`,
+        message: "decode" === bD ? `${fD} did not decode` : `${fD} could not load`,
         details: {
-          url: uz,
-          wasmBuild: Ez.wasm,
-          clientVersion: Ez.client
+          url: CD,
+          wasmBuild: ID.wasm,
+          clientVersion: ID.client
         },
-        error: tz
+        error: QD
       })
     }
-    const wb = "staleBuild";
+    const vc = "staleBuild";
 
-    function Xb(zz, uz, bz) {
-      const Ez = {
-          failedSite: zz.site,
-          url: zz.url,
-          from: zz.from,
-          sameBuild: String(zz.from === uz),
-          reloadMs: String(Math.max(0, Date.now() - zz.at)),
-          wasmBuild: bz.wasm,
-          clientVersion: bz.client
+    function Nc(DD, CD, cD) {
+      const ID = {
+          failedSite: DD.site,
+          url: DD.url,
+          from: DD.from,
+          sameBuild: String(DD.from === CD),
+          reloadMs: String(Math.max(0, Date.now() - DD.at)),
+          wasmBuild: cD.wasm,
+          clientVersion: cD.client
         },
-        nz = `reloaded into a newer build after ${zz.site} failed to load: ${zz.error}`;
-      return Ku({
+        pD = `reloaded into a newer build after ${DD.site} failed to load: ${DD.error}`;
+      return oC({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: wb,
+        site: vc,
         fatal: !1,
-        message: nz,
-        details: Ez
+        message: pD,
+        details: ID
       })
     }
   },
-  40177: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => nz,
-      h: () => Ez
+  40073: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => pD,
+      d: () => ID
     });
-    const Ez = 3e4;
-    class nz {
-      constructor(zz) {
-        this.xZ = zz, this.waitedMs = 0, this.lastMs = null
+    const ID = 3e4;
+    class pD {
+      constructor(DD) {
+        this.Nt = DD, this.waitedMs = 0, this.lastMs = null
       }
-      frame(zz, uz) {
-        if (uz) return !0;
-        const bz = null === this.lastMs ? 0 : zz - this.lastMs;
-        return this.lastMs = zz, bz <= 900 && (this.waitedMs += bz), !(this.waitedMs < Ez) && (this.xZ(), !0)
+      frame(DD, CD) {
+        if (CD) return !0;
+        const cD = null === this.lastMs ? 0 : DD - this.lastMs;
+        return this.lastMs = DD, cD <= 900 && (this.waitedMs += cD), !(this.waitedMs < ID) && (this.Nt(), !0)
       }
     }
   },
-  4552: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => lz,
-      h: () => iz,
-      l: () => nz
+  4575: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => fD,
+      c: () => iD,
+      e: () => pD
     });
-    var Ez = bz(4560);
+    var ID = cD(4581);
 
-    function nz(zz) {
-      return "none" !== zz
+    function pD(DD) {
+      return "none" !== DD
     }
 
-    function iz(zz, uz) {
-      if (!zz) return "none";
-      switch (uz) {
-        case Ez.Y.Drawn:
+    function iD(DD, CD) {
+      if (!DD) return "none";
+      switch (CD) {
+        case ID.Y.Drawn:
           return "drawn";
-        case Ez.Y.Paced:
+        case ID.Y.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function lz(zz) {
-      return "drawn" === zz
+    function fD(DD) {
+      return "drawn" === DD
     }
   },
-  39750: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez,
-      f: () => wz,
-      j: () => Rz,
-      l: () => Kz,
-      m: () => dz,
-      o: () => Fz,
-      q: () => Oz,
-      s: () => pz,
-      v: () => Zz
+  39692: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => ID,
+      d: () => vD,
+      g: () => ZD,
+      j: () => oD,
+      l: () => yD,
+      p: () => MD,
+      q: () => SD,
+      r: () => BD,
+      t: () => tD
     });
-    class Ez extends Error {
-      constructor(zz) {
-        super(`the join's code did not load: ${zz instanceof Error?zz.message:String(zz)}`, {
-          cause: zz
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === zz || void 0 === zz ? void 0 : zz.request
+    class ID extends Error {
+      constructor(DD) {
+        super(`the join's code did not load: ${DD instanceof Error?DD.message:String(DD)}`, {
+          cause: DD
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === DD || void 0 === DD ? void 0 : DD.request
       }
     }
-    let nz = null,
-      iz = null,
-      lz = null;
-    const Mz = [];
-    let tz = null;
+    let pD = null,
+      iD = null,
+      fD = null;
+    const bD = [];
+    let QD = null;
 
-    function Hz(zz, uz) {
+    function wD(DD, CD) {
       try {
-        zz(uz)
-      } catch (bz) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", bz)
+        DD(CD)
+      } catch (cD) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", cD)
       }
     }
 
-    function Oz() {
-      return tz
+    function SD() {
+      return QD
     }
 
-    function pz(zz) {
-      Mz.push(zz), null !== tz && Hz(zz, tz)
+    function BD(DD) {
+      bD.push(DD), null !== QD && wD(DD, QD)
     }
 
-    function dz(zz) {
-      return nz ??= Promise.all([bz.e(69), bz.e(94), bz.e(214), bz.e(74), bz.e(215), bz.e(189), bz.e(93), bz.e(259), bz.e(187), bz.e(262), bz.e(199), bz.e(186), bz.e(200), bz.e(136), bz.e(85), bz.e(114), bz.e(237), bz.e(53)]).then((() => bz(41801))).then((uz => {
-        uz.loadAudio(zz), tz = uz;
-        for (const zz of Mz) Hz(zz, uz);
-        return uz
-      })).catch((zz => {
-        throw nz = null, zz
-      })), nz
+    function yD(DD) {
+      return pD ??= Promise.all([cD.e(69), cD.e(94), cD.e(214), cD.e(74), cD.e(215), cD.e(189), cD.e(93), cD.e(259), cD.e(187), cD.e(262), cD.e(199), cD.e(186), cD.e(200), cD.e(136), cD.e(85), cD.e(114), cD.e(237), cD.e(53)]).then((() => cD(41730))).then((CD => {
+        CD.loadAudio(DD), QD = CD;
+        for (const DD of bD) wD(DD, CD);
+        return CD
+      })).catch((DD => {
+        throw pD = null, DD
+      })), pD
     }
-    async function Fz(zz, uz) {
+    async function MD(DD, CD) {
       try {
-        const bz = await dz(zz);
-        await bz.loadClientGame(uz)
-      } catch (bz) {
-        throw new Ez(bz)
+        const cD = await yD(DD);
+        await cD.loadClientGame(CD)
+      } catch (cD) {
+        throw new ID(cD)
       }
     }
 
-    function Zz(zz, uz) {
-      iz = {
-        running: zz,
-        shell: uz
+    function tD(DD, CD) {
+      iD = {
+        running: DD,
+        shell: CD
       }
     }
 
-    function Rz() {
-      return lz
+    function ZD() {
+      return fD
     }
-    async function Kz(zz) {
-      const uz = iz;
-      if ((null === uz || void 0 === uz ? void 0 : uz.running) !== zz) throw new Error("the core's session has ended");
-      const bz = await dz(uz.shell.audio).catch((zz => {
-        throw new Ez(zz)
+    async function oD(DD) {
+      const CD = iD;
+      if ((null === CD || void 0 === CD ? void 0 : CD.running) !== DD) throw new Error("the core's session has ended");
+      const cD = await yD(CD.shell.audio).catch((DD => {
+        throw new ID(DD)
       }));
-      if (null !== lz) return lz;
-      if (iz !== uz || zz.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (lz = bz.startGameHost(zz, uz.shell), null === lz) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return lz
+      if (null !== fD) return fD;
+      if (iD !== CD || DD.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (fD = cD.startGameHost(DD, CD.shell), null === fD) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return fD
     }
 
-    function wz() {
-      null !== lz && (null !== tz ? tz.endGameHost(lz) : lz.closeGame()), lz = null, iz = null
+    function vD() {
+      null !== fD && (null !== QD ? QD.endGameHost(fD) : fD.closeGame()), fD = null, iD = null
     }
   },
-  40052: (zz, uz, bz) => {
-    bz.d(uz, {
-      C: () => pz,
-      E: () => Mz,
-      d: () => Hz,
-      h: () => iz,
-      k: () => lz,
-      o: () => nz,
-      p: () => Fz,
-      s: () => Oz,
-      u: () => tz,
-      y: () => dz
+  39951: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => wD,
+      h: () => iD,
+      j: () => fD,
+      l: () => pD,
+      m: () => MD,
+      o: () => SD,
+      s: () => QD,
+      u: () => yD,
+      x: () => BD,
+      y: () => bD
     });
-    var Ez = bz(1739);
-    const nz = new Uint8Array([12]),
-      iz = 2e3,
-      lz = 257;
+    var ID = cD(1771);
+    const pD = new Uint8Array([12]),
+      iD = 2e3,
+      fD = 257;
 
-    function Mz(zz) {
-      const uz = new Uint8Array(4);
-      return new DataView(uz.buffer).setUint32(0, zz, !0), uz
+    function bD(DD) {
+      const CD = new Uint8Array(4);
+      return new DataView(CD.buffer).setUint32(0, DD, !0), CD
     }
-    class tz extends Error {
+    class QD extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class Hz extends Error {
-      constructor(zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(zz), this.stage = uz, this.code = bz, this.serverText = Ez, this.name = "JoinError"
+    class wD extends Error {
+      constructor(DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        super(DD), this.stage = CD, this.code = cD, this.serverText = ID, this.name = "JoinError"
       }
     }
-    class Oz extends Error {
-      constructor(zz) {
-        super(zz), this.final = !0, this.name = "ResumeRefusedError"
+    class SD extends Error {
+      constructor(DD) {
+        super(DD), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class pz extends Error {
-      constructor(zz) {
-        super((0, Ez.d)(zz), {
-          cause: zz
+    class BD extends Error {
+      constructor(DD) {
+        super((0, ID.g)(DD), {
+          cause: DD
         }), this.name = "TrafficCheckError"
       }
     }
-    class dz extends Error {
-      constructor(zz, uz, bz) {
-        super(zz, {
-          cause: bz
-        }), this.networkLost = uz, this.name = "SeatRequestError"
+    class yD extends Error {
+      constructor(DD, CD, cD) {
+        super(DD, {
+          cause: cD
+        }), this.networkLost = CD, this.name = "SeatRequestError"
       }
     }
-    class Fz extends Error {
-      constructor(zz, uz) {
-        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(zz), this.code = uz, this.serverText = bz, this.name = "MatchmakeError"
+    class MD extends Error {
+      constructor(DD, CD) {
+        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(DD), this.code = CD, this.serverText = cD, this.name = "MatchmakeError"
       }
     }
   },
-  40059: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => dz,
-      g: () => pz
+  39953: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => yD,
+      g: () => BD
     });
-    var Ez = bz(2471),
-      nz = bz(3218),
-      iz = bz(38429),
-      lz = bz(40049),
-      Mz = bz(40052),
-      tz = bz(40063);
-    const Hz = "seat reservation expired.",
-      Oz = "early_leave";
+    var ID = cD(2482),
+      pD = cD(3280),
+      iD = cD(38423),
+      fD = cD(39942),
+      bD = cD(39951),
+      QD = cD(39957);
+    const wD = "seat reservation expired.",
+      SD = "early_leave";
 
-    function pz(zz) {
-      if (zz instanceof iz.d) return "expected";
-      if (zz instanceof Mz.y) return zz.networkLost ? "expected" : "unrecognised";
-      if (zz instanceof Mz.d) {
-        if ("closed" === zz.stage && (0 === zz.code || (0, nz.d)(zz.code))) return "expected";
-        if ("roomError" === zz.stage && (zz.serverText === Hz || zz.serverText === Oz)) return "expected"
+    function BD(DD) {
+      if (DD instanceof iD.g) return "expected";
+      if (DD instanceof bD.u) return DD.networkLost ? "expected" : "unrecognised";
+      if (DD instanceof bD.d) {
+        if ("closed" === DD.stage && (0 === DD.code || (0, pD.e)(DD.code))) return "expected";
+        if ("roomError" === DD.stage && (DD.serverText === wD || DD.serverText === SD)) return "expected"
       }
-      return zz instanceof Mz.d || zz instanceof Mz.p ? null === (0, lz.m)(zz.code).name ? "unrecognised" : "known" : (0, Ez.g)(zz) ? "expected" : zz instanceof Mz.C || zz instanceof tz.f ? "known" : "unrecognised"
+      return DD instanceof bD.d || DD instanceof bD.m ? null === (0, fD.h)(DD.code).name ? "unrecognised" : "known" : (0, ID.f)(DD) ? "expected" : DD instanceof bD.x || DD instanceof QD.g ? "known" : "unrecognised"
     }
 
-    function dz(zz) {
-      return zz instanceof iz.d ? "timedOut" : "expected" !== pz(zz) || (0, Ez.g)(zz) || zz instanceof Mz.d && 1001 === zz.code ? void 0 : "failed"
+    function yD(DD) {
+      return DD instanceof iD.g ? "timedOut" : "expected" !== BD(DD) || (0, ID.f)(DD) || DD instanceof bD.d && 1001 === DD.code ? void 0 : "failed"
     }
   },
-  40155: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => xz,
-      j: () => pz,
-      n: () => rz,
-      q: () => wz,
-      r: () => Nz
+  40052: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => HD,
+      g: () => BD,
+      i: () => mD,
+      k: () => vD,
+      n: () => OD
     });
-    var Ez = bz(35959),
-      nz = bz(35956);
-    const iz = 64 * Ez.e,
-      lz = 40 * Ez.i,
-      Mz = 36 * Ez.i,
-      tz = 20 * Ez.i,
-      Hz = 2 * Ez.i,
-      Oz = 5 * Ez.i;
+    var ID = cD(35903),
+      pD = cD(35895);
+    const iD = 64 * ID.d,
+      fD = 40 * ID.g,
+      bD = 36 * ID.g,
+      QD = 20 * ID.g,
+      wD = 2 * ID.g,
+      SD = 5 * ID.g;
 
-    function pz(zz) {
-      return "footprint" !== zz
+    function BD(DD) {
+      return "footprint" !== DD
     }
-    const dz = 2 * Ez.i,
-      Fz = 4 * Ez.i,
-      Zz = 35 * Ez.i + dz + Fz,
-      Rz = 6.5 * Ez.i,
-      Kz = 132.5 * Ez.e;
+    const yD = 2 * ID.g,
+      MD = 4 * ID.g,
+      tD = 35 * ID.g + yD + MD,
+      ZD = 6.5 * ID.g,
+      oD = 132.5 * ID.d;
 
-    function wz(zz) {
-      const uz = Rz + (0, nz.l)(zz) + zz * Kz;
-      return Math.ceil((2 * Zz + uz) / iz) * iz
+    function vD(DD) {
+      const CD = ZD + (0, pD.m)(DD) + DD * oD;
+      return Math.ceil((2 * tD + CD) / iD) * iD
     }
-    const Xz = wz(nz.c),
-      fz = (Ez.i, Ez.i, Ez.i, {
-        targetBytes: lz,
-        leastBytes: tz
+    const ND = vD(pD.e),
+      gD = (ID.g, ID.g, ID.g, {
+        targetBytes: fD,
+        leastBytes: QD
       }),
-      sz = {
-        targetBytes: Mz,
-        leastBytes: tz
+      XD = {
+        targetBytes: bD,
+        leastBytes: QD
       };
 
-    function rz(zz) {
-      return zz >= nz.c ? fz : sz
+    function mD(DD) {
+      return DD >= pD.e ? gD : XD
     }
-    const oz = 2 * iz;
+    const nD = 2 * iD;
 
-    function Nz(zz, uz, bz) {
-      return zz + uz + oz > (null !== bz && void 0 !== bz ? bz : Xz)
+    function OD(DD, CD, cD) {
+      return DD + CD + nD > (null !== cD && void 0 !== cD ? cD : ND)
     }
-    const vz = {
+    const PD = {
       now: () => performance.now(),
-      requestIdle: "function" === typeof requestIdleCallback ? zz => {
-        requestIdleCallback(zz)
+      requestIdle: "function" === typeof requestIdleCallback ? DD => {
+        requestIdleCallback(DD)
       } : null
     };
-    class xz {
-      constructor(zz, uz, bz) {
-        let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vz;
-        this.memory = zz, this.readPeakStoredChunks = uz, this.onError = bz, this.clock = Ez, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+    class HD {
+      constructor(DD, CD, cD) {
+        let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : PD;
+        this.memory = DD, this.readPeakStoredChunks = CD, this.onError = cD, this.clock = ID, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
           reserves: 0,
           allocations: 0
         }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null
       }
-      setShed(zz, uz, bz) {
+      setShed(DD, CD, cD) {
         this.shedding = {
-          shed: zz,
-          xZ: uz,
-          readDistanceInUse: bz
+          shed: DD,
+          Nt: CD,
+          readDistanceInUse: cD
         }
       }
       shedDistanceInUse() {
         return this.distanceInUse
       }
-      setFootprint(zz) {
-        this.footprint = zz
+      setFootprint(DD) {
+        this.footprint = DD
       }
-      setCeiling(zz) {
-        this.ceilingBytes = zz, this.call((() => {
-          this.memory.setCeiling(zz)
+      setCeiling(DD) {
+        this.ceilingBytes = DD, this.call((() => {
+          this.memory.setCeiling(DD)
         }), void 0)
       }
-      ceilingMayRefuse(zz) {
-        return Nz(this.memory.memoryBytes(), zz, this.ceilingBytes)
+      ceilingMayRefuse(DD) {
+        return OD(this.memory.memoryBytes(), DD, this.ceilingBytes)
       }
-      reserveAtJoin(zz) {
+      reserveAtJoin(DD) {
         let {
-          targetBytes: uz,
-          leastBytes: bz
-        } = zz;
-        const Ez = this.memory.memoryBytes(),
-          nz = Ez + bz,
-          iz = Math.max(uz + (this.ballastOn() ? Oz : 0), nz),
-          lz = this.call((() => this.memory.reserveUpFront(iz) ? "target" : iz > nz && this.memory.reserveUpFront(nz) ? "least" : "none"), "none");
+          targetBytes: CD,
+          leastBytes: cD
+        } = DD;
+        const ID = this.memory.memoryBytes(),
+          pD = ID + cD,
+          iD = Math.max(CD + (this.ballastOn() ? SD : 0), pD),
+          fD = this.call((() => this.memory.reserveUpFront(iD) ? "target" : iD > pD && this.memory.reserveUpFront(pD) ? "least" : "none"), "none");
         if (this.stopped) return !1;
-        if ("target" !== lz) {
-          const zz = "least" === lz ? `took ${nz} bytes instead` : "frames grow it in steps";
-          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${iz} bytes was refused at ${Ez} bytes; ${zz}`)
+        if ("target" !== fD) {
+          const DD = "least" === fD ? `took ${pD} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${iD} bytes was refused at ${ID} bytes; ${DD}`)
         }
-        return this.joinReserveTaken = lz, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== lz && this.shedFor("joinReserve"), "none" !== lz
+        return this.joinReserveTaken = fD, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== fD && this.shedFor("joinReserve"), "none" !== fD
       }
       afterFrame() {
         if (this.stopped) return;
-        const zz = this.clock.now(),
-          uz = null !== this.stepsHeldUntil && zz >= this.stepsHeldUntil;
-        if (uz && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
-        if (null === this.stepsHeldUntil && zz >= this.ballastCheckAt && (this.takeBallast(zz), this.stopped)) return;
-        const bz = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
-          Ez = uz && "now" === bz ? "none" : bz,
+        const DD = this.clock.now(),
+          CD = null !== this.stepsHeldUntil && DD >= this.stepsHeldUntil;
+        if (CD && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && DD >= this.ballastCheckAt && (this.takeBallast(DD), this.stopped)) return;
+        const cD = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          ID = CD && "now" === cD ? "none" : cD,
           {
-            requestIdle: nz
+            requestIdle: pD
           } = this.clock;
-        "now" === Ez || null !== this.pendingSince && zz - this.pendingSince >= 500 ? this.step() : "idle" === Ez && null === this.pendingSince && (null === nz ? this.step() : (this.pendingSince = zz, nz((() => {
+        "now" === ID || null !== this.pendingSince && DD - this.pendingSince >= 500 ? this.step() : "idle" === ID && null === this.pendingSince && (null === pD ? this.step() : (this.pendingSince = DD, pD((() => {
           null !== this.pendingSince && this.step()
-        })))), zz - this.statsAt >= 1e3 && (this.statsAt = zz, this.refreshStats(), this.checkFootprint())
+        })))), DD - this.statsAt >= 1e3 && (this.statsAt = DD, this.refreshStats(), this.checkFootprint())
       }
       refreshStats() {
         this.call((() => {
-          var zz, uz;
-          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (uz = this.shedding.readDistanceInUse()) && void 0 !== uz ? uz : this.distanceInUse);
-          null === (zz = this.footprint) || void 0 === zz || zz.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+          var DD, CD;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (CD = this.shedding.readDistanceInUse()) && void 0 !== CD ? CD : this.distanceInUse);
+          null === (DD = this.footprint) || void 0 === DD || DD.read(this.memory.memoryBytes() + this.workersMemoryBytes())
         }), void 0)
       }
       stop() {
         this.stopped = !0, this.pendingSince = null
       }
-      noteMeshWorker(zz, uz) {
-        this.noteWorker(`Mesh${zz}`, uz)
+      noteMeshWorker(DD, CD) {
+        this.noteWorker(`Mesh${DD}`, CD)
       }
-      meshWorkerGone(zz) {
-        this.workerGone(`Mesh${zz}`)
+      meshWorkerGone(DD) {
+        this.workerGone(`Mesh${DD}`)
       }
-      noteWorldgen(zz) {
-        this.noteWorker("Worldgen", zz)
+      noteWorldgen(DD) {
+        this.noteWorker("Worldgen", DD)
       }
       worldgenGone() {
         this.workerGone("Worldgen")
       }
-      noteWorker(zz, uz) {
-        const bz = this.workers.get(zz);
-        null !== bz && void 0 !== bz && bz.gone && (this.replacedRefusals.reserves += bz.stats.reservesRefused, this.replacedRefusals.allocations += bz.stats.allocationsRefused), this.workers.set(zz, {
-          stats: uz,
+      noteWorker(DD, CD) {
+        const cD = this.workers.get(DD);
+        null !== cD && void 0 !== cD && cD.gone && (this.replacedRefusals.reserves += cD.stats.reservesRefused, this.replacedRefusals.allocations += cD.stats.allocationsRefused), this.workers.set(DD, {
+          stats: CD,
           gone: !1
         })
       }
-      workerGone(zz) {
-        const uz = this.workers.get(zz);
-        uz && (uz.gone = !0)
+      workerGone(DD) {
+        const CD = this.workers.get(DD);
+        CD && (CD.gone = !0)
       }
       details() {
-        var zz, uz;
-        const bz = {
-          wasmMemoryNow: `${(0,Ez.j)(this.memory.memoryBytes())} MiB`
+        var DD, CD;
+        const cD = {
+          wasmMemoryNow: `${(0,ID.k)(this.memory.memoryBytes())} MiB`
         };
-        null !== this.joinReserveTaken && (bz.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (bz.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
-        const nz = this.main;
-        if (nz) {
-          bz.wasmMemoryMain = Jz(nz);
-          const zz = Math.max(0, nz.peakLiveBytes - this.ballastPeakBytes),
-            uz = 0 === this.peakStoredChunks ? "-" : (zz / this.peakStoredChunks / Ez.e).toFixed(1);
-          bz.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${uz} KiB`
+        null !== this.joinReserveTaken && (cD.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (cD.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const pD = this.main;
+        if (pD) {
+          cD.wasmMemoryMain = UD(pD);
+          const DD = Math.max(0, pD.peakLiveBytes - this.ballastPeakBytes),
+            CD = 0 === this.peakStoredChunks ? "-" : (DD / this.peakStoredChunks / ID.d).toFixed(1);
+          cD.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${CD} KiB`
         }
-        for (const [Ez, {
-            stats: lz,
-            gone: Mz
-          }] of this.workers) bz[`wasmMemory${Ez}`] = Jz(lz) + (Mz ? " (gone)" : "");
-        const iz = null !== (zz = null === (uz = this.footprint) || void 0 === uz ? void 0 : uz.describe()) && void 0 !== zz ? zz : null;
-        return null !== iz && (bz.wasmMemoryFootprint = iz), bz
+        for (const [ID, {
+            stats: fD,
+            gone: bD
+          }] of this.workers) cD[`wasmMemory${ID}`] = UD(fD) + (bD ? " (gone)" : "");
+        const iD = null !== (DD = null === (CD = this.footprint) || void 0 === CD ? void 0 : CD.describe()) && void 0 !== DD ? DD : null;
+        return null !== iD && (cD.wasmMemoryFootprint = iD), cD
       }
       pageKillSnapshot() {
-        var zz, uz, bz, nz, iz;
-        let lz = (null !== (zz = null === (uz = this.main) || void 0 === uz ? void 0 : uz.reservesRefused) && void 0 !== zz ? zz : 0) + this.replacedRefusals.reserves,
-          Mz = (null !== (bz = null === (nz = this.main) || void 0 === nz ? void 0 : nz.allocationsRefused) && void 0 !== bz ? bz : 0) + this.replacedRefusals.allocations;
+        var DD, CD, cD, pD, iD;
+        let fD = (null !== (DD = null === (CD = this.main) || void 0 === CD ? void 0 : CD.reservesRefused) && void 0 !== DD ? DD : 0) + this.replacedRefusals.reserves,
+          bD = (null !== (cD = null === (pD = this.main) || void 0 === pD ? void 0 : pD.allocationsRefused) && void 0 !== cD ? cD : 0) + this.replacedRefusals.allocations;
         for (const {
-            stats: Ez
+            stats: ID
           }
-          of this.workers.values()) lz += Ez.reservesRefused, Mz += Ez.allocationsRefused;
+          of this.workers.values()) fD += ID.reservesRefused, bD += ID.allocationsRefused;
         return {
-          wasmMainMiB: Number((0, Ez.j)(this.memory.memoryBytes())),
-          wasmWorkersMiB: Number((0, Ez.j)(this.workersMemoryBytes())),
+          wasmMainMiB: Number((0, ID.k)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, ID.k)(this.workersMemoryBytes())),
           peakStoredChunks: this.peakStoredChunks,
-          refusedReserves: lz,
-          refusedAllocations: Mz,
+          refusedReserves: fD,
+          refusedAllocations: bD,
           sheds: this.sheds,
-          ...null === (iz = this.footprint) || void 0 === iz ? void 0 : iz.snapshot()
+          ...null === (iD = this.footprint) || void 0 === iD ? void 0 : iD.snapshot()
         }
       }
       workersMemoryBytes() {
-        let zz = 0;
+        let DD = 0;
         for (const {
-            stats: uz,
-            gone: bz
+            stats: CD,
+            gone: cD
           }
-          of this.workers.values()) zz += bz ? 0 : uz.memoryBytes;
-        return zz
+          of this.workers.values()) DD += cD ? 0 : CD.memoryBytes;
+        return DD
       }
       checkFootprint() {
         null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
       }
       step() {
-        this.pendingSince = null, this.call((() => this.memory.reserveAhead(Hz)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(wD)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
       }
       ballastOn() {
         return null !== this.shedding
       }
-      takeBallast(zz) {
+      takeBallast(DD) {
         if (!this.ballastOn() || null === this.joinReserveTaken) return;
-        this.ballastCheckAt = zz + 1e3;
-        const uz = this.call((() => this.memory.takeBallast()), 0);
-        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, uz)
+        this.ballastCheckAt = DD + 1e3;
+        const CD = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, CD)
       }
       takePressure() {
         return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
       }
-      stopSteps(zz) {
-        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${zz}: frames grow on demand from here`)
+      stopSteps(DD) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${DD}: frames grow on demand from here`)
       }
-      shedFor(zz) {
+      shedFor(DD) {
         const {
-          shedding: uz
+          shedding: CD
         } = this;
-        if (null === uz) return;
+        if (null === CD) return;
         this.pendingSince = null;
-        const bz = this.call((() => uz.shed(zz)), null);
-        this.stopped || (null !== bz ? (this.sheds++, this.shedCap = bz, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), uz.xZ(zz, this.sheds, this.details())) : pz(zz) && this.stopSteps("nothing is left to shed"))
+        const cD = this.call((() => CD.shed(DD)), null);
+        this.stopped || (null !== cD ? (this.sheds++, this.shedCap = cD, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), CD.Nt(DD, this.sheds, this.details())) : BD(DD) && this.stopSteps("nothing is left to shed"))
       }
-      call(zz, uz) {
-        if (this.stopped) return uz;
+      call(DD, CD) {
+        if (this.stopped) return CD;
         try {
-          return zz()
-        } catch (bz) {
-          return this.stop(), this.onError(bz), uz
+          return DD()
+        } catch (cD) {
+          return this.stop(), this.onError(cD), CD
         }
       }
     }
 
-    function Jz(zz) {
-      const uz = (zz, uz) => `${zz}/${(0,Ez.j)(uz)}`;
-      return `memory ${(0,Ez.j)(zz.memoryBytes)} live ${(0,Ez.j)(zz.liveBytes)} peak ${(0,Ez.j)(zz.peakLiveBytes)} unused ${(0,Ez.j)(zz.unusedBytes)} ceiling ${(0,Ez.j)(zz.ceilingBytes)} MiB; grows upFront ${uz(zz.grows.upFront,zz.grownBytes.upFront)} ahead ${uz(zz.grows.ahead,zz.grownBytes.ahead)} inFrame ${uz(zz.grows.onDemandInFrame,zz.grownBytes.onDemandInFrame)} other ${uz(zz.grows.onDemand,zz.grownBytes.onDemand)}; refused reserves ${zz.reservesRefused} allocations ${zz.allocationsRefused}`
+    function UD(DD) {
+      const CD = (DD, CD) => `${DD}/${(0,ID.k)(CD)}`;
+      return `memory ${(0,ID.k)(DD.memoryBytes)} live ${(0,ID.k)(DD.liveBytes)} peak ${(0,ID.k)(DD.peakLiveBytes)} unused ${(0,ID.k)(DD.unusedBytes)} ceiling ${(0,ID.k)(DD.ceilingBytes)} MiB; grows upFront ${CD(DD.grows.upFront,DD.grownBytes.upFront)} ahead ${CD(DD.grows.ahead,DD.grownBytes.ahead)} inFrame ${CD(DD.grows.onDemandInFrame,DD.grownBytes.onDemandInFrame)} other ${CD(DD.grows.onDemand,DD.grownBytes.onDemand)}; refused reserves ${DD.reservesRefused} allocations ${DD.allocationsRefused}`
     }
   },
-  40163: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => tz,
-      i: () => Hz,
-      l: () => Fz,
-      p: () => pz
+  40056: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => QD,
+      g: () => wD,
+      i: () => MD,
+      l: () => BD
     });
-    var Ez = bz(3475),
-      nz = bz(4560),
-      iz = bz(40165),
-      lz = bz(40169),
-      Mz = bz(39979);
-    const tz = 395,
-      Hz = 2147483648,
-      Oz = new Uint8Array(0);
-    class pz extends Error {
+    var ID = cD(3529),
+      pD = cD(4581),
+      iD = cD(40065),
+      fD = cD(40071),
+      bD = cD(39872);
+    const QD = 395,
+      wD = 2147483648,
+      SD = new Uint8Array(0);
+    class BD extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class dz extends Error {
+    class yD extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class Fz {
-      constructor(zz, uz, bz) {
-        var Ez, nz, lz, Mz;
-        let tz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = zz, this.build = uz, this.onFailure = bz, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.MZ = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (Ez = tz.fetchFile) && void 0 !== Ez ? Ez : zz => (0, iz.h)(zz), this.onWritten = null !== (nz = tz.onWritten) && void 0 !== nz ? nz : null, this.onTaken = null !== (lz = tz.onTaken) && void 0 !== lz ? lz : null, this.onPackFileFailed = null !== (Mz = tz.onPackFileFailed) && void 0 !== Mz ? Mz : null, this.startupLeft = new Set(zz.startup);
-        for (const iz of zz.startup) this.request(iz)
+    class MD {
+      constructor(DD, CD, cD) {
+        var ID, pD, fD, bD;
+        let QD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = DD, this.build = CD, this.onFailure = cD, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.uM = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (ID = QD.fetchFile) && void 0 !== ID ? ID : DD => (0, iD.i)(DD), this.onWritten = null !== (pD = QD.onWritten) && void 0 !== pD ? pD : null, this.onTaken = null !== (fD = QD.onTaken) && void 0 !== fD ? fD : null, this.onPackFileFailed = null !== (bD = QD.onPackFileFailed) && void 0 !== bD ? bD : null, this.startupLeft = new Set(DD.startup);
+        for (const iD of DD.startup) this.request(iD)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2196,361 +2196,361 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(zz) {
-        return this.drawn.get(zz)
+      drawnUrl(DD) {
+        return this.drawn.get(DD)
       }
-      request(zz) {
-        const uz = this.pending.get(zz);
-        if (!0 === (null === uz || void 0 === uz ? void 0 : uz.ask)) return;
-        const bz = this.QF(zz, !0);
-        bz.recheck = void 0 !== uz;
-        const Ez = this.drawn.get(zz);
-        if (void 0 !== Ez) return bz.yM = !0, bz.recheck = !0, void this.fetch(zz, bz, Ez);
-        this.fetchWanted(zz, bz)
+      request(DD) {
+        const CD = this.pending.get(DD);
+        if (!0 === (null === CD || void 0 === CD ? void 0 : CD.ask)) return;
+        const cD = this.VM(DD, !0);
+        cD.recheck = void 0 !== CD;
+        const ID = this.drawn.get(DD);
+        if (void 0 !== ID) return cD.Lb = !0, cD.recheck = !0, void this.fetch(DD, cD, ID);
+        this.fetchWanted(DD, cD)
       }
       async refresh() {
-        const zz = ++this.refreshes,
-          uz = new Set;
-        for (const lz of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const zz of lz) 0 === (zz & iz.e) && uz.add(zz);
-        const bz = [...uz];
-        let Ez;
+        const DD = ++this.refreshes,
+          CD = new Set;
+        for (const fD of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const DD of fD) 0 === (DD & iD.g) && CD.add(DD);
+        const cD = [...CD];
+        let ID;
         try {
-          Ez = await Promise.all(bz.map((zz => this.wanted(zz))))
+          ID = await Promise.all(cD.map((DD => this.wanted(DD))))
         } catch {
           return null
         }
-        if (zz !== this.refreshes) return null;
-        const nz = {
+        if (DD !== this.refreshes) return null;
+        const pD = {
           resent: 0,
           refetched: 0,
-          delivered: bz.filter((zz => this.drawn.has(zz))).length
+          delivered: cD.filter((DD => this.drawn.has(DD))).length
         };
-        return bz.forEach(((zz, uz) => {
+        return cD.forEach(((DD, CD) => {
           const {
-            url: bz,
-            inPlaceOf: iz
-          } = Ez[uz], lz = this.pending.get(zz);
-          if (void 0 !== lz) {
-            if (lz.yM || void 0 === lz.url) return void(lz.recheck = !0);
-            if (lz.url === bz) return;
-            nz.refetched++;
-            const uz = this.QF(zz, lz.ask);
-            return uz.recheck = lz.recheck, void this.fetch(zz, uz, bz, iz)
+            url: cD,
+            inPlaceOf: iD
+          } = ID[CD], fD = this.pending.get(DD);
+          if (void 0 !== fD) {
+            if (fD.Lb || void 0 === fD.url) return void(fD.recheck = !0);
+            if (fD.url === cD) return;
+            pD.refetched++;
+            const CD = this.VM(DD, fD.ask);
+            return CD.recheck = fD.recheck, void this.fetch(DD, CD, cD, iD)
           }
-          const Mz = this.written.get(zz);
-          void 0 === Mz ? this.drawn.get(zz) !== (null !== bz && void 0 !== bz ? bz : void 0) && (nz.resent++, this.fetch(zz, this.QF(zz, !1), bz, iz)) : Mz.url !== (null !== bz && void 0 !== bz ? bz : "") && (Mz.attempt.recheck = !0)
-        })), nz
+          const bD = this.written.get(DD);
+          void 0 === bD ? this.drawn.get(DD) !== (null !== cD && void 0 !== cD ? cD : void 0) && (pD.resent++, this.fetch(DD, this.VM(DD, !1), cD, iD)) : bD.url !== (null !== cD && void 0 !== cD ? cD : "") && (bD.attempt.recheck = !0)
+        })), pD
       }
-      taken(zz, uz) {
-        const bz = new Set,
-          Ez = new Set;
-        for (const nz of Array.from(uz)) 0 === (nz & Hz) ? bz.add(nz) : Ez.add((nz & ~Hz) >>> 0);
-        for (const [nz, iz] of this.written) iz.seq > zz || (this.written.delete(nz), bz.has(iz.seq) ? this.refusedFile(nz, iz) : this.takenFile(nz, iz, !iz.empty && !Ez.has(iz.seq)))
+      taken(DD, CD) {
+        const cD = new Set,
+          ID = new Set;
+        for (const pD of Array.from(CD)) 0 === (pD & wD) ? cD.add(pD) : ID.add((pD & ~wD) >>> 0);
+        for (const [pD, iD] of this.written) iD.seq > DD || (this.written.delete(pD), cD.has(iD.seq) ? this.refusedFile(pD, iD) : this.takenFile(pD, iD, !iD.empty && !ID.has(iD.seq)))
       }
-      takenFile(zz, uz, bz) {
+      takenFile(DD, CD, cD) {
         const {
-          attempt: Ez
-        } = uz;
-        if (bz) {
-          var nz;
-          this.drawn.set(zz, uz.url), this.undrawn.delete(zz), void 0 !== Ez.inPlaceOf ? this.refusedPack.set(zz, Ez.inPlaceOf) : Ez.yM || this.refusedPack.delete(zz), null === (nz = this.onTaken) || void 0 === nz || nz.call(this, zz, !0);
-          const bz = this.pending.get(zz);
-          if (!0 === (null === bz || void 0 === bz ? void 0 : bz.yM) && bz.url !== uz.url) {
-            const bz = this.QF(zz, !0);
-            bz.yM = !0, bz.recheck = !0, this.fetch(zz, bz, uz.url)
+          attempt: ID
+        } = CD;
+        if (cD) {
+          var pD;
+          this.drawn.set(DD, CD.url), this.undrawn.delete(DD), void 0 !== ID.inPlaceOf ? this.refusedPack.set(DD, ID.inPlaceOf) : ID.Lb || this.refusedPack.delete(DD), null === (pD = this.onTaken) || void 0 === pD || pD.call(this, DD, !0);
+          const cD = this.pending.get(DD);
+          if (!0 === (null === cD || void 0 === cD ? void 0 : cD.Lb) && cD.url !== CD.url) {
+            const cD = this.VM(DD, !0);
+            cD.Lb = !0, cD.recheck = !0, this.fetch(DD, cD, CD.url)
           }
         } else {
-          var iz;
-          this.drawn.has(zz) || this.undrawn.add(zz), null === (iz = this.onTaken) || void 0 === iz || iz.call(this, zz, !1)
+          var iD;
+          this.drawn.has(DD) || this.undrawn.add(DD), null === (iD = this.onTaken) || void 0 === iD || iD.call(this, DD, !1)
         }
-        Ez.recheck && this.resendIfChanged(zz)
+        ID.recheck && this.resendIfChanged(DD)
       }
-      refusedFile(zz, uz) {
-        var bz, Ez;
-        if (null === (bz = this.onTaken) || void 0 === bz || bz.call(this, zz, !1), this.refusedPack.set(zz, uz.url), this.pending.has(zz)) return void(null === (Ez = this.onPackFileFailed) || void 0 === Ez || Ez.call(this, zz, Zz(uz.url)));
-        const nz = this.QF(zz, uz.attempt.ask);
-        nz.recheck = uz.attempt.recheck, this.afterRefusal(zz, nz, uz.url)
+      refusedFile(DD, CD) {
+        var cD, ID;
+        if (null === (cD = this.onTaken) || void 0 === cD || cD.call(this, DD, !1), this.refusedPack.set(DD, CD.url), this.pending.has(DD)) return void(null === (ID = this.onPackFileFailed) || void 0 === ID || ID.call(this, DD, tD(CD.url)));
+        const pD = this.VM(DD, CD.attempt.ask);
+        pD.recheck = CD.attempt.recheck, this.afterRefusal(DD, pD, CD.url)
       }
-      async afterRefusal(zz, uz, bz) {
-        var Ez;
-        let nz;
+      async afterRefusal(DD, CD, cD) {
+        var ID;
+        let pD;
         try {
-          nz = await this.wanted(zz)
-        } catch (iz) {
-          return void(this.pending.get(zz) === uz && this.giveUp(zz, uz, bz, iz))
+          pD = await this.wanted(DD)
+        } catch (iD) {
+          return void(this.pending.get(DD) === CD && this.giveUp(DD, CD, cD, iD))
         }
-        this.pending.get(zz) === uz && (nz.inPlaceOf !== bz ? uz.ask || (null !== (Ez = nz.url) && void 0 !== Ez ? Ez : void 0) !== this.drawn.get(zz) ? this.fetch(zz, uz, nz.url, nz.inPlaceOf) : this.pending.delete(zz) : this.fallBack(zz, uz, bz, Zz(bz)))
+        this.pending.get(DD) === CD && (pD.inPlaceOf !== cD ? CD.ask || (null !== (ID = pD.url) && void 0 !== ID ? ID : void 0) !== this.drawn.get(DD) ? this.fetch(DD, CD, pD.url, pD.inPlaceOf) : this.pending.delete(DD) : this.fallBack(DD, CD, cD, tD(cD)))
       }
-      QF(zz, uz) {
-        const bz = {
+      VM(DD, CD) {
+        const cD = {
           url: void 0,
-          ask: uz,
-          yM: !1,
+          ask: CD,
+          Lb: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(zz, bz);
-        for (let Ez = this.ready.length - 1; Ez >= 0; Ez--) this.ready[Ez].file === zz && this.ready.splice(Ez, 1);
-        return bz
+        this.pending.set(DD, cD);
+        for (let ID = this.ready.length - 1; ID >= 0; ID--) this.ready[ID].file === DD && this.ready.splice(ID, 1);
+        return cD
       }
-      async wanted(zz) {
-        const uz = await this.files.url(zz);
-        return null !== uz && this.refusedPack.get(zz) === uz ? {
-          url: await this.files.shippedUrl(zz),
-          inPlaceOf: uz
+      async wanted(DD) {
+        const CD = await this.files.url(DD);
+        return null !== CD && this.refusedPack.get(DD) === CD ? {
+          url: await this.files.shippedUrl(DD),
+          inPlaceOf: CD
         } : {
-          url: uz,
+          url: CD,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(zz, uz) {
-        const bz = this.files.url(zz);
-        bz instanceof Promise ? bz.then((bz => {
-          this.fetchFound(zz, uz, bz)
-        }), (bz => {
-          this.pending.get(zz) === uz && this.giveUp(zz, uz, "", bz)
-        })) : this.fetchFound(zz, uz, bz)
+      fetchWanted(DD, CD) {
+        const cD = this.files.url(DD);
+        cD instanceof Promise ? cD.then((cD => {
+          this.fetchFound(DD, CD, cD)
+        }), (cD => {
+          this.pending.get(DD) === CD && this.giveUp(DD, CD, "", cD)
+        })) : this.fetchFound(DD, CD, cD)
       }
-      fetchFound(zz, uz, bz) {
-        null !== bz && this.refusedPack.get(zz) === bz ? Promise.resolve(this.files.shippedUrl(zz)).then((Ez => {
-          this.fetch(zz, uz, Ez, bz)
-        }), (Ez => {
-          this.pending.get(zz) === uz && this.giveUp(zz, uz, bz, Ez)
-        })) : this.fetch(zz, uz, bz)
+      fetchFound(DD, CD, cD) {
+        null !== cD && this.refusedPack.get(DD) === cD ? Promise.resolve(this.files.shippedUrl(DD)).then((ID => {
+          this.fetch(DD, CD, ID, cD)
+        }), (ID => {
+          this.pending.get(DD) === CD && this.giveUp(DD, CD, cD, ID)
+        })) : this.fetch(DD, CD, cD)
       }
-      fetch(zz, uz, bz, Ez) {
-        this.pending.get(zz) === uz && (uz.url = bz, uz.inPlaceOf = Ez, null !== bz ? this.load(zz, uz, bz) : this.buildFile(zz, uz, "", Oz))
+      fetch(DD, CD, cD, ID) {
+        this.pending.get(DD) === CD && (CD.url = cD, CD.inPlaceOf = ID, null !== cD ? this.load(DD, CD, cD) : this.buildFile(DD, CD, "", SD))
       }
-      load(zz, uz, bz) {
-        const Ez = this.MZ.get(zz);
-        (null === Ez || void 0 === Ez ? void 0 : Ez.url) !== bz ? this.fetchFile(bz).then((Ez => {
-          var nz, iz;
-          this.pending.get(zz) === uz && (this.keptTotal += Ez.byteLength - (null !== (nz = null === (iz = this.MZ.get(zz)) || void 0 === iz ? void 0 : iz.glb.byteLength) && void 0 !== nz ? nz : 0), this.MZ.set(zz, {
-            url: bz,
-            glb: Ez
-          }), this.buildFile(zz, uz, bz, Ez))
-        }), (Ez => {
-          this.pending.get(zz) === uz && this.fallBack(zz, uz, bz, Ez)
-        })) : this.buildFile(zz, uz, bz, Ez.glb)
+      load(DD, CD, cD) {
+        const ID = this.uM.get(DD);
+        (null === ID || void 0 === ID ? void 0 : ID.url) !== cD ? this.fetchFile(cD).then((ID => {
+          var pD, iD;
+          this.pending.get(DD) === CD && (this.keptTotal += ID.byteLength - (null !== (pD = null === (iD = this.uM.get(DD)) || void 0 === iD ? void 0 : iD.glb.byteLength) && void 0 !== pD ? pD : 0), this.uM.set(DD, {
+            url: cD,
+            glb: ID
+          }), this.buildFile(DD, CD, cD, ID))
+        }), (ID => {
+          this.pending.get(DD) === CD && this.fallBack(DD, CD, cD, ID)
+        })) : this.buildFile(DD, CD, cD, ID.glb)
       }
-      buildFile(zz, uz, bz, Ez) {
-        let nz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const lz = Ez.byteLength > 0 && (0, iz.l)(bz) ? (zz | iz.d) >>> 0 : zz;
-        this.queueRecord(zz, uz, bz, Ez, this.build(lz, Ez), nz)
+      buildFile(DD, CD, cD, ID) {
+        let pD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const fD = ID.byteLength > 0 && (0, iD.l)(cD) ? (DD | iD.c) >>> 0 : DD;
+        this.queueRecord(DD, CD, cD, ID, this.build(fD, ID), pD)
       }
-      queueRecord(zz, uz, bz, Ez, iz, Mz) {
-        iz.then((iz => {
-          if (this.pending.get(zz) !== uz) return;
-          if (nz.p + (0, nz.ie)(iz.byteLength) > nz.Bc) return void this.ringRefused(zz, uz, bz, new pz(`${Rz(bz)}'s record is ${iz.byteLength-lz.b} bytes, past the cmd ring's ${nz.Bc}`), Mz);
-          const tz = {
-            file: zz,
-            url: bz,
-            payload: iz,
-            glb: Ez,
-            attempt: uz
+      queueRecord(DD, CD, cD, ID, iD, bD) {
+        iD.then((iD => {
+          if (this.pending.get(DD) !== CD) return;
+          if (pD.w + (0, pD.je)(iD.byteLength) > pD.Dc) return void this.ringRefused(DD, CD, cD, new BD(`${ZD(cD)}'s record is ${iD.byteLength-fD.e} bytes, past the cmd ring's ${pD.Dc}`), bD);
+          const QD = {
+            file: DD,
+            url: cD,
+            payload: iD,
+            glb: ID,
+            attempt: CD
           };
-          Mz ? this.ready.unshift(tz) : this.ready.push(tz)
+          bD ? this.ready.unshift(QD) : this.ready.push(QD)
         }))
       }
-      async fallBack(zz, uz, bz, Ez) {
-        var nz;
-        let iz = null,
-          lz = Ez;
+      async fallBack(DD, CD, cD, ID) {
+        var pD;
+        let iD = null,
+          fD = ID;
         try {
-          iz = await this.files.shippedUrl(zz)
-        } catch (Mz) {
-          lz = Mz
+          iD = await this.files.shippedUrl(DD)
+        } catch (bD) {
+          fD = bD
         }
-        this.pending.get(zz) === uz && (null !== iz && iz !== bz ? (null === (nz = this.onPackFileFailed) || void 0 === nz || nz.call(this, zz, Ez), uz.ask || this.drawn.get(zz) !== iz ? (uz.url = iz, uz.inPlaceOf = bz, this.load(zz, uz, iz)) : this.pending.delete(zz)) : this.giveUp(zz, uz, bz, lz))
+        this.pending.get(DD) === CD && (null !== iD && iD !== cD ? (null === (pD = this.onPackFileFailed) || void 0 === pD || pD.call(this, DD, ID), CD.ask || this.drawn.get(DD) !== iD ? (CD.url = iD, CD.inPlaceOf = cD, this.load(DD, CD, iD)) : this.pending.delete(DD)) : this.giveUp(DD, CD, cD, fD))
       }
-      ringRefused(zz, uz, bz, Ez) {
-        let nz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, iz.l)(bz) ? this.fallBack(zz, uz, bz, Ez): this.giveUp(zz, uz, bz, Ez, nz)
+      ringRefused(DD, CD, cD, ID) {
+        let pD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, iD.l)(cD) ? this.fallBack(DD, CD, cD, ID): this.giveUp(DD, CD, cD, ID, pD)
       }
-      giveUp(zz, uz, bz, nz) {
-        let iz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(DD, CD, cD, pD) {
+        let iD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: zz,
-          url: Rz(bz),
-          error: nz,
-          startup: this.startupLeft.has(zz)
-        }), uz.ask || !this.drawn.has(zz) ? (0, Ez.J)(nz) ? this.queueRecord(zz, uz, bz, Oz, Promise.resolve((0, lz.k)(zz, (0, Mz.e)(nz))), iz) : this.buildFile(zz, uz, bz, Oz, iz) : this.pending.delete(zz)
+          file: DD,
+          url: ZD(cD),
+          error: pD,
+          startup: this.startupLeft.has(DD)
+        }), CD.ask || !this.drawn.has(DD) ? (0, ID.T)(pD) ? this.queueRecord(DD, CD, cD, SD, Promise.resolve((0, fD.q)(DD, (0, bD.h)(pD))), iD) : this.buildFile(DD, CD, cD, SD, iD) : this.pending.delete(DD)
       }
-      async resendIfChanged(zz) {
-        var uz;
-        if (0 !== (zz & iz.e)) return;
-        let bz;
+      async resendIfChanged(DD) {
+        var CD;
+        if (0 !== (DD & iD.g)) return;
+        let cD;
         try {
-          bz = await this.wanted(zz)
+          cD = await this.wanted(DD)
         } catch {
           return
-        }(null !== (uz = bz.url) && void 0 !== uz ? uz : void 0) === this.drawn.get(zz) || this.pending.has(zz) || this.written.has(zz) || this.fetch(zz, this.QF(zz, !1), bz.url, bz.inPlaceOf)
+        }(null !== (CD = cD.url) && void 0 !== CD ? CD : void 0) === this.drawn.get(DD) || this.pending.has(DD) || this.written.has(DD) || this.fetch(DD, this.VM(DD, !1), cD.url, cD.inPlaceOf)
       }
-      drain(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === zz) return;
-        let bz = 0,
-          Ez = 0;
-        for (; Ez < this.ready.length && bz < 262144;) {
-          const Mz = this.ready[Ez];
-          if (this.written.has(Mz.file)) {
-            Ez++;
+      drain(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === DD) return;
+        let cD = 0,
+          ID = 0;
+        for (; ID < this.ready.length && cD < 262144;) {
+          const bD = this.ready[ID];
+          if (this.written.has(bD.file)) {
+            ID++;
             continue
           }
-          const Oz = this.nextSeq;
-          new DataView(Mz.payload.buffer, Mz.payload.byteOffset, Mz.payload.byteLength).setUint32(lz.c, Oz, !0);
-          const dz = Mz.attempt.yM && Mz.glb.byteLength > 0 && this.drawn.get(Mz.file) === Mz.url;
-          if (zz(tz, dz ? 1 : 0, Mz.payload)) {
-            if (this.nextSeq = Oz >= Hz - 1 ? 1 : Oz + 1, this.ready.splice(Ez, 1), bz += Mz.payload.byteLength, this.pending.delete(Mz.file), this.startupLeft.delete(Mz.file), this.written.set(Mz.file, {
-                seq: Oz,
-                url: Mz.url,
-                empty: 0 === Mz.glb.byteLength,
-                attempt: Mz.attempt
-              }), Mz.glb.byteLength > 0) try {
-              var nz;
-              null === (nz = this.onWritten) || void 0 === nz || nz.call(this, Mz.file, Mz.glb)
-            } catch (iz) {
-              console.warn("ModelFeed: reading the file's images failed", iz)
+          const SD = this.nextSeq;
+          new DataView(bD.payload.buffer, bD.payload.byteOffset, bD.payload.byteLength).setUint32(fD.i, SD, !0);
+          const yD = bD.attempt.Lb && bD.glb.byteLength > 0 && this.drawn.get(bD.file) === bD.url;
+          if (DD(QD, yD ? 1 : 0, bD.payload)) {
+            if (this.nextSeq = SD >= wD - 1 ? 1 : SD + 1, this.ready.splice(ID, 1), cD += bD.payload.byteLength, this.pending.delete(bD.file), this.startupLeft.delete(bD.file), this.written.set(bD.file, {
+                seq: SD,
+                url: bD.url,
+                empty: 0 === bD.glb.byteLength,
+                attempt: bD.attempt
+              }), bD.glb.byteLength > 0) try {
+              var pD;
+              null === (pD = this.onWritten) || void 0 === pD || pD.call(this, bD.file, bD.glb)
+            } catch (iD) {
+              console.warn("ModelFeed: reading the file's images failed", iD)
             }
           } else {
-            if (null === uz || 0 === Mz.glb.byteLength || uz(Mz.payload.byteLength)) return;
-            this.ready.splice(Ez, 1);
-            const zz = new pz(`${Rz(Mz.url)}'s record is ${Mz.payload.byteLength-lz.b} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(Mz.file, Mz.attempt, Mz.url, zz, !0)
+            if (null === CD || 0 === bD.glb.byteLength || CD(bD.payload.byteLength)) return;
+            this.ready.splice(ID, 1);
+            const DD = new BD(`${ZD(bD.url)}'s record is ${bD.payload.byteLength-fD.e} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(bD.file, bD.attempt, bD.url, DD, !0)
           }
         }
       }
     }
 
-    function Zz(zz) {
-      return new dz(`presentation refused ${Rz(zz)}`)
+    function tD(DD) {
+      return new yD(`presentation refused ${ZD(DD)}`)
     }
 
-    function Rz(zz) {
-      return zz.startsWith("data:") ? `${zz.slice(0,Math.min(Math.max(zz.indexOf(","),5),64))},...` : zz
+    function ZD(DD) {
+      return DD.startsWith("data:") ? `${DD.slice(0,Math.min(Math.max(DD.indexOf(","),5),64))},...` : DD
     }
   },
-  40165: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => lz,
-      e: () => iz,
-      h: () => Oz,
-      l: () => Mz,
-      m: () => Hz,
-      q: () => tz
+  40065: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => fD,
+      g: () => iD,
+      i: () => SD,
+      l: () => bD,
+      o: () => wD,
+      p: () => QD
     });
-    var Ez = bz(3475),
-      nz = bz(2966);
-    const iz = 2147483648,
-      lz = 1073741824;
+    var ID = cD(3529),
+      pD = cD(3007);
+    const iD = 2147483648,
+      fD = 1073741824;
 
-    function Mz(zz) {
-      return zz.startsWith("data:")
+    function bD(DD) {
+      return DD.startsWith("data:")
     }
 
-    function tz(zz) {
+    function QD(DD) {
       let {
-        onTableFailed: uz,
-        packUrl: bz
+        onTableFailed: CD,
+        packUrl: cD
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const Ez = Hz();
-      Ez.catch((zz => {
-        null === uz || void 0 === uz || uz(zz)
+      const ID = wD();
+      ID.catch((DD => {
+        null === CD || void 0 === CD || CD(DD)
       }));
-      const nz = async uz => (await Ez).fileUrl((uz & ~iz) >>> 0, zz);
+      const pD = async CD => (await ID).fileUrl((CD & ~iD) >>> 0, DD);
       return {
         startup: [],
-        url: async zz => {
-          if (bz && 0 === (zz & iz)) {
-            const uz = await Ez,
-              nz = uz.filePackName(zz),
-              iz = null === nz || "lifeform" === uz.fileSource(zz) ? null : bz(nz);
-            if (null !== iz) return iz
+        url: async DD => {
+          if (cD && 0 === (DD & iD)) {
+            const CD = await ID,
+              pD = CD.filePackName(DD),
+              iD = null === pD || "lifeform" === CD.fileSource(DD) ? null : cD(pD);
+            if (null !== iD) return iD
           }
-          return nz(zz)
+          return pD(DD)
         },
-        shippedUrl: nz
+        shippedUrl: pD
       }
     }
 
-    function Hz() {
-      return bz.e(41).then((() => bz(42659)))
+    function wD() {
+      return cD.e(41).then((() => cD(42531)))
     }
-    async function Oz(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return zz.startsWith("data:") ? (0, nz.d)(zz.slice(zz.indexOf(",") + 1), uz) : (0, Ez.z)(zz, {
-        spare: uz
+    async function SD(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return DD.startsWith("data:") ? (0, pD.b)(DD.slice(DD.indexOf(",") + 1), CD) : (0, ID.I)(DD, {
+        spare: CD
       })
     }
   },
-  40169: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Hz,
-      c: () => Oz,
-      g: () => Fz,
-      h: () => Kz,
-      k: () => Zz,
-      l: () => dz,
-      p: () => Rz
+  40071: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => wD,
+      i: () => SD,
+      l: () => MD,
+      o: () => oD,
+      q: () => tD,
+      t: () => yD,
+      x: () => ZD
     });
-    const Ez = 826427981,
-      nz = 1,
-      iz = 2,
-      lz = 44,
-      Mz = 46,
-      tz = 58,
-      Hz = 8,
-      Oz = 4;
+    const ID = 826427981,
+      pD = 1,
+      iD = 2,
+      fD = 44,
+      bD = 46,
+      QD = 58,
+      wD = 8,
+      SD = 4;
 
-    function pz(zz, uz, bz) {
-      const nz = (new TextEncoder).encode(bz),
-        iz = Hz + 4 * (uz.length + 2),
-        lz = new Uint8Array(iz + (nz.byteLength + 3 & -4)),
-        Mz = new DataView(lz.buffer);
-      return Mz.setUint32(0, zz, !0), Mz.setUint32(Hz, Ez, !0), uz.forEach(((zz, uz) => {
-        Mz.setUint32(Hz + 4 * (uz + 1), zz, !0)
-      })), Mz.setUint32(iz - 4, nz.byteLength, !0), lz.set(nz, iz), lz
+    function BD(DD, CD, cD) {
+      const pD = (new TextEncoder).encode(cD),
+        iD = wD + 4 * (CD.length + 2),
+        fD = new Uint8Array(iD + (pD.byteLength + 3 & -4)),
+        bD = new DataView(fD.buffer);
+      return bD.setUint32(0, DD, !0), bD.setUint32(wD, ID, !0), CD.forEach(((DD, CD) => {
+        bD.setUint32(wD + 4 * (CD + 1), DD, !0)
+      })), bD.setUint32(iD - 4, pD.byteLength, !0), fD.set(pD, iD), fD
     }
 
-    function dz(zz, uz) {
-      return pz(zz, [iz], uz)
+    function yD(DD, CD) {
+      return BD(DD, [iD], CD)
     }
 
-    function Fz(zz, uz) {
-      return pz(zz, [nz, Mz], uz)
+    function MD(DD, CD) {
+      return BD(DD, [pD, bD], CD)
     }
 
-    function Zz(zz, uz) {
-      return pz(zz, [nz, tz], uz)
+    function tD(DD, CD) {
+      return BD(DD, [pD, QD], CD)
     }
 
-    function Rz(zz, uz) {
-      return pz(zz, [nz, lz], uz)
+    function ZD(DD, CD) {
+      return BD(DD, [pD, fD], CD)
     }
 
-    function Kz(zz) {
-      const uz = Hz;
-      if (zz.byteLength < uz + 12) return !1;
-      const bz = new DataView(zz.buffer, zz.byteOffset, zz.byteLength);
-      return bz.getUint32(uz, !0) === Ez && bz.getUint32(uz + 4, !0) === nz && bz.getUint32(uz + 8, !0) === lz
+    function oD(DD) {
+      const CD = wD;
+      if (DD.byteLength < CD + 12) return !1;
+      const cD = new DataView(DD.buffer, DD.byteOffset, DD.byteLength);
+      return cD.getUint32(CD, !0) === ID && cD.getUint32(CD + 4, !0) === pD && cD.getUint32(CD + 8, !0) === fD
     }
   },
-  40153: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Xz,
-      e: () => wz,
-      f: () => oz,
-      g: () => rz,
-      j: () => Nz,
-      m: () => Rz
+  40048: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => ND,
+      i: () => vD,
+      l: () => nD,
+      n: () => mD,
+      p: () => OD,
+      t: () => ZD
     });
-    var Ez = bz(4564),
-      nz = bz(40017);
-    const iz = 18,
-      lz = 19,
-      Mz = 20,
-      tz = {
+    var ID = cD(4585),
+      pD = cD(39908);
+    const iD = 18,
+      fD = 19,
+      bD = 20,
+      QD = {
         1: "link",
         2: "draw",
         3: "draw base vertex",
@@ -2564,24 +2564,24 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [iz]: "retry linked",
-        [lz]: "fallback linked",
-        [Mz]: "fallback failed",
+        [iD]: "retry linked",
+        [fD]: "fallback linked",
+        [bD]: "fallback failed",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function Hz(zz, uz) {
-      return zz === iz ? "program retry" : zz === lz || zz === Mz ? `program fallback ${uz}` : "program"
+    function wD(DD, CD) {
+      return DD === iD ? "program retry" : DD === fD || DD === bD ? `program fallback ${CD}` : "program"
     }
-    const Oz = {
+    const SD = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain"
       },
-      pz = {
+      BD = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -2594,14 +2594,14 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      dz = {
+      yD = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      Fz = {
+      MD = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -2610,7 +2610,7 @@ export const modules = {
         6: "no wait parallel links",
         7: "view shown unheld"
       },
-      Zz = {
+      tD = {
         1280: "invalid enum",
         1281: "invalid value",
         1282: "invalid operation",
@@ -2619,78 +2619,78 @@ export const modules = {
         37442: "context lost"
       };
 
-    function Rz(zz) {
-      return String(zz).replace(/\d/g, (zz => String.fromCharCode(97 + Number(zz))))
+    function ZD(DD) {
+      return String(DD).replace(/\d/g, (DD => String.fromCharCode(97 + Number(DD))))
     }
 
-    function Kz(zz, uz) {
-      var bz;
-      return null !== (bz = zz[uz]) && void 0 !== bz ? bz : Rz(uz)
+    function oD(DD, CD) {
+      var cD;
+      return null !== (cD = DD[CD]) && void 0 !== cD ? cD : ZD(CD)
     }
 
-    function wz() {
-      return Rz((0, nz.e)())
+    function vD() {
+      return ZD((0, pD.d)())
     }
 
-    function Xz(zz, uz) {
-      switch (zz) {
-        case Ez.g.RenderSceneRowNotDrawn:
+    function ND(DD, CD) {
+      switch (DD) {
+        case ID.g.RenderSceneRowNotDrawn:
           return {
-            words: ` ${Kz(pz,uz)}`, instance: String(uz), group: String(zz)
+            words: ` ${oD(BD,CD)}`, instance: String(CD), group: String(DD)
           };
-        case Ez.g.RenderChunkMeshNotDrawn: {
-          const bz = 0 === (128 & uz) ? "" : " shortage",
-            Ez = uz >>> 8;
+        case ID.g.RenderChunkMeshNotDrawn: {
+          const cD = 0 === (128 & CD) ? "" : " shortage",
+            ID = CD >>> 8;
           return {
-            words: ` ${Kz(dz,127&uz)}${bz}${0===Ez?"":` kind ${Rz(Ez)}`}`,
-            instance: String(uz),
-            group: String(zz)
+            words: ` ${oD(yD,127&CD)}${cD}${0===ID?"":` kind ${ZD(ID)}`}`,
+            instance: String(CD),
+            group: String(DD)
           }
         }
-        case Ez.g.RenderInternal: {
-          const bz = Kz(Oz, 255 & uz),
-            Ez = uz >>> 8 & 255;
-          if (0 === Ez) return {
-            words: ` ${bz}`,
-            instance: String(uz),
-            group: String(zz)
+        case ID.g.RenderInternal: {
+          const cD = oD(SD, 255 & CD),
+            ID = CD >>> 8 & 255;
+          if (0 === ID) return {
+            words: ` ${cD}`,
+            instance: String(CD),
+            group: String(DD)
           };
-          const nz = Kz(tz, Ez),
-            iz = uz >>> 16;
+          const pD = oD(QD, ID),
+            iD = CD >>> 16;
           return {
-            words: ` ${bz} ${nz} program ${Rz(iz)}`,
-            instance: `${bz} ${nz}`,
-            group: Hz(Ez, bz),
+            words: ` ${cD} ${pD} program ${ZD(iD)}`,
+            instance: `${cD} ${pD}`,
+            group: wD(ID, cD),
             gpuDetails: {
-              programFailure: nz,
-              program: String(iz)
+              programFailure: pD,
+              program: String(iD)
             }
           }
         }
-        case Ez.g.RenderSerialLinks: {
-          const bz = Kz(Fz, uz);
+        case ID.g.RenderSerialLinks: {
+          const cD = oD(MD, CD);
           return {
-            words: ` ${bz}`,
-            instance: String(uz),
-            group: String(zz),
+            words: ` ${cD}`,
+            instance: String(CD),
+            group: String(DD),
             gpuDetails: {
-              serialLinks: bz
+              serialLinks: cD
             }
           }
         }
-        case Ez.g.RenderGlErrorAfterRestore: {
-          const bz = Kz(Zz, 65535 & uz),
-            Ez = uz >>> 16,
-            nz = 65535 !== Ez;
+        case ID.g.RenderGlErrorAfterRestore: {
+          const cD = oD(tD, 65535 & CD),
+            ID = CD >>> 16,
+            pD = 65535 !== ID;
           return {
-            words: ` ${bz}${nz?` program ${Rz(Ez)}`:""}`,
-            instance: String(uz),
-            group: String(zz),
-            gpuDetails: nz ? {
-              glError: bz,
-              program: String(Ez)
+            words: ` ${cD}${pD?` program ${ZD(ID)}`:""}`,
+            instance: String(CD),
+            group: String(DD),
+            gpuDetails: pD ? {
+              glError: cD,
+              program: String(ID)
             } : {
-              glError: bz
+              glError: cD
             }
           }
         }
@@ -2698,533 +2698,533 @@ export const modules = {
           return null
       }
     }
-    const fz = 2,
-      sz = new Map;
+    const gD = 2,
+      XD = new Map;
 
-    function rz(zz) {
+    function mD(DD) {
       let {
-        group: uz,
-        instance: bz
-      } = zz, Ez = sz.get(uz);
-      return void 0 === Ez && (Ez = [], sz.set(uz, Ez)), !Ez.includes(bz) && (Ez.length >= fz || (Ez.push(bz), !1))
+        group: CD,
+        instance: cD
+      } = DD, ID = XD.get(CD);
+      return void 0 === ID && (ID = [], XD.set(CD, ID)), !ID.includes(cD) && (ID.length >= gD || (ID.push(cD), !1))
     }
 
-    function oz() {
-      return sz.size > 0
+    function nD() {
+      return XD.size > 0
     }
 
-    function Nz() {
-      sz.clear()
+    function OD() {
+      XD.clear()
     }
   },
-  40063: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => wz,
-      f: () => Xz,
-      g: () => Kz,
-      j: () => oz
+  39957: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => vD,
+      g: () => ND,
+      j: () => oD,
+      m: () => nD
     });
-    var Ez = bz(6362),
-      nz = bz(22),
-      iz = bz(4097),
-      lz = bz(4564),
-      Mz = bz(6359),
-      tz = bz(40071);
+    var ID = cD(6393),
+      pD = cD(20),
+      iD = cD(4142),
+      fD = cD(4585),
+      bD = cD(6384),
+      QD = cD(39961);
 
-    function Hz(zz, uz) {
-      const bz = (0, Mz.c)(uz.variants);
-      return zz.setShaderPack(bz.variantFlags, bz.hooks, bz.moduleCodes, (0, tz.y)(uz.layers), tz.m[uz.Nl], uz.keepCircleShadows)
+    function wD(DD, CD) {
+      const cD = (0, bD.d)(CD.variants);
+      return DD.setShaderPack(cD.variantFlags, cD.hooks, cD.moduleCodes, (0, QD.F)(CD.layers), QD.r[CD.wf], CD.keepCircleShadows)
     }
-    const Oz = 0,
-      pz = 1,
-      dz = 2,
-      Fz = "shaderPack:failedToCompile",
-      Zz = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
-      Rz = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
+    const SD = 0,
+      BD = 1,
+      yD = 2,
+      MD = "shaderPack:failedToCompile",
+      tD = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
+      ZD = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
 
-    function Kz(zz, uz) {
-      var bz;
-      const Ez = null !== (bz = null === zz || void 0 === zz ? void 0 : zz.reason) && void 0 !== bz ? bz : "none";
-      return Zz.has(Ez) ? {
-        messageKey: uz ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function oD(DD, CD) {
+      var cD;
+      const ID = null !== (cD = null === DD || void 0 === DD ? void 0 : DD.reason) && void 0 !== cD ? cD : "none";
+      return tD.has(ID) ? {
+        messageKey: CD ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === Ez && "override" === (null === zz || void 0 === zz ? void 0 : zz.source) ? {
+      } : "not_requested" === ID && "override" === (null === DD || void 0 === DD ? void 0 : DD.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: Rz.has(Ez) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: ZD.has(ID) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    const wz = {
+    const vD = {
       messageKey: "shaderPack:failedDeviceGraphics",
       noAdapter: !1
     };
-    class Xz extends Error {
-      constructor(zz) {
-        super(`the shader pack can't run in this game: ${zz}`), this.messageKey = zz, this.name = "ShaderPackJoinError"
+    class ND extends Error {
+      constructor(DD) {
+        super(`the shader pack can't run in this game: ${DD}`), this.messageKey = DD, this.name = "ShaderPackJoinError"
       }
     }
-    const fz = "strict";
-    class sz {
-      constructor(zz) {
-        this.deps = zz, this.pagePack = void 0, this.loaded = null, this.Nl = fz, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = zz.load().catch((uz => (zz.warn("the shader pack could not load: the game draws without it", uz), {
+    const gD = "strict";
+    class XD {
+      constructor(DD) {
+        this.deps = DD, this.pagePack = void 0, this.loaded = null, this.wf = gD, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = DD.load().catch((CD => (DD.warn("the shader pack could not load: the game draws without it", CD), {
           status: "none"
-        }))).then((zz => (this.loaded = zz, "active" === zz.status && (this.handOverToPreviews(zz), null !== zz.harnessPolicy && (this.Nl = zz.harnessPolicy, this.handOver())), zz)))
+        }))).then((DD => (this.loaded = DD, "active" === DD.status && (this.handOverToPreviews(DD), null !== DD.harnessPolicy && (this.wf = DD.harnessPolicy, this.handOver())), DD)))
       }
-      async join(zz) {
+      async join(DD) {
         this.leave();
-        const uz = this.game,
-          [bz, nz] = await Promise.all([this.pagePack, this.policyOf(zz)]);
-        if (uz !== this.game || "none" === bz.status) return null;
-        const iz = "active" === bz.status ? bz.pack.variants : bz.variants,
-          lz = (0, Ez.j)(iz, nz);
-        if (lz && "active" === bz.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (lz) {
-          const zz = this.cantRun(bz, nz);
-          if (null !== zz) return zz
-        } else if ("blocked" === bz.status || null === this.deps.core) return null;
-        return this.Nl = nz, this.handOver(), lz && this.refused ? Fz : (this.joined = !0, this.offInThisGame = !lz, null)
+        const CD = this.game,
+          [cD, pD] = await Promise.all([this.pagePack, this.policyOf(DD)]);
+        if (CD !== this.game || "none" === cD.status) return null;
+        const iD = "active" === cD.status ? cD.pack.variants : cD.variants,
+          fD = (0, ID.h)(iD, pD);
+        if (fD && "active" === cD.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (fD) {
+          const DD = this.cantRun(cD, pD);
+          if (null !== DD) return DD
+        } else if ("blocked" === cD.status || null === this.deps.core) return null;
+        return this.wf = pD, this.handOver(), fD && this.refused ? MD : (this.joined = !0, this.offInThisGame = !fD, null)
       }
-      async replay(zz) {
-        const uz = await this.join(zz);
-        null === uz ? this.playable() : this.deps.failInGame(uz)
+      async replay(DD) {
+        const CD = await this.join(DD);
+        null === CD ? this.playable() : this.deps.failInGame(CD)
       }
-      cantRun(zz, uz) {
+      cantRun(DD, CD) {
         const {
-          core: bz,
-          noWebGpu: Ez
+          core: cD,
+          noWebGpu: ID
         } = this.deps;
-        if ("blocked" === zz.status) {
-          return "shaderPack:failedUnchecked" === zz.messageKey && null === bz && Ez.noAdapter ? Ez.messageKey : zz.messageKey
+        if ("blocked" === DD.status) {
+          return "shaderPack:failedUnchecked" === DD.messageKey && null === cD && ID.noAdapter ? ID.messageKey : DD.messageKey
         }
-        return this.refused || this.failedPolicies.has(uz) ? Fz : null
+        return this.refused || this.failedPolicies.has(CD) ? MD : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
       }
       reachInJoinedGame() {
-        var zz;
-        return this.runsInJoinedGame() && "active" === (null === (zz = this.loaded) || void 0 === zz ? void 0 : zz.status) ? function(zz, uz) {
-          const bz = zz.filter((zz => (0, Ez.j)([zz], uz))),
-            nz = zz => bz.some((uz => uz[zz]));
+        var DD;
+        return this.runsInJoinedGame() && "active" === (null === (DD = this.loaded) || void 0 === DD ? void 0 : DD.status) ? function(DD, CD) {
+          const cD = DD.filter((DD => (0, ID.h)([DD], CD))),
+            pD = DD => cD.some((CD => CD[DD]));
           return {
-            sceneDepth: nz("sceneDepth"),
-            sunShadow: nz("sunShadow"),
-            airShadow: nz("airShadow")
+            sceneDepth: pD("sceneDepth"),
+            sunShadow: pD("sunShadow"),
+            airShadow: pD("airShadow")
           }
-        }(this.loaded.pack.variants, this.Nl) : null
+        }(this.loaded.pack.variants, this.wf) : null
       }
       couldntRunInJoinedGame() {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(Fz) : (null !== this.couldntRun ? this.notify(iz.b, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.Nl) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(MD) : (null !== this.couldntRun ? this.notify(iD.e, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.wf) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(zz) {
+      coreErrors(DD) {
         for (const {
-            code: uz,
-            detail: bz
+            code: CD,
+            detail: cD
           }
-          of zz)
-          if (uz === lz.g.RenderShaderPackNotRun) switch (255 & bz) {
-            case Oz:
+          of DD)
+          if (CD === fD.g.RenderShaderPackNotRun) switch (255 & cD) {
+            case SD:
               this.refused = !0, this.failed();
               break;
-            case pz:
-              this.failedPolicies.add(this.Nl), this.failed();
+            case BD:
+              this.failedPolicies.add(this.wf), this.failed();
               break;
-            case dz:
-              this.failedModelPolicies.add(this.Nl), this.playing && this.notifyModelFallback()
+            case yD:
+              this.failedModelPolicies.add(this.wf), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(Fz) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(MD) : this.failedWhileJoining = !0)
       }
-      fail(zz) {
-        this.leave(), this.deps.failInGame(zz)
+      fail(DD) {
+        this.leave(), this.deps.failInGame(DD)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(zz, uz) {
-        const bz = this.game;
-        this.deps.notify(zz, (() => bz === this.game && this.joined), uz)
+      notify(DD, CD) {
+        const cD = this.game;
+        this.deps.notify(DD, (() => cD === this.game && this.joined), CD)
       }
       handOver() {
-        var zz;
+        var DD;
         const {
-          core: uz
+          core: CD
         } = this.deps;
-        null !== uz && "active" === (null === (zz = this.loaded) || void 0 === zz ? void 0 : zz.status) && (Hz(uz, {
+        null !== CD && "active" === (null === (DD = this.loaded) || void 0 === DD ? void 0 : DD.status) && (wD(CD, {
           ...this.loaded.pack,
-          Nl: this.Nl
+          wf: this.wf
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(zz) {
+      handOverToPreviews(DD) {
         let {
-          pack: uz,
-          harnessPolicy: bz
-        } = zz;
+          pack: CD,
+          harnessPolicy: cD
+        } = DD;
         const {
-          previews: Ez
+          previews: ID
         } = this.deps;
-        null !== Ez && Hz(Ez, {
-          ...uz,
-          Nl: null !== bz && void 0 !== bz ? bz : fz
+        null !== ID && wD(ID, {
+          ...CD,
+          wf: null !== cD && void 0 !== cD ? cD : gD
         })
       }
-      policyOf(zz) {
-        return this.deps.policyOf(zz).catch((zz => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", zz), fz)))
+      policyOf(DD) {
+        return this.deps.policyOf(DD).catch((DD => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", DD), gD)))
       }
     }
-    const rz = "wasmShaderPackNotice";
+    const mD = "wasmShaderPackNotice";
 
-    function oz(zz, uz, bz, Ez) {
-      return nz.k.subscribe(rz, (zz => {
+    function nD(DD, CD, cD, ID) {
+      return pD.i.subscribe(mD, (DD => {
         let {
-          translationKey: uz,
-          stillCurrent: bz,
-          reasonKey: Ez
-        } = zz;
-        bz() && nz.k.sK("chat", (0, iz.h)(uz, Ez))
-      })), new sz({
-        load: Nz,
-        policyOf: vz,
-        core: zz,
-        previews: uz,
-        noWebGpu: bz,
-        notify: (zz, uz, bz) => {
-          const Ez = {
-            translationKey: zz,
-            stillCurrent: uz,
-            reasonKey: bz
+          translationKey: CD,
+          stillCurrent: cD,
+          reasonKey: ID
+        } = DD;
+        cD() && pD.i.Uo("chat", (0, iD.l)(CD, ID))
+      })), new XD({
+        load: OD,
+        policyOf: PD,
+        core: DD,
+        previews: CD,
+        noWebGpu: cD,
+        notify: (DD, CD, cD) => {
+          const ID = {
+            translationKey: DD,
+            stillCurrent: CD,
+            reasonKey: cD
           };
-          nz.k.sK(rz, Ez, !0)
+          pD.i.Uo(mD, ID, !0)
         },
-        failInGame: zz => {
-          nz.k.sK(iz.e, zz)
+        failInGame: DD => {
+          pD.i.Uo(iD.i, DD)
         },
-        warn: Ez
+        warn: ID
       })
     }
-    async function Nz() {
+    async function OD() {
       const [{
-        shaderPackPage: zz,
-        harnessShaderPackMode: uz
+        shaderPackPage: DD,
+        harnessShaderPackMode: CD
       }, {
-        shaderPackTextures: Ez
-      }] = await Promise.all([bz.e(129).then((() => bz(38566))), bz.e(130).then((() => bz(6352)))]), nz = await zz.load();
-      return "active" !== nz.status ? nz : {
+        shaderPackTextures: ID
+      }] = await Promise.all([cD.e(129).then((() => cD(38527))), cD.e(130).then((() => cD(6379)))]), pD = await DD.load();
+      return "active" !== pD.status ? pD : {
         status: "active",
         pack: {
-          variants: nz.pack.variants,
-          layers: Ez().layers,
-          keepCircleShadows: nz.pack.keepCircleShadows
+          variants: pD.pack.variants,
+          layers: ID().layers,
+          keepCircleShadows: pD.pack.keepCircleShadows
         },
-        harnessPolicy: uz()
+        harnessPolicy: CD()
       }
     }
-    async function vz(zz) {
-      var uz;
+    async function PD(DD) {
+      var CD;
       const [{
-        harnessShaderPackMode: Ez
+        harnessShaderPackMode: ID
       }, {
-        getShaderPackPolicy: nz
-      }] = await Promise.all([bz.e(129).then((() => bz(38566))), bz.e(89).then((() => bz(40479)))]);
-      return null !== (uz = Ez()) && void 0 !== uz ? uz : nz(zz)
+        getShaderPackPolicy: pD
+      }] = await Promise.all([cD.e(129).then((() => cD(38527))), cD.e(89).then((() => cD(40329)))]);
+      return null !== (CD = ID()) && void 0 !== CD ? CD : pD(DD)
     }
   },
-  40181: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Mz,
-      e: () => Kz,
-      g: () => tz,
-      j: () => Hz,
-      n: () => Oz,
-      r: () => dz
+  40079: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => bD,
+      f: () => oD,
+      g: () => QD,
+      h: () => wD,
+      l: () => SD,
+      n: () => yD
     });
-    var Ez = bz(40187),
-      nz = bz(40189);
-    const iz = "atlas:",
-      lz = 3e4;
-    class Mz extends Error {
-      constructor(zz, uz) {
-        super(`fetching ${zz} answered HTTP ${uz}`), this.url = zz, this.status = uz, this.name = "TerrainTextureFetchError"
+    var ID = cD(40083),
+      pD = cD(40088);
+    const iD = "atlas:",
+      fD = 3e4;
+    class bD extends Error {
+      constructor(DD, CD) {
+        super(`fetching ${DD} answered HTTP ${CD}`), this.url = DD, this.status = CD, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function tz(zz) {
-      if (!zz.startsWith(iz)) return null;
-      const uz = Number(zz.slice(iz.length));
-      return Number.isInteger(uz) && uz >= 0 ? uz : null
+    function QD(DD) {
+      if (!DD.startsWith(iD)) return null;
+      const CD = Number(DD.slice(iD.length));
+      return Number.isInteger(CD) && CD >= 0 ? CD : null
     }
-    async function Hz() {
-      const zz = await bz.e(201).then((() => bz(33750)));
+    async function wD() {
+      const DD = await cD.e(201).then((() => cD(33733)));
       return {
-        atlasSheets: zz.blockAtlasUrls,
-        texture: uz => {
-          var bz, Ez, iz;
-          return null !== (bz = null !== (Ez = null !== (iz = zz.animatedBlockTextures[uz]) && void 0 !== iz ? iz : zz.rotatedBlockTextures[uz]) && void 0 !== Ez ? Ez : nz.c[uz]) && void 0 !== bz ? bz : null
+        atlasSheets: DD.blockAtlasUrls,
+        texture: CD => {
+          var cD, ID, iD;
+          return null !== (cD = null !== (ID = null !== (iD = DD.animatedBlockTextures[CD]) && void 0 !== iD ? iD : DD.rotatedBlockTextures[CD]) && void 0 !== ID ? ID : pD.d[CD]) && void 0 !== cD ? cD : null
         }
       }
     }
-    async function Oz(zz) {
-      const uz = new AbortController,
-        bz = setTimeout((() => {
-          uz.abort(new DOMException(`${zz} took over ${lz} ms`, "TimeoutError"))
-        }), lz);
-      let Ez;
+    async function SD(DD) {
+      const CD = new AbortController,
+        cD = setTimeout((() => {
+          CD.abort(new DOMException(`${DD} took over ${fD} ms`, "TimeoutError"))
+        }), fD);
+      let ID;
       try {
-        const bz = await fetch(zz, {
-          signal: uz.signal
+        const cD = await fetch(DD, {
+          signal: CD.signal
         });
-        if (!bz.ok) throw new Mz(zz, bz.status);
-        Ez = await bz.blob()
+        if (!cD.ok) throw new bD(DD, cD.status);
+        ID = await cD.blob()
       } finally {
-        clearTimeout(bz)
+        clearTimeout(cD)
       }
-      const nz = await createImageBitmap(Ez, {
+      const pD = await createImageBitmap(ID, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return dz(nz)
+        return yD(pD)
       } finally {
-        nz.close()
+        pD.close()
       }
     }
-    const pz = 8192;
+    const BD = 8192;
 
-    function dz(zz) {
+    function yD(DD) {
       const {
-        width: uz,
-        height: bz
-      } = zz, nz = Math.max(1, Math.min(bz, pz)), iz = (0, Ez.e)(uz, nz, {
+        width: CD,
+        height: cD
+      } = DD, pD = Math.max(1, Math.min(cD, BD)), iD = (0, ID.h)(CD, pD, {
         willReadFrequently: !0
       });
-      if (!iz) throw new Error("no 2D context to read the texture back");
-      iz.globalCompositeOperation = "copy";
-      const lz = new Uint8Array(uz * bz * 4);
-      for (let Ez = 0; Ez < bz; Ez += nz) {
-        const Mz = Math.min(nz, bz - Ez);
-        iz.drawImage(zz, 0, Ez, uz, Mz, 0, 0, uz, Mz), lz.set(iz.getImageData(0, 0, uz, Mz).data, Ez * uz * 4)
+      if (!iD) throw new Error("no 2D context to read the texture back");
+      iD.globalCompositeOperation = "copy";
+      const fD = new Uint8Array(CD * cD * 4);
+      for (let ID = 0; ID < cD; ID += pD) {
+        const bD = Math.min(pD, cD - ID);
+        iD.drawImage(DD, 0, ID, CD, bD, 0, 0, CD, bD), fD.set(iD.getImageData(0, 0, CD, bD).data, ID * CD * 4)
       }
       return {
-        width: uz,
-        height: bz,
-        pixels: lz
+        width: CD,
+        height: cD,
+        pixels: fD
       }
     }
-    async function Fz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Oz;
-      const Ez = [],
-        nz = await Promise.all(zz.map((async zz => {
-          var nz, lz;
-          const Mz = null !== (nz = null === (lz = uz.decoded) || void 0 === lz ? void 0 : lz.call(uz, zz)) && void 0 !== nz ? nz : null,
-            Hz = null === Mz ? function(zz, uz) {
-              if (zz.startsWith(iz)) {
-                var bz;
-                const Ez = tz(zz);
-                return null === Ez ? null : null !== (bz = uz.atlasSheets[Ez]) && void 0 !== bz ? bz : null
+    async function MD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : SD;
+      const ID = [],
+        pD = await Promise.all(DD.map((async DD => {
+          var pD, fD;
+          const bD = null !== (pD = null === (fD = CD.decoded) || void 0 === fD ? void 0 : fD.call(CD, DD)) && void 0 !== pD ? pD : null,
+            wD = null === bD ? function(DD, CD) {
+              if (DD.startsWith(iD)) {
+                var cD;
+                const ID = QD(DD);
+                return null === ID ? null : null !== (cD = CD.atlasSheets[ID]) && void 0 !== cD ? cD : null
               }
-              return uz.texture(zz)
-            }(zz, uz) : null,
-            Oz = null !== Mz && void 0 !== Mz ? Mz : null === Hz ? null : bz(Hz);
-          if (null === Oz) return Ez.push({
-            name: zz,
-            url: Hz,
-            error: new Error(`no URL for terrain texture ${zz}`)
+              return CD.texture(DD)
+            }(DD, CD) : null,
+            SD = null !== bD && void 0 !== bD ? bD : null === wD ? null : cD(wD);
+          if (null === SD) return ID.push({
+            name: DD,
+            url: wD,
+            error: new Error(`no URL for terrain texture ${DD}`)
           }), null;
           try {
-            const uz = await Oz;
-            if (uz.pixels.byteLength !== uz.width * uz.height * 4) throw new Error(`decoded ${uz.pixels.byteLength} bytes for ${uz.width}x${uz.height} texels`);
+            const CD = await SD;
+            if (CD.pixels.byteLength !== CD.width * CD.height * 4) throw new Error(`decoded ${CD.pixels.byteLength} bytes for ${CD.width}x${CD.height} texels`);
             return {
-              name: zz,
-              texture: uz
+              name: DD,
+              texture: CD
             }
-          } catch (pz) {
-            return Ez.push({
-              name: zz,
-              url: Hz,
-              error: pz
+          } catch (BD) {
+            return ID.push({
+              name: DD,
+              url: wD,
+              error: BD
             }), null
           }
         }))),
-        lz = nz.filter((zz => null !== zz)),
-        Mz = new Uint32Array(2 * lz.length);
-      lz.forEach(((zz, uz) => {
+        fD = pD.filter((DD => null !== DD)),
+        bD = new Uint32Array(2 * fD.length);
+      fD.forEach(((DD, CD) => {
         let {
-          texture: bz
-        } = zz;
-        Mz[2 * uz] = bz.width, Mz[2 * uz + 1] = bz.height
+          texture: cD
+        } = DD;
+        bD[2 * CD] = cD.width, bD[2 * CD + 1] = cD.height
       }));
       return {
         handOver: {
-          names: lz.map((zz => {
+          names: fD.map((DD => {
             let {
-              name: uz
-            } = zz;
-            return uz
+              name: CD
+            } = DD;
+            return CD
           })),
-          textures: lz.map((zz => {
+          textures: fD.map((DD => {
             let {
-              texture: uz
-            } = zz;
-            return uz.pixels
+              texture: CD
+            } = DD;
+            return CD.pixels
           })),
-          sizes: Mz
+          sizes: bD
         },
-        failures: Ez
+        failures: ID
       }
     }
-    const Zz = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const tD = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function Rz() {}
-    class Kz {
-      constructor(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Zz,
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = zz, this.retryMs = uz, this.keepBelow = bz, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function ZD() {}
+    class oD {
+      constructor(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tD,
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = DD, this.retryMs = CD, this.keepBelow = cD, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hz,
-          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Ez = ++this.started,
-          nz = {
-            decode: bz.decode,
-            wholeAtlas: bz.wholeAtlas
+      async swap(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wD,
+          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const ID = ++this.started,
+          pD = {
+            decode: cD.decode,
+            wholeAtlas: cD.wholeAtlas
           };
-        return this.loadAndHandOver(uz, nz, zz, (() => {
-          var zz;
-          return Ez < this.landed || !1 === (null === (zz = bz.wanted) || void 0 === zz ? void 0 : zz.call(bz))
+        return this.loadAndHandOver(CD, pD, DD, (() => {
+          var DD;
+          return ID < this.landed || !1 === (null === (DD = cD.wanted) || void 0 === DD ? void 0 : DD.call(cD))
         }), {
-          onTaken: (zz, bz) => {
-            this.landed = Ez, this.current = {
-              mine: Ez,
-              sources: uz,
-              load: nz,
-              MZ: zz,
-              failed: bz
+          onTaken: (DD, cD) => {
+            this.landed = ID, this.current = {
+              mine: ID,
+              sources: CD,
+              load: pD,
+              uM: DD,
+              failed: cD
             }
           }
         })
       }
-      restore(zz) {
-        var uz;
-        const bz = this.current;
-        if (null === bz) return Promise.resolve(null);
-        if ((null === (uz = this.restoring) || void 0 === uz ? void 0 : uz.mine) === bz.mine) return this.restoring.done;
-        const Ez = {
-          mine: bz.mine,
-          done: this.restoreLanded(bz, zz).finally((() => {
-            this.restoring === Ez && (this.restoring = null)
+      restore(DD) {
+        var CD;
+        const cD = this.current;
+        if (null === cD) return Promise.resolve(null);
+        if ((null === (CD = this.restoring) || void 0 === CD ? void 0 : CD.mine) === cD.mine) return this.restoring.done;
+        const ID = {
+          mine: cD.mine,
+          done: this.restoreLanded(cD, DD).finally((() => {
+            this.restoring === ID && (this.restoring = null)
           }))
         };
-        return this.restoring = Ez, Ez.done
+        return this.restoring = ID, ID.done
       }
-      async restoreLanded(zz, uz) {
-        const bz = () => this.landed !== zz.mine,
+      async restoreLanded(DD, CD) {
+        const cD = () => this.landed !== DD.mine,
           {
-            MZ: Ez
-          } = zz;
-        if (null !== Ez) return this.stopped() ? null : this.core.setTerrainTextures(Ez.names, Ez.textures, Ez.sizes);
-        let nz = uz;
-        for (let iz = 0;; iz++) {
-          const uz = this.retryMs.at(iz),
-            Ez = {
-              allOrNothingExcept: void 0 === uz ? void 0 : zz.failed
+            uM: ID
+          } = DD;
+        if (null !== ID) return this.stopped() ? null : this.core.setTerrainTextures(ID.names, ID.textures, ID.sizes);
+        let pD = CD;
+        for (let iD = 0;; iD++) {
+          const CD = this.retryMs.at(iD),
+            ID = {
+              allOrNothingExcept: void 0 === CD ? void 0 : DD.failed
             },
-            lz = await this.loadAndHandOver(zz.sources, zz.load, nz, bz, Ez);
-          if (!1 !== lz || void 0 === uz || this.stopped()) return lz;
-          if (nz = Rz, await new Promise((zz => {
-              setTimeout(zz, uz)
-            })), bz()) return null
+            fD = await this.loadAndHandOver(DD.sources, DD.load, pD, cD, ID);
+          if (!1 !== fD || void 0 === CD || this.stopped()) return fD;
+          if (pD = ZD, await new Promise((DD => {
+              setTimeout(DD, CD)
+            })), cD()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(zz, uz, bz, Ez) {
-        let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(DD, CD, cD, ID) {
+        let pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const iz = this.core.terrainTextureNames();
-        var lz;
-        if (0 === iz.length) return null === (lz = nz.onTaken) || void 0 === lz || lz.call(nz, null, new Set), !0;
-        let Mz, Hz;
+        const iD = this.core.terrainTextureNames();
+        var fD;
+        if (0 === iD.length) return null === (fD = pD.onTaken) || void 0 === fD || fD.call(pD, null, new Set), !0;
+        let bD, wD;
         try {
-          Mz = await zz(), Hz = await Fz(iz, Mz, uz.decode)
-        } catch (Kz) {
-          return Ez() ? null : (bz({
+          bD = await DD(), wD = await MD(iD, bD, CD.decode)
+        } catch (oD) {
+          return ID() ? null : (cD({
             name: null,
             url: null,
-            error: Kz
+            error: oD
           }), !1)
         }
-        if (Ez() || this.stopped()) return null;
-        for (const tz of Hz.failures) bz(tz);
-        const Oz = nz.allOrNothingExcept;
-        if (void 0 !== Oz && Hz.failures.some((zz => {
+        if (ID() || this.stopped()) return null;
+        for (const QD of wD.failures) cD(QD);
+        const SD = pD.allOrNothingExcept;
+        if (void 0 !== SD && wD.failures.some((DD => {
             let {
-              name: uz
-            } = zz;
-            return null === uz || !Oz.has(uz)
-          })) || !0 === uz.wholeAtlas && Hz.failures.some((zz => {
+              name: CD
+            } = DD;
+            return null === CD || !SD.has(CD)
+          })) || !0 === CD.wholeAtlas && wD.failures.some((DD => {
             let {
-              name: uz
-            } = zz;
-            return null === uz || null !== tz(uz)
+              name: CD
+            } = DD;
+            return null === CD || null !== QD(CD)
           }))) return !1;
         const {
-          handOver: pz
-        } = Hz, dz = function(zz) {
-          return zz.textures.reduce(((zz, uz) => zz + uz.byteLength), 0)
-        }(pz) < this.keepBelow, Zz = this.core.setTerrainTextures(pz.names, pz.textures, pz.sizes, dz ? void 0 : () => {
-          !async function(zz, uz) {
-            await uz;
+          handOver: BD
+        } = wD, yD = function(DD) {
+          return DD.textures.reduce(((DD, CD) => DD + CD.byteLength), 0)
+        }(BD) < this.keepBelow, tD = this.core.setTerrainTextures(BD.names, BD.textures, BD.sizes, yD ? void 0 : () => {
+          !async function(DD, CD) {
+            await CD;
             for (const {
-                buffer: Ez
+                buffer: ID
               }
-              of zz) {
-              const zz = Ez;
-              var bz;
-              if (!zz.detached) null === (bz = zz.transfer) || void 0 === bz || bz.call(zz, 0)
+              of DD) {
+              const DD = ID;
+              var cD;
+              if (!DD.detached) null === (cD = DD.transfer) || void 0 === cD || cD.call(DD, 0)
             }
-          }(pz.textures, Mz.heldUntil)
+          }(BD.textures, bD.heldUntil)
         });
-        if (Zz) {
-          var Rz;
-          const zz = new Set(Hz.failures.flatMap((zz => {
+        if (tD) {
+          var ZD;
+          const DD = new Set(wD.failures.flatMap((DD => {
             let {
-              name: uz
-            } = zz;
-            return null === uz ? [] : [uz]
+              name: CD
+            } = DD;
+            return null === CD ? [] : [CD]
           })));
-          null === (Rz = nz.onTaken) || void 0 === Rz || Rz.call(nz, dz ? pz : null, zz)
+          null === (ZD = pD.onTaken) || void 0 === ZD || ZD.call(pD, yD ? BD : null, DD)
         }
-        return Zz
+        return tD
       }
     }
   },
-  36282: (zz, uz, bz) => {
-    function Ez(zz) {
-      return "fetch" === zz || "timeout" === zz || "integrity" === zz ? "download" : "browser"
+  36202: (DD, CD, cD) => {
+    function ID(DD) {
+      return "fetch" === DD || "timeout" === DD || "integrity" === DD ? "download" : "browser"
     }
-    bz.d(uz, {
-      e: () => nz,
-      i: () => lz,
-      l: () => tz,
-      m: () => Mz,
-      q: () => Ez,
-      s: () => iz
+    cD.d(CD, {
+      c: () => pD,
+      d: () => fD,
+      h: () => QD,
+      l: () => bD,
+      o: () => ID,
+      r: () => iD
     });
-    const nz = "https://discord.gg/playbloxd";
+    const pD = "https://discord.gg/playbloxd";
 
-    function iz(zz) {
-      return "download" === zz ? {
+    function iD(DD) {
+      return "download" === DD ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -3243,21 +3243,21 @@ export const modules = {
       }
     }
 
-    function lz(zz, uz) {
+    function fD(DD, CD) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: uz ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: CD ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: zz.code
+          code: DD.code
         },
-        discordLink: uz,
+        discordLink: CD,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function Mz() {
+    function bD() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -3269,146 +3269,146 @@ export const modules = {
       }
     }
 
-    function tz(zz, uz, bz) {
+    function QD(DD, CD, cD) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: bz ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: cD ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: zz.reason
+          reason: DD.reason
         },
-        discordLink: null === zz.name,
-        confirm: uz ? "general:reconnect" : zz.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === DD.name,
+        confirm: CD ? "general:reconnect" : DD.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  6359: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => sz,
-      e: () => rz,
-      i: () => Xz,
-      m: () => wz
+  6384: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => XD,
+      g: () => mD,
+      i: () => ND,
+      k: () => vD
     });
-    var Ez = bz(6362);
-    const nz = 6,
-      iz = 3,
-      lz = 1,
-      Mz = 2,
-      tz = 4,
-      Hz = 8,
-      Oz = 16,
-      pz = 32,
-      dz = 64,
-      Fz = 128,
-      Zz = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var ID = cD(6393);
+    const pD = 6,
+      iD = 3,
+      fD = 1,
+      bD = 2,
+      QD = 4,
+      wD = 8,
+      SD = 16,
+      BD = 32,
+      yD = 64,
+      MD = 128,
+      tD = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Rz(zz) {
-      if (!zz) return 0;
-      const uz = Zz.indexOf(zz);
-      if (uz <= 0) throw new Error(`"${zz}" is not a shader pack hook function`);
-      return uz
+    function ZD(DD) {
+      if (!DD) return 0;
+      const CD = tD.indexOf(DD);
+      if (CD <= 0) throw new Error(`"${DD}" is not a shader pack hook function`);
+      return CD
     }
 
-    function Kz(zz) {
-      if (0 === zz) return null;
-      const uz = Zz[zz];
-      if (void 0 === uz) throw new Error(`${zz} is not a shader pack hook function id`);
-      return uz
+    function oD(DD) {
+      if (0 === DD) return null;
+      const CD = tD[DD];
+      if (void 0 === CD) throw new Error(`${DD} is not a shader pack hook function id`);
+      return CD
     }
 
-    function wz(zz) {
-      const uz = Ez.e.length;
+    function vD(DD) {
+      const CD = ID.c.length;
       return {
-        strict: zz >= uz,
-        program: Ez.e[zz % uz]
+        strict: DD >= CD,
+        program: ID.c[DD % CD]
       }
     }
 
-    function Xz(zz) {
-      return Number(zz.strict) * Ez.e.length + Ez.e.indexOf(zz.program)
+    function ND(DD) {
+      return Number(DD.strict) * ID.c.length + ID.c.indexOf(DD.program)
     }
 
-    function fz(zz) {
-      return "" === zz ? [] : zz.split(" ")
+    function gD(DD) {
+      return "" === DD ? [] : DD.split(" ")
     }
 
-    function sz(zz) {
-      const uz = {
-        variantFlags: new Uint8Array(nz),
-        hooks: new Uint8Array(nz * iz),
-        moduleCodes: Array(nz).fill(""),
-        reads: Array(2 * nz).fill("")
+    function XD(DD) {
+      const CD = {
+        variantFlags: new Uint8Array(pD),
+        hooks: new Uint8Array(pD * iD),
+        moduleCodes: Array(pD).fill(""),
+        reads: Array(2 * pD).fill("")
       };
-      for (const bz of zz) {
-        const zz = Xz(bz.key),
-          Ez = (zz, uz) => null === bz.hooks.surface || bz.reads.fragment.includes(zz) ? 0 : uz;
-        uz.variantFlags[zz] = (bz.sceneDepth ? lz : 0) | (bz.movesVertices ? Mz : 0) | (bz.sunShadow ? tz : 0) | (bz.airShadow ? Hz : 0) | (bz.discards ? Oz : 0) | Ez("localPosition", pz) | Ez("enchantSpeed", dz) | Ez("enchantTier", Fz), uz.hooks[zz * iz] = Rz(bz.hooks.vertex), uz.hooks[zz * iz + 1] = Rz(bz.hooks.surface), uz.hooks[zz * iz + 2] = Rz(bz.hooks.light), uz.moduleCodes[zz] = bz.moduleCode, uz.reads[2 * zz] = bz.reads.vertex.join(" "), uz.reads[2 * zz + 1] = bz.reads.fragment.join(" ")
+      for (const cD of DD) {
+        const DD = ND(cD.key),
+          ID = (DD, CD) => null === cD.hooks.surface || cD.reads.fragment.includes(DD) ? 0 : CD;
+        CD.variantFlags[DD] = (cD.sceneDepth ? fD : 0) | (cD.movesVertices ? bD : 0) | (cD.sunShadow ? QD : 0) | (cD.airShadow ? wD : 0) | (cD.discards ? SD : 0) | ID("localPosition", BD) | ID("enchantSpeed", yD) | ID("enchantTier", MD), CD.hooks[DD * iD] = ZD(cD.hooks.vertex), CD.hooks[DD * iD + 1] = ZD(cD.hooks.surface), CD.hooks[DD * iD + 2] = ZD(cD.hooks.light), CD.moduleCodes[DD] = cD.moduleCode, CD.reads[2 * DD] = cD.reads.vertex.join(" "), CD.reads[2 * DD + 1] = cD.reads.fragment.join(" ")
       }
-      return uz
+      return CD
     }
 
-    function rz(zz) {
+    function mD(DD) {
       const {
-        hooks: uz,
-        moduleCodes: bz,
-        reads: Ez
-      } = zz;
-      return Array.from(zz.variantFlags, ((zz, nz) => {
-        const pz = nz * iz;
+        hooks: CD,
+        moduleCodes: cD,
+        reads: ID
+      } = DD;
+      return Array.from(DD.variantFlags, ((DD, pD) => {
+        const BD = pD * iD;
         return {
-          key: wz(nz),
+          key: vD(pD),
           hooks: {
-            vertex: Kz(uz[pz]),
-            surface: Kz(uz[pz + 1]),
-            light: Kz(uz[pz + 2])
+            vertex: oD(CD[BD]),
+            surface: oD(CD[BD + 1]),
+            light: oD(CD[BD + 2])
           },
-          moduleCode: bz[nz],
-          sceneDepth: 0 !== (zz & lz),
-          sunShadow: 0 !== (zz & tz),
-          airShadow: 0 !== (zz & Hz),
-          movesVertices: 0 !== (zz & Mz),
-          discards: 0 !== (zz & Oz),
+          moduleCode: cD[pD],
+          sceneDepth: 0 !== (DD & fD),
+          sunShadow: 0 !== (DD & QD),
+          airShadow: 0 !== (DD & wD),
+          movesVertices: 0 !== (DD & bD),
+          discards: 0 !== (DD & SD),
           reads: {
-            vertex: fz(Ez[2 * nz]),
-            fragment: fz(Ez[2 * nz + 1])
+            vertex: gD(ID[2 * pD]),
+            fragment: gD(ID[2 * pD + 1])
           }
         }
       }))
     }
   },
-  40071: (zz, uz, bz) => {
-    bz.d(uz, {
-      A: () => Fz,
-      B: () => Zz,
-      c: () => nz,
-      g: () => Ez,
-      h: () => dz,
-      j: () => Oz,
-      m: () => Kz,
-      o: () => iz,
-      q: () => Mz,
-      t: () => tz,
-      w: () => lz,
-      y: () => Rz
+  39961: (DD, CD, cD) => {
+    cD.d(CD, {
+      C: () => fD,
+      F: () => ZD,
+      G: () => MD,
+      J: () => tD,
+      e: () => pD,
+      h: () => ID,
+      l: () => yD,
+      p: () => SD,
+      r: () => oD,
+      u: () => iD,
+      v: () => bD,
+      z: () => QD
     });
-    const Ez = 3,
-      nz = 0,
-      iz = 1,
-      lz = 2,
-      Mz = {
+    const ID = 3,
+      pD = 0,
+      iD = 1,
+      fD = 2,
+      bD = {
         uniform: 3,
-        nF: 4,
+        Ey: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      tz = 10,
-      Hz = "BloxdPackInputs",
-      Oz = "bloxdPackInputs",
-      pz = [{
+      QD = 10,
+      wD = "BloxdPackInputs",
+      SD = "bloxdPackInputs",
+      BD = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -3433,115 +3433,115 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      dz = 80;
+      yD = 80;
 
-    function Fz() {
-      const zz = pz.map((zz => {
+    function MD() {
+      const DD = BD.map((DD => {
         let {
-          name: uz,
-          type: bz
-        } = zz;
-        return `    ${uz}: ${bz},\n`
+          name: CD,
+          type: cD
+        } = DD;
+        return `    ${CD}: ${cD},\n`
       })).join("");
-      return `struct ${Hz} {\n${zz}}\n@group(${Ez}) @binding(${nz}) var<uniform> ${Oz}: ${Hz};\n`
+      return `struct ${wD} {\n${DD}}\n@group(${ID}) @binding(${pD}) var<uniform> ${SD}: ${wD};\n`
     }
 
-    function Zz(zz, uz) {
-      const bz = new DataView(zz, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, dz),
-        [Ez, nz, iz, lz, Mz, tz] = pz;
-      bz.setFloat32(Ez.offset, uz.seconds, !0), bz.setUint32(nz.offset, uz.lit ? 1 : 0, !0);
-      for (let Hz = 0; Hz < 3; Hz++) bz.setInt32(iz.offset + 4 * Hz, uz.renderOffset[Hz], !0), bz.setFloat32(lz.offset + 4 * Hz, uz.k_[Hz], !0), bz.setFloat32(Mz.offset + 4 * Hz, uz.eyePosition[Hz], !0), bz.setFloat32(tz.offset + 4 * Hz, uz.shadowDirection[Hz], !0)
+    function tD(DD, CD) {
+      const cD = new DataView(DD, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, yD),
+        [ID, pD, iD, fD, bD, QD] = BD;
+      cD.setFloat32(ID.offset, CD.seconds, !0), cD.setUint32(pD.offset, CD.lit ? 1 : 0, !0);
+      for (let wD = 0; wD < 3; wD++) cD.setInt32(iD.offset + 4 * wD, CD.renderOffset[wD], !0), cD.setFloat32(fD.offset + 4 * wD, CD.i_[wD], !0), cD.setFloat32(bD.offset + 4 * wD, CD.eyePosition[wD], !0), cD.setFloat32(QD.offset + 4 * wD, CD.shadowDirection[wD], !0)
     }
 
-    function Rz(zz) {
-      const uz = new Uint32Array(Math.max(1, zz.length));
-      return zz.forEach(((zz, bz) => {
+    function ZD(DD) {
+      const CD = new Uint32Array(Math.max(1, DD.length));
+      return DD.forEach(((DD, cD) => {
         let {
-          id: Ez,
-          rotation: nz
-        } = zz;
-        uz[bz] = 65535 & Ez | (3 & nz) << 16
-      })), uz
+          id: ID,
+          rotation: pD
+        } = DD;
+        CD[cD] = 65535 & ID | (3 & pD) << 16
+      })), CD
     }
-    const Kz = {
+    const oD = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6362: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Ez,
-      i: () => lz,
-      j: () => Mz,
-      m: () => nz,
-      p: () => iz
+  6393: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => ID,
+      f: () => fD,
+      h: () => bD,
+      i: () => pD,
+      k: () => iD
     });
-    const Ez = ["terrain", "liquid", "model"];
+    const ID = ["terrain", "liquid", "model"];
 
-    function nz() {
-      const zz = [];
-      for (const uz of [!1, !0])
-        for (const bz of Ez) zz.push({
-          strict: uz,
-          program: bz
+    function pD() {
+      const DD = [];
+      for (const CD of [!1, !0])
+        for (const cD of ID) DD.push({
+          strict: CD,
+          program: cD
         });
-      return zz
+      return DD
     }
 
-    function iz(zz) {
-      return `${zz.strict?"strict":"allow"}.${zz.program}`
+    function iD(DD) {
+      return `${DD.strict?"strict":"allow"}.${DD.program}`
     }
 
-    function lz(zz) {
-      return !zz.hooks.vertex && !zz.hooks.surface && !zz.hooks.light
+    function fD(DD) {
+      return !DD.hooks.vertex && !DD.hooks.surface && !DD.hooks.light
     }
 
-    function Mz(zz, uz) {
-      return "off" !== uz && (null === zz || zz.some((zz => zz.key.strict === ("strict" === uz) && !lz(zz))))
+    function bD(DD, CD) {
+      return "off" !== CD && (null === DD || DD.some((DD => DD.key.strict === ("strict" === CD) && !fD(DD))))
     }
   },
-  40111: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Ez,
-      e: () => iz,
-      i: () => tz,
-      l: () => lz,
-      o: () => nz
+  39995: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => ID,
+      e: () => iD,
+      i: () => QD,
+      m: () => fD,
+      n: () => pD
     });
-    const Ez = /^alloc_failed (\d+) bytes$/;
+    const ID = /^alloc_failed (\d+) bytes$/;
 
-    function nz(zz, uz) {
-      return iz(zz, uz) ? `trap=alloc_failed ${uz} bytes` : `trap=${zz}`
+    function pD(DD, CD) {
+      return iD(DD, CD) ? `trap=alloc_failed ${CD} bytes` : `trap=${DD}`
     }
 
-    function iz(zz, uz) {
-      return "unreachable" === zz && uz > 0
+    function iD(DD, CD) {
+      return "unreachable" === DD && CD > 0
     }
 
-    function lz(zz, uz, bz) {
-      const Ez = function(zz) {
-        return zz instanceof WebAssembly.RuntimeError ? /unreachable/i.test(zz.message) ? "unreachable" : /out of bounds/i.test(zz.message) ? "out_of_bounds" : "runtime_error" : (zz instanceof RangeError || zz instanceof Error && "InternalError" === zz.name) && /call stack|recursion/i.test(zz.message) ? "stack_overflow" : "js_error"
-      }(zz);
-      if ("unreachable" !== Ez) return {
-        kind: Ez,
+    function fD(DD, CD, cD) {
+      const ID = function(DD) {
+        return DD instanceof WebAssembly.RuntimeError ? /unreachable/i.test(DD.message) ? "unreachable" : /out of bounds/i.test(DD.message) ? "out_of_bounds" : "runtime_error" : (DD instanceof RangeError || DD instanceof Error && "InternalError" === DD.name) && /call stack|recursion/i.test(DD.message) ? "stack_overflow" : "js_error"
+      }(DD);
+      if ("unreachable" !== ID) return {
+        kind: ID,
         panic: null,
         refusedBytes: 0
       };
-      const nz = uz(),
-        iz = bz();
+      const pD = CD(),
+        iD = cD();
       return {
-        kind: Ez,
-        panic: iz > 0 ? null : nz,
-        refusedBytes: iz
+        kind: ID,
+        panic: iD > 0 ? null : pD,
+        refusedBytes: iD
       }
     }
-    const Mz = 300;
+    const bD = 300;
 
-    function tz(zz) {
-      return zz.replace(/\s*\n\s*/g, " / ").slice(0, Mz)
+    function QD(DD) {
+      return DD.replace(/\s*\n\s*/g, " / ").slice(0, bD)
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,30 +1,30 @@
 export const id = 73;
 export const ids = [73];
 export const modules = {
-  4439: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Oz
+  4492: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => SD
     });
-    var Ez = bz(20),
-      nz = bz(22),
-      iz = bz(1269),
-      lz = bz(2689);
-    const Mz = 3e4,
-      tz = 1e3;
+    var ID = cD(16),
+      pD = cD(20),
+      iD = cD(1284),
+      fD = cD(2727);
+    const bD = 3e4,
+      QD = 1e3;
 
-    function Hz() {
-      return "visible" === document.visibilityState && "inGame" === Ez.e.get("gameState") && (0, iz.q)()
+    function wD() {
+      return "visible" === document.visibilityState && "inGame" === ID.d.get("gameState") && (0, iD.r)()
     }
 
-    function Oz(zz, uz) {
-      (0, lz.q)() || function(zz, uz, bz) {
-        let Ez = 0;
-        const nz = setInterval((() => {
-          uz() && (Ez += tz, Ez >= zz && (clearInterval(nz), bz()))
-        }), tz)
-      }(Mz, Hz, (() => {
-        uz().then((() => {
-          zz(`saved for the player after ${Mz/1e3} s of play`), (0, lz.y)(), nz.k.sK("chat", {
+    function SD(DD, CD) {
+      (0, fD.q)() || function(DD, CD, cD) {
+        let ID = 0;
+        const pD = setInterval((() => {
+          CD() && (ID += QD, ID >= DD && (clearInterval(pD), cD()))
+        }), QD)
+      }(bD, wD, (() => {
+        CD().then((() => {
+          DD(`saved for the player after ${bD/1e3} s of play`), (0, fD.w)(), pD.i.Uo("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,304 +36,304 @@ export const modules = {
       }))
     }
   },
-  8867: (zz, uz, bz) => {
-    function Ez(zz, uz) {
-      return 0 === zz.length ? 0 : zz[Math.min(zz.length - 1, Math.floor(uz * zz.length))]
+  8906: (DD, CD, cD) => {
+    function ID(DD, CD) {
+      return 0 === DD.length ? 0 : DD[Math.min(DD.length - 1, Math.floor(CD * DD.length))]
     }
-    bz.d(uz, {
-      c: () => Ez
+    cD.d(CD, {
+      b: () => ID
     })
   },
-  37376: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Hz,
-      e: () => Oz,
-      f: () => sz,
-      i: () => fz,
-      m: () => Xz
+  37329: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => wD,
+      d: () => SD,
+      e: () => XD,
+      h: () => gD,
+      i: () => ND
     });
-    var Ez = bz(4439),
-      nz = bz(8867),
-      iz = bz(2689);
-    const lz = 20,
-      Mz = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "Bp", "jobMs"];
+    var ID = cD(4492),
+      pD = cD(8906),
+      iD = cD(2727);
+    const fD = 20,
+      bD = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "LB", "jobMs"];
 
-    function tz(zz) {
-      return [...zz].sort(((zz, uz) => zz - uz))
+    function QD(DD) {
+      return [...DD].sort(((DD, CD) => DD - CD))
     }
-    const Hz = [];
+    const wD = [];
 
-    function Oz(zz, uz, bz) {
-      return `${zz},${uz},${bz}`
+    function SD(DD, CD, cD) {
+      return `${DD},${CD},${cD}`
     }
-    class pz {
+    class BD {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(zz, uz) {
-        var bz;
-        const Ez = null !== (bz = this.pending.get(zz)) && void 0 !== bz ? bz : [];
-        Ez.push({
-          editAt: uz,
+      edit(DD, CD) {
+        var cD;
+        const ID = null !== (cD = this.pending.get(DD)) && void 0 !== cD ? cD : [];
+        ID.push({
+          editAt: CD,
           meshJobId: 0
-        }), this.pending.set(zz, Ez)
+        }), this.pending.set(DD, ID)
       }
-      frame(zz) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, zz - this.lastFrameAt)), this.lastFrameAt = zz, this.frames++, zz - this.windowStart >= 1e3 && this.summarise(zz)
+      frame(DD) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, DD - this.lastFrameAt)), this.lastFrameAt = DD, this.frames++, DD - this.windowStart >= 1e3 && this.summarise(DD)
       }
-      sent(zz, uz, bz, Ez, nz, iz, lz) {
-        this.jobs.set(uz, {
-          sentAt: lz,
+      sent(DD, CD, cD, ID, pD, iD, fD) {
+        this.jobs.set(CD, {
+          sentAt: fD,
           receivedAt: 0,
-          ahead: bz,
-          inFlight: Ez,
-          Bp: nz,
+          ahead: cD,
+          inFlight: ID,
+          LB: pD,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, bz), this.maxCapacity = Math.max(this.maxCapacity, nz);
-        for (const tz of null !== (Mz = this.pending.get(zz)) && void 0 !== Mz ? Mz : []) {
-          var Mz;
-          iz.includes(tz.meshJobId) || (tz.meshJobId = uz)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, cD), this.maxCapacity = Math.max(this.maxCapacity, pD);
+        for (const QD of null !== (bD = this.pending.get(DD)) && void 0 !== bD ? bD : []) {
+          var bD;
+          iD.includes(QD.meshJobId) || (QD.meshJobId = CD)
         }
       }
-      received(zz, uz, bz) {
-        const Ez = this.jobs.get(zz);
-        void 0 !== Ez && (this.roundTrips.push(bz - Ez.sentAt), Ez.receivedAt = bz, Ez.jobMs = uz)
+      received(DD, CD, cD) {
+        const ID = this.jobs.get(DD);
+        void 0 !== ID && (this.roundTrips.push(cD - ID.sentAt), ID.receivedAt = cD, ID.jobMs = CD)
       }
-      failed(zz) {
-        this.jobs.delete(zz)
+      failed(DD) {
+        this.jobs.delete(DD)
       }
-      reassign(zz, uz, bz) {
-        this.jobs.delete(uz);
-        for (const nz of null !== (Ez = this.pending.get(zz)) && void 0 !== Ez ? Ez : []) {
-          var Ez;
-          nz.meshJobId === uz && (nz.meshJobId = bz)
+      reassign(DD, CD, cD) {
+        this.jobs.delete(CD);
+        for (const pD of null !== (ID = this.pending.get(DD)) && void 0 !== ID ? ID : []) {
+          var ID;
+          pD.meshJobId === CD && (pD.meshJobId = cD)
         }
       }
-      applied(zz, uz, bz) {
-        const Ez = this.jobs.get(uz);
-        this.jobs.delete(uz), void 0 !== Ez && this.show(zz, Ez, bz, (zz => zz.meshJobId === uz))
+      applied(DD, CD, cD) {
+        const ID = this.jobs.get(CD);
+        this.jobs.delete(CD), void 0 !== ID && this.show(DD, ID, cD, (DD => DD.meshJobId === CD))
       }
-      emptied(zz, uz) {
-        const bz = {
-          sentAt: uz,
-          receivedAt: uz,
+      emptied(DD, CD) {
+        const cD = {
+          sentAt: CD,
+          receivedAt: CD,
           ahead: 0,
           inFlight: 0,
-          Bp: 0,
+          LB: 0,
           jobMs: 0
         };
-        this.show(zz, bz, uz, (() => !0))
+        this.show(DD, cD, CD, (() => !0))
       }
-      show(zz, uz, bz, Ez) {
-        const nz = this.pending.get(zz);
-        if (!nz) return;
-        const iz = nz.filter((nz => !Ez(nz) || (this.record(zz, nz.editAt, uz, bz), !1)));
-        iz.length > 0 ? this.pending.set(zz, iz) : this.pending.delete(zz)
+      show(DD, CD, cD, ID) {
+        const pD = this.pending.get(DD);
+        if (!pD) return;
+        const iD = pD.filter((pD => !ID(pD) || (this.record(DD, pD.editAt, CD, cD), !1)));
+        iD.length > 0 ? this.pending.set(DD, iD) : this.pending.delete(DD)
       }
-      xZ(zz) {
-        this.reported += zz, this === Fz && this.reported >= lz && null !== Zz && (Zz(), Zz = null)
+      Nt(DD) {
+        this.reported += DD, this === MD && this.reported >= fD && null !== tD && (tD(), tD = null)
       }
-      record(zz, uz, bz, Ez) {
-        const nz = {
-          totalMs: Ez - uz,
-          slotMs: bz.sentAt - uz,
-          workerMs: bz.receivedAt - bz.sentAt,
-          applyMs: Ez - bz.receivedAt,
-          ahead: bz.ahead,
-          inFlight: bz.inFlight,
-          Bp: bz.Bp,
-          jobMs: bz.jobMs
+      record(DD, CD, cD, ID) {
+        const pD = {
+          totalMs: ID - CD,
+          slotMs: cD.sentAt - CD,
+          workerMs: cD.receivedAt - cD.sentAt,
+          applyMs: ID - cD.receivedAt,
+          ahead: cD.ahead,
+          inFlight: cD.inFlight,
+          LB: cD.LB,
+          jobMs: cD.jobMs
         };
-        if (this.edits[this.nextEdit] = nz, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(nz.totalMs), this.xZ(1), nz.totalMs < 100 || ++this.outliers > 5) return;
-        const lz = zz => Math.round(zz);
-        (0, iz.i)("remesh", `slow edit (${zz}) shown in ${lz(nz.totalMs)} ms: slot ${lz(nz.slotMs)}, worker ${lz(nz.workerMs)} (${nz.ahead} ahead, ${nz.inFlight}/${nz.Bp} in flight; job ${lz(nz.jobMs)}), apply ${lz(nz.applyMs)}`)
+        if (this.edits[this.nextEdit] = pD, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(pD.totalMs), this.Nt(1), pD.totalMs < 100 || ++this.outliers > 5) return;
+        const fD = DD => Math.round(DD);
+        (0, iD.j)("remesh", `slow edit (${DD}) shown in ${fD(pD.totalMs)} ms: slot ${fD(pD.slotMs)}, worker ${fD(pD.workerMs)} (${pD.ahead} ahead, ${pD.inFlight}/${pD.LB} in flight; job ${fD(pD.jobMs)}), apply ${fD(pD.applyMs)}`)
       }
-      summarise(zz) {
-        const uz = (zz - this.windowStart) / 1e3;
-        for (const [bz, Ez] of this.pending) {
-          const uz = Ez.filter((uz => zz - uz.editAt <= 1e4));
-          this.gaveUp += Ez.length - uz.length, this.xZ(Ez.length - uz.length), uz.length > 0 ? this.pending.set(bz, uz) : this.pending.delete(bz)
+      summarise(DD) {
+        const CD = (DD - this.windowStart) / 1e3;
+        for (const [cD, ID] of this.pending) {
+          const CD = ID.filter((CD => DD - CD.editAt <= 1e4));
+          this.gaveUp += ID.length - CD.length, this.Nt(ID.length - CD.length), CD.length > 0 ? this.pending.set(cD, CD) : this.pending.delete(cD)
         }
-        for (const [bz, Ez] of this.jobs) zz - Ez.sentAt > (Ez.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(bz);
+        for (const [cD, ID] of this.jobs) DD - ID.sentAt > (ID.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(cD);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const zz = tz(this.roundTrips),
-            bz = tz(this.windowEdits),
-            Ez = Math.max(0, this.outliers - 5);
-          (0, iz.i)("remesh", `${Math.round(this.frames/uz)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,nz.c)(zz,.5))} max ${Math.round((0,nz.c)(zz,1))} ms | ${bz.length} edits shown, p50 ${Math.round((0,nz.c)(bz,.5))} max ${Math.round((0,nz.c)(bz,1))} ms${Ez>0?`, ${Ez} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const DD = QD(this.roundTrips),
+            cD = QD(this.windowEdits),
+            ID = Math.max(0, this.outliers - 5);
+          (0, iD.j)("remesh", `${Math.round(this.frames/CD)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,pD.b)(DD,.5))} max ${Math.round((0,pD.b)(DD,1))} ms | ${cD.length} edits shown, p50 ${Math.round((0,pD.b)(cD,.5))} max ${Math.round((0,pD.b)(cD,1))} ms${ID>0?`, ${ID} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = zz, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = DD, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const zz = Mz.map((zz => {
-          const uz = tz(this.edits.map((uz => uz[zz])));
-          return `${zz}: p50 ${Math.round((0,nz.c)(uz,.5))} p90 ${Math.round((0,nz.c)(uz,.9))} max ${Math.round((0,nz.c)(uz,1))}`
+        const DD = bD.map((DD => {
+          const CD = QD(this.edits.map((CD => CD[DD])));
+          return `${DD}: p50 ${Math.round((0,pD.b)(CD,.5))} p90 ${Math.round((0,pD.b)(CD,.9))} max ${Math.round((0,pD.b)(CD,1))}`
         }));
-        return [`${this.edits.length} edits`, ...zz].join("\n")
+        return [`${this.edits.length} edits`, ...DD].join("\n")
       }
       dump() {
-        const zz = this.edits.map((zz => Mz.map((uz => Math.round(10 * zz[uz]) / 10)).join(",")));
-        return [this.stats(), Mz.join(","), ...zz].join("\n")
+        const DD = this.edits.map((DD => bD.map((CD => Math.round(10 * DD[CD]) / 10)).join(",")));
+        return [this.stats(), bD.join(","), ...DD].join("\n")
       }
     }
-    class dz {
-      constructor(zz, uz) {
-        this.log = zz, this.Gd = uz
+    class yD {
+      constructor(DD, CD) {
+        this.log = DD, this.ny = CD
       }
-      edit(zz, uz, bz) {
-        const [Ez, nz, iz] = this.Gd.xd.fEz(zz, uz, bz), lz = this.Gd.xd.gR.SR(Ez, nz, iz);
-        lz && lz.UR && this.log.edit(Oz(Ez, nz, iz), performance.now())
+      edit(DD, CD, cD) {
+        const [ID, pD, iD] = this.ny.Zy.xID(DD, CD, cD), fD = this.ny.Zy.GZ.RZ(ID, pD, iD);
+        fD && fD.LZ && this.log.edit(SD(ID, pD, iD), performance.now())
       }
-      sent(zz, uz, bz, Ez, nz) {
-        this.log.sent(Oz(zz.i, zz.j, zz.k), uz, bz, Ez, nz, Hz, performance.now())
+      sent(DD, CD, cD, ID, pD) {
+        this.log.sent(SD(DD.i, DD.j, DD.k), CD, cD, ID, pD, wD, performance.now())
       }
-      received(zz) {
-        this.log.received(zz.meshJobId, zz.jobMs, performance.now())
+      received(DD) {
+        this.log.received(DD.meshJobId, DD.jobMs, performance.now())
       }
-      failed(zz) {
-        this.log.failed(zz)
+      failed(DD) {
+        this.log.failed(DD)
       }
-      applied(zz, uz) {
-        this.log.applied(Oz(zz.i, zz.j, zz.k), uz, performance.now())
+      applied(DD, CD) {
+        this.log.applied(SD(DD.i, DD.j, DD.k), CD, performance.now())
       }
     }
-    let Fz = null,
-      Zz = null,
-      Rz = !1,
-      Kz = null;
+    let MD = null,
+      tD = null,
+      ZD = !1,
+      oD = null;
 
-    function wz() {
-      return new Promise((zz => {
-        null !== Fz && Fz.reported >= lz ? zz() : Zz = zz
+    function vD() {
+      return new Promise((DD => {
+        null !== MD && MD.reported >= fD ? DD() : tD = DD
       }))
     }
 
-    function Xz() {
-      const zz = new pz;
-      return Fz = zz, (0, iz.f)("remesh", (() => zz.dump())), (0, iz.c)("remeshStats", (() => {
-        console.log(zz.stats())
-      })), Rz || (Rz = !0, (0, Ez.c)((zz => {
-        (0, iz.i)("remesh", zz)
-      }), wz)), zz
+    function ND() {
+      const DD = new BD;
+      return MD = DD, (0, iD.h)("remesh", (() => DD.dump())), (0, iD.b)("remeshStats", (() => {
+        console.log(DD.stats())
+      })), ZD || (ZD = !0, (0, ID.d)((DD => {
+        (0, iD.j)("remesh", DD)
+      }), vD)), DD
     }
 
-    function fz(zz) {
-      const uz = Xz();
-      Kz = new dz(uz, zz), zz.mN.meshProbe = Kz, zz.on("beforeRender", (() => {
-        uz.frame(performance.now())
+    function gD(DD) {
+      const CD = ND();
+      oD = new yD(CD, DD), DD.RP.meshProbe = oD, DD.on("beforeRender", (() => {
+        CD.frame(performance.now())
       }))
     }
 
-    function sz(zz, uz, bz) {
-      var Ez;
-      null === (Ez = Kz) || void 0 === Ez || Ez.edit(zz, uz, bz)
+    function XD(DD, CD, cD) {
+      var ID;
+      null === (ID = oD) || void 0 === ID || ID.edit(DD, CD, cD)
     }
   },
-  37215: (zz, uz, bz) => {
-    function Ez(zz) {
-      return "string" !== typeof zz || 2 !== zz.length && ":" !== zz[2] ? null : zz[0] + zz[1]
+  37134: (DD, CD, cD) => {
+    function ID(DD) {
+      return "string" !== typeof DD || 2 !== DD.length && ":" !== DD[2] ? null : DD[0] + DD[1]
     }
-    bz.d(uz, {
-      e: () => Kz,
-      i: () => fz,
-      j: () => Mz,
-      l: () => lz,
-      o: () => iz,
-      q: () => tz,
-      u: () => wz,
-      x: () => Rz
+    cD.d(CD, {
+      e: () => oD,
+      f: () => gD,
+      j: () => bD,
+      m: () => fD,
+      o: () => iD,
+      r: () => QD,
+      s: () => vD,
+      v: () => ZD
     });
-    const nz = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const pD = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function iz(zz) {
-      if (function(zz) {
-          for (let uz = 0; uz < nz.length; uz++)
-            if (zz === nz[uz]) return !0;
+    function iD(DD) {
+      if (function(DD) {
+          for (let CD = 0; CD < pD.length; CD++)
+            if (DD === pD[CD]) return !0;
           return !1
-        }(zz)) return !1;
-      const uz = Ez(zz);
-      return "op" === uz || "ep" === uz || "wi" === uz || "pp" === uz || "fp:call" === zz || "fp:t" === zz
+        }(DD)) return !1;
+      const CD = ID(DD);
+      return "op" === CD || "ep" === CD || "wi" === CD || "pp" === CD || "fp:call" === DD || "fp:t" === DD
     }
 
-    function lz(zz) {
-      return "fp" === Ez(zz) && !iz(zz)
+    function fD(DD) {
+      return "fp" === ID(DD) && !iD(DD)
     }
 
-    function Mz(zz) {
-      if ("string" !== typeof zz) return !1;
-      return "o" === zz[0] && "p" === zz[1] && (2 === zz.length || ":" === zz[2]) || "fp:call" === zz || "2" === zz || "t" === zz || "a" === zz
+    function bD(DD) {
+      if ("string" !== typeof DD) return !1;
+      return "o" === DD[0] && "p" === DD[1] && (2 === DD.length || ":" === DD[2]) || "fp:call" === DD || "2" === DD || "t" === DD || "a" === DD
     }
 
-    function tz(zz, uz) {
-      return `~${function(zz){return zz.length<2?zz:":"===zz[1]?zz[0]:zz[0]+zz[1]}(uz)}~${zz}`
+    function QD(DD, CD) {
+      return `~${function(DD){return DD.length<2?DD:":"===DD[1]?DD[0]:DD[0]+DD[1]}(CD)}~${DD}`
     }
-    const Hz = 200;
+    const wD = 200;
 
-    function Oz(zz) {
-      let uz = zz.length - 1;
-      for (let bz = 0; bz < 2; bz++) {
-        const bz = uz;
-        for (; uz >= 0 && zz[uz] >= "0" && zz[uz] <= "9";) uz--;
-        if (uz < 0 || uz === bz || ":" !== zz[uz]) return -1;
-        uz--
+    function SD(DD) {
+      let CD = DD.length - 1;
+      for (let cD = 0; cD < 2; cD++) {
+        const cD = CD;
+        for (; CD >= 0 && DD[CD] >= "0" && DD[CD] <= "9";) CD--;
+        if (CD < 0 || CD === cD || ":" !== DD[CD]) return -1;
+        CD--
       }
-      return uz + 1
+      return CD + 1
     }
 
-    function pz(zz) {
-      return "unknown" === zz || Oz(zz) >= 0
+    function BD(DD) {
+      return "unknown" === DD || SD(DD) >= 0
     }
 
-    function dz(zz, uz) {
-      return zz[uz] >= "\ud800" && zz[uz] <= "\udbff" && uz + 1 < zz.length && zz[uz + 1] >= "\udc00" && zz[uz + 1] <= "\udfff" ? 2 : 1
+    function yD(DD, CD) {
+      return DD[CD] >= "\ud800" && DD[CD] <= "\udbff" && CD + 1 < DD.length && DD[CD + 1] >= "\udc00" && DD[CD + 1] <= "\udfff" ? 2 : 1
     }
 
-    function Fz(zz, uz, bz) {
-      return 2 === bz ? 4 : zz[uz] <= "\x7f" ? 1 : zz[uz] <= "\u07ff" ? 2 : 3
+    function MD(DD, CD, cD) {
+      return 2 === cD ? 4 : DD[CD] <= "\x7f" ? 1 : DD[CD] <= "\u07ff" ? 2 : 3
     }
 
-    function Zz(zz, uz, bz) {
-      let Ez = 0;
-      for (; Ez < uz;) {
-        const uz = dz(zz, Ez),
-          nz = Fz(zz, Ez, uz);
-        if (nz > bz) break;
-        bz -= nz, Ez += uz
+    function tD(DD, CD, cD) {
+      let ID = 0;
+      for (; ID < CD;) {
+        const CD = yD(DD, ID),
+          pD = MD(DD, ID, CD);
+        if (pD > cD) break;
+        cD -= pD, ID += CD
       }
-      return Ez
+      return ID
     }
 
-    function Rz(zz) {
-      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof zz || zz.length > Hz || !pz(zz)) return "t";
-      let bz = 2;
-      for (let Mz = 0; Mz < zz.length;) {
-        const uz = dz(zz, Mz);
-        bz += Fz(zz, Mz, uz), Mz += uz
+    function ZD(DD) {
+      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof DD || DD.length > wD || !BD(DD)) return "t";
+      let cD = 2;
+      for (let bD = 0; bD < DD.length;) {
+        const CD = yD(DD, bD);
+        cD += MD(DD, bD, CD), bD += CD
       }
-      if (bz <= uz) return `t ${zz}`;
-      const Ez = Oz(zz),
-        nz = uz - 2 - (zz.length - Ez);
-      if (nz < 0) return "t";
-      const iz = Zz(zz, Ez, nz);
-      let lz = "t ";
-      for (let Mz = 0; Mz < iz; Mz++) lz += zz[Mz];
-      for (let Mz = Ez; Mz < zz.length; Mz++) lz += zz[Mz];
-      return lz
+      if (cD <= CD) return `t ${DD}`;
+      const ID = SD(DD),
+        pD = CD - 2 - (DD.length - ID);
+      if (pD < 0) return "t";
+      const iD = tD(DD, ID, pD);
+      let fD = "t ";
+      for (let bD = 0; bD < iD; bD++) fD += DD[bD];
+      for (let bD = ID; bD < DD.length; bD++) fD += DD[bD];
+      return fD
     }
-    const Kz = 62;
+    const oD = 62;
 
-    function wz(zz) {
-      let uz = "so:";
-      const bz = Zz(zz, zz.length, Kz - uz.length);
-      for (let Ez = 0; Ez < bz; Ez++) uz += zz[Ez];
-      return uz
+    function vD(DD) {
+      let CD = "so:";
+      const cD = tD(DD, DD.length, oD - CD.length);
+      for (let ID = 0; ID < cD; ID++) CD += DD[ID];
+      return CD
     }
-    const Xz = "BABYLON ";
+    const ND = "BABYLON ";
 
-    function fz(zz) {
-      return wz(Xz + zz)
+    function gD(DD) {
+      return vD(ND + DD)
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

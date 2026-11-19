@@ -1,547 +1,547 @@
 export const id = 210;
 export const ids = [210];
 export const modules = {
-  35840: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Oz,
-      d: () => dz
+  35769: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => SD,
+      g: () => yD
     });
-    var Ez = bz(56),
-      nz = bz(1322),
-      iz = bz(1181),
-      lz = bz(1305),
-      Mz = bz(3230),
-      tz = bz(4690),
-      Hz = bz(1089);
+    var ID = cD(53),
+      pD = cD(1340),
+      iD = cD(1192),
+      fD = cD(1328),
+      bD = cD(3295),
+      QD = cD(4704),
+      wD = cD(1093);
 
-    function Oz(zz) {
+    function SD(DD) {
       let {
-        loading: uz,
-        schematics: bz,
-        onSchematicPicked: Ez,
-        selectedSchematicIdList: nz = [],
-        disableAutoExport: tz
-      } = zz;
+        loading: CD,
+        schematics: cD,
+        onSchematicPicked: ID,
+        selectedSchematicIdList: pD = [],
+        disableAutoExport: QD
+      } = DD;
       const {
-        t: Oz
-      } = (0, iz.F)();
-      return (0, Hz.jsxs)("div", {
+        t: SD
+      } = (0, iD.F)();
+      return (0, wD.jsxs)("div", {
         className: "SchematicList",
-        children: [uz && (0, Hz.jsx)(lz.c, {}), !uz && 0 === bz.length && (0, Hz.jsx)("div", {
+        children: [CD && (0, wD.jsx)(fD.e, {}), !CD && 0 === cD.length && (0, wD.jsx)("div", {
           className: "NoSchematicsText",
-          children: Oz("worldBuilder:noSavedSchematic")
-        }), !uz && bz.map((zz => (0, Hz.jsx)(Mz.i, {
+          children: SD("worldBuilder:noSavedSchematic")
+        }), !CD && cD.map((DD => (0, wD.jsx)(bD.f, {
           source: {
             type: "schematic",
-            schematic: zz
+            schematic: DD
           },
           gameWidth: "25%",
           useLongRatio: !0,
           onClick: () => {
-            Ez(zz)
+            ID(DD)
           },
-          isSelected: nz.includes(zz.schematicId),
+          isSelected: pD.includes(DD.schematicId),
           hideCcu: !0,
           hideFavourites: !0,
           showPublishedChip: !0,
           hideUnpublishedChip: !0,
-          disabled: zz.isAutoExported && tz,
+          disabled: DD.isAutoExported && QD,
           disabledReason: "worldBuilder:autoExportDisabled"
-        }, zz.schematicId)))]
+        }, DD.schematicId)))]
       })
     }
 
-    function pz(zz) {
+    function BD(DD) {
       let {
-        ownedSchematics: uz,
-        currentWorldSchematicId: bz,
-        onClose: nz
-      } = zz;
+        ownedSchematics: CD,
+        currentWorldSchematicId: cD,
+        onClose: pD
+      } = DD;
       const {
-        t: lz
-      } = (0, iz.F)(), [Mz, pz] = (0, Ez.useState)(null);
-      return (0, Hz.jsxs)("div", {
+        t: fD
+      } = (0, iD.F)(), [bD, BD] = (0, ID.useState)(null);
+      return (0, wD.jsxs)("div", {
         className: "SchematicListWindow",
-        children: [null === Mz && (0, Hz.jsxs)(Hz.Fragment, {
-          children: [(0, Hz.jsx)("h1", {
+        children: [null === bD && (0, wD.jsxs)(wD.Fragment, {
+          children: [(0, wD.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: lz("worldBuilder:schematicList")
-          }), (0, Hz.jsx)("h2", {
+            children: fD("worldBuilder:schematicList")
+          }), (0, wD.jsx)("h2", {
             className: "SchematicPopupSubtitle",
-            children: lz("worldBuilder:clickSchematicForOptions")
-          }), (0, Hz.jsx)("div", {
+            children: fD("worldBuilder:clickSchematicForOptions")
+          }), (0, wD.jsx)("div", {
             className: "SchematicPopupSchematicListContainer",
-            children: (0, Hz.jsx)(Oz, {
+            children: (0, wD.jsx)(SD, {
               loading: !1,
-              schematics: uz,
-              onSchematicPicked: zz => {
-                pz(zz)
+              schematics: CD,
+              onSchematicPicked: DD => {
+                BD(DD)
               },
               disableAutoExport: !1
             })
           })]
-        }), null !== Mz && (0, Hz.jsx)(tz.i, {
-          schematic: Mz,
-          inSourceWorld: Mz.schematicId === bz,
-          onSchematicUpdate: zz => {
-            pz(zz)
+        }), null !== bD && (0, wD.jsx)(QD.i, {
+          schematic: bD,
+          inSourceWorld: bD.schematicId === cD,
+          onSchematicUpdate: DD => {
+            BD(DD)
           },
           onClose: () => {
-            pz(null), nz()
+            BD(null), pD()
           }
         })]
       })
     }
 
-    function dz(zz) {
+    function yD(DD) {
       let {
-        ownedSchematics: uz,
-        currentWorldSchematicId: bz,
-        onClose: Ez
-      } = zz;
-      nz.NotificationProvider.showCustomPopup({
-        body: zz => (0, Hz.jsx)(pz, {
-          ownedSchematics: uz,
-          currentWorldSchematicId: bz,
-          onClose: zz
+        ownedSchematics: CD,
+        currentWorldSchematicId: cD,
+        onClose: ID
+      } = DD;
+      pD.NotificationProvider.showCustomPopup({
+        body: DD => (0, wD.jsx)(BD, {
+          ownedSchematics: CD,
+          currentWorldSchematicId: cD,
+          onClose: DD
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: Ez,
+        onClose: ID,
         unlockPointerKey: "schematicListPopup"
       })
     }
   },
-  40949: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      runClientGameMessage: () => Tz
+  40838: (DD, CD, cD) => {
+    cD.r(CD), cD.d(CD, {
+      runClientGameMessage: () => qD
     });
-    var Ez = bz(3509),
-      nz = bz(3521),
-      iz = bz(1296),
-      lz = bz(35840),
-      Mz = bz(4706),
-      tz = bz(1038),
-      Hz = bz.n(tz),
-      Oz = bz(56),
-      pz = bz(1322),
-      dz = bz(1419),
-      Fz = bz(328),
-      Zz = bz(1181),
-      Rz = bz(1047),
-      Kz = bz(1089);
+    var ID = cD(3563),
+      pD = cD(3583),
+      iD = cD(1317),
+      fD = cD(35769),
+      bD = cD(4734),
+      QD = cD(1049),
+      wD = cD.n(QD),
+      SD = cD(53),
+      BD = cD(1340),
+      yD = cD(1442),
+      MD = cD(326),
+      tD = cD(1192),
+      ZD = cD(1064),
+      oD = cD(1093);
 
-    function wz(zz) {
+    function vD(DD) {
       let {
-        onFilePicked: uz
-      } = zz;
+        onFilePicked: CD
+      } = DD;
       const {
-        t: bz
-      } = (0, Zz.F)(), [Ez, nz] = (0, Oz.useState)(null), {
-        getRootProps: iz,
-        getInputProps: lz,
-        isDragActive: tz
-      } = (0, Mz.b)({
-        onDrop: zz => {
-          zz.length > 0 && nz(zz[0])
+        t: cD
+      } = (0, tD.F)(), [ID, pD] = (0, SD.useState)(null), {
+        getRootProps: iD,
+        getInputProps: fD,
+        isDragActive: QD
+      } = (0, bD.b)({
+        onDrop: DD => {
+          DD.length > 0 && pD(DD[0])
         },
         useFsAccessApi: !1
-      }), pz = Ez && Ez.size > 1024 * Fz.id;
-      return (0, Kz.jsxs)("div", {
+      }), BD = ID && ID.size > 1024 * MD.Yc;
+      return (0, oD.jsxs)("div", {
         className: "SchematicUploadContainer",
-        children: [(0, Kz.jsxs)("div", {
-          ...iz({
-            className: Hz()("SchematicUpload", {
-              ActiveDrag: tz
+        children: [(0, oD.jsxs)("div", {
+          ...iD({
+            className: wD()("SchematicUpload", {
+              ActiveDrag: QD
             })
           }),
-          children: [(0, Kz.jsx)("input", {
-            ...lz({
+          children: [(0, oD.jsx)("input", {
+            ...fD({
               accept: ".bloxdschem"
             })
-          }), !tz && Ez ? (0, Kz.jsxs)(Kz.Fragment, {
-            children: [(0, Kz.jsx)("div", {
-              className: Hz()("SchematicUploadIcon", "Active", {
-                TooBig: pz
+          }), !QD && ID ? (0, oD.jsxs)(oD.Fragment, {
+            children: [(0, oD.jsx)("div", {
+              className: wD()("SchematicUploadIcon", "Active", {
+                TooBig: BD
               }),
-              children: (0, Kz.jsx)(Rz.c, {
+              children: (0, oD.jsx)(ZD.c, {
                 name: "file-lines"
               })
-            }), (0, Kz.jsx)("div", {
+            }), (0, oD.jsx)("div", {
               className: "SchematicUploadInstructions Active",
-              children: Ez.name
+              children: ID.name
             })]
-          }) : (0, Kz.jsxs)(Kz.Fragment, {
-            children: [(0, Kz.jsx)("div", {
+          }) : (0, oD.jsxs)(oD.Fragment, {
+            children: [(0, oD.jsx)("div", {
               className: "SchematicUploadIcon",
-              children: (0, Kz.jsx)(Rz.c, {
+              children: (0, oD.jsx)(ZD.c, {
                 name: "up-from-bracket"
               })
-            }), (0, Kz.jsx)("div", {
+            }), (0, oD.jsx)("div", {
               className: "SchematicUploadInstructions",
-              children: bz("worldBuilder:dragAFileHere")
+              children: cD("worldBuilder:dragAFileHere")
             })]
           })]
-        }), (0, Kz.jsx)(dz.q, {
-          disabled: pz || !Ez,
+        }), (0, oD.jsx)(yD.o, {
+          disabled: BD || !ID,
           className: "SchematicUploadButton",
           onClick: () => {
-            !pz && Ez && uz(Ez)
+            !BD && ID && CD(ID)
           },
-          children: pz ? bz("worldBuilder:fileTooBig", {
-            maxSizeKb: Fz.id
-          }) : bz("worldBuilder:upload")
+          children: BD ? cD("worldBuilder:fileTooBig", {
+            maxSizeKb: MD.Yc
+          }) : cD("worldBuilder:upload")
         })]
       })
     }
 
-    function Xz(zz) {
+    function ND(DD) {
       let {
-        ownedSchematics: uz,
-        onClose: bz,
-        onChosenPreset: Ez,
-        onChosenFile: nz
-      } = zz;
+        ownedSchematics: CD,
+        onClose: cD,
+        onChosenPreset: ID,
+        onChosenFile: pD
+      } = DD;
       const {
-        t: iz
-      } = (0, Zz.F)();
-      return (0, Kz.jsxs)(Kz.Fragment, {
-        children: [(0, Kz.jsx)("h1", {
+        t: iD
+      } = (0, tD.F)();
+      return (0, oD.jsxs)(oD.Fragment, {
+        children: [(0, oD.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: iz("worldBuilder:loadSchematic")
-        }), (0, Kz.jsx)("h2", {
+          children: iD("worldBuilder:loadSchematic")
+        }), (0, oD.jsx)("h2", {
           className: "SchematicPopupSubtitle",
-          children: iz("worldBuilder:chooseOneOfYourSchematics")
-        }), (0, Kz.jsx)("div", {
+          children: iD("worldBuilder:chooseOneOfYourSchematics")
+        }), (0, oD.jsx)("div", {
           className: "SchematicPopupSchematicListContainer",
-          children: (0, Kz.jsx)(lz.b, {
-            schematics: uz,
-            onSchematicPicked: zz => {
-              Ez(zz.schematicId), bz()
+          children: (0, oD.jsx)(fD.e, {
+            schematics: CD,
+            onSchematicPicked: DD => {
+              ID(DD.schematicId), cD()
             },
             loading: !1,
             disableAutoExport: !0
           })
-        }), (0, Kz.jsx)("h2", {
+        }), (0, oD.jsx)("h2", {
           className: "SchematicPopupSubtitle",
-          children: iz("worldBuilder:uploadNewSchematic")
-        }), (0, Kz.jsx)(wz, {
-          onFilePicked: async zz => {
+          children: iD("worldBuilder:uploadNewSchematic")
+        }), (0, oD.jsx)(vD, {
+          onFilePicked: async DD => {
             try {
-              await nz(zz)
-            } catch (uz) {
-              console.warn("Schematic upload failed", uz)
+              await pD(DD)
+            } catch (CD) {
+              console.warn("Schematic upload failed", CD)
             } finally {
-              bz()
+              cD()
             }
           }
         })]
       })
     }
-    var fz = bz(4690),
-      sz = bz(1628),
-      rz = bz(4144),
-      oz = bz(1212);
+    var gD = cD(4704),
+      XD = cD(1655),
+      mD = cD(4182),
+      nD = cD(1221);
 
-    function Nz(zz) {
-      var uz;
+    function OD(DD) {
+      var CD;
       let {
-        ownedSchematics: bz,
-        onClose: Ez,
-        onChosenEdit: nz,
-        onChosenNew: iz,
-        onChosenDownload: Mz
-      } = zz;
+        ownedSchematics: cD,
+        onClose: ID,
+        onChosenEdit: pD,
+        onChosenNew: iD,
+        onChosenDownload: bD
+      } = DD;
       const {
-        t: tz
-      } = (0, Zz.F)(), [Hz, pz] = (0, Oz.useState)("choose"), [Fz, Rz] = (0, Oz.useState)(null), [wz, Xz] = (0, Oz.useState)(null);
-      return (0, Kz.jsxs)(Kz.Fragment, {
-        children: [(0, Kz.jsx)("h1", {
+        t: QD
+      } = (0, tD.F)(), [wD, BD] = (0, SD.useState)("choose"), [MD, ZD] = (0, SD.useState)(null), [vD, ND] = (0, SD.useState)(null);
+      return (0, oD.jsxs)(oD.Fragment, {
+        children: [(0, oD.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: tz("worldBuilder:saveSchematic")
-        }), "choose" === Hz && (0, Kz.jsxs)(Kz.Fragment, {
-          children: [(0, Kz.jsx)("h2", {
+          children: QD("worldBuilder:saveSchematic")
+        }), "choose" === wD && (0, oD.jsxs)(oD.Fragment, {
+          children: [(0, oD.jsx)("h2", {
             className: "SchematicPopupSubtitle",
-            children: tz("worldBuilder:overwriteOneOfYourSchematics")
-          }), (0, Kz.jsx)("div", {
+            children: QD("worldBuilder:overwriteOneOfYourSchematics")
+          }), (0, oD.jsx)("div", {
             className: "SchematicPopupSchematicListContainer",
-            children: (0, Kz.jsx)(lz.b, {
-              schematics: bz,
-              onSchematicPicked: zz => {
-                Rz(zz.schematicId), Xz("existing"), pz("save")
+            children: (0, oD.jsx)(fD.e, {
+              schematics: cD,
+              onSchematicPicked: DD => {
+                ZD(DD.schematicId), ND("existing"), BD("save")
               },
               loading: !1,
               disableAutoExport: !1
             })
-          }), (0, Kz.jsx)("h2", {
+          }), (0, oD.jsx)("h2", {
             className: "SchematicPopupSubtitle",
-            children: tz("general:otherOptions")
-          }), (0, Kz.jsxs)("div", {
+            children: QD("general:otherOptions")
+          }), (0, oD.jsxs)("div", {
             className: "OtherOptions",
-            children: [(0, Kz.jsx)(dz.q, {
+            children: [(0, oD.jsx)(yD.o, {
               className: "ChooseUploadSchematicButton",
               onClick: () => {
-                Xz("new"), pz("save")
+                ND("new"), BD("save")
               },
-              children: tz("worldBuilder:saveAsNewSchematic")
-            }), (0, Kz.jsx)(dz.f, {
+              children: QD("worldBuilder:saveAsNewSchematic")
+            }), (0, oD.jsx)(yD.i, {
               className: "ChooseUploadSchematicButton",
               onClick: () => {
-                Xz("file"), pz("save")
+                ND("file"), BD("save")
               },
-              children: tz("worldBuilder:downloadSchematic")
+              children: QD("worldBuilder:downloadSchematic")
             })]
           })]
-        }), "choose" !== Hz && (0, Kz.jsx)(vz, {
-          type: wz,
-          ownedSchematics: bz,
-          onSubmit: (zz, uz, bz) => {
-            "file" === wz ? Mz(uz, zz) : "new" === wz ? iz(uz, bz, zz) : nz(Fz, uz, bz, zz), Ez()
+        }), "choose" !== wD && (0, oD.jsx)(PD, {
+          type: vD,
+          ownedSchematics: cD,
+          onSubmit: (DD, CD, cD) => {
+            "file" === vD ? bD(CD, DD) : "new" === vD ? iD(CD, cD, DD) : pD(MD, CD, cD, DD), ID()
           },
           onBack: () => {
-            pz("choose")
+            BD("choose")
           },
-          prepopName: "existing" === wz ? null === (uz = bz.find((zz => zz.schematicId === Fz))) || void 0 === uz ? void 0 : uz.name : null
+          prepopName: "existing" === vD ? null === (CD = cD.find((DD => DD.schematicId === MD))) || void 0 === CD ? void 0 : CD.name : null
         })]
       })
     }
 
-    function vz(zz) {
+    function PD(DD) {
       let {
-        type: uz,
-        prepopName: bz,
-        ownedSchematics: Ez,
-        onSubmit: nz,
-        onBack: iz
-      } = zz;
+        type: CD,
+        prepopName: cD,
+        ownedSchematics: ID,
+        onSubmit: pD,
+        onBack: iD
+      } = DD;
       const {
-        t: lz
-      } = (0, Zz.F)(), [Mz, tz] = (0, Oz.useState)(""), [pz, Fz] = (0, Oz.useState)(""), [Rz, wz] = (0, Oz.useState)(null), [Xz, fz] = (0, Oz.useState)(!0), Nz = zz => {
-        var bz;
-        zz = null !== (bz = zz) && void 0 !== bz ? bz : Mz;
-        const nz = "new" === uz ? (0, oz.A)(zz) : null,
-          iz = [...(0, oz.Db)(zz), ...nz ? [nz] : []];
-        return iz.length > 0 ? (wz(iz.join(", ")), !1) : "new" === uz && Ez.find((uz => uz.name === zz)) ? (wz(lz("worldBuilder:schematicAlreadyExists")), !1) : (wz(null), !0)
+        t: fD
+      } = (0, tD.F)(), [bD, QD] = (0, SD.useState)(""), [BD, MD] = (0, SD.useState)(""), [ZD, vD] = (0, SD.useState)(null), [ND, gD] = (0, SD.useState)(!0), OD = DD => {
+        var cD;
+        DD = null !== (cD = DD) && void 0 !== cD ? cD : bD;
+        const pD = "new" === CD ? (0, nD.v)(DD) : null,
+          iD = [...(0, nD.Ab)(DD), ...pD ? [pD] : []];
+        return iD.length > 0 ? (vD(iD.join(", ")), !1) : "new" === CD && ID.find((CD => CD.name === DD)) ? (vD(fD("worldBuilder:schematicAlreadyExists")), !1) : (vD(null), !0)
       };
-      return (0, Kz.jsxs)("div", {
+      return (0, oD.jsxs)("div", {
         className: "SaveSchematicWindow",
-        children: [(0, Kz.jsx)("h2", {
+        children: [(0, oD.jsx)("h2", {
           className: "SchematicPopupSubtitle",
-          children: lz("general:name")
-        }), (0, Kz.jsx)(sz.d, {
-          className: Hz()("SaveSchematicName", {
-            Error: Rz
+          children: fD("general:name")
+        }), (0, oD.jsx)(XD.b, {
+          className: wD()("SaveSchematicName", {
+            Error: ZD
           }),
-          forcedText: bz,
-          onValueChange: zz => {
-            tz(zz), Nz(zz)
+          forcedText: cD,
+          onValueChange: DD => {
+            QD(DD), OD(DD)
           },
-          placeholderText: lz("worldBuilder:schematicNamePlaceholder"),
-          maxLength: oz.xb
-        }), (0, Kz.jsx)("h2", {
-          className: Hz()("SaveSchematicError", {
-            Hidden: !Rz
+          placeholderText: fD("worldBuilder:schematicNamePlaceholder"),
+          maxLength: nD.qb
+        }), (0, oD.jsx)("h2", {
+          className: wD()("SaveSchematicError", {
+            Hidden: !ZD
           }),
-          children: Rz
-        }), (0, Kz.jsx)("h2", {
-          className: Hz()("SchematicPopupSubtitle", {
-            Hidden: "file" === uz
+          children: ZD
+        }), (0, oD.jsx)("h2", {
+          className: wD()("SchematicPopupSubtitle", {
+            Hidden: "file" === CD
           }),
-          children: lz("general:description")
-        }), (0, Kz.jsx)(sz.d, {
-          className: Hz()("SaveSchematicDescription", {
-            Hidden: "file" === uz
+          children: fD("general:description")
+        }), (0, oD.jsx)(XD.b, {
+          className: wD()("SaveSchematicDescription", {
+            Hidden: "file" === CD
           }),
-          onValueChange: Fz,
-          placeholderText: lz("worldBuilder:schematicDescriptionPlaceholder"),
-          maxLength: oz.ub,
+          onValueChange: MD,
+          placeholderText: fD("worldBuilder:schematicDescriptionPlaceholder"),
+          maxLength: nD.nb,
           useTextarea: !0
-        }), (0, Kz.jsxs)("div", {
-          className: Hz()("SaveSchematicCheckboxContainer", {
-            WarningBorder: "existing" === uz
+        }), (0, oD.jsxs)("div", {
+          className: wD()("SaveSchematicCheckboxContainer", {
+            WarningBorder: "existing" === CD
           }),
-          children: [(0, Kz.jsx)(rz.b, {
-            checked: Xz,
-            onChange: zz => {
-              fz(zz.target.checked)
+          children: [(0, oD.jsx)(mD.e, {
+            checked: ND,
+            onChange: DD => {
+              gD(DD.target.checked)
             },
             disabled: !1,
             className: "SaveSchematicCheckbox"
-          }), (0, Kz.jsx)("h1", {
+          }), (0, oD.jsx)("h1", {
             className: "SchematicPopupSubtitle",
-            children: lz("existing" === uz ? "worldBuilder:overwriteLobbyCode" : "worldBuilder:includeLobbyCode")
+            children: fD("existing" === CD ? "worldBuilder:overwriteLobbyCode" : "worldBuilder:includeLobbyCode")
           })]
-        }), "existing" === uz && (0, Kz.jsx)("div", {
+        }), "existing" === CD && (0, oD.jsx)("div", {
           className: "SaveSchematicLobbyCodeWarning",
-          children: lz("worldBuilder:lobbyCodeWarning")
-        }), (0, Kz.jsxs)("div", {
+          children: fD("worldBuilder:lobbyCodeWarning")
+        }), (0, oD.jsxs)("div", {
           className: "SaveSchematicButtons",
-          children: [(0, Kz.jsx)(dz.q, {
+          children: [(0, oD.jsx)(yD.o, {
             className: "SaveSchematicButton",
             onClick: () => {
-              Nz() && nz(Xz, Mz, pz)
+              OD() && pD(ND, bD, BD)
             },
-            children: lz("file" === uz ? "general:download" : "general:save")
-          }), (0, Kz.jsx)(dz.K, {
+            children: fD("file" === CD ? "general:download" : "general:save")
+          }), (0, oD.jsx)(yD.J, {
             className: "SaveSchematicButton",
-            onClick: iz,
-            children: lz("general:cancel")
+            onClick: iD,
+            children: fD("general:cancel")
           })]
         })]
       })
     }
-    var xz = bz(1195),
-      Jz = bz(1673),
-      Az = bz(1118);
+    var HD = cD(1199),
+      UD = cD(1701),
+      xD = cD(1127);
 
-    function Tz(zz, uz) {
-      if ("devDownloadJson" !== zz) ! function(zz, uz) {
-        const bz = xz.clientSideServerUrls.getHttpUrlFromWebSocketUrl((0, iz.b)().websocketUrl);
-        let Mz = !1;
-        const tz = async (zz, uz) => {
-          if (Mz) return;
-          Mz = !0;
+    function qD(DD, CD) {
+      if ("devDownloadJson" !== DD) ! function(DD, CD) {
+        const cD = HD.clientSideServerUrls.getHttpUrlFromWebSocketUrl((0, iD.b)().websocketUrl);
+        let bD = !1;
+        const QD = async (DD, CD) => {
+          if (bD) return;
+          bD = !0;
           const {
-            gameNameWithVariation: Ez,
-            lobbyName: lz
-          } = (0, iz.b)(), tz = {
-            gameNameWithVariation: Ez,
-            lobbyName: lz
+            gameNameWithVariation: ID,
+            lobbyName: fD
+          } = (0, iD.b)(), QD = {
+            gameNameWithVariation: ID,
+            lobbyName: fD
           };
-          return await (0, Az.postJsonWithMetricsCookiesAndJsonResponse)(`${bz}/schematic/${zz}`, nz.z[zz].toBuffer({
-            ...tz,
-            ...uz
+          return await (0, xD.postJsonWithMetricsCookiesAndJsonResponse)(`${cD}/schematic/${DD}`, pD.G[DD].toBuffer({
+            ...QD,
+            ...CD
           }), {
             retries: 1
           })
         };
-        if ("Plugin|WorldBuilder|SaveSchematic" === zz) ! function(zz) {
+        if ("Plugin|WorldBuilder|SaveSchematic" === DD) ! function(DD) {
           let {
-            ownedSchematics: uz,
-            onChosenDownload: bz,
-            onChosenEdit: Ez,
-            onChosenNew: nz,
-            onClose: iz
-          } = zz;
-          pz.NotificationProvider.showCustomPopup({
-            body: zz => (0, Kz.jsx)(Nz, {
-              ownedSchematics: uz,
-              onChosenDownload: bz,
-              onChosenEdit: Ez,
-              onChosenNew: nz,
-              onClose: zz
+            ownedSchematics: CD,
+            onChosenDownload: cD,
+            onChosenEdit: ID,
+            onChosenNew: pD,
+            onClose: iD
+          } = DD;
+          BD.NotificationProvider.showCustomPopup({
+            body: DD => (0, oD.jsx)(OD, {
+              ownedSchematics: CD,
+              onChosenDownload: cD,
+              onChosenEdit: ID,
+              onChosenNew: pD,
+              onClose: DD
             }),
             middleScreenPopupClassName: "SchematicPopup",
-            onClose: iz,
+            onClose: iD,
             unlockPointerKey: "schematicSaverPopup"
           })
         }({
-          ownedSchematics: uz,
-          onChosenDownload: (zz, uz) => {
-            tz("download-schematic", {
-              name: zz,
-              includeLobbyCode: uz
-            }).then((uz => {
+          ownedSchematics: CD,
+          onChosenDownload: (DD, CD) => {
+            QD("download-schematic", {
+              name: DD,
+              includeLobbyCode: CD
+            }).then((CD => {
               let {
                 buffer: {
-                  data: bz
+                  data: cD
                 }
-              } = uz;
-              const nz = Ez.gZ.from(bz);
-              (0, Jz.downloadBlob)(new Blob([nz], {
+              } = CD;
+              const pD = ID.lt.from(cD);
+              (0, UD.downloadBlob)(new Blob([pD], {
                 type: "application/octet-stream"
-              }), `${zz}.bloxdschem`)
+              }), `${DD}.bloxdschem`)
             }))
           },
           onClose: () => {
-            tz("cancel", {})
+            QD("cancel", {})
           },
-          onChosenEdit: (zz, uz, bz, Ez) => {
-            tz("save-to-profile", {
-              schematicId: zz,
-              name: uz,
-              description: bz,
-              includeLobbyCode: Ez
+          onChosenEdit: (DD, CD, cD, ID) => {
+            QD("save-to-profile", {
+              schematicId: DD,
+              name: CD,
+              description: cD,
+              includeLobbyCode: ID
             })
           },
-          onChosenNew: (zz, uz, bz) => {
-            tz("save-to-profile", {
+          onChosenNew: (DD, CD, cD) => {
+            QD("save-to-profile", {
               schematicId: null,
-              name: zz,
-              description: uz,
-              includeLobbyCode: bz
+              name: DD,
+              description: CD,
+              includeLobbyCode: cD
             })
           }
         });
-        else if ("Plugin|WorldBuilder|LoadSchematic" === zz) ! function(zz) {
+        else if ("Plugin|WorldBuilder|LoadSchematic" === DD) ! function(DD) {
           let {
-            ownedSchematics: uz,
-            onChosenFile: bz,
-            onChosenPreset: Ez,
-            onClose: nz
-          } = zz;
-          pz.NotificationProvider.showCustomPopup({
-            body: zz => (0, Kz.jsx)(Xz, {
-              ownedSchematics: uz,
-              onChosenFile: bz,
-              onChosenPreset: Ez,
-              onClose: zz
+            ownedSchematics: CD,
+            onChosenFile: cD,
+            onChosenPreset: ID,
+            onClose: pD
+          } = DD;
+          BD.NotificationProvider.showCustomPopup({
+            body: DD => (0, oD.jsx)(ND, {
+              ownedSchematics: CD,
+              onChosenFile: cD,
+              onChosenPreset: ID,
+              onClose: DD
             }),
             middleScreenPopupClassName: "SchematicPopup",
-            onClose: nz,
+            onClose: pD,
             unlockPointerKey: "schematicLoaderPopup"
           })
         }({
-          ownedSchematics: uz,
-          onChosenFile: async zz => {
-            const uz = Ez.gZ.from(await zz.arrayBuffer()),
+          ownedSchematics: CD,
+          onChosenFile: async DD => {
+            const CD = ID.lt.from(await DD.arrayBuffer()),
               {
-                gameNameWithVariation: lz,
-                lobbyName: Mz
-              } = (0, iz.b)();
-            await (0, Az.postBinaryWithMetricsCookiesAndCustomResponse)(`${bz}/schematic/upload-schematic`, nz.z["upload-schematic"].toBuffer({
-              gameNameWithVariation: lz,
-              lobbyName: Mz,
-              schematic: uz
+                gameNameWithVariation: fD,
+                lobbyName: bD
+              } = (0, iD.b)();
+            await (0, xD.postBinaryWithMetricsCookiesAndCustomResponse)(`${cD}/schematic/upload-schematic`, pD.G["upload-schematic"].toBuffer({
+              gameNameWithVariation: fD,
+              lobbyName: bD,
+              schematic: CD
             }), {
               retries: 1
-            }, Az.HttpPayloadType.json)
+            }, xD.HttpPayloadType.json)
           },
-          onChosenPreset: zz => {
-            tz("load-from-profile", {
-              schematicId: zz
+          onChosenPreset: DD => {
+            QD("load-from-profile", {
+              schematicId: DD
             })
           },
           onClose: () => {
-            tz("cancel", {})
+            QD("cancel", {})
           }
         });
-        else if ("Plugin|WorldBuilder|ListSchematics" === zz)(0, lz.d)({
-          ownedSchematics: Array.isArray(uz) ? uz : uz.schematics,
-          currentWorldSchematicId: Array.isArray(uz) ? null : uz.currentWorldSchematicId,
+        else if ("Plugin|WorldBuilder|ListSchematics" === DD)(0, fD.g)({
+          ownedSchematics: Array.isArray(CD) ? CD : CD.schematics,
+          currentWorldSchematicId: Array.isArray(CD) ? null : CD.currentWorldSchematicId,
           onClose: () => {
-            tz("cancel", {})
+            QD("cancel", {})
           }
         });
-        else if ("Plugin|WorldBuilder|ExportWorld" === zz) {
-          var Hz;
-          const zz = null !== (Hz = uz.schematic) && void 0 !== Hz ? Hz : uz;
-          (0, fz.k)({
-            schematic: zz,
-            inSourceWorld: zz.schematicId === uz.currentWorldSchematicId,
+        else if ("Plugin|WorldBuilder|ExportWorld" === DD) {
+          var wD;
+          const DD = null !== (wD = CD.schematic) && void 0 !== wD ? wD : CD;
+          (0, gD.l)({
+            schematic: DD,
+            inSourceWorld: DD.schematicId === CD.currentWorldSchematicId,
             onClose: () => {
-              tz("cancel", {})
+              QD("cancel", {})
             }
           })
-        } else console.error(`Unknown plugin message type ${zz}`)
-      }(zz, uz);
+        } else console.error(`Unknown plugin message type ${DD}`)
+      }(DD, CD);
       else {
-        const zz = JSON.stringify(uz.data, null, 2);
-        (0, Jz.downloadBlob)(new Blob([zz], {
+        const DD = JSON.stringify(CD.data, null, 2);
+        (0, UD.downloadBlob)(new Blob([DD], {
           type: "application/json"
-        }), uz.filename)
+        }), CD.filename)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,83 +1,83 @@
 export const id = 244;
 export const ids = [244];
 export const modules = {
-  39226: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => dz,
-      h: () => pz,
-      k: () => tz,
-      o: () => Fz,
-      p: () => Hz,
-      t: () => Mz,
-      u: () => Oz
+  39213: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => yD,
+      f: () => BD,
+      j: () => QD,
+      k: () => MD,
+      o: () => wD,
+      r: () => bD,
+      u: () => SD
     });
-    var Ez = bz(38060),
-      nz = bz(39231);
+    var ID = cD(38048),
+      pD = cD(39215);
 
-    function iz(zz, uz, bz, Ez) {
-      switch (uz) {
+    function iD(DD, CD, cD, ID) {
+      switch (CD) {
         case 5120: {
-          let uz = zz.getInt8(bz);
-          return Ez && (uz = Math.max(uz / 127, -1)), uz
+          let CD = DD.getInt8(cD);
+          return ID && (CD = Math.max(CD / 127, -1)), CD
         }
         case 5121: {
-          let uz = zz.getUint8(bz);
-          return Ez && (uz /= 255), uz
+          let CD = DD.getUint8(cD);
+          return ID && (CD /= 255), CD
         }
         case 5122: {
-          let uz = zz.getInt16(bz, !0);
-          return Ez && (uz = Math.max(uz / 32767, -1)), uz
+          let CD = DD.getInt16(cD, !0);
+          return ID && (CD = Math.max(CD / 32767, -1)), CD
         }
         case 5123: {
-          let uz = zz.getUint16(bz, !0);
-          return Ez && (uz /= 65535), uz
+          let CD = DD.getUint16(cD, !0);
+          return ID && (CD /= 65535), CD
         }
         case 5131:
-          return (0, nz.e)(zz.getUint16(bz, !0));
+          return (0, pD.c)(DD.getUint16(cD, !0));
         case 5124:
-          return zz.getInt32(bz, !0);
+          return DD.getInt32(cD, !0);
         case 5125:
-          return zz.getUint32(bz, !0);
+          return DD.getUint32(cD, !0);
         case 5126:
-          return zz.getFloat32(bz, !0);
+          return DD.getFloat32(cD, !0);
         default:
-          throw new Error(`Invalid component type ${uz}`)
+          throw new Error(`Invalid component type ${CD}`)
       }
     }
 
-    function lz(zz, uz, bz, Ez, iz) {
-      switch (uz) {
+    function fD(DD, CD, cD, ID, iD) {
+      switch (CD) {
         case 5120:
-          Ez && (iz = Math.round(127 * iz)), zz.setInt8(bz, iz);
+          ID && (iD = Math.round(127 * iD)), DD.setInt8(cD, iD);
           break;
         case 5121:
-          Ez && (iz = Math.round(255 * iz)), zz.setUint8(bz, iz);
+          ID && (iD = Math.round(255 * iD)), DD.setUint8(cD, iD);
           break;
         case 5122:
-          Ez && (iz = Math.round(32767 * iz)), zz.setInt16(bz, iz, !0);
+          ID && (iD = Math.round(32767 * iD)), DD.setInt16(cD, iD, !0);
           break;
         case 5123:
-          Ez && (iz = Math.round(65535 * iz)), zz.setUint16(bz, iz, !0);
+          ID && (iD = Math.round(65535 * iD)), DD.setUint16(cD, iD, !0);
           break;
         case 5131:
-          zz.setUint16(bz, (0, nz.i)(iz), !0);
+          DD.setUint16(cD, (0, pD.i)(iD), !0);
           break;
         case 5124:
-          zz.setInt32(bz, iz, !0);
+          DD.setInt32(cD, iD, !0);
           break;
         case 5125:
-          zz.setUint32(bz, iz, !0);
+          DD.setUint32(cD, iD, !0);
           break;
         case 5126:
-          zz.setFloat32(bz, iz, !0);
+          DD.setFloat32(cD, iD, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${uz}`)
+          throw new Error(`Invalid component type ${CD}`)
       }
     }
 
-    function Mz(zz) {
-      switch (zz) {
+    function bD(DD) {
+      switch (DD) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${zz}'`)
+          throw new Error(`Invalid type '${DD}'`)
       }
     }
 
-    function tz(zz, uz, bz, Ez, nz, tz, Hz, Oz) {
-      const pz = new Array(Ez),
-        dz = new Array(Ez);
-      if (zz instanceof Array) {
-        let nz = uz / 4;
-        const iz = bz / 4;
-        for (let uz = 0; uz < tz; uz += Ez) {
-          for (let uz = 0; uz < Ez; uz++) pz[uz] = dz[uz] = zz[nz + uz];
-          Oz(dz, uz);
-          for (let uz = 0; uz < Ez; uz++) pz[uz] !== dz[uz] && (zz[nz + uz] = dz[uz]);
-          nz += iz
+    function QD(DD, CD, cD, ID, pD, QD, wD, SD) {
+      const BD = new Array(ID),
+        yD = new Array(ID);
+      if (DD instanceof Array) {
+        let pD = CD / 4;
+        const iD = cD / 4;
+        for (let CD = 0; CD < QD; CD += ID) {
+          for (let CD = 0; CD < ID; CD++) BD[CD] = yD[CD] = DD[pD + CD];
+          SD(yD, CD);
+          for (let CD = 0; CD < ID; CD++) BD[CD] !== yD[CD] && (DD[pD + CD] = yD[CD]);
+          pD += iD
         }
       } else {
-        const Fz = ArrayBuffer.isView(zz) ? new DataView(zz.buffer, zz.byteOffset, zz.byteLength) : new DataView(zz),
-          Zz = Mz(nz);
-        for (let zz = 0; zz < tz; zz += Ez) {
-          for (let zz = 0, bz = uz; zz < Ez; zz++, bz += Zz) pz[zz] = dz[zz] = iz(Fz, nz, bz, Hz);
-          Oz(dz, zz);
-          for (let zz = 0, bz = uz; zz < Ez; zz++, bz += Zz) pz[zz] !== dz[zz] && lz(Fz, nz, bz, Hz, dz[zz]);
-          uz += bz
+        const MD = ArrayBuffer.isView(DD) ? new DataView(DD.buffer, DD.byteOffset, DD.byteLength) : new DataView(DD),
+          tD = bD(pD);
+        for (let DD = 0; DD < QD; DD += ID) {
+          for (let DD = 0, cD = CD; DD < ID; DD++, cD += tD) BD[DD] = yD[DD] = iD(MD, pD, cD, wD);
+          SD(yD, DD);
+          for (let DD = 0, cD = CD; DD < ID; DD++, cD += tD) BD[DD] !== yD[DD] && fD(MD, pD, cD, wD, yD[DD]);
+          CD += cD
         }
       }
     }
 
-    function Hz(zz, uz, bz, nz, iz, lz, Hz, Oz) {
-      const pz = uz * Mz(bz),
-        dz = Hz * uz;
-      if (5126 !== bz || iz !== pz) {
-        const Ez = new Float32Array(dz);
-        return tz(zz, nz, iz, uz, bz, dz, lz, ((zz, bz) => {
-          for (let nz = 0; nz < uz; nz++) Ez[bz + nz] = zz[nz]
-        })), Ez
+    function wD(DD, CD, cD, pD, iD, fD, wD, SD) {
+      const BD = CD * bD(cD),
+        yD = wD * CD;
+      if (5126 !== cD || iD !== BD) {
+        const ID = new Float32Array(yD);
+        return QD(DD, pD, iD, CD, cD, yD, fD, ((DD, cD) => {
+          for (let pD = 0; pD < CD; pD++) ID[cD + pD] = DD[pD]
+        })), ID
       }
-      if (!(zz instanceof Array || zz instanceof Float32Array) || 0 !== nz || zz.length !== dz) {
-        if (zz instanceof Array) {
-          const uz = nz / 4;
-          return zz.slice(uz, uz + dz)
+      if (!(DD instanceof Array || DD instanceof Float32Array) || 0 !== pD || DD.length !== yD) {
+        if (DD instanceof Array) {
+          const CD = pD / 4;
+          return DD.slice(CD, CD + yD)
         }
-        if (ArrayBuffer.isView(zz)) {
-          const uz = zz.byteOffset + nz;
-          return 0 !== (3 & uz) && (Ez.e.Warn("Float array must be aligned to 4-bytes border"), Oz = !0), Oz ? new Float32Array(zz.buffer.slice(uz, uz + dz * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(zz.buffer, uz, dz)
+        if (ArrayBuffer.isView(DD)) {
+          const CD = DD.byteOffset + pD;
+          return 0 !== (3 & CD) && (ID.e.Warn("Float array must be aligned to 4-bytes border"), SD = !0), SD ? new Float32Array(DD.buffer.slice(CD, CD + yD * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(DD.buffer, CD, yD)
         }
-        return new Float32Array(zz, nz, dz)
+        return new Float32Array(DD, pD, yD)
       }
-      return Oz ? zz.slice() : zz
+      return SD ? DD.slice() : DD
     }
 
-    function Oz(zz, uz, bz, nz, iz, lz, Hz) {
-      const Oz = Mz(bz),
-        pz = function(zz) {
-          switch (zz) {
+    function SD(DD, CD, cD, pD, iD, fD, wD) {
+      const SD = bD(cD),
+        BD = function(DD) {
+          switch (DD) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${zz}'`)
+              throw new Error(`Invalid component type '${DD}'`)
           }
-        }(bz),
-        dz = lz * uz;
-      if (Array.isArray(zz)) {
-        if (0 !== (3 & nz) || 0 !== (3 & iz)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const Ez = nz / 4,
-          Mz = iz / 4;
-        if (Ez + (lz - 1) * Mz + uz > zz.length) throw new Error("Last accessed index is out of bounds.");
-        if (Mz < uz) throw new Error("Data stride cannot be smaller than the component size.");
-        if (Mz !== uz) {
-          const Ez = new pz(dz);
-          return tz(zz, nz, iz, uz, bz, dz, !1, ((zz, bz) => {
-            for (let nz = 0; nz < uz; nz++) Ez[bz + nz] = zz[nz]
-          })), Ez
+        }(cD),
+        yD = fD * CD;
+      if (Array.isArray(DD)) {
+        if (0 !== (3 & pD) || 0 !== (3 & iD)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const ID = pD / 4,
+          bD = iD / 4;
+        if (ID + (fD - 1) * bD + CD > DD.length) throw new Error("Last accessed index is out of bounds.");
+        if (bD < CD) throw new Error("Data stride cannot be smaller than the component size.");
+        if (bD !== CD) {
+          const ID = new BD(yD);
+          return QD(DD, pD, iD, CD, cD, yD, !1, ((DD, cD) => {
+            for (let pD = 0; pD < CD; pD++) ID[cD + pD] = DD[pD]
+          })), ID
         }
-        return new pz(zz.slice(Ez, Ez + dz))
+        return new BD(DD.slice(ID, ID + yD))
       }
-      let Fz, Zz = nz;
-      ArrayBuffer.isView(zz) ? (Fz = zz.buffer, Zz += zz.byteOffset) : Fz = zz;
-      if (Zz + (lz - 1) * iz + uz * Oz > Fz.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const Rz = uz * Oz;
-      if (iz < Rz) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (iz !== Rz) {
-        const zz = new pz(dz),
-          bz = new Uint8Array(Fz, Zz),
-          Ez = new Uint8Array(zz.buffer),
-          nz = uz * Oz;
-        for (let uz = 0, Mz = 0, tz = 0; uz < lz; uz++, Mz += iz, tz += nz) Ez.set(bz.subarray(Mz, Mz + nz), tz);
-        return zz
+      let MD, tD = pD;
+      ArrayBuffer.isView(DD) ? (MD = DD.buffer, tD += DD.byteOffset) : MD = DD;
+      if (tD + (fD - 1) * iD + CD * SD > MD.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const ZD = CD * SD;
+      if (iD < ZD) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (iD !== ZD) {
+        const DD = new BD(yD),
+          cD = new Uint8Array(MD, tD),
+          ID = new Uint8Array(DD.buffer),
+          pD = CD * SD;
+        for (let CD = 0, bD = 0, QD = 0; CD < fD; CD++, bD += iD, QD += pD) ID.set(cD.subarray(bD, bD + pD), QD);
+        return DD
       }
-      return 1 !== Oz && 0 !== (Zz & Oz - 1) && (Ez.e.Warn("Array must be aligned to border of element size. Data will be copied."), Hz = !0), Hz ? new pz(Fz.slice(Zz, Zz + dz * Oz)) : new pz(Fz, Zz, dz)
+      return 1 !== SD && 0 !== (tD & SD - 1) && (ID.e.Warn("Array must be aligned to border of element size. Data will be copied."), wD = !0), wD ? new BD(MD.slice(tD, tD + yD * SD)) : new BD(MD, tD, yD)
     }
 
-    function pz(zz, uz, bz, nz, iz, lz, Hz, Oz) {
-      const pz = uz * Mz(bz),
-        dz = Hz * uz;
-      if (Oz.length !== dz) throw new Error("Output length is not valid");
-      if (5126 === bz && iz === pz)
-        if (zz instanceof Array) {
-          const uz = nz / 4;
-          Oz.set(zz, uz)
-        } else if (ArrayBuffer.isView(zz)) {
-        const uz = zz.byteOffset + nz;
-        if (0 !== (3 & uz)) return Ez.e.Warn("Float array must be aligned to 4-bytes border"), void Oz.set(new Float32Array(zz.buffer.slice(uz, uz + dz * Float32Array.BYTES_PER_ELEMENT)));
-        const bz = new Float32Array(zz.buffer, uz, dz);
-        Oz.set(bz)
+    function BD(DD, CD, cD, pD, iD, fD, wD, SD) {
+      const BD = CD * bD(cD),
+        yD = wD * CD;
+      if (SD.length !== yD) throw new Error("Output length is not valid");
+      if (5126 === cD && iD === BD)
+        if (DD instanceof Array) {
+          const CD = pD / 4;
+          SD.set(DD, CD)
+        } else if (ArrayBuffer.isView(DD)) {
+        const CD = DD.byteOffset + pD;
+        if (0 !== (3 & CD)) return ID.e.Warn("Float array must be aligned to 4-bytes border"), void SD.set(new Float32Array(DD.buffer.slice(CD, CD + yD * Float32Array.BYTES_PER_ELEMENT)));
+        const cD = new Float32Array(DD.buffer, CD, yD);
+        SD.set(cD)
       } else {
-        const uz = new Float32Array(zz, nz, dz);
-        Oz.set(uz)
-      } else tz(zz, nz, iz, uz, bz, dz, lz, ((zz, bz) => {
-        for (let Ez = 0; Ez < uz; Ez++) Oz[bz + Ez] = zz[Ez]
+        const CD = new Float32Array(DD, pD, yD);
+        SD.set(CD)
+      } else QD(DD, pD, iD, CD, cD, yD, fD, ((DD, cD) => {
+        for (let ID = 0; ID < CD; ID++) SD[cD + ID] = DD[ID]
       }))
     }
 
-    function dz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(zz)) {
-        for (let nz = 0; nz < uz; nz++)
-          if (zz[bz + nz] - Ez > 65535) return !0;
+    function yD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(DD)) {
+        for (let pD = 0; pD < CD; pD++)
+          if (DD[cD + pD] - ID > 65535) return !0;
         return !1
       }
-      return 4 === zz.BYTES_PER_ELEMENT
+      return 4 === DD.BYTES_PER_ELEMENT
     }
 
-    function Fz(zz) {
-      const uz = zz.buffer;
-      if (uz instanceof ArrayBuffer) return zz;
-      const bz = new ArrayBuffer(zz.byteLength);
-      return new Uint8Array(bz).set(new Uint8Array(uz, zz.byteOffset, zz.byteLength)), bz
+    function MD(DD) {
+      const CD = DD.buffer;
+      if (CD instanceof ArrayBuffer) return DD;
+      const cD = new ArrayBuffer(DD.byteLength);
+      return new Uint8Array(cD).set(new Uint8Array(CD, DD.byteOffset, DD.byteLength)), cD
     }
   },
-  39064: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => vz,
-      f: () => oz,
-      h: () => Nz,
-      g: () => Gz,
-      i: () => az
+  39035: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => PD,
+      c: () => nD,
+      k: () => OD,
+      g: () => aD,
+      o: () => VD
     });
-    class Ez {
+    class ID {
       constructor() {
         this.children = []
       }
-      isValid(zz) {
+      isValid(DD) {
         return !0
       }
-      process(zz, uz, bz) {
-        let Ez = "";
+      process(DD, CD, cD) {
+        let ID = "";
         if (this.line) {
-          let bz = this.line;
-          const nz = uz.processor;
-          if (nz) {
-            nz.lineProcessor && (bz = nz.lineProcessor(bz, uz.isFragment, uz.processingContext));
-            const Ez = uz.processor?.attributeKeywordName ?? "attribute",
-              iz = uz.isFragment && uz.processor?.varyingFragmentKeywordName ? uz.processor?.varyingFragmentKeywordName : !uz.isFragment && uz.processor?.varyingVertexKeywordName ? uz.processor?.varyingVertexKeywordName : "varying";
-            if (!uz.isFragment && nz.attributeProcessor && this.line.startsWith(Ez)) bz = nz.attributeProcessor(this.line, zz, uz.processingContext);
-            else if (nz.varyingProcessor && (nz.varyingCheck?.(this.line, uz.isFragment) || !nz.varyingCheck && this.line.startsWith(iz))) bz = nz.varyingProcessor(this.line, uz.isFragment, zz, uz.processingContext);
-            else if (nz.uniformProcessor && nz.uniformRegexp && nz.uniformRegexp.test(this.line)) uz.lookForClosingBracketForUniformBuffer || (bz = nz.uniformProcessor(this.line, uz.isFragment, zz, uz.processingContext));
-            else if (nz.uniformBufferProcessor && nz.uniformBufferRegexp && nz.uniformBufferRegexp.test(this.line)) uz.lookForClosingBracketForUniformBuffer || (bz = nz.uniformBufferProcessor(this.line, uz.isFragment, uz.processingContext), uz.lookForClosingBracketForUniformBuffer = !0);
-            else if (nz.textureProcessor && nz.textureRegexp && nz.textureRegexp.test(this.line)) bz = nz.textureProcessor(this.line, uz.isFragment, zz, uz.processingContext);
-            else if ((nz.uniformProcessor || nz.uniformBufferProcessor) && this.line.startsWith("uniform") && !uz.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? nz.uniformProcessor && (bz = nz.uniformProcessor(this.line, uz.isFragment, zz, uz.processingContext)) : nz.uniformBufferProcessor && (bz = nz.uniformBufferProcessor(this.line, uz.isFragment, uz.processingContext), uz.lookForClosingBracketForUniformBuffer = !0)
+          let cD = this.line;
+          const pD = CD.processor;
+          if (pD) {
+            pD.lineProcessor && (cD = pD.lineProcessor(cD, CD.isFragment, CD.processingContext));
+            const ID = CD.processor?.attributeKeywordName ?? "attribute",
+              iD = CD.isFragment && CD.processor?.varyingFragmentKeywordName ? CD.processor?.varyingFragmentKeywordName : !CD.isFragment && CD.processor?.varyingVertexKeywordName ? CD.processor?.varyingVertexKeywordName : "varying";
+            if (!CD.isFragment && pD.attributeProcessor && this.line.startsWith(ID)) cD = pD.attributeProcessor(this.line, DD, CD.processingContext);
+            else if (pD.varyingProcessor && (pD.varyingCheck?.(this.line, CD.isFragment) || !pD.varyingCheck && this.line.startsWith(iD))) cD = pD.varyingProcessor(this.line, CD.isFragment, DD, CD.processingContext);
+            else if (pD.uniformProcessor && pD.uniformRegexp && pD.uniformRegexp.test(this.line)) CD.lookForClosingBracketForUniformBuffer || (cD = pD.uniformProcessor(this.line, CD.isFragment, DD, CD.processingContext));
+            else if (pD.uniformBufferProcessor && pD.uniformBufferRegexp && pD.uniformBufferRegexp.test(this.line)) CD.lookForClosingBracketForUniformBuffer || (cD = pD.uniformBufferProcessor(this.line, CD.isFragment, CD.processingContext), CD.lookForClosingBracketForUniformBuffer = !0);
+            else if (pD.textureProcessor && pD.textureRegexp && pD.textureRegexp.test(this.line)) cD = pD.textureProcessor(this.line, CD.isFragment, DD, CD.processingContext);
+            else if ((pD.uniformProcessor || pD.uniformBufferProcessor) && this.line.startsWith("uniform") && !CD.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? pD.uniformProcessor && (cD = pD.uniformProcessor(this.line, CD.isFragment, DD, CD.processingContext)) : pD.uniformBufferProcessor && (cD = pD.uniformBufferProcessor(this.line, CD.isFragment, CD.processingContext), CD.lookForClosingBracketForUniformBuffer = !0)
             }
-            uz.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (uz.lookForClosingBracketForUniformBuffer = !1, nz.endOfUniformBufferProcessor && (bz = nz.endOfUniformBufferProcessor(this.line, uz.isFragment, uz.processingContext)))
+            CD.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (CD.lookForClosingBracketForUniformBuffer = !1, pD.endOfUniformBufferProcessor && (cD = pD.endOfUniformBufferProcessor(this.line, CD.isFragment, CD.processingContext)))
           }
-          Ez += bz + "\n"
+          ID += cD + "\n"
         }
-        for (const nz of this.children) Ez += nz.process(zz, uz, bz);
-        return this.additionalDefineKey && (zz[this.additionalDefineKey] = this.additionalDefineValue || "true", bz[this.additionalDefineKey] = zz[this.additionalDefineKey]), Ez
+        for (const pD of this.children) ID += pD.process(DD, CD, cD);
+        return this.additionalDefineKey && (DD[this.additionalDefineKey] = this.additionalDefineValue || "true", cD[this.additionalDefineKey] = DD[this.additionalDefineKey]), ID
       }
     }
-    class nz {
+    class pD {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(zz) {
+      set lines(DD) {
         this._lines.length = 0;
-        for (const uz of zz) {
-          if (!uz || "\r" === uz) continue;
-          if ("#" === uz[0]) {
-            this._lines.push(uz);
+        for (const CD of DD) {
+          if (!CD || "\r" === CD) continue;
+          if ("#" === CD[0]) {
+            this._lines.push(CD);
             continue
           }
-          const zz = uz.trim();
-          if (!zz) continue;
-          if (zz.startsWith("//")) {
-            this._lines.push(uz);
+          const DD = CD.trim();
+          if (!DD) continue;
+          if (DD.startsWith("//")) {
+            this._lines.push(CD);
             continue
           }
-          const bz = zz.indexOf(";");
-          if (-1 === bz) this._lines.push(zz);
-          else if (bz === zz.length - 1) zz.length > 1 && this._lines.push(zz);
+          const cD = DD.indexOf(";");
+          if (-1 === cD) this._lines.push(DD);
+          else if (cD === DD.length - 1) DD.length > 1 && this._lines.push(DD);
           else {
-            const zz = uz.split(";");
-            for (let uz = 0; uz < zz.length; uz++) {
-              let bz = zz[uz];
-              bz && (bz = bz.trim(), bz && this._lines.push(bz + (uz !== zz.length - 1 ? ";" : "")))
+            const DD = CD.split(";");
+            for (let CD = 0; CD < DD.length; CD++) {
+              let cD = DD[CD];
+              cD && (cD = cD.trim(), cD && this._lines.push(cD + (CD !== DD.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class iz extends Ez {
-      process(zz, uz, bz) {
-        for (let Ez = 0; Ez < this.children.length; Ez++) {
-          const nz = this.children[Ez];
-          if (nz.isValid(zz)) return nz.process(zz, uz, bz)
+    class iD extends ID {
+      process(DD, CD, cD) {
+        for (let ID = 0; ID < this.children.length; ID++) {
+          const pD = this.children[ID];
+          if (pD.isValid(DD)) return pD.process(DD, CD, cD)
         }
         return ""
       }
     }
-    class lz extends Ez {
-      isValid(zz) {
-        return this.testExpression.isTrue(zz)
+    class fD extends ID {
+      isValid(DD) {
+        return this.testExpression.isTrue(DD)
       }
     }
-    class Mz {
-      isTrue(zz) {
+    class bD {
+      isTrue(DD) {
         return !0
       }
-      static postfixToInfix(zz) {
-        const uz = [];
-        for (const bz of zz)
-          if (void 0 === Mz._OperatorPriority[bz]) uz.push(bz);
+      static postfixToInfix(DD) {
+        const CD = [];
+        for (const cD of DD)
+          if (void 0 === bD._OperatorPriority[cD]) CD.push(cD);
           else {
-            const zz = uz[uz.length - 1],
-              Ez = uz[uz.length - 2];
-            uz.length -= 2, uz.push(`(${Ez}${bz}${zz})`)
-          } return uz[uz.length - 1]
+            const DD = CD[CD.length - 1],
+              ID = CD[CD.length - 2];
+            CD.length -= 2, CD.push(`(${ID}${cD}${DD})`)
+          } return CD[CD.length - 1]
       }
-      static infixToPostfix(zz) {
-        const uz = Mz._InfixToPostfixCache.get(zz);
-        if (uz) return uz.accessTime = Date.now(), uz.result;
-        if (!zz.includes("&&") && !zz.includes("||") && !zz.includes(")") && !zz.includes("(")) return [zz];
-        const bz = [];
-        let Ez = -1;
-        const nz = () => {
-            Oz = Oz.trim(), "" !== Oz && (bz.push(Oz), Oz = "")
+      static infixToPostfix(DD) {
+        const CD = bD._InfixToPostfixCache.get(DD);
+        if (CD) return CD.accessTime = Date.now(), CD.result;
+        if (!DD.includes("&&") && !DD.includes("||") && !DD.includes(")") && !DD.includes("(")) return [DD];
+        const cD = [];
+        let ID = -1;
+        const pD = () => {
+            SD = SD.trim(), "" !== SD && (cD.push(SD), SD = "")
           },
-          iz = zz => {
-            Ez < Mz._Stack.length - 1 && (Mz._Stack[++Ez] = zz)
+          iD = DD => {
+            ID < bD._Stack.length - 1 && (bD._Stack[++ID] = DD)
           },
-          lz = () => Mz._Stack[Ez],
-          tz = () => -1 === Ez ? "!!INVALID EXPRESSION!!" : Mz._Stack[Ez--];
-        let Hz = 0,
-          Oz = "";
-        for (; Hz < zz.length;) {
-          const uz = zz.charAt(Hz),
-            pz = Hz < zz.length - 1 ? zz.substring(Hz, 2 + Hz) : "";
-          if ("(" === uz) Oz = "", iz(uz);
-          else if (")" === uz) {
-            for (nz(); - 1 !== Ez && "(" !== lz();) bz.push(tz());
-            tz()
-          } else if (Mz._OperatorPriority[pz] > 1) {
-            for (nz(); - 1 !== Ez && Mz._OperatorPriority[lz()] >= Mz._OperatorPriority[pz];) bz.push(tz());
-            iz(pz), Hz++
-          } else Oz += uz;
-          Hz++
+          fD = () => bD._Stack[ID],
+          QD = () => -1 === ID ? "!!INVALID EXPRESSION!!" : bD._Stack[ID--];
+        let wD = 0,
+          SD = "";
+        for (; wD < DD.length;) {
+          const CD = DD.charAt(wD),
+            BD = wD < DD.length - 1 ? DD.substring(wD, 2 + wD) : "";
+          if ("(" === CD) SD = "", iD(CD);
+          else if (")" === CD) {
+            for (pD(); - 1 !== ID && "(" !== fD();) cD.push(QD());
+            QD()
+          } else if (bD._OperatorPriority[BD] > 1) {
+            for (pD(); - 1 !== ID && bD._OperatorPriority[fD()] >= bD._OperatorPriority[BD];) cD.push(QD());
+            iD(BD), wD++
+          } else SD += CD;
+          wD++
         }
-        for (nz(); - 1 !== Ez;) "(" === lz() ? tz() : bz.push(tz());
-        return Mz._InfixToPostfixCache.size >= Mz.InfixToPostfixCacheLimitSize && Mz.ClearCache(), Mz._InfixToPostfixCache.set(zz, {
-          result: bz,
+        for (pD(); - 1 !== ID;) "(" === fD() ? QD() : cD.push(QD());
+        return bD._InfixToPostfixCache.size >= bD.InfixToPostfixCacheLimitSize && bD.ClearCache(), bD._InfixToPostfixCache.set(DD, {
+          result: cD,
           accessTime: Date.now()
-        }), bz
+        }), cD
       }
       static ClearCache() {
-        const zz = Array.from(Mz._InfixToPostfixCache.entries()).sort(((zz, uz) => zz[1].accessTime - uz[1].accessTime));
-        for (let uz = 0; uz < Mz.InfixToPostfixCacheCleanupSize; uz++) Mz._InfixToPostfixCache.delete(zz[uz][0])
+        const DD = Array.from(bD._InfixToPostfixCache.entries()).sort(((DD, CD) => DD[1].accessTime - CD[1].accessTime));
+        for (let CD = 0; CD < bD.InfixToPostfixCacheCleanupSize; CD++) bD._InfixToPostfixCache.delete(DD[CD][0])
       }
     }
-    Mz.InfixToPostfixCacheLimitSize = 5e4, Mz.InfixToPostfixCacheCleanupSize = 25e3, Mz._InfixToPostfixCache = new Map, Mz._OperatorPriority = {
+    bD.InfixToPostfixCacheLimitSize = 5e4, bD.InfixToPostfixCacheCleanupSize = 25e3, bD._InfixToPostfixCache = new Map, bD._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, Mz._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class tz extends Mz {
-      constructor(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = zz, this.not = uz
+    }, bD._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class QD extends bD {
+      constructor(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = DD, this.not = CD
       }
-      isTrue(zz) {
-        let uz = void 0 !== zz[this.define];
-        return this.not && (uz = !uz), uz
-      }
-    }
-    class Hz extends Mz {
-      isTrue(zz) {
-        return this.leftOperand.isTrue(zz) || this.rightOperand.isTrue(zz)
+      isTrue(DD) {
+        let CD = void 0 !== DD[this.define];
+        return this.not && (CD = !CD), CD
       }
     }
-    class Oz extends Mz {
-      isTrue(zz) {
-        return this.leftOperand.isTrue(zz) && this.rightOperand.isTrue(zz)
+    class wD extends bD {
+      isTrue(DD) {
+        return this.leftOperand.isTrue(DD) || this.rightOperand.isTrue(DD)
       }
     }
-    class pz extends Mz {
-      constructor(zz, uz, bz) {
-        super(), this.define = zz, this.operand = uz, this.testValue = bz
+    class SD extends bD {
+      isTrue(DD) {
+        return this.leftOperand.isTrue(DD) && this.rightOperand.isTrue(DD)
+      }
+    }
+    class BD extends bD {
+      constructor(DD, CD, cD) {
+        super(), this.define = DD, this.operand = CD, this.testValue = cD
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(zz) {
-        let uz = !1;
-        const bz = parseInt(void 0 != zz[this.define] ? zz[this.define] : this.define),
-          Ez = parseInt(void 0 != zz[this.testValue] ? zz[this.testValue] : this.testValue);
-        if (isNaN(bz) || isNaN(Ez)) return !1;
+      isTrue(DD) {
+        let CD = !1;
+        const cD = parseInt(void 0 != DD[this.define] ? DD[this.define] : this.define),
+          ID = parseInt(void 0 != DD[this.testValue] ? DD[this.testValue] : this.testValue);
+        if (isNaN(cD) || isNaN(ID)) return !1;
         switch (this.operand) {
           case ">":
-            uz = bz > Ez;
+            CD = cD > ID;
             break;
           case "<":
-            uz = bz < Ez;
+            CD = cD < ID;
             break;
           case "<=":
-            uz = bz <= Ez;
+            CD = cD <= ID;
             break;
           case ">=":
-            uz = bz >= Ez;
+            CD = cD >= ID;
             break;
           case "==":
-            uz = bz === Ez;
+            CD = cD === ID;
             break;
           case "!=":
-            uz = bz !== Ez
+            CD = cD !== ID
         }
-        return uz
+        return CD
       }
     }
-    var dz = bz(39061),
-      Fz = bz(39057);
-    const Zz = /defined\s*?\((.+?)\)/g,
-      Rz = /defined\s*?\[(.+?)\]/g,
-      Kz = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      wz = /__decl__/,
-      Xz = /light\{X\}.(\w*)/g,
-      fz = /\{X\}/g,
-      sz = [],
-      rz = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var yD = cD(39027),
+      MD = cD(39023);
+    const tD = /defined\s*?\((.+?)\)/g,
+      ZD = /defined\s*?\[(.+?)\]/g,
+      oD = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      vD = /__decl__/,
+      ND = /light\{X\}.(\w*)/g,
+      gD = /\{X\}/g,
+      XD = [],
+      mD = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function oz(zz) {
-      zz.processor && zz.processor.initializeShaders && zz.processor.initializeShaders(zz.processingContext)
+    function nD(DD) {
+      DD.processor && DD.processor.initializeShaders && DD.processor.initializeShaders(DD.processingContext)
     }
 
-    function Nz(zz, uz, bz, Ez) {
-      uz.processor?.preProcessShaderCode && (zz = uz.processor.preProcessShaderCode(zz, uz.isFragment)), Gz(zz, uz, (zz => {
-        uz.processCodeAfterIncludes && (zz = uz.processCodeAfterIncludes(uz.isFragment ? "fragment" : "vertex", zz, uz.defines));
-        const nz = function(zz, uz, bz) {
-          let Ez = function(zz, uz) {
-            if (uz.processor?.noPrecision) return zz;
-            const bz = uz.shouldUseHighPrecisionShader; - 1 === zz.indexOf("precision highp float") ? zz = bz ? "precision highp float;\n" + zz : "precision mediump float;\n" + zz : bz || (zz = zz.replace("precision highp float", "precision mediump float"));
-            return zz
-          }(zz, uz);
-          if (!uz.processor) return Ez;
-          if (0 === uz.processor.shaderLanguage && -1 !== Ez.indexOf("#version 3") && (Ez = Ez.replace("#version 300 es", ""), !uz.processor.parseGLES3)) return Ez;
-          const nz = uz.defines,
-            iz = Pz(uz, bz);
-          uz.processor.preProcessor && (Ez = uz.processor.preProcessor(Ez, nz, iz, uz.isFragment, uz.processingContext));
-          const lz = {};
-          Ez = Lz(Ez, iz, uz, lz), uz.processor.postProcessor && (Ez = uz.processor.postProcessor(Ez, nz, uz.isFragment, uz.processingContext, bz ? {
-            drawBuffersExtensionDisabled: !bz.getCaps().drawBuffersExtension
-          } : {}, iz, lz));
-          bz?._features.needShaderCodeInlining && (Ez = bz.inlineShaderCode(Ez));
-          return Ez
-        }(zz, uz, Ez);
-        bz(nz, zz)
+    function OD(DD, CD, cD, ID) {
+      CD.processor?.preProcessShaderCode && (DD = CD.processor.preProcessShaderCode(DD, CD.isFragment)), aD(DD, CD, (DD => {
+        CD.processCodeAfterIncludes && (DD = CD.processCodeAfterIncludes(CD.isFragment ? "fragment" : "vertex", DD, CD.defines));
+        const pD = function(DD, CD, cD) {
+          let ID = function(DD, CD) {
+            if (CD.processor?.noPrecision) return DD;
+            const cD = CD.shouldUseHighPrecisionShader; - 1 === DD.indexOf("precision highp float") ? DD = cD ? "precision highp float;\n" + DD : "precision mediump float;\n" + DD : cD || (DD = DD.replace("precision highp float", "precision mediump float"));
+            return DD
+          }(DD, CD);
+          if (!CD.processor) return ID;
+          if (0 === CD.processor.shaderLanguage && -1 !== ID.indexOf("#version 3") && (ID = ID.replace("#version 300 es", ""), !CD.processor.parseGLES3)) return ID;
+          const pD = CD.defines,
+            iD = KD(CD, cD);
+          CD.processor.preProcessor && (ID = CD.processor.preProcessor(ID, pD, iD, CD.isFragment, CD.processingContext));
+          const fD = {};
+          ID = JD(ID, iD, CD, fD), CD.processor.postProcessor && (ID = CD.processor.postProcessor(ID, pD, CD.isFragment, CD.processingContext, cD ? {
+            drawBuffersExtensionDisabled: !cD.getCaps().drawBuffersExtension
+          } : {}, iD, fD));
+          cD?._features.needShaderCodeInlining && (ID = cD.inlineShaderCode(ID));
+          return ID
+        }(DD, CD, ID);
+        cD(pD, DD)
       }))
     }
 
-    function vz(zz, uz, bz) {
-      return bz.processor && bz.processor.finalizeShaders ? bz.processor.finalizeShaders(zz, uz, bz.processingContext) : {
-        vertexCode: zz,
-        fragmentCode: uz
+    function PD(DD, CD, cD) {
+      return cD.processor && cD.processor.finalizeShaders ? cD.processor.finalizeShaders(DD, CD, cD.processingContext) : {
+        vertexCode: DD,
+        fragmentCode: CD
       }
     }
 
-    function xz(zz) {
-      const uz = /defined\((.+)\)/.exec(zz);
-      if (uz && uz.length) return new tz(uz[1].trim(), "!" === zz[0]);
-      const bz = ["==", "!=", ">=", "<=", "<", ">"];
-      let Ez = "",
-        nz = 0;
-      for (Ez of bz)
-        if (nz = zz.indexOf(Ez), nz > -1) break;
-      if (-1 === nz) return new tz(zz);
-      const iz = zz.substring(0, nz).trim(),
-        lz = zz.substring(nz + Ez.length).trim();
-      return new pz(iz, Ez, lz)
+    function HD(DD) {
+      const CD = /defined\((.+)\)/.exec(DD);
+      if (CD && CD.length) return new QD(CD[1].trim(), "!" === DD[0]);
+      const cD = ["==", "!=", ">=", "<=", "<", ">"];
+      let ID = "",
+        pD = 0;
+      for (ID of cD)
+        if (pD = DD.indexOf(ID), pD > -1) break;
+      if (-1 === pD) return new QD(DD);
+      const iD = DD.substring(0, pD).trim(),
+        fD = DD.substring(pD + ID.length).trim();
+      return new BD(iD, ID, fD)
     }
 
-    function Jz(zz, uz) {
-      const bz = new lz,
-        Ez = zz.substring(0, uz);
-      let nz = zz.substring(uz);
-      return nz = nz.substring(0, (nz.indexOf("//") + 1 || nz.length + 1) - 1).trim(), bz.testExpression = "#ifdef" === Ez ? new tz(nz) : "#ifndef" === Ez ? new tz(nz, !0) : function(zz) {
-        zz = zz.replace(Zz, "defined[$1]");
-        const uz = Mz.infixToPostfix(zz),
-          bz = [];
-        for (const nz of uz)
-          if ("||" !== nz && "&&" !== nz) bz.push(nz);
-          else if (bz.length >= 2) {
-          let zz = bz[bz.length - 1],
-            uz = bz[bz.length - 2];
-          bz.length -= 2;
-          const Ez = "&&" == nz ? new Oz : new Hz;
-          "string" === typeof zz && (zz = zz.replace(Rz, "defined($1)")), "string" === typeof uz && (uz = uz.replace(Rz, "defined($1)")), Ez.leftOperand = "string" === typeof uz ? xz(uz) : uz, Ez.rightOperand = "string" === typeof zz ? xz(zz) : zz, bz.push(Ez)
+    function UD(DD, CD) {
+      const cD = new fD,
+        ID = DD.substring(0, CD);
+      let pD = DD.substring(CD);
+      return pD = pD.substring(0, (pD.indexOf("//") + 1 || pD.length + 1) - 1).trim(), cD.testExpression = "#ifdef" === ID ? new QD(pD) : "#ifndef" === ID ? new QD(pD, !0) : function(DD) {
+        DD = DD.replace(tD, "defined[$1]");
+        const CD = bD.infixToPostfix(DD),
+          cD = [];
+        for (const pD of CD)
+          if ("||" !== pD && "&&" !== pD) cD.push(pD);
+          else if (cD.length >= 2) {
+          let DD = cD[cD.length - 1],
+            CD = cD[cD.length - 2];
+          cD.length -= 2;
+          const ID = "&&" == pD ? new SD : new wD;
+          "string" === typeof DD && (DD = DD.replace(ZD, "defined($1)")), "string" === typeof CD && (CD = CD.replace(ZD, "defined($1)")), ID.leftOperand = "string" === typeof CD ? HD(CD) : CD, ID.rightOperand = "string" === typeof DD ? HD(DD) : DD, cD.push(ID)
         }
-        let Ez = bz[bz.length - 1];
-        return "string" === typeof Ez && (Ez = Ez.replace(Rz, "defined($1)")), "string" === typeof Ez ? xz(Ez) : Ez
-      }(nz), bz
+        let ID = cD[cD.length - 1];
+        return "string" === typeof ID && (ID = ID.replace(ZD, "defined($1)")), "string" === typeof ID ? HD(ID) : ID
+      }(pD), cD
     }
 
-    function Az(zz, uz, bz, nz) {
-      let iz;
-      for (; Tz(zz, bz, nz);) {
-        iz = zz.currentLine;
-        const lz = iz.substring(0, 5).toLowerCase();
-        if ("#else" === lz) {
-          const bz = new Ez;
-          return uz.children.push(bz), void Tz(zz, bz, nz)
+    function xD(DD, CD, cD, pD) {
+      let iD;
+      for (; qD(DD, cD, pD);) {
+        iD = DD.currentLine;
+        const fD = iD.substring(0, 5).toLowerCase();
+        if ("#else" === fD) {
+          const cD = new ID;
+          return CD.children.push(cD), void qD(DD, cD, pD)
         }
-        if ("#elif" === lz) {
-          const zz = Jz(iz, 5);
-          uz.children.push(zz), bz = zz
+        if ("#elif" === fD) {
+          const DD = UD(iD, 5);
+          CD.children.push(DD), cD = DD
         }
       }
     }
 
-    function Tz(zz, uz, bz) {
-      for (; zz.canRead;) {
-        zz.lineIndex++;
-        const nz = zz.currentLine;
-        if (nz.indexOf("#") >= 0) {
-          const Ez = rz.exec(nz);
-          if (Ez && Ez.length) {
-            switch (Ez[0]) {
+    function qD(DD, CD, cD) {
+      for (; DD.canRead;) {
+        DD.lineIndex++;
+        const pD = DD.currentLine;
+        if (pD.indexOf("#") >= 0) {
+          const ID = mD.exec(pD);
+          if (ID && ID.length) {
+            switch (ID[0]) {
               case "#ifdef": {
-                const Ez = new iz;
-                uz.children.push(Ez);
-                const lz = Jz(nz, 6);
-                Ez.children.push(lz), Az(zz, Ez, lz, bz);
+                const ID = new iD;
+                CD.children.push(ID);
+                const fD = UD(pD, 6);
+                ID.children.push(fD), xD(DD, ID, fD, cD);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const Ez = new iz;
-                uz.children.push(Ez);
-                const lz = Jz(nz, 7);
-                Ez.children.push(lz), Az(zz, Ez, lz, bz);
+                const ID = new iD;
+                CD.children.push(ID);
+                const fD = UD(pD, 7);
+                ID.children.push(fD), xD(DD, ID, fD, cD);
                 break
               }
               case "#if": {
-                const Ez = new iz,
-                  lz = Jz(nz, 3);
-                uz.children.push(Ez), Ez.children.push(lz), Az(zz, Ez, lz, bz);
+                const ID = new iD,
+                  fD = UD(pD, 3);
+                CD.children.push(ID), ID.children.push(fD), xD(DD, ID, fD, cD);
                 break
               }
             }
             continue
           }
         }
-        const lz = new Ez;
-        if (lz.line = nz, uz.children.push(lz), "#" === nz[0] && "d" === nz[1]) {
-          const zz = nz.replace(";", "").split(" ");
-          lz.additionalDefineKey = zz[1], 3 === zz.length && (lz.additionalDefineValue = zz[2])
+        const fD = new ID;
+        if (fD.line = pD, CD.children.push(fD), "#" === pD[0] && "d" === pD[1]) {
+          const DD = pD.replace(";", "").split(" ");
+          fD.additionalDefineKey = DD[1], 3 === DD.length && (fD.additionalDefineValue = DD[2])
         }
       }
       return !1
     }
 
-    function Lz(zz, uz, bz, iz) {
-      const lz = new Ez,
-        Mz = new nz;
-      return Mz.lineIndex = -1, Mz.lines = zz.split("\n"), Tz(Mz, lz, iz), lz.process(uz, bz, iz)
+    function JD(DD, CD, cD, iD) {
+      const fD = new ID,
+        bD = new pD;
+      return bD.lineIndex = -1, bD.lines = DD.split("\n"), qD(bD, fD, iD), fD.process(CD, cD, iD)
     }
 
-    function Pz(zz, uz) {
-      const bz = zz.defines,
-        Ez = {};
-      for (const nz of bz) {
-        const zz = nz.replace("#define", "").replace(";", "").trim().split(" ");
-        Ez[zz[0]] = zz.length > 1 ? zz[1] : ""
+    function KD(DD, CD) {
+      const cD = DD.defines,
+        ID = {};
+      for (const pD of cD) {
+        const DD = pD.replace("#define", "").replace(";", "").trim().split(" ");
+        ID[DD[0]] = DD.length > 1 ? DD[1] : ""
       }
-      return 0 === zz.processor?.shaderLanguage && (Ez.GL_ES = "true"), Ez.__VERSION__ = zz.version, Ez[zz.platformName] = "true", (0, Fz.l)(Ez, uz?.isNDCHalfZRange, uz?.fbz, uz?.useExactSrgbConversions), Ez
+      return 0 === DD.processor?.shaderLanguage && (ID.GL_ES = "true"), ID.__VERSION__ = DD.version, ID[DD.platformName] = "true", (0, MD.l)(ID, CD?.isNDCHalfZRange, CD?.vcD, CD?.useExactSrgbConversions), ID
     }
 
-    function Gz(zz, uz, bz) {
-      let Ez;
-      for (sz.length = 0; null !== (Ez = Kz.exec(zz));) sz.push(Ez);
-      let nz = [zz],
-        iz = !1;
-      for (const Mz of sz) {
-        let zz = Mz[1];
-        if (-1 !== zz.indexOf("__decl__") && (zz = zz.replace(wz, ""), uz.supportsUniformBuffers && (zz = zz.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), zz += "Declaration"), !uz.includesShadersStore[zz]) {
-          const Ez = uz.shadersRepository + "ShadersInclude/" + zz + ".fx";
-          return void az.loadFile(Ez, (Ez => {
-            uz.includesShadersStore[zz] = Ez, Gz(nz.join(""), uz, bz)
+    function aD(DD, CD, cD) {
+      let ID;
+      for (XD.length = 0; null !== (ID = oD.exec(DD));) XD.push(ID);
+      let pD = [DD],
+        iD = !1;
+      for (const bD of XD) {
+        let DD = bD[1];
+        if (-1 !== DD.indexOf("__decl__") && (DD = DD.replace(vD, ""), CD.supportsUniformBuffers && (DD = DD.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), DD += "Declaration"), !CD.includesShadersStore[DD]) {
+          const ID = CD.shadersRepository + "ShadersInclude/" + DD + ".fx";
+          return void VD.loadFile(ID, (ID => {
+            CD.includesShadersStore[DD] = ID, aD(pD.join(""), CD, cD)
           }))
         } {
-          let bz = uz.includesShadersStore[zz];
-          if (Mz[2]) {
-            const zz = Mz[3].split(",");
-            for (let uz = 0; uz < zz.length; uz += 2) {
-              const Ez = new RegExp(zz[uz], "g"),
-                nz = zz[uz + 1];
-              bz = bz.replace(Ez, nz)
+          let cD = CD.includesShadersStore[DD];
+          if (bD[2]) {
+            const DD = bD[3].split(",");
+            for (let CD = 0; CD < DD.length; CD += 2) {
+              const ID = new RegExp(DD[CD], "g"),
+                pD = DD[CD + 1];
+              cD = cD.replace(ID, pD)
             }
           }
-          if (Mz[4]) {
-            const zz = Mz[5];
-            if (-1 !== zz.indexOf("..")) {
-              const Ez = zz.split(".."),
-                nz = parseInt(Ez[0]);
-              let iz = parseInt(Ez[1]),
-                lz = bz.slice(0);
-              bz = "", isNaN(iz) && (iz = uz.indexParameters[Ez[1]]);
-              for (let zz = nz; zz < iz; zz++) uz.supportsUniformBuffers || (lz = lz.replace(Xz, ((zz, uz) => uz + "{X}"))), bz += lz.replace(fz, zz.toString()) + "\n"
-            } else uz.supportsUniformBuffers || (bz = bz.replace(Xz, ((zz, uz) => uz + "{X}"))), bz = bz.replace(fz, zz)
+          if (bD[4]) {
+            const DD = bD[5];
+            if (-1 !== DD.indexOf("..")) {
+              const ID = DD.split(".."),
+                pD = parseInt(ID[0]);
+              let iD = parseInt(ID[1]),
+                fD = cD.slice(0);
+              cD = "", isNaN(iD) && (iD = CD.indexParameters[ID[1]]);
+              for (let DD = pD; DD < iD; DD++) CD.supportsUniformBuffers || (fD = fD.replace(ND, ((DD, CD) => CD + "{X}"))), cD += fD.replace(gD, DD.toString()) + "\n"
+            } else CD.supportsUniformBuffers || (cD = cD.replace(ND, ((DD, CD) => CD + "{X}"))), cD = cD.replace(gD, DD)
           }
-          const Ez = [];
-          for (const zz of nz) {
-            const uz = zz.split(Mz[0]);
-            for (let zz = 0; zz < uz.length - 1; zz++) Ez.push(uz[zz]), Ez.push(bz);
-            Ez.push(uz[uz.length - 1])
+          const ID = [];
+          for (const DD of pD) {
+            const CD = DD.split(bD[0]);
+            for (let DD = 0; DD < CD.length - 1; DD++) ID.push(CD[DD]), ID.push(cD);
+            ID.push(CD[CD.length - 1])
           }
-          nz = Ez, iz = iz || bz.indexOf("#include<") >= 0 || bz.indexOf("#include <") >= 0
+          pD = ID, iD = iD || cD.indexOf("#include<") >= 0 || cD.indexOf("#include <") >= 0
         }
       }
-      sz.length = 0;
-      const lz = nz.join("");
-      iz ? Gz(lz.toString(), uz, bz) : bz(lz)
+      XD.length = 0;
+      const fD = pD.join("");
+      iD ? aD(fD.toString(), CD, cD) : cD(fD)
     }
-    const az = {
-      loadFile: (zz, uz, bz, Ez, nz, iz) => {
-        throw (0, dz.l)("FileTools")
+    const VD = {
+      loadFile: (DD, CD, cD, ID, pD, iD) => {
+        throw (0, yD.m)("FileTools")
       }
     }
   },
-  39057: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => nz,
-      h: () => iz,
-      l: () => Mz,
-      o: () => lz,
-      s: () => tz
+  39023: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => pD,
+      h: () => iD,
+      l: () => bD,
+      n: () => fD,
+      p: () => QD
     });
-    var Ez = bz(39061);
-    const nz = {};
+    var ID = cD(39027);
+    const pD = {};
 
-    function iz(zz, uz) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (uz ? uz + "\n" : "") + zz
+    function iD(DD, CD) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (CD ? CD + "\n" : "") + DD
     }
 
-    function lz(zz, uz, bz, iz, lz, Mz, tz) {
-      const Hz = tz || nz.loadFile;
-      if (!Hz) throw (0, Ez.l)("FileTools");
-      return Hz(zz, uz, bz, iz, lz, Mz)
+    function fD(DD, CD, cD, iD, fD, bD, QD) {
+      const wD = QD || pD.loadFile;
+      if (!wD) throw (0, ID.m)("FileTools");
+      return wD(DD, CD, cD, iD, fD, bD)
     }
 
-    function Mz(zz, uz, bz, Ez) {
-      if (zz) return uz ? zz.IS_NDC_HALF_ZRANGE = "" : delete zz.IS_NDC_HALF_ZRANGE, bz ? zz.USE_REVERSE_DEPTHBUFFER = "" : delete zz.USE_REVERSE_DEPTHBUFFER, void(Ez ? zz.USE_EXACT_SRGB_CONVERSIONS = "" : delete zz.USE_EXACT_SRGB_CONVERSIONS);
+    function bD(DD, CD, cD, ID) {
+      if (DD) return CD ? DD.IS_NDC_HALF_ZRANGE = "" : delete DD.IS_NDC_HALF_ZRANGE, cD ? DD.USE_REVERSE_DEPTHBUFFER = "" : delete DD.USE_REVERSE_DEPTHBUFFER, void(ID ? DD.USE_EXACT_SRGB_CONVERSIONS = "" : delete DD.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let zz = "";
-        return uz && (zz += "#define IS_NDC_HALF_ZRANGE"), bz && (zz && (zz += "\n"), zz += "#define USE_REVERSE_DEPTHBUFFER"), Ez && (zz && (zz += "\n"), zz += "#define USE_EXACT_SRGB_CONVERSIONS"), zz
+        let DD = "";
+        return CD && (DD += "#define IS_NDC_HALF_ZRANGE"), cD && (DD && (DD += "\n"), DD += "#define USE_REVERSE_DEPTHBUFFER"), ID && (DD && (DD += "\n"), DD += "#define USE_EXACT_SRGB_CONVERSIONS"), DD
       }
     }
 
-    function tz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Ez = arguments.length > 3 ? arguments[3] : void 0;
-      switch (zz) {
+    function QD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        ID = arguments.length > 3 ? arguments[3] : void 0;
+      switch (DD) {
         case 3: {
-          const zz = new Int8Array(uz);
-          return Ez && zz.set(new Int8Array(Ez)), zz
+          const DD = new Int8Array(CD);
+          return ID && DD.set(new Int8Array(ID)), DD
         }
         case 0: {
-          const zz = new Uint8Array(uz);
-          return Ez && zz.set(new Uint8Array(Ez)), zz
+          const DD = new Uint8Array(CD);
+          return ID && DD.set(new Uint8Array(ID)), DD
         }
         case 4: {
-          const zz = "number" !== typeof uz ? new Int16Array(uz) : new Int16Array(bz ? uz / 2 : uz);
-          return Ez && zz.set(new Int16Array(Ez)), zz
+          const DD = "number" !== typeof CD ? new Int16Array(CD) : new Int16Array(cD ? CD / 2 : CD);
+          return ID && DD.set(new Int16Array(ID)), DD
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const zz = "number" !== typeof uz ? new Uint16Array(uz) : new Uint16Array(bz ? uz / 2 : uz);
-          return Ez && zz.set(new Uint16Array(Ez)), zz
+          const DD = "number" !== typeof CD ? new Uint16Array(CD) : new Uint16Array(cD ? CD / 2 : CD);
+          return ID && DD.set(new Uint16Array(ID)), DD
         }
         case 6: {
-          const zz = "number" !== typeof uz ? new Int32Array(uz) : new Int32Array(bz ? uz / 4 : uz);
-          return Ez && zz.set(new Int32Array(Ez)), zz
+          const DD = "number" !== typeof CD ? new Int32Array(CD) : new Int32Array(cD ? CD / 4 : CD);
+          return ID && DD.set(new Int32Array(ID)), DD
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const zz = "number" !== typeof uz ? new Uint32Array(uz) : new Uint32Array(bz ? uz / 4 : uz);
-          return Ez && zz.set(new Uint32Array(Ez)), zz
+          const DD = "number" !== typeof CD ? new Uint32Array(CD) : new Uint32Array(cD ? CD / 4 : CD);
+          return ID && DD.set(new Uint32Array(ID)), DD
         }
         case 1: {
-          const zz = "number" !== typeof uz ? new Float32Array(uz) : new Float32Array(bz ? uz / 4 : uz);
-          return Ez && zz.set(new Float32Array(Ez)), zz
+          const DD = "number" !== typeof CD ? new Float32Array(CD) : new Float32Array(cD ? CD / 4 : CD);
+          return ID && DD.set(new Float32Array(ID)), DD
         }
       }
-      const nz = new Uint8Array(uz);
-      return Ez && nz.set(new Uint8Array(Ez)), nz
+      const pD = new Uint8Array(CD);
+      return ID && pD.set(new Uint8Array(ID)), pD
     }
   },
-  39061: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Hz,
-      f: () => Oz,
-      h: () => tz,
-      l: () => nz
+  39027: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => wD,
+      g: () => SD,
+      j: () => QD,
+      m: () => pD
     });
-    const Ez = {};
+    const ID = {};
 
-    function nz(zz) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Ez[zz]) return Ez[zz] = !0, `${zz} needs to be imported before as it contains a side-effect required by your code.`
+    function pD(DD) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !ID[DD]) return ID[DD] = !0, `${DD} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const iz = {};
-    let lz = !1,
-      Mz = 0;
+    const iD = {};
+    let fD = !1,
+      bD = 0;
 
-    function tz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Ez = function() {
-        if ((bz || lz) && 0 === Mz) {
-          const bz = `${zz}.${uz}`;
-          iz[bz] || (iz[bz] = !0, console.warn(`[Babylon.js] ${bz}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function QD(DD, CD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const ID = function() {
+        if ((cD || fD) && 0 === bD) {
+          const cD = `${DD}.${CD}`;
+          iD[cD] || (iD[cD] = !0, console.warn(`[Babylon.js] ${cD}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return Ez.__isSideEffectStub = !0, Ez
+      return ID.__isSideEffectStub = !0, ID
     }
 
-    function Hz(zz) {
-      return !!zz && !zz.__isSideEffectStub
+    function wD(DD) {
+      return !!DD && !DD.__isSideEffectStub
     }
 
-    function Oz(zz, uz) {
+    function SD(DD, CD) {
       return {
         get() {},
-        set(zz) {
-          Object.defineProperty(this, uz, {
-            value: zz,
+        set(DD) {
+          Object.defineProperty(this, CD, {
+            value: DD,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  39043: (zz, uz, bz) => {
-    function Ez() {
+  39010: (DD, CD, cD) => {
+    function ID() {
       return "undefined" !== typeof window
     }
 
-    function nz() {
+    function pD() {
       return "undefined" !== typeof navigator
     }
 
-    function iz() {
+    function iD() {
       return "undefined" !== typeof document
     }
 
-    function lz(zz) {
-      let uz = "",
-        bz = zz.firstChild;
-      for (; bz;) 3 === bz.nodeType && (uz += bz.textContent), bz = bz.nextSibling;
-      return uz
+    function fD(DD) {
+      let CD = "",
+        cD = DD.firstChild;
+      for (; cD;) 3 === cD.nodeType && (CD += cD.textContent), cD = cD.nextSibling;
+      return CD
     }
-    bz.d(uz, {
-      d: () => lz,
-      e: () => iz,
-      h: () => nz,
-      i: () => Ez
+    cD.d(CD, {
+      c: () => fD,
+      e: () => iD,
+      i: () => pD,
+      m: () => ID
     })
   },
-  39212: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez,
-      f: () => nz,
-      j: () => iz
+  39206: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => ID,
+      c: () => pD,
+      f: () => iD
     });
-    class Ez extends Error {}
-    Ez._setPrototypeOf = Object.setPrototypeOf || ((zz, uz) => (zz.__proto__ = uz, zz));
-    const nz = {
+    class ID extends Error {}
+    ID._setPrototypeOf = Object.setPrototypeOf || ((DD, CD) => (DD.__proto__ = CD, DD));
+    const pD = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class iz extends Ez {
-      constructor(zz, uz, bz) {
-        super(zz), this.errorCode = uz, this.innerError = bz, this.name = "RuntimeError", Ez._setPrototypeOf(this, iz.prototype)
+    class iD extends ID {
+      constructor(DD, CD, cD) {
+        super(DD), this.errorCode = CD, this.innerError = cD, this.name = "RuntimeError", ID._setPrototypeOf(this, iD.prototype)
       }
     }
   },
-  39202: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Pz,
-      f: () => fz,
-      j: () => Jz,
-      n: () => Tz,
-      r: () => vz,
-      t: () => oz,
-      v: () => Nz,
-      z: () => qz,
-      A: () => xz,
-      B: () => sz
+  39193: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => KD,
+      f: () => gD,
+      i: () => UD,
+      m: () => qD,
+      n: () => PD,
+      q: () => nD,
+      s: () => OD,
+      t: () => lD,
+      u: () => HD,
+      v: () => XD
     });
-    var Ez = bz(39208),
-      nz = bz(39043),
-      iz = bz(36547);
-    class lz {}
-    lz.FilesToLoad = {};
-    var Mz = bz(39212),
-      tz = bz(39221),
-      Hz = bz(36543),
-      Oz = bz(39057),
-      pz = bz(39064),
-      dz = bz(38060),
-      Fz = bz(39071),
-      Zz = bz(39226);
-    const Rz = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class Kz extends Mz.j {
-      constructor(zz, uz) {
-        super(zz, Mz.f.LoadFileError), this.name = "LoadFileError", Mz.b._setPrototypeOf(this, Kz.prototype), uz instanceof Ez.b ? this.request = uz : this.file = uz
+    var ID = cD(39198),
+      pD = cD(39010),
+      iD = cD(36473);
+    class fD {}
+    fD.FilesToLoad = {};
+    var bD = cD(39206),
+      QD = cD(39208),
+      wD = cD(36464),
+      SD = cD(39023),
+      BD = cD(39035),
+      yD = cD(38048),
+      MD = cD(39039),
+      tD = cD(39213);
+    const ZD = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class oD extends bD.f {
+      constructor(DD, CD) {
+        super(DD, bD.c.LoadFileError), this.name = "LoadFileError", bD.b._setPrototypeOf(this, oD.prototype), CD instanceof ID.b ? this.request = CD : this.file = CD
       }
     }
-    class wz extends Mz.j {
-      constructor(zz, uz) {
-        super(zz, Mz.f.RequestFileError), this.request = uz, this.name = "RequestFileError", Mz.b._setPrototypeOf(this, wz.prototype)
+    class vD extends bD.f {
+      constructor(DD, CD) {
+        super(DD, bD.c.RequestFileError), this.request = CD, this.name = "RequestFileError", bD.b._setPrototypeOf(this, vD.prototype)
       }
     }
-    class Xz extends Mz.j {
-      constructor(zz, uz) {
-        super(zz, Mz.f.ReadFileError), this.file = uz, this.name = "ReadFileError", Mz.b._setPrototypeOf(this, Xz.prototype)
+    class ND extends bD.f {
+      constructor(DD, CD) {
+        super(DD, bD.c.ReadFileError), this.file = CD, this.name = "ReadFileError", bD.b._setPrototypeOf(this, ND.prototype)
       }
     }
-    const fz = {
+    const gD = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (bz, Ez, nz) => 0 !== Ez.status || nz >= zz || -1 !== bz.indexOf("file:") ? -1 : Math.pow(2, nz) * uz
+            let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (cD, ID, pD) => 0 !== ID.status || pD >= DD || -1 !== cD.indexOf("file:") ? -1 : Math.pow(2, pD) * CD
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: zz => zz,
+        PreprocessUrl: DD => DD,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: zz => zz,
-        CleanUrl: zz => zz = zz.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: DD => DD,
+        CleanUrl: DD => DD = DD.replace(/#/gm, "%23")
       },
-      sz = (zz, uz) => {
-        if ((!zz || 0 !== zz.indexOf("data:")) && fz.CorsBehavior)
-          if ("string" === typeof fz.CorsBehavior || fz.CorsBehavior instanceof String) uz.crossOrigin = fz.CorsBehavior;
+      XD = (DD, CD) => {
+        if ((!DD || 0 !== DD.indexOf("data:")) && gD.CorsBehavior)
+          if ("string" === typeof gD.CorsBehavior || gD.CorsBehavior instanceof String) CD.crossOrigin = gD.CorsBehavior;
           else {
-            const bz = fz.CorsBehavior(zz);
-            bz && (uz.crossOrigin = bz)
+            const cD = gD.CorsBehavior(DD);
+            cD && (CD.crossOrigin = cD)
           }
       },
-      rz = {
+      mD = {
         getRequiredSize: null
       },
-      oz = function(zz, uz, bz, nz) {
-        let iz, Mz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          Oz = arguments.length > 5 ? arguments[5] : void 0,
-          pz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Hz.d.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !pz?._features.forceBitmapOverHTMLImageElement) return bz("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (pz?._features.forceBitmapOverHTMLImageElement && "string" !== typeof zz && "undefined" !== typeof Blob) {
-          let Ez;
-          if (zz instanceof Blob) Ez = zz;
+      nD = function(DD, CD, cD, pD) {
+        let iD, bD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          SD = arguments.length > 5 ? arguments[5] : void 0,
+          BD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : wD.b.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !BD?._features.forceBitmapOverHTMLImageElement) return cD("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (BD?._features.forceBitmapOverHTMLImageElement && "string" !== typeof DD && "undefined" !== typeof Blob) {
+          let ID;
+          if (DD instanceof Blob) ID = DD;
           else {
-            const uz = zz instanceof ArrayBuffer ? zz : (0, Zz.o)(zz);
-            Ez = new Blob([uz], {
-              type: Mz
+            const CD = DD instanceof ArrayBuffer ? DD : (0, tD.k)(DD);
+            ID = new Blob([CD], {
+              type: bD
             })
           }
-          return pz.createImageBitmap(Ez, {
+          return BD.createImageBitmap(ID, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...Oz
-          }).then(uz).catch((uz => {
-            bz && bz("Error while trying to load image: " + zz, uz)
+            ...SD
+          }).then(CD).catch((CD => {
+            cD && cD("Error while trying to load image: " + DD, CD)
           })), null
         }
-        let dz = !1;
-        if (zz instanceof ArrayBuffer || ArrayBuffer.isView(zz))
+        let yD = !1;
+        if (DD instanceof ArrayBuffer || ArrayBuffer.isView(DD))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let uz;
-            uz = zz instanceof ArrayBuffer ? zz : (0, Zz.o)(zz), iz = URL.createObjectURL(new Blob([uz], {
-              type: Mz
-            })), dz = !0
-          } else iz = `data:${Mz};base64,` + (0, tz.h)(zz);
-        else zz instanceof Blob ? (iz = URL.createObjectURL(zz), dz = !0) : (iz = fz.CleanUrl(zz), iz = fz.PreprocessUrl(iz));
-        const Fz = uz => {
-          if (bz) {
-            const Ez = iz || zz.toString();
-            bz(`Error while trying to load image: ${0===Ez.indexOf("http")||Ez.length<=128?Ez:Ez.slice(0,128)+"..."}`, uz)
+            let CD;
+            CD = DD instanceof ArrayBuffer ? DD : (0, tD.k)(DD), iD = URL.createObjectURL(new Blob([CD], {
+              type: bD
+            })), yD = !0
+          } else iD = `data:${bD};base64,` + (0, QD.k)(DD);
+        else DD instanceof Blob ? (iD = URL.createObjectURL(DD), yD = !0) : (iD = gD.CleanUrl(DD), iD = gD.PreprocessUrl(iD));
+        const MD = CD => {
+          if (cD) {
+            const ID = iD || DD.toString();
+            cD(`Error while trying to load image: ${0===ID.indexOf("http")||ID.length<=128?ID:ID.slice(0,128)+"..."}`, CD)
           }
         };
-        if (pz?._features.forceBitmapOverHTMLImageElement) return vz(iz, (Ez => {
-          pz.createImageBitmap(new Blob([Ez], {
-            type: Mz
+        if (BD?._features.forceBitmapOverHTMLImageElement) return PD(iD, (ID => {
+          BD.createImageBitmap(new Blob([ID], {
+            type: bD
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...Oz
-          }).then((zz => {
-            uz(zz), dz && URL.revokeObjectURL(iz)
-          })).catch((uz => {
-            bz && bz("Error while trying to load image: " + zz, uz)
+            ...SD
+          }).then((DD => {
+            CD(DD), yD && URL.revokeObjectURL(iD)
+          })).catch((CD => {
+            cD && cD("Error while trying to load image: " + DD, CD)
           }))
-        }), void 0, nz || void 0, !0, ((zz, uz) => {
-          Fz(uz)
+        }), void 0, pD || void 0, !0, ((DD, CD) => {
+          MD(CD)
         })), null;
-        const Rz = new Image;
-        if (rz.getRequiredSize) {
-          const uz = rz.getRequiredSize(zz);
-          uz.width && (Rz.width = uz.width), uz.height && (Rz.height = uz.height)
+        const ZD = new Image;
+        if (mD.getRequiredSize) {
+          const CD = mD.getRequiredSize(DD);
+          CD.width && (ZD.width = CD.width), CD.height && (ZD.height = CD.height)
         }
-        sz(iz, Rz);
-        const Kz = [],
-          wz = () => {
-            for (const zz of Kz) zz.target.removeEventListener(zz.name, zz.handler);
-            Kz.length = 0
+        XD(iD, ZD);
+        const oD = [],
+          vD = () => {
+            for (const DD of oD) DD.target.removeEventListener(DD.name, DD.handler);
+            oD.length = 0
           };
-        Kz.push({
-          target: Rz,
+        oD.push({
+          target: ZD,
           name: "load",
           handler: () => {
-            wz(), uz(Rz), dz && Rz.src && URL.revokeObjectURL(Rz.src)
+            vD(), CD(ZD), yD && ZD.src && URL.revokeObjectURL(ZD.src)
           }
-        }), Kz.push({
-          target: Rz,
+        }), oD.push({
+          target: ZD,
           name: "error",
-          handler: zz => {
-            wz(), Fz(zz), dz && Rz.src && URL.revokeObjectURL(Rz.src)
+          handler: DD => {
+            vD(), MD(DD), yD && ZD.src && URL.revokeObjectURL(ZD.src)
           }
-        }), Kz.push({
+        }), oD.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: zz => {
-            if (zz.blockedURI !== Rz.src || "xZ" === zz.disposition) return;
-            wz();
-            const uz = new Error(`CSP violation of policy ${zz.effectiveDirective} ${zz.blockedURI}. Current policy is ${zz.originalPolicy}`);
-            Hz.d.UseFallbackTexture = !1, Fz(uz), dz && Rz.src && URL.revokeObjectURL(Rz.src), Rz.src = ""
+          handler: DD => {
+            if (DD.blockedURI !== ZD.src || "Nt" === DD.disposition) return;
+            vD();
+            const CD = new Error(`CSP violation of policy ${DD.effectiveDirective} ${DD.blockedURI}. Current policy is ${DD.originalPolicy}`);
+            wD.b.UseFallbackTexture = !1, MD(CD), yD && ZD.src && URL.revokeObjectURL(ZD.src), ZD.src = ""
           }
         }), (() => {
-          for (const zz of Kz) zz.target.addEventListener(zz.name, zz.handler)
+          for (const DD of oD) DD.target.addEventListener(DD.name, DD.handler)
         })();
-        const Xz = "blob:" === iz.substring(0, 5),
-          oz = "data:" === iz.substring(0, 5),
-          Nz = () => {
-            Xz || oz || !Ez.b.IsCustomRequestAvailable ? Rz.src = iz : vz(iz, ((zz, uz, bz) => {
-              const Ez = new Blob([zz], {
-                  type: !Mz && bz ? bz : Mz
+        const ND = "blob:" === iD.substring(0, 5),
+          nD = "data:" === iD.substring(0, 5),
+          OD = () => {
+            ND || nD || !ID.b.IsCustomRequestAvailable ? ZD.src = iD : PD(iD, ((DD, CD, cD) => {
+              const ID = new Blob([DD], {
+                  type: !bD && cD ? cD : bD
                 }),
-                nz = URL.createObjectURL(Ez);
-              dz = !0, Rz.src = nz
-            }), void 0, nz || void 0, !0, ((zz, uz) => {
-              Fz(uz)
+                pD = URL.createObjectURL(ID);
+              yD = !0, ZD.src = pD
+            }), void 0, pD || void 0, !0, ((DD, CD) => {
+              MD(CD)
             }))
           },
-          xz = () => {
-            nz && nz.loadImage(iz, Rz)
+          HD = () => {
+            pD && pD.loadImage(iD, ZD)
           };
-        if (!Xz && !oz && nz && nz.enableTexturesOffline) nz.open(xz, Nz);
+        if (!ND && !nD && pD && pD.enableTexturesOffline) pD.open(HD, OD);
         else {
-          if (-1 !== iz.indexOf("file:")) {
-            const zz = decodeURIComponent(iz.substring(5).toLowerCase());
-            if (lz.FilesToLoad[zz] && "undefined" !== typeof URL) {
+          if (-1 !== iD.indexOf("file:")) {
+            const DD = decodeURIComponent(iD.substring(5).toLowerCase());
+            if (fD.FilesToLoad[DD] && "undefined" !== typeof URL) {
               try {
-                let uz;
+                let CD;
                 try {
-                  uz = URL.createObjectURL(lz.FilesToLoad[zz])
-                } catch (Jz) {
-                  uz = URL.createObjectURL(lz.FilesToLoad[zz])
+                  CD = URL.createObjectURL(fD.FilesToLoad[DD])
+                } catch (UD) {
+                  CD = URL.createObjectURL(fD.FilesToLoad[DD])
                 }
-                Rz.src = uz, dz = !0
-              } catch (Az) {
-                Rz.src = ""
+                ZD.src = CD, yD = !0
+              } catch (xD) {
+                ZD.src = ""
               }
-              return Rz
+              return ZD
             }
           }
-          Nz()
+          OD()
         }
-        return Rz
+        return ZD
       },
-      Nz = (zz, uz, bz, Ez, nz) => {
-        const lz = new FileReader,
-          Mz = {
-            onCompleteObservable: new iz.b,
-            abort: () => lz.abort()
+      OD = (DD, CD, cD, ID, pD) => {
+        const fD = new FileReader,
+          bD = {
+            onCompleteObservable: new iD.c,
+            abort: () => fD.abort()
           };
-        return lz.onloadend = () => Mz.onCompleteObservable.notifyObservers(Mz), nz && (lz.onerror = () => {
-          nz(new Xz(`Unable to read ${zz.name}`, zz))
-        }), lz.onload = zz => {
-          uz(zz.target.result)
-        }, bz && (lz.onprogress = bz), Ez ? lz.readAsArrayBuffer(zz) : lz.readAsText(zz), Mz
+        return fD.onloadend = () => bD.onCompleteObservable.notifyObservers(bD), pD && (fD.onerror = () => {
+          pD(new ND(`Unable to read ${DD.name}`, DD))
+        }), fD.onload = DD => {
+          CD(DD.target.result)
+        }, cD && (fD.onprogress = cD), ID ? fD.readAsArrayBuffer(DD) : fD.readAsText(DD), bD
       },
-      vz = (zz, uz, bz, Ez, nz, tz, Hz) => {
-        if (zz.name) return Nz(zz, uz, bz, nz, tz ? zz => {
-          tz(void 0, zz)
+      PD = (DD, CD, cD, ID, pD, QD, wD) => {
+        if (DD.name) return OD(DD, CD, cD, pD, QD ? DD => {
+          QD(void 0, DD)
         } : void 0);
-        const Oz = zz;
-        if (-1 !== Oz.indexOf("file:")) {
-          let zz = decodeURIComponent(Oz.substring(5).toLowerCase());
-          0 === zz.indexOf("./") && (zz = zz.substring(2));
-          const Ez = lz.FilesToLoad[zz];
-          if (Ez) return Nz(Ez, uz, bz, nz, tz ? zz => tz(void 0, new Kz(zz.message, zz.file)) : void 0)
+        const SD = DD;
+        if (-1 !== SD.indexOf("file:")) {
+          let DD = decodeURIComponent(SD.substring(5).toLowerCase());
+          0 === DD.indexOf("./") && (DD = DD.substring(2));
+          const ID = fD.FilesToLoad[DD];
+          if (ID) return OD(ID, CD, cD, pD, QD ? DD => QD(void 0, new oD(DD.message, DD.file)) : void 0)
         }
         const {
-          match: pz,
-          type: Zz
-        } = Lz(Oz);
-        if (pz) {
-          const zz = {
-            onCompleteObservable: new iz.b,
+          match: BD,
+          type: tD
+        } = JD(SD);
+        if (BD) {
+          const DD = {
+            onCompleteObservable: new iD.c,
             abort: () => () => {}
           };
           try {
-            const zz = nz ? Pz(Oz) : Gz(Oz);
-            uz(zz, void 0, Zz)
-          } catch (Mz) {
-            tz ? tz(void 0, Mz) : dz.e.Error(Mz.message || "Failed to parse the Data URL")
+            const DD = pD ? KD(SD) : aD(SD);
+            CD(DD, void 0, tD)
+          } catch (bD) {
+            QD ? QD(void 0, bD) : yD.e.Error(bD.message || "Failed to parse the Data URL")
           }
-          return Fz.c.SetImmediate((() => {
-            zz.onCompleteObservable.notifyObservers(zz)
-          })), zz
+          return MD.d.SetImmediate((() => {
+            DD.onCompleteObservable.notifyObservers(DD)
+          })), DD
         }
-        return xz(Oz, ((zz, bz) => {
-          uz(zz, bz?.responseURL, bz?.getResponseHeader("content-type"))
-        }), bz, Ez, nz, tz ? zz => {
-          tz(zz.request, new Kz(zz.message, zz.request))
-        } : void 0, Hz)
+        return HD(SD, ((DD, cD) => {
+          CD(DD, cD?.responseURL, cD?.getResponseHeader("content-type"))
+        }), cD, ID, pD, QD ? DD => {
+          QD(DD.request, new oD(DD.message, DD.request))
+        } : void 0, wD)
       },
-      xz = (zz, uz, bz, lz, Mz, tz, Oz) => {
-        null !== lz && (lz ?? (lz = Hz.d.LastCreatedScene?.offlineProvider)), zz = fz.CleanUrl(zz), zz = fz.PreprocessUrl(zz);
-        const pz = fz.BaseUrl + zz;
-        let Fz = !1;
-        const Zz = {
-            onCompleteObservable: new iz.b,
-            abort: () => Fz = !0
+      HD = (DD, CD, cD, fD, bD, QD, SD) => {
+        null !== fD && (fD ?? (fD = wD.b.LastCreatedScene?.offlineProvider)), DD = gD.CleanUrl(DD), DD = gD.PreprocessUrl(DD);
+        const BD = gD.BaseUrl + DD;
+        let MD = !1;
+        const tD = {
+            onCompleteObservable: new iD.c,
+            abort: () => MD = !0
           },
-          Rz = () => {
-            let zz, iz = new Ez.b,
-              lz = null;
-            const Hz = () => {
-              iz && (bz && iz.removeEventListener("progress", bz), zz && iz.removeEventListener("readystatechange", zz), iz.removeEventListener("loadend", Rz))
+          ZD = () => {
+            let DD, iD = new ID.b,
+              fD = null;
+            const wD = () => {
+              iD && (cD && iD.removeEventListener("progress", cD), DD && iD.removeEventListener("readystatechange", DD), iD.removeEventListener("loadend", ZD))
             };
-            let Rz = () => {
-              Hz(), Zz.onCompleteObservable.notifyObservers(Zz), Zz.onCompleteObservable.clear(), bz = void 0, zz = null, Rz = null, tz = void 0, Oz = void 0, uz = void 0
+            let ZD = () => {
+              wD(), tD.onCompleteObservable.notifyObservers(tD), tD.onCompleteObservable.clear(), cD = void 0, DD = null, ZD = null, QD = void 0, SD = void 0, CD = void 0
             };
-            Zz.abort = () => {
-              Fz = !0, Rz && Rz(), iz && iz.readyState !== (XMLHttpRequest.DONE || 4) && iz.abort(), null !== lz && (clearTimeout(lz), lz = null), iz = null
+            tD.abort = () => {
+              MD = !0, ZD && ZD(), iD && iD.readyState !== (XMLHttpRequest.DONE || 4) && iD.abort(), null !== fD && (clearTimeout(fD), fD = null), iD = null
             };
-            const Kz = zz => {
-                const uz = zz.message || "Unknown error";
-                tz && iz ? tz(new wz(uz, iz)) : dz.e.Error(uz)
+            const oD = DD => {
+                const CD = DD.message || "Unknown error";
+                QD && iD ? QD(new vD(CD, iD)) : yD.e.Error(CD)
               },
-              Xz = dz => {
-                if (iz) {
-                  if (iz.open("GET", pz), Oz) try {
-                    Oz(iz)
-                  } catch (Zz) {
-                    return void Kz(Zz)
+              ND = yD => {
+                if (iD) {
+                  if (iD.open("GET", BD), SD) try {
+                    SD(iD)
+                  } catch (tD) {
+                    return void oD(tD)
                   }
-                  Mz && (iz.responseType = "arraybuffer"), bz && iz.addEventListener("progress", bz), Rz && iz.addEventListener("loadend", Rz), zz = () => {
-                    if (!Fz && iz && iz.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (zz && iz.removeEventListener("readystatechange", zz), iz.status >= 200 && iz.status < 300 || 0 === iz.status && (!(0, nz.i)() || Az())) {
-                        const zz = Mz ? iz.response : iz.responseText;
-                        if (null !== zz) {
+                  bD && (iD.responseType = "arraybuffer"), cD && iD.addEventListener("progress", cD), ZD && iD.addEventListener("loadend", ZD), DD = () => {
+                    if (!MD && iD && iD.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (DD && iD.removeEventListener("readystatechange", DD), iD.status >= 200 && iD.status < 300 || 0 === iD.status && (!(0, pD.m)() || xD())) {
+                        const DD = bD ? iD.response : iD.responseText;
+                        if (null !== DD) {
                           try {
-                            uz && uz(zz, iz)
-                          } catch (Zz) {
-                            Kz(Zz)
+                            CD && CD(DD, iD)
+                          } catch (tD) {
+                            oD(tD)
                           }
                           return
                         }
                       }
-                      const bz = fz.DefaultRetryStrategy;
-                      if (bz) {
-                        const zz = bz(pz, iz, dz);
-                        if (-1 !== zz) return Hz(), iz = new Ez.b, void(lz = setTimeout((() => Xz(dz + 1)), zz))
+                      const cD = gD.DefaultRetryStrategy;
+                      if (cD) {
+                        const DD = cD(BD, iD, yD);
+                        if (-1 !== DD) return wD(), iD = new ID.b, void(fD = setTimeout((() => ND(yD + 1)), DD))
                       }
-                      const Oz = new wz("Error status: " + iz.status + " " + iz.statusText + " - Unable to load " + pz, iz);
-                      tz && tz(Oz)
+                      const SD = new vD("Error status: " + iD.status + " " + iD.statusText + " - Unable to load " + BD, iD);
+                      QD && QD(SD)
                     }
-                  }, iz.addEventListener("readystatechange", zz), iz.send()
+                  }, iD.addEventListener("readystatechange", DD), iD.send()
                 }
               };
-            Xz(0)
+            ND(0)
           };
-        if (lz && lz.enableSceneOffline && !zz.startsWith("blob:")) {
-          const Ez = zz => {
-              zz && zz.status > 400 ? tz && tz(zz) : Rz()
+        if (fD && fD.enableSceneOffline && !DD.startsWith("blob:")) {
+          const ID = DD => {
+              DD && DD.status > 400 ? QD && QD(DD) : ZD()
             },
-            nz = () => {
-              lz && lz.loadFile(fz.BaseUrl + zz, (zz => {
-                !Fz && uz && uz(zz), Zz.onCompleteObservable.notifyObservers(Zz)
-              }), bz ? zz => {
-                !Fz && bz && bz(zz)
-              } : void 0, Ez, Mz)
+            pD = () => {
+              fD && fD.loadFile(gD.BaseUrl + DD, (DD => {
+                !MD && CD && CD(DD), tD.onCompleteObservable.notifyObservers(tD)
+              }), cD ? DD => {
+                !MD && cD && cD(DD)
+              } : void 0, ID, bD)
             };
-          lz.open(nz, Ez)
-        } else Rz();
-        return Zz
+          fD.open(pD, ID)
+        } else ZD();
+        return tD
       },
-      Jz = zz => {
+      UD = DD => {
         const {
-          match: uz,
-          type: bz
-        } = Lz(zz);
-        if (uz) return bz || void 0;
-        const Ez = zz.lastIndexOf(".");
-        switch (zz.substring(Ez + 1).toLowerCase()) {
+          match: CD,
+          type: cD
+        } = JD(DD);
+        if (CD) return cD || void 0;
+        const ID = DD.lastIndexOf(".");
+        switch (DD.substring(ID + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "JA":
+          case "Jq":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      Az = () => "undefined" !== typeof location && "file:" === location.protocol,
-      Tz = zz => Rz.test(zz),
-      Lz = zz => {
-        const uz = Rz.exec(zz);
-        if (null === uz || 0 === uz.length) return {
+      xD = () => "undefined" !== typeof location && "file:" === location.protocol,
+      qD = DD => ZD.test(DD),
+      JD = DD => {
+        const CD = ZD.exec(DD);
+        if (null === CD || 0 === CD.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: uz[0].replace("data:", "").replace(";base64,", "")
+          type: CD[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function Pz(zz) {
-      return (0, tz.e)(zz.split(",")[1])
+    function KD(DD) {
+      return (0, QD.e)(DD.split(",")[1])
     }
-    const Gz = zz => (0, tz.f)(zz.split(",")[1]);
-    let az;
-    const Vz = (zz, uz, bz, Ez, nz, iz, lz, Mz, tz, Hz) => {
-      az = {
-        DecodeBase64UrlToBinary: zz,
-        DecodeBase64UrlToString: uz,
-        DefaultRetryStrategy: bz.DefaultRetryStrategy,
-        BaseUrl: bz.BaseUrl,
-        CorsBehavior: bz.CorsBehavior,
-        PreprocessUrl: bz.PreprocessUrl,
-        IsBase64DataUrl: Ez,
-        IsFileURL: nz,
-        LoadFile: iz,
-        LoadImage: lz,
-        ReadFile: Mz,
-        RequestFile: tz,
-        SetCorsBehavior: Hz
-      }, Object.defineProperty(az, "DefaultRetryStrategy", {
+    const aD = DD => (0, QD.h)(DD.split(",")[1]);
+    let VD;
+    const zD = (DD, CD, cD, ID, pD, iD, fD, bD, QD, wD) => {
+      VD = {
+        DecodeBase64UrlToBinary: DD,
+        DecodeBase64UrlToString: CD,
+        DefaultRetryStrategy: cD.DefaultRetryStrategy,
+        BaseUrl: cD.BaseUrl,
+        CorsBehavior: cD.CorsBehavior,
+        PreprocessUrl: cD.PreprocessUrl,
+        IsBase64DataUrl: ID,
+        IsFileURL: pD,
+        LoadFile: iD,
+        LoadImage: fD,
+        ReadFile: bD,
+        RequestFile: QD,
+        SetCorsBehavior: wD
+      }, Object.defineProperty(VD, "DefaultRetryStrategy", {
         get: function() {
-          return bz.DefaultRetryStrategy
+          return cD.DefaultRetryStrategy
         },
-        set: function(zz) {
-          bz.DefaultRetryStrategy = zz
+        set: function(DD) {
+          cD.DefaultRetryStrategy = DD
         }
-      }), Object.defineProperty(az, "BaseUrl", {
+      }), Object.defineProperty(VD, "BaseUrl", {
         get: function() {
-          return bz.BaseUrl
+          return cD.BaseUrl
         },
-        set: function(zz) {
-          bz.BaseUrl = zz
+        set: function(DD) {
+          cD.BaseUrl = DD
         }
-      }), Object.defineProperty(az, "PreprocessUrl", {
+      }), Object.defineProperty(VD, "PreprocessUrl", {
         get: function() {
-          return bz.PreprocessUrl
+          return cD.PreprocessUrl
         },
-        set: function(zz) {
-          bz.PreprocessUrl = zz
+        set: function(DD) {
+          cD.PreprocessUrl = DD
         }
-      }), Object.defineProperty(az, "CorsBehavior", {
+      }), Object.defineProperty(VD, "CorsBehavior", {
         get: function() {
-          return bz.CorsBehavior
+          return cD.CorsBehavior
         },
-        set: function(zz) {
-          bz.CorsBehavior = zz
+        set: function(DD) {
+          cD.CorsBehavior = DD
         }
       })
     };
-    let mz = !1;
+    let jD = !1;
 
-    function qz() {
-      mz || (mz = !0, Vz(Pz, Gz, fz, Tz, Az, vz, oz, Nz, xz, sz), Oz.d.loadFile = vz, Oz.d.loadImage = oz, pz.i.loadFile = vz)
+    function lD() {
+      jD || (jD = !0, zD(KD, aD, gD, qD, xD, PD, nD, OD, HD, XD), SD.d.loadFile = PD, SD.d.loadImage = nD, BD.o.loadFile = PD)
     }
   },
-  39231: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz,
-      f: () => iz,
-      i: () => lz
+  39215: (DD, CD, cD) => {
+    cD.d(CD, {
+      c: () => bD,
+      f: () => iD,
+      i: () => fD
     });
-    let Ez = null;
+    let ID = null;
 
-    function nz() {
-      if (Ez) return Ez;
-      const zz = new ArrayBuffer(4),
-        uz = new Float32Array(zz),
-        bz = new Uint32Array(zz),
-        nz = new Uint32Array(512),
-        iz = new Uint32Array(512);
-      for (let Ez = 0; Ez < 256; ++Ez) {
-        const zz = Ez - 127;
-        zz < -24 ? (nz[Ez] = 0, nz[256 | Ez] = 32768, iz[Ez] = 24, iz[256 | Ez] = 24) : zz < -14 ? (nz[Ez] = 1024 >> -zz - 14, nz[256 | Ez] = 1024 >> -zz - 14 | 32768, iz[Ez] = -zz - 1, iz[256 | Ez] = -zz - 1) : zz <= 15 ? (nz[Ez] = zz + 15 << 10, nz[256 | Ez] = zz + 15 << 10 | 32768, iz[Ez] = 13, iz[256 | Ez] = 13) : zz < 128 ? (nz[Ez] = 31744, nz[256 | Ez] = 64512, iz[Ez] = 24, iz[256 | Ez] = 24) : (nz[Ez] = 31744, nz[256 | Ez] = 64512, iz[Ez] = 13, iz[256 | Ez] = 13)
+    function pD() {
+      if (ID) return ID;
+      const DD = new ArrayBuffer(4),
+        CD = new Float32Array(DD),
+        cD = new Uint32Array(DD),
+        pD = new Uint32Array(512),
+        iD = new Uint32Array(512);
+      for (let ID = 0; ID < 256; ++ID) {
+        const DD = ID - 127;
+        DD < -24 ? (pD[ID] = 0, pD[256 | ID] = 32768, iD[ID] = 24, iD[256 | ID] = 24) : DD < -14 ? (pD[ID] = 1024 >> -DD - 14, pD[256 | ID] = 1024 >> -DD - 14 | 32768, iD[ID] = -DD - 1, iD[256 | ID] = -DD - 1) : DD <= 15 ? (pD[ID] = DD + 15 << 10, pD[256 | ID] = DD + 15 << 10 | 32768, iD[ID] = 13, iD[256 | ID] = 13) : DD < 128 ? (pD[ID] = 31744, pD[256 | ID] = 64512, iD[ID] = 24, iD[256 | ID] = 24) : (pD[ID] = 31744, pD[256 | ID] = 64512, iD[ID] = 13, iD[256 | ID] = 13)
       }
-      const lz = new Uint32Array(2048),
-        Mz = new Uint32Array(64),
-        tz = new Uint32Array(64);
-      for (let Ez = 1; Ez < 1024; ++Ez) {
-        let zz = Ez << 13,
-          uz = 0;
-        for (; 0 === (8388608 & zz);) zz <<= 1, uz -= 8388608;
-        zz &= -8388609, uz += 947912704, lz[Ez] = zz | uz
+      const fD = new Uint32Array(2048),
+        bD = new Uint32Array(64),
+        QD = new Uint32Array(64);
+      for (let ID = 1; ID < 1024; ++ID) {
+        let DD = ID << 13,
+          CD = 0;
+        for (; 0 === (8388608 & DD);) DD <<= 1, CD -= 8388608;
+        DD &= -8388609, CD += 947912704, fD[ID] = DD | CD
       }
-      for (let Ez = 1024; Ez < 2048; ++Ez) lz[Ez] = 939524096 + (Ez - 1024 << 13);
-      for (let Ez = 1; Ez < 31; ++Ez) Mz[Ez] = Ez << 23;
-      Mz[31] = 1199570944, Mz[32] = 2147483648;
-      for (let Ez = 33; Ez < 63; ++Ez) Mz[Ez] = 2147483648 + (Ez - 32 << 23);
-      Mz[63] = 3347054592;
-      for (let Ez = 1; Ez < 64; ++Ez) 32 !== Ez && (tz[Ez] = 1024);
-      return Ez = {
-        floatView: uz,
-        uint32View: bz,
-        baseTable: nz,
-        shiftTable: iz,
-        mantissaTable: lz,
-        exponentTable: Mz,
-        offsetTable: tz
-      }, Ez
+      for (let ID = 1024; ID < 2048; ++ID) fD[ID] = 939524096 + (ID - 1024 << 13);
+      for (let ID = 1; ID < 31; ++ID) bD[ID] = ID << 23;
+      bD[31] = 1199570944, bD[32] = 2147483648;
+      for (let ID = 33; ID < 63; ++ID) bD[ID] = 2147483648 + (ID - 32 << 23);
+      bD[63] = 3347054592;
+      for (let ID = 1; ID < 64; ++ID) 32 !== ID && (QD[ID] = 1024);
+      return ID = {
+        floatView: CD,
+        uint32View: cD,
+        baseTable: pD,
+        shiftTable: iD,
+        mantissaTable: fD,
+        exponentTable: bD,
+        offsetTable: QD
+      }, ID
     }
-    const iz = 65504;
+    const iD = 65504;
 
-    function lz(zz) {
-      const uz = nz();
-      uz.floatView[0] = zz;
-      const bz = uz.uint32View[0],
-        Ez = bz >> 23 & 511;
-      return uz.baseTable[Ez] + ((8388607 & bz) >> uz.shiftTable[Ez])
+    function fD(DD) {
+      const CD = pD();
+      CD.floatView[0] = DD;
+      const cD = CD.uint32View[0],
+        ID = cD >> 23 & 511;
+      return CD.baseTable[ID] + ((8388607 & cD) >> CD.shiftTable[ID])
     }
 
-    function Mz(zz) {
-      const uz = nz();
-      return uz.uint32View[0] = uz.mantissaTable[uz.offsetTable[zz >> 10] + (1023 & zz)] + uz.exponentTable[zz >> 10], uz.floatView[0]
+    function bD(DD) {
+      const CD = pD();
+      return CD.uint32View[0] = CD.mantissaTable[CD.offsetTable[DD >> 10] + (1023 & DD)] + CD.exponentTable[DD >> 10], CD.floatView[0]
     }
   },
-  39221: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => iz,
-      f: () => nz,
-      h: () => Ez
+  39208: (DD, CD, cD) => {
+    cD.d(CD, {
+      e: () => iD,
+      h: () => pD,
+      k: () => ID
     });
-    const Ez = zz => {
-        const uz = ArrayBuffer.isView(zz) ? new Uint8Array(zz.buffer, zz.byteOffset, zz.byteLength) : new Uint8Array(zz);
-        return "function" === typeof uz.toBase64 ? uz.toBase64() : function(zz) {
-          const uz = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let bz, Ez, nz, iz, lz, Mz, tz, Hz = "",
-            Oz = 0;
-          for (; Oz < zz.length;) bz = zz[Oz++], Ez = Oz < zz.length ? zz[Oz++] : Number.NaN, nz = Oz < zz.length ? zz[Oz++] : Number.NaN, iz = bz >> 2, lz = (3 & bz) << 4 | Ez >> 4, Mz = (15 & Ez) << 2 | nz >> 6, tz = 63 & nz, isNaN(Ez) ? Mz = tz = 64 : isNaN(nz) && (tz = 64), Hz += uz.charAt(iz) + uz.charAt(lz) + uz.charAt(Mz) + uz.charAt(tz);
-          return Hz
-        }(uz)
+    const ID = DD => {
+        const CD = ArrayBuffer.isView(DD) ? new Uint8Array(DD.buffer, DD.byteOffset, DD.byteLength) : new Uint8Array(DD);
+        return "function" === typeof CD.toBase64 ? CD.toBase64() : function(DD) {
+          const CD = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let cD, ID, pD, iD, fD, bD, QD, wD = "",
+            SD = 0;
+          for (; SD < DD.length;) cD = DD[SD++], ID = SD < DD.length ? DD[SD++] : Number.NaN, pD = SD < DD.length ? DD[SD++] : Number.NaN, iD = cD >> 2, fD = (3 & cD) << 4 | ID >> 4, bD = (15 & ID) << 2 | pD >> 6, QD = 63 & pD, isNaN(ID) ? bD = QD = 64 : isNaN(pD) && (QD = 64), wD += CD.charAt(iD) + CD.charAt(fD) + CD.charAt(bD) + CD.charAt(QD);
+          return wD
+        }(CD)
       },
-      nz = zz => atob(zz),
-      iz = zz => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(zz).buffer : function(zz) {
-        const uz = nz(zz),
-          bz = uz.length,
-          Ez = new Uint8Array(new ArrayBuffer(bz));
-        for (let nz = 0; nz < bz; nz++) Ez[nz] = uz.charCodeAt(nz);
-        return Ez.buffer
-      }(zz)
+      pD = DD => atob(DD),
+      iD = DD => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(DD).buffer : function(DD) {
+        const CD = pD(DD),
+          cD = CD.length,
+          ID = new Uint8Array(new ArrayBuffer(cD));
+        for (let pD = 0; pD < cD; pD++) ID[pD] = CD.charCodeAt(pD);
+        return ID.buffer
+      }(DD)
   },
-  39071: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => nz,
-      g: () => lz
+  39039: (DD, CD, cD) => {
+    cD.d(CD, {
+      d: () => pD,
+      e: () => fD
     });
-    let Ez = [];
-    class nz {
-      static SetImmediate(zz) {
-        0 === Ez.length && setTimeout((() => {
-          const zz = Ez;
-          Ez = [];
-          for (const uz of zz) uz()
-        }), 1), Ez.push(zz)
+    let ID = [];
+    class pD {
+      static SetImmediate(DD) {
+        0 === ID.length && setTimeout((() => {
+          const DD = ID;
+          ID = [];
+          for (const CD of DD) CD()
+        }), 1), ID.push(DD)
       }
     }
 
-    function iz(zz, uz, bz) {
+    function iD(DD, CD, cD) {
       try {
-        if (zz()) return uz(), !0
-      } catch (Ez) {
-        return bz?.(Ez), !0
+        if (DD()) return CD(), !0
+      } catch (ID) {
+        return cD?.(ID), !0
       }
       return !1
     }
-    const lz = function(zz, uz, bz) {
-      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        lz = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && iz(zz, uz, bz)) return null;
-      const Mz = setInterval((() => {
-        iz(zz, uz, bz) ? clearInterval(Mz) : (nz -= Ez, nz < 0 && (clearInterval(Mz), bz?.(new Error("Operation timed out after maximum retries. " + (lz || "")), !0)))
-      }), Ez);
-      return () => clearInterval(Mz)
+    const fD = function(DD, CD, cD) {
+      let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        fD = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && iD(DD, CD, cD)) return null;
+      const bD = setInterval((() => {
+        iD(DD, CD, cD) ? clearInterval(bD) : (pD -= ID, pD < 0 && (clearInterval(bD), cD?.(new Error("Operation timed out after maximum retries. " + (fD || "")), !0)))
+      }), ID);
+      return () => clearInterval(bD)
     }
   },
-  39208: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez
+  39198: (DD, CD, cD) => {
+    cD.d(CD, {
+      b: () => ID
     });
-    class Ez {
+    class ID {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(Ez.CustomRequestHeaders).length > 0 || Ez.CustomRequestModifiers.length > 0
+        return Object.keys(ID.CustomRequestHeaders).length > 0 || ID.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(zz) {
-        return zz = (zz = zz.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(DD) {
+        return DD = (DD = DD.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(zz) {
-        return Ez.SkipRequestModificationForBabylonCDN && (zz.includes("preview.babylonjs.com") || zz.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(DD) {
+        return ID.SkipRequestModificationForBabylonCDN && (DD.includes("preview.babylonjs.com") || DD.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(zz) {
-        const uz = {
+      static _CollectCustomizations(DD) {
+        const CD = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (Ez._ShouldSkipRequestModifications(zz)) return {
-          url: zz,
-          headers: uz
+        if (ID._ShouldSkipRequestModifications(DD)) return {
+          url: DD,
+          headers: CD
         };
-        for (const nz in Ez.CustomRequestHeaders) {
-          const zz = Ez.CustomRequestHeaders[nz];
-          zz && (uz[nz] = zz)
+        for (const pD in ID.CustomRequestHeaders) {
+          const DD = ID.CustomRequestHeaders[pD];
+          DD && (CD[pD] = DD)
         }
-        const bz = {
-          setRequestHeader: (zz, bz) => {
-            uz[zz] = bz
+        const cD = {
+          setRequestHeader: (DD, cD) => {
+            CD[DD] = cD
           }
         };
-        for (const nz of Ez.CustomRequestModifiers) {
-          if (Ez._ShouldSkipRequestModifications(zz)) break;
-          const uz = nz(bz, zz);
-          "string" === typeof uz && (zz = uz)
+        for (const pD of ID.CustomRequestModifiers) {
+          if (ID._ShouldSkipRequestModifications(DD)) break;
+          const CD = pD(cD, DD);
+          "string" === typeof CD && (DD = CD)
         }
         return {
-          url: zz,
-          headers: uz
+          url: DD,
+          headers: CD
         }
       }
-      static async FetchAsync(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const bz = uz.method ?? "GET";
+      static async FetchAsync(DD) {
+        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const cD = CD.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: nz,
-            headers: iz
-          } = Ez._CollectCustomizations(Ez._CleanUrl(zz), uz.headers ?? {});
-          return await fetch(nz, {
-            method: bz,
-            headers: iz,
-            body: uz.body ?? void 0
+            url: pD,
+            headers: iD
+          } = ID._CollectCustomizations(ID._CleanUrl(DD), CD.headers ?? {});
+          return await fetch(pD, {
+            method: cD,
+            headers: iD,
+            body: CD.body ?? void 0
           })
         }
-        return await new Promise(((nz, iz) => {
-          const lz = new Ez;
-          lz.responseType = "arraybuffer", lz.addEventListener("readystatechange", (() => {
-            if (4 === lz.readyState)
-              if (lz.status >= 200 && lz.status < 300) {
-                const zz = "undefined" !== typeof Headers ? new Headers : void 0,
-                  uz = lz.getResponseHeader("Content-Type");
-                uz && zz && zz.set("Content-Type", uz), "undefined" !== typeof Response ? nz(new Response(lz.response, {
-                  status: lz.status,
-                  statusText: lz.statusText,
-                  headers: zz
-                })) : nz({
+        return await new Promise(((pD, iD) => {
+          const fD = new ID;
+          fD.responseType = "arraybuffer", fD.addEventListener("readystatechange", (() => {
+            if (4 === fD.readyState)
+              if (fD.status >= 200 && fD.status < 300) {
+                const DD = "undefined" !== typeof Headers ? new Headers : void 0,
+                  CD = fD.getResponseHeader("Content-Type");
+                CD && DD && DD.set("Content-Type", CD), "undefined" !== typeof Response ? pD(new Response(fD.response, {
+                  status: fD.status,
+                  statusText: fD.statusText,
+                  headers: DD
+                })) : pD({
                   ok: !0,
-                  status: lz.status,
-                  statusText: lz.statusText,
+                  status: fD.status,
+                  statusText: fD.statusText,
                   headers: {
-                    get: zz => lz.getResponseHeader(zz)
+                    get: DD => fD.getResponseHeader(DD)
                   },
-                  arrayBuffer: async () => await Promise.resolve(lz.response)
+                  arrayBuffer: async () => await Promise.resolve(fD.response)
                 })
-              } else iz(new Error(`HTTP ${lz.status} loading '${lz.requestURL}': ${lz.statusText}`))
-          })), lz.open(bz, zz, uz.headers), lz.send(uz.body ?? null)
+              } else iD(new Error(`HTTP ${fD.status} loading '${fD.requestURL}': ${fD.statusText}`))
+          })), fD.open(cD, DD, CD.headers), fD.send(CD.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(zz) {
-        this._xhr.onprogress = zz
+      set onprogress(DD) {
+        this._xhr.onprogress = DD
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(zz) {
-        this._xhr.responseType = zz
+      set responseType(DD) {
+        this._xhr.responseType = DD
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(zz) {
-        this._xhr.timeout = zz
+      set timeout(DD) {
+        this._xhr.timeout = DD
       }
-      addEventListener(zz, uz, bz) {
-        this._xhr.addEventListener(zz, uz, bz)
+      addEventListener(DD, CD, cD) {
+        this._xhr.addEventListener(DD, CD, cD)
       }
-      removeEventListener(zz, uz, bz) {
-        this._xhr.removeEventListener(zz, uz, bz)
+      removeEventListener(DD, CD, cD) {
+        this._xhr.removeEventListener(DD, CD, cD)
       }
       abort() {
         this._xhr.abort()
       }
-      send(zz) {
-        this._xhr.send(zz)
+      send(DD) {
+        this._xhr.send(DD)
       }
-      open(zz, uz, bz) {
+      open(DD, CD, cD) {
         const {
-          url: nz,
-          headers: iz
-        } = Ez._CollectCustomizations(uz, bz);
-        this._requestURL = Ez._CleanUrl(nz), this._xhr.open(zz, this._requestURL, !0);
-        for (const Ez in iz) this._xhr.setRequestHeader(Ez, iz[Ez])
+          url: pD,
+          headers: iD
+        } = ID._CollectCustomizations(CD, cD);
+        this._requestURL = ID._CleanUrl(pD), this._xhr.open(DD, this._requestURL, !0);
+        for (const ID in iD) this._xhr.setRequestHeader(ID, iD[ID])
       }
-      setRequestHeader(zz, uz) {
-        this._xhr.setRequestHeader(zz, uz)
+      setRequestHeader(DD, CD) {
+        this._xhr.setRequestHeader(DD, CD)
       }
-      getResponseHeader(zz) {
-        return this._xhr.getResponseHeader(zz)
+      getResponseHeader(DD) {
+        return this._xhr.getResponseHeader(DD)
       }
     }
-    Ez.CustomRequestHeaders = {}, Ez.CustomRequestModifiers = new Array, Ez.SkipRequestModificationForBabylonCDN = !0
+    ID.CustomRequestHeaders = {}, ID.CustomRequestModifiers = new Array, ID.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const DD in modules) Object.freeze(modules[DD]);
