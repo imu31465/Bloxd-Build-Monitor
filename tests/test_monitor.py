@@ -770,7 +770,7 @@ class MonitorTests(unittest.TestCase):
             self.assertEqual(fragment[0], "<details>")
             self.assertIn("<summary><code>large.js</code>", fragment[1])
             self.assertEqual(fragment[-1], "</details>")
-            self.assertIn("<summary>Hunk", "\\n".join(fragment))
+            self.assertIn("<summary>Hunk", "\n".join(fragment))
 
     def test_normalize_minified_js_identifiers_preserves_strings_and_properties(self):
         source = 'const BB = obj.id + config.xy + "BB"; // TB\nconst key = { id: BB };'

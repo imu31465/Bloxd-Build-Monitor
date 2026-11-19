@@ -205,7 +205,7 @@ def main() -> int:
                 break
         else:
             raise RuntimeError("CHANGES.md is missing its readable diff report link")
-        changes_path.write_text("\\n".join(change_lines) + "\\n", encoding="utf-8")
+        changes_path.write_text("\n".join(change_lines) + "\n", encoding="utf-8")
         return 0
 
     paths = [
