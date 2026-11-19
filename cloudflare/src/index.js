@@ -176,33 +176,75 @@ async function putState(env, key, value) {
   });
 }
 
-async function getText(url, headers = {}, timeoutMs = CONFIG.requestTimeoutMs) {
+export async function getText(url, headers = {}, timeoutMs = CONFIG.requestTimeoutMs) {
   const target = safeEndpoint(url);
-  let response;
-  try {
-    response = await fetch(url, {
-      headers: {
-        "User-Agent": UA,
-        "Accept": "text/html,application/javascript,application/json,*/*;q=0.8",
-        "Cache-Control": "no-cache",
-        ...headers,
-      },
-      cache: "no-store",
-      signal: AbortSignal.timeout(timeoutMs),
-    });
-  } catch (error) {
-    throw new Error("GET " + target + " network error: " +
-      truncate(error?.message || error, 160));
-  }
-  if (!response.ok) {
-    let detail = "";
+  const maxAttempts = 2;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    let response;
     try {
-      detail = truncate((await response.text()).replace(/s+/g, " "), 160);
-    } catch {}
-    throw new Error("HTTP " + response.status + " GET " + target +
-      (detail ? ": " + detail : ""));
+      response = await fetch(url, {
+        headers: {
+          "User-Agent": UA,
+          "Accept": "text/html,application/javascript,application/json,*/*;q=0.8",
+          "Cache-Control": "no-cache",
+          ...headers,
+        },
+        cache: "no-store",
+        signal: AbortSignal.timeout(timeoutMs),
+      });
+    } catch (error) {
+      if (attempt < maxAttempts) {
+        console.warn("GET retry after network error: " + target + " (attempt " + attempt + ")");
+        await sleep(500);
+        continue;
+      }
+      throw new Error("GET " + target + " network error: " +
+        truncate(error?.message || error, 160));
+    }
+
+    if (!response.ok) {
+      const retryable = response.status === 408 || response.status === 425 ||
+        response.status === 429 || response.status >= 500;
+      if (retryable && attempt < maxAttempts) {
+        let delayMs = 500;
+        const retryAfter = Number(response.headers.get("retry-after"));
+        if (Number.isFinite(retryAfter) && retryAfter > 0) {
+          delayMs = Math.min(3000, Math.max(delayMs, retryAfter * 1000));
+        }
+        try {
+          await response.body?.cancel();
+        } catch {}
+        console.warn(
+          "GET retry after HTTP " + response.status + ": " + target +
+          " (attempt " + attempt + ")",
+        );
+        await sleep(delayMs);
+        continue;
+      }
+
+      let detail = "";
+      try {
+        detail = truncate((await response.text()).replace(/\\s+/g, " "), 160);
+      } catch {}
+      throw new Error("HTTP " + response.status + " GET " + target +
+        (detail ? ": " + detail : ""));
+    }
+
+    try {
+      return await response.text();
+    } catch (error) {
+      if (attempt < maxAttempts) {
+        console.warn("GET retry after response-body error: " + target + " (attempt " + attempt + ")");
+        await sleep(500);
+        continue;
+      }
+      throw new Error("GET " + target + " response body error: " +
+        truncate(error?.message || error, 160));
+    }
   }
-  return response.text();
+
+  throw new Error("GET " + target + " failed after retry");
 }
 
 async function getOptionalText(url, timeoutMs = 7000) {
