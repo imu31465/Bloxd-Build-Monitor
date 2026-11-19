@@ -6,6 +6,7 @@ import {
   resolveUpdateLogChunkId,
   buildVarDateTable,
   safeEndpoint,
+  getText,
   describeFailure,
   entriesDiffNotification,
   buildDiscordPayload,
