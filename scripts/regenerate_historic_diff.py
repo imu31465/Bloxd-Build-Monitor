@@ -197,13 +197,15 @@ def main() -> int:
         )
         changes_path = ROOT / "CHANGES.md"
         changes = changes_path.read_text(encoding="utf-8")
-        changes = re.sub(
-            r"Readable per-file diff: \\[[^\\]]+\\]\\([^)]+\\)",
-            f"Readable per-file diff: [{index_relative_path}]({index_relative_path})",
-            changes,
-            count=1,
-        )
-        changes_path.write_text(changes, encoding="utf-8")
+        replacement = f"Readable per-file diff: [{index_relative_path}]({index_relative_path})"
+        change_lines = changes.splitlines()
+        for line_number, line in enumerate(change_lines):
+            if line.startswith("Readable per-file diff: "):
+                change_lines[line_number] = replacement
+                break
+        else:
+            raise RuntimeError("CHANGES.md is missing its readable diff report link")
+        changes_path.write_text("\\n".join(change_lines) + "\\n", encoding="utf-8")
         return 0
 
     paths = [

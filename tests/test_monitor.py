@@ -666,13 +666,13 @@ class MonitorTests(unittest.TestCase):
             names = [f"file-{number}.txt" for number in range(8)]
             for name in names:
                 path = root / name
-                path.write_text("\\n".join(f"old-{name}-{line}-" + "x" * 80 for line in range(16)) + "\\n", encoding="utf-8")
+                path.write_text("\n".join(f"old-{name}-{line}-" + "x" * 80 for line in range(16)) + "\n", encoding="utf-8")
             git("add", "-A")
             git("commit", "-qm", "baseline")
 
             for name in names:
                 path = root / name
-                path.write_text("\\n".join(f"new-{name}-{line}-" + "y" * 80 for line in range(16)) + "\\n", encoding="utf-8")
+                path.write_text("\n".join(f"new-{name}-{line}-" + "y" * 80 for line in range(16)) + "\n", encoding="utf-8")
 
             result = monitor.write_paginated_readable_diff_report(
                 root, "test build", "diffs/test-build/index.md", max_part_bytes=9000,
@@ -682,7 +682,7 @@ class MonitorTests(unittest.TestCase):
             self.assertGreater(result["pages"], 1)
             self.assertEqual(len(pages), result["pages"])
             self.assertIn("[Part 001](parts/part-001.md)", index)
-            rendered_pages = "\\n".join(page.read_text(encoding="utf-8") for page in pages)
+            rendered_pages = "\n".join(page.read_text(encoding="utf-8") for page in pages)
             for name in names:
                 self.assertIn(name, rendered_pages)
             self.assertLessEqual(result["largest_page_bytes"], 9000)
@@ -714,17 +714,17 @@ class MonitorTests(unittest.TestCase):
             git("init", "-q")
             git("config", "user.name", "Test")
             git("config", "user.email", "test@example.invalid")
-            path.write_text("\\n".join(old_lines) + "\\n", encoding="utf-8")
+            path.write_text("\n".join(old_lines) + "\n", encoding="utf-8")
             git("add", "-A")
             git("commit", "-qm", "baseline")
             base_ref = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
 
-            path.write_text("\\n".join(new_lines) + "\\n", encoding="utf-8")
+            path.write_text("\n".join(new_lines) + "\n", encoding="utf-8")
             git("add", "-A")
             git("commit", "-qm", "target build")
             head_ref = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
 
-            path.write_text("WORKTREE-ONLY-SENTINEL\\n", encoding="utf-8")
+            path.write_text("WORKTREE-ONLY-SENTINEL\n", encoding="utf-8")
             result = monitor.write_paginated_readable_diff_report(
                 root,
                 "large target build",
@@ -741,13 +741,36 @@ class MonitorTests(unittest.TestCase):
             for page in pages:
                 content = page.read_text(encoding="utf-8")
                 self.assertIn(f"<summary><code>{relative}</code> · modified", content)
-                self.assertIn("<details>\\n<summary>Hunk", content)
+                self.assertIn("<details>\n<summary>Hunk", content)
                 self.assertLessEqual(page.stat().st_size, 8192)
-            combined = "\\n".join(page.read_text(encoding="utf-8") for page in pages)
+            combined = "\n".join(page.read_text(encoding="utf-8") for page in pages)
             self.assertIn(".new-0", combined)
             self.assertNotIn("WORKTREE-ONLY-SENTINEL", combined)
             self.assertIn("[Part 001](parts/part-001.md)", index)
-            self.assertLess(index.count("\\n\\n\\n"), 3)
+            self.assertLess(index.count("\n\n\n"), 3)
+
+    def test_split_oversized_file_section_repeats_file_wrapper(self):
+        block = [
+            "<details>",
+            "<summary><code>large.js</code> · modified · +20 / -20</summary>",
+            "JavaScript notes",
+        ]
+        for number in range(10):
+            block.extend([
+                "<details>",
+                f"<summary>Hunk {number + 1}</summary>",
+                "x" * 500,
+                "</details>",
+            ])
+        block.append("</details>")
+
+        fragments = monitor.split_oversized_file_section(block, max_part_bytes=1800)
+        self.assertGreater(len(fragments), 1)
+        for fragment in fragments:
+            self.assertEqual(fragment[0], "<details>")
+            self.assertIn("<summary><code>large.js</code>", fragment[1])
+            self.assertEqual(fragment[-1], "</details>")
+            self.assertIn("<summary>Hunk", "\\n".join(fragment))
 
     def test_normalize_minified_js_identifiers_preserves_strings_and_properties(self):
         source = 'const BB = obj.id + config.xy + "BB"; // TB\nconst key = { id: BB };'

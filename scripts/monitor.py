@@ -1117,7 +1117,7 @@ def split_oversized_file_section(
                 nested_start = None
             elif depth < 0:
                 raise RuntimeError("Unbalanced nested diff section")
-    if depth != 1:
+    if depth != 0:
         raise RuntimeError("Unbalanced file wrapper while splitting an oversized diff section")
     if not nested:
         if encoded_size > MAX_SINGLE_DIFF_HUNK_BYTES:
