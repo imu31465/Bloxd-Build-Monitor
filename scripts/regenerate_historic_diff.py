@@ -152,6 +152,23 @@ def markdown_file_block(path: str, old_bytes: bytes | None, new_bytes: bytes | N
     }
 
 
+def render_part_index_links(part_index: list[dict]) -> list[str]:
+    """Render links relative to index.md; generated pages live in parts/."""
+    links = []
+    for part in part_index:
+        display = ", ".join(part["files"][:4])
+        if len(part["files"]) > 4:
+            display += f", +{len(part['files']) - 4} more"
+        links.extend([
+            f"### [{part['filename']}](parts/{part['filename']})",
+            "",
+            f"- Files: {len(part['files'])} · {part['chars']:,} characters",
+            f"- Includes: {display}",
+            "",
+        ])
+    return links
+
+
 def main() -> int:
     request = json.loads(REQUEST_PATH.read_text(encoding="utf-8"))
     base_ref = request["base"]
@@ -233,18 +250,7 @@ def main() -> int:
             print(f"Rendered {number}/{len(paths)} changed files...")
     flush_part()
 
-    part_links = []
-    for part in part_index:
-        display = ", ".join(part["files"][:4])
-        if len(part["files"]) > 4:
-            display += f", +{len(part['files']) - 4} more"
-        part_links.extend([
-            f"### [{part['filename']}]({part['filename']})",
-            "",
-            f"- Files: {len(part['files'])} · {part['chars']:,} characters",
-            f"- Includes: {display}",
-            "",
-        ])
+    part_links = render_part_index_links(part_index)
 
     css_path = "bundles/bloxd.io/chunks/css/76.css"
     js_path = "bundles/bloxd.io/chunks/js/207.js"
