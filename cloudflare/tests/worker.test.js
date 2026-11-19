@@ -73,6 +73,57 @@ test("safeEndpoint removes query strings and redacts Discord webhook paths", () 
   );
 });
 
+test("getText retries transient upstream HTTP errors once", async () => {
+  const originalFetch = globalThis.fetch;
+  let attempts = 0;
+  globalThis.fetch = async () => {
+    attempts++;
+    return attempts === 1
+      ? new Response("temporary upstream failure", { status: 503 })
+      : new Response("ok", { status: 200 });
+  };
+  try {
+    assert.equal(await getText("https://raw.githubusercontent.com/owner/repo/main/state.json", {}, 1000), "ok");
+    assert.equal(attempts, 2);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test("getText retries network timeouts once", async () => {
+  const originalFetch = globalThis.fetch;
+  let attempts = 0;
+  globalThis.fetch = async () => {
+    attempts++;
+    if (attempts === 1) throw new Error("The operation was aborted due to timeout");
+    return new Response("ok", { status: 200 });
+  };
+  try {
+    assert.equal(await getText("https://raw.githubusercontent.com/owner/repo/main/state.json", {}, 1000), "ok");
+    assert.equal(attempts, 2);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test("getText does not retry permanent HTTP 4xx responses", async () => {
+  const originalFetch = globalThis.fetch;
+  let attempts = 0;
+  globalThis.fetch = async () => {
+    attempts++;
+    return new Response("not found", { status: 404 });
+  };
+  try {
+    await assert.rejects(
+      () => getText("https://raw.githubusercontent.com/owner/repo/main/missing.json", {}, 1000),
+      /HTTP 404/,
+    );
+    assert.equal(attempts, 1);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
 test("describeFailure captures task, HTTP status, and sanitized endpoint", () => {
   assert.deepEqual(
     describeFailure(
